@@ -17,7 +17,7 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="..\src\MonoSoftware.Baasic.Framework.jquery.js" target="Scripts\MonoSoftware.Baasic.Framework.jquery.js" />
+        <file src="..\src\MonoSoftware.Baasic.Framework.jquery.js" target="content\Scripts\MonoSoftware.Baasic.Framework.jquery.js" />
     </files>
 </package>
 

@@ -7,14 +7,14 @@
         <authors>Kristijan Horvat</authors>
         <owners>Mono Ltd.</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Javascript</description>
+        <description>Javascript Baasic framework</description>
         <summary />
         <copyright>Mono Ltd.</copyright>
         <language>en-US</language>
         <tags>Javascript, Baasic</tags>
     </metadata>
     <files>
-        <file src="..\src\MonoSoftware.Baasic.Framework.js" target="Scripts\MonoSoftware.Baasic.Framework.js" />
+        <file src="..\src\MonoSoftware.Baasic.Framework.js" target="content\Scripts\MonoSoftware.Baasic.Framework.js" />
     </files>
 </package>
 
