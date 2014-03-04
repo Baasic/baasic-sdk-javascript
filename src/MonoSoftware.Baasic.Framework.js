@@ -1,5 +1,4 @@
-﻿var MonoSoftware;
-(function (MonoSoftware) {
+﻿(function (MonoSoftware) {
     (function (Baasic) {
         var AUTH_HEADER = "Authorization";
         (function (Application) {
@@ -15,7 +14,73 @@
                 apiRootUrl: "api.baasic.com",
 			    apiVersion: "v1"
             };
+			
+			function extend(obj1, obj2) {
+				for	(var prop in obj2) {
+					obj1[prop] = obj2[prop];
+				}
+				
+				return obj1;
+			}
+			
+			function addEvent(evnt, elem, func) {
+			   if (elem.addEventListener)  
+				  elem.addEventListener(evnt,func,false);
+			   else if (elem.attachEvent) { 
+				  elem.attachEvent("on"+evnt, func);
+			   }
+			   else { 
+				  elem["on" + evnt] = func;
+			   }
+			}
+			
+			function triggerEvent(element, eventName, additionalData) {
+					var event; // The custom event that will be created
+					
+					if (CustomEvent) {
+						event = new CustomEvent(eventName, additionalData);
+						element.dispatchEvent(event);
+						
+						return;
+					}
+					else if (document.createEvent) {
+						event = document.createEvent("Event");
+						event.initEvent(eventName, true, true);
+						
+						if (additionalData) {
+							extend(event, additionalData);
+						}
+						
+						if (element.dispatchEvent) {
+							element.dispatchEvent(event); 
+						} else {
+							document.dispatchEvent(event); 
+						}
+						
+						return;
+						
+					} else {
+						event = document.createEventObject();
+						event.eventType = eventName;
+						
+						if (additionalData) {
+							extend(event, additionalData);
+						}
+						element.fireEvent("on" + event.eventType, event);
+						
+						return;
+					}
 
+					if (element.dispatchEvent) {
+						element.dispatchEvent(event);
+					} else if (element.fireEvent) {
+						element.fireEvent("on" + event.eventType, event);
+					} else {
+						var handler = element["on" + event.eventType];
+						if (handler) handler(event);
+					}
+			}
+			
             var currentUser = JSON.parse(localStorage.getItem(userInfoKey));
             var userAccessTokenTimer = null;
             if (currentUser != null) {
@@ -41,10 +106,11 @@
                 return null;
             }
 
-            $(window).on("storage", function (e) {
-                switch (e.originalEvent.key) {
+            addEvent("storage", window, function (e) {
+				e = e || event;
+                switch (e.key) {
                     case userInfoKey:
-                        var value = e.originalEvent.newValue;
+                        var value = e.newValue;
                         if (value === undefined || value == null || value == '') {
                             updateCurrentUserObject(null, null);
                         } else {
@@ -53,13 +119,13 @@
                         }
                         break;
                 }
-            })
+            });
 
             function initialize(apiKey, options) {
                 if (!isInitialized) {
                     set_apiKey(apiKey);
 
-                    $.extend(settings, options);
+                    extend(settings, options);
 
                     var scheme = settings.useSSL ? "https" : "http";
                     apiUrl = scheme + "://" + settings.apiRootUrl + "/" + settings.apiVersion + "/" + apiKey + "/";
@@ -109,8 +175,8 @@
                     localStorage.setItem(userInfoKey, JSON.stringify(currentUser));
                     userAccessTokenTimer = setExpirationTimer(currentUser.token)
                 }
-
-                $.event.trigger("userChange", { user: currentUser });
+				
+				triggerEvent(document, "userChange", { user: currentUser });
             }
             Application.set_user = set_user;
 
