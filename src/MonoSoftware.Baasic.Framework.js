@@ -28,14 +28,14 @@
 			function triggerEvent(element, eventName, additionalData) {
 					var event; // The custom event that will be created
 					
-					if (CustomEvent) {
+					if (CustomEvent && typeof CustomEvent === "function") {
 						event = new CustomEvent(eventName, additionalData);
 						element.dispatchEvent(event);
 						
 						return;
 					}
 					else if (document.createEvent) {
-						event = document.createEvent("Event");
+						event = document.createEvent("CustomEvent");
 						event.initEvent(eventName, true, true);
 						
 						if (additionalData) {
