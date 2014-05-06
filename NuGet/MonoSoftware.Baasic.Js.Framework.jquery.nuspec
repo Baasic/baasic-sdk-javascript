@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MonoSoftware.Baasic.Js.Framework.jQuery</id>
-        <version>1.0.0-beta2</version>
+        <version>1.0.0-beta3</version>
         <title>MonoSoftware Baasic Javascript Framework jquery transport plugin.</title>
         <authors>Kristijan Horvat</authors>
         <owners>Mono Ltd.</owners>
@@ -13,11 +13,12 @@
         <language>en-US</language>
         <tags>Javascript, Baasic, jQuery</tags>
 		<dependencies>            
-            <dependency id="MonoSoftware.Baasic.Js.Framework" version="[1.0.0-beta2]" />                        
+            <dependency id="MonoSoftware.Baasic.Js.Framework" version="[1.0.0-beta3]" />                        
         </dependencies>
     </metadata>
     <files>
-        <file src="..\src\MonoSoftware.Baasic.Framework.jquery.js" target="content\Scripts\MonoSoftware.Baasic.Framework.jquery.js" />
+        <file src="..\dist\MonoSoftware.Baasic.Framework.jquery.js" target="content\Scripts\MonoSoftware.Baasic.Framework.jquery.js" />
+		<file src="..\dist\MonoSoftware.Baasic.Framework.jquery.min.js" target="content\Scripts\MonoSoftware.Baasic.Framework.jquery.min.js" />
     </files>
 </package>
 
