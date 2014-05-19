@@ -1,4 +1,6 @@
-﻿(function (MonoSoftware) {
+﻿(function (window, document) {
+	var MonoSoftware = window.MonoSoftware || (window.MonoSoftware = {});
+	
     (function (Baasic) {
         var AUTH_HEADER = "Authorization";
         (function (Application) {
@@ -210,4 +212,4 @@
         var Application = Baasic.Application;
     })(MonoSoftware.Baasic || (MonoSoftware.Baasic = {}));
     var Baasic = MonoSoftware.Baasic;
-})(MonoSoftware = MonoSoftware || {});
+})(window, document);
