@@ -102,8 +102,8 @@
 				}
 				
 				function setExpirationTimer(token) {
-					if (token && token != null && token.expire_time) {
-						var expiresIn = token.expire_time - new Date().getTime();
+					if (token && token != null && token.expireTime) {
+						var expiresIn = token.expireTime - new Date().getTime();
 						if (expiresIn > 0) {
 							return setTimeout(function () {
 								set_user(null, null);
@@ -184,6 +184,9 @@
 
 					if (token != null)
 					{
+						if (!token.expireTime && token.expires_in) {
+							token.expireTime = new Date().getTime() + (token.expires_in * 1000);
+						}
 						user.token = token;
 					}
 
