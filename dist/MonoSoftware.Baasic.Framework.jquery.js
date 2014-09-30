@@ -1,4 +1,4 @@
-﻿(function (app) {
+(function (app) {
     var AUTH_HEADER = "Authorization";
 
     if ((!$.support.cors || navigator.userAgent.indexOf("MSIE") != -1) && window.postMessage) {
@@ -73,7 +73,7 @@
         var authToken = app.get_accessToken();
         if (authToken != null) {
             var headers = options.headers || (options.headers = {});
-            
+
             headers[AUTH_HEADER] = authToken.token_type + ' ' + authToken.access_token;
         }
     }
@@ -86,4 +86,3 @@
     }
 
 })(MonoSoftware.Baasic.Application);
-        

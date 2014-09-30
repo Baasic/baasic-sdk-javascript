@@ -18,8 +18,7 @@
 			
 			extend(settings, options);
 			
-			var scheme = settings.useSSL ? "https" : "http";
-			var apiUrl = scheme + "://" + settings.apiRootUrl + "/" + settings.apiVersion + "/" + apiKey + "/";
+			var apiUrl = settings.useSSL ? "https" : "http" + "://" + settings.apiRootUrl + "/" + settings.apiVersion + "/" + apiKey + "/";
 			var userInfoKey = "baasic-user-info-" + apiKey;
 			
 			var currentUser = JSON.parse(localStorage.getItem(userInfoKey));
@@ -29,22 +28,6 @@
 				updateCurrentUserObject(currentUser.user, currentUser.token);
 			} else {
 				updateCurrentUserObject(null, null);
-			}
-			
-			function setExpirationTimer(token) {
-				if (token && token != null && token.expireTime) {
-					var expiresIn = token.expireTime - new Date().getTime();
-					if (expiresIn > 0) {
-						return setTimeout(function () {
-							set_user(null, null);
-						},
-						expiresIn);
-					} else {
-						set_user(null, null);
-					}
-				}
-
-				return null;
 			}
 			
 			addEvent("storage", window, function (e) {
@@ -104,6 +87,22 @@
 			}
 			this.set_user = set_user;
 
+			function setExpirationTimer(token) {
+				if (token && token != null && token.expireTime) {
+					var expiresIn = token.expireTime - new Date().getTime();
+					if (expiresIn > 0) {
+						return setTimeout(function () {
+							set_user(null, null);
+						},
+						expiresIn);
+					} else {
+						set_user(null, null);
+					}
+				}
+
+				return null;
+			}
+			
 			function updateCurrentUserObject(userDetails, token) {
 				var user = {
 					isAuthenticated: function () {
