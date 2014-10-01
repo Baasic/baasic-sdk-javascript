@@ -15,13 +15,14 @@ var addEvent = $ !== undefined ?
 
 var triggerEvent = $ !== undefined ? 
 	function (element, eventName, additionalData) {
-		$(element).trigger(eventName, additionalData);
+		var event = extend($.Event(eventName), additionalData);
+		$(element).trigger(event);
 	} :
 	function (element, eventName, additionalData) {
 		var event; // The custom event that will be created
 		
 		if (CustomEvent && typeof CustomEvent === "function") {
-			event = new CustomEvent(eventName, additionalData);
+			event = extend(new CustomEvent(eventName));
 			element.dispatchEvent(event);
 			
 			return;

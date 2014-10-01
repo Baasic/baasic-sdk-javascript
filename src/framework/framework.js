@@ -8,6 +8,14 @@
 		}
 		Application.init = initialize;
 		
+		function triggerUserChange(user) {
+			triggerEvent(document, "userChange", { user: user });
+		}
+		
+		function triggerTokenExpired() {
+			triggerEvent(document, "tokenExpired");
+		}
+		
 		function App(apiKey, options) {
 			var settings = {
 				useSSL: false,
@@ -43,6 +51,8 @@
 							var userObject = JSON.parse(value);
 							updateCurrentUserObject(userObject.user, userObject.token);
 						}
+						
+						triggerUserChange(currentUser);
 						break;
 				}
 			});
@@ -82,8 +92,6 @@
 					localStorage.setItem(userInfoKey, JSON.stringify(currentUser));
 					userAccessTokenTimer = setExpirationTimer(currentUser.token)
 				}
-				
-				triggerEvent(document, "userChange", { user: currentUser });
 			}
 			this.set_user = set_user;
 
@@ -91,12 +99,7 @@
 				if (token && token != null && token.expireTime) {
 					var expiresIn = token.expireTime - new Date().getTime();
 					if (expiresIn > 0) {
-						return setTimeout(function () {
-							set_user(null, null);
-						},
-						expiresIn);
-					} else {
-						set_user(null, null);
+						return setTimeout(triggerTokenExpired, expiresIn);
 					}
 				}
 
@@ -106,14 +109,14 @@
 			function updateCurrentUserObject(userDetails, token) {
 				var user = {
 					isAuthenticated: function () {
-						return this.token && this.token != null;
+						return this.token !== undefined && this.token !== null && (this.token.expireTime === undefined || this.token.expireTime === null || (this.token.expireTime - new Date().getTime()) > 0);
 					}
 				};
 
-				if (userDetails != null)
+				if (userDetails)
 					user.user = userDetails;
 
-				if (token != null) {
+				if (token) {
 					if (!token.expireTime) {
 						if (token.expires_in) {
 							token.expireTime = new Date().getTime() + (token.expires_in * 1000);
