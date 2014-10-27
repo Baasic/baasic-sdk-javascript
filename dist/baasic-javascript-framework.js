@@ -73,7 +73,7 @@
         }
     };
 
-    ﻿ (function (Baasic) {
+    (function (Baasic) {
         var AUTH_HEADER = "Authorization";
         (function (Application) {
             var browserLanguage = navigator.language || navigator.userLanguage;
