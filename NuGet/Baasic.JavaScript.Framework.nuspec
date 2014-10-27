@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Baasic.JavaScript.Framework</id>
+        <version>$version$</version>
+        <title>Baasic Javascript Framework</title>
+        <authors>Kristijan Horvat</authors>
+        <owners>Mono Ltd.</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Baasic Javascript Framework</description>
+        <summary />
+        <copyright>Mono Ltd.</copyright>
+        <language>en-US</language>
+        <tags>Javascript, Baasic</tags>
+    </metadata>
+    <files>
+        <file src="..\dist\baasic-javascript-framework.js" target="content\Scripts\baasic-javascript-framework.js" />
+		<file src="..\dist\baasic-javascript-framework.min.js" target="content\Scripts\baasic-javascript-framework.min.js" />
+    </files>
+</package>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

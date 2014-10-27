@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Baasic.JavaScript.Framework.jQuery</id>
+        <version>$version$</version>
+        <title>Baasic Javascript Framework jQuery transport plugin.</title>
+        <authors>Kristijan Horvat</authors>
+        <owners>Mono Ltd.</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Baasic Javascript Framework jQuery transport plugin.</description>
+        <summary />
+        <copyright>Mono Ltd.</copyright>
+        <language>en-US</language>
+        <tags>Javascript, Baasic, jQuery</tags>
+		<dependencies>            
+            <dependency id="Baasic.JavaScript.Framework" version="(,2.0.0)" />                        
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\dist\baasic-jquery-framework.js" target="content\Scripts\baasic-jquery-framework.js" />
+		<file src="..\dist\baasic-jquery-framework.min.js" target="content\Scripts\baasic-jquery-framework.min.js" />
+    </files>
+</package>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

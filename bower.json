@@ -1,0 +1,32 @@
+{
+  "name": "baasic-javascript-framework",
+  "version": "0.1.22",
+  "description": "Baasic JavaScript SDK Core services.",
+  "keywords": [
+    "javascript",
+    "baasic",
+	"ajax",
+    "backend"
+  ],
+  "license": "MIT",
+  "main": "dist/*",
+  "ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests",
+        "src",
+        "spec",
+		"NuGet",
+		"lib",
+        "bower.json",
+        "gulpfile.js",
+        "package.json",
+        "README.md"
+    ],
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
