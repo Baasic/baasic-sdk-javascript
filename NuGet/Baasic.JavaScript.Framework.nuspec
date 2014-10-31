@@ -9,6 +9,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Baasic Javascript Framework</description>
         <summary />
+		<projectUrl>https://github.com/Baasic/baasic-sdk-javascript</projectUrl>
         <copyright>Mono Ltd.</copyright>
         <language>en-US</language>
         <tags>Javascript, Baasic</tags>
