@@ -28,31 +28,36 @@
 			
 			var apiUrl = settings.useSSL ? "https" : "http" + "://" + settings.apiRootUrl + "/" + settings.apiVersion + "/" + apiKey + "/";
 			var userInfoKey = "baasic-user-info-" + apiKey;
+			var tokenKey = "baasic-auth-token-" + apiKey;
 			
+			var token = JSON.parse(localStorage.getItem(tokenKey));
 			var currentUser = JSON.parse(localStorage.getItem(userInfoKey));
 			var userAccessTokenTimer = null;
-			if (currentUser != null) {
-				userAccessTokenTimer = setExpirationTimer(currentUser.token);
-				updateCurrentUserObject(currentUser.user, currentUser.token);
+			if (token) {
+				updateCurrentUserObject(currentUser);
+				userAccessTokenTimer = setExpirationTimer(token);
 			} else {
-				updateCurrentUserObject(null, null);
+				updateCurrentUserObject(null);
 			}
 			
 			addEvent("storage", window, function (e) {
 				e = e || event;
 				if (e.originalEvent) e = e.originalEvent;
 				
+				var value =  e.newValue;
 				switch (e.key) {
 					case userInfoKey:
-						var value = e.newValue;
-						if (value === undefined || value == null || value == '') {
-							updateCurrentUserObject(null, null);
+						if (value === undefined || value === null || value === '') {
+							updateCurrentUserObject(null);
 						} else {
 							var userObject = JSON.parse(value);
-							updateCurrentUserObject(userObject.user, userObject.token);
+							updateCurrentUserObject(userObject.user);
 						}
 						
 						triggerUserChange(currentUser);
+						break;
+					case tokenKey:
+						syncToken(JSON.parse(value));
 						break;
 				}
 			});
@@ -68,12 +73,18 @@
 			this.get_apiUrl = get_apiUrl;
 			
 			function get_accessToken() {
-				return currentUser.token;
+				return token;
 			}
 			this.get_accessToken = get_accessToken;
 			
 			function update_accessToken(value) {
-				set_user(currentUser.user, value);
+				syncToken(value);
+				
+				if (value === undefined || value == null) {
+					localStorage.removeItem(tokenKey);
+				} else {
+					localStorage.setItem(tokenKey, JSON.stringify(token));
+				}
 			}
 			this.update_accessToken = update_accessToken;
 
@@ -82,15 +93,14 @@
 			}
 			this.get_user = get_user;
 
-			function set_user(userDetails, token) {
-				clearTimeout(userAccessTokenTimer);
-				if (token === undefined || token == null || userDetails === undefined || userDetails == null) {
+			function set_user(userDetails) {
+				
+				if (userDetails === undefined || userDetails == null) {
 					localStorage.removeItem(userInfoKey);
-					updateCurrentUserObject(null, null);
+					updateCurrentUserObject(null);
 				} else {
-					updateCurrentUserObject(userDetails, token);
-					localStorage.setItem(userInfoKey, JSON.stringify(currentUser));
-					userAccessTokenTimer = setExpirationTimer(currentUser.token)
+					updateCurrentUserObject(userDetails);
+					localStorage.setItem(userInfoKey, JSON.stringify(userDetails));
 				}
 			}
 			this.set_user = set_user;
@@ -106,17 +116,13 @@
 				return null;
 			}
 			
-			function updateCurrentUserObject(userDetails, token) {
-				var user = {
-					isAuthenticated: function () {
-						return this.token !== undefined && this.token !== null && (this.token.expireTime === undefined || this.token.expireTime === null || (this.token.expireTime - new Date().getTime()) > 0);
-					}
-				};
-
-				if (userDetails)
-					user.user = userDetails;
-
-				if (token) {
+			function syncToken(newToken) {
+				clearTimeout(userAccessTokenTimer);
+				if (newToken === undefined || newToken == null) {
+					token = undefined;
+					triggerTokenExpired();
+				} else {
+					token = newToken;
 					if (!token.expireTime) {
 						if (token.expires_in) {
 							token.expireTime = new Date().getTime() + (token.expires_in * 1000);
@@ -124,8 +130,19 @@
 							token.expireTime = new Date().getTime() + (token.sliding_window * 1000);
 						}
 					}
-					user.token = token;
+					userAccessTokenTimer = setExpirationTimer(token);
 				}
+			}
+			
+			function updateCurrentUserObject(userDetails) {
+				var user = {
+					isAuthenticated: function () {
+						return token !== undefined && token !== null && (token.expireTime === undefined || token.expireTime === null || (token.expireTime - new Date().getTime()) > 0);
+					}
+				};
+
+				if (userDetails)
+					user.user = userDetails;
 
 				currentUser = user;
 			}
