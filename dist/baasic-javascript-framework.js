@@ -83,14 +83,10 @@
             }
             Application.init = initialize;
 
-            function triggerUserChange(user) {
-                triggerEvent(document, "userChange", {
-                    user: user
+            function triggerTokenExpired(app) {
+                triggerEvent(document, "tokenExpired", {
+                    app: app
                 });
-            }
-
-            function triggerTokenExpired() {
-                triggerEvent(document, "tokenExpired");
             }
 
             function App(apiKey, options) {
@@ -99,7 +95,8 @@
                     defaultLanguage: "en",
                     apiRootUrl: "api.baasic.com",
                     apiVersion: "v1"
-                };
+                },
+                    app = this;
 
                 extend(settings, options);
 
@@ -131,10 +128,13 @@
                             updateCurrentUserObject(userObject.user);
                         }
 
-                        triggerUserChange(currentUser);
+                        triggerEvent(document, "userChange", {
+                            user: currentUser,
+                            app: app
+                        });
                         break;
                     case tokenKey:
-                        syncToken(JSON.parse(value));
+                        syncToken(value !== "" ? JSON.parse(value) : null);
                         break;
                     }
                 });
@@ -186,7 +186,9 @@
                     if (token && token != null && token.expireTime) {
                         var expiresIn = token.expireTime - new Date().getTime();
                         if (expiresIn > 0) {
-                            return setTimeout(triggerTokenExpired, expiresIn);
+                            return setTimeout(function () {
+                                triggerTokenExpired(app);
+                            }, expiresIn);
                         }
                     }
 
@@ -197,7 +199,7 @@
                     clearTimeout(userAccessTokenTimer);
                     if (newToken === undefined || newToken == null) {
                         token = undefined;
-                        triggerTokenExpired();
+                        triggerTokenExpired(app);
                     } else {
                         token = newToken;
                         if (!token.expireTime) {
