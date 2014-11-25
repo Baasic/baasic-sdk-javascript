@@ -1,8 +1,17 @@
 ﻿(function (Baasic) {
 	var AUTH_HEADER = "Authorization";
 	(function (Application) {
-		var browserLanguage = navigator.language || navigator.userLanguage;
-
+		var browserLanguage = navigator.language || navigator.userLanguage,
+			messageBusKey = "baasic-message-bus",
+			messageTypes = {
+				tokenChanged: "tokenChanged",
+				userChanged: "userChanged"
+			};
+		
+		function pushMessage(message) {
+			localStorage.setItem(messageBusKey, JSON.stringify(message));
+		}
+		
 		function initialize(apiKey, options) {
 			return new App(apiKey, options);
 		}
@@ -13,94 +22,113 @@
 		}
 		
 		function App(apiKey, options) {
-			var settings = {
-				useSSL: false,
-				defaultLanguage: "en",
-				apiRootUrl: "api.baasic.com",
-				apiVersion: "v1"
-			},
-			app = this;
+			var userInfoKey = "baasic-user-info-" + apiKey,
+				tokenKey = "baasic-auth-token-" + apiKey,
+				settings = {
+					useSSL: false,
+					defaultLanguage: "en",
+					apiRootUrl: "api.baasic.com",
+					apiVersion: "v1",
+					storeToken: function (token) {
+						if (token === undefined || token == null) {
+							localStorage.removeItem(tokenKey);
+						} else {
+							localStorage.setItem(tokenKey, JSON.stringify(token));
+						}
+					},
+					readToken: function () {
+						return JSON.parse(localStorage.getItem(tokenKey));
+					}, 
+					storeUserInfo: function (userInfo) {
+						if (userInfo === undefined || userInfo == null) {
+							localStorage.removeItem(userInfoKey);
+						} else {
+							localStorage.setItem(userInfoKey, JSON.stringify(userInfo));
+						}
+					},
+					readUserInfo: function () {
+						return JSON.parse(localStorage.getItem(userInfoKey));
+					}
+				},
+				app = this;
 			
 			extend(settings, options);
+						
+			var apiUrl = settings.useSSL ? "https" : "http" + "://" + settings.apiRootUrl + "/" + settings.apiVersion + "/" + apiKey + "/",
+				token = settings.readToken(),
+				userAccessTokenTimer = null,
+				user = {
+					isAuthenticated: function () {
+						var token = app.get_accessToken();
+						return token !== undefined && token !== null && (token.expireTime === undefined || token.expireTime === null || (token.expireTime - new Date().getTime()) > 0);
+					}
+				};
 			
-			var apiUrl = settings.useSSL ? "https" : "http" + "://" + settings.apiRootUrl + "/" + settings.apiVersion + "/" + apiKey + "/";
-			var userInfoKey = "baasic-user-info-" + apiKey;
-			var tokenKey = "baasic-auth-token-" + apiKey;
-			
-			var token = JSON.parse(localStorage.getItem(tokenKey));
-			var currentUser = JSON.parse(localStorage.getItem(userInfoKey));
-			var userAccessTokenTimer = null;
 			if (token) {
-				updateCurrentUserObject(currentUser);
 				userAccessTokenTimer = setExpirationTimer(token);
-			} else {
-				updateCurrentUserObject(null);
 			}
 			
 			addEvent("storage", window, function (e) {
 				e = e || event;
 				if (e.originalEvent) e = e.originalEvent;
 				
-				var value =  e.newValue;
-				switch (e.key) {
-					case userInfoKey:
-						if (value === undefined || value === null || value === '') {
-							updateCurrentUserObject(null);
-						} else {
-							var userObject = JSON.parse(value);
-							updateCurrentUserObject(userObject.user);
-						}
+				if (e.key === messageBusKey) {
+					var value =  e.newValue;
+					if (value && value !== "") {
+						var message = JSON.parse(value);
 						
-						triggerEvent(document, "userChange", { user: currentUser, app: app });
-						break;
-					case tokenKey:
-						syncToken(value !== "" ? JSON.parse(value) : null);
-						break;
+						switch (message.type) {
+							case messageTypes.userChanged:
+								triggerEvent(document, "userChange", { user: app.get_user(), app: app });
+								break;
+							case messageTypes.tokenChanged:
+								syncToken(value !== "" ? JSON.parse(value) : null);
+								break;
+						}
+					}
 				}
 			});
 			
-			function get_apiKey() {
+			this.get_apiKey = function get_apiKey() {
 				return apiKey;
-			}
-			this.get_apiKey = get_apiKey;
+			};
 			
-			function get_apiUrl() {
+			this.get_apiUrl = function get_apiUrl() {
 				return apiUrl;
-			}
-			this.get_apiUrl = get_apiUrl;
+			};
 			
-			function get_accessToken() {
-				return token;
-			}
-			this.get_accessToken = get_accessToken;
+			this.get_accessToken = function get_accessToken() {
+				return settings.readToken();
+			};
 			
-			function update_accessToken(value) {
+			this.update_accessToken = function update_accessToken(value) {
 				syncToken(value);
 				
-				if (value === undefined || value == null) {
-					localStorage.removeItem(tokenKey);
-				} else {
-					localStorage.setItem(tokenKey, JSON.stringify(token));
-				}
-			}
-			this.update_accessToken = update_accessToken;
-
-			function get_user() {
-				return currentUser;
-			}
-			this.get_user = get_user;
-
-			function set_user(userDetails) {
+				settings.storeToken(value);
 				
-				if (userDetails === undefined || userDetails == null) {
-					localStorage.removeItem(userInfoKey);
-					updateCurrentUserObject(null);
+				pushMessage({
+					type: messageTypes.tokenChanged
+				});
+			};
+
+			this.get_user = function get_user() {
+				var userInfo = settings.readUserInfo();
+				if (userInfo) {
+					user.user = userInfo;
 				} else {
-					updateCurrentUserObject(userDetails);
-					localStorage.setItem(userInfoKey, JSON.stringify(userDetails));
+					delete user.user;
 				}
-			}
-			this.set_user = set_user;
+				
+				return user;
+			};
+			
+			this.set_user = function set_user(userDetails) {
+				settings.storeUserInfo(userDetails);
+				
+				pushMessage({
+					type: messageTypes.userChanged
+				});
+			};
 
 			function setExpirationTimer(token) {
 				if (token && token != null && token.expireTime) {
@@ -118,35 +146,20 @@
 			function syncToken(newToken) {
 				clearTimeout(userAccessTokenTimer);
 				if (newToken === undefined || newToken == null) {
-					token = undefined;
 					triggerTokenExpired(app);
 				} else {
-					token = newToken;
-					if (!token.expireTime) {
-						if (token.expires_in) {
-							token.expireTime = new Date().getTime() + (token.expires_in * 1000);
-						} else if (token.sliding_window) {
-							token.expireTime = new Date().getTime() + (token.sliding_window * 1000);
+					if (!newToken.expireTime) {
+						if (newToken.expires_in) {
+							newToken.expireTime = new Date().getTime() + (newToken.expires_in * 1000);
+						} else if (newToken.sliding_window) {
+							newToken.expireTime = new Date().getTime() + (newToken.sliding_window * 1000);
 						}
 					}
-					userAccessTokenTimer = setExpirationTimer(token);
+					userAccessTokenTimer = setExpirationTimer(newToken);
 				}
 			}
-			
-			function updateCurrentUserObject(userDetails) {
-				var user = {
-					isAuthenticated: function () {
-						return token !== undefined && token !== null && (token.expireTime === undefined || token.expireTime === null || (token.expireTime - new Date().getTime()) > 0);
-					}
-				};
-
-				if (userDetails)
-					user.user = userDetails;
-
-				currentUser = user;
-			}
-
-			function get_currentLanguage() {
+						
+			this.get_currentLanguage = function get_currentLanguage() {
 				if (settings.language) {
 					return settings.language;
 				}
@@ -155,13 +168,11 @@
 				} else {
 					return get_defaultLanguage();
 				}
-			}
-			this.get_currentLanguage = get_currentLanguage;
-
-			function get_defaultLanguage() {
+			};
+			
+			this.get_defaultLanguage = function get_defaultLanguage() {
 				return settings.defaultLanguage;
-			}
-			this.get_defaultLanguage = get_defaultLanguage;
+			};
 		}
 		
 	})(Baasic.Application || (Baasic.Application = {}));
