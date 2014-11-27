@@ -4,7 +4,7 @@
 		var browserLanguage = navigator.language || navigator.userLanguage,
 			messageBusKey = "baasic-message-bus",
 			messageTypes = {
-				tokenChanged: "tokenChanged",
+				tokenExpired: "tokenExpired",
 				userChanged: "userChanged"
 			};
 		
@@ -19,6 +19,10 @@
 				
 		function triggerTokenExpired(app) {
 			triggerEvent(document, "tokenExpired", { app: app });
+			
+			pushMessage({
+				type: messageTypes.tokenExpired
+			});
 		}
 		
 		function App(apiKey, options) {
@@ -30,7 +34,7 @@
 					apiRootUrl: "api.baasic.com",
 					apiVersion: "v1",
 					storeToken: function (token) {
-						if (token === undefined || token == null) {
+						if (token === undefined || token === null) {
 							localStorage.removeItem(tokenKey);
 						} else {
 							localStorage.setItem(tokenKey, JSON.stringify(token));
@@ -40,7 +44,7 @@
 						return JSON.parse(localStorage.getItem(tokenKey));
 					}, 
 					storeUserInfo: function (userInfo) {
-						if (userInfo === undefined || userInfo == null) {
+						if (userInfo === undefined || userInfo === null) {
 							localStorage.removeItem(userInfoKey);
 						} else {
 							localStorage.setItem(userInfoKey, JSON.stringify(userInfo));
@@ -81,8 +85,9 @@
 							case messageTypes.userChanged:
 								triggerEvent(document, "userChange", { user: app.get_user(), app: app });
 								break;
-							case messageTypes.tokenChanged:
-								syncToken(value !== "" ? JSON.parse(value) : null);
+							case messageTypes.tokenExpired:
+								syncToken(null);
+								triggerEvent(document, "tokenExpired", { app: app });
 								break;
 						}
 					}
@@ -106,9 +111,9 @@
 				
 				settings.storeToken(value);
 				
-				pushMessage({
-					type: messageTypes.tokenChanged
-				});
+				if (value === undefined || value === null) {
+					triggerTokenExpired(app);
+				}
 			};
 
 			this.get_user = function get_user() {
@@ -145,9 +150,7 @@
 			
 			function syncToken(newToken) {
 				clearTimeout(userAccessTokenTimer);
-				if (newToken === undefined || newToken == null) {
-					triggerTokenExpired(app);
-				} else {
+				if (newToken !== undefined && newToken !== null) {
 					if (!newToken.expireTime) {
 						if (newToken.expires_in) {
 							newToken.expireTime = new Date().getTime() + (newToken.expires_in * 1000);
