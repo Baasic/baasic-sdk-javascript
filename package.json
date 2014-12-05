@@ -1,6 +1,6 @@
 {
   "name": "baasic-javascript-framework",
-  "version": "0.1.26",
+  "version": "0.1.27",
   "devDependencies": {
     "gulp": ">3.4.0",
 	"gulp-beautify": "1.0.3",

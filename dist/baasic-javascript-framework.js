@@ -84,6 +84,8 @@
                 };
 
             function pushMessage(message) {
+                localStorage.removeItem(messageBusKey);
+
                 localStorage.setItem(messageBusKey, JSON.stringify(message));
             }
 
