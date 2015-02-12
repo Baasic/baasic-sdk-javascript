@@ -1,32 +1,32 @@
 {
   "name": "baasic-javascript-framework",
-  "version": "0.1.27",
+  "version": "0.1.29",
   "description": "Baasic JavaScript SDK Core services.",
   "keywords": [
     "javascript",
     "baasic",
-	"ajax",
+    "ajax",
     "backend"
   ],
   "license": "MIT",
   "main": "dist/*",
   "ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests",
-        "src",
-        "spec",
-		"NuGet",
-		"lib",
-        "bower.json",
-        "gulpfile.js",
-        "package.json",
-        "README.md"
-    ],
-  "devDependencies": {
-  },
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "spec",
+    "NuGet",
+    "lib",
+	"baasic-jquery-framework.js",
+    "bower.json",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "devDependencies": {},
   "dependencies": {
   }
 }
