@@ -20,7 +20,7 @@
     "spec",
     "NuGet",
     "lib",
-	"baasic-jquery-framework.js",
+	"baasic-jquery-framework*.js",
     "bower.json",
     "gulpfile.js",
     "package.json",
