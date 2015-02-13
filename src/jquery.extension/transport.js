@@ -1,18 +1,20 @@
-﻿(function (app) {
-    var AUTH_HEADER = "Authorization";
+﻿/* global MonoSoftware, $ */
 
-    if ((!$.support.cors || navigator.userAgent.indexOf("MSIE") != -1) && window.postMessage) {
+(function (app) {
+    var AUTH_HEADER = 'Authorization';
+
+    if ((!$.support.cors || navigator.userAgent.indexOf('MSIE') !== -1) && window.postMessage) {
         setupProxyTransport();
     } else {
         setupCORS();
     }
 
     function isApiCall(url) {
-        return url.indexOf(app.get_apiUrl()) == 0;
+        return url.indexOf(app.getApiUrl()) === 0;
     }
 
     function setupCORS() {
-        $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+        $.ajaxPrefilter(function (options) {
             if (isApiCall(options.url)) {
                 prepareApiCall(options);
                 if (options.crossDomain) {
@@ -25,14 +27,16 @@
     }
 
     function setupProxyTransport() {
-        var injectFrame = $('<div style="display:none"><iframe src="' + apiUrl + 'proxy/jquery"></iframe></div>');
-        injectFrame.find("iframe").on("load", function () {
-            var requestHash = new Object();
+		var apiUrl = app.getApiUrl(),
+			injectFrame = $('<div style="display:none"><iframe src="' + apiUrl + 'proxy/jquery"></iframe></div>');
+			
+        injectFrame.find('iframe').on('load', function () {
+            var requestHash = {};
             var nextRequestId = 0;
             var iframe = this;
-            $(window).on("message", function (e) {
+            $(window).on('message', function (e) {
                 var event = e.originalEvent;
-                if (event.source == iframe.contentWindow) {
+                if (event.source === iframe.contentWindow) {
                     var response = JSON.parse(event.data);
                     var originalRequest = requestHash[response.requestId];
                     if (originalRequest) {
@@ -44,7 +48,7 @@
                 }
             });
 
-            $.ajaxTransport("+*", function (options, originalOptions, jqXHR) {
+            $.ajaxTransport('+*', function (options, originalOptions) {
                 if (isApiCall(options.url)) {
                     prepareApiCall(originalOptions);
                     return {
@@ -66,24 +70,16 @@
                 }
             });
         });
-        $("body").append(injectFrame);
+        $('body').append(injectFrame);
     }
 
     function prepareApiCall(options) {
-        var authToken = app.get_accessToken();
-        if (authToken != null) {
+        var authToken = app.getAccessToken();
+        if (authToken !== null) {
             var headers = options.headers || (options.headers = {});
-            
+            /*jshint camelcase: false */
             headers[AUTH_HEADER] = authToken.token_type + ' ' + authToken.access_token;
         }
     }
-
-    function updateAuthenticationToken(jqXHR) {
-        var authHeader = jqXHR.getResponseHeader(AUTH_HEADER);
-        if (authHeader) {
-            app.set_AccessToken(authHeader);
-        }
-    }
-
 })(MonoSoftware.Baasic.Application);
         

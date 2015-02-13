@@ -1,16 +1,20 @@
+/* global $, extend */
+/* exported addEvent, triggerEvent */
+
 var addEvent = $ !== undefined ? 
 	function (evnt, elem, func) {
 		$(elem).on(evnt, func);
 	} :
 	function (evnt, elem, func) {
-	   if (elem.addEventListener)  
-		  elem.addEventListener(evnt,func,false);
-	   else if (elem.attachEvent) { 
-		  elem.attachEvent("on"+evnt, func);
-	   }
-	   else { 
-		  elem["on" + evnt] = func;
-	   }
+	    if (elem.addEventListener)  {
+		   elem.addEventListener(evnt,func,false);
+	    }
+	    else if (elem.attachEvent) { 
+		   elem.attachEvent('on'+evnt, func);
+	    }
+	    else { 
+		   elem['on' + evnt] = func;
+	    }
 	};
 
 var triggerEvent = $ !== undefined ? 
@@ -21,14 +25,13 @@ var triggerEvent = $ !== undefined ?
 	function (element, eventName, additionalData) {
 		var event; // The custom event that will be created
 		
-		if (CustomEvent && typeof CustomEvent === "function") {
+		if (CustomEvent && typeof CustomEvent === 'function') {
 			event = extend(new CustomEvent(eventName));
 			element.dispatchEvent(event);
 			
 			return;
-		}
-		else if (document.createEvent) {
-			event = document.createEvent("CustomEvent");
+		} else if (document.createEvent) {
+			event = document.createEvent('CustomEvent');
 			event.initEvent(eventName, true, true);
 			
 			if (additionalData) {
@@ -42,7 +45,6 @@ var triggerEvent = $ !== undefined ?
 			}
 			
 			return;
-			
 		} else {
 			event = document.createEventObject();
 			event.eventType = eventName;
@@ -50,7 +52,7 @@ var triggerEvent = $ !== undefined ?
 			if (additionalData) {
 				extend(event, additionalData);
 			}
-			element.fireEvent("on" + event.eventType, event);
+			element.fireEvent('on' + event.eventType, event);
 			
 			return;
 		}
@@ -58,10 +60,12 @@ var triggerEvent = $ !== undefined ?
 		if (element.dispatchEvent) {
 			element.dispatchEvent(event);
 		} else if (element.fireEvent) {
-			element.fireEvent("on" + event.eventType, event);
+			element.fireEvent('on' + event.eventType, event);
 		} else {
-			var handler = element["on" + event.eventType];
-			if (handler) handler(event);
+			var handler = element['on' + event.eventType];
+			if (handler) {
+				handler(event);
+			}
 		}
 	};
 	
