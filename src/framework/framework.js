@@ -61,7 +61,7 @@
 			
 			extend(settings, options);
 						
-			var apiUrl = settings.useSSL ? 'https' : 'http' + '://' + settings.apiRootUrl + '/' + settings.apiVersion + '/' + apiKey + '/',
+			var apiUrl = (settings.useSSL ? 'https' : 'http') + '://' + settings.apiRootUrl + '/' + settings.apiVersion + '/' + apiKey + '/',
 				token = settings.readToken(),
 				userAccessTokenTimer = null,
 				user = {
