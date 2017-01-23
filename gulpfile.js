@@ -1,6 +1,7 @@
 /* jshint node: true */
 'use strict';
 
+var injectVersion = require('gulp-inject-version');
 var gulp = require('gulp'),
 	plugins = require('gulp-load-plugins')(),
 	stylish = require('jshint-stylish');
@@ -9,11 +10,12 @@ gulp.task('framework', function() {
   return gulp.src('src/framework/**/*.js')
 	.pipe(plugins.order(['utility.js', 'browserEvents.js', '*.js']))
 	.pipe(plugins.concat('baasic-javascript-framework.js'))
-	.pipe(plugins.header('(function (window, document, $, undefined) {\nvar MonoSoftware = window.MonoSoftware || (window.MonoSoftware = {});\n'))
+	.pipe(plugins.header('/*\n Baasic SDK JavaScript %%GULP_INJECT_VERSION%%\n (c) 2014-2016 Mono http://baasic.com\n License: MIT\n*/\n(function (window, document, $, undefined) {\nvar MonoSoftware = window.MonoSoftware || (window.MonoSoftware = {});\n'))
 	.pipe(plugins.footer('\n}(window, document, window.jQuery));'))
+    .pipe(injectVersion())
 	.pipe(plugins.beautify())
 	.pipe(gulp.dest('dist'))
-	.pipe(plugins.uglify())
+	.pipe(plugins.uglify({output: {comments: /^!|License: MIT/i}}))
 	.pipe(plugins.rename('baasic-javascript-framework.min.js'))
 	.pipe(gulp.dest('dist'));
 });
@@ -23,7 +25,7 @@ gulp.task('jqueryTransport', function() {
 	.pipe(plugins.concat('baasic-jquery-framework.js'))
 	.pipe(plugins.beautify())
 	.pipe(gulp.dest('dist'))
-	.pipe(plugins.uglify())
+	.pipe(plugins.uglify({output: {comments: /^!|License: MIT/i}}))
 	.pipe(plugins.rename('baasic-jquery-framework.min.js'))
 	.pipe(gulp.dest('dist'));
 });

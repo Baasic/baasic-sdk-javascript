@@ -1,3 +1,8 @@
+/*
+ Baasic SDK JavaScript v0.9.0
+ (c) 2014-2016 Mono http://baasic.com
+ License: MIT
+*/
 (function (window, document, $, undefined) {
     var MonoSoftware = window.MonoSoftware || (window.MonoSoftware = {}); /* exported extend */
 
@@ -86,6 +91,7 @@
                 messageBusKey = 'baasic-message-bus',
                 messageTypes = {
                     tokenExpired: 'tokenExpired',
+                    tokenUpdated: 'tokenUpdated',
                     userChanged: 'userChanged'
                 };
 
@@ -107,6 +113,16 @@
 
                 pushMessage({
                     type: messageTypes.tokenExpired
+                });
+            }
+
+            function triggerTokenUpdated(app) {
+                triggerEvent(document, 'tokenUpdated', {
+                    app: app
+                });
+
+                pushMessage({
+                    type: messageTypes.tokenUpdated
                 });
             }
 
@@ -181,6 +197,11 @@
                                     app: app
                                 });
                                 break;
+                            case messageTypes.tokenUpdated:
+                                triggerEvent(document, 'tokenUpdated', {
+                                    app: app
+                                });
+                                break;
                             }
                         }
                     }
@@ -205,6 +226,8 @@
 
                     if (value === undefined || value === null) {
                         triggerTokenExpired(app);
+                    } else {
+                        triggerTokenUpdated(app);
                     }
                 };
 
@@ -228,12 +251,15 @@
                 };
 
                 function setExpirationTimer(token) {
-                    if (token && token !== null && token.expireTime) {
+                    if (token && token.expireTime) {
                         var expiresIn = token.expireTime - new Date().getTime();
                         if (expiresIn > 0) {
                             return setTimeout(function () {
+                                settings.storeToken(null);
                                 triggerTokenExpired(app);
                             }, expiresIn);
+                        } else {
+                            settings.storeToken(null);
                         }
                     }
 
