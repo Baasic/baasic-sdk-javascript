@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es5"
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "src/article",
+        "src/key-value",
+        "src/value-set",
+        "src/baasicBaseRouteDefinition.ts",
+        "src/IOptions.ts",
+        "src/modelMapper.ts"
+    ]
+}

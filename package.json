@@ -1,21 +1,31 @@
 {
-  "name": "baasic-javascript-framework",
-  "version": "0.9.0",
-  "devDependencies": {
-    "gulp": ">3.4.0",
-    "gulp-beautify": "1.0.3",
-    "gulp-concat": ">2.1.7",
-    "gulp-footer": ">1.0.4",
-    "gulp-header": "1.1.1",
-    "gulp-inject-version": "^1.0.1",
-    "gulp-jshint": "^1.9.0",
-    "gulp-load-plugins": "0.5.0",
-    "gulp-ngmin": "0.2.0",
-    "gulp-order": "1.1.1",
-    "gulp-rename": "1.2.0",
-    "gulp-replace": "0.4.0",
-    "gulp-uglify": ">0.0.21",
-    "jshint-stylish": "^1.0.0"
+  "name": "baasic-sdk-core",
+  "version": "1.0.0",
+  "description": "JavaScript SDK provides core functionality for building web and mobile applications on [Baasic](http://www.baasic.com/).",
+  "main": "build/lib/index.js",
+  "types": "build/lib/types/index.d.ts",
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "run-p watch:*",
+    "watch:tsc": "npm run build:tsc -- --watch",
+    "watch:webpack": "webpack --config webpack.watch-dev.js",
+    "build:dev": "npm run clean:build && npm run build:tsc && webpack --config webpack.dev.js --bail",
+    "build:prod": "npm run clean:build && npm run build:tsc && webpack --config webpack.prod.js --bail",
+    "build:tsc": "tsc --outDir build/lib --declaration --declarationDir build/lib/types",
+    "clean:build": "rimraf build"
   },
-  "dependencies": {}
+  "keywords": [],
+  "author": "Mono Software",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "@types/webpack": "^2.2.5",
+    "npm-run-all": "^4.0.1",
+    "rimraf": "^2.5.4",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.6",
+    "webpack": "^2.2.1",
+    "webpack-merge": "^2.6.1",
+    "webpack-uglify-js-plugin": "^1.1.9"
+  }
 }
