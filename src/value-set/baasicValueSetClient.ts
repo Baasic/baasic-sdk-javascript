@@ -4,8 +4,9 @@
  */
 
 import { BaasicValueSetItemClient, BaasicValueSetRouteDefinition } from '.';
-import { IValueSet } from './models';
-import { IBaasicQueryModel, IOptions, ModelMapper } from '..';
+import { IValueSet } from './contracts';
+import { ModelMapper } from '..';
+import { IBaasicQueryModel, IOptions } from '../contracts';
 
 export class BaasicValueSetClient {
 

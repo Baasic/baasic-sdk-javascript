@@ -4,8 +4,9 @@
  */
 
 import { BaasicKeyValueRouteDefinition } from '.';
-import { IKeyValue } from './models';
-import { IBaasicQueryModel, IOptions, ModelMapper } from '..';
+import { IKeyValue } from './contracts';
+import { ModelMapper } from '..';
+import { IBaasicQueryModel, IOptions } from '../contracts';
 
 export class BaasicKeyValueClient {
     
