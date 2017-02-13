@@ -4,7 +4,7 @@
  * @description Baasic Register Client provides an easy way to consume Baasic Application Registration REST API end-points. In order to obtain needed routes `baasicRegisterClient` uses `baasicRegisterRouteDefinition`. 
  */
 
-import { BaasicRegisterRouteDefinition } from '.';
+import { BaasicRegisterRouteDefinition } from 'membership';
 import { ModelMapper } from '..';
 
 export class BaasicRegisterClient {

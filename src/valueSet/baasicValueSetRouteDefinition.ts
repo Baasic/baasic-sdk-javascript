@@ -4,7 +4,7 @@
  */
 
 import { BaasicBaseRouteDefinition } from '..';
-import { BaasicValueSetItemRouteDefinition } from '.';
+import { BaasicValueSetItemRouteDefinition } from 'valueSet';
 
 export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
 

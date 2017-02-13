@@ -4,7 +4,7 @@
  * @description Baasic Password Recovery Client provides an easy way to consume Baasic Password Recovery REST API end-points. In order to obtain needed routes `baasicPasswordRecoveryClient` uses `baasicPasswordRecoveryRouteDefinition`. 
 */
 
-import { BaasicPasswordRecoveryRouteDefinition } from '.';
+import { BaasicPasswordRecoveryRouteDefinition } from 'membership';
 
 export class BaasicPasswordRecoveryClient {
 

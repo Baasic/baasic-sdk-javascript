@@ -3,10 +3,10 @@
  * @description Baasic Value Set Item Client provides an easy way to consume Baasic Value Set Item REST end-points. In order to obtain needed routes `baasicValueSetItemClient` uses `baasicValueSetItemRouteDefinition`. 
  */
 
-import { BaasicValueSetRouteDefinition } from '.';
-import { IValueSetItem } from './contracts';
+import { BaasicValueSetRouteDefinition } from 'valueSet';
+import { IValueSetItem } from 'valueSet/contracts';
 import { ModelMapper } from '..';
-import { IBaasicQueryModel, IOptions } from '../contracts';
+import { IBaasicQueryModel, IOptions } from 'contracts';
 
 export class BaasicValueSetItemClient {
 

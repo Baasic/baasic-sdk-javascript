@@ -3,10 +3,10 @@
  * @description Baasic Key Value Client provides an easy way to consume Baasic Key Value REST API end-points. In order to obtain needed routes `baasicKeyValueClient` uses `baasicKeyValueRouteClient`. 
  */
 
-import { BaasicKeyValueRouteDefinition } from '.';
-import { IKeyValue } from './contracts';
+import { BaasicKeyValueRouteDefinition } from 'keyValue';
+import { IKeyValue } from 'keyValue/contracts';
 import { ModelMapper } from '..';
-import { IBaasicQueryModel, IOptions } from '../contracts';
+import { IBaasicQueryModel, IOptions } from 'contracts';
 
 export class BaasicKeyValueClient {
     
