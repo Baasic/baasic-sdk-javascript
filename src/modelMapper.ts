@@ -58,7 +58,8 @@ export class ModelMapper {
     }
 
     /**                 
-     * Parses Baasic Api pagination, sorting and search parameters.                 
+     * Parses Baasic Api pagination, sorting and search parameters.
+     * @param options query resources options object                 
      * @method                        
      * @example modelMapper.findParams({ pageNumber:1, pageSize:10 });
      **/     
@@ -68,15 +69,19 @@ export class ModelMapper {
     
     /**
      * Parses specified key parameters; initial object can be expanded with additional parameters.
+     * @param id Resources unique identifier
+     * @param options query resources options object
+     * @param propName property name
      * @method
      * @example modelMapper.getParams(('<value>', {additionalOptions: '<option>'},'<property-name>'));
      **/ 	
-    getParams(id: any, options: any, propName?: any) {
+    getParams(id: string, options: any, propName?: any) {
         return this.KeyParams(id, options, propName);
     }
 
     /**
      * Performs create resource transforms on an object so that it can be safely expanded with additional properties.
+     * @param data data object
      * @method
      * @example modelMapper.createParams({});
      **/ 	
@@ -86,6 +91,7 @@ export class ModelMapper {
 
     /**
      * Performs update resource transforms on transforms an object so that it can be safely expanded with additional properties.
+     * @param data data object
      * @method
      * @example modelMapper.updateParams({});
      **/ 	
@@ -95,6 +101,7 @@ export class ModelMapper {
 
     /**
      * Performs remove resource transforms on transforms an object so that it can be safely expanded with additional properties.
+     * @param data data object
      * @method 
      * @example modelMapper.removeParams({});
      **/ 	

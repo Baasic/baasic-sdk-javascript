@@ -4,10 +4,8 @@
  * @description Baasic Article Comment Replies Client provides an easy way to consume Baasic Article Comment Replies REST API end-points. `baasicArticleCommentRepliesService` functions enable performing standard CRUD operations directly on article comment reply resources, whereas the `baasicArticleClient` functions allow management between article and article comment reply. In order to obtain needed routes `baasicArticleCommentRepliesService` uses `baasicArticleCommentRepliesRouteDefinition`. 
 */
 
-import { BaasicArticleCommentRepliesRouteDefinition } from './baasicArticleCommentRepliesRouteDefinition';
-import { IOptions } from '../IOptions';
-import { IStatuses } from './IStatuses';
-import { ModelMapper } from '../modelMapper';
+import { BaasicArticleCommentRepliesRouteDefinition, IStatuses } from '.';
+import { IOptions, ModelMapper } from '..';
 
 export class BaasicArticleCommentRepliesClient {
     

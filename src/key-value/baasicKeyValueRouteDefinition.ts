@@ -4,7 +4,7 @@
  * @description Baasic Key Value Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Key Value Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition } from '../baasicBaseRouteDefinition';
+import { BaasicBaseRouteDefinition } from '..';
 
 export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
     /**                
@@ -14,6 +14,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the key value property to sort the result collection by. 
      * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @returns key value query resources uri with search params
      * @method
      * @example baasicKeyValueRouteDefinition.find.expand({searchQuery: '<search-phrase>'});
      **/
@@ -23,6 +24,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
 
      /**
       * Parses get key value route which must be expanded with the Id of the previously created key value resource in the system.
+      * @returns key value get resource uri
       * @method 
       * @example baasicKeyValueRouteDefinition.get.expand({id: '<key-value-id>'});
       **/   	
@@ -32,20 +34,12 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
 
     /**
      * Parses create key value route; this URI template does not expose any additional options.
+     * @returns key value create new resource uri
      * @method
      * @example baasicKeyValueRouteDefinition.create.expand({});
      **/  	
     create(): any {
         return this.baasicUriTemplateProcessor.parse("key-values");
-    }
-
-    /**                 
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
-     * @method
-     * @example baasicKeyValueRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
-     **/ 				
-    parse(link: string): any {
-        super.parse(link);
     }
 }
 

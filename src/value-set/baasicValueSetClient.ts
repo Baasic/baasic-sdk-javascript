@@ -3,9 +3,8 @@
  * @description Baasic Value Set Client provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`. 
  */
 
-import { BaasicValueSetRouteDefinition } from './baasicValueSetRouteDefinition';
-import { IOptions } from '../IOptions';
-import { ModelMapper } from '../modelMapper';
+import { BaasicValueSetRouteDefinition } from '.';
+import { IOptions, ModelMapper } from '..';
 
 export class BaasicValueSetClient {
 
@@ -14,7 +13,7 @@ export class BaasicValueSetClient {
      /**
       * Provides direct access to `baasicValueSetRouteDefinition`.
       * @method
-      * @example baasicValueSetClient.routeService.get().expand(expandObject);
+      * @example baasicValueSetClient.routeDefinition.get().expand(expandObject);
      **/ 
     get routeDefinition(): BaasicValueSetRouteDefinition {
         return this.baasicValueSetRouteDefinition;
@@ -27,6 +26,7 @@ export class BaasicValueSetClient {
 
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
+     * @param options query resource options object
      * @method 
      * @example baasicValueSetClient.find({
                     pageNumber: 1,
@@ -48,6 +48,8 @@ export class BaasicValueSetClient {
 
      /**
       * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set resource.
+      * @param setName value set name
+      * @param options query resource options object
       * @method
       * @example baasicValueSetClient.get('<value-set-name>')
                     .success(function (data) {   
@@ -63,6 +65,7 @@ export class BaasicValueSetClient {
 
     /**
      * Returns a promise that is resolved once the create value set action has been performed; this action creates a new value set resource.
+     * @param data A key value object that needs to be inserted into the system.
      * @method
      * @example baasicValueSetClient.create({
                     name: '<value-set-name>',
@@ -86,6 +89,7 @@ export class BaasicValueSetClient {
      * let params = modelMapper.removeParams(valueSet); 
      * let uri = params['model'].links('put').href; 
      * ```
+     * @param data value set object used to update specified value set resource.
      * @method
      * @example 
         // valueSet is a resource previously fetched using get action. 
@@ -114,6 +118,7 @@ class BaasicValueSetItemClient {
 
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
+     * @param options query resource options object
      * @method items.find
      * @example baasicValueSetClient.items.find({
                     setName: '<value-set-name>',
@@ -135,6 +140,9 @@ class BaasicValueSetItemClient {
 
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set item resource.
+     * @param setName value set name
+     * @param id unique identifier of value set resource
+     * @param options query resource options object
      * @method items.get
      * @example baasicValueSetClient.items.get('<value-set-name>', '<set-item-id>')
                    .success(function (data) {   
@@ -152,6 +160,7 @@ class BaasicValueSetItemClient {
 
     /**
      * Returns a promise that is resolved once the create value set item action has been performed; this action creates a new value set item resource.
+     * @param data A value set object that needs to be inserted into the system.
      * @method items.create
      * @example baasicValueSetClient.items.create({
                     setId: '<value-set-id>', 
@@ -172,7 +181,9 @@ class BaasicValueSetItemClient {
      * Returns a promise that is resolved once the update value set item action has been performed; this action updates a value set item resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicValueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(valueSetItem); 
-     * let uri = params['model'].links('put').href; ```
+     * let uri = params['model'].links('put').href; 
+     * ```
+     * @param data A value set object used to update specified value set resource.
      * @method items.update
      * @example // valueSetItem is a resource previously fetched using get action. 
                 valueSetItem.value = '<new-value>'; 
@@ -195,6 +206,7 @@ class BaasicValueSetItemClient {
      * let params = modelMapper.removeParams(valueSetItem); 
      * let uri = params['model'].links('delete').href; 
      * ```
+     * @param data A value set object used to delete specified value set resource.
      * @method items.remove 
      * @example // valueSetItem is a resource previously fetched using get action.
                 baasicValueSetClient.items.remove(valueSetItem)

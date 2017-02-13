@@ -4,9 +4,8 @@
  * @description Baasic Article Settings Client provides an easy way to consume Baasic Article Settings REST API end-points. In order to obtain needed routes `baasicArticleSettingsClient` uses `baasicArticleSettingsRouteDefinition`. 
  */
 
-import { BaasicArticleSettingsRouteDefinition } from './baasicArticleSettingsRouteDefinition';
-import { IOptions } from '../IOptions';
-import { ModelMapper } from '../modelMapper';
+import { BaasicArticleSettingsRouteDefinition } from '.';
+import { IOptions, ModelMapper } from '..';
 
 export class baasicArticleSettingsClient {
 

@@ -40,15 +40,6 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
     create(): any {
         return this.baasicUriTemplateProcessor.parse("value-sets");
     }
-
-    /**
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
-     * @method 
-     * @example baasicValueSetRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
-     **/  	
-    parse(link: string): any {
-        return super.parse(link);
-    }
 }
 
 
@@ -96,15 +87,6 @@ class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition {
 
     delete(params: any): any {
         return super.delete(params);
-    }
-
-    /**
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
-     * @method 
-     * @example baasicValueSetItemRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
-     **/ 						
-    parse(link: string): any {
-        return super.parse(link);
     }
 }
 

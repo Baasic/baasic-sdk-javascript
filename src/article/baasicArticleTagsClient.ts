@@ -4,9 +4,8 @@
  * @description Baasic Article Tags Definition provides an easy way to consume Baasic Article Tags REST API end-points. `baasicArticleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
 */
 
-import { BaasicArticleTagsRouteDefinition } from './baasicArticleTagsRouteDefinition':
-import { IOptions } from '../IOptions';
-import { ModelMapper } from '../modelMapper';
+import { BaasicArticleTagsRouteDefinition } from '.';
+import { IOptions, ModelMapper } from '..';
 
 export class BaasicArticleTagsClient {
 

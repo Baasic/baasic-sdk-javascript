@@ -4,7 +4,7 @@
  * @description Baasic Article Comments Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Comments Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
-import { BaasicBaseRouteDefinition } from '../baasicBaseRouteDefinition';
+import { BaasicBaseRouteDefinition } from '..';
 
 export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinition {
     

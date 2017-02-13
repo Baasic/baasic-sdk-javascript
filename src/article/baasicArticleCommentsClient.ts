@@ -4,10 +4,8 @@
  * @description Baasic Article Comments Client provides an easy way to consume Baasic Article Comments REST API end-points. `baasicArticleCommentsClient` functions enable performing standard CRUD operations directly on article comment resources, whereas the `baasicArticleClient` functions allow management between article and article comments. In order to obtain needed routes `baasicArticleCommentsClient` uses `baasicArticleCommentsRouteDefinition`. 
  */
 
-import { BaasicArticleCommentsRouteDefinition } from './baasicArticleCommentsRouteDefinition';
-import { IOptions } from '../IOptions';
-import { IStatuses } from './IStatuses';
-import { ModelMapper } from '../modelMapper';
+import { BaasicArticleCommentsRouteDefinition, IStatuses } from '.';
+import { IOptions, ModelMapper } from '..';
 
 export class BaasicArticleCommentClient {
     

@@ -4,9 +4,8 @@
  * @description Baasic Article Ratings Client provides an easy way to consume Baasic Article Ratings REST API end-points. `baasicArticleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `baasicArticleService` functions allow management between article and article rating. In order to obtain needed routes `baasicArticleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
 */
 
-import { BaasicArticleRatingsRouteDefinition } from './baasicArticleRatingsRouteDefinition';
-import { IOptions } from '../IOptions';
-import { ModelMapper } from '../modelMapper';
+import { BaasicArticleRatingsRouteDefinition } from '.';
+import { IOptions, ModelMapper } from '../IOptions';
 
 export class BaasicArticleRatingsClient {
 
