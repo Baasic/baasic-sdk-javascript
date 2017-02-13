@@ -4,7 +4,8 @@
  */
 
 import { BaasicKeyValueRouteDefinition } from '.';
-import { IOptions, ModelMapper } from '..';
+import { IKeyValue } from './models';
+import { IBaasicQueryModel, IOptions, ModelMapper } from '..';
 
 export class BaasicKeyValueClient {
     
@@ -40,7 +41,7 @@ export class BaasicKeyValueClient {
                     // perform error handling here 
                 });                     
      **/ 	
-    find(options: IOptions): Promise<any> {
+    find(options: IOptions): Promise<IBaasicQueryModel<IKeyValue>> {
         return this.baasicApiHttp.get(this.baasicKeyValueRouteDefinition.find().expand(this.modelMapper.findParams(options)));
     }
 
@@ -57,7 +58,7 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     });                  
      **/	
-    get(id: string, options: IOptions): Promise<any> {
+    get(id: string, options: IOptions): Promise<IKeyValue> {
         return this.baasicApiHtpp.get(this.baasicKeyValueRouteDefinition.get().expand(this.modelMapper.findParams(options)));
     }
 
@@ -73,7 +74,7 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     });
      */ 		
-    create(data: IKeyValue): Promise<any> {
+    create(data: IKeyValue): Promise<IKeyValue> {
         return this.baasicApiHttp.post(this.baasicKeyValueRouteDefinition.create().expand(), 
                     this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
     }
@@ -96,7 +97,7 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     }); 				
      **/					
-    update(data: IKeyValue): Promise<any> {
+    update(data: IKeyValue): Promise<IKeyValue> {
         let params = this.modelMapper.updateParams(data);
         return this.baasicApiHttp.put(this.baasicKeyValueRouteDefinition.update(params), params[this.baasicConstants.modelPropertyName]);
     }
@@ -118,19 +119,10 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     });
      **/	
-    remove(data: IKeyValue): Promise<any> {
+    remove(data: IKeyValue): Promise<void> {
         let params = this.modelMapper.removeParams(data);
         return this.baasicApiHttp.delete(this.baasicKeyValueRouteDefinition.delete(params), params[this.baasicConstants.modelProeprtyName]);
     }
-}
-
-interface IKeyValue {
-    key: string,
-    value: string,
-    dateCreated?: string,
-    dateUpdated?: string,
-    id?: string,
-    embed?: string
 }
 
 /**  
