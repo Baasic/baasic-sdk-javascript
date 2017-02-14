@@ -16,7 +16,7 @@ export class Utility {
      * @returns destination object with new properties from source object.
      */
     extend(dstObj: any, srcObj: any): any {
-        if(!this.isObject(dstObj) || !this.isObject(srcObj) { return; }
+        if(!this.isObject(dstObj) || !this.isObject(srcObj)) { return; }
         for (let key in srcObj) {
             dstObj[key] = srcObj[key];
         }

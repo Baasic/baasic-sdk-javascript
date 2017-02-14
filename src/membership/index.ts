@@ -4,3 +4,6 @@ export * from './baasicRegisterRouteDefinition';
 export * from './baasicRegisterClient';
 export * from './baasicRoleRouteDefinition';
 export * from './baasicRoleClient';
+export * from './baasicSocialLoginRouteDefinition';
+export * from './baasicUserRouteDefinition';
+export * from './baasicSocialLoginClient';

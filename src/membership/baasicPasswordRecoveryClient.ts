@@ -5,6 +5,7 @@
 */
 
 import { BaasicPasswordRecoveryRouteDefinition } from 'membership';
+import { IRequestPasswordReset, IResetPassword } from 'membership/contracts';
 
 export class BaasicPasswordRecoveryClient {
 
@@ -37,7 +38,7 @@ export class BaasicPasswordRecoveryClient {
                 })
                 .finally (function () {});								
      */
-    requestReset(data: IRequestReset): Promise<any> {
+    requestReset(data: IRequestPasswordReset): Promise<any> {
         return this.baasicApiHttp({
             url: this.baasicPasswordRecoveryRouteDefinition.passwordRecovery().expand({}), 
             method: 'POST',                         
@@ -46,7 +47,8 @@ export class BaasicPasswordRecoveryClient {
     }
 
     /** 				
-     * Returns a promise that is resolved once the password reset action is completed. This updates user's password selection. 				
+     * Returns a promise that is resolved once the password reset action is completed. This updates user's password selection. 
+     * @param data Password recovery object used to update user's current password selection.				
      * @method 				
      * @example baasicPasswordRecoveryClient.reset({   
                     newPassword : '<new-password>',   
@@ -57,29 +59,13 @@ export class BaasicPasswordRecoveryClient {
                     // perform error handling here 
                 }).finally (function () {});							
      */	
-    reset(data: IReset): Promise<any> {
+    reset(data: IResetPassword): Promise<any> {
         return this.baasicApiHttp({ 
             url: this.baasicPasswordRecoveryRouteDefinition.passwordRecovery().expand({}), 
             method: 'PUT', 
             data: data 
         });
-    }
-}
-
-interface IRequestReset {
-    challengeIdentifier?: string,
-    challengeResponse?: string,
-    recoverUrl: string,
-    userName: string,
-    dateCreated?: string,
-    dateUpdated?: string,
-    id?: string,
-    embed: string[]
-}
-
-interface IReset {
-    newPassword: string,
-    passwordRecoveryToken: string
+    }   
 }
 
 /**  

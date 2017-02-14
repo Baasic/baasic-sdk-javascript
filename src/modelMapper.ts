@@ -41,7 +41,7 @@ export class ModelMapper {
             if (propName !== undefined) {
                 object[propName] = id;
             } else {
-                object[baasicConstants.idPropertyName] = id;
+                object[this.baasicConstants.idPropertyName] = id;
             }
         }
         if (options !== undefined && this.utility.isObject(options)) {
@@ -80,7 +80,7 @@ export class ModelMapper {
      * @method
      * @example modelMapper.getParams(('<value>', {additionalOptions: '<option>'},'<property-name>'));
      **/ 	
-    getParams(id: string, options: any, propName?: any) {
+    getParams(id: any, options: any, propName?: any) {
         return this.KeyParams(id, options, propName);
     }
 

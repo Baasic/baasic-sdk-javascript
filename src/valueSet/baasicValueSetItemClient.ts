@@ -5,14 +5,15 @@
 
 import { BaasicValueSetRouteDefinition } from 'valueSet';
 import { IValueSetItem } from 'valueSet/contracts';
-import { ModelMapper } from '..';
+import { ModelMapper, Utility } from '..';
 import { IBaasicQueryModel, IOptions } from 'contracts';
 
 export class BaasicValueSetItemClient {
 
     constructor(
         private modelMapper: ModelMapper,
-        public baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition
+        private baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
+        private utility: Utility
     ) {}
 
     /**
@@ -54,7 +55,7 @@ export class BaasicValueSetItemClient {
                 });
      **/	
     get(setName: string, id: string, options: IOptions): Promise<IValueSetItem> {
-         let params = angular.extend({}, options);
+         let params = this.utility.extend({}, options);
          params.setName = setName;
          return this.baasicApiHttp.get(this.baasicValueSetRouteDefinition.items.get().expand(this.modelMapper.getParams(id, params)));
     }

@@ -5,6 +5,7 @@
  */
 
 import { BaasicRegisterRouteDefinition } from 'membership';
+import { IAppUser, IRegisterUser } from 'membership/contracts';
 import { ModelMapper } from '..';
 
 export class BaasicRegisterClient {
@@ -42,13 +43,14 @@ export class BaasicRegisterClient {
                 })
                 .finally (function () {});                 
      **/ 
-    create(data: IRegister): Promise<any> {
+    create(data: IRegisterUser): Promise<IAppUser> {
         return this.baasicApiHttp.post(this.baasicRegisterRouteDefinition.create().expand({}), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
     }
 
      /**                 
       * Returns a promise that is resolved once the account activation action has been performed; this action activates a user account and success response returns the token resource.      
-      * @param data Security code which uniquely identifies user account that needs to be activated.           
+      * @param data Security code which uniquely identifies user account that needs to be activated.
+      * @returns A promise that is resolved once the account activation action has been performed.           
       * @method                        
       * @example baasicRegisterClient.activate({   
                     activationToken : '<activation-token>' 
@@ -70,20 +72,6 @@ export class BaasicRegisterClient {
             this.authService.updateAccessToken(data); 
         });
     }
-}
-
-interface IRegister {
-    activationUrl?: string,
-    challengeIdentifier?: string,
-    challengeResponse?: string,
-    confirmPassword: string,
-    email: string,
-    password: string,
-    userName: string,
-    dateCreated?: string,
-    dateUpdated?: string,
-    id?: string,
-    embed?: string[]
 }
 
 /**  
