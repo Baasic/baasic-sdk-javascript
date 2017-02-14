@@ -16,7 +16,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @returns key value query resources uri with search params
      * @method
-     * @example baasicKeyValueRouteDefinition.find.expand({searchQuery: '<search-phrase>'});
+     * @example baasicKeyValueRouteDefinition.find().expand({searchQuery: '<search-phrase>'});
      **/
     find(): any {
         return this.baasicUriTemplateProcessor.parse("key-values/{?searchQuery,page,rpp,sort,embed,fields}");
@@ -26,7 +26,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
       * Parses get key value route which must be expanded with the Id of the previously created key value resource in the system.
       * @returns key value get resource uri
       * @method 
-      * @example baasicKeyValueRouteDefinition.get.expand({id: '<key-value-id>'});
+      * @example baasicKeyValueRouteDefinition.get().expand({id: '<key-value-id>'});
       **/   	
     get(): any {
         return this.baasicUriTemplateProcessor.parse("key-values/{id}/{?embed,fields}");
@@ -36,7 +36,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * Parses create key value route; this URI template does not expose any additional options.
      * @returns key value create new resource uri
      * @method
-     * @example baasicKeyValueRouteDefinition.create.expand({});
+     * @example baasicKeyValueRouteDefinition.create().expand({});
      **/  	
     create(): any {
         return this.baasicUriTemplateProcessor.parse("key-values");

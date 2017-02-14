@@ -27,6 +27,7 @@ export class BaasicKeyValueClient {
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of key value resources matching the given criteria.
      * @param options query resource options object
+     * @returns A promise that is resolved once the find action has beend performed.
      * @method
      * @example baasicKeyValueClient.find({
                  pageNumber: 1, 
@@ -50,6 +51,7 @@ export class BaasicKeyValueClient {
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified key value resource.
      * @param id unique identifer of key value resources
      * @param options query resource options object
+     * @returns A promise that is resolved once the get action has beend performed.
      * @method
      * @example baasicKeyValueClient.get('<key-value-id>')
                     .success(function (data) {   
@@ -66,6 +68,7 @@ export class BaasicKeyValueClient {
     /**
      * Returns a promise that is resolved once the create key value action has been performed; this action creates a new key value resource.
      * @param data A key value object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create key value action has beend performed.
      * @method
      * @example baasicKeyValueClient.create({key: '<key>', value: '<value>', })
                     .success(function (data) {   
@@ -87,6 +90,7 @@ export class BaasicKeyValueClient {
      * let uri = params['model'].links('put').href; 
      * ```
      * @param data A key value object used to update specified key value resource.
+     * @return A promise that is resolved once the update key value action has been performed.
      * @method
      * @example // keyValue is a resource previously fetched using get action. 
                    keyValue.value = '<new-value>'; 
@@ -109,7 +113,8 @@ export class BaasicKeyValueClient {
      * let params = modelMapper.removeParams(keyValue); 
      * let uri = params['model'].links('delete').href; 
      * ```      
-     * @param data A key value object used to delete specified key value resource.            
+     * @param data A key value object used to delete specified key value resource.  
+     * @returns A promise that is resolved once the remove action has been performed.          
      * @method 
      * @example // keyValue is a resource previously fetched using get action.				 
                     baasicKeyValueClient.remove(keyValue) 

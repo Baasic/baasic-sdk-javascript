@@ -18,6 +18,7 @@ export class BaasicValueSetItemClient {
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
      * @param options query resource options object
+     * @returns A promise that is resolved once the find action has been performed.
      * @method items.find
      * @example baasicValueSetItemClient.find({
                     setName: '<value-set-name>',
@@ -42,6 +43,7 @@ export class BaasicValueSetItemClient {
      * @param setName value set name
      * @param id unique identifier of value set resource
      * @param options query resource options object
+     * @returns A promise that is resolved once the get action has been performed.
      * @method items.get
      * @example baasicValueSetItemClient.get('<value-set-name>', '<set-item-id>')
                    .success(function (data) {   
@@ -59,7 +61,8 @@ export class BaasicValueSetItemClient {
 
     /**
      * Returns a promise that is resolved once the create value set item action has been performed; this action creates a new value set item resource.
-     * @param data A value set object that needs to be inserted into the system.
+     * @param data A value set item object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create value set item action has been performed.
      * @method items.create
      * @example baasicValueSetItemClient.create({
                     setId: '<value-set-id>', 
@@ -82,7 +85,8 @@ export class BaasicValueSetItemClient {
      * let params = modelMapper.removeParams(valueSetItem); 
      * let uri = params['model'].links('put').href; 
      * ```
-     * @param data A value set object used to update specified value set resource.
+     * @param data A value set item object used to update specified value set resource.
+     * @returns A promise that is resolved once the update value set item action has been performed.
      * @method items.update
      * @example // valueSetItem is a resource previously fetched using get action. 
                 valueSetItem.value = '<new-value>'; 
@@ -105,7 +109,8 @@ export class BaasicValueSetItemClient {
      * let params = modelMapper.removeParams(valueSetItem); 
      * let uri = params['model'].links('delete').href; 
      * ```
-     * @param data A value set object used to delete specified value set resource.
+     * @param data A value set item object used to delete specified value set resource.
+     * @returns A promise that is resolved once the remove action has been performed.
      * @method items.remove 
      * @example // valueSetItem is a resource previously fetched using get action.
                 baasicValueSetItemClient.remove(valueSetItem)
