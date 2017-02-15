@@ -6,5 +6,5 @@ export * from './IUserAccess';
 export * from './IUserIdentity';
 export * from './IAppUser';
 export * from './INewUser';
-export * from './IPasswordRecovery';
+export * from './INewPassword';
 export * from './ISocialLogin';

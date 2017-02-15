@@ -6,7 +6,7 @@
 
 import { IBaasicQueryModel, IOptions } from 'contracts';
 import { BaasicUserRouteDefinition, BaasicSocialLoginClient, BaasicSocialLoginRouteDefinition } from 'membership';
-import { IAppUser, INewUser, IPasswordRecovery } from 'membership/contracts';
+import { IAppUser, INewUser, INewPassword } from 'membership/contracts';
 import { ModelMapper, Utility } from '..';
 
 export class BaasicUserClient {
@@ -252,7 +252,10 @@ export class BaasicUserClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the changePassword action has been performed. This action will update user's password selection.                  
+     * Returns a promise that is resolved once the changePassword action has been performed. This action will update user's password selection.
+     * @param username A username or id which uniquely identifies user resource.
+     * @param data A new password object used to update specified user password resource.
+     * @returns A promise that is resolved once the changedPassword action has been performed.                
      * @method 
      * @example baasicUserClient.changePassword('<username>', {   
                     newPassword : '<new-password>',   
@@ -266,7 +269,7 @@ export class BaasicUserClient {
                 })
                 .finally (function () {}); 
      **/					
-    changePassword(username: string, data: IPasswordRecovery): Promise<any> {
+    changePassword(username: string, data: INewPassword): Promise<any> {
         return this.baasicApiHttp({ 
             url: this.baasicUserRouteDefinition.changePassword().expand({ username: username }), 
             method: 'PUT', 

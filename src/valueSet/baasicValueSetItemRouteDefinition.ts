@@ -7,39 +7,24 @@ import { BaasicBaseRouteDefinition } from '..';
 
 export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition {
     
-    /**
-     * Parses find value set items route which can be expanded with additional options. Supported items are: 
-     * - `setName` - Value set name.
-     * - `searchQuery` - A string value used to identify value set items using the phrase search.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain value set item subset from the storage.
-     * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the value set item property to sort the result collection by.
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @method
-     * @example baasicValueSetItemRouteDefinition.find.expand({searchQuery: '<search-phrase>'});
-     **/ 				
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse("value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}");
+    protected findRouteURI(): string {
+        return "value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}";
     }
 
-    /**
-     * Parses get route which must be expanded with the following items:
-     * - `setName` - Value set name.
-     * - `id` - Value set item id. 
-     * @method
-     * @example baasicValueSetItemRouteDefinition.get.expand({setName: '<value-set-name>', id: '<value-set-item-id>' });
-     **/	
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse("value-sets/{setName}/items/{id}/{?embed,fields}");
+    protected getRouteURI(): string {
+        return "value-sets/{setName}/items/{id}/{?embed,fields}";
     }
 
-    /**
-     * Parses create value set item route; the URI template should be expanded with the value set name.
-     * @method
-     * @example baasicValueSetItemRouteDefinition.create.expand({});
-     **/ 
-    create(): any {
-        return this.baasicUriTemplateProcessor.parse("value-sets/{setName}/items/");
+    protected createRouteURI(): string {
+        return "value-sets/{setName}/items/";
+    }
+
+    protected updateRouteURI(): string {
+        return "value-sets/{setId}/items/{id}";
+    }
+
+    protected deleteRouteURI(): string {
+        return "value-sets/{setId}/items/{id}";
     }
 }
 

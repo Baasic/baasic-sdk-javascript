@@ -7,40 +7,12 @@
 import { BaasicBaseRouteDefinition } from '..';
 
 export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
-    /**                
-     * Parses find key value route which can be expanded with additional options. Supported items are:                 
-     * - `searchQuery` - A string value used to identify key value resources using the phrase search.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain key value subset from the storage.
-     * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the key value property to sort the result collection by. 
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @returns key value query resources uri with search params
-     * @method
-     * @example baasicKeyValueRouteDefinition.find().expand({searchQuery: '<search-phrase>'});
-     **/
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse("key-values/{?searchQuery,page,rpp,sort,embed,fields}");
-    }
-
-     /**
-      * Parses get key value route which must be expanded with the Id of the previously created key value resource in the system.
-      * @returns key value get resource uri
-      * @method 
-      * @example baasicKeyValueRouteDefinition.get().expand({id: '<key-value-id>'});
-      **/   	
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse("key-values/{id}/{?embed,fields}");
-    }
-
-    /**
-     * Parses create key value route; this URI template does not expose any additional options.
-     * @returns key value create new resource uri
-     * @method
-     * @example baasicKeyValueRouteDefinition.create().expand({});
-     **/  	
-    create(): any {
-        return this.baasicUriTemplateProcessor.parse("key-values");
-    }
+    
+    protected readonly CreateRouteURI: string = "key-values";
+    protected readonly GetRouteURI: string = "key-values/{id}/{?embed,fields}";
+    protected readonly FindRouteURI: string = "key-values/{?searchQuery,page,rpp,sort,embed,fields}";
+    protected readonly UpdateRouteURI: string = "key-values/{id}";
+    protected readonly DeleteRouteURI: string = "key-values/{id}";
 }
 
 /**  

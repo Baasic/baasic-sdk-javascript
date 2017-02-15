@@ -7,3 +7,4 @@ export * from './baasicRoleClient';
 export * from './baasicSocialLoginRouteDefinition';
 export * from './baasicUserRouteDefinition';
 export * from './baasicSocialLoginClient';
+export * from './baasicUserClient';

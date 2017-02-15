@@ -1,6 +1,6 @@
 import { IBaasicModel } from 'contracts';
 
-export interface IPasswordRecovery extends IBaasicModel {
+export interface INewPassword extends IBaasicModel {
     newPassword: string,
     sendEmailNotification?: boolean,
     siteUrl?: string

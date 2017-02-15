@@ -8,36 +8,24 @@ import { BaasicBaseRouteDefinition } from '..';
 
 export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
 
-    /**                 
-     * Parses find role route which can be expanded with additional options. Supported items are:                 
-     * - `searchQuery` - A string value used to identify role resources using the phrase search.                 
-     * - `page` 
-     * - A value used to set the page number, i.e. to retrieve certain role subset from the storage.                 
-     * - `rpp` - A value used to limit the size of result set per page.                 
-     * - `sort` - A string used to set the role property to sort the result collection by.                 
-     * @method                        
-     * @example baasicRoleRouteDefinition.find().expand({searchQuery: '<search-phrase>'}); 
-     **/ 
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse('lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}');
+    protected findRouteURI(): string {
+        return "lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}";
     }
 
-    /**                 
-     * Parses get role route which should be expanded with the role Id. Note that the role Id is the primary key of the role.                 
-     * @method                        
-     * @example baasicRoleRouteDefinition.get().expand({id: '<role-id>'});                              
-     **/   					
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('lookups/roles/{id}/{?embed,fields}');
+    protected getRouteURI(): string {
+        return "lookups/roles/{id}/{?embed,fields}";
     }
 
-    /**                 
-     * Parses create role route; this URI template does not expose any additional options.                 
-     * @method                        
-     * @example baasicRoleRouteClient.create().expand({});                               
-     **/
-    create(): any {
-        return  this.baasicUriTemplateProcessor.parse('lookups/roles');
+    protected createRouteURI(): string {
+        return "lookups/roles";
+    }
+
+    protected updateRouteURI(): string {
+        return "lookups/roles/{id}";
+    }
+
+    protected deleteRouteURI(): string {
+        return "lookups/roles/{id}";
     }
 }
 

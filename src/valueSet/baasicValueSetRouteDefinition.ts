@@ -8,39 +8,27 @@ import { BaasicValueSetItemRouteDefinition } from 'valueSet';
 
 export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
 
+    protected findRouteURI(): string {
+        return "value-sets/{?searchQuery,page,rpp,sort,embed,fields}";
+    }
+
+    protected getRouteURI(): string {
+        return "value-sets/{setName}/{?embed,fields}";
+    }
+
+    protected createRouteURI(): string {
+        return "value-sets";
+    }
+
+    protected updateRouteURI(): string {
+        return "value-sets/{id}";
+    }
+
+    protected deleteRouteURI(): string {
+        return "value-sets/{id}";
+    }
+    
     public readonly items: BaasicValueSetItemRouteDefinition = new BaasicValueSetItemRouteDefinition();
-
-    /**
-     * Parses find value set route which can be expanded with additional options. Supported items are:
-     * - `searchQuery` - A string value used to identify value set resources using the phrase search.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain value set subset from the storage.
-     * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the value set property to sort the result collection by. 				
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @method
-     * @example baasicValueSetRouteDefinition.find().expand({searchQuery: '<search-phrase>'});
-     **/ 	
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse("value-sets/{?searchQuery,page,rpp,sort,embed,fields}");
-    }
-
-    /**
-     * Parses get value set route which must be expanded with the name of the previously created value set resource in the system.
-     * @method 
-     * @example baasicValueSetRouteDefinition.get().expand({setName: '<value-set-name>'});
-     **/ 
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse("value-sets/{setName}/{?embed,fields}");
-    }
-
-    /**
-     * Parses create value set route; this URI template does not expose any additional options.
-     * @method
-     * @example baasicValueSetRouteDefinition.create().expand({});
-     **/  	
-    create(): any {
-        return this.baasicUriTemplateProcessor.parse("value-sets");
-    }
 }
 
 /**  
