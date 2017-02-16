@@ -4,7 +4,11 @@
  * @description Baasic Register Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Register Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
+import { BaasicBaseRouteDefinition } from 'common';
+
 export class BaasicRegisterRouteDefinition {
+    
+    constructor(private baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
     
     /** 			
      * Parses register route, this route doesn't support any additional properties. 			
@@ -12,7 +16,7 @@ export class BaasicRegisterRouteDefinition {
      * @example baasicRegisterRouteDefinition.create().expand({});               			
      **/
     create(): any {
-        return this.baasicUriTemplateProcessor.parse('register');
+        return this.baasicBaseRouteDefinition.create('register');
     }
 
     /** 			

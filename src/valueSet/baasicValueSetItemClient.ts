@@ -6,7 +6,7 @@
 import { BaasicValueSetRouteDefinition } from 'valueSet';
 import { IValueSetItem } from 'valueSet/contracts';
 import { ModelMapper, Utility } from '..';
-import { IBaasicQueryModel, IOptions } from 'contracts';
+import { IBaasicQueryModel, IOptions } from 'common/contracts';
 
 export class BaasicValueSetItemClient {
 

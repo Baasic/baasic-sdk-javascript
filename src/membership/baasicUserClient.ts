@@ -4,7 +4,7 @@
  * @description Baasic User Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicUserClient` uses `baasicUserRouteDefinition`. 
  */
 
-import { IBaasicQueryModel, IOptions } from 'contracts';
+import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicUserRouteDefinition, BaasicSocialLoginClient, BaasicSocialLoginRouteDefinition } from 'membership';
 import { IAppUser, INewUser, INewPassword } from 'membership/contracts';
 import { ModelMapper, Utility } from '..';

@@ -6,7 +6,7 @@
 
 import { BaasicSocialLoginRouteDefinition } from 'membership';
 import { ISocialLogin } from 'membership/contracts';
-import { IBaasicQueryModel } from 'contracts';
+import { IBaasicQueryModel } from 'common/contracts';
 import { ModelMapper, Utility } from '..';
 
 export class BaasicSocialLoginClient {

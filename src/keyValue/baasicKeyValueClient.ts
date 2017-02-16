@@ -6,7 +6,7 @@
 import { BaasicKeyValueRouteDefinition } from 'keyValue';
 import { IKeyValue } from 'keyValue/contracts';
 import { ModelMapper } from '..';
-import { IBaasicQueryModel, IOptions } from 'contracts';
+import { IBaasicQueryModel, IOptions } from 'common/contracts';
 
 export class BaasicKeyValueClient {
     

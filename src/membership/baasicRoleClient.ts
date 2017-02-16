@@ -4,7 +4,7 @@
  * @description Baasic Role Client provides an easy way to consume Baasic Role REST API end-points. In order to obtain needed routes `baasicRoleClient` uses `baasicRoleRouteDefinition`. 
  */
 
-import { IBaasicQueryModel, IOptions } from 'contracts';
+import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicRoleRouteDefinition } from 'membership';
 import { IRole } from 'membership/contracts';
 import { ModelMapper } from '..';

@@ -1,4 +1,4 @@
-import { IBaasicModel } from 'contracts';
+import { IBaasicModel } from 'common/contracts';
 
 export interface IRole extends IBaasicModel {
     description?: string,

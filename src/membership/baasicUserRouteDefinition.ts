@@ -5,7 +5,7 @@
  */
 
 import { BaasicSocialLoginRouteDefinition } from 'membership';
-import { BaasicBaseRouteDefinition } from '..';
+import { BaasicBaseRouteDefinition } from 'common';
 
 export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
 
@@ -13,26 +13,29 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
         return this.baasicSocialLoginRouteDefinition;
     }
 
-    constructor(private baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition) { super(); }
-    
-    protected findRouteURI(): string {
-        return "users/{?searchQuery,page,rpp,sort,embed,fields}";
+    constructor(
+        private baasicBaseRouteDefinition: BaasicBaseRouteDefinition,
+        private baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition
+    ) { super(); }
+
+    find(): any {
+        return this.baasicBaseRouteDefinition.find('users/{?searchQuery,page,rpp,sort,embed,fields}');
     }
 
-    protected getRouteURI(): string {
-        return "users/{username}/{?embed,fields}";
+    get(): any {
+        return this.baasicBaseRouteDefinition.get('users/{username}/{?embed,fields}');
     }
 
-    protected createRouteURI(): string {
-        return "users";
+    create(): any {
+        return this.baasicBaseRouteDefinition.create('users');
     }
 
-    protected updateRouteURI(): string {
-        return "users/{id}";
+    update(params: any): any {
+        return this.baasicBaseRouteDefinition.update('users/{id}', params);
     }
 
-    protected deleteRouteURI(): string {
-        return "users/{id}";
+    delete(params: any): any {
+        return this.baasicBaseRouteDefinition.delete( 'users/{id}', params);
     }
     
     /**                 
