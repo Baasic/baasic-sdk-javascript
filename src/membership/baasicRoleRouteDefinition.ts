@@ -57,8 +57,8 @@ export class BaasicRoleRouteDefinition {
         return this.baasicBaseRouteDefinition.delete('lookups/roles/{id}', params);
     }
 
-    parse(link: string): any {
-        return this.baasicBaseRouteDefinition.parse(link);
+    parse(route: string): any {
+        return this.baasicBaseRouteDefinition.parse(route);
     }
 }
 

@@ -63,8 +63,8 @@ export class BaasicKeyValueRouteDefinition {
      * @method                 
      * @example baasicKeyValueRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
      **/
-    parse(link: string): any {
-        return this.baasicBaseRouteDefinition.parse(link);
+    parse(route: string): any {
+        return this.baasicBaseRouteDefinition.parse(route);
     }
 }
 

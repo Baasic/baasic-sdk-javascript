@@ -70,8 +70,8 @@ export class BaasicValueSetRouteDefinition {
       * @method                 
       * @example baasicValueSetRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
       **/ 					
-    parse(link: string): any {
-        return this.baasicBaseRouteDefinition.parse(link);
+    parse(route: string): any {
+        return this.baasicBaseRouteDefinition.parse(route);
     }
 }
 

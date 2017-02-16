@@ -51,8 +51,8 @@ export class BaasicBaseRouteDefinition {
         }
     }
 
-    parse(link: string): any {
-        return this.baasicUriTemplateProcessor.parse(link);
+    parse(route: string): any {
+        return this.baasicUriTemplateProcessor.parse(route);
     }
 }
 

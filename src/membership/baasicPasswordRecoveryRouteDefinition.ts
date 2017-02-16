@@ -23,8 +23,8 @@ export class BaasicPasswordRecoveryRouteDefinition {
      * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                  * @method                  * @example baasicPasswordRecoveryRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
      * @param link route link                  
      **/  				
-    parse(link: string): any {
-        return this.baasicBaseRouteDefinition.parse(link);
+    parse(route: string): any {
+        return this.baasicBaseRouteDefinition.parse(route);
     }
 }
 

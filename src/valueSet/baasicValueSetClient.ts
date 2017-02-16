@@ -10,7 +10,10 @@ import { IBaasicQueryModel, IOptions } from 'common/contracts';
 
 export class BaasicValueSetClient {
 
-    public items: BaasicValueSetItemClient = new BaasicValueSetItemClient(this.modelMapper, this.baasicValueSetRouteDefinition);
+    
+    get items(): BaasicValueSetItemClient {
+        return this.baasicValueSetItemClient;
+    }
 
      /**
       * Provides direct access to `baasicValueSetRouteDefinition`.
@@ -23,7 +26,8 @@ export class BaasicValueSetClient {
 
     constructor(
         private modelMapper: ModelMapper,
-        private baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition
+        private baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
+        private baasicValueSetItemClient: BaasicValueSetItemClient
     ) {}
 
     /**
