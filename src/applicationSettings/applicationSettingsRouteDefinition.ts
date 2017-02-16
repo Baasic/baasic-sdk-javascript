@@ -4,8 +4,38 @@
  * @description Baasic Application Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Application Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
+import { BaasicBaseRouteDefinition } from 'common';
+
 export class BaasicApplicationSettingsRouteDefinition {
 
+    constructor(private baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+
+    /**                 
+     * Parses get route; this route doesn't expose any properties.                 
+     * @method                        
+     * @example baasicApplicationSettingsRouteDefinition.get().expand({});                               
+     **/ 			
+    get(): any {
+        return this.baasicBaseRouteDefinition.get('applications/{?embed,fields}');
+    }
+
+     /**                 
+      * Parses update route; this route doesn't expose any properties.                 
+      * @method                        
+      * @example baasicApplicationSettingsRouteDefinition.update().expand({});                               
+      **/ 
+    update(params: any): any {
+        return this.baasicBaseRouteDefinition.update('applications/', params);
+    }
+
+    /**                 
+     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
+     * @method                 
+     * @example baasicApplicationSettingsRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
+     **/ 
+    parse(link: string): any {
+        return this.baasicBaseRouteDefinition.parse(link);    
+    }
 }
 
 /**  
