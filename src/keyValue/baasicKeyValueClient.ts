@@ -20,8 +20,8 @@ export class BaasicKeyValueClient {
     }
     
     constructor(
-        private modelMapper: ModelMapper,
-        private baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition
+        protected modelMapper: ModelMapper,
+        protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition
     ) {}
 
     /**
@@ -44,7 +44,7 @@ export class BaasicKeyValueClient {
                 });                     
      **/ 	
     find(options: IOptions): Promise<IBaasicQueryModel<IKeyValue>> {
-        return this.baasicApiHttp.get(this.baasicKeyValueRouteDefinition.find().expand(this.modelMapper.findParams(options)));
+        return this.baasicApiHttp.get(this.baasicKeyValueRouteDefinition.find(options));
     }
 
     /**
@@ -62,7 +62,7 @@ export class BaasicKeyValueClient {
                     });                  
      **/	
     get(id: string, options: IOptions): Promise<IKeyValue> {
-        return this.baasicApiHtpp.get(this.baasicKeyValueRouteDefinition.get().expand(this.modelMapper.findParams(options)));
+        return this.baasicApiHtpp.get(this.baasicKeyValueRouteDefinition.get(id, options));
     }
 
     /**
@@ -79,8 +79,7 @@ export class BaasicKeyValueClient {
                     });
      */ 		
     create(data: IKeyValue): Promise<IKeyValue> {
-        return this.baasicApiHttp.post(this.baasicKeyValueRouteDefinition.create().expand(), 
-                    this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.post(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
     }
 
     /**
@@ -104,7 +103,7 @@ export class BaasicKeyValueClient {
      **/					
     update(data: IKeyValue): Promise<IKeyValue> {
         let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicKeyValueRouteDefinition.update(params), params[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.put(this.baasicKeyValueRouteDefinition.update(params), this.baasicKeyValueRouteDefinition.updateParams(params));
     }
 
     /**
@@ -127,7 +126,7 @@ export class BaasicKeyValueClient {
      **/	
     remove(data: IKeyValue): Promise<void> {
         let params = this.modelMapper.removeParams(data);
-        return this.baasicApiHttp.delete(this.baasicKeyValueRouteDefinition.delete(params), params[this.baasicConstants.modelProeprtyName]);
+        return this.baasicApiHttp.delete(this.baasicKeyValueRouteDefinition.delete(params), this.baasicKeyValueRouteDefinition.deleteParams(params));
     }
 }
 

@@ -1,4 +1,9 @@
+import { IOptions } from 'common/contracts';
+import { ModelMapper } from '..';
+
 export class BaasicBaseRouteDefinition {
+
+    constructor(protected modelMapper: ModelMapper) {}
 
     /**                
      * Parses resources route which can be expanded with additional options. Supported items are:                 
@@ -11,8 +16,8 @@ export class BaasicBaseRouteDefinition {
      * @method
      * @example baasicBaseDefinition.find().expand({searchQuery: '<search-phrase>'});
      **/
-    find(route: string): any {
-        return this.baasicUriTemplateProcessor.parse(route);
+    find(route: string, options: IOptions): any {
+        return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.findParams(options));
     }
 
     /**
@@ -21,8 +26,8 @@ export class BaasicBaseRouteDefinition {
       * @method 
       * @example baasicBaseRouteDefinition.get().expand({id: '<key-value-id>'});
       **/
-    get(route: string): any {
-        return this.baasicUriTemplateProcessor.parse(route);
+    get(route: string, id: string, options: IOptions, propName?: string): any {
+        return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
     
     /**
@@ -31,8 +36,8 @@ export class BaasicBaseRouteDefinition {
       * @method 
       * @example baasicBaseRouteDefinition.get().expand({id: '<key-value-id>'});
       **/
-    create(route: string): any {
-        return this.baasicUriTemplateProcessor.parse(route);
+    create(route: string, data?: any): any {
+        return this.baasicUriTemplateProcessor.parse(route).expand(data);
     }
 
     update(route: string, params: any): any {
@@ -49,6 +54,18 @@ export class BaasicBaseRouteDefinition {
         } else {
             return this.baasicUriTemplateProcessor.parse(route);
         }
+    }
+
+    createParams(data: any): any {
+        return this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName];
+    }
+
+    updateParams(params: any): any {
+        return params[this.baasicConstants.modelPropertyName];
+    }
+
+    deleteParams(params: any): any {
+        params[this.baasicConstants.modelPropertyName];
     }
 
     parse(route: string): any {

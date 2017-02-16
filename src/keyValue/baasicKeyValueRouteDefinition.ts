@@ -5,10 +5,11 @@
  */
 
 import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
 
 export class BaasicKeyValueRouteDefinition {
 
-    constructor(private baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+    constructor(protected baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
 
      /**                 
       * Parses find key value route which can be expanded with additional options. Supported items are:                 
@@ -20,8 +21,8 @@ export class BaasicKeyValueRouteDefinition {
       * @method                        
       * @example baasicKeyValueRouteDefinition.find().expand({searchQuery: '<search-phrase>'});                               
       **/
-    find(): any {
-        return this.baasicBaseRouteDefinition.find('key-values/{?searchQuery,page,rpp,sort,embed,fields}');
+    find(options: IOptions): any {
+        return this.baasicBaseRouteDefinition.find('key-values/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
@@ -29,8 +30,8 @@ export class BaasicKeyValueRouteDefinition {
      * @method                        
      * @example baasicKeyValueRouteDefinition.get().expand({id: '<key-value-id>'});                               
      **/
-    get(): any {
-        return this.baasicBaseRouteDefinition.get('key-values/{id}/{?embed,fields}');
+    get(id: string, options: IOptions): any {
+        return this.baasicBaseRouteDefinition.get('key-values/{id}/{?embed,fields}', id, options);
     }
 
     /**                 
@@ -56,6 +57,18 @@ export class BaasicKeyValueRouteDefinition {
      */
     delete(params: any): any {
         return this.baasicBaseRouteDefinition.delete('key-values/{id}', params);
+    }
+
+    createParams(data: any): any {
+        return this.baasicBaseRouteDefinition.createParams(data);
+    }
+
+    updateParams(params: any): any {
+        return this.baasicBaseRouteDefinition.updateParams(params);
+    }
+
+    deleteParams(params: any): any {
+        return this.baasicBaseRouteDefinition.deleteParams(params);
     }
 
     /**                 
