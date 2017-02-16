@@ -102,8 +102,7 @@ export class BaasicKeyValueClient {
                     }); 				
      **/					
     update(data: IKeyValue): Promise<IKeyValue> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicKeyValueRouteDefinition.update(params), this.baasicKeyValueRouteDefinition.updateParams(params));
+        return this.baasicApiHttp.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(params));
     }
 
     /**
@@ -125,8 +124,7 @@ export class BaasicKeyValueClient {
                     });
      **/	
     remove(data: IKeyValue): Promise<void> {
-        let params = this.modelMapper.removeParams(data);
-        return this.baasicApiHttp.delete(this.baasicKeyValueRouteDefinition.delete(params), this.baasicKeyValueRouteDefinition.deleteParams(params));
+        return this.baasicApiHttp.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(params));
     }
 }
 

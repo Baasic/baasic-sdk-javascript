@@ -40,7 +40,8 @@ export class BaasicBaseRouteDefinition {
         return this.baasicUriTemplateProcessor.parse(route).expand(data);
     }
 
-    update(route: string, params: any): any {
+    update(route: string, data: any): any {
+        let params = this.modelMapper.updateParams(data);
         if ('HAL') {
             return params[this.baasicConstants.modelPropertyName].links('put').href;
         } else {
@@ -48,7 +49,8 @@ export class BaasicBaseRouteDefinition {
         }
     }
 
-    delete(route: string, params: any): any {
+    delete(route: string, data: any): any {
+        let params = this.modelMapper.removeParams(data);
         if ('HAL') {
             return params[this.baasicConstants.modelPropertyName].links('delete').href;
         } else {

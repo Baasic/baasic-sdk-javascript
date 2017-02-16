@@ -47,16 +47,16 @@ export class BaasicKeyValueRouteDefinition {
      * Parses update key value route.
      * @method
      */
-    update(params: any): any {
-        return this.baasicBaseRouteDefinition.update('key-values/{id}', params);
+    update(data: any): any {
+        return this.baasicBaseRouteDefinition.update('key-values/{id}', data);
     }
 
     /**
      * Parses delete key value route.
      * @method
      */
-    delete(params: any): any {
-        return this.baasicBaseRouteDefinition.delete('key-values/{id}', params);
+    delete(data: any): any {
+        return this.baasicBaseRouteDefinition.delete('key-values/{id}', data);
     }
 
     createParams(data: any): any {
