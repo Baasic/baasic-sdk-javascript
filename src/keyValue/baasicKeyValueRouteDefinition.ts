@@ -6,10 +6,11 @@
 
 import { BaasicBaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
+import { ModelMapper, Utility } from '..';
 
-export class BaasicKeyValueRouteDefinition {
+export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+    constructor(protected modelMapper: ModelMapper, protected utility: Utility) { super(modelMapper, utility); }
 
      /**                 
       * Parses find key value route which can be expanded with additional options. Supported items are:                 
@@ -22,7 +23,7 @@ export class BaasicKeyValueRouteDefinition {
       * @example baasicKeyValueRouteDefinition.find().expand({searchQuery: '<search-phrase>'});                               
       **/
     find(options: IOptions): any {
-        return this.baasicBaseRouteDefinition.find('key-values/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.find('key-values/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
@@ -31,7 +32,7 @@ export class BaasicKeyValueRouteDefinition {
      * @example baasicKeyValueRouteDefinition.get().expand({id: '<key-value-id>'});                               
      **/
     get(id: string, options: IOptions): any {
-        return this.baasicBaseRouteDefinition.get('key-values/{id}/{?embed,fields}', id, options);
+        return super.get('key-values/{id}/{?embed,fields}', id, options);
     }
 
     /**                 
@@ -40,7 +41,7 @@ export class BaasicKeyValueRouteDefinition {
      * @example baasicKeyValueRouteDefinition.create().expand({});                              
      **/
     create(): any {
-        return this.baasicBaseRouteDefinition.create('key-values');
+        return super.create('key-values');
     }
 
     /**
@@ -48,7 +49,7 @@ export class BaasicKeyValueRouteDefinition {
      * @method
      */
     update(data: any): any {
-        return this.baasicBaseRouteDefinition.update('key-values/{id}', data);
+        return super.update('key-values/{id}', data);
     }
 
     /**
@@ -56,28 +57,7 @@ export class BaasicKeyValueRouteDefinition {
      * @method
      */
     delete(data: any): any {
-        return this.baasicBaseRouteDefinition.delete('key-values/{id}', data);
-    }
-
-    createParams(data: any): any {
-        return this.baasicBaseRouteDefinition.createParams(data);
-    }
-
-    updateParams(params: any): any {
-        return this.baasicBaseRouteDefinition.updateParams(params);
-    }
-
-    deleteParams(params: any): any {
-        return this.baasicBaseRouteDefinition.deleteParams(params);
-    }
-
-    /**                 
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
-     * @method                 
-     * @example baasicKeyValueRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
-     **/
-    parse(route: string): any {
-        return this.baasicBaseRouteDefinition.parse(route);
+        return super.delete('key-values/{id}', data);
     }
 }
 

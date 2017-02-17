@@ -5,7 +5,6 @@
 
 import { BaasicKeyValueRouteDefinition } from 'keyValue';
 import { IKeyValue } from 'keyValue/contracts';
-import { ModelMapper } from '..';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 
 export class BaasicKeyValueClient {
@@ -20,7 +19,6 @@ export class BaasicKeyValueClient {
     }
     
     constructor(
-        protected modelMapper: ModelMapper,
         protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition
     ) {}
 
@@ -102,7 +100,7 @@ export class BaasicKeyValueClient {
                     }); 				
      **/					
     update(data: IKeyValue): Promise<IKeyValue> {
-        return this.baasicApiHttp.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(params));
+        return this.baasicApiHttp.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(data));
     }
 
     /**
@@ -124,7 +122,7 @@ export class BaasicKeyValueClient {
                     });
      **/	
     remove(data: IKeyValue): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(params));
+        return this.baasicApiHttp.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
     }
 }
 
