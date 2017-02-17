@@ -53,9 +53,9 @@ export class ModelMapper {
     }
 
     private ModelParams(data: any): any {
-        let object;
+        let object:any = {};
         if (data.hasOwnProperty(this.baasicConstants.modelPropertyName)) {
-            this.utility.extend(this, data);
+            this.utility.extend(object, data);
         } else {
             object[this.baasicConstants.modelPropertyName] = data;
         }

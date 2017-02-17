@@ -6,6 +6,7 @@
 
 import { BaasicBaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
+import { IKeyValue } from 'keyValue/contracts';
 import { ModelMapper, Utility } from '..';
 
 export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
@@ -19,8 +20,9 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
       * - `rpp` - A value used to limit the size of result set per page.                 
       * - `sort` - A string used to set the key value property to sort the result collection by. 				
       * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-      * @method                        
-      * @example baasicKeyValueRouteDefinition.find().expand({searchQuery: '<search-phrase>'});                               
+      * @method
+      * @param options Query resource options object.                        
+      * @example baasicKeyValueRouteDefinition.find(options);                               
       **/
     find(options: IOptions): any {
         return super.find('key-values/{?searchQuery,page,rpp,sort,embed,fields}', options);
@@ -28,8 +30,10 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
 
     /**                 
      * Parses get key value route which must be expanded with the Id of the previously created key value resource in the system.                 
-     * @method                        
-     * @example baasicKeyValueRouteDefinition.get().expand({id: '<key-value-id>'});                               
+     * @method
+     * @param id Key value resource unique identifier.
+     * @param options Query resource options object.                    
+     * @example baasicKeyValueRouteDefinition.get();                               
      **/
     get(id: string, options: IOptions): any {
         return super.get('key-values/{id}/{?embed,fields}', id, options);
@@ -38,25 +42,29 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
     /**                 
      * Parses create key value route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicKeyValueRouteDefinition.create().expand({});                              
+     * @example baasicKeyValueRouteDefinition.create();                           
      **/
     create(): any {
-        return super.create('key-values');
+        return super.create('key-values', {});
     }
 
     /**
      * Parses update key value route.
      * @method
+     * @param data Key Value object used to create update route.
+     * @example baasicKeyValueRouteDefinition.update(data);
      */
-    update(data: any): any {
+    update(data: IKeyValue): any {
         return super.update('key-values/{id}', data);
     }
 
     /**
      * Parses delete key value route.
      * @method
+     * @param data Key Value object used to create delete route.
+     * @example baasicKeyValueRouteDefinition.delete(data);
      */
-    delete(data: any): any {
+    delete(data: IKeyValue): any {
         return super.delete('key-values/{id}', data);
     }
 }

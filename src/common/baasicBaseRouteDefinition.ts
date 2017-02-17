@@ -48,14 +48,14 @@ export abstract class BaasicBaseRouteDefinition {
      */
     protected update(route: string, data: any, options?: IOptions): any {
         let params = this.modelMapper.updateParams(data);
-        if(typeof options === undefined) {
+        if(typeof options === 'undefined') {
             if ('HAL') {
                 return params[this.baasicConstants.modelPropertyName].links('put').href;
             } else {
-                return this.baasicUriTemplateProcessor.parse(route);
+                return this.baasicUriTemplateProcessor.parse(route).expand(params);
             }
         } else {
-            let opt = this.utility.extend({}, options); // ??
+            let opt = this.utility.extend({}, options);
             if ('HAL') {
                 return this.baasicUriTemplateProcessor.parse(params[this.baasicConstants.modelPropertyName].links('put').href).expand(opt);
             } else {
@@ -70,12 +70,21 @@ export abstract class BaasicBaseRouteDefinition {
      * @method
      * @example baasicBaseRouteDefinition.delete();
      */
-    protected delete(route: string, data: any): any {
+    protected delete(route: string, data: any, options: IOptions): any {
         let params = this.modelMapper.removeParams(data);
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('delete').href;
+        if (typeof options === 'undefined') {
+            if ('HAL') {
+                return params[this.baasicConstants.modelPropertyName].links('delete').href;
+            } else {
+                return this.baasicUriTemplateProcessor.parse(route).expand(params);
+            }
         } else {
-            return this.baasicUriTemplateProcessor.parse(route);
+            let opt = this.utility.extend({}, options);
+            if ('HAL') {
+                return this.baasicUriTemplateProcessor.parse(params[this.baasicConstants.modelPropertyName].links('delete').href).expand(opt);
+            } else {
+                return this.baasicUriTemplateProcessor.parse(route).expand(opt);
+            }
         }
     }
 
@@ -88,7 +97,7 @@ export abstract class BaasicBaseRouteDefinition {
     }
 
     deleteParams(data: any): any {
-        return this.modelMapper.deleteParams(data)[this.baasicConstants.modelPropertyName];
+        return this.modelMapper.removeParams(data)[this.baasicConstants.modelPropertyName];
     }
 
     /**                 

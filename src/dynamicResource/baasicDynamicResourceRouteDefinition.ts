@@ -5,14 +5,20 @@
 
 import { BaasicBaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
+import { BaasicDynamicResourceACLRouteDefinition } from 'dynamicResource/contracts';
 import { ModelMapper, Utility } from '..';
 
-export class BaasicDynamicResourceRouteDefinition {
+export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinition {
 
+    get acl(): BaasicDynamicResourceACLRouteDefinition {
+        return this.baasicDynamicResourceACLRouteDefinition;
+    }
+    
     constructor(
         protected utility: Utility,
         protected modelMapper: ModelMapper,
-        protected baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+        protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition
+    ) { super(modelMapper, utility); }
 
     /** 				
      * Parses find route which can be expanded with additional options. Supported items are: 				
@@ -22,56 +28,47 @@ export class BaasicDynamicResourceRouteDefinition {
      * - `rpp` - A value used to limit the size of result set per page. 				
      * - `sort` - A string used to set the dynamic resource property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
-     * @example baasicDynamicResourceRouteDefinition.find().expand({schemaName: '<schema-name>', searchQuery: '<search-phrase>' }); 				
+     * @method
+     * @param options query resource options object      				
+     * @example baasicDynamicResourceRouteDefinition.find(options); 				
      **/
     find(options: IOptions): any {
-        return this.baasicBaseRouteDefinition.find('resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.find('resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
      * Parses get route which must be expanded with the name of the previously created dynamic resource schema in the system and the Id of the previously created dynamic resource. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicDynamicResourceRouteDefinition.get().expand({ schemaName: '<schema-name>', id: '<schema-id>' });               				
+     * @param id Unique identifier of dynamic resources
+     * @param schemaName schema name
+     * @param options query resource options object
+     * @example baasicDynamicResourceRouteDefinition.get(id, schemaName, options);               				
      **/
     get(id: string, schemaName: string, options: IOptions): any {
-        return this.baasicBaseRouteDefinition.get('resources/{schemaName}/{id}/{?embed,fields}', id, options, this.utility.extend({ schemaName: schemaName }, options));
+        return super.get('resources/{schemaName}/{id}/{?embed,fields}', id, options, this.utility.extend({ schemaName: schemaName }, options));
     }
 			
-    // getParams??
     create(schemaName: string, data: any): any {
         let params = this.modelMapper.getParams(schemaName, data, 'schemaName');
-        return this.baasicBaseRouteDefinition.create('resources/{schemaName}', params);
+        return super.create('resources/{schemaName}', params);
     }
 	
     update(data: any, options: IOptions): any {
-        let opt = this.utility.extend({}, options); // ??
-        let params = this.modelMapper.updateParams(data);
-        if ('HAL') {
-            return this.baasicBaseRouteDefinition.parse(params[this.baasicConstants.modelPropertyName].links('put').href).expand(opt);
-        } else {
-            return this.baasicBaseRouteDefinition.parse('resources/{schemaName}/{id}').expand(opt);
-        }
+        return super.update('resources/{schemaName}/{id}/{?embed,fields}', data, options);
     }
 
     patch(data: any, options: IOptions): any {
         let opt = this.utility.extend({}, options);
         let params = this.modelMapper.updateParams(data);
         if ('HAL') {
-            return this.baasicBaseRouteDefinition.parse(params[this.baasicConstants.modelPropertyName].links('patch').href).expand(opt);
+            return super.parse(params[this.baasicConstants.modelPropertyName].links('patch').href).expand(opt);
         } else {
-            return this.baasicBaseRouteDefinition.parse('resources/{schemaName}/{id}').expand(opt);
+            return super.parse('resources/{schemaName}/{id}/{?embed,fields}').expand(opt);
         }
     }
 
     delete(data: any, options: IOptions): any {
-        let opt = this.utility.extend({}, options);
-        let params = this.modelMapper.removeParams(data);
-        if ('HAL') {
-            return this.baasicBaseRouteDefinition.parse(params[baasicConstants.modelPropertyName].links('delete').href).expand(opt);
-        } else {
-            return this.baasicBaseRouteDefinition.parse('resources/{schemaName}/{id}').expand(opt);
-        }
+        return super.delete('resources/{schemaName}/{id}', data, options);
     }
 }
