@@ -4,18 +4,19 @@
  * @description This service is used to perform low level model or option transformations before they are sent to the Baasic back-end.
  **/
 
+import { IOptions } from 'common/contracts';
 import { Utility } from '.';
 
 export class ModelMapper {
 
     constructor(private utility: Utility) {}
 
-    private FindParams(options: any): any {
-        let object;
+    private FindParams(options: IOptions): any {
+        let object: any = {};
         if (this.utility.isObject(options)) {
             this.utility.extend(object, options);
             if(options.hasOwnProperty('orderBy') && options.hasOwnProperty('orderDirection')) {
-                object.sort = options.orderBy ? options.orderby + '|' + options.orderDirection : null;
+                object.sort = options.orderBy ? options.orderBy + '|' + options.orderDirection : null;
             }
             if (options.hasOwnProperty('search')) {
                 object.searchQuery = options.search;
@@ -33,8 +34,8 @@ export class ModelMapper {
         return object;
     }
 
-    private KeyParams(id: any, options: any, propName: any): any {
-        let object;
+    private KeyParams(id: any, options: IOptions, propName: any): any {
+        let object: any = {};
         if (this.utility.isObject(id)) {
             this.utility.extend(object, id);
         } else {
