@@ -4,18 +4,22 @@
  */
 
 import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
 import { BaasicValueSetItemRouteDefinition } from 'valueSet';
+import { IValueSet } from 'valueSet/contracts';
+import { ModelMapper, Utility } from '..';
 
-export class BaasicValueSetRouteDefinition {
+export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
    
     get items(): BaasicValueSetItemRouteDefinition {
         return this.baasicValueSetItemRouteDefinition;
     }
 
     constructor(
-        private baasicBaseRouteDefinition: BaasicBaseRouteDefinition,
-        private baasicValueSetItemRouteDefinition: BaasicValueSetItemRouteDefinition
-    ) {}
+        protected modelMapper: ModelMapper,
+        protected utility: Utility,
+        protected baasicValueSetItemRouteDefinition: BaasicValueSetItemRouteDefinition
+    ) { super(modelMapper, utility); }
 
     /**                 
      * Parses find value set route which can be expanded with additional options. Supported items are:                 
@@ -24,54 +28,52 @@ export class BaasicValueSetRouteDefinition {
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the value set property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
-     * @example baasicValueSetRouteDefinition.find().expand({searchQuery: '<search-phrase>'});                               
+     * @method
+     * @param options Query resource options object.                        
+     * @example baasicValueSetRouteDefinition.find(options);                               
      **/
-    find(): any {
-        return this.baasicBaseRouteDefinition.find('value-sets/{?searchQuery,page,rpp,sort,embed,fields}');
+    find(options: IOptions): any {
+        return super.find('value-sets/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
      * Parses get value set route which must be expanded with the name of the previously created value set resource in the system.                 
-     * @method                        
-     * @example baasicValueSetRouteDefinition.get().expand({setName: '<value-set-name>'});                               
+     * @method 
+     * @param setName Value Set name.
+     * @param options Query resource options object.                       
+     * @example baasicValueSetRouteDefinition.get(setName, options);                               
      **/ 
-    get(): any {
-        return this.baasicBaseRouteDefinition.get('value-sets/{setName}/{?embed,fields}');
+    get(setName: string, options?: IOptions): any {
+        return super.get('value-sets/{setName}/{?embed,fields}', setName, options, 'setName');
     }
 
      /**                 
       * Parses create value set route; this URI template does not expose any additional options.                 
       * @method                        
-      * @example baasicValueSetRouteDefinition.create().expand({});                              
+      * @example baasicValueSetRouteDefinition.create();                              
       **/ 
     create(): any {
-        return this.baasicBaseRouteDefinition.create('value-sets');
+        return super.create('value-sets', {});
     }
 
     /**
      * Parses update value set route.
      * @method
+     * @param data Value set object used to update specified value set resource.
+     * @example baasicValueSetRouteDefinition.update(data);
      */
-    update(params: any): any {
-        return this.baasicBaseRouteDefinition.update('value-sets/{id}', params);
+    update(data: IValueSet): any {
+        return super.update('value-sets/{id}', data);
     }
 
     /**
      * Parses delete value set route.
      * @method
+     * @param data A value set object used to delete specified value set resource.
+     * @example baasicValueSetRouteDefinition.delete(data);
      */
-    delete(params: any): any {
-        return this.baasicBaseRouteDefinition.delete('value-sets/{id}', params);
-    }
-
-     /**                 
-      * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
-      * @method                 
-      * @example baasicValueSetRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
-      **/ 					
-    parse(route: string): any {
-        return this.baasicBaseRouteDefinition.parse(route);
+    delete(data: IValueSet): any {
+        return super.delete('value-sets/{id}', data);
     }
 }
 
