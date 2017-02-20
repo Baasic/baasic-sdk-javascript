@@ -4,10 +4,16 @@
  */
 
 import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
+import { IResourceSchema } from 'dynamicResource/contracts';
+import { ModelMapper, Utility } from '..';
 
-export class BaasicDynamicSchemaRouteDefinition {
+export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(private baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+    constructor(
+        protected modelMapper: ModelMapper,
+        protected utility: Utility
+    ) { super(modelMapper, utility); }
 
     /** 				
      * Parses find route which can be expanded with additional options. Supported items are: 				
@@ -17,63 +23,57 @@ export class BaasicDynamicSchemaRouteDefinition {
      * - `sort` - A string used to set the dynamic resource schema property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicDynamicSchemaRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
+     * @example baasicDynamicSchemaRouteDefinition.find({searchQuery: '<search-phrase>'});               				
      **/
-    find(): any {
-        return this.baasicBaseRouteDefinition.find('schemas/{?searchQuery,page,rpp,sort,embed,fields}');
+    find(options: IOptions): any {
+        return super.baseFind('schemas/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
      * Parses get route which must be expanded with name of the previously created dynamic resource schema. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicDynamicSchemaRouteDefinition.find().expand({name: '<schema-name>'});
+     * @example baasicDynamicSchemaRouteDefinition.find({name: '<schema-name>'});
      **/
-    get(): any {
-        return this.baasicBaseRouteDefinition.get('schemas/{name}/{?embed,fields}');
+    get(name: string, options?: IOptions): any {
+        return super.baseGet('schemas/{name}/{?embed,fields}', this.modelMapper.getParams(name, options, 'name'));
     }
 
     /** 				
      * Parses create route; this URI template doesn't expose any additional properties. 				
      * @method      				
-     * @example baasicDynamicSchemaRouteDefinition.create().expand({});              				
+     * @example baasicDynamicSchemaRouteDefinition.generate();              				
      **/	
     generate(): any {
-        return this.baasicUriTemplateProcessor.parse('schemas/generate');
+        return super.parse('schemas/generate').expand({});
     }
 
     /** 				
      * Parses create route; this URI template doesn't expose any additional properties. 		
      * @method      				
-     * @example baasicDynamicSchemaRouteDefinition.create().expand({});              				
+     * @example baasicDynamicSchemaRouteDefinition.create(data);              				
      **/ 
     create(): any {
-        return this.baasicBaseRouteDefinition.create('schemas');
+        return super.baseCreate('schemas', {});
     }
 
     /**
      * Parses update route.
      * @method
+     * @param data A dynamic schema object used to update specified dynamic resource schema.
+     * @example baasicDynamicSchemaRouteDefinition.update(data);
      */
-    update(params: any): any {
-        return this.baasicBaseRouteDefinition.update('schemas/{id}', params);
+    update(data: IResourceSchema): any {
+        return super.baseUpdate('schemas/{id}', data);
     }
 
     /**
      * Parses delete route.
      * @method
+     * @param data A dynamic schema object used to delete specified dynamic resource schema.   
      */
-    delete(params: any): any {
-        return this.baasicBaseRouteDefinition.delete('schemas/{id}', params);
-    }
-
-    /** 				
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page. 				
-     * @method 				
-     * @example baasicDynamicSchemaRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'}); 				
-     **/	
-    parse(route: string): any {
-        return this.baasicBaseRouteDefinition.parse(route);
+    delete(data: IResourceSchema): any {
+        return this.baasicBaseRouteDefinition.delete('schemas/{id}', data);
     }
 }
 

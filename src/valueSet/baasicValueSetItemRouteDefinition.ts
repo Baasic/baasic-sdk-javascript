@@ -28,7 +28,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicValueSetItemRouteDefinition.find(options);               					
      **/ 				
     find(options: IOptions): any {
-        return super.find('value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind('value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /** 					
@@ -44,7 +44,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
     get(setName: string, id: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
         params.setName = setName;
-        return super.get('value-sets/{setName}/items/{id}/{?embed,fields}', id, params);
+        return super.baseGet('value-sets/{setName}/items/{id}/{?embed,fields}', id, options);
     }
 
     /** 					
@@ -54,7 +54,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicValueSetItemRouteDefinition.create(data);              					
      **/
     create(data: IValueSetItem): any {
-        return super.create('value-sets/{setName}/items/', data);
+        return super.baseCreate('value-sets/{setName}/items/', data);
     }
 
     /**
@@ -64,7 +64,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicValueSetItemRouteDefinition.update(data);
      */
     update(data: IValueSetItem): any {
-        return super.update('value-sets/{setId}/items/{id}', data);
+        return super.baseUpdate('value-sets/{setId}/items/{id}', data);
     }
 
     /**
@@ -74,7 +74,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicValueSetItemRouteDefinition.delete(data);
      */
     delete(data: IValueSetItem): any {
-        return super.delete('value-sets/{setId}/items/{id}', data);
+        return super.baseDelete('value-sets/{setId}/items/{id}', data);
     }
 }
 

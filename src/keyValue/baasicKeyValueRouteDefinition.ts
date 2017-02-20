@@ -28,7 +28,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
       * @example baasicKeyValueRouteDefinition.find(options);                               
       **/
     find(options: IOptions): any {
-        return super.find('key-values/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind('key-values/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
@@ -39,7 +39,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.get();                               
      **/
     get(id: string, options?: IOptions): any {
-        return super.get('key-values/{id}/{?embed,fields}', id, options);
+        return super.baseGet('key-values/{id}/{?embed,fields}', id, options);
     }
 
     /**                 
@@ -48,7 +48,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.create();                           
      **/
     create(): any {
-        return super.create('key-values', {});
+        return super.baseCreate('key-values', {});
     }
 
     /**
@@ -58,7 +58,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.update(data);
      */
     update(data: IKeyValue): any {
-        return super.update('key-values/{id}', data);
+        return super.baseUpdate('key-values/{id}', data);
     }
 
     /**
@@ -68,7 +68,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.delete(data);
      */
     delete(data: IKeyValue): any {
-        return super.delete('key-values/{id}', data);
+        return super.baseDelete('key-values/{id}', data);
     }
 }
 

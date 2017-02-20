@@ -27,7 +27,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options: IOptions): any {
-        return super.find('lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind('lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
@@ -38,7 +38,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.get().expand({id: '<role-id>'});                               
      **/ 
     get(id: string, options?: IOptions): any {
-        return super.get('lookups/roles/{id}/{?embed,fields}', id, options);
+        return super.baseGet('lookups/roles/{id}/{?embed,fields}', id, options);
     }
 
     /**                 
@@ -47,7 +47,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.create();                               
      **/   				
     create(): any {
-        return super.create('lookups/roles', {});
+        return super.baseCreate('lookups/roles', {});
     }
 
     /**
@@ -57,7 +57,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.update(data);
      */
     update(data: IRole): any {
-        return super.update('lookups/roles/{id}', data);
+        return super.baseUpdate('lookups/roles/{id}', data);
     }
 
     /**
@@ -67,7 +67,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.delete(data);
      */
     delete(data: IRole): any {
-        return super.delete('lookups/roles/{id}', data);
+        return super.baseDelete('lookups/roles/{id}', data);
     }
 }
 

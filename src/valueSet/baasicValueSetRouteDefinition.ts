@@ -33,7 +33,7 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicValueSetRouteDefinition.find(options);                               
      **/
     find(options: IOptions): any {
-        return super.find('value-sets/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind('value-sets/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
@@ -44,7 +44,7 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicValueSetRouteDefinition.get(setName, options);                               
      **/ 
     get(setName: string, options?: IOptions): any {
-        return super.get('value-sets/{setName}/{?embed,fields}', setName, options, 'setName');
+        return super.baseGet('value-sets/{setName}/{?embed,fields}', setName, options, 'setName');
     }
 
      /**                 
@@ -53,7 +53,7 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
       * @example baasicValueSetRouteDefinition.create();                              
       **/ 
     create(): any {
-        return super.create('value-sets', {});
+        return super.baseCreate('value-sets', {});
     }
 
     /**
@@ -63,7 +63,7 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicValueSetRouteDefinition.update(data);
      */
     update(data: IValueSet): any {
-        return super.update('value-sets/{id}', data);
+        return super.baseUpdate('value-sets/{id}', data);
     }
 
     /**
@@ -73,7 +73,7 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicValueSetRouteDefinition.delete(data);
      */
     delete(data: IValueSet): any {
-        return super.delete('value-sets/{id}', data);
+        return super.baseDelete('value-sets/{id}', data);
     }
 }
 
