@@ -74,10 +74,10 @@ export class BaasicRoleClient {
                     description : '<description>',   
                     name : '<name>' 
                 })
-                .success(function (data) {   
+                .then(function (data) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                  
      **/

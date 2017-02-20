@@ -1,5 +1,5 @@
 {
-  "name": "baasic-sdk-core",
+  "name": "baasic-sdk-javascript",
   "version": "1.0.0",
   "description": "JavaScript SDK provides core functionality for building web and mobile applications on [Baasic](http://www.baasic.com/).",
   "main": "build/lib/index.js",
@@ -16,7 +16,10 @@
   },
   "keywords": [],
   "author": "Mono Software",
-  "license": "ISC",
+  "license": "MIT",
+  "dependencies": {
+    "baasic-uritemplate": "Baasic/uritemplate-js"
+  },
   "devDependencies": {
     "@types/node": "^7.0.5",
     "@types/webpack": "^2.2.5",

@@ -33,8 +33,8 @@ module.exports = {
      */
     output: {
         path: 'build/dist',
-        filename: 'baasic-sdk-core.js',
-        library: 'baasicSdkCore',
+        filename: 'baasic-sdk-javascript.js',
+        library: 'baasicSdkJavaScript',
         libraryTarget: 'umd'
     }
 }
