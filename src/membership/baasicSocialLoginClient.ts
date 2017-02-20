@@ -21,17 +21,17 @@ export class BaasicSocialLoginClient {
      * Returns a promise that is resolved once the get action has been performed. Success response returns a list user resource connected social login providers.
      * @param username A username or id which uniquely identifies user resource whose social login connections need to be retrieved.
      * @returns A promise that is resolved once the get action has been performed.                     
-     * @method socialLogin.get                     
+     * @method                    
      * @example baasicSocialLoginClient.get('<username>')
-                    .success(function (collection) {   
+                    .then(function (collection) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                     
      **/
     get(username: string): Promise<IBaasicQueryModel<ISocialLogin>> {
-        return this.baasicApiHttp.get(this.baasicSocialLoginRouteDefinition.get().expand({ username: username }));
+        return this.baasicApiHttp.get(this.baasicSocialLoginRouteDefinition.get(username));
     }
 
     /**                     
@@ -39,29 +39,16 @@ export class BaasicSocialLoginClient {
      * @param username A username or id which uniquely identifies user resource whose social login connection needs to be removed.    
      * @param provider A value which uniquely identifies provider from which the user resource needs to be disconnected.
      * @returns A promise that is resolved once the remove action has been performed.                 
-     * @method socialLogin.remove                     
+     * @method                 
      * @example baasicSocialLoginClient.remove('<username>', '<provider>')
-                    .success(function (collection) {   
+                    .then(function (collection) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                     
      **/                     
     remove(username: string, provider: any): Promise<void> {
-        let params;
-        if (provider.hasOwnProperty('abrv')){ 
-            params = { 
-                provider: provider.abrv                             
-            };
-         } else if (provider.hasOwnProperty('id')){ 
-             params = { 
-                 provider: provider.id
-            };
-        } else { 
-            params = this.utility.extend({}, provider);
-        }
-        params.username = username;
-        return this.baasicApiHttp.delete(this.baasicSocialLoginRouteDefinition.remove().expand(this.modelMapper.findParams(params)));                       
+        return this.baasicApiHttp.delete(this.baasicSocialLoginRouteDefinition.remove(username, provider));                       
     }
 }

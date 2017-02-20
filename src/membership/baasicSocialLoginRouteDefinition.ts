@@ -5,29 +5,49 @@
  */
 
 import { BaasicBaseRouteDefinition } from 'common';
+import { ModelMapper, Utility } from '..';
 
-export class BaasicSocialLoginRouteDefinition {
+export class BaasicSocialLoginRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(private baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+    constructor(
+        protected modelMapper: ModelMapper,
+        protected utility: Utility
+    ) { super(modelMapper, utility); }
 
     /**                     
      * Parses get social login route, URI template should be expanded with the username of the user resource whose social login connections should be retrieved.                     
-     * @method socialLogin.get                           
-     * @example baasicSocialLoginRouteDefinition.get().expand({ username : '<username>' });
+     * @method
+     * @param username A username or id which uniquely identifies user resource whose social login connections need to be retrieved.                           
+     * @example baasicSocialLoginRouteDefinition.get('<username>');
      **/
-    get(): any {
-        return this.baasicBaseRouteDefinition.get('users/{username}/social-login');
+    get(username: string): any {
+        return super.parse('users/{username}/social-login').expand({ username: username });
     }
 
     /**                     
      * Parses remove social login route which can be expanded with additional items. Supported items are:                     
      * - `username` - A username which uniquely identifies an application user whose social login connection needs to be removed.                     
      * - `provider` - Provider from which to disconnect the login resource from.                     
-     * @method socialLogin.remove                     
-     * @example baasicSocialLoginRouteDefinition.remove().expand({ username : '<username>',   provider : '<provider>' });
+     * @method
+     * @param username A username which uniquely identifies an application user whose social login connection needs to be removed.
+     * @param provider Provider from which to disconnect the login resource from.               
+     * @example baasicSocialLoginRouteDefinition.remove('<username>', '<provider>');
      **/                     
-    remove(): any {
-        return this.baasicUriTemplateProcessor.parse('users/{username}/social-login/{provider}');
+    remove(username: string, provider: any): any {
+        let params;
+        if (provider.hasOwnProperty('abrv')){ 
+            params = { 
+                provider: provider.abrv                             
+            };
+         } else if (provider.hasOwnProperty('id')){ 
+             params = { 
+                 provider: provider.id
+            };
+        } else { 
+            params = this.utility.extend({}, provider);
+        }
+        params.username = username;
+        return super.parse('users/{username}/social-login/{provider}').expand(this.modelMapper.findParams(params));
     }
 }
 
