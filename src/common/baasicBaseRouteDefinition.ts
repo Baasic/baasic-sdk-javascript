@@ -70,7 +70,7 @@ export abstract class BaasicBaseRouteDefinition {
      * @method
      * @example baasicBaseRouteDefinition.delete();
      */
-    protected delete(route: string, data: any, options: IOptions): any {
+    protected delete(route: string, data: any, options?: IOptions): any {
         let params = this.modelMapper.removeParams(data);
         if (typeof options === 'undefined') {
             if ('HAL') {

@@ -5,3 +5,4 @@ export * from './IACLAction';
 export * from './IACLRole';
 export * from './IACLUser';
 export * from './INewACLPolicy';
+export * from './IDynamicObject';

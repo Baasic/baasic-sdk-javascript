@@ -32,8 +32,8 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
      * @param options query resource options object      				
      * @example baasicDynamicResourceRouteDefinition.find(options); 				
      **/
-    find(options: IOptions): any {
-        return super.find('resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}', options);
+    find(schemaName: string, options: IOptions): any {
+        return super.find('resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}', this.utility.extend({ schemaName: schemaName }, options));
     }
 
     /**                 
@@ -46,7 +46,7 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicDynamicResourceRouteDefinition.get(id, schemaName, options);               				
      **/
     get(id: string, schemaName: string, options: IOptions): any {
-        return super.get('resources/{schemaName}/{id}/{?embed,fields}', id, options, this.utility.extend({ schemaName: schemaName }, options));
+        return super.get('resources/{schemaName}/{id}/{?embed,fields}', id, this.utility.extend({ schemaName: schemaName }, options));
     }
 			
     create(schemaName: string, data: any): any {
@@ -70,5 +70,10 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
 
     delete(data: any, options: IOptions): any {
         return super.delete('resources/{schemaName}/{id}', data, options);
+    }
+
+    createParams(schemaName: string, data: any): any {
+        let params = this.modelMapper.getParams(schemaName, data, 'schemaName');
+        return super.createParams(params);
     }
 }

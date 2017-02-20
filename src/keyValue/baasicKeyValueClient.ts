@@ -34,10 +34,10 @@ export class BaasicKeyValueClient {
                  orderDirection: '<asc|desc>', 
                  search: '<search-phrase>'
                 })
-                .success(function (collection) {   
+                .then(function (collection) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
      **/ 	
@@ -52,10 +52,10 @@ export class BaasicKeyValueClient {
      * @returns A promise that is resolved once the get action has beend performed.
      * @method
      * @example baasicKeyValueClient.get('<key-value-id>')
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                  
      **/	
@@ -69,10 +69,10 @@ export class BaasicKeyValueClient {
      * @returns A promise that is resolved once the create key value action has beend performed.
      * @method
      * @example baasicKeyValueClient.create({key: '<key>', value: '<value>', })
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });
      */ 		
@@ -92,10 +92,10 @@ export class BaasicKeyValueClient {
      * @example // keyValue is a resource previously fetched using get action. 
                    keyValue.value = '<new-value>'; 
                    baasicKeyValueClient.update(keyValue)
-                   .success(function (data) {   
+                   .then(function (data) {   
                        // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     }); 				
      **/					
@@ -114,10 +114,10 @@ export class BaasicKeyValueClient {
      * @method 
      * @example // keyValue is a resource previously fetched using get action.				 
                     baasicKeyValueClient.remove(keyValue) 
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });
      **/	

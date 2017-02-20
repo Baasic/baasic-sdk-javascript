@@ -1,6 +1,6 @@
 export interface IBaasicQueryModel<T> {
     embed: string,
-    item: T,
+    item: T[],
     page: number,
     recordsPerPage: number,
     searchQuery: string,

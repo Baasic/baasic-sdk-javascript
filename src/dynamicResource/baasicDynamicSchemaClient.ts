@@ -25,7 +25,8 @@ export class BaasicDynamicSchemaClient {
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resource schemas matching the given criteria.                  
-     * @method                         
+     * @method
+     * @param options Options object.                      
      * @example baasicDynamicSchemaClient.find({ 
                     pageNumber : 1,   
                     pageSize : 10,   
@@ -33,10 +34,10 @@ export class BaasicDynamicSchemaClient {
                     orderDirection : '<asc|desc>',   
                     search : '<search-phrase>' 
                 })
-                .success(function (collection) {   
+                .then(function (collection) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
      **/
@@ -46,12 +47,14 @@ export class BaasicDynamicSchemaClient {
 
     /**                  
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified dynamic resource schema.                  
-     * @method                         
+     * @method
+     * @param name Name of dynamic resource schema which need to be retrieved.
+     * @param options Options object.                         
      * @example baasicDynamicSchemaClient.get('<schema-name>')
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                 
      **/ 				
@@ -61,7 +64,8 @@ export class BaasicDynamicSchemaClient {
 
     /**                 
      * Returns a promise that is resolved once the create action has been performed; this action creates a new dynamic resource schema item.                 
-     * @method                        
+     * @method
+     * @param data A dynamic resource schema object that needs to be inserted into the system.                        
      * @example baasicDynamicSchemaDefinition.create({   
                     schema : {  
                         type : 'object',     
@@ -81,10 +85,10 @@ export class BaasicDynamicSchemaClient {
                     description : '<description>',   
                     enforceSchemaValidation : true 
                 })
-                .success(function (data) {   
+                .then(function (data) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                 
      **/
@@ -98,14 +102,15 @@ export class BaasicDynamicSchemaClient {
      * let params = modelMapper.removeParams(dynamicResourceSchema); 
      * let uri = params['model'].links('put').href; 
      * ```                  
-     * @method                         
+     * @method
+     * @param data A dynamic schema object used to update specified dynamic resource schema.                         
      * @example // dynamicResourceSchema is a resource previously fetched using get action. 
                     dynamicResourceSchema.description = '<description>'; 
                     baasicDynamicSchemaClient.update(dynamicResourceSchema)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				
      **/	
@@ -120,13 +125,14 @@ export class BaasicDynamicSchemaClient {
      * let params = modelMapper.removeParams(dynamicResourceSchema); 
      * let uri = params['model'].links('delete').href; 
      * ```                 
-     * @method                        
+     * @method
+     * @param data Dynamic Resource Schema that needs to be deleted.                        
      * @example // dynamicResourceSchema is a resource previously fetched using get action.				 
                     baasicDynamicSchemaClient.remove(dynamicResourceSchema)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
      **/					
@@ -137,15 +143,16 @@ export class BaasicDynamicSchemaClient {
 
     /**                 
      * Returns a promise that is resolved once the generate schema action has been performed. Success response returns a schema generated based on the json input.                 
-     * @method                        
+     * @method
+     * @param data Unordered collection of key value pairs used to specify dynamic schema definition.                         
      * @example baasicDynamicSchemaService.generate({ 
                     id : '<schema-Id>',   
                     description : '<description>' 
                 })
-                .success(function (data) {   
+                .then(function (data) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });					    
      **/					
