@@ -11,7 +11,10 @@ import { ModelMapper, Utility } from '..';
 
 export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper, protected utility: Utility) { super(modelMapper, utility); }
+    constructor(
+        protected modelMapper: ModelMapper, 
+        protected utility: Utility
+    ) { super(modelMapper, utility); }
 
      /**                 
       * Parses find key value route which can be expanded with additional options. Supported items are:                 

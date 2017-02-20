@@ -5,10 +5,16 @@
  */
 
 import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
+import { IRole } from 'membership/contracts';
+import { ModelMapper, Utility } from '..';
 
-export class BaasicRoleRouteDefinition {
+export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(private baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+    constructor(
+        protected modelMapper: ModelMapper,
+        protected utility: Utility
+    ) { super(modelMapper, utility); }
 
     /**                 
      * Parses find role route which can be expanded with additional options. Supported items are:                 
@@ -16,49 +22,52 @@ export class BaasicRoleRouteDefinition {
      * - `page` - A value used to set the page number, i.e. to retrieve certain role subset from the storage.                 
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the role property to sort the result collection by.                 
-     * @method                        
-     * @example baasicRoleRouteDefinition.find().expand({searchQuery: '<search-phrase>'});                               
+     * @method
+     * @param options Query resource options object.                        
+     * @example baasicRoleRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(): any {
-        return this.baasicBaseRouteDefinition.find('lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}');
+    find(options: IOptions): any {
+        return super.find('lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
      * Parses get role route which should be expanded with the role Id. Note that the role Id is the primary key of the role.                 
-     * @method                        
+     * @method
+     * @param id Role unique indentifer.
+     * @param options Query resource options object.                        
      * @example baasicRoleRouteDefinition.get().expand({id: '<role-id>'});                               
      **/ 
-    get(): any {
-        return this.baasicBaseRouteDefinition.get('lookups/roles/{id}/{?embed,fields}');
+    get(id: string, options?: IOptions): any {
+        return super.get('lookups/roles/{id}/{?embed,fields}', id, options);
     }
 
     /**                 
      * Parses create role route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicRoleRouteDefinition.create().expand({});                               
+     * @example baasicRoleRouteDefinition.create();                               
      **/   				
     create(): any {
-        return this.baasicBaseRouteDefinition.create('lookups/roles');
+        return super.create('lookups/roles', {});
     }
 
     /**
      * Parses update role route.
      * @method
+     * @param data A role object used to update specified role resource.
+     * @example baasicRoleRouteDefinition.update(data);
      */
-    update(params: any): any {
-        return this.baasicBaseRouteDefinition.update('lookups/roles/{id}', params);
+    update(data: IRole): any {
+        return super.update('lookups/roles/{id}', data);
     }
 
     /**
      * Parses delete role route.
      * @method
+     * @param data A role object used to delete specified role resource.
+     * @example baasicRoleRouteDefinition.delete(data);
      */
-    delete(params: any): any {
-        return this.baasicBaseRouteDefinition.delete('lookups/roles/{id}', params);
-    }
-
-    parse(route: string): any {
-        return this.baasicBaseRouteDefinition.parse(route);
+    delete(data: IRole): any {
+        return super.delete('lookups/roles/{id}', data);
     }
 }
 

@@ -13,6 +13,7 @@
         "src/common",
         "src/dynamicResource",
         "src/keyValue",
+        "src/membership",
         "src/valueSet",
         "src/modelMapper.ts",
         "src/utility.ts"
