@@ -12,7 +12,7 @@ export class BaasicPasswordRecoveryClient {
      /**                 
       * Provides direct access to `baasicPasswordRecoveryRouteDefinition`.                 
       * @method                        
-      * @example baasicPasswordRecoveryClient.routeDefinition.get().expand(expandObject);                 
+      * @example baasicPasswordRecoveryClient.routeDefinition.requestReset(data);                 
       **/    
     get routeDefinition(): BaasicPasswordRecoveryRouteDefinition {
         return this.baasicPasswordRecoveryRouteDefinition;
@@ -21,47 +21,50 @@ export class BaasicPasswordRecoveryClient {
     constructor(private baasicPasswordRecoveryRouteDefinition: BaasicPasswordRecoveryRouteDefinition) {}
 
     /** 				
-     * Returns a promise that is resolved once the password recovery requestReset action is completed. This action initiates the password recovery process for the user.
-     * @param data A password recovery object which contains parameters required for the password retrieval request. 				
-     * @method 				
+     * Returns a promise that is resolved once the password recovery requestReset action is completed. This action initiates the password recovery process for the user.			
+     * @method
+     * @param data A password recovery object which contains parameters required for the password retrieval request. 	 				
      * @example baasicPasswordRecoveryClient.requestReset({ 
                     challengeIdentifier : '<challenge-identifier>',   
                     challengeResponse : '<challenge-response>',   
                     recoverUrl : '<recover-url>',   
                     username : '<username>' 
                 })
-                .success(function () {   
+                .then(function () {   
                     // perform success action here 
-                })
-                .error(function (data) {   
+                },
+                 function (data) {   
                     // perform error handling here 
                 })
                 .finally (function () {});								
      */
     requestReset(data: IRequestPasswordReset): Promise<any> {
         return this.baasicApiHttp({
-            url: this.baasicPasswordRecoveryRouteDefinition.passwordRecovery().expand({}), 
+            url: this.baasicPasswordRecoveryRouteDefinition.passwordRecovery(), 
             method: 'POST',                         
             data: data 
         });
     }
 
     /** 				
-     * Returns a promise that is resolved once the password reset action is completed. This updates user's password selection. 
-     * @param data Password recovery object used to update user's current password selection.				
-     * @method 				
+     * Returns a promise that is resolved once the password reset action is completed. This updates user's password selection. 		
+     * @method
+     * @param data Password recovery object used to update user's current password selection.		 				
      * @example baasicPasswordRecoveryClient.reset({   
                     newPassword : '<new-password>',   
                     passwordRecoveryToken : '<password-recovery-token>' 
-                }).success(function () {   
+                })
+                .then(function () {   
                     // perform success action here 
-                }).error(function (data) {   
+                },
+                 function (data) {   
                     // perform error handling here 
-                }).finally (function () {});							
+                })
+                .finally (function () {});							
      */	
     reset(data: IResetPassword): Promise<any> {
         return this.baasicApiHttp({ 
-            url: this.baasicPasswordRecoveryRouteDefinition.passwordRecovery().expand({}), 
+            url: this.baasicPasswordRecoveryRouteDefinition.passwordRecovery(), 
             method: 'PUT', 
             data: data 
         });
