@@ -34,7 +34,7 @@ export class ModelMapper {
         return object;
     }
 
-    private KeyParams(id: any, options: IOptions, propName: any): any {
+    private KeyParams(id: any, options?: IOptions, propName?: any): any {
         let object: any = {};
         if (this.utility.isObject(id)) {
             this.utility.extend(object, id);
@@ -81,7 +81,7 @@ export class ModelMapper {
      * @method
      * @example modelMapper.getParams(('<value>', {additionalOptions: '<option>'},'<property-name>'));
      **/ 	
-    getParams(id: any, options: any, propName?: any) {
+    getParams(id: any, options?: any, propName?: any) {
         return this.KeyParams(id, options, propName);
     }
 

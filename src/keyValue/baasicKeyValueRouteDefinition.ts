@@ -35,7 +35,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @param options Query resource options object.                    
      * @example baasicKeyValueRouteDefinition.get();                               
      **/
-    get(id: string, options: IOptions): any {
+    get(id: string, options?: IOptions): any {
         return super.get('key-values/{id}/{?embed,fields}', id, options);
     }
 

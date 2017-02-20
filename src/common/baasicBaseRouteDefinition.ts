@@ -24,9 +24,9 @@ export abstract class BaasicBaseRouteDefinition {
       * Parses get resource route which must be expanded with the Id of the previously created resource in the system.
       * @returns get resource uri
       * @method 
-      * @example baasicBaseRouteDefinition.get();
+      * @example baasicBaseRouteDefinition.get(route, id);
       **/
-    protected get(route: string, id: string, options: IOptions, propName?: string): any {
+    protected get(route: string, id: string, options?: IOptions, propName?: string): any {
         return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
     
