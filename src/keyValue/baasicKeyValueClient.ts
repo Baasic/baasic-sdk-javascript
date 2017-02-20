@@ -5,7 +5,7 @@
 
 import { BaasicKeyValueRouteDefinition } from 'keyValue';
 import { IKeyValue } from 'keyValue/contracts';
-import { ModelMapper } from '..';
+import { ModelMapper, BaasicApiClient } from '..';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 
 export class BaasicKeyValueClient {
@@ -21,8 +21,12 @@ export class BaasicKeyValueClient {
     
     constructor(
         protected modelMapper: ModelMapper,
-        protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition
-    ) {}
+        protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition,
+        protected baasicApiClient: BaasicApiClient
+    ) {
+
+        
+    }
 
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of key value resources matching the given criteria.
@@ -43,8 +47,8 @@ export class BaasicKeyValueClient {
                     // perform error handling here 
                 });                     
      **/ 	
-    find(options: IOptions): Promise<IBaasicQueryModel<IKeyValue>> {
-        return this.baasicApiHttp.get(this.baasicKeyValueRouteDefinition.find(options));
+    find(options?: IOptions): Promise<IBaasicQueryModel<IKeyValue>> {
+        return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.find(options));
     }
 
     /**
@@ -62,7 +66,7 @@ export class BaasicKeyValueClient {
                     });                  
      **/	
     get(id: string, options: IOptions): Promise<IKeyValue> {
-        return this.baasicApiHtpp.get(this.baasicKeyValueRouteDefinition.get(id, options));
+        return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.get(id, options));
     }
 
     /**
@@ -79,7 +83,7 @@ export class BaasicKeyValueClient {
                     });
      */ 		
     create(data: IKeyValue): Promise<IKeyValue> {
-        return this.baasicApiHttp.post(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
+        return this.baasicApiClient.post(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
     }
 
     /**
@@ -102,7 +106,7 @@ export class BaasicKeyValueClient {
                     }); 				
      **/					
     update(data: IKeyValue): Promise<IKeyValue> {
-        return this.baasicApiHttp.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(params));
+        return this.baasicApiClient.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(params));
     }
 
     /**
@@ -124,7 +128,7 @@ export class BaasicKeyValueClient {
                     });
      **/	
     remove(data: IKeyValue): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(params));
+        return this.baasicApiClient.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(params));
     }
 }
 

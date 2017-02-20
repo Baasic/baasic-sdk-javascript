@@ -7,6 +7,8 @@
 import { BaasicBaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 
+const baseUrl : string = 'key-values';
+
 export class BaasicKeyValueRouteDefinition {
 
     constructor(protected baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}

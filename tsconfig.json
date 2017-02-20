@@ -3,7 +3,10 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "target": "es5",
-        "baseUrl": "./src"
+        "baseUrl": "./src",
+        "typeRoots": [
+            "./src/typings"
+        ]
     },
     "exclude": [
         "node_modules",

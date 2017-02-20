@@ -3,7 +3,20 @@ import { ModelMapper } from '..';
 
 export class BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) {}
+    url: (url: string) => string;
+
+    constructor(
+        baseUrl: string,
+        protected modelMapper: ModelMapper
+        ) {
+            this.url = (url) => {
+                if (url) {
+                    return `${ baseUrl }/${ url }`;
+                } else {
+                    return baseUrl;
+                }
+            };
+        }
 
     /**                
      * Parses resources route which can be expanded with additional options. Supported items are:                 
@@ -17,7 +30,7 @@ export class BaasicBaseRouteDefinition {
      * @example baasicBaseDefinition.find().expand({searchQuery: '<search-phrase>'});
      **/
     find(route: string, options: IOptions): any {
-        return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.findParams(options));
+        return this.baasicUriTemplateProcessor.parse(this.url(route)).expand(this.modelMapper.findParams(options));
     }
 
     /**
@@ -27,7 +40,7 @@ export class BaasicBaseRouteDefinition {
       * @example baasicBaseRouteDefinition.get().expand({id: '<key-value-id>'});
       **/
     get(route: string, id: string, options: IOptions, propName?: string): any {
-        return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.getParams(id, options, propName));
+        return this.baasicUriTemplateProcessor.parse(this.url(route)).expand(this.modelMapper.getParams(id, options, propName));
     }
     
     /**
@@ -37,7 +50,7 @@ export class BaasicBaseRouteDefinition {
       * @example baasicBaseRouteDefinition.get().expand({id: '<key-value-id>'});
       **/
     create(route: string, data?: any): any {
-        return this.baasicUriTemplateProcessor.parse(route).expand(data);
+        return this.baasicUriTemplateProcessor.parse(this.url(route)).expand(data);
     }
 
     update(route: string, data: any): any {
@@ -45,7 +58,7 @@ export class BaasicBaseRouteDefinition {
         if ('HAL') {
             return params[this.baasicConstants.modelPropertyName].links('put').href;
         } else {
-            return this.baasicUriTemplateProcessor.parse(route);
+            return this.baasicUriTemplateProcessor.parse(this.url(route));
         }
     }
 
@@ -54,7 +67,7 @@ export class BaasicBaseRouteDefinition {
         if ('HAL') {
             return params[this.baasicConstants.modelPropertyName].links('delete').href;
         } else {
-            return this.baasicUriTemplateProcessor.parse(route);
+            return this.baasicUriTemplateProcessor.parse(this.url(this.url(route)));
         }
     }
 
@@ -71,7 +84,7 @@ export class BaasicBaseRouteDefinition {
     }
 
     parse(route: string): any {
-        return this.baasicUriTemplateProcessor.parse(route);
+        return this.baasicUriTemplateProcessor.parse(this.url(route));
     }
 }
 
