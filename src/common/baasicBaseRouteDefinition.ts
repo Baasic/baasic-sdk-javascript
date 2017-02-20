@@ -1,5 +1,6 @@
 import { IOptions } from 'common/contracts';
-import { ModelMapper, Utility } from '..';
+import { ModelMapper, Utility } from 'common';
+import * as uritemplate from 'uritemplate';
 
 export abstract class BaasicBaseRouteDefinition {
 
@@ -17,7 +18,7 @@ export abstract class BaasicBaseRouteDefinition {
      * @example baasicBaseDefinition.find();
      **/
     protected find(route: string, options: IOptions): any {
-        return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.findParams(options));
+        return uritemplate.parse(route).expand(this.modelMapper.findParams(options));
     }
 
     /**
@@ -27,7 +28,7 @@ export abstract class BaasicBaseRouteDefinition {
       * @example baasicBaseRouteDefinition.get();
       **/
     protected get(route: string, id: string, options: IOptions, propName?: string): any {
-        return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.getParams(id, options, propName));
+        return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
     
     /**
@@ -37,7 +38,7 @@ export abstract class BaasicBaseRouteDefinition {
       * @example baasicBaseRouteDefinition.create();
       **/
     protected create(route: string, data?: any): any {
-        return this.baasicUriTemplateProcessor.parse(route).expand(data);
+        return uritemplate.parse(route).expand(data);
     }
 
     /**
@@ -50,16 +51,16 @@ export abstract class BaasicBaseRouteDefinition {
         let params = this.modelMapper.updateParams(data);
         if(typeof options === 'undefined') {
             if ('HAL') {
-                return params[this.baasicConstants.modelPropertyName].links('put').href;
+                return params[this.modelMapper.modelPropertyName].links('put').href;
             } else {
-                return this.baasicUriTemplateProcessor.parse(route).expand(params);
+                return uritemplate.parse(route).expand(params);
             }
         } else {
             let opt = this.utility.extend({}, options);
             if ('HAL') {
-                return this.baasicUriTemplateProcessor.parse(params[this.baasicConstants.modelPropertyName].links('put').href).expand(opt);
+                return uritemplate.parse(params[this.modelMapper.modelPropertyName].links('put').href).expand(opt);
             } else {
-                return this.baasicUriTemplateProcessor.parse(route).expand(opt);
+                return uritemplate.parse(route).expand(opt);
             }
         }
     }
@@ -74,30 +75,30 @@ export abstract class BaasicBaseRouteDefinition {
         let params = this.modelMapper.removeParams(data);
         if (typeof options === 'undefined') {
             if ('HAL') {
-                return params[this.baasicConstants.modelPropertyName].links('delete').href;
+                return params[this.modelMapper.modelPropertyName].links('delete').href;
             } else {
-                return this.baasicUriTemplateProcessor.parse(route).expand(params);
+                return uritemplate.parse(route).expand(params);
             }
         } else {
             let opt = this.utility.extend({}, options);
             if ('HAL') {
-                return this.baasicUriTemplateProcessor.parse(params[this.baasicConstants.modelPropertyName].links('delete').href).expand(opt);
+                return uritemplate.parse(params[this.modelMapper.modelPropertyName].links('delete').href).expand(opt);
             } else {
-                return this.baasicUriTemplateProcessor.parse(route).expand(opt);
+                return uritemplate.parse(route).expand(opt);
             }
         }
     }
 
     createParams(data: any): any {
-        return this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName];
+        return this.modelMapper.createParams(data)[this.modelMapper.modelPropertyName];
     }
 
     updateParams(data: any): any {
-        return this.modelMapper.updateParams(data)[this.baasicConstants.modelPropertyName];
+        return this.modelMapper.updateParams(data)[this.modelMapper.modelPropertyName];
     }
 
     deleteParams(data: any): any {
-        return this.modelMapper.removeParams(data)[this.baasicConstants.modelPropertyName];
+        return this.modelMapper.removeParams(data)[this.modelMapper.modelPropertyName];
     }
 
     /**                 
@@ -106,7 +107,7 @@ export abstract class BaasicBaseRouteDefinition {
      * @example baasicBaseRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
      **/
     parse(route: string): any {
-        return this.baasicUriTemplateProcessor.parse(route);
+        return uritemplate.parse(route);
     }
 }
 

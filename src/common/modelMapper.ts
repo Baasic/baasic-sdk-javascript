@@ -4,12 +4,15 @@
  * @description This service is used to perform low level model or option transformations before they are sent to the Baasic back-end.
  **/
 
-import { IOptions } from 'common/contracts';
-import { Utility } from '.';
+import { IOptions } from './contracts';
+import { Utility } from 'common';
 
 export class ModelMapper {
 
-    constructor(private utility: Utility) {}
+    public idPropertyName: string = 'id';
+    public modelPropertyName: string = 'model';
+
+    constructor(private utility: Utility) {}   
 
     private FindParams(options: IOptions): any {
         let object: any = {};
@@ -42,7 +45,7 @@ export class ModelMapper {
             if (propName !== undefined) {
                 object[propName] = id;
             } else {
-                object[this.baasicConstants.idPropertyName] = id;
+                object[this.idPropertyName] = id;
             }
         }
         if (options !== undefined && this.utility.isObject(options)) {
@@ -54,10 +57,10 @@ export class ModelMapper {
 
     private ModelParams(data: any): any {
         let object:any = {};
-        if (data.hasOwnProperty(this.baasicConstants.modelPropertyName)) {
+        if (data.hasOwnProperty(this.modelPropertyName)) {
             this.utility.extend(object, data);
         } else {
-            object[this.baasicConstants.modelPropertyName] = data;
+            object[this.modelPropertyName] = data;
         }
 
         return object;

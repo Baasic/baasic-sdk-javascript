@@ -10,11 +10,10 @@
         "build",
         "src/applicationSettings",
         "src/article",
-        "src/common",
         "src/dynamicResource",
+        "src/membership",
         "src/keyValue",
-        "src/valueSet",
-        "src/modelMapper.ts",
-        "src/utility.ts"
+        "src/valueSet",        
+        "src/baasicApp.ts"        
     ]
 }
