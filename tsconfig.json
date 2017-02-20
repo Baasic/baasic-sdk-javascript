@@ -11,11 +11,14 @@
     "exclude": [
         "node_modules",
         "build",
+        "src/applicationSettings",
         "src/article",
-        "src/key-value",
-        "src/value-set",
-        "src/baasicBaseRouteDefinition.ts",
-        "src/IOptions.ts",
-        "src/modelMapper.ts"
+        "src/common",
+        "src/dynamicResource",
+        "src/keyValue",
+        "src/membership",
+        "src/valueSet",
+        "src/modelMapper.ts",
+        "src/utility.ts"
     ]
 }

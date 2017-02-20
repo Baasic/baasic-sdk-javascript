@@ -1,22 +1,12 @@
 import { IOptions } from 'common/contracts';
-import { ModelMapper } from '..';
+import { ModelMapper, Utility } from '..';
 
-export class BaasicBaseRouteDefinition {
-
-    url: (url: string) => string;
+export abstract class BaasicBaseRouteDefinition {
 
     constructor(
-        baseUrl: string,
-        protected modelMapper: ModelMapper
-        ) {
-            this.url = (url) => {
-                if (url) {
-                    return `${ baseUrl }/${ url }`;
-                } else {
-                    return baseUrl;
-                }
-            };
-        }
+        protected modelMapper: ModelMapper,
+        protected utility: Utility
+    ) {}
 
     /**                
      * Parses resources route which can be expanded with additional options. Supported items are:                 
@@ -27,47 +17,77 @@ export class BaasicBaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @returns query resources uri with search params
      * @method
-     * @example baasicBaseDefinition.find().expand({searchQuery: '<search-phrase>'});
+     * @example baasicBaseDefinition.find();
      **/
-    find(route: string, options: IOptions): any {
-        return this.baasicUriTemplateProcessor.parse(this.url(route)).expand(this.modelMapper.findParams(options));
+    protected baseFind(route: string, options?: IOptions): any {
+        return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.findParams(options));
     }
 
     /**
       * Parses get resource route which must be expanded with the Id of the previously created resource in the system.
       * @returns get resource uri
       * @method 
-      * @example baasicBaseRouteDefinition.get().expand({id: '<key-value-id>'});
+      * @example baasicBaseRouteDefinition.get(route, id);
       **/
-    get(route: string, id: string, options: IOptions, propName?: string): any {
-        return this.baasicUriTemplateProcessor.parse(this.url(route)).expand(this.modelMapper.getParams(id, options, propName));
+    protected baseGet(route: string, id?: string, options?: IOptions, propName?: string): any {
+        return this.baasicUriTemplateProcessor.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
     
     /**
       * Parses get resource route which must be expanded with the Id of the previously created resource in the system.
       * @returns get resource uri
       * @method 
-      * @example baasicBaseRouteDefinition.get().expand({id: '<key-value-id>'});
+      * @example baasicBaseRouteDefinition.create();
       **/
-    create(route: string, data?: any): any {
-        return this.baasicUriTemplateProcessor.parse(this.url(route)).expand(data);
+    protected baseCreate(route: string, data?: any): any {
+        return this.baasicUriTemplateProcessor.parse(route).expand(data);
     }
 
-    update(route: string, data: any): any {
+    /**
+     * Parses get resource route.
+     * @returns update resource uri
+     * @method
+     * @example baasicBaseRouteDefinition.update();
+     */
+    protected baseUpdate(route: string, data: any, options?: IOptions): any {
         let params = this.modelMapper.updateParams(data);
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('put').href;
+        if(typeof options === 'undefined') {
+            if ('HAL') {
+                return params[this.baasicConstants.modelPropertyName].links('put').href;
+            } else {
+                return this.baasicUriTemplateProcessor.parse(route).expand(params);
+            }
         } else {
-            return this.baasicUriTemplateProcessor.parse(this.url(route));
+            let opt = this.utility.extend({}, options);
+            if ('HAL') {
+                return this.baasicUriTemplateProcessor.parse(params[this.baasicConstants.modelPropertyName].links('put').href).expand(opt);
+            } else {
+                return this.baasicUriTemplateProcessor.parse(route).expand(opt);
+            }
         }
     }
 
-    delete(route: string, data: any): any {
+    /**
+     * Parses delete resource route.
+     * @returns delete resource uri.
+     * @method
+     * @example baasicBaseRouteDefinition.delete();
+     */
+    protected baseDelete(route: string, data: any, options?: IOptions): any {
         let params = this.modelMapper.removeParams(data);
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('delete').href;
+        if (typeof options === 'undefined') {
+            if ('HAL') {
+                return params[this.baasicConstants.modelPropertyName].links('delete').href;
+            } else {
+                return this.baasicUriTemplateProcessor.parse(route).expand(params);
+            }
         } else {
-            return this.baasicUriTemplateProcessor.parse(this.url(this.url(route)));
+            let opt = this.utility.extend({}, options);
+            if ('HAL') {
+                return this.baasicUriTemplateProcessor.parse(params[this.baasicConstants.modelPropertyName].links('delete').href).expand(opt);
+            } else {
+                return this.baasicUriTemplateProcessor.parse(route).expand(opt);
+            }
         }
     }
 
@@ -75,16 +95,21 @@ export class BaasicBaseRouteDefinition {
         return this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName];
     }
 
-    updateParams(params: any): any {
-        return params[this.baasicConstants.modelPropertyName];
+    updateParams(data: any): any {
+        return this.modelMapper.updateParams(data)[this.baasicConstants.modelPropertyName];
     }
 
-    deleteParams(params: any): any {
-        params[this.baasicConstants.modelPropertyName];
+    deleteParams(data: any): any {
+        return this.modelMapper.removeParams(data)[this.baasicConstants.modelPropertyName];
     }
 
+    /**                 
+     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
+     * @method                 
+     * @example baasicBaseRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
+     **/
     parse(route: string): any {
-        return this.baasicUriTemplateProcessor.parse(this.url(route));
+        return this.baasicUriTemplateProcessor.parse(route);
     }
 }
 

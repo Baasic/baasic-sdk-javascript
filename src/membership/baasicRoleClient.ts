@@ -25,10 +25,10 @@ export class BaasicRoleClient {
         private baasicRoleRouteDefinition: BaasicRoleRouteDefinition) {}
 
     /**                  
-     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of role resources matching the given criteria. 
-     * @param options query resource options object 
-     * @returns A promise that is resolved once the find action has beend performed.                
-     * @method                         
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of role resources matching the given criteria.              
+     * @method
+     * @param options Query resource options object. 
+     * @returns A promise that is resolved once the find action has beend performed.                            
      * @example baasicRoleClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
@@ -36,40 +36,40 @@ export class BaasicRoleClient {
                     orderDirection : '<asc|desc>',   
                     search : '<search-phrase>' 
                 })
-                .success(function (collection) {   
+                .then(function (collection) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
      **/
     find(options: IOptions): Promise<IBaasicQueryModel<IRole>> {
-        return this.baasicApiHttp.get(this.baasicRoleRouteDefinition.find().expand(this.modelMapper.findParams(options)));
+        return this.baasicApiHttp.get(this.baasicRoleRouteDefinition.find(options));
     }
 
     /**                  
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified role resource.    
-     * @param id role unique indentifer.
-     * @param options query resource options object.
+     * @param id Role unique indentifer.
+     * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.              
      * @method                         
      * @example baasicRoleClient.get('<role-id>')
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                  
      **/ 
-    get(id: string, options: IOptions): Promise<IRole> {
-        return this.baasicApiHttp.get(this.baasicRoleRouteDefinition.get().expand(this.modelMapper.getParams(id, options)));
+    get(id: string, options?: IOptions): Promise<IRole> {
+        return this.baasicApiHttp.get(this.baasicRoleRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the create action has been performed; this action creates a role. 
+     * Returns a promise that is resolved once the create action has been performed; this action creates a role.         
+     * @method
      * @param data A role object that needs to be inserted into the system.
-     * @returns A promise that is resolved once the create action has beend performed.                 
-     * @method                         
+     * @returns A promise that is resolved once the create action has beend performed.                                  
      * @example baasicRoleClient.create({ 
                     description : '<description>',   
                     name : '<name>' 
@@ -82,7 +82,7 @@ export class BaasicRoleClient {
                 });                  
      **/
     create(data: IRole): Promise<IRole> {
-        return this.baasicApiHttp.post(this.baasicRoleRouteDefinition.create().expand({}), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.post(this.baasicRoleRouteDefinition.create(), this.baasicRoleRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -90,22 +90,22 @@ export class BaasicRoleClient {
      * ``` 
      * let params = modelMapper.removeParams(role); 
      * let uri = params['model'].links('put').href; 
-     * ```
+     * ```        
+     * @method
      * @param data A role object used to update specified role resource.
-     * @returns A promise that is resolved once the update role action has been performed.             
-     * @method                         
+     * @returns A promise that is resolved once the update role action has been performed.                              
      * @example // role is a resource previously fetched using get action. 
                     role.name = '<new-name>'; 
                     baasicRoleClient.update(role)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				
      **/
     update(data: IRole): Promise<IRole> {
-        return this.baasicApiHttp.put(this.baasicRoleRouteDefinition.update(), params[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.put(this.baasicRoleRouteDefinition.update(data), this.baasicRoleRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -118,16 +118,15 @@ export class BaasicRoleClient {
      * @method                         
      * @example // Role is a resource previously fetched using get action.				 
                     baasicRoleClient.remove(role)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
      **/				
     remove(data: IRole): Promise<void> {
-        let params = this.modelMapper.removeParams(data);
-        return this.baasicApiHttp.delete(this.baasicRoleRouteDefinition.delete(params));
+        return this.baasicApiHttp.delete(this.baasicRoleRouteDefinition.delete(data));
     }
 }
 

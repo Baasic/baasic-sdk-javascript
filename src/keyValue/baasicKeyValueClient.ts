@@ -20,7 +20,6 @@ export class BaasicKeyValueClient {
     }
     
     constructor(
-        protected modelMapper: ModelMapper,
         protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition,
         protected baasicApiClient: BaasicApiClient
     ) {
@@ -40,14 +39,14 @@ export class BaasicKeyValueClient {
                  orderDirection: '<asc|desc>', 
                  search: '<search-phrase>'
                 })
-                .success(function (collection) {   
+                .then(function (collection) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
      **/ 	
-    find(options?: IOptions): Promise<IBaasicQueryModel<IKeyValue>> {
+    find(options?: IOptions): PromiseLike<IBaasicQueryModel<IKeyValue>> {
         return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.find(options));
     }
 
@@ -58,14 +57,14 @@ export class BaasicKeyValueClient {
      * @returns A promise that is resolved once the get action has beend performed.
      * @method
      * @example baasicKeyValueClient.get('<key-value-id>')
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                  
      **/	
-    get(id: string, options: IOptions): Promise<IKeyValue> {
+    get(id: string, options: IOptions): PromiseLike<IKeyValue> {
         return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.get(id, options));
     }
 
@@ -75,14 +74,14 @@ export class BaasicKeyValueClient {
      * @returns A promise that is resolved once the create key value action has beend performed.
      * @method
      * @example baasicKeyValueClient.create({key: '<key>', value: '<value>', })
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });
      */ 		
-    create(data: IKeyValue): Promise<IKeyValue> {
+    create(data: IKeyValue): PromiseLike<IKeyValue> {
         return this.baasicApiClient.post(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
     }
 
@@ -98,15 +97,15 @@ export class BaasicKeyValueClient {
      * @example // keyValue is a resource previously fetched using get action. 
                    keyValue.value = '<new-value>'; 
                    baasicKeyValueClient.update(keyValue)
-                   .success(function (data) {   
+                   .then(function (data) {   
                        // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     }); 				
      **/					
-    update(data: IKeyValue): Promise<IKeyValue> {
-        return this.baasicApiClient.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(params));
+    update(data: IKeyValue): PromiseLike<IKeyValue> {
+        return this.baasicApiClient.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(data));
     }
 
     /**
@@ -120,15 +119,15 @@ export class BaasicKeyValueClient {
      * @method 
      * @example // keyValue is a resource previously fetched using get action.				 
                     baasicKeyValueClient.remove(keyValue) 
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });
      **/	
-    remove(data: IKeyValue): Promise<void> {
-        return this.baasicApiClient.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(params));
+    remove(data: IKeyValue): PromiseLike<void> {
+        return this.baasicApiClient.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
     }
 }
 

@@ -5,7 +5,6 @@
 
 import { BaasicValueSetItemClient, BaasicValueSetRouteDefinition } from 'valueSet';
 import { IValueSet } from 'valueSet/contracts';
-import { ModelMapper } from '..';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 
 export class BaasicValueSetClient {
@@ -25,9 +24,8 @@ export class BaasicValueSetClient {
     }
 
     constructor(
-        private modelMapper: ModelMapper,
-        private baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
-        private baasicValueSetItemClient: BaasicValueSetItemClient
+        protected baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
+        protected baasicValueSetItemClient: BaasicValueSetItemClient
     ) {}
 
     /**
@@ -42,15 +40,15 @@ export class BaasicValueSetClient {
                     orderDirection : '<asc|desc>', 
                     search : '<search-phrase>'
                 })
-                .success(function (collection) {   
+                .then(function (collection) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });
      **/ 					
     find(options: IOptions): Promise<IBaasicQueryModel<IValueSet>> {
-        return this.baasicApiHttp.get(this.baasicValueSetRouteDefinition.find().expand(this.modelMapper.findParams(options)));
+        return this.baasicApiHttp.get(this.baasicValueSetRouteDefinition.find(options));
     }
 
      /**
@@ -67,8 +65,8 @@ export class BaasicValueSetClient {
                         // perform error handling here 
                     });
      **/	
-    get(setName: string, options: IOptions): Promise<IValueSet> {
-        return this.baasicApiHttp.get(this.baasicValueSetRouteDefinition.get().expand(this.modelMapper.getParams(setName, options, 'setName')));
+    get(setName: string, options?: IOptions): Promise<IValueSet> {
+        return this.baasicApiHttp.get(this.baasicValueSetRouteDefinition.get(setName, options).expand(this.modelMapper.getParams(setName, options, 'setName')));
     }
 
     /**
@@ -81,15 +79,15 @@ export class BaasicValueSetClient {
                     description: '<description>',
                     values: [{value: '<value>'}]
                 })
-                .success(function (data) {   
+                .then(function (data) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });
      **/
     create(data: IValueSet): Promise<IValueSet> {
-        return this.baasicApiHttp.post(this.baasicValueSetRouteDefinition.create().expand({}), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.post(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
     }
     
     /**
@@ -98,23 +96,22 @@ export class BaasicValueSetClient {
      * let params = modelMapper.removeParams(valueSet); 
      * let uri = params['model'].links('put').href; 
      * ```
-     * @param data value set object used to update specified value set resource.
+     * @param data Value set object used to update specified value set resource.
      * @returns A promise that is resolved once the update value set action has been performed.
      * @method
      * @example 
         // valueSet is a resource previously fetched using get action. 
         valueSet.name = '<new-name>'; 
         baasicValueSetClient.update(valueSet)
-            .success(function (data) {   
+            .then(function (data) {   
                 // perform success action here 
-            })
-            .error(function (response, status, headers, config) {   
+            },
+             function (response, status, headers, config) {   
                 // perform error handling here 
             });
      **/	
     update(data: IValueSet): Promise<IValueSet> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicValueSetRouteDefinition.update(params), params[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.put(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -127,16 +124,15 @@ export class BaasicValueSetClient {
      * @method                         
      * @example // valueSet is a resource previously fetched using get action.				 
                     baasicValueSetClient.remove(valueSet)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
      **/					
     remove(data: IValueSet): Promise<void> {
-        let params = this.modelMapper.removeParams(data);
-        return this.baasicApiHttp.delete(this.baasicValueSetRouteDefinition.delete(params));
+        return this.baasicApiHttp.delete(this.baasicValueSetRouteDefinition.delete(data));
     }
 }
 
