@@ -3,10 +3,7 @@ import { ModelMapper, Utility } from '..';
 
 export abstract class BaasicBaseRouteDefinition {
 
-    constructor(
-        protected modelMapper: ModelMapper,
-        protected utility: Utility
-    ) {}
+    constructor(protected modelMapper: ModelMapper, protected utility: Utility) {}
 
     /**                
      * Parses resources route which can be expanded with additional options. Supported items are:                 
