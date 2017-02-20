@@ -35,7 +35,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
     // data object ??	
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('resources/{schemaName}/{id}/acl/{?fields}', options);
+        return super.baseUpdate('resources/{schemaName}/{id}/acl/{?fields}', options);
     }
 
     /** 					

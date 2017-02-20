@@ -5,26 +5,22 @@
 */
 
 import { BaasicBaseRouteDefinition } from 'common';
+import { ModelMapper, Utility } from '..'; 
 
-export class BaasicPasswordRecoveryRouteDefinition {
+export class BaasicPasswordRecoveryRouteDefinition extends BaasicBaseRouteDefinition {
     
-    constructor(private baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+    constructor(
+        protected modelMapper: ModelMapper, 
+        protected utility: Utility
+        ) { super(modelMapper, utility); }
 
     /**                  
      * Parses recover-password route, recover-password route doesn't expose any additional properties.                  
      * @method                         
-     * @example baasicPasswordRecoveryRouteDefinition.passwordRecovery.expand({});                                
+     * @example baasicPasswordRecoveryRouteDefinition.passwordRecovery();                                
      **/
     passwordRecovery(): any {
-        return this.baasicUriTemplateProcessor.parse('recover-password');
-    }
-
-    /**                  
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                  * @method                  * @example baasicPasswordRecoveryRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
-     * @param link route link                  
-     **/  				
-    parse(route: string): any {
-        return this.baasicBaseRouteDefinition.parse(route);
+        return super.parse('recover-password').expand({});
     }
 }
 

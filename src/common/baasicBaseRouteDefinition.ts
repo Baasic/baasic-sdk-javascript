@@ -17,7 +17,7 @@ export abstract class BaasicBaseRouteDefinition {
      * @method
      * @example baasicBaseDefinition.find();
      **/
-    protected find(route: string, options: IOptions): any {
+    protected baseFind(route: string, options?: IOptions): any {
         return uritemplate.parse(route).expand(this.modelMapper.findParams(options));
     }
 
@@ -25,9 +25,9 @@ export abstract class BaasicBaseRouteDefinition {
       * Parses get resource route which must be expanded with the Id of the previously created resource in the system.
       * @returns get resource uri
       * @method 
-      * @example baasicBaseRouteDefinition.get();
+      * @example baasicBaseRouteDefinition.get(route, id);
       **/
-    protected get(route: string, id: string, options: IOptions, propName?: string): any {
+    protected baseGet(route: string, id?: string, options?: IOptions, propName?: string): any {
         return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
     
@@ -37,7 +37,7 @@ export abstract class BaasicBaseRouteDefinition {
       * @method 
       * @example baasicBaseRouteDefinition.create();
       **/
-    protected create(route: string, data?: any): any {
+    protected baseCreate(route: string, data?: any): any {
         return uritemplate.parse(route).expand(data);
     }
 
@@ -47,7 +47,7 @@ export abstract class BaasicBaseRouteDefinition {
      * @method
      * @example baasicBaseRouteDefinition.update();
      */
-    protected update(route: string, data: any, options?: IOptions): any {
+    protected baseUpdate(route: string, data: any, options?: IOptions): any {
         let params = this.modelMapper.updateParams(data);
         if(typeof options === 'undefined') {
             if ('HAL') {
@@ -71,7 +71,7 @@ export abstract class BaasicBaseRouteDefinition {
      * @method
      * @example baasicBaseRouteDefinition.delete();
      */
-    protected delete(route: string, data: any, options?: IOptions): any {
+    protected baseDelete(route: string, data: any, options?: IOptions): any {
         let params = this.modelMapper.removeParams(data);
         if (typeof options === 'undefined') {
             if ('HAL') {

@@ -13,7 +13,7 @@ export class BaasicDynamicSchemaClient {
     /**                 
      * Provides direct access to `baasicDynamicSchemaRouteDefinition`.                 
      * @method                        
-     * @example baasicDynamicSchemaClient.routeService.get().expand(expandObject);                 
+     * @example baasicDynamicSchemaClient.routeDefinition.get();                 
      **/                
     get routeDefinition(): BaasicDynamicSchemaRouteDefinition {
         return this.baasicDynamicSchemaRouteDefinition;
@@ -42,7 +42,7 @@ export class BaasicDynamicSchemaClient {
                 });                     
      **/
     find(options: IOptions): Promise<IBaasicQueryModel<IResourceSchema>> {
-        return this.baasicApiHttp.get(this.baasicDynamicSchemaRouteDefinition.find().expand(this.modelMapper.findParams(options)));
+        return this.baasicApiHttp.get(this.baasicDynamicSchemaRouteDefinition.find(options));
     }
 
     /**                  
@@ -59,7 +59,7 @@ export class BaasicDynamicSchemaClient {
                     });                 
      **/ 				
     get(name: string, options: IOptions): Promise<IResourceSchema> {
-        return this.baasicApiHttp.get(this.baasicDynamicSchemaRouteDefinition.get().expand(this.modelMapper.getParams(name, options, 'name')));
+        return this.baasicApiHttp.get(this.baasicDynamicSchemaRouteDefinition.get(name, options));
     }
 
     /**                 
@@ -93,7 +93,7 @@ export class BaasicDynamicSchemaClient {
                 });                 
      **/
     create(data: IResourceSchema): Promise<IResourceSchema> {
-        return this.baasicApiHttp.post(this.baasicDynamicSchemaRouteDefinition.create().expand({}), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.post(this.baasicDynamicSchemaRouteDefinition.create(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -115,8 +115,7 @@ export class BaasicDynamicSchemaClient {
                         }); 				
      **/	
     update(data: IResourceSchema): Promise<void> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicDynamicSchemaRouteDefinition.update(params), params[baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.put(this.baasicDynamicSchemaRouteDefinition.update(data), this.baasicDynamicSchemaRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -126,7 +125,7 @@ export class BaasicDynamicSchemaClient {
      * let uri = params['model'].links('delete').href; 
      * ```                 
      * @method
-     * @param data Dynamic Resource Schema that needs to be deleted.                        
+     * @param data A dynamic schema object used to delete specified dynamic resource schema.                        
      * @example // dynamicResourceSchema is a resource previously fetched using get action.				 
                     baasicDynamicSchemaClient.remove(dynamicResourceSchema)
                         .then(function (data) {   
@@ -137,8 +136,7 @@ export class BaasicDynamicSchemaClient {
                         });						
      **/					
     remove(data: IResourceSchema): Promise<void> {
-        let params = this.modelMapper.removeParams(data);
-        return this.baasicApiHttp.delete(this.baasicDynamicSchemaRouteDefinition.delete(params));
+        return this.baasicApiHttp.delete(this.baasicDynamicSchemaRouteDefinition.delete(data));
     }
 
     /**                 
@@ -157,7 +155,7 @@ export class BaasicDynamicSchemaClient {
                 });					    
      **/					
     generate(data: any): Promise<any> {
-        return this.baasicApiHttp.post(this.baasicDynamicSchemaRouteDefinition.generate().expand({}), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.post(this.baasicDynamicSchemaRouteDefinition.generate(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
     } 
 }
 
