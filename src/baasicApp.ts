@@ -1,7 +1,7 @@
 import { Utility } from 'common';
-import {IBaasicAppOptions} from './';
-import {ITokenStore} from 'core';
-import * as m from 'modules';
+import { IBaasicAppOptions } from './';
+import { ITokenStore } from 'core';
+//import * as m from 'modules';
 
 export class BaasicApp {
     

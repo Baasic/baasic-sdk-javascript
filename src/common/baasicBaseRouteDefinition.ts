@@ -5,10 +5,13 @@ import { Utility } from 'common';
 
 export abstract class BaasicBaseRouteDefinition {
 
+    private utility: Utility;
+
     constructor(
-        protected modelMapper: ModelMapper,
-        private utility: Utility
-        ) {}
+        protected modelMapper: ModelMapper        
+        ) {
+            this.utility = new Utility();
+        }
 
     /**                
      * Parses resources route which can be expanded with additional options. Supported items are:                 
