@@ -4,3 +4,8 @@ export * from './baasicCompanyRouteDefinition';
 export * from './baasicOrganizationBatchRouteDefinition';
 export * from './baasicOrganizationBatchClient';
 export * from './baasicOrganizationRouteDefinition';
+export * from './baasicOrganizationClient';
+export * from './baasicSkillBatchRouteDefinition';
+export * from './baasicSkillBatchClient';
+export * from './baasicSkillRouteDefinition';
+export * from './baasicSkillClient';

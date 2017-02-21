@@ -114,7 +114,9 @@ export class BaasicOrganizationClient {
       * let params = modelMapper.removeParams(organization); 
       * let uri = params['model'].links('delete').href; 
       * ```                  
-      * @method                         
+      * @method
+      * @param data An organization object used to delete specified organization resource.
+      * @returns A promise that is resolved once the remove action has been performed.                         
       * @example // organization is a resource previously fetched using get action.				 
                         baasicOrganizationClient.remove(organization)
                             .then(function (data) {   
