@@ -1,4 +1,3 @@
-/* globals module */
 /**
  * @module modelMapper  
  * @description This service is used to perform low level model or option transformations before they are sent to the Baasic back-end.

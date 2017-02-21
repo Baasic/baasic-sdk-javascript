@@ -1,3 +1,6 @@
+import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'http';
+import {ITokenStore} from 'core';
+
 export class BaasicApiClient {
     constructor (
         private httpClient: IHttpClient,
