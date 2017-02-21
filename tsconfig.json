@@ -17,7 +17,5 @@
         "src/modules/membership",
         "src/modules/valueSet",  
         "src/modules/userProfile"
-        //"src/modules/keyValue",                                
-        ,"src/baasicApp.ts"        
     ]
 }
