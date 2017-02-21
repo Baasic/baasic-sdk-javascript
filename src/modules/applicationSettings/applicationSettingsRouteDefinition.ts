@@ -4,37 +4,32 @@
  * @description Baasic Application Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Application Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { IOptions } from 'common/contracts';
+import { IApplication } from 'modules/applicationSettings/contracts';
 
-export class BaasicApplicationSettingsRouteDefinition {
+export class BaasicApplicationSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(private baasicBaseRouteDefinition: BaasicBaseRouteDefinition) {}
+    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
 
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
-     * @method                        
-     * @example baasicApplicationSettingsRouteDefinition.get().expand({});                               
+     * @method
+     * @param options Query resource options object.                        
+     * @example baasicApplicationSettingsRouteDefinition.get();                               
      **/ 			
-    get(): any {
-        return this.baasicBaseRouteDefinition.get('applications/{?embed,fields}');
+    get(options: IOptions): any {
+        return super.baseGet('applications/{?embed,fields}', undefined, options);
     }
 
      /**                 
       * Parses update route; this route doesn't expose any properties.                 
-      * @method                        
-      * @example baasicApplicationSettingsRouteDefinition.update().expand({});                               
+      * @method
+      * @param data An application object used to update application settings of the specified application resource.                        
+      * @example baasicApplicationSettingsRouteDefinition.update();                               
       **/ 
-    update(params: any): any {
-        return this.baasicBaseRouteDefinition.update('applications/', params);
-    }
-
-    /**                 
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
-     * @method                 
-     * @example baasicApplicationSettingsRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
-     **/ 
-    parse(link: string): any {
-        return this.baasicBaseRouteDefinition.parse(link);    
+    update(data: IApplication): any {
+        return super.baseUpdate('applications/', data);
     }
 }
 
