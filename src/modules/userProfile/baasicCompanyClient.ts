@@ -130,3 +130,10 @@ export class BaasicCompanyClient {
         return this.baasicApiHttp.delete(this.baasicCompanyRouteDefinition.delete(data));
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.  
+ - All end-point objects are transformed by the associated route service. 
+ */
