@@ -4,8 +4,8 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicDynamicResourceACLClient, BaasicDynamicResourceRouteDefinition } from 'dynamicResource';
-import { IDynamicObject } from 'dynamicResource/contracts';
+import { BaasicDynamicResourceACLClient, BaasicDynamicResourceRouteDefinition } from 'modules/dynamicResource';
+import { IDynamicObject } from 'modules/dynamicResource/contracts';
 
 export class BaasicDynamicResourceClient {
 

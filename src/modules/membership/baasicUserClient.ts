@@ -25,8 +25,8 @@ export class BaasicUserClient {
     }
 
     constructor(
-        private baasicUserRouteDefinition: BaasicUserRouteDefinition,
-        private baasicUserSocialLoginClient: BaasicSocialLoginClient
+        protected baasicUserRouteDefinition: BaasicUserRouteDefinition,
+        protected baasicUserSocialLoginClient: BaasicSocialLoginClient
     ) {}
 
     /**                  

@@ -3,8 +3,8 @@
  * @description Baasic Dynamic Resource ACL Client provides an easy way to consume Baasic Dynamic Resource REST API end-points. In order to obtain needed routes `baasicDynamicResourceACLClient` uses `baasicDynamicResourceACLRouteDefinition`. 
  */
 
-import { BaasicDynamicResourceACLRouteDefinition } from 'dynamicResource';
-import { IACLOptions, IACLPolicy, INewACLPolicy } from 'dynamicResource/contracts';
+import { BaasicDynamicResourceACLRouteDefinition } from 'modules/dynamicResource';
+import { IACLOptions, IACLPolicy, INewACLPolicy } from 'modules/dynamicResource/contracts';
 
 export class BaasicDynamicResourceACLClient {
 
