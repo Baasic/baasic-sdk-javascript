@@ -1,6 +1,5 @@
 import { ModelMapper} from 'common';
 import { IOptions } from 'common/contracts';
-import { extend } from 'common/utility';
 import * as uritemplate from 'uritemplate';
 import { Utility } from 'common';
 
