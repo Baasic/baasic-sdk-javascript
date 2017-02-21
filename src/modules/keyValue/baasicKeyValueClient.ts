@@ -4,9 +4,9 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient,BaasicApiClient} from 'http';
 import { BaasicKeyValueRouteDefinition } from 'modules/keyValue';
 import { IKeyValue } from 'modules/keyValue/contracts';
-import { BaasicApiClient } from '../..';
 
 export class BaasicKeyValueClient {
     

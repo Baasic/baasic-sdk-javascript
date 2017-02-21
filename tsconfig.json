@@ -10,14 +10,14 @@
     },
     "exclude": [
         "node_modules",
-        "build",
-        "src/modules",
+        "build",        
         "src/modules/applicationSettings",
         "src/modules/article",
         "src/modules/dynamicResource",
         "src/modules/membership",
-        "src/modules/keyValue",
-        "src/modules/valueSet",        
-        "src/baasicApp.ts"        
+        "src/modules/valueSet",  
+        "src/modules/userProfile"
+        //"src/modules/keyValue",                                
+        ,"src/baasicApp.ts"        
     ]
 }
