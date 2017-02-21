@@ -5,16 +5,16 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicUserRouteDefinition, BaasicSocialLoginClient, BaasicSocialLoginRouteDefinition } from 'membership';
-import { IAppUser, INewUser, INewPassword } from 'membership/contracts';
-import { ModelMapper, Utility } from '..';
+import { BaasicUserRouteDefinition, BaasicSocialLoginClient, BaasicSocialLoginRouteDefinition } from 'modules/membership';
+import { IAppUser, INewUser, INewPassword } from 'modules/membership/contracts';
+import { ModelMapper } from 'common';
 
 export class BaasicUserClient {
 
     /**                 
      * Provides direct access to `baasicUserRouteDefinition`.                 
      * @method                        
-     * @example baasicUserClient.routeDefinition.get().expand(expandObject);                 
+     * @example baasicUserClient.routeDefinition.get();                 
      **/ 
     get routeDefinition(): BaasicUserRouteDefinition {
         return this.baasicUserRouteDefinition;
@@ -25,31 +25,30 @@ export class BaasicUserClient {
     }
 
     constructor(
-        private modelMapper: ModelMapper,
         private baasicUserRouteDefinition: BaasicUserRouteDefinition,
         private baasicUserSocialLoginClient: BaasicSocialLoginClient
     ) {}
 
     /**                  
-     * Returns a promise that is resolved once the exists action has been performed. This action checks if user exists in the application.         
-     * @param username user username         
-     * @method                         
+     * Returns a promise that is resolved once the exists action has been performed. This action checks if user exists in the application.            
+     * @method
+     * @param username A username which uniquely identifies an application user.                           
      * @example baasicUserClient.exists('<username>')
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                   
      **/ 
-    // options ????
-    exists(username: string, options: any): Promise<void> {
-        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.exists().expand(this.modelMapper.getParams(username, options, 'username')));
+    exists(username: string, options?: any): Promise<void> {
+        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.exists(username, options));
     }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user resources matching the given criteria.                  
-     * @method                         
+     * @method
+     * @param options Query resource options object.                         
      * @example baasicUserClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
@@ -57,43 +56,43 @@ export class BaasicUserClient {
                     orderDirection : '<asc|desc>',   
                     search : '<search-phrase>' 
                 })
-                .success(function (collection) {   
+                .then(function (collection) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
      **/  					
-    find(options: IOptions): Promise<IBaasicQueryModel<IAppUser>> {
-        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.find().expand(this.modelMapper.findParams(options)));
+    find(options?: IOptions): Promise<IBaasicQueryModel<IAppUser>> {
+        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.find(options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified user resource. 
-     * @param id user unique identifier.
-     * @param options query resources options.
-     * @returns A promise that is resolved once the get action has been performed.                 
-     * @method                         
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified user resource.               
+     * @method
+     * @param id A username or id which uniquely identifies an application user whose account information needs to be retrieved.
+     * @param options Query resources options.
+     * @returns A promise that is resolved once the get action has been performed.                           
      * @example baasicUserClient.get({   
                     username : '<username>',   
                     embed : '<embedded-resource>' 
                 })
-                .success(function (data) {   
+                .then(function (data) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                  
      **/ 
-    get(id: string, options: IOptions): Promise<IAppUser> {
-        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.get().expand(this.modelMapper.getParams(id, options, 'username')));
+    get(id: string, options?: IOptions): Promise<IAppUser> {
+        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the create user action has been performed; this action creates a new user.
+     * Returns a promise that is resolved once the create user action has been performed; this action creates a new user.   
+     * @method
      * @param data An user object that needs to be inserted into the system.
-     * @returns A promise that is resolved once the create user action has been performed.                  
-     * @method                         
+     * @returns A promise that is resolved once the create user action has been performed.                                        
      * @example baasicUserClient.create({   
                     confirmPassword : '<password>',   
                     email : '<email>',   
@@ -103,15 +102,15 @@ export class BaasicUserClient {
                     roles: ['<role-name>'],   
                     additionalProperty: '<additional-property>'  
                 })
-                .success(function (data) {   
+                .then(function (data) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                  
      **/ 						
     create(data: INewUser): Promise<IAppUser> {
-        return this.baasicApiHttp.post(this.baasicUserRouteDefinition.create().expand({}), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.post(this.baasicUserRouteDefinition.create(), this.baasicUserRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -127,16 +126,15 @@ export class BaasicUserClient {
                     user.roles = ['<role-name>', '<new-role-name>']; 
                     user.email = '<new-email>'; 
                     baasicUserClient.update(user)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				
      **/	
     update(data: IAppUser): Promise<void> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.update(params), params[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.update(data), this.baasicUserRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -144,22 +142,21 @@ export class BaasicUserClient {
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('delete').href; 
-     * ```
+     * ```             
+     * @method
      * @param data  A user object used to delete specified user resource.
-     * @returns A promise that is resolved once the remove user action has been performed.               
-     * @method                         
+     * @returns A promise that is resolved once the remove user action has been performed.                           
      * @example // user is a resource previously fetched using get action.				 
                     baasicUserClient.remove(user)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
      **/	
     remove(data: IAppUser): Promise<void> {
-        let params = this.modelMapper.removeParams(data);
-        return this.baasicApiHttp.delete(this.baasicUserRouteDefinition.delete(params));
+        return this.baasicApiHttp.delete(this.baasicUserRouteDefinition.delete(data));
     }
 
     /**                  
@@ -167,22 +164,21 @@ export class BaasicUserClient {
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('unlock').href; 
-     * ```
+     * ```           
+     * @method
      * @param data A user object used to unlock specified user resource.
-     * @returns A promise that is resolved once the unlock user action has been performed.              
-     * @method                         
+     * @returns A promise that is resolved once the unlock user action has been performed.                            
      * @example //  user is a resource previously fetched using get action.				 
                         baasicUserClient.unlock(user)
-                            .success(function (data) {   
+                            .then(function (data) {   
                                 // perform success action here 
-                            })
-                            .error(function (response, status, headers, config) {   
+                            },
+                             function (response, status, headers, config) {   
                                 // perform error handling here 
                             });						
      **/	
     unlock(data: IAppUser): Promise<void> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.unlock(params));
+        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.unlock(data));
     }
 
     /**                 
@@ -190,22 +186,21 @@ export class BaasicUserClient {
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('lock').href; 
-     * ```
+     * ```              
+     * @method
      * @param data A user object used to lock specified user resource.
-     * @returns A promise that is resolved once the lock user action has been performed.               
-     * @method                         
+     * @returns A promise that is resolved once the lock user action has been performed.                          
      * @example // user is a resource previously fetched using get action.				 
                     baasicUserClient.lock(user)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
      **/	
     lock(data: IAppUser): Promise<void> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.lock(params)); 
+        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.lock(data)); 
     }
 
     /**                  
@@ -213,22 +208,21 @@ export class BaasicUserClient {
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('approve').href; 
-     * ```
+     * ```                 
+     * @method
      * @param data A user object used to approve specified user resource. 
-     * @returns A promise that is resolved once the approve user action has been performed.                 
-     * @method                         
+     * @returns A promise that is resolved once the approve user action has been performed.                         
      * @example // user is a resource previously fetched using get action.				 
                     baasicUserClient.approve(user)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
                         })
-                        .error(function (response, status, headers, config) {   
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
      **/					
     approve(data: IAppUser): Promise<void> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.approve(params));
+        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.approve(data));
     }
 
     /**                  
@@ -239,39 +233,38 @@ export class BaasicUserClient {
      * ```                  
      * @method                         
      * @example // user is a resource previously fetched using get action.				 
-                    baasicUserClient.disapprove(user).success(function (data) {   
+                    baasicUserClient.disapprove(user).then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });						
      **/	
     disapprove(data: IAppUser): Promise<void> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.disapprove(params));
+        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.disapprove(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the changePassword action has been performed. This action will update user's password selection.
+     * Returns a promise that is resolved once the changePassword action has been performed. This action will update user's password selection.           
+     * @method 
      * @param username A username or id which uniquely identifies user resource.
      * @param data A new password object used to update specified user password resource.
-     * @returns A promise that is resolved once the changedPassword action has been performed.                
-     * @method 
+     * @returns A promise that is resolved once the changedPassword action has been performed.     
      * @example baasicUserClient.changePassword('<username>', {   
                     newPassword : '<new-password>',   
                     sendMailNotification : false 
                 })
-                .success(function () {   
+                .then(function () {   
                     // perform success action here 
-                })
-                .error(function (data, status, headers, config) {   
+                },
+                 function (data, status, headers, config) {   
                     // perform error handling here 
                 })
                 .finally (function () {}); 
      **/					
     changePassword(username: string, data: INewPassword): Promise<any> {
         return this.baasicApiHttp({ 
-            url: this.baasicUserRouteDefinition.changePassword().expand({ username: username }), 
+            url: this.baasicUserRouteDefinition.changePassword(username), 
             method: 'PUT', 
             data: data 
         });

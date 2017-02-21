@@ -1,10 +1,11 @@
 import { IOptions } from 'common/contracts';
-import { ModelMapper, Utility } from 'common';
+import { ModelMapper} from 'common';
 import * as uritemplate from 'uritemplate';
+import { extend } from 'common/utility';
 
 export abstract class BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper, protected utility: Utility) {}
+    constructor(protected modelMapper: ModelMapper) {}
 
     /**                
      * Parses resources route which can be expanded with additional options. Supported items are:                 
@@ -56,7 +57,7 @@ export abstract class BaasicBaseRouteDefinition {
                 return uritemplate.parse(route).expand(params);
             }
         } else {
-            let opt = this.utility.extend({}, options);
+            let opt = extend({}, options);
             if ('HAL') {
                 return uritemplate.parse(params[this.modelMapper.modelPropertyName].links('put').href).expand(opt);
             } else {
@@ -80,7 +81,7 @@ export abstract class BaasicBaseRouteDefinition {
                 return uritemplate.parse(route).expand(params);
             }
         } else {
-            let opt = this.utility.extend({}, options);
+            let opt = extend({}, options);
             if ('HAL') {
                 return uritemplate.parse(params[this.modelMapper.modelPropertyName].links('delete').href).expand(opt);
             } else {

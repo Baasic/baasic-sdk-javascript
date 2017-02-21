@@ -4,8 +4,12 @@
  * @description Baasic User Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicSocialLoginRouteDefinition } from 'membership';
-import { BaasicBaseRouteDefinition } from 'common';
+
+import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { IOptions } from 'common/contracts';
+import { BaasicSocialLoginRouteDefinition } from 'modules/membership';
+import { IAppUser } from 'modules/membership/contracts';
+import * as uritemplate from 'uritemplate';
 
 export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
 
@@ -14,87 +18,105 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     constructor(
-        private baasicBaseRouteDefinition: BaasicBaseRouteDefinition,
-        private baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition
-    ) { super(); }
+        protected modelMapper: ModelMapper,
+        protected baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition
+    ) { super(modelMapper); }
 
-    find(): any {
-        return this.baasicBaseRouteDefinition.find('users/{?searchQuery,page,rpp,sort,embed,fields}');
+     /**                 
+      * Parses find user route which can be expanded with additional options. Supported items are:                 
+      * - `searchQuery` - A string referencing user properties using the phrase or BQL (Baasic Query Language) search.                 
+      * - `page` - A value used to set the page number, i.e. to retrieve certain user subset from the storage.                 
+      * - `rpp` - A value used to limit the size of result set per page.                 
+      * - `sort` - A string used to set the user property to sort the result collection by. 				
+      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+      * @method                        
+      * @example baasicUserRouteDefinition.find({searchQuery: '<search-phrase>'});                              
+      **/ 
+    find(options: IOptions): any {
+        return super.baseFind('users/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
-    get(): any {
-        return this.baasicBaseRouteDefinition.get('users/{username}/{?embed,fields}');
+    /**                 
+     * Parses get user route which must be expanded with the username of the previously created user resource in the system. Additional expand supported items are: 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * @method                        
+     * @example baasicUserRouteDefinition.get({username: '<username>'})
+     **/
+    get(id: string, options?: IOptions): any {
+        return super.baseGet('users/{username}/{?embed,fields}', id, options, 'username');
     }
 
+    /**                 
+     * Parses create user route, this URI template does not expose any additional options.                 
+     * @method                        
+     * @example baasicUserRouteDefinition.create();                              
+     **/
     create(): any {
-        return this.baasicBaseRouteDefinition.create('users');
+        return super.baseCreate('users', {});
     }
 
-    update(params: any): any {
-        return this.baasicBaseRouteDefinition.update('users/{id}', params);
+    update(data: IAppUser): any {
+        return super.baseUpdate('users/{id}', data);
     }
 
-    delete(params: any): any {
-        return this.baasicBaseRouteDefinition.delete( 'users/{id}', params);
+    delete(data: IAppUser): any {
+        return super.baseDelete('users/{id}', data);
     }
     
     /**                 
      * Parses user exists route; URI template should be expanded with the username whose availability you'd like to check.                                
-     * @method                        
-     * @example baasicUserRouteDefinition.exists.expand({username: '<username>'});                               
+     * @method
+     * @param username A username which uniquely identifies an application user.                        
+     * @example baasicUserRouteDefinition.exists({username: '<username>'});                               
      **/			
-    exists(): any {
-        return this.baasicUriTemplateProcessor.parse('users/{username}/exists/');
+    exists(username: string, options?: any): any {
+        return uritemplate.parse('users/{username}/exists/').expand(this.modelMapper.getParams(username, options, 'username'));
     }
 
     /**                 
      * Parses change password route, URI template should be expanded with the username of the user resource whose password should be updated.                 
-     * @method                        
-     * @example baasicUserRouteDefinition.changePassword().expand({username: '<username>'});                              
+     * @method
+     * @param username A username or id which uniquely identifies user resource.                        
+     * @example baasicUserRouteDefinition.changePassword({username: '<username>'});                              
      **/
-    changePassword(): any {
-        return this.baasicUriTemplateProcessor.parse('users/{username}/change-password');
+    changePassword(username: string): any {
+        return uritemplate.parse('users/{username}/change-password').expand({ username: username });
     }
 
-    unlock(params: any): any {
+    unlock(data: IAppUser): any {
+        let params = this.modelMapper.updateParams(data);
         if('HAL') {
             return params[this.baasicConstants.modelPropertyName].links('unlock').href;
         } else {
-            return this.baasicUriTemplateProcessor.parse('users/{id}/unlock');
+            return uritemplate.parse('users/{id}/unlock');
         }
     }
 
-    lock(params: any): any {
+    lock(data: IAppUser): any {
+        let params = this.modelMapper.updateParams(data);
         if('HAL') {
             return params[this.baasicConstants.modelPropertyName].links('lock').href;
         } else {
-            return this.baasicUriTemplateProcessor.parse('users/{id}/lock');
+            return uritemplate.parse('users/{id}/lock');
         }
     }
 
-    approve(params: any): any {
+    approve(data: IAppUser): any {
+        let params = this.modelMapper.updateParams(data);
         if('HAL') {
             return params[this.baasicConstants.modelPropertyName].links('approve').href;
         } else {
-           return this.baasicUriTemplateProcessor.parse('users/{id}/approve');
+           return uritemplate.parse('users/{id}/approve');
         }
     }
 
-    disapprove(params: any): any {
+    disapprove(data: IAppUser): any {
+        let params = this.modelMapper.updateParams(data);
         if('HAL') {
             return params[this.baasicConstants.modelPropertyName].links('disapprove').href;
         } else {
-            return this.baasicUriTemplateProcessor.parse('users/{id}/disapprove');
+            return uritemplate.parse('users/{id}/disapprove');
         }
-    }
-
-    /**                 
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
-     * @method                 
-     * @example baasicUserRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
-     **/   				
-    parse(route: string): any {
-        return this.baasicBaseRouteDefinition.parse(route);
     }
 }
 
