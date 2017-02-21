@@ -8,13 +8,14 @@ import { BaasicCompanyBatchRouteDefinition } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 export class BaasicCompanyBatchClient {
-
+    
     constructor(protected baasicCompanyBatchRouteDefinition: BaasicCompanyBatchRouteDefinition) {}
 
     /**                   
      * Returns a promise that is resolved once the create company action has been performed; this action creates new company resources.                   
      * @method
-     * @param data A collection of company objects that need to be inserted into the system.                         
+     * @param data A collection of company objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create company action has been performed.                          
      * @example  baasicCompanyBatchClient.create([{     
                     description : '<description>',     
                     name : '<name>',     
@@ -34,7 +35,8 @@ export class BaasicCompanyBatchClient {
     /**                   
      * Returns a promise that is resolved once the update company action has been performed; this action updates specified company resources.                   
      * @method
-     * @param data A collection of company objects used to update specified company resources.                        
+     * @param data A collection of company objects used to update specified company resources.
+     * @returns A promise that is resolved once the update company action has been performed.                         
      * @example   baasicCompanyBatchClient.update(companies)
                     .then(function (data) {     
                         // perform success action here   
@@ -49,7 +51,9 @@ export class BaasicCompanyBatchClient {
 
      /**                   
       * Returns a promise that is resolved once the remove action has been performed. This action will remove company resources from the system if successfully completed.                   
-      * @method                         
+      * @method
+      * @param ids Collection of company ids which uniquely identifies company resources that need to be deleted.
+      * @returns A promise that is resolved once the remove action has been performed.                          
       * @example baasicCompanyBatchClient.remove(companyIds)
                     .then(function (data) {     
                         // perform success action here   
@@ -58,7 +62,7 @@ export class BaasicCompanyBatchClient {
                          // perform error handling here   
                     });		                  
      **/	
-    remove(ids: string[]): Promise<any> {
+    remove(ids: string[]): Promise<void> {
         return this.baasicApiHttp({                         
                 url: this.baasicCompanyBatchRouteDefinition.delete(),                         
                 method: 'DELETE',                         

@@ -4,11 +4,11 @@
  * @description Baasic Company Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, Utility } from 'common';
 
 export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor(protected modelMapper: ModelMapper, utility: Utility) { super(modelMapper, utility); }
 
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     
