@@ -17,10 +17,10 @@ export class BaasicApplicationSettingsClient {
      * @method
      * @param options Query resource options object.                        
      * @example baasicApplicationSettingsClient.get()
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                 
      **/ 
@@ -42,9 +42,10 @@ export class BaasicApplicationSettingsClient {
      * @example // appSettings is a resource previously fetched using get action. 
                     appSettings.allowAnyOrigin = true; 
                     baasicApplicationSettingsClient.update(appSettings)
-                        .success(function (data) {  
-                            // perform success action here })
-                        .error(function (response, status, headers, config) {   
+                        .then(function (data) {  
+                            // perform success action here 
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				
      **/	
