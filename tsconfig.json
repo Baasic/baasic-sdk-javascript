@@ -9,7 +9,7 @@
         ]
     },
     "exclude": [
-        /*"node_modules",
+        "node_modules",
         "build",
         "src/modules",
         "src/modules/applicationSettings",
@@ -17,7 +17,8 @@
         "src/modules/dynamicResource",
         "src/modules/membership",
         "src/modules/keyValue",
+        "src/modules/userProfile",
         "src/modules/valueSet",        
-        "src/baasicApp.ts" */    
+        "src/baasicApp.ts"   
     ]
 }
