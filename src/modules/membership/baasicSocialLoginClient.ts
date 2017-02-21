@@ -4,18 +4,13 @@
  * @description Baasic Social Login Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicSocialLoginClient` uses `baasicSocialLoginRouteDefinition`. 
  */
 
-import { BaasicSocialLoginRouteDefinition } from 'membership';
-import { ISocialLogin } from 'membership/contracts';
 import { IBaasicQueryModel } from 'common/contracts';
-import { ModelMapper, Utility } from '..';
+import { BaasicSocialLoginRouteDefinition } from 'modules/membership';
+import { ISocialLogin } from 'modules/membership/contracts';
 
 export class BaasicSocialLoginClient {
 
-    constructor(
-        private modelMapper: ModelMapper,
-        private utility: Utility,
-        private baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition
-    ) {}
+    constructor(protected baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition) {}
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns a list user resource connected social login providers.

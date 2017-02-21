@@ -4,24 +4,21 @@
  * @description Baasic Register Client provides an easy way to consume Baasic Application Registration REST API end-points. In order to obtain needed routes `baasicRegisterClient` uses `baasicRegisterRouteDefinition`. 
  */
 
-import { BaasicRegisterRouteDefinition } from 'membership';
-import { IAppUser, IRegisterUser } from 'membership/contracts';
-import { ModelMapper } from '..';
+import { BaasicRegisterRouteDefinition } from 'modules/membership';
+import { IAppUser, IRegisterUser } from 'modules/membership/contracts';
 
 export class BaasicRegisterClient {
 
     /**                 
      * Provides direct access to `baasicRegisterRouteDefinition`.                 
      * @method                        
-     * @example baasicRegisterClient.routeDefinition.get().expand(expandObject);                 
+     * @example baasicRegisterClient.routeDefinition.get();                 
      **/                
     get routeDefinition(): BaasicRegisterRouteDefinition {
         return this.baasicRegisterRouteDefinition;
     }
     
-    constructor(
-        private modelMapper: ModelMapper,
-        private baasicRegisterRouteDefinition: BaasicRegisterRouteDefinition) {}
+    constructor(protected baasicRegisterRouteDefinition: BaasicRegisterRouteDefinition) {}
 
     /**                 
      * Returns a promise that is resolved once the register create has been performed. This action will create a new user if completed successfully. Created user is not approved immediately, instead an activation e-mail is sent to the user. 
@@ -44,7 +41,7 @@ export class BaasicRegisterClient {
                 .finally (function () {});                 
      **/ 
     create(data: IRegisterUser): Promise<IAppUser> {
-        return this.baasicApiHttp.post(this.baasicRegisterRouteDefinition.create().expand({}), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+        return this.baasicApiHttp.post(this.baasicRegisterRouteDefinition.create(), this.baasicRegisterRouteDefinition.createParams(data));
     }
 
      /**                 
@@ -55,18 +52,17 @@ export class BaasicRegisterClient {
       * @example baasicRegisterClient.activate({   
                     activationToken : '<activation-token>' 
                 })
-                .success(function (data) {   
+                .then(function (data) {   
                     // perform success actions here 
-                })
-                .error(function (data, status) {   
+                },
+                 function (data, status) {   
                     // perform error handling here 
                 })
                 .finally (function () {});                 
      **/
     activate(data: string): Promise<any> {
-        let params = this.modelMapper.getParams(data, 'activationToken');
         return this.baasicApiHttp({ 
-            url: this.baasicRegisterRouteDefinition.activate().expand(params), 
+            url: this.baasicRegisterRouteDefinition.activate(data), 
             method: 'PUT' 
         }).success(function (data) { 
             this.authService.updateAccessToken(data); 

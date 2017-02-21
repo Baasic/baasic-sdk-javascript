@@ -4,21 +4,18 @@
  * @description Baasic Application Settings Client provides an easy way to consume Baasic Application Settings REST API end-points. In order to obtain needed routes `baasicApplicationSettingsClient` uses `baasicApplicationSettingsRouteDefinition`. 
  */
 
-import { BaasicApplicationSettingsRouteDefinition } from 'applicationSettings';
-import { IApplication } from 'applicationSettings/contracts';
 import { IOptions } from 'common/contracts';
-import { ModelMapper } from '..';
+import { BaasicApplicationSettingsRouteDefinition } from 'modules/applicationSettings';
+import { IApplication } from 'modules/applicationSettings/contracts';
 
 export class BaasicApplicationSettingsClient {
 
-    constructor(
-        private modelMapper: ModelMapper,
-        private baasicApplicationSettingsRouteDefinition: BaasicApplicationSettingsRouteDefinition
-    ) {}
+    constructor(protected baasicApplicationSettingsRouteDefinition: BaasicApplicationSettingsRouteDefinition) {}
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the application settings resource.                 
-     * @method                        
+     * @method
+     * @param options Query resource options object.                        
      * @example baasicApplicationSettingsClient.get()
                     .success(function (data) {   
                         // perform success action here 
@@ -28,7 +25,7 @@ export class BaasicApplicationSettingsClient {
                     });                 
      **/ 
     get(options: IOptions): Promise<IApplication> {
-        return this.baasicApiHttp.get(this.baaasicApplicationSettingsRouteDefinition.get().expand(this.modelMapper.getParams(undefined, options)))
+        return this.baasicApiHttp.get(this.baasicApplicationSettingsRouteDefinition.get(options))
                     .then(function (appSettings) { 
                         appSettings.origins = appSettings.origins || [];                         
                     });
@@ -40,7 +37,8 @@ export class BaasicApplicationSettingsClient {
      * let params = modelMapper.removeParams(appSettings); 
      * let uri = params['model'].links('put').href;				 
      * ```                  
-     * @method                         
+     * @method
+     * @param data An application object used to update application settings of the specified application resource.                         
      * @example // appSettings is a resource previously fetched using get action. 
                     appSettings.allowAnyOrigin = true; 
                     baasicApplicationSettingsClient.update(appSettings)
@@ -51,9 +49,7 @@ export class BaasicApplicationSettingsClient {
                         }); 				
      **/	
     update(data: IApplication): Promise<any> {
-        let params = this.modelMapper.updateParams(data);
-        let model = params[this.baasicConstants.modelPropertyName];
-        return this.baasicApiHttp.put(this.baasicApplicationSettingsRouteDefinition.update(params), model);
+        return this.baasicApiHttp.put(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
     }
 }
 

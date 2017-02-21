@@ -4,9 +4,8 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicDynamicSchemaRouteDefinition } from 'dynamicResource';
-import { IResourceSchema } from 'dynamicResource/contracts'; 
-import { ModelMapper } from '..';
+import { BaasicDynamicSchemaRouteDefinition } from 'modules/dynamicResource';
+import { IResourceSchema } from 'modules/dynamicResource/contracts'; 
 
 export class BaasicDynamicSchemaClient {
     
@@ -19,9 +18,7 @@ export class BaasicDynamicSchemaClient {
         return this.baasicDynamicSchemaRouteDefinition;
     }
     
-    constructor(
-        private modelMapper: ModelMapper,
-        private baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition) {}
+    constructor(protected baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition) {}
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resource schemas matching the given criteria.                  

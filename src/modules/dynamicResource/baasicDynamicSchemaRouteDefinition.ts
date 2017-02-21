@@ -3,17 +3,13 @@
  * @description Baasic Dynamic Schema Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Schema Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
 import { IOptions } from 'common/contracts';
-import { IResourceSchema } from 'dynamicResource/contracts';
-import { ModelMapper, Utility } from '..';
+import { IResourceSchema } from 'modules/dynamicResource/contracts';
 
 export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(
-        protected modelMapper: ModelMapper,
-        protected utility: Utility
-    ) { super(modelMapper, utility); }
+    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
 
     /** 				
      * Parses find route which can be expanded with additional options. Supported items are: 				

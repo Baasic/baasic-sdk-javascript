@@ -3,11 +3,10 @@
  * @description Baasic Value Set Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicValueSetItemRouteDefinition } from 'valueSet';
-import { IValueSet } from 'valueSet/contracts';
-import { ModelMapper, Utility } from '..';
+import { BaasicValueSetItemRouteDefinition } from 'modules/valueSet';
+import { IValueSet } from 'modules/valueSet/contracts';
 
 export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
    
@@ -17,9 +16,8 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor(
         protected modelMapper: ModelMapper,
-        protected utility: Utility,
         protected baasicValueSetItemRouteDefinition: BaasicValueSetItemRouteDefinition
-    ) { super(modelMapper, utility); }
+    ) { super(modelMapper); }
 
     /**                 
      * Parses find value set route which can be expanded with additional options. Supported items are:                 

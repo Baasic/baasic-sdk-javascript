@@ -3,17 +3,17 @@
  * @description Baasic Key Value Client provides an easy way to consume Baasic Key Value REST API end-points. In order to obtain needed routes `baasicKeyValueClient` uses `baasicKeyValueRouteClient`. 
  */
 
-import { BaasicKeyValueRouteDefinition } from 'keyValue';
-import { IKeyValue } from 'keyValue/contracts';
-import { ModelMapper, BaasicApiClient } from '..';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { BaasicKeyValueRouteDefinition } from 'modules/keyValue';
+import { IKeyValue } from 'modules/keyValue/contracts';
+import { BaasicApiClient } from '../..';
 
 export class BaasicKeyValueClient {
     
     /**
      * Provides direct access to `baasicKeyValueRouteDefinition`.
      * @method
-     * @example baasicKeyValueClient.routeDefinition.get().expand(expandObject);
+     * @example baasicKeyValueClient.routeDefinition.get();
      **/ 
     get routeDefinition(): BaasicKeyValueRouteDefinition {
         return this.baasicKeyValueRouteDefinition;
@@ -46,7 +46,7 @@ export class BaasicKeyValueClient {
                     // perform error handling here 
                 });                     
      **/ 	
-    find(options?: IOptions): PromiseLike<IBaasicQueryModel<IKeyValue>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IKeyValue>>> {
         return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.find(options));
     }
 
@@ -64,7 +64,7 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     });                  
      **/	
-    get(id: string, options: IOptions): PromiseLike<IKeyValue> {
+    get(id: string, options: IOptions): PromiseLike<IHttpResponse<IKeyValue>> {
         return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.get(id, options));
     }
 
@@ -81,7 +81,7 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     });
      */ 		
-    create(data: IKeyValue): PromiseLike<IKeyValue> {
+    create(data: IKeyValue): PromiseLike<IHttpResponse<IKeyValue>> {
         return this.baasicApiClient.post(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
     }
 
@@ -104,7 +104,7 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     }); 				
      **/					
-    update(data: IKeyValue): PromiseLike<IKeyValue> {
+    update(data: IKeyValue): PromiseLike<IHttpResponse<IKeyValue>> {
         return this.baasicApiClient.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(data));
     }
 
@@ -126,7 +126,7 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     });
      **/	
-    remove(data: IKeyValue): PromiseLike<void> {
+    remove(data: IKeyValue): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
     }
 }

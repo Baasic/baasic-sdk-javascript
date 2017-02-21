@@ -4,15 +4,11 @@
  * @description Baasic Password Recovery Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Password Recovery Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
-import { BaasicBaseRouteDefinition } from 'common';
-import { ModelMapper, Utility } from '..'; 
+import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
 
 export class BaasicPasswordRecoveryRouteDefinition extends BaasicBaseRouteDefinition {
     
-    constructor(
-        protected modelMapper: ModelMapper, 
-        protected utility: Utility
-        ) { super(modelMapper, utility); }
+    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
 
     /**                  
      * Parses recover-password route, recover-password route doesn't expose any additional properties.                  

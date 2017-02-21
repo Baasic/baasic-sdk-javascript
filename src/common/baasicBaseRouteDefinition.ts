@@ -1,5 +1,6 @@
-import { IOptions } from 'common/contracts';
 import { ModelMapper} from 'common';
+import { IOptions } from 'common/contracts';
+import { extend } from 'common/utility';
 import * as uritemplate from 'uritemplate';
 import { Utility } from 'common';
 
@@ -17,8 +18,8 @@ export abstract class BaasicBaseRouteDefinition {
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the resource property to sort the result collection by. 
      * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @returns query resources uri with search params
      * @method
+     * @returns Query resources uri with search params
      * @example baasicBaseDefinition.find();
      **/
     protected baseFind(route: string, options?: IOptions): any {
@@ -93,7 +94,7 @@ export abstract class BaasicBaseRouteDefinition {
         }
     }
 
-    createParams(data: any): any {
+    createParams(data: any, prop?: string): any {
         return this.modelMapper.createParams(data)[this.modelMapper.modelPropertyName];
     }
 

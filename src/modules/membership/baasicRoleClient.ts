@@ -5,9 +5,8 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicRoleRouteDefinition } from 'membership';
-import { IRole } from 'membership/contracts';
-import { ModelMapper } from '..';
+import { BaasicRoleRouteDefinition } from 'modules/membership';
+import { IRole } from 'modules/membership/contracts';
 
 export class BaasicRoleClient {
 
@@ -20,9 +19,7 @@ export class BaasicRoleClient {
         return this.baasicRoleRouteDefinition;
     }
     
-    constructor(
-        private modelMapper: ModelMapper,
-        private baasicRoleRouteDefinition: BaasicRoleRouteDefinition) {}
+    constructor(protected baasicRoleRouteDefinition: BaasicRoleRouteDefinition) {}
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of role resources matching the given criteria.              
