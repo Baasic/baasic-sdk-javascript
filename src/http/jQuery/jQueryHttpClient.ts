@@ -1,3 +1,5 @@
+import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'http';
+
 declare var $: any;
 
 var client: IHttpClient;

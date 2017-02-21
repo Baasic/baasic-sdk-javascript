@@ -11,12 +11,13 @@
     "exclude": [
         "node_modules",
         "build",
-        "src/applicationSettings",
-        "src/article",
-        "src/dynamicResource",
-        "src/membership",
-        "src/keyValue",
-        "src/valueSet",        
+        "src/modules",
+        "src/modules/applicationSettings",
+        "src/modules/article",
+        "src/modules/dynamicResource",
+        "src/modules/membership",
+        "src/modules/keyValue",
+        "src/modules/valueSet",        
         "src/baasicApp.ts"        
     ]
 }
