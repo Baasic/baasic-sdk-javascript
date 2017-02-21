@@ -1,8 +1,8 @@
 var path = require('path');
 var rootDir = path.resolve(__dirname);
 
-function getRootPath(args) {
-    args = Array.prototype.slice.call(arguments, 0);
+function getRootPath() {
+    var args = Array.prototype.slice.call(arguments, 0);
     return path.join.apply(path, [rootDir].concat(args));
 }
 
