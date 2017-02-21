@@ -1,4 +1,10 @@
 var path = require('path');
+var rootDir = path.resolve(__dirname);
+
+function getRootPath(args) {
+    args = Array.prototype.slice.call(arguments, 0);
+    return path.join.apply(path, [rootDir].concat(args));
+}
 
 module.exports = {
     /**
@@ -26,7 +32,11 @@ module.exports = {
         /**
          * Resolve the following extensions when requiring/importing modules.
          */
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js'],
+        /**
+         * Resolve modules using following folders.
+         */
+        modules: [getRootPath('src'), getRootPath('node_modules')]
     },
     /**
      * Specify output as an UMD library.
