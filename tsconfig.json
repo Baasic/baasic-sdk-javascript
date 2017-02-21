@@ -3,10 +3,14 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "target": "es5",
+        "lib": ["es6", "dom"],
         "baseUrl": "./src",
+        "types": ["reflect-metadata"],
         "typeRoots": [
             "./src/typings"
-        ]
+        ],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
     "exclude": [
         "node_modules",

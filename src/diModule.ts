@@ -1,28 +1,9 @@
-//Note Start: These are temporary classes
-export interface IContainerModule {    
-    registry: ContainerModuleCallBack;
-}
-
-export interface ContainerModuleCallBack extends Function {
-    (
-        bind: any,
-        unbind: any,
-        isBound: any,
-        rebind: any
-    ): void;
-}
-//Note End: These are temporary classes
-
-export class ContainerModule implements IContainerModule {
-    constructor(public registry: ContainerModuleCallBack) {
-
-    }
-}
+import { Container, interfaces } from "inversify";
 
 export class DIModule {
-    static modules : ContainerModule[];
-
-    static add(module: ContainerModule): void {
+    static modules : interfaces.ContainerModule[];
+    static kernel: Container = new Container();
+    static add(module: interfaces.ContainerModule): void {
         DIModule.modules.push(module);
     }
 };
