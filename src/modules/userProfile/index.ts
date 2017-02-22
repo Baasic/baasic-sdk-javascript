@@ -9,3 +9,8 @@ export * from './baasicSkillBatchRouteDefinition';
 export * from './baasicSkillBatchClient';
 export * from './baasicSkillRouteDefinition';
 export * from './baasicSkillClient';
+export * from './baasicUserEducationRouteDefinition';
+export * from './baasicUserEducationClient';
+export * from './baasicUserProfileAvatarStreamsRouteDefinition';
+export * from './baasicUserProfileAvatarStreamsClient',
+export * from './baasicUserProfileAvatarRouteDefinition';

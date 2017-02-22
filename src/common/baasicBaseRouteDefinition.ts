@@ -5,7 +5,7 @@ import { Utility } from 'common';
 
 export abstract class BaasicBaseRouteDefinition {
 
-    private utility: Utility;
+    protected utility: Utility;
 
     constructor(
         protected modelMapper: ModelMapper        
