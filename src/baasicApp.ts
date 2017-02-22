@@ -20,11 +20,12 @@ export class BaasicApp {
     };
 
     public readonly TokenStore: ITokenStore;
-    public readonly KeyValue: m.BaasicKeyValueClient;
+    //public readonly KeyValue: m.BaasicKeyValueClient;
 
 
     constructor (private apiKey: string, options?: Partial<IBaasicAppOptions>)
     {
+        console.log('ctor');
         this.utility = new Utility();
         
         options = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.settings, options);
@@ -32,10 +33,19 @@ export class BaasicApp {
         this[""] = {};						
         this.apiUrl = new URL(`${ options.useSSL ? 'https' : 'http' }://${ options.apiRootUrl }/${ options.apiVersion }/${ apiKey }/`);
 
-        
-        DIModule.kernel.load(...DIModule.modules);
-        
-        this.KeyValue = DIModule.kernel.get<m.BaasicKeyValueClient>(Symbol('KeyValueClient'));
+        //DIModule.kernel.load(m.diModule);
+
+        console.log(m.diModule);
+
+        //console.log(m);
+        // for (let mod in m) {
+        //     console.log(mod);
+        // }
+
+        //console.log(DIModule.modules);
+        //DIModule.kernel.load(...DIModule.modules);
+                
+        //this.KeyValue = DIModule.kernel.get<m.BaasicKeyValueClient>('BaasicKeyValueClient');
         //this.KeyValue = @injector.get<KeyValueClient>();
 
 
