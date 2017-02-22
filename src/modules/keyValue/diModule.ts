@@ -1,7 +1,11 @@
-import { DIModule } from 'diModule';
-import { ContainerModule } from "inversify";
-import { BaasicKeyValueClient } from 'modules/keyValue';
+//import { ContainerModule } from "inversify";
+//import { BaasicKeyValueClient } from 'modules/keyValue';
 
-DIModule.add(new ContainerModule((bind) => {
-    bind<BaasicKeyValueClient>(Symbol('KeyValueClient')).toSelf();
-}));
+// let diModule: ContainerModule = new ContainerModule((bind) => {
+//     console.log('init');
+//     //bind<BaasicKeyValueClient>('BaasicKeyValueClient').to(BaasicKeyValueClient);
+// });
+
+export class diModule {
+
+};
