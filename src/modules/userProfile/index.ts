@@ -14,3 +14,5 @@ export * from './baasicUserEducationClient';
 export * from './baasicUserProfileAvatarStreamsRouteDefinition';
 export * from './baasicUserProfileAvatarStreamsClient',
 export * from './baasicUserProfileAvatarRouteDefinition';
+export * from './baasicUserProfileAvatarClient';
+export * from './baasicUserProfileRouteDefinition';
