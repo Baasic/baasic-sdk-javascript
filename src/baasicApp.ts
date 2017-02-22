@@ -35,8 +35,6 @@ export class BaasicApp {
 
         //DIModule.kernel.load(m.diModule);
 
-        console.log(m.diModule);
-
         //console.log(m);
         // for (let mod in m) {
         //     console.log(mod);
