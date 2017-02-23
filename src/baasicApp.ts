@@ -3,10 +3,10 @@ import { IBaasicAppOptions } from './';
 import { ITokenStore } from 'core';
 import { DIModule } from './';
 
-import { injectable, inject, Container } from "inversify";
+import { Container } from "inversify";
 
-//import * as m from 'modules';
-import * as m from 'modules/keyValue';
+import * as modules from 'modules';
+//import * as m from 'modules/keyValue';
 
 export class BaasicApp {
         
@@ -25,25 +25,15 @@ export class BaasicApp {
 
     constructor (private apiKey: string, options?: Partial<IBaasicAppOptions>)
     {
-        console.log('ctor');
         this.utility = new Utility();
-        
-        options = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.settings, options);
+
+        options = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.settings, options || {});
 
         this[""] = {};						
         this.apiUrl = new URL(`${ options.useSSL ? 'https' : 'http' }://${ options.apiRootUrl }/${ options.apiVersion }/${ apiKey }/`);
 
-        //DIModule.kernel.load(m.diModule);
+        //DIModule.init(modules);        
 
-        console.log(m.diModule);
-
-        //console.log(m);
-        // for (let mod in m) {
-        //     console.log(mod);
-        // }
-
-        //console.log(DIModule.modules);
-        //DIModule.kernel.load(...DIModule.modules);
                 
         //this.KeyValue = DIModule.kernel.get<m.BaasicKeyValueClient>('BaasicKeyValueClient');
         //this.KeyValue = @injector.get<KeyValueClient>();

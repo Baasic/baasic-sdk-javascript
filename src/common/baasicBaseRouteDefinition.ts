@@ -2,7 +2,10 @@ import { ModelMapper} from 'common';
 import { IOptions } from 'common/contracts';
 import * as uritemplate from 'uritemplate';
 import { Utility } from 'common';
+import 'reflect-metadata';
+import { injectable } from "inversify";
 
+@injectable()
 export abstract class BaasicBaseRouteDefinition {
 
     protected utility: Utility;

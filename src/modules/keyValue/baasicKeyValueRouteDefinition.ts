@@ -4,7 +4,7 @@
  * @description Baasic Key Value Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Key Value Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { injectable, inject, Container } from "inversify";
+import { injectable } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
 import { IOptions } from 'common/contracts';
 import { IKeyValue } from 'modules/keyValue/contracts';
