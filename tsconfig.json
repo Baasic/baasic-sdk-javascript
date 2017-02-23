@@ -17,7 +17,7 @@
         "build",        
         "src/modules/applicationSettings",
         "src/modules/article",
-        "src/modules/dynamicResource",
+        /*"src/modules/dynamicResource",*/
         "src/modules/membership",
         "src/modules/valueSet"/*,  
         "src/modules/userProfile"*/

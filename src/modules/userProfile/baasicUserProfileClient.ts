@@ -5,12 +5,23 @@
  */
 
 import { IOptions } from 'common/contracts';
-import { BaasicUserProfileRouteDefinition } from 'modules/userProfile';
+import { BaasicUserProfileACLClient, BaasicUserProfileRouteDefinition } from 'modules/userProfile';
 import { IUserProfile } from 'modules/userProfile/contracts';
 
 export class BaasicUserProfileClient {
 
-    constructor(protected baasicUserProfileRouteDefinition: BaasicUserProfileRouteDefinition) {}
+    get acl(): BaasicUserProfileACLClient {
+        return this.baasicUserProfileACLClient;
+    }
+    
+    get routeDefinition(): BaasicUserProfileRouteDefinition {
+        return this.baasicUserProfileRouteDefinition;
+    }
+
+    constructor(
+        protected baasicUserProfileACLClient: BaasicUserProfileACLClient,
+        protected baasicUserProfileRouteDefinition: BaasicUserProfileRouteDefinition
+    ) {}
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user profile resources matching the given criteria.                  
@@ -95,4 +106,36 @@ export class BaasicUserProfileClient {
     update(data: IUserProfile): Promise<any> {
         return this.baasicApiHttp.put(this.baasicUserProfileRouteDefinition.update(data), this.baasicUserProfileRouteDefinition.updateParams(data));
     }
+
+    /**                  
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user profile resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserProfileRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * ``` 
+     * let params = modelMapper.removeParams(userProfile); 
+     * let uri = params['model'].links('delete').href; 
+     * ```                  
+     * @method
+     * @param data An user profile object used to delete specified user profile resource.     
+     * @returns A promise that is resolved once the remove action has been performed.                        
+     * @example // userProfile is a resource previously fetched using get action.				 
+                    baasicUserProfileClient.remove(userProfile)
+                        .then(function (data) {   
+                            // perform success action here 
+                        }, 
+                         function (response, status, headers, config) {   
+                             // perform error handling here 
+                        });						
+     **/					
+    remove(data: IUserProfile): Promise<any> {
+        return this.baasicApiHttp.delete(this.baasicUserProfileRouteDefinition.delete(data));
+    }
 }
+
+/**  
+ * @copyright (c) 2017 Mono Ltd 
+ * @license MIT  
+ * @author Mono Ltd  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - All end-point objects are transformed by the associated route definition. 
+ */

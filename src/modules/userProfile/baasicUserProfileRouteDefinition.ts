@@ -6,11 +6,19 @@
 
 import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
 import { IOptions } from 'common/contracts';
+import { BaasicUserProfileACLRouteDefinition } from 'modules/userProfile';
 import { IUserProfile } from 'modules/userProfile/contracts';
 
 export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
+    get acl(): BaasicUserProfileACLRouteDefinition {
+        return this.baasicUserProfileACLRouteDefinition;
+    }
+    
+    constructor(
+        protected modelMapper: ModelMapper,
+        protected baasicUserProfileACLRouteDefinition: BaasicUserProfileACLRouteDefinition
+    ) { super(modelMapper); }
 
     /**                 
      * Parses find user profile route which can be expanded with additional options. Supported items are:                 
@@ -57,7 +65,24 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
         return super.baseUpdate('profiles/{id}', data);
     }
 
+    /**                 
+     * Parses update user profile route; this URI template does not expose any additional options.                 
+     * @method 
+     * @param data An user profile object used to delete specified user profile resource.                       
+     * @example baasicUserProfileRouteService.delete(data);                              
+     **/
     delete(data: IUserProfile): any {
-        return super.baseDelete()
+        return super.baseDelete('profiles/{id}', data);
     }
 }
+
+/**  
+ * @copyright (c) 2017 Mono Ltd  
+ * @license MIT  
+ * @author Mono Ltd  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
+ - All end-point objects are transformed by the associated route definition. 
+ */
