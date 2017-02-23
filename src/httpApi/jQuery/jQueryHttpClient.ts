@@ -1,4 +1,4 @@
-import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'http';
+import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'httpApi';
 
 declare var $: any;
 

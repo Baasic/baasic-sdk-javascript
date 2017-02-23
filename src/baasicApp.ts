@@ -1,8 +1,8 @@
-import { Utility } from 'common';
+import { Utility, diModule as commonDIModule } from 'common';
 import { IBaasicAppOptions } from './';
-import { ITokenStore, TYPES as coreTYPES } from './core';
+import { ITokenStore, TYPES as coreTYPES, diModule as coreDIModule } from './core';
 import { DIModule } from './';
-
+import { diModule as httpDIModule } from 'httpApi';
 import { Container } from "inversify";
 
 import * as modules from 'modules';
@@ -32,7 +32,7 @@ export class BaasicApp {
         this[""] = {};						
         this.apiUrl = new URL(`${ options.useSSL ? 'https' : 'http' }://${ options.apiRootUrl }/${ options.apiVersion }/${ apiKey }/`);
 
-        DIModule.init(options, modules);
+        DIModule.init(options, [ commonDIModule, coreDIModule, httpDIModule, modules ]);
                 
         this.TokenStore = DIModule.kernel.get<ITokenStore>(coreTYPES.ITokenStore);
         this.KeyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);

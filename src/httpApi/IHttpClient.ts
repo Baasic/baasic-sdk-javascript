@@ -1,4 +1,4 @@
-import {IHttpRequest,IHttpResponse} from 'http';
+import {IHttpRequest,IHttpResponse} from 'httpApi';
 
 export interface IHttpClient
 {

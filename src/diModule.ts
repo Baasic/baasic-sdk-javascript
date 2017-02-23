@@ -1,14 +1,14 @@
 import { IBaasicAppOptions } from './';
-import { IHttpClient, TYPES as httpTYPES } from './http';
-import { ITokenStore, IEventHandler, TYPES as coreTYPES } from './core';
-import { client as jQueryHttpClient } from './http/jQuery';
+import { IHttpClient, TYPES as httpTYPES } from 'httpApi';
+import { ITokenStore, IEventHandler, TYPES as coreTYPES } from 'core';
+import { client as jQueryHttpClient } from 'httpApi/jQuery';
 import { Container, interfaces, ContainerModule } from "inversify";
 import 'reflect-metadata';
 
 export class DIModule {
     static diModules : interfaces.ContainerModule[] = [];
     static kernel: Container = new Container();
-    static init(options: Partial<IBaasicAppOptions>, modules: any): void {    
+    static init(options: Partial<IBaasicAppOptions>, modules: any[]): void {    
         let diModule = new ContainerModule((bind) => {
             if (options.httpClient) {
                 DIModule.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(options.httpClient);
@@ -36,18 +36,27 @@ export class DIModule {
         });
         DIModule.diModules.push(diModule);  
 
-        for (let module in modules) {            
-            if (modules[module] instanceof Object) {
-                let alias = modules[module];
-                for (let mod in alias) {
-                    if (alias[mod] instanceof ContainerModule) {
-                        DIModule.diModules.push(alias[mod]);                 
+        for (let m of modules) {          
+            if (m instanceof Object) {
+                for (let module in m) {
+                    if (modules[module] instanceof Object) {
+                        let alias = modules[module];
+                        for (let mod in alias) {
+                            if (alias[mod] instanceof ContainerModule) {
+                                DIModule.diModules.push(alias[mod]);                 
+                            }
+                        }
+                    } else if (modules[module] instanceof ContainerModule) {
+                                DIModule.diModules.push(modules[module]);
                     }
                 }
-            } else if (modules[module] instanceof ContainerModule) {
-                        DIModule.diModules.push(modules[module]);
+            } else if (m instanceof ContainerModule) {
+                DIModule.diModules.push(m);
             }
         }
         DIModule.kernel.load(...DIModule.diModules);        
+    }
+    private static addModule(module: any) {
+        
     }
 };

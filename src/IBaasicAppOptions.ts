@@ -1,5 +1,5 @@
 import { ITokenStore, IEventHandler } from 'core';
-import { IHttpClient } from 'http';
+import { IHttpClient } from 'httpApi';
 
 export interface IBaasicAppOptions
 {

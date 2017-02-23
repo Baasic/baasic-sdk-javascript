@@ -5,7 +5,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient,BaasicApiClient,TYPES as httpTYPES } from 'http';
+import { IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient,BaasicApiClient,TYPES as httpTYPES } from 'httpApi';
 import { BaasicKeyValueRouteDefinition, TYPES } from 'modules/keyValue';
 import { IKeyValue } from 'modules/keyValue/contracts';
 
@@ -22,11 +22,9 @@ export class BaasicKeyValueClient {
     }
     
     constructor(
-        protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition,
-        protected baasicApiClient: BaasicApiClient
+        @inject(TYPES.BaasicKeyValueRouteDefinition) protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition,
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) {
-        console.log(httpTYPES);
-        
     }
 
     /**

@@ -1,4 +1,4 @@
-import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'http';
+import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'httpApi';
 import {ITokenStore} from 'core';
 import { injectable } from "inversify";
 import 'reflect-metadata';

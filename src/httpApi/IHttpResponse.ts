@@ -1,4 +1,4 @@
-import {IHttpHeaders} from 'http';
+import {IHttpHeaders} from 'httpApi';
 
 export interface IHttpResponse<ReturnType>
 {

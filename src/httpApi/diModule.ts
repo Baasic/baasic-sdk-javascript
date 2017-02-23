@@ -1,5 +1,5 @@
 import { ContainerModule } from "inversify";
-import { BaasicApiClient } from 'http';
+import { BaasicApiClient } from 'httpApi';
 
 const TYPES = {
     BaasicApiClient: Symbol("BaasicApiClient"),
