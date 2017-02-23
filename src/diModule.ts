@@ -1,11 +1,18 @@
-import { Container, interfaces } from "inversify";
+import { IBaasicAppOptions } from './';
+import { Container, interfaces, ContainerModule } from "inversify";
 import 'reflect-metadata';
 
 export class DIModule {
-    static modules : interfaces.ContainerModule[] = [];
+    static diModules : interfaces.ContainerModule[] = [];
     static kernel: Container = new Container();
-    static add(module: interfaces.ContainerModule): void {
-        console.log(module);
-        DIModule.modules.push(module);
+    static init(options: IBaasicAppOptions, modules: any): void {        
+        
+
+        for (let module in modules) {            
+            if (modules[module] instanceof ContainerModule) {
+                DIModule.diModules.push(modules[module]);                 
+            }
+        }
+        DIModule.kernel.load(...DIModule.diModules);        
     }
 };
