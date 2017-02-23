@@ -3,8 +3,9 @@
  * @description Baasic Dynamic Resource ACL Client provides an easy way to consume Baasic Dynamic Resource REST API end-points. In order to obtain needed routes `baasicDynamicResourceACLClient` uses `baasicDynamicResourceACLRouteDefinition`. 
  */
 
+import { IACLPolicy } from 'common/contracts';
 import { BaasicDynamicResourceACLRouteDefinition } from 'modules/dynamicResource';
-import { IACLOptions, IACLPolicy, INewACLPolicy } from 'modules/dynamicResource/contracts';
+import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 
 export class BaasicDynamicResourceACLClient {
 
@@ -22,7 +23,7 @@ export class BaasicDynamicResourceACLClient {
                         // perform error handling here 
                     });                     
      **/	
-    get(options: IACLOptions): Promise<IACLPolicy[]> {
+    get(options: IDynamicACLOptions): Promise<IACLPolicy[]> {
         return this.baasicApiHttp.get(this.baasicDynamicResourceACLRouteDefinition.get(options));
     }
 
@@ -38,7 +39,7 @@ export class BaasicDynamicResourceACLClient {
                         // perform error handling here 
                     }); 				    
      **/	
-    update(options: IACLOptions): Promise<IACLOptions> {
+    update(options: IDynamicACLOptions): Promise<IACLPolicy[]> {
         return this.baasicApiHttp.put(this.baasicDynamicResourceACLRouteDefinition.update(options), this.baasicDynamicResourceACLRouteDefinition.updateParams(options));
     }
 
@@ -52,7 +53,7 @@ export class BaasicDynamicResourceACLClient {
      *               "Read"
      *               "Update"
      * @param user Username which uniquely identifies user for which ACL policy needs to be removed.
-     * @param data Dynamic resource whose security privileges need to be retrieved and updated.
+     * @param data ACL Policy whose security privileges need to be retrieved and updated.
      * @example // dynamicResource is a resource previously fetched using get action.					
                     baasicDynamicResourceACLClient.removeByUser('<access-action>', '<username>', dynamicResource)
                         .then(function (data) {   
@@ -62,7 +63,7 @@ export class BaasicDynamicResourceACLClient {
                             // perform error handling here 
                         }); 				    
      **/						
-    removeByUser(action: string, user: string, data: any): Promise<void> {
+    removeByUser(action: string, user: string, data: IACLPolicy): Promise<void> {
         return this.baasicApiHttp.delete(this.baasicDynamicResourceACLRouteDefinition.deleteByUser(action, user, data));
     }
 
@@ -76,7 +77,7 @@ export class BaasicDynamicResourceACLClient {
      *               "Read"
      *               "Update"
      * @param role Role's name which uniquely identifies role for which ACL policy needs to be removed.
-     * @param data Dynamic resource whose security privileges need to be retrieved and updated.                     
+     * @param data ACL Policy whose security privileges need to be retrieved and updated.                     
      * @example // dynamicResource is a resource previously fetched using get action. 
                     baasicDynamicResourceACLClient.removeByRole('<access-action>', '<role-name>', dynamicResource)
                         .then(function (data) {   
@@ -86,7 +87,7 @@ export class BaasicDynamicResourceACLClient {
                             // perform error handling here 
                         }); 				    
      **/	
-    removeByRole(action: string, role: string, data: any): Promise<any> {
+    removeByRole(action: string, role: string, data: IACLPolicy): Promise<void> {
         return this.baasicApiHttp.delete(this.baasicDynamicResourceACLRouteDefinition.deleteByRole(action, role, data));
     }
 }

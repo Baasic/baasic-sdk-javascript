@@ -4,8 +4,8 @@
  */
 
 import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
-import { IACLOptions } from 'modules/dynamicResource/contracts';
-import { extend } from 'common';
+import { IACLPolicy } from 'common/contracts';
+import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 
 export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefinition {
     
@@ -18,8 +18,8 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      * @param options Query resource options object.       					
      * @example baasicDynamicResourceACLRouteDefinition.get(options)               					
      **/ 				
-    get(options: IACLOptions): any {
-        let params = extend({}, options);
+    get(options: IDynamicACLOptions): any {
+        let params = this.utility.extend({}, options);
         return super.parse('resources/{schemaName}/{id}/acl/{?fields}').expand(params);
     }
 
@@ -29,9 +29,8 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      * @param options Options object.       					
      * @example baasicDynamicResourceACLRouteDefinition.update(options)					
      **/
-    // data object ??	
-    update(options: IACLOptions): any {
-        let params = extend({}, options);
+    update(options: IDynamicACLOptions): any {
+        let params = this.utility.extend({}, options);
         return super.baseUpdate('resources/{schemaName}/{id}/acl/{?fields}', options);
     }
 
@@ -44,10 +43,10 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      * @method
      * @param action Action abbreviation which identifies ACL policy assigned to the specified user and dynamic resource item.
      * @param username A value which uniquely identifies user for which ACL policy needs to be removed.	
-     * @param data Dynamic resource object used to perform delete action.       					
+     * @param data ACL Policy object used to perform delete action.       					
      * @example baasicDynamicResourceACLRouteDefinition.deleteByUser(action, username, data);					
      **/
-    deleteByUser(action: string, username: string, data: any): any {
+    deleteByUser(action: string, username: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);                         
         params.user = username;                         
         params.accessAction = action;
@@ -63,18 +62,18 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      * @method
      * @param action Action abbreviation which identifies ACL policy assigned to the specified role and dynamic resource item.
      * @param role A value which uniquely identifies role for which ACL policy needs to be removed.
-     * @param data Dynamic Resource object used to perform delete action. 					
+     * @param data ACLPolicy object used to perform delete action. 					
      * @example baasicDynamicResourceACLRouteDefinition.deleteByRole(action, role, data)					
      **/ 
-    deleteByRole(action: string, role: string, data: any): any {
+    deleteByRole(action: string, role: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);
         params.role = role; 
         params.accessAction = action;
         return super.parse('resources/{schemaName}/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
     }
 
-    updateParams(options: IACLOptions): any {
-        let params = extend({}, options);
+    updateParams(options: IDynamicACLOptions): any {
+        let params = this.utility.extend({}, options);
         return params[this.baasicConstants.modelPropertyName];
     }
 }
