@@ -1,6 +1,6 @@
 import { Utility } from 'common';
 import { IBaasicAppOptions } from './';
-import { ITokenStore } from 'core';
+import { ITokenStore, TYPES as coreTYPES } from './core';
 import { DIModule } from './';
 
 import { Container } from "inversify";
@@ -20,7 +20,7 @@ export class BaasicApp {
     };
 
     public readonly TokenStore: ITokenStore;
-    //public readonly KeyValue: m.BaasicKeyValueClient;
+    public readonly KeyValue: modules.KeyValue.BaasicKeyValueClient;
 
 
     constructor (private apiKey: string, options?: Partial<IBaasicAppOptions>)
@@ -32,11 +32,11 @@ export class BaasicApp {
         this[""] = {};						
         this.apiUrl = new URL(`${ options.useSSL ? 'https' : 'http' }://${ options.apiRootUrl }/${ options.apiVersion }/${ apiKey }/`);
 
-        //DIModule.init(modules);        
-
+        DIModule.init(options, modules);
                 
-        //this.KeyValue = DIModule.kernel.get<m.BaasicKeyValueClient>('BaasicKeyValueClient');
-        //this.KeyValue = @injector.get<KeyValueClient>();
+        this.TokenStore = DIModule.kernel.get<ITokenStore>(coreTYPES.ITokenStore);
+        this.KeyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
+        
 
 
     }

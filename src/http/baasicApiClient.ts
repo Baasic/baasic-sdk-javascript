@@ -1,6 +1,9 @@
 import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'http';
 import {ITokenStore} from 'core';
+import { injectable } from "inversify";
+import 'reflect-metadata';
 
+@injectable()
 export class BaasicApiClient {
     constructor (
         private httpClient: IHttpClient,
