@@ -1,13 +1,13 @@
-import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'httpApi';
-import {ITokenStore} from 'core';
-import { injectable } from "inversify";
+import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient,TYPES as httpTYPES} from 'httpApi';
+import {ITokenStore,TYPES as coreTYPES } from 'core';
+import { injectable,inject } from "inversify";
 import 'reflect-metadata';
 
 @injectable()
 export class BaasicApiClient {
     constructor (
-        private httpClient: IHttpClient,
-        private tokenStore: ITokenStore
+        @inject(httpTYPES.BaasicApiClient) private httpClient: IHttpClient,
+        @inject(coreTYPES.ITokenStore) private tokenStore: ITokenStore
     ) 
     {
 

@@ -4,8 +4,8 @@
  **/
 
 import { IOptions } from './contracts';
-import { Utility } from 'common';
-import { injectable } from "inversify";
+import { Utility,TYPES } from 'common';
+import { injectable,inject } from "inversify";
 
 @injectable()
 export class ModelMapper {
@@ -13,7 +13,9 @@ export class ModelMapper {
     public idPropertyName: string = 'id';
     public modelPropertyName: string = 'model';
 
-    constructor(private utility: Utility) {}   
+    constructor(
+        @inject(TYPES.Utility) protected utility: Utility
+    ) {}   
 
     private FindParams(options: IOptions): any {
         let object: any = {};

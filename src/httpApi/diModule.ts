@@ -9,7 +9,7 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicApiClient>(TYPES.BaasicApiClient).toConstructor(BaasicApiClient);
+    bind<BaasicApiClient>(TYPES.BaasicApiClient).to(BaasicApiClient);
 });
 
 export { diModule };
