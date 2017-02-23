@@ -36,27 +36,18 @@ export class DIModule {
         });
         DIModule.diModules.push(diModule);  
 
-        for (let m of modules) {          
-            if (m instanceof Object) {
-                for (let module in m) {
-                    if (modules[module] instanceof Object) {
-                        let alias = modules[module];
-                        for (let mod in alias) {
-                            if (alias[mod] instanceof ContainerModule) {
-                                DIModule.diModules.push(alias[mod]);                 
-                            }
-                        }
-                    } else if (modules[module] instanceof ContainerModule) {
-                                DIModule.diModules.push(modules[module]);
-                    }
-                }
-            } else if (m instanceof ContainerModule) {
-                DIModule.diModules.push(m);
-            }
+        for (let m of modules) {    
+            DIModule.addModule(m);
         }
         DIModule.kernel.load(...DIModule.diModules);        
     }
     private static addModule(module: any) {
-        
+        if (module instanceof ContainerModule) {
+            DIModule.diModules.push(module);
+        } else if (module instanceof Object) {            
+            for (let mod in module) {
+                DIModule.addModule(module[mod]);
+            }
+        }   
     }
 };

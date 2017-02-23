@@ -1,5 +1,13 @@
+
+import { injectable } from "inversify";
+
+@injectable()
 export class Utility
 {
+    constructor() {
+        
+    }
+
     /**
      * Checks if provided value is javascript object.
      * @param value any given value

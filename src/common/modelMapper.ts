@@ -5,7 +5,9 @@
 
 import { IOptions } from './contracts';
 import { Utility } from 'common';
+import { injectable } from "inversify";
 
+@injectable()
 export class ModelMapper {
 
     public idPropertyName: string = 'id';

@@ -1,14 +1,16 @@
 import { ContainerModule } from "inversify";
-import { ModelMapper } from 'common';
+import { ModelMapper,Utility } from 'common';
 
 const TYPES = {
-    ModelMapper: Symbol("ModelMapper")
+    Utility: Symbol("Utility"),
+    ModelMapper: Symbol("ModelMapper")       
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<ModelMapper>(TYPES.ModelMapper).to(ModelMapper);
+    bind<Utility>(TYPES.Utility).to(Utility);
+    bind<ModelMapper>(TYPES.ModelMapper).to(ModelMapper);    
 });
 
 export { diModule };
