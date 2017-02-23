@@ -1,5 +1,5 @@
 import { IBaasicModel } from 'common/contracts';
-import { IMembership, IProfileAvatar, IUserEducation, IUserSkill, IUserWork } from 'modules/userProfile/contracts';
+import { IMembership, IProfileAvatar, IUserEducation, IUserProfileSkill, IUserWork } from 'modules/userProfile/contracts';
 
 export interface IUserProfile extends IBaasicModel {
     aboutMySelf?: string,
@@ -14,7 +14,7 @@ export interface IUserProfile extends IBaasicModel {
     lastName?: string,
     membership?: IMembership,
     mobilePhone?: string,
-    skills?: IUserSkill[],
+    skills?: IUserProfileSkill[],
     timestamp?: string,
     timeZoneId?: string,
     webSites?: string,

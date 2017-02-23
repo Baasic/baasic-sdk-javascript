@@ -1,9 +1,6 @@
 import { IBaasicModel } from 'common/contracts';
-import { ISkill } from 'modules/userProfile/contracts';
+import { ISkill, IUserProfile, IUserProfileSkill } from 'modules/userProfile/contracts';
 
-export interface IUserSkill extends IBaasicModel {
-    skill?: ISkill,
-    skillId?: string,
-    skillName?: string,
-    userId?: string
+export interface IUserSkill extends IBaasicModel, IUserProfileSkill {
+    userProfile?: IUserProfile
 }

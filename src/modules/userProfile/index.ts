@@ -19,3 +19,5 @@ export * from './baasicUserProfileACLRouteDefinition';
 export * from './baasicUserProfileACLClient';
 export * from './baasicUserProfileRouteDefinition';
 export * from './baasicUserProfileClient';
+export * from './baasicUserSkillRouteDefinition';
+export * from './baasicUserSkillClient';
