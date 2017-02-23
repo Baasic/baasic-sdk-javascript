@@ -6,6 +6,7 @@ export * from './IFileEntry';
 export * from './IProfileAvatar';
 export * from './IMembership';
 export * from './IUserProfileSkill';
-export * from './IUserWork';
+export * from './IUserProfileWork';
 export * from './IUserProfile';
 export * from './IUserSkill';
+export * from './IUserWork';
