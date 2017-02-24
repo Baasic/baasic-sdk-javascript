@@ -13,9 +13,12 @@ export class ModelMapper {
     public idPropertyName: string = 'id';
     public modelPropertyName: string = 'model';
 
-    constructor(
-        @inject(TYPES.Utility) protected utility: Utility
-    ) {}   
+    protected utility: Utility;
+
+    constructor()     
+    {
+        this.utility = new Utility();
+    }   
 
     private FindParams(options: IOptions): any {
         let object: any = {};
