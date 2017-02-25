@@ -19,7 +19,8 @@
         "src/modules/article",
         "src/modules/dynamicResource",
         "src/modules/membership",
-        "src/modules/valueSet",  
-        "src/modules/userProfile"
+        /*"src/modules/templating",*/
+        "src/modules/userProfile",
+        "src/modules/valueSet"
     ]
 }
