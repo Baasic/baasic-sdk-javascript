@@ -3,10 +3,10 @@
  * @description Baasic Key Value Client provides an easy way to consume Baasic Key Value REST API end-points. In order to obtain needed routes `baasicKeyValueClient` uses `baasicKeyValueRouteClient`. 
  */
 
-import { injectable } from "inversify";
+import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient,BaasicApiClient} from 'http';
-import { BaasicKeyValueRouteDefinition } from 'modules/keyValue';
+import { IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient,BaasicApiClient,TYPES as httpTYPES } from 'httpApi';
+import { BaasicKeyValueRouteDefinition, TYPES } from 'modules/keyValue';
 import { IKeyValue } from 'modules/keyValue/contracts';
 
 @injectable()
@@ -22,11 +22,9 @@ export class BaasicKeyValueClient {
     }
     
     constructor(
-        protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition,
-        protected baasicApiClient: BaasicApiClient
+        @inject(TYPES.BaasicKeyValueRouteDefinition) protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition,
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) {
-
-        
     }
 
     /**

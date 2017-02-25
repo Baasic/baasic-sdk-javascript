@@ -1,4 +1,4 @@
-export * from './IBaasicAppOptions';
-export * from './baasicApp';
 export * from './diModule';
-export * from './http/jQuery';
+export * from './baasicApp';
+
+export * from './httpApi/jQuery';
