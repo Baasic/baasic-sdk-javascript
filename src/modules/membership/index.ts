@@ -8,3 +8,4 @@ export * from './baasicSocialLoginRouteDefinition';
 export * from './baasicUserRouteDefinition';
 export * from './baasicSocialLoginClient';
 export * from './baasicUserClient';
+export * from './diModule';

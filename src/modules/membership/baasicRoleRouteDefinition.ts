@@ -1,16 +1,18 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicRoleRouteDefinition  
  * @description Baasic Role Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Role Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
+import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { IRole } from 'modules/membership/contracts';
 
 export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
 
     /**                 
      * Parses find role route which can be expanded with additional options. Supported items are:                 
@@ -32,7 +34,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @param id Role unique indentifer.
      * @param options Query resource options object.                        
      * @example baasicRoleRouteDefinition.get().expand({id: '<role-id>'});                               
-     **/ 
+     **/
     get(id: string, options?: IOptions): any {
         return super.baseGet('lookups/roles/{id}/{?embed,fields}', id, options);
     }
@@ -41,7 +43,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * Parses create role route; this URI template does not expose any additional options.                 
      * @method                        
      * @example baasicRoleRouteDefinition.create();                               
-     **/   				
+     **/
     create(): any {
         return super.baseCreate('lookups/roles', {});
     }
@@ -72,5 +74,5 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
  ***Notes:**  
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
- - All end-point objects are transformed by the associated route service. 
+ - All end-point objects are transformed by the associated route definition. 
 */

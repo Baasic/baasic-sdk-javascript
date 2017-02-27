@@ -1,11 +1,18 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserClient  
  * @description Baasic User Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicUserClient` uses `baasicUserRouteDefinition`. 
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicUserRouteDefinition, BaasicSocialLoginClient, BaasicSocialLoginRouteDefinition } from 'modules/membership';
+import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import {
+    BaasicUserRouteDefinition,
+    BaasicSocialLoginClient,
+    BaasicSocialLoginRouteDefinition,
+    TYPES as membershipTypes
+} from 'modules/membership';
 import { IAppUser, INewUser, INewPassword } from 'modules/membership/contracts';
 import { ModelMapper } from 'common';
 
@@ -15,19 +22,20 @@ export class BaasicUserClient {
      * Provides direct access to `baasicUserRouteDefinition`.                 
      * @method                        
      * @example baasicUserClient.routeDefinition.get();                 
-     **/ 
+     **/
     get routeDefinition(): BaasicUserRouteDefinition {
         return this.baasicUserRouteDefinition;
     }
 
     get socialLogin(): BaasicSocialLoginClient {
-        return this.baasicUserSocialLoginClient;
+        return this.baasicSocialLoginClient;
     }
 
     constructor(
-        protected baasicUserRouteDefinition: BaasicUserRouteDefinition,
-        protected baasicUserSocialLoginClient: BaasicSocialLoginClient
-    ) {}
+        @inject(membershipTypes.BaasicUserRouteDefinition) protected baasicUserRouteDefinition: BaasicUserRouteDefinition,
+        @inject(membershipTypes.BaasicSocialLoginClient) protected baasicSocialLoginClient: BaasicSocialLoginClient,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                  
      * Returns a promise that is resolved once the exists action has been performed. This action checks if user exists in the application.            
@@ -40,9 +48,9 @@ export class BaasicUserClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });                   
-     **/ 
-    exists(username: string, options?: any): Promise<void> {
-        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.exists(username, options));
+     **/
+    exists(username: string, options?: any): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.get(this.baasicUserRouteDefinition.exists(username, options));
     }
 
     /**                  
@@ -62,9 +70,9 @@ export class BaasicUserClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
-     **/  					
-    find(options?: IOptions): Promise<IBaasicQueryModel<IAppUser>> {
-        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.find(options));
+     **/
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IAppUser>>> {
+        return this.baasicApiClient.get(this.baasicUserRouteDefinition.find(options));
     }
 
     /**                  
@@ -83,9 +91,9 @@ export class BaasicUserClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });                  
-     **/ 
-    get(id: string, options?: IOptions): Promise<IAppUser> {
-        return this.baasicApiHttp.get(this.baasicUserRouteDefinition.get(id, options));
+     **/
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IAppUser>> {
+        return this.baasicApiClient.get(this.baasicUserRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -108,9 +116,9 @@ export class BaasicUserClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });                  
-     **/ 						
-    create(data: INewUser): Promise<IAppUser> {
-        return this.baasicApiHttp.post(this.baasicUserRouteDefinition.create(), this.baasicUserRouteDefinition.createParams(data));
+     **/
+    create(data: INewUser): PromiseLike<IHttpResponse<IAppUser>> {
+        return this.baasicApiClient.post(this.baasicUserRouteDefinition.create(), this.baasicUserRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -132,9 +140,9 @@ export class BaasicUserClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				
-     **/	
-    update(data: IAppUser): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.update(data), this.baasicUserRouteDefinition.updateParams(data));
+     **/
+    update(data: IAppUser): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicUserRouteDefinition.update(data), this.baasicUserRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -154,9 +162,9 @@ export class BaasicUserClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
-     **/	
-    remove(data: IAppUser): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicUserRouteDefinition.delete(data));
+     **/
+    remove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicUserRouteDefinition.delete(data));
     }
 
     /**                  
@@ -176,9 +184,9 @@ export class BaasicUserClient {
                              function (response, status, headers, config) {   
                                 // perform error handling here 
                             });						
-     **/	
-    unlock(data: IAppUser): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.unlock(data));
+     **/
+    unlock(data: IAppUser): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicUserRouteDefinition.unlock(data), data);
     }
 
     /**                 
@@ -198,9 +206,9 @@ export class BaasicUserClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
-     **/	
-    lock(data: IAppUser): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.lock(data)); 
+     **/
+    lock(data: IAppUser): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicUserRouteDefinition.lock(data), data);
     }
 
     /**                  
@@ -220,9 +228,9 @@ export class BaasicUserClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
-     **/					
-    approve(data: IAppUser): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.approve(data));
+     **/
+    approve(data: IAppUser): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicUserRouteDefinition.approve(data), data);
     }
 
     /**                  
@@ -239,9 +247,9 @@ export class BaasicUserClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });						
-     **/	
-    disapprove(data: IAppUser): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicUserRouteDefinition.disapprove(data));
+     **/
+    disapprove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicUserRouteDefinition.disapprove(data), data);
     }
 
     /**                  
@@ -261,12 +269,15 @@ export class BaasicUserClient {
                     // perform error handling here 
                 })
                 .finally (function () {}); 
-     **/					
-    changePassword(username: string, data: INewPassword): Promise<any> {
-        return this.baasicApiHttp({ 
-            url: this.baasicUserRouteDefinition.changePassword(username), 
-            method: 'PUT', 
-            data: data 
-        });
+     **/
+    changePassword(username: string, data: INewPassword): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicUserRouteDefinition.changePassword(username), data);
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - All end-point objects are transformed by the associated route definition. 
+ */

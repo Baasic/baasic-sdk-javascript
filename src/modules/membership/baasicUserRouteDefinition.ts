@@ -1,13 +1,14 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserRouteDefinition  
  * @description Baasic User Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicSocialLoginRouteDefinition } from 'modules/membership';
+import { injectable, inject } from "inversify";
+import { BaasicSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser } from 'modules/membership/contracts';
 import * as uritemplate from 'uritemplate';
 
@@ -18,20 +19,20 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     constructor(
-        protected modelMapper: ModelMapper,
-        protected baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition
+        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(membershipTypes.BaasicSocialLoginRouteDefinition) protected baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition
     ) { super(modelMapper); }
 
-     /**                 
-      * Parses find user route which can be expanded with additional options. Supported items are:                 
-      * - `searchQuery` - A string referencing user properties using the phrase or BQL (Baasic Query Language) search.                 
-      * - `page` - A value used to set the page number, i.e. to retrieve certain user subset from the storage.                 
-      * - `rpp` - A value used to limit the size of result set per page.                 
-      * - `sort` - A string used to set the user property to sort the result collection by. 				
-      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-      * @method                        
-      * @example baasicUserRouteDefinition.find({searchQuery: '<search-phrase>'});                              
-      **/ 
+    /**                 
+     * Parses find user route which can be expanded with additional options. Supported items are:                 
+     * - `searchQuery` - A string referencing user properties using the phrase or BQL (Baasic Query Language) search.                 
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user subset from the storage.                 
+     * - `rpp` - A value used to limit the size of result set per page.                 
+     * - `sort` - A string used to set the user property to sort the result collection by. 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * @method                        
+     * @example baasicUserRouteDefinition.find({searchQuery: '<search-phrase>'});                              
+     **/
     find(options: IOptions): any {
         return super.baseFind('users/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
@@ -62,13 +63,13 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
     delete(data: IAppUser): any {
         return super.baseDelete('users/{id}', data);
     }
-    
+
     /**                 
      * Parses user exists route; URI template should be expanded with the username whose availability you'd like to check.                                
      * @method
      * @param username A username which uniquely identifies an application user.                        
      * @example baasicUserRouteDefinition.exists({username: '<username>'});                               
-     **/			
+     **/
     exists(username: string, options?: any): any {
         return uritemplate.parse('users/{username}/exists/').expand(this.modelMapper.getParams(username, options, 'username'));
     }
@@ -85,8 +86,8 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
 
     unlock(data: IAppUser): any {
         let params = this.modelMapper.updateParams(data);
-        if('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('unlock').href;
+        if ('HAL') {
+            return params[this.modelMapper.modelPropertyName].links('unlock').href;
         } else {
             return uritemplate.parse('users/{id}/unlock');
         }
@@ -94,8 +95,8 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
 
     lock(data: IAppUser): any {
         let params = this.modelMapper.updateParams(data);
-        if('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('lock').href;
+        if ('HAL') {
+            return params[this.modelMapper.modelPropertyName].links('lock').href;
         } else {
             return uritemplate.parse('users/{id}/lock');
         }
@@ -103,17 +104,17 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
 
     approve(data: IAppUser): any {
         let params = this.modelMapper.updateParams(data);
-        if('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('approve').href;
+        if ('HAL') {
+            return params[this.modelMapper.modelPropertyName].links('approve').href;
         } else {
-           return uritemplate.parse('users/{id}/approve');
+            return uritemplate.parse('users/{id}/approve');
         }
     }
 
     disapprove(data: IAppUser): any {
         let params = this.modelMapper.updateParams(data);
-        if('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('disapprove').href;
+        if ('HAL') {
+            return params[this.modelMapper.modelPropertyName].links('disapprove').href;
         } else {
             return uritemplate.parse('users/{id}/disapprove');
         }
@@ -125,5 +126,5 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
  ***Notes:**  
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
- - All end-point objects are transformed by the associated route service. 
+ - All end-point objects are transformed by the associated route definition. 
  */
