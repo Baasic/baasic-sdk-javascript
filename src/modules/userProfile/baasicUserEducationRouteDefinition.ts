@@ -1,28 +1,29 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserEducationRouteDefinition  
  * @description Baasic User Education Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, Utility } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
+import { injectable, inject } from "inversify";
 import { IUserEducation } from 'modules/userProfile/contracts';
 
 export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper, utility: Utility) { super(modelMapper, utility); }
+    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
 
-     /**                 
-      * Parses find route which can be expanded with additional options. Supported items are:                 
-      * - `searchQuery` - A string referencing user education properties using the phrase or BQL (Baasic Query Language) search.                 
-      * - `page` - A value used to set the page number, i.e. to retrieve certain user education subset from the storage.                 
-      * - `rpp` - A value used to limit the size of result set per page.                 
-      * - `sort` - A string used to set the user education property to sort the result collection by. 				
-      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-      * @method
-      * @param options Query resource options object.                        
-      * @example baasicUserEducationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
-      **/ 
+    /**                 
+     * Parses find route which can be expanded with additional options. Supported items are:                 
+     * - `searchQuery` - A string referencing user education properties using the phrase or BQL (Baasic Query Language) search.                 
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user education subset from the storage.                 
+     * - `rpp` - A value used to limit the size of result set per page.                 
+     * - `sort` - A string used to set the user education property to sort the result collection by. 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * @method
+     * @param options Query resource options object.                        
+     * @example baasicUserEducationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     **/
     find(options?: IOptions): any {
         return super.baseFind('profiles/{userId}/educations/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
@@ -33,7 +34,7 @@ export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinitio
      * @param id User education id which uniquely identifies user education resource that needs to be retrieved. 
      * @param options Query resource options object.                      
      * @example baasicUserEducationRouteDefinition.get(id);                               
-     **/ 			
+     **/
     get(id: string, options?: IOptions): any {
         return super.baseGet('profiles/{userId}/educations/{id}/{?embed,fields}', id, options);
     }
@@ -55,7 +56,7 @@ export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicUserEducationRouteDefinition.update(data);                              
      **/
     update(data: IUserEducation): any {
-        return super.baseUpdate(data);
+        return super.baseUpdate('profiles/{userId}/educations/{id}', data);
     }
 
     /**                 
@@ -65,7 +66,7 @@ export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicUserEducationRouteDefinition.delete(data);                              
      **/
     delete(data: IUserEducation): any {
-        return super.baseDelete(data);
+        return super.baseDelete('profiles/{userId}/educations/{id}', data);
     }
 }
 

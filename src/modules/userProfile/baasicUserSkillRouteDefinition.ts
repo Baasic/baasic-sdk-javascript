@@ -1,16 +1,17 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserSkillRouteDefinition  
  * @description Baasic User Skill Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
+import { injectable, inject } from "inversify";
 import { IUserSkill } from 'modules/userProfile/contracts';
 
 export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 
@@ -33,7 +34,7 @@ export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @param id User profile id or display name which uniquely identifies user profile whose skill resources need to be retrieved.
      * @param options Query resource options object.                        
      * @example baasicUserSkillRouteDefinition.get(id, options);                               
-     **/ 
+     **/
     get(id: string, options?: IOptions): any {
         return super.baseGet('profiles/{userId}/skills/{id}/{?embed,fields}', id, options);
     }

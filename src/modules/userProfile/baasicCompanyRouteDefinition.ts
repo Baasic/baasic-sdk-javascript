@@ -1,12 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicCompanyRouteDefinition  
  * @description Baasic Company Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, Utility } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicCompanyBatchRouteDefinition } from 'modules/userProfile';
+import { injectable, inject } from "inversify";
+import { BaasicCompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
@@ -14,12 +15,11 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
     get batch(): BaasicCompanyBatchRouteDefinition {
         return this.baasicCompanyBatchRouteDefinition;
     }
-    
+
     constructor(
-        protected modelMapper: ModelMapper,
-        utility: Utility,
-        protected baasicCompanyBatchRouteDefinition: BaasicCompanyBatchRouteDefinition
-    ) { super(modelMapper, utility); }
+        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(userProfileTypes.BaasicCompanyBatchRouteDefinition) protected baasicCompanyBatchRouteDefinition: BaasicCompanyBatchRouteDefinition
+    ) { super(modelMapper); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 
@@ -31,7 +31,7 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
      * @method
      * @param options Query resource options object.       
      * @example baasicCompanyRouteDefinition.find({searchQuery: '<search-phrase>'});                               
-     **/ 
+     **/
     find(options?: IOptions): any {
         return super.baseFind('lookups/companies/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
@@ -40,7 +40,7 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
      * Parses create route; this URI template does not expose any additional options.                 
      * @method                        
      * @example baasicCompanyRouteDefinition.create();                              
-     **/ 
+     **/
     create(): any {
         return super.baseCreate('lookups/companies', {});
     }
@@ -51,7 +51,7 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
      * @param id Company id which uniquely identifies resource that needs to be retrieved.
      * @param options Query resource options object.                        
      * @example baasicCompanyRouteDefinition.get();                               
-     **/ 
+     **/
     get(id: string, options?: IOptions): any {
         return super.baseGet('lookups/companies/{id}/{?embed,fields}', id, options);
     }

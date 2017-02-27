@@ -1,12 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserProfileAvatarRouteDefinition  
  * @description Baasic User Profile Avatar Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, Utility } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicUserProfileAvatarStreamsRouteDefinition } from 'modules/userProfile';
+import { injectable, inject } from "inversify";
+import { BaasicUserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
 
 export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefinition {
@@ -14,10 +15,10 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
     get streams(): BaasicUserProfileAvatarStreamsRouteDefinition {
         return this.baasicUserProfileAvatarStreamsRouteDefinition;
     }
-    
+
     constructor(
-        protected modelMapper: ModelMapper,
-        protected baasicUserProfileAvatarStreamsRouteDefinition: BaasicUserProfileAvatarStreamsRouteDefinition
+        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(userProfileTypes.BaasicUserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: BaasicUserProfileAvatarStreamsRouteDefinition
     ) { super(modelMapper); }
 
     /**                 
@@ -49,7 +50,7 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicUserProfileAvatarRouteDefinition.link({id: '<file-id>'});                              
      **/
     link(id: string, data: IProfileAvatar): any {
-        let params = this.utility.extend({}, data);                     
+        let params = this.utility.extend({}, data);
         params.id = id;
         return super.parse('profiles/{id}/avatars/link').expand(params);
     }
@@ -62,14 +63,14 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicUserProfileAvatarRouteDefinition.unlink(data);                              
      **/
     unlink(data: IProfileAvatar, options?: IOptions): any {
-        if (!options) {                         
-            options = {};                     
+        if (!options) {
+            options = {};
         }
         return super.baseDelete('profiles/{userId}/avatars/unlink', data, options);
     }
 
     createParams(data: any, id: string): any {
-        let params = this.utility.extend(data);                     
+        let params = this.utility.extend(data);
         params.id = id;
         return super.createParams(params);
     }

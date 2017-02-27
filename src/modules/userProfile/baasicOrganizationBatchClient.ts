@@ -1,10 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicOrganizationBatchClient  
  * @description Baasic Organization Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicOrganizationBatchRouteDefinition } from 'modules/userProfile';
+
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from "inversify";
+import { BaasicOrganizationBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
 export class BaasicOrganizationBatchClient {
@@ -12,8 +15,11 @@ export class BaasicOrganizationBatchClient {
     get routeDefinition(): BaasicOrganizationBatchRouteDefinition {
         return this.baasicOrganizationBatchRouteDefinition;
     }
-    
-    constructor(protected baasicOrganizationBatchRouteDefinition: BaasicOrganizationBatchRouteDefinition) {}
+
+    constructor(
+        @inject(userProfileTypes.BaasicOrganizationBatchRouteDefinition) protected baasicOrganizationBatchRouteDefinition: BaasicOrganizationBatchRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                   
      * Returns a promise that is resolved once the create organization action has been performed; this action creates new organization resources.                   
@@ -31,9 +37,9 @@ export class BaasicOrganizationBatchClient {
                     function (response, status, headers, config) {     
                         // perform error handling here   
                    });                   
-     **/ 		
-    create(data: IOrganization[]): Promise<any> {
-        return this.baasicApiHttp.post(this.baasicOrganizationBatchRouteDefinition.create(), this.baasicOrganizationBatchRouteDefinition.createParams(data));
+     **/
+    create(data: IOrganization[]): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.post(this.baasicOrganizationBatchRouteDefinition.create(), this.baasicOrganizationBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -49,8 +55,8 @@ export class BaasicOrganizationBatchClient {
                          // perform error handling here   
                     });                   
      **/
-    update(data: IOrganization[]): Promise<any> {
-        return this.baasicApiHttp.put(this.baasicOrganizationBatchRouteDefinition.update, this.baasicOrganizationBatchRouteDefinition.updateParams(data));                                     
+    update(data: IOrganization[]): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicOrganizationBatchRouteDefinition.update(), this.baasicOrganizationBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -63,13 +69,9 @@ export class BaasicOrganizationBatchClient {
                      function (response, status, headers, config) {     
                          // perform error handling here   
                     });		                  
-     **/	
-    remove(ids: string[]): Promise<any> {
-        return this.baasicApiHttp({ 
-                    url: this.baasicOrganizationBatchRouteDefinition.delete(),                         
-                    method: 'DELETE',                         
-                    data: ids                     
-                }); 
+     **/
+    remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicOrganizationBatchRouteDefinition.delete(), this.baasicOrganizationBatchRouteDefinition.deleteParams(ids));
     }
 }
 

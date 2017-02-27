@@ -1,19 +1,24 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserProfileACLClient  
  * @description Baasic User Profile ACL Client provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileACLClient` uses `baasicUserProfileACLRouteDefinition`. 
  */
 
 import { IACLOptions, IACLPolicy } from 'common/contracts';
-import { BaasicUserProfileACLRouteDefinition } from 'modules/userProfile';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from "inversify";
+import { BaasicUserProfileACLRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 
 export class BaasicUserProfileACLClient {
 
     get routeDefinition(): BaasicUserProfileACLRouteDefinition {
         return this.baasicUserProfileACLRouteDefinition;
     }
-    
-    constructor(protected baasicUserProfileACLRouteDefinition: BaasicUserProfileACLRouteDefinition) {}
+
+    constructor(
+        @inject(userProfileTypes.BaasicUserProfileACLRouteDefinition) protected baasicUserProfileACLRouteDefinition: BaasicUserProfileACLRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified user profile resource.                     
@@ -27,9 +32,9 @@ export class BaasicUserProfileACLClient {
                      function (response, status, headers, config) {   
                          // perform error handling here 
                     });                     
-     **/ 					
-    get(options: IACLOptions): Promise<IACLPolicy[]> {
-        return this.baasicUserProfileACLRouteDefinition.get(options);
+     **/
+    get(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
+        return this.baasicApiClient.get(this.baasicUserProfileACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -47,9 +52,9 @@ export class BaasicUserProfileACLClient {
                      function (response, status, headers, config) {   
                          // perform error handling here 
                     }); 				    
-     **/							
-    update(options: IACLOptions): Promise<IACLPolicy[]> {
-        return this.baasicApiHttp.put(this.baasicUserProfileACLRouteDefinition.get(options), this.baasicUserProfileACLRouteDefinition.updateParams(options)); 
+     **/
+    update(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
+        return this.baasicApiClient.put(this.baasicUserProfileACLRouteDefinition.get(options), this.baasicUserProfileACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -72,9 +77,9 @@ export class BaasicUserProfileACLClient {
                      function (response, status, headers, config) {   
                          // perform error handling here 
                     }); 				    
-     **/	
-    removeByUser(profileId: string, action: string, user: string, data: IACLPolicy): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicUserProfileACLRouteDefinition.deleteByUser(profileId, action, user, data));
+     **/
+    removeByUser(profileId: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicUserProfileACLRouteDefinition.deleteByUser(profileId, action, user, data));
     }
 
     /**                     
@@ -97,9 +102,9 @@ export class BaasicUserProfileACLClient {
                      function (response, status, headers, config) {   
                          // perform error handling here 
                     }); 				    
-     **/						
-    removeByRole(profileId: string, action: string, role: string, data: IACLPolicy): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicUserProfileACLRouteDefinition.deleteByRole(profileId, action, role, data));
+     **/
+    removeByRole(profileId: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicUserProfileACLRouteDefinition.deleteByRole(profileId, action, role, data));
     }
 }
 

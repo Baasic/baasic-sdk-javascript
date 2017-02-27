@@ -1,6 +1,7 @@
 export * from './baasicCompanyBatchRouteDefinition';
 export * from './baasicCompanyBatchClient';
 export * from './baasicCompanyRouteDefinition';
+export * from './baasicCompanyClient';
 export * from './baasicOrganizationBatchRouteDefinition';
 export * from './baasicOrganizationBatchClient';
 export * from './baasicOrganizationRouteDefinition';
@@ -12,7 +13,7 @@ export * from './baasicSkillClient';
 export * from './baasicUserEducationRouteDefinition';
 export * from './baasicUserEducationClient';
 export * from './baasicUserProfileAvatarStreamsRouteDefinition';
-export * from './baasicUserProfileAvatarStreamsClient',
+export * from './baasicUserProfileAvatarStreamsClient';
 export * from './baasicUserProfileAvatarRouteDefinition';
 export * from './baasicUserProfileAvatarClient';
 export * from './baasicUserProfileACLRouteDefinition';
@@ -23,3 +24,4 @@ export * from './baasicUserSkillRouteDefinition';
 export * from './baasicUserSkillClient';
 export * from './baasicUserWorkRouteDefinition';
 export * from './baasicUserWorkClient';
+export * from './diModule';

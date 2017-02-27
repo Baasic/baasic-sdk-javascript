@@ -1,10 +1,12 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserEducationClient  * @description Baasic User Education Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicUserEducationRouteDefinition } from 'modules/userProfile';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from "inversify";
+import { BaasicUserEducationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserEducation } from 'modules/userProfile/contracts';
 
 export class BaasicUserEducationClient {
@@ -12,8 +14,11 @@ export class BaasicUserEducationClient {
     get routeDefinition(): BaasicUserEducationRouteDefinition {
         return this.baasicUserEducationRouteDefinition;
     }
-    
-    constructor(protected baasicUserEducationRouteDefinition: BaasicUserEducationRouteDefinition) {}
+
+    constructor(
+        @inject(userProfileTypes.BaasicUserEducationRouteDefinition) protected baasicUserEducationRouteDefinition: BaasicUserEducationRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user education resources matching the given criteria.                  
@@ -34,8 +39,8 @@ export class BaasicUserEducationClient {
                      // perform error handling here 
                 });                    
      **/
-    find(options?: IOptions): Promise<IBaasicQueryModel<IUserEducation>> {
-        return this.baasicApiHttp.get(this.baasicUserEducationRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserEducation>>> {
+        return this.baasicApiClient.get(this.baasicUserEducationRouteDefinition.find(options));
     }
 
     /**                 
@@ -48,9 +53,9 @@ export class BaasicUserEducationClient {
                      function (response, status, headers, config) {   
                          // perform error handling here 
                     });                 
-     **/  				
-    get(id: string, options?: IOptions): Promise<IUserEducation> {
-        return this.baasicApiHttp.get(this.baasicUserEducationRouteDefinition.get(id, options));
+     **/
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IUserEducation>> {
+        return this.baasicApiClient.get(this.baasicUserEducationRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -70,8 +75,8 @@ export class BaasicUserEducationClient {
                      // perform error handling here 
                 });                 
      **/
-    create(data: IUserEducation): Promise<IUserEducation> {
-        return this.baasicApiHttp.post(this.baasicUserEducationRouteDefinition.create(data), this.baasicUserEducationRouteDefinition.createParams(data));
+    create(data: IUserEducation): PromiseLike<IHttpResponse<IUserEducation>> {
+        return this.baasicApiClient.post(this.baasicUserEducationRouteDefinition.create(data), this.baasicUserEducationRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -92,9 +97,9 @@ export class BaasicUserEducationClient {
                          function (response, status, headers, config) {   
                              // perform error handling here 
                         }); 				        
-     **/					
-    update(data: IUserEducation): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicUserEducationRouteDefinition.update(data), this.baasicUserEducationRouteDefinition.updateParams(data));
+     **/
+    update(data: IUserEducation): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicUserEducationRouteDefinition.update(data), this.baasicUserEducationRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -112,9 +117,9 @@ export class BaasicUserEducationClient {
                          function (response, status, headers, config) {   
                              // perform error handling here 
                         });						        
-     **/	
-    remove(data: IUserEducation): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicUserEducationRouteDefinition.delete(data));
+     **/
+    remove(data: IUserEducation): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicUserEducationRouteDefinition.delete(data));
     }
 }
 

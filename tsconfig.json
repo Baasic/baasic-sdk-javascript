@@ -20,7 +20,7 @@
         "src/modules/dynamicResource",
         "src/modules/membership",
         "src/modules/templating",
-        "src/modules/userProfile",
+        /*"src/modules/userProfile",*/
         "src/modules/valueSet"
     ]
 }

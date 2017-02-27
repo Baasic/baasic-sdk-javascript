@@ -1,11 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicCompanyClient  
  * @description Baasic Company Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { IOptions, IBaasicQueryModel } from 'common/contracts';
-import { BaasicCompanyBatchClient, BaasicCompanyRouteDefinition } from 'modules/userProfile';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from "inversify";
+import { BaasicCompanyBatchClient, BaasicCompanyRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 export class BaasicCompanyClient {
@@ -17,11 +19,12 @@ export class BaasicCompanyClient {
     get batch(): BaasicCompanyBatchClient {
         return this.baasicCompanyBatchClient;
     }
-    
+
     constructor(
-        protected baasicCompanyBatchClient: BaasicCompanyBatchClient,
-        protected baasicCompanyRouteDefinition: BaasicCompanyRouteDefinition
-    ) {}
+        @inject(userProfileTypes.BaasicCompanyBatchClient) protected baasicCompanyBatchClient: BaasicCompanyBatchClient,
+        @inject(userProfileTypes.BaasicCompanyRouteDefinition) protected baasicCompanyRouteDefinition: BaasicCompanyRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of company resources matching the given criteria.                  
@@ -42,8 +45,8 @@ export class BaasicCompanyClient {
                      // perform error handling here 
                 });                    
      **/
-    find(options?: IOptions): Promise<IBaasicQueryModel<ICompany>> {
-        return this.baasicApiHttp.get(this.baasicCompanyRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ICompany>>> {
+        return this.baasicApiClient.get(this.baasicCompanyRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,9 +62,9 @@ export class BaasicCompanyClient {
                      function (response, status, headers, config) {   
                          // perform error handling here 
                     });                 
-     **/  				
-    get(id: string, options?: IOptions): Promise<ICompany> {
-        return this.baasicApiHttp.get(this.baasicCompanyRouteDefinition.get(id, options));
+     **/
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<ICompany>> {
+        return this.baasicApiClient.get(this.baasicCompanyRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -80,9 +83,9 @@ export class BaasicCompanyClient {
                  function (response, status, headers, config) {   
                      // perform error handling here 
                 });                 
-     **/ 
-    create(data: ICompany): Promise<ICompany> {
-        return this.baasicApiHttp.post(this.baasicCompanyRouteDefinition.create, this.baasicCompanyRouteDefinition.createParams(data));
+     **/
+    create(data: ICompany): PromiseLike<IHttpResponse<ICompany>> {
+        return this.baasicApiClient.post(this.baasicCompanyRouteDefinition.create(), this.baasicCompanyRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -103,9 +106,9 @@ export class BaasicCompanyClient {
                          function (response, status, headers, config) {   
                              // perform error handling here 
                         }); 				        
-     **/					
-    update(data: ICompany): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicCompanyRouteDefinition.update(data), this.baasicCompanyRouteDefinition.updateParams(data));
+     **/
+    update(data: ICompany): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicCompanyRouteDefinition.update(data), this.baasicCompanyRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -125,9 +128,9 @@ export class BaasicCompanyClient {
                          function (response, status, headers, config) {   
                              // perform error handling here 
                     });						        
-     **/	
-    remove(data: ICompany): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicCompanyRouteDefinition.delete(data));
+     **/
+    remove(data: ICompany): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicCompanyRouteDefinition.delete(data));
     }
 }
 
