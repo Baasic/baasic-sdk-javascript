@@ -5,12 +5,17 @@
  */
 
 import { IOptions } from 'common/contracts';
-import { BaasicApplicationSettingsRouteDefinition } from 'modules/applicationSettings';
+import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApplicationSettingsRouteDefinition, TYPES as applicationTypes } from 'modules/applicationSettings';
 import { IApplication } from 'modules/applicationSettings/contracts';
 
 export class BaasicApplicationSettingsClient {
 
-    constructor(protected baasicApplicationSettingsRouteDefinition: BaasicApplicationSettingsRouteDefinition) {}
+    constructor(
+        @inject(applicationTypes.BaasicApplicationSettingsRouteDefinition) protected baasicApplicationSettingsRouteDefinition: BaasicApplicationSettingsRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        ) {}
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the application settings resource.                 
@@ -24,11 +29,8 @@ export class BaasicApplicationSettingsClient {
                         // perform error handling here 
                     });                 
      **/ 
-    get(options: IOptions): Promise<IApplication> {
-        return this.baasicApiHttp.get(this.baasicApplicationSettingsRouteDefinition.get(options))
-                    .then(function (appSettings) { 
-                        appSettings.origins = appSettings.origins || [];                         
-                    });
+    get(options: IOptions): PromiseLike<IHttpResponse<IApplication>> {
+        return this.baasicApiClient.get(this.baasicApplicationSettingsRouteDefinition.get(options));
     }
 
     /**                  
@@ -49,8 +51,8 @@ export class BaasicApplicationSettingsClient {
                             // perform error handling here 
                         }); 				
      **/	
-    update(data: IApplication): Promise<any> {
-        return this.baasicApiHttp.put(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
+    update(data: IApplication): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
     }
 }
 

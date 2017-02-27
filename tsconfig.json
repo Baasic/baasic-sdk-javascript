@@ -15,7 +15,7 @@
     "exclude": [
         "node_modules",
         "build",        
-        "src/modules/applicationSettings",
+        /*"src/modules/applicationSettings",*/
         "src/modules/article",
         "src/modules/dynamicResource",
         "src/modules/membership",
