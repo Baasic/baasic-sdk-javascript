@@ -1,8 +1,9 @@
-import { IBaasicModel } from 'common/contracts';
-
-export interface ISocialLogin extends IBaasicModel {
-    abrv: string,
-    isConfigured: boolean,
-    isConnected: boolean,
-    name: string
+export interface ISocialLogin {
+    activationUrl?: string,
+    code?: string,
+    email?: string,
+    oAuthToken?: string,
+    oAuthVerifier?: string,
+    password?: string,
+    returnUrl?: string
 }

@@ -1,11 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicRoleClient  
  * @description Baasic Role Client provides an easy way to consume Baasic Role REST API end-points. In order to obtain needed routes `baasicRoleClient` uses `baasicRoleRouteDefinition`. 
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicRoleRouteDefinition } from 'modules/membership';
+import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicRoleRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRole } from 'modules/membership/contracts';
 
 export class BaasicRoleClient {
@@ -14,12 +16,15 @@ export class BaasicRoleClient {
      * Provides direct access to `baasicRoleRouteDefinition`.                 
      * @method                        
      * @example baasicRoleClient.routeDefinition.get().expand(expandObject);                 
-     **/ 
+     **/
     get routeDefinition(): BaasicRoleRouteDefinition {
         return this.baasicRoleRouteDefinition;
     }
-    
-    constructor(protected baasicRoleRouteDefinition: BaasicRoleRouteDefinition) {}
+
+    constructor(
+        @inject(membershipTypes.BaasicRoleRouteDefinition) protected baasicRoleRouteDefinition: BaasicRoleRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of role resources matching the given criteria.              
@@ -40,8 +45,8 @@ export class BaasicRoleClient {
                     // perform error handling here 
                 });                     
      **/
-    find(options: IOptions): Promise<IBaasicQueryModel<IRole>> {
-        return this.baasicApiHttp.get(this.baasicRoleRouteDefinition.find(options));
+    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRole>>> {
+        return this.baasicApiClient.get(this.baasicRoleRouteDefinition.find(options));
     }
 
     /**                  
@@ -57,9 +62,9 @@ export class BaasicRoleClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });                  
-     **/ 
-    get(id: string, options?: IOptions): Promise<IRole> {
-        return this.baasicApiHttp.get(this.baasicRoleRouteDefinition.get(id, options));
+     **/
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IRole>> {
+        return this.baasicApiClient.get(this.baasicRoleRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -78,8 +83,8 @@ export class BaasicRoleClient {
                     // perform error handling here 
                 });                  
      **/
-    create(data: IRole): Promise<IRole> {
-        return this.baasicApiHttp.post(this.baasicRoleRouteDefinition.create(), this.baasicRoleRouteDefinition.createParams(data));
+    create(data: IRole): PromiseLike<IHttpResponse<IRole>> {
+        return this.baasicApiClient.post(this.baasicRoleRouteDefinition.create(), this.baasicRoleRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -101,8 +106,8 @@ export class BaasicRoleClient {
                             // perform error handling here 
                         }); 				
      **/
-    update(data: IRole): Promise<IRole> {
-        return this.baasicApiHttp.put(this.baasicRoleRouteDefinition.update(data), this.baasicRoleRouteDefinition.updateParams(data));
+    update(data: IRole): PromiseLike<IHttpResponse<IRole>> {
+        return this.baasicApiClient.put(this.baasicRoleRouteDefinition.update(data), this.baasicRoleRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -121,9 +126,9 @@ export class BaasicRoleClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
-     **/				
-    remove(data: IRole): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicRoleRouteDefinition.delete(data));
+     **/
+    remove(data: IRole): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicRoleRouteDefinition.delete(data));
     }
 }
 
@@ -131,5 +136,5 @@ export class BaasicRoleClient {
  * @overview  
  ***Notes:**  
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
- - All end-point objects are transformed by the associated route service. 
+ - All end-point objects are transformed by the associated route definition. 
 */

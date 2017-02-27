@@ -7,4 +7,5 @@ export * from './IUserIdentity';
 export * from './IAppUser';
 export * from './INewUser';
 export * from './INewPassword';
+export * from './IUserSocialLogin';
 export * from './ISocialLogin';

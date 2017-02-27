@@ -4,7 +4,9 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicDynamicResourceACLClient, BaasicDynamicResourceRouteDefinition } from 'modules/dynamicResource';
+import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicDynamicResourceACLClient, BaasicDynamicResourceRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IDynamicObject } from 'modules/dynamicResource/contracts';
 
 export class BaasicDynamicResourceClient {
@@ -23,8 +25,9 @@ export class BaasicDynamicResourceClient {
     }
     
     constructor(
-        protected baasicDynamicResourceRouteDefinition: BaasicDynamicResourceRouteDefinition,
-        protected baasicDynamicResourceACLClient: BaasicDynamicResourceACLClient
+        @inject(dynamicResourceTypes.BaasicDynamicResourceRouteDefinition) protected baasicDynamicResourceRouteDefinition: BaasicDynamicResourceRouteDefinition,
+        @inject(dynamicResourceTypes.BaasicDynamicResourceACLClient) protected baasicDynamicResourceACLClient: BaasicDynamicResourceACLClient,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
         ) {}
 
     /**                  
@@ -47,8 +50,8 @@ export class BaasicDynamicResourceClient {
                     // perform error handling here 
                 });                    
      **/ 				
-    find(schemaName: string, options: IOptions): Promise<IBaasicQueryModel<IDynamicObject>> {
-        return this.baasicApiHttp.get(this.baasicDynamicResourceRouteDefinition.find(schemaName, options));
+    find(schemaName: string, options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IDynamicObject>>> {
+        return this.baasicApiClient.get(this.baasicDynamicResourceRouteDefinition.find(schemaName, options));
     }
 
     /**                  
@@ -62,8 +65,8 @@ export class BaasicDynamicResourceClient {
                         // perform error handling here 
                     });                 
      **/ 				    
-    get(schemaName: string, id: string, options: IOptions): Promise<IDynamicObject> {
-        return this.baasicApiHttp.get(this.baasicDynamicResourceRouteDefinition.get(id, schemaName, options));
+    get(schemaName: string, id: string, options: IOptions): PromiseLike<IHttpResponse<IDynamicObject>> {
+        return this.baasicApiClient.get(this.baasicDynamicResourceRouteDefinition.get(id, schemaName, options));
     }
 
     /**                  
@@ -82,8 +85,8 @@ export class BaasicDynamicResourceClient {
                      // perform error handling here 
                 });                  
      **/
-    create(schemaName: string, data: any): Promise<IDynamicObject> {
-        return this.baasicApiHttp.post(this.baasicDynamicResourceRouteDefinition.create(schemaName, data), this.baasicDynamicResourceRouteDefinition.createParams(schemaName, data));
+    create(schemaName: string, data: any): PromiseLike<IHttpResponse<IDynamicObject>> {
+        return this.baasicApiClient.post(this.baasicDynamicResourceRouteDefinition.create(schemaName, data), this.baasicDynamicResourceRouteDefinition.createParams(schemaName, data));
     }
 
     /**                  
@@ -107,8 +110,8 @@ export class BaasicDynamicResourceClient {
                          // perform error handling here 
                     }); 				
      **/	
-    update(data: any, options: IOptions): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicDynamicResourceRouteDefinition.update(data, options), this.baasicDynamicResourceRouteDefinition.updateParams(data));
+    update(data: any, options: IOptions): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicDynamicResourceRouteDefinition.update(data, options), this.baasicDynamicResourceRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -134,8 +137,8 @@ export class BaasicDynamicResourceClient {
                         
                     }); 				
      **/				
-    patch(data: any, options: IOptions): Promise<any> {
-        return this.baasicApiHttp.patch(this.baasicDynamicResourceRouteDefinition.patch(data, options), this.baasicDynamicResourceRouteDefinition.updateParams(data));
+    patch(data: any, options: IOptions): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.patch(this.baasicDynamicResourceRouteDefinition.patch(data, options), this.baasicDynamicResourceRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -157,7 +160,7 @@ export class BaasicDynamicResourceClient {
                          // perform error handling here 
                     });						
      **/					
-    remove(data: any, options: IOptions): Promise<any> {
-        return this.baasicApiHttp.delete(this.baasicDynamicResourceRouteDefinition.delete(data, options));
+    remove(data: any, options: IOptions): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicDynamicResourceRouteDefinition.delete(data, options));
     }
 }

@@ -1,4 +1,4 @@
-import { IRole } from 'membership/contracts';
+import { IRole } from 'modules/membership/contracts';
 
 export interface IUserAccess {
     isApproved?: boolean,

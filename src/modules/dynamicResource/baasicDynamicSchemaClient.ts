@@ -4,21 +4,26 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicDynamicSchemaRouteDefinition } from 'modules/dynamicResource';
-import { IResourceSchema } from 'modules/dynamicResource/contracts'; 
+import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { IResourceSchema } from 'modules/dynamicResource/contracts';
 
 export class BaasicDynamicSchemaClient {
-    
+
     /**                 
      * Provides direct access to `baasicDynamicSchemaRouteDefinition`.                 
      * @method                        
      * @example baasicDynamicSchemaClient.routeDefinition.get();                 
-     **/                
+     **/
     get routeDefinition(): BaasicDynamicSchemaRouteDefinition {
         return this.baasicDynamicSchemaRouteDefinition;
     }
-    
-    constructor(protected baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition) {}
+
+    constructor(
+        @inject(dynamicResourceTypes.BaasicDynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resource schemas matching the given criteria.                  
@@ -38,8 +43,8 @@ export class BaasicDynamicSchemaClient {
                     // perform error handling here 
                 });                     
      **/
-    find(options: IOptions): Promise<IBaasicQueryModel<IResourceSchema>> {
-        return this.baasicApiHttp.get(this.baasicDynamicSchemaRouteDefinition.find(options));
+    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IResourceSchema>>> {
+        return this.baasicApiClient.get(this.baasicDynamicSchemaRouteDefinition.find(options));
     }
 
     /**                  
@@ -54,9 +59,9 @@ export class BaasicDynamicSchemaClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });                 
-     **/ 				
-    get(name: string, options: IOptions): Promise<IResourceSchema> {
-        return this.baasicApiHttp.get(this.baasicDynamicSchemaRouteDefinition.get(name, options));
+     **/
+    get(name: string, options: IOptions): PromiseLike<IHttpResponse<IResourceSchema>> {
+        return this.baasicApiClient.get(this.baasicDynamicSchemaRouteDefinition.get(name, options));
     }
 
     /**                 
@@ -89,8 +94,8 @@ export class BaasicDynamicSchemaClient {
                     // perform error handling here 
                 });                 
      **/
-    create(data: IResourceSchema): Promise<IResourceSchema> {
-        return this.baasicApiHttp.post(this.baasicDynamicSchemaRouteDefinition.create(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
+    create(data: IResourceSchema): PromiseLike<IHttpResponse<IResourceSchema>> {
+        return this.baasicApiClient.post(this.baasicDynamicSchemaRouteDefinition.create(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -110,9 +115,9 @@ export class BaasicDynamicSchemaClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				
-     **/	
-    update(data: IResourceSchema): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicDynamicSchemaRouteDefinition.update(data), this.baasicDynamicSchemaRouteDefinition.updateParams(data));
+     **/
+    update(data: IResourceSchema): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicDynamicSchemaRouteDefinition.update(data), this.baasicDynamicSchemaRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -131,9 +136,9 @@ export class BaasicDynamicSchemaClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
-     **/					
-    remove(data: IResourceSchema): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicDynamicSchemaRouteDefinition.delete(data));
+     **/
+    remove(data: IResourceSchema): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicDynamicSchemaRouteDefinition.delete(data));
     }
 
     /**                 
@@ -150,15 +155,15 @@ export class BaasicDynamicSchemaClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });					    
-     **/					
-    generate(data: any): Promise<any> {
-        return this.baasicApiHttp.post(this.baasicDynamicSchemaRouteDefinition.generate(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
-    } 
+     **/
+    generate(data: any): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.post(this.baasicDynamicSchemaRouteDefinition.generate(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
+    }
 }
 
 /**  
  * @overview  
  ***Notes:**  
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
- - All end-point objects are transformed by the associated route service. 
+ - All end-point objects are transformed by the associated route definition. 
  */

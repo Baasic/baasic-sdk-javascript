@@ -1,23 +1,28 @@
-/* globals module */ 
+/* globals module */
 /**  
- * @module baasicSocialLoginClient  
- * @description Baasic Social Login Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicSocialLoginClient` uses `baasicSocialLoginRouteDefinition`. 
+ * @module baasicUserSocialLoginClient  
+ * @description Baasic User Social Login Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicUserSocialLoginClient` uses `baasicUserSocialLoginRouteDefinition`. 
  */
 
 import { IBaasicQueryModel } from 'common/contracts';
-import { BaasicSocialLoginRouteDefinition } from 'modules/membership';
-import { ISocialLogin } from 'modules/membership/contracts';
+import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { IUserSocialLogin } from 'modules/membership/contracts';
 
-export class BaasicSocialLoginClient {
+export class BaasicUserSocialLoginClient {
 
-    constructor(protected baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition) {}
+    constructor(
+        @inject(membershipTypes.BaasicUserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: BaasicUserSocialLoginRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns a list user resource connected social login providers.
      * @param username A username or id which uniquely identifies user resource whose social login connections need to be retrieved.
      * @returns A promise that is resolved once the get action has been performed.                     
      * @method                    
-     * @example baasicSocialLoginClient.get('<username>')
+     * @example baasicUserSocialLoginClient.get('<username>')
                     .then(function (collection) {   
                         // perform success action here 
                     },
@@ -25,8 +30,8 @@ export class BaasicSocialLoginClient {
                         // perform error handling here 
                     });                     
      **/
-    get(username: string): Promise<IBaasicQueryModel<ISocialLogin>> {
-        return this.baasicApiHttp.get(this.baasicSocialLoginRouteDefinition.get(username));
+    get(username: string): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSocialLogin>>> {
+        return this.baasicApiClient.get(this.baasicUserSocialLoginRouteDefinition.get(username));
     }
 
     /**                     
@@ -35,15 +40,22 @@ export class BaasicSocialLoginClient {
      * @param provider A value which uniquely identifies provider from which the user resource needs to be disconnected.
      * @returns A promise that is resolved once the remove action has been performed.                 
      * @method                 
-     * @example baasicSocialLoginClient.remove('<username>', '<provider>')
+     * @example baasicUserSocialLoginClient.remove('<username>', '<provider>')
                     .then(function (collection) {   
                         // perform success action here 
                     },
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });                     
-     **/                     
-    remove(username: string, provider: any): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicSocialLoginRouteDefinition.remove(username, provider));                       
+     **/
+    remove(username: string, provider: any): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicUserSocialLoginRouteDefinition.remove(username, provider));
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - All end-point objects are transformed by the associated route definition. 
+ */
