@@ -1,1 +1,1 @@
-export * from './LocalStorageTokenStore';
+export * from './LocalStorageHandler';
