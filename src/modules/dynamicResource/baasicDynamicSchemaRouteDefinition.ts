@@ -3,13 +3,14 @@
  * @description Baasic Dynamic Schema Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Schema Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
+import { injectable, inject } from "inversify";
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
 
 export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
 
     /** 				
      * Parses find route which can be expanded with additional options. Supported items are: 				
@@ -39,7 +40,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * Parses create route; this URI template doesn't expose any additional properties. 				
      * @method      				
      * @example baasicDynamicSchemaRouteDefinition.generate();              				
-     **/	
+     **/
     generate(): any {
         return super.parse('schemas/generate').expand({});
     }
@@ -48,7 +49,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * Parses create route; this URI template doesn't expose any additional properties. 		
      * @method      				
      * @example baasicDynamicSchemaRouteDefinition.create(data);              				
-     **/ 
+     **/
     create(): any {
         return super.baseCreate('schemas', {});
     }
@@ -69,7 +70,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @param data A dynamic schema object used to delete specified dynamic resource schema.   
      */
     delete(data: IResourceSchema): any {
-        return this.baasicBaseRouteDefinition.delete('schemas/{id}', data);
+        return super.baseDelete('schemas/{id}', data);
     }
 }
 
@@ -78,5 +79,5 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
  ***Notes:**  
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
- - All end-point objects are transformed by the associated route service. 
- */ 
+ - All end-point objects are transformed by the associated route definition. 
+ */

@@ -4,3 +4,4 @@ export * from './baasicDynamicResourceACLRouteDefinition';
 export * from './baasicDynamicResourceACLClient';
 export * from './baasicDynamicResourceRouteDefinition';
 export * from './baasicDynamicResourceClient';
+export * from './diModule';

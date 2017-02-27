@@ -3,19 +3,20 @@
  * @description Baasic Dynamic Resource Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Resource Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, extend } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicDynamicResourceACLRouteDefinition } from 'modules/dynamicResource';
+import { injectable, inject } from "inversify";
+import { BaasicDynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 
 export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinition {
 
     get acl(): BaasicDynamicResourceACLRouteDefinition {
         return this.baasicDynamicResourceACLRouteDefinition;
     }
-    
+
     constructor(
-        protected modelMapper: ModelMapper,
-        protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition
+        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition
     ) { super(modelMapper); }
 
     /** 				
@@ -31,7 +32,7 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicDynamicResourceRouteDefinition.find(options); 				
      **/
     find(schemaName: string, options: IOptions): any {
-        return super.baseFind('resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}', extend({ schemaName: schemaName }, options));
+        return super.baseFind('resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}', this.utility.extend({ schemaName: schemaName }, options));
     }
 
     /**                 
@@ -44,23 +45,23 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicDynamicResourceRouteDefinition.get(id, schemaName, options);               				
      **/
     get(id: string, schemaName: string, options: IOptions): any {
-        return super.baseGet('resources/{schemaName}/{id}/{?embed,fields}', id, extend({ schemaName: schemaName }, options));
+        return super.baseGet('resources/{schemaName}/{id}/{?embed,fields}', id, this.utility.extend({ schemaName: schemaName }, options));
     }
-			
+
     create(schemaName: string, data: any): any {
         let params = this.modelMapper.getParams(schemaName, data, 'schemaName');
         return super.baseCreate('resources/{schemaName}', params);
     }
-	
+
     update(data: any, options: IOptions): any {
         return super.baseUpdate('resources/{schemaName}/{id}/{?embed,fields}', data, options);
     }
 
     patch(data: any, options: IOptions): any {
-        let opt = extend({}, options);
+        let opt = this.utility.extend({}, options);
         let params = this.modelMapper.updateParams(data);
         if ('HAL') {
-            return super.parse(params[this.baasicConstants.modelPropertyName].links('patch').href).expand(opt);
+            return super.parse(params[this.modelMapper.modelPropertyName].links('patch').href).expand(opt);
         } else {
             return super.parse('resources/{schemaName}/{id}/{?embed,fields}').expand(opt);
         }
@@ -81,5 +82,5 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
  ***Notes:**  
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
- - All end-point objects are transformed by the associated route service. 
+ - All end-point objects are transformed by the associated route definition. 
  */
