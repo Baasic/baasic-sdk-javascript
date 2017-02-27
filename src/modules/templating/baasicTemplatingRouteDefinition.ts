@@ -4,9 +4,10 @@
  * @description Baasic Templating Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Templating Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicTemplatingBatchRouteDefinition } from 'modules/templating';
+import { injectable, inject } from 'inversify';
+import { BaasicTemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
@@ -16,8 +17,8 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
     }
     
     constructor(
-        protected modelMapper: ModelMapper,
-        protected baasicTemplatingBatchRouteDefinition: BaasicTemplatingBatchRouteDefinition
+       @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+       @inject(templatingTypes.BaasicTemplatingBatchRouteDefinition) protected baasicTemplatingBatchRouteDefinition: BaasicTemplatingBatchRouteDefinition
     ) { super(modelMapper); }
 
     /**                 

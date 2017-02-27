@@ -5,7 +5,9 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicTemplatingBatchClient, BaasicTemplatingRouteDefinition } from 'modules/templating';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from 'inversify';
+import { BaasicTemplatingBatchClient, BaasicTemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 export class BaasicTemplatingClient {
@@ -19,8 +21,9 @@ export class BaasicTemplatingClient {
     }
     
     constructor(
-        protected baasicTemplatingRouteDefinition: BaasicTemplatingRouteDefinition,
-        protected baasicTemplatingBatchClient: BaasicTemplatingBatchClient
+       @inject(templatingTypes.BaasicTemplatingRouteDefinition) protected baasicTemplatingRouteDefinition: BaasicTemplatingRouteDefinition,
+       @inject(templatingTypes.BaasicTemplatingBatchClient) protected baasicTemplatingBatchClient: BaasicTemplatingBatchClient,
+       @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) {}
 
     /**                 
@@ -42,8 +45,8 @@ export class BaasicTemplatingClient {
                      // perform error handling here 
                 });                    
      **/
-    find(options?: IOptions): Promise<IBaasicQueryModel<ITemplate>> {
-        return this.baasicApiHttp.get(this.baasicTemplatingRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ITemplate>>> {
+        return this.baasicApiClient.get(this.baasicTemplatingRouteDefinition.find(options));
     }
 
      /**                 
@@ -59,8 +62,8 @@ export class BaasicTemplatingClient {
                          // perform error handling here 
                     });                 
      **/
-    get(id: string, options?: IOptions): Promise<ITemplate> {
-        return this.baasicApiHttp.get(this.baasicTemplatingRouteDefinition.get(id, options));
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<ITemplate>> {
+        return this.baasicApiClient.get(this.baasicTemplatingRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -76,8 +79,8 @@ export class BaasicTemplatingClient {
                          // perform error handling here 
                     });                 
      **/
-    create(data: ITemplate): Promise<ITemplate> {
-        return this.baasicApiHttp.post(this.baasicTemplatingRouteDefinition.create(), this.baasicTemplatingRouteDefinition.createParams(data));
+    create(data: ITemplate): PromiseLike<IHttpResponse<ITemplate>> {
+        return this.baasicApiClient.post(this.baasicTemplatingRouteDefinition.create(), this.baasicTemplatingRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -99,8 +102,8 @@ export class BaasicTemplatingClient {
                              // perform error handling here 
                         });                
      **/
-    update(data: ITemplate): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicTemplatingRouteDefinition.update(data), this.baasicTemplatingRouteDefinition.updateParams(data));
+    update(data: ITemplate): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicTemplatingRouteDefinition.update(data), this.baasicTemplatingRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -121,8 +124,8 @@ export class BaasicTemplatingClient {
                              // perform error handling here 
                         });		               
      **/
-    remove(data: ITemplate): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicTemplatingRouteDefinition.delete(data));
+    remove(data: ITemplate): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicTemplatingRouteDefinition.delete(data));
     }   
 }
 

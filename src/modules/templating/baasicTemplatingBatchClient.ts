@@ -5,16 +5,21 @@
  */
 
 import { IBaasicResponse } from 'common/contracts';
-import { BaasicTemplatingBatchRouteDefinition } from 'modules/templating';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from 'inversify';
+import { BaasicTemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 export class BaasicTemplatingBatchClient {
+    
+    constructor(
+        @inject(templatingTypes.BaasicTemplatingBatchRouteDefinition) protected baasicTemplatingBatchRouteDefinition: BaasicTemplatingBatchRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        ) {}
 
     get routeDefinition(): BaasicTemplatingBatchRouteDefinition {
         return this.baasicTemplatingBatchRouteDefinition;
     }
-    
-    constructor(protected baasicTemplatingBatchRouteDefinition: BaasicTemplatingBatchRouteDefinition) {}
 
     /**                     
      * Returns a promise that is resolved once the create action has been performed; this action creates new template resources.                     
@@ -29,8 +34,8 @@ export class BaasicTemplatingBatchClient {
                         // perform error handling here     
                     });                     
     **/
-    create(data: ITemplate[]): Promise<IBaasicResponse[]> {
-        return this.baasicApiHttp.post(this.baasicTemplatingBatchRouteDefinition.create(), this.baasicTemplatingBatchRouteDefinition.createParams(data));
+    create(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
+        return this.baasicApiClient.post(this.baasicTemplatingBatchRouteDefinition.create(), this.baasicTemplatingBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -46,8 +51,8 @@ export class BaasicTemplatingBatchClient {
                          // perform error handling here     
                     });                     
      **/
-    update(data: ITemplate[]): Promise<IBaasicResponse[]> {
-        return this.baasicApiHttp.post(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data)); 
+    update(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
+        return this.baasicApiClient.post(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data)); 
     }
 
     /**                     
@@ -63,12 +68,8 @@ export class BaasicTemplatingBatchClient {
                          // perform error handling here     
                     });		                    
      **/
-    remove(ids: string[]): Promise<any> {
-        return this.baasicApiHttp({ 
-            url: this.baasicTemplatingRouteDefinition.remove(),                             
-            method: 'DELETE',                             
-            data: ids                         
-        });
+    remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicTemplatingBatchRouteDefinition.delete(), this.baasicTemplatingBatchRouteDefinition.deleteParams(ids));
     }
 }
 
