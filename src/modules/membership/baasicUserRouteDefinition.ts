@@ -8,19 +8,19 @@
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
-import { BaasicSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser } from 'modules/membership/contracts';
 import * as uritemplate from 'uritemplate';
 
 export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
 
-    get socialLogin(): BaasicSocialLoginRouteDefinition {
-        return this.baasicSocialLoginRouteDefinition;
+    get socialLogin(): BaasicUserSocialLoginRouteDefinition {
+        return this.baasicUserSocialLoginRouteDefinition;
     }
 
     constructor(
         @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
-        @inject(membershipTypes.BaasicSocialLoginRouteDefinition) protected baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition
+        @inject(membershipTypes.BaasicUserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: BaasicUserSocialLoginRouteDefinition
     ) { super(modelMapper); }
 
     /**                 

@@ -9,8 +9,7 @@ import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
     BaasicUserRouteDefinition,
-    BaasicSocialLoginClient,
-    BaasicSocialLoginRouteDefinition,
+    BaasicUserSocialLoginClient,
     TYPES as membershipTypes
 } from 'modules/membership';
 import { IAppUser, INewUser, INewPassword } from 'modules/membership/contracts';
@@ -27,13 +26,13 @@ export class BaasicUserClient {
         return this.baasicUserRouteDefinition;
     }
 
-    get socialLogin(): BaasicSocialLoginClient {
-        return this.baasicSocialLoginClient;
+    get socialLogin(): BaasicUserSocialLoginClient {
+        return this.baasicUserSocialLoginClient;
     }
 
     constructor(
         @inject(membershipTypes.BaasicUserRouteDefinition) protected baasicUserRouteDefinition: BaasicUserRouteDefinition,
-        @inject(membershipTypes.BaasicSocialLoginClient) protected baasicSocialLoginClient: BaasicSocialLoginClient,
+        @inject(membershipTypes.BaasicUserSocialLoginClient) protected baasicUserSocialLoginClient: BaasicUserSocialLoginClient,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 

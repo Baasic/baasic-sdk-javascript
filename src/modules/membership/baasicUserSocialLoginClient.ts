@@ -1,19 +1,19 @@
 /* globals module */
 /**  
- * @module baasicSocialLoginClient  
- * @description Baasic Social Login Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicSocialLoginClient` uses `baasicSocialLoginRouteDefinition`. 
+ * @module baasicUserSocialLoginClient  
+ * @description Baasic User Social Login Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicUserSocialLoginClient` uses `baasicUserSocialLoginRouteDefinition`. 
  */
 
 import { IBaasicQueryModel } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
-import { ISocialLogin } from 'modules/membership/contracts';
+import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { IUserSocialLogin } from 'modules/membership/contracts';
 
-export class BaasicSocialLoginClient {
+export class BaasicUserSocialLoginClient {
 
     constructor(
-        @inject(membershipTypes.BaasicSocialLoginRouteDefinition) protected baasicSocialLoginRouteDefinition: BaasicSocialLoginRouteDefinition,
+        @inject(membershipTypes.BaasicUserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: BaasicUserSocialLoginRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
@@ -22,7 +22,7 @@ export class BaasicSocialLoginClient {
      * @param username A username or id which uniquely identifies user resource whose social login connections need to be retrieved.
      * @returns A promise that is resolved once the get action has been performed.                     
      * @method                    
-     * @example baasicSocialLoginClient.get('<username>')
+     * @example baasicUserSocialLoginClient.get('<username>')
                     .then(function (collection) {   
                         // perform success action here 
                     },
@@ -30,8 +30,8 @@ export class BaasicSocialLoginClient {
                         // perform error handling here 
                     });                     
      **/
-    get(username: string): PromiseLike<IHttpResponse<IBaasicQueryModel<ISocialLogin>>> {
-        return this.baasicApiClient.get(this.baasicSocialLoginRouteDefinition.get(username));
+    get(username: string): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSocialLogin>>> {
+        return this.baasicApiClient.get(this.baasicUserSocialLoginRouteDefinition.get(username));
     }
 
     /**                     
@@ -40,7 +40,7 @@ export class BaasicSocialLoginClient {
      * @param provider A value which uniquely identifies provider from which the user resource needs to be disconnected.
      * @returns A promise that is resolved once the remove action has been performed.                 
      * @method                 
-     * @example baasicSocialLoginClient.remove('<username>', '<provider>')
+     * @example baasicUserSocialLoginClient.remove('<username>', '<provider>')
                     .then(function (collection) {   
                         // perform success action here 
                     },
@@ -49,7 +49,7 @@ export class BaasicSocialLoginClient {
                     });                     
      **/
     remove(username: string, provider: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicSocialLoginRouteDefinition.remove(username, provider));
+        return this.baasicApiClient.delete(this.baasicUserSocialLoginRouteDefinition.remove(username, provider));
     }
 }
 
