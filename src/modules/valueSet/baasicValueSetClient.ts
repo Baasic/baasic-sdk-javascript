@@ -4,7 +4,9 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicValueSetItemClient, BaasicValueSetRouteDefinition } from 'modules/valueSet';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from 'inversify';
+import { BaasicValueSetItemClient, BaasicValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 
 export class BaasicValueSetClient {
@@ -24,8 +26,9 @@ export class BaasicValueSetClient {
     }
 
     constructor(
-        protected baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
-        protected baasicValueSetItemClient: BaasicValueSetItemClient
+       @inject(valueSetTypes.BaasicValueSetRouteDefinition) protected baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
+       @inject(valueSetTypes.BaasicValueSetItemClient) protected baasicValueSetItemClient: BaasicValueSetItemClient,
+       @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) {}
 
     /**
@@ -47,8 +50,8 @@ export class BaasicValueSetClient {
                     // perform error handling here 
                 });
      **/ 					
-    find(options: IOptions): Promise<IBaasicQueryModel<IValueSet>> {
-        return this.baasicApiHttp.get(this.baasicValueSetRouteDefinition.find(options));
+    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSet>>> {
+        return this.baasicApiClient.get(this.baasicValueSetRouteDefinition.find(options));
     }
 
      /**
@@ -65,8 +68,8 @@ export class BaasicValueSetClient {
                         // perform error handling here 
                     });
      **/	
-    get(setName: string, options?: IOptions): Promise<IValueSet> {
-        return this.baasicApiHttp.get(this.baasicValueSetRouteDefinition.get(setName, options).expand(this.modelMapper.getParams(setName, options, 'setName')));
+    get(setName: string, options?: IOptions): PromiseLike<IHttpResponse<IValueSet>> {
+        return this.baasicApiClient.get(this.baasicValueSetRouteDefinition.get(setName, options));
     }
 
     /**
@@ -86,8 +89,8 @@ export class BaasicValueSetClient {
                     // perform error handling here 
                 });
      **/
-    create(data: IValueSet): Promise<IValueSet> {
-        return this.baasicApiHttp.post(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
+    create(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
+        return this.baasicApiClient.post(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
     }
     
     /**
@@ -110,8 +113,8 @@ export class BaasicValueSetClient {
                 // perform error handling here 
             });
      **/	
-    update(data: IValueSet): Promise<IValueSet> {
-        return this.baasicApiHttp.put(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
+    update(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
+        return this.baasicApiClient.put(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -131,8 +134,8 @@ export class BaasicValueSetClient {
                             // perform error handling here 
                         });						
      **/					
-    remove(data: IValueSet): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicValueSetRouteDefinition.delete(data));
+    remove(data: IValueSet): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicValueSetRouteDefinition.delete(data));
     }
 }
 

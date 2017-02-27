@@ -20,3 +20,5 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicTemplatingRouteDefinition>(TYPES.BaasicTemplatingRouteDefinition).toSelf();
     bind<BaasicTemplatingClient>(TYPES.BaasicTemplatingClient).toSelf();
 });
+
+export { diModule };

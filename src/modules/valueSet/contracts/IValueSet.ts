@@ -1,4 +1,4 @@
-import { IValueSetItem } from 'valueSet/contracts';
+import { IValueSetItem } from 'modules/valueSet/contracts';
 import { IBaasicModel } from 'common/contracts';
 
 export interface IValueSet extends IBaasicModel {
