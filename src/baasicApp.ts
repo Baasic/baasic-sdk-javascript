@@ -1,5 +1,5 @@
 import { Utility, diModule as commonDIModule } from 'common';
-import { ITokenStore, IBaasicAppOptions, TYPES as coreTYPES, diModule as coreDIModule } from 'core';
+import { ITokenHandler, IBaasicAppOptions, TYPES as coreTYPES, diModule as coreDIModule } from 'core';
 import { DIModule } from './';
 import { diModule as httpDIModule } from 'httpApi';
 import { Container } from "inversify";
@@ -17,7 +17,7 @@ export class BaasicApp {
         apiVersion: 'v1'
     };
 
-    public readonly TokenStore: ITokenStore;
+    public readonly TokenStore: ITokenHandler;
     public readonly KeyValue: modules.KeyValue.BaasicKeyValueClient;
 
 
@@ -27,7 +27,7 @@ export class BaasicApp {
         this.options = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.settings, options || {});
         DIModule.init(this.apiKey, this.options, [commonDIModule, coreDIModule, httpDIModule, modules]);
 
-        this.TokenStore = DIModule.kernel.get<ITokenStore>(coreTYPES.ITokenStore);
+        this.TokenStore = DIModule.kernel.get<ITokenHandler>(coreTYPES.ITokenStore);
         this.KeyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
 
 

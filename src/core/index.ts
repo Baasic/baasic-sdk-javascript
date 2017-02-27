@@ -1,8 +1,8 @@
 export * from './IStorageHandler';
 export * from './IEventHandler';
 export * from './IToken';
-export * from './ITokenStore';
-export * from './TokenStore';
+export * from './ITokenHandler';
+export * from './TokenHandler';
 
 export * from './IBaasicAppOptions';
 export * from './IAppOptions';

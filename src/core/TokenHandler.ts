@@ -1,9 +1,9 @@
-import { IToken, TokenType, TokenTypes, ITokenStore, IEventHandler, IStorageHandler } from 'core';
+import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler } from 'core';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 
 @injectable()
-export class TokenStore implements ITokenStore {
+export class TokenHandler implements ITokenHandler {
 
     private token: IToken;
     private userAccessTokenTimerHandle: number

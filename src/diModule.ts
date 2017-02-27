@@ -1,5 +1,5 @@
 import { IHttpClient, TYPES as httpTYPES } from 'httpApi';
-import { ITokenStore, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, TYPES as coreTYPES } from 'core';
+import { ITokenHandler, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, TYPES as coreTYPES } from 'core';
 import { client as jQueryHttpClient } from 'httpApi/jQuery';
 import { Container, interfaces, ContainerModule } from "inversify";
 import 'reflect-metadata';
@@ -27,11 +27,11 @@ export class DIModule {
             }
 
             if (options.tokenStore) {
-                DIModule.kernel.bind<ITokenStore>(coreTYPES.ITokenStore).toFunction(options.tokenStore);
+                DIModule.kernel.bind<ITokenHandler>(coreTYPES.ITokenStore).toFunction(options.tokenStore);
             } else {
                 let get = function (type?: TokenType): IToken { return null; };
                 //TODO: Fix this, provide default              
-                DIModule.kernel.bind<ITokenStore>(coreTYPES.ITokenStore).toConstantValue({
+                DIModule.kernel.bind<ITokenHandler>(coreTYPES.ITokenStore).toConstantValue({
                     store: null,
                     get: get
                 });

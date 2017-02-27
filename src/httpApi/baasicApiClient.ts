@@ -1,5 +1,5 @@
 import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, TYPES as httpTYPES } from 'httpApi';
-import { ITokenStore, IAppOptions, TYPES as coreTYPES } from 'core';
+import { ITokenHandler, IAppOptions, TYPES as coreTYPES } from 'core';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 
@@ -8,7 +8,7 @@ export class BaasicApiClient {
     constructor(
         @inject(coreTYPES.IAppOptions) private appOptions: IAppOptions,
         @inject(httpTYPES.IHttpClient) private httpClient: IHttpClient,
-        @inject(coreTYPES.ITokenStore) private tokenStore: ITokenStore
+        @inject(coreTYPES.ITokenStore) private tokenStore: ITokenHandler
     ) {
 
     }
