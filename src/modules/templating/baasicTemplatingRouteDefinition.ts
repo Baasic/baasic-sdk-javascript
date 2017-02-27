@@ -6,11 +6,19 @@
 
 import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
 import { IOptions } from 'common/contracts';
+import { BaasicTemplatingBatchRouteDefinition } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
+    get batch(): BaasicTemplatingBatchRouteDefinition {
+        return this.baasicTemplatingBatchRouteDefinition;
+    }
+    
+    constructor(
+        protected modelMapper: ModelMapper,
+        protected baasicTemplatingBatchRouteDefinition: BaasicTemplatingBatchRouteDefinition
+    ) { super(modelMapper); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 
@@ -67,3 +75,11 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
         return super.baseDelete('templates/{id}', data);
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.  
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
+ - All end-point objects are transformed by the associated route definition. 
+ */

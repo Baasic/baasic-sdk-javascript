@@ -7,3 +7,5 @@ export * from './IACLRole';
 export * from './IACLUser';
 export * from './IACLOptions';
 export * from './IACLPolicy';
+export * from './IException';
+export * from './IBaasicResponse';

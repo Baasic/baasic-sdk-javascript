@@ -5,12 +5,23 @@
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicTemplatingRouteDefinition } from 'modules/templating';
+import { BaasicTemplatingBatchClient, BaasicTemplatingRouteDefinition } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 export class BaasicTemplatingClient {
 
-    constructor(protected baasicTemplatingRouteDefinition: BaasicTemplatingRouteDefinition) {}
+    get routeDefinition(): BaasicTemplatingRouteDefinition {
+        return this.baasicTemplatingRouteDefinition;
+    }
+
+    get batch(): BaasicTemplatingBatchClient {
+        return this.baasicTemplatingBatchClient;
+    }
+    
+    constructor(
+        protected baasicTemplatingRouteDefinition: BaasicTemplatingRouteDefinition,
+        protected baasicTemplatingBatchClient: BaasicTemplatingBatchClient
+    ) {}
 
     /**                 
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of template resources matching the given criteria.                 
@@ -114,3 +125,10 @@ export class BaasicTemplatingClient {
         return this.baasicApiHttp.delete(this.baasicTemplatingRouteDefinition.delete(data));
     }   
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.  
+ - All end-point objects are transformed by the associated route definition. 
+ */
