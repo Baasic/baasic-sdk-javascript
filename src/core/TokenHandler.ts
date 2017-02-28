@@ -24,7 +24,7 @@ export class TokenHandler implements ITokenHandler {
         }
     }
 
-    
+
     protected readonly messageTypes = {
         tokenExpired: 'tokenExpired',
         tokenUpdated: 'tokenUpdated'
@@ -52,22 +52,24 @@ export class TokenHandler implements ITokenHandler {
     }
 
 
-    
+
 
     triggerTokenExpired(app: IBaasicApp) {
-        this.eventHandler.triggerEvent('tokenExpired', { app: app });
+        var data = { app: app };
+        this.eventHandler.triggerEvent('tokenExpired', data);
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.tokenExpired
-        });
+        }, [data]);
     }
 
     triggerTokenUpdated(app: IBaasicApp) {
-        this.eventHandler.triggerEvent('tokenUpdated', { app: app });
+        var data = { app: app };
+        this.eventHandler.triggerEvent('tokenUpdated', data);
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.tokenUpdated
-        });
+        }, [data]);
     }
 
     setExpirationTimer(token: IToken): any {
