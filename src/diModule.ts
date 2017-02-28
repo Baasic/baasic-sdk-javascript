@@ -8,11 +8,11 @@ import { BrowserEventHandler } from 'core/browserEvents';
 import { Container, interfaces, ContainerModule } from "inversify";
 import 'reflect-metadata';
 
-const rootTYPES = {
+const TYPES = {
     IBaasicApp: Symbol("IBaasicApp")
 };
 
-export { rootTYPES };
+export { TYPES };
 
 
 export class DIModule {
@@ -49,7 +49,7 @@ export class DIModule {
                 DIModule.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).to(BrowserEventHandler);
             }
 
-            DIModule.kernel.bind<IBaasicApp>(rootTYPES.IBaasicApp).toConstantValue(app);
+            DIModule.kernel.bind<IBaasicApp>(TYPES.IBaasicApp).toConstantValue(app);
 
         });
         DIModule.diModules.push(diModule);

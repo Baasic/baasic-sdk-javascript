@@ -1,5 +1,6 @@
 import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler } from 'core/contracts';
-import { IBaasicApp } from '../';
+import { TYPES as coreTYPES } from 'core';
+import { IBaasicApp, TYPES as rootTYPES } from '../';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 
@@ -11,9 +12,9 @@ export class TokenHandler implements ITokenHandler {
     private userAccessTokenTimerHandle: number
 
     constructor(
-        protected eventHandler: IEventHandler,
-        protected storageHandler: IStorageHandler,
-        private application: IBaasicApp
+        @inject(coreTYPES.IEventHandler) protected eventHandler: IEventHandler,
+        @inject(coreTYPES.IStorageHandler) protected storageHandler: IStorageHandler,
+        @inject(rootTYPES.IBaasicApp) private application: IBaasicApp
     ) {
         this.initEventing();
 

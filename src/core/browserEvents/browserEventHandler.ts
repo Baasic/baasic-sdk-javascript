@@ -38,8 +38,6 @@ export class BrowserEventHandler implements IEventHandler {
 				if (CustomEvent && typeof CustomEvent === 'function') {
 					event = utility.extend(new CustomEvent(eventName));
 					element.dispatchEvent(event);
-
-					return;
 				} else if (document.createEvent) {
 					event = document.createEvent('CustomEvent');
 					event.initEvent(eventName, true, true);
@@ -53,8 +51,6 @@ export class BrowserEventHandler implements IEventHandler {
 					} else {
 						document.dispatchEvent(event);
 					}
-
-					return;
 				} else {
 					event = document.createEvent('CustomEvent');
 					event.eventType = eventName;
@@ -63,19 +59,6 @@ export class BrowserEventHandler implements IEventHandler {
 						utility.extend(event, additionalData);
 					}
 					element.fireEvent('on' + event.eventType, event);
-
-					return;
-				}
-
-				if (element.dispatchEvent) {
-					element.dispatchEvent(event);
-				} else if (element.fireEvent) {
-					element.fireEvent('on' + event.eventType, event);
-				} else {
-					var handler = element['on' + event.eventType];
-					if (handler) {
-						handler(event);
-					}
 				}
 			};
 	}
