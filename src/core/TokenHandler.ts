@@ -24,7 +24,6 @@ export class TokenHandler implements ITokenHandler {
         }
     }
 
-
     protected readonly messageTypes = {
         tokenExpired: 'tokenExpired',
         tokenUpdated: 'tokenUpdated'
@@ -50,9 +49,6 @@ export class TokenHandler implements ITokenHandler {
     get(type?: TokenType): IToken {
         return JSON.parse(this.storageHandler.get(this.tokenKey));
     }
-
-
-
 
     triggerTokenExpired(app: IBaasicApp) {
         var data = { app: app };
@@ -107,32 +103,12 @@ export class TokenHandler implements ITokenHandler {
 
 
     initEventing(): void {
-        this.eventHandler.addEvent('storage', function (e) {
+        this.eventHandler.addEvent('tokenExpired', function (e) {
             e = e || event;
             if (e.originalEvent) {
                 e = e.originalEvent;
             }
-
-            if (e.key === this.messageBusKey) {
-                var value = e.newValue;
-                if (value && value !== '') {
-                    var message = JSON.parse(value);
-
-                    switch (message.type) {
-                        case this.messageTypes.userChanged:
-                            this.eventHandler.triggerEvent('userChange', { user: this.application.getUser(), app: this.application });
-                            break;
-                        case this.messageTypes.tokenExpired:
-                            this.syncToken(null);
-                            this.eventHandler.triggerEvent('tokenExpired', { app: this.application });
-                            break;
-                        case this.messageTypes.tokenUpdated:
-                            this.eventHandler.triggerEvent('tokenUpdated', { app: this.application });
-                            break;
-                    }
-                }
-            }
-
+            this.syncToken(null);
         });
     }
 

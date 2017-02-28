@@ -1,5 +1,5 @@
 import { Utility, diModule as commonDIModule } from 'common';
-import { ITokenHandler, IToken, TokenType, TokenTypes, IBaasicAppOptions, TYPES as coreTYPES, diModule as coreDIModule } from 'core';
+import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, TYPES as coreTYPES, diModule as coreDIModule } from 'core';
 import { DIModule, IBaasicApp } from './';
 import { diModule as httpDIModule } from 'httpApi';
 import { Container } from "inversify";
@@ -18,6 +18,7 @@ export class BaasicApp implements IBaasicApp {
 
     public readonly settings: Partial<IBaasicAppOptions>;
     public readonly tokenHandler: ITokenHandler;
+    public readonly userHandler: IUserHandler;
 
     //Modules
     public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
@@ -33,6 +34,7 @@ export class BaasicApp implements IBaasicApp {
         DIModule.init(this, [commonDIModule, coreDIModule, httpDIModule, modules]);
 
         this.tokenHandler = DIModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
+        this.userHandler = DIModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
 
         //Modules
         this.keyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
@@ -56,5 +58,13 @@ export class BaasicApp implements IBaasicApp {
 
     getApiUrl(): URL {
         return this.settings.apiUrl;
+    };
+
+    getUser(): IUser {
+        return this.userHandler.getUser();
+    }
+
+    setUser(userInfo: IUser) {
+        this.userHandler.setUser(userInfo);
     };
 }
