@@ -8,13 +8,13 @@ export class BaasicApiClient {
     constructor(
         @inject(coreTYPES.IAppOptions) private appOptions: IAppOptions,
         @inject(httpTYPES.IHttpClient) private httpClient: IHttpClient,
-        @inject(coreTYPES.ITokenStore) private tokenStore: ITokenHandler
+        @inject(coreTYPES.ITokenHandler) private tokenHandler: ITokenHandler
     ) {
 
     }
 
     request<TResponse>(request: IHttpRequest): PromiseLike<IHttpResponse<TResponse>> {
-        var authToken = this.tokenStore.get();
+        var authToken = this.tokenHandler.get();
         if (authToken) {
             var headers = request.headers || (request.headers = {});
             /*jshint camelcase: false */

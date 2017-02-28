@@ -1,4 +1,5 @@
 import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler } from 'core';
+import { IBaasicApp } from '../';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 
@@ -6,15 +7,20 @@ import 'reflect-metadata';
 export class TokenHandler implements ITokenHandler {
 
     private token: IToken;
+    private tokenKey: string;
     private userAccessTokenTimerHandle: number
 
     constructor(
         protected eventHandler: IEventHandler,
-        protected storageHandler: IStorageHandler
+        protected storageHandler: IStorageHandler,
+        private application: IBaasicApp
     ) {
         this.initEventing();
+
+        this.tokenKey = 'baasic-auth-token-' + this.application.apiKey;
+
         if (this.token) {
-            userAccessTokenTimerHandle = setExpirationTimer(this.token);
+            this.userAccessTokenTimerHandle = setExpirationTimer(this.token);
         }
     }
 
@@ -25,14 +31,27 @@ export class TokenHandler implements ITokenHandler {
     };
 
     store(token: IToken): void {
+        this.syncToken(token);
+
+
+
+
+        if (token === undefined || token === null) {
+            this.storageHandler.remove(this.tokenKey);
+        } else {
+            this.storageHandler.set(this.tokenKey, JSON.stringify(token));
+        }
+
+        if (token === undefined || token === null) {
+            this.triggerTokenExpired(this.application);
+        } else {
+            this.triggerTokenUpdated(this.application);
+        }
 
     }
+
     get(type?: TokenType): IToken {
-        return {
-            expireTime: null,
-            token: '',
-            type: <TokenType>TokenTypes.Access
-        };
+        return JSON.parse(this.storageHandler.get(this.tokenKey));
     }
 
 
@@ -42,7 +61,7 @@ export class TokenHandler implements ITokenHandler {
         this.storageHandler.set(this.messageBusKey, JSON.stringify(message));
     }
 
-    triggerTokenExpired(app) {
+    triggerTokenExpired(app: IBaasicApp) {
         this.eventHandler.triggerEvent('tokenExpired', { app: app });
 
         this.pushMessage({
@@ -50,7 +69,7 @@ export class TokenHandler implements ITokenHandler {
         });
     }
 
-    triggerTokenUpdated(app) {
+    triggerTokenUpdated(app: IBaasicApp) {
         this.eventHandler.triggerEvent('tokenUpdated', { app: app });
 
         this.pushMessage({
@@ -63,11 +82,11 @@ export class TokenHandler implements ITokenHandler {
             var expiresIn = this.token.expireTime.getTime() - new Date().getTime();
             if (expiresIn > 0) {
                 return setTimeout(function () {
-                    settings.storeToken(null);
-                    this.triggerTokenExpired(app);
+                    this.store(null);
+                    this.triggerTokenExpired(this.application);
                 }, expiresIn);
             } else {
-                settings.storeToken(null);
+                this.store(null);
             }
         }
 
@@ -107,14 +126,14 @@ export class TokenHandler implements ITokenHandler {
 
                     switch (message.type) {
                         case this.messageTypes.userChanged:
-                            this.eventHandler.triggerEvent('userChange', { user: app.getUser(), app: app });
+                            this.eventHandler.triggerEvent('userChange', { user: app.getUser(), app: this.application });
                             break;
                         case this.messageTypes.tokenExpired:
                             syncToken(null);
-                            this.eventHandler.triggerEvent('tokenExpired', { app: app });
+                            this.eventHandler.triggerEvent('tokenExpired', { app: this.application });
                             break;
                         case this.messageTypes.tokenUpdated:
-                            this.eventHandler.triggerEvent('tokenUpdated', { app: app });
+                            this.eventHandler.triggerEvent('tokenUpdated', { app: this.application });
                             break;
                     }
                 }
