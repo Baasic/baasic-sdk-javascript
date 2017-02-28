@@ -51,3 +51,5 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicMeteringSettingsRouteDefinition>(TYPES.BaasicMeteringSettingsRouteDefinition).toSelf();
     bind<BaasicMeteringSettingsClient>(TYPES.BaasicMeteringSettingsClient).toSelf();
 });
+
+export { diModule };
