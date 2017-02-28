@@ -1,1 +1,1 @@
-export * from './browserEvents';
+export * from './browserEventHandler';

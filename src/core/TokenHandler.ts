@@ -20,11 +20,11 @@ export class TokenHandler implements ITokenHandler {
         this.tokenKey = 'baasic-auth-token-' + this.application.apiKey;
 
         if (this.token) {
-            this.userAccessTokenTimerHandle = setExpirationTimer(this.token);
+            this.userAccessTokenTimerHandle = this.setExpirationTimer(this.token);
         }
     }
 
-    protected readonly messageBusKey: string = 'baasic-message-bus';
+    
     protected readonly messageTypes = {
         tokenExpired: 'tokenExpired',
         tokenUpdated: 'tokenUpdated'
@@ -55,16 +55,12 @@ export class TokenHandler implements ITokenHandler {
     }
 
 
-    private pushMessage(message) {
-        this.storageHandler.remove(this.messageBusKey);
-
-        this.storageHandler.set(this.messageBusKey, JSON.stringify(message));
-    }
+    
 
     triggerTokenExpired(app: IBaasicApp) {
         this.eventHandler.triggerEvent('tokenExpired', { app: app });
 
-        this.pushMessage({
+        this.eventHandler.pushMessage({
             type: this.messageTypes.tokenExpired
         });
     }
@@ -72,14 +68,14 @@ export class TokenHandler implements ITokenHandler {
     triggerTokenUpdated(app: IBaasicApp) {
         this.eventHandler.triggerEvent('tokenUpdated', { app: app });
 
-        this.pushMessage({
+        this.eventHandler.pushMessage({
             type: this.messageTypes.tokenUpdated
         });
     }
 
     setExpirationTimer(token: IToken): any {
         if (token && token.expireTime) {
-            var expiresIn = this.token.expireTime.getTime() - new Date().getTime();
+            var expiresIn = this.token.expireTime - new Date().getTime();
             if (expiresIn > 0) {
                 return setTimeout(function () {
                     this.store(null);
@@ -97,9 +93,8 @@ export class TokenHandler implements ITokenHandler {
         clearTimeout(this.userAccessTokenTimerHandle);
         if (newToken !== undefined && newToken !== null) {
             if (!newToken.expireTime) {
-                /*jshint camelcase: false */
-                var expiresIn = newToken.expires_in;
-                var slidingWindow = newToken.sliding_window;
+                let expiresIn = newToken.expires_in;
+                let slidingWindow = newToken.sliding_window;
                 /*jshint camelcase: true */
                 if (expiresIn) {
                     newToken.expireTime = new Date().getTime() + (expiresIn * 1000);
@@ -107,7 +102,7 @@ export class TokenHandler implements ITokenHandler {
                     newToken.expireTime = new Date().getTime() + (slidingWindow * 1000);
                 }
             }
-            this.userAccessTokenTimerHandle = setExpirationTimer(newToken);
+            this.userAccessTokenTimerHandle = this.setExpirationTimer(newToken);
         }
     }
 
@@ -126,10 +121,10 @@ export class TokenHandler implements ITokenHandler {
 
                     switch (message.type) {
                         case this.messageTypes.userChanged:
-                            this.eventHandler.triggerEvent('userChange', { user: app.getUser(), app: this.application });
+                            this.eventHandler.triggerEvent('userChange', { user: this.application.getUser(), app: this.application });
                             break;
                         case this.messageTypes.tokenExpired:
-                            syncToken(null);
+                            this.syncToken(null);
                             this.eventHandler.triggerEvent('tokenExpired', { app: this.application });
                             break;
                         case this.messageTypes.tokenUpdated:
@@ -139,7 +134,7 @@ export class TokenHandler implements ITokenHandler {
                 }
             }
 
-        };
+        });
     }
 
 

@@ -23,7 +23,7 @@ export class DIModule {
             if (app.settings) {
                 let appOptions: IAppOptions = {
                     apiKey: app.apiKey,
-                    apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${apiKey}/`)
+                    apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${app.apiKey}/`)
                 }
                 DIModule.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);
 

@@ -1,14 +1,28 @@
 import { Utility } from 'common';
-import { IEventHandler } from 'core';
+import { IEventHandler, IStorageHandler } from 'core';
 
 declare var $: any;
 let utility = new Utility();
 
 export class BrowserEventHandler implements IEventHandler {
 
-	constructor() {
+	protected readonly messageBusKey: string = 'baasic-message-bus';
 
+	constructor(
+		protected storageHandler: IStorageHandler
+	) {
+		this.initEventing();
 	}
+
+	pushMessage(message: any, args: any[]) {
+		this.storageHandler.remove(this.messageBusKey);
+
+		this.storageHandler.set(this.messageBusKey, JSON.stringify({
+			message: message,
+			args: args
+		}));
+	}
+
 
 	triggerEvent(eventName: string, data: any): void {
 		var element = document;
@@ -84,6 +98,24 @@ export class BrowserEventHandler implements IEventHandler {
 					elem['on' + evnt] = func;
 				}
 			};
+	}
+
+	initEventing(): void {
+		this.addEvent('storage', function (e) {
+			e = e || event;
+			if (e.originalEvent) {
+				e = e.originalEvent;
+			}
+
+			if (e.key === this.messageBusKey) {
+				var value = e.newValue;
+				if (value && value !== '') {
+					var data = JSON.parse(value);
+					this.eventHandler.triggerEvent(data.message.type, data.args);
+				}
+			}
+
+		});
 	}
 };
 

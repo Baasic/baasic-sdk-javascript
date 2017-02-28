@@ -6,7 +6,9 @@ export const TokenTypes = {
 export type TokenType = "access" | "refresh";
 
 export interface IToken {
-    expireTime?: Date
+    expireTime?: number,
+    expires_in?: number,
+    sliding_window?: number,
     token: string,
     type: TokenType
 }
