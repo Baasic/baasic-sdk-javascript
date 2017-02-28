@@ -6,4 +6,6 @@ export interface IBaasicApp {
     settings: Partial<IBaasicAppOptions>,
     getAccessToken(): IToken;
     updateAccessToken(value: IToken);
+    getApiKey(): string;
+    getApiUrl(): URL;
 }

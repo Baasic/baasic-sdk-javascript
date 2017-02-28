@@ -50,11 +50,11 @@ export class BaasicApp implements IBaasicApp {
     };
 
 
-    get() {
-        console.log('Get called.');
-    }
+    getApiKey(): string {
+        return this.apiKey;
+    };
 
-    set() {
-        console.log('Set called 3.');
-    }
+    getApiUrl(): URL {
+        return this.settings.apiUrl;
+    };
 }
