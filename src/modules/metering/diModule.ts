@@ -10,6 +10,8 @@ import {
     BaasicMeteringCategoryClient,
     BaasicMeteringRouteDefinition,
     BaasicMeteringClient,
+    BaasicMeteringSettingsRouteDefinition,
+    BaasicMeteringSettingsClient,
     BaasicMeteringStatisticsClient,
     BaasicMeteringStatisticsRouteDefinition
 } from 'modules/metering';
@@ -25,6 +27,8 @@ const TYPES = {
     BaasicMeteringCategoryClient: Symbol("BaasicMeteringCategoryClient"),
     BaasicMeteringRouteDefinition: Symbol("BaasicMeteringRouteDefinition"),
     BaasicMeteringClient: Symbol("BaasicMeteringClient"),
+    BaasicMeteringSettingsRouteDefinition: Symbol("BaasicMeteringSettingsRouteDefinition"),
+    BaasicMeteringSettingsClient: Symbol("BaasicMeteringSettingsClient"),
     BaasicMeteringStatisticsClient: Symbol("BaasicMeteringStatisticsClient"),
     BaasicMeteringStatisticsRouteDefinition: Symbol("BaasicMeteringStatisticsRouteDefinition")
 };
@@ -44,4 +48,6 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicMeteringACLClient>(TYPES.BaasicMeteringACLClient).toSelf();
     bind<BaasicMeteringRouteDefinition>(TYPES.BaasicMeteringRouteDefinition).toSelf();
     bind<BaasicMeteringClient>(TYPES.BaasicMeteringClient).toSelf();
+    bind<BaasicMeteringSettingsRouteDefinition>(TYPES.BaasicMeteringSettingsRouteDefinition).toSelf();
+    bind<BaasicMeteringSettingsClient>(TYPES.BaasicMeteringSettingsClient).toSelf();
 });

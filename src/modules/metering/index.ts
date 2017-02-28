@@ -10,4 +10,6 @@ export * from './baasicMeteringACLRouteDefinition';
 export * from './baasicMeteringACLClient';
 export * from './baasicMeteringRouteDefinition';
 export * from './baasicMeteringClient';
+export * from './baasicMeteringSettingsRouteDefinition';
+export * from './baasicMeteringSettingsClient';
 export * from './diModule';
