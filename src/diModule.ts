@@ -1,6 +1,7 @@
 import { IBaasicApp } from './';
 import { IHttpClient, TYPES as httpTYPES } from 'httpApi';
-import { IStorageHandler, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, TYPES as coreTYPES } from 'core';
+import { IStorageHandler, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions } from 'core/contracts';
+import { TYPES as coreTYPES } from 'core';
 import { client as jQueryHttpClient } from 'httpApi/jQuery';
 import { LocalStorageHandler } from 'core/localStorage';
 import { BrowserEventHandler } from 'core/browserEvents';

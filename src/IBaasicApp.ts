@@ -1,4 +1,4 @@
-import { ITokenHandler, IToken, TokenType, IBaasicAppOptions, IUserHandler, IUser } from 'core';
+import { ITokenHandler, IToken, TokenType, IBaasicAppOptions, IUserHandler, IUser } from 'core/contracts';
 
 export interface IBaasicApp {
     apiKey: string;

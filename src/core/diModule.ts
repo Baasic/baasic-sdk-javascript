@@ -1,5 +1,6 @@
 import { ContainerModule } from "inversify";
-import { IStorageHandler, TokenHandler, IEventHandler, IBaasicAppOptions, ITokenHandler, IUserHandler, UserHandler } from 'core';
+import { IStorageHandler, IEventHandler, IBaasicAppOptions, ITokenHandler, IUserHandler } from 'core/contracts';
+import { TokenHandler, UserHandler } from 'core';
 import { BrowserEventHandler } from 'core/browserEvents';
 import { LocalStorageHandler } from 'core/localStorage';
 

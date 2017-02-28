@@ -1,4 +1,4 @@
-import { IEventHandler, IUserHandler, IStorageHandler, IUser } from 'core';
+import { IEventHandler, IUserHandler, IStorageHandler, IUser } from 'core/contracts';
 import { IBaasicApp } from '../';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';

@@ -1,5 +1,5 @@
 import { Utility } from 'common';
-import { IEventHandler, IStorageHandler } from 'core';
+import { IEventHandler, IStorageHandler } from 'core/contracts';
 
 declare var $: any;
 let utility = new Utility();

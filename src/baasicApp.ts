@@ -1,5 +1,6 @@
 import { Utility, diModule as commonDIModule } from 'common';
-import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, TYPES as coreTYPES, diModule as coreDIModule } from 'core';
+import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions } from 'core/contracts';
+import { TYPES as coreTYPES, diModule as coreDIModule } from 'core';
 import { DIModule, IBaasicApp } from './';
 import { diModule as httpDIModule } from 'httpApi';
 import { Container } from "inversify";

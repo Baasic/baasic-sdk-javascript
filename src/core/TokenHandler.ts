@@ -1,4 +1,4 @@
-import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler } from 'core';
+import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler } from 'core/contracts';
 import { IBaasicApp } from '../';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';

@@ -1,4 +1,4 @@
-import { IToken, TokenType } from 'core';
+import { IToken, TokenType } from 'core/contracts';
 
 export interface ITokenHandler {
     store(token: IToken): void,

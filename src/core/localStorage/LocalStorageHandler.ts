@@ -1,4 +1,4 @@
-import { IStorageHandler } from 'core';
+import { IStorageHandler } from 'core/contracts';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 
