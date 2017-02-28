@@ -1,15 +1,20 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicCompanyBatchClient  
  * @description Baasic Company Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicCompanyBatchRouteDefinition } from 'modules/userProfile';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from "inversify";
+import { BaasicCompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 export class BaasicCompanyBatchClient {
-    
-    constructor(protected baasicCompanyBatchRouteDefinition: BaasicCompanyBatchRouteDefinition) {}
+
+    constructor(
+        @inject(userProfileTypes.BaasicCompanyBatchRouteDefinition) protected baasicCompanyBatchRouteDefinition: BaasicCompanyBatchRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                   
      * Returns a promise that is resolved once the create company action has been performed; this action creates new company resources.                   
@@ -27,9 +32,9 @@ export class BaasicCompanyBatchClient {
                    function (response, status, headers, config) {     
                        // perform error handling here   
                  });                   
-     **/ 				
-    create(data: ICompany[]): Promise<any> {
-        return this.baasicApiHttp.post(this.baasicCompanyBatchRouteDefinition.create(), this.baasicCompanyBatchRouteDefinition.createParams(data));
+     **/
+    create(data: ICompany[]): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.post(this.baasicCompanyBatchRouteDefinition.create(), this.baasicCompanyBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -44,30 +49,26 @@ export class BaasicCompanyBatchClient {
                      function (response, status, headers, config) {     
                          // perform error handling here   
                     });                   
-     **/ 				
-    update(data: ICompany[]): Promise<any> {
-        return this.baasicApiHttp.put(this.baasicCompanyBatchRouteDefinition.update(), this.baasicCompanyBatchRouteDefinition.updateParams(data));
+     **/
+    update(data: ICompany[]): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicCompanyBatchRouteDefinition.update(), this.baasicCompanyBatchRouteDefinition.updateParams(data));
     }
 
-     /**                   
-      * Returns a promise that is resolved once the remove action has been performed. This action will remove company resources from the system if successfully completed.                   
-      * @method
-      * @param ids Collection of company ids which uniquely identifies company resources that need to be deleted.
-      * @returns A promise that is resolved once the remove action has been performed.                          
-      * @example baasicCompanyBatchClient.remove(companyIds)
-                    .then(function (data) {     
-                        // perform success action here   
-                    }, 
-                     function (response, status, headers, config) {     
-                         // perform error handling here   
-                    });		                  
-     **/	
-    remove(ids: string[]): Promise<void> {
-        return this.baasicApiHttp({                         
-                url: this.baasicCompanyBatchRouteDefinition.delete(),                         
-                method: 'DELETE',                         
-                data: ids                     
-        });  
+    /**                   
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove company resources from the system if successfully completed.                   
+     * @method
+     * @param ids Collection of company ids which uniquely identifies company resources that need to be deleted.
+     * @returns A promise that is resolved once the remove action has been performed.                          
+     * @example baasicCompanyBatchClient.remove(companyIds)
+                   .then(function (data) {     
+                       // perform success action here   
+                   }, 
+                    function (response, status, headers, config) {     
+                        // perform error handling here   
+                   });		                  
+    **/
+    remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicCompanyBatchRouteDefinition.delete(), this.baasicCompanyBatchRouteDefinition.deleteParams(ids));
     }
 }
 

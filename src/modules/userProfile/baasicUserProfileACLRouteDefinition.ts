@@ -1,22 +1,23 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserProfileACLRouteDefinition  
  * @description Baasic User ACL Profile Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile ACL Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IACLOptions, IACLPolicy } from 'common/contracts';
+import { injectable, inject } from "inversify";
 
 export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
 
     /** 					
      * Parses get user profile acl route; this URI template should be expanded with the Id of the user profile resource.										
      * @method 
      * @param options Query resource options object.     					
      * @example baasicUserProfileACLRouteDefinition.get({id: '<profile-id>'}); 					
-     **/ 				
+     **/
     get(options?: IACLOptions): any {
         let params = this.utility.extend({}, options);
         return super.parse('profiles/{id}/acl/{?fields}').expand(params);
@@ -27,7 +28,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      * @method
      * @param options ACL options object.    					
      * @example baasicUserProfileACLRouteDefinition.update({id: '<profile-id>'}); 					
-     **/ 					
+     **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
         return super.parse('profiles/{id}/acl/{?fields}').expand(params);
@@ -35,7 +36,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
 
     updateParams(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return params[this.baasicConstants.modelPropertyName];
+        return params[this.modelMapper.modelPropertyName];
     }
 
     /** 					
@@ -56,9 +57,9 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      * @example baasicUserProfileACLRouteDefinition.deleteByUser({ id: '<profile-id>', accessAction: '<access-action>', user: '<username>' }); 					
      **/
     deleteByUser(profileId: string, action: string, user: string, data: IACLPolicy): any {
-        let params = this.modelMapper.removeParams(data);                         
-        params.profileId = profileId;                         
-        params.user = user;                         
+        let params = this.modelMapper.removeParams(data);
+        params.profileId = profileId;
+        params.user = user;
         params.accessAction = action;
         return super.parse('profiles/{id}/acl/actions/{accessAction}/users/{user}/').expand(params);
     }
@@ -79,11 +80,11 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
      * @param data  ACL policy object used to delete specified ACL policy resource.      					
      * @example baasicUserProfileACLRouteDefinition.deleteByRole.expand({ id: '<profile-id>', accessAction: '<access-action>', role: '<role-name>' }); 					
-     **/ 					
+     **/
     deleteByRole(profileId: string, action: string, role: string, data: IACLPolicy): any {
-        let params = this.modelMapper.removeParams(data);                         
-        params.profileId = profileId;                         
-        params.role = role;                         
+        let params = this.modelMapper.removeParams(data);
+        params.profileId = profileId;
+        params.role = role;
         params.accessAction = action;
         return super.parse('profiles/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
     }

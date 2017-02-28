@@ -1,12 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicSkillRouteDefinition  
  * @description Baasic Skill Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, Utility } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicSkillBatchRouteDefinition } from 'modules/userProfile';
+import { injectable, inject } from "inversify";
+import { BaasicSkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
 export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
@@ -16,10 +17,9 @@ export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     constructor(
-        protected modelMapper: ModelMapper, 
-        utility: Utility,
-        protected baasicSkillBatchRouteDefinition: BaasicSkillBatchRouteDefinition
-    ) { super(modelMapper, utility); }
+        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(userProfileTypes.BaasicSkillBatchRouteDefinition) protected baasicSkillBatchRouteDefinition: BaasicSkillBatchRouteDefinition
+    ) { super(modelMapper); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 
@@ -31,7 +31,7 @@ export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @method
      * @param options Query resource options object.                        
      * @example baasicSkillRouteDefinition.find({searchQuery: '<search-phrase>'});                               
-     **/  			
+     **/
     find(options?: IOptions): any {
         return super.baseFind('profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }

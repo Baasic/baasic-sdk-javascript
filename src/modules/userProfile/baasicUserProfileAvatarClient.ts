@@ -1,11 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserProfileAvatarClient  
  * @description Baasic User Profile Avatar Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { IOptions } from 'common/contracts';
-import { BaasicUserProfileAvatarRouteDefinition, BaasicUserProfileAvatarStreamsClient } from 'modules/userProfile';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from "inversify";
+import { BaasicUserProfileAvatarRouteDefinition, BaasicUserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
 
 export class BaasicUserProfileAvatarClient {
@@ -14,54 +16,55 @@ export class BaasicUserProfileAvatarClient {
         return this.baasicUserProfileAvatarRouteDefinition;
     }
 
-    get streams(): BaasicUserProfileAvatarClient {
-        return this.baasicUserProfileAvatarClient;
+    get streams(): BaasicUserProfileAvatarStreamsClient {
+        return this.baasicUserProfileAvatarStreamsClient;
     }
-    
+
     constructor(
-        protected baasicUserProfileAvatarRouteDefinition: BaasicUserProfileAvatarRouteDefinition,
-        protected baasicUserProfileAvatarClient: BaasicUserProfileAvatarClient
-    ) {}
+        @inject(userProfileTypes.BaasicUserProfileAvatarRouteDefinition) protected baasicUserProfileAvatarRouteDefinition: BaasicUserProfileAvatarRouteDefinition,
+        @inject(userProfileTypes.BaasicUserProfileAvatarStreamsClient) protected baasicUserProfileAvatarStreamsClient: BaasicUserProfileAvatarStreamsClient,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
-     /**                 
-      * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.                 
-      * @method
-      * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
-      * @param options Query resource options object.
-      * @returns A promise that is resolved once the get action has been performed.                        
-      * @example baasicUserProfileAvatarClient.get('<file-id>')
-                    .then(function (data) {   
-                        // perform success action here 
-                    },
-                     function (response, status, headers, config) {   
-                         // perform error handling here 
-                    });                 
-     **/
-    get(id: string, options?: IOptions): Promise<IProfileAvatar> {
-        return this.baasicApiHttp.get(this.baasicUserProfileAvatarRouteDefinition.get(id, options));
+    /**                 
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.                 
+     * @method
+     * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.                        
+     * @example baasicUserProfileAvatarClient.get('<file-id>')
+                   .then(function (data) {   
+                       // perform success action here 
+                   },
+                    function (response, status, headers, config) {   
+                        // perform error handling here 
+                   });                 
+    **/
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IProfileAvatar>> {
+        return this.baasicApiClient.get(this.baasicUserProfileAvatarRouteDefinition.get(id, options));
     }
 
-     /**                  
-      * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserProfileAvatarRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
-      * ``` 
-      * let params = modelMapper.updateParams(fileEntry); 
-      * let uri = params['model'].links('put').href; 
-      * ```                  
-      * @method
-      * @param data Avatar file object that need to be updated in the system.
-      * @returns A promise that is resolved once the update file action has been performed.                         
-      * @example // fileEntry is a file resource previously fetched using get action. 
-                        fileEntry.description = '<description>'; 
-                        baasicUserProfileAvatarClient.update(fileEntry)
-                            .then(function (data) {   
-                                // perform success action here 
-                            },
-                             function (response, status, headers, config) {   
-                            }); 				
-                                 // perform error handling here 
-     **/
-    update(data: IProfileAvatar): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicUserProfileAvatarRouteDefinition.update(data));
+    /**                  
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserProfileAvatarRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * ``` 
+     * let params = modelMapper.updateParams(fileEntry); 
+     * let uri = params['model'].links('put').href; 
+     * ```                  
+     * @method
+     * @param data Avatar file object that need to be updated in the system.
+     * @returns A promise that is resolved once the update file action has been performed.                         
+     * @example // fileEntry is a file resource previously fetched using get action. 
+                       fileEntry.description = '<description>'; 
+                       baasicUserProfileAvatarClient.update(fileEntry)
+                           .then(function (data) {   
+                               // perform success action here 
+                           },
+                            function (response, status, headers, config) {   
+                           }); 				
+                                // perform error handling here 
+    **/
+    update(data: IProfileAvatar): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicUserProfileAvatarRouteDefinition.update(data), data);
     }
 
     /**                 
@@ -78,8 +81,8 @@ export class BaasicUserProfileAvatarClient {
                          // perform error handling here 
                     });                
      **/
-    link(id: string, data: IProfileAvatar): Promise<any> {
-        return this.baasicApiHttp.post(this.baasicUserProfileAvatarRouteDefinition.link(id, data), this.baasicUserProfileAvatarRouteDefinition.createParams(data, id));
+    link(id: string, data: IProfileAvatar): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.post(this.baasicUserProfileAvatarRouteDefinition.link(id, data), this.baasicUserProfileAvatarRouteDefinition.createParams(data, id));
     }
 
     /**                 
@@ -101,8 +104,8 @@ export class BaasicUserProfileAvatarClient {
                              // perform error handling here 
                         });                
      **/
-    unlink(data: IProfileAvatar, options?: IOptions): any {
-        return this.baasicApiHttp.delete(this.baasicUserProfileAvatarRouteDefinition.unlink(data, options));
+    unlink(data: IProfileAvatar, options?: IOptions): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicUserProfileAvatarRouteDefinition.unlink(data, options));
     }
 }
 

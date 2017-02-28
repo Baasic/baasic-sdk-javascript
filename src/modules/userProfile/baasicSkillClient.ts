@@ -1,11 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicSkillClient  
  * @description Baasic Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicSkillBatchClient, BaasicSkillRouteDefinition } from 'modules/userProfile';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from "inversify";
+import { BaasicSkillBatchClient, BaasicSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
 export class BaasicSkillClient {
@@ -15,13 +17,14 @@ export class BaasicSkillClient {
     }
 
     get batch(): BaasicSkillBatchClient {
-        return this.baasicSkillBatchClient;    
+        return this.baasicSkillBatchClient;
     }
 
     constructor(
-        protected baasicSkillRouteDefinition: BaasicSkillRouteDefinition,
-        protected baasicSkillBatchClient: BaasicSkillBatchClient
-    ) {}
+        @inject(userProfileTypes.BaasicSkillRouteDefinition) protected baasicSkillRouteDefinition: BaasicSkillRouteDefinition,
+        @inject(userProfileTypes.BaasicSkillBatchClient) protected baasicSkillBatchClient: BaasicSkillBatchClient,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of skill resources matching the given criteria.                  
@@ -41,9 +44,9 @@ export class BaasicSkillClient {
                  function (response, status, headers, config) {   
                      // perform error handling here 
                 });                    
-     **/ 				
-    find(options?: IOptions): Promise<IBaasicQueryModel<ISkill>> {
-        return this.baasicApiHttp.get(this.baasicSkillRouteDefinition.find(options));
+     **/
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ISkill>>> {
+        return this.baasicApiClient.get(this.baasicSkillRouteDefinition.find(options));
     }
 
     /**                 
@@ -58,9 +61,9 @@ export class BaasicSkillClient {
                      function (response, status, headers, config) {   
                          // perform error handling here 
                     });                 
-     **/  				
-    get(id: string, options?: IOptions): Promise<ISkill> {
-        return this.baasicApiHttp.get(this.baasicSkillRouteDefinition.get(id, options));
+     **/
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<ISkill>> {
+        return this.baasicApiClient.get(this.baasicSkillRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -79,9 +82,9 @@ export class BaasicSkillClient {
                  function (response, status, headers, config) {   
                      // perform error handling here 
                 });                 
-     **/ 				
-    create(data: ISkill): Promise<ISkill> {
-        return this.baasicApiHttp.post(this.baasicSkillRouteDefinition.create(), this.baasicSkillRouteDefinition.createParams(data));
+     **/
+    create(data: ISkill): PromiseLike<IHttpResponse<ISkill>> {
+        return this.baasicApiClient.post(this.baasicSkillRouteDefinition.create(), this.baasicSkillRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -102,30 +105,30 @@ export class BaasicSkillClient {
                          function (response, status, headers, config) {   
                              // perform error handling here 
                         }); 				       
-     **/					
-    update(data: ISkill): Promise<void> {
-        return this.baasicApiHttp.put(this.baasicSkillRouteDefinition.update(data), this.baasicSkillRouteDefinition.updateParams(data));
+     **/
+    update(data: ISkill): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.put(this.baasicSkillRouteDefinition.update(data), this.baasicSkillRouteDefinition.updateParams(data));
     }
 
-     /**                  
-      * Returns a promise that is resolved once the remove action has been performed. This action will remove a skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicSkillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
-      * ``` 
-      * let params = modelMapper.removeParams(skill); 
-      * let uri = params['model'].links('delete').href; 
-      * ```                  
-      * @method
-      * @param A skill object used to delete specified skill resource.
-      * @returns A promise that is resolved once the remove action has been performed.                          
-      * @example // skill is a resource previously fetched using get action.				 
-                        baasicSkillClient.remove(skill)
-                            .then(function (data) {   
-                                // perform success action here 
-                            }, 
-                             function (response, status, headers, config) {   
-                                 // perform error handling here 
-                            });						        
-     **/					
-    remove(data: ISkill): Promise<void> {
-        return this.baasicApiHttp.delete(this.baasicSkillRouteDefinition.delete(data)); 
+    /**                  
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicSkillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * ``` 
+     * let params = modelMapper.removeParams(skill); 
+     * let uri = params['model'].links('delete').href; 
+     * ```                  
+     * @method
+     * @param A skill object used to delete specified skill resource.
+     * @returns A promise that is resolved once the remove action has been performed.                          
+     * @example // skill is a resource previously fetched using get action.				 
+                       baasicSkillClient.remove(skill)
+                           .then(function (data) {   
+                               // perform success action here 
+                           }, 
+                            function (response, status, headers, config) {   
+                                // perform error handling here 
+                           });						        
+    **/
+    remove(data: ISkill): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.delete(this.baasicSkillRouteDefinition.delete(data));
     }
 }

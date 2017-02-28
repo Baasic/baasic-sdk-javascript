@@ -1,12 +1,13 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserProfileRouteDefinition  
  * @description Baasic User Profile Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicUserProfileACLRouteDefinition } from 'modules/userProfile';
+import { injectable, inject } from "inversify";
+import { BaasicUserProfileACLRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserProfile } from 'modules/userProfile/contracts';
 
 export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition {
@@ -14,10 +15,10 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
     get acl(): BaasicUserProfileACLRouteDefinition {
         return this.baasicUserProfileACLRouteDefinition;
     }
-    
+
     constructor(
-        protected modelMapper: ModelMapper,
-        protected baasicUserProfileACLRouteDefinition: BaasicUserProfileACLRouteDefinition
+        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(userProfileTypes.BaasicUserProfileACLRouteDefinition) protected baasicUserProfileACLRouteDefinition: BaasicUserProfileACLRouteDefinition
     ) { super(modelMapper); }
 
     /**                 
@@ -30,7 +31,7 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
      * @method
      * @param options Query resource options object.                        
      * @example baasicUserProfileRouteDefinition.find.({searchQuery: '<search-phrase>'});                               
-     **/  
+     **/
     find(options?: IOptions): any {
         return super.baseFind('profiles/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
@@ -41,7 +42,7 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
      * @param id User profile id which uniquely identifies user profile resource that needs to be retrieved.
      * @param options Query resource options object.                        
      * @example baasicUserProfileRouteDefinition.get(id, options);                               
-     **/     
+     **/
     get(id: string, options?: IOptions): any {
         return super.baseGet('profiles/{id}/{?embed,fields}', id, options);
     }
@@ -50,7 +51,7 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
      * Parses create user profile route; this URI template does not expose any additional options.                 
      * @method                        
      * @example baasicUserProfileRouteService.create();                              
-     **/  				
+     **/
     create(): any {
         return super.baseCreate('profiles', {});
     }

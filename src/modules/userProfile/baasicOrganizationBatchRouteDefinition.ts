@@ -1,20 +1,21 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicOrganizationBatchRouteDefinition  
  * @description Baasic Organization Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, Utility } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { injectable, inject } from "inversify";
 
 export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper, utility: Utility) { super(modelMapper, utility); }
+    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
 
-     /**                     
-      * Parses create route; this URI template does not expose any additional options.                     
-      * @method                           
-      * @example baasicOrganizationBatchRouteDefinition.create();                                  
-      **/ 
+    /**                     
+     * Parses create route; this URI template does not expose any additional options.                     
+     * @method                           
+     * @example baasicOrganizationBatchRouteDefinition.create();                                  
+     **/
     create(): any {
         return super.baseCreate('lookups/organizations/batch', {});
     }
@@ -23,7 +24,7 @@ export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefin
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                           
      * @example baasicOrganizationBatchRouteDefinition.update();                                  
-     **/ 
+     **/
     update(): any {
         return super.parse('lookups/organizations/batch').expand({});
     }
@@ -32,8 +33,8 @@ export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefin
      * Parses remove route; this URI template does not expose any additional options.                     
      * @method                          
      * @example baasicOrganizationBatchRouteDefinition.delete();                                  
-     **/ 
-    delete(): any{
+     **/
+    delete(): any {
         return super.parse('lookups/organizations/batch').expand({});
     }
 }

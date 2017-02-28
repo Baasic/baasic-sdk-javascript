@@ -1,25 +1,25 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicOrganizationRouteDefinition  
  * @description Baasic Organization Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, Utility } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicOrganizationBatchRouteDefinition } from 'modules/userProfile';
+import { injectable, inject } from "inversify";
+import { BaasicOrganizationBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
 export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition {
-    
+
     get batch(): BaasicOrganizationBatchRouteDefinition {
         return this.baasicOrganizationBatchRouteDefinition;
     }
-    
+
     constructor(
-        protected modelMapper: ModelMapper, 
-        utility: Utility,
-        protected baasicOrganizationBatchRouteDefinition: BaasicOrganizationBatchRouteDefinition
-    ) { super(modelMapper, utility); }
+        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(userProfileTypes.BaasicOrganizationBatchRouteDefinition) protected baasicOrganizationBatchRouteDefinition: BaasicOrganizationBatchRouteDefinition
+    ) { super(modelMapper); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 
@@ -51,7 +51,7 @@ export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition
      * Parses create route; this URI template does not expose any additional options.                 
      * @method                        
      * @example baasicOrganizationRouteDefinition.create();                              
-     **/  				
+     **/
     create(): any {
         return super.baseCreate('lookups/organizations', {});
     }

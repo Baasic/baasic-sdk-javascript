@@ -1,10 +1,12 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserProfileAvatarStreamsClient  
  * @description Baasic User Profile Avatar Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicUserProfileAvatarStreamsRouteDefinition } from 'modules/userProfile';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { injectable, inject } from "inversify";
+import { BaasicUserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 
 export class BaasicUserProfileAvatarStreamsClient {
 
@@ -12,7 +14,10 @@ export class BaasicUserProfileAvatarStreamsClient {
         return this.baasicUserProfileAvatarStreamsRouteDefinition;
     }
 
-    constructor(protected baasicUserProfileAvatarStreamsRouteDefinition: BaasicUserProfileAvatarStreamsRouteDefinition) {}
+    constructor(
+        @inject(userProfileTypes.BaasicUserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: BaasicUserProfileAvatarStreamsRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.                     
@@ -36,8 +41,8 @@ export class BaasicUserProfileAvatarStreamsClient {
                              // perform error handling here 
                         });                     
      **/
-    get(data: any): Promise<any> {
-        return this.baasicApiHttp.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data));
+    get(data: any): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data));
     }
 
     /**                     
@@ -60,12 +65,13 @@ export class BaasicUserProfileAvatarStreamsClient {
                                  // perform error handling here 
                             });                     
      **/
-    getBlob(data: any): Promise<any> {
-        return  this.baasicApiHttp({                             
-                    url: this.baasicUserProfileAvatarStreamsRouteDefinition.get(data),                             
-                    method: 'GET',                             
-                    responseType: 'blob'                         
-                });
+    getBlob(data: any): PromiseLike<IHttpResponse<any>> {
+        /*return this.baasicApiHttp({
+            url: this.baasicUserProfileAvatarStreamsRouteDefinition.get(data),
+            method: 'GET',
+            responseType: 'blob'
+        });*/
+        return this.baasicApiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data));
     }
 
     /**                     
@@ -83,18 +89,19 @@ export class BaasicUserProfileAvatarStreamsClient {
                          // perform error handling here 
                     });                    
      **/
-    create(id: string, data: any, stream: any): Promise<any> {
-        let formData = new FormData();                         
+    create(id: string, data: any, stream: any): PromiseLike<IHttpResponse<any>> {
+        let formData = new FormData();
         formData.append('file', stream);
-        return this.baasicApiHttp({                             
-                    transformRequest: (value: any) => { return value; },                             
-                    url: this.baasicUserProfileAvatarStreamsRouteDefinition.create(id, data),                             
-                    method: 'POST',                             
-                    data: formData,                             
-                    headers: {                                 
-                        'Content-Type': undefined                             
-                    }                         
-                });
+        /*return this.baasicApiHttp({
+            transformRequest: (value: any) => { return value; },
+            url: this.baasicUserProfileAvatarStreamsRouteDefinition.create(id, data),
+            method: 'POST',
+            data: formData,
+            headers: {
+                'Content-Type': undefined
+            }
+        });*/
+        return this.baasicApiClient.post(this.baasicUserProfileAvatarStreamsRouteDefinition.create(id, data), data, { 'Content-Type': undefined });
     }
 
     /**                     
@@ -120,18 +127,19 @@ export class BaasicUserProfileAvatarStreamsClient {
                                  // perform error handling here 
                             });                    
      **/
-    update(data: any, stream: any): Promise<any> {
-        let formData = new FormData();                         
+    update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
+        let formData = new FormData();
         formData.append('file', stream);
-        return this.baasicApiHttp({ 
-                    transformRequest: (value: any) => { return value; },                             
-                    url: this.baasicUserProfileAvatarStreamsRouteDefinition.update(data),                             
-                    method: 'PUT',                             
-                    data: formData,                             
-                    headers: {                                 
-                        'Content-Type': undefined                             
-                    }                         
-                });
+        /*return this.baasicApiHttp({
+            transformRequest: (value: any) => { return value; },
+            url: this.baasicUserProfileAvatarStreamsRouteDefinition.update(data),
+            method: 'PUT',
+            data: formData,
+            headers: {
+                'Content-Type': undefined
+            }
+        });*/
+        return this.baasicApiClient.put(this.baasicUserProfileAvatarStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
     }
 }
 

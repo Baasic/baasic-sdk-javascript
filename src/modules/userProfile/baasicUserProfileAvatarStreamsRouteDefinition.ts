@@ -1,14 +1,15 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicUserProfileAvatarStreamsRouteDefinition  
  * @description Baasic User Profile Avatar Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper } from 'common';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { injectable, inject } from "inversify";
 
 export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
 
     /**                     
      * Parses get route; this route should be expanded with id of profile. Additional supported items are:                     
@@ -18,10 +19,10 @@ export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRou
      * @example baasicUserProfileAvatarStreamsRouteDefinition.get({id: '<file-id>'});                                   
      **/
     get(data: any): any {
-        if (!this.utility.isObject(data)) {                             
-            data = {                                 
-                id: data                             
-            };                         
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
         }
         return super.parse('profiles/{id}/avatar-streams/{?width,height}').expand(data);
     }
@@ -32,12 +33,12 @@ export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRou
      * @example baasicUserProfileAvatarStreamRouteDefinition.create({ filename: '<filename>', id: '<file-id>' });                                   
      **/
     create(id: string, data: any): any {
-        if (!this.utility.isObject(data)) {                             
-            data = {                                 
-                filename: data                             
-            };                         
+        if (!this.utility.isObject(data)) {
+            data = {
+                filename: data
+            };
         }
-        let params = this.utility.extend({}, data);                         
+        let params = this.utility.extend({}, data);
         params.id = id;
         return super.baseCreate('profiles/{id}/avatar-streams/{filename}', params);
     }
@@ -51,10 +52,10 @@ export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRou
      * @example baasicUserProfileAvatarStreamsRouteDefinition.update({id: '<file-id>'});                                   
      **/
     update(data: any): any {
-        if (!this.utility.isObject(data)) {                             
-            data = {                                 
-                id: data                             
-            };                         
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
         }
         return super.parse('profiles/{id}/avatar-streams/{?width,height}').expand(data);
     }
