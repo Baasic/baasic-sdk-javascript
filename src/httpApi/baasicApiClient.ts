@@ -1,6 +1,5 @@
 import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, TYPES as httpTYPES } from 'httpApi';
-import { ITokenHandler, IAppOptions } from 'core/contracts';
-import { TYPES as coreTYPES } from 'core';
+import { ITokenHandler, IAppOptions, TYPES as coreTYPES } from 'core/contracts';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 

@@ -3,6 +3,7 @@
 //export * from './dynamicResource';
 import * as KeyValue from './keyValue';
 export { KeyValue };
-//export * from './membership';
+import * as Membership from './membership';
+export { Membership };
 //export * from './valueSet';
 //export * from './userProfile';

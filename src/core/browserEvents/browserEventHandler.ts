@@ -1,15 +1,18 @@
 import { Utility } from 'common';
-import { IEventHandler, IStorageHandler } from 'core/contracts';
+import { IEventHandler, IStorageHandler, TYPES as coreTYPES } from 'core/contracts';
+import { injectable, inject } from "inversify";
+import 'reflect-metadata';
 
 declare var $: any;
 let utility = new Utility();
 
+@injectable()
 export class BrowserEventHandler implements IEventHandler {
 
 	protected readonly messageBusKey: string = 'baasic-message-bus';
 
 	constructor(
-		protected storageHandler: IStorageHandler
+		@inject(coreTYPES.IStorageHandler) protected storageHandler: IStorageHandler
 	) {
 		this.initEventing();
 	}

@@ -13,7 +13,8 @@ import {
     BaasicUserSocialLoginClient,
     BaasicUserSocialLoginRouteDefinition,
     BaasicUserClient,
-    BaasicUserRouteDefinition
+    BaasicUserRouteDefinition,
+    Membership
 } from 'modules/membership';
 
 const TYPES = {
@@ -21,7 +22,7 @@ const TYPES = {
     BaasicLoginClient: Symbol("BaasicLoginClient"),
     BaasicLoginSocialRouteDefinition: Symbol("BaasicLoginSocialRouteDefinition"),
     BaasicLoginSocialClient: Symbol("BaasicLoginSocialClient"),
-    BaasicPassworRecoveryClient: Symbol("BaasicPasswordRecoveryClient"),
+    BaasicPasswordRecoveryClient: Symbol("BaasicPasswordRecoveryClient"),
     BaasicPasswordRecoveryRouteDefinition: Symbol("BaasicPasswordRecoveryRouteDefinition"),
     BaasicRegisterClient: Symbol("BaasicRegisterClient"),
     BaasicRegisterRouteDefinition: Symbol("BaasicRegisterRouteDefinition"),
@@ -30,7 +31,8 @@ const TYPES = {
     BaasicUserSocialLoginClient: Symbol("BaasicUserSocialLoginClient"),
     BaasicUserSocialLoginRouteDefinition: Symbol("BaasicUserSocialLoginRouteDefinition"),
     BaasicUserClient: Symbol("BaasicUserClient"),
-    BaasicUserRouteDefinition: Symbol("BaasicUserRouteDefinition")
+    BaasicUserRouteDefinition: Symbol("BaasicUserRouteDefinition"),
+    Membership: Symbol("Membership")
 };
 
 export { TYPES };
@@ -41,7 +43,7 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicLoginRouteDefinition>(TYPES.BaasicLoginRouteDefinition).toSelf();
     bind<BaasicLoginClient>(TYPES.BaasicLoginClient).toSelf();
     bind<BaasicPasswordRecoveryRouteDefinition>(TYPES.BaasicPasswordRecoveryRouteDefinition).toSelf();
-    bind<BaasicPasswordRecoveryClient>(TYPES.BaasicPassworRecoveryClient).toSelf();
+    bind<BaasicPasswordRecoveryClient>(TYPES.BaasicPasswordRecoveryClient).toSelf();
     bind<BaasicRegisterRouteDefinition>(TYPES.BaasicRegisterRouteDefinition).toSelf();
     bind<BaasicRegisterClient>(TYPES.BaasicRegisterClient).toSelf();
     bind<BaasicRoleRouteDefinition>(TYPES.BaasicRoleRouteDefinition).toSelf();
@@ -50,6 +52,7 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicUserSocialLoginClient>(TYPES.BaasicUserSocialLoginClient).toSelf();
     bind<BaasicUserRouteDefinition>(TYPES.BaasicUserRouteDefinition).toSelf();
     bind<BaasicUserClient>(TYPES.BaasicUserClient).toSelf();
+    bind<Membership>(TYPES.Membership).toSelf();
 });
 
 export { diModule };

@@ -1,6 +1,4 @@
-import { IEventHandler, IUserHandler, IStorageHandler, IUser } from 'core/contracts';
-import { TYPES as coreTYPES } from 'core';
-import { IBaasicApp, TYPES as rootTYPES } from '../';
+import { IEventHandler, IUserHandler, IStorageHandler, IUser, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 
@@ -16,7 +14,7 @@ export class UserHandler implements IUserHandler {
     constructor(
         @inject(coreTYPES.IEventHandler) protected eventHandler: IEventHandler,
         @inject(coreTYPES.IStorageHandler) protected storageHandler: IStorageHandler,
-        @inject(rootTYPES.IBaasicApp) private application: IBaasicApp
+        @inject(coreTYPES.IBaasicApp) private application: IBaasicApp
     ) {
         this.userInfoKey = 'baasic-user-info-' + this.application.apiKey;
 

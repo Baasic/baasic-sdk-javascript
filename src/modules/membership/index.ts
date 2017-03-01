@@ -12,4 +12,6 @@ export * from './baasicUserSocialLoginRouteDefinition';
 export * from './baasicUserRouteDefinition';
 export * from './baasicUserSocialLoginClient';
 export * from './baasicUserClient';
+export * from './membership';
+
 export * from './diModule';
