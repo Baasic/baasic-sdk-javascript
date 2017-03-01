@@ -1,5 +1,3 @@
-//import * as m from 'modules/membership';
-
 import {
     BaasicLoginRouteDefinition,
     BaasicLoginClient,

@@ -55,7 +55,7 @@ export class TokenHandler implements ITokenHandler {
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.tokenExpired
-        }, [data]);
+        }, {});
     }
 
     triggerTokenUpdated(app: IBaasicApp) {
@@ -64,12 +64,12 @@ export class TokenHandler implements ITokenHandler {
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.tokenUpdated
-        }, [data]);
+        }, {});
     }
 
     setExpirationTimer(token: IToken): any {
         if (token && token.expireTime) {
-            var expiresIn = this.token.expireTime - new Date().getTime();
+            var expiresIn = token.expireTime - new Date().getTime();
             if (expiresIn > 0) {
                 return setTimeout(function () {
                     this.store(null);

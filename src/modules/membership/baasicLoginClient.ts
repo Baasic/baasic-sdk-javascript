@@ -5,7 +5,8 @@
  */
 
 import { Utility } from 'common';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTYPES } from 'httpApi';
 import { injectable, inject } from "inversify";
 import { BaasicLoginRouteDefinition, BaasicLoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
 
@@ -16,16 +17,12 @@ export class BaasicLoginClient {
         return this.baasicLoginRouteDefinition;
     }
 
-    get social(): BaasicLoginSocialClient {
-        return this.baasicLoginSocialClient;
-    }
-
     private utility: Utility = new Utility();
 
     constructor(
         @inject(membershipTypes.BaasicLoginRouteDefinition) protected baasicLoginRouteDefinition: BaasicLoginRouteDefinition,
-        @inject(membershipTypes.BaasicLoginSocialClient) protected baasicLoginSocialClient: BaasicLoginSocialClient,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                  
@@ -57,9 +54,18 @@ export class BaasicLoginClient {
             username: settings.username,
             password: settings.password
         });
-        return this.baasicApiClient.post(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
-            .then(function (data) {
-                this.authService.updateAccessToken(data);
+        var self = this;
+        return this.baasicApiClient.post<any>(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
+            .then<any>(function (data) {
+                let token: IToken = {
+                    token: data.body.access_token,
+                    expires_in: data.body.expires_in,
+                    sliding_window: data.body.sliding_window,
+                    tokenUrl: data.body.access_url_token,
+                    type: data.body.token_type
+                };
+                self.tokenHandler.store(token);
+                return data;
             });
     }
 

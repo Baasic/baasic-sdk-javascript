@@ -1,5 +1,5 @@
 import { Utility } from 'common';
-import { IEventHandler, IStorageHandler, TYPES as coreTYPES } from 'core/contracts';
+import { IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 
@@ -9,15 +9,17 @@ let utility = new Utility();
 @injectable()
 export class BrowserEventHandler implements IEventHandler {
 
-	protected readonly messageBusKey: string = 'baasic-message-bus';
+	protected readonly messageBusKey: string;
 
 	constructor(
-		@inject(coreTYPES.IStorageHandler) protected storageHandler: IStorageHandler
+		@inject(coreTYPES.IStorageHandler) protected storageHandler: IStorageHandler,
+		@inject(coreTYPES.IBaasicApp) private application: IBaasicApp
 	) {
+		this.messageBusKey = 'baasic-message-bus-' + this.application.apiKey;
 		this.initEventing();
 	}
 
-	pushMessage(message: any, args: any[]) {
+	pushMessage(message: any, args: any) {
 		this.storageHandler.remove(this.messageBusKey);
 
 		this.storageHandler.set(this.messageBusKey, JSON.stringify({
@@ -97,7 +99,7 @@ export class BrowserEventHandler implements IEventHandler {
 				var value = e.newValue;
 				if (value && value !== '') {
 					var data = JSON.parse(value);
-					this.eventHandler.triggerEvent(data.message.type, data.args);
+					this.eventHandler.triggerEvent(data.message.type, this.utility.extend(data.args, { app: this.application }));
 				}
 			}
 

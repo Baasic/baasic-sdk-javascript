@@ -46,9 +46,8 @@ export class UserHandler implements IUserHandler {
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.userChanged
-        }, [{
-            user: this.getUser(),
-            app: this.application
-        }]);
+        }, {
+                user: this.getUser()
+            });
     }
 }
