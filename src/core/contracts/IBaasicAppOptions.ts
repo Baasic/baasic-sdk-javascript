@@ -1,4 +1,4 @@
-import { ITokenStore, IEventHandler } from 'core';
+import { IStorageHandler, IEventHandler } from 'core/contracts';
 import { IHttpClient } from 'httpApi';
 
 export interface IBaasicAppOptions {
@@ -6,7 +6,8 @@ export interface IBaasicAppOptions {
     apiRootUrl: string,
     apiVersion: string,
     apiUrl?: URL,
-    tokenStore?: ITokenStore,
+    enableHALJSON?: boolean,
+    storageHandler?: IStorageHandler,
     httpClient?: IHttpClient,
     eventHandler?: IEventHandler
 }

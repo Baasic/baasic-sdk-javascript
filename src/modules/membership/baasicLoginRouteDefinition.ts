@@ -8,6 +8,7 @@ import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'co
 import { injectable, inject } from "inversify";
 import { BaasicLoginSocialRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 
+@injectable()
 export class BaasicLoginRouteDefinition extends BaasicBaseRouteDefinition {
 
     social(): BaasicLoginSocialRouteDefinition {

@@ -1,16 +1,13 @@
 import { ContainerModule } from "inversify";
-import { ITokenStore, IEventHandler, IBaasicAppOptions } from 'core';
-
-const TYPES = {
-    IBaasicAppOptions: Symbol("IBaasicAppOptions"),
-    IAppOptions: Symbol("IAppOptions"),
-    ITokenStore: Symbol("ITokenStore"),
-    IEventHandler: Symbol("IEventHandler")
-};
-
-export { TYPES };
+import { IStorageHandler, IEventHandler, IBaasicAppOptions, ITokenHandler, IUserHandler, TYPES } from 'core/contracts';
+import { TokenHandler, UserHandler } from 'core';
+import { BrowserEventHandler } from 'core/browserEvents';
+import { LocalStorageHandler } from 'core/localStorage';
+import 'reflect-metadata';
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
+    bind<ITokenHandler>(TYPES.ITokenHandler).to(TokenHandler);
+    bind<IUserHandler>(TYPES.IUserHandler).to(UserHandler);
 });
 
 export { diModule };

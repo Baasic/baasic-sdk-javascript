@@ -18,9 +18,11 @@
         "src/modules/applicationSettings",
         "src/modules/article",
         "src/modules/dynamicResource",
-        "src/modules/membership",
         "src/modules/templating",
-        /*"src/modules/userProfile",*/
+        "src/modules/userProfile",
+        "src/modules/metering",
+        "src/modules/files",
+        "src/modules/mediaVault",
         "src/modules/valueSet"
     ]
 }

@@ -1,48 +1,47 @@
 import { IHttpClient, TYPES as httpTYPES } from 'httpApi';
-import { ITokenStore, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, TYPES as coreTYPES } from 'core';
+import { IStorageHandler, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { client as jQueryHttpClient } from 'httpApi/jQuery';
+import { LocalStorageHandler } from 'core/localStorage';
+import { BrowserEventHandler } from 'core/browserEvents';
 import { Container, interfaces, ContainerModule } from "inversify";
 import 'reflect-metadata';
 
 export class DIModule {
     static diModules: interfaces.ContainerModule[] = [];
     static kernel: Container = new Container();
-    static init(apiKey: string, options: Partial<IBaasicAppOptions>, modules: any[]): void {
+    static init(app: IBaasicApp, modules: any[]): void {
         let diModule = new ContainerModule((bind) => {
 
-            if (options) {
+            if (app.settings) {
                 let appOptions: IAppOptions = {
-                    apiKey: apiKey,
-                    apiUrl: new URL(`${options.useSSL ? 'https' : 'http'}://${options.apiRootUrl}/${options.apiVersion}/${apiKey}/`)
+                    apiKey: app.apiKey,
+                    apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${app.apiKey}/`),
+                    enableHALJSON: app.settings.enableHALJSON
                 }
                 DIModule.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);
 
-                DIModule.kernel.bind<Partial<IBaasicAppOptions>>(coreTYPES.IBaasicAppOptions).toConstantValue(options);
+                DIModule.kernel.bind<Partial<IBaasicAppOptions>>(coreTYPES.IBaasicAppOptions).toConstantValue(app.settings);
             }
 
-            if (options.httpClient) {
-                DIModule.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(options.httpClient);
+            if (app.settings.httpClient) {
+                DIModule.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(app.settings.httpClient);
             } else {
                 DIModule.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(jQueryHttpClient);
             }
 
-            if (options.tokenStore) {
-                DIModule.kernel.bind<ITokenStore>(coreTYPES.ITokenStore).toFunction(options.tokenStore);
+            if (app.settings.storageHandler) {
+                DIModule.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).toFunction(app.settings.storageHandler);
             } else {
-                let get = function (type?: TokenType): IToken { return null; };
-                //TODO: Fix this, provide default              
-                DIModule.kernel.bind<ITokenStore>(coreTYPES.ITokenStore).toConstantValue({
-                    store: null,
-                    get: get
-                });
+                DIModule.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).to(LocalStorageHandler);
             }
 
-            if (options.eventHandler) {
-                DIModule.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).toFunction(options.eventHandler);
+            if (app.settings.eventHandler) {
+                DIModule.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).toFunction(app.settings.eventHandler);
             } else {
-                //TODO: Fix this, provide default              
-                DIModule.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).toConstantValue({});
+                DIModule.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).to(BrowserEventHandler);
             }
+
+            DIModule.kernel.bind<IBaasicApp>(coreTYPES.IBaasicApp).toConstantValue(app);
 
         });
         DIModule.diModules.push(diModule);

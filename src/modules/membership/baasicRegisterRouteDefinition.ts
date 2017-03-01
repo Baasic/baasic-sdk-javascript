@@ -7,6 +7,7 @@
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { injectable, inject } from "inversify";
 
+@injectable()
 export class BaasicRegisterRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
