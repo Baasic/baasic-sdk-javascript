@@ -4,5 +4,8 @@ export * from './baasicMediaVaultBatchRouteDefinition';
 export * from './baasicMediaVaultBatchClient';
 export * from './baasicMediaVaultSettingsRouteDefinition';
 export * from './baasicMediaVaultSettingsClient';
+export * from './baasicMediaVaultProcessingProviderSettingsRouteDefinition';
+export * from './baasicMediaVaultProcessingProviderSettingsClient';
 export * from './baasicMediaVaultRouteDefinition';
+export * from './baasicMediaVaultClient';
 export * from './diModule';

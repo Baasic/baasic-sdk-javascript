@@ -9,6 +9,7 @@ import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'co
 import { IOptions } from 'common/contracts';
 import {
     BaasicMediaVaultBatchRouteDefinition,
+    BaasicMediaVaultProcessingProviderSettingsRouteDefinition,
     BaasicMediaVaultSettingsRouteDefinition,
     BaasicMediaVaultStreamsRouteDefinition,
     TYPES as mediaVaultTypes
@@ -29,11 +30,16 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
         return this.baasicMediaVaultSettingsRouteDefinition;
     }
 
+    get processingProviderSettings(): BaasicMediaVaultProcessingProviderSettingsRouteDefinition {
+        return this.baasicMediaVaultProcessingProviderSettingsRouteDefinition;
+    }
+
     constructor(
         @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
         @inject(mediaVaultTypes.BaasicMediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: BaasicMediaVaultStreamsRouteDefinition,
         @inject(mediaVaultTypes.BaasicMediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: BaasicMediaVaultBatchRouteDefinition,
-        @inject(mediaVaultTypes.BaasicMediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: BaasicMediaVaultSettingsRouteDefinition
+        @inject(mediaVaultTypes.BaasicMediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: BaasicMediaVaultSettingsRouteDefinition,
+        @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: BaasicMediaVaultProcessingProviderSettingsRouteDefinition
     ) { super(modelMapper); }
 
     /**                 
@@ -91,3 +97,11 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
         }
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
+ - All end-point objects are transformed by the associated route service. 
+ */
