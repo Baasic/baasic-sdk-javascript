@@ -29,15 +29,19 @@ export class BaasicApiClient {
     }
 
     delete<TResponse>(url: URL | string, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest(url, "DELETE", undefined, headers);
+        return this.internalRequest(this.compileUrl(url), "DELETE", undefined, headers);
     }
 
     post<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest(url, "GET", data, headers);
+        return this.internalRequest(this.compileUrl(url), "POST", data, headers);
     }
 
     put<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest(url, "PUT", data, headers);
+        return this.internalRequest(this.compileUrl(url), "PUT", data, headers);
+    }
+
+    patch<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
+        return this.internalRequest(this.compileUrl(url), "PATCH", data, headers);
     }
 
     private compileUrl(url: URL | string): URL {

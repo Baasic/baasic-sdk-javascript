@@ -15,6 +15,7 @@ import {
 import { IAppUser, INewUser, INewPassword } from 'modules/membership/contracts';
 import { ModelMapper } from 'common';
 
+@injectable()
 export class BaasicUserClient {
 
     /**                 

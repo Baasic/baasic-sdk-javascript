@@ -9,6 +9,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { injectable, inject } from "inversify";
 import { BaasicLoginRouteDefinition, BaasicLoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
 
+@injectable()
 export class BaasicLoginClient {
 
     get routeDefinition(): BaasicLoginRouteDefinition {

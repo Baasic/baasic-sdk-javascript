@@ -9,6 +9,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicPasswordRecoveryRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRequestPasswordReset, IResetPassword } from 'modules/membership/contracts';
 
+@injectable()
 export class BaasicPasswordRecoveryClient {
 
     /**                 

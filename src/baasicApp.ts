@@ -23,7 +23,7 @@ export class BaasicApp implements IBaasicApp {
 
     //Modules
     public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
-    public readonly membership: modules.Membership.Membership;
+    public readonly membership: modules.Membership.Root;
 
 
     constructor(public apiKey: string, options?: Partial<IBaasicAppOptions>) {
@@ -40,7 +40,7 @@ export class BaasicApp implements IBaasicApp {
 
         //Modules
         this.keyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
-        this.membership = DIModule.kernel.get<modules.Membership.Membership>(modules.Membership.TYPES.Membership);
+        this.membership = DIModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
 
 
     }
