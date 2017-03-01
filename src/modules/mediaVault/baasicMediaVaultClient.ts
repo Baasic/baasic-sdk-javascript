@@ -7,7 +7,13 @@
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicMediaVaultBatchClient, BaasicMediaVaultRouteDefinition, BaasicMediaVaultStreamsClient, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import {
+    BaasicMediaVaultBatchClient,
+    BaasicMediaVaultRouteDefinition,
+    BaasicMediaVaultSettingsClient,
+    BaasicMediaVaultStreamsClient,
+    TYPES as mediaVaultTypes
+} from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 
 export class BaasicMediaVaultClient {
@@ -24,11 +30,16 @@ export class BaasicMediaVaultClient {
         return this.baasicMediaVaultBatchClient;
     }
 
+    get setting(): BaasicMediaVaultSettingsClient {
+        return this.baasicMediaVaultSettingsClient;
+    }
+
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultRouteDefinition) protected baasicMediaVaultRouteDefinition: BaasicMediaVaultRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
         @inject(mediaVaultTypes.BaasicMediaVaultStreamsClient) protected baasicMediaVaultStreamsClient: BaasicMediaVaultStreamsClient,
-        @inject(mediaVaultTypes.BaasicMediaVaultBatchClient) protected baasicMediaVaultBatchClient: BaasicMediaVaultBatchClient
+        @inject(mediaVaultTypes.BaasicMediaVaultBatchClient) protected baasicMediaVaultBatchClient: BaasicMediaVaultBatchClient,
+        @inject(mediaVaultTypes.BaasicMediaVaultSettingsClient) protected baasicMediaVaultSettingsClient: BaasicMediaVaultSettingsClient
     ) { }
 
     /**                  

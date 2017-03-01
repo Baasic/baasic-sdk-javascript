@@ -3,6 +3,8 @@ import {
     BaasicMediaVaultBatchRouteDefinition,
     BaasicMediaVaultBatchClient,
     BaasicMediaVaultRouteDefinition,
+    BaasicMediaVaultSettingsRouteDefinition,
+    BaasicMediaVaultSettingsClient,
     BaasicMediaVaultStreamsRouteDefinition,
     BaasicMediaVaultStreamsClient
 } from 'modules/mediaVault';
@@ -11,6 +13,8 @@ const TYPES = {
     BaasicMediaVaultBatchRouteDefinition: Symbol("BaasicMediaVaultBatchRouteDefinition"),
     BaasicMediaVaultBatchClient: Symbol("BaasicMediaVaultBatchClient"),
     BaasicMediaVaultRouteDefinition: Symbol("BaasicMediaVaultRouteDefinition"),
+    BaasicMediaVaultSettingsRouteDefinition: Symbol("BaasicMediaVaultSettingsRouteDefinition"),
+    BaasicMediaVaultSettingsClient: Symbol("BaasicMediaVaultSettingsClient"),
     BaasicMediaVaultStreamsRouteDefinition: Symbol("BaasicMediaVaultStreamsRouteDefinition"),
     BaasicMediaVaultStreamsClient: Symbol("BaasicMediaVaultStreamsClient")
 };
@@ -22,6 +26,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicMediaVaultStreamsClient>(TYPES.BaasicMediaVaultStreamsClient).toSelf();
     bind<BaasicMediaVaultBatchRouteDefinition>(TYPES.BaasicMediaVaultBatchRouteDefinition).toSelf();
     bind<BaasicMediaVaultBatchClient>(TYPES.BaasicMediaVaultBatchClient).toSelf();
+    bind<BaasicMediaVaultSettingsRouteDefinition>(TYPES.BaasicMediaVaultSettingsRouteDefinition).toSelf();
+    bind<BaasicMediaVaultSettingsClient>(TYPES.BaasicMediaVaultSettingsClient).toSelf();
     bind<BaasicMediaVaultRouteDefinition>(TYPES.BaasicMediaVaultRouteDefinition).toSelf();
 });
 

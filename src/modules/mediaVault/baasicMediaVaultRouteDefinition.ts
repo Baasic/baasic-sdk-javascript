@@ -7,7 +7,12 @@
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicMediaVaultBatchRouteDefinition, BaasicMediaVaultStreamsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import {
+    BaasicMediaVaultBatchRouteDefinition,
+    BaasicMediaVaultSettingsRouteDefinition,
+    BaasicMediaVaultStreamsRouteDefinition,
+    TYPES as mediaVaultTypes
+} from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 
 export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
@@ -17,13 +22,18 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     get batch(): BaasicMediaVaultBatchRouteDefinition {
-        return this.BaasicMediaVaultBatchRouteDefinition;
+        return this.baasicMediaVaultBatchRouteDefinition;
+    }
+
+    get settings(): BaasicMediaVaultSettingsRouteDefinition {
+        return this.baasicMediaVaultSettingsRouteDefinition;
     }
 
     constructor(
         @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
         @inject(mediaVaultTypes.BaasicMediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: BaasicMediaVaultStreamsRouteDefinition,
-        @inject(mediaVaultTypes.BaasicMediaVaultBatchRouteDefinition) protected BaasicMediaVaultBatchRouteDefinition: BaasicMediaVaultBatchRouteDefinition
+        @inject(mediaVaultTypes.BaasicMediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: BaasicMediaVaultBatchRouteDefinition,
+        @inject(mediaVaultTypes.BaasicMediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: BaasicMediaVaultSettingsRouteDefinition
     ) { super(modelMapper); }
 
     /**                 
