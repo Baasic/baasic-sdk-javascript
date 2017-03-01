@@ -9,6 +9,7 @@ import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTYPES } from 'httpApi';
 import { injectable, inject } from "inversify";
 import { BaasicLoginRouteDefinition, BaasicLoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
+import { IUserInfo } from 'modules/membership/contracts';
 
 @injectable()
 export class BaasicLoginClient {
@@ -81,9 +82,9 @@ export class BaasicLoginClient {
                     })
                     .finally (function () {});							
      */
-    loadUserData(data: any): any {
+    loadUserData(data: any): IUserInfo {
         data = data || {};
-        return this.baasicApiClient.get(this.baasicLoginRouteDefinition.login(data), { 'Accept': 'application/json; charset=UTF-8' });
+        return this.baasicApiClient.get<IUserInfo>(this.baasicLoginRouteDefinition.login(data), { 'Accept': 'application/json; charset=UTF-8' });
     }
 
     /** 				
@@ -106,9 +107,10 @@ export class BaasicLoginClient {
             token: token,
             type: type
         };
+        var self = this;
         return this.baasicApiClient.delete(this.baasicLoginRouteDefinition.login({}), data)
             .then(function () {
-                this.authService.updateAccessToken(null);
+                self.tokenHandler.store(null);
             });
     }
 
@@ -120,7 +122,6 @@ export class BaasicLoginClient {
         for (let key in data) {
             items.push([encodeURIComponent(key), encodeURIComponent(data[key])].join('='))
         }
-
         return items.join('&');
     }
 }
