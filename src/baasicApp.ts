@@ -14,7 +14,8 @@ export class BaasicApp implements IBaasicApp {
     private static readonly defaultSettings: IBaasicAppOptions = {
         useSSL: true,
         apiRootUrl: 'api.baasic.com',
-        apiVersion: 'v1'
+        apiVersion: 'v1',
+        enableHALJSON: false
     };
 
     public readonly settings: Partial<IBaasicAppOptions>;

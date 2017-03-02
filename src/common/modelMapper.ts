@@ -3,9 +3,9 @@
  * @description This service is used to perform low level model or option transformations before they are sent to the Baasic back-end.
  **/
 
-import { IOptions } from './contracts';
-import { Utility,TYPES } from 'common';
-import { injectable,inject } from "inversify";
+import { IOptions } from 'common/contracts';
+import { Utility, TYPES } from 'common';
+import { injectable, inject } from "inversify";
 
 @injectable()
 export class ModelMapper {
@@ -15,16 +15,15 @@ export class ModelMapper {
 
     protected utility: Utility;
 
-    constructor()     
-    {
+    constructor() {
         this.utility = new Utility();
-    }   
+    }
 
     private FindParams(options: IOptions): any {
         let object: any = {};
         if (this.utility.isObject(options)) {
             this.utility.extend(object, options);
-            if(options.hasOwnProperty('orderBy') && options.hasOwnProperty('orderDirection')) {
+            if (options.hasOwnProperty('orderBy') && options.hasOwnProperty('orderDirection')) {
                 object.sort = options.orderBy ? options.orderBy + '|' + options.orderDirection : null;
             }
             if (options.hasOwnProperty('search')) {
@@ -62,7 +61,7 @@ export class ModelMapper {
     }
 
     private ModelParams(data: any): any {
-        let object:any = {};
+        let object: any = {};
         if (data.hasOwnProperty(this.modelPropertyName)) {
             this.utility.extend(object, data);
         } else {
@@ -77,11 +76,11 @@ export class ModelMapper {
      * @param options query resources options object                 
      * @method                        
      * @example modelMapper.findParams({ pageNumber:1, pageSize:10 });
-     **/     
+     **/
     findParams(options: any): any {
         return this.FindParams(options);
     }
-    
+
     /**
      * Parses specified key parameters; initial object can be expanded with additional parameters.
      * @param id Resources unique identifier
@@ -89,7 +88,7 @@ export class ModelMapper {
      * @param propName property name
      * @method
      * @example modelMapper.getParams(('<value>', {additionalOptions: '<option>'},'<property-name>'));
-     **/ 	
+     **/
     getParams(id: any, options?: any, propName?: any) {
         return this.KeyParams(id, options, propName);
     }
@@ -99,7 +98,7 @@ export class ModelMapper {
      * @param data data object
      * @method
      * @example modelMapper.createParams({});
-     **/ 	
+     **/
     createParams(data: any) {
         return this.ModelParams(data);
     }
@@ -109,7 +108,7 @@ export class ModelMapper {
      * @param data data object
      * @method
      * @example modelMapper.updateParams({});
-     **/ 	
+     **/
     updateParams(data: any) {
         return this.ModelParams(data);
     }
@@ -119,7 +118,7 @@ export class ModelMapper {
      * @param data data object
      * @method 
      * @example modelMapper.removeParams({});
-     **/ 	
+     **/
     removeParams(data: any) {
         return this.ModelParams(data);
     }
