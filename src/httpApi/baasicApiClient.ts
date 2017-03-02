@@ -7,6 +7,13 @@ import { IHALParser, HALParser, TYPES as commonTYPES } from 'common';
 
 @injectable()
 export class BaasicApiClient {
+    private wwwAuthenticateTokenizer = (function () {
+		let ws = '(?:(?:\\r\\n)?[ \\t])+',
+		token = '(?:[\\x21\\x23-\\x27\\x2A\\x2B\\x2D\\x2E\\x30-\\x39\\x3F\\x41-\\x5A\\x5E-\\x7A\\x7C\\x7E]+)',
+		quotedString = '"(?:[\\x00-\\x0B\\x0D-\\x21\\x23-\\x5B\\\\x5D-\\x7F]|'+ws+'|\\\\[\\x00-\\x7F])*"';
+		
+		return new RegExp(token+'(?:=(?:'+quotedString+'|'+token+'))?', 'g');
+	})();
 
     constructor(
         @inject(coreTYPES.IAppOptions) private appOptions: IAppOptions,
@@ -40,6 +47,33 @@ export class BaasicApiClient {
                 data.body = self.halParser.parse(data.body);
             }
             return data;
+        },
+        (response: IHttpResponse<TResponse>) => {
+            var wwwAuthenticate = this.parseWWWAuthenticateHeader(response.headers['WWW-Authenticate']);
+			if (wwwAuthenticate) {
+				if (wwwAuthenticate.scheme.toLowerCase() === 'bearer') {
+					var details = wwwAuthenticate.details;
+					if (details) {
+						if (details.error) {
+							switch (details.error) {
+								case 'invalid_token':
+									this.tokenHandler.store(null);
+									break;
+								case 'invalid_request':
+									/*jshint camelcase: false */
+									switch (details.error_description) {
+									/*jshint camelcase: true */
+										case 'Missing or invalid session':
+										this.tokenHandler.store(null);
+										break;
+									}
+									break;
+							}
+						}
+					}
+				}
+			}
+            return response;
         });
     }
 
@@ -85,4 +119,31 @@ export class BaasicApiClient {
 
         return this.request<TResponse>(request);
     }
+
+    private unquote(quotedString: string) : string {
+		return quotedString.substr(1, quotedString.length-2).replace(/(?:(?:\r\n)?[ \t])+/g, ' ');
+	}
+
+    private parseWWWAuthenticateHeader(value) {
+		if (value) {
+			var tokens = value.match(this.wwwAuthenticateTokenizer);
+			if (tokens && tokens.length > 0) {
+				var wwwAutheniticate : any = {
+					scheme: tokens[0]
+				};
+				
+				if (tokens.length > 1) {
+					var details = {};
+					for (var i=1,l=tokens.length;i<l;i++) {
+						var values = tokens[i].split('=');
+						details[values[0]] = this.unquote(values[1]);
+					}
+					
+					wwwAutheniticate.details = details;
+				}
+				
+				return wwwAutheniticate;
+			}
+		}
+	}
 };
