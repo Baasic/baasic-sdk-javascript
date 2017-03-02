@@ -8,6 +8,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { injectable, inject } from "inversify";
 import { BaasicUserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 
+@injectable()
 export class BaasicUserProfileAvatarStreamsClient {
 
     get routeDefinition(): BaasicUserProfileAvatarStreamsRouteDefinition {

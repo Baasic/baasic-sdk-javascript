@@ -10,6 +10,7 @@ import { injectable, inject } from "inversify";
 import { BaasicCompanyBatchClient, BaasicCompanyRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
+@injectable()
 export class BaasicCompanyClient {
 
     get routeDefinition(): BaasicCompanyRouteDefinition {

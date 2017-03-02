@@ -9,6 +9,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { injectable, inject } from "inversify";
 import { BaasicUserProfileACLRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 
+@injectable()
 export class BaasicUserProfileACLClient {
 
     get routeDefinition(): BaasicUserProfileACLRouteDefinition {

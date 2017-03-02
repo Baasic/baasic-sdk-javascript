@@ -4,12 +4,13 @@
  * @description Baasic User Profile Client provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileClient` uses `baasicUserProfileRouteDefinition`. 
  */
 
+import { injectable, inject } from "inversify";
 import { IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { injectable, inject } from "inversify";
 import { BaasicUserProfileACLClient, BaasicUserProfileRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserProfile } from 'modules/userProfile/contracts';
 
+@injectable()
 export class BaasicUserProfileClient {
 
     get acl(): BaasicUserProfileACLClient {

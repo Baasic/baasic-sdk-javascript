@@ -10,6 +10,7 @@ import { injectable, inject } from "inversify";
 import { BaasicUserWorkRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserWork } from 'modules/userProfile/contracts';
 
+@injectable()
 export class BaasicUserWorkClient {
 
     routeDefinition(): BaasicUserWorkRouteDefinition {

@@ -10,6 +10,7 @@ import { injectable, inject } from "inversify";
 import { BaasicSkillBatchClient, BaasicSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
+@injectable()
 export class BaasicSkillClient {
 
     get routeDefinition(): BaasicSkillRouteDefinition {

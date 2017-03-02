@@ -9,6 +9,7 @@ import { injectable, inject } from "inversify";
 import { BaasicUserEducationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserEducation } from 'modules/userProfile/contracts';
 
+@injectable()
 export class BaasicUserEducationClient {
 
     get routeDefinition(): BaasicUserEducationRouteDefinition {

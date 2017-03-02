@@ -27,6 +27,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly applicationSettings: modules.ApplicationSettings.BaasicApplicationSettingsClient;
     public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
     public readonly valueSet: modules.ValueSet.BaasicValueSetClient;
+    public readonly userProfile: modules.UserProfile.BaasicUserProfileClient;
 
 
 
@@ -47,6 +48,7 @@ export class BaasicApp implements IBaasicApp {
         this.applicationSettings = DIModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
         this.keyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
         this.valueSet = DIModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
+        this.userProfile = DIModule.kernel.get<modules.UserProfile.BaasicUserProfileClient>(modules.UserProfile.TYPES.BaasicUserProfileClient);
 
     }
 

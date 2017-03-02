@@ -9,5 +9,5 @@ import * as ValueSet from './valueSet';
 export { ValueSet };
 import * as Membership from './membership';
 export { Membership };
-
-//export * from './userProfile';
+import * as UserProfile from './userProfile';
+export { UserProfile };

@@ -10,6 +10,7 @@ import { injectable, inject } from "inversify";
 import { BaasicUserProfileAvatarRouteDefinition, BaasicUserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
 
+@injectable()
 export class BaasicUserProfileAvatarClient {
 
     get routeDefinition(): BaasicUserProfileAvatarRouteDefinition {

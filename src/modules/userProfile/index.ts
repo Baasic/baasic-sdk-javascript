@@ -1,3 +1,4 @@
+export * from './diModule';
 export * from './baasicCompanyBatchRouteDefinition';
 export * from './baasicCompanyBatchClient';
 export * from './baasicCompanyRouteDefinition';
@@ -24,4 +25,4 @@ export * from './baasicUserSkillRouteDefinition';
 export * from './baasicUserSkillClient';
 export * from './baasicUserWorkRouteDefinition';
 export * from './baasicUserWorkClient';
-export * from './diModule';
+
