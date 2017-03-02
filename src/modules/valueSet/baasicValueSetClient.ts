@@ -9,27 +9,28 @@ import { injectable, inject } from 'inversify';
 import { BaasicValueSetItemClient, BaasicValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 
+@injectable()
 export class BaasicValueSetClient {
 
-    
+
     get items(): BaasicValueSetItemClient {
         return this.baasicValueSetItemClient;
     }
 
-     /**
-      * Provides direct access to `baasicValueSetRouteDefinition`.
-      * @method
-      * @example baasicValueSetClient.routeDefinition.get().expand(expandObject);
-     **/ 
+    /**
+     * Provides direct access to `baasicValueSetRouteDefinition`.
+     * @method
+     * @example baasicValueSetClient.routeDefinition.get().expand(expandObject);
+    **/
     get routeDefinition(): BaasicValueSetRouteDefinition {
         return this.baasicValueSetRouteDefinition;
     }
 
     constructor(
-       @inject(valueSetTypes.BaasicValueSetRouteDefinition) protected baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
-       @inject(valueSetTypes.BaasicValueSetItemClient) protected baasicValueSetItemClient: BaasicValueSetItemClient,
-       @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
-    ) {}
+        @inject(valueSetTypes.BaasicValueSetRouteDefinition) protected baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
+        @inject(valueSetTypes.BaasicValueSetItemClient) protected baasicValueSetItemClient: BaasicValueSetItemClient,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
@@ -49,25 +50,25 @@ export class BaasicValueSetClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });
-     **/ 					
+     **/
     find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSet>>> {
         return this.baasicApiClient.get(this.baasicValueSetRouteDefinition.find(options));
     }
 
-     /**
-      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set resource.
-      * @param setName value set name
-      * @param options query resource options object
-      * @returns A promise that is resolved once the get action has been performed.
-      * @method
-      * @example baasicValueSetClient.get('<value-set-name>')
-                    .success(function (data) {   
-                        // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
-                        // perform error handling here 
-                    });
-     **/	
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set resource.
+     * @param setName value set name
+     * @param options query resource options object
+     * @returns A promise that is resolved once the get action has been performed.
+     * @method
+     * @example baasicValueSetClient.get('<value-set-name>')
+                   .success(function (data) {   
+                       // perform success action here 
+                   })
+                   .error(function (response, status, headers, config) {   
+                       // perform error handling here 
+                   });
+    **/
     get(setName: string, options?: IOptions): PromiseLike<IHttpResponse<IValueSet>> {
         return this.baasicApiClient.get(this.baasicValueSetRouteDefinition.get(setName, options));
     }
@@ -92,7 +93,7 @@ export class BaasicValueSetClient {
     create(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
         return this.baasicApiClient.post(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
     }
-    
+
     /**
      * Returns a promise that is resolved once the update value set action has been performed; this action updates a value set resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicValueSetService` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
@@ -112,7 +113,7 @@ export class BaasicValueSetClient {
              function (response, status, headers, config) {   
                 // perform error handling here 
             });
-     **/	
+     **/
     update(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
         return this.baasicApiClient.put(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
     }
@@ -133,7 +134,7 @@ export class BaasicValueSetClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         });						
-     **/					
+     **/
     remove(data: IValueSet): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.delete(this.baasicValueSetRouteDefinition.delete(data));
     }

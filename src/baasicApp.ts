@@ -22,9 +22,12 @@ export class BaasicApp implements IBaasicApp {
     public readonly tokenHandler: ITokenHandler;
     public readonly userHandler: IUserHandler;
 
-    //Modules
-    public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
     public readonly membership: modules.Membership.Root;
+    //Modules
+    public readonly applicationSettings: modules.ApplicationSettings.BaasicApplicationSettingsClient;
+    public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
+    public readonly valueSet: modules.ValueSet.BaasicValueSetClient;
+
 
 
     constructor(public apiKey: string, options?: Partial<IBaasicAppOptions>) {
@@ -39,10 +42,11 @@ export class BaasicApp implements IBaasicApp {
         this.tokenHandler = DIModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
         this.userHandler = DIModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
 
-        //Modules
-        this.keyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
         this.membership = DIModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
-
+        //Modules
+        this.applicationSettings = DIModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
+        this.keyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
+        this.valueSet = DIModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
 
     }
 

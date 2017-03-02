@@ -2,19 +2,19 @@
  * @module baasicValueSetItemClient
  * @description Baasic Value Set Item Client provides an easy way to consume Baasic Value Set Item REST end-points. In order to obtain needed routes `baasicValueSetItemClient` uses `baasicValueSetItemRouteDefinition`. 
  */
-
+import { injectable, inject } from 'inversify';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { injectable, inject } from 'inversify';
 import { BaasicValueSetItemRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSetItem } from 'modules/valueSet/contracts';
 
+@injectable()
 export class BaasicValueSetItemClient {
 
     constructor(
         @inject(valueSetTypes.BaasicValueSetItemRouteDefinition) protected baasicValueSetItemRouteDefinition: BaasicValueSetItemRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
-        ) {}
+    ) { }
 
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
@@ -34,7 +34,7 @@ export class BaasicValueSetItemClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });
-     **/ 				
+     **/
     find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSetItem>>> {
         return this.baasicApiClient.get(this.baasicValueSetItemRouteDefinition.find(options));
     }
@@ -53,9 +53,9 @@ export class BaasicValueSetItemClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });
-     **/	
+     **/
     get(setName: string, id: string, options?: IOptions): PromiseLike<IHttpResponse<IValueSetItem>> {
-         return this.baasicApiClient.get(this.baasicValueSetItemRouteDefinition.get(setName, id, options));
+        return this.baasicApiClient.get(this.baasicValueSetItemRouteDefinition.get(setName, id, options));
     }
 
     /**
@@ -73,7 +73,7 @@ export class BaasicValueSetItemClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });
-     **/ 						
+     **/
     create(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
         return this.baasicApiClient.post(this.baasicValueSetItemRouteDefinition.create(data), this.baasicValueSetItemRouteDefinition.createParams(data));
     }
@@ -96,7 +96,7 @@ export class BaasicValueSetItemClient {
                      function (response, status, headers, config) {  
                          // perform error handling here 
                     });
-     **/	
+     **/
     update(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
         return this.baasicApiClient.put(this.baasicValueSetItemRouteDefinition.update(data), this.baasicValueSetItemRouteDefinition.updateParams(data));
     }
@@ -118,7 +118,7 @@ export class BaasicValueSetItemClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });
-     **/	
+     **/
     remove(data: IValueSetItem): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.delete(this.baasicValueSetItemRouteDefinition.delete(data));
     }

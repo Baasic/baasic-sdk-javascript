@@ -1,21 +1,22 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicApplicationSettingsClient  
  * @description Baasic Application Settings Client provides an easy way to consume Baasic Application Settings REST API end-points. In order to obtain needed routes `baasicApplicationSettingsClient` uses `baasicApplicationSettingsRouteDefinition`. 
  */
 
-import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
+import { IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicApplicationSettingsRouteDefinition, TYPES as applicationTypes } from 'modules/applicationSettings';
 import { IApplication } from 'modules/applicationSettings/contracts';
 
+@injectable()
 export class BaasicApplicationSettingsClient {
 
     constructor(
         @inject(applicationTypes.BaasicApplicationSettingsRouteDefinition) protected baasicApplicationSettingsRouteDefinition: BaasicApplicationSettingsRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
-        ) {}
+    ) { }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the application settings resource.                 
@@ -28,7 +29,7 @@ export class BaasicApplicationSettingsClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });                 
-     **/ 
+     **/
     get(options: IOptions): PromiseLike<IHttpResponse<IApplication>> {
         return this.baasicApiClient.get(this.baasicApplicationSettingsRouteDefinition.get(options));
     }
@@ -50,7 +51,7 @@ export class BaasicApplicationSettingsClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				
-     **/	
+     **/
     update(data: IApplication): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.put(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
     }

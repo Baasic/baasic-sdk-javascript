@@ -3,7 +3,8 @@ import {
     BaasicValueSetClient,
     BaasicValueSetItemClient,
     BaasicValueSetItemRouteDefinition,
-    BaasicValueSetRouteDefinition } from 'modules/valueSet';
+    BaasicValueSetRouteDefinition
+} from 'modules/valueSet';
 
 const TYPES = {
     BaasicValueSetClient: Symbol("BaasicValueSetClient"),
@@ -15,10 +16,10 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicValueSetItemRouteDefinition>(TYPES.BaasicValueSetItemRouteDefinition).toSelf();
-    bind<BaasicValueSetItemClient>(TYPES.BaasicValueSetItemClient).toSelf();
-    bind<BaasicValueSetRouteDefinition>(TYPES.BaasicValueSetRouteDefinition).toSelf();
-    bind<BaasicValueSetClient>(TYPES.BaasicValueSetClient).toSelf();
+    bind<BaasicValueSetItemRouteDefinition>(TYPES.BaasicValueSetItemRouteDefinition).to(BaasicValueSetItemRouteDefinition);
+    bind<BaasicValueSetItemClient>(TYPES.BaasicValueSetItemClient).to(BaasicValueSetItemClient);
+    bind<BaasicValueSetRouteDefinition>(TYPES.BaasicValueSetRouteDefinition).to(BaasicValueSetRouteDefinition);
+    bind<BaasicValueSetClient>(TYPES.BaasicValueSetClient).to(BaasicValueSetClient);
 });
 
 export { diModule };
