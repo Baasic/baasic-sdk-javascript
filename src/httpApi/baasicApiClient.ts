@@ -1,15 +1,18 @@
-import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, TYPES as httpTYPES } from 'httpApi';
-import { ITokenHandler, IAppOptions } from 'core/contracts';
-import { TYPES as coreTYPES } from 'core';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
+import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, TYPES as httpTYPES } from 'httpApi';
+import { ITokenHandler, IAppOptions, TYPES as coreTYPES } from 'core/contracts';
+import { IHALParser, HALParser, TYPES as commonTYPES } from 'common';
+
 
 @injectable()
 export class BaasicApiClient {
+
     constructor(
         @inject(coreTYPES.IAppOptions) private appOptions: IAppOptions,
         @inject(httpTYPES.IHttpClient) private httpClient: IHttpClient,
-        @inject(coreTYPES.ITokenHandler) private tokenHandler: ITokenHandler
+        @inject(coreTYPES.ITokenHandler) private tokenHandler: ITokenHandler,
+        @inject(commonTYPES.IHALParser) private halParser: IHALParser
     ) {
 
     }
@@ -22,23 +25,42 @@ export class BaasicApiClient {
             headers["AUTHORIZATION"] = `BEARER ${authToken.token}`;
         }
 
-        return this.httpClient<TResponse>(request);
+        if (this.appOptions.enableHALJSON) {
+            var headers = request.headers || (request.headers = {});
+            //Do not override if exists
+            if (!headers.hasOwnProperty("Accept")) {
+                headers["Accept"] = 'application/hal+json; charset=UTF-8';
+            }
+        }
+
+        var self = this;
+        return this.httpClient<TResponse>(request).then<IHttpResponse<TResponse>>(function (data) {
+            var contentType = data.headers['Content-Type'];
+            if (contentType && contentType.toLowerCase().indexOf('application/hal+json') !== -1) {
+                data.body = self.halParser.parse(data.body);
+            }
+            return data;
+        });
     }
 
     get<TResponse>(url: URL | string, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest(this.compileUrl(url), "GET", undefined, headers);
+        return this.internalRequest<TResponse>(this.compileUrl(url), "GET", undefined, headers);
     }
 
     delete<TResponse>(url: URL | string, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest(url, "DELETE", undefined, headers);
+        return this.internalRequest<TResponse>(this.compileUrl(url), "DELETE", undefined, headers);
     }
 
     post<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest(url, "GET", data, headers);
+        return this.internalRequest<TResponse>(this.compileUrl(url), "POST", data, headers);
     }
 
     put<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest(url, "PUT", data, headers);
+        return this.internalRequest<TResponse>(this.compileUrl(url), "PUT", data, headers);
+    }
+
+    patch<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
+        return this.internalRequest<TResponse>(this.compileUrl(url), "PATCH", data, headers);
     }
 
     private compileUrl(url: URL | string): URL {
@@ -61,6 +83,6 @@ export class BaasicApiClient {
             request.headers = headers;
         }
 
-        return this.request(request);
+        return this.request<TResponse>(request);
     }
 };

@@ -7,3 +7,6 @@ export * from './IUserHandler';
 
 export * from './IBaasicAppOptions';
 export * from './IAppOptions';
+export * from './IBaasicApp';
+
+export * from './diModule';

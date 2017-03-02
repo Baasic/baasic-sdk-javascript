@@ -10,6 +10,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IUserSocialLogin } from 'modules/membership/contracts';
 
+@injectable()
 export class BaasicUserSocialLoginClient {
 
     constructor(

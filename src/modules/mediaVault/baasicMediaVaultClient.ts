@@ -7,7 +7,14 @@
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicMediaVaultBatchClient, BaasicMediaVaultRouteDefinition, BaasicMediaVaultStreamsClient, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import {
+    BaasicMediaVaultBatchClient,
+    BaasicMediaVaultProcessingProviderSettingsClient,
+    BaasicMediaVaultRouteDefinition,
+    BaasicMediaVaultSettingsClient,
+    BaasicMediaVaultStreamsClient,
+    TYPES as mediaVaultTypes
+} from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 
 export class BaasicMediaVaultClient {
@@ -24,11 +31,21 @@ export class BaasicMediaVaultClient {
         return this.baasicMediaVaultBatchClient;
     }
 
+    get setting(): BaasicMediaVaultSettingsClient {
+        return this.baasicMediaVaultSettingsClient;
+    }
+
+    get processingProviderSettings(): BaasicMediaVaultProcessingProviderSettingsClient {
+        return this.baasicMediaVaultProcessingProviderSettingsClient;
+    }
+
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultRouteDefinition) protected baasicMediaVaultRouteDefinition: BaasicMediaVaultRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
         @inject(mediaVaultTypes.BaasicMediaVaultStreamsClient) protected baasicMediaVaultStreamsClient: BaasicMediaVaultStreamsClient,
-        @inject(mediaVaultTypes.BaasicMediaVaultBatchClient) protected baasicMediaVaultBatchClient: BaasicMediaVaultBatchClient
+        @inject(mediaVaultTypes.BaasicMediaVaultBatchClient) protected baasicMediaVaultBatchClient: BaasicMediaVaultBatchClient,
+        @inject(mediaVaultTypes.BaasicMediaVaultSettingsClient) protected baasicMediaVaultSettingsClient: BaasicMediaVaultSettingsClient,
+        @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsClient) protected baasicMediaVaultProcessingProviderSettingsClient: BaasicMediaVaultProcessingProviderSettingsClient
     ) { }
 
     /**                  
@@ -125,3 +142,10 @@ export class BaasicMediaVaultClient {
         return this.baasicApiClient.delete<void>(this.baasicMediaVaultRouteDefinition.delete(data, options));
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - All end-point objects are transformed by the associated route service. 
+ */

@@ -9,6 +9,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicRegisterRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser, IRegisterUser } from 'modules/membership/contracts';
 
+@injectable()
 export class BaasicRegisterClient {
 
     /**                 

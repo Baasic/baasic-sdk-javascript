@@ -10,6 +10,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicRoleRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRole } from 'modules/membership/contracts';
 
+@injectable()
 export class BaasicRoleClient {
 
     /**                 

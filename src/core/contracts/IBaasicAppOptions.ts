@@ -6,6 +6,7 @@ export interface IBaasicAppOptions {
     apiRootUrl: string,
     apiVersion: string,
     apiUrl?: URL,
+    enableHALJSON?: boolean,
     storageHandler?: IStorageHandler,
     httpClient?: IHttpClient,
     eventHandler?: IEventHandler

@@ -1,11 +1,10 @@
-import {IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient} from 'httpApi';
+import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient } from 'httpApi';
 
 declare var $: any;
 
 var client: IHttpClient;
 
-client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<ResponseType>> => 
-{
+client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<ResponseType>> => {
     var jqueryParams: any = {
         method: request.method,
         xhrFields: {
@@ -26,7 +25,7 @@ client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<Respon
             return <IHttpResponse<ResponseType>>{
                 statusText: textStatus,
                 statusCode: jqXHR.status,
-                headers: jqXHR.getAllResponseHeaders(),
+                headers: parseHeaders(jqXHR.getAllResponseHeaders()),
                 body: data
             };
         },
@@ -34,12 +33,30 @@ client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<Respon
             return <IHttpResponse<ResponseType>>{
                 statusText: textStatus,
                 statusCode: jqXHR.status,
-                headers: jqXHR.getAllResponseHeaders(),
+                headers: parseHeaders(jqXHR.getAllResponseHeaders()),
                 body: jqXHR.responseText || jqXHR.responseXML
             };
         });
 };
 
+function parseHeaders(headers: string): IHttpHeaders {
+    let result: IHttpHeaders = {};
+    if (headers) {
+        var arrayOfLines = headers.match(/[^\r\n]+/g);
+        for (var i = 0; i < arrayOfLines.length; i++) {
+            var line = arrayOfLines[i];
+            var keyValue = line.split(':');
+            if (keyValue.length === 2) {
+                result[keyValue[0]] = keyValue[1].trim();
+            } else if (keyValue.length === 1) {
+                result[keyValue[0]] = null;
+            }
+        }
+    }
+    return result;
+}
+
 
 export { client };
+
 

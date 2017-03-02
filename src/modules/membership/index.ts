@@ -1,3 +1,5 @@
+export * from './diModule';
+
 export * from './baasicLoginSocialRouteDefinition';
 export * from './baasicLoginSocialClient';
 export * from './baasicLoginRouteDefinition';
@@ -12,4 +14,5 @@ export * from './baasicUserSocialLoginRouteDefinition';
 export * from './baasicUserRouteDefinition';
 export * from './baasicUserSocialLoginClient';
 export * from './baasicUserClient';
-export * from './diModule';
+export * from './root';
+

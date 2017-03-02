@@ -7,7 +7,13 @@
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicMediaVaultBatchRouteDefinition, BaasicMediaVaultStreamsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import {
+    BaasicMediaVaultBatchRouteDefinition,
+    BaasicMediaVaultProcessingProviderSettingsRouteDefinition,
+    BaasicMediaVaultSettingsRouteDefinition,
+    BaasicMediaVaultStreamsRouteDefinition,
+    TYPES as mediaVaultTypes
+} from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 
 export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
@@ -17,13 +23,23 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     get batch(): BaasicMediaVaultBatchRouteDefinition {
-        return this.BaasicMediaVaultBatchRouteDefinition;
+        return this.baasicMediaVaultBatchRouteDefinition;
+    }
+
+    get settings(): BaasicMediaVaultSettingsRouteDefinition {
+        return this.baasicMediaVaultSettingsRouteDefinition;
+    }
+
+    get processingProviderSettings(): BaasicMediaVaultProcessingProviderSettingsRouteDefinition {
+        return this.baasicMediaVaultProcessingProviderSettingsRouteDefinition;
     }
 
     constructor(
         @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
         @inject(mediaVaultTypes.BaasicMediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: BaasicMediaVaultStreamsRouteDefinition,
-        @inject(mediaVaultTypes.BaasicMediaVaultBatchRouteDefinition) protected BaasicMediaVaultBatchRouteDefinition: BaasicMediaVaultBatchRouteDefinition
+        @inject(mediaVaultTypes.BaasicMediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: BaasicMediaVaultBatchRouteDefinition,
+        @inject(mediaVaultTypes.BaasicMediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: BaasicMediaVaultSettingsRouteDefinition,
+        @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: BaasicMediaVaultProcessingProviderSettingsRouteDefinition
     ) { super(modelMapper); }
 
     /**                 
@@ -81,3 +97,11 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
         }
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
+ - All end-point objects are transformed by the associated route service. 
+ */

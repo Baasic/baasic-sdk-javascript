@@ -5,22 +5,22 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { IHttpHeaders,IHttpRequest,IHttpResponse,IHttpClient,BaasicApiClient,TYPES as httpTYPES } from 'httpApi';
+import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, BaasicApiClient, TYPES as httpTYPES } from 'httpApi';
 import { BaasicKeyValueRouteDefinition, TYPES } from 'modules/keyValue';
 import { IKeyValue } from 'modules/keyValue/contracts';
 
 @injectable()
 export class BaasicKeyValueClient {
-    
+
     /**
      * Provides direct access to `baasicKeyValueRouteDefinition`.
      * @method
      * @example baasicKeyValueClient.routeDefinition.get();
-     **/ 
+     **/
     get routeDefinition(): BaasicKeyValueRouteDefinition {
         return this.baasicKeyValueRouteDefinition;
     }
-    
+
     constructor(
         @inject(TYPES.BaasicKeyValueRouteDefinition) protected baasicKeyValueRouteDefinition: BaasicKeyValueRouteDefinition,
         @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
@@ -45,7 +45,7 @@ export class BaasicKeyValueClient {
                  function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
-     **/ 	
+     **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IKeyValue>>> {
         return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.find(options));
     }
@@ -63,9 +63,9 @@ export class BaasicKeyValueClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });                  
-     **/	
+     **/
     get(id: string, options: IOptions): PromiseLike<IHttpResponse<IKeyValue>> {
-        return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IKeyValue>(this.baasicKeyValueRouteDefinition.get(id, options));
     }
 
     /**
@@ -80,9 +80,9 @@ export class BaasicKeyValueClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });
-     */ 		
+     */
     create(data: IKeyValue): PromiseLike<IHttpResponse<IKeyValue>> {
-        return this.baasicApiClient.post(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IKeyValue>(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
     }
 
     /**
@@ -103,7 +103,7 @@ export class BaasicKeyValueClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     }); 				
-     **/					
+     **/
     update(data: IKeyValue): PromiseLike<IHttpResponse<IKeyValue>> {
         return this.baasicApiClient.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(data));
     }
@@ -125,9 +125,9 @@ export class BaasicKeyValueClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });
-     **/	
+     **/
     remove(data: IKeyValue): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
+        return this.baasicApiClient.delete<any>(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
     }
 }
 

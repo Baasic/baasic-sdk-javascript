@@ -10,6 +10,7 @@ import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { IRole } from 'modules/membership/contracts';
 
+@injectable()
 export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }

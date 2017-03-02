@@ -1,19 +1,10 @@
-import { IBaasicApp } from './';
 import { IHttpClient, TYPES as httpTYPES } from 'httpApi';
-import { IStorageHandler, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions } from 'core/contracts';
-import { TYPES as coreTYPES } from 'core';
+import { IStorageHandler, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { client as jQueryHttpClient } from 'httpApi/jQuery';
 import { LocalStorageHandler } from 'core/localStorage';
 import { BrowserEventHandler } from 'core/browserEvents';
 import { Container, interfaces, ContainerModule } from "inversify";
 import 'reflect-metadata';
-
-const TYPES = {
-    IBaasicApp: Symbol("IBaasicApp")
-};
-
-export { TYPES };
-
 
 export class DIModule {
     static diModules: interfaces.ContainerModule[] = [];
@@ -24,7 +15,8 @@ export class DIModule {
             if (app.settings) {
                 let appOptions: IAppOptions = {
                     apiKey: app.apiKey,
-                    apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${app.apiKey}/`)
+                    apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${app.apiKey}/`),
+                    enableHALJSON: app.settings.enableHALJSON
                 }
                 DIModule.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);
 
@@ -49,7 +41,7 @@ export class DIModule {
                 DIModule.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).to(BrowserEventHandler);
             }
 
-            DIModule.kernel.bind<IBaasicApp>(TYPES.IBaasicApp).toConstantValue(app);
+            DIModule.kernel.bind<IBaasicApp>(coreTYPES.IBaasicApp).toConstantValue(app);
 
         });
         DIModule.diModules.push(diModule);

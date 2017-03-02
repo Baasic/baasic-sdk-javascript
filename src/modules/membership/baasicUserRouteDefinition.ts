@@ -12,6 +12,7 @@ import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from '
 import { IAppUser } from 'modules/membership/contracts';
 import * as uritemplate from 'uritemplate';
 
+@injectable()
 export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
 
     get socialLogin(): BaasicUserSocialLoginRouteDefinition {

@@ -1,7 +1,7 @@
 import { Utility, diModule as commonDIModule } from 'common';
-import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions } from 'core/contracts';
-import { TYPES as coreTYPES, diModule as coreDIModule } from 'core';
-import { DIModule, IBaasicApp } from './';
+import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
+import { diModule as coreDIModule } from 'core';
+import { DIModule } from './';
 import { diModule as httpDIModule } from 'httpApi';
 import { Container } from "inversify";
 
@@ -14,7 +14,8 @@ export class BaasicApp implements IBaasicApp {
     private static readonly defaultSettings: IBaasicAppOptions = {
         useSSL: true,
         apiRootUrl: 'api.baasic.com',
-        apiVersion: 'v1'
+        apiVersion: 'v1',
+        enableHALJSON: false
     };
 
     public readonly settings: Partial<IBaasicAppOptions>;
@@ -23,6 +24,7 @@ export class BaasicApp implements IBaasicApp {
 
     //Modules
     public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
+    public readonly membership: modules.Membership.Root;
 
 
     constructor(public apiKey: string, options?: Partial<IBaasicAppOptions>) {
@@ -39,7 +41,7 @@ export class BaasicApp implements IBaasicApp {
 
         //Modules
         this.keyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
-
+        this.membership = DIModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
 
 
     }

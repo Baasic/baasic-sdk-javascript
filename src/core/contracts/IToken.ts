@@ -10,5 +10,6 @@ export interface IToken {
     expires_in?: number,
     sliding_window?: number,
     token: string,
+    tokenUrl: string,
     type: TokenType
 }

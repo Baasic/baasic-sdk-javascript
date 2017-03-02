@@ -1,6 +1,4 @@
-import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler } from 'core/contracts';
-import { TYPES as coreTYPES } from 'core';
-import { IBaasicApp, TYPES as rootTYPES } from '../';
+import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
 
@@ -14,7 +12,7 @@ export class TokenHandler implements ITokenHandler {
     constructor(
         @inject(coreTYPES.IEventHandler) protected eventHandler: IEventHandler,
         @inject(coreTYPES.IStorageHandler) protected storageHandler: IStorageHandler,
-        @inject(rootTYPES.IBaasicApp) private application: IBaasicApp
+        @inject(coreTYPES.IBaasicApp) private application: IBaasicApp
     ) {
         this.initEventing();
 
@@ -57,7 +55,7 @@ export class TokenHandler implements ITokenHandler {
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.tokenExpired
-        }, [data]);
+        }, {});
     }
 
     triggerTokenUpdated(app: IBaasicApp) {
@@ -66,12 +64,12 @@ export class TokenHandler implements ITokenHandler {
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.tokenUpdated
-        }, [data]);
+        }, {});
     }
 
     setExpirationTimer(token: IToken): any {
         if (token && token.expireTime) {
-            var expiresIn = this.token.expireTime - new Date().getTime();
+            var expiresIn = token.expireTime - new Date().getTime();
             if (expiresIn > 0) {
                 return setTimeout(function () {
                     this.store(null);
