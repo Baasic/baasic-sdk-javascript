@@ -6,6 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
 import { BaasicRegisterRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser, IRegisterUser } from 'modules/membership/contracts';
 
@@ -23,7 +24,8 @@ export class BaasicRegisterClient {
 
     constructor(
         @inject(membershipTypes.BaasicRegisterRouteDefinition) protected baasicRegisterRouteDefinition: BaasicRegisterRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+        @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
     ) { }
 
     /**                 
@@ -67,9 +69,18 @@ export class BaasicRegisterClient {
                .finally (function () {});                 
     **/
     activate(data: string): PromiseLike<void> {
-        return this.baasicApiClient.put(this.baasicRegisterRouteDefinition.activate(data), data)
-            .then(function (data) {
-                this.authService.updateAccessToken(data);
+        var self = this;
+        return this.baasicApiClient.put<any>(this.baasicRegisterRouteDefinition.activate(data), data)
+            .then<any>(function (data) {
+                let token: IToken = {
+                    token: data.body.access_token,
+                    expires_in: data.body.expires_in,
+                    sliding_window: data.body.sliding_window,
+                    tokenUrl: data.body.access_url_token,
+                    type: data.body.token_type
+                };
+                self.tokenHandler.store(token);
+                return data;
             });
     }
 }

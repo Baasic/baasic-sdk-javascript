@@ -20,7 +20,7 @@ export class BaasicUserSocialLoginRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicUserSocialLoginRouteDefinition.get('<username>');
      **/
     get(username: string): any {
-        return super.parse('users/{username}/social-login').expand({ username: username });
+        return super.baseGet('users/{username}/social-login', username, { username: username });
     }
 
     /**                     

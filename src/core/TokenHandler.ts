@@ -71,9 +71,10 @@ export class TokenHandler implements ITokenHandler {
         if (token && token.expireTime) {
             var expiresIn = token.expireTime - new Date().getTime();
             if (expiresIn > 0) {
+                var self = this;
                 return setTimeout(function () {
-                    this.store(null);
-                    this.triggerTokenExpired(this.application);
+                    self.store(null);
+                    self.triggerTokenExpired(self.application);
                 }, expiresIn);
             } else {
                 this.store(null);

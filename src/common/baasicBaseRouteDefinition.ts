@@ -1,9 +1,11 @@
+import { injectable, inject } from "inversify";
 import { ModelMapper } from 'common';
 import { IOptions } from 'common/contracts';
 import * as uritemplate from 'uritemplate';
 import { Utility } from 'common';
 import { IAppOptions, TYPES as coreTYPES } from 'core/contracts';
 
+@injectable()
 export abstract class BaasicBaseRouteDefinition {
 
     protected utility: Utility;
@@ -37,7 +39,7 @@ export abstract class BaasicBaseRouteDefinition {
       * @method 
       * @example baasicBaseRouteDefinition.get(route, id);
       **/
-    protected baseGet(route: string, id?: string, options?: IOptions, propName?: string): any {
+    protected baseGet(route: string, id?: string, options?: any, propName?: string): any {
         return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
 
@@ -64,10 +66,10 @@ export abstract class BaasicBaseRouteDefinition {
             if (this.appOptions.enableHALJSON) {
                 return params[this.modelMapper.modelPropertyName].links(link).href;
             } else {
-                return uritemplate.parse(route).expand(params);
+                return uritemplate.parse(route).expand(params[this.modelMapper.modelPropertyName]);
             }
         } else {
-            let opt = this.utility.extend({}, options);
+            let opt = this.utility.extend(params[this.modelMapper.modelPropertyName], options);
             if (this.appOptions.enableHALJSON) {
                 return uritemplate.parse(params[this.modelMapper.modelPropertyName].links(link).href).expand(opt);
             } else {
@@ -89,10 +91,10 @@ export abstract class BaasicBaseRouteDefinition {
             if (this.appOptions.enableHALJSON) {
                 return params[this.modelMapper.modelPropertyName].links(link).href;
             } else {
-                return uritemplate.parse(route).expand(params);
+                return uritemplate.parse(route).expand(params[this.modelMapper.modelPropertyName]);
             }
         } else {
-            let opt = this.utility.extend({}, options);
+            let opt = this.utility.extend(params[this.modelMapper.modelPropertyName], options);
             if (this.appOptions.enableHALJSON) {
                 return uritemplate.parse(params[this.modelMapper.modelPropertyName].links(link).href).expand(opt);
             } else {

@@ -19,7 +19,7 @@ export class BaasicPasswordRecoveryRouteDefinition extends BaasicBaseRouteDefini
      * @example baasicPasswordRecoveryRouteDefinition.passwordRecovery();                                
      **/
     passwordRecovery(): any {
-        return super.parse('recover-password').expand({});
+        return super.baseCreate('recover-password', {});
     }
 }
 

@@ -10,7 +10,6 @@ import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser } from 'modules/membership/contracts';
-import * as uritemplate from 'uritemplate';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
@@ -73,7 +72,7 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserRouteDefinition.exists({username: '<username>'});                               
      **/
     exists(username: string, options?: any): any {
-        return uritemplate.parse('users/{username}/exists/').expand(this.modelMapper.getParams(username, options, 'username'));
+        return super.baseGet('users/{username}/exists/', username, options, 'username');
     }
 
     /**                 
@@ -83,43 +82,23 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserRouteDefinition.changePassword({username: '<username>'});                              
      **/
     changePassword(username: string): any {
-        return uritemplate.parse('users/{username}/change-password').expand({ username: username });
+        return super.baseUpdate('users/{username}/change-password', { username: username });
     }
 
     unlock(data: IAppUser): any {
-        let params = this.modelMapper.updateParams(data);
-        if ('HAL') {
-            return params[this.modelMapper.modelPropertyName].links('unlock').href;
-        } else {
-            return uritemplate.parse('users/{id}/unlock');
-        }
+        return super.baseUpdate('users/{id}/unlock', data, null, 'unlock');
     }
 
     lock(data: IAppUser): any {
-        let params = this.modelMapper.updateParams(data);
-        if ('HAL') {
-            return params[this.modelMapper.modelPropertyName].links('lock').href;
-        } else {
-            return uritemplate.parse('users/{id}/lock');
-        }
+        return super.baseUpdate('users/{id}/lock', data, null, 'lock');
     }
 
     approve(data: IAppUser): any {
-        let params = this.modelMapper.updateParams(data);
-        if ('HAL') {
-            return params[this.modelMapper.modelPropertyName].links('approve').href;
-        } else {
-            return uritemplate.parse('users/{id}/approve');
-        }
+        return super.baseUpdate('users/{id}/approve', data, null, 'approve');
     }
 
     disapprove(data: IAppUser): any {
-        let params = this.modelMapper.updateParams(data);
-        if ('HAL') {
-            return params[this.modelMapper.modelPropertyName].links('disapprove').href;
-        } else {
-            return uritemplate.parse('users/{id}/disapprove');
-        }
+        return super.baseUpdate('users/{id}/disapprove', data, null, 'disapprove');
     }
 }
 

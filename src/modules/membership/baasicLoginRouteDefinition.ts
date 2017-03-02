@@ -23,7 +23,7 @@ export class BaasicLoginRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicLoginRouteDefinition.login( {options: 'sliding'});                                
      **/
     login(options: any): any {
-        return super.parse('login/{?embed,fields,options}').expand(options);
+        return super.baseCreate('login/{?embed,fields,options}', options);
     }
 }
 
