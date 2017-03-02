@@ -1,20 +1,20 @@
-import { ModelMapper} from 'common';
+import { ModelMapper } from 'common';
 import { IOptions } from 'common/contracts';
 import * as uritemplate from 'uritemplate';
 import { Utility } from 'common';
-import 'reflect-metadata';
-import { injectable } from "inversify";
+import { IAppOptions, TYPES as coreTYPES } from 'core/contracts';
 
-@injectable()
 export abstract class BaasicBaseRouteDefinition {
 
     protected utility: Utility;
+    protected modelMapper: ModelMapper;
 
     constructor(
-        protected modelMapper: ModelMapper        
-        ) {
-            this.utility = new Utility();
-        }
+        protected appOptions: IAppOptions
+    ) {
+        this.utility = new Utility();
+        this.modelMapper = new ModelMapper();
+    }
 
     /**                
      * Parses resources route which can be expanded with additional options. Supported items are:                 
@@ -40,7 +40,7 @@ export abstract class BaasicBaseRouteDefinition {
     protected baseGet(route: string, id?: string, options?: IOptions, propName?: string): any {
         return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
-    
+
     /**
       * Parses get resource route which must be expanded with the Id of the previously created resource in the system.
       * @returns get resource uri
@@ -57,18 +57,19 @@ export abstract class BaasicBaseRouteDefinition {
      * @method
      * @example baasicBaseRouteDefinition.update();
      */
-    protected baseUpdate(route: string, data: any, options?: IOptions): any {
+    protected baseUpdate(route: string, data: any, options?: IOptions, linkName?: string): any {
+        let link: string = linkName ? linkName : 'put';
         let params = this.modelMapper.updateParams(data);
-        if(typeof options === 'undefined') {
-            if ('HAL') {
-                return params[this.modelMapper.modelPropertyName].links('put').href;
+        if (typeof options === 'undefined') {
+            if (this.appOptions.enableHALJSON) {
+                return params[this.modelMapper.modelPropertyName].links(link).href;
             } else {
                 return uritemplate.parse(route).expand(params);
             }
         } else {
             let opt = this.utility.extend({}, options);
-            if ('HAL') {
-                return uritemplate.parse(params[this.modelMapper.modelPropertyName].links('put').href).expand(opt);
+            if (this.appOptions.enableHALJSON) {
+                return uritemplate.parse(params[this.modelMapper.modelPropertyName].links(link).href).expand(opt);
             } else {
                 return uritemplate.parse(route).expand(opt);
             }
@@ -81,18 +82,19 @@ export abstract class BaasicBaseRouteDefinition {
      * @method
      * @example baasicBaseRouteDefinition.delete();
      */
-    protected baseDelete(route: string, data: any, options?: IOptions): any {
+    protected baseDelete(route: string, data: any, options?: IOptions, linkName?: string): any {
+        let link: string = linkName ? linkName : 'delete';
         let params = this.modelMapper.removeParams(data);
         if (typeof options === 'undefined') {
-            if ('HAL') {
-                return params[this.modelMapper.modelPropertyName].links('delete').href;
+            if (this.appOptions.enableHALJSON) {
+                return params[this.modelMapper.modelPropertyName].links(link).href;
             } else {
                 return uritemplate.parse(route).expand(params);
             }
         } else {
             let opt = this.utility.extend({}, options);
-            if ('HAL') {
-                return uritemplate.parse(params[this.modelMapper.modelPropertyName].links('delete').href).expand(opt);
+            if (this.appOptions.enableHALJSON) {
+                return uritemplate.parse(params[this.modelMapper.modelPropertyName].links(link).href).expand(opt);
             } else {
                 return uritemplate.parse(route).expand(opt);
             }

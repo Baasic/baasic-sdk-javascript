@@ -3,22 +3,19 @@
  * @module baasicLoginRouteDefinition  
  * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
-
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { injectable, inject } from "inversify";
-import { BaasicLoginSocialRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class BaasicLoginRouteDefinition extends BaasicBaseRouteDefinition {
 
-    social(): BaasicLoginSocialRouteDefinition {
-        return this.baasicLoginSocialRouteDefinition;
-    }
-
     constructor(
         @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
-        @inject(membershipTypes.BaasicLoginSocialRouteDefinition) protected baasicLoginSocialRouteDefinition: BaasicLoginSocialRouteDefinition
-    ) { super(modelMapper); }
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+    ) {
+        super(modelMapper, appOptions);
+    }
 
     /**                  
      * Parses login route which can be expanded with additional options. Supported items are:                                   

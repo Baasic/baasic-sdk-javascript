@@ -5,15 +5,13 @@
 
 import { IOptions } from 'common/contracts';
 import { Utility, TYPES } from 'common';
-import { injectable, inject } from "inversify";
 
-@injectable()
 export class ModelMapper {
 
     public idPropertyName: string = 'id';
     public modelPropertyName: string = 'model';
 
-    protected utility: Utility;
+    private utility: Utility;
 
     constructor() {
         this.utility = new Utility();
