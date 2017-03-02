@@ -20,12 +20,12 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicDynamicResourceACLRouteDefinition>(TYPES.BaasicDynamicResourceACLRouteDefinition).toSelf();
-    bind<BaasicDynamicResourceACLClient>(TYPES.BaasicDynamicResourceACLClient).toSelf();
-    bind<BaasicDynamicResourceRouteDefinition>(TYPES.BaasicDynamicResourceRouteDefinition).toSelf();
-    bind<BaasicDynamicResourceClient>(TYPES.BaasicDynamicResourceClient).toSelf();
-    bind<BaasicDynamicSchemaRouteDefinition>(TYPES.BaasicDynamicSchemaRouteDefinition).toSelf();
-    bind<BaasicDynamicSchemaClient>(TYPES.BaasicDynamicSchemaClient).toSelf();
+    bind<BaasicDynamicResourceACLRouteDefinition>(TYPES.BaasicDynamicResourceACLRouteDefinition).to(BaasicDynamicResourceACLRouteDefinition);
+    bind<BaasicDynamicResourceACLClient>(TYPES.BaasicDynamicResourceACLClient).to(BaasicDynamicResourceACLClient);
+    bind<BaasicDynamicResourceRouteDefinition>(TYPES.BaasicDynamicResourceRouteDefinition).to(BaasicDynamicResourceRouteDefinition);
+    bind<BaasicDynamicResourceClient>(TYPES.BaasicDynamicResourceClient).to(BaasicDynamicResourceClient);
+    bind<BaasicDynamicSchemaRouteDefinition>(TYPES.BaasicDynamicSchemaRouteDefinition).to(BaasicDynamicSchemaRouteDefinition);
+    bind<BaasicDynamicSchemaClient>(TYPES.BaasicDynamicSchemaClient).to(BaasicDynamicSchemaClient);
 });
 
 export { diModule };

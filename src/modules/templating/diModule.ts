@@ -15,10 +15,10 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicTemplatingBatchRouteDefinition>(TYPES.BaasicTemplatingBatchRouteDefinition).toSelf();
-    bind<BaasicTemplatingBatchClient>(TYPES.BaasicTemplatingBatchClient).toSelf();
-    bind<BaasicTemplatingRouteDefinition>(TYPES.BaasicTemplatingRouteDefinition).toSelf();
-    bind<BaasicTemplatingClient>(TYPES.BaasicTemplatingClient).toSelf();
+    bind<BaasicTemplatingBatchRouteDefinition>(TYPES.BaasicTemplatingBatchRouteDefinition).to(BaasicTemplatingBatchRouteDefinition);
+    bind<BaasicTemplatingBatchClient>(TYPES.BaasicTemplatingBatchClient).to(BaasicTemplatingBatchClient);
+    bind<BaasicTemplatingRouteDefinition>(TYPES.BaasicTemplatingRouteDefinition).to(BaasicTemplatingRouteDefinition);
+    bind<BaasicTemplatingClient>(TYPES.BaasicTemplatingClient).to(BaasicTemplatingClient);
 });
 
 export { diModule };

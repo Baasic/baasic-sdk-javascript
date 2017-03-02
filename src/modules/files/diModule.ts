@@ -24,14 +24,14 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicFilesBatchRouteDefinition>(TYPES.BaasicFilesBatchRouteDefinition).toSelf();
-    bind<BaasicFilesBatchClient>(TYPES.BaasicFilesBatchClient).toSelf();
-    bind<BaasicFilesStreamsRouteDefinition>(TYPES.BaasicFilesStreamsRouteDefinition).toSelf();
-    bind<BaasicFilesStreamsClient>(TYPES.BaasicFilesStreamsClient).toSelf();
-    bind<BaasicFilesACLRouteDefinition>(TYPES.BaasicFilesACLRouteDefinition).toSelf();
-    bind<BaasicFilesACLClient>(TYPES.BaasicFilesACLClient).toSelf();
-    bind<BaasicFilesRouteDefinition>(TYPES.BaasicFilesRouteDefinition).toSelf();
-    bind<BaasicFilesClient>(TYPES.BaasicFilesClient).toSelf();
+    bind<BaasicFilesBatchRouteDefinition>(TYPES.BaasicFilesBatchRouteDefinition).to(BaasicFilesBatchRouteDefinition);
+    bind<BaasicFilesBatchClient>(TYPES.BaasicFilesBatchClient).to(BaasicFilesBatchClient);
+    bind<BaasicFilesStreamsRouteDefinition>(TYPES.BaasicFilesStreamsRouteDefinition).to(BaasicFilesStreamsRouteDefinition);
+    bind<BaasicFilesStreamsClient>(TYPES.BaasicFilesStreamsClient).to(BaasicFilesStreamsClient);
+    bind<BaasicFilesACLRouteDefinition>(TYPES.BaasicFilesACLRouteDefinition).to(BaasicFilesACLRouteDefinition);
+    bind<BaasicFilesACLClient>(TYPES.BaasicFilesACLClient).to(BaasicFilesACLClient);
+    bind<BaasicFilesRouteDefinition>(TYPES.BaasicFilesRouteDefinition).to(BaasicFilesRouteDefinition);
+    bind<BaasicFilesClient>(TYPES.BaasicFilesClient).to(BaasicFilesClient);
 });
 
 export { diModule };

@@ -28,16 +28,16 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicMediaVaultStreamsRouteDefinition>(TYPES.BaasicMediaVaultStreamsRouteDefinition).toSelf();
-    bind<BaasicMediaVaultStreamsClient>(TYPES.BaasicMediaVaultStreamsClient).toSelf();
-    bind<BaasicMediaVaultBatchRouteDefinition>(TYPES.BaasicMediaVaultBatchRouteDefinition).toSelf();
-    bind<BaasicMediaVaultBatchClient>(TYPES.BaasicMediaVaultBatchClient).toSelf();
-    bind<BaasicMediaVaultSettingsRouteDefinition>(TYPES.BaasicMediaVaultSettingsRouteDefinition).toSelf();
-    bind<BaasicMediaVaultSettingsClient>(TYPES.BaasicMediaVaultSettingsClient).toSelf();
-    bind<BaasicMediaVaultProcessingProviderSettingsRouteDefinition>(TYPES.BaasicMediaVaultProcessingProviderSettingsRouteDefinition).toSelf();
-    bind<BaasicMediaVaultProcessingProviderSettingsClient>(TYPES.BaasicMediaVaultProcessingProviderSettingsClient).toSelf();
-    bind<BaasicMediaVaultRouteDefinition>(TYPES.BaasicMediaVaultRouteDefinition).toSelf();
-    bind<BaasicMediaVaultClient>(TYPES.BaasicMediaVaultClient).toSelf();
+    bind<BaasicMediaVaultStreamsRouteDefinition>(TYPES.BaasicMediaVaultStreamsRouteDefinition).to(BaasicMediaVaultStreamsRouteDefinition);
+    bind<BaasicMediaVaultStreamsClient>(TYPES.BaasicMediaVaultStreamsClient).to(BaasicMediaVaultStreamsClient);
+    bind<BaasicMediaVaultBatchRouteDefinition>(TYPES.BaasicMediaVaultBatchRouteDefinition).to(BaasicMediaVaultBatchRouteDefinition);
+    bind<BaasicMediaVaultBatchClient>(TYPES.BaasicMediaVaultBatchClient).to(BaasicMediaVaultBatchClient);
+    bind<BaasicMediaVaultSettingsRouteDefinition>(TYPES.BaasicMediaVaultSettingsRouteDefinition).to(BaasicMediaVaultSettingsRouteDefinition);
+    bind<BaasicMediaVaultSettingsClient>(TYPES.BaasicMediaVaultSettingsClient).to(BaasicMediaVaultSettingsClient);
+    bind<BaasicMediaVaultProcessingProviderSettingsRouteDefinition>(TYPES.BaasicMediaVaultProcessingProviderSettingsRouteDefinition).to(BaasicMediaVaultProcessingProviderSettingsRouteDefinition);
+    bind<BaasicMediaVaultProcessingProviderSettingsClient>(TYPES.BaasicMediaVaultProcessingProviderSettingsClient).to(BaasicMediaVaultProcessingProviderSettingsClient);
+    bind<BaasicMediaVaultRouteDefinition>(TYPES.BaasicMediaVaultRouteDefinition).to(BaasicMediaVaultRouteDefinition);
+    bind<BaasicMediaVaultClient>(TYPES.BaasicMediaVaultClient).to(BaasicMediaVaultClient);
 });
 
 export { diModule };
