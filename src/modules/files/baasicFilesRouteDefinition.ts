@@ -9,6 +9,7 @@ import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'co
 import { IOptions } from 'common/contracts';
 import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/files';
 import { IFileEntry } from 'modules/files/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
 
@@ -17,9 +18,9 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     constructor(
-        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
         @inject(filesTypes.BaasicFilesStreamsRouteDefinition) protected baasicFilesStreamsRouteDefinition: BaasicFilesStreamsRouteDefinition
-    ) { super(modelMapper); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 

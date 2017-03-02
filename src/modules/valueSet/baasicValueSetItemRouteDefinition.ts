@@ -2,15 +2,15 @@
  * @module baasicValueSetItemRouteDefinition
  * @description Baasic Value Set Item Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
-
+import { injectable, inject } from 'inversify';
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { injectable, inject } from 'inversify';
 import { IValueSetItem } from 'modules/valueSet/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(@inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
      * Parses find value set items route which can be expanded with additional options. Supported items are: 					
@@ -23,7 +23,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @method items.find
      * @param options Options object.       					
      * @example baasicValueSetItemRouteDefinition.find(options);               					
-     **/ 				
+     **/
     find(options: IOptions): any {
         return super.baseFind('value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
@@ -37,7 +37,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @param id Value set id.
      * @param options Query resource options object.        					
      * @example baasicValueSetItemRouteDefinition.get(setName, id, options);               					
-     **/					
+     **/
     get(setName: string, id: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
         params.setName = setName;

@@ -15,6 +15,7 @@ import {
     TYPES as mediaVaultTypes
 } from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
 
@@ -35,12 +36,12 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     constructor(
-        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
         @inject(mediaVaultTypes.BaasicMediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: BaasicMediaVaultStreamsRouteDefinition,
         @inject(mediaVaultTypes.BaasicMediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: BaasicMediaVaultBatchRouteDefinition,
         @inject(mediaVaultTypes.BaasicMediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: BaasicMediaVaultSettingsRouteDefinition,
         @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: BaasicMediaVaultProcessingProviderSettingsRouteDefinition
-    ) { super(modelMapper); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 

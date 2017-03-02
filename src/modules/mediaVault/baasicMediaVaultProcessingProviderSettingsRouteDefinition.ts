@@ -8,10 +8,11 @@ import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicMediaVaultProcessingProviderSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses find route which can be expanded with additional options. Supported items are:                     

@@ -9,6 +9,7 @@ import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { BaasicUserProfileACLRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserProfile } from 'modules/userProfile/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition {
 
@@ -17,9 +18,9 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
     }
 
     constructor(
-        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
         @inject(userProfileTypes.BaasicUserProfileACLRouteDefinition) protected baasicUserProfileACLRouteDefinition: BaasicUserProfileACLRouteDefinition
-    ) { super(modelMapper); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses find user profile route which can be expanded with additional options. Supported items are:                 

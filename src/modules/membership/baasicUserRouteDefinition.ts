@@ -11,6 +11,7 @@ import { injectable, inject } from "inversify";
 import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser } from 'modules/membership/contracts';
 import * as uritemplate from 'uritemplate';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
@@ -20,9 +21,9 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     constructor(
-        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
         @inject(membershipTypes.BaasicUserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: BaasicUserSocialLoginRouteDefinition
-    ) { super(modelMapper); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses find user route which can be expanded with additional options. Supported items are:                 

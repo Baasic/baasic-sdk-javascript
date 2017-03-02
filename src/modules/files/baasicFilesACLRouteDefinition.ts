@@ -7,10 +7,11 @@
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IACLOptions, IACLPolicy } from 'common/contracts';
 import { injectable, inject } from "inversify";
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
      * Parses get acl route; this URI template should be expanded with the Id of the file resource.										

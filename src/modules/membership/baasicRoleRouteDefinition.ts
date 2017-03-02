@@ -9,11 +9,12 @@ import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { IRole } from 'modules/membership/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
      * Parses find role route which can be expanded with additional options. Supported items are:                 

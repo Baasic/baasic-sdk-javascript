@@ -13,6 +13,7 @@ import {
     BaasicMeteringStatisticsRouteDefinition,
     TYPES as meteringTypes
 } from 'modules/metering';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IMeteringData } from 'modules/metering/contracts';
 
 export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
@@ -30,11 +31,11 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     constructor(
-        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
         @inject(meteringTypes.BaasicMeteringBatchRouteDefinition) protected baasicMeteringBatchRouteDefinition: BaasicMeteringBatchRouteDefinition,
         @inject(meteringTypes.BaasicMeteringStatisticsRouteDefinition) protected baasicMeteringStatisticsRouteDefinition: BaasicMeteringStatisticsRouteDefinition,
         @inject(meteringTypes.BaasicMeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: BaasicMeteringACLRouteDefinition
-    ) { super(modelMapper); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses find metering route which can be expanded with additional options. Supported items are:                 

@@ -11,10 +11,9 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 export class BaasicLoginRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor(
-        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) {
-        super(modelMapper, appOptions);
+        super(appOptions);
     }
 
     /**                  

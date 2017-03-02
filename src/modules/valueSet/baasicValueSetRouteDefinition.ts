@@ -8,17 +8,18 @@ import { IOptions } from 'common/contracts';
 import { injectable, inject } from 'inversify';
 import { BaasicValueSetItemRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
-   
+
     get items(): BaasicValueSetItemRouteDefinition {
         return this.baasicValueSetItemRouteDefinition;
     }
 
     constructor(
-       @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
-       @inject(valueSetTypes.BaasicValueSetItemRouteDefinition) protected baasicValueSetItemRouteDefinition: BaasicValueSetItemRouteDefinition
-    ) { super(modelMapper); }
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
+        @inject(valueSetTypes.BaasicValueSetItemRouteDefinition) protected baasicValueSetItemRouteDefinition: BaasicValueSetItemRouteDefinition
+    ) { super(appOptions); }
 
     /**                 
      * Parses find value set route which can be expanded with additional options. Supported items are:                 
@@ -41,16 +42,16 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
      * @param setName Value Set name.
      * @param options Query resource options object.                       
      * @example baasicValueSetRouteDefinition.get(setName, options);                               
-     **/ 
+     **/
     get(setName: string, options?: IOptions): any {
         return super.baseGet('value-sets/{setName}/{?embed,fields}', setName, options, 'setName');
     }
 
-     /**                 
-      * Parses create value set route; this URI template does not expose any additional options.                 
-      * @method                        
-      * @example baasicValueSetRouteDefinition.create();                              
-      **/ 
+    /**                 
+     * Parses create value set route; this URI template does not expose any additional options.                 
+     * @method                        
+     * @example baasicValueSetRouteDefinition.create();                              
+     **/
     create(): any {
         return super.baseCreate('value-sets', {});
     }

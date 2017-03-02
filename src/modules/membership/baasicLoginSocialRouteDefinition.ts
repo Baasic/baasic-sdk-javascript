@@ -6,11 +6,12 @@
 
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { injectable, inject } from "inversify";
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class BaasicLoginSocialRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses get social login route which can be expanded with additional items. Supported items are:                     

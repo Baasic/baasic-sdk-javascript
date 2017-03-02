@@ -7,10 +7,11 @@ import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'co
 import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 				
      * Parses find route which can be expanded with additional options. Supported items are: 				

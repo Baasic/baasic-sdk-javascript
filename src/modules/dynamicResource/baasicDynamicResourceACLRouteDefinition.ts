@@ -7,18 +7,19 @@ import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'co
 import { IACLPolicy } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefinition {
-    
 
-    constructor(@inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
      * Parses get acl route; this URI template should be expanded with the Id of the dynamic resource and name of the dynamic resource schema.										
      * @method
      * @param options Query resource options object.       					
      * @example baasicDynamicResourceACLRouteDefinition.get(options)               					
-     **/ 				
+     **/
     get(options: IDynamicACLOptions): any {
         let params = this.utility.extend({}, options);
         return super.parse('resources/{schemaName}/{id}/acl/{?fields}').expand(params);
@@ -48,12 +49,12 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      * @example baasicDynamicResourceACLRouteDefinition.deleteByUser(action, username, data);					
      **/
     deleteByUser(action: string, username: string, data: IACLPolicy): any {
-        let params = this.modelMapper.removeParams(data);                         
-        params.user = username;                         
+        let params = this.modelMapper.removeParams(data);
+        params.user = username;
         params.accessAction = action;
         return super.parse('resources/{schemaName}/{id}/acl/actions/{accessAction}/users/{user}/').expand(params);
     }
-    
+
     /** 					
      * Parses deleteByRole acl route which can be expanded with additional options. Supported items are: 					
      * - `schemaName` - Name of the dynamic resource schema. 					
@@ -65,10 +66,10 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      * @param role A value which uniquely identifies role for which ACL policy needs to be removed.
      * @param data ACLPolicy object used to perform delete action. 					
      * @example baasicDynamicResourceACLRouteDefinition.deleteByRole(action, role, data)					
-     **/ 
+     **/
     deleteByRole(action: string, role: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);
-        params.role = role; 
+        params.role = role;
         params.accessAction = action;
         return super.parse('resources/{schemaName}/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
     }
@@ -85,4 +86,4 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
  - All end-point objects are transformed by the associated route service. 
- */ 
+ */

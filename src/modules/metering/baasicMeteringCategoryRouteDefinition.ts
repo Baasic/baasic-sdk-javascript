@@ -8,6 +8,7 @@ import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { BaasicMeteringCategoryBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefinition {
 
@@ -16,9 +17,9 @@ export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefini
     }
 
     constructor(
-        @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper,
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
         @inject(meteringTypes.BaasicMeteringCategoryBatchRouteDefinition) protected baasicMeteringCategoryBatchRouteDefinition: BaasicMeteringCategoryBatchRouteDefinition
-    ) { super(modelMapper); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses find metering category route which can be expanded with additional options. Supported items are:                 

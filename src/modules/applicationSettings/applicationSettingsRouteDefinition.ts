@@ -1,4 +1,4 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicApplicationSettingsRouteDefinition  
  * @description Baasic Application Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Application Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
@@ -8,27 +8,28 @@ import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'co
 import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { IApplication } from 'modules/applicationSettings/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicApplicationSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor(@inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method
      * @param options Query resource options object.                        
      * @example baasicApplicationSettingsRouteDefinition.get();                               
-     **/ 			
+     **/
     get(options: IOptions): any {
         return super.baseGet('applications/{?embed,fields}', undefined, options);
     }
 
-     /**                 
-      * Parses update route; this route doesn't expose any properties.                 
-      * @method
-      * @param data An application object used to update application settings of the specified application resource.                        
-      * @example baasicApplicationSettingsRouteDefinition.update();                               
-      **/ 
+    /**                 
+     * Parses update route; this route doesn't expose any properties.                 
+     * @method
+     * @param data An application object used to update application settings of the specified application resource.                        
+     * @example baasicApplicationSettingsRouteDefinition.update();                               
+     **/
     update(data: IApplication): any {
         return super.baseUpdate('applications/', data);
     }

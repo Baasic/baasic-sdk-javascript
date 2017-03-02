@@ -6,11 +6,12 @@
 
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { injectable, inject } from "inversify";
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class BaasicUserSocialLoginRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor( @inject(commonTypes.ModelMapper) protected modelMapper: ModelMapper) { super(modelMapper); }
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses get social login route, URI template should be expanded with the username of the user resource whose social login connections should be retrieved.                     
