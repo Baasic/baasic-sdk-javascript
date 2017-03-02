@@ -48,7 +48,7 @@ export class BaasicApiClient {
             }
             return data;
         },
-        (response: IHttpResponse<TResponse>) => {
+        (response: IHttpResponse<any>) => {
             var wwwAuthenticate = this.parseWWWAuthenticateHeader(response.headers['WWW-Authenticate']);
 			if (wwwAuthenticate) {
 				if (wwwAuthenticate.scheme.toLowerCase() === 'bearer') {
@@ -124,7 +124,7 @@ export class BaasicApiClient {
 		return quotedString.substr(1, quotedString.length-2).replace(/(?:(?:\r\n)?[ \t])+/g, ' ');
 	}
 
-    private parseWWWAuthenticateHeader(value) {
+    private parseWWWAuthenticateHeader(value: string) {
 		if (value) {
 			var tokens = value.match(this.wwwAuthenticateTokenizer);
 			if (tokens && tokens.length > 0) {
