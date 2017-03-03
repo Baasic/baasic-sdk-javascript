@@ -17,6 +17,7 @@ import {
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
 
     get streams(): BaasicMediaVaultStreamsRouteDefinition {

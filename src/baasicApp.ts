@@ -29,7 +29,8 @@ export class BaasicApp implements IBaasicApp {
     public readonly valueSet: modules.ValueSet.BaasicValueSetClient;
     public readonly userProfile: modules.UserProfile.BaasicUserProfileClient;
     public readonly templating: modules.Templating.BaasicTemplatingClient;
-
+    public readonly metering: modules.Metering.BaasicMeteringClient;
+    public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
 
 
     constructor(public apiKey: string, options?: Partial<IBaasicAppOptions>) {
@@ -51,6 +52,9 @@ export class BaasicApp implements IBaasicApp {
         this.valueSet = DIModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
         this.userProfile = DIModule.kernel.get<modules.UserProfile.BaasicUserProfileClient>(modules.UserProfile.TYPES.BaasicUserProfileClient);
         this.templating = DIModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
+        this.metering = DIModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
+        this.mediaVault = DIModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
+
     }
 
     getAccessToken(): IToken {

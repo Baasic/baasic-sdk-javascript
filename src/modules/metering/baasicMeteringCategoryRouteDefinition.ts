@@ -10,6 +10,7 @@ import { BaasicMeteringCategoryBatchRouteDefinition, TYPES as meteringTypes } fr
 import { IMeteringCategory } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefinition {
 
     get batch(): BaasicMeteringCategoryBatchRouteDefinition {

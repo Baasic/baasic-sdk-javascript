@@ -10,6 +10,7 @@ import { IOptions } from 'common/contracts';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicMediaVaultProcessingProviderSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }

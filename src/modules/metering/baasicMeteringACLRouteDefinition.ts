@@ -9,6 +9,7 @@ import { IACLOptions, IACLPolicy } from 'common/contracts';
 import { injectable, inject } from "inversify";
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }

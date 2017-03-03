@@ -1,3 +1,4 @@
+export * from './diModule';
 export * from './baasicMediaVaultStreamsRouteDefinition';
 export * from './baasicMediaVaultStreamsClient';
 export * from './baasicMediaVaultBatchRouteDefinition';
@@ -8,4 +9,3 @@ export * from './baasicMediaVaultProcessingProviderSettingsRouteDefinition';
 export * from './baasicMediaVaultProcessingProviderSettingsClient';
 export * from './baasicMediaVaultRouteDefinition';
 export * from './baasicMediaVaultClient';
-export * from './diModule';

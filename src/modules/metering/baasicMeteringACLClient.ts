@@ -9,6 +9,7 @@ import { IACLOptions, IACLPolicy, IBaasicQueryModel, IOptions } from 'common/con
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicMeteringACLRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 
+@injectable()
 export class BaasicMeteringACLClient {
 
     constructor(
@@ -49,7 +50,7 @@ export class BaasicMeteringACLClient {
                     }); 				    
      **/
     update(options: IACLOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMeteringACLRouteDefinition.update(options), this.baasicMeteringACLRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicMeteringACLRouteDefinition.update(options), this.baasicMeteringACLRouteDefinition.updateParams(options));
     }
 
     /**                     

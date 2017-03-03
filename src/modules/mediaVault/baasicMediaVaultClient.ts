@@ -17,6 +17,7 @@ import {
 } from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 
+@injectable()
 export class BaasicMediaVaultClient {
 
     get routeDefinition(): BaasicMediaVaultRouteDefinition {

@@ -23,6 +23,7 @@ client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<Respon
     return $.ajax(request.url.toString(), jqueryParams)
         .then((data, textStatus, jqXHR) => {
             return <IHttpResponse<ResponseType>>{
+                request: request,
                 statusText: textStatus,
                 statusCode: jqXHR.status,
                 headers: parseHeaders(jqXHR.getAllResponseHeaders()),
@@ -31,6 +32,7 @@ client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<Respon
         },
         (jqXHR, textStatus, errorThrown) => {
             return <IHttpResponse<ResponseType>>{
+                request: request,
                 statusText: textStatus,
                 statusCode: jqXHR.status,
                 headers: parseHeaders(jqXHR.getAllResponseHeaders()),

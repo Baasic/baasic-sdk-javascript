@@ -16,6 +16,7 @@ import {
 } from 'modules/metering';
 import { IMeteringData } from 'modules/metering/contracts';
 
+@injectable()
 export class BaasicMeteringClient {
 
     get routeDefinition(): BaasicMeteringRouteDefinition {

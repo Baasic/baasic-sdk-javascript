@@ -7,9 +7,10 @@
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
-import { IMeteringData } from 'modules/metering/contracts';
+import { IMeteringSettings } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicMeteringSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
@@ -29,7 +30,7 @@ export class BaasicMeteringSettingsRouteDefinition extends BaasicBaseRouteDefini
     * @param data An meteringSetting object used to update specified MeteringSetting resource.                       
     * @example baasicMeteringSettingsRouteDefinition.update(data);                               
     **/
-    update(data: IMeteringData): any {
+    update(data: IMeteringSettings): any {
         return super.baseUpdate('metering/settings/{id}', data);
     }
 }

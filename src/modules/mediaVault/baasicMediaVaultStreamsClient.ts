@@ -9,6 +9,7 @@ import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicMediaVaultStreamsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 
+@injectable()
 export class BaasicMediaVaultStreamsClient {
 
     get routeDefinition(): BaasicMediaVaultStreamsRouteDefinition {

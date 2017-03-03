@@ -10,6 +10,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicMediaVaultSettingsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 import { IMediaVaultSettings } from 'modules/mediaVault/contracts';
 
+@injectable()
 export class BaasicMediaVaultSettingsClient {
 
     constructor(

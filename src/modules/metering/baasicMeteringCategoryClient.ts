@@ -10,6 +10,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTYPES } from 'httpApi';
 import { BaasicMeteringCategoryBatchClient, BaasicMeteringCategoryRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
 
+@injectable()
 export class BaasicMeteringCategoryClient {
 
     get routeDefinition(): BaasicMeteringCategoryRouteDefinition {

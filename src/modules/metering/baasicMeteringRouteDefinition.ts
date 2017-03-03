@@ -16,6 +16,7 @@ import {
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IMeteringData } from 'modules/metering/contracts';
 
+@injectable()
 export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
 
     get batch(): BaasicMeteringBatchRouteDefinition {
