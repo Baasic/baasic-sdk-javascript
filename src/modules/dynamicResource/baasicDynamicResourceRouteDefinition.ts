@@ -9,6 +9,7 @@ import { injectable, inject } from "inversify";
 import { BaasicDynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinition {
 
     get acl(): BaasicDynamicResourceACLRouteDefinition {

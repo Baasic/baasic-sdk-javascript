@@ -9,12 +9,13 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicDynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 
+@injectable()
 export class BaasicDynamicResourceACLClient {
 
     constructor(
         @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
-        ) {}
+    ) { }
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified dynamic resource.                     
@@ -27,7 +28,7 @@ export class BaasicDynamicResourceACLClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     });                     
-     **/	
+     **/
     get(options: IDynamicACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
         return this.baasicApiClient.get(this.baasicDynamicResourceACLRouteDefinition.get(options));
     }
@@ -43,7 +44,7 @@ export class BaasicDynamicResourceACLClient {
                      function (response, status, headers, config) {   
                         // perform error handling here 
                     }); 				    
-     **/	
+     **/
     update(options: IDynamicACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
         return this.baasicApiClient.put(this.baasicDynamicResourceACLRouteDefinition.update(options), this.baasicDynamicResourceACLRouteDefinition.updateParams(options));
     }
@@ -67,7 +68,7 @@ export class BaasicDynamicResourceACLClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				    
-     **/						
+     **/
     removeByUser(action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.delete(this.baasicDynamicResourceACLRouteDefinition.deleteByUser(action, user, data));
     }
@@ -91,7 +92,7 @@ export class BaasicDynamicResourceACLClient {
                          function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				    
-     **/	
+     **/
     removeByRole(action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.delete(this.baasicDynamicResourceACLRouteDefinition.deleteByRole(action, role, data));
     }

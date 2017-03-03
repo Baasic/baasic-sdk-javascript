@@ -9,6 +9,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
 
+@injectable()
 export class BaasicDynamicSchemaClient {
 
     /**                 

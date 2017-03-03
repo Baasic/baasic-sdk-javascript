@@ -32,6 +32,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly metering: modules.Metering.BaasicMeteringClient;
     public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
     public readonly files: modules.Files.BaasicFilesClient;
+    public readonly dynamicResource: modules.DynamicResource.BaasicDynamicResourceClient;
 
 
     constructor(public apiKey: string, options?: Partial<IBaasicAppOptions>) {
@@ -56,6 +57,7 @@ export class BaasicApp implements IBaasicApp {
         this.metering = DIModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
         this.mediaVault = DIModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
         this.files = DIModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
+        this.dynamicResource = DIModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
 
     }
 

@@ -9,6 +9,7 @@ import { injectable, inject } from "inversify";
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
