@@ -16,6 +16,7 @@ import {
 } from 'modules/files';
 import { IFileEntry } from 'modules/files/contracts';
 
+@injectable()
 export class BaasicFilesClient {
 
     get routeDefinition(): BaasicFilesRouteDefinition {

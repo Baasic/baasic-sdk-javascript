@@ -31,6 +31,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly templating: modules.Templating.BaasicTemplatingClient;
     public readonly metering: modules.Metering.BaasicMeteringClient;
     public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
+    public readonly files: modules.Files.BaasicFilesClient;
 
 
     constructor(public apiKey: string, options?: Partial<IBaasicAppOptions>) {
@@ -54,6 +55,7 @@ export class BaasicApp implements IBaasicApp {
         this.templating = DIModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
         this.metering = DIModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
         this.mediaVault = DIModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
+        this.files = DIModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
 
     }
 

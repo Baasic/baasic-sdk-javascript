@@ -10,6 +10,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicFilesBatchRouteDefinition, TYPES as filesTypes } from 'modules/files';
 import { IFileEntry } from 'modules/files/contracts';
 
+@injectable()
 export class BaasicFilesBatchClient {
 
     get routeDefinition(): BaasicFilesBatchRouteDefinition {

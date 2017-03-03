@@ -9,6 +9,7 @@ import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicFilesACLRouteDefinition, TYPES as filesTypes } from 'modules/files';
 
+@injectable()
 export class BaasicFilesACLClient {
 
     routeDefinition(): BaasicFilesACLRouteDefinition {

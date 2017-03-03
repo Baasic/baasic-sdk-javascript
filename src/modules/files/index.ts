@@ -1,3 +1,4 @@
+export * from './diModule';
 export * from './baasicFilesStreamsRouteDefinition';
 export * from './baasicFilesStreamsClient';
 export * from './baasicFilesBatchRouteDefinition';
@@ -6,4 +7,3 @@ export * from './baasicFilesACLRouteDefinition';
 export * from './baasicFilesACLClient';
 export * from './baasicFilesRouteDefinition';
 export * from './baasicFilesClient';
-export * from './diModule';

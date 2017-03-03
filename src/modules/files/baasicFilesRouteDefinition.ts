@@ -11,6 +11,7 @@ import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/
 import { IFileEntry } from 'modules/files/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
 
     get streams(): BaasicFilesStreamsRouteDefinition {
