@@ -8,6 +8,7 @@ import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'co
 import { injectable, inject } from 'inversify';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicTemplatingBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }

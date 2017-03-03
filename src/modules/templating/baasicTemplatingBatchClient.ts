@@ -1,4 +1,4 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicTemplatingBatchClient  
  * @description Baasic Templating Batch Client provides an easy way to consume Baasic Templating REST API end-points. In order to obtain a needed routes `baasicTemplatingBatchClient` uses `baasicTemplatingBatchRouteDefinition`. 
@@ -10,12 +10,13 @@ import { injectable, inject } from 'inversify';
 import { BaasicTemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
+@injectable()
 export class BaasicTemplatingBatchClient {
-    
+
     constructor(
         @inject(templatingTypes.BaasicTemplatingBatchRouteDefinition) protected baasicTemplatingBatchRouteDefinition: BaasicTemplatingBatchRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
-        ) {}
+    ) { }
 
     get routeDefinition(): BaasicTemplatingBatchRouteDefinition {
         return this.baasicTemplatingBatchRouteDefinition;
@@ -52,7 +53,7 @@ export class BaasicTemplatingBatchClient {
                     });                     
      **/
     update(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
-        return this.baasicApiClient.post(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data)); 
+        return this.baasicApiClient.post(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data));
     }
 
     /**                     

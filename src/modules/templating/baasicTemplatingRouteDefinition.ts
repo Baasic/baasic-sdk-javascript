@@ -11,6 +11,7 @@ import { BaasicTemplatingBatchRouteDefinition, TYPES as templatingTypes } from '
 import { ITemplate } from 'modules/templating/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
+@injectable()
 export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
 
     get batch(): BaasicTemplatingBatchRouteDefinition {

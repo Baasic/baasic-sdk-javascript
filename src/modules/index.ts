@@ -11,3 +11,5 @@ import * as Membership from './membership';
 export { Membership };
 import * as UserProfile from './userProfile';
 export { UserProfile };
+import * as Templating from './templating';
+export { Templating };

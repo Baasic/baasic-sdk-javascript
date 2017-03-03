@@ -1,4 +1,4 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicTemplatingClient  
  * @description Baasic Templating Client provides an easy way to consume Baasic Templating REST API end-points. In order to obtain a needed routes `baasicTemplatingClient` uses `baasicTemplatingRouteDefinition`. 
@@ -10,6 +10,7 @@ import { injectable, inject } from 'inversify';
 import { BaasicTemplatingBatchClient, BaasicTemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
+@injectable()
 export class BaasicTemplatingClient {
 
     get routeDefinition(): BaasicTemplatingRouteDefinition {
@@ -19,12 +20,12 @@ export class BaasicTemplatingClient {
     get batch(): BaasicTemplatingBatchClient {
         return this.baasicTemplatingBatchClient;
     }
-    
+
     constructor(
-       @inject(templatingTypes.BaasicTemplatingRouteDefinition) protected baasicTemplatingRouteDefinition: BaasicTemplatingRouteDefinition,
-       @inject(templatingTypes.BaasicTemplatingBatchClient) protected baasicTemplatingBatchClient: BaasicTemplatingBatchClient,
-       @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
-    ) {}
+        @inject(templatingTypes.BaasicTemplatingRouteDefinition) protected baasicTemplatingRouteDefinition: BaasicTemplatingRouteDefinition,
+        @inject(templatingTypes.BaasicTemplatingBatchClient) protected baasicTemplatingBatchClient: BaasicTemplatingBatchClient,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**                 
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of template resources matching the given criteria.                 
@@ -49,19 +50,19 @@ export class BaasicTemplatingClient {
         return this.baasicApiClient.get(this.baasicTemplatingRouteDefinition.find(options));
     }
 
-     /**                 
-      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified template resource.                 
-      * @method
-      * @param id Template id which uniquely identifies Template resource that needs to be retrieved.
-      * @param options Query resource options object.                        
-      * @example baasicTemplatingClient.get('<template-id>')
-                    .then(function (data) {  
-                        // perform success action here 
-                    },
-                     function (response, status, headers, config) {  
-                         // perform error handling here 
-                    });                 
-     **/
+    /**                 
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified template resource.                 
+     * @method
+     * @param id Template id which uniquely identifies Template resource that needs to be retrieved.
+     * @param options Query resource options object.                        
+     * @example baasicTemplatingClient.get('<template-id>')
+                   .then(function (data) {  
+                       // perform success action here 
+                   },
+                    function (response, status, headers, config) {  
+                        // perform error handling here 
+                   });                 
+    **/
     get(id: string, options?: IOptions): PromiseLike<IHttpResponse<ITemplate>> {
         return this.baasicApiClient.get(this.baasicTemplatingRouteDefinition.get(id, options));
     }
@@ -126,7 +127,7 @@ export class BaasicTemplatingClient {
      **/
     remove(data: ITemplate): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.delete(this.baasicTemplatingRouteDefinition.delete(data));
-    }   
+    }
 }
 
 /**  
