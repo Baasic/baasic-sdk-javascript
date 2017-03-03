@@ -75,6 +75,7 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicUserEducationRouteDefinition>(TYPES.BaasicUserEducationRouteDefinition).to(BaasicUserEducationRouteDefinition);
     bind<BaasicUserEducationClient>(TYPES.BaasicUserEducationClient).to(BaasicUserEducationClient);
     bind<BaasicUserProfileACLRouteDefinition>(TYPES.BaasicUserProfileACLRouteDefinition).to(BaasicUserProfileACLRouteDefinition);
+    bind<BaasicUserProfileACLClient>(TYPES.BaasicUserProfileACLClient).to(BaasicUserProfileACLClient);
     bind<BaasicUserProfileAvatarStreamsRouteDefinition>(TYPES.BaasicUserProfileAvatarStreamsRouteDefinition).to(BaasicUserProfileAvatarStreamsRouteDefinition);
     bind<BaasicUserProfileAvatarStreamsClient>(TYPES.BaasicUserProfileAvatarStreamsClient).to(BaasicUserProfileAvatarStreamsClient);
     bind<BaasicUserProfileAvatarRouteDefinition>(TYPES.BaasicUserProfileAvatarRouteDefinition).to(BaasicUserProfileAvatarRouteDefinition);
@@ -85,3 +86,5 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicUserWorkRouteDefinition>(TYPES.BaasicUserWorkRouteDefinition).to(BaasicUserWorkRouteDefinition);
     bind<BaasicUserWorkClient>(TYPES.BaasicUserWorkClient).to(BaasicUserWorkClient);
 });
+
+export { diModule };
