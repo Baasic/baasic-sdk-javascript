@@ -3,6 +3,8 @@ import {
     BaasicNotificationsPublishBatchClient,
     BaasicNotificationsPublishBatchRouteDefinition,
     BaasicNotificationsPublishRouteDefinition,
+    BaasicNotificationsRegistrationsUsersClient,
+    BaasicNotificationsRegistrationsUsersRouteDefinition,
     BaasicNotificationsRouteDefinition,
     BaasicNotificationsSubscriptionsAnonymousBatchClient,
     BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition,
@@ -19,6 +21,8 @@ const TYPES = {
     BaasicNotificationsPublishBatchClient: Symbol("BaasicNotificationsPublishBatchClient"),
     BaasicNotificationsPublishBatchRouteDefinition: Symbol("BaasicNotificationsPublishBatchRouteDefinition"),
     BaasicNotificationsPublishRouteDefinition: Symbol("BaasicNotificationsPublishRouteDefinition"),
+    BaasicNotificationsRegistrationsUsersClient: Symbol("BaasicNotificationsRegistrationsUsersClient"),
+    BaasicNotificationsRegistrationsUsersRouteDefinition: Symbol("BaasicNotificationsRegistrationsUsersRouteDefinition"),
     BaasicNotificationsRouteDefinition: Symbol("BaasicNotificationsRouteDefinition"),
     BaasicNotificationsSubscriptionsRouteDefinition: Symbol("BaasicNotificationsSubscriptionsRouteDefinition"),
     BaasicNotificationsSubscriptionsAnonymousBatchClient: Symbol("BaasicNotificationsSubscriptionsAnonymousBatchClient"),
@@ -45,6 +49,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicNotificationsSubscriptionsAnonymousBatchClient>(TYPES.BaasicNotificationsSubscriptionsAnonymousBatchClient).toSelf();
     bind<BaasicNotificationsSubscriptionsAnonymousClient>(TYPES.BaasicNotificationsSubscriptionsAnonymousClient).toSelf();
     bind<BaasicNotificationsSubscriptionsUsersRouteDefinition>(TYPES.BaasicNotificationsSubscriptionsRouteDefinition).toSelf();
+    bind<BaasicNotificationsRegistrationsUsersRouteDefinition>(TYPES.BaasicNotificationsRegistrationsUsersRouteDefinition).toSelf();
+    bind<BaasicNotificationsRegistrationsUsersClient>(TYPES.BaasicNotificationsRegistrationsUsersClient).toSelf();
     bind<BaasicNotificationsRouteDefinition>(TYPES.BaasicNotificationsRouteDefinition).toSelf();
 });
 

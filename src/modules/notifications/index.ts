@@ -2,6 +2,8 @@ export * from './diModule';
 export * from './baasicNotificationsPublishBatchRouteDefinition';
 export * from './baasicNotificationsPublishBatchClient';
 export * from './baasicNotificationsPublishRouteDefinition';
+export * from './baasicNotificationsRegistrationsUsersRouteDefinition';
+export * from './baasicNotificationsRegistrationsUsersClient';
 export * from './baasicNotificationsSubscriptionsUsersBatchRouteDefinition';
 export * from './baasicNotificationsSubscriptionsUsersBatchClient';
 export * from './baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition';
