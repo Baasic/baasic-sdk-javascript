@@ -56,7 +56,7 @@ export class BaasicNotificationsSubscriptionsAnonymousBatchClient {
                    });		                            
     */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.delete(), ids);
+        return this.baasicApiClient.delete<void>(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              

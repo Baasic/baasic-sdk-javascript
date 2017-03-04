@@ -8,13 +8,19 @@ import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { BaasicNotificationsRegistrationsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
 
 @injectable()
 export class BaasicNotificationsRegistrationsUsersRouteDefinition extends BaasicBaseRouteDefinition {
 
+    get batch(): BaasicNotificationsRegistrationsUsersBatchRouteDefinition {
+        return this.baasicNotificationsRegistrationsUsersBatchRouteDefinition;
+    }
+
     constructor(
-        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
+        @inject(notificationsTypes.BaasicNotificationsRegistrationsUsersBatchRouteDefinition) protected baasicNotificationsRegistrationsUsersBatchRouteDefinition: BaasicNotificationsRegistrationsUsersBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                          

@@ -7,13 +7,46 @@
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import {
+    BaasicNotificationsPublishRouteDefinition,
+    BaasicNotificationsSubscriptionsRouteDefinition,
+    BaasicNotificationsRegistrationsRouteDefinition,
+    BaasicNotificationsSettingsRouteDefinition,
+    TYPES as notificationsTypes
+} from 'modules/notifications';
 
 @injectable()
 export class BaasicNotificationsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    get publish(): BaasicNotificationsPublishRouteDefinition {
+        return this.baasicNotificationsPublishRouteDefinition;
+    }
+
+    get subscriptions(): BaasicNotificationsSubscriptionsRouteDefinition {
+        return this.basicNotificationsSubscriptionsRouteDefinition;
+    }
+
+    get registrations(): BaasicNotificationsRegistrationsRouteDefinition {
+        return this.baasicNotificationsRegistrationsRouteDefinition;
+    }
+
+    get settings(): BaasicNotificationsSettingsRouteDefinition {
+        return this.baasicNotificationsSettingsRouteDefinition;
+    }
+
     constructor(
-        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
+        @inject(notificationsTypes.BaasicNotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: BaasicNotificationsPublishRouteDefinition,
+        @inject(notificationsTypes.BaasicNotificationsSubscriptionsRouteDefinition) protected basicNotificationsSubscriptionsRouteDefinition: BaasicNotificationsSubscriptionsRouteDefinition,
+        @inject(notificationsTypes.BaasicNotificationsRegistrationsRouteDefinition) protected baasicNotificationsRegistrationsRouteDefinition: BaasicNotificationsRegistrationsRouteDefinition,
+        @inject(notificationsTypes.BaasicNotificationsSettingsRouteDefinition) protected baasicNotificationsSettingsRouteDefinition: BaasicNotificationsSettingsRouteDefinition
     ) { super(appOptions); }
-
-
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.  
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
+ - All end-point objects are transformed by the associated route service. 
+ */

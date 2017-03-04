@@ -31,8 +31,8 @@ export class BaasicNotificationsSubscriptionsUsersBatchRouteDefinition extends B
      * @method                          
      * @example baasicNotificationsSubscriptionsUsersBatchRouteDefinition.delete(ids);                              
      */
-    delete(ids: string[]): any {
-        return super.baseDelete('notifications/subscriptions/batch', ids);
+    delete(): any {
+        return super.baseDelete('notifications/subscriptions/batch', {});
     }
 
     /**                              
@@ -41,7 +41,7 @@ export class BaasicNotificationsSubscriptionsUsersBatchRouteDefinition extends B
      * @example baasicNotificationsSubscriptionsUsersBatchRouteDefinition.update();                              
      */
     update(): any {
-        return super.baseUpdate('notifications/subscriptions/batch', undefined);
+        return super.baseUpdate('notifications/subscriptions/batch', {});
     }
 }
 

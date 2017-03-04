@@ -52,7 +52,7 @@ export class BaasicNotificationsSubscriptionsUsersBatchClient {
                     });		                            
      */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.delete(ids), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.deleteParams(ids));
+        return this.baasicApiClient.delete<void>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              

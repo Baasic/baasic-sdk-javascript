@@ -7,7 +7,11 @@
 import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicNotificationsRegistrationsUsersRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import {
+    BaasicNotificationsRegistrationsUsersBatchClient,
+    BaasicNotificationsRegistrationsUsersRouteDefinition,
+    TYPES as notificationsTypes
+} from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
 
 @injectable()
@@ -17,8 +21,13 @@ export class BaasicNotificationsRegistrationsUsersClient {
         return this.baasicNotificationsRegistrationsUsersRouteDefinition;
     }
 
+    get batch(): BaasicNotificationsRegistrationsUsersBatchClient {
+        return this.baasicNotificationsRegistrationsUsersBatchClient;
+    }
+
     constructor(
         @inject(notificationsTypes.BaasicNotificationsRegistrationsUsersRouteDefinition) protected baasicNotificationsRegistrationsUsersRouteDefinition: BaasicNotificationsRegistrationsUsersRouteDefinition,
+        @inject(notificationsTypes.BaasicNotificationsRegistrationsUsersBatchClient) protected baasicNotificationsRegistrationsUsersBatchClient: BaasicNotificationsRegistrationsUsersBatchClient,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 

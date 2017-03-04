@@ -32,7 +32,7 @@ export class BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition exten
      * @example baasicNotificationsSubscriptionsAnonymousBatchRouteDefinitio.delete();                              
      */
     delete(): any {
-        return this.baseDelete('notifications/subscriptions/anonymous/batch', undefined);
+        return this.baseDelete('notifications/subscriptions/anonymous/batch', {});
     }
 
     /**                              
@@ -41,7 +41,7 @@ export class BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition exten
      * @example baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.update();                              
      */
     update(): any {
-        return this.baseUpdate('notifications/subscriptions/anonymous/batch', undefined);
+        return this.baseUpdate('notifications/subscriptions/anonymous/batch', {});
     }
 }
 

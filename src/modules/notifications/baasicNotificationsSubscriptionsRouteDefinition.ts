@@ -14,7 +14,7 @@ import {
 } from 'modules/notifications';
 
 @injectable()
-export class BasicNotificationsSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
+export class BaasicNotificationsSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
 
     get users(): BaasicNotificationsSubscriptionsUsersRouteDefinition {
         return this.baasicNotificationsSubscriptionsUsersRouteDefinition;
@@ -26,7 +26,7 @@ export class BasicNotificationsSubscriptionsRouteDefinition extends BaasicBaseRo
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: BaasicNotificationsSubscriptionsAnonymousRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: BaasicNotificationsSubscriptionsUsersRouteDefinition
+        @inject(notificationsTypes.BaasicNotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: BaasicNotificationsSubscriptionsUsersRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 }
