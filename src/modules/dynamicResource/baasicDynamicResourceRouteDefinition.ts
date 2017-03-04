@@ -60,13 +60,7 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
     }
 
     patch(data: any, options: IOptions): any {
-        let opt = this.utility.extend({}, options);
-        let params = this.modelMapper.updateParams(data);
-        if ('HAL') {
-            return super.parse(params[this.modelMapper.modelPropertyName].links('patch').href).expand(opt);
-        } else {
-            return super.parse('resources/{schemaName}/{id}/{?embed,fields}').expand(opt);
-        }
+        return super.baseUpdate('resources/{schemaName}/{id}/{?embed,fields}', data, options, 'patch');
     }
 
     delete(data: any, options: IOptions): any {
