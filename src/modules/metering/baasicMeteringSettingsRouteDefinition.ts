@@ -4,9 +4,9 @@
  * @description Baasic Metering Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Settings Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
 import { injectable, inject } from "inversify";
+import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { IOptions } from 'common/contracts';
 import { IMeteringSettings } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 

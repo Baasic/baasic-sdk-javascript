@@ -4,9 +4,9 @@
  * @description Baasic Templating Client provides an easy way to consume Baasic Templating REST API end-points. In order to obtain a needed routes `baasicTemplatingClient` uses `baasicTemplatingRouteDefinition`. 
  */
 
+import { injectable, inject } from 'inversify';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { injectable, inject } from 'inversify';
 import { BaasicTemplatingBatchClient, BaasicTemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 

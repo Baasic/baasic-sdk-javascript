@@ -3,9 +3,9 @@
  * @description Baasic Value Set Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
 import { injectable, inject } from 'inversify';
+import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { IOptions } from 'common/contracts';
 import { BaasicValueSetItemRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';

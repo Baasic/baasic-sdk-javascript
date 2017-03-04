@@ -4,8 +4,8 @@
  * @description Baasic Files ACL Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { IBaasicQueryModel, IACLOptions, IACLPolicy } from 'common/contracts';
 import { injectable, inject } from "inversify";
+import { IBaasicQueryModel, IACLOptions, IACLPolicy } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicFilesACLRouteDefinition, TYPES as filesTypes } from 'modules/files';
 

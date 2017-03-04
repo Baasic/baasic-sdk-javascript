@@ -4,10 +4,10 @@
  * @description Baasic Login Client provides an easy way to consume Baasic Application Registration REST API end-points. In order to obtain needed routes `baasicLoginClient` uses `baasicLoginRouteDefinition`. 
  */
 
+import { injectable, inject } from "inversify";
 import { Utility } from 'common';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTYPES } from 'httpApi';
-import { injectable, inject } from "inversify";
 import { BaasicLoginRouteDefinition, BaasicLoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
 import { IUserInfo } from 'modules/membership/contracts';
 
