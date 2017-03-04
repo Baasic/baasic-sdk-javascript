@@ -20,7 +20,7 @@ export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('files/batch').expand({});
+        return super.baseCreate('files/batch', {});
     }
 
     /**                     
@@ -29,7 +29,7 @@ export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesBatchRouteDefinition.link();                                  
      **/
     link(): any {
-        return super.parse('files/batch/link').expand({});
+        return super.baseCreate('files/batch/link', {});
     }
 
     /**                     
@@ -38,7 +38,7 @@ export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesBatchRouteDefinition.unlink();                                  
      **/
     unlink(): any {
-        return super.parse('files/batch/unlink').expand({});
+        return super.baseCreate('files/batch/unlink', {});
     }
 }
 

@@ -19,7 +19,7 @@ export class BaasicMediaVaultSettingsRouteDefinition extends BaasicBaseRouteDefi
      * @example baasicMediaVaultSettingsRouteDefinition.get();                                   
      **/
     get(): any {
-        return super.parse('media-vault-settings').expand({});
+        return super.baseCreate('media-vault-settings', {});
     }
 
     /**                     
@@ -28,7 +28,7 @@ export class BaasicMediaVaultSettingsRouteDefinition extends BaasicBaseRouteDefi
      * @example baasicMediaVaultSettingsRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('media-vault-settings').expand({});
+        return super.baseCreate('media-vault-settings', {});
     }
 }
 

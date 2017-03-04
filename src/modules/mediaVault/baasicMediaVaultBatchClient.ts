@@ -57,7 +57,7 @@ export class BaasicMediaVaultBatchClient {
                             });	  	                  
      **/
     remove(data: any[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMediaVaultBatchRouteDefinition.delete(data), undefined, data);
+        return this.baasicApiClient.delete<void>(this.baasicMediaVaultBatchRouteDefinition.delete(), undefined, data);
     }
 }
 

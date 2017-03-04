@@ -27,7 +27,7 @@ export class BaasicSkillBatchRouteDefinition extends BaasicBaseRouteDefinition {
       * @example baasicSkillBatchRouteDefinition.update();                                  
       **/
     update(): any {
-        return super.parse('profile/lookups/skills/batch').expand({});
+        return super.baseUpdate('profile/lookups/skills/batch', {});
     }
 
     /**                     
@@ -36,7 +36,7 @@ export class BaasicSkillBatchRouteDefinition extends BaasicBaseRouteDefinition {
       * @example baasicSkillBatchRouteDefinition.delete();                                  
       **/
     delete(): any {
-        return super.parse('profile/lookups/skills/batch').expand({});
+        return super.baseDelete('profile/lookups/skills/batch', {});
     }
 }
 

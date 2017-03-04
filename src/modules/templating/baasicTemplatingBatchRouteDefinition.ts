@@ -28,7 +28,7 @@ export class BaasicTemplatingBatchRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicTemplatingBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('templates/batch').expand({});
+        return super.baseUpdate('templates/batch', {});
     }
 
     /**                     
@@ -37,7 +37,7 @@ export class BaasicTemplatingBatchRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicTemplatingBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
-        return super.parse('templates/batch').expand({});
+        return super.baseDelete('templates/batch', {});
     }
 }
 

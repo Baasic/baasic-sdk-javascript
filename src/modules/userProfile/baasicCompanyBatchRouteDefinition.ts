@@ -27,7 +27,7 @@ export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicCompanyRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('lookups/companies/batch').expand({});
+        return super.baseUpdate('lookups/companies/batch', {});
     }
 
     /**                     
@@ -36,7 +36,7 @@ export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicCompanyRouteDefinition.remove();                                  
      **/
     delete(): any {
-        return super.parse('lookups/companies/batch').expand({});
+        return super.baseDelete('lookups/companies/batch', {});
     }
 }
 

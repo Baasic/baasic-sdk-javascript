@@ -21,7 +21,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('files/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('files/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -31,7 +31,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     update(options: IACLOptions[]): any {
         let params = this.utility.extend({}, options);
-        return super.parse('files/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('files/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -55,7 +55,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
         params.id = id;
         params.user = user;
         params.accessAction = action;
-        return super.parse('files/{id}/acl/actions/{accessAction}/users/{user}/').expand(params);
+        return super.baseCreate('files/{id}/acl/actions/{accessAction}/users/{user}/', params);
     }
 
     /** 					
@@ -79,7 +79,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
         params.id = id;
         params.role = role;
         params.accessAction = action;
-        return super.parse('files/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
+        return super.baseCreate('files/{id}/acl/actions/{accessAction}/roles/{role}/', params);
     }
 
     updateParams(data: any): any {

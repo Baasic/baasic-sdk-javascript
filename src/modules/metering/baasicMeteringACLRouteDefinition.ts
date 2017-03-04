@@ -22,7 +22,7 @@ export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition 
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('metering/data/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('metering/data/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -33,7 +33,7 @@ export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition 
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('metering/data/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('metering/data/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -62,7 +62,7 @@ export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition 
         params.id = id;
         params.user = user;
         params.accessAction = action;
-        return super.parse('metering/data/{id}/acl/actions/{accessAction}/users/{user}/').expand(params);
+        return super.baseCreate('metering/data/{id}/acl/actions/{accessAction}/users/{user}/', params);
     }
 
     /** 					
@@ -87,7 +87,7 @@ export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition 
         params.id = id;
         params.role = role;
         params.accessAction = action;
-        return super.parse('metering/data/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
+        return super.baseCreate('metering/data/{id}/acl/actions/{accessAction}/roles/{role}/', params);
     }
 
     updateParams(options: IACLOptions) {

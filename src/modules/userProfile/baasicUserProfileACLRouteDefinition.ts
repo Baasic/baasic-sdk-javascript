@@ -21,7 +21,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      **/
     get(options?: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('profiles/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('profiles/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -32,7 +32,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('profiles/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('profiles/{id}/acl/{?fields}', params);
     }
 
     updateParams(options: IACLOptions): any {
@@ -62,7 +62,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
         params.profileId = profileId;
         params.user = user;
         params.accessAction = action;
-        return super.parse('profiles/{id}/acl/actions/{accessAction}/users/{user}/').expand(params);
+        return super.baseCreate('profiles/{id}/acl/actions/{accessAction}/users/{user}/', params);
     }
 
     /** 					
@@ -87,7 +87,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
         params.profileId = profileId;
         params.role = role;
         params.accessAction = action;
-        return super.parse('profiles/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
+        return super.baseCreate('profiles/{id}/acl/actions/{accessAction}/roles/{role}/', params);
     }
 }
 

@@ -46,7 +46,7 @@ export class BaasicUserSocialLoginRouteDefinition extends BaasicBaseRouteDefinit
             params = this.utility.extend({}, provider);
         }
         params.username = username;
-        return super.parse('users/{username}/social-login/{provider}').expand(this.modelMapper.findParams(params));
+        return super.baseFind('users/{username}/social-login/{provider}', params);
     }
 }
 

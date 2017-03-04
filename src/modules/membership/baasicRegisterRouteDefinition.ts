@@ -30,7 +30,7 @@ export class BaasicRegisterRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     activate(data: string): any {
         let params = this.modelMapper.getParams(data, undefined, 'activationToken');
-        return super.parse('register/activate/{activationToken}/').expand(params);
+        return super.baseCreate('register/activate/{activationToken}/', params);
     }
 }
 

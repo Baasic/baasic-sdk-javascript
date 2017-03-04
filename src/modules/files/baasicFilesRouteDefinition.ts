@@ -59,17 +59,17 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
         return super.baseUpdate('files/{id}', data);
     }
 
+    /**                 
+     * Parses unlink route; this route should be expanded with the Id of the file resource.                 
+     * @method 
+     * @param data A file entry object used to update specific file entry resource in the system.                           
+     * @example baasicFilesRouteDefinition.unlink({id: '<file-id>'});                               
+     **/
     unlink(data: IFileEntry, options?: Object): any {
-        if (!options) {
-            options = {};
-        }
-        let params = this.modelMapper.removeParams(data);
-        if ('HAL') {
-            return super.parse(params[this.modelMapper.modelPropertyName].links('unlink').href + '{?height,width}').expand(options);
-        } else {
-            return super.parse('files/unlink/{id}/{?height,width}).expand(options)');
-        }
+        return super.baseDelete('files/unlink/{id}/{?height,width}', data, options, 'unlink');
     }
+
+
 
     /**                 
      * Parses link route; this URI template does not expose any additional options.                 
@@ -77,7 +77,7 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesRouteDefinition.link();                              
      **/
     link(): any {
-        return super.parse('files/link').expand({});
+        return super.baseCreate('files/link', {});
     }
 }
 

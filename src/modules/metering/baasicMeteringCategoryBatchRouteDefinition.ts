@@ -29,7 +29,7 @@ export class BaasicMeteringCategoryBatchRouteDefinition extends BaasicBaseRouteD
      * @example baasicMeteringCategoryBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('metering/categories/batch').expand();
+        return super.baseUpdate('metering/categories/batch', {});
     }
 
     /**                     
@@ -38,7 +38,7 @@ export class BaasicMeteringCategoryBatchRouteDefinition extends BaasicBaseRouteD
      * @example baasicMeteringCategoryBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
-        return super.parse('metering/categories/batch').expand();
+        return super.baseDelete('metering/categories/batch', {});
     }
 }
 

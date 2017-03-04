@@ -107,7 +107,7 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMeteringRouteDefinition.purge();                  
      **/
     purge(): any {
-        return super.parse('metering/data/purge').expand({});
+        return super.baseDelete('metering/data/purge', {});
     }
 }
 

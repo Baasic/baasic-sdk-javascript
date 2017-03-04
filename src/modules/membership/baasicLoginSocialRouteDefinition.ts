@@ -37,6 +37,6 @@ export class BaasicLoginSocialRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicLoginSocialClient.post({ provider : '<provider>' });                                
      **/
     post(provider: string, options?: any): any {
-        return super.parse('login/social/{provider}/{?embed,fields,options}').expand({ provider: provider, options: options });
+        return super.baseCreate('login/social/{provider}/{?embed,fields,options}', { provider: provider, options: options });
     }
 }

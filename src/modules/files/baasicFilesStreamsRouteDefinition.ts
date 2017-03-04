@@ -26,7 +26,7 @@ export class BaasicFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition
                 id: data
             };
         }
-        return super.parse('file-streams/{id}/{?width,height}').expand(data);
+        return super.baseCreate('file-streams/{id}/{?width,height}', data);
     }
 
     /**                     
@@ -42,7 +42,7 @@ export class BaasicFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition
                 id: data
             };
         }
-        return super.parse('file-streams/{id}/{?width,height}').expand(data);
+        return super.baseCreate('file-streams/{id}/{?width,height}', data);
     }
 
     /**                     
@@ -56,7 +56,7 @@ export class BaasicFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition
                 path: data
             };
         }
-        return super.parse('file-streams/{path}').expand(data);
+        return super.baseCreate('file-streams/{path}', data);
     }
 }
 

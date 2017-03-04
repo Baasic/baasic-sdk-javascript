@@ -25,7 +25,7 @@ export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRou
                 id: data
             };
         }
-        return super.parse('profiles/{id}/avatar-streams/{?width,height}').expand(data);
+        return super.baseCreate('profiles/{id}/avatar-streams/{?width,height}', data);
     }
 
     /**                     
@@ -58,7 +58,7 @@ export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRou
                 id: data
             };
         }
-        return super.parse('profiles/{id}/avatar-streams/{?width,height}').expand(data);
+        return super.baseCreate('profiles/{id}/avatar-streams/{?width,height}', data);
     }
 }
 

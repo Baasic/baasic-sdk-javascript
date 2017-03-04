@@ -53,7 +53,7 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
     link(id: string, data: IProfileAvatar): any {
         let params = this.utility.extend({}, data);
         params.id = id;
-        return super.parse('profiles/{id}/avatars/link').expand(params);
+        return super.baseCreate('profiles/{id}/avatars/link', params);
     }
 
     /**                 

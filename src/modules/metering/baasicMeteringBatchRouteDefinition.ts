@@ -30,7 +30,7 @@ export class BaasicMeteringBatchRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicMeteringBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('metering/data/batch').expand({});
+        return super.baseUpdate('metering/data/batch', {});
     }
 
     /**                     
@@ -39,7 +39,7 @@ export class BaasicMeteringBatchRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicMeteringBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
-        return super.parse('metering/data/batch').expand({});
+        return super.baseDelete('metering/data/batch', {});
     }
 }
 

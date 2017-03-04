@@ -27,7 +27,7 @@ export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicOrganizationBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('lookups/organizations/batch').expand({});
+        return super.baseUpdate('lookups/organizations/batch', {});
     }
 
     /**                     
@@ -36,7 +36,7 @@ export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicOrganizationBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
-        return super.parse('lookups/organizations/batch').expand({});
+        return super.baseDelete('lookups/organizations/batch', {});
     }
 }
 

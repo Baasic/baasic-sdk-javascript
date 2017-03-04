@@ -44,7 +44,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicDynamicSchemaRouteDefinition.generate();              				
      **/
     generate(): any {
-        return super.parse('schemas/generate').expand({});
+        return super.baseCreate('schemas/generate', {});
     }
 
     /** 				
