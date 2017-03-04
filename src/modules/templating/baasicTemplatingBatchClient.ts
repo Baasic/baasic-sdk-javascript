@@ -70,7 +70,7 @@ export class BaasicTemplatingBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicTemplatingBatchRouteDefinition.delete(), this.baasicTemplatingBatchRouteDefinition.deleteParams(ids));
+        return this.baasicApiClient.delete(this.baasicTemplatingBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

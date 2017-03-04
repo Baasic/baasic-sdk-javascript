@@ -55,8 +55,8 @@ export class BaasicOrganizationBatchClient {
                          // perform error handling here   
                     });                   
      **/
-    update(data: IOrganization[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicOrganizationBatchRouteDefinition.update(), this.baasicOrganizationBatchRouteDefinition.updateParams(data));
+    update(data: IOrganization[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicOrganizationBatchRouteDefinition.update(), this.baasicOrganizationBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -70,8 +70,8 @@ export class BaasicOrganizationBatchClient {
                          // perform error handling here   
                     });		                  
      **/
-    remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicOrganizationBatchRouteDefinition.delete(), this.baasicOrganizationBatchRouteDefinition.deleteParams(ids));
+    remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicOrganizationBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

@@ -51,8 +51,8 @@ export class BaasicSkillBatchClient {
                          // perform error handling here   
                     });                   
      **/
-    update(data: ISkill[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicSkillBatchRouteDefinition.update(), this.baasicSkillBatchRouteDefinition.updateParams(data));
+    update(data: ISkill[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicSkillBatchRouteDefinition.update(), this.baasicSkillBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -68,8 +68,8 @@ export class BaasicSkillBatchClient {
                          // perform error handling here   
                     });		                  
      **/
-    remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicSkillBatchRouteDefinition.delete(), this.baasicSkillBatchRouteDefinition.deleteParams(ids));
+    remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicSkillBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

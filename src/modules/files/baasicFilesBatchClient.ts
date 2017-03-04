@@ -79,7 +79,7 @@ export class BaasicFilesBatchClient {
                         });		                    
      **/
     unlink(data: Object[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicFilesBatchRouteDefinition.unlink(), this.baasicFilesBatchRouteDefinition.deleteParams(data));
+        return this.baasicApiClient.delete<void>(this.baasicFilesBatchRouteDefinition.unlink(), undefined, data);
     }
 
     /**                   
