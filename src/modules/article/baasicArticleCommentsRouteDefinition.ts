@@ -15,8 +15,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
 
     /**

@@ -1,134 +1,92 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicArticleFilesRouteDefinition  
  * @description Baasic Article Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
-import { BaasicBaseRouteDefinition } from '..';
+import { injectable, inject } from "inversify";
+import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import {
+    BaasicArticleFilesBatchRouteDefinition,
+    BaasicArticleFilesStreamsRouteDefinition,
+    TYPES as articleTypes
+} from 'modules/article';
+import { IArticleFile } from 'modules/article/contracts';
 
+@injectable()
 export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition {
 
-      public readonly streams: BaasicArticleFilesStreamsRouteDefinition = new BaasicArticleFilesStreamsRouteDefinition();
+    get streams(): BaasicArticleFilesStreamsRouteDefinition {
+        return this.baasicArticleFilesStreamsRouteDefinition;
+    }
 
-      public readonly batch: BaasicArticleFilesBatchRouteDefinition = new BaasicArticleFilesBatchRouteDefinition();
+    get batch(): BaasicArticleFilesBatchRouteDefinition {
+        return this.baasicArticleFilesBatchRouteDefinition;
+    }
 
-      /**                 
-       * Parses find route which can be expanded with additional options. Supported items are:                 
-       * - `searchQuery` - A string referencing file properties using the phrase search.                 
-       * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.                 
-       * - `rpp` - A value used to limit the size of result set per page.                 
-       * - `sort` - A string used to set the file property to sort the result collection by. 	
-       * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-       * @method                        
-       * @example baasicArticleFilesRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
-       **/
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse('article-files/{?searchQuery,page,rpp,sort,embed,fields}');
+    constructor(
+        @inject(articleTypes.BaasicArticleFilesStreamsRouteDefinition) protected baasicArticleFilesStreamsRouteDefinition: BaasicArticleFilesStreamsRouteDefinition,
+        @inject(articleTypes.BaasicArticleFilesBatchRouteDefinition) protected baasicArticleFilesBatchRouteDefinition: BaasicArticleFilesBatchRouteDefinition,
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+    ) { super(appOptions); }
+
+    /**                 
+     * Parses find route which can be expanded with additional options. Supported items are:                 
+     * - `searchQuery` - A string referencing file properties using the phrase search.                 
+     * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.                 
+     * - `rpp` - A value used to limit the size of result set per page.                 
+     * - `sort` - A string used to set the file property to sort the result collection by. 	
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * @method                        
+     * @example baasicArticleFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     **/
+    find(options: IOptions): any {
+        return super.baseFind('article-files/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
      * Parses get route; this route should be expanded with the Id of the file resource.
      * @method 
-     * @example baasicArticleFilesRouteDefinition.get.expand({id: '<file-id>'});
+     * @example baasicArticleFilesRouteDefinition.get({id: '<file-id>'});
      **/
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('article-files/{id}/{?embed,fields}');
+    get(id: string, options?: IOptions): any {
+        return super.baseGet('article-files/{id}/{?embed,fields}', id, options);
     }
 
     /**
      * Parses link route; this URI template does not expose any additional options.
      * @method  
-     * @example baasicArticleFilesRouteDefinition.link.expand({});
+     * @example baasicArticleFilesRouteDefinition.link();
      **/
     link(): any {
-        return this.baasicUriTemplateProcessor.parse('article-files/link');
+        return super.baseCreate('article-files/link', {});
     }
 
-    unlink(params: any): any {
-        if ('HAL') {
-            return this.baasicUriTemplateProcessor.parse((params[baasicConstants.modelPropertyName].links('unlink').href));
-        } else {
-            // return json;
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method  
+     * @example baasicArticleFilesRouteDefinition.unlink(data);
+     **/
+    unlink(data: IArticleFile, options: Object): any {
+        return super.baseDelete('article-files/unlink/{id}', data, options, 'unlink');
+    }
+
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method  
+     * @example baasicArticleFilesRouteDefinition.update(data);
+     **/
+    update(data: any): any {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
         }
-    }
-
-    /**                 
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
-     * @method                 
-     * @example baasicArticleFilesRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
-     **/
-    parse(link: string): any {
-        return super.parse(link);
-    }   
-}
-
-
-
-class BaasicArticleFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition {
-
-     /**                     
-      * Parses get route; this route should be expanded with id of desired file stream. Additional supported items are:                     
-      * - `width` - width of desired derived image.  
-      * - `height` - height of desired derived image. 
-      * @method streams.get   
-      * @example baasicArticleFilesRouteDefinition.streams.get.expand({id: '<filename>'});
-      **/
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('article-file-streams/{id}/{?width,height}');
-    }
-
-    /**                     
-     * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.                     
-     * @method streams.create                     
-     * @example baasicArticleFilesRouteDefinition.streams.create.expand({filename: '<filename>'});                                   
-     **/
-    create(): any {
-        return this.baasicUriTemplateProcessor.parse('article-file-streams/{filename}/{?articleId}');
-    }
-
-    /**                     
-     * Parses update route; this route should be expanded with the id of the previously saved resource. Additional supported items are:                     
-     * - `width` - width of derived image to update.                     
-     * - `height` - height of derived image to update.                                        
-     * @method streams.update                        
-     * @example baasicArticleFilesRouteDefinition.streams.update.expand({id: '<filename>'});
-     **/
-    update(): any {
-        return this.baasicUriTemplateProcessor.parse('article-file-streams/{id}/{?width,height}');
+        return super.baseUpdate('article-files/{id}', data);
     }
 }
-
-
-class BaasicArticleFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
-    
-    /**                     
-     * Parses unlink route; this URI template does not expose any additional options.                                                        
-     * @method batch.unlink                           
-     * @example baasicArticleFilesRouteDefinition.batch.unlink.expand({});                                  
-     **/
-    unlink(): any {
-        return this.baasicUriTemplateProcessor.parse('article-files/batch/unlink');
-    }
-
-     /**                     
-      * Parses update route; this URI template does not expose any additional options.  
-      * @method batch.update                           
-      * @example baasicArticleFilesRouteDefinition.batch.update.expand({});                                  
-      **/
-    update(): any {
-        return this.baasicUriTemplateProcessor.parse('article-files/batch');
-    }
-
-    /**                     
-     * Parses update route; this URI template does not expose any additional options.                     
-     * @method batch.link                           
-     * @example baasicArticleFilesRouteDefinition.batch.link.expand({});                                  
-     **/
-    link(): any {
-        return this.baasicUriTemplateProcessor.parse('article-files/batch/link');
-    }
-}
-
 
 /**  
  * @overview  

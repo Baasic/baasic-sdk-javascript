@@ -1,41 +1,46 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicArticleRatingsClient  
  * @description Baasic Article Ratings Client provides an easy way to consume Baasic Article Ratings REST API end-points. `baasicArticleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `baasicArticleService` functions allow management between article and article rating. In order to obtain needed routes `baasicArticleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
 */
 
-import { BaasicArticleRatingsRouteDefinition } from '.';
-import { IOptions, ModelMapper } from '../IOptions';
 
+import { injectable, inject } from "inversify";
+import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicArticleRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { IRating } from 'modules/article/contracts';
+
+@injectable()
 export class BaasicArticleRatingsClient {
 
     /**                 
      * Provides direct access to `baasicArticleRatingsRouteDefinition`.                
      * @method                        
-     * @example baasicArticleRatingsClient.routeDefinition.get.expand(expandObject);                 
-     **/ 
+     * @example baasicArticleRatingsClient.routeDefinition.get(id);                 
+     **/
     get routeDefinition(): BaasicArticleRatingsRouteDefinition {
         return this.baasicArticleRatingsRouteDefinition;
     }
 
     constructor(
-        private modelMapper: ModelMapper,
-        private baasicArticleRatingsRouteDefinition: BaasicArticleRatingsRouteDefinition
-    ) {}
+        @inject(articleTypes.BaasicArticleRatingsRouteDefinition) protected baasicArticleRatingsRouteDefinition: BaasicArticleRatingsRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**       
      * Returns a promise that is resolved once the create article rating action has been performed; this action creates a new rating for an article.                   
      * @method                       
      * @example baasicArticleRatingsClient.create({ articleId : '<article-id>', rating : 5, userId : '<user-id>' })
-                    .success(function (data) { 
+                    .then(function (data) { 
                         // perform success action here 
-                })
-                .error(function (response, status, headers, config) { 
-                    // perform error handling here 
-                });                   
-     **/ 						
-    create(data: any): Promise<any> {
-        return this.baasicApiHttp.post(this.baasicArticleRatingsRouteDefinition.create().expand(data), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+                    },
+                     function (response, status, headers, config) { 
+                        // perform error handling here 
+                    });                   
+     **/
+    create(data: IRating): PromiseLike<IHttpResponse<IRating>> {
+        return this.baasicApiClient.post(this.baasicArticleRatingsRouteDefinition.create(data), this.baasicArticleRatingsRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -48,15 +53,15 @@ export class BaasicArticleRatingsClient {
                     orderDirection : '<asc|desc>',   
                     search : '<search-phrase>' 
                 })
-                .success(function (collection) {   
+                .then(function (collection) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
-     **/  				
-    find(options: IOptions): Promise<any> {
-        return this.baasicApiHttp.get(this.baasicArticleRatingsRouteDefinition.find().expand(this.modelMapper.findParams(options)));
+     **/
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
+        return this.baasicApiClient.get(this.baasicArticleRatingsRouteDefinition.find(options));
     }
 
     /**                  
@@ -68,33 +73,30 @@ export class BaasicArticleRatingsClient {
                     orderBy : '<field>',   
                     orderDirection : '<asc|desc>'
                 })
-                .success(function (collection) {   
+                .then(function (collection) {   
                     // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
+                },
+                 function (response, status, headers, config) {   
                     // perform error handling here 
                 });                     
      **/
-    findByUser(username: string, options: IOptions): Promise<any> {
-         let params = angular.extend({}, options); 
-         params.username = username;
-         
-         return this.baasicApiHttp.get(this.baasicArticleRatingsRouteDefinition.findByUser().expand(this.modelMapper.findParams(params))); 
+    findByUser(username: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
+        return this.baasicApiClient.get(this.baasicArticleRatingsRouteDefinition.findByUser(username, options));
     }
 
     /**                  
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article rating resource.                  
      * @method                         
      * @example baasicArticleRatingsClient.get('<articleRating-id>')
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                })
-                .error(function (response, status, headers, config) {   
-                    // perform error handling here 
-                });                 
+                    },
+                     function (response, status, headers, config) {   
+                        // perform error handling here 
+                    });                 
      **/
-    get(id: string, options: IOptions): Promise<any> {
-        return this.baasicApiHttp.get(this.baasicArticleRatingsRouteDefinition.get().expand(this.modelMapper.getParams(id, options)));
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IRating>> {
+        return this.baasicApiClient.get(this.baasicArticleRatingsRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -107,16 +109,15 @@ export class BaasicArticleRatingsClient {
      * @example // articleRating is a resource previously fetched using get action. 
                     articleRating.rating = 4; 
                     baasicArticleRatingsClient.update(articleRating)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) {   
+                        },
+                         function (response, status, headers, config) {   
                             // perform error handling here 
                         }); 				
-     **/						
-    update(data: any): Promise<any> {
-         let params = this.modelMapper.updateParams(data);
-         return this.baasicApiHttp.put(this.baasicArticleRatingsRouteDefinition.update(params), params[this.baasicConstants.modelPropertyName]);
+     **/
+    update(data: IRating): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleRatingsRouteDefinition.update(data), this.baasicArticleRatingsRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -127,16 +128,16 @@ export class BaasicArticleRatingsClient {
      * ```                 
      * @method                        
      * @example // articleRating is a resource previously fetched using get action.				 
-                    baasicArticleRatingsClient.remove(articleRating).success(function (data) {   
-                        // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
-                        // perform error handling here 
-                    });						
-     **/					
-    remove(data: any): Promise<any> {
-        let params = this.modelMapper.removeParams(data);
-        return this.baasicApiHttp.delete(this.baasicArticleRatingsRouteDefinition.delete(params));
+                    baasicArticleRatingsClient.remove(articleRating)
+                        .then(function (data) {   
+                            // perform success action here 
+                        },
+                         function (response, status, headers, config) {   
+                            // perform error handling here 
+                        });						
+     **/
+    remove(data: IRating): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicArticleRatingsRouteDefinition.delete(data));
     }
 }
 

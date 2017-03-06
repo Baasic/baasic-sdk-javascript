@@ -4,3 +4,6 @@ export * from './IArticleCommentMetadata';
 export * from './IArticleComment';
 export * from './IArticleCommentReply';
 export * from './INotificationConfiguration';
+export * from './IArticleFileEntry';
+export * from './IArticleFile';
+export * from './IRating';

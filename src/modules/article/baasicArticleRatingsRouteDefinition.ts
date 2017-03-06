@@ -1,20 +1,30 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicArticleRatingsRouteDefinition  
  * @description Baasic Article Ratings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Ratings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
-import { BaasicBaseRouteDefinition } from '..';
+import { injectable, inject } from "inversify";
+import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IRating } from 'modules/article/contracts';
 
+@injectable()
 export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefinition {
+
+    constructor(
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+    )
+    { super(appOptions); }
 
     /**                 
      * Parses create article rating route; this URI does not support any additional embed items.                 
      * @method                     
-     * @example baasicArticleRatingsRouteDefinition.create.expand({});                 
+     * @example baasicArticleRatingsRouteDefinition.create(data);                 
      **/
-    create(): any {
-        return this.baasicUriTemplateProcessor.parse('article-ratings');
+    create(data: IRating): any {
+        return super.baseCreate('article-ratings', data);
     }
 
     /**                 
@@ -25,10 +35,10 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * - `sort` - A string used to set the article rating property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicArticleRatingsRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
-     **/ 
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse('article-ratings/{?searchQuery,page,rpp,sort,embed,fields}');
+     * @example baasicArticleRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     **/
+    find(options?: IOptions): any {
+        return super.baseFind('article-ratings/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
@@ -39,29 +49,40 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * - `sort` - A string used to set the article rating property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicArticleRatingsRouteDefinition.find.expand({username: '<username>'});                               
+     * @example baasicArticleRatingsRouteDefinition.find({username: '<username>'});                               
      **/
-    findByUser(): any {
-        return this.baasicUriTemplateProcessor.parse('article-ratings/{?username,page,rpp,sort,embed,fields}');
-    }
-
-     /**                 
-      * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system. Additional expand supported items are: 				
-      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-      * @method                        
-      * @example baasicArticleRatingsRouteDefinition.get.expand({id: '<articleRating-id>'});                               
-      **/
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('article-ratings/{id}/{?embed,fields}');
+    findByUser(username: string, options?: IOptions): any {
+        let params = this.utility.extend({}, options);
+        params.username = username;
+        return super.baseFind('article-ratings/{?username,page,rpp,sort,embed,fields}', params);
     }
 
     /**                 
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
-     * @method                 
-     * @example baasicArticleRatingsRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
-     **/	
-    parse(link: string): any {
-        return super.parse(link);
+     * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system. Additional expand supported items are: 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * @method                        
+     * @example baasicArticleRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
+     **/
+    get(id: string, options?: IOptions): any {
+        return super.baseGet('article-ratings/{id}/{?embed,fields}', id, options);
+    }
+
+    /**                 
+     * Parses update article rating route; this URI does not support any additional embed items.                 
+     * @method                     
+     * @example baasicArticleRatingsRouteDefinition.update(data);                 
+     **/
+    update(data: IRating): any {
+        return super.baseUpdate('article-ratings/{id}', data);
+    }
+
+    /**                 
+    * Parses delete article rating route; this URI does not support any additional embed items.                 
+    * @method                     
+    * @example baasicArticleRatingsRouteDefinition.delete(data);                 
+    **/
+    delete(data: IRating): any {
+        return super.baseDelete('article-ratings/{id}', data);
     }
 }
 
