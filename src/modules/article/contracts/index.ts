@@ -8,3 +8,5 @@ export * from './IArticleFileEntry';
 export * from './IArticleFile';
 export * from './IRating';
 export * from './IArticleSettings';
+export * from './IArticleTag';
+export * from './IArticleSubscription';

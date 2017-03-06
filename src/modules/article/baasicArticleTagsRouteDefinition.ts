@@ -1,15 +1,29 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicArticleTagsRouteDefinition  
  * @description Baasic Article Tags Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Tags Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
 */
 
-import { BaasicBaseRouteDefinition } from '..';
+import { injectable, inject } from "inversify";
+import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { BaasicArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { IArticleTag } from 'modules/article/contracts';
 
+@injectable()
 export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition {
 
-    public readonly subscriptions: BaasicArticleTagsSubscriptions = new BaasicArticleTagsSubscriptions();
-    
+    get subscriptions(): BaasicArticleTagsSubscriptionsRouteDefinition {
+        return this.baasicArticleTagsSubscriptionsRouteDefinition;
+    }
+
+    constructor(
+        @inject(articleTypes.BaasicArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: BaasicArticleTagsSubscriptionsRouteDefinition,
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+    )
+    { super(appOptions); }
+
     /** 				
      * Parses find article tags route which can be expanded with additional options. Supported items are: 				
      * - `searchQuery` - A string value used to identify article tags using the phrase search; multiple tag keywords must be comma separated. 				
@@ -20,48 +34,38 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
      * @method      				
      * @example baasicArticleTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
      **/
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse('article-tags/{?searchQuery,page,rpp,sort,embed,fields}');
+    find(options?: IOptions): any {
+        return super.baseFind('article-tags/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 
     /**                 
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicArticleTagsRouteDefinition.find().expand({id: '<articleTag-id>'});               				
+     * @example baasicArticleTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('article-tags/{id}/{?embed,fields}');
-    }
-}
-
-class BaasicArticleTagsSubscriptions {
-
-    /**                     
-     * Parses subscribe route which must be expanded with id of the tag.                     
-     * @method subscriptions.subscribe                     
-     * @example baasicArticleTagsRouteDefinition.subscriptions.subscribe().expand( {id: '<tag-id>'} );                       
-     **/
-    subscribe(): any {
-        return this.UriTemplateProcessor.parse('article-tags/{id}/subscriptions');
+    get(id: string, options?: IOptions): any {
+        return super.baseGet('article-tags/{id}/{?embed,fields}', id, options);
     }
 
-    /**                      
-     * Parses isSubscribed route which must be expanded with subscriber id and the id of the tag.                      
-     * @method subscriptions.isSubscribed                      
-     * @example baasicArticleRouteDefinition.subscriptions.isSubscribed().expand({ id: '<tag-id>', subscriberId: '<subscriber-id>' });                       
+    /**                 
+     * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation. 				
+     * @method      				
+     * @example baasicArticleTagsRouteDefinition.update({id: '<articleTag-id>'});               				
      **/
-    isSubscribed(): any {
-        return this.baasicUriTemplateProcessor.parse('article-tags/{id}/subscriptions/{subscriberId}');
+    update(data: IArticleTag): any {
+        return super.baseUpdate('article-tags/{id}', data);
     }
 
-    /**  
-     * Parses unSubscribe route which must be expanded with the id of the article.                     
-     * @method subscriptions.unSubscribe                     
-     * @example baasicArticleRouteDefinition.subscriptions.unSubscribe.expand({id: '<tag-id>'});                                                 
+    /**                 
+     * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation. 				
+     * @method      				
+     * @example baasicArticleTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
      **/
-    unSubscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('article-tags/{id}/subscriptions');
+    delete(data: IArticleTag): any {
+        return super.baseDelete('article-tags/{id}', data);
     }
 }
 

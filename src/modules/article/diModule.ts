@@ -13,7 +13,11 @@ import {
     BaasicArticleRatingsClient,
     BaasicArticleRatingsRouteDefinition,
     BaasicArticleSettingsClient,
-    BaasicArticleSettingsRouteDefinition
+    BaasicArticleSettingsRouteDefinition,
+    BaasicArticleTagsClient,
+    BaasicArticleTagsRouteDefinition,
+    BaasicArticleTagsSubscriptionsClient,
+    BaasicArticleTagsSubscriptionsRouteDefinition
 } from 'modules/article';
 
 const TYPES = {
@@ -30,7 +34,11 @@ const TYPES = {
     BaasicArticleRatingsClient: Symbol("BaasicArticleRatingsClient"),
     BaasicArticleRatingsRouteDefinition: Symbol("BaasicArticleRatingsRouteDefinition"),
     BaasicArticleSettingsClient: Symbol("BaasicArticleSettingsClient"),
-    BaasicArticleSettingsRouteDefinition: Symbol("BaasicArticleSettingsRouteDefinition")
+    BaasicArticleSettingsRouteDefinition: Symbol("BaasicArticleSettingsRouteDefinition"),
+    BaasicArticleTagsClient: Symbol("BaasicArticleTagsClient"),
+    BaasicArticleTagsRouteDefinition: Symbol("BaasicArticleTagsRouteDefinition"),
+    BaasicArticleTagsSubscriptionsClient: Symbol("BaasicArticleTagsSubscriptionsClient"),
+    BaasicArticleTagsSubscriptionsRouteDefinition: Symbol("BaasicArticleTagsSubscriptionsRouteDefinition")
 };
 
 export { TYPES };
@@ -50,6 +58,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicArticleRatingsClient>(TYPES.BaasicArticleRatingsClient).toSelf();
     bind<BaasicArticleSettingsRouteDefinition>(TYPES.BaasicArticleSettingsRouteDefinition).toSelf();
     bind<BaasicArticleSettingsClient>(TYPES.BaasicArticleSettingsClient).toSelf();
+    bind<BaasicArticleTagsSubscriptionsRouteDefinition>(TYPES.BaasicArticleTagsSubscriptionsRouteDefinition).toSelf();
+    bind<BaasicArticleTagsSubscriptionsClient>(TYPES.BaasicArticleTagsSubscriptionsClient).toSelf();
+    bind<BaasicArticleTagsRouteDefinition>(TYPES.BaasicArticleTagsRouteDefinition).toSelf();
+    bind<BaasicArticleTagsClient>(TYPES.BaasicArticleTagsClient).toSelf();
 });
 
 export { diModule };

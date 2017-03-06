@@ -13,5 +13,7 @@ export * from './baasicArticleRatingsRouteDefinition';
 export * from './baasicArticleRatingsClient';
 export * from './baasicArticleSettingsRouteDefinition';
 export * from './baasicArticleSettingsClient';
+export * from './baasicArticleTagsSubscriptionsRouteDefinition';
+export * from './baasicArticleTagsSubscriptionsClient';
 export * from './baasicArticleTagsRouteDefinition';
 export * from './baasicArticleTagsClient';
