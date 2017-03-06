@@ -42,7 +42,7 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
      * @method                        
      * @example baasicArticleFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(options: IOptions): any {
+    find(options?: IOptions): any {
         return super.baseFind('article-files/{?searchQuery,page,rpp,sort,embed,fields}', options);
     }
 

@@ -30,7 +30,10 @@ export abstract class BaasicBaseRouteDefinition {
      * @example baasicBaseDefinition.find();
      **/
     protected baseFind(route: string, options?: IOptions): any {
-        return uritemplate.parse(route).expand(this.modelMapper.findParams(options));
+        let params = this.modelMapper.findParams(options);
+        params.startDate = this.getStartDate(options);
+        params.endDate = this.getEndDate(options);
+        return uritemplate.parse(route).expand(params);
     }
 
     /**
@@ -39,7 +42,7 @@ export abstract class BaasicBaseRouteDefinition {
       * @method 
       * @example baasicBaseRouteDefinition.get(route, id);
       **/
-    protected baseGet(route: string, id?: string, options?: any, propName?: string): any {
+    protected baseGet(route: string, id?: any, options?: any, propName?: string): any {
         return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
 
@@ -122,6 +125,20 @@ export abstract class BaasicBaseRouteDefinition {
      **/
     parse(route: string): any {
         return uritemplate.parse(route);
+    }
+
+    protected getStartDate(options: any) {
+        if (!this.utility.isUndefined(options.startDate) && options.startDate !== null) {
+            return options.startDate.toISOString();
+        }
+        return undefined;
+    }
+
+    protected getEndDate(options: any) {
+        if (!this.utility.isUndefined(options.endDate) && options.endDate !== null) {
+            return options.endDate.toISOString();
+        }
+        return undefined;
     }
 }
 

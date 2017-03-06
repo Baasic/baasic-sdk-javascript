@@ -1,41 +1,49 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicArticleRouteDefinition  
  * @description Baasic Article Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
-import { BaasicBaseRouteDefinition } from '..';
+import { injectable, inject } from "inversify";
+import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IArticle } from 'modules/article/contracts';
 
+@injectable()
 export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
-    
-     public readonly subscriptions: BaasicSubsciption = new BaasicSubsciption();
-     public readonly ratings: BaasicRating = new BaasicRating();
-     
-     /**                 
-      * Parses find article route which can be expanded with additional options. Supported items are:                 
-      * - `searchQuery` - A string referencing article properties using the phrase or BQL (Baasic Query Language) search.                 
-      * - `page` - A value used to set the page number, i.e. to retrieve certain article subset from the storage.                 
-      * - `rpp` - A value used to limit the size of result set per page.                 * - `sort` - A string used to set the article property to sort the result collection by. 				
-      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-      * - `startDate` - A value used to specify the article creation, publish or archive date date starting from which article resource collection should be returned.                 
-      * - `endDate` - A value used to specify the article creation, publish or archive date until (and including) which article resource collection should be returned.                 
-      * - `statuses` - Comma separated list of article statuses that specify where search should be done (Allowed statuses: Published, Draft and Archived).                 
-      * -  `tags` - A value used to restrict the search to article resources with these tags. Multiple tags should be comma separated.        				                
-      * @method                        
-      * @example baasicArticleRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
-      **/
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{?searchQuery,page,rpp,sort,embed,fields,statuses,tags,startDate,endDate}');
+
+    constructor(
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+    )
+    { super(appOptions); }
+
+
+    /**                 
+     * Parses find article route which can be expanded with additional options. Supported items are:                 
+     * - `searchQuery` - A string referencing article properties using the phrase or BQL (Baasic Query Language) search.                 
+     * - `page` - A value used to set the page number, i.e. to retrieve certain article subset from the storage.                 
+     * - `rpp` - A value used to limit the size of result set per page.                 * - `sort` - A string used to set the article property to sort the result collection by. 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * - `startDate` - A value used to specify the article creation, publish or archive date date starting from which article resource collection should be returned.                 
+     * - `endDate` - A value used to specify the article creation, publish or archive date until (and including) which article resource collection should be returned.                 
+     * - `statuses` - Comma separated list of article statuses that specify where search should be done (Allowed statuses: Published, Draft and Archived).                 
+     * -  `tags` - A value used to restrict the search to article resources with these tags. Multiple tags should be comma separated.        				                
+     * @method                        
+     * @example baasicArticleRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
+     **/
+    find(options?: IOptions): any {
+        return super.baseFind('articles/{?searchQuery,page,rpp,sort,embed,fields,statuses,tags,startDate,endDate}', options);
     }
 
     /**                 
      * Parses get article route which must be expanded with the Id of the previously created article resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicArticleRouteDefinition.get.expand({id: '<article-id>'});                               
+     * @example baasicArticleRouteDefinition.get({id: '<article-id>'});                               
      **/
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{id}/{?embed,fields}');
+    get(id: string, options?: IOptions): any {
+        return super.baseGet('articles/{id}/{?embed,fields}', id, options);
     }
 
     /**                 
@@ -43,167 +51,95 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @method                        
      * @example baasicArticleRouteDefinition.publish.expand({id: '<article-id>'});                               
      **/
-    publish(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{id}/publish/');
+    publish(data: IArticle): any {
+        return super.baseGet('articles/{id}/publish/', data);
     }
 
-     /**                 
-      * Parses purge article route, this URI template doesn't expose any additional properties.                 
-      * @method                        
-      * @example baasicArticleRouteDefinition.purge.expand({});                               
-      **/
-    purge(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/purge/');
+    /**                 
+     * Parses purge article route, this URI template doesn't expose any additional properties.                 
+     * @method                        
+     * @example baasicArticleRouteDefinition.purge();                               
+     **/
+    purge(options: Object): any {
+        return super.baseCreate('articles/purge/', options);
     }
 
     /**                 
      * Parses create article route; this URI template doesn't expose any additional properties.                 
      * @method                        
-     * @example baasicArticleRouteDefinition.create.expand({});                               
+     * @example baasicArticleRouteDefinition.create();                               
      **/
     create(): any {
-        return this.baasicUriTemplateProcessor.parse('articles');
+        return super.baseCreate('articles', {});
     }
-}
 
-class BaasicSubsciption {
-
-    public readonly articleModule: BaasicArticleModule = new BaasicArticleModule();
-    public readonly article: BaasicArticle = new BaasicArticle();
-    public readonly commentReported: BaasicCommentReported = new BaasicCommentReported();
-    public readonly commentRequiresModeration: BaasicCommentRequiresModeration = new BaasicCommentRequiresModeration();
-}
-
-class BaasicArticleModule {
-
-    /**                          
-     * Parses article module subscribe route which doesn't support any additional options.                          
-     * @method subscriptions.articleModule.subscribe                          
-     * @example baasicArticleRouteDefinition.subscriptions.articleModule.subscribe.expand({});                           
+    /**                 
+     * Parses update article route; this URI template doesn't expose any additional properties.                 
+     * @method                        
+     * @example baasicArticleRouteDefinition.update(data);                               
      **/
-    subscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions');
+    update(data: IArticle): any {
+        return super.baseUpdate('articles/{id}', data);
     }
 
-     /**                          
-      * Parses article module isSubscribed route which must be expanded with subscriber Id                          
-      * @method subscriptions.articleModule.isSubscribed                          
-      * @example baasicArticleRouteDefinition.subscriptions.articleModule.isSubscribed.expand({subscriberId: '<subscriber-id>'});                           
-      **/
-    isSubscribed(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions/{subscriberId}');
-    }
-
-    /**                         
-     * Parses article module unSubscribe route which doesn't support any additional options.                         
-     * @method subscriptions.articleModule.unSubscribe                         
-     * @example baasicArticleRouteDefinition.subscriptions.articleModule.unSubscribe.expand({});                          
+    /**                 
+     * Parses delete article route; this URI template doesn't expose any additional properties.                 
+     * @method                        
+     * @example baasicArticleRouteDefinition.delete(data);                               
      **/
-    unSubscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions');
+    delete(data: IArticle): any {
+        return super.baseDelete('articles/{id}', data);
     }
-}
 
-class BaasicArticle {
-
-    /**                         
-     * Parses article subscribe route which must be expanded with id of the article.                         
-     * @method subscriptions.article.subscribe                         
-     * @example baasicArticleRouteDefinition.subscriptions.article.subscribe.expand({id: '<article-id>'});                          
+    /**                 
+     * Parses archive article route; this URI template doesn't expose any additional properties.                 
+     * @method                        
+     * @example baasicArticleRouteDefinition.archive(data);                               
      **/
-    subscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{id}/subscriptions');
+    archive(data: IArticle): any {
+        return super.baseUpdate('articles/{id}/archive', data, undefined, 'archive');
     }
 
-    /**                          
-     * Parses article isSubscribed route which must be expanded with subscriber Id and the id of the article.                          
-     * @method subscriptions.article.isSubscribed                          
-     * @example baasicArticleRouteDefinition.subscriptions.article.isSubscribed.expand({id: '<article-id>', subscriberId: '<subscriber-id>' });                           
+    /**                 
+     * Parses restore article route; this URI template doesn't expose any additional properties.                 
+     * @method                        
+     * @example baasicArticleRouteDefinition.restore(data);                               
      **/
-    isSubscribed(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{id}/subscriptions/{subscriberId}');                             
+    restore(data: IArticle): any {
+        return super.baseUpdate('articles/{id}/archive', data, undefined, 'archive');
     }
 
-     /**                         
-      * Parses article unSubscribe route which must be expanded with the id of the article.                         
-      * @method subscriptions.articleModule.unSubscribe                         
-      * @example baasicArticleRouteDefinition.subscriptions.article.unSubscribe.expand({id: '<article-id>'});                                                    
-      **/
-    unSubscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{id}/subscriptions');
-    }
-}
-
-class BaasicCommentReported {
-
-     /**                         
-      * Parses commentReported subscribe route which doesn't support any additional options.                         
-      * @method subscriptions.commentReported.subscribe                         
-      * @example baasicArticleRouteDefinition.subscriptions.commentReported.subscribe.expand({});                        
-      **/
-    subscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions/comment-reported');
-    }
-
-    /**                          
-     * Parses commentReported isSubscribed route which must be expanded with subscriber Id.                          
-     * @method subscriptions.commentReported.isSubscribed                          
-     * @example baasicArticleRouteDefinition.subscriptions.article.isSubscribed.expand({subscriberId: '<subscriber-id>'});                           
+    /**                 
+     * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * ``` 
+     * let params = modelMapper.updateParams(article); 
+     * let uri = params['model'].links('unpublish').href; 
+     * ```                 
+     * @method                        
+     * @example // article is a resource previously fetched using get action.				 
+                    baasicArticleClient.unpublish(article)
+                        .then(function (data) {  
+                            // perform success action here 
+                        },
+                         function (response, status, headers, config) {  
+                             // perform error handling here 
+                        });		               
      **/
-    isSubscribed(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions/comment-reported/{subscriberId}');
-    }
-
-     /**                         
-      * Parses commentReported unSubscribe route which doesn't support any additional options.                         
-      * @method subscriptions.commentReported.unSubscribe                         
-      * @example baasicArticleRouteDefinition.subscriptions.article.unSubscribe.expand({})                        
-      **/
-    unSubscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions/comment-reported');
-    }
-}
-
-class BaasicCommentRequiresModeration {
-
-     /**                          
-      * Parses commentRequiresModeration subscribe route which doesn't support any additional options.                          
-      * @method subscriptions.commentRequiresModeration.subscribe                          
-      * @example baasicArticleRouteDefinition.subscriptions.commentRequiresModeration.subscribe.expand({});                         
-      **/
-    subscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions/comment-requires-moderation');
-    }
-
-    /**                          
-     * Parses commentRequiresModeration isSubscribed route which must be expanded with subscriber Id.                          
-     * @method subscriptions.commentRequiresModeration.isSubscribed                          
-     * @example baasicArticleRouteDefinition.subscriptions.commentRequiresModeration.isSubscribed.expand({subscriberId: '<subscriber-id>'});                           
-     **/
-    isSubscribed(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions/comment-requires-moderation/{subscriberId}');
-    }
-
-    /**                         
-     * Parses commentRequiresModeration unSubscribe route which doesn't support any additional options.                         
-     * @method subscriptions.commentRequiresModeration.unSubscribe                         
-     * @example baasicArticleRouteDefinition.subscriptions.commentRequiresModeration.unSubscribe.expand({})                        
-     **/
-    unSubscribe(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/subscriptions/comment-requires-moderation');
+    unpublish(data: IArticle): any {
+        return super.baseUpdate('articles/{id}/restore', data, undefined, 'unpublish');
     }
 }
 
 class BaasicRating extends BaasicBaseRouteDefinition {
 
-     /**                     
-      * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system and the ArticleId. Additional expand supported items are:                     
-      * - `embed` - Comma separated list of resources to be contained within the current representation.                     
-      * @method                            
-      * @example     baasicArticleRouteDefinition.ratings.get().expand({articleId: '<article-id>', id: '<articleRating-id>'});                                   
-      **/
+    /**                     
+     * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system and the ArticleId. Additional expand supported items are:                     
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                     
+     * @method                            
+     * @example     baasicArticleRouteDefinition.ratings.get().expand({articleId: '<article-id>', id: '<articleRating-id>'});                                   
+     **/
     get(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{articleId}/ratings/{id}/{?embed,fields}');                       
+        return this.baasicUriTemplateProcessor.parse('articles/{articleId}/ratings/{id}/{?embed,fields}');
     }
 
     /** 					
@@ -243,7 +179,7 @@ class BaasicRating extends BaasicBaseRouteDefinition {
 }
 
 class BaasicTag extends BaasicBaseRouteDefinition {
-    
+
     /** 				
      * Parses find article tags route which can be expanded with additional options. Supported items are: 					
      * - `id` - Id of the article. 					
