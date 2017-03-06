@@ -1,13 +1,17 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicArticleSettingsClient  
  * @description Baasic Article Settings Client provides an easy way to consume Baasic Article Settings REST API end-points. In order to obtain needed routes `baasicArticleSettingsClient` uses `baasicArticleSettingsRouteDefinition`. 
  */
 
-import { BaasicArticleSettingsRouteDefinition } from '.';
-import { IOptions, ModelMapper } from '..';
+import { injectable, inject } from "inversify";
+import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicArticleSettingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { IArticleSettings } from 'modules/article/contracts';
 
-export class baasicArticleSettingsClient {
+@injectable()
+export class BaasicArticleSettingsClient {
 
     /**                 
      * Provides direct access to `baasicArticleSettingsRouteService`.                 
@@ -19,24 +23,25 @@ export class baasicArticleSettingsClient {
     }
 
     constructor(
-        private modelMapper: ModelMapper,
-        private baasicArticleSettingsRouteDefinition: BaasicArticleSettingsRouteDefinition
-    ) {}
+        @inject(articleTypes.BaasicArticleSettingsRouteDefinition) protected baasicArticleSettingsRouteDefinition: BaasicArticleSettingsRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
+
 
     /**                  
      * Returns a promise that is resolved once the get action has been performed. Success response returns the article settings. 
      * @param options options object                 
      * @method                         
      * @example baasicArticleSettingsClient.get()
-                    .success(function (data) {   
+                    .then(function (data) {   
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) {   
+                    },
+                     function (response, status, headers, config) {   
                         // perform error handling here 
                     });                 
      **/
-    get(options: IOptions): Promise<any> {
-        return this.baasicApiHttp.get(this.baasicArticleSettingsRouteDefinition.get().expand(this.modelMapper.getParams(options)));
+    get(options?: IOptions): PromiseLike<IHttpResponse<any>> {
+        return this.baasicApiClient.get(this.baasicArticleSettingsRouteDefinition.get(options));
     }
 
 
@@ -51,16 +56,16 @@ export class baasicArticleSettingsClient {
      * @example // articleSettings is a resource previously fetched using get action. 
                     articleSettings.allowArchive = true; 
                     baasicArticleSettingsClient.update(articleSettings)
-                        .success(function (data) {   
+                        .then(function (data) {   
                             // perform success action here 
-                    }).error(function (response, status, headers, config) {   
-                        // perform error handling here 
-                    }); 				
-     **/	
-    update(data: any): Promise<any> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicArticleSettingsRouteDefinition.update(params), params[this.baasicConstants.modelPropertyName]);
-    }    
+                        },
+                         function (response, status, headers, config) {   
+                            // perform error handling here 
+                        }); 				
+     **/
+    update(data: IArticleSettings): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleSettingsRouteDefinition.update(data), this.baasicArticleSettingsRouteDefinition.updateParams(data));
+    }
 }
 
 /**  

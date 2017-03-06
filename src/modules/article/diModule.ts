@@ -11,7 +11,9 @@ import {
     BaasicArticleFilesStreamsClient,
     BaasicArticleFilesStreamsRouteDefinition,
     BaasicArticleRatingsClient,
-    BaasicArticleRatingsRouteDefinition
+    BaasicArticleRatingsRouteDefinition,
+    BaasicArticleSettingsClient,
+    BaasicArticleSettingsRouteDefinition
 } from 'modules/article';
 
 const TYPES = {
@@ -26,7 +28,9 @@ const TYPES = {
     BaasicArticleFilesStreamsClient: Symbol("BaasicArticleFilesStreamsClient"),
     BaasicArticleFilesStreamsRouteDefinition: Symbol("BaasicArticleFilesStreamsRouteDefinition"),
     BaasicArticleRatingsClient: Symbol("BaasicArticleRatingsClient"),
-    BaasicArticleRatingsRouteDefinition: Symbol("BaasicArticleRatingsRouteDefinition")
+    BaasicArticleRatingsRouteDefinition: Symbol("BaasicArticleRatingsRouteDefinition"),
+    BaasicArticleSettingsClient: Symbol("BaasicArticleSettingsClient"),
+    BaasicArticleSettingsRouteDefinition: Symbol("BaasicArticleSettingsRouteDefinition")
 };
 
 export { TYPES };
@@ -44,6 +48,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicArticleFilesClient>(TYPES.BaasicArticleFilesClient).toSelf();
     bind<BaasicArticleRatingsRouteDefinition>(TYPES.BaasicArticleRatingsRouteDefinition).toSelf();
     bind<BaasicArticleRatingsClient>(TYPES.BaasicArticleRatingsClient).toSelf();
+    bind<BaasicArticleSettingsRouteDefinition>(TYPES.BaasicArticleSettingsRouteDefinition).toSelf();
+    bind<BaasicArticleSettingsClient>(TYPES.BaasicArticleSettingsClient).toSelf();
 });
 
 export { diModule };
