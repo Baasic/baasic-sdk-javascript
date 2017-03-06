@@ -24,3 +24,4 @@ export * from './articleSubscriptions';
 export * from './articleRatings';
 export * from './articleTags';
 export * from './articleComments';
+export * from './articleFiles';

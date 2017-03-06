@@ -36,7 +36,13 @@ import {
     BaasicArticleInstanceCommentsRouteDefinition,
     BaasicArticleInstanceCommentsClient,
     BaasicArticleInstanceCommentRepliesRouteDefinition,
-    BaasicArticleInstanceCommentRepliesClient
+    BaasicArticleInstanceCommentRepliesClient,
+    BaasicArticleInstanceFilesRouteDefinition,
+    BaasicArticleInstanceFilesClient,
+    BaasicArticleInstanceFilesStreamsRouteDefinition,
+    BaasicArticleInstanceFilesStreamsClient,
+    BaasicArticleInstanceFilesBatchRouteDefinition,
+    BaasicArticleInstanceFilesBatchClient
 } from 'modules/article';
 
 const TYPES = {
@@ -76,7 +82,13 @@ const TYPES = {
     BaasicArticleInstanceCommentsRouteDefinition: Symbol("BaasicArticleInstanceCommentsRouteDefinition"),
     BaasicArticleInstanceCommentsClient: Symbol("BaasicArticleInstanceCommentsClient"),
     BaasicArticleInstanceCommentRepliesRouteDefinition: Symbol("BaasicArticleInstanceCommentRepliesRouteDefinition"),
-    BaasicArticleInstanceCommentRepliesClient: Symbol("BaasicArticleInstanceCommentRepliesClient")
+    BaasicArticleInstanceCommentRepliesClient: Symbol("BaasicArticleInstanceCommentRepliesClient"),
+    BaasicArticleInstanceFilesRouteDefinition: Symbol("BaasicArticleInstanceFilesRouteDefinition"),
+    BaasicArticleInstanceFilesClient: Symbol("BaasicArticleInstanceFilesClient"),
+    BaasicArticleInstanceFilesStreamsRouteDefinition: Symbol("BaasicArticleInstanceFilesStreamsRouteDefinition"),
+    BaasicArticleInstanceFilesStreamsClient: Symbol("BaasicArticleInstanceFilesStreamsClient"),
+    BaasicArticleInstanceFilesBatchRouteDefinition: Symbol("BaasicArticleInstanceFilesBatchRouteDefinition"),
+    BaasicArticleInstanceFilesBatchClient: Symbol("BaasicArticleInstanceFilesBatchClient")
 };
 
 export { TYPES };
@@ -119,6 +131,12 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicArticleInstanceCommentsClient>(TYPES.BaasicArticleInstanceCommentsClient).toSelf();
     bind<BaasicArticleInstanceCommentRepliesRouteDefinition>(TYPES.BaasicArticleInstanceCommentRepliesRouteDefinition).toSelf();
     bind<BaasicArticleInstanceCommentRepliesClient>(TYPES.BaasicArticleInstanceCommentRepliesClient).toSelf();
+    bind<BaasicArticleInstanceFilesRouteDefinition>(TYPES.BaasicArticleInstanceFilesRouteDefinition).toSelf();
+    bind<BaasicArticleInstanceFilesClient>(TYPES.BaasicArticleInstanceFilesClient).toSelf();
+    bind<BaasicArticleInstanceFilesStreamsRouteDefinition>(TYPES.BaasicArticleInstanceFilesStreamsRouteDefinition).toSelf();
+    bind<BaasicArticleInstanceFilesStreamsClient>(TYPES.BaasicArticleInstanceFilesStreamsClient).toSelf();
+    bind<BaasicArticleInstanceFilesBatchRouteDefinition>(TYPES.BaasicArticleInstanceFilesBatchRouteDefinition).toSelf();
+    bind<BaasicArticleInstanceFilesBatchClient>(TYPES.BaasicArticleInstanceFilesBatchClient).toSelf();
 });
 
 export { diModule };
