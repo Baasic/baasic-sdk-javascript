@@ -6,7 +6,7 @@
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicDynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { BaasicDynamicResourceACLRouteDefinition, BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
@@ -16,9 +16,14 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
         return this.baasicDynamicResourceACLRouteDefinition;
     }
 
+    get dynamicSchema(): BaasicDynamicSchemaRouteDefinition {
+        return this.baasicDynamicSchemaRouteDefinition;
+    }
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition
+        @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition,
+        @inject(dynamicResourceTypes.BaasicDynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition,
     ) { super(appOptions); }
 
     /** 				
