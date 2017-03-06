@@ -17,7 +17,7 @@ export class ModelMapper {
         this.utility = new Utility();
     }
 
-    private FindParams(options: IOptions): any {
+    private FindParams(options?: IOptions): any {
         let object: any = {};
         if (this.utility.isObject(options)) {
             this.utility.extend(object, options);
@@ -75,7 +75,7 @@ export class ModelMapper {
      * @method                        
      * @example modelMapper.findParams({ pageNumber:1, pageSize:10 });
      **/
-    findParams(options: any): any {
+    findParams(options?: any): any {
         return this.FindParams(options);
     }
 

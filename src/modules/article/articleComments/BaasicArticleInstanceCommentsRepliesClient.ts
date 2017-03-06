@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module baasicArticleCommentRepliesClient
- * @description Baasic Article Comment Replies Client provides an easy way to consume Baasic Article Comment Replies REST API end-points. `baasicArticleCommentRepliesService` functions enable performing standard CRUD operations directly on article comment reply resources, whereas the `baasicArticleClient` functions allow management between article and article comment reply. In order to obtain needed routes `baasicArticleCommentRepliesService` uses `baasicArticleCommentRepliesRouteDefinition`. 
+ * @module baasicArticleInstanceCommentRepliesClient
+ * @description Baasic Article Instance Comment Replies Client provides an easy way to consume Baasic Article Comment Replies REST API end-points. `baasicArticleCommentRepliesService` functions enable performing standard CRUD operations directly on article comment reply resources, whereas the `baasicArticleClient` functions allow management between article and article comment reply. In order to obtain needed routes `baasicArticleCommentRepliesService` uses `baasicArticleCommentRepliesRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicArticleCommentRepliesRouteDefinition, TYPES as articleTypes } from 'modules/article';
-import { IArticleCommentReply, INotificationConfiguration, IStatuses } from 'modules/article/contracts';
+import { BaasicArticleInstanceCommentRepliesRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { IArticle, IArticleCommentReply, INotificationConfiguration, IStatuses } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleCommentRepliesClient {
+export class BaasicArticleInstanceCommentRepliesClient {
 
 
     /**
@@ -19,7 +19,7 @@ export class BaasicArticleCommentRepliesClient {
      * @method 
      * @example baasicArticleCommentRepliesClient.statuses.approved;
      **/
-    public statuses: IStatuses = {
+    public commentStatuses: IStatuses = {
         approved: 1,
         spam: 2,
         reported: 4,
@@ -30,14 +30,14 @@ export class BaasicArticleCommentRepliesClient {
     /**
      * Provides direct access to `baasicArticleCommentRepliesRouteDefinition`.
      * @method 
-     * @example baasicArticleCommentRepliesClient.routeDefinition.get();
+     * @example baasicArticleInstanceCommentRepliesClient.routeDefinition.get();
      **/
-    get routeDefinition(): BaasicArticleCommentRepliesRouteDefinition {
-        return this.baasicArticleCommentRepliesRouteDefinition;
+    get routeDefinition(): BaasicArticleInstanceCommentRepliesRouteDefinition {
+        return this.baasicArticleInstanceCommentRepliesRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleCommentRepliesRouteDefinition) protected baasicArticleCommentRepliesRouteDefinition: BaasicArticleCommentRepliesRouteDefinition,
+        @inject(articleTypes.BaasicArticleInstanceCommentRepliesRouteDefinition) protected baasicArticleInstanceCommentRepliesRouteDefinition: BaasicArticleInstanceCommentRepliesRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
@@ -49,7 +49,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method
      * @example // articleCommentReply is a resource previously fetched using get action. 
-                    baasicArticleCommentRepliesClient.approve(articleCommentReply, commentOptions)
+                    baasicArticleInstanceCommentRepliesClient.approve(articleCommentReply, commentOptions)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -58,7 +58,7 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     approve(data: IArticleCommentReply, options: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.approve(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.approve(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -69,7 +69,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method 
      * @example // articleCommentReply is a resource previously fetched using get action.
-                    baasicArticleCommentRepliesClient.unapprove(articleCommentReply)
+                    baasicArticleInstanceCommentRepliesClient.unapprove(articleCommentReply)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -78,13 +78,13 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     unapprove(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.unapprove(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.unapprove(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
      * Returns a promise that is resolved once the create article comment reply action has been performed; this action creates a new comment reply for an article.
      * @method
-     * @example baasicArticleCommentRepliesClient.create('<article-id>', { 
+     * @example baasicArticleInstanceCommentRepliesClient.create('<article-id>', { 
                     commentId : '<comment-id>', 
                     comment : <comment>, 
                     userId : '<user-id>' })
@@ -95,14 +95,14 @@ export class BaasicArticleCommentRepliesClient {
                     // perform error handling here 
                 });
      **/
-    create(data: IArticleCommentReply): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.baasicApiClient.post(this.baasicArticleCommentRepliesRouteDefinition.create(data), this.baasicArticleCommentRepliesRouteDefinition.createParams(data));
+    create(articleId: string, data: IArticleCommentReply): PromiseLike<IHttpResponse<IArticleCommentReply>> {
+        return this.baasicApiClient.post(this.baasicArticleInstanceCommentRepliesRouteDefinition.create(articleId, data), this.baasicArticleInstanceCommentRepliesRouteDefinition.createParams(data));
     }
 
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article comment reply resources matching the given criteria.
      * @method
-     * @example baasicArticleCommentRepliesClient.find({ 
+     * @example baasicArticleInstanceCommentRepliesClient.find({ 
                     pageNumber : 1, 
                     pageSize : 10, 
                     orderBy : '<field>', 
@@ -116,8 +116,8 @@ export class BaasicArticleCommentRepliesClient {
                     // perform error handling here 
                 });
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
-        return this.baasicApiClient.get(this.baasicArticleCommentRepliesRouteDefinition.find(options));
+    find(articleId: string, commentId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
+        return this.baasicApiClient.get(this.baasicArticleInstanceCommentRepliesRouteDefinition.find(articleId, commentId, options));
     }
 
     /**
@@ -128,7 +128,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method
      * @example     // articleCommentReply is a resource previously fetched using get action.
-                        baasicArticleCommentRepliesClient.flag(articleCommentReply)
+                        baasicArticleInstanceCommentRepliesClient.flag(articleCommentReply)
                             .then(function (data) { 
                                 // perform success action here 
                             },
@@ -137,7 +137,7 @@ export class BaasicArticleCommentRepliesClient {
                             });
      **/
     flag(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.flag(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.flag(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -148,7 +148,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method 
      * @example // articleCommentReply is a resource previously fetched using get action. 
-                    baasicArticleCommentRepliesClient.unflag(articleCommentReply)
+                    baasicArticleInstanceCommentRepliesClient.unflag(articleCommentReply)
                         .success(function (data) { 
                             // perform success action here 
                         }).error(function (response, status, headers, config) { 
@@ -156,13 +156,13 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     unflag(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.unflag(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.unflag(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article comment reply resource.
      * @method
-     * @example baasicArticleCommentRepliesClient.get('<comment-reply-id>')
+     * @example baasicArticleInstanceCommentRepliesClient.get('<comment-reply-id>')
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -170,8 +170,8 @@ export class BaasicArticleCommentRepliesClient {
                          // perform error handling here 
                     });
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.baasicApiClient.get(this.baasicArticleCommentRepliesRouteDefinition.get(id, options));
+    get(articleId: string, commentId: string, replyId: string, options?: IOptions): PromiseLike<IHttpResponse<IArticleCommentReply>> {
+        return this.baasicApiClient.get(this.baasicArticleInstanceCommentRepliesRouteDefinition.get(articleId, commentId, replyId, options));
     }
 
     /**
@@ -182,7 +182,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method
      * @example // articleCommentReply is a resource previously fetched using get action. 
-                    baasicArticleCommentRepliesClient.remove(articleCommentReply)
+                    baasicArticleInstanceCommentRepliesClient.remove(articleCommentReply)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -191,7 +191,27 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     remove(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleCommentRepliesRouteDefinition.delete(data));
+        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.delete(data));
+    }
+
+    /**                         
+     * Returns a promise that is resolved once the removeAll article comment reply action has been performed. This action will remove all comment replies from an article comment if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleInstanceCommentsRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * ``` 
+     * let params = modelMapper.removeParams(articleCommentReply); 
+     * let uri = params['model'].links('delete-comments-by-article').href; 
+     * ```                         
+     * @method                         
+     * @example // articleCommentReply is a resource previously fetched using get action.					
+                    baasicArticleInstanceCommentRepliesClient.removeAll(articleCommentReply)
+                        .then(function (data) {   
+                            // perform success action here 
+                        },
+                         function (response, status, headers, config) {   
+                             // perform error handling here 
+                        });		                        
+     **/
+    removeAll(data: IArticle, options: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.deleteAll(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(options));
     }
 
     /**
@@ -202,7 +222,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method 
      * @example // articleCommentReply is a resource previously fetched using get action. 
-                    baasicArticleCommentRepliesClient.report(articleCommentReply, commentOptions)
+                    baasicArticleInstanceCommentRepliesClient.report(articleCommentReply, commentOptions)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -211,7 +231,7 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     report(data: any, options?: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.report(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(options));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.report(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(options));
     }
 
     /**
@@ -222,7 +242,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method
      * @example // articleCommentReply is a resource previously fetched using get action. 
-                    baasicArticleCommentRepliesClient.unreport(articleCommentReply)
+                    baasicArticleInstanceCommentRepliesClient.unreport(articleCommentReply)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -231,7 +251,7 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     unreport(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.unreport(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.unreport(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -242,7 +262,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method
      * @example // articleCommentReply is a resource previously fetched using get action. 
-                    baasicArticleCommentRepliesClient.spam(articleCommentReply)
+                    baasicArticleInstanceCommentRepliesClient.spam(articleCommentReply)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -251,7 +271,7 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     spam(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.spam(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.spam(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -262,7 +282,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method 
      * @example // articleCommentReply is a resource previously fetched using get action. 
-                      baasicArticleCommentRepliesClient.unspam(articleCommentReply)
+                      baasicArticleInstanceCommentRepliesClient.unspam(articleCommentReply)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -271,7 +291,7 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     unspam(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.unspam(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.unspam(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -282,7 +302,7 @@ export class BaasicArticleCommentRepliesClient {
      * ```
      * @method
      * @example // articleCommentReply is a resource previously fetched using get action. 
-                    baasicArticleCommentRepliesClient.update(articleCommentReply)
+                    baasicArticleInstanceCommentRepliesClient.update(articleCommentReply)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -291,7 +311,7 @@ export class BaasicArticleCommentRepliesClient {
                         });
      **/
     update(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.update(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.update(data), this.baasicArticleInstanceCommentRepliesRouteDefinition.updateParams(data));
     }
 }
 

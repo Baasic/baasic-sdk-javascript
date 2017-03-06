@@ -10,3 +10,5 @@ export * from './IRating';
 export * from './IArticleSettings';
 export * from './IArticleTag';
 export * from './IArticleSubscription';
+export * from './IArticle';
+export * from './IArticleOptions';

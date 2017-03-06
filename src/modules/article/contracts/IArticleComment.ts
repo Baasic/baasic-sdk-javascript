@@ -1,9 +1,8 @@
 import { IBaasicModel } from 'common/contracts';
-import { IArticleCommentMetadata } from 'modules/article/contracts';
+import { IArticle, IArticleCommentMetadata } from 'modules/article/contracts';
 
 export interface IArticleComment extends IBaasicModel, IArticleCommentMetadata {
-    article?: Object,
+    article?: IArticle,
     articleId: string,
-    author?: string,
     comment?: string
 }

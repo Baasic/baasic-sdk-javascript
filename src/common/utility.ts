@@ -16,6 +16,10 @@ export class Utility {
         return value !== null && typeof value === 'object';
     }
 
+    isUndefined(value: any): boolean {
+        return typeof value === 'undefined';
+    }
+
     /**
      * Copies properties from source object to destination object.
      * @param dstObj destination object
