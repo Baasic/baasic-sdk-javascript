@@ -4,9 +4,9 @@
  * @description Baasic Files ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
+import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IACLOptions, IACLPolicy } from 'common/contracts';
-import { injectable, inject } from "inversify";
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
@@ -21,7 +21,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('files/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('files/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -31,7 +31,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     update(options: IACLOptions[]): any {
         let params = this.utility.extend({}, options);
-        return super.parse('files/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('files/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -55,7 +55,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
         params.id = id;
         params.user = user;
         params.accessAction = action;
-        return super.parse('files/{id}/acl/actions/{accessAction}/users/{user}/').expand(params);
+        return super.baseCreate('files/{id}/acl/actions/{accessAction}/users/{user}/', params);
     }
 
     /** 					
@@ -79,7 +79,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
         params.id = id;
         params.role = role;
         params.accessAction = action;
-        return super.parse('files/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
+        return super.baseCreate('files/{id}/acl/actions/{accessAction}/roles/{role}/', params);
     }
 
     updateParams(data: any): any {

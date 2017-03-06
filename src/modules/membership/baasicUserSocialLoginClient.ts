@@ -4,8 +4,8 @@
  * @description Baasic User Social Login Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicUserSocialLoginClient` uses `baasicUserSocialLoginRouteDefinition`. 
  */
 
-import { IBaasicQueryModel } from 'common/contracts';
 import { injectable, inject } from "inversify";
+import { IBaasicQueryModel } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IUserSocialLogin } from 'modules/membership/contracts';

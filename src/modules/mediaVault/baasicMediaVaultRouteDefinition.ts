@@ -88,15 +88,7 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMediaVaultRouteDefinition.delete({id: '<media-vault-id>'});                               
      **/
     delete(data: IMediaEntry, options?: Object): any {
-        if (!options) {
-            options = {};
-        }
-        let params = this.modelMapper.removeParams(data);
-        if ('HAL') {
-            return super.parse(params[this.modelMapper.modelPropertyName].links('delete').href + '{?height,width}').expand(options);
-        } else {
-            return super.parse('media-vaults/{id}/{?height,width}').expand(options);
-        }
+        return super.baseDelete('media-vaults/{id}/{?height,width}', data, options);
     }
 }
 

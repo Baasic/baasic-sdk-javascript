@@ -4,9 +4,9 @@
  * @description Baasic User ACL Profile Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile ACL Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
-import { IACLOptions, IACLPolicy } from 'common/contracts';
 import { injectable, inject } from "inversify";
+import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { IACLOptions, IACLPolicy } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefinition {
@@ -21,7 +21,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      **/
     get(options?: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('profiles/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('profiles/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -32,7 +32,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('profiles/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('profiles/{id}/acl/{?fields}', params);
     }
 
     updateParams(options: IACLOptions): any {
@@ -62,7 +62,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
         params.profileId = profileId;
         params.user = user;
         params.accessAction = action;
-        return super.parse('profiles/{id}/acl/actions/{accessAction}/users/{user}/').expand(params);
+        return super.baseCreate('profiles/{id}/acl/actions/{accessAction}/users/{user}/', params);
     }
 
     /** 					
@@ -87,7 +87,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
         params.profileId = profileId;
         params.role = role;
         params.accessAction = action;
-        return super.parse('profiles/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
+        return super.baseCreate('profiles/{id}/acl/actions/{accessAction}/roles/{role}/', params);
     }
 }
 

@@ -4,9 +4,8 @@
  * @description Baasic Organization Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicOrganizationBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
@@ -56,8 +55,8 @@ export class BaasicOrganizationBatchClient {
                          // perform error handling here   
                     });                   
      **/
-    update(data: IOrganization[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicOrganizationBatchRouteDefinition.update(), this.baasicOrganizationBatchRouteDefinition.updateParams(data));
+    update(data: IOrganization[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicOrganizationBatchRouteDefinition.update(), this.baasicOrganizationBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -71,8 +70,8 @@ export class BaasicOrganizationBatchClient {
                          // perform error handling here   
                     });		                  
      **/
-    remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicOrganizationBatchRouteDefinition.delete(), this.baasicOrganizationBatchRouteDefinition.deleteParams(ids));
+    remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicOrganizationBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

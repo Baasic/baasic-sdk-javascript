@@ -3,10 +3,10 @@
  * @description Baasic Dynamic Resource Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Resource Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
+import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { injectable, inject } from "inversify";
-import { BaasicDynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { BaasicDynamicResourceACLRouteDefinition, BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
@@ -16,9 +16,14 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
         return this.baasicDynamicResourceACLRouteDefinition;
     }
 
+    get dynamicSchema(): BaasicDynamicSchemaRouteDefinition {
+        return this.baasicDynamicSchemaRouteDefinition;
+    }
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition
+        @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition,
+        @inject(dynamicResourceTypes.BaasicDynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition,
     ) { super(appOptions); }
 
     /** 				
@@ -60,13 +65,7 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
     }
 
     patch(data: any, options: IOptions): any {
-        let opt = this.utility.extend({}, options);
-        let params = this.modelMapper.updateParams(data);
-        if ('HAL') {
-            return super.parse(params[this.modelMapper.modelPropertyName].links('patch').href).expand(opt);
-        } else {
-            return super.parse('resources/{schemaName}/{id}/{?embed,fields}').expand(opt);
-        }
+        return super.baseUpdate('resources/{schemaName}/{id}/{?embed,fields}', data, options, 'patch');
     }
 
     delete(data: any, options: IOptions): any {

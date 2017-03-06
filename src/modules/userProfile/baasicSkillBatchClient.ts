@@ -4,8 +4,8 @@
  * @description Baasic Skill Batch Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { injectable, inject } from "inversify";
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicSkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
@@ -51,8 +51,8 @@ export class BaasicSkillBatchClient {
                          // perform error handling here   
                     });                   
      **/
-    update(data: ISkill[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicSkillBatchRouteDefinition.update(), this.baasicSkillBatchRouteDefinition.updateParams(data));
+    update(data: ISkill[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicSkillBatchRouteDefinition.update(), this.baasicSkillBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -68,8 +68,8 @@ export class BaasicSkillBatchClient {
                          // perform error handling here   
                     });		                  
      **/
-    remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicSkillBatchRouteDefinition.delete(), this.baasicSkillBatchRouteDefinition.deleteParams(ids));
+    remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicSkillBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

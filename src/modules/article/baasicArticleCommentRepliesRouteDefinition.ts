@@ -4,9 +4,19 @@
  * @description Baasic Article Comment Replies Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Comment Replies Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
+import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
+import { IOptions } from 'common/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IArticleCommentReply } from 'modules/article/contracts';
 
+@injectable()
 export class BaasicArticleCommentRepliesRouteDefinition extends BaasicBaseRouteDefinition {
+
+    constructor(
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+    )
+    { super(appOptions); }
 
     /**
      * Parses find route which can be expanded with additional options. Supported items are:
@@ -17,10 +27,11 @@ export class BaasicArticleCommentRepliesRouteDefinition extends BaasicBaseRouteD
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `statuses` - Comma separated list of article comment reply states that specify where search should be done (Allowed states: Approved, Spam, Reported, Flagged and UnApproved).
      * @method 
-     * @example baasicArticleCommentRepliesRouteDefinition.find.expand({ searchQuery: '<search-phrase>' });
+     * @param options Query resource options object.
+     * @example baasicArticleCommentRepliesRouteDefinition.find({ searchQuery: '<search-phrase>' });
      **/
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse('article-comment-replies/{?searchQuery,statuses,page,rpp,sort,embed,fields}');
+    find(options: IOptions): any {
+        return super.baseFind('article-comment-replies/{?searchQuery,statuses,page,rpp,sort,embed,fields}', options);
     }
 
     /**
@@ -28,92 +39,59 @@ export class BaasicArticleCommentRepliesRouteDefinition extends BaasicBaseRouteD
      * - `id` - Id which uniquely identifies article comment reply resource that needs to be retrieved.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method 
-     * @example baasicArticleCommentRepliesRouteDefinition.get.expand({ id: '<comment-reply-id>' });
+     * @example baasicArticleCommentRepliesRouteDefinition.get({ id: '<comment-reply-id>' });
      **/
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('article-comment-replies/{id}/{?embed,fields}')
+    get(id: string, options?: IOptions): any {
+        return super.baseGet('article-comment-replies/{id}/{?embed,fields}', id, options)
     }
 
     /**
      * Parses create article comment reply route; this URI template does not support any additional items.
      * @method
-     * @example baasicArticleCommentRepliesRouteDefinition.create.expand({});
+     * @example baasicArticleCommentRepliesRouteDefinition.create(data);
      **/
-    create(): any {
-        return this.baasicUriTemplateProcessor.parse('article-comment-replies');
+    create(data: IArticleCommentReply): any {
+        return super.baseCreate('article-comment-replies', data);
     }
 
-    approve(params: any): any {
-        if ('HAL') {
-            return params[baasicConstants.modelPropertyName].links('comment-approve').href;
-        } else {
-            // return json;
-        }
+    update(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}', data);
     }
 
-    unapprove(params: any): any {
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('comment-unapprove').href;
-        } else {
-            // return json;
-        }
+    approve(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/approve', data, undefined, 'comment-approve');
     }
 
-    flag(params: any): any {
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('comment-flag').href;
-        } else {
-            // return json;
-        }
+    unapprove(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/unapprove', data, undefined, 'comment-unapprove');
     }
 
-    unflag(params: any): any {
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('comment-unflag').href;
-        } else {
-            // return json;
-        }
+    flag(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/flag', data, undefined, 'comment-flag');
     }
 
-    report(params: any): any {
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('comment-report').href;
-        } else {
-            // return json;
-        }
+    unflag(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/unflag', data, undefined, 'comment-unflag');
     }
 
-    unreport(params: any): any {
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('comment-unreport').href;
-        } else {
-            // return json;
-        }
+    report(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/report', data, undefined, 'comment-report');
     }
 
-    spam(params: any): any {
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('comment-spam').href;
-        } else {
-            // return json;
-        }
+    delete(data: IArticleCommentReply): any {
+        return super.baseDelete('article-comment-replies/{id}', data);
     }
 
-    unspam(params: any): any {
-        if ('HAL') {
-            return params[this.baasicConstants.modelPropertyName].links('comment-unspam').href;
-        } else {
-            // return json;
-        }
+    unreport(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/unreport', data, undefined, 'comment-unreport');
     }
 
-    /**
-     * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
-     * @method
-     * @example baasicArticleCommentRepliesRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});
-     **/
-    parse(link: string): any {
-        return super.parse(link);
+    spam(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/spam', data, undefined, 'comment-spam');
+    }
+
+    unspam(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/unspam', data, undefined, 'comment-unspam');
     }
 }
 

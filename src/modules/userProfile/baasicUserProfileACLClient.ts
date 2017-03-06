@@ -4,9 +4,9 @@
  * @description Baasic User Profile ACL Client provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileACLClient` uses `baasicUserProfileACLRouteDefinition`. 
  */
 
+import { injectable, inject } from "inversify";
 import { IACLOptions, IACLPolicy } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { injectable, inject } from "inversify";
 import { BaasicUserProfileACLRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 
 @injectable()

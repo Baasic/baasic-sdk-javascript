@@ -4,8 +4,8 @@
  * @description Baasic Company Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { injectable, inject } from "inversify";
+import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition {
@@ -27,7 +27,7 @@ export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicCompanyRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('lookups/companies/batch').expand({});
+        return super.baseUpdate('lookups/companies/batch', {});
     }
 
     /**                     
@@ -36,7 +36,7 @@ export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicCompanyRouteDefinition.remove();                                  
      **/
     delete(): any {
-        return super.parse('lookups/companies/batch').expand({});
+        return super.baseDelete('lookups/companies/batch', {});
     }
 }
 

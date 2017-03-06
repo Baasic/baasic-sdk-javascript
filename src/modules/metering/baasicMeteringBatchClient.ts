@@ -75,7 +75,7 @@ export class BaasicMeteringBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMeteringBatchRouteDefinition.delete(), this.baasicMeteringBatchRouteDefinition.deleteParams(ids));
+        return this.baasicApiClient.delete<void>(this.baasicMeteringBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

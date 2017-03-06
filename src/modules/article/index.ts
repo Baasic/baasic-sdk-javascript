@@ -1,3 +1,4 @@
+export * from './diModule';
 export * from './baasicArticleCommentRepliesRouteDefinition';
 export * from './baasicArticleCommentRepliesClient';
 export * from './baasicArticleCommentsRouteDefinition';
@@ -10,4 +11,3 @@ export * from './baasicArticleSettingsRouteDefinition';
 export * from './baasicArticleSettingsClient';
 export * from './baasicArticleTagsRouteDefinition';
 export * from './baasicArticleTagsClient';
-export * from './IStatuses';

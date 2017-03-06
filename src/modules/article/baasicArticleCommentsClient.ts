@@ -1,19 +1,23 @@
-/* globals module */ 
+/* globals module */
 /**  
  * @module baasicArticleCommentsClient  
  * @description Baasic Article Comments Client provides an easy way to consume Baasic Article Comments REST API end-points. `baasicArticleCommentsClient` functions enable performing standard CRUD operations directly on article comment resources, whereas the `baasicArticleClient` functions allow management between article and article comments. In order to obtain needed routes `baasicArticleCommentsClient` uses `baasicArticleCommentsRouteDefinition`. 
  */
 
-import { BaasicArticleCommentsRouteDefinition, IStatuses } from '.';
-import { IOptions, ModelMapper } from '..';
+import { injectable, inject } from "inversify";
+import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicArticleCommentsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { IArticleComment, INotificationConfiguration, IStatuses } from 'modules/article/contracts';
 
-export class BaasicArticleCommentClient {
-    
+@injectable()
+export class BaasicArticleCommentsClient {
+
     /**
     * Contains a reference to valid list of article comment states. It returns an object containing all article comment states.
     * @method
     * @example baasicArticleCommentsClient.statuses.approved;
-    **/ 
+    **/
     public statuses: IStatuses = {
         approved: 1,
         spam: 2,
@@ -23,9 +27,9 @@ export class BaasicArticleCommentClient {
     };
 
     constructor(
-        private modelMapper: ModelMapper,
-        private baasicArticleCommentsRouteDefinition: BaasicArticleCommentsRouteDefinition
-    ) {}
+        @inject(articleTypes.BaasicArticleCommentsRouteDefinition) protected baasicArticleCommentsRouteDefinition: BaasicArticleCommentsRouteDefinition,
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+    ) { }
 
     /**
      * Returns a promise that is resolved once the approve article comment action has been performed. This action sets the state of an article comment to "approved". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicarticleCommentsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
@@ -36,17 +40,15 @@ export class BaasicArticleCommentClient {
      * @method
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleCommentsClient.approve(articleComment, commentOptions)
-                        .success(function (data) { 
+                        .then(function (data) { 
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) { 
+                        },
+                         function (response, status, headers, config) { 
                             // perform error handling here 
                         });
-     **/		                    
-    approve(data: any, options: IOptions): Promise<any> {
-        let params = this.modelMapper.updateParams(data);
-        let commentOptions = this.modelMapper.updateParams(options);
-        return this.baasicApiHttp.put(this.baasicArticleCommentsRouteDefinition.approve(params), commentOptions[this.baasicConstants.modelPropertyName]);
+     **/
+    approve(data: IArticleComment, options: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.approve(data), this.baasicArticleCommentsRouteDefinition.u);
     }
 
     /**
@@ -58,15 +60,15 @@ export class BaasicArticleCommentClient {
      * @method 
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleCommentsClient.unapprove(articleComment)
-                        .success(function (data) { 
+                        .then(function (data) { 
                             // perform success action here 
-                        }).error(function (response, status, headers, config) { 
+                        },
+                         function (response, status, headers, config) { 
                             // perform error handling here 
                         });
-     **/	
-    unapprove(data: any): Promise<any> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicArticleCommentsRouteDefinition.unapprove(params), params[this.baasicConstants.modelPropertyName]);                        
+     **/
+    unapprove(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.unapprove(data), this.baasicArticleCommentsRouteDefinition.updateParams(data));
     }
 
     /**
@@ -76,15 +78,15 @@ export class BaasicArticleCommentClient {
                         articleId : '<article-id>', 
                         comment : <comment>, 
                         userId : '<user-id>' })
-                    .success(function (data) { 
+                    .then(function (data) { 
                         // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) { 
+                    },
+                     function (response, status, headers, config) { 
                         // perform error handling here 
                     });
-     **/ 
-    create(data: any): Promise<any> {
-        return this.baasicApiHttp.post(this.baasicArticleCommentsRouteDefinition.create().expand(data), this.modelMapper.createParams(data)[this.baasicConstants.modelPropertyName]);
+     **/
+    create(data: IArticleComment): PromiseLike<IHttpResponse<IArticleComment>> {
+        return this.baasicApiClient.post(this.baasicArticleCommentsRouteDefinition.create(data), this.baasicArticleCommentsRouteDefinition.createParams(data));
     }
 
     /**
@@ -103,9 +105,9 @@ export class BaasicArticleCommentClient {
                 .error(function (response, status, headers, config) { 
                     // perform error handling here 
                 });
-     **/ 
-    find(options: IOptions): Promise<any> {
-        return this.baasicApiHttp.get(this.baasicArticleCommentsRouteDefinition.find().expand(this.modelMapper.findParams(options)));
+     **/
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleComment>>> {
+        return this.baasicApiClient.get(this.baasicArticleCommentsRouteDefinition.find(options));
     }
 
     /**
@@ -117,16 +119,15 @@ export class BaasicArticleCommentClient {
      * @method
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleCommentsClient.flag(articleComment)
-                        .success(function (data) { 
+                        .then(function (data) { 
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) { 
+                        },
+                         function (response, status, headers, config) { 
                             // perform error handling here 
                         });		                
-     **/	
-    flag(data: any): Promise<any> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicArticleCommentsRouteDefinition.flag(params), params[this.baasicConstants.modelPropertyName]); 
+     **/
+    flag(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.flag(data), this.baasicArticleCommentsRouteDefinition.updateParams(data));
     }
 
     /**
@@ -138,51 +139,50 @@ export class BaasicArticleCommentClient {
      * @method
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleCommentsClient.unflag(articleComment)
-                        .success(function (data) { 
+                        .then(function (data) { 
                             // perform success action here 
-                        })
-                        .error(function (response, status, headers, config) { 
+                        },
+                         function (response, status, headers, config) { 
                             // perform error handling here 
                         });
-     **/		                    
-    unflag(data: any): Promise<any> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicArticleCommentsRouteDefinition.unflag(params), params[this.baasicConstants.modelPropertyName]);
+     **/
+    unflag(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.unflag(data), this.baasicArticleCommentsRouteDefinition.updateParams(data));
     }
 
-     /**
-      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article comment resource.
-      * @method 
-      * @example baasicArticleCommentsClient.get('<article-id>', '<comment-id>')
-                    .success(function (data) { 
-                        // perform success action here 
-                    })
-                    .error(function (response, status, headers, config) { 
-                        // perform error handling here 
-                    });
-     **/ 	
-    get(id: string, options: IOptions): Promise<any> {
-        return this.baasicApiHttp.get(this.baasicArticleCommentsRouteDefinition.get.expand(this.modelMapper.getParams(id, options)));
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article comment resource.
+     * @method 
+     * @example baasicArticleCommentsClient.get('<article-id>', '<comment-id>')
+                   .then(function (data) { 
+                       // perform success action here 
+                   },
+                    function (response, status, headers, config) { 
+                       // perform error handling here 
+                   });
+    **/
+    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IArticleComment>> {
+        return this.baasicApiClient.get(this.baasicArticleCommentsRouteDefinition.get(id, options));
     }
 
-     /**
-      * Returns a promise that is resolved once the remove article comment action has been performed. If the action is successfully completed, the article comment resource and its replies will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleCommentsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
-      ``` 
-      let params = modelMapper.removeParams(articleComment); 
-      let uri = params['model'].links('delete').href; 
-      ```
-      * @method
-      * @example // articleComment is a resource previously fetched using get action. 
-                        baasicArticleCommentsClient.remove(articleComment)
-                            .success(function (data) { 
-                                // perform success action here 
-                            }).error(function (response, status, headers, config) { 
-                                // perform error handling here 
-                            });
-     **/	
-    remove(data: any): Promise<any> {
-        let params = this.modelMapper.removeParams(data);
-        return this.baasicApiHttp.delete(this.baasicArticleCommentsRouteDefinition.delete(params));
+    /**
+     * Returns a promise that is resolved once the remove article comment action has been performed. If the action is successfully completed, the article comment resource and its replies will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleCommentsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     ``` 
+     let params = modelMapper.removeParams(articleComment); 
+     let uri = params['model'].links('delete').href; 
+     ```
+     * @method
+     * @example // articleComment is a resource previously fetched using get action. 
+                       baasicArticleCommentsClient.remove(articleComment)
+                           .then(function (data) { 
+                               // perform success action here 
+                           }, 
+                            function (response, status, headers, config) { 
+                               // perform error handling here 
+                           });
+    **/
+    remove(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicArticleCommentsRouteDefinition.delete(data));
     }
 
     /** 
@@ -200,11 +200,9 @@ export class BaasicArticleCommentClient {
                         .error(function (response, status, headers, config) { 
                             // perform error handling here 
                         });
-     **/	
-    report(data: any, options: IOptions): Promise<any> {
-        let params = this.modelMapper.updateParams(data);
-        let commentOptions = this.modelMapper.updateParams(options);
-        return this.baasicApiHttp.put(this.baasicArticleCommentsRouteDefinition.report(params), commentOptions[this.baasicConstants.modelPropertyName]);
+     **/
+    report(data: IArticleComment, options: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.report(data), this.baasicArticleCommentsRouteDefinition.updateParams(options));
     }
 
     /**
@@ -215,14 +213,42 @@ export class BaasicArticleCommentClient {
      * ```
      * @method 
      * @example // articleComment is a resource previously fetched using get action. 
-                    baasicArticleCommentsClient.unreport(articleComment).success(function (data) { 
-                        // perform success action here 
-                    }).error(function (response, status, headers, config) { 
-                        // perform error handling here 
-                    });
-     **/		 
-    unreport(data: any): Promise<any> {
-        let params = this.modelMapper.updateParams(data);
-        return this.baasicApiHttp.put(this.baasicArticleCommentsRouteDefinition.unreport(params), params[this.baasicConstants.modelPropertyName]);
+                    baasicArticleCommentsClient.unreport(articleComment)
+                        .then(function (data) { 
+                            // perform success action here 
+                        },
+                         function (response, status, headers, config) { 
+                            // perform error handling here 
+                        });
+     **/
+    unreport(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.unreport(data), this.baasicArticleCommentsRouteDefinition.updateParams(data));
+    }
+
+    /**                 
+     * Returns a promise that is resolved once the update article comment action has been performed; this action updates an article comment resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicarticleCommentsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * ``` 
+     * let params = modelMapper.updateParams(articleComment); 
+     * let uri = params['model'].links('put').href; 
+     * ```                     
+     * @method                     
+     * @example // articleComment is a resource previously fetched using get action.				 
+                    baasicArticleCommentsClient.update(articleComment)
+                        .then(function (data) { 
+                            // perform success action here 
+                        },
+                         function (response, status, headers, config) { 
+                             // perform error handling here 
+                        });		                
+     **/
+    update(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.update(data), this.baasicArticleCommentsRouteDefinition.updateParams(data));
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.  
+ - All end-point objects are transformed by the associated route service. 
+ */

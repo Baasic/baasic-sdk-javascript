@@ -26,7 +26,7 @@ export class BaasicMediaVaultStreamsRouteDefinition extends BaasicBaseRouteDefin
                 id: data
             };
         }
-        return super.parse('media-vault-streams/{id}/{?width,height}').expand(data);
+        return super.baseCreate('media-vault-streams/{id}/{?width,height}', data);
     }
 
     /**                     
@@ -40,7 +40,7 @@ export class BaasicMediaVaultStreamsRouteDefinition extends BaasicBaseRouteDefin
                 path: data
             };
         }
-        return super.parse('media-vault-streams/{path}').expand(data);
+        return super.baseCreate('media-vault-streams/{path}', data);
     }
 
     /**                     
@@ -56,7 +56,7 @@ export class BaasicMediaVaultStreamsRouteDefinition extends BaasicBaseRouteDefin
                 id: data
             };
         }
-        return super.parse('media-vault-streams/{id}/{?width,height}').expand(data);
+        return super.baseUpdate('media-vault-streams/{id}/{?width,height}', data);
     }
 }
 

@@ -20,16 +20,16 @@ export class BaasicMediaVaultBatchRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicMediaVaultBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.parse('media-vaults/batch').expand({});
+        return super.baseUpdate('media-vaults/batch', {});
     }
 
     /**                     
      * Parses remove route; this URI template does not expose any additional options.                                             
      * @method                           
-     * @example baasicMediaVaultBatchRouteDefinition.remove();                                 
+     * @example baasicMediaVaultBatchRouteDefinition.delete();                                 
      **/
-    delete(data: IMediaEntry[]): any {
-        return super.parse('media-vaults/batch').expand(data);
+    delete(): any {
+        return super.baseDelete('media-vaults/batch', {});
     }
 }
 
