@@ -8,12 +8,51 @@ import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import {
+    BaasicArticleACLRouteDefinition,
+    BaasicArticleSubscriptionsRouteDefinition,
+    BaasicArticleInstanceCommentsRouteDefinition,
+    BaasicArticleInstanceFilesRouteDefinition,
+    BaasicArticleInstanceRatingsRouteDefinition,
+    BaasicArticleInstanceTagsRouteDefinition,
+    TYPES as articleTypes
+} from 'modules/article';
 import { IArticle } from 'modules/article/contracts';
 
 @injectable()
 export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
+    get subscriptions(): BaasicArticleSubscriptionsRouteDefinition {
+        return this.baasicArticleSubscriptionsRouteDefinition;
+    }
+
+    get comments(): BaasicArticleInstanceCommentsRouteDefinition {
+        return this.baasicArticleInstanceCommentsRouteDefinition;
+    }
+
+    get files(): BaasicArticleInstanceFilesRouteDefinition {
+        return this.baasicArticleInstanceFilesRouteDefinition;
+    }
+
+    get ratings(): BaasicArticleInstanceRatingsRouteDefinition {
+        return this.baasicArticleInstanceRatingsRouteDefinition;
+    }
+
+    get tags(): BaasicArticleInstanceTagsRouteDefinition {
+        return this.baasicArticleInstanceTagsRouteDefinition;
+    }
+
+    get acl(): BaasicArticleACLRouteDefinition {
+        return this.baasicArticleACLRouteDefinition;
+    }
+
     constructor(
+        @inject(articleTypes.BaasicArticleSubscriptionsRouteDefinition) protected baasicArticleSubscriptionsRouteDefinition: BaasicArticleSubscriptionsRouteDefinition,
+        @inject(articleTypes.BaasicArticleInstanceCommentsRouteDefinition) protected baasicArticleInstanceCommentsRouteDefinition: BaasicArticleInstanceCommentsRouteDefinition,
+        @inject(articleTypes.BaasicArticleInstanceFilesRouteDefinition) protected baasicArticleInstanceFilesRouteDefinition: BaasicArticleInstanceFilesRouteDefinition,
+        @inject(articleTypes.BaasicArticleInstanceRatingsRouteDefinition) protected baasicArticleInstanceRatingsRouteDefinition: BaasicArticleInstanceRatingsRouteDefinition,
+        @inject(articleTypes.BaasicArticleInstanceTagsRouteDefinition) protected baasicArticleInstanceTagsRouteDefinition: BaasicArticleInstanceTagsRouteDefinition,
+        @inject(articleTypes.BaasicArticleACLRouteDefinition) protected baasicArticleACLRouteDefinition: BaasicArticleACLRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
     { super(appOptions); }
@@ -130,84 +169,13 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
     }
 }
 
-class BaasicRating extends BaasicBaseRouteDefinition {
-
-    /**                     
-     * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system and the ArticleId. Additional expand supported items are:                     
-     * - `embed` - Comma separated list of resources to be contained within the current representation.                     
-     * @method                            
-     * @example     baasicArticleRouteDefinition.ratings.get().expand({articleId: '<article-id>', id: '<articleRating-id>'});                                   
-     **/
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{articleId}/ratings/{id}/{?embed,fields}');
-    }
-
-    /** 					
-     * Parses find article rating route which can be expanded with additional options. Supported items are: 					
-     * - `articleId` - Id of the article. 					
-     * - `page` - A value used to set the page number, i.e. to retrieve certain article rating subset from the storage. 					
-     * - `rpp` - A value used to limit the size of result set per page. 					
-     * - `sort` - A string used to set the article rating property to sort the result collection by. 					
-     * - `embed` - Comma separated list of resources to be contained within the current representation. 					
-     * @method ratings.find       					
-     * @example baasicArticleRouteDefinition.ratings.find.expand({articleId: '<article-id>'});               					
-     **/
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{articleId}/ratings{?page,rpp,sort,embed,fields}');
-    }
-
-    /** 					
-     * Parses findByUser article rating route which can be expanded with additional options. Supported items are: 					
-     * - `articleId` - Id of the article. 					
-     * - `username` - A value that uniquely identifies a user which has created an article rating. 					
-     * - `embed` - Comma separated list of resources to be contained within the current representation. 					
-     * @method ratings.findByUsername       					
-     * @example baasicArticleRouteDefinition.ratings.findByUsername.expand({articleId: '<article-id>', username: '<username>' }); 					
-     **/
-    findByUsername(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{articleId}/users/{username}/ratings/{?embed,fields}');
-    }
-
-    /** 					
-     * Parses create article rating route; this URI template should be expanded with the Id of the article. 					
-     * @method ratings.create       					
-     * @example baasicArticleRouteDefinition.ratings.create().expand({articleId: '<article-id>'}); 					
-     **/
-    create(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{articleId}/ratings/');
-    }
-}
-
-class BaasicTag extends BaasicBaseRouteDefinition {
-
-    /** 				
-     * Parses find article tags route which can be expanded with additional options. Supported items are: 					
-     * - `id` - Id of the article. 					
-     * - `searchQuery` - A string value used to identify article tag resources using the phrase search. 					
-     * - `page` - A value used to set the page number, i.e. to retrieve certain article tag subset from the storage. 					
-     * - `rpp` - A value used to limit the size of result set per page. 					
-     * - `sort` - A string used to set the article tag property to sort the result collection by. 					
-     * - `embed` - Comma separated list of resources to be contained within the current representation. 					
-     * @method tags.find       					
-     * @example baasicArticleRouteDefinition.tags.find().expand({id: '<article-id>',searchQuery: '<search-phrase>'}); 					
-     **/
-    find(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{id}/tags/{?searchQuery,page,rpp,sort,embed,fields}');
-    }
-
-    /** 					
-     * Parses get article tags route which can be expanded with additional options. Supported items are: 					
-     * - `id` - Id of the article.										
-     * - `tag` - Article slug which uniquely identifies article tag resource that needs to be retrieved. 					
-     * - `embed` - Comma separated list of resources to be contained within the current representation. 					
-     * @method tags.get       					
-     * @example baasicArticleRouteDefinition.tags.get().expand({id: '<article-id>',tag: '<tag>'}); 					
-     **/
-    get(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{id}/tags/{tag}/{?embed,fields}');
-    }
-
-    create(): any {
-        return this.baasicUriTemplateProcessor.parse('articles/{id}/tags/{tag}/');
-    }
-}
+/**  
+ * @copyright (c) 2017 Mono Ltd  
+ * @license MIT  
+ * @author Mono Ltd  
+ * @overview  
+ ***Notes:** 
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
+ - All end-point objects are transformed by the associated route service. 
+*/

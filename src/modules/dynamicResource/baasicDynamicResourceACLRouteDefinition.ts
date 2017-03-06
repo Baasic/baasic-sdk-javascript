@@ -4,7 +4,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IACLPolicy } from 'common/contracts';
 import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
@@ -23,7 +23,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      **/
     get(options: IDynamicACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.parse('resources/{schemaName}/{id}/acl/{?fields}').expand(params);
+        return super.baseCreate('resources/{schemaName}/{id}/acl/{?fields}', params);
     }
 
     /** 					
@@ -53,7 +53,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
         let params = this.modelMapper.removeParams(data);
         params.user = username;
         params.accessAction = action;
-        return super.parse('resources/{schemaName}/{id}/acl/actions/{accessAction}/users/{user}/').expand(params);
+        return super.baseCreate('resources/{schemaName}/{id}/acl/actions/{accessAction}/users/{user}/', params);
     }
 
     /** 					
@@ -72,7 +72,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
         let params = this.modelMapper.removeParams(data);
         params.role = role;
         params.accessAction = action;
-        return super.parse('resources/{schemaName}/{id}/acl/actions/{accessAction}/roles/{role}/').expand(params);
+        return super.baseCreate('resources/{schemaName}/{id}/acl/actions/{accessAction}/roles/{role}/', params);
     }
 
     updateParams(options: IDynamicACLOptions): any {

@@ -48,7 +48,7 @@ export class BaasicArticleCommentsClient {
                         });
      **/
     approve(data: IArticleComment, options: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.approve(data), this.baasicArticleCommentsRouteDefinition.u);
+        return this.baasicApiClient.put<void>(this.baasicArticleCommentsRouteDefinition.approve(data), this.baasicArticleCommentsRouteDefinition.updateParams(options));
     }
 
     /**

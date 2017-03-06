@@ -7,7 +7,17 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { ALPHABET, BaasicArticleRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import {
+    ALPHABET,
+    BaasicArticleACLClient,
+    BaasicArticleRouteDefinition,
+    BaasicArticleSubscriptionsClient,
+    BaasicArticleInstanceCommentsClient,
+    BaasicArticleInstanceFilesClient,
+    BaasicArticleInstanceRatingsClient,
+    BaasicArticleInstanceTagsClient,
+    TYPES as articleTypes
+} from 'modules/article';
 import { IArticle, IArticleOptions } from 'modules/article/contracts';
 
 @injectable()
@@ -22,17 +32,36 @@ export class BaasicArticleClient {
         return this.baasicArticleRouteDefinition;
     }
 
+    get subscriptions(): BaasicArticleSubscriptionsClient {
+        return this.baasicArticleSubscriptionsClient;
+    }
+
+    get comments(): BaasicArticleInstanceCommentsClient {
+        return this.baasicArticleInstanceCommentsClient;
+    }
+
+    get files(): BaasicArticleInstanceFilesClient {
+        return this.baasicArticleInstanceFilesClient;
+    }
+
+    get tags(): BaasicArticleInstanceTagsClient {
+        return this.baasicArticleInstanceTagsClient;
+    }
+
+    get acl(): BaasicArticleACLClient {
+        return this.baasicArticleACLClient;
+    }
+
     constructor(
+        @inject(articleTypes.BaasicArticleSubscriptionsClient) protected baasicArticleSubscriptionsClient: BaasicArticleSubscriptionsClient,
+        @inject(articleTypes.BaasicArticleCommentRepliesClient) protected baasicArticleInstanceCommentsClient: BaasicArticleInstanceCommentsClient,
+        @inject(articleTypes.BaasicArticleInstanceFilesClient) protected baasicArticleInstanceFilesClient: BaasicArticleInstanceFilesClient,
+        @inject(articleTypes.BaasicArticleInstanceRatingsClient) protected baasicArticleInstanceRatingsClient: BaasicArticleInstanceRatingsClient,
+        @inject(articleTypes.BaasicArticleInstanceTagsClient) protected baasicArticleInstanceTagsClient: BaasicArticleInstanceTagsClient,
         @inject(articleTypes.BaasicArticleRouteDefinition) protected baasicArticleRouteDefinition: BaasicArticleRouteDefinition,
+        @inject(articleTypes.BaasicArticleACLClient) protected baasicArticleACLClient: BaasicArticleACLClient,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
-
-    private replaceDiacritics(str: string): string {
-        for (let letter in ALPHABET) {
-            str = str.replace(ALPHABET[letter], letter);
-        }
-        return str;
-    }
 
     public statuses: Object = {
         none: 0,
@@ -48,41 +77,6 @@ export class BaasicArticleClient {
         flagged: 8,
         unapproved: 16
     };
-
-    private isUndefined(value: any): boolean {
-        return typeof value === 'undefined';
-    }
-
-    private equals(value1: any, value2: any): boolean {
-        if (value1 === value2) { return true; }
-        if (value1 === null || value2 === null) { return false; }
-        if (value1 !== value1 && value2 !== value2) return true; // NaN === NaN
-        let t1 = typeof value1, t2 = typeof value2, length, key, keySet;
-
-    }
-
-    updateSlug(resource: any): any {
-        let newSlug = this.toSlug(resource.slug);
-        if (this.isUndefined(newSlug) || newSlug === null || newSlug === '') {
-            newSlug = this.toSlug(resource.title);
-        }
-        if (this.isUndefined(newSlug) || newSlug !== null || newSlug !== '') {
-            if (!this.equals(resource.slug, newSlug)) {
-                resource.slug = newSlug;
-            }
-        }
-    }
-
-    toSlug(str: string): string {
-        if (this.isUndefined(str) || str === null || str === '') {
-            return str;
-        }
-        str = this.replaceDiacritics(str);
-        str = str.toLowerCase();
-        str = str.replace(/[^a-z0-9]+/g, '-');
-        str = str.replace(/^-|-$/g, '');
-        return str;
-    }
 
     /**                 
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article resources matching the given criteria.                 

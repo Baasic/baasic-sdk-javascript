@@ -12,6 +12,7 @@ import {
     BaasicArticleFilesStreamsRouteDefinition,
     BaasicArticleRatingsClient,
     BaasicArticleRatingsRouteDefinition,
+    BaasicArticleClient,
     BaasicArticleRouteDefinition,
     BaasicArticleSettingsClient,
     BaasicArticleSettingsRouteDefinition,
@@ -42,7 +43,9 @@ import {
     BaasicArticleInstanceFilesStreamsRouteDefinition,
     BaasicArticleInstanceFilesStreamsClient,
     BaasicArticleInstanceFilesBatchRouteDefinition,
-    BaasicArticleInstanceFilesBatchClient
+    BaasicArticleInstanceFilesBatchClient,
+    BaasicArticleACLRouteDefinition,
+    BaasicArticleACLClient
 } from 'modules/article';
 
 const TYPES = {
@@ -58,6 +61,7 @@ const TYPES = {
     BaasicArticleFilesStreamsRouteDefinition: Symbol("BaasicArticleFilesStreamsRouteDefinition"),
     BaasicArticleRatingsClient: Symbol("BaasicArticleRatingsClient"),
     BaasicArticleRatingsRouteDefinition: Symbol("BaasicArticleRatingsRouteDefinition"),
+    BaasicArticleClient: Symbol("BaasicArticleClient"),
     BaasicArticleRouteDefinition: Symbol("BaasicArticleRouteDefinition"),
     BaasicArticleSettingsClient: Symbol("BaasicArticleSettingsClient"),
     BaasicArticleSettingsRouteDefinition: Symbol("BaasicArticleSettingsRouteDefinition"),
@@ -88,7 +92,9 @@ const TYPES = {
     BaasicArticleInstanceFilesStreamsRouteDefinition: Symbol("BaasicArticleInstanceFilesStreamsRouteDefinition"),
     BaasicArticleInstanceFilesStreamsClient: Symbol("BaasicArticleInstanceFilesStreamsClient"),
     BaasicArticleInstanceFilesBatchRouteDefinition: Symbol("BaasicArticleInstanceFilesBatchRouteDefinition"),
-    BaasicArticleInstanceFilesBatchClient: Symbol("BaasicArticleInstanceFilesBatchClient")
+    BaasicArticleInstanceFilesBatchClient: Symbol("BaasicArticleInstanceFilesBatchClient"),
+    BaasicArticleACLRouteDefinition: Symbol(" BaasicArticleACLRouteDefinition"),
+    BaasicArticleACLClient: Symbol("BaasicArticleACLClient")
 };
 
 export { TYPES };
@@ -113,7 +119,6 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicArticleTagsRouteDefinition>(TYPES.BaasicArticleTagsRouteDefinition).toSelf();
     bind<BaasicArticleTagsClient>(TYPES.BaasicArticleTagsClient).toSelf();
     bind<BaasicArticleSubscriptionsArticleModuleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleModuleRouteDefinition).toSelf();
-    bind<BaasicArticleRouteDefinition>(TYPES.BaasicArticleRouteDefinition).toSelf();
     bind<BaasicArticleSubscriptionsArticleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleRouteDefinition).toSelf();
     bind<BaasicArticleSubscriptionsCommentReportedRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition).toSelf();
     bind<BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition).toSelf();
@@ -137,6 +142,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicArticleInstanceFilesStreamsClient>(TYPES.BaasicArticleInstanceFilesStreamsClient).toSelf();
     bind<BaasicArticleInstanceFilesBatchRouteDefinition>(TYPES.BaasicArticleInstanceFilesBatchRouteDefinition).toSelf();
     bind<BaasicArticleInstanceFilesBatchClient>(TYPES.BaasicArticleInstanceFilesBatchClient).toSelf();
+    bind<BaasicArticleACLRouteDefinition>(TYPES.BaasicArticleACLRouteDefinition).toSelf();
+    bind<BaasicArticleACLClient>(TYPES.BaasicArticleACLClient).toSelf();
+    bind<BaasicArticleRouteDefinition>(TYPES.BaasicArticleRouteDefinition).toSelf();
+    bind<BaasicArticleClient>(TYPES.BaasicArticleClient).toSelf();
 });
 
 export { diModule };
