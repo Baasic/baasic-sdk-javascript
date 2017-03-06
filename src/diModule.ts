@@ -12,11 +12,11 @@ export class DIModule {
     static kernel: Container = new Container();
     static init(app: IBaasicApp, modules: any[]): void {
         let diModule = new ContainerModule((bind) => {
-
+            let apiKey = app.getApiKey();
             if (app.settings) {
                 let appOptions: IAppOptions = {
-                    apiKey: app.apiKey,
-                    apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${app.apiKey}/`),
+                    apiKey: apiKey,
+                    apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${apiKey}/`),
                     enableHALJSON: app.settings.enableHALJSON
                 };
                 DIModule.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);

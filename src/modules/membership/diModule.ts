@@ -14,6 +14,8 @@ import {
     BaasicUserSocialLoginRouteDefinition,
     BaasicUserClient,
     BaasicUserRouteDefinition,
+    BaasicPermissionRouteDefinition,
+    BaasicPermissionClient,
     Root
 } from 'modules/membership';
 
@@ -32,6 +34,8 @@ const TYPES = {
     BaasicUserSocialLoginRouteDefinition: Symbol("BaasicUserSocialLoginRouteDefinition"),
     BaasicUserClient: Symbol("BaasicUserClient"),
     BaasicUserRouteDefinition: Symbol("BaasicUserRouteDefinition"),
+    BaasicPermissionRouteDefinition: Symbol("BaasicPermissionRouteDefinition"),
+    BaasicPermissionClient: Symbol("BaasicPermissionClient"),
     Root: Symbol("Root")
 };
 
@@ -52,6 +56,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicUserSocialLoginClient>(TYPES.BaasicUserSocialLoginClient).to(BaasicUserSocialLoginClient);
     bind<BaasicUserRouteDefinition>(TYPES.BaasicUserRouteDefinition).to(BaasicUserRouteDefinition);
     bind<BaasicUserClient>(TYPES.BaasicUserClient).to(BaasicUserClient);
+    bind<BaasicPermissionRouteDefinition>(TYPES.BaasicPermissionRouteDefinition).to(BaasicPermissionRouteDefinition);
+    bind<BaasicPermissionClient>(TYPES.BaasicPermissionClient).to(BaasicPermissionClient);
+
+
     bind<Root>(TYPES.Root).to(Root);
 });
 

@@ -10,3 +10,5 @@ export * from './INewPassword';
 export * from './IUserSocialLogin';
 export * from './ISocialLogin';
 export * from './IUserInfo';
+export * from './IAccessAction';
+export * from './IAccessPolicy';

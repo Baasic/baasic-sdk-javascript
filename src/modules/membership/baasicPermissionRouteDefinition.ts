@@ -1,0 +1,124 @@
+/* globals module */
+/**  
+ * @module baasicLoginRouteDefinition  
+ * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ */
+import { injectable, inject } from "inversify";
+import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAccessPolicy, IAccessAction } from 'modules/membership/contracts';
+
+@injectable()
+export class BaasicPermissionRouteDefinition extends BaasicBaseRouteDefinition {
+
+    constructor(
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
+    ) {
+        super(appOptions);
+    }
+
+    /**
+    * Parses find route which can be expanded with additional options. Supported items are: 
+    * - `section` - Section abbreviation which identifies part of the application for which security privileges can be retrieved and managed.
+    * - `searchQuery` - A string value used to identify access policy resources using the phrase search. 
+    * - `sort` - A string used to set the access policy property to sort the result collection by.				
+    * @method        
+    * @example 
+baasicPermissionRouteDefinition.find(
+	'sectionName',
+	{searchQuery: '<search-phrase>'}
+);               
+    **/
+    find(section: string, options?: any): any {
+        var opt = options || {};
+        return super.baseFind('permissions/sections/{section}/{?searchQuery,sort,embed,fields}', this.utility.extend({ section: section }, opt));
+    }
+    /**
+    * Parses getActions route which can be expanded with additional options. Supported items are: 
+    * - `searchQuery` - A string value used to identify access action resources using the phrase search.  
+    * - `sort` - A string used to set the access action property to sort the result collection by.				
+    * @method        
+    * @example 
+baasicPermissionRouteDefinition.getActions(
+{searchQuery: '<search-phrase>'}
+);               
+    **/
+    getActions(options?: any): any {
+        var opt = options || {};
+        return super.baseFind('permissions/actions/{?searchQuery,sort,embed,fields}', opt);
+    }
+    /**
+    * Parses getRoles route which can be expanded with additional options. Supported items are: 
+    * - `searchQuery` - A string value used to identify access policy resources using the phrase search.   
+    * - `sort` - A string used to set the access policy property to sort the result collection by.	
+    * - `page` - A value used to set the page number, i.e. to retrieve certain access policy subset from the storage.
+    * - `rpp` - A value used to limit the size of result set per page.				
+    * @method        
+    * @example 
+baasicPermissionRouteDefinition.getRoles(
+{searchQuery: '<search-phrase>'}
+);               
+    **/
+    getRoles(options?: any): any {
+        var opt = options || {};
+        return super.baseFind('lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}', opt);
+    }
+    /**
+    * Parses getUsers route which can be expanded with additional options. Supported items are: 
+    * - `searchQuery` - A string value used to identify access policy resources using the phrase search.     
+    * - `sort` - A string used to set the access policy property to sort the result collection by.	
+    * - `page` - A value used to set the page number, i.e. to retrieve certain access policy subset from the storage.
+    * - `rpp` - A value used to limit the size of result set per page.				
+    * @method        
+    * @example 
+baasicPermissionRouteDefinition.getRoles(
+{searchQuery: '<search-phrase>'}
+);               
+    **/
+    getUsers(options?: any): any {
+        var opt = options || {};
+        return super.baseFind('users/{?searchQuery,page,rpp,sort,embed,fields}', opt);
+    }
+    /**
+    * Parses create permission route; this URI template doesn't expose any additional properties.
+    * @method        
+    * @example baasicPermissionRouteDefinition.create({});               
+    **/
+    create(): any { super.baseCreate('permissions/') }
+    /**                  
+     * Returns a promise that is resolved once the remove permission action has been performed. This action will remove a permission from the system, if completed successfully. 
+     * @param data A permission object used to delete specified permission resource.
+     * @returns A promise that is resolved once the remove action has been performed.                
+     * @method                         
+     * @example // Permission is a resource previously fetched using get action.				 
+                    baasicPermissionClient.remove(permission)
+                        .then(function (data) {   
+                            // perform success action here 
+                        },
+                         function (response, status, headers, config) {   
+                            // perform error handling here 
+                        });						
+     **/
+    remove(data: IAccessPolicy): any {
+        var params = super.deleteParams(data);
+        var action = data.actions[0];
+        let operation = '';
+        let subject = '';
+        if (data.role && data.role.length > 0) {
+            operation = 'Role';
+            subject = data.role;
+        } else {
+            operation = 'User';
+            subject = data.userName;
+        }
+        return super.baseDelete('permissions/sections/{section}/actions/{action}/' + operation.toLowerCase() + 's/' + subject, data, null, 'delete' + action.abrv + operation);
+    }
+}
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
+ - All end-point objects are transformed by the associated route definition. 
+ */

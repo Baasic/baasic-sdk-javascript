@@ -8,6 +8,26 @@ export class Utility {
     }
 
     /**
+     * Order an array by specified order type.
+     * @param values of T type
+     * @param orderType property name
+     * @returns ordered array.
+     */
+    OrderByArray<T>(values: T[], orderType: any) {
+        return values.sort((a, b) => {
+            if (a[orderType] < b[orderType]) {
+                return -1;
+            }
+
+            if (a[orderType] > b[orderType]) {
+                return 1;
+            }
+
+            return 0
+        });
+    }
+
+    /**
      * Checks if provided value is javascript object.
      * @param value any given value
      * @returns true if provided value is object, otherwise false.

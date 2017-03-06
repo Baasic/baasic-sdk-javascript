@@ -16,7 +16,7 @@ export class TokenHandler implements ITokenHandler {
     ) {
         this.initEventing();
 
-        this.tokenKey = 'baasic-auth-token-' + this.application.apiKey;
+        this.tokenKey = 'baasic-auth-token-' + this.application.getApiKey();
         this.token = this.get(<TokenType>TokenTypes.Access);
         if (this.token) {
             this.userAccessTokenTimerHandle = this.setExpirationTimer(this.token);
