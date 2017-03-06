@@ -35,7 +35,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly dynamicResource: modules.DynamicResource.BaasicDynamicResourceClient;
 
 
-    constructor(public apiKey: string, options?: Partial<IBaasicAppOptions>) {
+    constructor(private apiKey: string, options?: Partial<IBaasicAppOptions>) {
         this.utility = new Utility();
         if (!this.apiKey) {
             throw new Error("API Key is required.");

@@ -16,7 +16,7 @@ export class UserHandler implements IUserHandler {
         @inject(coreTYPES.IStorageHandler) protected storageHandler: IStorageHandler,
         @inject(coreTYPES.IBaasicApp) private application: IBaasicApp
     ) {
-        this.userInfoKey = 'baasic-user-info-' + this.application.apiKey;
+        this.userInfoKey = 'baasic-user-info-' + this.application.getApiKey();
 
         this.user = {
             isAuthenticated: function () {

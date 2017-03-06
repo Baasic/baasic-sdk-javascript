@@ -14,5 +14,7 @@ export * from './baasicUserSocialLoginRouteDefinition';
 export * from './baasicUserRouteDefinition';
 export * from './baasicUserSocialLoginClient';
 export * from './baasicUserClient';
+export * from './baasicPermissionRouteDefinition';
+export * from './baasicPermissionClient';
 export * from './root';
 

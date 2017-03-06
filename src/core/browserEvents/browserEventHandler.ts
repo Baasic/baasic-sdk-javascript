@@ -15,7 +15,7 @@ export class BrowserEventHandler implements IEventHandler {
 		@inject(coreTYPES.IStorageHandler) protected storageHandler: IStorageHandler,
 		@inject(coreTYPES.IBaasicApp) private application: IBaasicApp
 	) {
-		this.messageBusKey = 'baasic-message-bus-' + this.application.apiKey;
+		this.messageBusKey = 'baasic-message-bus-' + this.application.getApiKey();
 		this.initEventing();
 	}
 

@@ -1,7 +1,6 @@
 import { ITokenHandler, IToken, TokenType, IBaasicAppOptions, IUserHandler, IUser } from 'core/contracts';
 
 export interface IBaasicApp {
-    apiKey: string;
     tokenHandler: ITokenHandler;
     userHandler: IUserHandler;
     settings: Partial<IBaasicAppOptions>;
