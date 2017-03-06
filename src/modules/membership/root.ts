@@ -23,13 +23,13 @@ import 'reflect-metadata';
 export class Root {
 
     constructor(
-        @inject(TYPES.BaasicLoginClient) public Login: BaasicLoginClient,
-        @inject(TYPES.BaasicLoginSocialClient) public LoginSocial: BaasicLoginSocialClient,
-        @inject(TYPES.BaasicPasswordRecoveryClient) public PasswordRecovery: BaasicPasswordRecoveryClient,
-        @inject(TYPES.BaasicRegisterClient) public Register: BaasicRegisterClient,
-        @inject(TYPES.BaasicRoleClient) public Role: BaasicRoleClient,
-        @inject(TYPES.BaasicUserClient) public User: BaasicUserClient,
-        @inject(TYPES.BaasicUserSocialLoginClient) public UserSocialLogin: BaasicUserSocialLoginClient
+        @inject(TYPES.BaasicLoginClient) public login: BaasicLoginClient,
+        @inject(TYPES.BaasicLoginSocialClient) public loginSocial: BaasicLoginSocialClient,
+        @inject(TYPES.BaasicPasswordRecoveryClient) public passwordRecovery: BaasicPasswordRecoveryClient,
+        @inject(TYPES.BaasicRegisterClient) public register: BaasicRegisterClient,
+        @inject(TYPES.BaasicRoleClient) public role: BaasicRoleClient,
+        @inject(TYPES.BaasicUserClient) public user: BaasicUserClient,
+        @inject(TYPES.BaasicUserSocialLoginClient) public userSocialLogin: BaasicUserSocialLoginClient
     ) {
 
     }
