@@ -276,11 +276,11 @@ export class BaasicPermissionClient {
             return this.permissionHash[apiKey][authorization];
         }
 
-        var user = this.application.getUser();
-        if (user === undefined) {
+        var userContainer = this.application.getUser();
+        if (userContainer === undefined) {
             return;
         }
-
+        var user = userContainer.user;
         var hasPermission = false;
 
         if (user.permissions) {

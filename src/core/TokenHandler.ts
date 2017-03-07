@@ -29,6 +29,19 @@ export class TokenHandler implements ITokenHandler {
     };
 
     store(token: IToken): void {
+        //Type guard for plain JavaScript
+        var anyToken: IToken | any = token;
+        if (anyToken.access_token !== undefined) {
+            let t: IToken = {
+                token: anyToken.access_token,
+                expires_in: anyToken.expires_in,
+                sliding_window: anyToken.sliding_window,
+                tokenUrl: anyToken.access_url_token,
+                type: anyToken.token_type
+            };
+            token = t;
+        }
+
         this.syncToken(token);
 
         if (token === undefined || token === null) {
