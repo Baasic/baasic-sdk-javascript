@@ -20,7 +20,8 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
 
     /**                 
      * Parses create article rating route; this URI does not support any additional embed items.                 
-     * @method                     
+     * @method 
+     * @param data An article rating object that needs to be inserted into the system.                    
      * @example baasicArticleRatingsRouteDefinition.create(data);                 
      **/
     create(data: IRating): any {
@@ -34,7 +35,8 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the article rating property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method 
+     * @param options Query resource options object.                       
      * @example baasicArticleRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
@@ -48,7 +50,9 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the article rating property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method 
+     * @param username Username which uniquely identifies a user which has created an article rating.
+     * @param options Query resource options object.                       
      * @example baasicArticleRatingsRouteDefinition.find({username: '<username>'});                               
      **/
     findByUser(username: string, options?: IOptions): any {
@@ -60,7 +64,9 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
     /**                 
      * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method
+     * @param id Id which uniquely identifies article rating resource that needs to be retrieved.
+     * @param options Options object that contains embed data.                        
      * @example baasicArticleRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
@@ -69,7 +75,8 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
 
     /**                 
      * Parses update article rating route; this URI does not support any additional embed items.                 
-     * @method                     
+     * @method
+     * @param data An article object used to update specified article rating resource.                     
      * @example baasicArticleRatingsRouteDefinition.update(data);                 
      **/
     update(data: IRating): any {
@@ -78,7 +85,8 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
 
     /**                 
     * Parses delete article rating route; this URI does not support any additional embed items.                 
-    * @method                     
+    * @method
+    * @param data An article object used to delete specified article rating resource.                     
     * @example baasicArticleRatingsRouteDefinition.delete(data);                 
     **/
     delete(data: IRating): any {

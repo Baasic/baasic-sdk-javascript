@@ -38,7 +38,9 @@ export class BaasicArticleCommentRepliesRouteDefinition extends BaasicBaseRouteD
      * Parses get route which can be expanded with additional options. Supported items are:
      * - `id` - Id which uniquely identifies article comment reply resource that needs to be retrieved.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @method 
+     * @method
+     * @param id Id which uniquely identifies article comment reply resource that needs to be retrieved.
+     * @param options Options object that contains embed data. 
      * @example baasicArticleCommentRepliesRouteDefinition.get({ id: '<comment-reply-id>' });
      **/
     get(id: string, options?: IGetRequestOptions): any {
@@ -48,48 +50,109 @@ export class BaasicArticleCommentRepliesRouteDefinition extends BaasicBaseRouteD
     /**
      * Parses create article comment reply route; this URI template does not support any additional items.
      * @method
+     * @param data An article comment reply object that needs to be inserted into the system.
      * @example baasicArticleCommentRepliesRouteDefinition.create(data);
      **/
     create(data: IArticleCommentReply): any {
         return super.baseCreate('article-comment-replies', data);
     }
 
+    /**
+     * Parses update article comment reply route; this URI template does not support any additional items.
+     * @method
+     * @param data An Article Comments Reply object used to update specified article comment reply resource.
+     * @example baasicArticleCommentRepliesRouteDefinition.update(data);
+     **/
     update(data: IArticleCommentReply): any {
         return super.baseUpdate('article-comment-replies/{id}', data);
     }
 
-    approve(data: IArticleCommentReply): any {
-        return super.baseUpdate('article-comment-replies/{id}/approve', data, undefined, 'comment-approve');
-    }
-
-    unapprove(data: IArticleCommentReply): any {
-        return super.baseUpdate('article-comment-replies/{id}/unapprove', data, undefined, 'comment-unapprove');
-    }
-
-    flag(data: IArticleCommentReply): any {
-        return super.baseUpdate('article-comment-replies/{id}/flag', data, undefined, 'comment-flag');
-    }
-
-    unflag(data: IArticleCommentReply): any {
-        return super.baseUpdate('article-comment-replies/{id}/unflag', data, undefined, 'comment-unflag');
-    }
-
-    report(data: IArticleCommentReply): any {
-        return super.baseUpdate('article-comment-replies/{id}/report', data, undefined, 'comment-report');
-    }
-
+    /**
+    * Parses delete article comment reply route; this URI template does not support any additional items.
+    * @method
+    * @param data Article Comment Reply object.
+    * @example baasicArticleCommentRepliesRouteDefinition.delete(data);
+    **/
     delete(data: IArticleCommentReply): any {
         return super.baseDelete('article-comment-replies/{id}', data);
     }
 
+    /**
+     * Parses approve article comment reply route; this URI template does not support any additional items.
+     * @method
+     * @param data Article Comment Reply object.
+     * @example baasicArticleCommentRepliesRouteDefinition.approve(data);
+     **/
+    approve(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/approve', data, undefined, 'comment-approve');
+    }
+
+    /**
+    * Parses unapprove article comment reply route; this URI template does not support any additional items.
+    * @method
+    * @param data Article Comment Reply object.
+    * @example baasicArticleCommentRepliesRouteDefinition.unapprove(data);
+    **/
+    unapprove(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/unapprove', data, undefined, 'comment-unapprove');
+    }
+
+    /**
+    * Parses flag article comment reply route; this URI template does not support any additional items.
+    * @method
+    * @param data Article Comment Reply object.
+    * @example baasicArticleCommentRepliesRouteDefinition.flag(data);
+    **/
+    flag(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/flag', data, undefined, 'comment-flag');
+    }
+
+    /**
+    * Parses unflag article comment reply route; this URI template does not support any additional items.
+    * @method
+    * @param data Article Comment Reply object.
+    * @example baasicArticleCommentRepliesRouteDefinition.unflag(data);
+    **/
+    unflag(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/unflag', data, undefined, 'comment-unflag');
+    }
+
+    /**
+    * Parses report article comment reply route; this URI template does not support any additional items.
+    * @method
+    * @param data Article Comment Reply object.
+    * @example baasicArticleCommentRepliesRouteDefinition.report(data);
+    **/
+    report(data: IArticleCommentReply): any {
+        return super.baseUpdate('article-comment-replies/{id}/report', data, undefined, 'comment-report');
+    }
+
+    /**
+    * Parses unreport article comment reply route; this URI template does not support any additional items.
+    * @method
+    * @param data Article Comment Reply object.
+    * @example baasicArticleCommentRepliesRouteDefinition.unreport(data);
+    **/
     unreport(data: IArticleCommentReply): any {
         return super.baseUpdate('article-comment-replies/{id}/unreport', data, undefined, 'comment-unreport');
     }
 
+    /**
+    * Parses spam article comment reply route; this URI template does not support any additional items.
+    * @method
+    * @param data Article Comment Reply object.
+    * @example baasicArticleCommentRepliesRouteDefinition.spam(data);
+    **/
     spam(data: IArticleCommentReply): any {
         return super.baseUpdate('article-comment-replies/{id}/spam', data, undefined, 'comment-spam');
     }
 
+    /**
+    * Parses unspam article comment reply route; this URI template does not support any additional items.
+    * @method
+    * @param data Article Comment Reply object.
+    * @example baasicArticleCommentRepliesRouteDefinition.unspam(data);
+    **/
     unspam(data: IArticleCommentReply): any {
         return super.baseUpdate('article-comment-replies/{id}/unspam', data, undefined, 'comment-unspam');
     }

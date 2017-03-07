@@ -51,7 +51,7 @@ export class BaasicArticleFilesBatchClient {
 
     /**                   
      * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.                  
-     * @method batch.update                         
+     * @method                        
      * @example baasicArticleFilesClient.batch.update(files)
                     .then(function (data) {   
                         // perform success action here 
@@ -66,7 +66,7 @@ export class BaasicArticleFilesBatchClient {
 
     /**                   
      * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).                   
-     * @method batch.link                         
+     * @method                         
      * @example baasicArticleFilesClient.batch.link(files)
                     .then(function (data) {   
                         // perform success action here 

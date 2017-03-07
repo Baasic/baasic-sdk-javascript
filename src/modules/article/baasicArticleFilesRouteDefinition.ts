@@ -39,7 +39,8 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the file property to sort the result collection by. 	
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method
+     * @param options Query resource options object.                        
      * @example baasicArticleFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
@@ -49,6 +50,8 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
     /**                 
      * Parses get route; this route should be expanded with the Id of the file resource.
      * @method 
+     * @param id Article file id which uniquely identifies article resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
      * @example baasicArticleFilesRouteDefinition.get({id: '<file-id>'});
      **/
     get(id: string, options?: IGetRequestOptions): any {

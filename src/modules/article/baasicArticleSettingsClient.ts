@@ -31,7 +31,9 @@ export class BaasicArticleSettingsClient {
     /**                  
      * Returns a promise that is resolved once the get action has been performed. Success response returns the article settings. 
      * @param options options object                 
-     * @method                         
+     * @method
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed.                          
      * @example baasicArticleSettingsClient.get()
                     .then(function (data) {   
                         // perform success action here 
@@ -50,9 +52,10 @@ export class BaasicArticleSettingsClient {
      * ``` 
      * let params = modelMapper.removeParams(articleSettings); 
      * let uri = params['model'].links('put').href; 
-     * ```
-     * @param data data object                  
-     * @method                         
+     * ```               
+     * @method
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the update article settings action has been performed.                          
      * @example // articleSettings is a resource previously fetched using get action. 
                     articleSettings.allowArchive = true; 
                     baasicArticleSettingsClient.update(articleSettings)

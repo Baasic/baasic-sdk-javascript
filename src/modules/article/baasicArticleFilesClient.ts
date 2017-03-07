@@ -39,7 +39,9 @@ export class BaasicArticleFilesClient {
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.                  
-     * @method                         
+     * @method 
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.                         
      * @example baasicArticleFilesClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
@@ -54,13 +56,16 @@ export class BaasicArticleFilesClient {
                     // perform error handling here 
                 });
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleFile>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleFile>>> {
         return this.baasicApiClient.get(this.baasicArticleFilesRouteDefinition.find(options));
     }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.                 
-     * @method                        
+     * @method
+     * @param id Article file id which uniquely identifies article resource that needs to be retrieved.                       
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed. 
      * @example baasicArticleFilesClient.get('<file-id>')
                    .then(function (data) {   
                        // perform success action here 
@@ -69,7 +74,7 @@ export class BaasicArticleFilesClient {
                        // perform error handling here 
                    });                 
     **/
-    get(id: string, options: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
         return this.baasicApiClient.get(this.baasicArticleFilesRouteDefinition.get(id, options));
     }
 
@@ -79,7 +84,10 @@ export class BaasicArticleFilesClient {
      * let params = modelMapper.removeParams(fileEntry); 
      * let uri = params['model'].links('unlink').href; 
      * ```                  
-     * @method                         
+     * @method
+     * @param data Article file object.
+     * @param options options object.
+     * @returns A promise that is resolved once the unlink action has been performed.                          
      * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
                     baasicArticleFilesRouteDefinition.remove(fileEntry)
                         .then(function (data) {   
@@ -89,7 +97,7 @@ export class BaasicArticleFilesClient {
                             // perform error handling here 
                         }); 				
      **/
-    unlink(data: any, options: Object): PromiseLike<IHttpResponse<void>> {
+    unlink(data: IArticleFile, options: Object): PromiseLike<IHttpResponse<void>> {
         if (!options) {
             options = {};
         }
@@ -102,7 +110,9 @@ export class BaasicArticleFilesClient {
      let params = modelMapper.updateParams(fileEntry); 
      let uri = params['model'].links('put').href; 
      ```                  
-     * @method                         
+     * @method
+     * @param data Article file object that need to be updated in the system.
+     * @returns A promise that is resolved once the update file action has been performed.                          
      * @example // fileEntry is a file resource previously fetched using get action. 
                    fileEntry.description = '<description>'; 
                    baasicArticleFilesClient.update(fileEntry)
@@ -119,7 +129,9 @@ export class BaasicArticleFilesClient {
 
     /** 
      * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the Article Files module (For example: file resources from the Media Vault module can be linked directly into the Article Files module).                  
-     * @method                         
+     * @method
+     * @param data Article file object.
+     * @returns A promise that is resolved once the link action has been performed.                          
      * @example baasicArticleFilesClient.link(fileObject)
                     .then(function (response, status, headers, config) {   
                         // perform success handling here 

@@ -33,6 +33,8 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `statuses` - Comma separated list of article comment states that specify where search should be done (Allowed states: Approved, Spam, Reported, Flagged and UnApproved).
      * @method
+     * @param articleId Article slug or id which uniquely identifies article whose comment resources need to be retrieved.
+     * @param options Query resource options object.
      * @example baasicArticleInstanceCommentsRouteDefinition.find({ searchQuery: '<search-phrase>' });
      **/
     find(articleId: string, options?: IOptions): any {
@@ -46,6 +48,9 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * - `id` - Id which uniquely identifies article comment resource that needs to be retrieved.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method
+     * @param articleId Article slug or id which uniquely identifies article whose comment resource needs to be retrieved.
+     * @param commentId Id which identifies article comment resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
      * @example baasicArticleInstanceCommentsRouteDefinition.get().expand({ id: '<comment-id>' }); 
      **/
     get(articleId: string, commentId?: string, options?: IGetRequestOptions): any {
@@ -58,6 +63,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
     /**
      * Parses create route; this URI template doesnt support any additional options.
      * @method
+     * @param data An article comment object that needs to be inserted into the system.
      * @example baasicArticleInstanceCommentsRouteDefinition.create(data);
      **/
     create(data: IArticleComment): any {
@@ -67,48 +73,109 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
     /**
      * Parses update route; this URI template doesnt support any additional options.
      * @method
+     * @param data An article comments object used to update specified article comment resource.
      * @example baasicArticleInstanceCommentsRouteDefinition.update(data);
      **/
     update(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}', data);
     }
 
+    /**
+     * Parses delete route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comments object used to delete specified article comment resource.
+     * @example baasicArticleInstanceCommentsRouteDefinition.delete(data);
+     **/
     delete(data: IArticleComment): any {
         return super.baseDelete('articles/{articleId}/comments/{id}', data);
     }
 
+    /**
+     * Parses delete all route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article object used to delete specified article comment resource.
+     * @example baasicArticleInstanceCommentsRouteDefinition.deleteAll(data);
+     **/
     deleteAll(data: IArticle): any {
         return super.baseDelete('articles/{articleId}/comments/{id}', data, undefined, 'delete-comments-by-article');
     }
 
+    /**
+     * Parses approve route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comment object.
+     * @example baasicArticleInstanceCommentsRouteDefinition.approve(data);
+     **/
     approve(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}/approve', data, undefined, 'comment-approve');
     }
 
+    /**
+     * Parses unapprove route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comment object.
+     * @example baasicArticleInstanceCommentsRouteDefinition.unapprove(data);
+     **/
     unapprove(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}/unapprove', data, undefined, 'comment-unapprove');
     }
 
+    /**
+     * Parses flag route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comment object.
+     * @example baasicArticleInstanceCommentsRouteDefinition.flag(data);
+     **/
     flag(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}/flag', data, undefined, 'comment-flag');
     }
 
+    /**
+     * Parses unflag route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comment object.
+     * @example baasicArticleInstanceCommentsRouteDefinition.unflag(data);
+     **/
     unflag(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}/unflag', data, undefined, 'comment-unflag');
     }
 
+    /**
+     * Parses report route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comment object.
+     * @example baasicArticleInstanceCommentsRouteDefinition.report(data);
+     **/
     report(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}/report', data, undefined, 'comment-report');
     }
 
+    /**
+     * Parses unreport route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comment object.
+     * @example baasicArticleInstanceCommentsRouteDefinition.unreport(data);
+     **/
     unreport(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}/unreport', data, undefined, 'comment-unreport')
     }
 
+    /**
+     * Parses spam route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comment object.
+     * @example baasicArticleInstanceCommentsRouteDefinition.spam(data);
+     **/
     spam(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}/spam', data, undefined, 'comment-spam');
     }
 
+    /**
+     * Parses unspam route; this URI template doesnt support any additional options.
+     * @method
+     * @param data An article comment object.
+     * @example baasicArticleInstanceCommentsRouteDefinition.unspam(data);
+     **/
     unspam(data: IArticleComment): any {
         return super.baseUpdate('articles/{articleId}/comments/{id}/unspam', data, undefined, 'comment-unspam');
     }

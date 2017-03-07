@@ -51,6 +51,9 @@ export class BaasicArticleInstanceCommentsClient {
      * let uri = params['model'].links('comment-approve').href; 
      * ```
      * @method
+     * @param data Article Comment object.
+     * @param options Notification configuration used to control the article comment recourse access when managing notification distribution.
+     * @returns A promise that is resolved once the approve article comment action has been performed. 
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleInstanceCommentsClient.approve(articleComment, commentOptions)
                         .then(function (data) { 
@@ -70,7 +73,9 @@ export class BaasicArticleInstanceCommentsClient {
      * let params = modelMapper.updateParams(articleComment); 
      * let uri = params['model'].links('comment-unapprove').href; 
      * ```
-     * @method 
+     * @method
+     * @param data Article Comment object.
+     * @returns A promise that is resolved once the unapprove article comment action has been performed.  
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleInstanceCommentsClient.unapprove(articleComment)
                         .then(function (data) { 
@@ -87,6 +92,8 @@ export class BaasicArticleInstanceCommentsClient {
     /**
      * Returns a promise that is resolved once the create article comment action has been performed; this action creates a new comment for an article.
      * @method
+     * @param data An article comment object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create article comment action has been performed.  
      * @example baasicArticleInstanceCommentsClient.create({ 
                         articleId : '<article-id>', 
                         comment : <comment>, 
@@ -104,7 +111,10 @@ export class BaasicArticleInstanceCommentsClient {
 
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article comment resources matching the given criteria.
-     * @method 
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose comment resources need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed. 
      * @example baasicArticleInstanceCommentsClient.find({ 
                     pageNumber : 1, 
                     pageSize : 10, 
@@ -130,6 +140,8 @@ export class BaasicArticleInstanceCommentsClient {
      * let uri = params['model'].links('comment-flag').href; 
      * ```                     
      * @method
+     * @param data Article Comment object.
+     * @returns A promise that is resolved once the flag article comment action has been performed. 
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleInstanceCommentsClient.flag(articleComment)
                         .then(function (data) { 
@@ -150,6 +162,8 @@ export class BaasicArticleInstanceCommentsClient {
      * let uri = params['model'].links('comment-unflag').href; 
      * ```
      * @method
+     * @param data Article Comment object.
+     * @returns A promise that is resolved once the unflag article comment action has been performed. 
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleInstanceCommentsClient.unflag(articleComment)
                         .then(function (data) { 
@@ -166,6 +180,10 @@ export class BaasicArticleInstanceCommentsClient {
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article comment resource.
      * @method 
+     * @param articleId Article slug or id which uniquely identifies article whose comment resource needs to be retrieved.
+     * @param commentId Id which identifies article comment resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed. 
      * @example baasicArticleInstanceCommentsClient.get('<article-id>', '<comment-id>')
                    .then(function (data) { 
                        // perform success action here 
@@ -185,6 +203,8 @@ export class BaasicArticleInstanceCommentsClient {
      let uri = params['model'].links('delete').href; 
      ```
      * @method
+     * @param data An article comment object used to delete specified article comment resource.
+     * @returns A promise that is resolved once the remove article comment action has been performed.
      * @example // articleComment is a resource previously fetched using get action. 
                        baasicArticleInstanceCommentsClient.remove(articleComment)
                            .then(function (data) { 
@@ -204,7 +224,9 @@ export class BaasicArticleInstanceCommentsClient {
      * let params = modelMapper.removeParams(articleComment); 
      * let uri = params['model'].links('delete-comments-by-article').href; 
      * ```                     
-     * @method                     
+     * @method
+     * @param data An article object used to delete specified article comment resource.
+     * @returns A promise that is resolved once the removeAll article comment action has been performed.                      
      * @example // articleComment is a resource previously fetched using get action.					
                     baasicArticleInstanceCommentsClient.removeAll(articleComment)
                         .then(function (data) {   
@@ -224,7 +246,10 @@ export class BaasicArticleInstanceCommentsClient {
      * let params = modelMapper.updateParams(articleComment); 
      * let uri = params['model'].links('comment-report').href; 
      * ```
-     * @method 
+     * @method
+     * @param data Article Comment object.
+     * @param options Notification configuration used to control the article comment recourse access when managing notification distribution.
+     * @returns A promise that is resolved once the report article comment action has been performed.  
      * @example // articleComment is a resource previously fetched using get action.
                     baasicArticleInstanceCommentsClient.report(articleComment, commentOptions)
                         .success(function (data) { 
@@ -244,7 +269,9 @@ export class BaasicArticleInstanceCommentsClient {
      * let params = modelMapper.updateParams(articleComment); 
      * let uri = params['model'].links('comment-unreport').href; 
      * ```
-     * @method 
+     * @method
+     * @param data Article Comment object.
+     * @returns A promise that is resolved once the unreport article comment action has been performed.  
      * @example // articleComment is a resource previously fetched using get action. 
                     baasicArticleInstanceCommentsClient.unreport(articleComment)
                         .then(function (data) { 
@@ -264,7 +291,9 @@ export class BaasicArticleInstanceCommentsClient {
      * let params = modelMapper.updateParams(articleComment); 
      * let uri = params['model'].links('put').href; 
      * ```                     
-     * @method                     
+     * @method
+     * @param data An article comments object used to update specified article comment resource.
+     * @returns A promise that is resolved once the update article comment action has been performed.                      
      * @example // articleComment is a resource previously fetched using get action.				 
                     baasicArticleInstanceCommentsClient.update(articleComment)
                         .then(function (data) { 
@@ -284,7 +313,9 @@ export class BaasicArticleInstanceCommentsClient {
      * let params = modelMapper.updateParams(articleComment); 
      * let uri = params['model'].links('comment-spam').href; 
      * ```                      
-     * @method                            
+     * @method
+     * @param data Article Comment object.
+     * @returns A promise that is resolved once the mark as spam article comment action has been performed.                             
      * @example // articleComment is a resource previously fetched using get action.				 
                     baasicArticleInstanceClient.spam(articleComment)
                         .then(function (data) {   
@@ -304,7 +335,9 @@ export class BaasicArticleInstanceCommentsClient {
      * let params = modelMapper.updateParams(articleComment); 
      * let uri = params['model'].links('comment-unspam').href; 
      * ```                      
-     * @method                           
+     * @method
+     * @param data Article Comment object.
+     * @returns A promise that is resolved once the unspam article comment action has been performed.                           
      * @example // articleComment is a resource previously fetched using get action.				 
                         baasicArticleInstanceClient.unspam(articleComment)
                             .then(function (data) {   

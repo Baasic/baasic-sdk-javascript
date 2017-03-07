@@ -36,7 +36,7 @@ export class BaasicArticleFilesBatchRouteDefinition extends BaasicBaseRouteDefin
 
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
-     * @method batch.link                           
+     * @method                         
      * @example baasicArticleFilesStreamsRouteDefinition.link();                                  
      **/
     link(): any {

@@ -27,7 +27,9 @@ export class BaasicArticleInstanceCommentRepliesRouteDefinition extends BaasicBa
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `statuses` - Comma separated list of article comment reply states that specify where search should be done (Allowed states: Approved, Spam, Reported, Flagged and UnApproved).
      * @method 
-     * @param options Query resource options object.
+     * @param articleId Article id which uniquely identifies article whose comment reply resources need to be retrieved.
+     * @param commentId Comment id which uniquely identifies comment whose reply resources need to be retrieved.
+     * @param options Query resource options.
      * @example baasicArticleCommentRepliesRouteDefinition.find({ searchQuery: '<search-phrase>' });
      **/
     find(articleId: string, commentId: string, options?: IOptions): any {
