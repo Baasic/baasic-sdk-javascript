@@ -12,6 +12,14 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'metering/data/{id}/acl/{?fields}';
+
+    public readonly updateRoute: string = 'metering/data/{id}/acl/{?fields}';
+
+    public readonly deleteByUserRoute: string = 'metering/data/{id}/acl/actions/{accessAction}/users/{user}/';
+
+    public readonly deleteByRoleRoute: string = 'metering/data/{id}/acl/actions/{accessAction}/roles/{role}/';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
@@ -22,7 +30,7 @@ export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition 
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseCreate('metering/data/{id}/acl/{?fields}', params);
+        return super.baseCreate(this.getRoute, params);
     }
 
     /** 					
@@ -33,7 +41,7 @@ export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition 
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseCreate('metering/data/{id}/acl/{?fields}', params);
+        return super.baseCreate(this.updateRoute, params);
     }
 
     /** 					
@@ -62,7 +70,7 @@ export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition 
         params.id = id;
         params.user = user;
         params.accessAction = action;
-        return super.baseCreate('metering/data/{id}/acl/actions/{accessAction}/users/{user}/', params);
+        return super.baseCreate(this.deleteByUserRoute, params);
     }
 
     /** 					
@@ -87,7 +95,7 @@ export class BaasicMeteringACLRouteDefinition extends BaasicBaseRouteDefinition 
         params.id = id;
         params.role = role;
         params.accessAction = action;
-        return super.baseCreate('metering/data/{id}/acl/actions/{accessAction}/roles/{role}/', params);
+        return super.baseCreate(this.deleteByRoleRoute, params);
     }
 
     updateParams(options: IACLOptions) {

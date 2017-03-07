@@ -12,6 +12,18 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'schemas/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'schemas/{name}/{?embed,fields}';
+
+    public readonly generateRoute: string = 'schemas/generate';
+
+    public readonly createRoute: string = 'schemas';
+
+    public readonly updateRoute: string = 'schemas/{id}';
+
+    public readonly deleteRoute: string = 'schemas/{id}';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 				
@@ -25,7 +37,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicDynamicSchemaRouteDefinition.find({searchQuery: '<search-phrase>'});               				
      **/
     find(options: IOptions): any {
-        return super.baseFind('schemas/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -35,7 +47,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicDynamicSchemaRouteDefinition.find({name: '<schema-name>'});
      **/
     get(name: string, options?: IGetRequestOptions): any {
-        return super.baseGet('schemas/{name}/{?embed,fields}', this.modelMapper.getParams(name, options, 'name'));
+        return super.baseGet(this.getRoute, this.modelMapper.getParams(name, options, 'name'));
     }
 
     /** 				
@@ -44,7 +56,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicDynamicSchemaRouteDefinition.generate();              				
      **/
     generate(): any {
-        return super.baseCreate('schemas/generate', {});
+        return super.baseCreate(this.generateRoute, {});
     }
 
     /** 				
@@ -53,7 +65,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicDynamicSchemaRouteDefinition.create(data);              				
      **/
     create(): any {
-        return super.baseCreate('schemas', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**
@@ -63,7 +75,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicDynamicSchemaRouteDefinition.update(data);
      */
     update(data: IResourceSchema): any {
-        return super.baseUpdate('schemas/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**
@@ -72,7 +84,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @param data A dynamic schema object used to delete specified dynamic resource schema.   
      */
     delete(data: IResourceSchema): any {
-        return super.baseDelete('schemas/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

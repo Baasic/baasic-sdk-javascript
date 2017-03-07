@@ -11,6 +11,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMediaVaultStreamsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'media-vault-streams/{id}/{?width,height}';
+
+    public readonly createRoute: string = 'media-vault-streams/{path}';
+
+    public readonly updateRoute: string = 'media-vault-streams/{id}/{?width,height}';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -26,7 +32,7 @@ export class BaasicMediaVaultStreamsRouteDefinition extends BaasicBaseRouteDefin
                 id: data
             };
         }
-        return super.baseCreate('media-vault-streams/{id}/{?width,height}', data);
+        return super.baseCreate(this.getRoute, data);
     }
 
     /**                     
@@ -40,7 +46,7 @@ export class BaasicMediaVaultStreamsRouteDefinition extends BaasicBaseRouteDefin
                 path: data
             };
         }
-        return super.baseCreate('media-vault-streams/{path}', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                     
@@ -56,7 +62,7 @@ export class BaasicMediaVaultStreamsRouteDefinition extends BaasicBaseRouteDefin
                 id: data
             };
         }
-        return super.baseUpdate('media-vault-streams/{id}/{?width,height}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

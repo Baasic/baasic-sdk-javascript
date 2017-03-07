@@ -14,6 +14,12 @@ import { IArticleFile } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleInstanceFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'articles/{articleId}/file-streams/{id}/{?width,height}';
+
+    public readonly createRoute: string = 'articles/{articleId}/file-streams/{filename}';
+
+    public readonly updateRoute: string = 'articles/{articleId}/file-streams/{id}';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -33,7 +39,7 @@ export class BaasicArticleInstanceFilesStreamsRouteDefinition extends BaasicBase
         }
         let params = this.utility.extend({}, data);
         params.articleId = articleId;
-        return super.baseCreate('articles/{articleId}/file-streams/{id}/{?width,height}', params);
+        return super.baseCreate(this.getRoute, params);
     }
 
     /**                     
@@ -44,7 +50,7 @@ export class BaasicArticleInstanceFilesStreamsRouteDefinition extends BaasicBase
     create(articleId: string, data: IArticleFile): any {
         let params = this.utility.extend({}, data);
         params.articleId = articleId;
-        return super.baseCreate('articles/{articleId}/file-streams/{filename}', params);
+        return super.baseCreate(this.createRoute, params);
     }
 
     /**                     
@@ -57,7 +63,7 @@ export class BaasicArticleInstanceFilesStreamsRouteDefinition extends BaasicBase
     update(articleId: string, data: IArticleFile): any {
         let params = this.utility.extend({}, data);
         params.articleId = articleId;
-        return super.baseUpdate('articles/{articleId}/file-streams/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

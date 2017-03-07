@@ -13,6 +13,20 @@ import { IArticle, IRating } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'articles/{articleId}/ratings/';
+
+    public readonly findRoute: string = 'articles/{articleId}/ratings{?page,rpp,sort,embed,fields}';
+
+    public readonly findByUserRoute: string = 'articles/{articleId}/users/{username}/ratings/{?embed,fields}';
+
+    public readonly getRoute: string = 'articles/{articleId}/ratings/{id}/{?embed,fields}';
+
+    public readonly updateRoute: string = 'articles/{articleId}/ratings/{id}';
+
+    public readonly deleteRoute: string = 'articles/{articleId}/ratings/{id}';
+
+    public readonly deleteAllRoute: string = 'articles/{articleId}/ratings';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -24,7 +38,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
      * @example baasicArticleInstanceRatingsRouteDefinition.create(data);                 
      **/
     create(data: IRating): any {
-        return super.baseCreate('articles/{articleId}/ratings/', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 
@@ -38,7 +52,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
      * @example baasicArticleInstanceRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('articles/{articleId}/ratings{?page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -54,7 +68,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
     findByUser(username: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
         params.username = username;
-        return super.baseFind('articles/{articleId}/users/{username}/ratings/{?embed,fields}', params);
+        return super.baseFind(this.findByUserRoute, params);
     }
 
     /**                 
@@ -64,7 +78,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
      * @example baasicArticleInstanceRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('articles/{articleId}/ratings/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -73,7 +87,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
      * @example baasicArticleInstanceRatingsRouteDefinition.update(data);                 
      **/
     update(data: IRating): any {
-        return super.baseUpdate('articles/{articleId}/ratings/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -82,7 +96,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
     * @example baasicArticleInstanceRatingsRouteDefinition.delete(data);                 
     **/
     delete(data: IRating): any {
-        return super.baseDelete('articles/{articleId}/ratings/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**                 
@@ -91,7 +105,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
     * @example baasicArticleInstanceRatingsRouteDefinition.deleteAll(data);                 
     **/
     deleteAll(data: IArticle): any {
-        return super.baseDelete('articles/{articleId}/ratings', data, undefined, 'delete-ratings-by-article');
+        return super.baseDelete(this.deleteAllRoute, data, undefined, 'delete-ratings-by-article');
     }
 }
 

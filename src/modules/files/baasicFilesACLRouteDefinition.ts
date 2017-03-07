@@ -12,6 +12,14 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'files/{id}/acl/{?fields}';
+
+    public readonly updateRoute: string = 'files/{id}/acl/{?fields}';
+
+    public readonly deleteByUserRoute: string = 'files/{id}/acl/actions/{accessAction}/users/{user}/';
+
+    public readonly deleteByRoleRoute: string = 'files/{id}/acl/actions/{accessAction}/roles/{role}/';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
@@ -21,7 +29,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseCreate('files/{id}/acl/{?fields}', params);
+        return super.baseCreate(this.getRoute, params);
     }
 
     /** 					
@@ -31,7 +39,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     update(options: IACLOptions[]): any {
         let params = this.utility.extend({}, options);
-        return super.baseCreate('files/{id}/acl/{?fields}', params);
+        return super.baseCreate(this.updateRoute, params);
     }
 
     /** 					
@@ -55,7 +63,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
         params.id = id;
         params.user = user;
         params.accessAction = action;
-        return super.baseCreate('files/{id}/acl/actions/{accessAction}/users/{user}/', params);
+        return super.baseCreate(this.deleteByUserRoute, params);
     }
 
     /** 					
@@ -79,7 +87,7 @@ export class BaasicFilesACLRouteDefinition extends BaasicBaseRouteDefinition {
         params.id = id;
         params.role = role;
         params.accessAction = action;
-        return super.baseCreate('files/{id}/acl/actions/{accessAction}/roles/{role}/', params);
+        return super.baseCreate(this.deleteByRoleRoute, params);
     }
 
     updateParams(data: any): any {

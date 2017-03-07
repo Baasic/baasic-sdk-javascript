@@ -13,6 +13,16 @@ import { IArticle, IArticleTag } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'articles/{id}/tags/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'articles/{id}/tags/{tag}/{?embed,fields}';
+
+    public readonly createRoute: string = 'articles/{id}/tags/{tag}/';
+
+    public readonly deleteRoute: string = 'articles/{articleId}/tags/{id}';
+
+    public readonly deleteAllRoute: string = 'articles/{articleId}/tags';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -29,7 +39,7 @@ export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicArticleInstanceTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
      **/
     find(options?: IOptions): any {
-        return super.baseFind('articles/{id}/tags/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -39,7 +49,7 @@ export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicArticleInstanceTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('articles/{id}/tags/{tag}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -49,7 +59,7 @@ export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicArticleInstanceTagsRouteDefinition.create({id: '<articleTag-id>'});               				
      **/
     create(data: IArticleTag): any {
-        return super.baseCreate('articles/{id}/tags/{tag}/', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 
@@ -59,7 +69,7 @@ export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicArticleInstanceTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
      **/
     delete(data: IArticleTag): any {
-        return super.baseDelete('articles/{articleId}/tags/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**                 
@@ -69,7 +79,7 @@ export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicArticleInstanceTagsRouteDefinition.deleteAll({id: '<articleTag-id>'});               				
      **/
     deleteAll(data: IArticle): any {
-        return super.baseDelete('articles/{articleId}/tags', data, undefined, 'delete-tags-by-article');
+        return super.baseDelete(this.deleteAllRoute, data, undefined, 'delete-tags-by-article');
     }
 }
 

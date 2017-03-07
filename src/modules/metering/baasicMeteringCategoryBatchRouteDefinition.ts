@@ -12,6 +12,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMeteringCategoryBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'metering/categories/batch';
+
+    public readonly updateRoute: string = 'metering/categories/batch';
+
+    public readonly deleteRoute: string = 'metering/categories/batch';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -20,7 +26,7 @@ export class BaasicMeteringCategoryBatchRouteDefinition extends BaasicBaseRouteD
      * @example baasicMeteringCategoryBatchRouteDefinition.create();                                  
      **/
     create(): any {
-        return super.baseCreate('metering/categories/batch', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                     
@@ -29,7 +35,7 @@ export class BaasicMeteringCategoryBatchRouteDefinition extends BaasicBaseRouteD
      * @example baasicMeteringCategoryBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.baseUpdate('metering/categories/batch', {});
+        return super.baseUpdate(this.updateRoute, {});
     }
 
     /**                     
@@ -38,7 +44,7 @@ export class BaasicMeteringCategoryBatchRouteDefinition extends BaasicBaseRouteD
      * @example baasicMeteringCategoryBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
-        return super.baseDelete('metering/categories/batch', {});
+        return super.baseDelete(this.deleteRoute, {});
     }
 }
 

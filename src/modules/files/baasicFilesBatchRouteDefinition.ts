@@ -12,6 +12,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly updateRoute: string = 'files/batch';
+
+    public readonly linkRoute: string = 'files/batch/link';
+
+    public readonly unlinkRoute: string = 'files/batch/unlink';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -20,7 +26,7 @@ export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.baseCreate('files/batch', {});
+        return super.baseCreate(this.updateRoute, {});
     }
 
     /**                     
@@ -29,7 +35,7 @@ export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesBatchRouteDefinition.link();                                  
      **/
     link(): any {
-        return super.baseCreate('files/batch/link', {});
+        return super.baseCreate(this.linkRoute, {});
     }
 
     /**                     
@@ -38,7 +44,7 @@ export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesBatchRouteDefinition.unlink();                                  
      **/
     unlink(): any {
-        return super.baseCreate('files/batch/unlink', {});
+        return super.baseCreate(this.unlinkRoute, {});
     }
 }
 

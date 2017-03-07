@@ -13,6 +13,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'metering/categories/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'metering/categories/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'metering/categories';
+
+    public readonly updateRoute: string = 'metering/categories/{id}';
+
+    public readonly deleteRoute: string = 'metering/categories/{id}';
+    
     get batch(): BaasicMeteringCategoryBatchRouteDefinition {
         return this.baasicMeteringCategoryBatchRouteDefinition;
     }
@@ -34,7 +44,7 @@ export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefini
      * @example baasicMeteringCategoryRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('metering/categories/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -45,7 +55,7 @@ export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefini
      * @example baasicMeteringCategoryRouteDefinition.get(id);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('metering/categories/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -54,7 +64,7 @@ export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefini
      * @example baasicMeteringCategoryRouteDefinition.create();                              
      **/
     create(): any {
-        return super.baseCreate('metering/categories', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                 
@@ -64,7 +74,7 @@ export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefini
      * @example baasicMeteringCategoryRouteDefinition.update();                              
      **/
     update(data: IMeteringCategory): any {
-        return super.baseUpdate('metering/categories/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -74,7 +84,7 @@ export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefini
      * @example baasicMeteringCategoryRouteDefinition.delete();                              
      **/
     delete(data: IMeteringCategory): any {
-        return super.baseDelete('metering/categories/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

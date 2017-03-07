@@ -11,6 +11,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'file-streams/{id}/{?width,height}';
+
+    public readonly updateRoute: string = 'file-streams/{id}/{?width,height}';
+
+    public readonly createRoute: string = 'file-streams/{path}';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -26,7 +32,7 @@ export class BaasicFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition
                 id: data
             };
         }
-        return super.baseCreate('file-streams/{id}/{?width,height}', data);
+        return super.baseCreate(this.getRoute, data);
     }
 
     /**                     
@@ -42,7 +48,7 @@ export class BaasicFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition
                 id: data
             };
         }
-        return super.baseCreate('file-streams/{id}/{?width,height}', data);
+        return super.baseCreate(this.updateRoute, data);
     }
 
     /**                     
@@ -56,7 +62,7 @@ export class BaasicFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition
                 path: data
             };
         }
-        return super.baseCreate('file-streams/{path}', data);
+        return super.baseCreate(this.createRoute, data);
     }
 }
 

@@ -11,6 +11,10 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMediaVaultSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'media-vault-settings';
+
+    public readonly updateRoute: string = 'media-vault-settings';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -19,7 +23,7 @@ export class BaasicMediaVaultSettingsRouteDefinition extends BaasicBaseRouteDefi
      * @example baasicMediaVaultSettingsRouteDefinition.get();                                   
      **/
     get(): any {
-        return super.baseCreate('media-vault-settings', {});
+        return super.baseCreate(this.getRoute, {});
     }
 
     /**                     
@@ -28,7 +32,7 @@ export class BaasicMediaVaultSettingsRouteDefinition extends BaasicBaseRouteDefi
      * @example baasicMediaVaultSettingsRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.baseCreate('media-vault-settings', {});
+        return super.baseCreate(this.updateRoute, {});
     }
 }
 

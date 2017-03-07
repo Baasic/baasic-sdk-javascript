@@ -13,6 +13,12 @@ import { IArticleSubscription } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSubscriptionsCommentReportedRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly subscribeRoute: string = 'articles/subscriptions/comment-reported';
+
+    public readonly isSubscribedRoute: string = 'articles/subscriptions/comment-reported/{subscriberId}';
+
+    public readonly unSubscribeRoute: string = 'articles/subscriptions/comment-reported';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -24,7 +30,7 @@ export class BaasicArticleSubscriptionsCommentReportedRouteDefinition extends Ba
      * @example baasicArticleSubscriptionsCommentReportedRouteDefinition.subscribe(data);                        
      **/
     subscribe(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions/comment-reported', data);
+        return super.baseCreate(this.subscribeRoute, data);
     }
 
     /**                          
@@ -33,7 +39,7 @@ export class BaasicArticleSubscriptionsCommentReportedRouteDefinition extends Ba
      * @example baasicArticleSubscriptionsCommentReportedRouteDefinition.isSubscribed({subscriberId: '<subscriber-id>'});                           
      **/
     isSubscribed(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions/comment-reported/{subscriberId}', data);
+        return super.baseCreate(this.isSubscribedRoute, data);
     }
 
     /**                         
@@ -42,6 +48,6 @@ export class BaasicArticleSubscriptionsCommentReportedRouteDefinition extends Ba
      * @example baasicArticleSubscriptionsCommentReportedRouteDefinition.unSubscribe(data);                        
      **/
     unSubscribe(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions/comment-reported', data);
+        return super.baseCreate(this.unSubscribeRoute, data);
     }
 }

@@ -18,6 +18,18 @@ import { IArticleFile } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'articles/{articleId}/files/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'articles/{articleId}/files/{id}/{?embed,fields}';
+
+    public readonly linkRoute: string = 'articles/{articleId}/files/link';
+
+    public readonly unlinkRoute: string = 'articles/{articleId}/files/unlink/{id}';
+
+    public readonly unlinkByArticleRoute: string = 'articles/{articleId}/files/unlink/{id}';
+
+    public readonly updateRoute: string = 'article-files/{id}';
+
     get streams(): BaasicArticleInstanceFilesStreamsRouteDefinition {
         return this.baasicArticleInstanceFilesStreamsRouteDefinition;
     }
@@ -45,7 +57,7 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
     find(articleId: string, options?: IOptions): any {
         let params = this.modelMapper.findParams(options);
         params.articleId = articleId;
-        return super.baseCreate('articles/{articleId}/files/{?searchQuery,page,rpp,sort,embed,fields}', params);
+        return super.baseCreate(this.findRoute, params);
     }
 
     /**                 
@@ -57,7 +69,7 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
         let params = this.utility.extend({}, options);
         params.articleId = articleId;
         params.id = id;
-        return super.baseGet('articles/{articleId}/files/{id}/{?embed,fields}', params);
+        return super.baseGet(this.getRoute, params);
     }
 
     /**
@@ -68,7 +80,7 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
     link(articleId: string, data: IArticleFile): any {
         let params = this.utility.extend({}, data);
         params.articleId = articleId;
-        return super.baseCreate('articles/{articleId}/files/link', {});
+        return super.baseCreate(this.linkRoute, {});
     }
 
     /**
@@ -82,7 +94,7 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
         }
         let params = this.modelMapper.removeParams(data);
         params.articleId = articleId;
-        return super.baseDelete('articles/{articleId}/files/unlink/{id}', params, options, 'unlink');
+        return super.baseDelete(this.unlinkRoute, params, options, 'unlink');
     }
 
     unlinkByArticle(articleId: string, data: IArticleFile, options?: any) {
@@ -91,7 +103,7 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
         }
         let params = this.modelMapper.removeParams(data);
         params.articleId = articleId;
-        return super.baseDelete('articles/{articleId}/files/unlink', params, options, 'unlink-by-article');
+        return super.baseDelete(this.unlinkByArticleRoute, params, options, 'unlink-by-article');
     }
 
     /**
@@ -102,7 +114,7 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
     update(articleId: string, data: IArticleFile): any {
         let params = this.modelMapper.updateParams(data);
         params.articleId = articleId;
-        return super.baseUpdate('article-files/{id}', params);
+        return super.baseUpdate(this.updateRoute, params);
     }
 }
 

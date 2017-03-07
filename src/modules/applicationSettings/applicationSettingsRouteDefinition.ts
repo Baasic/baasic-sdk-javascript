@@ -13,6 +13,10 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicApplicationSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'applications/{?embed,fields}';
+
+    public readonly updateRoute: string = 'applications/';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
@@ -22,7 +26,7 @@ export class BaasicApplicationSettingsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicApplicationSettingsRouteDefinition.get();                               
      **/
     get(options: IOptions): any {
-        return super.baseGet('applications/{?embed,fields}', undefined, options);
+        return super.baseGet(this.getRoute, undefined, options);
     }
 
     /**                 
@@ -32,7 +36,7 @@ export class BaasicApplicationSettingsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicApplicationSettingsRouteDefinition.update();                               
      **/
     update(data: IApplication): any {
-        return super.baseUpdate('applications/', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

@@ -12,6 +12,13 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'resources/{schemaName}/{id}/acl/{?fields}';
+
+    public readonly updateRoute: string = 'resources/{schemaName}/{id}/acl/{?fields}';
+
+    public readonly deleteByUserRoute: string = 'resources/{schemaName}/{id}/acl/actions/{accessAction}/users/{user}/';
+
+    public readonly deleteByRoleRoute: string = 'resources/{schemaName}/{id}/acl/actions/{accessAction}/roles/{role}/';
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
@@ -23,7 +30,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      **/
     get(options: IDynamicACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseCreate('resources/{schemaName}/{id}/acl/{?fields}', params);
+        return super.baseCreate(this.getRoute, params);
     }
 
     /** 					
@@ -34,7 +41,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      **/
     update(options: IDynamicACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseUpdate('resources/{schemaName}/{id}/acl/{?fields}', options);
+        return super.baseUpdate(this.updateRoute, options);
     }
 
     /** 					
@@ -53,7 +60,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
         let params = this.modelMapper.removeParams(data);
         params.user = username;
         params.accessAction = action;
-        return super.baseCreate('resources/{schemaName}/{id}/acl/actions/{accessAction}/users/{user}/', params);
+        return super.baseCreate(this.deleteByUserRoute, params);
     }
 
     /** 					
@@ -72,7 +79,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
         let params = this.modelMapper.removeParams(data);
         params.role = role;
         params.accessAction = action;
-        return super.baseCreate('resources/{schemaName}/{id}/acl/actions/{accessAction}/roles/{role}/', params);
+        return super.baseCreate(this.deleteByRoleRoute, params);
     }
 
     updateParams(options: IDynamicACLOptions): any {

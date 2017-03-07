@@ -13,6 +13,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMediaVaultProcessingProviderSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'media-vault-preprocessing-settings/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'media-vault-settings';
+
+    public readonly updateRoute: string = 'media-vault-preprocessing-settings/{id}';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -26,7 +32,7 @@ export class BaasicMediaVaultProcessingProviderSettingsRouteDefinition extends B
      * @example baasicMediaVaultProcessingProviderSettingsRouteDefinition.find({searchQuery: '<search-phrase>'});                                   
      **/
     find(options?: IOptions): any {
-        return super.baseFind('media-vault-preprocessing-settings/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                     
@@ -35,7 +41,7 @@ export class BaasicMediaVaultProcessingProviderSettingsRouteDefinition extends B
      * @example baasicMediaVaultProcessingProviderSettingsRouteDefinition.get({id: '<id>'});                                   
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('media-vault-settings', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                     
@@ -45,7 +51,7 @@ export class BaasicMediaVaultProcessingProviderSettingsRouteDefinition extends B
      * @example baasicMediaVaultProcessingProviderSettingsRouteDefinition.update(data);                                   
      **/
     update(data: IPreprocessingProviderSettings): any {
-        return super.baseUpdate('media-vault-preprocessing-settings/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

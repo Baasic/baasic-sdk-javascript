@@ -13,6 +13,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'key-values/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'key-values/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'key-values';
+
+    public readonly updateRoute: string = 'key-values/{id}';
+
+    public readonly deleteRoute: string = 'key-values/{id}';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -30,7 +40,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.find(options);                               
      **/
     find(options: IOptions): any {
-        return super.baseFind('key-values/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -41,7 +51,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.get();                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('key-values/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -50,7 +60,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.create();                           
      **/
     create(): any {
-        return super.baseCreate('key-values', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**
@@ -60,7 +70,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.update(data);
      */
     update(data: IKeyValue): any {
-        return super.baseUpdate('key-values/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**
@@ -70,7 +80,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicKeyValueRouteDefinition.delete(data);
      */
     delete(data: IKeyValue): any {
-        return super.baseDelete('key-values/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

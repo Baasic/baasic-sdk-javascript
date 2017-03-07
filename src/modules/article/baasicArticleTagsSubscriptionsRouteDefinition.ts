@@ -13,6 +13,12 @@ import { IArticleTag } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleTagsSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly subscribeRoute: string = 'article-tags/{id}/subscriptions';
+
+    public readonly isSubscribedRoute: string = 'article-tags/{id}/subscriptions/{subscriberId}';
+
+    public readonly unSubscribeRoute: string = 'article-tags/{id}/subscriptions';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -25,7 +31,7 @@ export class BaasicArticleTagsSubscriptionsRouteDefinition extends BaasicBaseRou
      **/
     subscribe(tag: IArticleTag, data: any): any {
         let params = this.utility.extend(tag, data);
-        return super.baseCreate('article-tags/{id}/subscriptions', params);
+        return super.baseCreate(this.subscribeRoute, params);
     }
 
     /**                      
@@ -35,7 +41,7 @@ export class BaasicArticleTagsSubscriptionsRouteDefinition extends BaasicBaseRou
      **/
     isSubscribed(tag: IArticleTag, data: any): any {
         let params = this.utility.extend(tag, data);
-        return super.baseCreate('article-tags/{id}/subscriptions/{subscriberId}', params);
+        return super.baseCreate(this.isSubscribedRoute, params);
     }
 
     /**  
@@ -45,7 +51,7 @@ export class BaasicArticleTagsSubscriptionsRouteDefinition extends BaasicBaseRou
      **/
     unSubscribe(tag: IArticleTag, data: any): any {
         let params = this.utility.extend(tag, data);
-        return super.baseCreate('article-tags/{id}/subscriptions', params);
+        return super.baseCreate(this.unSubscribeRoute, params);
     }
 
     subscribeParams(tag: IArticleTag, data: any): any {

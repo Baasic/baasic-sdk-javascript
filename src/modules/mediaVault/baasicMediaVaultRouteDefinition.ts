@@ -20,6 +20,14 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'media-vaults/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'media-vaults/{id}/{?embed,fields}';
+
+    public readonly updateRoute: string = 'media-vaults/{id}';
+
+    public readonly deleteRoute: string = 'media-vaults/{id}/{?height,width}';
+    
     get streams(): BaasicMediaVaultStreamsRouteDefinition {
         return this.baasicMediaVaultStreamsRouteDefinition;
     }
@@ -56,7 +64,7 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMediaVaultRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('media-vaults/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -67,7 +75,7 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMediaVaultRouteDefinition.get({id: '<media-vault-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('media-vaults/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -77,7 +85,7 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMediaVaultRouteDefinition.get({id: '<media-vault-id>'});                               
      **/
     update(data: IMediaEntry): any {
-        return super.baseUpdate('media-vaults/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -88,7 +96,7 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMediaVaultRouteDefinition.delete({id: '<media-vault-id>'});                               
      **/
     delete(data: IMediaEntry, options?: Object): any {
-        return super.baseDelete('media-vaults/{id}/{?height,width}', data, options);
+        return super.baseDelete(this.deleteRoute, data, options);
     }
 }
 
