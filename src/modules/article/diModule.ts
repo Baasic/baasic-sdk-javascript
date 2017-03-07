@@ -14,8 +14,8 @@ import {
     BaasicArticleRatingsRouteDefinition,
     BaasicArticleClient,
     BaasicArticleRouteDefinition,
-    BaasicArticleSettingsClient,
     BaasicArticleSettingsRouteDefinition,
+    BaasicArticleSettingsClient,
     BaasicArticleTagsClient,
     BaasicArticleTagsRouteDefinition,
     BaasicArticleTagsSubscriptionsClient,
@@ -100,52 +100,52 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicArticleCommentRepliesRouteDefinition>(TYPES.BaasicArticleCommentRepliesRouteDefinition).toSelf();
-    bind<BaasicArticleCommentRepliesClient>(TYPES.BaasicArticleCommentRepliesClient).toSelf();
-    bind<BaasicArticleCommentsRouteDefinition>(TYPES.BaasicArticleCommentsRouteDefinition).toSelf();
-    bind<BaasicArticleCommentsClient>(TYPES.BaasicArticleCommentsClient).toSelf();
-    bind<BaasicArticleFilesBatchRouteDefinition>(TYPES.BaasicArticleFilesBatchRouteDefinition).toSelf();
-    bind<BaasicArticleFilesBatchClient>(TYPES.BaasicArticleFilesBatchClient).toSelf();
-    bind<BaasicArticleFilesStreamsRouteDefinition>(TYPES.BaasicArticleFilesStreamsRouteDefinition).toSelf();
-    bind<BaasicArticleFilesStreamsClient>(TYPES.BaasicArticleFilesStreamsClient).toSelf();
-    bind<BaasicArticleFilesRouteDefinition>(TYPES.BaasicArticleFilesRouteDefinition).toSelf();
-    bind<BaasicArticleFilesClient>(TYPES.BaasicArticleFilesClient).toSelf();
-    bind<BaasicArticleRatingsRouteDefinition>(TYPES.BaasicArticleRatingsRouteDefinition).toSelf();
-    bind<BaasicArticleRatingsClient>(TYPES.BaasicArticleRatingsClient).toSelf();
-    bind<BaasicArticleSettingsRouteDefinition>(TYPES.BaasicArticleSettingsRouteDefinition).toSelf();
-    bind<BaasicArticleSettingsClient>(TYPES.BaasicArticleSettingsClient).toSelf();
-    bind<BaasicArticleTagsSubscriptionsRouteDefinition>(TYPES.BaasicArticleTagsSubscriptionsRouteDefinition).toSelf();
-    bind<BaasicArticleTagsSubscriptionsClient>(TYPES.BaasicArticleTagsSubscriptionsClient).toSelf();
-    bind<BaasicArticleTagsRouteDefinition>(TYPES.BaasicArticleTagsRouteDefinition).toSelf();
-    bind<BaasicArticleTagsClient>(TYPES.BaasicArticleTagsClient).toSelf();
-    bind<BaasicArticleSubscriptionsArticleModuleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleModuleRouteDefinition).toSelf();
-    bind<BaasicArticleSubscriptionsArticleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleRouteDefinition).toSelf();
-    bind<BaasicArticleSubscriptionsCommentReportedRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition).toSelf();
-    bind<BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition).toSelf();
-    bind<BaasicArticleSubscriptionsRouteDefinition>(TYPES.BaasicArticleSubscriptionsRouteDefinition).toSelf();
-    bind<BaasicArticleSubscriptionsArticleModuleClient>(TYPES.BaasicArticleSubscriptionsArticleModuleClient).toSelf();
-    bind<BaasicArticleSubscriptionsArticleClient>(TYPES.BaasicArticleSubscriptionsArticleClient).toSelf();
-    bind<BaasicArticleSubscriptionsCommentReportedClient>(TYPES.BaasicArticleSubscriptionsCommentReportedClient).toSelf();
-    bind<BaasicArticleSubscriptionsCommentRequiresModerationClient>(TYPES.BaasicArticleSubscriptionsCommentRequiresModerationClient).toSelf();
-    bind<BaasicArticleSubscriptionsClient>(TYPES.BaasicArticleSubscriptionsClient).toSelf();
-    bind<BaasicArticleInstanceRatingsRouteDefinition>(TYPES.BaasicArticleInstanceRatingsRouteDefinition).toSelf();
-    bind<BaasicArticleInstanceRatingsClient>(TYPES.BaasicArticleInstanceRatingsClient).toSelf();
-    bind<BaasicArticleInstanceTagsRouteDefinition>(TYPES.BaasicArticleInstanceTagsRouteDefinition).toSelf();
-    bind<BaasicArticleInstanceTagsClient>(TYPES.BaasicArticleInstanceTagsClient).toSelf();
-    bind<BaasicArticleInstanceCommentsRouteDefinition>(TYPES.BaasicArticleInstanceCommentsRouteDefinition).toSelf();
-    bind<BaasicArticleInstanceCommentsClient>(TYPES.BaasicArticleInstanceCommentsClient).toSelf();
-    bind<BaasicArticleInstanceCommentRepliesRouteDefinition>(TYPES.BaasicArticleInstanceCommentRepliesRouteDefinition).toSelf();
-    bind<BaasicArticleInstanceCommentRepliesClient>(TYPES.BaasicArticleInstanceCommentRepliesClient).toSelf();
-    bind<BaasicArticleInstanceFilesRouteDefinition>(TYPES.BaasicArticleInstanceFilesRouteDefinition).toSelf();
-    bind<BaasicArticleInstanceFilesClient>(TYPES.BaasicArticleInstanceFilesClient).toSelf();
-    bind<BaasicArticleInstanceFilesStreamsRouteDefinition>(TYPES.BaasicArticleInstanceFilesStreamsRouteDefinition).toSelf();
-    bind<BaasicArticleInstanceFilesStreamsClient>(TYPES.BaasicArticleInstanceFilesStreamsClient).toSelf();
-    bind<BaasicArticleInstanceFilesBatchRouteDefinition>(TYPES.BaasicArticleInstanceFilesBatchRouteDefinition).toSelf();
-    bind<BaasicArticleInstanceFilesBatchClient>(TYPES.BaasicArticleInstanceFilesBatchClient).toSelf();
-    bind<BaasicArticleACLRouteDefinition>(TYPES.BaasicArticleACLRouteDefinition).toSelf();
-    bind<BaasicArticleACLClient>(TYPES.BaasicArticleACLClient).toSelf();
-    bind<BaasicArticleRouteDefinition>(TYPES.BaasicArticleRouteDefinition).toSelf();
-    bind<BaasicArticleClient>(TYPES.BaasicArticleClient).toSelf();
+    bind<BaasicArticleCommentRepliesRouteDefinition>(TYPES.BaasicArticleCommentRepliesRouteDefinition).to(BaasicArticleCommentRepliesRouteDefinition);
+    bind<BaasicArticleCommentRepliesClient>(TYPES.BaasicArticleCommentRepliesClient).to(BaasicArticleCommentRepliesClient);
+    bind<BaasicArticleCommentsRouteDefinition>(TYPES.BaasicArticleCommentsRouteDefinition).to(BaasicArticleCommentsRouteDefinition);
+    bind<BaasicArticleCommentsClient>(TYPES.BaasicArticleCommentsClient).to(BaasicArticleCommentsClient);
+    bind<BaasicArticleFilesBatchRouteDefinition>(TYPES.BaasicArticleFilesBatchRouteDefinition).to(BaasicArticleFilesBatchRouteDefinition);
+    bind<BaasicArticleFilesBatchClient>(TYPES.BaasicArticleFilesBatchClient).to(BaasicArticleFilesBatchClient);
+    bind<BaasicArticleFilesStreamsRouteDefinition>(TYPES.BaasicArticleFilesStreamsRouteDefinition).to(BaasicArticleFilesStreamsRouteDefinition);
+    bind<BaasicArticleFilesStreamsClient>(TYPES.BaasicArticleFilesStreamsClient).to(BaasicArticleFilesStreamsClient);
+    bind<BaasicArticleFilesRouteDefinition>(TYPES.BaasicArticleFilesRouteDefinition).to(BaasicArticleFilesRouteDefinition);
+    bind<BaasicArticleFilesClient>(TYPES.BaasicArticleFilesClient).to(BaasicArticleFilesClient);
+    bind<BaasicArticleRatingsRouteDefinition>(TYPES.BaasicArticleRatingsRouteDefinition).to(BaasicArticleRatingsRouteDefinition);
+    bind<BaasicArticleRatingsClient>(TYPES.BaasicArticleRatingsClient).to(BaasicArticleRatingsClient);
+    bind<BaasicArticleSettingsRouteDefinition>(TYPES.BaasicArticleSettingsRouteDefinition).to(BaasicArticleSettingsRouteDefinition);
+    bind<BaasicArticleSettingsClient>(TYPES.BaasicArticleSettingsClient).to(BaasicArticleSettingsClient);
+    bind<BaasicArticleTagsSubscriptionsRouteDefinition>(TYPES.BaasicArticleTagsSubscriptionsRouteDefinition).to(BaasicArticleTagsSubscriptionsRouteDefinition);
+    bind<BaasicArticleTagsSubscriptionsClient>(TYPES.BaasicArticleTagsSubscriptionsClient).to(BaasicArticleTagsSubscriptionsClient);
+    bind<BaasicArticleTagsRouteDefinition>(TYPES.BaasicArticleTagsRouteDefinition).to(BaasicArticleTagsRouteDefinition);
+    bind<BaasicArticleTagsClient>(TYPES.BaasicArticleTagsClient).to(BaasicArticleTagsClient);
+    bind<BaasicArticleSubscriptionsArticleModuleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleModuleRouteDefinition).to(BaasicArticleSubscriptionsArticleModuleRouteDefinition);
+    bind<BaasicArticleSubscriptionsArticleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleRouteDefinition).to(BaasicArticleSubscriptionsArticleRouteDefinition);
+    bind<BaasicArticleSubscriptionsCommentReportedRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition).to(BaasicArticleSubscriptionsCommentReportedRouteDefinition);
+    bind<BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition).to(BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition);
+    bind<BaasicArticleSubscriptionsRouteDefinition>(TYPES.BaasicArticleSubscriptionsRouteDefinition).to(BaasicArticleSubscriptionsRouteDefinition);
+    bind<BaasicArticleSubscriptionsArticleModuleClient>(TYPES.BaasicArticleSubscriptionsArticleModuleClient).to(BaasicArticleSubscriptionsArticleModuleClient);
+    bind<BaasicArticleSubscriptionsArticleClient>(TYPES.BaasicArticleSubscriptionsArticleClient).to(BaasicArticleSubscriptionsArticleClient);
+    bind<BaasicArticleSubscriptionsCommentReportedClient>(TYPES.BaasicArticleSubscriptionsCommentReportedClient).to(BaasicArticleSubscriptionsCommentReportedClient);
+    bind<BaasicArticleSubscriptionsCommentRequiresModerationClient>(TYPES.BaasicArticleSubscriptionsCommentRequiresModerationClient).to(BaasicArticleSubscriptionsCommentRequiresModerationClient);
+    bind<BaasicArticleSubscriptionsClient>(TYPES.BaasicArticleSubscriptionsClient).to(BaasicArticleSubscriptionsClient);
+    bind<BaasicArticleInstanceRatingsRouteDefinition>(TYPES.BaasicArticleInstanceRatingsRouteDefinition).to(BaasicArticleInstanceRatingsRouteDefinition);
+    bind<BaasicArticleInstanceRatingsClient>(TYPES.BaasicArticleInstanceRatingsClient).to(BaasicArticleInstanceRatingsClient);
+    bind<BaasicArticleInstanceTagsRouteDefinition>(TYPES.BaasicArticleInstanceTagsRouteDefinition).to(BaasicArticleInstanceTagsRouteDefinition);
+    bind<BaasicArticleInstanceTagsClient>(TYPES.BaasicArticleInstanceTagsClient).to(BaasicArticleInstanceTagsClient);
+    bind<BaasicArticleInstanceCommentsRouteDefinition>(TYPES.BaasicArticleInstanceCommentsRouteDefinition).to(BaasicArticleInstanceCommentsRouteDefinition);
+    bind<BaasicArticleInstanceCommentsClient>(TYPES.BaasicArticleInstanceCommentsClient).to(BaasicArticleInstanceCommentsClient);
+    bind<BaasicArticleInstanceCommentRepliesRouteDefinition>(TYPES.BaasicArticleInstanceCommentRepliesRouteDefinition).to(BaasicArticleInstanceCommentRepliesRouteDefinition);
+    bind<BaasicArticleInstanceCommentRepliesClient>(TYPES.BaasicArticleInstanceCommentRepliesClient).to(BaasicArticleInstanceCommentRepliesClient);
+    bind<BaasicArticleInstanceFilesRouteDefinition>(TYPES.BaasicArticleInstanceFilesRouteDefinition).to(BaasicArticleInstanceFilesRouteDefinition);
+    bind<BaasicArticleInstanceFilesClient>(TYPES.BaasicArticleInstanceFilesClient).to(BaasicArticleInstanceFilesClient);
+    bind<BaasicArticleInstanceFilesStreamsRouteDefinition>(TYPES.BaasicArticleInstanceFilesStreamsRouteDefinition).to(BaasicArticleInstanceFilesStreamsRouteDefinition);
+    bind<BaasicArticleInstanceFilesStreamsClient>(TYPES.BaasicArticleInstanceFilesStreamsClient).to(BaasicArticleInstanceFilesStreamsClient);
+    bind<BaasicArticleInstanceFilesBatchRouteDefinition>(TYPES.BaasicArticleInstanceFilesBatchRouteDefinition).to(BaasicArticleInstanceFilesBatchRouteDefinition);
+    bind<BaasicArticleInstanceFilesBatchClient>(TYPES.BaasicArticleInstanceFilesBatchClient).to(BaasicArticleInstanceFilesBatchClient);
+    bind<BaasicArticleACLRouteDefinition>(TYPES.BaasicArticleACLRouteDefinition).to(BaasicArticleACLRouteDefinition);
+    bind<BaasicArticleACLClient>(TYPES.BaasicArticleACLClient).to(BaasicArticleACLClient);
+    bind<BaasicArticleRouteDefinition>(TYPES.BaasicArticleRouteDefinition).to(BaasicArticleRouteDefinition);
+    bind<BaasicArticleClient>(TYPES.BaasicArticleClient).to(BaasicArticleClient);
 });
 
 export { diModule };
