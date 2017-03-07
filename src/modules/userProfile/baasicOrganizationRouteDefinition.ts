@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicOrganizationBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
@@ -44,7 +44,7 @@ export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition
      * @param options Query resource options object.                        
      * @example baasicOrganizationRouteDefinition.get(id, options);                               
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('lookups/organizations/{id}/{?embed,fields}', id, options);
     }
 

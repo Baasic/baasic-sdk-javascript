@@ -6,7 +6,7 @@
 
 import { injectable, inject } from 'inversify';
 import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicTemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
@@ -45,7 +45,7 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
      * @param options Query resource options object.                        
      * @example baasicTemplatingRouteDefinition.get({id: '<template-id>'});                               
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('templates/{id}/{?embed,fields}', id, options);
     }
 

@@ -6,7 +6,7 @@
 
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicNotificationsSubscriptionsAnonymousRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
@@ -83,7 +83,7 @@ export class BaasicNotificationsSubscriptionsAnonymousClient {
                          // perform error handling here 
                     });                         
      */
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
         return this.baasicApiClient.get(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.get(id, options));
     }
 

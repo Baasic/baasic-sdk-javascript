@@ -6,7 +6,7 @@
 
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicArticleInstanceRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IRating } from 'modules/article/contracts';
@@ -95,7 +95,7 @@ export class BaasicArticleInstanceRatingsClient {
                         // perform error handling here 
                     });                 
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IRating>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
         return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.get(id, options));
     }
 

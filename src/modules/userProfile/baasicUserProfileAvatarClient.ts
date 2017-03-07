@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicUserProfileAvatarRouteDefinition, BaasicUserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
@@ -41,7 +41,7 @@ export class BaasicUserProfileAvatarClient {
                         // perform error handling here 
                    });                 
     **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IProfileAvatar>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IProfileAvatar>> {
         return this.baasicApiClient.get(this.baasicUserProfileAvatarRouteDefinition.get(id, options));
     }
 

@@ -4,7 +4,7 @@
  */
 import { injectable, inject } from 'inversify';
 import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IValueSetItem } from 'modules/valueSet/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
@@ -39,7 +39,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @param options Query resource options object.        					
      * @example baasicValueSetItemRouteDefinition.get(setName, id, options);               					
      **/
-    get(setName: string, id: string, options?: IOptions): any {
+    get(setName: string, id: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
         params.setName = setName;
         return super.baseGet('value-sets/{setName}/items/{id}/{?embed,fields}', id, options);

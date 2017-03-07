@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicCompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
@@ -53,7 +53,7 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
      * @param options Query resource options object.                        
      * @example baasicCompanyRouteDefinition.get();                               
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('lookups/companies/{id}/{?embed,fields}', id, options);
     }
 

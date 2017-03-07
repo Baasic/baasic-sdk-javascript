@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicUserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
@@ -29,7 +29,7 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
      * @param options Query resource options object.                       
      * @example baasicUserProfileAvatarRouteDefinition.get({id: '<file-id>'});                               
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('profiles/{id}/avatars/{?embed,fields}', id, options);
     }
 

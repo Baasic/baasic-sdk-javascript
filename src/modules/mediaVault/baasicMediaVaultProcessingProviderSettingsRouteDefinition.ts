@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
@@ -34,7 +34,7 @@ export class BaasicMediaVaultProcessingProviderSettingsRouteDefinition extends B
      * @method                            
      * @example baasicMediaVaultProcessingProviderSettingsRouteDefinition.get({id: '<id>'});                                   
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('media-vault-settings', id, options);
     }
 

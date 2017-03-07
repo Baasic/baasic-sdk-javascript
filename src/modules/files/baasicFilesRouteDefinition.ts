@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/files';
 import { IFileEntry } from 'modules/files/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
@@ -45,7 +45,7 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
      * @param options Query resource options object.                           
      * @example baasicFilesRouteDefinition.get({id: '<file-id>'});                               
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('files/{id}/{?embed,fields}', id, options);
     }
 

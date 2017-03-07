@@ -2,7 +2,7 @@ import { ALPHABET as alphabet } from 'modules/article';
 
 export class BaasicArticleHelpers {
 
-    private isUndefined(value: any): boolean {
+    isUndefined(value: any): boolean {
         return typeof value === 'undefined';
     }
 

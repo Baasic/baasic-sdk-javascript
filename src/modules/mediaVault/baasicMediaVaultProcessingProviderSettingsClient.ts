@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicMediaVaultProcessingProviderSettingsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
@@ -55,7 +55,7 @@ export class BaasicMediaVaultProcessingProviderSettingsClient {
                          // perform error handling here 
                     });                   
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IPreprocessingProviderSettings>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IPreprocessingProviderSettings>> {
         return this.baasicApiClient.get(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.get(id, options));
     }
 

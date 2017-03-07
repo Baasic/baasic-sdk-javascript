@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicLookupRouteDefinition, TYPES as commonTypes } from 'common';
-import { ILookup, ILookupOptions } from 'common/contracts';
+import { ILookup, IGetRequestOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 
 @injectable()
@@ -48,7 +48,7 @@ export class BaasicLookupClient {
                          // perform error handling here 
                     });                  
      **/
-    get(options?: ILookupOptions): PromiseLike<IHttpResponse<ILookup>> {
+    get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<ILookup>> {
         let embed = options.embed || 'role,accessAction,accessSection,snProvider';
         return this.baasicApiClient.get(this.baasicLookupRouteDefinition.get({ embed: embed }));
     }

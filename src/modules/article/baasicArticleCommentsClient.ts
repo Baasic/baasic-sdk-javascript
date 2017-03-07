@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicArticleCommentsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleComment, INotificationConfiguration, IStatuses } from 'modules/article/contracts';
@@ -161,7 +161,7 @@ export class BaasicArticleCommentsClient {
                        // perform error handling here 
                    });
     **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IArticleComment>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleComment>> {
         return this.baasicApiClient.get(this.baasicArticleCommentsRouteDefinition.get(id, options));
     }
 

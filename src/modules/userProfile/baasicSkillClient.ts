@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicSkillBatchClient, BaasicSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
@@ -63,7 +63,7 @@ export class BaasicSkillClient {
                          // perform error handling here 
                     });                 
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<ISkill>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ISkill>> {
         return this.baasicApiClient.get(this.baasicSkillRouteDefinition.get(id, options));
     }
 

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IOptions, IBaasicQueryModel } from 'common/contracts';
+import { IGetRequestOptions, IOptions, IBaasicQueryModel } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicCompanyBatchClient, BaasicCompanyRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
@@ -64,7 +64,7 @@ export class BaasicCompanyClient {
                          // perform error handling here 
                     });                 
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<ICompany>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICompany>> {
         return this.baasicApiClient.get(this.baasicCompanyRouteDefinition.get(id, options));
     }
 

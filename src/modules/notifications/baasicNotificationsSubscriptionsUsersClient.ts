@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
     BaasicNotificationsSubscriptionsUsersBatchClient,
@@ -90,7 +90,7 @@ export class BaasicNotificationsSubscriptionsUsersClient {
                         // perform error handling here 
                    });                         
     */
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IUserSubscription>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserSubscription>> {
         return this.baasicApiClient.get(this.baasicNotificationsSubscriptionsUsersRouteDefinition.get(id, options));
     }
 

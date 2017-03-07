@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
@@ -59,7 +59,7 @@ export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends Ba
      * @param options Query resource options object.                          
      * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.get({id: '<subscription-id>'});                          
      */
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('notifications/subscriptions/anonymous/{id}/{?embed,fields}', id, options);
     }
 

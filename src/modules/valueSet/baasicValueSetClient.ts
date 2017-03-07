@@ -4,7 +4,7 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicValueSetItemClient, BaasicValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
@@ -69,7 +69,7 @@ export class BaasicValueSetClient {
                        // perform error handling here 
                    });
     **/
-    get(setName: string, options?: IOptions): PromiseLike<IHttpResponse<IValueSet>> {
+    get(setName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSet>> {
         return this.baasicApiClient.get(this.baasicValueSetRouteDefinition.get(setName, options));
     }
 

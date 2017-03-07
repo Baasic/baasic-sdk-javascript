@@ -38,7 +38,16 @@ export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
      * - `id` - Id of the article. 					
      * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and article resource. 					
      * - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.										
-     * @method     					
+     * @method
+     * @param articleId Article id which uniquely identifies article resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and article resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
+     * @param data An ACL policy object that needs to be updated in the system.      					
      * @example baasicArticleACLRouteDefinition.deleteByUser({     
                         id: '<article-id>',     
                         accessAction: '<access-action>',     
@@ -58,7 +67,16 @@ export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
      * - `id` - Id of the article. 					
      * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified role and article resource. 					
      * - `role` - A value which uniquely identifies role for which ACL policy needs to be removed.										
-     * @method     					
+     * @method
+     * @param articleId Article id which uniquely identifies article resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and article resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
+     * @param data An ACL policy object that needs to be updated in the system.      					
      * @example baasicArticleACLRouteDefinition.deleteByRole({     
                     id: '<article-id>',    
                     accessAction: '<access-action>',     

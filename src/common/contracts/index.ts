@@ -14,4 +14,4 @@ export * from './IAccessSection';
 export * from './IRole';
 export * from './ISnProvider';
 export * from './ILookup';
-export * from './ILookupOptions';
+export * from './IGetRequestOptions';

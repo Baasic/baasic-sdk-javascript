@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IUserSkill } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
@@ -36,7 +36,7 @@ export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @param options Query resource options object.                        
      * @example baasicUserSkillRouteDefinition.get(id, options);                               
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('profiles/{userId}/skills/{id}/{?embed,fields}', id, options);
     }
 

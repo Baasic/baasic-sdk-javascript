@@ -4,7 +4,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
@@ -61,7 +61,7 @@ export class BaasicDynamicSchemaClient {
                         // perform error handling here 
                     });                 
      **/
-    get(name: string, options: IOptions): PromiseLike<IHttpResponse<IResourceSchema>> {
+    get(name: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IResourceSchema>> {
         return this.baasicApiClient.get(this.baasicDynamicSchemaRouteDefinition.get(name, options));
     }
 
