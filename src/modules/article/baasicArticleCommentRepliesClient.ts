@@ -48,6 +48,9 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('comment-approve').href; 
      * ```
      * @method
+     * @param data Article Comment Reply object.
+     * @param options Notification configuration used to control the article comment recourse access when managing notification distribution.
+     * @returns A promise that is resolved once the approve article comment reply action has been performed. 
      * @example // articleCommentReply is a resource previously fetched using get action. 
                     baasicArticleCommentRepliesClient.approve(articleCommentReply, commentOptions)
                         .then(function (data) { 
@@ -57,7 +60,7 @@ export class BaasicArticleCommentRepliesClient {
                             // perform error handling here 
                         });
      **/
-    approve(data: IArticleCommentReply, options: IOptions): PromiseLike<IHttpResponse<void>> {
+    approve(data: IArticleCommentReply, options: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
         return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.approve(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
     }
 
@@ -67,7 +70,9 @@ export class BaasicArticleCommentRepliesClient {
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-unapprove').href; 
      * ```
-     * @method 
+     * @method
+     * @param data Article Comment Reply object.
+     * @returns A promise that is resolved once the unapprove article comment reply action has been performed.  
      * @example // articleCommentReply is a resource previously fetched using get action.
                     baasicArticleCommentRepliesClient.unapprove(articleCommentReply)
                         .then(function (data) { 
@@ -84,6 +89,8 @@ export class BaasicArticleCommentRepliesClient {
     /**
      * Returns a promise that is resolved once the create article comment reply action has been performed; this action creates a new comment reply for an article.
      * @method
+     * @param data An article comment reply object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create article comment reply action has been performed. 
      * @example baasicArticleCommentRepliesClient.create('<article-id>', { 
                     commentId : '<comment-id>', 
                     comment : <comment>, 
@@ -102,6 +109,8 @@ export class BaasicArticleCommentRepliesClient {
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article comment reply resources matching the given criteria.
      * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed. 
      * @example baasicArticleCommentRepliesClient.find({ 
                     pageNumber : 1, 
                     pageSize : 10, 
@@ -116,7 +125,7 @@ export class BaasicArticleCommentRepliesClient {
                     // perform error handling here 
                 });
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
         return this.baasicApiClient.get(this.baasicArticleCommentRepliesRouteDefinition.find(options));
     }
 
@@ -127,6 +136,8 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('comment-flag').href; 
      * ```
      * @method
+     * @param data Article Comment Reply object.
+     * @returns A promise that is resolved once the flag article comment reply action has been performed. 
      * @example     // articleCommentReply is a resource previously fetched using get action.
                         baasicArticleCommentRepliesClient.flag(articleCommentReply)
                             .then(function (data) { 
@@ -147,6 +158,8 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('comment-unflag').href; 
      * ```
      * @method 
+     * @param data Article Comment Reply object.
+     * @returns A promise that is resolved once the unflag article comment reply action has been performed. 
      * @example // articleCommentReply is a resource previously fetched using get action. 
                     baasicArticleCommentRepliesClient.unflag(articleCommentReply)
                         .success(function (data) { 
@@ -162,6 +175,9 @@ export class BaasicArticleCommentRepliesClient {
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article comment reply resource.
      * @method
+     * @param id Id which uniquely identifies article comment reply resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed. 
      * @example baasicArticleCommentRepliesClient.get('<comment-reply-id>')
                     .then(function (data) { 
                         // perform success action here 
@@ -181,6 +197,8 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('delete').href; 
      * ```
      * @method
+     * @param data An article Comment Reply object used to update specified article comment reply resource. 
+     * @returns A promise that is resolved once the remove article comment reply action has been performed. 
      * @example // articleCommentReply is a resource previously fetched using get action. 
                     baasicArticleCommentRepliesClient.remove(articleCommentReply)
                         .then(function (data) { 
@@ -201,6 +219,9 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('comment-report').href; 
      * ```
      * @method 
+     * @param data Article Comment Reply object.
+     * @param options Notification configuration used to control the article comment recourse access when managing notification distribution.
+     * @returns A promise that is resolved once the report article comment reply action has been performed. 
      * @example // articleCommentReply is a resource previously fetched using get action. 
                     baasicArticleCommentRepliesClient.report(articleCommentReply, commentOptions)
                         .then(function (data) { 
@@ -210,7 +231,7 @@ export class BaasicArticleCommentRepliesClient {
                             // perform error handling here 
                         });
      **/
-    report(data: any, options?: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
+    report(data: IArticleCommentReply, options?: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
         return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.report(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(options));
     }
 
@@ -221,6 +242,8 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('comment-unreport').href; 
      * ```
      * @method
+     * @param data Article Comment Reply object.
+     * @returns A promise that is resolved once the unreport article comment reply action has been performed. 
      * @example // articleCommentReply is a resource previously fetched using get action. 
                     baasicArticleCommentRepliesClient.unreport(articleCommentReply)
                         .then(function (data) { 
@@ -241,6 +264,8 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('comment-spam').href; 
      * ```
      * @method
+     * @param data Article Comment Reply object.
+     * @returns A promise that is resolved once the mark as spam article comment reply action has been performed. 
      * @example // articleCommentReply is a resource previously fetched using get action. 
                     baasicArticleCommentRepliesClient.spam(articleCommentReply)
                         .then(function (data) { 
@@ -261,6 +286,8 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('comment-unspam').href; 
      * ```
      * @method 
+     * @param data Article Comment Reply object.
+     * @returns A promise that is resolved once the unspam article comment reply action has been performed. 
      * @example // articleCommentReply is a resource previously fetched using get action. 
                       baasicArticleCommentRepliesClient.unspam(articleCommentReply)
                         .then(function (data) { 
@@ -270,7 +297,7 @@ export class BaasicArticleCommentRepliesClient {
                             // perform error handling here 
                         });
      **/
-    unspam(data: any): PromiseLike<IHttpResponse<void>> {
+    unspam(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
         return this.baasicApiClient.put<void>(this.baasicArticleCommentRepliesRouteDefinition.unspam(data), this.baasicArticleCommentRepliesRouteDefinition.updateParams(data));
     }
 
@@ -281,6 +308,8 @@ export class BaasicArticleCommentRepliesClient {
      * let uri = params['model'].links('put').href; 
      * ```
      * @method
+     * @param data An Article Comments Reply object used to update specified article comment reply resource.
+     * @returns A promise that is resolved once the update article comment reply action has been performed. 
      * @example // articleCommentReply is a resource previously fetched using get action. 
                     baasicArticleCommentRepliesClient.update(articleCommentReply)
                         .then(function (data) { 

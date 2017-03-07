@@ -31,7 +31,8 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
      * - `rpp` - A value used to limit the size of result set per page. 				
      * - `sort` - A string used to set the article tag property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method
+     * @param options Query resource options object.      				
      * @example baasicArticleTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
      **/
     find(options?: IOptions): any {
@@ -41,7 +42,9 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
     /**                 
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method
+     * @param id Article tag id or slug that uniquely identifies article tag resource that needs to be retrieved.
+     * @param options Options object that contains embed data.      				
      * @example baasicArticleTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
     get(id: string, options?: IGetRequestOptions): any {
@@ -51,7 +54,8 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
     /**                 
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method 
+     * @param data An article tag object used to update specified article tag resource.     				
      * @example baasicArticleTagsRouteDefinition.update({id: '<articleTag-id>'});               				
      **/
     update(data: IArticleTag): any {
@@ -61,7 +65,8 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
     /**                 
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method
+     * @param data An article tag object used to delete specified article tag resource.      				
      * @example baasicArticleTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
      **/
     delete(data: IArticleTag): any {

@@ -21,7 +21,8 @@ export class BaasicArticleSettingsRouteDefinition extends BaasicBaseRouteDefinit
 
     /** 				
      * Parses get article settings route; this URI template doesn't expose any additional properties.								
-     * @method 				
+     * @method 	
+     * @param options Options object that contains embed data.			
      * @example baasicArticleSettingsRouteDefinition.get(options);               				
      **/
     get(options?: IGetRequestOptions): any {
@@ -30,7 +31,8 @@ export class BaasicArticleSettingsRouteDefinition extends BaasicBaseRouteDefinit
 
     /** 				
      * Parses update article settings route; this URI template doesn't expose any additional properties.								
-     * @method 				
+     * @method
+     * @param options Options object that contains embed data. 				
      * @example baasicArticleSettingsRouteDefinition.update(data);               				
      **/
     update(data: IArticleSettings): any {

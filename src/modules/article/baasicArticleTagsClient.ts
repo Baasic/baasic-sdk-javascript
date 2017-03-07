@@ -33,7 +33,9 @@ export class BaasicArticleTagsClient {
 
     /**                 
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article tag resources matching the given criteria.                 
-     * @method                        
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.                         
      * @example baasicArticleTagsClient.find({  
                     pageNumber : 1,  
                     pageSize : 10, 
@@ -53,10 +55,11 @@ export class BaasicArticleTagsClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article tag resource.  
-     * @param id tag id
-     * @param options options object               
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article tag resource.             
      * @method                        
+     * @param id Article tag id or slug that uniquely identifies article tag resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed. 
      * @example baasicArticleTagsClient.get('<articleTag-id>')
                    .then(function (data) {  
                        // perform success action here 
@@ -74,9 +77,10 @@ export class BaasicArticleTagsClient {
      * ``` 
      * let params = modelMapper.removeParams(articleTag); 
      * let uri = params['model'].links('put').href; 
-     * ```
-     * @param data data object                 
-     * @method                        
+     * ```               
+     * @method
+     * @param data An article tag object used to update specified article tag resource.
+     * @returns A promise that is resolved once the update article tag action has been performed.                           
      * @example // articleTag is a resource previously fetched using get action. 
                     articleTag.tag = '<new-tag>'; 
                     baasicArticleTagsClient.update(articleTag)
@@ -97,7 +101,9 @@ export class BaasicArticleTagsClient {
      * let params = modelMapper.removeParams(articleTag); 
      * let uri = params['model'].links('delete').href; 
      * ```                 
-     * @method                        
+     * @method
+     * @param data An article tag object used to delete specified article tag resource.
+     * @returns A promise that is resolved once the remove article tag action has been performed.                         
      * @example // articleTag is a resource previously fetched using get action.
                     baasicArticleTagsClient.remove(articleTag)
                         .then(function (data) {   

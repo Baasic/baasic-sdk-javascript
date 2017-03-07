@@ -23,7 +23,7 @@ export class BaasicArticleTagsSubscriptionsClient {
 
     /**                     
      * Returns a promise that is resolved once the subscribe action has been performed. This action subscribes an user to the specified tag.                     
-     * @method                     
+     * @method             
      * @example baasicArticleTagsSubscriptionsClient.subscribe(tag, user) 
                     .then(function (data) { 
                         // perform success action here 
@@ -39,8 +39,8 @@ export class BaasicArticleTagsSubscriptionsClient {
     /**                    
      * Returns a promise that is resolved once the isSubscribed action has been performed. This action checks if a user is subscribed to the specified tag.
      * @param                     
-     * @method subscriptions.isSubscribed                     
-     * @example baasicArticleTagsClient.subscriptions.isSubscribed(tag, user)
+     * @method                     
+     * @example baasicArticleTagsSubscriptionsClient.isSubscribed(tag, user)
                     .then(function (data) { 
                         // perform success action here 
                     },
