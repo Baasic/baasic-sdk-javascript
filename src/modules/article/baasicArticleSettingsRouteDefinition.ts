@@ -13,6 +13,10 @@ import { IArticleSettings } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'article-settings/{?embed,fields}';
+
+    public readonly updateRoute: string = 'article-settings/{id}';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -26,7 +30,7 @@ export class BaasicArticleSettingsRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicArticleSettingsRouteDefinition.get(options);               				
      **/
     get(options?: IGetRequestOptions): any {
-        return super.baseGet('article-settings/{?embed,fields}', undefined, options);
+        return super.baseGet(this.getRoute, undefined, options);
     }
 
     /** 				
@@ -36,7 +40,7 @@ export class BaasicArticleSettingsRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicArticleSettingsRouteDefinition.update(data);               				
      **/
     update(data: IArticleSettings): any {
-        return super.baseUpdate('article-settings/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

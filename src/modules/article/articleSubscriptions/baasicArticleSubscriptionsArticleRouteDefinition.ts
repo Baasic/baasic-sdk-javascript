@@ -13,6 +13,12 @@ import { IArticle, IArticleSubscription } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSubscriptionsArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly subscribeRoute: string = 'articles/{id}/subscriptions';
+
+    public readonly isSubscribedRoute: string = 'articles/{id}/subscriptions/{subscriberId}';
+
+    public readonly unSubscribeRoute: string = 'articles/{id}/subscriptions';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -25,7 +31,7 @@ export class BaasicArticleSubscriptionsArticleRouteDefinition extends BaasicBase
      **/
     subscribe(article: IArticle, data: IArticleSubscription): any {
         let params = this.utility.extend(article, data);
-        return super.baseCreate('articles/{id}/subscriptions', params);
+        return super.baseCreate(this.subscribeRoute, params);
     }
 
     /**                          
@@ -35,7 +41,7 @@ export class BaasicArticleSubscriptionsArticleRouteDefinition extends BaasicBase
      **/
     isSubscribed(article: IArticle, data: IArticleSubscription): any {
         let params = this.utility.extend(article, data);
-        return super.baseCreate('articles/{id}/subscriptions/{subscriberId}', params);
+        return super.baseCreate(this.isSubscribedRoute, params);
     }
 
     /**                         
@@ -45,7 +51,7 @@ export class BaasicArticleSubscriptionsArticleRouteDefinition extends BaasicBase
      **/
     unSubscribe(article: IArticle, data: IArticleSubscription): any {
         let params = this.utility.extend(article, data);
-        return super.baseCreate('articles/{id}/subscriptions', params);
+        return super.baseCreate(this.unSubscribeRoute, params);
     }
 
     subscribeParams(article: IArticle, data: IArticleSubscription): any {

@@ -14,6 +14,34 @@ import { IArticle, IArticleComment } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'articles/{articleId}/comments/{?searchQuery,statuses,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'articles/{articleId}/comments/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'articles/{articleId}/comments/';
+
+    public readonly updateRoute: string = 'articles/{articleId}/comments/{id}';
+
+    public readonly deleteRoute: string = 'articles/{articleId}/comments/{id}';
+
+    public readonly deleteAllRoute: string = 'articles/{articleId}/comments/{id}';
+
+    public readonly approveRoute: string = 'articles/{articleId}/comments/{id}/approve';
+
+    public readonly unapproveRoute: string = 'articles/{articleId}/comments/{id}/unapprove';
+
+    public readonly flagRoute: string = 'articles/{articleId}/comments/{id}/flag';
+
+    public readonly unflagRoute: string = 'articles/{articleId}/comments/{id}/unflag';
+
+    public readonly reportRoute: string = 'articles/{articleId}/comments/{id}/report';
+
+    public readonly unreportRoute: string = 'articles/{articleId}/comments/{id}/unreport';
+
+    public readonly spamRoute: string = 'articles/{articleId}/comments/{id}/spam';
+
+    public readonly unspamRoute: string = 'articles/{articleId}/comments/{id}/unspam';
+    
     get replies(): BaasicArticleInstanceCommentRepliesRouteDefinition {
         return this.baasicArticleInstanceCommentRepliesRouteDefinition;
     }
@@ -40,7 +68,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
     find(articleId: string, options?: IOptions): any {
         let params = this.modelMapper.findParams(options);
         params.articleId = articleId;
-        return super.baseCreate('articles/{articleId}/comments/{?searchQuery,statuses,page,rpp,sort,embed,fields}', params);
+        return super.baseCreate(this.findRoute, params);
     }
 
     /**
@@ -57,7 +85,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
         let params = this.utility.extend({}, options);
         params.articleId = articleId;
         params.id = commentId;
-        return super.baseGet('articles/{articleId}/comments/{id}/{?embed,fields}', params);
+        return super.baseGet(this.getRoute, params);
     }
 
     /**
@@ -67,7 +95,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.create(data);
      **/
     create(data: IArticleComment): any {
-        return super.baseCreate('articles/{articleId}/comments/', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**
@@ -77,7 +105,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.update(data);
      **/
     update(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**
@@ -87,7 +115,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.delete(data);
      **/
     delete(data: IArticleComment): any {
-        return super.baseDelete('articles/{articleId}/comments/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**
@@ -97,7 +125,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.deleteAll(data);
      **/
     deleteAll(data: IArticle): any {
-        return super.baseDelete('articles/{articleId}/comments/{id}', data, undefined, 'delete-comments-by-article');
+        return super.baseDelete(this.deleteAllRoute, data, undefined, 'delete-comments-by-article');
     }
 
     /**
@@ -107,7 +135,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.approve(data);
      **/
     approve(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}/approve', data, undefined, 'comment-approve');
+        return super.baseUpdate(this.approveRoute, data, undefined, 'comment-approve');
     }
 
     /**
@@ -117,7 +145,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.unapprove(data);
      **/
     unapprove(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}/unapprove', data, undefined, 'comment-unapprove');
+        return super.baseUpdate(this.unapproveRoute, data, undefined, 'comment-unapprove');
     }
 
     /**
@@ -127,7 +155,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.flag(data);
      **/
     flag(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}/flag', data, undefined, 'comment-flag');
+        return super.baseUpdate(this.flagRoute, data, undefined, 'comment-flag');
     }
 
     /**
@@ -137,7 +165,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.unflag(data);
      **/
     unflag(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}/unflag', data, undefined, 'comment-unflag');
+        return super.baseUpdate(this.unflagRoute, data, undefined, 'comment-unflag');
     }
 
     /**
@@ -147,7 +175,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.report(data);
      **/
     report(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}/report', data, undefined, 'comment-report');
+        return super.baseUpdate(this.reportRoute, data, undefined, 'comment-report');
     }
 
     /**
@@ -157,7 +185,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.unreport(data);
      **/
     unreport(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}/unreport', data, undefined, 'comment-unreport')
+        return super.baseUpdate(this.unreportRoute, data, undefined, 'comment-unreport')
     }
 
     /**
@@ -167,7 +195,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.spam(data);
      **/
     spam(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}/spam', data, undefined, 'comment-spam');
+        return super.baseUpdate(this.spamRoute, data, undefined, 'comment-spam');
     }
 
     /**
@@ -177,7 +205,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @example baasicArticleInstanceCommentsRouteDefinition.unspam(data);
      **/
     unspam(data: IArticleComment): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}/unspam', data, undefined, 'comment-unspam');
+        return super.baseUpdate(this.unspamRoute, data, undefined, 'comment-unspam');
     }
 }
 

@@ -13,6 +13,8 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMeteringStatisticsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'metering/statistics/{category}/{?applicationIds,rateBy,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -36,7 +38,7 @@ export class BaasicMeteringStatisticsRouteDefinition extends BaasicBaseRouteDefi
      * @example baasicMeteringStatisticsRouteDefinition.find({category: '<category-name-or-id>'});                                   
      **/
     find(options?: IOptions): any {
-        return super.baseFind('metering/statistics/{category}/{?applicationIds,rateBy,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 }
 

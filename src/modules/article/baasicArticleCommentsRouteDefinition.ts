@@ -13,6 +13,28 @@ import { IArticleComment } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'article-comments/{?searchQuery,statuses,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'article-comments/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'article-comments/';
+
+    public readonly updateRoute: string = 'article-comments/{id}';
+
+    public readonly deleteRoute: string = 'article-comments/{id}';
+
+    public readonly approveRoute: string = 'article-comments/{id}/approve';
+
+    public readonly unapproveRoute: string = 'article-comments/{id}/unapprove';
+
+    public readonly flagRoute: string = 'article-comments/{id}';
+
+    public readonly unflagRoute: string = 'article-comments/{id}/unflag';
+
+    public readonly reportRoute: string = 'article-comments/{id}/report';
+
+    public readonly unreportRoute: string = 'article-comments/{id}/unreport';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -31,7 +53,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicArticleCommentsRouteDefinition.find({ searchQuery: '<search-phrase>' });
      **/
     find(options?: IOptions): any {
-        return super.baseFind('article-comments/{?searchQuery,statuses,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**
@@ -44,7 +66,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicArticleCommentsRouteDefinition.get().expand({ id: '<comment-id>' }); 
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('article-comments/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**
@@ -54,7 +76,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicArticleCommentsRouteDefinition.create(data);
      **/
     create(data: IArticleComment): any {
-        return super.baseCreate('article-comments/', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**
@@ -63,7 +85,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicArticleCommentsRouteDefinition.update(data);
      **/
     update(data: IArticleComment): any {
-        return super.baseUpdate('article-comments/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**
@@ -72,7 +94,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicArticleCommentsRouteDefinition.delete(data);
      **/
     delete(data: IArticleComment): any {
-        return super.baseDelete('article-comments/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**
@@ -81,7 +103,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
     * @example baasicArticleCommentsRouteDefinition.approve(data);
     **/
     approve(data: IArticleComment): any {
-        return super.baseUpdate('article-comments/{id}/approve', data, undefined, 'comment-approve');
+        return super.baseUpdate(this.approveRoute, data, undefined, 'comment-approve');
     }
 
     /**
@@ -90,7 +112,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
     * @example baasicArticleCommentsRouteDefinition.unapprove(data);
     **/
     unapprove(data: IArticleComment): any {
-        return super.baseUpdate('article-comments/{id}/unapprove', data, undefined, 'comment-unapprove');
+        return super.baseUpdate(this.unapproveRoute, data, undefined, 'comment-unapprove');
     }
 
     /**
@@ -99,7 +121,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
     * @example baasicArticleCommentsRouteDefinition.flag(data);
     **/
     flag(data: IArticleComment): any {
-        return super.baseUpdate('article-comments/{id}', data, undefined, 'comment-flag');
+        return super.baseUpdate(this.flagRoute, data, undefined, 'comment-flag');
     }
 
     /**
@@ -108,7 +130,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
     * @example baasicArticleCommentsRouteDefinition.unflag(data);
     **/
     unflag(data: IArticleComment): any {
-        return super.baseUpdate('article-comments/{id}/unflag', data, undefined, 'comment-unflag');
+        return super.baseUpdate(this.unflagRoute, data, undefined, 'comment-unflag');
     }
 
     /**
@@ -117,7 +139,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
     * @example baasicArticleCommentsRouteDefinition.report(data);
     **/
     report(data: IArticleComment): any {
-        return super.baseUpdate('article-comments/{id}/report', data, undefined, 'comment-report');
+        return super.baseUpdate(this.reportRoute, data, undefined, 'comment-report');
     }
 
     /**
@@ -126,7 +148,7 @@ export class BaasicArticleCommentsRouteDefinition extends BaasicBaseRouteDefinit
     * @example baasicArticleCommentsRouteDefinition.unreport(data);
     **/
     unreport(data: IArticleComment): any {
-        return super.baseUpdate('article-comments/{id}/unreport', data, undefined, 'comment-unreport')
+        return super.baseUpdate(this.unreportRoute, data, undefined, 'comment-unreport')
     }
 }
 

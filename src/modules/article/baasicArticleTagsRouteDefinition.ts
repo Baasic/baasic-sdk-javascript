@@ -14,6 +14,14 @@ import { IArticleTag } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'article-tags/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'article-tags/{id}/{?embed,fields}';
+
+    public readonly updateRoute: string = 'article-tags/{id}';
+
+    public readonly deleteRoute: string = 'article-tags/{id}';
+    
     get subscriptions(): BaasicArticleTagsSubscriptionsRouteDefinition {
         return this.baasicArticleTagsSubscriptionsRouteDefinition;
     }
@@ -36,7 +44,7 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicArticleTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
      **/
     find(options?: IOptions): any {
-        return super.baseFind('article-tags/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -48,7 +56,7 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicArticleTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('article-tags/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -59,7 +67,7 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicArticleTagsRouteDefinition.update({id: '<articleTag-id>'});               				
      **/
     update(data: IArticleTag): any {
-        return super.baseUpdate('article-tags/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -70,7 +78,7 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicArticleTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
      **/
     delete(data: IArticleTag): any {
-        return super.baseDelete('article-tags/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

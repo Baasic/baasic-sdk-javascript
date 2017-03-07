@@ -14,6 +14,13 @@ import { IArticleFile } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'article-file-streams/{id}/{?width,height}';
+
+    public readonly createRoute: string = 'article-file-streams/{filename}/{?articleId}';
+
+    public readonly updateRoute: string = 'article-file-streams/{id}/{?width,height}';
+
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -31,7 +38,7 @@ export class BaasicArticleFilesStreamsRouteDefinition extends BaasicBaseRouteDef
                 id: data
             };
         }
-        return super.baseCreate('article-file-streams/{id}/{?width,height}', data);
+        return super.baseCreate(this.getRoute, data);
     }
 
     /**                     
@@ -40,7 +47,7 @@ export class BaasicArticleFilesStreamsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicArticleFilesRouteDefinition.create({filename: '<filename>'});                                   
      **/
     create(data: IArticleFile): any {
-        return super.baseCreate('article-file-streams/{filename}/{?articleId}', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                     
@@ -51,7 +58,7 @@ export class BaasicArticleFilesStreamsRouteDefinition extends BaasicBaseRouteDef
      * @example baasicArticleFilesRouteDefinition.update({id: '<filename>'});
      **/
     update(data: IArticleFile): any {
-        return super.baseUpdate('article-file-streams/{id}/{?width,height}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

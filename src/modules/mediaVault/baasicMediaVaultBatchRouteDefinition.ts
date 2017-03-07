@@ -12,6 +12,10 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMediaVaultBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly updateRoute: string = 'media-vaults/batch';
+
+    public readonly deleteRoute: string = 'media-vaults/batch';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -20,7 +24,7 @@ export class BaasicMediaVaultBatchRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicMediaVaultBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.baseUpdate('media-vaults/batch', {});
+        return super.baseUpdate(this.updateRoute, {});
     }
 
     /**                     
@@ -29,7 +33,7 @@ export class BaasicMediaVaultBatchRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicMediaVaultBatchRouteDefinition.delete();                                 
      **/
     delete(): any {
-        return super.baseDelete('media-vaults/batch', {});
+        return super.baseDelete(this.deleteRoute, {});
     }
 }
 

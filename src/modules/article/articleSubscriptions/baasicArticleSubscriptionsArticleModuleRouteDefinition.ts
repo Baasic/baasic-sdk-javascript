@@ -13,6 +13,12 @@ import { IArticleSubscription } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSubscriptionsArticleModuleRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly subscribeRoute: string = 'articles/subscriptions';
+
+    public readonly isSubscribedRoute: string = 'articles/subscriptions/{subscriberId}';
+
+    public readonly unSubscribeRoute: string = 'articles/subscriptions';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -24,7 +30,7 @@ export class BaasicArticleSubscriptionsArticleModuleRouteDefinition extends Baas
      * @example baasicArticleSubscriptionsArticleModuleRouteDefinition.subscribe(data);                           
      **/
     subscribe(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions', data);
+        return super.baseCreate(this.subscribeRoute, data);
     }
 
     /**                          
@@ -33,7 +39,7 @@ export class BaasicArticleSubscriptionsArticleModuleRouteDefinition extends Baas
      * @example baasicArticleSubscriptionsArticleModuleRouteDefinition.isSubscribed({subscriberId: '<subscriber-id>'});                           
      **/
     isSubscribed(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions/{subscriberId}', data);
+        return super.baseCreate(this.isSubscribedRoute, data);
     }
 
     /**                         
@@ -42,6 +48,6 @@ export class BaasicArticleSubscriptionsArticleModuleRouteDefinition extends Baas
      * @example baasicArticleSubscriptionsArticleModuleRouteDefinition.unSubscribe(data);                          
      **/
     unSubscribe(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions', data);
+        return super.baseCreate(this.unSubscribeRoute, data);
     }
 }

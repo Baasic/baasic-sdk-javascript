@@ -13,6 +13,34 @@ import { IArticle, IArticleCommentReply } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleInstanceCommentRepliesRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{?searchQuery,statuses,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'articles/{articleId}/comments/{commentId}/replies';
+
+    public readonly updateRoute: string = 'articles/{articleId}/comments/{id}';
+
+    public readonly approveRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{id}/approve';
+
+    public readonly unapproveRoute: string = '/articles/{articleId}/comments/{commentId}/replies/{id}/unapprove';
+
+    public readonly flagRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{id}/flag';
+
+    public readonly unflagRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{id}/unflag';
+
+    public readonly reportRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{id}/report';
+
+    public readonly deleteRoute: string = 'articles/{articleId}/comments/{id}';
+
+    public readonly deleteAllRoute: string = 'articles/{articleId}/comments';
+
+    public readonly unreportRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{id}/unreport';
+
+    public readonly spamRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{id}/spam';
+
+    public readonly unspamRoute: string = '/articles/{articleId}/comments/{commentId}/replies/{id}/unspam';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -36,7 +64,7 @@ export class BaasicArticleInstanceCommentRepliesRouteDefinition extends BaasicBa
         let params = this.modelMapper.findParams(options);
         params.articleId = articleId;
         params.commentId = commentId;
-        return super.baseFind('articles/{articleId}/comments/{commentId}/replies/{?searchQuery,statuses,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**
@@ -51,7 +79,7 @@ export class BaasicArticleInstanceCommentRepliesRouteDefinition extends BaasicBa
         params.articleId = articleId;
         params.commentId = commentId;
         params.id = replyId;
-        return super.baseGet('articles/{articleId}/comments/{commentId}/replies/{id}/{?embed,fields}', params);
+        return super.baseGet(this.getRoute, params);
     }
 
     /**
@@ -62,51 +90,51 @@ export class BaasicArticleInstanceCommentRepliesRouteDefinition extends BaasicBa
     create(articleId: string, data: IArticleCommentReply): any {
         let params = this.utility.extend({}, data);
         params.articleId = articleId;
-        return super.baseCreate('articles/{articleId}/comments/{commentId}/replies', params);
+        return super.baseCreate(this.createRoute, params);
     }
 
     update(data: IArticleCommentReply): any {
-        return super.baseUpdate('articles/{articleId}/comments/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     approve(data: IArticleCommentReply): any {
-        return super.baseUpdate('articles/{articleId}/comments/{commentId}/replies/{id}/approve', data, undefined, 'comment-approve');
+        return super.baseUpdate(this.approveRoute, data, undefined, 'comment-approve');
     }
 
     unapprove(data: IArticleCommentReply): any {
-        return super.baseUpdate('/articles/{articleId}/comments/{commentId}/replies/{id}/unapprove', data, undefined, 'comment-unapprove');
+        return super.baseUpdate(this.unapproveRoute, data, undefined, 'comment-unapprove');
     }
 
     flag(data: IArticleCommentReply): any {
-        return super.baseUpdate('articles/{articleId}/comments/{commentId}/replies/{id}/flag', data, undefined, 'comment-flag');
+        return super.baseUpdate(this.flagRoute, data, undefined, 'comment-flag');
     }
 
     unflag(data: IArticleCommentReply): any {
-        return super.baseUpdate('articles/{articleId}/comments/{commentId}/replies/{id}/unflag', data, undefined, 'comment-unflag');
+        return super.baseUpdate(this.unflagRoute, data, undefined, 'comment-unflag');
     }
 
     report(data: IArticleCommentReply): any {
-        return super.baseUpdate('articles/{articleId}/comments/{commentId}/replies/{id}/report', data, undefined, 'comment-report');
+        return super.baseUpdate(this.reportRoute, data, undefined, 'comment-report');
     }
 
     delete(data: IArticleCommentReply): any {
-        return super.baseDelete('articles/{articleId}/comments/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     deleteAll(data: IArticle): any {
-        return super.baseUpdate('articles/{articleId}/comments', data, undefined, 'delete-comments-by-article');
+        return super.baseUpdate(this.deleteAllRoute, data, undefined, 'delete-comments-by-article');
     }
 
     unreport(data: IArticleCommentReply): any {
-        return super.baseUpdate('articles/{articleId}/comments/{commentId}/replies/{id}/unreport', data, undefined, 'comment-unreport');
+        return super.baseUpdate(this.unreportRoute, data, undefined, 'comment-unreport');
     }
 
     spam(data: IArticleCommentReply): any {
-        return super.baseUpdate('articles/{articleId}/comments/{commentId}/replies/{id}/spam', data, undefined, 'comment-spam');
+        return super.baseUpdate(this.spamRoute, data, undefined, 'comment-spam');
     }
 
     unspam(data: IArticleCommentReply): any {
-        return super.baseUpdate('/articles/{articleId}/comments/{commentId}/replies/{id}/unspam', data, undefined, 'comment-unspam');
+        return super.baseUpdate(this.unspamRoute, data, undefined, 'comment-unspam');
     }
 }
 

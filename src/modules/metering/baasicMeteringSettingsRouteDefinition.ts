@@ -13,6 +13,10 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicMeteringSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'metering/settings/{id}/{?embed,fields}';
+
+    public readonly updateRoute: string = 'metering/settings/{id}';
+    
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
@@ -21,7 +25,7 @@ export class BaasicMeteringSettingsRouteDefinition extends BaasicBaseRouteDefini
      * @example baasicMeteringSettingsRouteDefinition.get();                               
      **/
     get(options?: IGetRequestOptions): any {
-        return super.baseGet('metering/settings/{id}/{?embed,fields}', undefined, options);
+        return super.baseGet(this.getRoute, undefined, options);
     }
 
     /**                 
@@ -31,7 +35,7 @@ export class BaasicMeteringSettingsRouteDefinition extends BaasicBaseRouteDefini
     * @example baasicMeteringSettingsRouteDefinition.update(data);                               
     **/
     update(data: IMeteringSettings): any {
-        return super.baseUpdate('metering/settings/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

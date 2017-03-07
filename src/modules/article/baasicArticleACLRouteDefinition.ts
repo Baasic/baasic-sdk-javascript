@@ -11,8 +11,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    public readonly getRoute: string = 'articles/{id}/acl/{?fields}';
+    
+    public readonly updateRoute: string = 'articles/{id}/acl/{?fields}';
 
+    public readonly deleteByUserRoute: string = 'articles/{id}/acl/actions/{accessAction}/users/{user}/';
+
+    public readonly deleteByRoleRoute: string = 'articles/{id}/acl/actions/{accessAction}/roles/{role}/';
+
+    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    
     /** 					
      * Parses get article acl route; this URI template should be expanded with the Id of the article.										
      * @method      					
@@ -20,7 +28,7 @@ export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseCreate('articles/{id}/acl/{?fields}', params);
+        return super.baseCreate(this.getRoute, params);
     }
 
     /** 				
@@ -30,7 +38,7 @@ export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseUpdate('articles/{id}/acl/{?fields}', params);
+        return super.baseUpdate(this.updateRoute, params);
     }
 
     /** 					
@@ -59,7 +67,7 @@ export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
         params.articleId = articleId;
         params.user = user;
         params.accessAction = action;
-        return super.baseCreate('articles/{id}/acl/actions/{accessAction}/users/{user}/', params);
+        return super.baseCreate(this.deleteByUserRoute, params);
     }
 
     /** 					
@@ -88,7 +96,7 @@ export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
         params.articleId = articleId;
         params.role = role;
         params.accessAction = action;
-        return super.baseCreate('articles/{id}/acl/actions/{accessAction}/roles/{role}/', params);
+        return super.baseCreate(this.deleteByRoleRoute, params);
     }
 
     updateParams(options: IACLOptions): any {

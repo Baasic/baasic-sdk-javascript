@@ -12,6 +12,18 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'resources/{schemaName}/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'resources/{schemaName}';
+
+    public readonly updateRoute: string = 'resources/{schemaName}/{id}/{?embed,fields}';
+
+    public readonly patchRoute: string = 'resources/{schemaName}/{id}/{?embed,fields}';
+
+    public readonly deleteRoute: string = 'resources/{schemaName}/{id}';
+    
     get acl(): BaasicDynamicResourceACLRouteDefinition {
         return this.baasicDynamicResourceACLRouteDefinition;
     }
@@ -39,7 +51,7 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicDynamicResourceRouteDefinition.find(options); 				
      **/
     find(schemaName: string, options: IOptions): any {
-        return super.baseFind('resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}', this.utility.extend({ schemaName: schemaName }, options));
+        return super.baseFind(this.findRoute, this.utility.extend({ schemaName: schemaName }, options));
     }
 
     /**                 
@@ -52,24 +64,24 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicDynamicResourceRouteDefinition.get(id, schemaName, options);               				
      **/
     get(id: string, schemaName: string, options?: IGetRequestOptions): any {
-        return super.baseGet('resources/{schemaName}/{id}/{?embed,fields}', id, this.utility.extend({ schemaName: schemaName }, options));
+        return super.baseGet(this.getRoute, id, this.utility.extend({ schemaName: schemaName }, options));
     }
 
     create(schemaName: string, data: any): any {
         let params = this.modelMapper.getParams(schemaName, data, 'schemaName');
-        return super.baseCreate('resources/{schemaName}', params);
+        return super.baseCreate(this.createRoute, params);
     }
 
     update(data: any, options: IOptions): any {
-        return super.baseUpdate('resources/{schemaName}/{id}/{?embed,fields}', data, options);
+        return super.baseUpdate(this.updateRoute, data, options);
     }
 
     patch(data: any, options: IOptions): any {
-        return super.baseUpdate('resources/{schemaName}/{id}/{?embed,fields}', data, options, 'patch');
+        return super.baseUpdate(this.patchRoute, data, options, 'patch');
     }
 
     delete(data: any, options: IOptions): any {
-        return super.baseDelete('resources/{schemaName}/{id}', data, options);
+        return super.baseDelete(this.deleteRoute, data, options);
     }
 
     createParams(schemaName: string, data: any): any {

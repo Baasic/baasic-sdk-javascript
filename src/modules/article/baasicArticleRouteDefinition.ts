@@ -22,6 +22,26 @@ import { IArticle } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'articles/{?searchQuery,page,rpp,sort,embed,fields,statuses,tags,startDate,endDate}';
+
+    public readonly getRoute: string = 'articles/{id}/{?embed,fields}';
+
+    public readonly publishRoute: string = 'articles/{id}/publish/';
+
+    public readonly purgeRoute: string = 'articles/purge/';
+
+    public readonly createRoute: string = 'articles';
+
+    public readonly updateRoute: string = 'articles/{id}';
+
+    public readonly deleteRoute: string = 'articles/{id}';
+
+    public readonly archiveRoute: string = 'articles/{id}/archive';
+
+    public readonly restoreRoute: string = 'articles/{id}/restore';
+
+    public readonly unpublishRoute: string = 'articles/{id}/unpublish';
+    
     get subscriptions(): BaasicArticleSubscriptionsRouteDefinition {
         return this.baasicArticleSubscriptionsRouteDefinition;
     }
@@ -72,7 +92,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('articles/{?searchQuery,page,rpp,sort,embed,fields,statuses,tags,startDate,endDate}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -82,7 +102,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.get({id: '<article-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('articles/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -91,7 +111,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.publish.expand({id: '<article-id>'});                               
      **/
     publish(data: IArticle): any {
-        return super.baseGet('articles/{id}/publish/', data);
+        return super.baseGet(this.publishRoute, data);
     }
 
     /**                 
@@ -100,7 +120,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.purge();                               
      **/
     purge(options: Object): any {
-        return super.baseCreate('articles/purge/', options);
+        return super.baseCreate(this.purgeRoute, options);
     }
 
     /**                 
@@ -109,7 +129,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.create();                               
      **/
     create(): any {
-        return super.baseCreate('articles', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                 
@@ -118,7 +138,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.update(data);                               
      **/
     update(data: IArticle): any {
-        return super.baseUpdate('articles/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -127,7 +147,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.delete(data);                               
      **/
     delete(data: IArticle): any {
-        return super.baseDelete('articles/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**                 
@@ -136,7 +156,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.archive(data);                               
      **/
     archive(data: IArticle): any {
-        return super.baseUpdate('articles/{id}/archive', data, undefined, 'archive');
+        return super.baseUpdate(this.archiveRoute, data, undefined, 'archive');
     }
 
     /**                 
@@ -145,7 +165,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicArticleRouteDefinition.restore(data);                               
      **/
     restore(data: IArticle): any {
-        return super.baseUpdate('articles/{id}/archive', data, undefined, 'archive');
+        return super.baseUpdate(this.restoreRoute, data, undefined, 'restore');
     }
 
     /**                 
@@ -165,7 +185,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
                         });		               
      **/
     unpublish(data: IArticle): any {
-        return super.baseUpdate('articles/{id}/restore', data, undefined, 'unpublish');
+        return super.baseUpdate(this.unpublishRoute, data, undefined, 'unpublish');
     }
 }
 

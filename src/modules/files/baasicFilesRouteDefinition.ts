@@ -14,6 +14,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'files/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'files/{id}/{?embed,fields}';
+
+    public readonly updateRoute: string = 'files/{id}';
+
+    public readonly unlinkRoute: string = 'files/unlink/{id}/{?height,width}';
+
+    public readonly linkRoute: string = 'files/link';
+    
     get streams(): BaasicFilesStreamsRouteDefinition {
         return this.baasicFilesStreamsRouteDefinition;
     }
@@ -35,7 +45,7 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('files/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -46,7 +56,7 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesRouteDefinition.get({id: '<file-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('files/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -56,7 +66,7 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesRouteDefinition.get({id: '<file-id>'});                               
      **/
     update(data: IFileEntry): any {
-        return super.baseUpdate('files/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -66,9 +76,8 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesRouteDefinition.unlink({id: '<file-id>'});                               
      **/
     unlink(data: IFileEntry, options?: Object): any {
-        return super.baseDelete('files/unlink/{id}/{?height,width}', data, options, 'unlink');
+        return super.baseDelete(this.unlinkRoute, data, options, 'unlink');
     }
-
 
 
     /**                 
@@ -77,7 +86,7 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicFilesRouteDefinition.link();                              
      **/
     link(): any {
-        return super.baseCreate('files/link', {});
+        return super.baseCreate(this.linkRoute, {});
     }
 }
 

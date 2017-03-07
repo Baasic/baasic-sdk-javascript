@@ -13,6 +13,12 @@ import { IArticleSubscription } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly subscribeRoute: string = 'articles/subscriptions/comment-requires-moderation';
+
+    public readonly isSubscribedRoute: string = 'articles/subscriptions/comment-requires-moderation/{subscriberId}';
+
+    public readonly unSubscribeRoute: string = 'articles/subscriptions/comment-requires-moderation';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -24,7 +30,7 @@ export class BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition 
      * @example baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.subscribe(data);                         
      **/
     subscribe(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions/comment-requires-moderation', data);
+        return super.baseCreate(this.subscribeRoute, data);
     }
 
     /**                          
@@ -33,7 +39,7 @@ export class BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition 
      * @example baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.isSubscribed({subscriberId: '<subscriber-id>'});                           
      **/
     isSubscribed(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions/comment-requires-moderation/{subscriberId}', data);
+        return super.baseCreate(this.isSubscribedRoute, data);
     }
 
     /**                         
@@ -42,6 +48,6 @@ export class BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition 
      * @example baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.unSubscribe(data)                        
      **/
     unSubscribe(data: IArticleSubscription): any {
-        return super.baseCreate('articles/subscriptions/comment-requires-moderation', data);
+        return super.baseCreate(this.unSubscribeRoute, data);
     }
 }

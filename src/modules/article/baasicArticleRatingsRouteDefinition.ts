@@ -13,6 +13,18 @@ import { IRating } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'article-ratings';
+
+    public readonly findRoute: string = 'article-ratings/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly findByUserRoute: string = 'article-ratings/{?username,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'article-ratings/{id}/{?embed,fields}';
+
+    public readonly updateRoute: string = 'article-ratings/{id}';
+
+    public readonly deleteRoute: string = 'article-ratings/{id}';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -25,7 +37,7 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * @example baasicArticleRatingsRouteDefinition.create(data);                 
      **/
     create(data: IRating): any {
-        return super.baseCreate('article-ratings', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 
@@ -40,7 +52,7 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * @example baasicArticleRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('article-ratings/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -58,7 +70,7 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
     findByUser(username: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
         params.username = username;
-        return super.baseFind('article-ratings/{?username,page,rpp,sort,embed,fields}', params);
+        return super.baseFind(this.findByUserRoute, params);
     }
 
     /**                 
@@ -70,7 +82,7 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * @example baasicArticleRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('article-ratings/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -80,7 +92,7 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * @example baasicArticleRatingsRouteDefinition.update(data);                 
      **/
     update(data: IRating): any {
-        return super.baseUpdate('article-ratings/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -90,7 +102,7 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
     * @example baasicArticleRatingsRouteDefinition.delete(data);                 
     **/
     delete(data: IRating): any {
-        return super.baseDelete('article-ratings/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

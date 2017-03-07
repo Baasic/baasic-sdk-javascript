@@ -18,6 +18,16 @@ import { IArticleFile } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'article-files/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'article-files/{id}/{?embed,fields}';
+
+    public readonly linkRoute: string = 'article-files/link';
+
+    public readonly unlinkRoute: string = 'article-files/unlink/{id}';
+
+    public readonly updateRoute: string = 'article-files/{id}';
+    
     get streams(): BaasicArticleFilesStreamsRouteDefinition {
         return this.baasicArticleFilesStreamsRouteDefinition;
     }
@@ -44,7 +54,7 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicArticleFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('article-files/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -55,7 +65,7 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicArticleFilesRouteDefinition.get({id: '<file-id>'});
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('article-files/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**
@@ -64,7 +74,7 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicArticleFilesRouteDefinition.link();
      **/
     link(): any {
-        return super.baseCreate('article-files/link', {});
+        return super.baseCreate(this.linkRoute, {});
     }
 
     /**
@@ -73,7 +83,7 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicArticleFilesRouteDefinition.unlink(data);
      **/
     unlink(data: IArticleFile, options: Object): any {
-        return super.baseDelete('article-files/unlink/{id}', data, options, 'unlink');
+        return super.baseDelete(this.unlinkRoute, data, options, 'unlink');
     }
 
     /**
@@ -87,7 +97,7 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
                 id: data
             };
         }
-        return super.baseUpdate('article-files/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

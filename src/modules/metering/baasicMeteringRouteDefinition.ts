@@ -18,6 +18,18 @@ import { IMeteringData } from 'modules/metering/contracts';
 @injectable()
 export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'metering/data/{?applicationId,searchQuery,categories,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'metering/data/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'metering/data';
+
+    public readonly updateRoute: string = 'metering/data/{id}';
+
+    public readonly deleteRoute: string = '/metering/data/{id}';
+
+    public readonly purgeRoute: string = 'metering/data/purge';
+    
     get batch(): BaasicMeteringBatchRouteDefinition {
         return this.baasicMeteringBatchRouteDefinition;
     }
@@ -58,7 +70,7 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMeteringRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('metering/data/{?applicationId,searchQuery,categories,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -69,7 +81,7 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMeteringRouteDefinition.get();                               
      **/
     get(id: string, options?: IOptions): any {
-        return super.baseGet('metering/data/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -78,7 +90,7 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMeteringRouteDefinition.create();                              
      **/
     create(): any {
-        return super.baseCreate('metering/data', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                 
@@ -88,7 +100,7 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMeteringRouteDefinition.update(data);                              
      **/
     update(data: IMeteringData): any {
-        return super.baseUpdate('metering/data/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -98,7 +110,7 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMeteringRouteDefinition.delete(data);                              
      **/
     delete(data: IMeteringData): any {
-        return super.baseDelete('/metering/data/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**                 
@@ -107,7 +119,7 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicMeteringRouteDefinition.purge();                  
      **/
     purge(): any {
-        return super.baseDelete('metering/data/purge', {});
+        return super.baseDelete(this.purgeRoute, {});
     }
 }
 

@@ -12,6 +12,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicArticleFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly unlinkRoute: string = 'article-files/batch/unlink';
+
+    public readonly updateRoute: string = 'article-files/batch';
+
+    public readonly linkRoute: string = 'article-files/batch/link';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -22,7 +28,7 @@ export class BaasicArticleFilesBatchRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicArticleFilesBatchRouteDefinition.unlink();                                  
      **/
     unlink(): any {
-        return super.baseCreate('article-files/batch/unlink', {});
+        return super.baseCreate(this.unlinkRoute, {});
     }
 
     /**                     
@@ -31,7 +37,7 @@ export class BaasicArticleFilesBatchRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicArticleFilesStreamsRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.baseCreate('article-files/batch', {});
+        return super.baseCreate(this.updateRoute, {});
     }
 
     /**                     
@@ -40,7 +46,7 @@ export class BaasicArticleFilesBatchRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicArticleFilesStreamsRouteDefinition.link();                                  
      **/
     link(): any {
-        return super.baseCreate('article-files/batch/link', {});
+        return super.baseCreate(this.linkRoute, {});
     }
 }
 

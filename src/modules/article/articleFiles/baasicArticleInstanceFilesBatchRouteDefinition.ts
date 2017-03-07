@@ -12,6 +12,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly unlinkRoute: string = 'articles/{articleId}/files/batch/unlink';
+
+    public readonly updateRoute: string = 'articles/{articleId}/files/batch';
+
+    public readonly linkRoute: string = 'articles/{articleId}/files/batch/link';
+    
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -23,7 +29,7 @@ export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRo
      **/
     unlink(articleId: string): any {
         let params = { articleId: articleId };
-        return super.baseCreate('articles/{articleId}/files/batch/unlink', params);
+        return super.baseCreate(this.unlinkRoute, params);
     }
 
     /**                     
@@ -33,7 +39,7 @@ export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRo
      **/
     update(articleId: string): any {
         let params = { articleId: articleId };
-        return super.baseCreate('articles/{articleId}/files/batch', params);
+        return super.baseCreate(this.updateRoute, params);
     }
 
     /**                     
@@ -43,7 +49,7 @@ export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRo
      **/
     link(articleId: string): any {
         let params = { articleId: articleId };
-        return super.baseCreate('articles/{articleId}/files/batch/link', params);
+        return super.baseCreate(this.linkRoute, params);
     }
 }
 

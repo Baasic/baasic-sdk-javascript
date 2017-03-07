@@ -235,7 +235,7 @@ export class BaasicArticleInstanceCommentRepliesClient {
                         });		                        
      **/
     removeAll(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.deleteAll(data));
+        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceCommentRepliesRouteDefinition.deleteAll(data));
     }
 
     /**
