@@ -1,10 +1,9 @@
+import { Utility } from 'common';
 import { ALPHABET as alphabet } from 'modules/article';
 
 export class BaasicArticleHelpers {
 
-    isUndefined(value: any): boolean {
-        return typeof value === 'undefined';
-    }
+    private utility: Utility = new Utility();
 
     private replaceDiacritics(str: string): string {
         for (let letter in alphabet) {
@@ -14,7 +13,7 @@ export class BaasicArticleHelpers {
     }
 
     toSlug(str: string) {
-        if (this.isUndefined(str) || str === null || str === '') {
+        if (this.utility.isUndefined(str) || str === null || str === '') {
             return str;
         }
         str = this.replaceDiacritics(str);
@@ -26,11 +25,11 @@ export class BaasicArticleHelpers {
 
     updateSlug(resource: any): void {
         let newSlug = this.toSlug(resource.slug);
-        if (this.isUndefined(newSlug) || newSlug === null || newSlug === '') {
+        if (this.utility.isUndefined(newSlug) || newSlug === null || newSlug === '') {
             newSlug = this.toSlug(resource.title);
         }
 
-        if (!this.isUndefined(newSlug) || newSlug !== null || newSlug !== '') {
+        if (!this.utility.isUndefined(newSlug) || newSlug !== null || newSlug !== '') {
             if (resource.slug === newSlug) {
                 resource.slug = newSlug;
             }

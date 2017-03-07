@@ -7,6 +7,7 @@ import {
     BaasicUserSocialLoginClient,
     BaasicUserClient,
     BaasicPermissionClient,
+    BaasicLookupClient,
     TYPES
 } from 'modules/membership';
 
@@ -24,8 +25,8 @@ export class Root {
         @inject(TYPES.BaasicRoleClient) public role: BaasicRoleClient,
         @inject(TYPES.BaasicUserClient) public user: BaasicUserClient,
         @inject(TYPES.BaasicUserSocialLoginClient) public userSocialLogin: BaasicUserSocialLoginClient,
-        @inject(TYPES.BaasicPermissionClient) public permissions: BaasicPermissionClient
-
+        @inject(TYPES.BaasicPermissionClient) public permissions: BaasicPermissionClient,
+        @inject(TYPES.BaasicLookupClient) public lookups: BaasicLookupClient
     ) {
 
     }

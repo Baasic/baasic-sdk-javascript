@@ -16,5 +16,7 @@ export * from './baasicUserSocialLoginClient';
 export * from './baasicUserClient';
 export * from './baasicPermissionRouteDefinition';
 export * from './baasicPermissionClient';
+export * from './baasicLookupRouteDefinition';
+export * from './baasicLookupClient';
 export * from './root';
 

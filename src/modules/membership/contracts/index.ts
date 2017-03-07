@@ -11,3 +11,8 @@ export * from './ISocialLogin';
 export * from './IUserInfo';
 export * from './IAccessAction';
 export * from './IAccessPolicy';
+export * from './IAccessSection';
+export * from './IRole';
+export * from './ISnProvider';
+export * from './ILookup';
+export * from './ILookupOptions';
