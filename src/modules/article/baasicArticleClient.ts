@@ -8,8 +8,8 @@ import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
-    ALPHABET,
     BaasicArticleACLClient,
+    BaasicArticleHelpers,
     BaasicArticleRouteDefinition,
     BaasicArticleSubscriptionsClient,
     BaasicArticleInstanceCommentsClient,
@@ -51,6 +51,8 @@ export class BaasicArticleClient {
     get acl(): BaasicArticleACLClient {
         return this.baasicArticleACLClient;
     }
+
+    public helpers: BaasicArticleHelpers = new BaasicArticleHelpers();
 
     constructor(
         @inject(articleTypes.BaasicArticleSubscriptionsClient) protected baasicArticleSubscriptionsClient: BaasicArticleSubscriptionsClient,
