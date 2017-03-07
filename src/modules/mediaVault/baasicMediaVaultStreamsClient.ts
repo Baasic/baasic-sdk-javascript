@@ -67,7 +67,7 @@ export class BaasicMediaVaultStreamsClient {
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
         // responseType: 'blob'
-        return this.baasicApiClient.get(this.baasicMediaVaultStreamsRouteDefinition.get(data));
+        return this.baasicApiClient.get(this.baasicMediaVaultStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      

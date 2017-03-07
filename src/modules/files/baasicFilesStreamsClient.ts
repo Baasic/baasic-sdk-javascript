@@ -64,7 +64,7 @@ export class BaasicFilesStreamsClient {
                         });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicFilesStreamsRouteDefinition.get(data));
+        return this.baasicApiClient.get(this.baasicFilesStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      

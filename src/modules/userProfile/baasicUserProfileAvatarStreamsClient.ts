@@ -67,12 +67,7 @@ export class BaasicUserProfileAvatarStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        /*return this.baasicApiHttp({
-            url: this.baasicUserProfileAvatarStreamsRouteDefinition.get(data),
-            method: 'GET',
-            responseType: 'blob'
-        });*/
-        return this.baasicApiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data));
+        return this.baasicApiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                     

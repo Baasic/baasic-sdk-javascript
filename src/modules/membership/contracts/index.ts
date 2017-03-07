@@ -1,7 +1,6 @@
 export * from './IRequestPasswordReset';
 export * from './IResetPassword';
 export * from './IRegisterUser';
-export * from './IRole';
 export * from './IUserAccess';
 export * from './IUserIdentity';
 export * from './IAppUser';
