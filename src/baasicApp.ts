@@ -1,8 +1,8 @@
 import { Utility, diModule as commonDIModule } from 'common';
-import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
+import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, IEventHandler, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { diModule as coreDIModule } from 'core';
 import { DIModule } from './';
-import { diModule as httpDIModule } from 'httpApi';
+import { diModule as httpDIModule, BaasicApiClient, TYPES as httpApiTypes } from 'httpApi';
 import { Container } from "inversify";
 
 import * as modules from 'modules';
@@ -21,6 +21,8 @@ export class BaasicApp implements IBaasicApp {
     public readonly settings: Partial<IBaasicAppOptions>;
     public readonly tokenHandler: ITokenHandler;
     public readonly userHandler: IUserHandler;
+    public readonly eventHandler: IEventHandler;
+    public readonly baasicApiClient: BaasicApiClient;
 
     public readonly membership: modules.Membership.Root;
     //Modules
@@ -33,7 +35,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
     public readonly files: modules.Files.BaasicFilesClient;
     public readonly dynamicResource: modules.DynamicResource.BaasicDynamicResourceClient;
-
+    
 
     constructor(private apiKey: string, options?: Partial<IBaasicAppOptions>) {
         this.utility = new Utility();
@@ -46,7 +48,9 @@ export class BaasicApp implements IBaasicApp {
 
         this.tokenHandler = DIModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
         this.userHandler = DIModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
-
+        this.eventHandler = DIModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
+        this.baasicApiClient = DIModule.kernel.get<BaasicApiClient>(httpApiTypes.BaasicApiClient);
+        
         this.membership = DIModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
         //Modules
         this.applicationSettings = DIModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);

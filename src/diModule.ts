@@ -55,7 +55,7 @@ export class DIModule {
     private static addModule(module: any) {
         if (module instanceof ContainerModule) {
             DIModule.diModules.push(module);
-        } else if (module instanceof Object) {
+        } else if (module instanceof Object && !(module instanceof Function)) {
             for (let mod in module) {
                 DIModule.addModule(module[mod]);
             }
