@@ -7,5 +7,4 @@ export * from './modelMapper';
 export * from './baasicBaseRouteDefinition';
 export * from './halParser';
 
-export * from './baasicLookupRouteDefinition';
-export * from './baasicLookupClient';
+

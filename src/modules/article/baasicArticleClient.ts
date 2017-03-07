@@ -6,6 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { Utility } from 'common';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
     BaasicArticleACLClient,
@@ -22,6 +23,8 @@ import { IArticle, IArticleOptions } from 'modules/article/contracts';
 
 @injectable()
 export class BaasicArticleClient {
+
+    private utility: Utility = new Utility();
 
     /**
      * Provides direct access to `baasicArticleRouteDefinition`.
@@ -172,7 +175,7 @@ export class BaasicArticleClient {
                             });                
      **/
     saveDraft(data: IArticle): PromiseLike<IHttpResponse<any>> {
-        if (this.isUndefined(data.id)) {
+        if (this.utility.isUndefined(data.id)) {
             // Create new draft
             return this.create(data);
         }

@@ -1,5 +1,5 @@
-import { IBaasicModel, IRole } from 'common/contracts';
-import { IUserAccess, IUserIdentity } from 'modules/membership/contracts';
+import { IBaasicModel } from 'common/contracts';
+import { IUserAccess, IUserIdentity, IRole } from 'modules/membership/contracts';
 
 export interface IAppUser extends IBaasicModel, IUserAccess, IUserIdentity {
     creationDate?: string,

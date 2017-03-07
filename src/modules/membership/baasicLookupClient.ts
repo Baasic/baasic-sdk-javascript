@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicLookupRouteDefinition, TYPES as commonTypes } from 'common';
-import { ILookup, ILookupOptions } from 'common/contracts';
+import { ILookup, ILookupOptions } from 'modules/membership/contracts';
+import { BaasicLookupRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 
 @injectable()
@@ -17,7 +17,7 @@ export class BaasicLookupClient {
     }
 
     constructor(
-        @inject(commonTypes.BaasicLookupRouteDefinition) protected baasicLookupRouteDefinition: BaasicLookupRouteDefinition,
+        @inject(membershipTypes.BaasicLookupRouteDefinition) protected baasicLookupRouteDefinition: BaasicLookupRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
