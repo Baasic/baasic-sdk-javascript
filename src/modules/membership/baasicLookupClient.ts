@@ -5,7 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { ILookup, ILookupOptions } from 'modules/membership/contracts';
+import { IGetRequestOptions } from 'common/contracts';
+import { ILookup } from 'modules/membership/contracts';
 import { BaasicLookupRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 
@@ -48,7 +49,7 @@ export class BaasicLookupClient {
                          // perform error handling here 
                     });                  
      **/
-    get(options?: ILookupOptions): PromiseLike<IHttpResponse<ILookup>> {
+    get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<ILookup>> {
         let embed = options.embed || 'role,accessAction,accessSection,snProvider';
         return this.baasicApiClient.get(this.baasicLookupRouteDefinition.get({ embed: embed }));
     }

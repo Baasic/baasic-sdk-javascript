@@ -9,3 +9,4 @@ export * from './IACLOptions';
 export * from './IACLPolicy';
 export * from './IException';
 export * from './IBaasicResponse';
+export * from './IGetRequestOptions';

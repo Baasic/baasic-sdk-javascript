@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { BaasicArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleTag } from 'modules/article/contracts';
@@ -44,7 +44,7 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
      * @method      				
      * @example baasicArticleTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('article-tags/{id}/{?embed,fields}', id, options);
     }
 

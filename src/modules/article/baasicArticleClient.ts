@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { Utility } from 'common';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
@@ -85,7 +85,9 @@ export class BaasicArticleClient {
 
     /**                 
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article resources matching the given criteria.                 
-     * @method                        
+     * @method
+     * @param options A promise that is resolved once the find action has been performed.
+     * @returns A promise that is resolved once the find action has been performed.                         
      * @example baasicArticleClient.find({  
                     pageNumber : 1,  
                     pageSize : 10,  
@@ -106,7 +108,10 @@ export class BaasicArticleClient {
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns a single article resource.                 
-     * @method                        
+     * @method 
+     * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
+     * @param options Options object that contains embed items.
+     * @returns a promise that is resolved once the get action has been performed.                       
      * @example baasicArticleClient.get('<article-id>')
                     .then(function (data) {  
                         // perform success action here 
@@ -115,13 +120,15 @@ export class BaasicArticleClient {
                          // perform error handling here 
                     });                
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IArticle>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticle>> {
         return this.baasicApiClient.get(this.baasicArticleRouteDefinition.get(id, options));
     }
 
     /**                 
      * Returns a promise that is resolved once the create article action has been performed, this action creates a new article resource.                 
-     * @method                        
+     * @method 
+     * @param data An article object that needs to be inserted into the system.
+     * @returns a promise that is resolved once the create article action has been performed.                        
      * @example baasicArticleClient.create({  
                     publishDate : new Date(),  
                     title : '<title>',  
@@ -147,7 +154,9 @@ export class BaasicArticleClient {
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('put').href; 
      * ```                 
-     * @method                        
+     * @method 
+     * @param data An article object that needs to be updated into the system.                     
+     * @returns A promise that is resolved once the update article action has been performed.
      * @example // article is a resource previously fetched using get action. 
                     article.title = '<title>'; 
                     baasicArticleClient.update(article)
@@ -164,7 +173,9 @@ export class BaasicArticleClient {
 
     /**                 
      * Returns a promise that is resolved once the saveDraft article action has been performed. This action saves an article with "draft" status. If an article does not exist it will create a new article resource otherwise it will update an existing article resource.                 
-     * @method                        
+     * @method
+     * @param data An article object that needs to be inserted into the system.                        
+     * @returns A promise that is resolved once the saveDraft article action has been performed.
      * @example // article is a resource previously fetched using get action. 
                         baasicArticleClient.saveDraft(article)
                             .then(function (data) {  
@@ -189,7 +200,9 @@ export class BaasicArticleClient {
      * let params = modelMapper.removeParams(article); 
      * let uri = params['model'].links('delete').href; 
      * ```                 
-     * @method                        
+     * @method
+     * @param data An article object that needs to be removed from the system.
+     * @returns A promise that is resolved once the remove article action has been performed.                          
      * @example // article is a resource previously fetched using get action.				 
                     baasicArticleClient.remove(article)
                         .then(function (data) {  
@@ -209,7 +222,10 @@ export class BaasicArticleClient {
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('archive').href; 
      * ```                 
-     * @method                        
+     * @method 
+     * @param data An article object.                    
+     * @param options Notification options.
+     * @returns A promise that is resolved once the archive article action has been performed. 
      * @example // article is a resource previously fetched using get action.				 
                     baasicArticleClient.archive(article, articleOptions)
                         .then(function (data) {  
@@ -219,7 +235,7 @@ export class BaasicArticleClient {
                              // perform error handling here 
                         });		               
      **/
-    archive(data: IArticle, options: Object): PromiseLike<IHttpResponse<void>> {
+    archive(data: IArticle, options: IArticleOptions): PromiseLike<IHttpResponse<void>> {
         return this.baasicApiClient.put<void>(this.baasicArticleRouteDefinition.archive(data), this.baasicArticleRouteDefinition.updateParams(options));
     }
 
@@ -229,7 +245,9 @@ export class BaasicArticleClient {
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('unpublish').href; 
      * ```                 
-     * @method                        
+     * @method 
+     * @param data An article object.
+     * @returns A promise that is resolved once the unpublish article action has been performed.                       
      * @example 	// article is a resource previously fetched using get action.				 
                         baasicArticleClient.unpublish(article)
                             .then(function (data) {  
@@ -245,7 +263,10 @@ export class BaasicArticleClient {
 
     /**                 
      * Returns a promise that is resolved once the publish article action has been performed. This action sets the status of an article from "draft" to "published".                 
-     * @method                        
+     * @method 
+     * @param data An article object.
+     * @param articleOptions Notification options.
+     * @returns A promise that is resolved once the unpublish article action has been performed.                              
      * @example baasicArticleClient.publish(article, articleOptions)
                     .then(function (data) {  
                         // perform success action here 

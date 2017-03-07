@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTYPES } from 'httpApi';
 import { BaasicMeteringSettingsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringSettings } from 'modules/metering/contracts';
@@ -33,7 +33,7 @@ export class BaasicMeteringSettingsClient {
                           // perform error handling here 
                     });                 
      **/
-    get(options: any): PromiseLike<IHttpResponse<IMeteringSettings>> {
+    get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMeteringSettings>> {
         return this.baasicApiClient.get(this.baasicMeteringSettingsRouteDefinition.get(options));
     }
 

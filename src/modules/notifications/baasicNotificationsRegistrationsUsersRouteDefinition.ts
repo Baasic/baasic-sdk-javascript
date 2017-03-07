@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { BaasicNotificationsRegistrationsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
@@ -56,7 +56,7 @@ export class BaasicNotificationsRegistrationsUsersRouteDefinition extends Baasic
      * @param options Query resource options object.                       
      * @example baasicNotificationsRegistrationsUsersRouteDefinition.get({ id: '<registration-id>' });                          
      */
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('notifications/registrations/{id}/{?embed}', id, options);
     }
 

@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IRating } from 'modules/article/contracts';
 
@@ -63,7 +63,7 @@ export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefiniti
      * @method                        
      * @example baasicArticleRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('article-ratings/{id}/{?embed,fields}', id, options);
     }
 

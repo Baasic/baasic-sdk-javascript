@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleSettings } from 'modules/article/contracts';
 
@@ -24,7 +24,7 @@ export class BaasicArticleSettingsRouteDefinition extends BaasicBaseRouteDefinit
      * @method 				
      * @example baasicArticleSettingsRouteDefinition.get(options);               				
      **/
-    get(options?: IOptions): any {
+    get(options?: IGetRequestOptions): any {
         return super.baseGet('article-settings/{?embed,fields}', undefined, options);
     }
 

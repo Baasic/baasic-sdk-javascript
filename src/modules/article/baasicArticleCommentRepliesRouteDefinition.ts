@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleCommentReply } from 'modules/article/contracts';
 
@@ -41,7 +41,7 @@ export class BaasicArticleCommentRepliesRouteDefinition extends BaasicBaseRouteD
      * @method 
      * @example baasicArticleCommentRepliesRouteDefinition.get({ id: '<comment-reply-id>' });
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('article-comment-replies/{id}/{?embed,fields}', id, options)
     }
 

@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
     BaasicArticleInstanceFilesBatchRouteDefinition,
@@ -53,7 +53,7 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
      * @method 
      * @example baasicArticleInstanceFilesRouteDefinition.get({id: '<file-id>'});
      **/
-    get(articleId: string, id: string, options?: IOptions): any {
+    get(articleId: string, id: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
         params.articleId = articleId;
         params.id = id;

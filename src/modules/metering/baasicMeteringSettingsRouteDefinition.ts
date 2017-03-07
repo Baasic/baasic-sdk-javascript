@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions } from 'common/contracts';
 import { IMeteringSettings } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
@@ -20,7 +20,7 @@ export class BaasicMeteringSettingsRouteDefinition extends BaasicBaseRouteDefini
      * @method                        
      * @example baasicMeteringSettingsRouteDefinition.get();                               
      **/
-    get(options?: any): any {
+    get(options?: IGetRequestOptions): any {
         return super.baseGet('metering/settings/{id}/{?embed,fields}', undefined, options);
     }
 

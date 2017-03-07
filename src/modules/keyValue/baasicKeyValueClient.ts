@@ -4,7 +4,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, BaasicApiClient, TYPES as httpTYPES } from 'httpApi';
 import { BaasicKeyValueRouteDefinition, TYPES } from 'modules/keyValue';
 import { IKeyValue } from 'modules/keyValue/contracts';
@@ -64,7 +64,7 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     });                  
      **/
-    get(id: string, options: IOptions): PromiseLike<IHttpResponse<IKeyValue>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IKeyValue>> {
         return this.baasicApiClient.get<IKeyValue>(this.baasicKeyValueRouteDefinition.get(id, options));
     }
 

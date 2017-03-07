@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicArticleSettingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleSettings } from 'modules/article/contracts';
@@ -40,7 +40,7 @@ export class BaasicArticleSettingsClient {
                         // perform error handling here 
                     });                 
      **/
-    get(options?: IOptions): PromiseLike<IHttpResponse<any>> {
+    get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.get(this.baasicArticleSettingsRouteDefinition.get(options));
     }
 

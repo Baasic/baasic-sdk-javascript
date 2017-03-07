@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, TYPES as commonTYPES } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IKeyValue } from 'modules/keyValue/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
@@ -40,7 +40,7 @@ export class BaasicKeyValueRouteDefinition extends BaasicBaseRouteDefinition {
      * @param options Query resource options object.                    
      * @example baasicKeyValueRouteDefinition.get();                               
      **/
-    get(id: string, options?: IOptions): any {
+    get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet('key-values/{id}/{?embed,fields}', id, options);
     }
 

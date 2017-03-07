@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicTemplatingBatchClient, BaasicTemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
@@ -63,7 +63,7 @@ export class BaasicTemplatingClient {
                         // perform error handling here 
                    });                 
     **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<ITemplate>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ITemplate>> {
         return this.baasicApiClient.get(this.baasicTemplatingRouteDefinition.get(id, options));
     }
 

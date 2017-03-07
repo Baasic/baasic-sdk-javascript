@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import {
     BaasicNotificationsRegistrationsAnonymousBatchClient,
     BaasicNotificationsRegistrationsAnonymousRouteDefinition,
@@ -91,7 +91,7 @@ export class BaasicNotificationsRegistrationsAnonymousClient {
                          // perform error handling here 
                     });                         
      */
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
         return this.baasicApiClient.get(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.get(id, options));
     }
 

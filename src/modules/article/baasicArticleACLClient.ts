@@ -38,9 +38,11 @@ export class BaasicArticleACLClient {
 
     /**                     
      * Returns a promise that is resolved once the update acl action has been performed, this action creates new ACL policy for the specified article resource.                     
-     * @method                        
-     * @example var options = {id : '<article-id>'}; 
-                var aclObj =  {  
+     * @method
+     * @param options An ACL policy object that needs to be updated in the system. This object specifies parameters necessary for establishing user and/or role set of rights.
+     * @returns A promise that is resolved once the update acl action has been performed.
+     * @example let options = {id : '<article-id>'}; 
+                let aclObj =  {  
                     actionId: '<action-id'>,  
                     roleId: '<roleId>',  
                     userId: '<userId>' 
@@ -60,7 +62,17 @@ export class BaasicArticleACLClient {
 
     /**                     
      * Returns a promise that is resolved once the removeByUser action has been performed. This action deletes ACL policy assigned to the specified user and article resource.                     
-     * @method                         
+     * @method
+     * @param articleId Article id which uniquely identifies article resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and article resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
+     * @param data An ACL policy object that needs to be updated in the system. 
+     * @returns A promise that is resolved once the removeByUser action has been performed.                        
      * @example baasicArticleACLClient.removeByUser('<article-id>', '<access-action>', '<username>')
                     .then(function (data) {   
                         // perform success action here 
@@ -75,7 +87,17 @@ export class BaasicArticleACLClient {
 
     /**                     
      * Returns a promise that is resolved once the removeByRole action has been performed. This action deletes ACL policy assigned to the specified role and article resource.                     
-     * @method                        
+     * @method 
+     * @param articleId Article id which uniquely identifies article resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and article resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
+     * @param data An ACL policy object that needs to be updated in the system. 
+     * @returns A promise that is resolved once the removeByRole action has been performed.                     
      * @example baasicArticleACLClient.removeByRole('<article-id>', '<access-action>', '<role-name>')
                     .then(function (data) {   
                         // perform success action here 

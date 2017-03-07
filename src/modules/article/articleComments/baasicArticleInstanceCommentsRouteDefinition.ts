@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { BaasicArticleInstanceCommentRepliesRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IArticleComment } from 'modules/article/contracts';
@@ -48,7 +48,7 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
      * @method
      * @example baasicArticleInstanceCommentsRouteDefinition.get().expand({ id: '<comment-id>' }); 
      **/
-    get(articleId: string, commentId?: string, options?: IOptions): any {
+    get(articleId: string, commentId?: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
         params.articleId = articleId;
         params.id = commentId;

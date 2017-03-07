@@ -5,7 +5,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
@@ -34,7 +34,7 @@ export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinitio
      * @method      				
      * @example baasicDynamicSchemaRouteDefinition.find({name: '<schema-name>'});
      **/
-    get(name: string, options?: IOptions): any {
+    get(name: string, options?: IGetRequestOptions): any {
         return super.baseGet('schemas/{name}/{?embed,fields}', this.modelMapper.getParams(name, options, 'name'));
     }
 

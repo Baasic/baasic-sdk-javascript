@@ -5,7 +5,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
-import { IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicDynamicResourceACLRouteDefinition, BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
@@ -51,7 +51,7 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
      * @param options query resource options object
      * @example baasicDynamicResourceRouteDefinition.get(id, schemaName, options);               				
      **/
-    get(id: string, schemaName: string, options: IOptions): any {
+    get(id: string, schemaName: string, options?: IGetRequestOptions): any {
         return super.baseGet('resources/{schemaName}/{id}/{?embed,fields}', id, this.utility.extend({ schemaName: schemaName }, options));
     }
 
