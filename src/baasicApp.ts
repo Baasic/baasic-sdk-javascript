@@ -9,7 +9,7 @@ import * as modules from 'modules';
 
 export class BaasicApp implements IBaasicApp {
 
-    private readonly kernel: Container;
+    private readonly diModule: DIModule;
     private readonly utility: Utility;
     private static readonly defaultSettings: IBaasicAppOptions = {
         useSSL: true,
@@ -35,7 +35,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
     public readonly files: modules.Files.BaasicFilesClient;
     public readonly dynamicResource: modules.DynamicResource.BaasicDynamicResourceClient;
-    
+
 
     constructor(private apiKey: string, private options?: Partial<IBaasicAppOptions>) {
         this.utility = new Utility();
@@ -44,24 +44,25 @@ export class BaasicApp implements IBaasicApp {
         }
 
         this.settings = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.defaultSettings, options || {});
-        DIModule.init(this, [commonDIModule, coreDIModule, httpDIModule, modules]);
+        this.diModule = new DIModule();
+        this.diModule.init(this, [commonDIModule, coreDIModule, httpDIModule, modules]);
 
-        this.tokenHandler = DIModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
-        this.userHandler = DIModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
-        this.eventHandler = DIModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
-        this.baasicApiClient = DIModule.kernel.get<BaasicApiClient>(httpApiTypes.BaasicApiClient);
-        
-        this.membership = DIModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
+        this.tokenHandler = this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
+        this.userHandler = this.diModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
+        this.eventHandler = this.diModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
+        this.baasicApiClient = this.diModule.kernel.get<BaasicApiClient>(httpApiTypes.BaasicApiClient);
+
+        this.membership = this.diModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
         //Modules
-        this.applicationSettings = DIModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
-        this.keyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
-        this.valueSet = DIModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
-        this.userProfile = DIModule.kernel.get<modules.UserProfile.BaasicUserProfileClient>(modules.UserProfile.TYPES.BaasicUserProfileClient);
-        this.templating = DIModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
-        this.metering = DIModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
-        this.mediaVault = DIModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
-        this.files = DIModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
-        this.dynamicResource = DIModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
+        this.applicationSettings = this.diModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
+        this.keyValue = this.diModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
+        this.valueSet = this.diModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
+        this.userProfile = this.diModule.kernel.get<modules.UserProfile.BaasicUserProfileClient>(modules.UserProfile.TYPES.BaasicUserProfileClient);
+        this.templating = this.diModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
+        this.metering = this.diModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
+        this.mediaVault = this.diModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
+        this.files = this.diModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
+        this.dynamicResource = this.diModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
 
     }
 

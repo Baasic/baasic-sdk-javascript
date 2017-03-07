@@ -1,5 +1,3 @@
-import { IStorageHandler, IEventHandler, IBaasicAppOptions, ITokenHandler, IUserHandler } from 'core/contracts';
-
 const TYPES = {
     IBaasicAppOptions: Symbol("IBaasicAppOptions"),
     IAppOptions: Symbol("IAppOptions"),
