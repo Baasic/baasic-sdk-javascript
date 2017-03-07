@@ -35,7 +35,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly dynamicResource: modules.DynamicResource.BaasicDynamicResourceClient;
 
 
-    constructor(private apiKey: string, options?: Partial<IBaasicAppOptions>) {
+    constructor(private apiKey: string, private options?: Partial<IBaasicAppOptions>) {
         this.utility = new Utility();
         if (!this.apiKey) {
             throw new Error("API Key is required.");
@@ -63,20 +63,19 @@ export class BaasicApp implements IBaasicApp {
 
     getAccessToken(): IToken {
         return this.tokenHandler.get(<TokenType>TokenTypes.Access);
-    };
+    }
 
     updateAccessToken(value: IToken) {
         this.tokenHandler.store(value);
-    };
-
+    }
 
     getApiKey(): string {
         return this.apiKey;
-    };
+    }
 
     getApiUrl(): URL {
         return this.settings.apiUrl;
-    };
+    }
 
     getUser(): IUser {
         return this.userHandler.getUser();
@@ -84,5 +83,5 @@ export class BaasicApp implements IBaasicApp {
 
     setUser(userInfo: IUser) {
         this.userHandler.setUser(userInfo);
-    };
+    }
 }

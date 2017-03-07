@@ -42,7 +42,7 @@ export class BaasicLoginClient {
                 })
                 .finally (function () {});                        
      **/
-    login(data: any): PromiseLike<void> {
+    login(data: any): PromiseLike<any> {
         let settings = this.utility.extend({}, data);
         if (settings.options) {
             let options = settings.options;
@@ -56,18 +56,21 @@ export class BaasicLoginClient {
             password: settings.password
         });
         var self = this;
-        return this.baasicApiClient.post<any>(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
-            .then<any>(function (data) {
-                let token: IToken = {
-                    token: data.body.access_token,
-                    expires_in: data.body.expires_in,
-                    sliding_window: data.body.sliding_window,
-                    tokenUrl: data.body.access_url_token,
-                    type: data.body.token_type
-                };
-                self.tokenHandler.store(token);
-                return data;
-            });
+        var promise = this.baasicApiClient.post<any>(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' });
+
+        promise.then<any>(function (data) {
+            let token: IToken = {
+                token: data.body.access_token,
+                expires_in: data.body.expires_in,
+                sliding_window: data.body.sliding_window,
+                tokenUrl: data.body.access_url_token,
+                type: data.body.token_type
+            };
+            self.tokenHandler.store(token);
+            return data;
+        });
+
+        return promise;
     }
 
     /** 				

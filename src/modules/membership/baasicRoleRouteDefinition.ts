@@ -14,6 +14,29 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
 
+
+    /**                  
+    * Find route with route and query parameters.
+    **/
+    public findRoute: string = 'lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}';
+    /**                  
+    * Get route with route and query parameters.
+    **/
+    public getRoute: string = 'lookups/roles/{id}/{?embed,fields}';
+    /**                  
+    * Create route with route and query parameters.
+    **/
+    public createRoute: string = 'lookups/roles';
+    /**                  
+    * Update route with route and query parameters.
+    **/
+    public updateRoute: string = 'lookups/roles/{id}';
+    /**                  
+    * Remove route with route and query parameters.
+    **/
+    public removeRoute: string = 'lookups/roles/{id}';
+
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
@@ -27,7 +50,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options: IOptions): any {
-        return super.baseFind('lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -38,7 +61,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.get().expand({id: '<role-id>'});                               
      **/
     get(id: string, options?: IOptions): any {
-        return super.baseGet('lookups/roles/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -47,7 +70,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.create();                               
      **/
     create(): any {
-        return super.baseCreate('lookups/roles', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**
@@ -57,7 +80,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.update(data);
      */
     update(data: IRole): any {
-        return super.baseUpdate('lookups/roles/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**
@@ -67,7 +90,7 @@ export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRoleRouteDefinition.delete(data);
      */
     delete(data: IRole): any {
-        return super.baseDelete('lookups/roles/{id}', data);
+        return super.baseDelete(this.removeRoute, data);
     }
 }
 

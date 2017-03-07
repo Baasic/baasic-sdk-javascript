@@ -41,7 +41,8 @@ export class BaasicApiClient {
         }
 
         var self = this;
-        return this.httpClient<TResponse>(request).then<IHttpResponse<TResponse>>(function (data) {
+        var promise = this.httpClient<TResponse>(request);
+        promise.then<IHttpResponse<TResponse>>(function (data) {
             var contentType = data.headers['Content-Type'];
             if (contentType && contentType.toLowerCase().indexOf('application/hal+json') !== -1) {
                 data.body = self.halParser.parse(data.body);
@@ -75,6 +76,7 @@ export class BaasicApiClient {
                 }
                 return response;
             });
+        return promise;
     }
 
     get<TResponse>(url: URL | string, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {

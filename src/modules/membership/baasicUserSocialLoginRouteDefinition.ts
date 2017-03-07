@@ -11,6 +11,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicUserSocialLoginRouteDefinition extends BaasicBaseRouteDefinition {
 
+    /**                  
+    * Get route with route and query parameters.
+    **/
+    public getRoute: string = 'users/{username}/social-login';
+    /**                  
+    * Remove route with route and query parameters.
+    **/
+    public removeRoute: string = 'users/{username}/social-login/{provider}';
+
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -20,7 +30,7 @@ export class BaasicUserSocialLoginRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicUserSocialLoginRouteDefinition.get('<username>');
      **/
     get(username: string): any {
-        return super.baseGet('users/{username}/social-login', username, { username: username });
+        return super.baseGet(this.getRoute, username, { username: username });
     }
 
     /**                     
@@ -46,7 +56,7 @@ export class BaasicUserSocialLoginRouteDefinition extends BaasicBaseRouteDefinit
             params = this.utility.extend({}, provider);
         }
         params.username = username;
-        return super.baseFind('users/{username}/social-login/{provider}', params);
+        return super.baseFind(this.removeRoute, params);
     }
 }
 

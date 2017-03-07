@@ -14,6 +14,51 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
 
+    /**                  
+    * Find route with route and query parameters.
+    **/
+    public findRoute: string = 'users/{?searchQuery,page,rpp,sort,embed,fields}';
+    /**                  
+    * Get route with route and query parameters.
+    **/
+    public getRoute: string = 'users/{username}/{?embed,fields}';
+    /**                  
+    * Create route with route and query parameters.
+    **/
+    public createRoute: string = 'users';
+    /**                  
+    * Update route with route and query parameters.
+    **/
+    public updateRoute: string = 'users/{id}';
+    /**                  
+    * Delete route with route and query parameters.
+    **/
+    public deleteRoute: string = 'users/{id}';
+    /**                  
+    * Exists route with route and query parameters.
+    **/
+    public existsRoute: string = 'users/{username}/exists/';
+    /**                  
+    * Change password route with route and query parameters.
+    **/
+    public changePasswordRoute: string = 'users/{username}/change-password';
+    /**                  
+    * Unlock route with route and query parameters.
+    **/
+    public unlockRoute: string = 'users/{id}/unlock';
+    /**                  
+    * Lock route with route and query parameters.
+    **/
+    public lockRoute: string = 'users/{id}/lock';
+    /**                  
+    * Approve route with route and query parameters.
+    **/
+    public approveRoute: string = 'users/{id}/approve';
+    /**                  
+    * Disapprove route with route and query parameters.
+    **/
+    public disapproveRoute: string = 'users/{id}/disapprove';
+
     get socialLogin(): BaasicUserSocialLoginRouteDefinition {
         return this.baasicUserSocialLoginRouteDefinition;
     }
@@ -34,7 +79,7 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserRouteDefinition.find({searchQuery: '<search-phrase>'});                              
      **/
     find(options: IOptions): any {
-        return super.baseFind('users/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -44,7 +89,7 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserRouteDefinition.get({username: '<username>'})
      **/
     get(id: string, options?: IOptions): any {
-        return super.baseGet('users/{username}/{?embed,fields}', id, options, 'username');
+        return super.baseGet(this.getRoute, id, options, 'username');
     }
 
     /**                 
@@ -53,15 +98,15 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserRouteDefinition.create();                              
      **/
     create(): any {
-        return super.baseCreate('users', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     update(data: IAppUser): any {
-        return super.baseUpdate('users/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     delete(data: IAppUser): any {
-        return super.baseDelete('users/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**                 
@@ -71,7 +116,7 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserRouteDefinition.exists({username: '<username>'});                               
      **/
     exists(username: string, options?: any): any {
-        return super.baseGet('users/{username}/exists/', username, options, 'username');
+        return super.baseGet(this.existsRoute, username, options, 'username');
     }
 
     /**                 
@@ -81,11 +126,11 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserRouteDefinition.changePassword({username: '<username>'});                              
      **/
     changePassword(username: string): any {
-        return super.baseUpdate('users/{username}/change-password', { username: username });
+        return super.baseUpdate(this.changePasswordRoute, { username: username });
     }
 
     unlock(data: IAppUser): any {
-        return super.baseUpdate('users/{id}/unlock', data, null, 'unlock');
+        return super.baseUpdate(this.unlockRoute, data, null, 'unlock');
     }
 
     lock(data: IAppUser): any {
@@ -93,11 +138,11 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
     }
 
     approve(data: IAppUser): any {
-        return super.baseUpdate('users/{id}/approve', data, null, 'approve');
+        return super.baseUpdate(this.approveRoute, data, null, 'approve');
     }
 
     disapprove(data: IAppUser): any {
-        return super.baseUpdate('users/{id}/disapprove', data, null, 'disapprove');
+        return super.baseUpdate(this.disapproveRoute, data, null, 'disapprove');
     }
 }
 

@@ -19,6 +19,7 @@ export class DIModule {
                     apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${apiKey}/`),
                     enableHALJSON: app.settings.enableHALJSON
                 };
+                app.settings.apiUrl = appOptions.apiUrl;
                 DIModule.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);
 
                 DIModule.kernel.bind<Partial<IBaasicAppOptions>>(coreTYPES.IBaasicAppOptions).toConstantValue(app.settings);

@@ -11,6 +11,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicRegisterRouteDefinition extends BaasicBaseRouteDefinition {
 
+    /**                  
+    * Create route with route and query parameters.
+    **/
+    public createRoute: string = 'register';
+    /**                  
+    * Activate route with route and query parameters.
+    **/
+    public activateRoute: string = 'register/activate/{activationToken}/';
+
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 			
@@ -19,7 +29,7 @@ export class BaasicRegisterRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicRegisterRouteDefinition.create();               			
      **/
     create(): any {
-        return super.baseCreate('register', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /** 			
@@ -30,7 +40,7 @@ export class BaasicRegisterRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     activate(data: string): any {
         let params = this.modelMapper.getParams(data, undefined, 'activationToken');
-        return super.baseCreate('register/activate/{activationToken}/', params);
+        return super.baseCreate(this.activateRoute, params);
     }
 }
 

@@ -11,6 +11,11 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicPasswordRecoveryRouteDefinition extends BaasicBaseRouteDefinition {
 
+    /**                  
+    * Password recovery route with route and query parameters.
+    **/
+    public passwordRecoveryRoute: string = 'recover-password';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                  
@@ -19,7 +24,7 @@ export class BaasicPasswordRecoveryRouteDefinition extends BaasicBaseRouteDefini
      * @example baasicPasswordRecoveryRouteDefinition.passwordRecovery();                                
      **/
     passwordRecovery(): any {
-        return super.baseCreate('recover-password', {});
+        return super.baseCreate(this.passwordRecoveryRoute, {});
     }
 }
 
