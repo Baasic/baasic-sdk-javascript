@@ -81,32 +81,6 @@ export class BaasicFilesBatchClient {
     unlink(data: Object[]): PromiseLike<IHttpResponse<void>> {
         return this.baasicApiClient.delete<void>(this.baasicFilesBatchRouteDefinition.unlink(), undefined, data);
     }
-
-    /**                   
-     * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system.                   
-     * @method
-     * @param data Collection of file delete requests which uniquely identifies file resources that need to be deleted.
-     * @returns A promise that is resolved once the unlink action has been performed.                       
-     * @example // Remove original file resources                
-                    baasicFilesBatchClient.remove([{ id: '<file-id>' }])
-                        .then(function (data) {   
-                            // perform success action here 
-                        },
-                         function (response, status, headers, config) {   
-                             // perform error handling here 
-                        });		
-                // Remove derived file resources  
-                        baasicFilesBatchClient.remove([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
-                            .then(function (data) {   
-                                // perform success action here 
-                            },
-                             function (response, status, headers, config) {   
-                                 // perform error handling here 
-                            });		                    
-     **/
-    remove(data: Object[]): PromiseLike<IHttpResponse<void>> {
-        return this.unlink(data);
-    }
 }
 
 /**  

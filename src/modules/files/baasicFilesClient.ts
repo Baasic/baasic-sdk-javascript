@@ -112,36 +112,6 @@ export class BaasicFilesClient {
      * let params = modelMapper.removeParams(fileEntry); 
      * let uri = params['model'].links('unlink').href; 
      * ```                  
-     * @method
-     * @param data
-     * @param options                          
-     * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
-                    baasicFilesClient.remove(fileEntry)
-                        .then(function (data) {   
-                            // perform success action here 
-                        },
-                         function (response, status, headers, config) {   
-                             // perform error handling here 
-                        }); 
-                // fileEntry is a file resource previously fetched using get action. The following action will remove derived file resource only.		 
-                    baasicFilesClient.remove(fileEntry, {width: <width>, height: <height>})
-                        .then(function (data) {   
-                            // perform success action here 
-                        },
-                         function (response, status, headers, config) {   
-                             // perform error handling here 
-                        });						
-     **/
-    remove(data: IFileEntry, options?: Object): PromiseLike<IHttpResponse<void>> {
-        return this.unlink(data, options);
-    }
-
-    /**                  
-     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicFilesRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects: 
-     * ``` 
-     * let params = modelMapper.removeParams(fileEntry); 
-     * let uri = params['model'].links('unlink').href; 
-     * ```                  
      * @method 
      * @param data
      * @param options

@@ -32,7 +32,7 @@ export class BaasicMediaVaultClient {
         return this.baasicMediaVaultBatchClient;
     }
 
-    get setting(): BaasicMediaVaultSettingsClient {
+    get settings(): BaasicMediaVaultSettingsClient {
         return this.baasicMediaVaultSettingsClient;
     }
 
