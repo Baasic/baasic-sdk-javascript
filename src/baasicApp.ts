@@ -9,7 +9,7 @@ import * as modules from 'modules';
 
 export class BaasicApp implements IBaasicApp {
 
-    private readonly kernel: Container;
+    private readonly diModule: DIModule;
     private readonly utility: Utility;
     private static readonly defaultSettings: IBaasicAppOptions = {
         useSSL: true,
@@ -29,58 +29,60 @@ export class BaasicApp implements IBaasicApp {
     public readonly applicationSettings: modules.ApplicationSettings.BaasicApplicationSettingsClient;
     public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
     public readonly valueSet: modules.ValueSet.BaasicValueSetClient;
-    public readonly userProfile: modules.UserProfile.BaasicUserProfileClient;
+    public readonly userProfile: modules.UserProfile.Root;
     public readonly templating: modules.Templating.BaasicTemplatingClient;
     public readonly metering: modules.Metering.BaasicMeteringClient;
     public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
     public readonly files: modules.Files.BaasicFilesClient;
     public readonly dynamicResource: modules.DynamicResource.BaasicDynamicResourceClient;
-    
+    public readonly notifications: modules.Notifications.BaasicNotificationsClient;
 
-    constructor(private apiKey: string, options?: Partial<IBaasicAppOptions>) {
+
+    constructor(private apiKey: string, private options?: Partial<IBaasicAppOptions>) {
         this.utility = new Utility();
         if (!this.apiKey) {
             throw new Error("API Key is required.");
         }
 
         this.settings = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.defaultSettings, options || {});
-        DIModule.init(this, [commonDIModule, coreDIModule, httpDIModule, modules]);
+        this.diModule = new DIModule();
+        this.diModule.init(this, [commonDIModule, coreDIModule, httpDIModule, modules]);
 
-        this.tokenHandler = DIModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
-        this.userHandler = DIModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
-        this.eventHandler = DIModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
-        this.baasicApiClient = DIModule.kernel.get<BaasicApiClient>(httpApiTypes.BaasicApiClient);
-        
-        this.membership = DIModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
+        this.tokenHandler = this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
+        this.userHandler = this.diModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
+        this.eventHandler = this.diModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
+        this.baasicApiClient = this.diModule.kernel.get<BaasicApiClient>(httpApiTypes.BaasicApiClient);
+
+        this.membership = this.diModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
         //Modules
-        this.applicationSettings = DIModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
-        this.keyValue = DIModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
-        this.valueSet = DIModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
-        this.userProfile = DIModule.kernel.get<modules.UserProfile.BaasicUserProfileClient>(modules.UserProfile.TYPES.BaasicUserProfileClient);
-        this.templating = DIModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
-        this.metering = DIModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
-        this.mediaVault = DIModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
-        this.files = DIModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
-        this.dynamicResource = DIModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
+        this.applicationSettings = this.diModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
+        this.keyValue = this.diModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
+        this.valueSet = this.diModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
+        this.userProfile = this.diModule.kernel.get<modules.UserProfile.Root>(modules.UserProfile.TYPES.Root);
+        this.templating = this.diModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
+        this.metering = this.diModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
+        this.mediaVault = this.diModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
+        this.files = this.diModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
+        this.dynamicResource = this.diModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
+        this.notifications = this.diModule.kernel.get<modules.Notifications.BaasicNotificationsClient>(modules.Notifications.TYPES.BaasicNotificationsClient);
 
     }
 
     getAccessToken(): IToken {
         return this.tokenHandler.get(<TokenType>TokenTypes.Access);
-    };
+    }
 
     updateAccessToken(value: IToken) {
         this.tokenHandler.store(value);
-    };
-
+    }
 
     getApiKey(): string {
         return this.apiKey;
-    };
+    }
 
     getApiUrl(): URL {
         return this.settings.apiUrl;
-    };
+    }
 
     getUser(): IUser {
         return this.userHandler.getUser();
@@ -88,5 +90,5 @@ export class BaasicApp implements IBaasicApp {
 
     setUser(userInfo: IUser) {
         this.userHandler.setUser(userInfo);
-    };
+    }
 }

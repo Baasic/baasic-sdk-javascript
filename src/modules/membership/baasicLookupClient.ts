@@ -6,12 +6,15 @@
 
 import { injectable, inject } from "inversify";
 import { IGetRequestOptions } from 'common/contracts';
+import { Utility } from 'common';
 import { ILookup } from 'modules/membership/contracts';
 import { BaasicLookupRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 
 @injectable()
 export class BaasicLookupClient {
+
+    private utility: Utility = new Utility();
 
     get routeDefinition(): BaasicLookupRouteDefinition {
         return this.baasicLookupRouteDefinition;
@@ -51,7 +54,8 @@ export class BaasicLookupClient {
      **/
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<ILookup>> {
         let embed = options.embed || 'role,accessAction,accessSection,snProvider';
-        return this.baasicApiClient.get(this.baasicLookupRouteDefinition.get({ embed: embed }));
+        var opt = this.utility.extend({}, options, { embed: embed });
+        return this.baasicApiClient.get(this.baasicLookupRouteDefinition.get(opt));
     }
 }
 

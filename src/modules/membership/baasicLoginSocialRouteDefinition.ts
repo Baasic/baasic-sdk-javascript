@@ -11,6 +11,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicLoginSocialRouteDefinition extends BaasicBaseRouteDefinition {
 
+    /**                  
+    * Social login get route with route and query parameters.
+    **/
+    public getRoute: string = 'login/social/{provider}/{?returnUrl}';
+
+    /**                  
+    * Social login post route with route and query parameters.
+    **/
+    public postRoute: string = 'login/social/{provider}/{?embed,fields,options}';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -27,7 +37,7 @@ export class BaasicLoginSocialRouteDefinition extends BaasicBaseRouteDefinition 
             provider: provider,
             returnUrl: returnUrl
         };
-        return super.baseFind('login/social/{provider}/{?returnUrl}', params);
+        return super.baseFind(this.getRoute, params);
     }
 
     /**                     
@@ -37,6 +47,6 @@ export class BaasicLoginSocialRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicLoginSocialClient.post({ provider : '<provider>' });                                
      **/
     post(provider: string, options?: any): any {
-        return super.baseCreate('login/social/{provider}/{?embed,fields,options}', { provider: provider, options: options });
+        return super.baseCreate(this.postRoute, { provider: provider, options: options });
     }
 }

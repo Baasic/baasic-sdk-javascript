@@ -8,9 +8,9 @@ import { BrowserEventHandler } from 'core/browserEvents';
 
 
 export class DIModule {
-    static diModules: interfaces.ContainerModule[] = [];
-    static kernel: Container = new Container();
-    static init(app: IBaasicApp, modules: any[]): void {
+    diModules: interfaces.ContainerModule[] = [];
+    kernel: Container = new Container();
+    init(app: IBaasicApp, modules: any[]): void {
         let diModule = new ContainerModule((bind) => {
             let apiKey = app.getApiKey();
             if (app.settings) {
@@ -19,45 +19,46 @@ export class DIModule {
                     apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${apiKey}/`),
                     enableHALJSON: app.settings.enableHALJSON
                 };
-                DIModule.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);
+                app.settings.apiUrl = appOptions.apiUrl;
+                this.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);
 
-                DIModule.kernel.bind<Partial<IBaasicAppOptions>>(coreTYPES.IBaasicAppOptions).toConstantValue(app.settings);
+                this.kernel.bind<Partial<IBaasicAppOptions>>(coreTYPES.IBaasicAppOptions).toConstantValue(app.settings);
             }
 
             if (app.settings.httpClient) {
-                DIModule.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(app.settings.httpClient);
+                this.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(app.settings.httpClient);
             } else {
-                DIModule.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(jQueryHttpClient);
+                this.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(jQueryHttpClient);
             }
 
             if (app.settings.storageHandler) {
-                DIModule.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).toFunction(app.settings.storageHandler);
+                this.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).toFunction(app.settings.storageHandler);
             } else {
-                DIModule.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).to(LocalStorageHandler);
+                this.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).to(LocalStorageHandler);
             }
 
             if (app.settings.eventHandler) {
-                DIModule.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).toFunction(app.settings.eventHandler);
+                this.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).toFunction(app.settings.eventHandler);
             } else {
-                DIModule.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).to(BrowserEventHandler);
+                this.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).to(BrowserEventHandler);
             }
 
-            DIModule.kernel.bind<IBaasicApp>(coreTYPES.IBaasicApp).toConstantValue(app);
+            this.kernel.bind<IBaasicApp>(coreTYPES.IBaasicApp).toConstantValue(app);
 
         });
-        DIModule.diModules.push(diModule);
+        this.diModules.push(diModule);
 
         for (let m of modules) {
-            DIModule.addModule(m);
+            this.addModule(m);
         }
-        DIModule.kernel.load(...DIModule.diModules);
+        this.kernel.load(...this.diModules);
     }
-    private static addModule(module: any) {
+    private addModule(module: any) {
         if (module instanceof ContainerModule) {
-            DIModule.diModules.push(module);
+            this.diModules.push(module);
         } else if (module instanceof Object && !(module instanceof Function)) {
             for (let mod in module) {
-                DIModule.addModule(module[mod]);
+                this.addModule(module[mod]);
             }
         }
     }

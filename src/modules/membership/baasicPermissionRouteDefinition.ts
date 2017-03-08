@@ -11,6 +11,32 @@ import { IAccessPolicy, IAccessAction } from 'modules/membership/contracts';
 @injectable()
 export class BaasicPermissionRouteDefinition extends BaasicBaseRouteDefinition {
 
+    /**                  
+    * Find route with route and query parameters.
+    **/
+    public findRoute: string = 'permissions/sections/{section}/{?searchQuery,sort,embed,fields}';
+    /**                  
+    * Get actions route with route and query parameters.
+    **/
+    public getActionsRoute: string = 'permissions/actions/{?searchQuery,sort,embed,fields}';
+    /**                  
+    * Get roles route with route and query parameters.
+    **/
+    public getRolesRoute: string = 'lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}';
+    /**                  
+    * Get users route with route and query parameters.
+    **/
+    public getUsersRoute: string = 'users/{?searchQuery,page,rpp,sort,embed,fields}';
+    /**                  
+    * Create route with route and query parameters.
+    **/
+    public createRoute: string = 'permissions/';
+    /**                  
+    * Remove route with route and query parameters.
+    **/
+    public removeRoute: string = 'permissions/sections/{section}/actions/{action}/{{operation}}/{{subject}}/';
+
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) {
@@ -31,7 +57,7 @@ baasicPermissionRouteDefinition.find(
     **/
     find(section: string, options?: any): any {
         var opt = options || {};
-        return super.baseFind('permissions/sections/{section}/{?searchQuery,sort,embed,fields}', this.utility.extend({ section: section }, opt));
+        return super.baseFind(this.findRoute, this.utility.extend({ section: section }, opt));
     }
     /**
     * Parses getActions route which can be expanded with additional options. Supported items are: 
@@ -45,7 +71,7 @@ baasicPermissionRouteDefinition.getActions(
     **/
     getActions(options?: any): any {
         var opt = options || {};
-        return super.baseFind('permissions/actions/{?searchQuery,sort,embed,fields}', opt);
+        return super.baseFind(this.getActionsRoute, opt);
     }
     /**
     * Parses getRoles route which can be expanded with additional options. Supported items are: 
@@ -61,7 +87,7 @@ baasicPermissionRouteDefinition.getRoles(
     **/
     getRoles(options?: any): any {
         var opt = options || {};
-        return super.baseFind('lookups/roles/{?searchQuery,page,rpp,sort,embed,fields}', opt);
+        return super.baseFind(this.getRolesRoute, opt);
     }
     /**
     * Parses getUsers route which can be expanded with additional options. Supported items are: 
@@ -77,14 +103,14 @@ baasicPermissionRouteDefinition.getRoles(
     **/
     getUsers(options?: any): any {
         var opt = options || {};
-        return super.baseFind('users/{?searchQuery,page,rpp,sort,embed,fields}', opt);
+        return super.baseFind(this.getUsersRoute, opt);
     }
     /**
     * Parses create permission route; this URI template doesn't expose any additional properties.
     * @method        
     * @example baasicPermissionRouteDefinition.create({});               
     **/
-    create(): any { super.baseCreate('permissions/') }
+    create(): any { super.baseCreate(this.createRoute) }
     /**                  
      * Returns a promise that is resolved once the remove permission action has been performed. This action will remove a permission from the system, if completed successfully. 
      * @param data A permission object used to delete specified permission resource.
@@ -111,7 +137,9 @@ baasicPermissionRouteDefinition.getRoles(
             operation = 'User';
             subject = data.userName;
         }
-        return super.baseDelete('permissions/sections/{section}/actions/{action}/' + operation.toLowerCase() + 's/' + subject, data, null, 'delete' + action.abrv + operation);
+
+        let route = this.removeRoute.replace('{{operation}}', operation.toLowerCase() + 's').replace('{{subject}}', subject);
+        return super.baseDelete(route, data, null, 'delete' + action.abrv + operation);
     }
 }
 

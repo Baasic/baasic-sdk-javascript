@@ -93,7 +93,7 @@ export class BaasicPermissionClient {
         var self = this;
         return this.getUsers(options)
             .then(function (collection) {
-                collection.body.forEach(element => {
+                collection.data.forEach(element => {
                     var membershipItem = {
                         name: element.userName,
                         role: ''
@@ -104,7 +104,7 @@ export class BaasicPermissionClient {
 
                 self.getRoles(options)
                     .then(function (collection) {
-                        collection.body.forEach(element => {
+                        collection.data.forEach(element => {
                             var membershipItem = {
                                 name: element.name,
                                 roleName: element.name,
@@ -276,11 +276,11 @@ export class BaasicPermissionClient {
             return this.permissionHash[apiKey][authorization];
         }
 
-        var user = this.application.getUser();
-        if (user === undefined) {
+        var userContainer = this.application.getUser();
+        if (userContainer === undefined) {
             return;
         }
-
+        var user = userContainer.user;
         var hasPermission = false;
 
         if (user.permissions) {

@@ -16,8 +16,8 @@ client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<Respon
         jqueryParams.headers = request.headers;
     }
 
-    if (request.body) {
-        jqueryParams.data = request.body;
+    if (request.data) {
+        jqueryParams.data = request.data;
     }
 
     return $.ajax(request.url.toString(), jqueryParams)
@@ -27,7 +27,7 @@ client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<Respon
                 statusText: textStatus,
                 statusCode: jqXHR.status,
                 headers: parseHeaders(jqXHR.getAllResponseHeaders()),
-                body: data
+                data: data
             };
         },
         (jqXHR, textStatus, errorThrown) => {
@@ -36,7 +36,7 @@ client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<Respon
                 statusText: textStatus,
                 statusCode: jqXHR.status,
                 headers: parseHeaders(jqXHR.getAllResponseHeaders()),
-                body: jqXHR.responseText || jqXHR.responseXML
+                data: jqXHR.responseText || jqXHR.responseXML
             };
         });
 };

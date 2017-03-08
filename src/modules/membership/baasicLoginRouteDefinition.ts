@@ -10,6 +10,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicLoginRouteDefinition extends BaasicBaseRouteDefinition {
 
+
+    /**                  
+     * Login route with route and query parameters.
+     **/
+    public loginRoute: string = 'login/{?embed,fields,options}';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) {
@@ -23,7 +29,7 @@ export class BaasicLoginRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicLoginRouteDefinition.login( {options: 'sliding'});                                
      **/
     login(options: any): any {
-        return super.baseCreate('login/{?embed,fields,options}', options);
+        return super.baseCreate(this.loginRoute, options);
     }
 }
 

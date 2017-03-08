@@ -25,4 +25,5 @@ export * from './baasicUserSkillRouteDefinition';
 export * from './baasicUserSkillClient';
 export * from './baasicUserWorkRouteDefinition';
 export * from './baasicUserWorkClient';
+export * from './root';
 

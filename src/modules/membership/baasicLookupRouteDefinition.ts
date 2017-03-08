@@ -11,6 +11,11 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicLookupRouteDefinition extends BaasicBaseRouteDefinition {
 
+    /**                  
+    * Get route with route and query parameters.
+    **/
+    public getRoute: string = 'lookups/{?embed,fields}';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -23,7 +28,7 @@ export class BaasicLookupRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicLookupRouteService.get(data);                               
      **/
     get(data: any): any {
-        return super.baseCreate('lookups/{?embed,fields}', data);
+        return super.baseCreate(this.getRoute, data);
     }
 }
 

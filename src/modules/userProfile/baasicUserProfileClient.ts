@@ -7,7 +7,15 @@
 import { injectable, inject } from "inversify";
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicUserProfileACLClient, BaasicUserProfileRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import {
+    BaasicUserProfileACLClient,
+    BaasicUserProfileRouteDefinition,
+    BaasicUserEducationClient,
+    BaasicUserProfileAvatarClient,
+    BaasicUserSkillClient,
+    BaasicUserWorkClient,
+    TYPES as userProfileTypes
+} from 'modules/userProfile';
 import { IUserProfile } from 'modules/userProfile/contracts';
 
 @injectable()
@@ -21,10 +29,28 @@ export class BaasicUserProfileClient {
         return this.baasicUserProfileRouteDefinition;
     }
 
+    get education(): BaasicUserEducationClient {
+        return this.baasicUserEducationClient;
+    }
+    get avatar(): BaasicUserProfileAvatarClient {
+        return this.baasicUserProfileAvatarClient;
+    }
+    get skill(): BaasicUserSkillClient {
+        return this.baasicUserSkillClient;
+    }
+    get work(): BaasicUserWorkClient {
+        return this.baasicUserWorkClient;
+    }
+
     constructor(
         @inject(userProfileTypes.BaasicUserProfileACLClient) protected baasicUserProfileACLClient: BaasicUserProfileACLClient,
         @inject(userProfileTypes.BaasicUserProfileRouteDefinition) protected baasicUserProfileRouteDefinition: BaasicUserProfileRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+
+        @inject(userProfileTypes.BaasicUserEducationClient) protected baasicUserEducationClient: BaasicUserEducationClient,
+        @inject(userProfileTypes.BaasicUserProfileAvatarClient) protected baasicUserProfileAvatarClient: BaasicUserProfileAvatarClient,
+        @inject(userProfileTypes.BaasicUserSkillClient) protected baasicUserSkillClient: BaasicUserSkillClient,
+        @inject(userProfileTypes.BaasicUserWorkClient) protected baasicUserWorkClient: BaasicUserWorkClient,
     ) { }
 
     /**                  

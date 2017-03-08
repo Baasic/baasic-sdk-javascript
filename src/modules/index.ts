@@ -20,3 +20,5 @@ import * as Templating from './templating';
 export { Templating };
 import * as Metering from './metering';
 export { Metering };
+import * as Notifications from './notifications';
+export { Notifications };
