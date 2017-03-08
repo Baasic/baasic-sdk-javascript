@@ -5,7 +5,7 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaasicBaseRouteDefinition, Utility } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
@@ -21,6 +21,8 @@ import { IArticle } from 'modules/article/contracts';
 
 @injectable()
 export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
+
+    private utility = new Utility();
 
     public readonly findRoute: string = 'articles/{?searchQuery,page,rpp,sort,embed,fields,statuses,tags,startDate,endDate}';
 
@@ -41,7 +43,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
     public readonly restoreRoute: string = 'articles/{id}/restore';
 
     public readonly unpublishRoute: string = 'articles/{id}/unpublish';
-    
+
     get subscriptions(): BaasicArticleSubscriptionsRouteDefinition {
         return this.baasicArticleSubscriptionsRouteDefinition;
     }
@@ -82,17 +84,21 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * Parses find article route which can be expanded with additional options. Supported items are:                 
      * - `searchQuery` - A string referencing article properties using the phrase or BQL (Baasic Query Language) search.                 
      * - `page` - A value used to set the page number, i.e. to retrieve certain article subset from the storage.                 
-     * - `rpp` - A value used to limit the size of result set per page.                 * - `sort` - A string used to set the article property to sort the result collection by. 				
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the article property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * - `startDate` - A value used to specify the article creation, publish or archive date date starting from which article resource collection should be returned.                 
-     * - `endDate` - A value used to specify the article creation, publish or archive date until (and including) which article resource collection should be returned.                 
+     * - `startDate` - A value used to specify the article creation, publish or archive date date starting from which article resource collection should be returned.   
+     * - `endDate` - A value used to specify the article creation, publish or archive date until (and including) which article resource collection should be returned.     
      * - `statuses` - Comma separated list of article statuses that specify where search should be done (Allowed statuses: Published, Draft and Archived).                 
-     * -  `tags` - A value used to restrict the search to article resources with these tags. Multiple tags should be comma separated.        				                
+     * - `tags` - A value used to restrict the search to article resources with these tags. Multiple tags should be comma separated.        				                
      * @method                        
      * @example baasicArticleRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind(this.findRoute, options);
+        var opt = options || {};
+        opt.startDate = this.getStartDate(opt);
+        opt.endDate = this.getEndDate(opt);
+        return super.baseFind(this.findRoute, opt);
     }
 
     /**                 
@@ -186,6 +192,20 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     unpublish(data: IArticle): any {
         return super.baseUpdate(this.unpublishRoute, data, undefined, 'unpublish');
+    }
+
+    protected getStartDate(options: any) {
+        if (!this.utility.isUndefined(options.startDate) && options.startDate !== null) {
+            return options.startDate.toISOString();
+        }
+        return undefined;
+    }
+
+    protected getEndDate(options: any) {
+        if (!this.utility.isUndefined(options.endDate) && options.endDate !== null) {
+            return options.endDate.toISOString();
+        }
+        return undefined;
     }
 }
 

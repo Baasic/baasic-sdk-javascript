@@ -1,8 +1,7 @@
 import { injectable, inject } from "inversify";
-import { ModelMapper } from 'common';
-import { IOptions } from 'common/contracts';
 import * as uritemplate from 'uritemplate';
-import { Utility } from 'common';
+import { IOptions } from 'common/contracts';
+import { ModelMapper, Utility } from 'common';
 import { IAppOptions, TYPES as coreTYPES } from 'core/contracts';
 
 @injectable()
@@ -31,8 +30,6 @@ export abstract class BaasicBaseRouteDefinition {
      **/
     protected baseFind(route: string, options?: IOptions): any {
         let params = this.modelMapper.findParams(options);
-        params.startDate = this.getStartDate(options);
-        params.endDate = this.getEndDate(options);
         return uritemplate.parse(route).expand(params);
     }
 
@@ -127,19 +124,7 @@ export abstract class BaasicBaseRouteDefinition {
         return uritemplate.parse(route);
     }
 
-    protected getStartDate(options: any) {
-        if (!this.utility.isUndefined(options.startDate) && options.startDate !== null) {
-            return options.startDate.toISOString();
-        }
-        return undefined;
-    }
 
-    protected getEndDate(options: any) {
-        if (!this.utility.isUndefined(options.endDate) && options.endDate !== null) {
-            return options.endDate.toISOString();
-        }
-        return undefined;
-    }
 }
 
 /**  
