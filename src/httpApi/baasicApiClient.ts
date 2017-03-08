@@ -49,7 +49,7 @@ export class BaasicApiClient {
         promise.then<IHttpResponse<TResponse>>(function (data) {
             var contentType = data.headers['Content-Type'] || data.headers['content-type'];
             if (contentType && contentType.toLowerCase().indexOf('application/hal+json') !== -1) {
-                data.body = self.halParser.parse(data.body);
+                data.data = self.halParser.parse(data.data);
             }
             return data;
         },
@@ -122,7 +122,7 @@ export class BaasicApiClient {
         };
 
         if (data) {
-            request.body = data;
+            request.data = data;
         }
 
         if (headers) {

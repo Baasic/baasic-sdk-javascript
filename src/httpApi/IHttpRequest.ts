@@ -1,9 +1,8 @@
-import {IHttpHeaders} from 'httpApi';
+import { IHttpHeaders } from 'httpApi';
 
-export interface IHttpRequest
-{
+export interface IHttpRequest {
     headers?: IHttpHeaders,
     url: URL,
     method: string
-    body?: any; 
+    data?: any;
 }

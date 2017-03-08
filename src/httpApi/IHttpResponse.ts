@@ -5,6 +5,6 @@ export interface IHttpResponse<ReturnType> {
     headers: IHttpHeaders,
     statusCode: number,
     statusText: string,
-    body: ReturnType
+    data: ReturnType
 
 }

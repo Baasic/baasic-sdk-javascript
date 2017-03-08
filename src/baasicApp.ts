@@ -35,6 +35,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
     public readonly files: modules.Files.BaasicFilesClient;
     public readonly dynamicResource: modules.DynamicResource.BaasicDynamicResourceClient;
+    public readonly notifications: modules.Notifications.BaasicNotificationsClient;
 
 
     constructor(private apiKey: string, private options?: Partial<IBaasicAppOptions>) {
@@ -63,6 +64,7 @@ export class BaasicApp implements IBaasicApp {
         this.mediaVault = this.diModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
         this.files = this.diModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
         this.dynamicResource = this.diModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
+        this.notifications = this.diModule.kernel.get<modules.Notifications.BaasicNotificationsClient>(modules.Notifications.TYPES.BaasicNotificationsClient);
 
     }
 

@@ -59,11 +59,11 @@ export class BaasicLoginClient {
         var promise = this.baasicApiClient.post<any>(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' });
         promise.then<any>(function (data) {
             let token: IToken = {
-                token: data.body.access_token,
-                expires_in: data.body.expires_in,
-                sliding_window: data.body.sliding_window,
-                tokenUrl: data.body.access_url_token,
-                type: data.body.token_type
+                token: data.data.access_token,
+                expires_in: data.data.expires_in,
+                sliding_window: data.data.sliding_window,
+                tokenUrl: data.data.access_url_token,
+                type: data.data.token_type
             };
             self.tokenHandler.store(token);
             return data;
