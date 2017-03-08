@@ -12,6 +12,8 @@ import {
     BaasicMeteringBatchClient,
     BaasicMeteringRouteDefinition,
     BaasicMeteringStatisticsClient,
+    BaasicMeteringCategoryClient,
+    BaasicMeteringSettingsClient,
     TYPES as meteringTypes
 } from 'modules/metering';
 import { IMeteringData } from 'modules/metering/contracts';
@@ -35,12 +37,22 @@ export class BaasicMeteringClient {
         return this.baasicMeteringACLClient;
     }
 
+    get settings(): BaasicMeteringSettingsClient {
+        return this.baasicMeteringSettingsClient;
+    }
+
+    get category(): BaasicMeteringCategoryClient {
+        return this.baasicMeteringCategoryClient;
+    }
+
     constructor(
         @inject(meteringTypes.BaasicMeteringRouteDefinition) protected baasicMeteringRouteDefinition: BaasicMeteringRouteDefinition,
         @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
         @inject(meteringTypes.BaasicMeteringBatchClient) protected baasicMeteringBatchClient: BaasicMeteringBatchClient,
         @inject(meteringTypes.BaasicMeteringStatisticsClient) protected baasicMeteringStatisticsClient: BaasicMeteringStatisticsClient,
-        @inject(meteringTypes.BaasicMeteringACLClient) protected baasicMeteringACLClient: BaasicMeteringACLClient
+        @inject(meteringTypes.BaasicMeteringACLClient) protected baasicMeteringACLClient: BaasicMeteringACLClient,
+        @inject(meteringTypes.BaasicMeteringCategoryClient) protected baasicMeteringCategoryClient: BaasicMeteringCategoryClient,
+        @inject(meteringTypes.BaasicMeteringSettingsClient) protected baasicMeteringSettingsClient: BaasicMeteringSettingsClient,
     ) { }
 
     /**                  
