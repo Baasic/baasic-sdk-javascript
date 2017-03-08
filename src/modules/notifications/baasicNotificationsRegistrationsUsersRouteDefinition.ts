@@ -14,6 +14,16 @@ import { IUserRegistration } from 'modules/notifications/contracts';
 @injectable()
 export class BaasicNotificationsRegistrationsUsersRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/registrations';
+
+    public readonly findRoute: string = 'notifications/registrations/{?searchQuery,userIds,providers,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'notifications/registrations/{id}/{?embed}';
+
+    public readonly deleteRoute: string = 'notifications/registrations/{id}';
+
+    public readonly updateRoute: string = 'notifications/registrations/{id}';
+
     get batch(): BaasicNotificationsRegistrationsUsersBatchRouteDefinition {
         return this.baasicNotificationsRegistrationsUsersBatchRouteDefinition;
     }
@@ -29,7 +39,7 @@ export class BaasicNotificationsRegistrationsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsRegistrationsUsersRouteDefinition.create();                          
      */
     create(): any {
-        return super.baseCreate('notifications/registrations', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                          
@@ -46,7 +56,7 @@ export class BaasicNotificationsRegistrationsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsRegistrationsUsersRouteDefinition.find({ searchQuery: '<search-phrase>', providers: '<provider-name>,<provider-name>' });                          
      */
     find(options?: IOptions): any {
-        return super.baseFind('notifications/registrations/{?searchQuery,userIds,providers,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                          
@@ -57,7 +67,7 @@ export class BaasicNotificationsRegistrationsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsRegistrationsUsersRouteDefinition.get({ id: '<registration-id>' });                          
      */
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('notifications/registrations/{id}/{?embed}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                          
@@ -67,7 +77,7 @@ export class BaasicNotificationsRegistrationsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsRegistrationsUsersRouteDefinition.delete(data);                          
      */
     delete(data: IUserRegistration): any {
-        return super.baseDelete('notifications/registrations/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**                          
@@ -77,7 +87,7 @@ export class BaasicNotificationsRegistrationsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsRegistrationsUsersRouteDefinition.update(data);                          
      */
     update(data: IUserRegistration): any {
-        return super.baseUpdate('notifications/registrations/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

@@ -13,6 +13,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'profiles/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'profiles/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'profiles';
+
+    public readonly updateRoute: string = 'profiles/{id}';
+
+    public readonly deleteRoute: string = 'profiles/{id}';
+
     get acl(): BaasicUserProfileACLRouteDefinition {
         return this.baasicUserProfileACLRouteDefinition;
     }
@@ -34,7 +44,7 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicUserProfileRouteDefinition.find.({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('profiles/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -45,7 +55,7 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicUserProfileRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('profiles/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -54,7 +64,7 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicUserProfileRouteService.create();                              
      **/
     create(): any {
-        return super.baseCreate('profiles', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                 
@@ -64,7 +74,7 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicUserProfileRouteService.update(data);                              
      **/
     update(data: IUserProfile): any {
-        return super.baseUpdate('profiles/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -74,7 +84,7 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
      * @example baasicUserProfileRouteService.delete(data);                              
      **/
     delete(data: IUserProfile): any {
-        return super.baseDelete('profiles/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

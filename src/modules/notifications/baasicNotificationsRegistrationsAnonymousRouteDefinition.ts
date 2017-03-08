@@ -14,6 +14,16 @@ import { IAnonymousRegistration } from 'modules/notifications/contracts';
 @injectable()
 export class BaasicNotificationsRegistrationsAnonymousRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/registrations/anonymous';
+
+    public readonly findRoute: string = 'notifications/registrations/anonymous/{?searchQuery,providers,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'notifications/registrations/anonymous/{id}/{?embed}';
+
+    public readonly updateRoute: string = 'notifications/registrations/anonymous/{id}';
+
+    public readonly deleteRoute: string = 'notifications/registrations/anonymous/{id}';
+
     get batch(): BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition {
         return this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition;
     }
@@ -29,7 +39,7 @@ export class BaasicNotificationsRegistrationsAnonymousRouteDefinition extends Ba
      * @example baasicNotificationsRegistrationsAnonymousRouteDefinition.create();                          
      */
     create(): any {
-        return super.baseCreate('notifications/registrations/anonymous', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                          
@@ -48,7 +58,7 @@ export class BaasicNotificationsRegistrationsAnonymousRouteDefinition extends Ba
                });                          
     */
     find(options?: IOptions): any {
-        return super.baseFind('notifications/registrations/anonymous/{?searchQuery,providers,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                          
@@ -59,7 +69,7 @@ export class BaasicNotificationsRegistrationsAnonymousRouteDefinition extends Ba
      * @example baasicNotificationsRegistrationsAnonymousRouteDefinition.get({ id: '<registration-id>' });                          
      */
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('notifications/registrations/anonymous/{id}/{?embed}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                          
@@ -69,7 +79,7 @@ export class BaasicNotificationsRegistrationsAnonymousRouteDefinition extends Ba
      * @example baasicNotificationsRegistrationsAnonymousRouteDefinition.update(data);                          
      */
     update(data: IAnonymousRegistration): any {
-        return super.baseUpdate('notifications/registrations/anonymous/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                          
@@ -79,7 +89,7 @@ export class BaasicNotificationsRegistrationsAnonymousRouteDefinition extends Ba
      * @example baasicNotificationsRegistrationsAnonymousRouteDefinition.delete(data);                          
      */
     delete(data: IAnonymousRegistration): any {
-        return super.baseDelete('notifications/registrations/anonymous/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

@@ -13,6 +13,14 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'profiles/{id}/avatars/{?embed,fields}';
+
+    public readonly updateRoute: string = 'profiles/{userId}/avatars';
+
+    public readonly linkRoute: string = 'profiles/{id}/avatars/link';
+
+    public readonly unlinkRoute: string = 'profiles/{userId}/avatars/unlink';
+
     get streams(): BaasicUserProfileAvatarStreamsRouteDefinition {
         return this.baasicUserProfileAvatarStreamsRouteDefinition;
     }
@@ -30,7 +38,7 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicUserProfileAvatarRouteDefinition.get({id: '<file-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('profiles/{id}/avatars/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -40,7 +48,7 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicUserProfileAvatarRouteDefinition.update(data);                              
      **/
     update(data: IProfileAvatar): any {
-        return super.baseUpdate('profiles/{userId}/avatars', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -53,7 +61,7 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
     link(id: string, data: IProfileAvatar): any {
         let params = this.utility.extend({}, data);
         params.id = id;
-        return super.baseCreate('profiles/{id}/avatars/link', params);
+        return super.baseCreate(this.linkRoute, params);
     }
 
     /**                 
@@ -67,7 +75,7 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
         if (!options) {
             options = {};
         }
-        return super.baseDelete('profiles/{userId}/avatars/unlink', data, options);
+        return super.baseDelete(this.unlinkRoute, data, options);
     }
 
     createParams(data: any, id: string): any {

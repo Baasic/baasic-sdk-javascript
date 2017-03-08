@@ -13,6 +13,12 @@ import { IAnonymousSubscription } from 'modules/notifications/contracts';
 @injectable()
 export class BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/subscriptions/anonymous/batch';
+
+    public readonly deleteRoute: string = 'notifications/subscriptions/anonymous/batch';
+
+    public readonly updateRoute: string = 'notifications/subscriptions/anonymous/batch';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -23,7 +29,7 @@ export class BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition exten
      * @example baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.create();                              
      */
     create(): any {
-        return this.baseCreate('notifications/subscriptions/anonymous/batch', {});
+        return this.baseCreate(this.createRoute, {});
     }
 
     /**                              
@@ -32,7 +38,7 @@ export class BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition exten
      * @example baasicNotificationsSubscriptionsAnonymousBatchRouteDefinitio.delete();                              
      */
     delete(): any {
-        return this.baseDelete('notifications/subscriptions/anonymous/batch', {});
+        return this.baseDelete(this.deleteRoute, {});
     }
 
     /**                              
@@ -41,7 +47,7 @@ export class BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition exten
      * @example baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.update();                              
      */
     update(): any {
-        return this.baseUpdate('notifications/subscriptions/anonymous/batch', {});
+        return this.baseUpdate(this.updateRoute, {});
     }
 }
 

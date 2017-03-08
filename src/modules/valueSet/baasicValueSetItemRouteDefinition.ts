@@ -11,6 +11,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'value-sets/{setName}/items/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'value-sets/{setName}/items/';
+
+    public readonly updateRoute: string = 'value-sets/{setId}/items/{id}';
+
+    public readonly deleteRoute: string = 'value-sets/{setId}/items/{id}';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
@@ -26,7 +36,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicValueSetItemRouteDefinition.find(options);               					
      **/
     find(options: IOptions): any {
-        return super.baseFind('value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /** 					
@@ -42,7 +52,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
     get(setName: string, id: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
         params.setName = setName;
-        return super.baseGet('value-sets/{setName}/items/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /** 					
@@ -52,7 +62,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicValueSetItemRouteDefinition.create(data);              					
      **/
     create(data: IValueSetItem): any {
-        return super.baseCreate('value-sets/{setName}/items/', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**
@@ -62,7 +72,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicValueSetItemRouteDefinition.update(data);
      */
     update(data: IValueSetItem): any {
-        return super.baseUpdate('value-sets/{setId}/items/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**
@@ -72,7 +82,7 @@ export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicValueSetItemRouteDefinition.delete(data);
      */
     delete(data: IValueSetItem): any {
-        return super.baseDelete('value-sets/{setId}/items/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

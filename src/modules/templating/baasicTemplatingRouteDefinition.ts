@@ -14,6 +14,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'templates/{?searchQuery,page,rpp,sort,embed,fields,moduleNames}';
+
+    public readonly getRoute: string = 'templates/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'templates';
+
+    public readonly updateRoute: string = 'templates/{id}';
+
+    public readonly deleteRoute: string = 'templates/{id}';
+
     get batch(): BaasicTemplatingBatchRouteDefinition {
         return this.baasicTemplatingBatchRouteDefinition;
     }
@@ -35,7 +45,7 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicTemplatingRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('templates/{?searchQuery,page,rpp,sort,embed,fields,moduleNames}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -46,7 +56,7 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicTemplatingRouteDefinition.get({id: '<template-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('templates/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -55,7 +65,7 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicTemplatingRouteDefinition.create();                              
      **/
     create(): any {
-        return super.baseCreate('templates', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                 
@@ -65,7 +75,7 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicTemplatingRouteDefinition.update(data);                              
      **/
     update(data: ITemplate): any {
-        return super.baseUpdate('templates/{id}', data)
+        return super.baseUpdate(this.updateRoute, data)
     }
 
     /**                 
@@ -75,7 +85,7 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicTemplatingRouteDefinition.update(data);                              
      **/
     delete(data: ITemplate): any {
-        return super.baseDelete('templates/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

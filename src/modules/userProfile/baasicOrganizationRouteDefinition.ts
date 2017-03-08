@@ -13,6 +13,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'lookups/organizations/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'lookups/organizations/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'lookups/organizations';
+
+    public readonly updateRoute: string = 'lookups/organizations/{id}';
+
+    public readonly deleteRoute: string = 'lookups/organizations/{id}';
+
     get batch(): BaasicOrganizationBatchRouteDefinition {
         return this.baasicOrganizationBatchRouteDefinition;
     }
@@ -34,7 +44,7 @@ export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicOrganizationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('lookups/organizations/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -45,7 +55,7 @@ export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicOrganizationRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('lookups/organizations/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -54,7 +64,7 @@ export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicOrganizationRouteDefinition.create();                              
      **/
     create(): any {
-        return super.baseCreate('lookups/organizations', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                 
@@ -64,7 +74,7 @@ export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicOrganizationRouteDefinition.updata(data);                              
      **/
     update(data: IOrganization): any {
-        return super.baseUpdate('lookups/organizations/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -74,7 +84,7 @@ export class BaasicOrganizationRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicOrganizationRouteDefinition.delete(data);                              
      **/
     delete(data: IOrganization): any {
-        return super.baseDelete('lookups/organizations/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

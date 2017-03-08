@@ -11,6 +11,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicTemplatingBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'templates/batch';
+
+    public readonly updateRoute: string = 'templates/batch';
+
+    public readonly deleteRoute: string = 'templates/batch';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -19,7 +25,7 @@ export class BaasicTemplatingBatchRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicTemplatingBatchRouteDefinition.create();                                  
      **/
     create(): any {
-        return super.baseCreate('templates/batch', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                     
@@ -28,7 +34,7 @@ export class BaasicTemplatingBatchRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicTemplatingBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.baseUpdate('templates/batch', {});
+        return super.baseUpdate(this.updateRoute, {});
     }
 
     /**                     
@@ -37,7 +43,7 @@ export class BaasicTemplatingBatchRouteDefinition extends BaasicBaseRouteDefinit
      * @example baasicTemplatingBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
-        return super.baseDelete('templates/batch', {});
+        return super.baseDelete(this.deleteRoute, {});
     }
 }
 

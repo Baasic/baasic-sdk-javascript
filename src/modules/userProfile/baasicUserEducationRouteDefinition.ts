@@ -12,6 +12,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'profiles/{userId}/educations/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'profiles/{userId}/educations/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'profiles/{userId}/educations';
+
+    public readonly updateRoute: string = 'profiles/{userId}/educations/{id}';
+
+    public readonly deleteRoute: string = 'profiles/{userId}/educations/{id}';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
@@ -26,7 +36,7 @@ export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicUserEducationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('profiles/{userId}/educations/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -37,7 +47,7 @@ export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicUserEducationRouteDefinition.get(id);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('profiles/{userId}/educations/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -47,7 +57,7 @@ export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicUserEducationRouteDefinition.create(data);                              
      **/
     create(data: IUserEducation): any {
-        return super.baseCreate('profiles/{userId}/educations', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 
@@ -57,7 +67,7 @@ export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicUserEducationRouteDefinition.update(data);                              
      **/
     update(data: IUserEducation): any {
-        return super.baseUpdate('profiles/{userId}/educations/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -67,7 +77,7 @@ export class BaasicUserEducationRouteDefinition extends BaasicBaseRouteDefinitio
      * @example baasicUserEducationRouteDefinition.delete(data);                              
      **/
     delete(data: IUserEducation): any {
-        return super.baseDelete('profiles/{userId}/educations/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

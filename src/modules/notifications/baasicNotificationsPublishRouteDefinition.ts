@@ -12,6 +12,8 @@ import { BaasicNotificationsPublishBatchRouteDefinition, TYPES as notificationsT
 @injectable()
 export class BaasicNotificationsPublishRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/publish';
+
     batch(): BaasicNotificationsPublishBatchRouteDefinition {
         return this.baasicNotificationsPublishBatchRouteDefinition;
     }
@@ -27,7 +29,7 @@ export class BaasicNotificationsPublishRouteDefinition extends BaasicBaseRouteDe
      * @example baasicNotificationsPublishRouteDefinition.create();                      
      */
     create(): any {
-        return super.baseCreate('notifications/publish', {});
+        return super.baseCreate(this.createRoute, {});
     }
 }
 

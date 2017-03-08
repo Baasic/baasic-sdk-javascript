@@ -10,6 +10,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'lookups/organizations/batch';
+
+    public readonly updateRoute: string = 'lookups/organizations/batch';
+
+    public readonly deleteRoute: string = 'lookups/organizations/batch';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -18,7 +24,7 @@ export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicOrganizationBatchRouteDefinition.create();                                  
      **/
     create(): any {
-        return super.baseCreate('lookups/organizations/batch', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                     
@@ -27,7 +33,7 @@ export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicOrganizationBatchRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.baseUpdate('lookups/organizations/batch', {});
+        return super.baseUpdate(this.updateRoute, {});
     }
 
     /**                     
@@ -36,7 +42,7 @@ export class BaasicOrganizationBatchRouteDefinition extends BaasicBaseRouteDefin
      * @example baasicOrganizationBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
-        return super.baseDelete('lookups/organizations/batch', {});
+        return super.baseDelete(this.deleteRoute, {});
     }
 }
 

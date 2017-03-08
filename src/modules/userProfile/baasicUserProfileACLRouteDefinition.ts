@@ -11,6 +11,14 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'profiles/{id}/acl/{?fields}';
+
+    public readonly updateRoute: string = 'profiles/{id}/acl/{?fields}';
+
+    public readonly deleteByUserRoute: string = 'profiles/{id}/acl/actions/{accessAction}/users/{user}/';
+
+    public readonly deleteByRoleRoute: string = 'profiles/{id}/acl/actions/{accessAction}/roles/{role}/';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
@@ -21,7 +29,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      **/
     get(options?: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseCreate('profiles/{id}/acl/{?fields}', params);
+        return super.baseCreate(this.getRoute, params);
     }
 
     /** 					
@@ -32,7 +40,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseCreate('profiles/{id}/acl/{?fields}', params);
+        return super.baseCreate(this.updateRoute, params);
     }
 
     updateParams(options: IACLOptions): any {
@@ -62,7 +70,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
         params.profileId = profileId;
         params.user = user;
         params.accessAction = action;
-        return super.baseCreate('profiles/{id}/acl/actions/{accessAction}/users/{user}/', params);
+        return super.baseCreate(this.deleteByUserRoute, params);
     }
 
     /** 					
@@ -87,7 +95,7 @@ export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefiniti
         params.profileId = profileId;
         params.role = role;
         params.accessAction = action;
-        return super.baseCreate('profiles/{id}/acl/actions/{accessAction}/roles/{role}/', params);
+        return super.baseCreate(this.deleteByRoleRoute, params);
     }
 }
 

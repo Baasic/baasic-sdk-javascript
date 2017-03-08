@@ -13,6 +13,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'lookups/companies/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly createRoute: string = 'lookups/companies';
+
+    public readonly getRoute: string = 'lookups/companies/{id}/{?embed,fields}';
+
+    public readonly updateRoute: string = 'lookups/companies/{id}';
+
+    public readonly deleteRoute: string = 'lookups/companies/{id}';
+
     get batch(): BaasicCompanyBatchRouteDefinition {
         return this.baasicCompanyBatchRouteDefinition;
     }
@@ -34,7 +44,7 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicCompanyRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('lookups/companies/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -43,7 +53,7 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicCompanyRouteDefinition.create();                              
      **/
     create(): any {
-        return super.baseCreate('lookups/companies', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                 
@@ -54,15 +64,15 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicCompanyRouteDefinition.get();                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('lookups/companies/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     update(data: ICompany): any {
-        return super.baseUpdate('lookups/companies/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     delete(data: ICompany): any {
-        return super.baseDelete('lookups/companies/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 
