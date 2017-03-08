@@ -25,7 +25,8 @@ import {
     BaasicUserSkillClient,
     BaasicUserSkillRouteDefinition,
     BaasicUserWorkClient,
-    BaasicUserWorkRouteDefinition
+    BaasicUserWorkRouteDefinition,
+    Root
 } from 'modules/userProfile';
 
 const TYPES = {
@@ -54,7 +55,8 @@ const TYPES = {
     BaasicUserSkillClient: Symbol("BaasicUserSkillClient"),
     BaasicUserSkillRouteDefinition: Symbol("BaasicUserSkillRouteDefinition"),
     BaasicUserWorkClient: Symbol("BaasicUserWorkClient"),
-    BaasicUserWorkRouteDefinition: Symbol("BaasicUserWorkRouteDefinition")
+    BaasicUserWorkRouteDefinition: Symbol("BaasicUserWorkRouteDefinition"),
+    Root: Symbol("UserProfile-Root")
 };
 
 export { TYPES };
@@ -79,12 +81,14 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicUserProfileAvatarStreamsRouteDefinition>(TYPES.BaasicUserProfileAvatarStreamsRouteDefinition).to(BaasicUserProfileAvatarStreamsRouteDefinition);
     bind<BaasicUserProfileAvatarStreamsClient>(TYPES.BaasicUserProfileAvatarStreamsClient).to(BaasicUserProfileAvatarStreamsClient);
     bind<BaasicUserProfileAvatarRouteDefinition>(TYPES.BaasicUserProfileAvatarRouteDefinition).to(BaasicUserProfileAvatarRouteDefinition);
+    bind<BaasicUserProfileAvatarClient>(TYPES.BaasicUserProfileAvatarClient).to(BaasicUserProfileAvatarClient);
     bind<BaasicUserProfileRouteDefinition>(TYPES.BaasicUserProfileRouteDefinition).to(BaasicUserProfileRouteDefinition);
     bind<BaasicUserProfileClient>(TYPES.BaasicUserProfileClient).to(BaasicUserProfileClient);
     bind<BaasicUserSkillRouteDefinition>(TYPES.BaasicUserSkillRouteDefinition).to(BaasicUserSkillRouteDefinition);
     bind<BaasicUserSkillClient>(TYPES.BaasicUserSkillClient).to(BaasicUserSkillClient);
     bind<BaasicUserWorkRouteDefinition>(TYPES.BaasicUserWorkRouteDefinition).to(BaasicUserWorkRouteDefinition);
     bind<BaasicUserWorkClient>(TYPES.BaasicUserWorkClient).to(BaasicUserWorkClient);
+    bind<Root>(TYPES.Root).to(Root);
 });
 
 export { diModule };

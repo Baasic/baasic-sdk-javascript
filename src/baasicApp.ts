@@ -29,7 +29,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly applicationSettings: modules.ApplicationSettings.BaasicApplicationSettingsClient;
     public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
     public readonly valueSet: modules.ValueSet.BaasicValueSetClient;
-    public readonly userProfile: modules.UserProfile.BaasicUserProfileClient;
+    public readonly userProfile: modules.UserProfile.Root;
     public readonly templating: modules.Templating.BaasicTemplatingClient;
     public readonly metering: modules.Metering.BaasicMeteringClient;
     public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
@@ -57,7 +57,7 @@ export class BaasicApp implements IBaasicApp {
         this.applicationSettings = this.diModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
         this.keyValue = this.diModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
         this.valueSet = this.diModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
-        this.userProfile = this.diModule.kernel.get<modules.UserProfile.BaasicUserProfileClient>(modules.UserProfile.TYPES.BaasicUserProfileClient);
+        this.userProfile = this.diModule.kernel.get<modules.UserProfile.Root>(modules.UserProfile.TYPES.Root);
         this.templating = this.diModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
         this.metering = this.diModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
         this.mediaVault = this.diModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);

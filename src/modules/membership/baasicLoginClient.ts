@@ -57,7 +57,6 @@ export class BaasicLoginClient {
         });
         var self = this;
         var promise = this.baasicApiClient.post<any>(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' });
-
         promise.then<any>(function (data) {
             let token: IToken = {
                 token: data.body.access_token,
@@ -69,7 +68,6 @@ export class BaasicLoginClient {
             self.tokenHandler.store(token);
             return data;
         });
-
         return promise;
     }
 

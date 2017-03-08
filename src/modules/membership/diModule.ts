@@ -40,7 +40,7 @@ const TYPES = {
     BaasicPermissionClient: Symbol("BaasicPermissionClient"),
     BaasicLookupRouteDefinition: Symbol("BaasicLookupRouteDefinition"),
     BaasicLookupClient: Symbol("BaasicLookupClient"),
-    Root: Symbol("Root")
+    Root: Symbol("Membership-Root")
 };
 
 export { TYPES };

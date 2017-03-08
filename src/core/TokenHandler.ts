@@ -1,3 +1,4 @@
+import { Utility } from 'common';
 import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { injectable, inject } from "inversify";
 import 'reflect-metadata';
@@ -5,6 +6,7 @@ import 'reflect-metadata';
 @injectable()
 export class TokenHandler implements ITokenHandler {
 
+    private utility = new Utility();
     private token: IToken;
     private tokenKey: string;
     private userAccessTokenTimerHandle: number
@@ -31,7 +33,7 @@ export class TokenHandler implements ITokenHandler {
     store(token: IToken): void {
         //Type guard for plain JavaScript
         var anyToken: IToken | any = token;
-        if (anyToken.access_token !== undefined) {
+        if (anyToken && !this.utility.isUndefined(anyToken.access_token)) {
             let t: IToken = {
                 token: anyToken.access_token,
                 expires_in: anyToken.expires_in,
