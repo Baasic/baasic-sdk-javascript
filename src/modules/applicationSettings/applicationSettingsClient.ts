@@ -13,6 +13,15 @@ import { IApplication } from 'modules/applicationSettings/contracts';
 @injectable()
 export class BaasicApplicationSettingsClient {
 
+    /**                 
+     * Provides direct access to `baasicApplicationSettingsRouteDefinition`.                 
+     * @method                        
+     * @example BaasicApplicationSettingsClient.routeDefinition.get(options)                 
+     **/
+    get routeDefinition(): BaasicApplicationSettingsRouteDefinition {
+        return this.baasicApplicationSettingsRouteDefinition;
+    }
+
     constructor(
         @inject(applicationTypes.BaasicApplicationSettingsRouteDefinition) protected baasicApplicationSettingsRouteDefinition: BaasicApplicationSettingsRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient

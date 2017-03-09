@@ -1,4 +1,3 @@
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
     BaasicUserProfileACLClient, BaasicUserProfileRouteDefinition,
     BaasicUserProfileClient,

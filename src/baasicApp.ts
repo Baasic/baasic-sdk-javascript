@@ -26,16 +26,17 @@ export class BaasicApp implements IBaasicApp {
 
     public readonly membership: modules.Membership.Root;
     //Modules
-    public readonly applicationSettings: modules.ApplicationSettings.BaasicApplicationSettingsClient;
-    public readonly keyValue: modules.KeyValue.BaasicKeyValueClient;
-    public readonly valueSet: modules.ValueSet.BaasicValueSetClient;
-    public readonly userProfile: modules.UserProfile.Root;
-    public readonly templating: modules.Templating.BaasicTemplatingClient;
-    public readonly metering: modules.Metering.BaasicMeteringClient;
-    public readonly mediaVault: modules.MediaVault.BaasicMediaVaultClient;
-    public readonly files: modules.Files.BaasicFilesClient;
-    public readonly dynamicResource: modules.DynamicResource.BaasicDynamicResourceClient;
-    public readonly notifications: modules.Notifications.BaasicNotificationsClient;
+    public readonly applicationSettingModule: modules.ApplicationSettings.BaasicApplicationSettingsClient;
+    public readonly keyValueModule: modules.KeyValue.BaasicKeyValueClient;
+    public readonly valueSetModule: modules.ValueSet.BaasicValueSetClient;
+    public readonly userProfileModule: modules.UserProfile.Root;
+    public readonly templatingModule: modules.Templating.BaasicTemplatingClient;
+    public readonly meteringModule: modules.Metering.BaasicMeteringClient;
+    public readonly mediaVaultModule: modules.MediaVault.BaasicMediaVaultClient;
+    public readonly fileModule: modules.Files.BaasicFilesClient;
+    public readonly dynamicResourceModule: modules.DynamicResource.BaasicDynamicResourceClient;
+    public readonly notificationModule: modules.Notifications.BaasicNotificationsClient;
+    public readonly articleModule: modules.Article.Root;
 
 
     constructor(private apiKey: string, private options?: Partial<IBaasicAppOptions>) {
@@ -55,17 +56,17 @@ export class BaasicApp implements IBaasicApp {
 
         this.membership = this.diModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
         //Modules
-        this.applicationSettings = this.diModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
-        this.keyValue = this.diModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
-        this.valueSet = this.diModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
-        this.userProfile = this.diModule.kernel.get<modules.UserProfile.Root>(modules.UserProfile.TYPES.Root);
-        this.templating = this.diModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
-        this.metering = this.diModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
-        this.mediaVault = this.diModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
-        this.files = this.diModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
-        this.dynamicResource = this.diModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
-        this.notifications = this.diModule.kernel.get<modules.Notifications.BaasicNotificationsClient>(modules.Notifications.TYPES.BaasicNotificationsClient);
-
+        this.applicationSettingModule = this.diModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
+        this.keyValueModule = this.diModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);
+        this.valueSetModule = this.diModule.kernel.get<modules.ValueSet.BaasicValueSetClient>(modules.ValueSet.TYPES.BaasicValueSetClient);
+        this.userProfileModule = this.diModule.kernel.get<modules.UserProfile.Root>(modules.UserProfile.TYPES.Root);
+        this.templatingModule = this.diModule.kernel.get<modules.Templating.BaasicTemplatingClient>(modules.Templating.TYPES.BaasicTemplatingClient);
+        this.meteringModule = this.diModule.kernel.get<modules.Metering.BaasicMeteringClient>(modules.Metering.TYPES.BaasicMeteringClient);
+        this.mediaVaultModule = this.diModule.kernel.get<modules.MediaVault.BaasicMediaVaultClient>(modules.MediaVault.TYPES.BaasicMediaVaultClient);
+        this.fileModule = this.diModule.kernel.get<modules.Files.BaasicFilesClient>(modules.Files.TYPES.BaasicFilesClient);
+        this.dynamicResourceModule = this.diModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
+        this.notificationModule = this.diModule.kernel.get<modules.Notifications.BaasicNotificationsClient>(modules.Notifications.TYPES.BaasicNotificationsClient);
+        this.articleModule = this.diModule.kernel.get<modules.Article.Root>(modules.Article.TYPES.Root);
     }
 
     getAccessToken(): IToken {

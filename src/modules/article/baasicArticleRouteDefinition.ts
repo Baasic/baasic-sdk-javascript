@@ -17,12 +17,10 @@ import {
     BaasicArticleInstanceTagsRouteDefinition,
     TYPES as articleTypes
 } from 'modules/article';
-import { IArticle } from 'modules/article/contracts';
+import { IArticle, IArticleOptions } from 'modules/article/contracts';
 
 @injectable()
 export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
-
-    private utility = new Utility();
 
     public readonly findRoute: string = 'articles/{?searchQuery,page,rpp,sort,embed,fields,statuses,tags,startDate,endDate}';
 
@@ -94,7 +92,7 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * @method                        
      * @example baasicArticleRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
      **/
-    find(options?: IOptions): any {
+    find(options?: IArticleOptions): any {
         var opt = options || {};
         opt.startDate = this.getStartDate(opt);
         opt.endDate = this.getEndDate(opt);

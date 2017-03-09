@@ -29,3 +29,4 @@ export * from './baasicArticleTagsRouteDefinition';
 export * from './baasicArticleTagsClient';
 export * from './baasicArticleRouteDefinition';
 export * from './baasicArticleClient';
+export * from './root';

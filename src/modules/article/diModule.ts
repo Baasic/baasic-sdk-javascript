@@ -45,7 +45,8 @@ import {
     BaasicArticleInstanceFilesBatchRouteDefinition,
     BaasicArticleInstanceFilesBatchClient,
     BaasicArticleACLRouteDefinition,
-    BaasicArticleACLClient
+    BaasicArticleACLClient,
+    Root
 } from 'modules/article';
 
 const TYPES = {
@@ -94,7 +95,8 @@ const TYPES = {
     BaasicArticleInstanceFilesBatchRouteDefinition: Symbol("BaasicArticleInstanceFilesBatchRouteDefinition"),
     BaasicArticleInstanceFilesBatchClient: Symbol("BaasicArticleInstanceFilesBatchClient"),
     BaasicArticleACLRouteDefinition: Symbol(" BaasicArticleACLRouteDefinition"),
-    BaasicArticleACLClient: Symbol("BaasicArticleACLClient")
+    BaasicArticleACLClient: Symbol("BaasicArticleACLClient"),
+    Root: Symbol("Root")
 };
 
 export { TYPES };
