@@ -1,10 +1,14 @@
 import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient } from 'httpApi';
 
 declare var $: any;
+let client: IHttpClient = {
+    request : request,
+    cratePromise: createPromise
+}
 
-var client: IHttpClient;
+export { client };
 
-client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<ResponseType>> => {
+function request<ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<ResponseType>> {
     var jqueryParams: any = {
         method: request.method,
         xhrFields: {
@@ -39,7 +43,13 @@ client = <ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse<Respon
                 data: jqXHR.responseText || jqXHR.responseXML
             };
         });
-};
+}
+
+function createPromise<TData>(deferFn: (resolve:(data: TData) => void, reject: (data: any) => void) => void): PromiseLike<TData> {
+    let deferred = $.Deferred();
+    deferFn(deferred.resolve, deferred.reject);
+    return deferred.promise();
+}
 
 function parseHeaders(headers: string): IHttpHeaders {
     let result: IHttpHeaders = {};
@@ -57,8 +67,5 @@ function parseHeaders(headers: string): IHttpHeaders {
     }
     return result;
 }
-
-
-export { client };
 
 
