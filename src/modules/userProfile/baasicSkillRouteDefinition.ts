@@ -13,6 +13,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'profile/lookups/skills';
+
+    public readonly createRoute: string = 'profile/lookups/skills';
+
+    public readonly updateRoute: string = 'profile/lookups/skills/{id}';
+
+    public readonly deleteRoute: string = 'lookups/skills/{id}';
+
     get batch(): BaasicSkillBatchRouteDefinition {
         return this.baasicSkillBatchRouteDefinition;
     }
@@ -34,7 +44,7 @@ export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicSkillRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -45,7 +55,7 @@ export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicSkillRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('profile/lookups/skills', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -54,7 +64,7 @@ export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicSkillRouteDefinition.create();                              
      **/
     create(): any {
-        return super.baseCreate('profile/lookups/skills', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                 
@@ -64,7 +74,7 @@ export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicSkillRouteDefinition.update(data);                              
      **/
     update(data: ISkill): any {
-        return super.baseUpdate('profile/lookups/skills/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -74,6 +84,6 @@ export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicSkillRouteDefinition.delete(data);                              
      **/
     delete(data: ISkill): any {
-        return super.baseDelete('lookups/skills/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }

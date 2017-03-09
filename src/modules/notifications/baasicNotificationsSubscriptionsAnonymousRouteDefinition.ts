@@ -14,6 +14,16 @@ import { IAnonymousSubscription } from 'modules/notifications/contracts';
 @injectable()
 export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/subscriptions/batch';
+
+    public readonly findRoute: string = 'notifications/subscriptions/anonymous/{?searchQuery,registrationIds,channels,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'notifications/subscriptions/anonymous/{id}/{?embed,fields}';
+
+    public readonly deleteRoute: string = 'notifications/subscriptions/anonymous/{id}';
+
+    public readonly updateRoute: string = 'notifications/subscriptions/anonymous/{id}';
+
     get batch(): BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition {
         return this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition;
     }
@@ -29,7 +39,7 @@ export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends Ba
      * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.create();                          
      */
     create(): any {
-        return super.baseCreate('notifications/subscriptions/batch', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                          
@@ -49,7 +59,7 @@ export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends Ba
                });                          
     */
     find(options?: IOptions): any {
-        return super.baseFind('notifications/subscriptions/anonymous/{?searchQuery,registrationIds,channels,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                          
@@ -60,7 +70,7 @@ export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends Ba
      * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.get({id: '<subscription-id>'});                          
      */
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('notifications/subscriptions/anonymous/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                          
@@ -70,7 +80,7 @@ export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends Ba
      * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.delete(data);                          
      */
     delete(data: IAnonymousSubscription): any {
-        return super.baseDelete('notifications/subscriptions/anonymous/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**                          
@@ -80,7 +90,7 @@ export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends Ba
      * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.update(data);                          
      */
     update(data: IAnonymousSubscription): any {
-        return super.baseUpdate('notifications/subscriptions/anonymous/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

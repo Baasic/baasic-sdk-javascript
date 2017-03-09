@@ -10,6 +10,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'lookups/companies/batch';
+
+    public readonly updateRoute: string = 'lookups/companies/batch';
+
+    public readonly deleteRoute: string = 'lookups/companies/batch';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -18,7 +24,7 @@ export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicCompanyRouteDefinition.create();                                  
      **/
     create(): any {
-        return super.baseCreate('lookups/companies/batch', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                     
@@ -27,7 +33,7 @@ export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicCompanyRouteDefinition.update();                                  
      **/
     update(): any {
-        return super.baseUpdate('lookups/companies/batch', {});
+        return super.baseUpdate(this.updateRoute, {});
     }
 
     /**                     
@@ -36,7 +42,7 @@ export class BaasicCompanyBatchRouteDefinition extends BaasicBaseRouteDefinition
      * @example baasicCompanyRouteDefinition.remove();                                  
      **/
     delete(): any {
-        return super.baseDelete('lookups/companies/batch', {});
+        return super.baseDelete(this.deleteRoute, {});
     }
 }
 

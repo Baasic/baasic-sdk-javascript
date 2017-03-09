@@ -13,6 +13,12 @@ import { IUserRegistration } from 'modules/notifications/contracts';
 @injectable()
 export class BaasicNotificationsRegistrationsUsersBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/registrations/batch';
+
+    public readonly deleteRoute: string = 'notifications/registrations/batch';
+
+    public readonly updateRoute: string = 'notifications/registrations/batch';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -23,7 +29,7 @@ export class BaasicNotificationsRegistrationsUsersBatchRouteDefinition extends B
      * @example baasicNotificationsRegistrationsUsersBatchRouteDefinition.create();                              
      */
     create(): any {
-        return this.baseCreate('notifications/registrations/batch', {});
+        return this.baseCreate(this.createRoute, {});
     }
 
     /**                              
@@ -32,7 +38,7 @@ export class BaasicNotificationsRegistrationsUsersBatchRouteDefinition extends B
      * @example baasicNotificationsRegistrationsUsersBatchRouteDefinition.delete();                              
      */
     delete(): any {
-        return this.baseDelete('notifications/registrations/batch', {});
+        return this.baseDelete(this.deleteRoute, {});
     }
 
     /**                              
@@ -41,7 +47,7 @@ export class BaasicNotificationsRegistrationsUsersBatchRouteDefinition extends B
      * @example baasicNotificationsRegistrationsUsersBatchRouteDefinition.update();                              
      */
     update(): any {
-        return this.baseUpdate('notifications/registrations/batch', {});
+        return this.baseUpdate(this.updateRoute, {});
     }
 }
 

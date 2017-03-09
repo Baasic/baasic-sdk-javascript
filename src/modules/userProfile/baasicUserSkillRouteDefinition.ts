@@ -12,6 +12,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'profiles/{userId}/skills/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'profiles/{userId}/skills/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'profiles/{userId}/skills';
+
+    public readonly updateRoute: string = 'profiles/{userId}/skills/{id}';
+
+    public readonly deleteRoute: string = 'profiles/{userId}/skills/{id}';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
@@ -26,7 +36,7 @@ export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserSkillRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('profiles/{userId}/skills/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -37,7 +47,7 @@ export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserSkillRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('profiles/{userId}/skills/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -47,7 +57,7 @@ export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserSkillRouteDefinition.create(data);                              
      **/
     create(data: IUserSkill): any {
-        return super.baseCreate('profiles/{userId}/skills', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 
@@ -57,7 +67,7 @@ export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserSkillRouteDefinition.update(data);                              
      **/
     update(data: IUserSkill): any {
-        return super.baseUpdate('profiles/{userId}/skills/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     /**                 
@@ -67,7 +77,7 @@ export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserSkillRouteDefinition.delete(data);                              
      **/
     delete(data: IUserSkill): any {
-        return super.baseDelete('profiles/{userId}/skills/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

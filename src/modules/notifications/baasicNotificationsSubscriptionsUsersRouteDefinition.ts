@@ -14,6 +14,16 @@ import { IUserSubscription } from 'modules/notifications/contracts';
 @injectable()
 export class BaasicNotificationsSubscriptionsUsersRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/subscriptions';
+
+    public readonly findRoute: string = 'notifications/subscriptions/{?searchQuery,userIds,channels,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'notifications/subscriptions/{id}/{?embed,fields}';
+
+    public readonly deleteRoute: string = 'notifications/subscriptions/{id}';
+
+    public readonly updateRoute: string = 'notifications/subscriptions/{id}';
+
     batch(): BaasicNotificationsSubscriptionsUsersBatchRouteDefinition {
         return this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition;
     }
@@ -29,7 +39,7 @@ export class BaasicNotificationsSubscriptionsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsSubscriptionsUsersRouteDefinition.create();                          
      */
     create(): any {
-        return super.baseCreate('notifications/subscriptions', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                          
@@ -45,7 +55,7 @@ export class BaasicNotificationsSubscriptionsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsSubscriptionsUsersRouteDefinition.find({ searchQuery: '<search-phrase>', channels: '<channel-name>,<channel-name>' });                          
      */
     find(options?: IOptions): any {
-        return super.baseFind('notifications/subscriptions/{?searchQuery,userIds,channels,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                          
@@ -56,7 +66,7 @@ export class BaasicNotificationsSubscriptionsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsSubscriptionsUsersRouteDefinition.get({ id: '<subscription-id>' });                          
      */
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('notifications/subscriptions/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                          
@@ -66,7 +76,7 @@ export class BaasicNotificationsSubscriptionsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsSubscriptionsUsersRouteDefinition.delete(data);                          
      */
     delete(data: IUserSubscription): any {
-        return super.baseDelete('notifications/subscriptions/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 
     /**                          
@@ -76,7 +86,7 @@ export class BaasicNotificationsSubscriptionsUsersRouteDefinition extends Baasic
      * @example baasicNotificationsSubscriptionsUsersRouteDefinition.update(data);                          
      */
     update(data: IUserSubscription): any {
-        return super.baseUpdate('notifications/subscriptions/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

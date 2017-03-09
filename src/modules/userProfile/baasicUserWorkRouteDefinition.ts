@@ -12,6 +12,16 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserWorkRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly findRoute: string = 'profiles/{userId}/work/{?searchQuery,page,rpp,sort,embed,fields}';
+
+    public readonly getRoute: string = 'profiles/{userId}/work/{id}/{?embed,fields}';
+
+    public readonly createRoute: string = 'profiles/{userId}/work';
+
+    public readonly updateRoute: string = 'profiles/{userId}/work/{id}';
+
+    public readonly deleteRoute: string = 'profiles/{userId}/work/{id}';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
@@ -26,7 +36,7 @@ export class BaasicUserWorkRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserWorkRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
-        return super.baseFind('profiles/{userId}/work/{?searchQuery,page,rpp,sort,embed,fields}', options);
+        return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -37,7 +47,7 @@ export class BaasicUserWorkRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserWorkRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet('profiles/{userId}/work/{id}/{?embed,fields}', id, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -47,7 +57,7 @@ export class BaasicUserWorkRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicUserWorkRouteDefinition.create(data);                              
      **/
     create(data: IUserWork): any {
-        return super.baseCreate('profiles/{userId}/work', data);
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 
@@ -57,11 +67,11 @@ export class BaasicUserWorkRouteDefinition extends BaasicBaseRouteDefinition {
       * @example baasicUserWorkRouteDefinition.create(data);                              
       **/
     update(data: IUserWork): any {
-        return super.baseUpdate('profiles/{userId}/work/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 
     delete(data: IUserWork): any {
-        return super.baseDelete('profiles/{userId}/work/{id}', data);
+        return super.baseDelete(this.deleteRoute, data);
     }
 }
 

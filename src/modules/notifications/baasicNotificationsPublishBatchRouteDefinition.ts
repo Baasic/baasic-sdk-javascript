@@ -11,6 +11,8 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicNotificationsPublishBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/publish/batch';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -21,7 +23,7 @@ export class BaasicNotificationsPublishBatchRouteDefinition extends BaasicBaseRo
      * @example baasicNotificationsPublishBatchRouteDefinition.create();                          
      */
     create(): any {
-        return super.baseCreate('notifications/publish/batch', {});
+        return super.baseCreate(this.createRoute, {});
     }
 }
 

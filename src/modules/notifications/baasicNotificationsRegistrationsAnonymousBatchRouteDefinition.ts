@@ -12,6 +12,10 @@ import { IAnonymousRegistration } from 'modules/notifications/contracts';
 
 export class BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'notifications/registrations/anonymous/batch';
+
+    public readonly deleteRoute: string = 'notifications/registrations/anonymous/batch';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -22,7 +26,7 @@ export class BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition exten
      * @example baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.create();                              
      */
     create(): any {
-        return this.baseCreate('notifications/registrations/anonymous/batch', {});
+        return this.baseCreate(this.createRoute, {});
     }
 
     /**                              
@@ -31,7 +35,7 @@ export class BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition exten
      * @example baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.delete();                              
      */
     delete(): any {
-        return this.baseDelete('notifications/registrations/anonymous/batch', {});
+        return this.baseDelete(this.deleteRoute, {});
     }
 
     /**                              

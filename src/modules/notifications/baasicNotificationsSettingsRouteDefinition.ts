@@ -11,6 +11,10 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 @injectable()
 export class BaasicNotificationsSettingsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'notifications/settings/{id}';
+
+    public readonly updateRoute: string = 'notifications/settings/{id}';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -22,7 +26,7 @@ export class BaasicNotificationsSettingsRouteDefinition extends BaasicBaseRouteD
      * @example baasicNotificationsSettingsRouteDefinition.get({ id: '<provider-name>' });                      
      */
     get(provider: string): any {
-        return super.baseGet('notifications/settings/{id}', provider);
+        return super.baseGet(this.getRoute, provider);
     }
 
     /**                      
@@ -32,7 +36,7 @@ export class BaasicNotificationsSettingsRouteDefinition extends BaasicBaseRouteD
      * @example baasicNotificationsSettingsRouteDefinition.update({ id: '<provider-name>' });                      
      */
     update(data: Object): any {
-        return super.baseUpdate('notifications/settings/{id}', data);
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

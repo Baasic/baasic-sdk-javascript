@@ -10,6 +10,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly getRoute: string = 'profiles/{id}/avatar-streams/{?width,height}';
+
+    public readonly createRoute: string = 'profiles/{id}/avatar-streams/{filename}';
+
+    public readonly updateRoute: string = 'profiles/{id}/avatar-streams/{?width,height}';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -25,7 +31,7 @@ export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRou
                 id: data
             };
         }
-        return super.baseCreate('profiles/{id}/avatar-streams/{?width,height}', data);
+        return super.baseCreate(this.getRoute, data);
     }
 
     /**                     
@@ -41,7 +47,7 @@ export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRou
         }
         let params = this.utility.extend({}, data);
         params.id = id;
-        return super.baseCreate('profiles/{id}/avatar-streams/{filename}', params);
+        return super.baseCreate(this.createRoute, params);
     }
 
     /**                     
@@ -58,7 +64,7 @@ export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRou
                 id: data
             };
         }
-        return super.baseCreate('profiles/{id}/avatar-streams/{?width,height}', data);
+        return super.baseCreate(this.updateRoute, data);
     }
 }
 

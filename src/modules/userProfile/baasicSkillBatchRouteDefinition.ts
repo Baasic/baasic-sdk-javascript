@@ -10,6 +10,12 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class BaasicSkillBatchRouteDefinition extends BaasicBaseRouteDefinition {
 
+    public readonly createRoute: string = 'profile/lookups/skills/batch';
+
+    public readonly updateRoute: string = 'profile/lookups/skills/batch';
+
+    public readonly deleteRoute: string = 'profile/lookups/skills/batch';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
@@ -18,7 +24,7 @@ export class BaasicSkillBatchRouteDefinition extends BaasicBaseRouteDefinition {
      * @example baasicSkillBatchRouteDefinition.create();                                  
      **/
     create(): any {
-        return super.baseCreate('profile/lookups/skills/batch', {});
+        return super.baseCreate(this.createRoute, {});
     }
 
     /**                     
@@ -27,7 +33,7 @@ export class BaasicSkillBatchRouteDefinition extends BaasicBaseRouteDefinition {
       * @example baasicSkillBatchRouteDefinition.update();                                  
       **/
     update(): any {
-        return super.baseUpdate('profile/lookups/skills/batch', {});
+        return super.baseUpdate(this.updateRoute, {});
     }
 
     /**                     
@@ -36,7 +42,7 @@ export class BaasicSkillBatchRouteDefinition extends BaasicBaseRouteDefinition {
       * @example baasicSkillBatchRouteDefinition.delete();                                  
       **/
     delete(): any {
-        return super.baseDelete('profile/lookups/skills/batch', {});
+        return super.baseDelete(this.deleteRoute, {});
     }
 }
 
