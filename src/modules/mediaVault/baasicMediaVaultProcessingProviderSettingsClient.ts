@@ -13,6 +13,10 @@ import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 @injectable()
 export class BaasicMediaVaultProcessingProviderSettingsClient {
 
+    get routeDefinition(): BaasicMediaVaultProcessingProviderSettingsRouteDefinition {
+        return this.baasicMediaVaultProcessingProviderSettingsRouteDefinition;
+    }
+
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: BaasicMediaVaultProcessingProviderSettingsRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient

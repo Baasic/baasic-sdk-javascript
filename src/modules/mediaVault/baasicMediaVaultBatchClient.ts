@@ -13,6 +13,10 @@ import { IMediaEntry } from 'modules/mediaVault/contracts';
 @injectable()
 export class BaasicMediaVaultBatchClient {
 
+    get routeDefinition(): BaasicMediaVaultBatchRouteDefinition {
+        return this.baasicMediaVaultBatchRouteDefinition;
+    }
+
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: BaasicMediaVaultBatchRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient

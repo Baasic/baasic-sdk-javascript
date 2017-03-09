@@ -87,13 +87,14 @@ export class BaasicPermissionClient {
             // perform error handling here
             }); 
     **/
-    getPermissionSubjects(options: any): PromiseLike<IHttpResponse<any>> {
+    getPermissionSubjects(options: any): PromiseLike<any> {
         let membershipCollection = [];
+        let queue: PromiseLike<any>[] = [];
         let resolvedTasks = 0;
         var self = this;
-        return this.getUsers(options)
+        queue.push(this.getUsers(options)
             .then(function (collection) {
-                collection.data.forEach(element => {
+                collection.data.item.forEach(element => {
                     var membershipItem = {
                         name: element.userName,
                         role: ''
@@ -101,29 +102,33 @@ export class BaasicPermissionClient {
                     self.utility.extend(membershipItem, element);
                     membershipCollection.push(membershipItem);
                 });
-
-                self.getRoles(options)
-                    .then(function (collection) {
-                        collection.data.forEach(element => {
-                            var membershipItem = {
-                                name: element.name,
-                                roleName: element.name,
-                                userName: ''
-                            };
-                            self.utility.extend(membershipItem, element);
-                            membershipCollection.push(membershipItem);
-                            return self.utility.OrderByArray(membershipCollection, 'name');
-                        });
-                    }, function (data) {
-                        if (data.status !== undefined && data.status !== 403) {
-                            return data;
-                        }
-                    });
             }, function (data) {
                 if (data.status !== undefined && data.status !== 403) {
                     return data;
                 }
-            });
+            }));
+
+
+        queue.push(self.getRoles(options)
+            .then(function (collection) {
+                collection.data.item.forEach(element => {
+                    var membershipItem = {
+                        name: element.name,
+                        roleName: element.name,
+                        userName: ''
+                    };
+                    self.utility.extend(membershipItem, element);
+                    membershipCollection.push(membershipItem);
+                });
+            }, function (data) {
+                if (data.status !== undefined && data.status !== 403) {
+                    return data;
+                }
+            }));
+
+        return Promise.all(queue).then(function (data) {
+            return self.utility.OrderByArray(membershipCollection, 'name');
+        });
     }
 
     /**
@@ -313,11 +318,11 @@ export class BaasicPermissionClient {
         return data === undefined || data === null || data === '';
     }
 
-    private getRoles(options): PromiseLike<IHttpResponse<IRole[]>> {
+    private getRoles(options): PromiseLike<IHttpResponse<IBaasicQueryModel<IRole>>> {
         return this.baasicApiClient.get(this.baasicPermissionRouteDefinition.getRoles(options));
     }
 
-    private getUsers(options): PromiseLike<IHttpResponse<IUserInfo[]>> {
+    private getUsers(options): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserInfo>>> {
         return this.baasicApiClient.get(this.baasicPermissionRouteDefinition.getUsers(options));
     }
 

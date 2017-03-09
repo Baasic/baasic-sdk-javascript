@@ -12,6 +12,10 @@ import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/
 @injectable()
 export class BaasicFilesStreamsClient {
 
+    get routeDefinition(): BaasicFilesStreamsRouteDefinition {
+        return this.baasicFilesStreamsRouteDefinition;
+    }
+
     constructor(
         @inject(filesTypes.BaasicFilesStreamsRouteDefinition) protected baasicFilesStreamsRouteDefinition: BaasicFilesStreamsRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient

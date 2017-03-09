@@ -30,7 +30,7 @@ export class BaasicDynamicResourceClient {
         return this.baasicDynamicResourceACLClient;
     }
 
-    get dynamicSchema(): BaasicDynamicSchemaClient {
+    get schema(): BaasicDynamicSchemaClient {
         return this.baasicDynamicSchemaClient;
     }
 

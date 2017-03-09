@@ -13,6 +13,11 @@ import { IMediaVaultSettings } from 'modules/mediaVault/contracts';
 @injectable()
 export class BaasicMediaVaultSettingsClient {
 
+
+    get routeDefinition(): BaasicMediaVaultSettingsRouteDefinition {
+        return this.baasicMediaVaultSettingsRouteDefinition;
+    }
+
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: BaasicMediaVaultSettingsRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
