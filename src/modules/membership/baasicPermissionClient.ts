@@ -88,46 +88,45 @@ export class BaasicPermissionClient {
             }); 
     **/
     getPermissionSubjects(options: any): PromiseLike<any> {
-        let membershipCollection = [];
         let queue: PromiseLike<any>[] = [];
         let resolvedTasks = 0;
         var self = this;
         queue.push(this.getUsers(options)
             .then(function (collection) {
+                let membCollection: any[] = [];
                 collection.data.item.forEach(element => {
                     var membershipItem = {
                         name: element.userName,
                         role: ''
                     };
-                    self.utility.extend(membershipItem, element);
-                    membershipCollection.push(membershipItem);
+                    membCollection.push(self.utility.extend(membershipItem, element));
                 });
+                return membCollection;
             }, function (data) {
                 if (data.status !== undefined && data.status !== 403) {
                     return data;
                 }
             }));
-
-
         queue.push(self.getRoles(options)
             .then(function (collection) {
+                let membCollection: any[] = [];
                 collection.data.item.forEach(element => {
                     var membershipItem = {
                         name: element.name,
                         roleName: element.name,
                         userName: ''
                     };
-                    self.utility.extend(membershipItem, element);
-                    membershipCollection.push(membershipItem);
+                    membCollection.push(self.utility.extend(membershipItem, element));
                 });
+                return membCollection;
             }, function (data) {
                 if (data.status !== undefined && data.status !== 403) {
                     return data;
                 }
             }));
 
-        return Promise.all(queue).then(function (data) {
-            return self.utility.OrderByArray(membershipCollection, 'name');
+        return Promise.all(queue).then(function (membershipCollection) {
+            return self.utility.OrderByArray([].concat.apply([], membershipCollection), 'name');
         });
     }
 
