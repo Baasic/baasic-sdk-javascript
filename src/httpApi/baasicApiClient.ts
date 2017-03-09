@@ -21,8 +21,10 @@ export class BaasicApiClient {
         @inject(coreTYPES.ITokenHandler) private tokenHandler: ITokenHandler,
         @inject(commonTYPES.IHALParser) private halParser: IHALParser
     ) {
-
+        this.createPromise = httpClient.cratePromise;
     }
+
+    createPromise: <TData>(deferFn: (resolve:(data: TData) => void, reject: (data: any) => void) => void) => PromiseLike<TData>;
 
     request<TResponse>(request: IHttpRequest): PromiseLike<IHttpResponse<TResponse>> {
         if (request && request.url) {
@@ -45,7 +47,7 @@ export class BaasicApiClient {
         }
 
         var self = this;
-        var promise = this.httpClient<TResponse>(request);
+        var promise = this.httpClient.request<TResponse>(request);
         promise.then<IHttpResponse<TResponse>>(function (data) {
             var contentType = data.headers['Content-Type'] || data.headers['content-type'];
             if (contentType && contentType.toLowerCase().indexOf('application/hal+json') !== -1) {
