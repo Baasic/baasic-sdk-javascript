@@ -15,6 +15,7 @@ import {
     BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition
 } from 'modules/article';
 
+@injectable()
 export class BaasicArticleSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
 
     get articleModule(): BaasicArticleSubscriptionsArticleModuleRouteDefinition {

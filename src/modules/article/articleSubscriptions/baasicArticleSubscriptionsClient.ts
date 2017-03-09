@@ -16,7 +16,7 @@ import {
 } from 'modules/article';
 import { IArticle, IArticleOptions } from 'modules/article/contracts';
 
-
+@injectable()
 export class BaasicArticleSubscriptionsClient {
 
     get articleModule(): BaasicArticleSubscriptionsArticleModuleClient {
@@ -40,10 +40,10 @@ export class BaasicArticleSubscriptionsClient {
     }
 
     constructor(
-        @inject(BaasicArticleSubscriptionsArticleModuleClient) protected baasicArticleSubscriptionsArticleModuleClient: BaasicArticleSubscriptionsArticleModuleClient,
-        @inject(BaasicArticleSubscriptionsCommentReportedClient) protected baasicArticleSubscriptionsCommentReportedClient: BaasicArticleSubscriptionsCommentReportedClient,
-        @inject(BaasicArticleSubscriptionsArticleClient) protected baasicArticleSubscriptionsArticleClient: BaasicArticleSubscriptionsArticleClient,
-        @inject(BaasicArticleSubscriptionsCommentRequiresModerationClient) protected baasicArticleSubscriptionsCommentRequiresModerationClient: BaasicArticleSubscriptionsCommentRequiresModerationClient,
+        @inject(articleTypes.BaasicArticleSubscriptionsArticleModuleClient) protected baasicArticleSubscriptionsArticleModuleClient: BaasicArticleSubscriptionsArticleModuleClient,
+        @inject(articleTypes.BaasicArticleSubscriptionsCommentReportedClient) protected baasicArticleSubscriptionsCommentReportedClient: BaasicArticleSubscriptionsCommentReportedClient,
+        @inject(articleTypes.BaasicArticleSubscriptionsArticleClient) protected baasicArticleSubscriptionsArticleClient: BaasicArticleSubscriptionsArticleClient,
+        @inject(articleTypes.BaasicArticleSubscriptionsCommentRequiresModerationClient) protected baasicArticleSubscriptionsCommentRequiresModerationClient: BaasicArticleSubscriptionsCommentRequiresModerationClient,
         @inject(articleTypes.BaasicArticleSubscriptionsRouteDefinition) protected baasicArticleSubscriptionsRouteDefinition: BaasicArticleSubscriptionsRouteDefinition
     )
     { }

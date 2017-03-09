@@ -148,6 +148,7 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicArticleACLClient>(TYPES.BaasicArticleACLClient).to(BaasicArticleACLClient);
     bind<BaasicArticleRouteDefinition>(TYPES.BaasicArticleRouteDefinition).to(BaasicArticleRouteDefinition);
     bind<BaasicArticleClient>(TYPES.BaasicArticleClient).to(BaasicArticleClient);
+    bind<Root>(TYPES.Root).to(Root);
 });
 
 export { diModule };
