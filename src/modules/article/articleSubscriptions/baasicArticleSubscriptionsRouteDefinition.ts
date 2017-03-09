@@ -12,7 +12,8 @@ import {
     BaasicArticleSubscriptionsArticleModuleRouteDefinition,
     BaasicArticleSubscriptionsCommentReportedRouteDefinition,
     BaasicArticleSubscriptionsArticleRouteDefinition,
-    BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition
+    BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
+    TYPES as articleTYPES
 } from 'modules/article';
 
 @injectable()
@@ -35,10 +36,10 @@ export class BaasicArticleSubscriptionsRouteDefinition extends BaasicBaseRouteDe
     }
 
     constructor(
-        @inject(BaasicArticleSubscriptionsArticleModuleRouteDefinition) protected baasicArticleSubscriptionsArticleModuleRouteDefinition: BaasicArticleSubscriptionsArticleModuleRouteDefinition,
-        @inject(BaasicArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: BaasicArticleSubscriptionsCommentReportedRouteDefinition,
-        @inject(BaasicArticleSubscriptionsArticleRouteDefinition) protected baasicArticleSubscriptionsArticleRouteDefinition: BaasicArticleSubscriptionsArticleRouteDefinition,
-        @inject(BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
+        @inject(articleTYPES.BaasicArticleSubscriptionsArticleModuleRouteDefinition) protected baasicArticleSubscriptionsArticleModuleRouteDefinition: BaasicArticleSubscriptionsArticleModuleRouteDefinition,
+        @inject(articleTYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: BaasicArticleSubscriptionsCommentReportedRouteDefinition,
+        @inject(articleTYPES.BaasicArticleSubscriptionsArticleRouteDefinition) protected baasicArticleSubscriptionsArticleRouteDefinition: BaasicArticleSubscriptionsArticleRouteDefinition,
+        @inject(articleTYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
     { super(appOptions); }
