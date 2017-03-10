@@ -10,7 +10,7 @@ import { Utility } from 'common';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
     BaasicArticleACLClient,
-    BaasicArticleHelpers,
+    BaasicArticleUtility,
     BaasicArticleRouteDefinition,
     BaasicArticleSubscriptionsClient,
     BaasicArticleInstanceCommentsClient,
@@ -53,7 +53,7 @@ export class BaasicArticleClient {
         return this.baasicArticleACLClient;
     }
 
-    protected helpers: BaasicArticleHelpers = new BaasicArticleHelpers();
+    public articleUtility: BaasicArticleUtility = new BaasicArticleUtility();
 
     constructor(
         @inject(articleTypes.BaasicArticleInstanceCommentsClient) protected baasicArticleInstanceCommentsClient: BaasicArticleInstanceCommentsClient,
