@@ -13,3 +13,4 @@ export * from './baasicCommerceProductRouteDefinition';
 export * from './baasicCommerceProductClient';
 export * from './baasicCommerceRouteDefinition';
 export * from './baasicCommerceClient';
+export * from './lookups';

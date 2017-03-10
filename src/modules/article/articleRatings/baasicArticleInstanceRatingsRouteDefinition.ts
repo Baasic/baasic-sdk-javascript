@@ -52,7 +52,9 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
      * @example baasicArticleInstanceRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(articleId: string, options?: IOptions): any {
-        return super.baseFind(this.findRoute, options);
+        let params = this.utility.extend({}, options);
+        params.articleId = articleId;
+        return super.baseFind(this.findRoute, params);
     }
 
     /**                 
@@ -65,9 +67,10 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
      * @method                        
      * @example baasicArticleInstanceRatingsRouteDefinition.find({username: '<username>'});                               
      **/
-    findByUser(username: string, options?: IOptions): any {
+    findByUser(articleId: string, username: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
         params.username = username;
+        params.articleId = articleId;
         return super.baseFind(this.findByUserRoute, params);
     }
 
@@ -77,8 +80,10 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
      * @method                        
      * @example baasicArticleInstanceRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
      **/
-    get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet(this.getRoute, id, options);
+    get(articleId, id: string, options?: IGetRequestOptions): any {
+        let params = this.utility.extend({}, options);
+        params.articleId = articleId;
+        return super.baseGet(this.getRoute, id, params);
     }
 
     /**                 

@@ -13,12 +13,12 @@ import { IArticle, IArticleSubscription } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSubscriptionsArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
-    public readonly subscribeRoute: string = 'articles/{id}/subscriptions';
+    public readonly subscribeRoute: string = 'articles/{articleId}/subscriptions';
 
-    public readonly isSubscribedRoute: string = 'articles/{id}/subscriptions/{subscriberId}';
+    public readonly isSubscribedRoute: string = 'articles/{articleId}/subscriptions/{subscriberId}';
 
-    public readonly unSubscribeRoute: string = 'articles/{id}/subscriptions';
-    
+    public readonly unSubscribeRoute: string = 'articles/{articleId}/subscriptions';
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )

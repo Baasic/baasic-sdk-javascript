@@ -28,7 +28,7 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
 
     public readonly unlinkByArticleRoute: string = 'articles/{articleId}/files/unlink/{id}';
 
-    public readonly updateRoute: string = 'article-files/{id}';
+    public readonly updateRoute: string = 'articles/{articleId}/comments/{id}';
 
     get streams(): BaasicArticleInstanceFilesStreamsRouteDefinition {
         return this.baasicArticleInstanceFilesStreamsRouteDefinition;

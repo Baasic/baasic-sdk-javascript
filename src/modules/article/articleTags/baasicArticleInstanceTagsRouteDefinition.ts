@@ -38,8 +38,10 @@ export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDef
      * @method      				
      * @example baasicArticleInstanceTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
      **/
-    find(options?: IOptions): any {
-        return super.baseFind(this.findRoute, options);
+    find(articleId: string, options?: IOptions): any {
+        let params = this.utility.extend({}, options);
+        params.articleId = articleId;
+        return super.baseFind(this.findRoute, params);
     }
 
     /**                 
@@ -48,8 +50,10 @@ export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDef
      * @method      				
      * @example baasicArticleInstanceTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
-    get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet(this.getRoute, id, options);
+    get(articleId: string, id: string, options?: IGetRequestOptions): any {
+        let params = this.utility.extend({}, options);
+        params.articleId = articleId;
+        return super.baseGet(this.getRoute, id, params);
     }
 
     /**                 

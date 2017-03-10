@@ -13,7 +13,19 @@ import {
     BaasicCommerceProductClient,
     BaasicCommerceProductRouteDefinition,
     BaasicCommerceClient,
-    BaasicCommerceRouteDefinition
+    BaasicCommerceRouteDefinition,
+    BaasicCommerceLookupsAddressTypesBatchClient,
+    BaasicCommerceLookupsAddressTypeBatchRouteDefinition,
+    BaasicCommerceLookupsAddressTypesClient,
+    BaasicCommerceLookupsAddressTypeRouteDefinition,
+    BaasicCommerceCountryBatchClient,
+    BaasicCommerceLookupsCountryBatchRouteDefinition,
+    BaasicCommerceLookupsCountryClient,
+    BaasicCommerceLookupsCountryRouteDefinition,
+    BaasicCommerceCountryStateBatchClient,
+    BaasicCommerceLookupsCountryStateBatchRouteDefinition,
+    BaasicCommerceLookupsCountryStateClient,
+    BaasicCommerceLookupsCountryStateRouteDefinition
 } from 'modules/commerce';
 
 const TYPES = {
@@ -30,7 +42,19 @@ const TYPES = {
     BaasicCommerceProductClient: Symbol("BaasicCommerceProductClient"),
     BaasicCommerceProductRouteDefinition: Symbol("BaasicCommerceProductRouteDefinition"),
     BaasicCommerceClient: Symbol("BaasicCommerceClient"),
-    BaasicCommerceRouteDefinition: Symbol("BaasicCommerceRouteDefinition")
+    BaasicCommerceRouteDefinition: Symbol("BaasicCommerceRouteDefinition"),
+    BaasicCommerceLookupsAddressTypesBatchClient: Symbol("BaasicCommerceLookupsAddressTypesBatchClient"),
+    BaasicCommerceLookupsAddressTypeBatchRouteDefinition: Symbol("BaasicCommerceLookupsAddressTypeBatchRouteDefinition"),
+    BaasicCommerceLookupsAddressTypesClient: Symbol("BaasicCommerceLookupsAddressTypesClient"),
+    BaasicCommerceLookupsAddressTypeRouteDefinition: Symbol("BaasicCommerceLookupsAddressTypeRouteDefinition"),
+    BaasicCommerceCountryBatchClient: Symbol("BaasicCommerceCountryBatchClient"),
+    BaasicCommerceLookupsCountryBatchRouteDefinition: Symbol("BaasicCommerceLookupsCountryBatchRouteDefinition"),
+    BaasicCommerceLookupsCountryClient: Symbol("BaasicCommerceLookupsCountryClient"),
+    BaasicCommerceLookupsCountryRouteDefinition: Symbol("BaasicCommerceLookupsCountryRouteDefinition"),
+    BaasicCommerceCountryStateBatchClient: Symbol("BaasicCommerceCountryStateBatchClient"),
+    BaasicCommerceLookupsCountryStateBatchRouteDefinition: Symbol("BaasicCommerceLookupsCountryStateBatchRouteDefinition"),
+    BaasicCommerceLookupsCountryStateClient: Symbol("BaasicCommerceLookupsCountryStateClient"),
+    BaasicCommerceLookupsCountryStateRouteDefinition: Symbol("BaasicCommerceLookupsCountryStateRouteDefinition")
 };
 
 export { TYPES };
@@ -50,6 +74,18 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicCommerceProductClient>(TYPES.BaasicCommerceProductClient).to(BaasicCommerceProductClient);
     bind<BaasicCommerceRouteDefinition>(TYPES.BaasicCommerceRouteDefinition).to(BaasicCommerceRouteDefinition);
     bind<BaasicCommerceClient>(TYPES.BaasicCommerceClient).to(BaasicCommerceClient);
+    bind<BaasicCommerceLookupsAddressTypeBatchRouteDefinition>(TYPES.BaasicCommerceLookupsAddressTypeBatchRouteDefinition).to(BaasicCommerceLookupsAddressTypeBatchRouteDefinition);
+    bind<BaasicCommerceLookupsAddressTypesBatchClient>(TYPES.BaasicCommerceLookupsAddressTypesBatchClient).to(BaasicCommerceLookupsAddressTypesBatchClient);
+    bind<BaasicCommerceLookupsAddressTypeRouteDefinition>(TYPES.BaasicCommerceLookupsAddressTypeRouteDefinition).to(BaasicCommerceLookupsAddressTypeRouteDefinition);
+    bind<BaasicCommerceLookupsAddressTypesClient>(TYPES.BaasicCommerceLookupsAddressTypesClient).to(BaasicCommerceLookupsAddressTypesClient);
+    bind<BaasicCommerceLookupsCountryBatchRouteDefinition>(TYPES.BaasicCommerceLookupsCountryBatchRouteDefinition).to(BaasicCommerceLookupsCountryBatchRouteDefinition);
+    bind<BaasicCommerceCountryBatchClient>(TYPES.BaasicCommerceCountryBatchClient).to(BaasicCommerceCountryBatchClient);
+    bind<BaasicCommerceLookupsCountryRouteDefinition>(TYPES.BaasicCommerceLookupsCountryRouteDefinition).to(BaasicCommerceLookupsCountryRouteDefinition);
+    bind<BaasicCommerceLookupsCountryClient>(TYPES.BaasicCommerceLookupsCountryClient).to(BaasicCommerceLookupsCountryClient);
+    bind<BaasicCommerceLookupsCountryStateBatchRouteDefinition>(TYPES.BaasicCommerceLookupsCountryStateBatchRouteDefinition).to(BaasicCommerceLookupsCountryStateBatchRouteDefinition);
+    bind<BaasicCommerceCountryStateBatchClient>(TYPES.BaasicCommerceCountryStateBatchClient).to(BaasicCommerceCountryStateBatchClient);
+    bind<BaasicCommerceLookupsCountryStateRouteDefinition>(TYPES.BaasicCommerceLookupsCountryStateRouteDefinition).to(BaasicCommerceLookupsCountryStateRouteDefinition);
+    bind<BaasicCommerceLookupsCountryStateClient>(TYPES.BaasicCommerceLookupsCountryStateClient).to(BaasicCommerceLookupsCountryStateClient);
 });
 
 export { diModule };
