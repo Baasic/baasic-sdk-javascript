@@ -40,8 +40,8 @@ export class BaasicArticleInstanceTagsClient {
                     // perform error handling here 
                 });                    
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleTag>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceTagsRouteDefinition.find(options));
+    find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleTag>>> {
+        return this.baasicApiClient.get(this.baasicArticleInstanceTagsRouteDefinition.find(articleId, options));
     }
 
     /**                 
@@ -57,8 +57,8 @@ export class BaasicArticleInstanceTagsClient {
                        // perform error handling here 
                    });                
     **/
-    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceTagsRouteDefinition.get(id, options));
+    get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
+        return this.baasicApiClient.get(this.baasicArticleInstanceTagsRouteDefinition.get(articleId, id, options));
     }
 
     /**                     

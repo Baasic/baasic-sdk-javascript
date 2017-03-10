@@ -17,7 +17,7 @@
         "build",
         "src/modules/applicationSettings",
         "src/modules/article",
-        /*"src/modules/commerce",*/
+        "src/modules/commerce",
         "src/modules/dynamicResource",
         "src/modules/metering",
         "src/modules/files",

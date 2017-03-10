@@ -40,7 +40,7 @@ export class BaasicArticleInstanceCommentRepliesRouteDefinition extends BaasicBa
     public readonly spamRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{id}/spam';
 
     public readonly unspamRoute: string = '/articles/{articleId}/comments/{commentId}/replies/{id}/unspam';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -78,8 +78,7 @@ export class BaasicArticleInstanceCommentRepliesRouteDefinition extends BaasicBa
         let params = this.utility.extend({}, options);
         params.articleId = articleId;
         params.commentId = commentId;
-        params.id = replyId;
-        return super.baseGet(this.getRoute, params);
+        return super.baseGet(this.getRoute, replyId, params);
     }
 
     /**

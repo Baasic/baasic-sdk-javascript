@@ -80,8 +80,8 @@ export class BaasicArticleInstanceRatingsClient {
                     // perform error handling here 
                 });                     
      **/
-    findByUser(username: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(username, options));
+    findByUser(articleId: string, username: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
+        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
     }
 
     /**                  
@@ -95,8 +95,8 @@ export class BaasicArticleInstanceRatingsClient {
                         // perform error handling here 
                     });                 
      **/
-    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.get(id, options));
+    get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
+        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.get(articleId, id, options));
     }
 
     /**                  
