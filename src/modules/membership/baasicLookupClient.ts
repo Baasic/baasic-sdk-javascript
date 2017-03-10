@@ -55,7 +55,16 @@ export class BaasicLookupClient {
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<ILookup>> {
         let embed = options.embed || 'role,accessAction,accessSection,snProvider';
         var opt = this.utility.extend({}, options, { embed: embed });
-        return this.baasicApiClient.get(this.baasicLookupRouteDefinition.get(opt));
+        var self = this;
+        return this.baasicApiClient.createPromise<any>((resolve, reject) => {
+            this.baasicApiClient.get(this.baasicLookupRouteDefinition.get(opt))
+                .then<any>(function (data) {
+                    var responseData = self.getResponseData(embed, data);
+                    resolve(responseData);
+                }, function (data) {
+                    reject(data);
+                });
+        });
     }
 }
 
