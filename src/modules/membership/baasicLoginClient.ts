@@ -56,19 +56,22 @@ export class BaasicLoginClient {
             password: settings.password
         });
         var self = this;
-        var promise = this.baasicApiClient.post<any>(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' });
-        promise.then<any>(function (data) {
-            let token: IToken = {
-                token: data.data.access_token,
-                expires_in: data.data.expires_in,
-                sliding_window: data.data.sliding_window,
-                tokenUrl: data.data.access_url_token,
-                type: data.data.token_type
-            };
-            self.tokenHandler.store(token);
-            return data;
+        return this.baasicApiClient.createPromise<any>((resolve, reject) => {
+            this.baasicApiClient.post<any>(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
+                .then<any>(function (data) {
+                    let token: IToken = {
+                        token: data.data.access_token,
+                        expires_in: data.data.expires_in,
+                        sliding_window: data.data.sliding_window,
+                        tokenUrl: data.data.access_url_token,
+                        type: data.data.token_type
+                    };
+                    self.tokenHandler.store(token);
+                    resolve(data);
+                }, function (data) {
+                    reject(data);
+                });
         });
-        return promise;
     }
 
     /** 				
@@ -109,10 +112,15 @@ export class BaasicLoginClient {
             type: type
         };
         var self = this;
-        return this.baasicApiClient.delete(this.baasicLoginRouteDefinition.login({}), data)
-            .then(function () {
-                self.tokenHandler.store(null);
-            });
+        return this.baasicApiClient.createPromise<void>((resolve, reject) => {  
+            this.baasicApiClient.delete(this.baasicLoginRouteDefinition.login({}), data)
+                .then(function (result) {
+                    self.tokenHandler.store(null);
+                    resolve();
+                }, (data) => {
+                    reject(data);
+                });
+        });
     }
 
     /**              
