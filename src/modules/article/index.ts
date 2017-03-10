@@ -1,5 +1,6 @@
 export * from './diModule';
 export * from './alphabet';
+export * from './constants';
 export * from './baasicArticleHelpers';
 export * from './baasicArticleClient';
 export * from './articleSubscriptions';

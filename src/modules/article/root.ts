@@ -1,10 +1,10 @@
 import {
     BaasicArticleClient,
-    BaasicArticleInstanceCommentsClient,
-    BaasicArticleInstanceFilesClient,
-    BaasicArticleInstanceRatingsClient,
+    BaasicArticleCommentsClient,
+    BaasicArticleFilesClient,
+    BaasicArticleRatingsClient,
     BaasicArticleSubscriptionsClient,
-    BaasicArticleInstanceTagsClient,
+    BaasicArticleTagsClient,
     TYPES
 } from 'modules/article';
 
@@ -17,11 +17,11 @@ export class Root {
 
     constructor(
         @inject(TYPES.BaasicArticleClient) public articles: BaasicArticleClient,
-        @inject(TYPES.BaasicArticleInstanceCommentsClient) public comments: BaasicArticleInstanceCommentsClient,
-        @inject(TYPES.BaasicArticleInstanceFilesClient) public files: BaasicArticleInstanceFilesClient,
-        @inject(TYPES.BaasicArticleInstanceRatingsClient) public ratings: BaasicArticleInstanceRatingsClient,
+        @inject(TYPES.BaasicArticleCommentsClient) public comments: BaasicArticleCommentsClient,
+        @inject(TYPES.BaasicArticleFilesClient) public files: BaasicArticleFilesClient,
+        @inject(TYPES.BaasicArticleRatingsClient) public ratings: BaasicArticleRatingsClient,
         @inject(TYPES.BaasicArticleSubscriptionsClient) public subscriptions: BaasicArticleSubscriptionsClient,
-        @inject(TYPES.BaasicArticleInstanceTagsClient) public tags: BaasicArticleInstanceTagsClient
+        @inject(TYPES.BaasicArticleTagsClient) public tags: BaasicArticleTagsClient
     ) {
     }
 

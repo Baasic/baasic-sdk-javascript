@@ -17,9 +17,11 @@ import {
     BaasicArticleInstanceFilesClient,
     BaasicArticleInstanceRatingsClient,
     BaasicArticleInstanceTagsClient,
+    ArticleStatus,
+    CommentStatus,
     TYPES as articleTypes
 } from 'modules/article';
-import { IArticle, IArticleOptions } from 'modules/article/contracts';
+import { IArticle, IArticleOptions, IArticleStatus, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
 export class BaasicArticleClient {
@@ -33,10 +35,6 @@ export class BaasicArticleClient {
      **/
     get routeDefinition(): BaasicArticleRouteDefinition {
         return this.baasicArticleRouteDefinition;
-    }
-
-    get subscriptions(): BaasicArticleSubscriptionsClient {
-        return this.baasicArticleSubscriptionsClient;
     }
 
     get comments(): BaasicArticleInstanceCommentsClient {
@@ -55,11 +53,10 @@ export class BaasicArticleClient {
         return this.baasicArticleACLClient;
     }
 
-    public helpers: BaasicArticleHelpers = new BaasicArticleHelpers();
+    protected helpers: BaasicArticleHelpers = new BaasicArticleHelpers();
 
     constructor(
-        @inject(articleTypes.BaasicArticleSubscriptionsClient) protected baasicArticleSubscriptionsClient: BaasicArticleSubscriptionsClient,
-        @inject(articleTypes.BaasicArticleCommentRepliesClient) protected baasicArticleInstanceCommentsClient: BaasicArticleInstanceCommentsClient,
+        @inject(articleTypes.BaasicArticleInstanceCommentsClient) protected baasicArticleInstanceCommentsClient: BaasicArticleInstanceCommentsClient,
         @inject(articleTypes.BaasicArticleInstanceFilesClient) protected baasicArticleInstanceFilesClient: BaasicArticleInstanceFilesClient,
         @inject(articleTypes.BaasicArticleInstanceRatingsClient) protected baasicArticleInstanceRatingsClient: BaasicArticleInstanceRatingsClient,
         @inject(articleTypes.BaasicArticleInstanceTagsClient) protected baasicArticleInstanceTagsClient: BaasicArticleInstanceTagsClient,
@@ -68,20 +65,8 @@ export class BaasicArticleClient {
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
-    public statuses: Object = {
-        none: 0,
-        published: 2,
-        draft: 1,
-        archive: 4
-    };
-
-    private commentStatuses: Object = {
-        approved: 1,
-        spam: 2,
-        reported: 4,
-        flagged: 8,
-        unapproved: 16
-    };
+    public statuses: IArticleStatus = ArticleStatus;
+    protected commentStatuses: ICommentStatus = CommentStatus;
 
     /**                 
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article resources matching the given criteria.                 

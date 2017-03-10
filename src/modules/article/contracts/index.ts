@@ -1,4 +1,5 @@
-export * from './IStatuses';
+export * from './IArticleStatus';
+export * from './ICommentStatus';
 export * from './IAuthor';
 export * from './IArticleCommentMetadata';
 export * from './IArticleComment';

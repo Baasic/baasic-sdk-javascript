@@ -7,8 +7,8 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicArticleInstanceCommentRepliesRouteDefinition, TYPES as articleTypes } from 'modules/article';
-import { IArticle, IArticleCommentReply, INotificationConfiguration, IStatuses } from 'modules/article/contracts';
+import { BaasicArticleInstanceCommentRepliesRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
+import { IArticle, IArticleCommentReply, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
 export class BaasicArticleInstanceCommentRepliesClient {
@@ -19,13 +19,7 @@ export class BaasicArticleInstanceCommentRepliesClient {
      * @method 
      * @example baasicArticleCommentRepliesClient.statuses.approved;
      **/
-    public commentStatuses: IStatuses = {
-        approved: 1,
-        spam: 2,
-        reported: 4,
-        flagged: 8,
-        unapproved: 16
-    };
+    public statuses: ICommentStatus = CommentStatus;
 
     /**
      * Provides direct access to `baasicArticleCommentRepliesRouteDefinition`.
