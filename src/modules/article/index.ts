@@ -28,6 +28,8 @@ export * from './baasicArticleTagsSubscriptionsRouteDefinition';
 export * from './baasicArticleTagsSubscriptionsClient';
 export * from './baasicArticleTagsRouteDefinition';
 export * from './baasicArticleTagsClient';
+export * from './baasicArticleSubscriptionsRouteDefinition';
+export * from './baasicArticleSubscriptionsClient';
 export * from './baasicArticleRouteDefinition';
 export * from './baasicArticleClient';
 export * from './root';

@@ -12,7 +12,7 @@ import {
     BaasicArticleACLClient,
     BaasicArticleUtility,
     BaasicArticleRouteDefinition,
-    BaasicArticleSubscriptionsClient,
+    BaasicArticleInstanceSubscriptionsClient,
     BaasicArticleInstanceCommentsClient,
     BaasicArticleInstanceFilesClient,
     BaasicArticleInstanceRatingsClient,
@@ -49,6 +49,14 @@ export class BaasicArticleClient {
         return this.baasicArticleInstanceTagsClient;
     }
 
+    get ratings(): BaasicArticleInstanceRatingsClient {
+        return this.baasicArticleInstanceRatingsClient;
+    }
+
+    get subscriptions(): BaasicArticleInstanceSubscriptionsClient {
+        return this.baasicArticleInstanceSubscriptionsClient;
+    }
+
     get acl(): BaasicArticleACLClient {
         return this.baasicArticleACLClient;
     }
@@ -60,6 +68,7 @@ export class BaasicArticleClient {
         @inject(articleTypes.BaasicArticleInstanceFilesClient) protected baasicArticleInstanceFilesClient: BaasicArticleInstanceFilesClient,
         @inject(articleTypes.BaasicArticleInstanceRatingsClient) protected baasicArticleInstanceRatingsClient: BaasicArticleInstanceRatingsClient,
         @inject(articleTypes.BaasicArticleInstanceTagsClient) protected baasicArticleInstanceTagsClient: BaasicArticleInstanceTagsClient,
+        @inject(articleTypes.BaasicArticleInstanceSubscriptionsClient) protected baasicArticleInstanceSubscriptionsClient: BaasicArticleInstanceSubscriptionsClient,
         @inject(articleTypes.BaasicArticleRouteDefinition) protected baasicArticleRouteDefinition: BaasicArticleRouteDefinition,
         @inject(articleTypes.BaasicArticleACLClient) protected baasicArticleACLClient: BaasicArticleACLClient,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient

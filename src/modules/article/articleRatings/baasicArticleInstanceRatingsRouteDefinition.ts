@@ -26,7 +26,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
     public readonly deleteRoute: string = 'articles/{articleId}/ratings/{id}';
 
     public readonly deleteAllRoute: string = 'articles/{articleId}/ratings';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -51,7 +51,7 @@ export class BaasicArticleInstanceRatingsRouteDefinition extends BaasicBaseRoute
      * @method                        
      * @example baasicArticleInstanceRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(options?: IOptions): any {
+    find(articleId: string, options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
     }
 

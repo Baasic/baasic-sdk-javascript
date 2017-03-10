@@ -13,16 +13,16 @@ import { IArticle, IArticleTag } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDefinition {
 
-    public readonly findRoute: string = 'articles/{id}/tags/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'articles/{articleId}/tags/{?searchQuery,page,rpp,sort,embed,fields}';
 
-    public readonly getRoute: string = 'articles/{id}/tags/{tag}/{?embed,fields}';
+    public readonly getRoute: string = 'articles/{articleId}/tags/{tag}/{?embed,fields}';
 
-    public readonly createRoute: string = 'articles/{id}/tags/{tag}/';
+    public readonly createRoute: string = 'articles/{articleId}/tags/{tag}/';
 
     public readonly deleteRoute: string = 'articles/{articleId}/tags/{id}';
 
     public readonly deleteAllRoute: string = 'articles/{articleId}/tags';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )

@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicArticleCommentsRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
+import { BaasicArticleCommentsRouteDefinition, BaasicArticleCommentRepliesClient, CommentStatus, TYPES as articleTypes } from 'modules/article';
 import { IArticleComment, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
@@ -20,7 +20,26 @@ export class BaasicArticleCommentsClient {
     **/
     public statuses: ICommentStatus = CommentStatus;
 
+    /**
+     * Provides direct access to `baasicArticleCommentRepliesClient`.
+     * @method 
+     **/
+    get replies(): BaasicArticleCommentRepliesClient {
+        return this.baasicArticleCommentRepliesClient;
+    }
+
+
+    /**
+     * Provides direct access to `baasicArticleCommentsRouteDefinition`.
+     * @method 
+     * @example baasicArticleCommentsRouteDefinition.routeDefinition.get();
+     **/
+    get routeDefinition(): BaasicArticleCommentsRouteDefinition {
+        return this.baasicArticleCommentsRouteDefinition;
+    }
+
     constructor(
+        @inject(articleTypes.BaasicArticleCommentRepliesClient) protected baasicArticleCommentRepliesClient: BaasicArticleCommentRepliesClient,
         @inject(articleTypes.BaasicArticleCommentsRouteDefinition) protected baasicArticleCommentsRouteDefinition: BaasicArticleCommentsRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }

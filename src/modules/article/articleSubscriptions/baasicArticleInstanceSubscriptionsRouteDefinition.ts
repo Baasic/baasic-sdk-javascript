@@ -9,7 +9,6 @@ import { BaasicBaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    BaasicArticleSubscriptionsArticleModuleRouteDefinition,
     BaasicArticleSubscriptionsCommentReportedRouteDefinition,
     BaasicArticleSubscriptionsArticleRouteDefinition,
     BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
@@ -17,11 +16,7 @@ import {
 } from 'modules/article';
 
 @injectable()
-export class BaasicArticleSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
-
-    get articleModule(): BaasicArticleSubscriptionsArticleModuleRouteDefinition {
-        return this.baasicArticleSubscriptionsArticleModuleRouteDefinition;
-    }
+export class BaasicArticleInstanceSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
 
     get commentReported(): BaasicArticleSubscriptionsCommentReportedRouteDefinition {
         return this.baasicArticleSubscriptionsCommentReportedRouteDefinition;
@@ -36,7 +31,6 @@ export class BaasicArticleSubscriptionsRouteDefinition extends BaasicBaseRouteDe
     }
 
     constructor(
-        @inject(articleTYPES.BaasicArticleSubscriptionsArticleModuleRouteDefinition) protected baasicArticleSubscriptionsArticleModuleRouteDefinition: BaasicArticleSubscriptionsArticleModuleRouteDefinition,
         @inject(articleTYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: BaasicArticleSubscriptionsCommentReportedRouteDefinition,
         @inject(articleTYPES.BaasicArticleSubscriptionsArticleRouteDefinition) protected baasicArticleSubscriptionsArticleRouteDefinition: BaasicArticleSubscriptionsArticleRouteDefinition,
         @inject(articleTYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,

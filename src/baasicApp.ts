@@ -24,7 +24,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly eventHandler: IEventHandler;
     public readonly baasicApiClient: BaasicApiClient;
 
-    public readonly membership: modules.Membership.Root;
+    public readonly membershipModule: modules.Membership.Root;
     //Modules
     public readonly applicationSettingModule: modules.ApplicationSettings.BaasicApplicationSettingsClient;
     public readonly keyValueModule: modules.KeyValue.BaasicKeyValueClient;
@@ -54,7 +54,7 @@ export class BaasicApp implements IBaasicApp {
         this.eventHandler = this.diModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
         this.baasicApiClient = this.diModule.kernel.get<BaasicApiClient>(httpApiTypes.BaasicApiClient);
 
-        this.membership = this.diModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
+        this.membershipModule = this.diModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
         //Modules
         this.applicationSettingModule = this.diModule.kernel.get<modules.ApplicationSettings.BaasicApplicationSettingsClient>(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
         this.keyValueModule = this.diModule.kernel.get<modules.KeyValue.BaasicKeyValueClient>(modules.KeyValue.TYPES.BaasicKeyValueClient);

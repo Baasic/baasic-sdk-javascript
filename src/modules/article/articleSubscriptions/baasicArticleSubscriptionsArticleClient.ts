@@ -13,7 +13,7 @@ import { IArticle, IArticleSubscription } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSubscriptionsArticleClient {
 
-    get RouteDefinition(): BaasicArticleSubscriptionsArticleRouteDefinition {
+    get routeDefinition(): BaasicArticleSubscriptionsArticleRouteDefinition {
         return this.baasicArticleSubscriptionsArticleRouteDefinition;
     }
 

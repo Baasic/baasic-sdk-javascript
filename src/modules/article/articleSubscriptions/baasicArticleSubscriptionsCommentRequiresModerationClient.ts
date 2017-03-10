@@ -13,7 +13,7 @@ import { IArticleSubscription } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSubscriptionsCommentRequiresModerationClient {
 
-    get RouteDefinition(): BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition {
+    get routeDefinition(): BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition {
         return this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition;
     }
 
