@@ -60,8 +60,8 @@ export class BaasicArticleInstanceRatingsClient {
                     // perform error handling here 
                 });                     
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.find(options));
+    find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
+        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.find(articleId, options));
     }
 
     /**                  

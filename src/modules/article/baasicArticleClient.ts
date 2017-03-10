@@ -49,6 +49,10 @@ export class BaasicArticleClient {
         return this.baasicArticleInstanceTagsClient;
     }
 
+    get ratings(): BaasicArticleInstanceRatingsClient {
+        return this.baasicArticleInstanceRatingsClient;
+    }
+
     get subscriptions(): BaasicArticleInstanceSubscriptionsClient {
         return this.baasicArticleInstanceSubscriptionsClient;
     }
