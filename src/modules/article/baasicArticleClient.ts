@@ -240,6 +240,28 @@ export class BaasicArticleClient {
     }
 
     /**                 
+     * Returns a promise that is resolved once the restore article action has been performed. This action sets the status of an article from "archive" to "published". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * ``` 
+     * let params = modelMapper.updateParams(article); 
+     * let uri = params['model'].links('restore').href; 
+     * ```                 
+     * @method
+     * @param data Article object.
+     * @returns A promise that is resolved once the restore article action has been performed.                         
+     * @example // article is a resource previously fetched using get action.				 
+                        baasicArticleClient.restore(article)
+                            .then(function (data) {  
+                                // perform success action here 
+                            },
+                             function (response, status, headers, config) {  
+                                 // perform error handling here 
+                            });		               
+     **/
+    restore(data: IArticle): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicArticleRouteDefinition.restore(data), this.baasicArticleRouteDefinition.updateParams(data));
+    }
+
+    /**                 
      * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(article); 

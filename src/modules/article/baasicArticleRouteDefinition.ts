@@ -89,7 +89,8 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
      * - `endDate` - A value used to specify the article creation, publish or archive date until (and including) which article resource collection should be returned.     
      * - `statuses` - Comma separated list of article statuses that specify where search should be done (Allowed statuses: Published, Draft and Archived).                 
      * - `tags` - A value used to restrict the search to article resources with these tags. Multiple tags should be comma separated.        				                
-     * @method                        
+     * @method
+     * @param options A promise that is resolved once the find action has been performed.                        
      * @example baasicArticleRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IArticleOptions): any {
@@ -102,7 +103,9 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
     /**                 
      * Parses get article route which must be expanded with the Id of the previously created article resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method
+     * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
+     * @param options Options object that contains embed items.                        
      * @example baasicArticleRouteDefinition.get({id: '<article-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
@@ -111,7 +114,8 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
     /**                 
      * Parses publish article route which must be expanded with the Id of the previously created article resource in the system.                 
-     * @method                        
+     * @method
+     * @param data An article object.                       
      * @example baasicArticleRouteDefinition.publish.expand({id: '<article-id>'});                               
      **/
     publish(data: IArticle): any {
@@ -138,7 +142,8 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
     /**                 
      * Parses update article route; this URI template doesn't expose any additional properties.                 
-     * @method                        
+     * @method
+     * @param data An article object that needs to be updated into the system.                         
      * @example baasicArticleRouteDefinition.update(data);                               
      **/
     update(data: IArticle): any {
@@ -147,7 +152,8 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
     /**                 
      * Parses delete article route; this URI template doesn't expose any additional properties.                 
-     * @method                        
+     * @method 
+     * @param data An article object that needs to be removed from the system.                       
      * @example baasicArticleRouteDefinition.delete(data);                               
      **/
     delete(data: IArticle): any {
@@ -156,7 +162,8 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
     /**                 
      * Parses archive article route; this URI template doesn't expose any additional properties.                 
-     * @method                        
+     * @method 
+     * @param data An article object.                        
      * @example baasicArticleRouteDefinition.archive(data);                               
      **/
     archive(data: IArticle): any {
