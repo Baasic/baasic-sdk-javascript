@@ -1,0 +1,15 @@
+{
+    "tab_size": 4,
+    "indent_size": 4,
+    "indent_char": " ",
+    "preserve_newlines": false,
+    "ts": {
+        "max_preserve_newlines": 1
+    },
+    "js": {
+        "max_preserve_newlines": 1
+    },
+    "css": {
+        "indent_size": 2
+    }
+}

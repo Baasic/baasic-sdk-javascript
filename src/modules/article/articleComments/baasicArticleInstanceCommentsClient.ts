@@ -10,9 +10,10 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
     BaasicArticleInstanceCommentRepliesClient,
     BaasicArticleInstanceCommentsRouteDefinition,
+    CommentStatus,
     TYPES as articleTypes
 } from 'modules/article';
-import { IArticle, IArticleComment, INotificationConfiguration, IStatuses } from 'modules/article/contracts';
+import { IArticle, IArticleComment, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
 export class BaasicArticleInstanceCommentsClient {
@@ -22,13 +23,7 @@ export class BaasicArticleInstanceCommentsClient {
    * @method
    * @example baasicArticleInstanceCommentsClient.statuses.approved;
    **/
-    public statuses: IStatuses = {
-        approved: 1,
-        spam: 2,
-        reported: 4,
-        flagged: 8,
-        unapproved: 16
-    };
+    public statuses: ICommentStatus = CommentStatus;
 
     get routeDefinition(): BaasicArticleInstanceCommentsRouteDefinition {
         return this.baasicArticleInstanceCommentsRouteDefinition;

@@ -1,4 +1,4 @@
-export interface IStatuses {
+export interface ICommentStatus {
     approved: number,
     spam: number,
     reported: number,

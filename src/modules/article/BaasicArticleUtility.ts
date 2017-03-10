@@ -1,7 +1,7 @@
 import { Utility } from 'common';
 import { ALPHABET as alphabet } from 'modules/article';
 
-export class BaasicArticleHelpers {
+export class BaasicArticleUtility {
 
     private utility: Utility = new Utility();
 
