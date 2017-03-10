@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module baasicArticleSubscriptionsArticleModuleClient  
- * @description Baasic Article Subscriptions Article Module Client provides an easy way to consume Baasic Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsArticleModuleClient` uses `baasicArticleSubscriptionsArticleModuleRouteDefinition`. 
+ * @description Baasic Article Subscriptions Article Module Client provides an easy way to consume Baasic Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicArticleSubscriptionsArticleModuleRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { BaasicArticleSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleSubscriptionsArticleModuleClient {
+export class BaasicArticleSubscriptionsClient {
 
-    get RouteDefinition(): BaasicArticleSubscriptionsArticleModuleRouteDefinition {
-        return this.baasicArticleSubscriptionsArticleModuleRouteDefinition;
+    get RouteDefinition(): BaasicArticleSubscriptionsRouteDefinition {
+        return this.baasicArticleSubscriptionsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleSubscriptionsArticleModuleRouteDefinition) protected baasicArticleSubscriptionsArticleModuleRouteDefinition: BaasicArticleSubscriptionsArticleModuleRouteDefinition,
+        @inject(articleTypes.BaasicArticleSubscriptionsRouteDefinition) protected baasicArticleSubscriptionsRouteDefinition: BaasicArticleSubscriptionsRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
@@ -34,7 +34,7 @@ export class BaasicArticleSubscriptionsArticleModuleClient {
                    });                         
     **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicArticleSubscriptionsArticleModuleRouteDefinition.subscribe(data), data);
+        return this.baasicApiClient.post(this.baasicArticleSubscriptionsRouteDefinition.subscribe(data), data);
     }
 
     /**                         
@@ -49,7 +49,7 @@ export class BaasicArticleSubscriptionsArticleModuleClient {
                    });                         
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicArticleSubscriptionsArticleModuleRouteDefinition.isSubscribed(data));
+        return this.baasicApiClient.get(this.baasicArticleSubscriptionsRouteDefinition.isSubscribed(data));
     }
 
     /**                         
@@ -63,6 +63,6 @@ export class BaasicArticleSubscriptionsArticleModuleClient {
                         // perform error handling here 
                    });                          **/
     unSubscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleSubscriptionsArticleModuleRouteDefinition.unSubscribe(data), undefined, data);
+        return this.baasicApiClient.delete<void>(this.baasicArticleSubscriptionsRouteDefinition.unSubscribe(data), undefined, data);
     }
 }

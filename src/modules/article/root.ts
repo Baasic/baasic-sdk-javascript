@@ -5,6 +5,7 @@ import {
     BaasicArticleRatingsClient,
     BaasicArticleSubscriptionsClient,
     BaasicArticleTagsClient,
+    BaasicArticleSettingsClient,
     TYPES
 } from 'modules/article';
 
@@ -21,7 +22,9 @@ export class Root {
         @inject(TYPES.BaasicArticleFilesClient) public files: BaasicArticleFilesClient,
         @inject(TYPES.BaasicArticleRatingsClient) public ratings: BaasicArticleRatingsClient,
         @inject(TYPES.BaasicArticleSubscriptionsClient) public subscriptions: BaasicArticleSubscriptionsClient,
-        @inject(TYPES.BaasicArticleTagsClient) public tags: BaasicArticleTagsClient
+        @inject(TYPES.BaasicArticleTagsClient) public tags: BaasicArticleTagsClient,
+        @inject(TYPES.BaasicArticleSettingsClient) public settings: BaasicArticleSettingsClient
+
     ) {
     }
 

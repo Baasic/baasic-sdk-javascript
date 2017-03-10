@@ -20,16 +20,16 @@ import {
     BaasicArticleTagsRouteDefinition,
     BaasicArticleTagsSubscriptionsClient,
     BaasicArticleTagsSubscriptionsRouteDefinition,
-    BaasicArticleSubscriptionsArticleModuleRouteDefinition,
+    BaasicArticleInstanceSubscriptionsRouteDefinition,
     BaasicArticleSubscriptionsArticleRouteDefinition,
     BaasicArticleSubscriptionsCommentReportedRouteDefinition,
     BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
     BaasicArticleSubscriptionsRouteDefinition,
-    BaasicArticleSubscriptionsArticleModuleClient,
+    BaasicArticleSubscriptionsClient,
     BaasicArticleSubscriptionsArticleClient,
     BaasicArticleSubscriptionsCommentReportedClient,
     BaasicArticleSubscriptionsCommentRequiresModerationClient,
-    BaasicArticleSubscriptionsClient,
+    BaasicArticleInstanceSubscriptionsClient,
     BaasicArticleInstanceRatingsRouteDefinition,
     BaasicArticleInstanceRatingsClient,
     BaasicArticleInstanceTagsRouteDefinition,
@@ -70,16 +70,16 @@ const TYPES = {
     BaasicArticleTagsRouteDefinition: Symbol("BaasicArticleTagsRouteDefinition"),
     BaasicArticleTagsSubscriptionsClient: Symbol("BaasicArticleTagsSubscriptionsClient"),
     BaasicArticleTagsSubscriptionsRouteDefinition: Symbol("BaasicArticleTagsSubscriptionsRouteDefinition"),
-    BaasicArticleSubscriptionsArticleModuleRouteDefinition: Symbol("BaasicArticleSubscriptionsArticleModuleRouteDefinition"),
     BaasicArticleSubscriptionsArticleRouteDefinition: Symbol("BaasicArticleSubscriptionsArticleRouteDefinition"),
     BaasicArticleSubscriptionsCommentReportedRouteDefinition: Symbol("BaasicArticleSubscriptionsCommentReportedRouteDefinition"),
     BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: Symbol("BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition"),
     BaasicArticleSubscriptionsRouteDefinition: Symbol("BaasicArticleSubscriptionsRouteDefinition"),
-    BaasicArticleSubscriptionsArticleModuleClient: Symbol("BaasicArticleSubscriptionsArticleModuleClient"),
+    BaasicArticleSubscriptionsClient: Symbol("BaasicArticleSubscriptionsClient"),
     BaasicArticleSubscriptionsArticleClient: Symbol("BaasicArticleSubscriptionsArticleClient"),
     BaasicArticleSubscriptionsCommentReportedClient: Symbol("BaasicArticleSubscriptionsCommentReportedClient"),
     BaasicArticleSubscriptionsCommentRequiresModerationClient: Symbol("BaasicArticleSubscriptionsCommentRequiresModerationClient"),
-    BaasicArticleSubscriptionsClient: Symbol("BaasicArticleSubscriptionsClient"),
+    BaasicArticleInstanceSubscriptionsClient: Symbol("BaasicArticleInstanceSubscriptionsClient"),
+    BaasicArticleInstanceSubscriptionsRouteDefinition: Symbol("BaasicArticleInstanceSubscriptionsRouteDefinition"),
     BaasicArticleInstanceRatingsRouteDefinition: Symbol("BaasicArticleInstanceRatingsRouteDefinition"),
     BaasicArticleInstanceRatingsClient: Symbol("BaasicArticleInstanceRatingsClient"),
     BaasicArticleInstanceTagsRouteDefinition: Symbol("BaasicArticleInstanceTagsRouteDefinition"),
@@ -120,12 +120,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicArticleTagsSubscriptionsClient>(TYPES.BaasicArticleTagsSubscriptionsClient).to(BaasicArticleTagsSubscriptionsClient);
     bind<BaasicArticleTagsRouteDefinition>(TYPES.BaasicArticleTagsRouteDefinition).to(BaasicArticleTagsRouteDefinition);
     bind<BaasicArticleTagsClient>(TYPES.BaasicArticleTagsClient).to(BaasicArticleTagsClient);
-    bind<BaasicArticleSubscriptionsArticleModuleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleModuleRouteDefinition).to(BaasicArticleSubscriptionsArticleModuleRouteDefinition);
     bind<BaasicArticleSubscriptionsArticleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleRouteDefinition).to(BaasicArticleSubscriptionsArticleRouteDefinition);
     bind<BaasicArticleSubscriptionsCommentReportedRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition).to(BaasicArticleSubscriptionsCommentReportedRouteDefinition);
     bind<BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition).to(BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition);
     bind<BaasicArticleSubscriptionsRouteDefinition>(TYPES.BaasicArticleSubscriptionsRouteDefinition).to(BaasicArticleSubscriptionsRouteDefinition);
-    bind<BaasicArticleSubscriptionsArticleModuleClient>(TYPES.BaasicArticleSubscriptionsArticleModuleClient).to(BaasicArticleSubscriptionsArticleModuleClient);
     bind<BaasicArticleSubscriptionsArticleClient>(TYPES.BaasicArticleSubscriptionsArticleClient).to(BaasicArticleSubscriptionsArticleClient);
     bind<BaasicArticleSubscriptionsCommentReportedClient>(TYPES.BaasicArticleSubscriptionsCommentReportedClient).to(BaasicArticleSubscriptionsCommentReportedClient);
     bind<BaasicArticleSubscriptionsCommentRequiresModerationClient>(TYPES.BaasicArticleSubscriptionsCommentRequiresModerationClient).to(BaasicArticleSubscriptionsCommentRequiresModerationClient);
@@ -144,6 +142,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicArticleInstanceFilesStreamsClient>(TYPES.BaasicArticleInstanceFilesStreamsClient).to(BaasicArticleInstanceFilesStreamsClient);
     bind<BaasicArticleInstanceFilesBatchRouteDefinition>(TYPES.BaasicArticleInstanceFilesBatchRouteDefinition).to(BaasicArticleInstanceFilesBatchRouteDefinition);
     bind<BaasicArticleInstanceFilesBatchClient>(TYPES.BaasicArticleInstanceFilesBatchClient).to(BaasicArticleInstanceFilesBatchClient);
+    bind<BaasicArticleInstanceSubscriptionsClient>(TYPES.BaasicArticleInstanceSubscriptionsClient).to(BaasicArticleInstanceSubscriptionsClient);
+    bind<BaasicArticleInstanceSubscriptionsRouteDefinition>(TYPES.BaasicArticleInstanceSubscriptionsRouteDefinition).to(BaasicArticleInstanceSubscriptionsRouteDefinition);
     bind<BaasicArticleACLRouteDefinition>(TYPES.BaasicArticleACLRouteDefinition).to(BaasicArticleACLRouteDefinition);
     bind<BaasicArticleACLClient>(TYPES.BaasicArticleACLClient).to(BaasicArticleACLClient);
     bind<BaasicArticleRouteDefinition>(TYPES.BaasicArticleRouteDefinition).to(BaasicArticleRouteDefinition);

@@ -26,19 +26,31 @@ export class DIModule {
             }
 
             if (app.settings.httpClient) {
-                this.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(app.settings.httpClient);
+                if (app.settings.httpClient instanceof Function) {
+                    this.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(app.settings.httpClient);
+                } else {
+                    this.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toConstantValue(app.settings.httpClient);
+                }
             } else {
                 this.kernel.bind<IHttpClient>(httpTYPES.IHttpClient).toFunction(jQueryHttpClient);
             }
 
             if (app.settings.storageHandler) {
-                this.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).toFunction(app.settings.storageHandler);
+                if (app.settings.storageHandler instanceof Function) {
+                    this.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).toFunction(app.settings.storageHandler);
+                } else {
+                    this.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).toConstantValue(app.settings.storageHandler);
+                }
             } else {
                 this.kernel.bind<IStorageHandler>(coreTYPES.IStorageHandler).to(LocalStorageHandler);
             }
 
             if (app.settings.eventHandler) {
-                this.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).toFunction(app.settings.eventHandler);
+                if (app.settings.eventHandler instanceof Function) {
+                    this.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).toFunction(app.settings.eventHandler);
+                } else {
+                    this.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).toConstantValue(app.settings.eventHandler);
+                }
             } else {
                 this.kernel.bind<IEventHandler>(coreTYPES.IEventHandler).to(BrowserEventHandler);
             }

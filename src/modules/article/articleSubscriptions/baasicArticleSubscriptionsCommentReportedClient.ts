@@ -13,7 +13,7 @@ import { IArticleSubscription } from 'modules/article/contracts';
 @injectable()
 export class BaasicArticleSubscriptionsCommentReportedClient {
 
-    get RouteDefinition(): BaasicArticleSubscriptionsCommentReportedRouteDefinition {
+    get routeDefinition(): BaasicArticleSubscriptionsCommentReportedRouteDefinition {
         return this.baasicArticleSubscriptionsCommentReportedRouteDefinition;
     }
 

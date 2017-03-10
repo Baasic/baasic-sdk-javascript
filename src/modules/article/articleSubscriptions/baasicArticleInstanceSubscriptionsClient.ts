@@ -7,8 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import {
-    BaasicArticleSubscriptionsRouteDefinition,
-    BaasicArticleSubscriptionsArticleModuleClient,
+    BaasicArticleInstanceSubscriptionsRouteDefinition,
     BaasicArticleSubscriptionsArticleClient,
     BaasicArticleSubscriptionsCommentReportedClient,
     BaasicArticleSubscriptionsCommentRequiresModerationClient,
@@ -17,11 +16,7 @@ import {
 import { IArticle, IArticleOptions } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleSubscriptionsClient {
-
-    get articleModule(): BaasicArticleSubscriptionsArticleModuleClient {
-        return this.baasicArticleSubscriptionsArticleModuleClient;
-    }
+export class BaasicArticleInstanceSubscriptionsClient {
 
     get commentReported(): BaasicArticleSubscriptionsCommentReportedClient {
         return this.baasicArticleSubscriptionsCommentReportedClient;
@@ -35,16 +30,15 @@ export class BaasicArticleSubscriptionsClient {
         return this.baasicArticleSubscriptionsCommentRequiresModerationClient;
     }
 
-    get routeDefinition(): BaasicArticleSubscriptionsRouteDefinition {
-        return this.baasicArticleSubscriptionsRouteDefinition;
+    get routeDefinition(): BaasicArticleInstanceSubscriptionsRouteDefinition {
+        return this.baasicArticleInstanceSubscriptionsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleSubscriptionsArticleModuleClient) protected baasicArticleSubscriptionsArticleModuleClient: BaasicArticleSubscriptionsArticleModuleClient,
         @inject(articleTypes.BaasicArticleSubscriptionsCommentReportedClient) protected baasicArticleSubscriptionsCommentReportedClient: BaasicArticleSubscriptionsCommentReportedClient,
         @inject(articleTypes.BaasicArticleSubscriptionsArticleClient) protected baasicArticleSubscriptionsArticleClient: BaasicArticleSubscriptionsArticleClient,
         @inject(articleTypes.BaasicArticleSubscriptionsCommentRequiresModerationClient) protected baasicArticleSubscriptionsCommentRequiresModerationClient: BaasicArticleSubscriptionsCommentRequiresModerationClient,
-        @inject(articleTypes.BaasicArticleSubscriptionsRouteDefinition) protected baasicArticleSubscriptionsRouteDefinition: BaasicArticleSubscriptionsRouteDefinition
+        @inject(articleTypes.BaasicArticleInstanceSubscriptionsRouteDefinition) protected baasicArticleInstanceSubscriptionsRouteDefinition: BaasicArticleInstanceSubscriptionsRouteDefinition
     )
     { }
 }
