@@ -1,27 +1,26 @@
 /* globals module */
 /**  
- * @module baasicCommerceCountryStateBatchClient  
- * @description Baasic Commerce Country State Batch Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCountryStateBatchClient` uses `baasicCommerceCountryStateBatchRouteDefinition`. 
+ * @module baasicCommerceSubscriptionStatusBatchClient  
+ * @description Baasic Commerce Subscription Stauts Batch Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceSubscriptionStatusBatchClient` uses `baasicCommerceSubscriptionStatusBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicCommerceLookupsCountryStateBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceCountryStateBatchClient {
+export class BaasicCommerceLookupsSubscriptionStatusBatchClient {
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsCountryStateBatchRouteDefinition) protected baasicCommerceLookupsCountryStateBatchRouteDefinition: BaasicCommerceLookupsCountryStateBatchRouteDefinition,
+        @inject(commerceTypes.BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition) protected baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition: BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                     
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.                     
-     * @method                            
-     * @example baasicCommerceLookupsCountryStateBatchClient.create([{   
-                    countryId: '<country-id>',    
+     * @method                         
+     * @example baasicCommerceLookupsSubscriptionStatusBatchClient.create([{    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
                     description: '<description>' 
@@ -29,18 +28,18 @@ export class BaasicCommerceCountryStateBatchClient {
                 .then(function (data) {   
                     // perform success action here 
                 },
-                 function (response, status, headers, config) {   
-                     // perform error handling here 
+                 function (response, status, headers, config) {  
+                    // perform error handling here 
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.create(), this.baasicCommerceLookupsCountryStateBatchRouteDefinition.createParams(data));
+        return this.baasicApiClient.post(this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.create(), this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.createParams(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.                     
      * @method                        
-     * @example baasicCommerceLookupsCountryStateBatchClient.update(commerceCountryStates)
+     * @example baasicCommerceLookupsSubscriptionStatusBatchClient.update(subscriptionStatuses)   
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -49,22 +48,22 @@ export class BaasicCommerceCountryStateBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.update(), this.baasicCommerceLookupsCountryStateBatchRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<void>(this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.update(), this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.                     
-     * @method                       
-     * @example baasicCommerceLookupsCountryStateBatchClient.remove(commerceCountryStateIds)
-                   .then(function (data) {     
-                       // perform success action here   
-                   }, 
-                    function (response, status, headers, config) {     
-                        // perform error handling here   
-                   });		                    
-    **/
+     * @method                         
+     * @example baasicCommerceLookupsSubscriptionStatusBatchClient.remove(subscriptionStatusIds)   
+                    .then(function (data) {     
+                        // perform success action here   
+                    },
+                     function (response, status, headers, config) {     
+                         // perform error handling here   
+                    });		                    
+     **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.delete(), undefined, ids);
+        return this.baasicApiClient.delete<void>(this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

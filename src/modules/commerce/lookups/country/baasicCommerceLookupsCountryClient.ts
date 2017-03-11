@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicCommerceCountryBatchClient, BaasicCommerceLookupsCountryRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { BaasicCommerceLookupsCountryBatchClient, BaasicCommerceLookupsCountryRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class BaasicCommerceLookupsCountryClient {
@@ -16,13 +16,13 @@ export class BaasicCommerceLookupsCountryClient {
         return this.baasicCommerceLookupsCountryRouteDefinition;
     }
 
-    get batch(): BaasicCommerceCountryBatchClient {
-        return this.baasicCommerceCountryBatchClient;
+    get batch(): BaasicCommerceLookupsCountryBatchClient {
+        return this.baasicCommerceLookupsCountryBatchClient;
     }
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsCountryRouteDefinition) protected baasicCommerceLookupsCountryRouteDefinition: BaasicCommerceLookupsCountryRouteDefinition,
-        @inject(commerceTypes.BaasicCommerceCountryBatchClient) protected baasicCommerceCountryBatchClient: BaasicCommerceCountryBatchClient,
+        @inject(commerceTypes.BaasicCommerceLookupsCountryBatchClient) protected baasicCommerceLookupsCountryBatchClient: BaasicCommerceLookupsCountryBatchClient,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 

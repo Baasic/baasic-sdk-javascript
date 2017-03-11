@@ -10,7 +10,7 @@ import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicCommerceLookupsCountryBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceCountryBatchClient {
+export class BaasicCommerceLookupsCountryBatchClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsCountryBatchRouteDefinition) protected baasicCommerceLookupsCountryBatchRouteDefinition: BaasicCommerceLookupsCountryBatchRouteDefinition,

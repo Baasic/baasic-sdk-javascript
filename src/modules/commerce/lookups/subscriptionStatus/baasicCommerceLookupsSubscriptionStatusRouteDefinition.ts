@@ -1,28 +1,34 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsPaymentMethodRouteDefinition  
- * @description Baasic Commerce Lookups PaymentMethod Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups PaymentMethod Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
+ * @module baasicCommerceLookupsSubscriptionStatusRouteDefinition  
+ * @description Baasic Commerce Lookups SubscriptionStatus Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups SubscriptionStatus Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsPaymentMethodRouteDefinition extends BaasicBaseRouteDefinition {
+export class BaasicCommerceLookupsSubscriptionStatusRouteDefinition extends BaasicBaseRouteDefinition {
 
-    public readonly findRoute: string = 'commerce/lookups/payment-methods/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'commerce/lookups/subscription-statuses/{?searchQuery,page,rpp,sort,embed,fields}';
 
-    public readonly getRoute: string = 'commerce/lookups/payment-methods/{id}/{?embed,fields}';
+    public readonly getRoute: string = 'commerce/lookups/subscription-statuses/{id}/{?embed,fields}';
 
-    public readonly createRoute: string = 'commerce/lookups/payment-methods';
+    public readonly createRoute: string = 'commerce/lookups/subscription-statuses';
 
-    public readonly updateRoute: string = 'commerce/lookups/payment-methods/{id}';
+    public readonly updateRoute: string = 'commerce/lookups/subscription-statuses/{id}';
 
-    public readonly deleteRoute: string = 'commerce/lookups/payment-methods/{id}';
+    public readonly deleteRoute: string = 'commerce/lookups/subscription-statuses/{id}';
+
+    get batch(): BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition {
+        return this.basicCommerceLookupsSubscriptionStatusBatchRouteDefinition;
+    }
 
     constructor(
+        @inject(commerceTypes.BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition) protected basicCommerceLookupsSubscriptionStatusBatchRouteDefinition: BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -35,7 +41,7 @@ export class BaasicCommerceLookupsPaymentMethodRouteDefinition extends BaasicBas
      * - `embed` - Comma separated list of resources to be contained within the current representation.                
      * @method                        
      * @param options Query resource options.
-     * @example baasicCommerceLookupsPaymentMethodRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example baasicCommerceLookupsSubscriptionStatusRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -44,7 +50,7 @@ export class BaasicCommerceLookupsPaymentMethodRouteDefinition extends BaasicBas
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentMethodRouteDefinition.get();                               
+     * @example baasicCommerceLookupsSubscriptionStatusRouteDefinition.get();                               
      **/
     get(id: string, options: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, options);
@@ -53,7 +59,7 @@ export class BaasicCommerceLookupsPaymentMethodRouteDefinition extends BaasicBas
     /**                 
      * Parses create commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentMethodRouteDefinition.create();                              
+     * @example baasicCommerceLookupsSubscriptionStatusRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -62,7 +68,7 @@ export class BaasicCommerceLookupsPaymentMethodRouteDefinition extends BaasicBas
     /**                 
      * Parses update commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentMethodRouteDefinition.update(data);                              
+     * @example baasicCommerceLookupsSubscriptionStatusRouteDefinition.update(data);                              
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -71,7 +77,7 @@ export class BaasicCommerceLookupsPaymentMethodRouteDefinition extends BaasicBas
     /**                 
      * Parses delete commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentMethodRouteDefinition.delete(data);                              
+     * @example baasicCommerceLookupsSubscriptionStatusRouteDefinition.delete(data);                              
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);
