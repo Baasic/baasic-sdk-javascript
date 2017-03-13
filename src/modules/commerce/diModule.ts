@@ -41,7 +41,8 @@ import {
     BaasicCommerceLookupsSubscriptionStatusBatchClient,
     BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition,
     BaasicCommerceLookupsSubscriptionStatusClient,
-    BaasicCommerceLookupsSubscriptionStatusRouteDefinition
+    BaasicCommerceLookupsSubscriptionStatusRouteDefinition,
+    Lookups
 } from 'modules/commerce';
 
 const TYPES = {
@@ -86,7 +87,9 @@ const TYPES = {
     BaasicCommerceLookupsSubscriptionStatusBatchClient: Symbol("BaasicCommerceLookupsSubscriptionStatusBatchClient"),
     BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition: Symbol("BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition"),
     BaasicCommerceLookupsSubscriptionStatusClient: Symbol("BaasicCommerceLookupsSubscriptionStatusClient"),
-    BaasicCommerceLookupsSubscriptionStatusRouteDefinition: Symbol("BaasicCommerceLookupsSubscriptionStatusRouteDefinition")
+    BaasicCommerceLookupsSubscriptionStatusRouteDefinition: Symbol("BaasicCommerceLookupsSubscriptionStatusRouteDefinition"),
+    Lookups: Symbol("Lookups")
+
 };
 
 export { TYPES };
@@ -134,6 +137,7 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicCommerceLookupsSubscriptionStatusBatchClient>(TYPES.BaasicCommerceLookupsSubscriptionStatusBatchClient).to(BaasicCommerceLookupsSubscriptionStatusBatchClient);
     bind<BaasicCommerceLookupsSubscriptionStatusRouteDefinition>(TYPES.BaasicCommerceLookupsSubscriptionStatusRouteDefinition).to(BaasicCommerceLookupsSubscriptionStatusRouteDefinition);
     bind<BaasicCommerceLookupsSubscriptionStatusClient>(TYPES.BaasicCommerceLookupsSubscriptionStatusClient).to(BaasicCommerceLookupsSubscriptionStatusClient);
+    bind<Lookups>(TYPES.Lookups).to(Lookups);
 });
 
 export { diModule };

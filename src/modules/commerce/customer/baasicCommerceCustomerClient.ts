@@ -7,15 +7,20 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicCommerceCustomerRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { BaasicCommerceCustomerRouteDefinition, BaasicCommerceCustomerPaymentMethodClient, TYPES as commerceTypes } from 'modules/commerce';
 
 export class BaasicCommerceCustomerClient {
+
+    get paymentMethods(): BaasicCommerceCustomerPaymentMethodClient {
+        return this.baasicCommerceCustomerPaymentMethodClient;
+    }
 
     get routeDefinition(): BaasicCommerceCustomerRouteDefinition {
         return this.baasicCommerceCustomerRouteDefinition;
     }
 
     constructor(
+        @inject(commerceTypes.BaasicCommerceCustomerPaymentMethodClient) protected baasicCommerceCustomerPaymentMethodClient: BaasicCommerceCustomerPaymentMethodClient,
         @inject(commerceTypes.BaasicCommerceCustomerRouteDefinition) protected baasicCommerceCustomerRouteDefinition: BaasicCommerceCustomerRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
     ) { }
