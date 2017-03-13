@@ -46,7 +46,7 @@ export class BaasicDynamicResourceACLClient {
                     }); 				    
      **/
     update(options: IDynamicACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.put(this.baasicDynamicResourceACLRouteDefinition.update(options), this.baasicDynamicResourceACLRouteDefinition.updateParams(options));
+        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicDynamicResourceACLRouteDefinition.update(options), this.baasicDynamicResourceACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -69,8 +69,8 @@ export class BaasicDynamicResourceACLClient {
                             // perform error handling here 
                         }); 				    
      **/
-    removeByUser(action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicDynamicResourceACLRouteDefinition.deleteByUser(action, user, data));
+    removeByUser(action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicDynamicResourceACLRouteDefinition.deleteByUser(action, user, data));
     }
 
     /**                     
@@ -93,8 +93,8 @@ export class BaasicDynamicResourceACLClient {
                             // perform error handling here 
                         }); 				    
      **/
-    removeByRole(action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicDynamicResourceACLRouteDefinition.deleteByRole(action, role, data));
+    removeByRole(action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicDynamicResourceACLRouteDefinition.deleteByRole(action, role, data));
     }
 }
 

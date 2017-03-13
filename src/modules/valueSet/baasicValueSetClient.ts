@@ -51,8 +51,8 @@ export class BaasicValueSetClient {
                     // perform error handling here 
                 });
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSet>>> {
-        return this.baasicApiClient.get(this.baasicValueSetRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSet>>> {
+        return this.baasicApiClient.get<IBaasicQueryModel<IValueSet>>(this.baasicValueSetRouteDefinition.find(options));
     }
 
     /**
@@ -70,7 +70,7 @@ export class BaasicValueSetClient {
                    });
     **/
     get(setName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.baasicApiClient.get(this.baasicValueSetRouteDefinition.get(setName, options));
+        return this.baasicApiClient.get<IValueSet>(this.baasicValueSetRouteDefinition.get(setName, options));
     }
 
     /**
@@ -91,7 +91,7 @@ export class BaasicValueSetClient {
                 });
      **/
     create(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.baasicApiClient.post(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IValueSet>(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
     }
 
     /**
@@ -103,19 +103,18 @@ export class BaasicValueSetClient {
      * @param data Value set object used to update specified value set resource.
      * @returns A promise that is resolved once the update value set action has been performed.
      * @method
-     * @example 
-        // valueSet is a resource previously fetched using get action. 
-        valueSet.name = '<new-name>'; 
-        baasicValueSetClient.update(valueSet)
-            .then(function (data) {   
-                // perform success action here 
-            },
-             function (response, status, headers, config) {   
-                // perform error handling here 
-            });
+     * @example // valueSet is a resource previously fetched using get action. 
+                    valueSet.name = '<new-name>'; 
+                    baasicValueSetClient.update(valueSet)
+                        .then(function (data) {   
+                            // perform success action here 
+                        },
+                         function (response, status, headers, config) {   
+                            // perform error handling here 
+                        });
      **/
-    update(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.baasicApiClient.put(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
+    update(data: IValueSet): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -135,8 +134,8 @@ export class BaasicValueSetClient {
                             // perform error handling here 
                         });						
      **/
-    remove(data: IValueSet): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicValueSetRouteDefinition.delete(data));
+    remove(data: IValueSet): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicValueSetRouteDefinition.delete(data));
     }
 }
 

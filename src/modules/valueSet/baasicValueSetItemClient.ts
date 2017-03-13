@@ -35,8 +35,8 @@ export class BaasicValueSetItemClient {
                     // perform error handling here 
                 });
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSetItem>>> {
-        return this.baasicApiClient.get(this.baasicValueSetItemRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSetItem>>> {
+        return this.baasicApiClient.get<IBaasicQueryModel<IValueSetItem>>(this.baasicValueSetItemRouteDefinition.find(options));
     }
 
     /**
@@ -55,7 +55,7 @@ export class BaasicValueSetItemClient {
                 });
      **/
     get(setName: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.baasicApiClient.get(this.baasicValueSetItemRouteDefinition.get(setName, id, options));
+        return this.baasicApiClient.get<IValueSetItem>(this.baasicValueSetItemRouteDefinition.get(setName, id, options));
     }
 
     /**
@@ -75,7 +75,7 @@ export class BaasicValueSetItemClient {
                 });
      **/
     create(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.baasicApiClient.post(this.baasicValueSetItemRouteDefinition.create(data), this.baasicValueSetItemRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IValueSetItem>(this.baasicValueSetItemRouteDefinition.create(data), this.baasicValueSetItemRouteDefinition.createParams(data));
     }
 
     /**
@@ -98,7 +98,7 @@ export class BaasicValueSetItemClient {
                     });
      **/
     update(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.baasicApiClient.put(this.baasicValueSetItemRouteDefinition.update(data), this.baasicValueSetItemRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<IValueSetItem>(this.baasicValueSetItemRouteDefinition.update(data), this.baasicValueSetItemRouteDefinition.updateParams(data));
     }
 
     /**
@@ -119,8 +119,8 @@ export class BaasicValueSetItemClient {
                         // perform error handling here 
                     });
      **/
-    remove(data: IValueSetItem): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicValueSetItemRouteDefinition.delete(data));
+    remove(data: IValueSetItem): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicValueSetItemRouteDefinition.delete(data));
     }
 }
 

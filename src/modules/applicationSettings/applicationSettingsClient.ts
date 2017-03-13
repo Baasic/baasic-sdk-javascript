@@ -40,7 +40,7 @@ export class BaasicApplicationSettingsClient {
                     });                 
      **/
     get(options: IOptions): PromiseLike<IHttpResponse<IApplication>> {
-        return this.baasicApiClient.get(this.baasicApplicationSettingsRouteDefinition.get(options));
+        return this.baasicApiClient.get<IApplication>(this.baasicApplicationSettingsRouteDefinition.get(options));
     }
 
     /**                  
@@ -61,8 +61,8 @@ export class BaasicApplicationSettingsClient {
                             // perform error handling here 
                         }); 				
      **/
-    update(data: IApplication): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
+    update(data: IApplication): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
     }
 }
 

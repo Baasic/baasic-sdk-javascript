@@ -44,8 +44,8 @@ export class BaasicDynamicSchemaClient {
                     // perform error handling here 
                 });                     
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IResourceSchema>>> {
-        return this.baasicApiClient.get(this.baasicDynamicSchemaRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IResourceSchema>>> {
+        return this.baasicApiClient.get<IBaasicQueryModel<IResourceSchema>>(this.baasicDynamicSchemaRouteDefinition.find(options));
     }
 
     /**                  
@@ -62,14 +62,14 @@ export class BaasicDynamicSchemaClient {
                     });                 
      **/
     get(name: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.baasicApiClient.get(this.baasicDynamicSchemaRouteDefinition.get(name, options));
+        return this.baasicApiClient.get<IResourceSchema>(this.baasicDynamicSchemaRouteDefinition.get(name, options));
     }
 
     /**                 
      * Returns a promise that is resolved once the create action has been performed; this action creates a new dynamic resource schema item.                 
      * @method
      * @param data A dynamic resource schema object that needs to be inserted into the system.                        
-     * @example baasicDynamicSchemaDefinition.create({   
+     * @example baasicDynamicSchemaClient.create({   
                     schema : {  
                         type : 'object',     
                         properties : { 
@@ -96,7 +96,7 @@ export class BaasicDynamicSchemaClient {
                 });                 
      **/
     create(data: IResourceSchema): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.baasicApiClient.post(this.baasicDynamicSchemaRouteDefinition.create(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IResourceSchema>(this.baasicDynamicSchemaRouteDefinition.create(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -117,8 +117,8 @@ export class BaasicDynamicSchemaClient {
                             // perform error handling here 
                         }); 				
      **/
-    update(data: IResourceSchema): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicDynamicSchemaRouteDefinition.update(data), this.baasicDynamicSchemaRouteDefinition.updateParams(data));
+    update(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicDynamicSchemaRouteDefinition.update(data), this.baasicDynamicSchemaRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -138,8 +138,8 @@ export class BaasicDynamicSchemaClient {
                             // perform error handling here 
                         });						
      **/
-    remove(data: IResourceSchema): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicDynamicSchemaRouteDefinition.delete(data));
+    remove(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicDynamicSchemaRouteDefinition.delete(data));
     }
 
     /**                 

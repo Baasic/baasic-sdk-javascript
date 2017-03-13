@@ -104,8 +104,8 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     }); 				
      **/
-    update(data: IKeyValue): PromiseLike<IHttpResponse<IKeyValue>> {
-        return this.baasicApiClient.put(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(data));
+    update(data: IKeyValue): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(data));
     }
 
     /**
@@ -126,8 +126,8 @@ export class BaasicKeyValueClient {
                         // perform error handling here 
                     });
      **/
-    remove(data: IKeyValue): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete<any>(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
+    remove(data: IKeyValue): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
     }
 }
 
