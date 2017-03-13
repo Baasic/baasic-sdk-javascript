@@ -12,7 +12,7 @@ export class BaasicArticleUtility {
         return str;
     }
 
-    toSlug(str: string) {
+    toSlug(str: string): string {
         if (this.utility.isUndefined(str) || str === null || str === '') {
             return str;
         }
@@ -30,7 +30,7 @@ export class BaasicArticleUtility {
         }
 
         if (!this.utility.isUndefined(newSlug) || newSlug !== null || newSlug !== '') {
-            if (resource.slug === newSlug) {
+            if (resource.slug !== newSlug) {
                 resource.slug = newSlug;
             }
         }
