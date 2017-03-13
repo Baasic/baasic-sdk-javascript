@@ -97,7 +97,7 @@ export class BaasicArticleClient {
                 });                   
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticle>>> {
-        return this.baasicApiClient.get(this.baasicArticleRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IArticle>>(this.baasicArticleRouteDefinition.find(options));
     }
 
     /**                 
@@ -115,7 +115,7 @@ export class BaasicArticleClient {
                     });                
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticle>> {
-        return this.baasicApiClient.get(this.baasicArticleRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IArticle>(this.baasicArticleRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -139,7 +139,7 @@ export class BaasicArticleClient {
                 });                 
      **/
     create(data: IArticle): PromiseLike<IHttpResponse<IArticle>> {
-        return this.baasicApiClient.post(this.baasicArticleRouteDefinition.create(), this.baasicArticleRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IArticle>(this.baasicArticleRouteDefinition.create(), this.baasicArticleRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -310,3 +310,10 @@ export class BaasicArticleClient {
         return this.baasicApiClient.delete<void>(this.baasicArticleRouteDefinition.purge(options));
     }
 }
+
+/**  
+ * @overview  
+ ***Notes:**  
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.  
+ - All end-point objects are transformed by the associated route service. 
+ */

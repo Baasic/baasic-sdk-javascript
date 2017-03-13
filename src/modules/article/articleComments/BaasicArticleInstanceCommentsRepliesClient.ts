@@ -97,7 +97,7 @@ export class BaasicArticleInstanceCommentRepliesClient {
                 });
      **/
     create(articleId: string, data: IArticleCommentReply): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.baasicApiClient.post(this.baasicArticleInstanceCommentRepliesRouteDefinition.create(articleId, data), this.baasicArticleInstanceCommentRepliesRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IArticleCommentReply>(this.baasicArticleInstanceCommentRepliesRouteDefinition.create(articleId, data), this.baasicArticleInstanceCommentRepliesRouteDefinition.createParams(data));
     }
 
     /**
@@ -122,7 +122,7 @@ export class BaasicArticleInstanceCommentRepliesClient {
                 });
      **/
     find(articleId: string, commentId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceCommentRepliesRouteDefinition.find(articleId, commentId, options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IArticleCommentReply>>(this.baasicArticleInstanceCommentRepliesRouteDefinition.find(articleId, commentId, options));
     }
 
     /**
@@ -185,7 +185,7 @@ export class BaasicArticleInstanceCommentRepliesClient {
                     });
      **/
     get(articleId: string, commentId: string, replyId: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceCommentRepliesRouteDefinition.get(articleId, commentId, replyId, options));
+        return this.baasicApiClient.get<IArticleCommentReply>(this.baasicArticleInstanceCommentRepliesRouteDefinition.get(articleId, commentId, replyId, options));
     }
 
     /**
