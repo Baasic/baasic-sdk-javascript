@@ -2,8 +2,8 @@ import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient } from 'httpApi'
 
 declare var $: any;
 let client: IHttpClient = {
-    request : request,
-    cratePromise: createPromise
+    request: request,
+    createPromise: createPromise
 }
 
 export { client };
@@ -45,7 +45,7 @@ function request<ResponseType>(request: IHttpRequest): PromiseLike<IHttpResponse
         });
 }
 
-function createPromise<TData>(deferFn: (resolve:(data: TData) => void, reject: (data: any) => void) => void): PromiseLike<TData> {
+function createPromise<TData>(deferFn: (resolve: (data: TData) => void, reject: (data: any) => void) => void): PromiseLike<TData> {
     let deferred = $.Deferred();
     deferFn(deferred.resolve, deferred.reject);
     return deferred.promise();
