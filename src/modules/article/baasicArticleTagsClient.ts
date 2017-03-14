@@ -51,7 +51,7 @@ export class BaasicArticleTagsClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleTag>>> {
-        return this.baasicApiClient.get(this.baasicArticleTagsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IArticleTag>>(this.baasicArticleTagsRouteDefinition.find(options));
     }
 
     /**                 
@@ -69,7 +69,7 @@ export class BaasicArticleTagsClient {
                    });                
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.baasicApiClient.get(this.baasicArticleTagsRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IArticleTag>(this.baasicArticleTagsRouteDefinition.get(id, options));
     }
 
     /**                 

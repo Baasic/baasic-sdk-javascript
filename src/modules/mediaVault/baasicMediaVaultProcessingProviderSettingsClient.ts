@@ -42,7 +42,7 @@ export class BaasicMediaVaultProcessingProviderSettingsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IPreprocessingProviderSettings>>> {
-        return this.baasicApiClient.get(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IPreprocessingProviderSettings>>(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.find(options));
     }
 
     /**                   
@@ -60,7 +60,7 @@ export class BaasicMediaVaultProcessingProviderSettingsClient {
                     });                   
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IPreprocessingProviderSettings>> {
-        return this.baasicApiClient.get(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IPreprocessingProviderSettings>(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.get(id, options));
     }
 
     /**                   

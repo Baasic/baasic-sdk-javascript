@@ -57,7 +57,7 @@ export class BaasicArticleFilesClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleFile>>> {
-        return this.baasicApiClient.get(this.baasicArticleFilesRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IArticleFile>>(this.baasicArticleFilesRouteDefinition.find(options));
     }
 
     /**                 

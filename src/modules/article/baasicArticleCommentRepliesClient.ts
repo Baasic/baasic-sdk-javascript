@@ -97,7 +97,7 @@ export class BaasicArticleCommentRepliesClient {
                 });
      **/
     create(data: IArticleCommentReply): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.baasicApiClient.post(this.baasicArticleCommentRepliesRouteDefinition.create(data), this.baasicArticleCommentRepliesRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IArticleCommentReply>(this.baasicArticleCommentRepliesRouteDefinition.create(data), this.baasicArticleCommentRepliesRouteDefinition.createParams(data));
     }
 
     /**
@@ -120,7 +120,7 @@ export class BaasicArticleCommentRepliesClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
-        return this.baasicApiClient.get(this.baasicArticleCommentRepliesRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IArticleCommentReply>>(this.baasicArticleCommentRepliesRouteDefinition.find(options));
     }
 
     /**
@@ -181,7 +181,7 @@ export class BaasicArticleCommentRepliesClient {
                     });
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.baasicApiClient.get(this.baasicArticleCommentRepliesRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IArticleCommentReply>(this.baasicArticleCommentRepliesRouteDefinition.get(id, options));
     }
 
     /**

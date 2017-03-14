@@ -36,7 +36,7 @@ export class BaasicMediaVaultSettingsClient {
                     });                     
      **/
     get(): PromiseLike<IHttpResponse<IMediaVaultSettings>> {
-        return this.baasicApiClient.get(this.baasicMediaVaultSettingsRouteDefinition.get());
+        return this.baasicApiClient.get<IMediaVaultSettings>(this.baasicMediaVaultSettingsRouteDefinition.get());
     }
 
     /**                   
