@@ -37,6 +37,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly dynamicResourceModule: modules.DynamicResource.BaasicDynamicResourceClient;
     public readonly notificationModule: modules.Notifications.BaasicNotificationsClient;
     public readonly articleModule: modules.Article.Root;
+    public readonly commerceModule: modules.Commerce.BaasicCommerceClient;
 
 
     constructor(private apiKey: string, private options?: Partial<IBaasicAppOptions>) {
@@ -67,6 +68,7 @@ export class BaasicApp implements IBaasicApp {
         this.dynamicResourceModule = this.diModule.kernel.get<modules.DynamicResource.BaasicDynamicResourceClient>(modules.DynamicResource.TYPES.BaasicDynamicResourceClient);
         this.notificationModule = this.diModule.kernel.get<modules.Notifications.BaasicNotificationsClient>(modules.Notifications.TYPES.BaasicNotificationsClient);
         this.articleModule = this.diModule.kernel.get<modules.Article.Root>(modules.Article.TYPES.Root);
+        this.commerceModule = this.diModule.kernel.get<modules.Commerce.BaasicCommerceClient>(modules.Commerce.TYPES.BaasicCommerceClient);
     }
 
     getAccessToken(): IToken {

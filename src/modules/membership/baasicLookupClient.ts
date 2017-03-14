@@ -57,7 +57,7 @@ export class BaasicLookupClient {
         var opt = this.utility.extend({}, options, { embed: embed });
         var self = this;
         return this.baasicApiClient.createPromise<any>((resolve, reject) => {
-            this.baasicApiClient.get(this.baasicLookupRouteDefinition.get(opt))
+            self.baasicApiClient.get(this.baasicLookupRouteDefinition.get(opt))
                 .then<any>(function (data) {
                     var responseData = self.getResponseData(embed, data);
                     resolve(responseData);

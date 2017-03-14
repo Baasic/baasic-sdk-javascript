@@ -55,7 +55,7 @@ export class BaasicArticleInstanceFilesClient {
                 });
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleFile>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceFilesRouteDefinition.find(articleId, options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IArticleFile>>(this.baasicArticleInstanceFilesRouteDefinition.find(articleId, options));
     }
 
     /**                 
@@ -70,7 +70,7 @@ export class BaasicArticleInstanceFilesClient {
                    });                 
     **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceFilesRouteDefinition.get(articleId, id, options));
+        return this.baasicApiClient.get<IArticleFile>(this.baasicArticleInstanceFilesRouteDefinition.get(articleId, id, options));
     }
 
     /**                  
@@ -146,7 +146,7 @@ export class BaasicArticleInstanceFilesClient {
                     });                 
      **/
     link(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.baasicApiClient.post(this.baasicArticleInstanceFilesRouteDefinition.link(articleId, data), this.baasicArticleInstanceFilesRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IArticleFile>(this.baasicArticleInstanceFilesRouteDefinition.link(articleId, data), this.baasicArticleInstanceFilesRouteDefinition.createParams(data));
     }
 }
 

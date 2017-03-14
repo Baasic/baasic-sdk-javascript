@@ -24,7 +24,7 @@ export class BaasicApiClient {
         this.createPromise = httpClient.createPromise;
     }
 
-    createPromise: <TData>(deferFn: (resolve:(data?: TData | undefined) => void, reject: (data?: any) => void) => void) => PromiseLike<TData>;
+    createPromise: <TData>(deferFn: (resolve: (data?: TData | undefined) => void, reject: (data?: any) => void) => void) => PromiseLike<TData>;
 
     request<TResponse>(request: IHttpRequest): PromiseLike<IHttpResponse<TResponse>> {
         if (request && request.url) {

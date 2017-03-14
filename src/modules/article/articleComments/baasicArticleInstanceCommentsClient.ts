@@ -101,7 +101,7 @@ export class BaasicArticleInstanceCommentsClient {
                     });
      **/
     create(data: IArticleComment): PromiseLike<IHttpResponse<IArticleComment>> {
-        return this.baasicApiClient.post(this.baasicArticleInstanceCommentsRouteDefinition.create(data), this.baasicArticleInstanceCommentsRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IArticleComment>(this.baasicArticleInstanceCommentsRouteDefinition.create(data), this.baasicArticleInstanceCommentsRouteDefinition.createParams(data));
     }
 
     /**
@@ -125,7 +125,7 @@ export class BaasicArticleInstanceCommentsClient {
                 });
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleComment>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceCommentsRouteDefinition.find(articleId, options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IArticleComment>>(this.baasicArticleInstanceCommentsRouteDefinition.find(articleId, options));
     }
 
     /**
@@ -188,7 +188,7 @@ export class BaasicArticleInstanceCommentsClient {
                    });
     **/
     get(articleId: string, commentId: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleComment>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceCommentsRouteDefinition.get(articleId, commentId, options));
+        return this.baasicApiClient.get<IArticleComment>(this.baasicArticleInstanceCommentsRouteDefinition.get(articleId, commentId, options));
     }
 
     /**
