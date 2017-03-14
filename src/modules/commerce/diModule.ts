@@ -42,6 +42,10 @@ import {
     BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition,
     BaasicCommerceLookupsSubscriptionStatusClient,
     BaasicCommerceLookupsSubscriptionStatusRouteDefinition,
+    BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition,
+    BaasicCommerceLookupsInvoiceStatusRouteDefinition,
+    BaasicCommerceLookupsInvoiceStatusBatchClient,
+    BaasicCommerceLookupsInvoiceStatusClient,
     Lookups
 } from 'modules/commerce';
 
@@ -88,6 +92,10 @@ const TYPES = {
     BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition: Symbol("BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition"),
     BaasicCommerceLookupsSubscriptionStatusClient: Symbol("BaasicCommerceLookupsSubscriptionStatusClient"),
     BaasicCommerceLookupsSubscriptionStatusRouteDefinition: Symbol("BaasicCommerceLookupsSubscriptionStatusRouteDefinition"),
+    BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition: Symbol("BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition"),
+    BaasicCommerceLookupsInvoiceStatusRouteDefinition: Symbol("BaasicCommerceLookupsInvoiceStatusRouteDefinition"),
+    BaasicCommerceLookupsInvoiceStatusBatchClient: Symbol("BaasicCommerceLookupsInvoiceStatusBatchClient"),
+    BaasicCommerceLookupsInvoiceStatusClient: Symbol("BaasicCommerceLookupsInvoiceStatusClient"),
     Lookups: Symbol("Lookups")
 
 };
@@ -137,6 +145,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicCommerceLookupsSubscriptionStatusBatchClient>(TYPES.BaasicCommerceLookupsSubscriptionStatusBatchClient).to(BaasicCommerceLookupsSubscriptionStatusBatchClient);
     bind<BaasicCommerceLookupsSubscriptionStatusRouteDefinition>(TYPES.BaasicCommerceLookupsSubscriptionStatusRouteDefinition).to(BaasicCommerceLookupsSubscriptionStatusRouteDefinition);
     bind<BaasicCommerceLookupsSubscriptionStatusClient>(TYPES.BaasicCommerceLookupsSubscriptionStatusClient).to(BaasicCommerceLookupsSubscriptionStatusClient);
+    bind<BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition>(TYPES.BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition).to(BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition);
+    bind<BaasicCommerceLookupsInvoiceStatusRouteDefinition>(TYPES.BaasicCommerceLookupsInvoiceStatusRouteDefinition).to(BaasicCommerceLookupsInvoiceStatusRouteDefinition);
+    bind<BaasicCommerceLookupsInvoiceStatusBatchClient>(TYPES.BaasicCommerceLookupsInvoiceStatusBatchClient).to(BaasicCommerceLookupsInvoiceStatusBatchClient);
+    bind<BaasicCommerceLookupsInvoiceStatusClient>(TYPES.BaasicCommerceLookupsInvoiceStatusClient).to(BaasicCommerceLookupsInvoiceStatusClient);
     bind<Lookups>(TYPES.Lookups).to(Lookups);
 });
 

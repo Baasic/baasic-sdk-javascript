@@ -8,7 +8,8 @@ import {
     BaasicCommerceLookupsPaymentMethodClient,
     BaasicCommerceLookupsPaymentTransactionStatusClient,
     BaasicCommerceLookupsRecurringCyclePeriodTypeClient,
-    BaasicCommerceLookupsSubscriptionStatusClient
+    BaasicCommerceLookupsSubscriptionStatusClient,
+    BaasicCommerceLookupsInvoiceStatusClient
 } from 'modules/commerce/lookups';
 
 
@@ -25,8 +26,8 @@ export class Lookups {
         @inject(TYPES.BaasicCommerceLookupsPaymentMethodClient) public paymentMethods: BaasicCommerceLookupsPaymentMethodClient,
         @inject(TYPES.BaasicCommerceLookupsPaymentTransactionStatusClient) public paymentTransactionStatuses: BaasicCommerceLookupsPaymentTransactionStatusClient,
         @inject(TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeClient) public recurringCyclePerioedTypes: BaasicCommerceLookupsRecurringCyclePeriodTypeClient,
-        @inject(TYPES.BaasicCommerceLookupsSubscriptionStatusClient) public subscriptionStatuses: BaasicCommerceLookupsSubscriptionStatusClient
-
+        @inject(TYPES.BaasicCommerceLookupsSubscriptionStatusClient) public subscriptionStatuses: BaasicCommerceLookupsSubscriptionStatusClient,
+        @inject(TYPES.BaasicCommerceLookupsInvoiceStatusClient) public invoiceStatuses: BaasicCommerceLookupsInvoiceStatusClient
     ) {
     }
 
