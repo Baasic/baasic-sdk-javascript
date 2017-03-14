@@ -241,7 +241,7 @@ export class BaasicPermissionClient {
         } else {
             operation = this.create;
         }
-        return operation(requestPermission);
+        return operation.call(this, requestPermission);
     }
     /**
     * Fetches and returns and object containing all existing module permissions.

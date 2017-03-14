@@ -112,13 +112,13 @@ export class BaasicLoginClient {
             type: type
         };
         var self = this;
-        return this.baasicApiClient.createPromise<void>((resolve, reject) => {  
-            this.baasicApiClient.delete(this.baasicLoginRouteDefinition.login({}), data)
+        return this.baasicApiClient.createPromise<void>((resolve, reject) => {
+            self.baasicApiClient.delete<void>(self.baasicLoginRouteDefinition.login({}), null, data)
                 .then(function (result) {
                     self.tokenHandler.store(null);
                     resolve();
-                }, (data) => {
-                    reject(data);
+                }, (result) => {
+                    reject(result);
                 });
         });
     }

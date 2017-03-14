@@ -31,17 +31,20 @@ export class BaasicApiClient {
             request.url = this.compileUrl(request.url);
         }
 
+        var headers = request.headers || (request.headers = {});
         var authToken = this.tokenHandler.get();
         if (authToken) {
-            var headers = request.headers || (request.headers = {});
             /*jshint camelcase: false */
             headers["AUTHORIZATION"] = `BEARER ${authToken.token}`;
         }
 
+
+        if (request.data && !this.headerExists(headers, 'Content-Type')) {
+            headers['Content-Type'] = 'application/json; charset=UTF-8';
+        }
+
         if (this.appOptions.enableHALJSON) {
-            var headers = request.headers || (request.headers = {});
-            //Do not override if exists
-            if (!headers.hasOwnProperty("Accept")) {
+            if (!this.headerExists(headers, 'Accept')) {
                 headers["Accept"] = 'application/hal+json; charset=UTF-8';
             }
         }
@@ -49,7 +52,7 @@ export class BaasicApiClient {
         var self = this;
         var promise = this.httpClient.request<TResponse>(request);
         promise.then<IHttpResponse<TResponse>>(function (data) {
-            var contentType = data.headers['Content-Type'] || data.headers['content-type'];
+            var contentType = self.getHeader(data.headers, 'Content-Type');
             if (contentType && contentType.toLowerCase().indexOf('application/hal+json') !== -1) {
                 data.data = self.halParser.parse(data.data);
             }
@@ -136,6 +139,17 @@ export class BaasicApiClient {
 
     private unquote(quotedString: string): string {
         return quotedString.substr(1, quotedString.length - 2).replace(/(?:(?:\r\n)?[ \t])+/g, ' ');
+    }
+
+    private headerExists(headers: any, key: string): boolean {
+        return headers && (headers.hasOwnProperty(key) || headers.hasOwnProperty(key.toLowerCase()));
+    }
+
+    private getHeader(headers: any, key: string): string {
+        if (headers) {
+            return headers[key] || headers[key.toLowerCase()];
+        }
+        return undefined;
     }
 
     private parseWWWAuthenticateHeader(value: string) {

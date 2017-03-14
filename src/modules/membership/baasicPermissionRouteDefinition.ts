@@ -110,7 +110,9 @@ baasicPermissionRouteDefinition.getRoles(
     * @method        
     * @example baasicPermissionRouteDefinition.create({});               
     **/
-    create(): any { super.baseCreate(this.createRoute) }
+    create(): any {
+        return super.baseCreate(this.createRoute);
+    }
     /**                  
      * Returns a promise that is resolved once the remove permission action has been performed. This action will remove a permission from the system, if completed successfully. 
      * @param data A permission object used to delete specified permission resource.
