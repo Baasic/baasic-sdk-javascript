@@ -7,16 +7,49 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
-import { BaasicCommerceRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import {
+    BaasicCommerceRouteDefinition,
+    BaasicCommerceCustomerClient,
+    BaasicCommerceInvoiceClient,
+    BaasicCommerceProductClient,
+    BaasicCommercePaymentTransactionClient,
+    Lookups,
+    TYPES as commerceTypes
+} from 'modules/commerce';
 
 @injectable()
 export class BaasicCommerceClient {
+
+    get customers(): BaasicCommerceCustomerClient {
+        return this.baasicCommerceCustomerClient;
+    }
+
+    get invoices(): BaasicCommerceInvoiceClient {
+        return this.baasicCommerceInvoiceClient;
+    }
+
+    get products(): BaasicCommerceProductClient {
+        return this.baasicCommerceProductClient;
+    }
+
+    get paymentTransactions(): BaasicCommercePaymentTransactionClient {
+        return this.baasicCommercePaymentTransactionClient;
+    }
+
+    get lookups(): Lookups {
+        return this.lookup;
+    }
 
     get routeDefinition(): BaasicCommerceRouteDefinition {
         return this.baasicCommerceRouteDefinition;
     }
 
     constructor(
+        @inject(commerceTypes.BaasicCommerceCustomerClient) protected baasicCommerceCustomerClient: BaasicCommerceCustomerClient,
+        @inject(commerceTypes.BaasicCommerceInvoiceClient) protected baasicCommerceInvoiceClient: BaasicCommerceInvoiceClient,
+        @inject(commerceTypes.BaasicCommerceProductClient) protected baasicCommerceProductClient: BaasicCommerceProductClient,
+        @inject(commerceTypes.BaasicCommercePaymentTransactionClient) protected baasicCommercePaymentTransactionClient: BaasicCommercePaymentTransactionClient,
+        @inject(commerceTypes.Lookups) protected lookup: Lookups,
         @inject(commerceTypes.BaasicCommerceRouteDefinition) protected baasicCommerceRouteDefinition: BaasicCommerceRouteDefinition,
         @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }

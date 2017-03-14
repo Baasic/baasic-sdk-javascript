@@ -22,3 +22,5 @@ import * as Metering from './metering';
 export { Metering };
 import * as Notifications from './notifications';
 export { Notifications };
+import * as Commerce from './commerce';
+export { Commerce };
