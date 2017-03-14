@@ -49,7 +49,7 @@ export class BaasicNotificationsRegistrationsUsersClient {
                 });                         
      */
     create(data: IUserRegistration): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.baasicApiClient.post(this.baasicNotificationsRegistrationsUsersRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IUserRegistration>(this.baasicNotificationsRegistrationsUsersRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -75,7 +75,7 @@ export class BaasicNotificationsRegistrationsUsersClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserRegistration>>> {
-        return this.baasicApiClient.get(this.baasicNotificationsRegistrationsUsersRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IUserRegistration>>(this.baasicNotificationsRegistrationsUsersRouteDefinition.find(options));
     }
 
     /**                          
@@ -92,7 +92,7 @@ export class BaasicNotificationsRegistrationsUsersClient {
                    });                         
     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.baasicApiClient.get(this.baasicNotificationsRegistrationsUsersRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IUserRegistration>(this.baasicNotificationsRegistrationsUsersRouteDefinition.get(id, options));
     }
 
     /**                          

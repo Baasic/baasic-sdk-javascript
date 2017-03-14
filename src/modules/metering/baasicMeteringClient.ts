@@ -75,7 +75,7 @@ export class BaasicMeteringClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IMeteringData>>> {
-        return this.baasicApiClient.get(this.baasicMeteringRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IMeteringData>>(this.baasicMeteringRouteDefinition.find(options));
     }
 
     /**                 
@@ -93,7 +93,7 @@ export class BaasicMeteringClient {
                     });                 
      **/
     get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IMeteringData>> {
-        return this.baasicApiClient.get(this.baasicMeteringRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IMeteringData>(this.baasicMeteringRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -114,7 +114,7 @@ export class BaasicMeteringClient {
                 });                 
       **/
     create(data: IMeteringData): PromiseLike<IHttpResponse<IMeteringData>> {
-        return this.baasicApiClient.post(this.baasicMeteringRouteDefinition.create(), this.baasicMeteringRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IMeteringData>(this.baasicMeteringRouteDefinition.create(), this.baasicMeteringRouteDefinition.createParams(data));
     }
 
     /**                  

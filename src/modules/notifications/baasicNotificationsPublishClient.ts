@@ -48,7 +48,7 @@ export class BaasicNotificationsPublishClient {
                 });                      
      */
     create(data: INotification): PromiseLike<IHttpResponse<INotification>> {
-        return this.baasicApiClient.post(this.baasicNotificationsPublishRouteDefinition.create(), this.baasicNotificationsPublishRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<INotification>(this.baasicNotificationsPublishRouteDefinition.create(), this.baasicNotificationsPublishRouteDefinition.createParams(data));
     }
 }
 

@@ -47,7 +47,7 @@ export class BaasicTemplatingClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ITemplate>>> {
-        return this.baasicApiClient.get(this.baasicTemplatingRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<ITemplate>>(this.baasicTemplatingRouteDefinition.find(options));
     }
 
     /**                 
@@ -64,7 +64,7 @@ export class BaasicTemplatingClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.baasicApiClient.get(this.baasicTemplatingRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<ITemplate>(this.baasicTemplatingRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -81,7 +81,7 @@ export class BaasicTemplatingClient {
                     });                 
      **/
     create(data: ITemplate): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.baasicApiClient.post(this.baasicTemplatingRouteDefinition.create(), this.baasicTemplatingRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<ITemplate>(this.baasicTemplatingRouteDefinition.create(), this.baasicTemplatingRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -103,8 +103,8 @@ export class BaasicTemplatingClient {
                              // perform error handling here 
                         });                
      **/
-    update(data: ITemplate): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicTemplatingRouteDefinition.update(data), this.baasicTemplatingRouteDefinition.updateParams(data));
+    update(data: ITemplate): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicTemplatingRouteDefinition.update(data), this.baasicTemplatingRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -125,8 +125,8 @@ export class BaasicTemplatingClient {
                              // perform error handling here 
                         });		               
      **/
-    remove(data: ITemplate): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicTemplatingRouteDefinition.delete(data));
+    remove(data: ITemplate): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicTemplatingRouteDefinition.delete(data));
     }
 }
 

@@ -47,7 +47,7 @@ export class BaasicNotificationsSubscriptionsUsersClient {
                 });                         
      */
     create(data: IUserSubscription): PromiseLike<IHttpResponse<IUserSubscription>> {
-        return this.baasicApiClient.post(this.baasicNotificationsSubscriptionsUsersRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IUserSubscription>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -73,7 +73,7 @@ export class BaasicNotificationsSubscriptionsUsersClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSubscription>>> {
-        return this.baasicApiClient.get(this.baasicNotificationsSubscriptionsUsersRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IUserSubscription>>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.find(options));
     }
 
     /**                          

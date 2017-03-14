@@ -35,7 +35,7 @@ export class BaasicNotificationsSubscriptionsUsersBatchClient {
                 });                             
      */
     create(data: IUserSubscription[]): PromiseLike<IHttpResponse<IUserSubscription[]>> {
-        return this.baasicApiClient.post(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IUserSubscription[]>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.createParams(data));
     }
 
     /**                              

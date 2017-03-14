@@ -42,7 +42,7 @@ export class BaasicMeteringCategoryBatchClient {
                 });                   
      **/
     create(data: IMeteringCategory[]): PromiseLike<IHttpResponse<IMeteringCategory[]>> {
-        return this.baasicApiClient.post(this.baasicMeteringCategoryBatchRouteDefinition.create(), this.baasicMeteringCategoryBatchRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IMeteringCategory[]>(this.baasicMeteringCategoryBatchRouteDefinition.create(), this.baasicMeteringCategoryBatchRouteDefinition.createParams(data));
     }
 
     /**                   

@@ -40,7 +40,7 @@ export class BaasicNotificationsSubscriptionsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousSubscription): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.baasicApiClient.post(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.create(), this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IAnonymousSubscription>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.create(), this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -66,7 +66,7 @@ export class BaasicNotificationsSubscriptionsAnonymousClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IAnonymousSubscription>>> {
-        return this.baasicApiClient.get(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.find())
+        return this.baasicApiClient.get<IBaasicQueryModel<IAnonymousSubscription>>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.find())
     }
 
     /**                          
@@ -84,7 +84,7 @@ export class BaasicNotificationsSubscriptionsAnonymousClient {
                     });                         
      */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.baasicApiClient.get(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IAnonymousSubscription>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.get(id, options));
     }
 
     /**                          

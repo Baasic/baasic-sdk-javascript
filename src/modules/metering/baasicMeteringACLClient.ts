@@ -30,8 +30,8 @@ export class BaasicMeteringACLClient {
                         // perform error handling here 
                    });                     
     **/
-    get(options: IACLOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IACLPolicy[]>>> {
-        return this.baasicApiClient.get(this.baasicMeteringACLRouteDefinition.get(options));
+    get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
+        return this.baasicApiClient.get<IACLPolicy[]>(this.baasicMeteringACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -49,7 +49,7 @@ export class BaasicMeteringACLClient {
                           // perform error handling here 
                     }); 				    
      **/
-    update(options: IACLOptions): PromiseLike<IHttpResponse<void>> {
+    update(options: IACLOptions[]): PromiseLike<IHttpResponse<void>> {
         return this.baasicApiClient.put<void>(this.baasicMeteringACLRouteDefinition.update(options), this.baasicMeteringACLRouteDefinition.updateParams(options));
     }
 

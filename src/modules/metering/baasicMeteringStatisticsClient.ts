@@ -41,7 +41,7 @@ export class BaasicMeteringStatisticsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IMeteringData>>> {
-        return this.baasicApiClient.get(this.baasicMeteringStatisticsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IMeteringData>>(this.baasicMeteringStatisticsRouteDefinition.find(options));
     }
 }
 
