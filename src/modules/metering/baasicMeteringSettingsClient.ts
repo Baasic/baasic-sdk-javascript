@@ -34,7 +34,7 @@ export class BaasicMeteringSettingsClient {
                     });                 
      **/
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMeteringSettings>> {
-        return this.baasicApiClient.get(this.baasicMeteringSettingsRouteDefinition.get(options));
+        return this.baasicApiClient.get<IMeteringSettings>(this.baasicMeteringSettingsRouteDefinition.get(options));
     }
 
     /**                  

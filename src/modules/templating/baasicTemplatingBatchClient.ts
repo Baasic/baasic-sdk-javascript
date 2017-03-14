@@ -36,7 +36,7 @@ export class BaasicTemplatingBatchClient {
                     });                     
     **/
     create(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
-        return this.baasicApiClient.post(this.baasicTemplatingBatchRouteDefinition.create(), this.baasicTemplatingBatchRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IBaasicResponse[]>(this.baasicTemplatingBatchRouteDefinition.create(), this.baasicTemplatingBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -53,7 +53,7 @@ export class BaasicTemplatingBatchClient {
                     });                     
      **/
     update(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
-        return this.baasicApiClient.post(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<IBaasicResponse[]>(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
@@ -69,8 +69,8 @@ export class BaasicTemplatingBatchClient {
                          // perform error handling here     
                     });		                    
      **/
-    remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicTemplatingBatchRouteDefinition.delete(), undefined, ids);
+    remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicTemplatingBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

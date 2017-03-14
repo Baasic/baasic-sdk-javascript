@@ -49,7 +49,7 @@ export class BaasicNotificationsRegistrationsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousRegistration): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
-        return this.baasicApiClient.post(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.create(), this.baasicNotificationsRegistrationsAnonymousRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IAnonymousRegistration>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.create(), this.baasicNotificationsRegistrationsAnonymousRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -74,7 +74,7 @@ export class BaasicNotificationsRegistrationsAnonymousClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IAnonymousRegistration>>> {
-        return this.baasicApiClient.get(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IAnonymousRegistration>>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.find(options));
     }
 
     /**                          

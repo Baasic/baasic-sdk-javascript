@@ -40,7 +40,7 @@ export class BaasicNotificationsRegistrationsUsersBatchClient {
                 });                             
      */
     create(data: IUserRegistration[]): PromiseLike<IHttpResponse<IUserRegistration[]>> {
-        return this.baasicApiClient.post(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IUserRegistration[]>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.createParams(data));
     }
 
     /**                              
