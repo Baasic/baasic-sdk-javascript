@@ -1,4 +1,4 @@
-import { IStorageHandler, IEventHandler } from 'core/contracts';
+import { IStorageHandler, IEventHandler, IDefaultStorageConfig } from 'core/contracts';
 import { IHttpClient } from 'httpApi';
 
 export interface IBaasicAppOptions {
@@ -7,8 +7,8 @@ export interface IBaasicAppOptions {
     apiVersion: string,
     apiUrl?: URL,
     enableHALJSON?: boolean,
-    storageHandler?: IStorageHandler,
-    httpClient?: IHttpClient,
-    eventHandler?: IEventHandler,
+    storageHandler?: () => IStorageHandler | IDefaultStorageConfig,
+    httpClient?: () => IHttpClient,
+    eventHandler?: () => IEventHandler,
     promiseFactory?: <RType>(resolve:(data: RType) => void, reject: (data: any) => void) => PromiseLike<RType>
 }

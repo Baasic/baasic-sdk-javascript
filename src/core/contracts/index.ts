@@ -4,7 +4,7 @@ export * from './IToken';
 export * from './ITokenHandler';
 export * from './IUser';
 export * from './IUserHandler';
-
+export * from './IDefaultStorageConfig';
 export * from './IBaasicAppOptions';
 export * from './IAppOptions';
 export * from './IBaasicApp';
