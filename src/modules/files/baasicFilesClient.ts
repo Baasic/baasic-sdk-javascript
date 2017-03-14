@@ -63,7 +63,7 @@ export class BaasicFilesClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IFileEntry>>> {
-        return this.baasicApiClient.get(this.baasicFilesRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IFileEntry>>(this.baasicFilesRouteDefinition.find(options));
     }
 
     /**                 
@@ -81,7 +81,7 @@ export class BaasicFilesClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IFileEntry>> {
-        return this.baasicApiClient.get(this.baasicFilesRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IFileEntry>(this.baasicFilesRouteDefinition.get(id, options));
     }
 
     /**                  

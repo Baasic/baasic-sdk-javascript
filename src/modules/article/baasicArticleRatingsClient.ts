@@ -46,7 +46,7 @@ export class BaasicArticleRatingsClient {
                 });                   
      **/
     create(data: IRating): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.post(this.baasicArticleRatingsRouteDefinition.create(data), this.baasicArticleRatingsRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IRating>(this.baasicArticleRatingsRouteDefinition.create(data), this.baasicArticleRatingsRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -69,7 +69,7 @@ export class BaasicArticleRatingsClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get(this.baasicArticleRatingsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.find(options));
     }
 
     /**                  
@@ -92,7 +92,7 @@ export class BaasicArticleRatingsClient {
                 });                     
      **/
     findByUser(username: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get(this.baasicArticleRatingsRouteDefinition.findByUser(username, options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.findByUser(username, options));
     }
 
     /**                  
@@ -110,7 +110,7 @@ export class BaasicArticleRatingsClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.get(this.baasicArticleRatingsRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IRating>(this.baasicArticleRatingsRouteDefinition.get(id, options));
     }
 
     /**                  
