@@ -38,8 +38,8 @@ export class BaasicApiClient {
             headers["AUTHORIZATION"] = `BEARER ${authToken.token}`;
         }
 
-        if (this.appOptions.enableHALJSON) {
-            var headers = request.headers || (request.headers = {});
+        var headers = request.headers || (request.headers = {});
+        if (this.appOptions.enableHALJSON) {            
             //Do not override if exists
             if (!headers.hasOwnProperty("Accept")) {
                 headers["Accept"] = 'application/hal+json; charset=UTF-8';

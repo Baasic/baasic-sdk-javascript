@@ -63,6 +63,6 @@ export class BaasicArticleSubscriptionsClient {
                         // perform error handling here 
                    });                          **/
     unSubscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleSubscriptionsRouteDefinition.unSubscribe(data), undefined, data);
+        return this.baasicApiClient.delete<void>(this.baasicArticleSubscriptionsRouteDefinition.unSubscribe(data));
     }
 }

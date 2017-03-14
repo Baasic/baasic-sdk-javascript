@@ -9,6 +9,7 @@ import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contract
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicCommerceCustomerRouteDefinition, BaasicCommerceCustomerPaymentMethodClient, TYPES as commerceTypes } from 'modules/commerce';
 
+@injectable()
 export class BaasicCommerceCustomerClient {
 
     get paymentMethods(): BaasicCommerceCustomerPaymentMethodClient {

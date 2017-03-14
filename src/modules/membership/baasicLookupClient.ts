@@ -59,8 +59,8 @@ export class BaasicLookupClient {
         return this.baasicApiClient.createPromise<any>((resolve, reject) => {
             self.baasicApiClient.get(this.baasicLookupRouteDefinition.get(opt))
                 .then<any>(function (data) {
-                    var responseData = self.getResponseData(embed, data);
-                    resolve(responseData);
+                    data.data = self.getResponseData(embed, data.data);
+                    resolve(data);
                 }, function (data) {
                     reject(data);
                 });

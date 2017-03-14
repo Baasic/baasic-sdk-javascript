@@ -60,7 +60,7 @@ export class ModelMapper {
 
     private ModelParams(data: any): any {
         let object: any = {};
-        if (data.hasOwnProperty(this.modelPropertyName)) {
+        if (data && data.hasOwnProperty(this.modelPropertyName)) {
             this.utility.extend(object, data);
         } else {
             object[this.modelPropertyName] = data;
