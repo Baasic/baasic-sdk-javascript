@@ -21,7 +21,7 @@ export class BaasicApiClient {
         @inject(coreTYPES.ITokenHandler) private tokenHandler: ITokenHandler,
         @inject(commonTYPES.IHALParser) private halParser: IHALParser
     ) {
-        this.createPromise = httpClient.cratePromise;
+        this.createPromise = httpClient.createPromise;
     }
 
     createPromise: <TData>(deferFn: (resolve:(data?: TData | undefined) => void, reject: (data?: any) => void) => void) => PromiseLike<TData>;

@@ -5,7 +5,8 @@ const TYPES = {
     IEventHandler: Symbol("IEventHandler"),
     ITokenHandler: Symbol("ITokenHandler"),
     IUserHandler: Symbol("IUserHandler"),
-    IBaasicApp: Symbol("IBaasicApp")
+    IBaasicApp: Symbol("IBaasicApp"),
+    IDefaultStorageConfig: Symbol("IDefaultStorageConfig")
 };
 
 export { TYPES };
