@@ -17,8 +17,7 @@ export class LocalStorageHandler implements IStorageHandler {
         if (parseKey) {
             getHandler = function (fn) { arguments[0] = parseKey(arguments[0]); fn.apply(this, arguments); }
         } else {
-            getHandler = (fn) => fn;
-            
+            getHandler = (fn) => fn;            
         }
         this.clear = localStorage.clear;
         this.remove = getHandler(this.removeItem);
