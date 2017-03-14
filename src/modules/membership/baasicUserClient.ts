@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
     BaasicUserRouteDefinition,
@@ -72,7 +72,7 @@ export class BaasicUserClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IAppUser>>> {
-        return this.baasicApiClient.get(this.baasicUserRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IAppUser>>(this.baasicUserRouteDefinition.find(options));
     }
 
     /**                  
@@ -92,8 +92,8 @@ export class BaasicUserClient {
                     // perform error handling here 
                 });                  
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.baasicApiClient.get(this.baasicUserRouteDefinition.get(id, options));
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAppUser>> {
+        return this.baasicApiClient.get<IAppUser>(this.baasicUserRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -118,7 +118,7 @@ export class BaasicUserClient {
                 });                  
      **/
     create(data: INewUser): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.baasicApiClient.post(this.baasicUserRouteDefinition.create(), this.baasicUserRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IAppUser>(this.baasicUserRouteDefinition.create(), this.baasicUserRouteDefinition.createParams(data));
     }
 
     /**                  

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import { BaasicRoleRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRole } from 'modules/membership/contracts';
@@ -46,8 +46,8 @@ export class BaasicRoleClient {
                     // perform error handling here 
                 });                     
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRole>>> {
-        return this.baasicApiClient.get(this.baasicRoleRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRole>>> {
+        return this.baasicApiClient.get<IBaasicQueryModel<IRole>>(this.baasicRoleRouteDefinition.find(options));
     }
 
     /**                  
@@ -64,8 +64,8 @@ export class BaasicRoleClient {
                         // perform error handling here 
                     });                  
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IRole>> {
-        return this.baasicApiClient.get(this.baasicRoleRouteDefinition.get(id, options));
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRole>> {
+        return this.baasicApiClient.get<IRole>(this.baasicRoleRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -85,7 +85,7 @@ export class BaasicRoleClient {
                 });                  
      **/
     create(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.baasicApiClient.post(this.baasicRoleRouteDefinition.create(), this.baasicRoleRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IRole>(this.baasicRoleRouteDefinition.create(), this.baasicRoleRouteDefinition.createParams(data));
     }
 
     /**                  

@@ -68,8 +68,8 @@ export class BaasicMediaVaultClient {
                    // perform error handling here 
               });                    
    **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IMediaEntry>> {
-        return this.baasicApiClient.get(this.baasicMediaVaultRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IMediaEntry>>> {
+        return this.baasicApiClient.get<IBaasicQueryModel<IMediaEntry>>(this.baasicMediaVaultRouteDefinition.find(options));
     }
 
     /**                 
@@ -87,7 +87,7 @@ export class BaasicMediaVaultClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMediaEntry>> {
-        return this.baasicApiClient.get(this.baasicMediaVaultRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IMediaEntry>(this.baasicMediaVaultRouteDefinition.get(id, options));
     }
 
     /**                  

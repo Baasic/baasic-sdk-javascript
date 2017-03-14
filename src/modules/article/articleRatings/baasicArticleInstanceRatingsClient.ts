@@ -40,7 +40,7 @@ export class BaasicArticleInstanceRatingsClient {
                     });                   
      **/
     create(data: IRating): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.post(this.baasicArticleInstanceRatingsRouteDefinition.create(data), this.baasicArticleInstanceRatingsRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IRating>(this.baasicArticleInstanceRatingsRouteDefinition.create(data), this.baasicArticleInstanceRatingsRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -61,7 +61,7 @@ export class BaasicArticleInstanceRatingsClient {
                 });                     
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.find(articleId, options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.find(articleId, options));
     }
 
     /**                  
@@ -81,7 +81,7 @@ export class BaasicArticleInstanceRatingsClient {
                 });                     
      **/
     findByUser(articleId: string, username: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
     }
 
     /**                  
@@ -96,7 +96,7 @@ export class BaasicArticleInstanceRatingsClient {
                     });                 
      **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceRatingsRouteDefinition.get(articleId, id, options));
+        return this.baasicApiClient.get<IRating>(this.baasicArticleInstanceRatingsRouteDefinition.get(articleId, id, options));
     }
 
     /**                  

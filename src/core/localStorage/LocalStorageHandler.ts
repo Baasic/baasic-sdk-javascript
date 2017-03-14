@@ -21,7 +21,7 @@ export class LocalStorageHandler implements IStorageHandler {
             
         }
         this.clear = localStorage.clear;
-        this.remove = getHandler(localStorage.removeItem);
+        this.remove = getHandler(this.removeItem);
         this.set = getHandler(this.setItem);
         this.get = getHandler(this.getItem);
     }
@@ -33,6 +33,10 @@ export class LocalStorageHandler implements IStorageHandler {
     set: (key: string, data: any) => void;
 
     get: (key: string) => any;
+
+    private removeItem(key: string): void {
+        localStorage.removeItem(key);
+    }
 
     private getItem(key:string) : any {
         return JSON.parse(localStorage.getItem(key));

@@ -32,7 +32,7 @@ export class BaasicArticleTagsSubscriptionsClient {
                         // perform error handling here 
                     });                     
      **/
-    subscribe(tag: any, data: any): PromiseLike<IHttpResponse<IArticleSubscription>> {
+    subscribe(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<IArticleSubscription>> {
         return this.baasicApiClient.post(this.baasicArticleTagsSubscriptionsRouteDefinition.subscribe(tag, data), this.baasicArticleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
     }
 

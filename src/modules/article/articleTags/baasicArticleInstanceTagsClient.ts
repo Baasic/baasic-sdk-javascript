@@ -41,7 +41,7 @@ export class BaasicArticleInstanceTagsClient {
                 });                    
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleTag>>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceTagsRouteDefinition.find(articleId, options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IArticleTag>>(this.baasicArticleInstanceTagsRouteDefinition.find(articleId, options));
     }
 
     /**                 
@@ -58,7 +58,7 @@ export class BaasicArticleInstanceTagsClient {
                    });                
     **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceTagsRouteDefinition.get(articleId, id, options));
+        return this.baasicApiClient.get<IArticleTag>(this.baasicArticleInstanceTagsRouteDefinition.get(articleId, id, options));
     }
 
     /**                     
@@ -80,7 +80,7 @@ export class BaasicArticleInstanceTagsClient {
                 });                     
      **/
     create(data: IArticleTag): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.baasicApiClient.post(this.baasicArticleInstanceTagsRouteDefinition.create(data), this.baasicArticleInstanceTagsRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IArticleTag>(this.baasicArticleInstanceTagsRouteDefinition.create(data), this.baasicArticleInstanceTagsRouteDefinition.createParams(data));
     }
 
     /**                 

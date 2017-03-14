@@ -32,7 +32,7 @@ export class BaasicUserSocialLoginClient {
                     });                     
      **/
     get(username: string): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSocialLogin>>> {
-        return this.baasicApiClient.get(this.baasicUserSocialLoginRouteDefinition.get(username));
+        return this.baasicApiClient.get<IBaasicQueryModel<IUserSocialLogin>>(this.baasicUserSocialLoginRouteDefinition.get(username));
     }
 
     /**                     
@@ -49,8 +49,8 @@ export class BaasicUserSocialLoginClient {
                         // perform error handling here 
                     });                     
      **/
-    remove(username: string, provider: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserSocialLoginRouteDefinition.remove(username, provider));
+    remove(username: string, provider: any): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicUserSocialLoginRouteDefinition.remove(username, provider));
     }
 }
 
