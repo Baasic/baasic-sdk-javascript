@@ -33,7 +33,7 @@ export class BaasicArticleACLClient {
                     });                     
      **/
     get(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.get(this.baasicArticleACLRouteDefinition.get(options));
+        return this.baasicApiClient.get<IACLPolicy[]>(this.baasicArticleACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -57,7 +57,7 @@ export class BaasicArticleACLClient {
                     }); 				    
      **/
     update(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicArticleACLRouteDefinition.get(options), this.baasicArticleACLRouteDefinition.updateParams(options));
+        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicArticleACLRouteDefinition.update(options), this.baasicArticleACLRouteDefinition.updateParams(options));
     }
 
     /**                     

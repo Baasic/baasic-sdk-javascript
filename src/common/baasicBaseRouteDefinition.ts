@@ -62,16 +62,17 @@ export abstract class BaasicBaseRouteDefinition {
     protected baseUpdate(route: string, data: any, options?: IOptions, linkName?: string): any {
         let link: string = linkName ? linkName : 'put';
         let params = this.modelMapper.updateParams(data);
+        let model = params[this.modelMapper.modelPropertyName];
         if (typeof options === 'undefined') {
-            if (this.appOptions.enableHALJSON) {
-                return params[this.modelMapper.modelPropertyName].links(link).href;
+            if (this.appOptions.enableHALJSON && model.links) {
+                return model.links(link).href;
             } else {
-                return uritemplate.parse(route).expand(params[this.modelMapper.modelPropertyName]);
+                return uritemplate.parse(route).expand(model);
             }
         } else {
-            let opt = this.utility.extend(params[this.modelMapper.modelPropertyName], options);
-            if (this.appOptions.enableHALJSON) {
-                return uritemplate.parse(params[this.modelMapper.modelPropertyName].links(link).href).expand(opt);
+            let opt = this.utility.extend(model, options);
+            if (this.appOptions.enableHALJSON && model.links) {
+                return uritemplate.parse(model.links(link).href).expand(opt);
             } else {
                 return uritemplate.parse(route).expand(opt);
             }
@@ -87,16 +88,17 @@ export abstract class BaasicBaseRouteDefinition {
     protected baseDelete(route: string, data: any, options?: IOptions, linkName?: string): any {
         let link: string = linkName ? linkName : 'delete';
         let params = this.modelMapper.removeParams(data);
+        let model = params[this.modelMapper.modelPropertyName];
         if (typeof options === 'undefined') {
-            if (this.appOptions.enableHALJSON) {
-                return params[this.modelMapper.modelPropertyName].links(link).href;
+            if (this.appOptions.enableHALJSON && model.links) {
+                return model.links(link).href;
             } else {
-                return uritemplate.parse(route).expand(params[this.modelMapper.modelPropertyName]);
+                return uritemplate.parse(route).expand(model);
             }
         } else {
-            let opt = this.utility.extend(params[this.modelMapper.modelPropertyName], options);
-            if (this.appOptions.enableHALJSON) {
-                return uritemplate.parse(params[this.modelMapper.modelPropertyName].links(link).href).expand(opt);
+            let opt = this.utility.extend(model, options);
+            if (this.appOptions.enableHALJSON && model.links) {
+                return uritemplate.parse(model.links(link).href).expand(opt);
             } else {
                 return uritemplate.parse(route).expand(opt);
             }

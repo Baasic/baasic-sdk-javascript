@@ -6,6 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicApiClient, IHttpResponse, TYPES as httpTYPES } from 'httpApi';
+import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
 import { BaasicLoginSocialRouteDefinition, TYPES as membershipTYPES } from 'modules/membership';
 import { ISocialLogin } from 'modules/membership/contracts';
 
@@ -18,6 +19,7 @@ export class BaasicLoginSocialClient {
 
     constructor(
         @inject(membershipTYPES.BaasicLoginSocialRouteDefinition) protected baasicLoginSocialRouteDefinition: BaasicLoginSocialRouteDefinition,
+        @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
         @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
@@ -67,12 +69,26 @@ export class BaasicLoginSocialClient {
         if (options) {
             params.options = options;
         }
-        return this.baasicApiClient.post(this.baasicLoginSocialRouteDefinition.post(provider, options), this.baasicLoginSocialRouteDefinition.createParams(data), { 'Content-Type': 'application/json; charset=UTF-8' })
-            .then(function (data) {
-                if (data && !data.statusCode) {
-                    this.authService.updateAccessToken(data)
-                }
-            });
+        var self = this;
+        return this.baasicApiClient.createPromise<any>((resolve, reject) => {
+            self.baasicApiClient.post<any>(self.baasicLoginSocialRouteDefinition.post(provider, options), self.baasicLoginSocialRouteDefinition.createParams(data),
+                { 'Content-Type': 'application/json; charset=UTF-8' })
+                .then<any>(function (data) {
+                    if (data) {
+                        let token: IToken = {
+                            token: data.data.access_token,
+                            expires_in: data.data.expires_in,
+                            sliding_window: data.data.sliding_window,
+                            tokenUrl: data.data.access_url_token,
+                            type: data.data.token_type
+                        };
+                        self.tokenHandler.store(token);
+                    }
+                    resolve(data);
+                }, function (data) {
+                    reject(data);
+                });
+        });
     }
 
     parseResponse(provider: string, returnUrl: string): any {
