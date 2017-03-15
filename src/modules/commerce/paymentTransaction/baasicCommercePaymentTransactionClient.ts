@@ -53,7 +53,7 @@ export class BaasicCommercePaymentTransactionClient {
                          // perform error handling here 
                     });                 
      **/
-    get(id: string, options?: IOptions): PromiseLike<IHttpResponse<any>> {
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
         return this.BaasicApiClient.get(this.baasicCommercePaymentTransactionRouteDefinition.get(id, options));
     }
 
