@@ -15,7 +15,7 @@ export class LocalStorageHandler implements IStorageHandler {
         let parseKey = config.keyGenerator;
         let getHandler: (fn: Function) => any;
         if (parseKey) {
-            getHandler = function (fn) { arguments[0] = parseKey(arguments[0]); fn.apply(this, arguments); }
+            getHandler = function (fn) { return function () { arguments[0] = parseKey(arguments[0]); return fn.apply(this, arguments); }; }
         } else {
             getHandler = (fn) => fn;            
         }
