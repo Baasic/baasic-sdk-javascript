@@ -57,7 +57,7 @@ export class BaasicLoginClient {
         });
         var self = this;
         return this.baasicApiClient.createPromise<any>((resolve, reject) => {
-            this.baasicApiClient.post<any>(this.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
+            self.baasicApiClient.post<any>(self.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
                 .then<any>(function (data) {
                     let token: IToken = {
                         token: data.data.access_token,

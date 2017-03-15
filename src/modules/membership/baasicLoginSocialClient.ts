@@ -71,10 +71,10 @@ export class BaasicLoginSocialClient {
         }
         var self = this;
         return this.baasicApiClient.createPromise<any>((resolve, reject) => {
-            self.baasicApiClient.post<any>(this.baasicLoginSocialRouteDefinition.post(provider, options), self.baasicLoginSocialRouteDefinition.createParams(data),
+            self.baasicApiClient.post<any>(self.baasicLoginSocialRouteDefinition.post(provider, options), self.baasicLoginSocialRouteDefinition.createParams(data),
                 { 'Content-Type': 'application/json; charset=UTF-8' })
                 .then<any>(function (data) {
-                    if (data && !data.statusCode) {
+                    if (data) {
                         let token: IToken = {
                             token: data.data.access_token,
                             expires_in: data.data.expires_in,
