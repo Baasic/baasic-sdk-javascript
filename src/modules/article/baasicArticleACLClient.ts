@@ -57,7 +57,7 @@ export class BaasicArticleACLClient {
                     }); 				    
      **/
     update(options: IACLOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleACLRouteDefinition.get(options), this.baasicArticleACLRouteDefinition.updateParams(options));
+        return this.baasicApiClient.put<void>(this.baasicArticleACLRouteDefinition.update(options), this.baasicArticleACLRouteDefinition.updateParams(options));
     }
 
     /**                     

@@ -55,7 +55,7 @@ export class BaasicUserProfileACLClient {
                     }); 				    
      **/
     update(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.put(this.baasicUserProfileACLRouteDefinition.get(options), this.baasicUserProfileACLRouteDefinition.updateParams(options));
+        return this.baasicApiClient.put(this.baasicUserProfileACLRouteDefinition.update(options), this.baasicUserProfileACLRouteDefinition.updateParams(options));
     }
 
     /**                     

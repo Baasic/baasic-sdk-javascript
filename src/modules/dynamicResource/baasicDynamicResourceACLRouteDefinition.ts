@@ -41,7 +41,7 @@ export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefi
      **/
     update(options: IDynamicACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseUpdate(this.updateRoute, options);
+        return super.baseCreate(this.updateRoute, options);
     }
 
     /** 					

@@ -12,7 +12,7 @@ import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly getRoute: string = 'articles/{id}/acl/{?fields}';
-    
+
     public readonly updateRoute: string = 'articles/{id}/acl/{?fields}';
 
     public readonly deleteByUserRoute: string = 'articles/{id}/acl/actions/{accessAction}/users/{user}/';
@@ -20,7 +20,7 @@ export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
     public readonly deleteByRoleRoute: string = 'articles/{id}/acl/actions/{accessAction}/roles/{role}/';
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
-    
+
     /** 					
      * Parses get article acl route; this URI template should be expanded with the Id of the article.										
      * @method      					
@@ -38,7 +38,7 @@ export class BaasicArticleACLRouteDefinition extends BaasicBaseRouteDefinition {
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
-        return super.baseUpdate(this.updateRoute, params);
+        return super.baseCreate(this.updateRoute, params);
     }
 
     /** 					
