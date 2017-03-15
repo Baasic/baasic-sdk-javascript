@@ -43,7 +43,7 @@ var application = new baasicSdkJavaScript.BaasicApp('<api-key>', options);
 ### Module Usage
 
 ```javascript
-application.membership.Login.login({
+application.membershipModule.login.login({
     username: '<username>',
     password: '<password>'
 }).then(function (data) {
