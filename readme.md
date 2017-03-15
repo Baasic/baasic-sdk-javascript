@@ -40,6 +40,20 @@ var options = {
 var application = new baasicSdkJavaScript.BaasicApp('<api-key>', options);
 ```
 
+### Module Usage
+
+```javascript
+application.membership.Login.login({
+    username: '<username>',
+    password: '<password>'
+}).then(function (data) {
+    //Do your work here
+}, function (data) {
+    console.log(data);
+});
+```
+
+
 ## Baasic Modules
 
 Baasic back-end contains various built-in modules that can be easily consumed through the Baasic JavaScript library. Baasic Developer Center contains detailed information about all the core modules supported by the [JavaScript library](http://dev.baasic.com/sdk#JavaScript).
