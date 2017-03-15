@@ -88,15 +88,6 @@ export class BaasicUserProfileAvatarStreamsClient {
     create(id: string, data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        /*return this.baasicApiHttp({
-            transformRequest: (value: any) => { return value; },
-            url: this.baasicUserProfileAvatarStreamsRouteDefinition.create(id, data),
-            method: 'POST',
-            data: formData,
-            headers: {
-                'Content-Type': undefined
-            }
-        });*/
         return this.baasicApiClient.post(this.baasicUserProfileAvatarStreamsRouteDefinition.create(id, data), data, { 'Content-Type': undefined });
     }
 
@@ -126,15 +117,6 @@ export class BaasicUserProfileAvatarStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        /*return this.baasicApiHttp({
-            transformRequest: (value: any) => { return value; },
-            url: this.baasicUserProfileAvatarStreamsRouteDefinition.update(data),
-            method: 'PUT',
-            data: formData,
-            headers: {
-                'Content-Type': undefined
-            }
-        });*/
         return this.baasicApiClient.put(this.baasicUserProfileAvatarStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
     }
 }

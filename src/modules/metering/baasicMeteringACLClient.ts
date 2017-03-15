@@ -49,8 +49,8 @@ export class BaasicMeteringACLClient {
                           // perform error handling here 
                     }); 				    
      **/
-    update(options: IACLOptions[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMeteringACLRouteDefinition.update(options), this.baasicMeteringACLRouteDefinition.updateParams(options));
+    update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
+        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicMeteringACLRouteDefinition.update(options), this.baasicMeteringACLRouteDefinition.updateParams(options));
     }
 
     /**                     

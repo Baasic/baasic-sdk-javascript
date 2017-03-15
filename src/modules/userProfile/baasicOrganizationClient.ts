@@ -47,7 +47,7 @@ export class BaasicOrganizationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IOrganization>>> {
-        return this.baasicApiClient.get(this.baasicOrganizationRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IOrganization>>(this.baasicOrganizationRouteDefinition.find(options));
     }
 
     /**                 
@@ -65,7 +65,7 @@ export class BaasicOrganizationClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.baasicApiClient.get(this.baasicOrganizationRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IOrganization>(this.baasicOrganizationRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -86,7 +86,7 @@ export class BaasicOrganizationClient {
                 });                 
      **/
     create(data: IOrganization): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.baasicApiClient.post(this.baasicOrganizationRouteDefinition.create(), this.baasicOrganizationRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IOrganization>(this.baasicOrganizationRouteDefinition.create(), this.baasicOrganizationRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -108,8 +108,8 @@ export class BaasicOrganizationClient {
                              // perform error handling here 
                         }); 				        
      **/
-    update(data: IOrganization): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicOrganizationRouteDefinition.update(data), this.baasicOrganizationRouteDefinition.updateParams(data));
+    update(data: IOrganization): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicOrganizationRouteDefinition.update(data), this.baasicOrganizationRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -130,7 +130,7 @@ export class BaasicOrganizationClient {
                                 // perform error handling here 
                            });						        
     **/
-    remove(data: IOrganization): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicOrganizationRouteDefinition.delete(data));
+    remove(data: IOrganization): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicOrganizationRouteDefinition.delete(data));
     }
 }

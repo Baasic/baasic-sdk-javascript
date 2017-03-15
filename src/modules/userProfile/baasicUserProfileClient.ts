@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IGetRequestOptions, IOptions } from 'common/contracts';
+import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
 import {
     BaasicUserProfileACLClient,
@@ -72,8 +72,8 @@ export class BaasicUserProfileClient {
                      // perform error handling here 
                 });                     
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.baasicApiClient.get(this.baasicUserProfileRouteDefinition.find(options));
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserProfile>>> {
+        return this.baasicApiClient.get<IBaasicQueryModel<IUserProfile>>(this.baasicUserProfileRouteDefinition.find(options));
     }
 
     /**                 
@@ -91,7 +91,7 @@ export class BaasicUserProfileClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.baasicApiClient.get(this.baasicUserProfileRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IUserProfile>(this.baasicUserProfileRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -111,7 +111,7 @@ export class BaasicUserProfileClient {
                 });                  
      **/
     create(data: IUserProfile): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.baasicApiClient.post(this.baasicUserProfileRouteDefinition.create(), this.baasicUserProfileRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IUserProfile>(this.baasicUserProfileRouteDefinition.create(), this.baasicUserProfileRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -133,8 +133,8 @@ export class BaasicUserProfileClient {
                                 // perform error handling here 
                            }); 				
     **/
-    update(data: IUserProfile): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserProfileRouteDefinition.update(data), this.baasicUserProfileRouteDefinition.updateParams(data));
+    update(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicUserProfileRouteDefinition.update(data), this.baasicUserProfileRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -155,8 +155,8 @@ export class BaasicUserProfileClient {
                              // perform error handling here 
                         });						
      **/
-    remove(data: IUserProfile): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserProfileRouteDefinition.delete(data));
+    remove(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicUserProfileRouteDefinition.delete(data));
     }
 }
 

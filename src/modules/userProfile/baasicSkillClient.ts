@@ -47,7 +47,7 @@ export class BaasicSkillClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ISkill>>> {
-        return this.baasicApiClient.get(this.baasicSkillRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<ISkill>>(this.baasicSkillRouteDefinition.find(options));
     }
 
     /**                 
@@ -64,7 +64,7 @@ export class BaasicSkillClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ISkill>> {
-        return this.baasicApiClient.get(this.baasicSkillRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<ISkill>(this.baasicSkillRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -85,7 +85,7 @@ export class BaasicSkillClient {
                 });                 
      **/
     create(data: ISkill): PromiseLike<IHttpResponse<ISkill>> {
-        return this.baasicApiClient.post(this.baasicSkillRouteDefinition.create(), this.baasicSkillRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<ISkill>(this.baasicSkillRouteDefinition.create(), this.baasicSkillRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -107,8 +107,8 @@ export class BaasicSkillClient {
                              // perform error handling here 
                         }); 				       
      **/
-    update(data: ISkill): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicSkillRouteDefinition.update(data), this.baasicSkillRouteDefinition.updateParams(data));
+    update(data: ISkill): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicSkillRouteDefinition.update(data), this.baasicSkillRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -129,7 +129,7 @@ export class BaasicSkillClient {
                                 // perform error handling here 
                            });						        
     **/
-    remove(data: ISkill): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicSkillRouteDefinition.delete(data));
+    remove(data: ISkill): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicSkillRouteDefinition.delete(data));
     }
 }

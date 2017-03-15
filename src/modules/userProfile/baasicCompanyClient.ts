@@ -47,7 +47,7 @@ export class BaasicCompanyClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ICompany>>> {
-        return this.baasicApiClient.get(this.baasicCompanyRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<ICompany>>(this.baasicCompanyRouteDefinition.find(options));
     }
 
     /**                 
@@ -65,7 +65,7 @@ export class BaasicCompanyClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICompany>> {
-        return this.baasicApiClient.get(this.baasicCompanyRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<ICompany>(this.baasicCompanyRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -86,7 +86,7 @@ export class BaasicCompanyClient {
                 });                 
      **/
     create(data: ICompany): PromiseLike<IHttpResponse<ICompany>> {
-        return this.baasicApiClient.post(this.baasicCompanyRouteDefinition.create(), this.baasicCompanyRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<ICompany>(this.baasicCompanyRouteDefinition.create(), this.baasicCompanyRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -108,8 +108,8 @@ export class BaasicCompanyClient {
                              // perform error handling here 
                         }); 				        
      **/
-    update(data: ICompany): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicCompanyRouteDefinition.update(data), this.baasicCompanyRouteDefinition.updateParams(data));
+    update(data: ICompany): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicCompanyRouteDefinition.update(data), this.baasicCompanyRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -130,8 +130,8 @@ export class BaasicCompanyClient {
                              // perform error handling here 
                     });						        
      **/
-    remove(data: ICompany): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicCompanyRouteDefinition.delete(data));
+    remove(data: ICompany): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicCompanyRouteDefinition.delete(data));
     }
 }
 
