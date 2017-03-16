@@ -1,5 +1,11 @@
+import * as common from './common';
+export { common };
+import * as httpApi from './httpApi';
+export { httpApi };
+import * as core from "./core";
+export { core };
+import * as modules from "./modules";
+export { modules };
 export * from './diModule';
 export * from './baasicApp';
-export { IHttpClient, IHttpHeaders, IHttpRequest, IHttpResponse } from './httpApi';
-export { IEventHandler, ITokenHandler, IBaasicAppOptions, IToken, TokenTypes, IUser, IUserHandler, IDefaultStorageConfig } from "./core/contracts";
 
