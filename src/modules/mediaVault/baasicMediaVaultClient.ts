@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     BaasicMediaVaultBatchClient,
     BaasicMediaVaultProcessingProviderSettingsClient,
@@ -42,7 +42,7 @@ export class BaasicMediaVaultClient {
 
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultRouteDefinition) protected baasicMediaVaultRouteDefinition: BaasicMediaVaultRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
         @inject(mediaVaultTypes.BaasicMediaVaultStreamsClient) protected baasicMediaVaultStreamsClient: BaasicMediaVaultStreamsClient,
         @inject(mediaVaultTypes.BaasicMediaVaultBatchClient) protected baasicMediaVaultBatchClient: BaasicMediaVaultBatchClient,
         @inject(mediaVaultTypes.BaasicMediaVaultSettingsClient) protected baasicMediaVaultSettingsClient: BaasicMediaVaultSettingsClient,

@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleFilesStreamsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
 
@@ -19,7 +19,7 @@ export class BaasicArticleFilesStreamsClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleFilesStreamsRouteDefinition) protected baasicArticleFilesStreamsRouteDefinition: BaasicArticleFilesStreamsRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                     

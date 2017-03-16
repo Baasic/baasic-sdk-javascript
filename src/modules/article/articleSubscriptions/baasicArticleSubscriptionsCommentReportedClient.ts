@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleSubscriptionsCommentReportedRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleSubscription } from 'modules/article/contracts';
 
@@ -19,7 +19,7 @@ export class BaasicArticleSubscriptionsCommentReportedClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: BaasicArticleSubscriptionsCommentReportedRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                         

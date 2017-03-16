@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicUserProfileAvatarRouteDefinition, BaasicUserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
 
@@ -24,7 +24,7 @@ export class BaasicUserProfileAvatarClient {
     constructor(
         @inject(userProfileTypes.BaasicUserProfileAvatarRouteDefinition) protected baasicUserProfileAvatarRouteDefinition: BaasicUserProfileAvatarRouteDefinition,
         @inject(userProfileTypes.BaasicUserProfileAvatarStreamsClient) protected baasicUserProfileAvatarStreamsClient: BaasicUserProfileAvatarStreamsClient,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                 

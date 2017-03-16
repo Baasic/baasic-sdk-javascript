@@ -1,8 +1,8 @@
-import { Utility, diModule as commonDIModule } from 'common';
+import { Utility, commonDIModule } from 'common';
 import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, IEventHandler, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
-import { diModule as coreDIModule } from 'core';
+import { coreDIModule as coreDIModule } from 'core';
 import { DIModule } from './';
-import { diModule as httpDIModule, BaasicApiClient, TYPES as httpApiTypes } from 'httpApi';
+import { httpDIModule as httpDIModule, BaasicApiClient, httpTYPES } from 'httpApi';
 import { Container } from "inversify";
 
 import * as modules from 'modules';
@@ -53,7 +53,7 @@ export class BaasicApp implements IBaasicApp {
         this.tokenHandler = this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
         this.userHandler = this.diModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
         this.eventHandler = this.diModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
-        this.baasicApiClient = this.diModule.kernel.get<BaasicApiClient>(httpApiTypes.BaasicApiClient);
+        this.baasicApiClient = this.diModule.kernel.get<BaasicApiClient>(httpTYPES.BaasicApiClient);
 
         this.membershipModule = this.diModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
         //Modules

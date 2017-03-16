@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     BaasicUserProfileACLClient,
     BaasicUserProfileRouteDefinition,
@@ -45,7 +45,7 @@ export class BaasicUserProfileClient {
     constructor(
         @inject(userProfileTypes.BaasicUserProfileACLClient) protected baasicUserProfileACLClient: BaasicUserProfileACLClient,
         @inject(userProfileTypes.BaasicUserProfileRouteDefinition) protected baasicUserProfileRouteDefinition: BaasicUserProfileRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
 
         @inject(userProfileTypes.BaasicUserEducationClient) protected baasicUserEducationClient: BaasicUserEducationClient,
         @inject(userProfileTypes.BaasicUserProfileAvatarClient) protected baasicUserProfileAvatarClient: BaasicUserProfileAvatarClient,

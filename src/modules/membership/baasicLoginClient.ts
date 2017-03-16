@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { Utility } from 'common';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTYPES } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicLoginRouteDefinition, BaasicLoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
 import { IUserInfo } from 'modules/membership/contracts';
 

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import {
     BaasicNotificationsRegistrationsAnonymousBatchClient,
@@ -28,7 +28,7 @@ export class BaasicNotificationsRegistrationsAnonymousClient {
     constructor(
         @inject(notificationsTypes.BaasicNotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: BaasicNotificationsRegistrationsAnonymousRouteDefinition,
         @inject(notificationsTypes.BaasicNotificationsRegistrationsAnonymousBatchClient) protected baasicNotificationsRegistrationsAnonymousBatchClient: BaasicNotificationsRegistrationsAnonymousBatchClient,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                          

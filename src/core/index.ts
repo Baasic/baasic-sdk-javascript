@@ -1,4 +1,4 @@
 export * from './tokenHandler';
 export * from './userHandler';
 
-export * from './diModule';
+export { diModule as coreDIModule } from './diModule';

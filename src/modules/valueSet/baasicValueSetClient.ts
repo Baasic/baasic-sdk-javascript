@@ -5,7 +5,7 @@
 
 import { injectable, inject } from 'inversify';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicValueSetItemClient, BaasicValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 
@@ -29,7 +29,7 @@ export class BaasicValueSetClient {
     constructor(
         @inject(valueSetTypes.BaasicValueSetRouteDefinition) protected baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
         @inject(valueSetTypes.BaasicValueSetItemClient) protected baasicValueSetItemClient: BaasicValueSetItemClient,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**

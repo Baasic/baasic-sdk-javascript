@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicApplicationSettingsRouteDefinition, TYPES as applicationTypes } from 'modules/applicationSettings';
 import { IApplication } from 'modules/applicationSettings/contracts';
 
@@ -24,7 +24,7 @@ export class BaasicApplicationSettingsClient {
 
     constructor(
         @inject(applicationTypes.BaasicApplicationSettingsRouteDefinition) protected baasicApplicationSettingsRouteDefinition: BaasicApplicationSettingsRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                 

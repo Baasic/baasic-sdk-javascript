@@ -5,7 +5,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     BaasicDynamicResourceACLClient,
     BaasicDynamicResourceRouteDefinition,
@@ -38,7 +38,7 @@ export class BaasicDynamicResourceClient {
         @inject(dynamicResourceTypes.BaasicDynamicResourceRouteDefinition) protected baasicDynamicResourceRouteDefinition: BaasicDynamicResourceRouteDefinition,
         @inject(dynamicResourceTypes.BaasicDynamicResourceACLClient) protected baasicDynamicResourceACLClient: BaasicDynamicResourceACLClient,
         @inject(dynamicResourceTypes.BaasicDynamicSchemaClient) protected baasicDynamicSchemaClient: BaasicDynamicSchemaClient,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                  
