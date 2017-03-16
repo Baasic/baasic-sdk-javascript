@@ -35,7 +35,7 @@ export class BaasicUserProfileACLClient {
                     });                     
      **/
     get(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.get(this.baasicUserProfileACLRouteDefinition.get(options));
+        return this.baasicApiClient.get<IACLPolicy[]>(this.baasicUserProfileACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -55,7 +55,7 @@ export class BaasicUserProfileACLClient {
                     }); 				    
      **/
     update(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.put(this.baasicUserProfileACLRouteDefinition.update(options), this.baasicUserProfileACLRouteDefinition.updateParams(options));
+        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicUserProfileACLRouteDefinition.update(options), this.baasicUserProfileACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -79,8 +79,8 @@ export class BaasicUserProfileACLClient {
                          // perform error handling here 
                     }); 				    
      **/
-    removeByUser(profileId: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserProfileACLRouteDefinition.deleteByUser(profileId, action, user, data));
+    removeByUser(profileId: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicUserProfileACLRouteDefinition.deleteByUser(profileId, action, user, data));
     }
 
     /**                     
@@ -104,8 +104,8 @@ export class BaasicUserProfileACLClient {
                          // perform error handling here 
                     }); 				    
      **/
-    removeByRole(profileId: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserProfileACLRouteDefinition.deleteByRole(profileId, action, role, data));
+    removeByRole(profileId: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicUserProfileACLRouteDefinition.deleteByRole(profileId, action, role, data));
     }
 }
 

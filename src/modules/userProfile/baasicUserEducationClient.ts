@@ -41,7 +41,7 @@ export class BaasicUserEducationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserEducation>>> {
-        return this.baasicApiClient.get(this.baasicUserEducationRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IUserEducation>>(this.baasicUserEducationRouteDefinition.find(options));
     }
 
     /**                 
@@ -56,7 +56,7 @@ export class BaasicUserEducationClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserEducation>> {
-        return this.baasicApiClient.get(this.baasicUserEducationRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IUserEducation>(this.baasicUserEducationRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -77,7 +77,7 @@ export class BaasicUserEducationClient {
                 });                 
      **/
     create(data: IUserEducation): PromiseLike<IHttpResponse<IUserEducation>> {
-        return this.baasicApiClient.post(this.baasicUserEducationRouteDefinition.create(data), this.baasicUserEducationRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IUserEducation>(this.baasicUserEducationRouteDefinition.create(data), this.baasicUserEducationRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -99,8 +99,8 @@ export class BaasicUserEducationClient {
                              // perform error handling here 
                         }); 				        
      **/
-    update(data: IUserEducation): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserEducationRouteDefinition.update(data), this.baasicUserEducationRouteDefinition.updateParams(data));
+    update(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicUserEducationRouteDefinition.update(data), this.baasicUserEducationRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -119,8 +119,8 @@ export class BaasicUserEducationClient {
                              // perform error handling here 
                         });						        
      **/
-    remove(data: IUserEducation): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserEducationRouteDefinition.delete(data));
+    remove(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicUserEducationRouteDefinition.delete(data));
     }
 }
 

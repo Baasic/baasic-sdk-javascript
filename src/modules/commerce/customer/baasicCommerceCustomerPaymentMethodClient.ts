@@ -40,7 +40,7 @@ export class BaasicCommerceCustomerPaymentMethodClient {
                      // perform error handling here 
                 });                     
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<any>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
         return this.BaasicApiClient.get(this.baasicCommerceCustomerPaymentMethodRouteDefinition.find(options));
     }
 

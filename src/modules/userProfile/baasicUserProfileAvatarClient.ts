@@ -42,7 +42,7 @@ export class BaasicUserProfileAvatarClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IProfileAvatar>> {
-        return this.baasicApiClient.get(this.baasicUserProfileAvatarRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IProfileAvatar>(this.baasicUserProfileAvatarRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -64,8 +64,8 @@ export class BaasicUserProfileAvatarClient {
                            }); 				
                                 // perform error handling here 
     **/
-    update(data: IProfileAvatar): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserProfileAvatarRouteDefinition.update(data), data);
+    update(data: IProfileAvatar): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicUserProfileAvatarRouteDefinition.update(data), data);
     }
 
     /**                 
@@ -105,7 +105,7 @@ export class BaasicUserProfileAvatarClient {
                              // perform error handling here 
                         });                
      **/
-    unlink(data: IProfileAvatar, options?: IOptions): PromiseLike<IHttpResponse<any>> {
+    unlink(data: IProfileAvatar, options?: any): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.delete(this.baasicUserProfileAvatarRouteDefinition.unlink(data, options));
     }
 }

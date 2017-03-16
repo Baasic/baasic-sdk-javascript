@@ -42,7 +42,7 @@ export class BaasicUserSkillClient {
                 });                    
      **/
     find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSkill>>> {
-        return this.baasicApiClient.get(this.baasicUserSkillRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IUserSkill>>(this.baasicUserSkillRouteDefinition.find(options));
     }
 
     /**                 
@@ -60,7 +60,7 @@ export class BaasicUserSkillClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserSkill>> {
-        return this.baasicApiClient.get(this.baasicUserSkillRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IUserSkill>(this.baasicUserSkillRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -77,7 +77,7 @@ export class BaasicUserSkillClient {
                     });                 
      **/
     create(data: IUserSkill): PromiseLike<IHttpResponse<IUserSkill>> {
-        return this.baasicApiClient.post(this.baasicUserSkillRouteDefinition.create(data), this.baasicUserSkillRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IUserSkill>(this.baasicUserSkillRouteDefinition.create(data), this.baasicUserSkillRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -99,8 +99,8 @@ export class BaasicUserSkillClient {
                                 // perform error handling here 
                            }); 				        
     **/
-    update(data: IUserSkill): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserSkillRouteDefinition.update(data), this.baasicUserSkillRouteDefinition.updateParams(data));
+    update(data: IUserSkill): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicUserSkillRouteDefinition.update(data), this.baasicUserSkillRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -121,8 +121,8 @@ export class BaasicUserSkillClient {
                              // perform error handling here 
                         });						        
      **/
-    remove(data: IUserSkill): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserSkillRouteDefinition.delete(data));
+    remove(data: IUserSkill): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicUserSkillRouteDefinition.delete(data));
     }
 }
 

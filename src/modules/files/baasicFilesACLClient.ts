@@ -53,8 +53,8 @@ export class BaasicFilesACLClient {
                          // perform error handling here
                     }); 				    
      **/
-    update(options: IACLOptions[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicFilesACLRouteDefinition.update(options), this.baasicFilesACLRouteDefinition.updateParams(options));
+    update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
+        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicFilesACLRouteDefinition.update(options), this.baasicFilesACLRouteDefinition.updateParams(options));
     }
 
     /**                     

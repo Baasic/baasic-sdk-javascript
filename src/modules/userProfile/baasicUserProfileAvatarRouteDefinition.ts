@@ -71,7 +71,7 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
      * @param options Query resource options object.                         
      * @example baasicUserProfileAvatarRouteDefinition.unlink(data);                              
      **/
-    unlink(data: IProfileAvatar, options?: IOptions): any {
+    unlink(data: IProfileAvatar, options?: any): any {
         if (!options) {
             options = {};
         }

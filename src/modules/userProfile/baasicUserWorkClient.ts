@@ -42,7 +42,7 @@ export class BaasicUserWorkClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserWork>>> {
-        return this.baasicApiClient.get(this.baasicUserWorkRouteDefinition.find(options));
+        return this.baasicApiClient.get<IBaasicQueryModel<IUserWork>>(this.baasicUserWorkRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,7 +59,7 @@ export class BaasicUserWorkClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserWork>> {
-        return this.baasicApiClient.get(this.baasicUserWorkRouteDefinition.get(id, options));
+        return this.baasicApiClient.get<IUserWork>(this.baasicUserWorkRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -76,7 +76,7 @@ export class BaasicUserWorkClient {
                     });                 
      **/
     create(data: IUserWork): PromiseLike<IHttpResponse<IUserWork>> {
-        return this.baasicApiClient.post(this.baasicUserWorkRouteDefinition.create(data), this.baasicUserWorkRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IUserWork>(this.baasicUserWorkRouteDefinition.create(data), this.baasicUserWorkRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -98,8 +98,8 @@ export class BaasicUserWorkClient {
                              // perform error handling here 
                         }); 				        
      **/
-    update(data: IUserWork): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserWorkRouteDefinition.update(data), this.baasicUserWorkRouteDefinition.updateParams(data));
+    update(data: IUserWork): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.put<void>(this.baasicUserWorkRouteDefinition.update(data), this.baasicUserWorkRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -118,8 +118,8 @@ export class BaasicUserWorkClient {
                                 // perform error handling here 
                            });						        
     **/
-    remove(data: IUserWork): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserWorkRouteDefinition.delete(data));
+    remove(data: IUserWork): PromiseLike<IHttpResponse<void>> {
+        return this.baasicApiClient.delete<void>(this.baasicUserWorkRouteDefinition.delete(data));
     }
 }
 
