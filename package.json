@@ -11,6 +11,7 @@
     "watch:webpack": "webpack --config webpack.watch-dev.js",
     "build:dev": "npm run clean:build && npm run build:tsc && webpack --config webpack.dev.js --bail",
     "build:prod": "npm run clean:build && npm run build:tsc && webpack --config webpack.prod.js --bail",
+    "build:docs": "npm run clean:build && webpack --config webpack.docs.js --bail",
     "build:tsc": "tsc --outDir build/lib --declaration --declarationDir build/lib/types",
     "clean:build": "rimraf build"
   },
