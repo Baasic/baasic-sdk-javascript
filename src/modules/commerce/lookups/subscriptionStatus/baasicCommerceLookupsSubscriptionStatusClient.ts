@@ -43,7 +43,7 @@ export class BaasicCommerceLookupsSubscriptionStatusClient {
                          // perform error handling here 
                     });                     
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
         return this.BaasicApiClient.get(this.baasicCommerceLookupsSubscriptionStatusRouteDefinition.find(options));
     }
 

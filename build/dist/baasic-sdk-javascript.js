@@ -15848,13 +15848,13 @@ var lookups_1 = __webpack_require__(32);
 var inversify_1 = __webpack_require__(0);
 __webpack_require__(10);
 var Lookups = (function () {
-    function Lookups(addressTypes, countries, countryStates, paymentMethods, paymentTransactionStatuses, recurringCyclePerioedTypes, subscriptionStatuses, invoiceStatuses) {
+    function Lookups(addressTypes, countries, countryStates, paymentMethods, paymentTransactionStatuses, recurringCyclePeriodTypes, subscriptionStatuses, invoiceStatuses) {
         this.addressTypes = addressTypes;
         this.countries = countries;
         this.countryStates = countryStates;
         this.paymentMethods = paymentMethods;
         this.paymentTransactionStatuses = paymentTransactionStatuses;
-        this.recurringCyclePerioedTypes = recurringCyclePerioedTypes;
+        this.recurringCyclePeriodTypes = recurringCyclePeriodTypes;
         this.subscriptionStatuses = subscriptionStatuses;
         this.invoiceStatuses = invoiceStatuses;
     }
