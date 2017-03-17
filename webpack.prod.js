@@ -12,7 +12,7 @@ module.exports = webpackMerge(commonConfig, {
             cacheFolder: path.resolve(__dirname, 'build', 'cached_uglify'),
             debug: false,
             minimize: true,
-            sourceMap: false,
+            sourceMap: true,
             output: {
                 comments: false
             },

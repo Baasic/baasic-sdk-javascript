@@ -54,3 +54,4 @@ jspm_packages
 # End of https://www.gitignore.io/api/node
 0
 
+build/dist/docs/
