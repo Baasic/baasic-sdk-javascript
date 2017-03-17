@@ -13,7 +13,7 @@ import { ICompany } from 'modules/userProfile/contracts';
 export class CompanyBatchClient {
 
     constructor(
-        @inject(userProfileTypes.CompanyBatchRouteDefinition) protected baasicCompanyBatchRouteDefinition: CompanyBatchRouteDefinition,
+        @inject(userProfileTypes.CompanyBatchRouteDefinition) protected companyBatchRouteDefinition: CompanyBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -35,7 +35,7 @@ export class CompanyBatchClient {
                  });                   
      **/
     create(data: ICompany[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCompanyBatchRouteDefinition.create(), this.baasicCompanyBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.companyBatchRouteDefinition.create(), this.companyBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -52,7 +52,7 @@ export class CompanyBatchClient {
                     });                   
      **/
     update(data: ICompany[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.baasicCompanyBatchRouteDefinition.update(), this.baasicCompanyBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.companyBatchRouteDefinition.update(), this.companyBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -69,7 +69,7 @@ export class CompanyBatchClient {
                    });		                  
     **/
     remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.baasicCompanyBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete(this.companyBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

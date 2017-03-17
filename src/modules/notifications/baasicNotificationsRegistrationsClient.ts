@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsRegistrationsClient  
- * @description  Notifications Registrations Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsClient` uses `baasicNotificationsRegistrationsRouteDefinition`. 
+ * @description  Notifications Registrations Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsClient` uses `notificationsRegistrationsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -16,7 +16,7 @@ import {
 export class NotificationsRegistrationsClient {
 
     get routeDefinition(): NotificationsRegistrationsRouteDefinition {
-        return this.baasicNotificationsRegistrationsRouteDefinition;
+        return this.notificationsRegistrationsRouteDefinition;
     }
 
     get anonymous(): NotificationsRegistrationsAnonymousClient {
@@ -28,7 +28,7 @@ export class NotificationsRegistrationsClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsRegistrationsRouteDefinition) protected baasicNotificationsRegistrationsRouteDefinition: NotificationsRegistrationsRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsRouteDefinition) protected notificationsRegistrationsRouteDefinition: NotificationsRegistrationsRouteDefinition,
         @inject(notificationsTypes.NotificationsRegistrationsAnonymousClient) protected notificationsRegistrationsAnonymousClient: NotificationsRegistrationsAnonymousClient,
         @inject(notificationsTypes.NotificationsRegistrationsUsersClient) protected notificationsRegistrationsUsersClient: NotificationsRegistrationsUsersClient
     ) { }

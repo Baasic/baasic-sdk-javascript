@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMediaVaultBatchRouteDefinition  
+ * @module mediaVaultBatchRouteDefinition  
  * @description Baasic Media Vault Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -21,7 +21,7 @@ export class MediaVaultBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                          
-     * @example baasicMediaVaultBatchRouteDefinition.update();                                  
+     * @example mediaVaultBatchRouteDefinition.update();                                  
      **/
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -30,7 +30,7 @@ export class MediaVaultBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses remove route; this URI template does not expose any additional options.                                             
      * @method                           
-     * @example baasicMediaVaultBatchRouteDefinition.delete();                                 
+     * @example mediaVaultBatchRouteDefinition.delete();                                 
      **/
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

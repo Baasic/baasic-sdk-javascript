@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceProductRouteDefinition  
+ * @module commerceProductRouteDefinition  
  * @description Baasic Commerce Product Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Product Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -34,7 +34,7 @@ export class CommerceProductRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicCommerceProductRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceProductRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -43,7 +43,7 @@ export class CommerceProductRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceProductRouteDefinition.get(id, options);                               
+     * @example commerceProductRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -52,7 +52,7 @@ export class CommerceProductRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create commerce product route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceProductRouteDefinition.create();                              
+     * @example commerceProductRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -61,7 +61,7 @@ export class CommerceProductRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses update commerce product route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceProductRouteDefinition.update(data);                              
+     * @example commerceProductRouteDefinition.update(data);                              
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -70,7 +70,7 @@ export class CommerceProductRouteDefinition extends BaseRouteDefinition {
     /**                 
     * Parses delete commerce product route; this URI template does not expose any additional options.                 
     * @method                        
-    * @example baasicCommerceProductRouteDefinition.delete(data);                              
+    * @example commerceProductRouteDefinition.delete(data);                              
     **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

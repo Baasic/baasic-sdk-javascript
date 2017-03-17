@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleFilesRouteDefinition  
+ * @module articleFilesRouteDefinition  
  * @description Baasic Article Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -29,16 +29,16 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
     public readonly updateRoute: string = 'article-files/{id}';
     
     get streams(): ArticleFilesStreamsRouteDefinition {
-        return this.baasicArticleFilesStreamsRouteDefinition;
+        return this.articleFilesStreamsRouteDefinition;
     }
 
     get batch(): ArticleFilesBatchRouteDefinition {
-        return this.baasicArticleFilesBatchRouteDefinition;
+        return this.articleFilesBatchRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleFilesStreamsRouteDefinition) protected baasicArticleFilesStreamsRouteDefinition: ArticleFilesStreamsRouteDefinition,
-        @inject(articleTypes.ArticleFilesBatchRouteDefinition) protected baasicArticleFilesBatchRouteDefinition: ArticleFilesBatchRouteDefinition,
+        @inject(articleTypes.ArticleFilesStreamsRouteDefinition) protected articleFilesStreamsRouteDefinition: ArticleFilesStreamsRouteDefinition,
+        @inject(articleTypes.ArticleFilesBatchRouteDefinition) protected articleFilesBatchRouteDefinition: ArticleFilesBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -51,7 +51,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example baasicArticleFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example articleFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -62,7 +62,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param id Article file id which uniquely identifies article resource that needs to be retrieved.
      * @param options Options object that contains embed data.
-     * @example baasicArticleFilesRouteDefinition.get({id: '<file-id>'});
+     * @example articleFilesRouteDefinition.get({id: '<file-id>'});
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -71,7 +71,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
     /**
      * Parses link route; this URI template does not expose any additional options.
      * @method  
-     * @example baasicArticleFilesRouteDefinition.link();
+     * @example articleFilesRouteDefinition.link();
      **/
     link(): any {
         return super.baseCreate(this.linkRoute, {});
@@ -80,7 +80,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
     /**
      * Parses unlink route; this URI template does not expose any additional options.
      * @method  
-     * @example baasicArticleFilesRouteDefinition.unlink(data);
+     * @example articleFilesRouteDefinition.unlink(data);
      **/
     unlink(data: IArticleFile, options: Object): any {
         return super.baseDelete(this.unlinkRoute, data, options, 'unlink');
@@ -89,7 +89,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
     /**
      * Parses update route; this URI template does not expose any additional options.
      * @method  
-     * @example baasicArticleFilesRouteDefinition.update(data);
+     * @example articleFilesRouteDefinition.update(data);
      **/
     update(data: any): any {
         if (!this.utility.isObject(data)) {

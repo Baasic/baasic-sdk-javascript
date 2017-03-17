@@ -1,6 +1,6 @@
 /**  
  * @module valueSetItemClient
- * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `valueSetItemClient` uses `baasicValueSetItemRouteDefinition`. 
+ * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `valueSetItemClient` uses `valueSetItemRouteDefinition`. 
  */
 import { injectable, inject } from 'inversify';
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
@@ -12,7 +12,7 @@ import { IValueSetItem } from 'modules/valueSet/contracts';
 export class ValueSetItemClient {
 
     constructor(
-        @inject(valueSetTypes.ValueSetItemRouteDefinition) protected baasicValueSetItemRouteDefinition: ValueSetItemRouteDefinition,
+        @inject(valueSetTypes.ValueSetItemRouteDefinition) protected valueSetItemRouteDefinition: ValueSetItemRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -36,7 +36,7 @@ export class ValueSetItemClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSetItem>>> {
-        return this.apiClient.get<IQueryModel<IValueSetItem>>(this.baasicValueSetItemRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IValueSetItem>>(this.valueSetItemRouteDefinition.find(options));
     }
 
     /**
@@ -55,7 +55,7 @@ export class ValueSetItemClient {
                 });
      **/
     get(setName: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.apiClient.get<IValueSetItem>(this.baasicValueSetItemRouteDefinition.get(setName, id, options));
+        return this.apiClient.get<IValueSetItem>(this.valueSetItemRouteDefinition.get(setName, id, options));
     }
 
     /**
@@ -75,7 +75,7 @@ export class ValueSetItemClient {
                 });
      **/
     create(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.apiClient.post<IValueSetItem>(this.baasicValueSetItemRouteDefinition.create(data), this.baasicValueSetItemRouteDefinition.createParams(data));
+        return this.apiClient.post<IValueSetItem>(this.valueSetItemRouteDefinition.create(data), this.valueSetItemRouteDefinition.createParams(data));
     }
 
     /**
@@ -98,7 +98,7 @@ export class ValueSetItemClient {
                     });
      **/
     update(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.apiClient.put<IValueSetItem>(this.baasicValueSetItemRouteDefinition.update(data), this.baasicValueSetItemRouteDefinition.updateParams(data));
+        return this.apiClient.put<IValueSetItem>(this.valueSetItemRouteDefinition.update(data), this.valueSetItemRouteDefinition.updateParams(data));
     }
 
     /**
@@ -120,7 +120,7 @@ export class ValueSetItemClient {
                     });
      **/
     remove(data: IValueSetItem): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicValueSetItemRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.valueSetItemRouteDefinition.delete(data));
     }
 }
 

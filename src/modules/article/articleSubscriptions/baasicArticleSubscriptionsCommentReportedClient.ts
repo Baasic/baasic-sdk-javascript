@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsCommentReportedClient  
- * @description  Article Subscriptions Comment Reported Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentReportedClient` uses `baasicArticleSubscriptionsCommentReportedRouteDefinition`. 
+ * @description  Article Subscriptions Comment Reported Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentReportedClient` uses `articleSubscriptionsCommentReportedRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,11 +14,11 @@ import { IArticleSubscription } from 'modules/article/contracts';
 export class ArticleSubscriptionsCommentReportedClient {
 
     get routeDefinition(): ArticleSubscriptionsCommentReportedRouteDefinition {
-        return this.baasicArticleSubscriptionsCommentReportedRouteDefinition;
+        return this.articleSubscriptionsCommentReportedRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: ArticleSubscriptionsCommentReportedRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsCommentReportedRouteDefinition) protected articleSubscriptionsCommentReportedRouteDefinition: ArticleSubscriptionsCommentReportedRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -34,7 +34,7 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                         
      **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.articleSubscriptionsCommentReportedRouteDefinition.subscribe(data), data);
     }
 
     /**                         
@@ -49,7 +49,7 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                          
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.articleSubscriptionsCommentReportedRouteDefinition.isSubscribed(data));
     }
 
     /**                         
@@ -64,6 +64,6 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                           
      **/
     unSubscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.unSubscribe(data), undefined, data);
+        return this.apiClient.delete<void>(this.articleSubscriptionsCommentReportedRouteDefinition.unSubscribe(data), undefined, data);
     }
 }

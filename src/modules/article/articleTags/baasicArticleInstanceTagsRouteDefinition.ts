@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleInstanceTagsRouteDefinition  
+ * @module articleInstanceTagsRouteDefinition  
  * @description Baasic Article Instance Tags Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Instance Tags Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
 */
 
@@ -36,7 +36,7 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the article tag property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicArticleInstanceTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
+     * @example articleInstanceTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
      **/
     find(articleId: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
@@ -48,7 +48,7 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicArticleInstanceTagsRouteDefinition.get({id: '<articleTag-id>'});               				
+     * @example articleInstanceTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
     get(articleId: string, id: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
@@ -60,7 +60,7 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
      * Parses create article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicArticleInstanceTagsRouteDefinition.create({id: '<articleTag-id>'});               				
+     * @example articleInstanceTagsRouteDefinition.create({id: '<articleTag-id>'});               				
      **/
     create(data: IArticleTag): any {
         return super.baseCreate(this.createRoute, data);
@@ -70,7 +70,7 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicArticleInstanceTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
+     * @example articleInstanceTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
      **/
     delete(data: IArticleTag): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -80,7 +80,7 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicArticleInstanceTagsRouteDefinition.deleteAll({id: '<articleTag-id>'});               				
+     * @example articleInstanceTagsRouteDefinition.deleteAll({id: '<articleTag-id>'});               				
      **/
     deleteAll(data: IArticle): any {
         return super.baseDelete(this.deleteAllRoute, data, undefined, 'delete-tags-by-article');

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsRouteDefinition  
+ * @module notificationsRouteDefinition  
  * @description Baasic Notifications Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -19,7 +19,7 @@ import {
 export class NotificationsRouteDefinition extends BaseRouteDefinition {
 
     get publish(): NotificationsPublishRouteDefinition {
-        return this.baasicNotificationsPublishRouteDefinition;
+        return this.notificationsPublishRouteDefinition;
     }
 
     get subscriptions(): NotificationsSubscriptionsRouteDefinition {
@@ -27,19 +27,19 @@ export class NotificationsRouteDefinition extends BaseRouteDefinition {
     }
 
     get registrations(): NotificationsRegistrationsRouteDefinition {
-        return this.baasicNotificationsRegistrationsRouteDefinition;
+        return this.notificationsRegistrationsRouteDefinition;
     }
 
     get settings(): NotificationsSettingsRouteDefinition {
-        return this.baasicNotificationsSettingsRouteDefinition;
+        return this.notificationsSettingsRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.NotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: NotificationsPublishRouteDefinition,
+        @inject(notificationsTypes.NotificationsPublishRouteDefinition) protected notificationsPublishRouteDefinition: NotificationsPublishRouteDefinition,
         @inject(notificationsTypes.NotificationsSubscriptionsRouteDefinition) protected basicNotificationsSubscriptionsRouteDefinition: NotificationsSubscriptionsRouteDefinition,
-        @inject(notificationsTypes.NotificationsRegistrationsRouteDefinition) protected baasicNotificationsRegistrationsRouteDefinition: NotificationsRegistrationsRouteDefinition,
-        @inject(notificationsTypes.NotificationsSettingsRouteDefinition) protected baasicNotificationsSettingsRouteDefinition: NotificationsSettingsRouteDefinition
+        @inject(notificationsTypes.NotificationsRegistrationsRouteDefinition) protected notificationsRegistrationsRouteDefinition: NotificationsRegistrationsRouteDefinition,
+        @inject(notificationsTypes.NotificationsSettingsRouteDefinition) protected notificationsSettingsRouteDefinition: NotificationsSettingsRouteDefinition
     ) { super(appOptions); }
 }
 

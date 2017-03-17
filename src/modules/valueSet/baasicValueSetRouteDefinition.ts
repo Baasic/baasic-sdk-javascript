@@ -1,5 +1,5 @@
 /**  
- * @module baasicValueSetRouteDefinition
+ * @module valueSetRouteDefinition
  * @description Baasic Value Set Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -23,12 +23,12 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
     public readonly deleteRoute: string = 'value-sets/{id}';
 
     get items(): ValueSetItemRouteDefinition {
-        return this.baasicValueSetItemRouteDefinition;
+        return this.valueSetItemRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(valueSetTypes.ValueSetItemRouteDefinition) protected baasicValueSetItemRouteDefinition: ValueSetItemRouteDefinition
+        @inject(valueSetTypes.ValueSetItemRouteDefinition) protected valueSetItemRouteDefinition: ValueSetItemRouteDefinition
     ) { super(appOptions); }
 
     /**                 
@@ -40,7 +40,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example baasicValueSetRouteDefinition.find(options);                               
+     * @example valueSetRouteDefinition.find(options);                               
      **/
     find(options: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -51,7 +51,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param setName Value Set name.
      * @param options Query resource options object.                       
-     * @example baasicValueSetRouteDefinition.get(setName, options);                               
+     * @example valueSetRouteDefinition.get(setName, options);                               
      **/
     get(setName: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, setName, options, 'setName');
@@ -60,7 +60,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create value set route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicValueSetRouteDefinition.create();                              
+     * @example valueSetRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -70,7 +70,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
      * Parses update value set route.
      * @method
      * @param data Value set object used to update specified value set resource.
-     * @example baasicValueSetRouteDefinition.update(data);
+     * @example valueSetRouteDefinition.update(data);
      */
     update(data: IValueSet): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -80,7 +80,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
      * Parses delete value set route.
      * @method
      * @param data A value set object used to delete specified value set resource.
-     * @example baasicValueSetRouteDefinition.delete(data);
+     * @example valueSetRouteDefinition.delete(data);
      */
     delete(data: IValueSet): any {
         return super.baseDelete(this.deleteRoute, data);

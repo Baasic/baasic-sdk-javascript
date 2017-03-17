@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserRouteDefinition  
+ * @module userRouteDefinition  
  * @description Baasic User Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -60,12 +60,12 @@ export class UserRouteDefinition extends BaseRouteDefinition {
     public disapproveRoute: string = 'users/{id}/disapprove';
 
     get socialLogin(): UserSocialLoginRouteDefinition {
-        return this.baasicUserSocialLoginRouteDefinition;
+        return this.userSocialLoginRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(membershipTypes.UserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: UserSocialLoginRouteDefinition
+        @inject(membershipTypes.UserSocialLoginRouteDefinition) protected userSocialLoginRouteDefinition: UserSocialLoginRouteDefinition
     ) { super(appOptions); }
 
     /**                 
@@ -76,7 +76,7 @@ export class UserRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the user property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicUserRouteDefinition.find({searchQuery: '<search-phrase>'});                              
+     * @example userRouteDefinition.find({searchQuery: '<search-phrase>'});                              
      **/
     find(options: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -86,7 +86,7 @@ export class UserRouteDefinition extends BaseRouteDefinition {
      * Parses get user route which must be expanded with the username of the previously created user resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicUserRouteDefinition.get({username: '<username>'})
+     * @example userRouteDefinition.get({username: '<username>'})
      **/
     get(id: string, options?: IOptions): any {
         return super.baseGet(this.getRoute, id, options, 'username');
@@ -95,7 +95,7 @@ export class UserRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create user route, this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicUserRouteDefinition.create();                              
+     * @example userRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -113,7 +113,7 @@ export class UserRouteDefinition extends BaseRouteDefinition {
      * Parses user exists route; URI template should be expanded with the username whose availability you'd like to check.                                
      * @method
      * @param username A username which uniquely identifies an application user.                        
-     * @example baasicUserRouteDefinition.exists({username: '<username>'});                               
+     * @example userRouteDefinition.exists({username: '<username>'});                               
      **/
     exists(username: string, options?: any): any {
         return super.baseGet(this.existsRoute, username, options, 'username');
@@ -123,7 +123,7 @@ export class UserRouteDefinition extends BaseRouteDefinition {
      * Parses change password route, URI template should be expanded with the username of the user resource whose password should be updated.                 
      * @method
      * @param username A username or id which uniquely identifies user resource.                        
-     * @example baasicUserRouteDefinition.changePassword({username: '<username>'});                              
+     * @example userRouteDefinition.changePassword({username: '<username>'});                              
      **/
     changePassword(username: string): any {
         return super.baseUpdate(this.changePasswordRoute, { username: username });

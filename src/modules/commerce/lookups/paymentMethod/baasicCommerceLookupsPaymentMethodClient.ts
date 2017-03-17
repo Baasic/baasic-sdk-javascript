@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceLookupsPaymentMethodClient  
- * @description  Commerce Lookups PaymentMethod Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentMethodClient` uses `baasicCommerceLookupsPaymentMethodRouteDefinition`. 
+ * @description  Commerce Lookups PaymentMethod Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentMethodClient` uses `commerceLookupsPaymentMethodRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsPaymentMethodBatchClient, CommerceLookupsPaymentMethodRo
 export class CommerceLookupsPaymentMethodClient {
 
     get routeDefinition(): CommerceLookupsPaymentMethodRouteDefinition {
-        return this.baasicCommerceLookupsPaymentMethodRouteDefinition;
+        return this.commerceLookupsPaymentMethodRouteDefinition;
     }
 
     get batch(): CommerceLookupsPaymentMethodBatchClient {
@@ -22,8 +22,8 @@ export class CommerceLookupsPaymentMethodClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsPaymentMethodBatchClient) protected commerceLookupsPaymentMethodBatchClient: CommerceLookupsPaymentMethodBatchClient,
-        @inject(commerceTypes.CommerceLookupsPaymentMethodRouteDefinition) protected baasicCommerceLookupsPaymentMethodRouteDefinition: CommerceLookupsPaymentMethodRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
+        @inject(commerceTypes.CommerceLookupsPaymentMethodRouteDefinition) protected commerceLookupsPaymentMethodRouteDefinition: CommerceLookupsPaymentMethodRouteDefinition,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class CommerceLookupsPaymentMethodClient {
                     });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.ApiClient.get(this.baasicCommerceLookupsPaymentMethodRouteDefinition.find(options));
+        return this.apiClient.get(this.commerceLookupsPaymentMethodRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,11 +59,11 @@ export class CommerceLookupsPaymentMethodClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.get(this.baasicCommerceLookupsPaymentMethodRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceLookupsPaymentMethodRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransactionStatus); 
      * let uri = params['model'].links('put').href; 
@@ -80,7 +80,7 @@ export class CommerceLookupsPaymentMethodClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.put<void>(this.baasicCommerceLookupsPaymentMethodRouteDefinition.update(data), this.baasicCommerceLookupsPaymentMethodRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsPaymentMethodRouteDefinition.update(data), this.commerceLookupsPaymentMethodRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -99,11 +99,11 @@ export class CommerceLookupsPaymentMethodClient {
                     });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.post(this.baasicCommerceLookupsPaymentMethodRouteDefinition.create(), this.baasicCommerceLookupsPaymentMethodRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsPaymentMethodRouteDefinition.create(), this.commerceLookupsPaymentMethodRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransactionStatus); 
      * let uri = params['model'].links('delete').href; 
@@ -119,7 +119,7 @@ export class CommerceLookupsPaymentMethodClient {
                             });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.delete<void>(this.baasicCommerceLookupsPaymentMethodRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.commerceLookupsPaymentMethodRouteDefinition.delete(data));
     }
 }
 

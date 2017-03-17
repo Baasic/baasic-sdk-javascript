@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMediaVaultProcessingProviderSettingsRouteDefinition  
+ * @module mediaVaultProcessingProviderSettingsRouteDefinition  
  * @description Baasic Media Vault Processing Provider Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Processing Provider Settings Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -29,7 +29,7 @@ export class MediaVaultProcessingProviderSettingsRouteDefinition extends BaseRou
      * - `sort` - A string used to set the media vault processing provider setting property to sort the result collection by.                     
      * - `embed` - Comma separated list of resources to be contained within the current representation.                     
      * @method                            
-     * @example baasicMediaVaultProcessingProviderSettingsRouteDefinition.find({searchQuery: '<search-phrase>'});                                   
+     * @example mediaVaultProcessingProviderSettingsRouteDefinition.find({searchQuery: '<search-phrase>'});                                   
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -38,7 +38,7 @@ export class MediaVaultProcessingProviderSettingsRouteDefinition extends BaseRou
     /**                     
      * Parses get route; this route should be expanded with Id of the media vault processing provider setting resource.                     
      * @method                            
-     * @example baasicMediaVaultProcessingProviderSettingsRouteDefinition.get({id: '<id>'});                                   
+     * @example mediaVaultProcessingProviderSettingsRouteDefinition.get({id: '<id>'});                                   
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -48,7 +48,7 @@ export class MediaVaultProcessingProviderSettingsRouteDefinition extends BaseRou
      * Parses update route; this route should be expanded with Id of the media vault processing provider setting resource.                     
      * @method   
      * @param data A media vault preprocessing provider settings object used to update specified media vault preprocessing provider settings in the system.                         
-     * @example baasicMediaVaultProcessingProviderSettingsRouteDefinition.update(data);                                   
+     * @example mediaVaultProcessingProviderSettingsRouteDefinition.update(data);                                   
      **/
     update(data: IPreprocessingProviderSettings): any {
         return super.baseUpdate(this.updateRoute, data);

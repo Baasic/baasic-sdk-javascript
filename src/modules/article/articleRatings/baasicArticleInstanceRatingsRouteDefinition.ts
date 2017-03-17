@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleInstanceRatingsRouteDefinition  
+ * @module articleInstanceRatingsRouteDefinition  
  * @description Baasic Article Instance Ratings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Sub Ratings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -35,7 +35,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create article rating route; this URI does not support any additional embed items.                 
      * @method                     
-     * @example baasicArticleInstanceRatingsRouteDefinition.create(data);                 
+     * @example articleInstanceRatingsRouteDefinition.create(data);                 
      **/
     create(data: IRating): any {
         return super.baseCreate(this.createRoute, data);
@@ -49,7 +49,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the article rating property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicArticleInstanceRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example articleInstanceRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(articleId: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
@@ -65,7 +65,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the article rating property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicArticleInstanceRatingsRouteDefinition.find({username: '<username>'});                               
+     * @example articleInstanceRatingsRouteDefinition.find({username: '<username>'});                               
      **/
     findByUser(articleId: string, username: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
@@ -78,7 +78,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicArticleInstanceRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
+     * @example articleInstanceRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
      **/
     get(articleId, id: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
@@ -89,7 +89,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses update article rating route; this URI does not support any additional embed items.                 
      * @method                     
-     * @example baasicArticleInstanceRatingsRouteDefinition.update(data);                 
+     * @example articleInstanceRatingsRouteDefinition.update(data);                 
      **/
     update(data: IRating): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -98,7 +98,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
     /**                 
     * Parses delete article rating route; this URI does not support any additional embed items.                 
     * @method                     
-    * @example baasicArticleInstanceRatingsRouteDefinition.delete(data);                 
+    * @example articleInstanceRatingsRouteDefinition.delete(data);                 
     **/
     delete(data: IRating): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -107,7 +107,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
     /**                 
     * Parses delete article rating route; this URI does not support any additional embed items.                 
     * @method                     
-    * @example baasicArticleInstanceRatingsRouteDefinition.deleteAll(data);                 
+    * @example articleInstanceRatingsRouteDefinition.deleteAll(data);                 
     **/
     deleteAll(data: IArticle): any {
         return super.baseDelete(this.deleteAllRoute, data, undefined, 'delete-ratings-by-article');

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module templatingClient  
- * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingClient` uses `baasicTemplatingRouteDefinition`. 
+ * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingClient` uses `templatingRouteDefinition`. 
  */
 
 import { injectable, inject } from 'inversify';
@@ -14,7 +14,7 @@ import { ITemplate } from 'modules/templating/contracts';
 export class TemplatingClient {
 
     get routeDefinition(): TemplatingRouteDefinition {
-        return this.baasicTemplatingRouteDefinition;
+        return this.templatingRouteDefinition;
     }
 
     get batch(): TemplatingBatchClient {
@@ -22,7 +22,7 @@ export class TemplatingClient {
     }
 
     constructor(
-        @inject(templatingTypes.TemplatingRouteDefinition) protected baasicTemplatingRouteDefinition: TemplatingRouteDefinition,
+        @inject(templatingTypes.TemplatingRouteDefinition) protected templatingRouteDefinition: TemplatingRouteDefinition,
         @inject(templatingTypes.TemplatingBatchClient) protected templatingBatchClient: TemplatingBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -47,7 +47,7 @@ export class TemplatingClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ITemplate>>> {
-        return this.apiClient.get<IQueryModel<ITemplate>>(this.baasicTemplatingRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ITemplate>>(this.templatingRouteDefinition.find(options));
     }
 
     /**                 
@@ -64,7 +64,7 @@ export class TemplatingClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.apiClient.get<ITemplate>(this.baasicTemplatingRouteDefinition.get(id, options));
+        return this.apiClient.get<ITemplate>(this.templatingRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -81,7 +81,7 @@ export class TemplatingClient {
                     });                 
      **/
     create(data: ITemplate): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.apiClient.post<ITemplate>(this.baasicTemplatingRouteDefinition.create(), this.baasicTemplatingRouteDefinition.createParams(data));
+        return this.apiClient.post<ITemplate>(this.templatingRouteDefinition.create(), this.templatingRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -104,7 +104,7 @@ export class TemplatingClient {
                         });                
      **/
     update(data: ITemplate): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicTemplatingRouteDefinition.update(data), this.baasicTemplatingRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.templatingRouteDefinition.update(data), this.templatingRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -126,7 +126,7 @@ export class TemplatingClient {
                         });		               
      **/
     remove(data: ITemplate): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicTemplatingRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.templatingRouteDefinition.delete(data));
     }
 }
 

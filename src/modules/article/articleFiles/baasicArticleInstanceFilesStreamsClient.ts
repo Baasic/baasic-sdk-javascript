@@ -14,11 +14,11 @@ import { IArticleFile } from 'modules/article/contracts';
 export class ArticleInstanceFilesStreamsClient {
 
     get routeDefinition(): ArticleInstanceFilesStreamsRouteDefinition {
-        return this.baasicArticleInstanceFilesStreamsRouteDefinition;
+        return this.articleInstanceFilesStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleInstanceFilesStreamsRouteDefinition) protected baasicArticleInstanceFilesStreamsRouteDefinition: ArticleInstanceFilesStreamsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesStreamsRouteDefinition) protected articleInstanceFilesStreamsRouteDefinition: ArticleInstanceFilesStreamsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -47,7 +47,7 @@ export class ArticleInstanceFilesStreamsClient {
                             });                     
      **/
     get(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicArticleInstanceFilesStreamsRouteDefinition.get(articleId, data));
+        return this.apiClient.get(this.articleInstanceFilesStreamsRouteDefinition.get(articleId, data));
     }
 
     /**                     
@@ -79,7 +79,7 @@ export class ArticleInstanceFilesStreamsClient {
                         });                     
      **/
     getBlob(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicArticleInstanceFilesStreamsRouteDefinition.get(articleId, data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.articleInstanceFilesStreamsRouteDefinition.get(articleId, data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -109,7 +109,7 @@ export class ArticleInstanceFilesStreamsClient {
     update(articleId: string, data: IArticleFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.baasicArticleInstanceFilesStreamsRouteDefinition.update(articleId, data), formData, { 'Content-Type': undefined });
+        return this.apiClient.put(this.articleInstanceFilesStreamsRouteDefinition.update(articleId, data), formData, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -130,7 +130,7 @@ export class ArticleInstanceFilesStreamsClient {
     create(articleId: string, data: IArticleFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.baasicArticleInstanceFilesStreamsRouteDefinition.create(articleId, data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.articleInstanceFilesStreamsRouteDefinition.create(articleId, data), formData, { 'Content-Type': undefined });
     }
 }
 

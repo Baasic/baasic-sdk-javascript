@@ -13,11 +13,11 @@ import { IOrganization } from 'modules/userProfile/contracts';
 export class OrganizationBatchClient {
 
     get routeDefinition(): OrganizationBatchRouteDefinition {
-        return this.baasicOrganizationBatchRouteDefinition;
+        return this.organizationBatchRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.OrganizationBatchRouteDefinition) protected baasicOrganizationBatchRouteDefinition: OrganizationBatchRouteDefinition,
+        @inject(userProfileTypes.OrganizationBatchRouteDefinition) protected organizationBatchRouteDefinition: OrganizationBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -39,7 +39,7 @@ export class OrganizationBatchClient {
                    });                   
      **/
     create(data: IOrganization[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicOrganizationBatchRouteDefinition.create(), this.baasicOrganizationBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.organizationBatchRouteDefinition.create(), this.organizationBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -56,7 +56,7 @@ export class OrganizationBatchClient {
                     });                   
      **/
     update(data: IOrganization[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicOrganizationBatchRouteDefinition.update(), this.baasicOrganizationBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.organizationBatchRouteDefinition.update(), this.organizationBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -71,7 +71,7 @@ export class OrganizationBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicOrganizationBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.organizationBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

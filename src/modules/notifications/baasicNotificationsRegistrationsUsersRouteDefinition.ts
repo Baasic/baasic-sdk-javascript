@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsRegistrationsUsersRouteDefinition  
+ * @module notificationsRegistrationsUsersRouteDefinition  
  * @description Baasic Notifications Registrations Users Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Users Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -25,18 +25,18 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
     public readonly updateRoute: string = 'notifications/registrations/{id}';
 
     get batch(): NotificationsRegistrationsUsersBatchRouteDefinition {
-        return this.baasicNotificationsRegistrationsUsersBatchRouteDefinition;
+        return this.notificationsRegistrationsUsersBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected baasicNotificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition
+        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected notificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                          
      * Parses create users registrations route; this route does not expose any additional options                          
      * @method                         
-     * @example baasicNotificationsRegistrationsUsersRouteDefinition.create();                          
+     * @example notificationsRegistrationsUsersRouteDefinition.create();                          
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -53,7 +53,7 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
      * - `embed` - Comma separated list of resources to be contained within the current representation.                          
      * @method 
      * @param options Query resource options object.                                
-     * @example baasicNotificationsRegistrationsUsersRouteDefinition.find({ searchQuery: '<search-phrase>', providers: '<provider-name>,<provider-name>' });                          
+     * @example notificationsRegistrationsUsersRouteDefinition.find({ searchQuery: '<search-phrase>', providers: '<provider-name>,<provider-name>' });                          
      */
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -64,7 +64,7 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
      * @method
      * @param id The registration identifier which uniquely identifies UserRegistration resource that needs to be retrieved.
      * @param options Query resource options object.                       
-     * @example baasicNotificationsRegistrationsUsersRouteDefinition.get({ id: '<registration-id>' });                          
+     * @example notificationsRegistrationsUsersRouteDefinition.get({ id: '<registration-id>' });                          
      */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
      * Parses delete users registrations route; this route should be expanded with the Id of users registrations resource.                         
      * @method
      * @param data An object used to delete specified UserRegistration resource.                          
-     * @example baasicNotificationsRegistrationsUsersRouteDefinition.delete(data);                          
+     * @example notificationsRegistrationsUsersRouteDefinition.delete(data);                          
      */
     delete(data: IUserRegistration): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -84,7 +84,7 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
      * Parses update users registrations route; this route should be expanded with the Id of users registrations resource.                         
      * @method
      * @param data An object used to update specified UserRegistration resource.                          
-     * @example baasicNotificationsRegistrationsUsersRouteDefinition.update(data);                          
+     * @example notificationsRegistrationsUsersRouteDefinition.update(data);                          
      */
     update(data: IUserRegistration): any {
         return super.baseUpdate(this.updateRoute, data);

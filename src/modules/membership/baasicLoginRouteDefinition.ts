@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicLoginRouteDefinition  
+ * @module loginRouteDefinition  
  * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 import { injectable, inject } from "inversify";
@@ -26,7 +26,7 @@ export class LoginRouteDefinition extends BaseRouteDefinition {
      * Parses login route which can be expanded with additional options. Supported items are:                                   
      * - `options` - Comma separated list of options used to setup authentication token with cookie session. Supported values are: "session" and "sliding".                  
      * @method                         
-     * @example baasicLoginRouteDefinition.login( {options: 'sliding'});                                
+     * @example loginRouteDefinition.login( {options: 'sliding'});                                
      **/
     login(options: any): any {
         return super.baseCreate(this.loginRoute, options);

@@ -1,4 +1,4 @@
-export * from './baasicArticleInstanceCommentsRepliesRouteDefinition';
+export * from './articleInstanceCommentsRepliesRouteDefinition';
 export * from './articleInstanceCommentsRepliesClient';
-export * from './baasicArticleInstanceCommentsRouteDefinition';
+export * from './articleInstanceCommentsRouteDefinition';
 export * from './articleInstanceCommentsClient';

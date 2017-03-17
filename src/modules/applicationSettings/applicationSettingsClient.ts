@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module applicationSettingsClient  
- * @description  Application Settings Client provides an easy way to consume  Application Settings REST API end-points. In order to obtain needed routes `applicationSettingsClient` uses `baasicApplicationSettingsRouteDefinition`. 
+ * @description  Application Settings Client provides an easy way to consume  Application Settings REST API end-points. In order to obtain needed routes `applicationSettingsClient` uses `applicationSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,16 +14,16 @@ import { IApplication } from 'modules/applicationSettings/contracts';
 export class ApplicationSettingsClient {
 
     /**                 
-     * Provides direct access to `baasicApplicationSettingsRouteDefinition`.                 
+     * Provides direct access to `applicationSettingsRouteDefinition`.                 
      * @method                        
      * @example ApplicationSettingsClient.routeDefinition.get(options)                 
      **/
     get routeDefinition(): ApplicationSettingsRouteDefinition {
-        return this.baasicApplicationSettingsRouteDefinition;
+        return this.applicationSettingsRouteDefinition;
     }
 
     constructor(
-        @inject(applicationTypes.ApplicationSettingsRouteDefinition) protected baasicApplicationSettingsRouteDefinition: ApplicationSettingsRouteDefinition,
+        @inject(applicationTypes.ApplicationSettingsRouteDefinition) protected applicationSettingsRouteDefinition: ApplicationSettingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -40,11 +40,11 @@ export class ApplicationSettingsClient {
                     });                 
      **/
     get(options: IOptions): PromiseLike<IHttpResponse<IApplication>> {
-        return this.apiClient.get<IApplication>(this.baasicApplicationSettingsRouteDefinition.get(options));
+        return this.apiClient.get<IApplication>(this.applicationSettingsRouteDefinition.get(options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update application settings action has been performed. This action updates the application setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't use `baasicApplicationSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update application settings action has been performed. This action updates the application setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't use `applicationSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(appSettings); 
      * let uri = params['model'].links('put').href;				 
@@ -62,7 +62,7 @@ export class ApplicationSettingsClient {
                         }); 				
      **/
     update(data: IApplication): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.applicationSettingsRouteDefinition.update(data), this.applicationSettingsRouteDefinition.updateParams(data));
     }
 }
 

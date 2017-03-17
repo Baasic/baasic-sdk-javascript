@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsRegistrationsRouteDefinition  
+ * @module notificationsRegistrationsRouteDefinition  
  * @description Baasic Notifications Registrations Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -17,17 +17,17 @@ import {
 export class NotificationsRegistrationsRouteDefinition extends BaseRouteDefinition {
 
     get users(): NotificationsRegistrationsUsersRouteDefinition {
-        return this.baasicNotificationsRegistrationsUsersRouteDefinition;
+        return this.notificationsRegistrationsUsersRouteDefinition;
     }
 
     get anonymous(): NotificationsRegistrationsAnonymousRouteDefinition {
-        return this.baasicNotificationsRegistrationsAnonymousRouteDefinition;
+        return this.notificationsRegistrationsAnonymousRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.NotificationsRegistrationsUsersRouteDefinition) protected baasicNotificationsRegistrationsUsersRouteDefinition: NotificationsRegistrationsUsersRouteDefinition,
-        @inject(notificationsTypes.NotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: NotificationsRegistrationsAnonymousRouteDefinition
+        @inject(notificationsTypes.NotificationsRegistrationsUsersRouteDefinition) protected notificationsRegistrationsUsersRouteDefinition: NotificationsRegistrationsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousRouteDefinition) protected notificationsRegistrationsAnonymousRouteDefinition: NotificationsRegistrationsAnonymousRouteDefinition
     ) { super(appOptions); }
 }
 

@@ -13,11 +13,11 @@ import { IUserEducation } from 'modules/userProfile/contracts';
 export class UserEducationClient {
 
     get routeDefinition(): UserEducationRouteDefinition {
-        return this.baasicUserEducationRouteDefinition;
+        return this.userEducationRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.UserEducationRouteDefinition) protected baasicUserEducationRouteDefinition: UserEducationRouteDefinition,
+        @inject(userProfileTypes.UserEducationRouteDefinition) protected userEducationRouteDefinition: UserEducationRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -41,7 +41,7 @@ export class UserEducationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserEducation>>> {
-        return this.apiClient.get<IQueryModel<IUserEducation>>(this.baasicUserEducationRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserEducation>>(this.userEducationRouteDefinition.find(options));
     }
 
     /**                 
@@ -56,7 +56,7 @@ export class UserEducationClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserEducation>> {
-        return this.apiClient.get<IUserEducation>(this.baasicUserEducationRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserEducation>(this.userEducationRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -77,11 +77,11 @@ export class UserEducationClient {
                 });                 
      **/
     create(data: IUserEducation): PromiseLike<IHttpResponse<IUserEducation>> {
-        return this.apiClient.post<IUserEducation>(this.baasicUserEducationRouteDefinition.create(data), this.baasicUserEducationRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserEducation>(this.userEducationRouteDefinition.create(data), this.userEducationRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update user education action has been performed; this action updates a user education resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserEducationRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user education action has been performed; this action updates a user education resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userEducationRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(education); 
      * let uri = params['model'].links('put').href; 
@@ -100,7 +100,7 @@ export class UserEducationClient {
                         }); 				        
      **/
     update(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicUserEducationRouteDefinition.update(data), this.baasicUserEducationRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.userEducationRouteDefinition.update(data), this.userEducationRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -120,7 +120,7 @@ export class UserEducationClient {
                         });						        
      **/
     remove(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicUserEducationRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.userEducationRouteDefinition.delete(data));
     }
 }
 

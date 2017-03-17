@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsAddressTypeRouteDefinition  
+ * @module commerceLookupsAddressTypeRouteDefinition  
  * @description Baasic Commerce Lookups AddressType Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups AddressType Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -24,11 +24,11 @@ export class CommerceLookupsAddressTypeRouteDefinition extends BaseRouteDefiniti
     public readonly deleteRoute: string = 'commerce/lookups/address-types/{id}';
 
     get batch(): CommerceLookupsAddressTypeBatchRouteDefinition {
-        return this.baasicCommerceLookupsAddressTypeBatchRouteDefinition;
+        return this.commerceLookupsAddressTypeBatchRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsAddressTypeBatchRouteDefinition) protected baasicCommerceLookupsAddressTypeBatchRouteDefinition: CommerceLookupsAddressTypeBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsAddressTypeBatchRouteDefinition) protected commerceLookupsAddressTypeBatchRouteDefinition: CommerceLookupsAddressTypeBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -40,7 +40,7 @@ export class CommerceLookupsAddressTypeRouteDefinition extends BaseRouteDefiniti
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicCommerceLookupsAddressTypeRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceLookupsAddressTypeRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -49,7 +49,7 @@ export class CommerceLookupsAddressTypeRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceLookupsAddressTypeRouteDefinition.get(id, options);                               
+     * @example commerceLookupsAddressTypeRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -58,7 +58,7 @@ export class CommerceLookupsAddressTypeRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses create commerce address type route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsAddressTypeRouteDefinition.create();                              
+     * @example commerceLookupsAddressTypeRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -67,7 +67,7 @@ export class CommerceLookupsAddressTypeRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses update commerce address type route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsAddressTypeRouteDefinition.update(data);                              
+     * @example commerceLookupsAddressTypeRouteDefinition.update(data);                              
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -77,7 +77,7 @@ export class CommerceLookupsAddressTypeRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses delete commerce address type route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsAddressTypeRouteDefinition.delete(data);                              
+     * @example commerceLookupsAddressTypeRouteDefinition.delete(data);                              
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsAddressTypeBatchRouteDefinition  
+ * @module commerceLookupsAddressTypeBatchRouteDefinition  
  * @description Baasic Commerce Lookups AddressType Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups AddressType Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -25,7 +25,7 @@ export class CommerceLookupsAddressTypeBatchRouteDefinition extends BaseRouteDef
     /**                      
      * Parses create commerce address type batch route; this route does not expose any additional options                      
      * @method                     
-     * @example baasicCommerceLookupsAddressTypeRouteDefinition.create();                      
+     * @example commerceLookupsAddressTypeRouteDefinition.create();                      
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -34,7 +34,7 @@ export class CommerceLookupsAddressTypeBatchRouteDefinition extends BaseRouteDef
     /**                      
      * Parses remove commerce address type batch route; this route does not expose any additional options                      
      * @method                     
-     * @example baasicCommerceLookupsAddressTypeRouteDefinition.update();                      
+     * @example commerceLookupsAddressTypeRouteDefinition.update();                      
      */
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -43,7 +43,7 @@ export class CommerceLookupsAddressTypeBatchRouteDefinition extends BaseRouteDef
     /**                      
      * Parses remove commerce address type batch route; this route does not expose any additional options                      
      * @method                    
-     * @example baasicCommerceLookupsAddressTypeRouteDefinition.remove();                      
+     * @example commerceLookupsAddressTypeRouteDefinition.remove();                      
      */
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

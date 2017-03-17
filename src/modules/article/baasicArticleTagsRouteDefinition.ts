@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleTagsRouteDefinition  
+ * @module articleTagsRouteDefinition  
  * @description Baasic Article Tags Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Tags Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
 */
 
@@ -23,11 +23,11 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
     public readonly deleteRoute: string = 'article-tags/{id}';
     
     get subscriptions(): ArticleTagsSubscriptionsRouteDefinition {
-        return this.baasicArticleTagsSubscriptionsRouteDefinition;
+        return this.articleTagsSubscriptionsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected articleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
     { super(appOptions); }
@@ -41,7 +41,7 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method
      * @param options Query resource options object.      				
-     * @example baasicArticleTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
+     * @example articleTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -53,7 +53,7 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Article tag id or slug that uniquely identifies article tag resource that needs to be retrieved.
      * @param options Options object that contains embed data.      				
-     * @example baasicArticleTagsRouteDefinition.get({id: '<articleTag-id>'});               				
+     * @example articleTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -64,7 +64,7 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method 
      * @param data An article tag object used to update specified article tag resource.     				
-     * @example baasicArticleTagsRouteDefinition.update({id: '<articleTag-id>'});               				
+     * @example articleTagsRouteDefinition.update({id: '<articleTag-id>'});               				
      **/
     update(data: IArticleTag): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -75,7 +75,7 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method
      * @param data An article tag object used to delete specified article tag resource.      				
-     * @example baasicArticleTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
+     * @example articleTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
      **/
     delete(data: IArticleTag): any {
         return super.baseDelete(this.deleteRoute, data);

@@ -19,7 +19,7 @@ import { IArticleFile } from 'modules/article/contracts';
 export class ArticleInstanceFilesClient {
 
     get routeDefinition(): ArticleInstanceFilesRouteDefinition {
-        return this.baasicArticleInstanceFilesRouteDefinition;
+        return this.articleInstanceFilesRouteDefinition;
     }
 
     get streams(): ArticleInstanceFilesStreamsClient {
@@ -31,7 +31,7 @@ export class ArticleInstanceFilesClient {
     }
 
     constructor(
-        @inject(articleTypes.ArticleInstanceFilesRouteDefinition) protected baasicArticleInstanceFilesRouteDefinition: ArticleInstanceFilesRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesRouteDefinition) protected articleInstanceFilesRouteDefinition: ArticleInstanceFilesRouteDefinition,
         @inject(articleTypes.ArticleInstanceFilesStreamsClient) protected articleInstanceFilesStreamsClient: ArticleInstanceFilesStreamsClient,
         @inject(articleTypes.ArticleInstanceFilesBatchClient) protected ArticleInstanceFilesBatchClient: ArticleInstanceFilesBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -58,7 +58,7 @@ export class ArticleInstanceFilesClient {
                 });
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleFile>>> {
-        return this.apiClient.get<IQueryModel<IArticleFile>>(this.baasicArticleInstanceFilesRouteDefinition.find(articleId, options));
+        return this.apiClient.get<IQueryModel<IArticleFile>>(this.articleInstanceFilesRouteDefinition.find(articleId, options));
     }
 
     /**                 
@@ -77,7 +77,7 @@ export class ArticleInstanceFilesClient {
                    });                 
     **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.apiClient.get<IArticleFile>(this.baasicArticleInstanceFilesRouteDefinition.get(articleId, id, options));
+        return this.apiClient.get<IArticleFile>(this.articleInstanceFilesRouteDefinition.get(articleId, id, options));
     }
 
     /**                  
@@ -92,7 +92,7 @@ export class ArticleInstanceFilesClient {
      * @param options
      * @returns A promise that is resolved once the unlink action has been performed.                         
      * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
-                    baasicArticleInstanceFilesRouteDefinition.remove(fileEntry)
+                    articleInstanceFilesRouteDefinition.remove(fileEntry)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -101,7 +101,7 @@ export class ArticleInstanceFilesClient {
                         }); 				
      **/
     unlink(articleId: string, data: IArticleFile, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleInstanceFilesRouteDefinition.unlink(articleId, data, options));
+        return this.apiClient.delete<void>(this.articleInstanceFilesRouteDefinition.unlink(articleId, data, options));
     }
 
     /**                      
@@ -125,7 +125,7 @@ export class ArticleInstanceFilesClient {
                         });                     
      **/
     unlinkByArticle(articleId: string, data: IArticleFile, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleInstanceFilesRouteDefinition.unlink(articleId, data, options));
+        return this.apiClient.delete<void>(this.articleInstanceFilesRouteDefinition.unlink(articleId, data, options));
     }
 
     /**                  
@@ -149,7 +149,7 @@ export class ArticleInstanceFilesClient {
                        }); 				
     **/
     update(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleInstanceFilesRouteDefinition.update(articleId, data), this.baasicArticleInstanceFilesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleInstanceFilesRouteDefinition.update(articleId, data), this.articleInstanceFilesRouteDefinition.updateParams(data));
     }
 
     /** 
@@ -167,7 +167,7 @@ export class ArticleInstanceFilesClient {
                     });                 
      **/
     link(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.apiClient.post<IArticleFile>(this.baasicArticleInstanceFilesRouteDefinition.link(articleId, data), this.baasicArticleInstanceFilesRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleFile>(this.articleInstanceFilesRouteDefinition.link(articleId, data), this.articleInstanceFilesRouteDefinition.createParams(data));
     }
 }
 

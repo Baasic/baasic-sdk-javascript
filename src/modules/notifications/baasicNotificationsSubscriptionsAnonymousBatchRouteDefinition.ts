@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition  
+ * @module notificationsSubscriptionsAnonymousBatchRouteDefinition  
  * @description Baasic Notifications Subscriptions Anonymous Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Subscriptions Anonymous Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -26,7 +26,7 @@ export class NotificationsSubscriptionsAnonymousBatchRouteDefinition extends Bas
     /**                              
      * Parses create anonymous subscription batch route; this route does not expose any additional options                              
      * @method                              
-     * @example baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.create();                              
+     * @example notificationsSubscriptionsAnonymousBatchRouteDefinition.create();                              
      */
     create(): any {
         return this.baseCreate(this.createRoute, {});
@@ -44,7 +44,7 @@ export class NotificationsSubscriptionsAnonymousBatchRouteDefinition extends Bas
     /**                              
      * Parses update anonymous subscription batch route; this route does not expose any additional options                              
      * @method                              
-     * @example baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.update();                              
+     * @example notificationsSubscriptionsAnonymousBatchRouteDefinition.update();                              
      */
     update(): any {
         return this.baseUpdate(this.updateRoute, {});

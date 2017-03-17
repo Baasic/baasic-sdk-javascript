@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceLookupsPaymentTransactionStatusClient  
- * @description  Commerce Lookups PaymentTransactionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentTransactionStatusClient` uses `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition`. 
+ * @description  Commerce Lookups PaymentTransactionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentTransactionStatusClient` uses `commerceLookupsPaymentTransactionStatusRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsPaymentTransactionStatusBatchClient, CommerceLookupsPaym
 export class CommerceLookupsPaymentTransactionStatusClient {
 
     get routeDefinition(): CommerceLookupsPaymentTransactionStatusRouteDefinition {
-        return this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition;
+        return this.commerceLookupsPaymentTransactionStatusRouteDefinition;
     }
 
     get batch(): CommerceLookupsPaymentTransactionStatusBatchClient {
@@ -22,8 +22,8 @@ export class CommerceLookupsPaymentTransactionStatusClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusBatchClient) protected commerceLookupsPaymentTransactionStatusBatchClient: CommerceLookupsPaymentTransactionStatusBatchClient,
-        @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusRouteDefinition) protected baasicCommerceLookupsPaymentTransactionStatusRouteDefinition: CommerceLookupsPaymentTransactionStatusRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
+        @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusRouteDefinition) protected commerceLookupsPaymentTransactionStatusRouteDefinition: CommerceLookupsPaymentTransactionStatusRouteDefinition,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
                     });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.ApiClient.get(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.find(options));
+        return this.apiClient.get(this.commerceLookupsPaymentTransactionStatusRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,11 +59,11 @@ export class CommerceLookupsPaymentTransactionStatusClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.get(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceLookupsPaymentTransactionStatusRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransactionStatus); 
      * let uri = params['model'].links('put').href; 
@@ -80,7 +80,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.put<void>(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.update(data), this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsPaymentTransactionStatusRouteDefinition.update(data), this.commerceLookupsPaymentTransactionStatusRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -99,11 +99,11 @@ export class CommerceLookupsPaymentTransactionStatusClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.post(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.create(), this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsPaymentTransactionStatusRouteDefinition.create(), this.commerceLookupsPaymentTransactionStatusRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransactionStatus); 
      * let uri = params['model'].links('delete').href; 
@@ -119,7 +119,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
                             });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.delete<void>(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.commerceLookupsPaymentTransactionStatusRouteDefinition.delete(data));
     }
 }
 

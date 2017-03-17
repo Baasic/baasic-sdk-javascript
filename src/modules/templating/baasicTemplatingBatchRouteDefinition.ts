@@ -1,6 +1,6 @@
 /*global module */
 /**  
- * @module baasicTemplatingBatchRouteDefinition  
+ * @module templatingBatchRouteDefinition  
  * @description Baasic Templating Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Templating Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -22,7 +22,7 @@ export class TemplatingBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example baasicTemplatingBatchRouteDefinition.create();                                  
+     * @example templatingBatchRouteDefinition.create();                                  
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -31,7 +31,7 @@ export class TemplatingBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example baasicTemplatingBatchRouteDefinition.update();                                  
+     * @example templatingBatchRouteDefinition.update();                                  
      **/
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -40,7 +40,7 @@ export class TemplatingBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses remove route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example baasicTemplatingBatchRouteDefinition.delete();                                  
+     * @example templatingBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

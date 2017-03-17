@@ -14,11 +14,11 @@ import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 export class MediaVaultProcessingProviderSettingsClient {
 
     get routeDefinition(): MediaVaultProcessingProviderSettingsRouteDefinition {
-        return this.baasicMediaVaultProcessingProviderSettingsRouteDefinition;
+        return this.mediaVaultProcessingProviderSettingsRouteDefinition;
     }
 
     constructor(
-        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: MediaVaultProcessingProviderSettingsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsRouteDefinition) protected mediaVaultProcessingProviderSettingsRouteDefinition: MediaVaultProcessingProviderSettingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -42,7 +42,7 @@ export class MediaVaultProcessingProviderSettingsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IPreprocessingProviderSettings>>> {
-        return this.apiClient.get<IQueryModel<IPreprocessingProviderSettings>>(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IPreprocessingProviderSettings>>(this.mediaVaultProcessingProviderSettingsRouteDefinition.find(options));
     }
 
     /**                   
@@ -60,11 +60,11 @@ export class MediaVaultProcessingProviderSettingsClient {
                     });                   
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IPreprocessingProviderSettings>> {
-        return this.apiClient.get<IPreprocessingProviderSettings>(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.get(id, options));
+        return this.apiClient.get<IPreprocessingProviderSettings>(this.mediaVaultProcessingProviderSettingsRouteDefinition.get(id, options));
     }
 
     /**                   
-     * Returns a promise that is resolved once the update action has been performed; this action updates a media vault processing provider setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicMediaVaultProcessingProviderSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update action has been performed; this action updates a media vault processing provider setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaVaultProcessingProviderSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(processingProviderSetting); 
      * let uri = params['model'].links('put').href; 
@@ -83,7 +83,7 @@ export class MediaVaultProcessingProviderSettingsClient {
                         }); 			
      **/
     update(data: IPreprocessingProviderSettings): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.update(data), this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.mediaVaultProcessingProviderSettingsRouteDefinition.update(data), this.mediaVaultProcessingProviderSettingsRouteDefinition.updateParams(data));
     }
 }
 

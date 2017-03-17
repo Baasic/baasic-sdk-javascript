@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsPublishRouteDefinition  
+ * @module notificationsPublishRouteDefinition  
  * @description Baasic Notifications Publish Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -15,18 +15,18 @@ export class NotificationsPublishRouteDefinition extends BaseRouteDefinition {
     public readonly createRoute: string = 'notifications/publish';
 
     batch(): NotificationsPublishBatchRouteDefinition {
-        return this.baasicNotificationsPublishBatchRouteDefinition;
+        return this.notificationsPublishBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.NotificationsPublishBatchRouteDefinition) protected baasicNotificationsPublishBatchRouteDefinition: NotificationsPublishBatchRouteDefinition
+        @inject(notificationsTypes.NotificationsPublishBatchRouteDefinition) protected notificationsPublishBatchRouteDefinition: NotificationsPublishBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                      
      * Parses create publish route; this route does not expose any additional options.                      
      * @method                     
-     * @example baasicNotificationsPublishRouteDefinition.create();                      
+     * @example notificationsPublishRouteDefinition.create();                      
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});

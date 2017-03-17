@@ -1,4 +1,4 @@
-export * from './baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition';
+export * from './commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition';
 export * from './commerceLookupsRecurringCyclePeriodTypeBatchClient';
-export * from './baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition';
+export * from './commerceLookupsRecurringCyclePeriodTypeRouteDefinition';
 export * from './commerceLookupsRecurringCyclePeriodTypeClient';

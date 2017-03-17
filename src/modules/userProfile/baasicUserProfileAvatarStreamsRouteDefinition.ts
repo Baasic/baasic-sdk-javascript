@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserProfileAvatarStreamsRouteDefinition  
+ * @module userProfileAvatarStreamsRouteDefinition  
  * @description Baasic User Profile Avatar Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -23,7 +23,7 @@ export class UserProfileAvatarStreamsRouteDefinition extends BaseRouteDefinition
      * - `width` - width of desired derived image.                     
      * - `height` - height of desired derived image.                     
      * @method                    
-     * @example baasicUserProfileAvatarStreamsRouteDefinition.get({id: '<file-id>'});                                   
+     * @example userProfileAvatarStreamsRouteDefinition.get({id: '<file-id>'});                                   
      **/
     get(data: any): any {
         if (!this.utility.isObject(data)) {
@@ -37,7 +37,7 @@ export class UserProfileAvatarStreamsRouteDefinition extends BaseRouteDefinition
     /**                     
      * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved as well with id of the profile.                     
      * @method                     
-     * @example baasicUserProfileAvatarStreamRouteDefinition.create({ filename: '<filename>', id: '<file-id>' });                                   
+     * @example userProfileAvatarStreamRouteDefinition.create({ filename: '<filename>', id: '<file-id>' });                                   
      **/
     create(id: string, data: any): any {
         if (!this.utility.isObject(data)) {
@@ -56,7 +56,7 @@ export class UserProfileAvatarStreamsRouteDefinition extends BaseRouteDefinition
      * - `height` - height of derived image to update.                                        
      * @method 
      * @param data                       
-     * @example baasicUserProfileAvatarStreamsRouteDefinition.update({id: '<file-id>'});                                   
+     * @example userProfileAvatarStreamsRouteDefinition.update({id: '<file-id>'});                                   
      **/
     update(data: any): any {
         if (!this.utility.isObject(data)) {

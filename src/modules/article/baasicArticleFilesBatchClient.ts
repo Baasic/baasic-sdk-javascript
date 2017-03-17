@@ -17,11 +17,11 @@ import { IArticleFile } from 'modules/article/contracts';
 export class ArticleFilesBatchClient {
 
     get routeDefinition(): ArticleFilesBatchRouteDefinition {
-        return this.baasicArticleFilesBatchRouteDefinition;
+        return this.articleFilesBatchRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleFilesBatchRouteDefinition) protected baasicArticleFilesBatchRouteDefinition: ArticleFilesBatchRouteDefinition,
+        @inject(articleTypes.ArticleFilesBatchRouteDefinition) protected articleFilesBatchRouteDefinition: ArticleFilesBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -46,7 +46,7 @@ export class ArticleFilesBatchClient {
                        });		                    
     **/
     unlink(data: Object[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleFilesBatchRouteDefinition.unlink(), undefined, data);
+        return this.apiClient.delete<void>(this.articleFilesBatchRouteDefinition.unlink(), undefined, data);
     }
 
     /**                   
@@ -61,7 +61,7 @@ export class ArticleFilesBatchClient {
                     });                   
      **/
     update(data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleFilesBatchRouteDefinition.update(), this.baasicArticleFilesBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleFilesBatchRouteDefinition.update(), this.articleFilesBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -76,7 +76,7 @@ export class ArticleFilesBatchClient {
                     });                   
      **/
     link(data: IArticleFile[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicArticleFilesBatchRouteDefinition.link(), this.baasicArticleFilesBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.articleFilesBatchRouteDefinition.link(), this.articleFilesBatchRouteDefinition.createParams(data));
     }
 }
 

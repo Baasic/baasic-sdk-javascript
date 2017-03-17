@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceCustomerRouteDefinition  
+ * @module commerceCustomerRouteDefinition  
  * @description Baasic Commerce Customer Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Customer Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -32,7 +32,7 @@ export class CommerceCustomerRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicCommerceCustomerRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceCustomerRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return this.baseFind(this.findRoute, options);
@@ -41,7 +41,7 @@ export class CommerceCustomerRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceCustomerRouteDefinition.get(id, options);                               
+     * @example commerceCustomerRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return this.baseGet(this.getRoute, id, options);
@@ -50,7 +50,7 @@ export class CommerceCustomerRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses update route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceCustomerRouteDefinition.update(data);                               
+     * @example commerceCustomerRouteDefinition.update(data);                               
      **/
     update(data: any): any {
         return this.baseUpdate(this.updateRoute, data);
@@ -59,7 +59,7 @@ export class CommerceCustomerRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses delete route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceCustomerRouteDefinition.delete(data);                               
+     * @example commerceCustomerRouteDefinition.delete(data);                               
      **/
     delete(data: any): any {
         return this.baseDelete(this.deleteRoute, data);

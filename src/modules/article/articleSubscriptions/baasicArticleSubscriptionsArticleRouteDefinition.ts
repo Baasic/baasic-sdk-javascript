@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleSubscriptionsArticleRouteDefinition  
+ * @module articleSubscriptionsArticleRouteDefinition  
  * @description Baasic Article Subscriptions Article Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Subscriptions Article Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -27,7 +27,7 @@ export class ArticleSubscriptionsArticleRouteDefinition extends BaseRouteDefinit
     /**                         
      * Parses article subscribe route which must be expanded with id of the article.                         
      * @method subscriptions.article.subscribe                         
-     * @example baasicArticleSubscriptionsArticleRouteDefinition.subscribe({id: '<article-id>'});                          
+     * @example articleSubscriptionsArticleRouteDefinition.subscribe({id: '<article-id>'});                          
      **/
     subscribe(article: IArticle, data: IArticleSubscription): any {
         let params = this.utility.extend(article, data);
@@ -37,7 +37,7 @@ export class ArticleSubscriptionsArticleRouteDefinition extends BaseRouteDefinit
     /**                          
      * Parses article isSubscribed route which must be expanded with subscriber Id and the id of the article.                          
      * @method subscriptions.article.isSubscribed                          
-     * @example baasicArticleRouteDefinition.subscriptions.article.isSubscribed.expand({id: '<article-id>', subscriberId: '<subscriber-id>' });                           
+     * @example articleRouteDefinition.subscriptions.article.isSubscribed.expand({id: '<article-id>', subscriberId: '<subscriber-id>' });                           
      **/
     isSubscribed(article: IArticle, data: IArticleSubscription): any {
         let params = this.utility.extend(article, data);
@@ -47,7 +47,7 @@ export class ArticleSubscriptionsArticleRouteDefinition extends BaseRouteDefinit
     /**                         
      * Parses article unSubscribe route which must be expanded with the id of the article.                         
      * @method subscriptions.articleModule.unSubscribe                         
-     * @example baasicArticleSubscriptionsArticleRouteDefinition.unSubscribe({id: '<article-id>'});                                                    
+     * @example articleSubscriptionsArticleRouteDefinition.unSubscribe({id: '<article-id>'});                                                    
      **/
     unSubscribe(article: IArticle, data: IArticleSubscription): any {
         let params = this.utility.extend(article, data);

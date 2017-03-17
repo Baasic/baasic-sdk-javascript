@@ -14,7 +14,7 @@ import { IOrganization } from 'modules/userProfile/contracts';
 export class OrganizationClient {
 
     get routeDefinition(): OrganizationRouteDefinition {
-        return this.baasicOrganizationRouteDefinition;
+        return this.organizationRouteDefinition;
     }
 
     get batch(): OrganizationBatchClient {
@@ -22,7 +22,7 @@ export class OrganizationClient {
     }
 
     constructor(
-        @inject(userProfileTypes.OrganizationRouteDefinition) protected baasicOrganizationRouteDefinition: OrganizationRouteDefinition,
+        @inject(userProfileTypes.OrganizationRouteDefinition) protected organizationRouteDefinition: OrganizationRouteDefinition,
         @inject(userProfileTypes.OrganizationBatchClient) protected organizationBatchClient: OrganizationBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -47,7 +47,7 @@ export class OrganizationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IOrganization>>> {
-        return this.apiClient.get<IQueryModel<IOrganization>>(this.baasicOrganizationRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IOrganization>>(this.organizationRouteDefinition.find(options));
     }
 
     /**                 
@@ -65,7 +65,7 @@ export class OrganizationClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.apiClient.get<IOrganization>(this.baasicOrganizationRouteDefinition.get(id, options));
+        return this.apiClient.get<IOrganization>(this.organizationRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -86,11 +86,11 @@ export class OrganizationClient {
                 });                 
      **/
     create(data: IOrganization): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.apiClient.post<IOrganization>(this.baasicOrganizationRouteDefinition.create(), this.baasicOrganizationRouteDefinition.createParams(data));
+        return this.apiClient.post<IOrganization>(this.organizationRouteDefinition.create(), this.organizationRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update organization action has been performed; this action updates an organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update organization action has been performed; this action updates an organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `organizationRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(organization); 
      * let uri = params['model'].links('put').href; 
@@ -109,11 +109,11 @@ export class OrganizationClient {
                         }); 				        
      **/
     update(data: IOrganization): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicOrganizationRouteDefinition.update(data), this.baasicOrganizationRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.organizationRouteDefinition.update(data), this.organizationRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove an organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicOrganizationRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove an organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `organizationRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(organization); 
      * let uri = params['model'].links('delete').href; 
@@ -131,6 +131,6 @@ export class OrganizationClient {
                            });						        
     **/
     remove(data: IOrganization): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicOrganizationRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.organizationRouteDefinition.delete(data));
     }
 }

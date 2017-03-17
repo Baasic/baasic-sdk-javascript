@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCompanyBatchRouteDefinition  
+ * @module companyBatchRouteDefinition  
  * @description Baasic Company Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -21,7 +21,7 @@ export class CompanyBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example baasicCompanyRouteDefinition.create();                                  
+     * @example companyRouteDefinition.create();                                  
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -30,7 +30,7 @@ export class CompanyBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example baasicCompanyRouteDefinition.update();                                  
+     * @example companyRouteDefinition.update();                                  
      **/
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -39,7 +39,7 @@ export class CompanyBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses remove route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example baasicCompanyRouteDefinition.remove();                                  
+     * @example companyRouteDefinition.remove();                                  
      **/
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

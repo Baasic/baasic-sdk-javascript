@@ -1,5 +1,5 @@
 /**  
- * @module baasicDynamicResourceRouteDefinition  
+ * @module dynamicResourceRouteDefinition  
  * @description Baasic Dynamic Resource Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Resource Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -25,17 +25,17 @@ export class DynamicResourceRouteDefinition extends BaseRouteDefinition {
     public readonly deleteRoute: string = 'resources/{schemaName}/{id}';
     
     get acl(): DynamicResourceACLRouteDefinition {
-        return this.baasicDynamicResourceACLRouteDefinition;
+        return this.dynamicResourceACLRouteDefinition;
     }
 
     get dynamicSchema(): DynamicSchemaRouteDefinition {
-        return this.baasicDynamicSchemaRouteDefinition;
+        return this.dynamicSchemaRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
-        @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected dynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected dynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
     ) { super(appOptions); }
 
     /** 				
@@ -48,7 +48,7 @@ export class DynamicResourceRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method
      * @param options query resource options object      				
-     * @example baasicDynamicResourceRouteDefinition.find(options); 				
+     * @example dynamicResourceRouteDefinition.find(options); 				
      **/
     find(schemaName: string, options: IOptions): any {
         return super.baseFind(this.findRoute, this.utility.extend({ schemaName: schemaName }, options));
@@ -61,7 +61,7 @@ export class DynamicResourceRouteDefinition extends BaseRouteDefinition {
      * @param id Unique identifier of dynamic resources
      * @param schemaName schema name
      * @param options query resource options object
-     * @example baasicDynamicResourceRouteDefinition.get(id, schemaName, options);               				
+     * @example dynamicResourceRouteDefinition.get(id, schemaName, options);               				
      **/
     get(id: string, schemaName: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, this.utility.extend({ schemaName: schemaName }, options));

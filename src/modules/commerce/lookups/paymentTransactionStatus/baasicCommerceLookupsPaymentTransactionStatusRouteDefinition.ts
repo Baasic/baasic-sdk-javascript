@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsPaymentTransactionStatusRouteDefinition  
+ * @module commerceLookupsPaymentTransactionStatusRouteDefinition  
  * @description Baasic Commerce Lookups PaymentTransactionStatus Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups PaymentTransactionStatus Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -41,7 +41,7 @@ export class CommerceLookupsPaymentTransactionStatusRouteDefinition extends Base
      * - `embed` - Comma separated list of resources to be contained within the current representation.                
      * @method                        
      * @param options Query resource options.
-     * @example baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceLookupsPaymentTransactionStatusRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -50,7 +50,7 @@ export class CommerceLookupsPaymentTransactionStatusRouteDefinition extends Base
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.get();                               
+     * @example commerceLookupsPaymentTransactionStatusRouteDefinition.get();                               
      **/
     get(id: string, options: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, options);
@@ -59,7 +59,7 @@ export class CommerceLookupsPaymentTransactionStatusRouteDefinition extends Base
     /**                 
      * Parses create commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.create();                              
+     * @example commerceLookupsPaymentTransactionStatusRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -68,7 +68,7 @@ export class CommerceLookupsPaymentTransactionStatusRouteDefinition extends Base
     /**                 
      * Parses update commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.update(data);                              
+     * @example commerceLookupsPaymentTransactionStatusRouteDefinition.update(data);                              
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -77,7 +77,7 @@ export class CommerceLookupsPaymentTransactionStatusRouteDefinition extends Base
     /**                 
      * Parses delete commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.delete(data);                              
+     * @example commerceLookupsPaymentTransactionStatusRouteDefinition.delete(data);                              
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

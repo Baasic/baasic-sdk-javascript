@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicFilesACLRouteDefinition  
+ * @module filesACLRouteDefinition  
  * @description Baasic Files ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -25,7 +25,7 @@ export class FilesACLRouteDefinition extends BaseRouteDefinition {
     /** 					
      * Parses get acl route; this URI template should be expanded with the Id of the file resource.										
      * @method  					
-     * @example baasicFilesACLRouteDefinition.get({id: '<file-id>'}); 					
+     * @example filesACLRouteDefinition.get({id: '<file-id>'}); 					
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
@@ -35,7 +35,7 @@ export class FilesACLRouteDefinition extends BaseRouteDefinition {
     /** 					
      * Parses update acl route; this URI template should be expanded with the Id of the file resource.										
      * @method    				
-     * @example baasicFilesACLRouteDefinition.update({id: '<file-id>'}); 					
+     * @example filesACLRouteDefinition.update({id: '<file-id>'}); 					
      **/
     update(options: IACLOptions[]): any {
         let params = this.utility.extend({}, options);
@@ -56,7 +56,7 @@ export class FilesACLRouteDefinition extends BaseRouteDefinition {
      *               "Read"
      *               "Update"
      * @param user A value that uniquely identifies user for which ACL policy needs to be removed.      					
-     * @example baasicFilesACLRouteDefinition.deleteByUser({ id: '<file-id>', accessAction: '<access-action>', user: '<username>' }); 					
+     * @example filesACLRouteDefinition.deleteByUser({ id: '<file-id>', accessAction: '<access-action>', user: '<username>' }); 					
      **/
     deleteByUser(id: string, action: string, user: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);
@@ -80,7 +80,7 @@ export class FilesACLRouteDefinition extends BaseRouteDefinition {
      *               "Read"
      *               "Update"
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.				
-     * @example baasicFilesACLRouteDefinition.deleteByRole({ id: '<file-id>', accessAction: '<access-action>', role: '<role-name>' }); 					
+     * @example filesACLRouteDefinition.deleteByRole({ id: '<file-id>', accessAction: '<access-action>', role: '<role-name>' }); 					
      **/
     deleteByRole(id: string, action: string, role: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);

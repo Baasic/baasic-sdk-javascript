@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceSubscriptionStatusBatchClient  
- * @description  Commerce Subscription Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceSubscriptionStatusBatchClient` uses `baasicCommerceSubscriptionStatusBatchRouteDefinition`. 
+ * @description  Commerce Subscription Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceSubscriptionStatusBatchClient` uses `commerceSubscriptionStatusBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsSubscriptionStatusBatchRouteDefinition, TYPES as commerc
 export class CommerceLookupsSubscriptionStatusBatchClient {
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsSubscriptionStatusBatchRouteDefinition) protected baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition: CommerceLookupsSubscriptionStatusBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsSubscriptionStatusBatchRouteDefinition) protected commerceLookupsSubscriptionStatusBatchRouteDefinition: CommerceLookupsSubscriptionStatusBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -33,7 +33,7 @@ export class CommerceLookupsSubscriptionStatusBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.create(), this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsSubscriptionStatusBatchRouteDefinition.create(), this.commerceLookupsSubscriptionStatusBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -48,7 +48,7 @@ export class CommerceLookupsSubscriptionStatusBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.update(), this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsSubscriptionStatusBatchRouteDefinition.update(), this.commerceLookupsSubscriptionStatusBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
@@ -63,7 +63,7 @@ export class CommerceLookupsSubscriptionStatusBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsSubscriptionStatusBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMeteringSettingsRouteDefinition  
+ * @module meteringSettingsRouteDefinition  
  * @description Baasic Metering Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Settings Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -22,7 +22,7 @@ export class MeteringSettingsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicMeteringSettingsRouteDefinition.get();                               
+     * @example meteringSettingsRouteDefinition.get();                               
      **/
     get(options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, undefined, options);
@@ -32,7 +32,7 @@ export class MeteringSettingsRouteDefinition extends BaseRouteDefinition {
     * Parses updatea route; this route doesn't expose any properties.                 
     * @method 
     * @param data An meteringSetting object used to update specified MeteringSetting resource.                       
-    * @example baasicMeteringSettingsRouteDefinition.update(data);                               
+    * @example meteringSettingsRouteDefinition.update(data);                               
     **/
     update(data: IMeteringSettings): any {
         return super.baseUpdate(this.updateRoute, data);

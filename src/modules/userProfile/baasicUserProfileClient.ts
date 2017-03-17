@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module userProfileClient  
- * @description  User Profile Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `userProfileClient` uses `baasicUserProfileRouteDefinition`. 
+ * @description  User Profile Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `userProfileClient` uses `userProfileRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -26,7 +26,7 @@ export class UserProfileClient {
     }
 
     get routeDefinition(): UserProfileRouteDefinition {
-        return this.baasicUserProfileRouteDefinition;
+        return this.userProfileRouteDefinition;
     }
 
     get education(): UserEducationClient {
@@ -44,7 +44,7 @@ export class UserProfileClient {
 
     constructor(
         @inject(userProfileTypes.UserProfileACLClient) protected userProfileACLClient: UserProfileACLClient,
-        @inject(userProfileTypes.UserProfileRouteDefinition) protected baasicUserProfileRouteDefinition: UserProfileRouteDefinition,
+        @inject(userProfileTypes.UserProfileRouteDefinition) protected userProfileRouteDefinition: UserProfileRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
 
         @inject(userProfileTypes.UserEducationClient) protected userEducationClient: UserEducationClient,
@@ -73,7 +73,7 @@ export class UserProfileClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserProfile>>> {
-        return this.apiClient.get<IQueryModel<IUserProfile>>(this.baasicUserProfileRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserProfile>>(this.userProfileRouteDefinition.find(options));
     }
 
     /**                 
@@ -91,7 +91,7 @@ export class UserProfileClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.apiClient.get<IUserProfile>(this.baasicUserProfileRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserProfile>(this.userProfileRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -111,11 +111,11 @@ export class UserProfileClient {
                 });                  
      **/
     create(data: IUserProfile): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.apiClient.post<IUserProfile>(this.baasicUserProfileRouteDefinition.create(), this.baasicUserProfileRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserProfile>(this.userProfileRouteDefinition.create(), this.userProfileRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update user profile action has been performed; this action updates a user profile resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserProfileRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user profile action has been performed; this action updates a user profile resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(userProfile); 
      * let uri = params['model'].links('put').href; 
@@ -134,11 +134,11 @@ export class UserProfileClient {
                            }); 				
     **/
     update(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicUserProfileRouteDefinition.update(data), this.baasicUserProfileRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.userProfileRouteDefinition.update(data), this.userProfileRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user profile resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserProfileRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user profile resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(userProfile); 
      * let uri = params['model'].links('delete').href; 
@@ -156,7 +156,7 @@ export class UserProfileClient {
                         });						
      **/
     remove(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicUserProfileRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.userProfileRouteDefinition.delete(data));
     }
 }
 

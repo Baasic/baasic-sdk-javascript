@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsAnonymousRouteDefinition  
+ * @module notificationsSubscriptionsAnonymousRouteDefinition  
  * @description Baasic Notifications Subscriptions Anonymous Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Subscriptions Anonymous Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -25,18 +25,18 @@ export class NotificationsSubscriptionsAnonymousRouteDefinition extends BaseRout
     public readonly updateRoute: string = 'notifications/subscriptions/anonymous/{id}';
 
     get batch(): NotificationsSubscriptionsAnonymousBatchRouteDefinition {
-        return this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition;
+        return this.notificationsSubscriptionsAnonymousBatchRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition: NotificationsSubscriptionsAnonymousBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchRouteDefinition) protected notificationsSubscriptionsAnonymousBatchRouteDefinition: NotificationsSubscriptionsAnonymousBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
     /**                          
      * Parses create anonymous subscription route; this route does not expose any additional options                          
      * @method                          
-     * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.create();                          
+     * @example notificationsSubscriptionsAnonymousRouteDefinition.create();                          
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -53,7 +53,7 @@ export class NotificationsSubscriptionsAnonymousRouteDefinition extends BaseRout
      * - `embed` - Comma separated list of resources to be contained within the current representation.                          
      * @method
      * @param options Query resource options object.                                 
-     * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.find({     
+     * @example notificationsSubscriptionsAnonymousRouteDefinition.find({     
                    searchQuery: '<search-phrase>',     
                    channels: '<channel-name>,<channel-name>' 
                });                          
@@ -67,7 +67,7 @@ export class NotificationsSubscriptionsAnonymousRouteDefinition extends BaseRout
      * @method
      * @param id The subscription identifier which uniquely identifies AnonymousSubscription resource that needs to be retrieved.
      * @param options Query resource options object.                          
-     * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.get({id: '<subscription-id>'});                          
+     * @example notificationsSubscriptionsAnonymousRouteDefinition.get({id: '<subscription-id>'});                          
      */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -77,7 +77,7 @@ export class NotificationsSubscriptionsAnonymousRouteDefinition extends BaseRout
      * Parses delete anonymous subscription route; this route should be expanded with the Id of anonymous subscription resource.                          
      * @method
      * @param data The subscription identifier used to delete specific subscription resource in the system.                        
-     * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.delete(data);                          
+     * @example notificationsSubscriptionsAnonymousRouteDefinition.delete(data);                          
      */
     delete(data: IAnonymousSubscription): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -87,7 +87,7 @@ export class NotificationsSubscriptionsAnonymousRouteDefinition extends BaseRout
      * Parses update anonymous subscription route; this route should be expanded with the Id of anonymous subscription resource.                          
      * @method
      * @param data The subscription identifier used to update specific subscription resource in the system.                        
-     * @example baasicNotificationsSubscriptionsAnonymousRouteDefinition.update(data);                          
+     * @example notificationsSubscriptionsAnonymousRouteDefinition.update(data);                          
      */
     update(data: IAnonymousSubscription): any {
         return super.baseUpdate(this.updateRoute, data);

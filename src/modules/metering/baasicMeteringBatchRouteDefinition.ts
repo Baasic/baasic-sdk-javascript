@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMeteringBatchRouteDefinition  
+ * @module meteringBatchRouteDefinition  
  * @description Baasic Metering Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Route Definition Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -24,7 +24,7 @@ export class MeteringBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     
      * @method                         
-     * @example baasicMeteringBatchRouteDefinition.create();                                  
+     * @example meteringBatchRouteDefinition.create();                                  
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -33,7 +33,7 @@ export class MeteringBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                          
-     * @example baasicMeteringBatchRouteDefinition.update();                                  
+     * @example meteringBatchRouteDefinition.update();                                  
      **/
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -42,7 +42,7 @@ export class MeteringBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses remove route; this URI template does not expose any additional options.                     
      * @method                         
-     * @example baasicMeteringBatchRouteDefinition.delete();                                  
+     * @example meteringBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsUsersRouteDefinition  
+ * @module notificationsSubscriptionsUsersRouteDefinition  
  * @description Baasic Notifications Subscriptions Users Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -25,18 +25,18 @@ export class NotificationsSubscriptionsUsersRouteDefinition extends BaseRouteDef
     public readonly updateRoute: string = 'notifications/subscriptions/{id}';
 
     batch(): NotificationsSubscriptionsUsersBatchRouteDefinition {
-        return this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition;
+        return this.notificationsSubscriptionsUsersBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notitificationsTypes.NotificationsSubscriptionsUsersBatchRouteDefinition) protected baasicNotificationsSubscriptionsUsersBatchRouteDefinition: NotificationsSubscriptionsUsersBatchRouteDefinition
+        @inject(notitificationsTypes.NotificationsSubscriptionsUsersBatchRouteDefinition) protected notificationsSubscriptionsUsersBatchRouteDefinition: NotificationsSubscriptionsUsersBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                          
      * Parses create user subscription route; this route does not expose any additional options                          
      * @method                         
-     * @example baasicNotificationsSubscriptionsUsersRouteDefinition.create();                          
+     * @example notificationsSubscriptionsUsersRouteDefinition.create();                          
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -52,7 +52,7 @@ export class NotificationsSubscriptionsUsersRouteDefinition extends BaseRouteDef
      * - `sort` - A string used to set the user subscription property to sort the result collection by.                          
      * - `embed` - Comma separated list of resources to be contained within the current representation.                          
      * @method                         
-     * @example baasicNotificationsSubscriptionsUsersRouteDefinition.find({ searchQuery: '<search-phrase>', channels: '<channel-name>,<channel-name>' });                          
+     * @example notificationsSubscriptionsUsersRouteDefinition.find({ searchQuery: '<search-phrase>', channels: '<channel-name>,<channel-name>' });                          
      */
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -63,7 +63,7 @@ export class NotificationsSubscriptionsUsersRouteDefinition extends BaseRouteDef
      * @method
      * @param id The subscription identifier which uniquely identifies UserSubscription resource that needs to be retrieved.
      * @param options Query resource options object.                         
-     * @example baasicNotificationsSubscriptionsUsersRouteDefinition.get({ id: '<subscription-id>' });                          
+     * @example notificationsSubscriptionsUsersRouteDefinition.get({ id: '<subscription-id>' });                          
      */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -73,7 +73,7 @@ export class NotificationsSubscriptionsUsersRouteDefinition extends BaseRouteDef
      * Parses delete user subscription route; this route should be expanded with the Id of user subscription resource.                          
      * @method
      * @param data An object used to delete specified UserSubscription resource.                   
-     * @example baasicNotificationsSubscriptionsUsersRouteDefinition.delete(data);                          
+     * @example notificationsSubscriptionsUsersRouteDefinition.delete(data);                          
      */
     delete(data: IUserSubscription): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -83,7 +83,7 @@ export class NotificationsSubscriptionsUsersRouteDefinition extends BaseRouteDef
      * Parses update user subscription route; this route should be expanded with the Id of user subscription resource.                          
      * @method
      * @param data An object used to update specified UserSubscription resource.                   
-     * @example baasicNotificationsSubscriptionsUsersRouteDefinition.update(data);                          
+     * @example notificationsSubscriptionsUsersRouteDefinition.update(data);                          
      */
     update(data: IUserSubscription): any {
         return super.baseUpdate(this.updateRoute, data);

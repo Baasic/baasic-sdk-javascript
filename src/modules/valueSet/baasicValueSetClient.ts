@@ -18,16 +18,16 @@ export class ValueSetClient {
     }
 
     /**
-     * Provides direct access to `baasicValueSetRouteDefinition`.
+     * Provides direct access to `valueSetRouteDefinition`.
      * @method
      * @example valueSetClient.routeDefinition.get().expand(expandObject);
     **/
     get routeDefinition(): ValueSetRouteDefinition {
-        return this.baasicValueSetRouteDefinition;
+        return this.valueSetRouteDefinition;
     }
 
     constructor(
-        @inject(valueSetTypes.ValueSetRouteDefinition) protected baasicValueSetRouteDefinition: ValueSetRouteDefinition,
+        @inject(valueSetTypes.ValueSetRouteDefinition) protected valueSetRouteDefinition: ValueSetRouteDefinition,
         @inject(valueSetTypes.ValueSetItemClient) protected valueSetItemClient: ValueSetItemClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -52,7 +52,7 @@ export class ValueSetClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSet>>> {
-        return this.apiClient.get<IQueryModel<IValueSet>>(this.baasicValueSetRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IValueSet>>(this.valueSetRouteDefinition.find(options));
     }
 
     /**
@@ -70,7 +70,7 @@ export class ValueSetClient {
                    });
     **/
     get(setName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.apiClient.get<IValueSet>(this.baasicValueSetRouteDefinition.get(setName, options));
+        return this.apiClient.get<IValueSet>(this.valueSetRouteDefinition.get(setName, options));
     }
 
     /**
@@ -91,7 +91,7 @@ export class ValueSetClient {
                 });
      **/
     create(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.apiClient.post<IValueSet>(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
+        return this.apiClient.post<IValueSet>(this.valueSetRouteDefinition.create(), this.valueSetRouteDefinition.createParams(data));
     }
 
     /**
@@ -114,7 +114,7 @@ export class ValueSetClient {
                         });
      **/
     update(data: IValueSet): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.valueSetRouteDefinition.update(data), this.valueSetRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -135,7 +135,7 @@ export class ValueSetClient {
                         });						
      **/
     remove(data: IValueSet): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicValueSetRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.valueSetRouteDefinition.delete(data));
     }
 }
 

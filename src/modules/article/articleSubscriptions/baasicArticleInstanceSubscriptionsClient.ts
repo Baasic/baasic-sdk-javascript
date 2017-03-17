@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsClient  
- * @description  Articles Subscriptions Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
+ * @description  Articles Subscriptions Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `articleSubscriptionsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -31,14 +31,14 @@ export class ArticleInstanceSubscriptionsClient {
     }
 
     get routeDefinition(): ArticleInstanceSubscriptionsRouteDefinition {
-        return this.baasicArticleInstanceSubscriptionsRouteDefinition;
+        return this.articleInstanceSubscriptionsRouteDefinition;
     }
 
     constructor(
         @inject(articleTypes.ArticleSubscriptionsCommentReportedClient) protected articleSubscriptionsCommentReportedClient: ArticleSubscriptionsCommentReportedClient,
         @inject(articleTypes.ArticleSubscriptionsArticleClient) protected articleSubscriptionsArticleClient: ArticleSubscriptionsArticleClient,
         @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationClient) protected articleSubscriptionsCommentRequiresModerationClient: ArticleSubscriptionsCommentRequiresModerationClient,
-        @inject(articleTypes.ArticleInstanceSubscriptionsRouteDefinition) protected baasicArticleInstanceSubscriptionsRouteDefinition: ArticleInstanceSubscriptionsRouteDefinition
+        @inject(articleTypes.ArticleInstanceSubscriptionsRouteDefinition) protected articleInstanceSubscriptionsRouteDefinition: ArticleInstanceSubscriptionsRouteDefinition
     )
     { }
 }

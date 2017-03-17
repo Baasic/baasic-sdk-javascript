@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsUsersBatchRouteDefinition  
+ * @module notificationsSubscriptionsUsersBatchRouteDefinition  
  * @description Baasic Notifications Subscriptions Users Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Subscriptions Users Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -26,7 +26,7 @@ export class NotificationsSubscriptionsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses create user subscriptions batch route; this route does not expose any additional options                              
      * @method                              
-     * @example baasicNotificationsSubscriptionsUsersBatchRouteDefinition.create();                              
+     * @example notificationsSubscriptionsUsersBatchRouteDefinition.create();                              
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -35,7 +35,7 @@ export class NotificationsSubscriptionsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses remove user subscriptions batch route; this route does not expose any additional options                              
      * @method                          
-     * @example baasicNotificationsSubscriptionsUsersBatchRouteDefinition.delete(ids);                              
+     * @example notificationsSubscriptionsUsersBatchRouteDefinition.delete(ids);                              
      */
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});
@@ -44,7 +44,7 @@ export class NotificationsSubscriptionsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses update user subscriptions batch route; this route does not expose any additional options                              
      * @method                             
-     * @example baasicNotificationsSubscriptionsUsersBatchRouteDefinition.update();                              
+     * @example notificationsSubscriptionsUsersBatchRouteDefinition.update();                              
      */
     update(): any {
         return super.baseUpdate(this.updateRoute, {});

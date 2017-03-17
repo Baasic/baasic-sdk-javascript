@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsCountryBatchRouteDefinition  
+ * @module commerceLookupsCountryBatchRouteDefinition  
  * @description Baasic Commerce Lookups Country Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -25,7 +25,7 @@ export class CommerceLookupsCountryBatchRouteDefinition extends BaseRouteDefinit
     /**                      
      * Parses create commerce country batch route; this route does not expose any additional options                      
      * @method                   
-     * @example baasicCommerceLookupsCountryRouteDefinition.create();                      
+     * @example commerceLookupsCountryRouteDefinition.create();                      
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -34,7 +34,7 @@ export class CommerceLookupsCountryBatchRouteDefinition extends BaseRouteDefinit
     /**                      
      * Parses remove commerce country batch route; this route does not expose any additional options                      
      * @method                  
-     * @example baasicCommerceLookupsCountryRouteDefinition.update();                      
+     * @example commerceLookupsCountryRouteDefinition.update();                      
      */
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -43,7 +43,7 @@ export class CommerceLookupsCountryBatchRouteDefinition extends BaseRouteDefinit
     /**                      
      * Parses remove commerce country batch route; this route does not expose any additional options                      
      * @method                  
-     * @example baasicCommerceLookupsCountryRouteDefinition.remove();                      
+     * @example commerceLookupsCountryRouteDefinition.remove();                      
      */
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

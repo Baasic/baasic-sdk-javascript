@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module meteringCategoryBatchClient  
- * @description  Metering Category Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringCategoryBatchClient` uses `baasicMeteringCategoryBatchRouteDefinition`. 
+ * @description  Metering Category Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringCategoryBatchClient` uses `meteringCategoryBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,11 +13,11 @@ import { IMeteringCategory } from 'modules/metering/contracts';
 export class MeteringCategoryBatchClient {
 
     get routeDefinition(): MeteringCategoryBatchRouteDefinition {
-        return this.baasicMeteringCategoryBatchRouteDefinition;
+        return this.meteringCategoryBatchRouteDefinition;
     }
 
     constructor(
-        @inject(meteringTypes.MeteringCategoryBatchRouteDefinition) protected baasicMeteringCategoryBatchRouteDefinition: MeteringCategoryBatchRouteDefinition,
+        @inject(meteringTypes.MeteringCategoryBatchRouteDefinition) protected meteringCategoryBatchRouteDefinition: MeteringCategoryBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -42,7 +42,7 @@ export class MeteringCategoryBatchClient {
                 });                   
      **/
     create(data: IMeteringCategory[]): PromiseLike<IHttpResponse<IMeteringCategory[]>> {
-        return this.apiClient.post<IMeteringCategory[]>(this.baasicMeteringCategoryBatchRouteDefinition.create(), this.baasicMeteringCategoryBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IMeteringCategory[]>(this.meteringCategoryBatchRouteDefinition.create(), this.meteringCategoryBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -59,7 +59,7 @@ export class MeteringCategoryBatchClient {
                     });                   
      **/
     update(data: IMeteringCategory[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicMeteringCategoryBatchRouteDefinition.update(), this.baasicMeteringCategoryBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.meteringCategoryBatchRouteDefinition.update(), this.meteringCategoryBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -76,7 +76,7 @@ export class MeteringCategoryBatchClient {
                     });		                  
      **/
     delete(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicMeteringCategoryBatchRouteDefinition.delete(), this.baasicMeteringCategoryBatchRouteDefinition.deleteParams(ids));
+        return this.apiClient.delete<void>(this.meteringCategoryBatchRouteDefinition.delete(), this.meteringCategoryBatchRouteDefinition.deleteParams(ids));
     }
 }
 

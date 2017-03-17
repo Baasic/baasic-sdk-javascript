@@ -1,2 +1,2 @@
-export * from './baasicArticleInstanceRatingsRouteDefinition';
+export * from './articleInstanceRatingsRouteDefinition';
 export * from './articleInstanceRatingsClient';

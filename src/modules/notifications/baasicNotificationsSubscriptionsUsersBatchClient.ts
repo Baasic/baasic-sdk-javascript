@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsSubscriptionsUsersBatchClient  
- * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersBatchUsersClient` uses `baasicNotificationsSubscriptionsUsersBatchRouteDefinition`. 
+ * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersBatchUsersClient` uses `notificationsSubscriptionsUsersBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,7 +14,7 @@ import { IUserSubscription } from 'modules/notifications/contracts';
 export class NotificationsSubscriptionsUsersBatchClient {
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchRouteDefinition) protected baasicNotificationsSubscriptionsUsersBatchRouteDefinition: NotificationsSubscriptionsUsersBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchRouteDefinition) protected notificationsSubscriptionsUsersBatchRouteDefinition: NotificationsSubscriptionsUsersBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -35,7 +35,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                 });                             
      */
     create(data: IUserSubscription[]): PromiseLike<IHttpResponse<IUserSubscription[]>> {
-        return this.apiClient.post<IUserSubscription[]>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSubscription[]>(this.notificationsSubscriptionsUsersBatchRouteDefinition.create(), this.notificationsSubscriptionsUsersBatchRouteDefinition.createParams(data));
     }
 
     /**                              
@@ -52,7 +52,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                     });		                            
      */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.notificationsSubscriptionsUsersBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              
@@ -69,7 +69,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                     });                             
      */
     update(data: IUserSubscription[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.update(), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.notificationsSubscriptionsUsersBatchRouteDefinition.update(), this.notificationsSubscriptionsUsersBatchRouteDefinition.updateParams(data));
     }
 }
 

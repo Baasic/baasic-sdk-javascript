@@ -1,6 +1,6 @@
 /* globals module */
 /**  
-* @module baasicArticleSettingsRouteDefinition  
+* @module articleSettingsRouteDefinition  
 * @description Baasic Article Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
 */
 
@@ -27,7 +27,7 @@ export class ArticleSettingsRouteDefinition extends BaseRouteDefinition {
      * Parses get article settings route; this URI template doesn't expose any additional properties.								
      * @method 	
      * @param options Options object that contains embed data.			
-     * @example baasicArticleSettingsRouteDefinition.get(options);               				
+     * @example articleSettingsRouteDefinition.get(options);               				
      **/
     get(options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, undefined, options);
@@ -37,7 +37,7 @@ export class ArticleSettingsRouteDefinition extends BaseRouteDefinition {
      * Parses update article settings route; this URI template doesn't expose any additional properties.								
      * @method
      * @param options Options object that contains embed data. 				
-     * @example baasicArticleSettingsRouteDefinition.update(data);               				
+     * @example articleSettingsRouteDefinition.update(data);               				
      **/
     update(data: IArticleSettings): any {
         return super.baseUpdate(this.updateRoute, data);

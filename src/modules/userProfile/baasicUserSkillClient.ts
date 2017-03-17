@@ -14,11 +14,11 @@ import { IUserSkill } from 'modules/userProfile/contracts';
 export class UserSkillClient {
 
     get routeDefinition(): UserSkillRouteDefinition {
-        return this.baasicUserSkillRouteDefinition;
+        return this.userSkillRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.UserSkillRouteDefinition) protected baasicUserSkillRouteDefinition: UserSkillRouteDefinition,
+        @inject(userProfileTypes.UserSkillRouteDefinition) protected userSkillRouteDefinition: UserSkillRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -42,7 +42,7 @@ export class UserSkillClient {
                 });                    
      **/
     find(options: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserSkill>>> {
-        return this.apiClient.get<IQueryModel<IUserSkill>>(this.baasicUserSkillRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserSkill>>(this.userSkillRouteDefinition.find(options));
     }
 
     /**                 
@@ -60,7 +60,7 @@ export class UserSkillClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserSkill>> {
-        return this.apiClient.get<IUserSkill>(this.baasicUserSkillRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserSkill>(this.userSkillRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -77,11 +77,11 @@ export class UserSkillClient {
                     });                 
      **/
     create(data: IUserSkill): PromiseLike<IHttpResponse<IUserSkill>> {
-        return this.apiClient.post<IUserSkill>(this.baasicUserSkillRouteDefinition.create(data), this.baasicUserSkillRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSkill>(this.userSkillRouteDefinition.create(data), this.userSkillRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update user skill action has been performed; this action updates a user skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserSkillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user skill action has been performed; this action updates a user skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userSkillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(skill); 
      * let uri = params['model'].links('put').href; 
@@ -100,11 +100,11 @@ export class UserSkillClient {
                            }); 				        
     **/
     update(data: IUserSkill): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicUserSkillRouteDefinition.update(data), this.baasicUserSkillRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.userSkillRouteDefinition.update(data), this.userSkillRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserSkillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userSkillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(skill); 
      * let uri = params['model'].links('delete').href; 
@@ -122,7 +122,7 @@ export class UserSkillClient {
                         });						        
      **/
     remove(data: IUserSkill): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicUserSkillRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.userSkillRouteDefinition.delete(data));
     }
 }
 

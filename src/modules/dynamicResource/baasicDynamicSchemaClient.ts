@@ -1,6 +1,6 @@
 /**  
  * @module dynamicSchemaClient  
- * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `dynamicSchemaClient` uses `baasicDynamicSchemaRouteDefinition`. 
+ * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `dynamicSchemaClient` uses `dynamicSchemaRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,16 +13,16 @@ import { IResourceSchema } from 'modules/dynamicResource/contracts';
 export class DynamicSchemaClient {
 
     /**                 
-     * Provides direct access to `baasicDynamicSchemaRouteDefinition`.                 
+     * Provides direct access to `dynamicSchemaRouteDefinition`.                 
      * @method                        
      * @example dynamicSchemaClient.routeDefinition.get();                 
      **/
     get routeDefinition(): DynamicSchemaRouteDefinition {
-        return this.baasicDynamicSchemaRouteDefinition;
+        return this.dynamicSchemaRouteDefinition;
     }
 
     constructor(
-        @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected dynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -45,7 +45,7 @@ export class DynamicSchemaClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IResourceSchema>>> {
-        return this.apiClient.get<IQueryModel<IResourceSchema>>(this.baasicDynamicSchemaRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IResourceSchema>>(this.dynamicSchemaRouteDefinition.find(options));
     }
 
     /**                  
@@ -62,7 +62,7 @@ export class DynamicSchemaClient {
                     });                 
      **/
     get(name: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.apiClient.get<IResourceSchema>(this.baasicDynamicSchemaRouteDefinition.get(name, options));
+        return this.apiClient.get<IResourceSchema>(this.dynamicSchemaRouteDefinition.get(name, options));
     }
 
     /**                 
@@ -96,11 +96,11 @@ export class DynamicSchemaClient {
                 });                 
      **/
     create(data: IResourceSchema): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.apiClient.post<IResourceSchema>(this.baasicDynamicSchemaRouteDefinition.create(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
+        return this.apiClient.post<IResourceSchema>(this.dynamicSchemaRouteDefinition.create(), this.dynamicSchemaRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update dynamic resource schema action has been performed; this action updates a dynamic resource schema item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicDynamicSchemaRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update dynamic resource schema action has been performed; this action updates a dynamic resource schema item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(dynamicResourceSchema); 
      * let uri = params['model'].links('put').href; 
@@ -118,11 +118,11 @@ export class DynamicSchemaClient {
                         }); 				
      **/
     update(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicDynamicSchemaRouteDefinition.update(data), this.baasicDynamicSchemaRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.dynamicSchemaRouteDefinition.update(data), this.dynamicSchemaRouteDefinition.updateParams(data));
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource schema item from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicDynamicSchemaRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource schema item from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(dynamicResourceSchema); 
      * let uri = params['model'].links('delete').href; 
@@ -139,7 +139,7 @@ export class DynamicSchemaClient {
                         });						
      **/
     remove(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicDynamicSchemaRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.dynamicSchemaRouteDefinition.delete(data));
     }
 
     /**                 
@@ -158,7 +158,7 @@ export class DynamicSchemaClient {
                 });					    
      **/
     generate(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicDynamicSchemaRouteDefinition.generate(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
+        return this.apiClient.post(this.dynamicSchemaRouteDefinition.generate(), this.dynamicSchemaRouteDefinition.createParams(data));
     }
 }
 

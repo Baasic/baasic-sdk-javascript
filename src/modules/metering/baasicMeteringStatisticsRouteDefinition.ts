@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMeteringStatisticsRouteDefinition  
+ * @module meteringStatisticsRouteDefinition  
  * @description Baasic Metering Statistics Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Statistics Route Definition Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -35,7 +35,7 @@ export class MeteringStatisticsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                     
      * @method
      * @param options Query resource options object.                           
-     * @example baasicMeteringStatisticsRouteDefinition.find({category: '<category-name-or-id>'});                                   
+     * @example meteringStatisticsRouteDefinition.find({category: '<category-name-or-id>'});                                   
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);

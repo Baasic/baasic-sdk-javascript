@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleRatingsClient  
- * @description  Article Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `articleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `articleService` functions allow management between article and article rating. In order to obtain needed routes `articleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
+ * @description  Article Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `articleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `articleService` functions allow management between article and article rating. In order to obtain needed routes `articleRatingsClient` uses `articleRatingsRouteDefinition`. 
 */
 
 
@@ -15,16 +15,16 @@ import { IRating } from 'modules/article/contracts';
 export class ArticleRatingsClient {
 
     /**                 
-     * Provides direct access to `baasicArticleRatingsRouteDefinition`.                
+     * Provides direct access to `articleRatingsRouteDefinition`.                
      * @method                        
      * @example articleRatingsClient.routeDefinition.get(id);                 
      **/
     get routeDefinition(): ArticleRatingsRouteDefinition {
-        return this.baasicArticleRatingsRouteDefinition;
+        return this.articleRatingsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleRatingsRouteDefinition) protected baasicArticleRatingsRouteDefinition: ArticleRatingsRouteDefinition,
+        @inject(articleTypes.ArticleRatingsRouteDefinition) protected articleRatingsRouteDefinition: ArticleRatingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -46,7 +46,7 @@ export class ArticleRatingsClient {
                 });                   
      **/
     create(data: IRating): PromiseLike<IHttpResponse<IRating>> {
-        return this.apiClient.post<IRating>(this.baasicArticleRatingsRouteDefinition.create(data), this.baasicArticleRatingsRouteDefinition.createParams(data));
+        return this.apiClient.post<IRating>(this.articleRatingsRouteDefinition.create(data), this.articleRatingsRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -69,7 +69,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.apiClient.get<IQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.articleRatingsRouteDefinition.find(options));
     }
 
     /**                  
@@ -92,7 +92,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     findByUser(username: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.apiClient.get<IQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.findByUser(username, options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.articleRatingsRouteDefinition.findByUser(username, options));
     }
 
     /**                  
@@ -110,11 +110,11 @@ export class ArticleRatingsClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
-        return this.apiClient.get<IRating>(this.baasicArticleRatingsRouteDefinition.get(id, options));
+        return this.apiClient.get<IRating>(this.articleRatingsRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update article rating action has been performed; this action updates an article rating. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRatingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article rating action has been performed; this action updates an article rating. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleRating); 
      * let uri = params['model'].links('put').href; 
@@ -133,11 +133,11 @@ export class ArticleRatingsClient {
                         }); 				
      **/
     update(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleRatingsRouteDefinition.update(data), this.baasicArticleRatingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleRatingsRouteDefinition.update(data), this.articleRatingsRouteDefinition.updateParams(data));
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove article rating action has been performed. If the action is successfully completed, the article rating resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRatingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article rating action has been performed. If the action is successfully completed, the article rating resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleRating); 
      * let uri = params['model'].links('delete').href; 
@@ -155,7 +155,7 @@ export class ArticleRatingsClient {
                         });						
      **/
     remove(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleRatingsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.articleRatingsRouteDefinition.delete(data));
     }
 }
 

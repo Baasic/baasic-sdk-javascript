@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsRegistrationsUsersBatchRouteDefinition  
+ * @module notificationsRegistrationsUsersBatchRouteDefinition  
  * @description Baasic Notifications Registrations Users Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Users Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -26,7 +26,7 @@ export class NotificationsRegistrationsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses create users registrations batch route; this route does not expose any additional options                              
      * @method                            
-     * @example baasicNotificationsRegistrationsUsersBatchRouteDefinition.create();                              
+     * @example notificationsRegistrationsUsersBatchRouteDefinition.create();                              
      */
     create(): any {
         return this.baseCreate(this.createRoute, {});
@@ -35,7 +35,7 @@ export class NotificationsRegistrationsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses remove users registrations batch route; this route does not expose any additional options                              
      * @method                            
-     * @example baasicNotificationsRegistrationsUsersBatchRouteDefinition.delete();                              
+     * @example notificationsRegistrationsUsersBatchRouteDefinition.delete();                              
      */
     delete(): any {
         return this.baseDelete(this.deleteRoute, {});
@@ -44,7 +44,7 @@ export class NotificationsRegistrationsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses update users registrations batch route; this route does not expose any additional options                              
      * @method                             
-     * @example baasicNotificationsRegistrationsUsersBatchRouteDefinition.update();                              
+     * @example notificationsRegistrationsUsersBatchRouteDefinition.update();                              
      */
     update(): any {
         return this.baseUpdate(this.updateRoute, {});

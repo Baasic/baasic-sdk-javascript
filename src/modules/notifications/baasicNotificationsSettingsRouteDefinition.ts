@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSettingsRouteDefinition  
+ * @module notificationsSettingsRouteDefinition  
  * @description Baasic Notifications Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Settings Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -23,7 +23,7 @@ export class NotificationsSettingsRouteDefinition extends BaseRouteDefinition {
      * Parses get notification settings route; this route should be expanded with the notification provider name.                      
      * @method
      * @param provider The notification provider name.                   
-     * @example baasicNotificationsSettingsRouteDefinition.get({ id: '<provider-name>' });                      
+     * @example notificationsSettingsRouteDefinition.get({ id: '<provider-name>' });                      
      */
     get(provider: string): any {
         return super.baseGet(this.getRoute, provider);
@@ -33,7 +33,7 @@ export class NotificationsSettingsRouteDefinition extends BaseRouteDefinition {
      * Parses update notification settings route; this route should be expanded with the notification provider name.                      
      * @method 
      * @param data The notification settings.                    
-     * @example baasicNotificationsSettingsRouteDefinition.update({ id: '<provider-name>' });                      
+     * @example notificationsSettingsRouteDefinition.update({ id: '<provider-name>' });                      
      */
     update(data: Object): any {
         return super.baseUpdate(this.updateRoute, data);

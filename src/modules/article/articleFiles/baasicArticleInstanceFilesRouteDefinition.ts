@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleInstanceFilesRouteDefinition  
+ * @module articleInstanceFilesRouteDefinition  
  * @description Baasic Article Instance Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -31,16 +31,16 @@ export class ArticleInstanceFilesRouteDefinition extends BaseRouteDefinition {
     public readonly updateRoute: string = 'articles/{articleId}/comments/{id}';
 
     get streams(): ArticleInstanceFilesStreamsRouteDefinition {
-        return this.baasicArticleInstanceFilesStreamsRouteDefinition;
+        return this.articleInstanceFilesStreamsRouteDefinition;
     }
 
     get batch(): ArticleInstanceFilesBatchRouteDefinition {
-        return this.baasicArticleInstanceFilesBatchRouteDefinition;
+        return this.articleInstanceFilesBatchRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleInstanceFilesStreamsRouteDefinition) protected baasicArticleInstanceFilesStreamsRouteDefinition: ArticleInstanceFilesStreamsRouteDefinition,
-        @inject(articleTypes.ArticleInstanceFilesBatchRouteDefinition) protected baasicArticleInstanceFilesBatchRouteDefinition: ArticleInstanceFilesBatchRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesStreamsRouteDefinition) protected articleInstanceFilesStreamsRouteDefinition: ArticleInstanceFilesStreamsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesBatchRouteDefinition) protected articleInstanceFilesBatchRouteDefinition: ArticleInstanceFilesBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -54,7 +54,7 @@ export class ArticleInstanceFilesRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be retrieved.
      * @param options Query resource options object.                        
-     * @example baasicArticleInstanceFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example articleInstanceFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(articleId: string, options?: IOptions): any {
         let params = this.modelMapper.findParams(options);
@@ -68,7 +68,7 @@ export class ArticleInstanceFilesRouteDefinition extends BaseRouteDefinition {
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be retrieved.
      * @param id Article file id which uniquely identifies article file that needs to be retrieved.
      * @param options options object that contains embed data. 
-     * @example baasicArticleInstanceFilesRouteDefinition.get({id: '<file-id>'});
+     * @example articleInstanceFilesRouteDefinition.get({id: '<file-id>'});
      **/
     get(articleId: string, id: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
@@ -83,7 +83,7 @@ export class ArticleInstanceFilesRouteDefinition extends BaseRouteDefinition {
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be deleted.
      * @param data
      * @param options  
-     * @example baasicArticleInstanceFilesRouteDefinition.link();
+     * @example articleInstanceFilesRouteDefinition.link();
      **/
     link(articleId: string, data: IArticleFile): any {
         let params = this.utility.extend({}, data);
@@ -97,7 +97,7 @@ export class ArticleInstanceFilesRouteDefinition extends BaseRouteDefinition {
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be deleted.
      * @param data
      * @param options  
-     * @example baasicArticleFilesRouteDefinition.unlink(data);
+     * @example articleFilesRouteDefinition.unlink(data);
      **/
     unlink(articleId: string, data: IArticleFile, options: Object): any {
         if (!options) {
@@ -114,7 +114,7 @@ export class ArticleInstanceFilesRouteDefinition extends BaseRouteDefinition {
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be deleted.
      * @param data
      * @param options  
-     * @example baasicArticleFilesRouteDefinition.unlinkByArticle(data);
+     * @example articleFilesRouteDefinition.unlinkByArticle(data);
      **/
     unlinkByArticle(articleId: string, data: IArticleFile, options?: any) {
         if (!options) {
@@ -128,7 +128,7 @@ export class ArticleInstanceFilesRouteDefinition extends BaseRouteDefinition {
     /**
      * Parses update route; this URI template does not expose any additional options.
      * @method  
-     * @example baasicArticleInstanceFilesRouteDefinition.update(data);
+     * @example articleInstanceFilesRouteDefinition.update(data);
      **/
     update(articleId: string, data: IArticleFile): any {
         let params = this.modelMapper.updateParams(data);

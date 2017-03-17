@@ -20,7 +20,7 @@ import { IFileEntry } from 'modules/file/contracts';
 export class FilesClient {
 
     get routeDefinition(): FilesRouteDefinition {
-        return this.baasicFilesRouteDefinition;
+        return this.filesRouteDefinition;
     }
 
     get streams(): FilesStreamsClient {
@@ -36,7 +36,7 @@ export class FilesClient {
     }
 
     constructor(
-        @inject(filesTypes.FilesRouteDefinition) protected baasicFilesRouteDefinition: FilesRouteDefinition,
+        @inject(filesTypes.FilesRouteDefinition) protected filesRouteDefinition: FilesRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(filesTypes.FilesStreamsClient) protected filesStreamsClient: FilesStreamsClient,
         @inject(filesTypes.FilesBatchClient) protected filesBatchClient: FilesBatchClient,
@@ -63,7 +63,7 @@ export class FilesClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IFileEntry>>> {
-        return this.apiClient.get<IQueryModel<IFileEntry>>(this.baasicFilesRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IFileEntry>>(this.filesRouteDefinition.find(options));
     }
 
     /**                 
@@ -81,11 +81,11 @@ export class FilesClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IFileEntry>> {
-        return this.apiClient.get<IFileEntry>(this.baasicFilesRouteDefinition.get(id, options));
+        return this.apiClient.get<IFileEntry>(this.filesRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicFilesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `filesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(fileEntry); 
      * let uri = params['model'].links('put').href; 
@@ -103,7 +103,7 @@ export class FilesClient {
                         }); 				
      **/
     update(data: IFileEntry): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicFilesRouteDefinition.update(data), this.baasicFilesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.filesRouteDefinition.update(data), this.filesRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -134,7 +134,7 @@ export class FilesClient {
                     });						
      **/
     unlink(data: IFileEntry, options?: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicFilesRouteDefinition.unlink(data, options));
+        return this.apiClient.delete<void>(this.filesRouteDefinition.unlink(data, options));
     }
 
     /**                  
@@ -151,7 +151,7 @@ export class FilesClient {
                    });                 
     **/
     link(data: IFileEntry): PromiseLike<IHttpResponse<IFileEntry>> {
-        return this.apiClient.post(this.baasicFilesRouteDefinition.link(), this.baasicFilesRouteDefinition.createParams(data));
+        return this.apiClient.post(this.filesRouteDefinition.link(), this.filesRouteDefinition.createParams(data));
     }
 }
 

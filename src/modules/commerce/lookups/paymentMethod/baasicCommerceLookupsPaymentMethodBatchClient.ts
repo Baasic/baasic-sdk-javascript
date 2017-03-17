@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commercePaymentMethodBatchClient  
- * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentMethodBatchClient` uses `baasicCommercePaymentMethodBatchRouteDefinition`. 
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentMethodBatchClient` uses `commercePaymentMethodBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsPaymentMethodBatchRouteDefinition, TYPES as commerceType
 export class CommerceLookupsPaymentMethodBatchClient {
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsPaymentMethodBatchRouteDefinition) protected baasicCommerceLookupsPaymentMethodBatchRouteDefinition: CommerceLookupsPaymentMethodBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsPaymentMethodBatchRouteDefinition) protected commerceLookupsPaymentMethodBatchRouteDefinition: CommerceLookupsPaymentMethodBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -34,7 +34,7 @@ export class CommerceLookupsPaymentMethodBatchClient {
                     });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceLookupsPaymentMethodBatchRouteDefinition.create(), this.baasicCommerceLookupsPaymentMethodBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsPaymentMethodBatchRouteDefinition.create(), this.commerceLookupsPaymentMethodBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -49,7 +49,7 @@ export class CommerceLookupsPaymentMethodBatchClient {
                         });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicCommerceLookupsPaymentMethodBatchRouteDefinition.update(), this.baasicCommerceLookupsPaymentMethodBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsPaymentMethodBatchRouteDefinition.update(), this.commerceLookupsPaymentMethodBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
@@ -64,7 +64,7 @@ export class CommerceLookupsPaymentMethodBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCommerceLookupsPaymentMethodBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsPaymentMethodBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

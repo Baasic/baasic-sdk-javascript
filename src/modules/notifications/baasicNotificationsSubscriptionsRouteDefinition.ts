@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsRouteDefinition  
+ * @module notificationsSubscriptionsRouteDefinition  
  * @description Baasic Notifications Subscriptions Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -17,16 +17,16 @@ import {
 export class NotificationsSubscriptionsRouteDefinition extends BaseRouteDefinition {
 
     get users(): NotificationsSubscriptionsUsersRouteDefinition {
-        return this.baasicNotificationsSubscriptionsUsersRouteDefinition;
+        return this.notificationsSubscriptionsUsersRouteDefinition;
     }
 
     get anonymous(): NotificationsSubscriptionsAnonymousRouteDefinition {
-        return this.baasicNotificationsSubscriptionsAnonymousRouteDefinition;
+        return this.notificationsSubscriptionsAnonymousRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
-        @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected notificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected notificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 }

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module baasicArticleInstanceTagsDefinition  
- * @description  Article Instance Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleInstanceTagsRouteClient` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleInstanceTagsClient` uses `baasicArticleInstanceTagsRouteDefinition`. 
+ * @description  Article Instance Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleInstanceTagsRouteClient` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleInstanceTagsClient` uses `articleInstanceTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
@@ -14,12 +14,12 @@ import { IArticle, IArticleTag } from 'modules/article/contracts';
 export class ArticleInstanceTagsClient {
 
     get routeDefinition(): ArticleInstanceTagsRouteDefinition {
-        return this.baasicArticleInstanceTagsRouteDefinition;
+        return this.articleInstanceTagsRouteDefinition;
     }
 
 
     constructor(
-        @inject(articleTypes.ArticleInstanceTagsRouteDefinition) protected baasicArticleInstanceTagsRouteDefinition: ArticleInstanceTagsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceTagsRouteDefinition) protected articleInstanceTagsRouteDefinition: ArticleInstanceTagsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -41,7 +41,7 @@ export class ArticleInstanceTagsClient {
                 });                    
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleTag>>> {
-        return this.apiClient.get<IQueryModel<IArticleTag>>(this.baasicArticleInstanceTagsRouteDefinition.find(articleId, options));
+        return this.apiClient.get<IQueryModel<IArticleTag>>(this.articleInstanceTagsRouteDefinition.find(articleId, options));
     }
 
     /**                 
@@ -58,7 +58,7 @@ export class ArticleInstanceTagsClient {
                    });                
     **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.apiClient.get<IArticleTag>(this.baasicArticleInstanceTagsRouteDefinition.get(articleId, id, options));
+        return this.apiClient.get<IArticleTag>(this.articleInstanceTagsRouteDefinition.get(articleId, id, options));
     }
 
     /**                     
@@ -80,11 +80,11 @@ export class ArticleInstanceTagsClient {
                 });                     
      **/
     create(data: IArticleTag): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.apiClient.post<IArticleTag>(this.baasicArticleInstanceTagsRouteDefinition.create(data), this.baasicArticleInstanceTagsRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleTag>(this.articleInstanceTagsRouteDefinition.create(data), this.articleInstanceTagsRouteDefinition.createParams(data));
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove article tag action has been performed. If the action is successfully completed, the article tag resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleTagsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article tag action has been performed. If the action is successfully completed, the article tag resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleTagsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleTag); 
      * let uri = params['model'].links('delete').href; 
@@ -100,7 +100,7 @@ export class ArticleInstanceTagsClient {
                         });						
      **/
     remove(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleInstanceTagsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.articleInstanceTagsRouteDefinition.delete(data));
     }
 
     /**                     
@@ -120,7 +120,7 @@ export class ArticleInstanceTagsClient {
                         });						    
      **/
     removeAll(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleInstanceTagsRouteDefinition.deleteAll(data));
+        return this.apiClient.delete<void>(this.articleInstanceTagsRouteDefinition.deleteAll(data));
     }
 }
 

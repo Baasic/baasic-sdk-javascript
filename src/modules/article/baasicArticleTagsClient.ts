@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module baasicArticleTagsDefinition  
- * @description  Article Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
+ * @description  Article Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleTagsDefinition` uses `articleTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
@@ -18,7 +18,7 @@ import { IArticleTag } from 'modules/article/contracts';
 export class ArticleTagsClient {
 
     get routeDefinition(): ArticleTagsRouteDefinition {
-        return this.baasicArticleTagsRouteDefinition;
+        return this.articleTagsRouteDefinition;
     }
 
     get subscriptions(): ArticleTagsSubscriptionsClient {
@@ -26,7 +26,7 @@ export class ArticleTagsClient {
     }
 
     constructor(
-        @inject(articleTypes.ArticleTagsRouteDefinition) protected baasicArticleTagsRouteDefinition: ArticleTagsRouteDefinition,
+        @inject(articleTypes.ArticleTagsRouteDefinition) protected articleTagsRouteDefinition: ArticleTagsRouteDefinition,
         @inject(articleTypes.ArticleTagsSubscriptionsClient) protected articleTagsSubscriptionsClient: ArticleTagsSubscriptionsClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -51,7 +51,7 @@ export class ArticleTagsClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleTag>>> {
-        return this.apiClient.get<IQueryModel<IArticleTag>>(this.baasicArticleTagsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticleTag>>(this.articleTagsRouteDefinition.find(options));
     }
 
     /**                 
@@ -69,11 +69,11 @@ export class ArticleTagsClient {
                    });                
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.apiClient.get<IArticleTag>(this.baasicArticleTagsRouteDefinition.get(id, options));
+        return this.apiClient.get<IArticleTag>(this.articleTagsRouteDefinition.get(id, options));
     }
 
     /**                 
-     * Returns a promise that is resolved once the update article tag action has been performed; this action updates a tag. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleTagsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article tag action has been performed; this action updates a tag. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleTagsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleTag); 
      * let uri = params['model'].links('put').href; 
@@ -92,11 +92,11 @@ export class ArticleTagsClient {
                         });                
      **/
     update(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleTagsRouteDefinition.update(data), this.baasicArticleTagsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleTagsRouteDefinition.update(data), this.articleTagsRouteDefinition.updateParams(data));
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove article tag action has been performed. If the action is successfully completed, the article tag resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleTagsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article tag action has been performed. If the action is successfully completed, the article tag resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleTagsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleTag); 
      * let uri = params['model'].links('delete').href; 
@@ -114,7 +114,7 @@ export class ArticleTagsClient {
                         });						
      **/
     remove(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleTagsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.articleTagsRouteDefinition.delete(data));
     }
 }
 

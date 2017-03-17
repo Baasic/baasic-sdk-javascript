@@ -13,11 +13,11 @@ import { MediaVaultStreamsRouteDefinition, TYPES as mediaVaultTypes } from 'modu
 export class MediaVaultStreamsClient {
 
     get routeDefinition(): MediaVaultStreamsRouteDefinition {
-        return this.baasicMediaVaultStreamsRouteDefinition;
+        return this.mediaVaultStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(mediaVaultTypes.MediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: MediaVaultStreamsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultStreamsRouteDefinition) protected mediaVaultStreamsRouteDefinition: MediaVaultStreamsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -42,7 +42,7 @@ export class MediaVaultStreamsClient {
                             });                     
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicMediaVaultStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.mediaVaultStreamsRouteDefinition.get(data));
     }
 
     /**                     
@@ -66,7 +66,7 @@ export class MediaVaultStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicMediaVaultStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.mediaVaultStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -83,7 +83,7 @@ export class MediaVaultStreamsClient {
     create(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.baasicMediaVaultStreamsRouteDefinition.create(data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.mediaVaultStreamsRouteDefinition.create(data), formData, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -109,7 +109,7 @@ export class MediaVaultStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.baasicMediaVaultStreamsRouteDefinition.update(data), formData, { 'Content-Type': undefined });
+        return this.apiClient.put(this.mediaVaultStreamsRouteDefinition.update(data), formData, { 'Content-Type': undefined });
     }
 }
 

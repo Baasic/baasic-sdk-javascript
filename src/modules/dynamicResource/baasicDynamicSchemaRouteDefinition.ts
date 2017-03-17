@@ -1,5 +1,5 @@
 /**  
- * @module baasicDynamicSchemaRouteDefinition  
+ * @module dynamicSchemaRouteDefinition  
  * @description Baasic Dynamic Schema Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Schema Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -34,7 +34,7 @@ export class DynamicSchemaRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the dynamic resource schema property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicDynamicSchemaRouteDefinition.find({searchQuery: '<search-phrase>'});               				
+     * @example dynamicSchemaRouteDefinition.find({searchQuery: '<search-phrase>'});               				
      **/
     find(options: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -44,7 +44,7 @@ export class DynamicSchemaRouteDefinition extends BaseRouteDefinition {
      * Parses get route which must be expanded with name of the previously created dynamic resource schema. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method      				
-     * @example baasicDynamicSchemaRouteDefinition.find({name: '<schema-name>'});
+     * @example dynamicSchemaRouteDefinition.find({name: '<schema-name>'});
      **/
     get(name: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, this.modelMapper.getParams(name, options, 'name'));
@@ -53,7 +53,7 @@ export class DynamicSchemaRouteDefinition extends BaseRouteDefinition {
     /** 				
      * Parses create route; this URI template doesn't expose any additional properties. 				
      * @method      				
-     * @example baasicDynamicSchemaRouteDefinition.generate();              				
+     * @example dynamicSchemaRouteDefinition.generate();              				
      **/
     generate(): any {
         return super.baseCreate(this.generateRoute, {});
@@ -62,7 +62,7 @@ export class DynamicSchemaRouteDefinition extends BaseRouteDefinition {
     /** 				
      * Parses create route; this URI template doesn't expose any additional properties. 		
      * @method      				
-     * @example baasicDynamicSchemaRouteDefinition.create(data);              				
+     * @example dynamicSchemaRouteDefinition.create(data);              				
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -72,7 +72,7 @@ export class DynamicSchemaRouteDefinition extends BaseRouteDefinition {
      * Parses update route.
      * @method
      * @param data A dynamic schema object used to update specified dynamic resource schema.
-     * @example baasicDynamicSchemaRouteDefinition.update(data);
+     * @example dynamicSchemaRouteDefinition.update(data);
      */
     update(data: IResourceSchema): any {
         return super.baseUpdate(this.updateRoute, data);

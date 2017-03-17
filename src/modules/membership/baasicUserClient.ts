@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module userClient  
- * @description  User Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userClient` uses `baasicUserRouteDefinition`. 
+ * @description  User Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userClient` uses `userRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,12 +19,12 @@ import { ModelMapper } from 'common';
 export class UserClient {
 
     /**                 
-     * Provides direct access to `baasicUserRouteDefinition`.                 
+     * Provides direct access to `userRouteDefinition`.                 
      * @method                        
      * @example userClient.routeDefinition.get();                 
      **/
     get routeDefinition(): UserRouteDefinition {
-        return this.baasicUserRouteDefinition;
+        return this.userRouteDefinition;
     }
 
     get socialLogin(): UserSocialLoginClient {
@@ -32,7 +32,7 @@ export class UserClient {
     }
 
     constructor(
-        @inject(membershipTypes.UserRouteDefinition) protected baasicUserRouteDefinition: UserRouteDefinition,
+        @inject(membershipTypes.UserRouteDefinition) protected userRouteDefinition: UserRouteDefinition,
         @inject(membershipTypes.UserSocialLoginClient) protected userSocialLoginClient: UserSocialLoginClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -50,7 +50,7 @@ export class UserClient {
                     });                   
      **/
     exists(username: string, options?: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicUserRouteDefinition.exists(username, options));
+        return this.apiClient.get(this.userRouteDefinition.exists(username, options));
     }
 
     /**                  
@@ -72,7 +72,7 @@ export class UserClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAppUser>>> {
-        return this.apiClient.get<IQueryModel<IAppUser>>(this.baasicUserRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IAppUser>>(this.userRouteDefinition.find(options));
     }
 
     /**                  
@@ -93,7 +93,7 @@ export class UserClient {
                 });                  
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.apiClient.get<IAppUser>(this.baasicUserRouteDefinition.get(id, options));
+        return this.apiClient.get<IAppUser>(this.userRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -118,11 +118,11 @@ export class UserClient {
                 });                  
      **/
     create(data: INewUser): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.apiClient.post<IAppUser>(this.baasicUserRouteDefinition.create(), this.baasicUserRouteDefinition.createParams(data));
+        return this.apiClient.post<IAppUser>(this.userRouteDefinition.create(), this.userRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update user action has been performed; this action updates a user. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user action has been performed; this action updates a user. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('put').href; 
@@ -142,11 +142,11 @@ export class UserClient {
                         }); 				
      **/
     update(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.baasicUserRouteDefinition.update(data), this.baasicUserRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.userRouteDefinition.update(data), this.userRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove user action has been performed. This action will remove a user from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove user action has been performed. This action will remove a user from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('delete').href; 
@@ -164,11 +164,11 @@ export class UserClient {
                         });						
      **/
     remove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.baasicUserRouteDefinition.delete(data));
+        return this.apiClient.delete(this.userRouteDefinition.delete(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the unlock user action has been performed. This action will unlock the user resource which was previously locked either manually or automatically by the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unlock user action has been performed. This action will unlock the user resource which was previously locked either manually or automatically by the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('unlock').href; 
@@ -186,11 +186,11 @@ export class UserClient {
                             });						
      **/
     unlock(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.baasicUserRouteDefinition.unlock(data), data);
+        return this.apiClient.put(this.userRouteDefinition.unlock(data), data);
     }
 
     /**                 
-     * Returns a promise that is resolved once the lock user action has been performed. This action will lock the user resource out of the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the lock user action has been performed. This action will lock the user resource out of the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('lock').href; 
@@ -208,11 +208,11 @@ export class UserClient {
                         });						
      **/
     lock(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.baasicUserRouteDefinition.lock(data), data);
+        return this.apiClient.put(this.userRouteDefinition.lock(data), data);
     }
 
     /**                  
-     * Returns a promise that is resolved once the approve user action has been performed. This action will mark the user resource as 'approved' in the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the approve user action has been performed. This action will mark the user resource as 'approved' in the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('approve').href; 
@@ -230,11 +230,11 @@ export class UserClient {
                         });						
      **/
     approve(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.baasicUserRouteDefinition.approve(data), data);
+        return this.apiClient.put(this.userRouteDefinition.approve(data), data);
     }
 
     /**                  
-     * Returns a promise that is resolved once the disapprove user action has been performed. This action will mark the user resource as 'not approved' in the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the disapprove user action has been performed. This action will mark the user resource as 'not approved' in the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('disapprove').href; 
@@ -249,7 +249,7 @@ export class UserClient {
                     });						
      **/
     disapprove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.baasicUserRouteDefinition.disapprove(data), data);
+        return this.apiClient.put(this.userRouteDefinition.disapprove(data), data);
     }
 
     /**                  
@@ -271,7 +271,7 @@ export class UserClient {
                 .finally (function () {}); 
      **/
     changePassword(username: string, data: INewPassword): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.baasicUserRouteDefinition.changePassword(username), data);
+        return this.apiClient.put(this.userRouteDefinition.changePassword(username), data);
     }
 }
 

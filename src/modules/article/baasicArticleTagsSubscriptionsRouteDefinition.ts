@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleTagsSubscriptionsRouteDefinition  
+ * @module articleTagsSubscriptionsRouteDefinition  
  * @description Baasic Article Tags Subscriptions Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Tags Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
 */
 
@@ -27,7 +27,7 @@ export class ArticleTagsSubscriptionsRouteDefinition extends BaseRouteDefinition
     /**                     
      * Parses subscribe route which must be expanded with id of the tag.                     
      * @method              
-     * @example baasicArticleTagsSubscriptionsRouteDefinition.subscribe( {id: '<tag-id>'} );                       
+     * @example articleTagsSubscriptionsRouteDefinition.subscribe( {id: '<tag-id>'} );                       
      **/
     subscribe(tag: IArticleTag, data: any): any {
         let params = this.utility.extend(tag, data);
@@ -37,7 +37,7 @@ export class ArticleTagsSubscriptionsRouteDefinition extends BaseRouteDefinition
     /**                      
      * Parses isSubscribed route which must be expanded with subscriber id and the id of the tag.                      
      * @method                     
-     * @example baasicArticleSubscriptionsRouteDefinition.isSubscribed({ id: '<tag-id>', subscriberId: '<subscriber-id>' });                       
+     * @example articleSubscriptionsRouteDefinition.isSubscribed({ id: '<tag-id>', subscriberId: '<subscriber-id>' });                       
      **/
     isSubscribed(tag: IArticleTag, data: any): any {
         let params = this.utility.extend(tag, data);
@@ -47,7 +47,7 @@ export class ArticleTagsSubscriptionsRouteDefinition extends BaseRouteDefinition
     /**  
      * Parses unSubscribe route which must be expanded with the id of the article.                     
      * @method                    
-     * @example baasicArticleUnSubscribeRouteDefinition.unSubscribe({id: '<tag-id>'});                                                 
+     * @example articleUnSubscribeRouteDefinition.unSubscribe({id: '<tag-id>'});                                                 
      **/
     unSubscribe(tag: IArticleTag, data: any): any {
         let params = this.utility.extend(tag, data);

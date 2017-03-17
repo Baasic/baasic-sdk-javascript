@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleACLClient  
- * @description  Article ACL Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleACLClient` uses `baasicArticleACLRouteDefinition`. 
+ * @description  Article ACL Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleACLClient` uses `articleACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,11 +13,11 @@ import { ArticleACLRouteDefinition, TYPES as articleTypes } from 'modules/articl
 export class ArticleACLClient {
 
     get routeDefinition(): ArticleACLRouteDefinition {
-        return this.baasicArticleACLRouteDefinition;
+        return this.articleACLRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleACLRouteDefinition) protected baasicArticleACLRouteDefinition: ArticleACLRouteDefinition,
+        @inject(articleTypes.ArticleACLRouteDefinition) protected articleACLRouteDefinition: ArticleACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -33,7 +33,7 @@ export class ArticleACLClient {
                     });                     
      **/
     get(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get<IACLPolicy[]>(this.baasicArticleACLRouteDefinition.get(options));
+        return this.apiClient.get<IACLPolicy[]>(this.articleACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -57,7 +57,7 @@ export class ArticleACLClient {
                     }); 				    
      **/
     update(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.put<IACLPolicy[]>(this.baasicArticleACLRouteDefinition.update(options), this.baasicArticleACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.articleACLRouteDefinition.update(options), this.articleACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -82,7 +82,7 @@ export class ArticleACLClient {
                     }); 				    
      **/
     removeByUser(articleId: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleACLRouteDefinition.deleteByUser(articleId, action, user, data));
+        return this.apiClient.delete<void>(this.articleACLRouteDefinition.deleteByUser(articleId, action, user, data));
     }
 
     /**                     
@@ -107,7 +107,7 @@ export class ArticleACLClient {
                     }); 				    
      **/
     removeByRole(articleId: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleACLRouteDefinition.deleteByRole(articleId, action, role, data));
+        return this.apiClient.delete<void>(this.articleACLRouteDefinition.deleteByRole(articleId, action, role, data));
     }
 }
 

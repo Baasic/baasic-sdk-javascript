@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceLookupsRecurringCyclePeriodTypeClient  
- * @description  Commerce Lookups RecurringCyclePeriodType Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsRecurringCyclePeriodTypeClient` uses `baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition`. 
+ * @description  Commerce Lookups RecurringCyclePeriodType Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsRecurringCyclePeriodTypeClient` uses `commerceLookupsRecurringCyclePeriodTypeRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsRecurringCyclePeriodTypeBatchClient, CommerceLookupsRecu
 export class CommerceLookupsRecurringCyclePeriodTypeClient {
 
     get routeDefinition(): CommerceLookupsRecurringCyclePeriodTypeRouteDefinition {
-        return this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition;
+        return this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition;
     }
 
     get batch(): CommerceLookupsRecurringCyclePeriodTypeBatchClient {
@@ -22,8 +22,8 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchClient) protected commerceLookupsRecurringCyclePeriodTypeBatchClient: CommerceLookupsRecurringCyclePeriodTypeBatchClient,
-        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeRouteDefinition) protected baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
+        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeRouteDefinition) protected commerceLookupsRecurringCyclePeriodTypeRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeRouteDefinition,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.ApiClient.get(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.find(options));
+        return this.apiClient.get(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,11 +59,11 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.get(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsRecurringCyclePeriodTypeRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commerceRecurringPeriodType); 
      * let uri = params['model'].links('put').href; 
@@ -80,7 +80,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.put<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.update(data), this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.update(data), this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -100,11 +100,11 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.post(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.create(), this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.create(), this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsRecurringCyclePeriodTypeRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commerceRecurringPeriodType); 
      * let uri = params['model'].links('delete').href; 
@@ -120,7 +120,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                             });						                   
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.delete<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.delete(data));
     }
 }
 

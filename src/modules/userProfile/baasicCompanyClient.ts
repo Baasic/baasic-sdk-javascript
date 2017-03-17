@@ -14,7 +14,7 @@ import { ICompany } from 'modules/userProfile/contracts';
 export class CompanyClient {
 
     get routeDefinition(): CompanyRouteDefinition {
-        return this.baasicCompanyRouteDefinition;
+        return this.companyRouteDefinition;
     }
 
     get batch(): CompanyBatchClient {
@@ -23,7 +23,7 @@ export class CompanyClient {
 
     constructor(
         @inject(userProfileTypes.CompanyBatchClient) protected companyBatchClient: CompanyBatchClient,
-        @inject(userProfileTypes.CompanyRouteDefinition) protected baasicCompanyRouteDefinition: CompanyRouteDefinition,
+        @inject(userProfileTypes.CompanyRouteDefinition) protected companyRouteDefinition: CompanyRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -47,7 +47,7 @@ export class CompanyClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ICompany>>> {
-        return this.apiClient.get<IQueryModel<ICompany>>(this.baasicCompanyRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ICompany>>(this.companyRouteDefinition.find(options));
     }
 
     /**                 
@@ -65,7 +65,7 @@ export class CompanyClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICompany>> {
-        return this.apiClient.get<ICompany>(this.baasicCompanyRouteDefinition.get(id, options));
+        return this.apiClient.get<ICompany>(this.companyRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -86,11 +86,11 @@ export class CompanyClient {
                 });                 
      **/
     create(data: ICompany): PromiseLike<IHttpResponse<ICompany>> {
-        return this.apiClient.post<ICompany>(this.baasicCompanyRouteDefinition.create(), this.baasicCompanyRouteDefinition.createParams(data));
+        return this.apiClient.post<ICompany>(this.companyRouteDefinition.create(), this.companyRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update company action has been performed; this action updates a company resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCompanyRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update company action has been performed; this action updates a company resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `companyRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(company); 
      * let uri = params['model'].links('put').href; 
@@ -109,11 +109,11 @@ export class CompanyClient {
                         }); 				        
      **/
     update(data: ICompany): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicCompanyRouteDefinition.update(data), this.baasicCompanyRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.companyRouteDefinition.update(data), this.companyRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a company resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCompanyRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a company resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `companyRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(company); 
      * let uri = params['model'].links('delete').href; 
@@ -131,7 +131,7 @@ export class CompanyClient {
                     });						        
      **/
     remove(data: ICompany): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCompanyRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.companyRouteDefinition.delete(data));
     }
 }
 

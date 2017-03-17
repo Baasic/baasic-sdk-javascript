@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsArticleClient  
- * @description  Article Subscriptions Article Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsArticleClient` uses `baasicArticleSubscriptionsArticleRouteDefinition`. 
+ * @description  Article Subscriptions Article Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsArticleClient` uses `articleSubscriptionsArticleRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,11 +14,11 @@ import { IArticle, IArticleSubscription } from 'modules/article/contracts';
 export class ArticleSubscriptionsArticleClient {
 
     get routeDefinition(): ArticleSubscriptionsArticleRouteDefinition {
-        return this.baasicArticleSubscriptionsArticleRouteDefinition;
+        return this.articleSubscriptionsArticleRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsArticleRouteDefinition) protected baasicArticleSubscriptionsArticleRouteDefinition: ArticleSubscriptionsArticleRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsArticleRouteDefinition) protected articleSubscriptionsArticleRouteDefinition: ArticleSubscriptionsArticleRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -34,7 +34,7 @@ export class ArticleSubscriptionsArticleClient {
                     });                         
      **/
     subscribe(article: IArticle, data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicArticleSubscriptionsArticleRouteDefinition.subscribe(article, data), this.baasicArticleSubscriptionsArticleRouteDefinition.subscribeParams(article, data));
+        return this.apiClient.post(this.articleSubscriptionsArticleRouteDefinition.subscribe(article, data), this.articleSubscriptionsArticleRouteDefinition.subscribeParams(article, data));
     }
 
     /**                         
@@ -49,7 +49,7 @@ export class ArticleSubscriptionsArticleClient {
                     });                          
      **/
     isSubscribed(article: IArticle, data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicArticleSubscriptionsArticleRouteDefinition.isSubscribed(article, data));
+        return this.apiClient.get(this.articleSubscriptionsArticleRouteDefinition.isSubscribed(article, data));
     }
 
     /**                         
@@ -64,6 +64,6 @@ export class ArticleSubscriptionsArticleClient {
                     });                         
      **/
     unSubscribe(article: IArticle, data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleSubscriptionsArticleRouteDefinition.unSubscribe(article, data));
+        return this.apiClient.delete<void>(this.articleSubscriptionsArticleRouteDefinition.unSubscribe(article, data));
     }
 }

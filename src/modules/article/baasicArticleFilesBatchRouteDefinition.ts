@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleFilesBatchRouteDefinition  
+ * @module articleFilesBatchRouteDefinition  
  * @description Baasic Article Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -25,7 +25,7 @@ export class ArticleFilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses unlink route; this URI template does not expose any additional options.                                                        
      * @method
-     * @example baasicArticleFilesBatchRouteDefinition.unlink();                                  
+     * @example articleFilesBatchRouteDefinition.unlink();                                  
      **/
     unlink(): any {
         return super.baseCreate(this.unlinkRoute, {});
@@ -34,7 +34,7 @@ export class ArticleFilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.  
      * @method                           
-     * @example baasicArticleFilesStreamsRouteDefinition.update();                                  
+     * @example articleFilesStreamsRouteDefinition.update();                                  
      **/
     update(): any {
         return super.baseCreate(this.updateRoute, {});
@@ -43,7 +43,7 @@ export class ArticleFilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                         
-     * @example baasicArticleFilesStreamsRouteDefinition.link();                                  
+     * @example articleFilesStreamsRouteDefinition.link();                                  
      **/
     link(): any {
         return super.baseCreate(this.linkRoute, {});

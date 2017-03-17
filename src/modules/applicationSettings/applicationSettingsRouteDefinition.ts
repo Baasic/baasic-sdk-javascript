@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicApplicationSettingsRouteDefinition  
+ * @module applicationSettingsRouteDefinition  
  * @description Baasic Application Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Application Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -23,7 +23,7 @@ export class ApplicationSettingsRouteDefinition extends BaseRouteDefinition {
      * Parses get route; this route doesn't expose any properties.                 
      * @method
      * @param options Query resource options object.                        
-     * @example baasicApplicationSettingsRouteDefinition.get();                               
+     * @example applicationSettingsRouteDefinition.get();                               
      **/
     get(options: IOptions): any {
         return super.baseGet(this.getRoute, undefined, options);
@@ -33,7 +33,7 @@ export class ApplicationSettingsRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this route doesn't expose any properties.                 
      * @method
      * @param data An application object used to update application settings of the specified application resource.                        
-     * @example baasicApplicationSettingsRouteDefinition.update();                               
+     * @example applicationSettingsRouteDefinition.update();                               
      **/
     update(data: IApplication): any {
         return super.baseUpdate(this.updateRoute, data);

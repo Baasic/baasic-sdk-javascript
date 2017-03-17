@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceInvoiceStreamsClient  
- * @description  Commerce Invoice Streams Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceStreamsClient` uses `baasicCommerceInvoiceStreamsRouteDefinition`. 
+ * @description  Commerce Invoice Streams Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceStreamsClient` uses `commerceInvoiceStreamsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,12 +13,12 @@ import { CommerceInvoiceStreamsRouteDefinition, TYPES as commerceTypes } from 'm
 export class CommerceInvoiceStreamsClient {
 
     get routeDefinition(): CommerceInvoiceStreamsRouteDefinition {
-        return this.baasicCommerceInvoiceStreamsRouteDefinition;
+        return this.commerceInvoiceStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceInvoiceStreamsRouteDefinition) protected baasicCommerceInvoiceStreamsRouteDefinition: CommerceInvoiceStreamsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
+        @inject(commerceTypes.CommerceInvoiceStreamsRouteDefinition) protected commerceInvoiceStreamsRouteDefinition: CommerceInvoiceStreamsRouteDefinition,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
 
@@ -35,7 +35,7 @@ export class CommerceInvoiceStreamsClient {
                         });                                        
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.get(this.baasicCommerceInvoiceStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.commerceInvoiceStreamsRouteDefinition.get(data));
     }
 
     /**                     
@@ -51,7 +51,7 @@ export class CommerceInvoiceStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.get(this.baasicCommerceInvoiceStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.commerceInvoiceStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 }
 

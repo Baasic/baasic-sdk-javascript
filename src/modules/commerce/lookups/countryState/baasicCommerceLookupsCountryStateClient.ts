@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceCountryStateClient  
- * @description  Commerce Country State Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryStateClient` uses `baasicCommerceCountryStateRouteDefinition`. 
+ * @description  Commerce Country State Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryStateClient` uses `commerceCountryStateRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsCountryStateBatchClient, CommerceLookupsCountryStateRout
 export class CommerceLookupsCountryStateClient {
 
     get routeDefinition(): CommerceLookupsCountryStateRouteDefinition {
-        return this.baasicCommerceLookupsCountryStateRouteDefinition;
+        return this.commerceLookupsCountryStateRouteDefinition;
     }
 
     get batch(): CommerceLookupsCountryStateBatchClient {
@@ -21,7 +21,7 @@ export class CommerceLookupsCountryStateClient {
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsCountryStateRouteDefinition) protected baasicCommerceLookupsCountryStateRouteDefinition: CommerceLookupsCountryStateRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsCountryStateRouteDefinition) protected commerceLookupsCountryStateRouteDefinition: CommerceLookupsCountryStateRouteDefinition,
         @inject(commerceTypes.CommerceLookupsCountryStateBatchClient) protected commerceLookupsCountryStateBatchClient: CommerceLookupsCountryStateBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -45,7 +45,7 @@ export class CommerceLookupsCountryStateClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.apiClient.get(this.baasicCommerceLookupsCountryStateRouteDefinition.find(options));
+        return this.apiClient.get(this.commerceLookupsCountryStateRouteDefinition.find(options));
     }
 
     /**                 
@@ -60,7 +60,7 @@ export class CommerceLookupsCountryStateClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicCommerceLookupsCountryStateRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceLookupsCountryStateRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -80,11 +80,11 @@ export class CommerceLookupsCountryStateClient {
                   });                  
    **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceLookupsCountryStateRouteDefinition.create(), this.baasicCommerceLookupsCountryStateRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsCountryStateRouteDefinition.create(), this.commerceLookupsCountryStateRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceLookupsCountryStateRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCountryStateRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commerceCountryState); 
      * let uri = params['model'].links('put').href; 
@@ -101,11 +101,11 @@ export class CommerceLookupsCountryStateClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicCommerceLookupsCountryStateRouteDefinition.update(data), this.baasicCommerceLookupsCountryStateRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsCountryStateRouteDefinition.update(data), this.commerceLookupsCountryStateRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceLookupsCountryStateRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCountryStateRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commerceCountryState); 
      * let uri = params['model'].links('delete').href; 
@@ -121,7 +121,7 @@ export class CommerceLookupsCountryStateClient {
                        });						
     **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCommerceLookupsCountryStateRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.commerceLookupsCountryStateRouteDefinition.delete(data));
     }
 }
 

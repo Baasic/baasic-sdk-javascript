@@ -13,11 +13,11 @@ import { FilesACLRouteDefinition, TYPES as filesTypes } from 'modules/file';
 export class FilesACLClient {
 
     routeDefinition(): FilesACLRouteDefinition {
-        return this.baasicFilesACLRouteDefinition;
+        return this.filesACLRouteDefinition;
     }
 
     constructor(
-        @inject(filesTypes.FilesACLRouteDefinition) protected baasicFilesACLRouteDefinition: FilesACLRouteDefinition,
+        @inject(filesTypes.FilesACLRouteDefinition) protected filesACLRouteDefinition: FilesACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -35,7 +35,7 @@ export class FilesACLClient {
                     });                     
      **/
     get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get(this.baasicFilesACLRouteDefinition.get(options));
+        return this.apiClient.get(this.filesACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -54,7 +54,7 @@ export class FilesACLClient {
                     }); 				    
      **/
     update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.put<IACLPolicy[]>(this.baasicFilesACLRouteDefinition.update(options), this.baasicFilesACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.filesACLRouteDefinition.update(options), this.filesACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -78,7 +78,7 @@ export class FilesACLClient {
                     }); 				    
      **/
     removeByUser(id: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicFilesACLRouteDefinition.deleteByUser(id, action, user, data));
+        return this.apiClient.delete<void>(this.filesACLRouteDefinition.deleteByUser(id, action, user, data));
     }
 
     /**                     
@@ -93,7 +93,7 @@ export class FilesACLClient {
                     }); 				    
      **/
     removeByRole(id: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicFilesACLRouteDefinition.deleteByRole(id, action, role, data));
+        return this.apiClient.delete<void>(this.filesACLRouteDefinition.deleteByRole(id, action, role, data));
     }
 }
 

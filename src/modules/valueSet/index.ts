@@ -1,5 +1,5 @@
 export * from './diModule';
-export * from './baasicValueSetItemRouteDefinition';
+export * from './valueSetItemRouteDefinition';
 export * from './valueSetItemClient';
-export * from './baasicValueSetRouteDefinition';
+export * from './valueSetRouteDefinition';
 export * from './valueSetClient';

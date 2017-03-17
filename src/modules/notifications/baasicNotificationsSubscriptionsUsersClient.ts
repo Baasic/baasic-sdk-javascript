@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsSubscriptionsUsersClient  
- * @description  Notifications Subscriptions Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersClient` uses `baasicNotificationsSubscriptionsUsersRouteDefinition`. 
+ * @description  Notifications Subscriptions Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersClient` uses `notificationsSubscriptionsUsersRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,7 +17,7 @@ import { IUserSubscription } from 'modules/notifications/contracts';
 export class NotificationsSubscriptionsUsersClient {
 
     routeDefinition(): NotificationsSubscriptionsUsersRouteDefinition {
-        return this.baasicNotificationsSubscriptionsUsersRouteDefinition;
+        return this.notificationsSubscriptionsUsersRouteDefinition;
     }
 
     batch(): NotificationsSubscriptionsUsersBatchClient {
@@ -25,7 +25,7 @@ export class NotificationsSubscriptionsUsersClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected notificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
         @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchClient) protected NotificationsSubscriptionsUsersBatchClient: NotificationsSubscriptionsUsersBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -47,7 +47,7 @@ export class NotificationsSubscriptionsUsersClient {
                 });                         
      */
     create(data: IUserSubscription): PromiseLike<IHttpResponse<IUserSubscription>> {
-        return this.apiClient.post<IUserSubscription>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSubscription>(this.notificationsSubscriptionsUsersRouteDefinition.create(), this.notificationsSubscriptionsUsersRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -73,7 +73,7 @@ export class NotificationsSubscriptionsUsersClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserSubscription>>> {
-        return this.apiClient.get<IQueryModel<IUserSubscription>>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserSubscription>>(this.notificationsSubscriptionsUsersRouteDefinition.find(options));
     }
 
     /**                          
@@ -91,11 +91,11 @@ export class NotificationsSubscriptionsUsersClient {
                    });                         
     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserSubscription>> {
-        return this.apiClient.get(this.baasicNotificationsSubscriptionsUsersRouteDefinition.get(id, options));
+        return this.apiClient.get(this.notificationsSubscriptionsUsersRouteDefinition.get(id, options));
     }
 
     /**                          
-     * Returns a promise that is resolved once the remove user subscription action has been performed. This action will remove a user subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicNotificationsSubscriptionsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove user subscription action has been performed. This action will remove a user subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(subscription); 
      * let uri = params['model'].links('delete').href; 
@@ -113,11 +113,11 @@ export class NotificationsSubscriptionsUsersClient {
                         });		                        
      */
     remove(data: IUserSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.notificationsSubscriptionsUsersRouteDefinition.delete(data));
     }
 
     /**                          
-     * Returns a promise that is resolved once the update user subscription action has been performed; this action updates a user subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicNotificationsSubscriptionsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user subscription action has been performed; this action updates a user subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(subscription); 
      * let uri = params['model'].links('put').href; 
@@ -135,7 +135,7 @@ export class NotificationsSubscriptionsUsersClient {
                            }); 				        
     */
     update(data: IUserSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.update(data), this.baasicNotificationsSubscriptionsUsersRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.notificationsSubscriptionsUsersRouteDefinition.update(data), this.notificationsSubscriptionsUsersRouteDefinition.updateParams(data));
     }
 }
 

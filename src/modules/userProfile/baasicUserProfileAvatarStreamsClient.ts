@@ -12,11 +12,11 @@ import { UserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } fr
 export class UserProfileAvatarStreamsClient {
 
     get routeDefinition(): UserProfileAvatarStreamsRouteDefinition {
-        return this.baasicUserProfileAvatarStreamsRouteDefinition;
+        return this.userProfileAvatarStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.UserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: UserProfileAvatarStreamsRouteDefinition,
+        @inject(userProfileTypes.UserProfileAvatarStreamsRouteDefinition) protected userProfileAvatarStreamsRouteDefinition: UserProfileAvatarStreamsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -43,7 +43,7 @@ export class UserProfileAvatarStreamsClient {
                         });                     
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.userProfileAvatarStreamsRouteDefinition.get(data));
     }
 
     /**                     
@@ -67,7 +67,7 @@ export class UserProfileAvatarStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.userProfileAvatarStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                     
@@ -88,7 +88,7 @@ export class UserProfileAvatarStreamsClient {
     create(id: string, data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.baasicUserProfileAvatarStreamsRouteDefinition.create(id, data), data, { 'Content-Type': undefined });
+        return this.apiClient.post(this.userProfileAvatarStreamsRouteDefinition.create(id, data), data, { 'Content-Type': undefined });
     }
 
     /**                     
@@ -117,7 +117,7 @@ export class UserProfileAvatarStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.baasicUserProfileAvatarStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.userProfileAvatarStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceClient  
- * @description  Commerce Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceClient` uses `baasicCommerceRouteDefinition`. 
+ * @description  Commerce Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceClient` uses `commerceRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -41,7 +41,7 @@ export class CommerceClient {
     }
 
     get routeDefinition(): CommerceRouteDefinition {
-        return this.baasicCommerceRouteDefinition;
+        return this.commerceRouteDefinition;
     }
 
     constructor(
@@ -50,7 +50,7 @@ export class CommerceClient {
         @inject(commerceTypes.CommerceProductClient) protected commerceProductClient: CommerceProductClient,
         @inject(commerceTypes.CommercePaymentTransactionClient) protected commercePaymentTransactionClient: CommercePaymentTransactionClient,
         @inject(commerceTypes.Lookups) protected lookup: Lookups,
-        @inject(commerceTypes.CommerceRouteDefinition) protected baasicCommerceRouteDefinition: CommerceRouteDefinition,
+        @inject(commerceTypes.CommerceRouteDefinition) protected commerceRouteDefinition: CommerceRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -72,7 +72,7 @@ export class CommerceClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.apiClient.get(this.baasicCommerceRouteDefinition.find(options));
+        return this.apiClient.get(this.commerceRouteDefinition.find(options));
     }
 
     /**                 
@@ -87,7 +87,7 @@ export class CommerceClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicCommerceRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -102,7 +102,7 @@ export class CommerceClient {
                     });                 
      **/
     validateVAT(countryCode: string, vatId: string): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicCommerceRouteDefinition.validateVAT(countryCode, vatId));
+        return this.apiClient.get(this.commerceRouteDefinition.validateVAT(countryCode, vatId));
     }
 
     /**                  
@@ -121,7 +121,7 @@ export class CommerceClient {
                 });                  
      **/
     preprocess(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceRouteDefinition.preprocess(), this.baasicCommerceRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceRouteDefinition.preprocess(), this.commerceRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -144,11 +144,11 @@ export class CommerceClient {
                 });                  
      **/
     subscribe(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceRouteDefinition.subscribe(), this.baasicCommerceRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceRouteDefinition.subscribe(), this.commerceRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the cancel subscription action has been performed. This action will remove a commerce subscription resource from the system if successfully completed. This route obtain routes from `baasicCommerceRouteDefinition` route template. Here is an example of how execute this action:                  
+     * Returns a promise that is resolved once the cancel subscription action has been performed. This action will remove a commerce subscription resource from the system if successfully completed. This route obtain routes from `commerceRouteDefinition` route template. Here is an example of how execute this action:                  
      * @method                         
      * @example	commerceClient.cancel({   
                     systemName: '<system-name>',   
@@ -164,7 +164,7 @@ export class CommerceClient {
                 });						
      **/
     cancel(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCommerceRouteDefinition.cancel(data));
+        return this.apiClient.delete<void>(this.commerceRouteDefinition.cancel(data));
     }
 }
 

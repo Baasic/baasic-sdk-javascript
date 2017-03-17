@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceInvoiceRouteDefinition  
+ * @module commerceInvoiceRouteDefinition  
  * @description Baasic Commerce Invoice Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Invoice Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -22,11 +22,11 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
     public readonly deleteRoute: string = 'commerce/invoices/{id}';
 
     get streams(): CommerceInvoiceStreamsRouteDefinition {
-        return this.baasicCommerceInvoiceStreamsRouteDefinition;
+        return this.commerceInvoiceStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceInvoiceStreamsRouteDefinition) protected baasicCommerceInvoiceStreamsRouteDefinition: CommerceInvoiceStreamsRouteDefinition,
+        @inject(commerceTypes.CommerceInvoiceStreamsRouteDefinition) protected commerceInvoiceStreamsRouteDefinition: CommerceInvoiceStreamsRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -43,7 +43,7 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicCommerceInvoiceRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceInvoiceRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -52,7 +52,7 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceInvoiceRouteDefinition.get(id, options);                               
+     * @example commerceInvoiceRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -61,7 +61,7 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses update route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceInvoiceRouteDefinition.update(data);                               
+     * @example commerceInvoiceRouteDefinition.update(data);                               
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -70,7 +70,7 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses delete route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceInvoiceRouteDefinition.delete(data);                               
+     * @example commerceInvoiceRouteDefinition.delete(data);                               
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

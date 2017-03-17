@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module meteringBatchClient  
- * @description  Metering Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringBatchClient` uses `baasicMeteringBatchRouteDefinition`. 
+ * @description  Metering Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringBatchClient` uses `meteringBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,11 +14,11 @@ import { IMeteringData } from 'modules/metering/contracts';
 export class MeteringBatchClient {
 
     get routeDefinition(): MeteringBatchRouteDefinition {
-        return this.baasicMeteringBatchRouteDefinition;
+        return this.meteringBatchRouteDefinition;
     }
 
     constructor(
-        @inject(meteringTypes.MeteringBatchRouteDefinition) protected baasicMeteringBatchRouteDefinition: MeteringBatchRouteDefinition,
+        @inject(meteringTypes.MeteringBatchRouteDefinition) protected meteringBatchRouteDefinition: MeteringBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -41,7 +41,7 @@ export class MeteringBatchClient {
                 });                   
      **/
     create(data: IMeteringData[]): PromiseLike<IHttpResponse<IMeteringData[]>> {
-        return this.apiClient.post(this.baasicMeteringBatchRouteDefinition.create(), this.baasicMeteringBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.meteringBatchRouteDefinition.create(), this.meteringBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -58,7 +58,7 @@ export class MeteringBatchClient {
                         });                   
      **/
     update(data: IMeteringData[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicMeteringBatchRouteDefinition.update(), this.baasicMeteringBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.meteringBatchRouteDefinition.update(), this.meteringBatchRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -75,7 +75,7 @@ export class MeteringBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicMeteringBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.meteringBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

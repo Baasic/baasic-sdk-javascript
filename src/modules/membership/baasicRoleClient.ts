@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module roleClient  
- * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `roleClient` uses `baasicRoleRouteDefinition`. 
+ * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `roleClient` uses `roleRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,16 +14,16 @@ import { IRole } from 'modules/membership/contracts';
 export class RoleClient {
 
     /**                 
-     * Provides direct access to `baasicRoleRouteDefinition`.                 
+     * Provides direct access to `roleRouteDefinition`.                 
      * @method                        
      * @example roleClient.routeDefinition.get().expand(expandObject);                 
      **/
     get routeDefinition(): RoleRouteDefinition {
-        return this.baasicRoleRouteDefinition;
+        return this.roleRouteDefinition;
     }
 
     constructor(
-        @inject(membershipTypes.RoleRouteDefinition) protected baasicRoleRouteDefinition: RoleRouteDefinition,
+        @inject(membershipTypes.RoleRouteDefinition) protected roleRouteDefinition: RoleRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -47,7 +47,7 @@ export class RoleClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
-        return this.apiClient.get<IQueryModel<IRole>>(this.baasicRoleRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IRole>>(this.roleRouteDefinition.find(options));
     }
 
     /**                  
@@ -65,7 +65,7 @@ export class RoleClient {
                     });                  
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.get<IRole>(this.baasicRoleRouteDefinition.get(id, options));
+        return this.apiClient.get<IRole>(this.roleRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -85,7 +85,7 @@ export class RoleClient {
                 });                  
      **/
     create(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.post<IRole>(this.baasicRoleRouteDefinition.create(), this.baasicRoleRouteDefinition.createParams(data));
+        return this.apiClient.post<IRole>(this.roleRouteDefinition.create(), this.roleRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -108,7 +108,7 @@ export class RoleClient {
                         }); 				
      **/
     update(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.put(this.baasicRoleRouteDefinition.update(data), this.baasicRoleRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.roleRouteDefinition.update(data), this.roleRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -129,7 +129,7 @@ export class RoleClient {
                         });						
      **/
     remove(data: IRole): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.baasicRoleRouteDefinition.delete(data));
+        return this.apiClient.delete(this.roleRouteDefinition.delete(data));
     }
 }
 

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsCountryRouteDefinition  
+ * @module commerceLookupsCountryRouteDefinition  
  * @description Baasic Commerce Lookups Country Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -24,11 +24,11 @@ export class CommerceLookupsCountryRouteDefinition extends BaseRouteDefinition {
     public readonly deleteRoute: string = 'commerce/lookups/countries/{id}';
 
     get batch(): CommerceLookupsCountryBatchRouteDefinition {
-        return this.baasicCommerceCountryBatchRouteDefinition;
+        return this.commerceCountryBatchRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsCountryBatchRouteDefinition) protected baasicCommerceCountryBatchRouteDefinition: CommerceLookupsCountryBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsCountryBatchRouteDefinition) protected commerceCountryBatchRouteDefinition: CommerceLookupsCountryBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -40,7 +40,7 @@ export class CommerceLookupsCountryRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicCommerceLookupsCountryRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceLookupsCountryRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -49,7 +49,7 @@ export class CommerceLookupsCountryRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceLookupsCountryRouteDefinition.get();                               
+     * @example commerceLookupsCountryRouteDefinition.get();                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -58,7 +58,7 @@ export class CommerceLookupsCountryRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create commerce country route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceLookupsCountryRouteDefinition.create();                              
+     * @example commerceLookupsCountryRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -67,7 +67,7 @@ export class CommerceLookupsCountryRouteDefinition extends BaseRouteDefinition {
     /**                 
     * Parses update commerce country route; this URI template does not expose any additional options.                 
     * @method                        
-    * @example baasicCommerceLookupsCountryRouteDefinition.update(data);                              
+    * @example commerceLookupsCountryRouteDefinition.update(data);                              
     **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -76,7 +76,7 @@ export class CommerceLookupsCountryRouteDefinition extends BaseRouteDefinition {
     /**                 
     * Parses delete commerce country route; this URI template does not expose any additional options.                 
     * @method                        
-    * @example baasicCommerceLookupsCountryRouteDefinition.delete(data);                              
+    * @example commerceLookupsCountryRouteDefinition.delete(data);                              
     **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

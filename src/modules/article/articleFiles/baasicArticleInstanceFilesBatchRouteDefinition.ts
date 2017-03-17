@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleInstanceFilesBatchRouteDefinition  
+ * @module articleInstanceFilesBatchRouteDefinition  
  * @description Baasic Article Instance Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -26,7 +26,7 @@ export class ArticleInstanceFilesBatchRouteDefinition extends BaseRouteDefinitio
      * Parses unlink route; this URI template does not expose any additional options.                                                        
      * @method
      * @param articleId Article file id of the original article file used to identify article files on which delete action should be performed.
-     * @example baasicArticleInstanceFilesBatchRouteDefinition.unlink(articleId);                                  
+     * @example articleInstanceFilesBatchRouteDefinition.unlink(articleId);                                  
      **/
     unlink(articleId: string): any {
         let params = { articleId: articleId };
@@ -37,7 +37,7 @@ export class ArticleInstanceFilesBatchRouteDefinition extends BaseRouteDefinitio
      * Parses update route; this URI template does not expose any additional options.  
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article file need to be updated.                           
-     * @example baasicArticleInstanceFilesStreamsRouteDefinition.update(articleId);                                  
+     * @example articleInstanceFilesStreamsRouteDefinition.update(articleId);                                  
      **/
     update(articleId: string): any {
         let params = { articleId: articleId };
@@ -48,7 +48,7 @@ export class ArticleInstanceFilesBatchRouteDefinition extends BaseRouteDefinitio
      * Parses update route; this URI template does not expose any additional options.                     
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be linked.                           
-     * @example baasicArticleInstanceFilesStreamsRouteDefinition.link(articleId);                                  
+     * @example articleInstanceFilesStreamsRouteDefinition.link(articleId);                                  
      **/
     link(articleId: string): any {
         let params = { articleId: articleId };

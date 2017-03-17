@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsClient  
- * @description  Notifications Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsClient` uses `baasicNotificationsRouteDefinition`. 
+ * @description  Notifications Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsClient` uses `notificationsRouteDefinition`. 
  */
 
 
@@ -20,7 +20,7 @@ import {
 export class NotificationsClient {
 
     get routeDefinition(): NotificationsRouteDefinition {
-        return this.baasicNotificationsRouteDefinition;
+        return this.notificationsRouteDefinition;
     }
 
     get publish(): NotificationsPublishClient {
@@ -44,7 +44,7 @@ export class NotificationsClient {
         @inject(notificationsTypes.NotificationsSubscriptionsClient) protected basicNotificationsSubscriptionsClient: NotificationsSubscriptionsClient,
         @inject(notificationsTypes.NotificationsRegistrationsClient) protected notificationsRegistrationsClient: NotificationsRegistrationsClient,
         @inject(notificationsTypes.NotificationsSettingsClient) protected notificationsSettingsClient: NotificationsSettingsClient,
-        @inject(notificationsTypes.NotificationsRouteDefinition) protected baasicNotificationsRouteDefinition: NotificationsRouteDefinition
+        @inject(notificationsTypes.NotificationsRouteDefinition) protected notificationsRouteDefinition: NotificationsRouteDefinition
     ) { }
 }
 

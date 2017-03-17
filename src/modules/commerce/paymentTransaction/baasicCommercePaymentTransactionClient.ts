@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commercePaymentTransactionClient  
- * @description  Commerce PaymentTransaction Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionClient` uses `baasicCommercePaymentTransactionRouteDefinition`. 
+ * @description  Commerce PaymentTransaction Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionClient` uses `commercePaymentTransactionRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,12 +13,12 @@ import { CommercePaymentTransactionRouteDefinition, TYPES as commerceTypes } fro
 export class CommercePaymentTransactionClient {
 
     get routeDefinition(): CommercePaymentTransactionRouteDefinition {
-        return this.baasicCommercePaymentTransactionRouteDefinition;
+        return this.commercePaymentTransactionRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.CommercePaymentTransactionRouteDefinition) protected baasicCommercePaymentTransactionRouteDefinition: CommercePaymentTransactionRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
+        @inject(commerceTypes.CommercePaymentTransactionRouteDefinition) protected commercePaymentTransactionRouteDefinition: CommercePaymentTransactionRouteDefinition,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -39,7 +39,7 @@ export class CommercePaymentTransactionClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.ApiClient.get(this.baasicCommercePaymentTransactionRouteDefinition.find(options));
+        return this.apiClient.get(this.commercePaymentTransactionRouteDefinition.find(options));
     }
 
     /**                 
@@ -54,7 +54,7 @@ export class CommercePaymentTransactionClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.get(this.baasicCommercePaymentTransactionRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commercePaymentTransactionRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -69,11 +69,11 @@ export class CommercePaymentTransactionClient {
                     });                 
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.post(this.baasicCommercePaymentTransactionRouteDefinition.create(), this.baasicCommercePaymentTransactionRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commercePaymentTransactionRouteDefinition.create(), this.commercePaymentTransactionRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommercePaymentTransactionRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commercePaymentTransactionRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransaction); 
      * let uri = params['model'].links('put').href; 
@@ -90,11 +90,11 @@ export class CommercePaymentTransactionClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.put<void>(this.baasicCommercePaymentTransactionRouteDefinition.update(data), this.baasicCommercePaymentTransactionRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commercePaymentTransactionRouteDefinition.update(data), this.commercePaymentTransactionRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommercePaymentTransactionRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commercePaymentTransactionRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransaction); 
      * let uri = params['model'].links('delete').href; 
@@ -110,7 +110,7 @@ export class CommercePaymentTransactionClient {
                             });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.delete<void>(this.baasicCommercePaymentTransactionRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.commercePaymentTransactionRouteDefinition.delete(data));
     }
 }
 

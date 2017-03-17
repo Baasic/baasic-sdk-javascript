@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsPublishClient  
- * @description  Notifications Publish Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsPublishClient` uses `baasicNotificationsPublishRouteDefinition`. 
+ * @description  Notifications Publish Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsPublishClient` uses `notificationsPublishRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { INotification } from 'modules/notifications/contracts';
 export class NotificationsPublishClient {
 
     routeDefinition(): NotificationsPublishRouteDefinition {
-        return this.baasicNotificationsPublishRouteDefinition;
+        return this.notificationsPublishRouteDefinition;
     }
 
     batch(): NotificationsPublishBatchClient {
@@ -21,7 +21,7 @@ export class NotificationsPublishClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: NotificationsPublishRouteDefinition,
+        @inject(notificationsTypes.NotificationsPublishRouteDefinition) protected notificationsPublishRouteDefinition: NotificationsPublishRouteDefinition,
         @inject(notificationsTypes.NotificationsPublishBatchClient) protected notificationsPublishBatchClient: NotificationsPublishBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -48,7 +48,7 @@ export class NotificationsPublishClient {
                 });                      
      */
     create(data: INotification): PromiseLike<IHttpResponse<INotification>> {
-        return this.apiClient.post<INotification>(this.baasicNotificationsPublishRouteDefinition.create(), this.baasicNotificationsPublishRouteDefinition.createParams(data));
+        return this.apiClient.post<INotification>(this.notificationsPublishRouteDefinition.create(), this.notificationsPublishRouteDefinition.createParams(data));
     }
 }
 

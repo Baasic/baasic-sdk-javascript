@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- *@module baasicLookupRouteDefinition  
+ *@module lookupRouteDefinition  
  * @description Baasic Lookup Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Lookup Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 

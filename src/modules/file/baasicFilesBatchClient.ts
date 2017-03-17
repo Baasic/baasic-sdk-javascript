@@ -14,11 +14,11 @@ import { IFileEntry } from 'modules/file/contracts';
 export class FilesBatchClient {
 
     get routeDefinition(): FilesBatchRouteDefinition {
-        return this.baasicFilesBatchRouteDefinition;
+        return this.filesBatchRouteDefinition;
     }
 
     constructor(
-        @inject(filesTypes.FilesBatchRouteDefinition) protected baasicFilesBatchRouteDefinition: FilesBatchRouteDefinition,
+        @inject(filesTypes.FilesBatchRouteDefinition) protected filesBatchRouteDefinition: FilesBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -36,7 +36,7 @@ export class FilesBatchClient {
                     });                   
      **/
     update(data: IFileEntry[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicFilesBatchRouteDefinition.update(), this.baasicFilesBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.filesBatchRouteDefinition.update(), this.filesBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -53,7 +53,7 @@ export class FilesBatchClient {
                     });                   
      **/
     link(data: IFileEntry[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicFilesBatchRouteDefinition.link(), this.baasicFilesBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.filesBatchRouteDefinition.link(), this.filesBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -79,7 +79,7 @@ export class FilesBatchClient {
                         });		                    
      **/
     unlink(data: Object[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicFilesBatchRouteDefinition.unlink(), undefined, data);
+        return this.apiClient.delete<void>(this.filesBatchRouteDefinition.unlink(), undefined, data);
     }
 }
 

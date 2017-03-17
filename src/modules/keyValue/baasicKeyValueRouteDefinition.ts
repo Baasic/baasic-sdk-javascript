@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicKeyValueRouteDefinition 
+ * @module keyValueRouteDefinition 
  * @description Baasic Key Value Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Key Value Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -37,7 +37,7 @@ export class KeyValueRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example baasicKeyValueRouteDefinition.find(options);                               
+     * @example keyValueRouteDefinition.find(options);                               
      **/
     find(options: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -48,7 +48,7 @@ export class KeyValueRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Key value resource unique identifier.
      * @param options Query resource options object.                    
-     * @example baasicKeyValueRouteDefinition.get();                               
+     * @example keyValueRouteDefinition.get();                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -57,7 +57,7 @@ export class KeyValueRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create key value route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicKeyValueRouteDefinition.create();                           
+     * @example keyValueRouteDefinition.create();                           
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -67,7 +67,7 @@ export class KeyValueRouteDefinition extends BaseRouteDefinition {
      * Parses update key value route.
      * @method
      * @param data Key Value object used to create update route.
-     * @example baasicKeyValueRouteDefinition.update(data);
+     * @example keyValueRouteDefinition.update(data);
      */
     update(data: IKeyValue): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -77,7 +77,7 @@ export class KeyValueRouteDefinition extends BaseRouteDefinition {
      * Parses delete key value route.
      * @method
      * @param data Key Value object used to create delete route.
-     * @example baasicKeyValueRouteDefinition.delete(data);
+     * @example keyValueRouteDefinition.delete(data);
      */
     delete(data: IKeyValue): any {
         return super.baseDelete(this.deleteRoute, data);

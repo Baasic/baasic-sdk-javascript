@@ -1,3 +1,3 @@
 export * from './diModule';
-export * from './baasicKeyValueRouteDefinition';
+export * from './keyValueRouteDefinition';
 export * from './keyValueClient';

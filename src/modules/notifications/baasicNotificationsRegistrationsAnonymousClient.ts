@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsRegistrationsAnonymousClient  
- * @description  Notifications Registrations Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousClient` uses `baasicNotificationsRegistrationsAnonymousRouteDefinition`. 
+ * @description  Notifications Registrations Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousClient` uses `notificationsRegistrationsAnonymousRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -18,7 +18,7 @@ import { IAnonymousRegistration } from 'modules/notifications/contracts';
 export class NotificationsRegistrationsAnonymousClient {
 
     get routeDefinition(): NotificationsRegistrationsAnonymousRouteDefinition {
-        return this.baasicNotificationsRegistrationsAnonymousRouteDefinition;
+        return this.notificationsRegistrationsAnonymousRouteDefinition;
     }
 
     get batch(): NotificationsRegistrationsAnonymousBatchClient {
@@ -26,7 +26,7 @@ export class NotificationsRegistrationsAnonymousClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: NotificationsRegistrationsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousRouteDefinition) protected notificationsRegistrationsAnonymousRouteDefinition: NotificationsRegistrationsAnonymousRouteDefinition,
         @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchClient) protected notificationsRegistrationsAnonymousBatchClient: NotificationsRegistrationsAnonymousBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -49,7 +49,7 @@ export class NotificationsRegistrationsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousRegistration): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
-        return this.apiClient.post<IAnonymousRegistration>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.create(), this.baasicNotificationsRegistrationsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousRegistration>(this.notificationsRegistrationsAnonymousRouteDefinition.create(), this.notificationsRegistrationsAnonymousRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsAnonymousClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAnonymousRegistration>>> {
-        return this.apiClient.get<IQueryModel<IAnonymousRegistration>>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IAnonymousRegistration>>(this.notificationsRegistrationsAnonymousRouteDefinition.find(options));
     }
 
     /**                          
@@ -92,11 +92,11 @@ export class NotificationsRegistrationsAnonymousClient {
                     });                         
      */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
-        return this.apiClient.get(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.get(id, options));
+        return this.apiClient.get(this.notificationsRegistrationsAnonymousRouteDefinition.get(id, options));
     }
 
     /**                          
-     * Returns a promise that is resolved once the remove anonymous registration action has been performed. This action will remove a anonymous registration resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicNotificationsRegistrationsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove anonymous registration action has been performed. This action will remove a anonymous registration resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(registration); 
      * var uri = params['model'].links('delete').href; 
@@ -114,11 +114,11 @@ export class NotificationsRegistrationsAnonymousClient {
                         });						        
      */
     remove(data: IAnonymousRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.notificationsRegistrationsAnonymousRouteDefinition.delete(data));
     }
 
     /**                          
-     * Returns a promise that is resolved once the update anonymous registration action has been performed; this action updates a anonymous registration resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicNotificationsRegistrationsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update anonymous registration action has been performed; this action updates a anonymous registration resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(registration); 
      * var uri = params['model'].links('put').href; 
@@ -137,7 +137,7 @@ export class NotificationsRegistrationsAnonymousClient {
                             }); 				        
      */
     update(data: IAnonymousRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.update(data), this.baasicNotificationsRegistrationsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.notificationsRegistrationsAnonymousRouteDefinition.update(data), this.notificationsRegistrationsAnonymousRouteDefinition.updateParams(data));
     }
 }
 

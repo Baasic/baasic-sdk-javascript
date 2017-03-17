@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsRegistrationsUsersBatchClient  
- * @description  Notifications Registrations Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersBatchClient` uses `baasicNotificationsRegistrationsUsersBatchRouteDefinition`. 
+ * @description  Notifications Registrations Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersBatchClient` uses `notificationsRegistrationsUsersBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,11 +14,11 @@ import { IUserRegistration } from 'modules/notifications/contracts';
 export class NotificationsRegistrationsUsersBatchClient {
 
     get routeDefinition(): NotificationsRegistrationsUsersBatchRouteDefinition {
-        return this.baasicNotificationsRegistrationsUsersBatchRouteDefinition;
+        return this.notificationsRegistrationsUsersBatchRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected baasicNotificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected notificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -40,7 +40,7 @@ export class NotificationsRegistrationsUsersBatchClient {
                 });                             
      */
     create(data: IUserRegistration[]): PromiseLike<IHttpResponse<IUserRegistration[]>> {
-        return this.apiClient.post<IUserRegistration[]>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserRegistration[]>(this.notificationsRegistrationsUsersBatchRouteDefinition.create(), this.notificationsRegistrationsUsersBatchRouteDefinition.createParams(data));
     }
 
     /**                              
@@ -57,7 +57,7 @@ export class NotificationsRegistrationsUsersBatchClient {
                     });		                            
      */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.notificationsRegistrationsUsersBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsUsersBatchClient {
                     });                             
      */
     update(data: IUserRegistration[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.update(), this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.notificationsRegistrationsUsersBatchRouteDefinition.update(), this.notificationsRegistrationsUsersBatchRouteDefinition.updateParams(data));
     }
 }
 

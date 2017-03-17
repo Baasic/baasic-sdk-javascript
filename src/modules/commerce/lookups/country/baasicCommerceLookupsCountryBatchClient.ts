@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceCountryBatchClient  
- * @description  Commerce Country Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryBatchClient` uses `baasicCommerceCountryBatchRouteDefinition`. 
+ * @description  Commerce Country Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryBatchClient` uses `commerceCountryBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsCountryBatchRouteDefinition, TYPES as commerceTypes } fr
 export class CommerceLookupsCountryBatchClient {
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsCountryBatchRouteDefinition) protected baasicCommerceLookupsCountryBatchRouteDefinition: CommerceLookupsCountryBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsCountryBatchRouteDefinition) protected commerceLookupsCountryBatchRouteDefinition: CommerceLookupsCountryBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -33,7 +33,7 @@ export class CommerceLookupsCountryBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceLookupsCountryBatchRouteDefinition.create(), this.baasicCommerceLookupsCountryBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsCountryBatchRouteDefinition.create(), this.commerceLookupsCountryBatchRouteDefinition.createParams(data));
     }
 
     /**                    
@@ -48,7 +48,7 @@ export class CommerceLookupsCountryBatchClient {
                       });                     
    **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicCommerceLookupsCountryBatchRouteDefinition.update(), this.baasicCommerceLookupsCountryBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsCountryBatchRouteDefinition.update(), this.commerceLookupsCountryBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
@@ -63,7 +63,7 @@ export class CommerceLookupsCountryBatchClient {
                    });		                    
     **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCommerceLookupsCountryBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsCountryBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

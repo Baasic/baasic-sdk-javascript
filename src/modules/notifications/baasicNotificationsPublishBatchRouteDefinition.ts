@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicNotificationsPublishBatchRouteDefinition  
+ * @module notificationsPublishBatchRouteDefinition  
  * @description Baasic Notifications Publish Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Publish Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -20,7 +20,7 @@ export class NotificationsPublishBatchRouteDefinition extends BaseRouteDefinitio
     /**                          
      * Parses create publish batch route; this route does not expose any additional options.                          
      * @method                      
-     * @example baasicNotificationsPublishBatchRouteDefinition.create();                          
+     * @example notificationsPublishBatchRouteDefinition.create();                          
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});

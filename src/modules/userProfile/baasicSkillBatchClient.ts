@@ -13,7 +13,7 @@ import { ISkill } from 'modules/userProfile/contracts';
 export class SkillBatchClient {
 
     constructor(
-        @inject(userProfileTypes.SkillBatchRouteDefinition) protected baasicSkillBatchRouteDefinition: SkillBatchRouteDefinition,
+        @inject(userProfileTypes.SkillBatchRouteDefinition) protected skillBatchRouteDefinition: SkillBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -35,7 +35,7 @@ export class SkillBatchClient {
                   });                   
      **/
     create(data: ISkill[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicSkillBatchRouteDefinition.create(), this.baasicSkillBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.skillBatchRouteDefinition.create(), this.skillBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -52,7 +52,7 @@ export class SkillBatchClient {
                     });                   
      **/
     update(data: ISkill[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicSkillBatchRouteDefinition.update(), this.baasicSkillBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.skillBatchRouteDefinition.update(), this.skillBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -69,7 +69,7 @@ export class SkillBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicSkillBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.skillBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

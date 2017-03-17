@@ -14,11 +14,11 @@ import { IMediaEntry } from 'modules/mediaVault/contracts';
 export class MediaVaultBatchClient {
 
     get routeDefinition(): MediaVaultBatchRouteDefinition {
-        return this.baasicMediaVaultBatchRouteDefinition;
+        return this.mediaVaultBatchRouteDefinition;
     }
 
     constructor(
-        @inject(mediaVaultTypes.MediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: MediaVaultBatchRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultBatchRouteDefinition) protected mediaVaultBatchRouteDefinition: MediaVaultBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -36,7 +36,7 @@ export class MediaVaultBatchClient {
                    });                   
     **/
     update(data: IMediaEntry[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicMediaVaultBatchRouteDefinition.update(), this.baasicMediaVaultBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.mediaVaultBatchRouteDefinition.update(), this.mediaVaultBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -61,7 +61,7 @@ export class MediaVaultBatchClient {
                             });	  	                  
      **/
     remove(data: any[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicMediaVaultBatchRouteDefinition.delete(), undefined, data);
+        return this.apiClient.delete<void>(this.mediaVaultBatchRouteDefinition.delete(), undefined, data);
     }
 }
 

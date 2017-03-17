@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceCustomerClient  
- * @description  Commerce Customer Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCustomerClient` uses `baasicCommerceCustomerRouteDefinition`. 
+ * @description  Commerce Customer Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCustomerClient` uses `commerceCustomerRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,13 +17,13 @@ export class CommerceCustomerClient {
     }
 
     get routeDefinition(): CommerceCustomerRouteDefinition {
-        return this.baasicCommerceCustomerRouteDefinition;
+        return this.commerceCustomerRouteDefinition;
     }
 
     constructor(
         @inject(commerceTypes.CommerceCustomerPaymentMethodClient) protected commerceCustomerPaymentMethodClient: CommerceCustomerPaymentMethodClient,
-        @inject(commerceTypes.CommerceCustomerRouteDefinition) protected baasicCommerceCustomerRouteDefinition: CommerceCustomerRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
+        @inject(commerceTypes.CommerceCustomerRouteDefinition) protected commerceCustomerRouteDefinition: CommerceCustomerRouteDefinition,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class CommerceCustomerClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.ApiClient.get(this.baasicCommerceCustomerRouteDefinition.find(options));
+        return this.apiClient.get(this.commerceCustomerRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,11 +59,11 @@ export class CommerceCustomerClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.get(this.baasicCommerceCustomerRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceCustomerRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCustomerRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCustomerRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = apiClient.removeParams(commerceCustomer); 
      * let uri = params['model'].links('put').href; 
@@ -80,11 +80,11 @@ export class CommerceCustomerClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.put<void>(this.baasicCommerceCustomerRouteDefinition.update(data), this.baasicCommerceCustomerRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceCustomerRouteDefinition.update(data), this.commerceCustomerRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCustomerRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCustomerRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = apiClient.removeParams(commerceCustomer); 
      * let uri = params['model'].links('delete').href; 
@@ -100,7 +100,7 @@ export class CommerceCustomerClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.delete<void>(this.baasicCommerceCustomerRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.commerceCustomerRouteDefinition.delete(data));
     }
 }
 

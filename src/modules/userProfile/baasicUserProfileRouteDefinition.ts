@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserProfileRouteDefinition  
+ * @module userProfileRouteDefinition  
  * @description Baasic User Profile Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -24,12 +24,12 @@ export class UserProfileRouteDefinition extends BaseRouteDefinition {
     public readonly deleteRoute: string = 'profiles/{id}';
 
     get acl(): UserProfileACLRouteDefinition {
-        return this.baasicUserProfileACLRouteDefinition;
+        return this.userProfileACLRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.UserProfileACLRouteDefinition) protected baasicUserProfileACLRouteDefinition: UserProfileACLRouteDefinition
+        @inject(userProfileTypes.UserProfileACLRouteDefinition) protected userProfileACLRouteDefinition: UserProfileACLRouteDefinition
     ) { super(appOptions); }
 
     /**                 
@@ -41,7 +41,7 @@ export class UserProfileRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example baasicUserProfileRouteDefinition.find.({searchQuery: '<search-phrase>'});                               
+     * @example userProfileRouteDefinition.find.({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -52,7 +52,7 @@ export class UserProfileRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id User profile id which uniquely identifies user profile resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example baasicUserProfileRouteDefinition.get(id, options);                               
+     * @example userProfileRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);

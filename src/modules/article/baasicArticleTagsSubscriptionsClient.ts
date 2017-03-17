@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module baasicArticleTagsSubscriptionsDefinition  
- * @description  Article Tags Subscriptions Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
+ * @description  Article Tags Subscriptions Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleTagsDefinition` uses `articleTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
@@ -13,11 +13,11 @@ import { IArticleTag, IArticleSubscription } from 'modules/article/contracts';
 export class ArticleTagsSubscriptionsClient {
 
     get routeDefinition(): ArticleTagsSubscriptionsRouteDefinition {
-        return this.baasicArticleTagsSubscriptionsRouteDefinition;
+        return this.articleTagsSubscriptionsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected articleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -33,7 +33,7 @@ export class ArticleTagsSubscriptionsClient {
                     });                     
      **/
     subscribe(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<IArticleSubscription>> {
-        return this.apiClient.post(this.baasicArticleTagsSubscriptionsRouteDefinition.subscribe(tag, data), this.baasicArticleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
+        return this.apiClient.post(this.articleTagsSubscriptionsRouteDefinition.subscribe(tag, data), this.articleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
     }
 
     /**                    
@@ -49,7 +49,7 @@ export class ArticleTagsSubscriptionsClient {
                     });                     
      **/
     isSubscribed(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<IArticleSubscription>> {
-        return this.apiClient.get(this.baasicArticleTagsSubscriptionsRouteDefinition.isSubscribed(tag, data));
+        return this.apiClient.get(this.articleTagsSubscriptionsRouteDefinition.isSubscribed(tag, data));
     }
 
     /**                     
@@ -66,7 +66,7 @@ export class ArticleTagsSubscriptionsClient {
                    });                     
     **/
     unSubscribe(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleTagsSubscriptionsRouteDefinition.unSubscribe(tag, data), this.baasicArticleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
+        return this.apiClient.delete<void>(this.articleTagsSubscriptionsRouteDefinition.unSubscribe(tag, data), this.articleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
     }
 }
 

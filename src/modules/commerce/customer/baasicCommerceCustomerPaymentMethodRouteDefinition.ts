@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceCustomerPaymentMethodRouteDefinition  
+ * @module commerceCustomerPaymentMethodRouteDefinition  
  * @description Baasic Commerce CustomerPaymentMethod Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce CustomerPaymentMethod Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -35,7 +35,7 @@ export class CommerceCustomerPaymentMethodRouteDefinition extends BaseRouteDefin
      * - `embed` - Comma separated list of resources to be contained within the current representation.                
      * @method                        
      * @param options Query resource options.
-     * @example baasicCommerceCustomerPaymentMethodRouteDefinition.find({searchQuery: '<search-phrase>'});                               **/
+     * @example commerceCustomerPaymentMethodRouteDefinition.find({searchQuery: '<search-phrase>'});                               **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
     }
@@ -43,7 +43,7 @@ export class CommerceCustomerPaymentMethodRouteDefinition extends BaseRouteDefin
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommerceCustomerPaymentMethodRouteDefinition.get(id, options);                               
+     * @example commerceCustomerPaymentMethodRouteDefinition.get(id, options);                               
      **/
     get(id: string, options: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, options);
@@ -52,7 +52,7 @@ export class CommerceCustomerPaymentMethodRouteDefinition extends BaseRouteDefin
     /**                 
      * Parses create commerce customer-payment-method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceCustomerPaymentMethodRouteDefinition.create();                              
+     * @example commerceCustomerPaymentMethodRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -61,7 +61,7 @@ export class CommerceCustomerPaymentMethodRouteDefinition extends BaseRouteDefin
     /**                 
      * Parses update commerce customer-payment-method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicCommerceCustomerPaymentMethodRouteDefinition.update(data);                              
+     * @example commerceCustomerPaymentMethodRouteDefinition.update(data);                              
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -70,7 +70,7 @@ export class CommerceCustomerPaymentMethodRouteDefinition extends BaseRouteDefin
     /**                 
     * Parses delete commerce customer-payment-method route; this URI template does not expose any additional options.                 
     * @method                        
-    * @example baasicCommerceCustomerPaymentMethodRouteDefinition.delete(data);                              
+    * @example commerceCustomerPaymentMethodRouteDefinition.delete(data);                              
     **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

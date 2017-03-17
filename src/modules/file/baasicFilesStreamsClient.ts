@@ -13,11 +13,11 @@ import { FilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
 export class FilesStreamsClient {
 
     get routeDefinition(): FilesStreamsRouteDefinition {
-        return this.baasicFilesStreamsRouteDefinition;
+        return this.filesStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(filesTypes.FilesStreamsRouteDefinition) protected baasicFilesStreamsRouteDefinition: FilesStreamsRouteDefinition,
+        @inject(filesTypes.FilesStreamsRouteDefinition) protected filesStreamsRouteDefinition: FilesStreamsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -44,7 +44,7 @@ export class FilesStreamsClient {
                         });                     
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicFilesStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.filesStreamsRouteDefinition.get(data));
     }
 
     /**                     
@@ -68,7 +68,7 @@ export class FilesStreamsClient {
                         });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicFilesStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.filesStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -94,7 +94,7 @@ export class FilesStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.baasicFilesStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.filesStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -111,7 +111,7 @@ export class FilesStreamsClient {
     create(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.baasicFilesStreamsRouteDefinition.create(data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.filesStreamsRouteDefinition.create(data), formData, { 'Content-Type': undefined });
     }
 }
 

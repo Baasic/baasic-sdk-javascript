@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module lookupClient 
- * @description  Lookup Client provides an easy way to consume  Lookup REST API end-points. In order to obtain needed routes `lookupClient` uses `baasicLookupRouteDefinition`. 
+ * @description  Lookup Client provides an easy way to consume  Lookup REST API end-points. In order to obtain needed routes `lookupClient` uses `lookupRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,11 +17,11 @@ export class LookupClient {
     private utility: Utility = new Utility();
 
     get routeDefinition(): LookupRouteDefinition {
-        return this.baasicLookupRouteDefinition;
+        return this.lookupRouteDefinition;
     }
 
     constructor(
-        @inject(membershipTypes.LookupRouteDefinition) protected baasicLookupRouteDefinition: LookupRouteDefinition,
+        @inject(membershipTypes.LookupRouteDefinition) protected lookupRouteDefinition: LookupRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -57,7 +57,7 @@ export class LookupClient {
         var opt = this.utility.extend({}, options, { embed: embed });
         var self = this;
         return this.apiClient.createPromise<any>((resolve, reject) => {
-            self.apiClient.get(this.baasicLookupRouteDefinition.get(opt))
+            self.apiClient.get(this.lookupRouteDefinition.get(opt))
                 .then<any>(function (data) {
                     data.data = self.getResponseData(embed, data.data);
                     resolve(data);

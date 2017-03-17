@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleInstanceFilesStreamsRouteDefinition  
+ * @module articleInstanceFilesStreamsRouteDefinition  
  * @description Baasic Article Instance Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -31,7 +31,7 @@ export class ArticleInstanceFilesStreamsRouteDefinition extends BaseRouteDefinit
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article file need to be retrieved.
      * @param data Article File object used to identify stream that needs to be retrieved from the system.    
-     * @example baasicArticleInstanceFilesRouteDefinition.get({id: '<filename>'});
+     * @example articleInstanceFilesRouteDefinition.get({id: '<filename>'});
      **/
     get(articleId: string, data: any): any {
         if (!this.utility.isObject(data)) {
@@ -49,7 +49,7 @@ export class ArticleInstanceFilesStreamsRouteDefinition extends BaseRouteDefinit
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article file need to be inserted.
      * @param data Article File object that need to be inserted into the system. 
-     * @example baasicArticleInstanceFilesRouteDefinition.create({filename: '<filename>'});                                   
+     * @example articleInstanceFilesRouteDefinition.create({filename: '<filename>'});                                   
      **/
     create(articleId: string, data: IArticleFile): any {
         let params = this.utility.extend({}, data);
@@ -64,7 +64,7 @@ export class ArticleInstanceFilesStreamsRouteDefinition extends BaseRouteDefinit
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article file need to be updated.
      * @param data Article File object used to identify stream that needs to be updated.                        
-     * @example baasicArticleFilesRouteDefinition.update({id: '<filename>'});
+     * @example articleFilesRouteDefinition.update({id: '<filename>'});
      **/
     update(articleId: string, data: IArticleFile): any {
         let params = this.utility.extend({}, data);

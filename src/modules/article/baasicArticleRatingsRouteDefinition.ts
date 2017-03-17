@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleRatingsRouteDefinition  
+ * @module articleRatingsRouteDefinition  
  * @description Baasic Article Ratings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Ratings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -34,7 +34,7 @@ export class ArticleRatingsRouteDefinition extends BaseRouteDefinition {
      * Parses create article rating route; this URI does not support any additional embed items.                 
      * @method 
      * @param data An article rating object that needs to be inserted into the system.                    
-     * @example baasicArticleRatingsRouteDefinition.create(data);                 
+     * @example articleRatingsRouteDefinition.create(data);                 
      **/
     create(data: IRating): any {
         return super.baseCreate(this.createRoute, data);
@@ -49,7 +49,7 @@ export class ArticleRatingsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method 
      * @param options Query resource options object.                       
-     * @example baasicArticleRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example articleRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -65,7 +65,7 @@ export class ArticleRatingsRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param username Username which uniquely identifies a user which has created an article rating.
      * @param options Query resource options object.                       
-     * @example baasicArticleRatingsRouteDefinition.find({username: '<username>'});                               
+     * @example articleRatingsRouteDefinition.find({username: '<username>'});                               
      **/
     findByUser(username: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
@@ -79,7 +79,7 @@ export class ArticleRatingsRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Id which uniquely identifies article rating resource that needs to be retrieved.
      * @param options Options object that contains embed data.                        
-     * @example baasicArticleRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
+     * @example articleRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -89,7 +89,7 @@ export class ArticleRatingsRouteDefinition extends BaseRouteDefinition {
      * Parses update article rating route; this URI does not support any additional embed items.                 
      * @method
      * @param data An article object used to update specified article rating resource.                     
-     * @example baasicArticleRatingsRouteDefinition.update(data);                 
+     * @example articleRatingsRouteDefinition.update(data);                 
      **/
     update(data: IRating): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -99,7 +99,7 @@ export class ArticleRatingsRouteDefinition extends BaseRouteDefinition {
     * Parses delete article rating route; this URI does not support any additional embed items.                 
     * @method
     * @param data An article object used to delete specified article rating resource.                     
-    * @example baasicArticleRatingsRouteDefinition.delete(data);                 
+    * @example articleRatingsRouteDefinition.delete(data);                 
     **/
     delete(data: IRating): any {
         return super.baseDelete(this.deleteRoute, data);

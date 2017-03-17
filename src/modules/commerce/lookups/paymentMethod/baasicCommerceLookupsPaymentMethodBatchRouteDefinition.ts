@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsPaymentMethodBatchRouteDefinition  
+ * @module commerceLookupsPaymentMethodBatchRouteDefinition  
  * @description Baasic Commerce Lookups Payment Method Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -25,7 +25,7 @@ export class CommerceLookupsPaymentMethodBatchRouteDefinition extends BaseRouteD
     /**                      
      * Parses create commerce country state batch route; this route does not expose any additional options                      
      * @method                    
-     * @example baasicCommerceLookupsPaymentMethodBatchRouteDefinition.create();                      
+     * @example commerceLookupsPaymentMethodBatchRouteDefinition.create();                      
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -34,7 +34,7 @@ export class CommerceLookupsPaymentMethodBatchRouteDefinition extends BaseRouteD
     /**                      
      * Parses remove commerce country state batch route; this route does not expose any additional options                      
      * @method                
-     * @example baasicCommerceLookupsPaymentMethodBatchRouteDefinition.update();                      
+     * @example commerceLookupsPaymentMethodBatchRouteDefinition.update();                      
      */
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -43,7 +43,7 @@ export class CommerceLookupsPaymentMethodBatchRouteDefinition extends BaseRouteD
     /**                      
      * Parses remove commerce country state batch route; this route does not expose any additional options                      
      * @method                    
-     * @example baasicCommerceLookupsPaymentMethodBatchRouteDefinition.remove();                      
+     * @example commerceLookupsPaymentMethodBatchRouteDefinition.remove();                      
      */
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

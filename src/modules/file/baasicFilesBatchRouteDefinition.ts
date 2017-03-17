@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicFilesBatchRouteDefinition  
+ * @module filesBatchRouteDefinition  
  * @description Baasic Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -23,7 +23,7 @@ export class FilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                       
-     * @example baasicFilesBatchRouteDefinition.update();                                  
+     * @example filesBatchRouteDefinition.update();                                  
      **/
     update(): any {
         return super.baseCreate(this.updateRoute, {});
@@ -32,7 +32,7 @@ export class FilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example baasicFilesBatchRouteDefinition.link();                                  
+     * @example filesBatchRouteDefinition.link();                                  
      **/
     link(): any {
         return super.baseCreate(this.linkRoute, {});
@@ -41,7 +41,7 @@ export class FilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses unlink route; this URI template does not expose any additional options.                                                        
      * @method                       
-     * @example baasicFilesBatchRouteDefinition.unlink();                                  
+     * @example filesBatchRouteDefinition.unlink();                                  
      **/
     unlink(): any {
         return super.baseCreate(this.unlinkRoute, {});

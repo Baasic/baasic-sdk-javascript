@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module userSocialLoginClient  
- * @description  User Social Login Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userSocialLoginClient` uses `baasicUserSocialLoginRouteDefinition`. 
+ * @description  User Social Login Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userSocialLoginClient` uses `userSocialLoginRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,7 +14,7 @@ import { IUserSocialLogin } from 'modules/membership/contracts';
 export class UserSocialLoginClient {
 
     constructor(
-        @inject(membershipTypes.UserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: UserSocialLoginRouteDefinition,
+        @inject(membershipTypes.UserSocialLoginRouteDefinition) protected userSocialLoginRouteDefinition: UserSocialLoginRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -32,7 +32,7 @@ export class UserSocialLoginClient {
                     });                     
      **/
     get(username: string): PromiseLike<IHttpResponse<IQueryModel<IUserSocialLogin>>> {
-        return this.apiClient.get<IQueryModel<IUserSocialLogin>>(this.baasicUserSocialLoginRouteDefinition.get(username));
+        return this.apiClient.get<IQueryModel<IUserSocialLogin>>(this.userSocialLoginRouteDefinition.get(username));
     }
 
     /**                     
@@ -50,7 +50,7 @@ export class UserSocialLoginClient {
                     });                     
      **/
     remove(username: string, provider: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicUserSocialLoginRouteDefinition.remove(username, provider));
+        return this.apiClient.delete<void>(this.userSocialLoginRouteDefinition.remove(username, provider));
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsSubscriptionsAnonymousBatchClient  
- * @description  Notifications Subscriptions Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousBatchClient` uses `baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition`. 
+ * @description  Notifications Subscriptions Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousBatchClient` uses `notificationsSubscriptionsAnonymousBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,11 +14,11 @@ import { IAnonymousSubscription } from 'modules/notifications/contracts';
 export class NotificationsSubscriptionsAnonymousBatchClient {
 
     get routeDefinition(): NotificationsSubscriptionsAnonymousBatchRouteDefinition {
-        return this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition;
+        return this.notificationsSubscriptionsAnonymousBatchRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition: NotificationsSubscriptionsAnonymousBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchRouteDefinition) protected notificationsSubscriptionsAnonymousBatchRouteDefinition: NotificationsSubscriptionsAnonymousBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -39,7 +39,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
                 });                             
      */
     create(data: IAnonymousSubscription[]): PromiseLike<IHttpResponse<IAnonymousSubscription[]>> {
-        return this.apiClient.post(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.create(), this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.notificationsSubscriptionsAnonymousBatchRouteDefinition.create(), this.notificationsSubscriptionsAnonymousBatchRouteDefinition.createParams(data));
     }
 
     /**                              
@@ -56,7 +56,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
                    });		                            
     */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.notificationsSubscriptionsAnonymousBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              
@@ -73,7 +73,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
                     });                             
      */
     update(data: IAnonymousSubscription[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.update(), this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.notificationsSubscriptionsAnonymousBatchRouteDefinition.update(), this.notificationsSubscriptionsAnonymousBatchRouteDefinition.updateParams(data));
     }
 }
 

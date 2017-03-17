@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMeteringCategoryBatchRouteDefinition  * @description Baasic Metering Category Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Category Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
+ * @module meteringCategoryBatchRouteDefinition  * @description Baasic Metering Category Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Category Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
@@ -23,7 +23,7 @@ export class MeteringCategoryBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     
      * @method                        
-     * @example baasicMeteringCategoryBatchRouteDefinition.create();                                  
+     * @example meteringCategoryBatchRouteDefinition.create();                                  
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -32,7 +32,7 @@ export class MeteringCategoryBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     
      * @method                        
-     * @example baasicMeteringCategoryBatchRouteDefinition.update();                                  
+     * @example meteringCategoryBatchRouteDefinition.update();                                  
      **/
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -41,7 +41,7 @@ export class MeteringCategoryBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses remove route; this URI template does not expose any additional options.                     
      * @method                         
-     * @example baasicMeteringCategoryBatchRouteDefinition.delete();                                  
+     * @example meteringCategoryBatchRouteDefinition.delete();                                  
      **/
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

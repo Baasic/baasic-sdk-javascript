@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsCommentRequiresModerationClient  
- * @description  Article Subscriptions Comment Requires Moderation Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentRequiresModerationClient` uses `baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition`. 
+ * @description  Article Subscriptions Comment Requires Moderation Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentRequiresModerationClient` uses `articleSubscriptionsCommentRequiresModerationRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,11 +14,11 @@ import { IArticleSubscription } from 'modules/article/contracts';
 export class ArticleSubscriptionsCommentRequiresModerationClient {
 
     get routeDefinition(): ArticleSubscriptionsCommentRequiresModerationRouteDefinition {
-        return this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition;
+        return this.articleSubscriptionsCommentRequiresModerationRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: ArticleSubscriptionsCommentRequiresModerationRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected articleSubscriptionsCommentRequiresModerationRouteDefinition: ArticleSubscriptionsCommentRequiresModerationRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -34,7 +34,7 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                         
      **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.articleSubscriptionsCommentRequiresModerationRouteDefinition.subscribe(data), data);
     }
 
     /**                         
@@ -49,7 +49,7 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                         
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.articleSubscriptionsCommentRequiresModerationRouteDefinition.isSubscribed(data));
     }
 
     /**                         
@@ -64,6 +64,6 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                        
      **/
     unSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.unSubscribe(data));
+        return this.apiClient.delete<void>(this.articleSubscriptionsCommentRequiresModerationRouteDefinition.unSubscribe(data));
     }
 }

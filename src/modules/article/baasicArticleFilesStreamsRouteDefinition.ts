@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleFilesStreamsRouteDefinition  
+ * @module articleFilesStreamsRouteDefinition  
  * @description Baasic Article Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -30,7 +30,7 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
      * - `width` - width of desired derived image.  
      * - `height` - height of desired derived image. 
      * @method
-     * @example baasicArticleFilesRouteDefinition.get({id: '<filename>'});
+     * @example articleFilesRouteDefinition.get({id: '<filename>'});
      **/
     get(data: any): any {
         if (!this.utility.isObject(data)) {
@@ -44,7 +44,7 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.                     
      * @method 
-     * @example baasicArticleFilesRouteDefinition.create({filename: '<filename>'});                                   
+     * @example articleFilesRouteDefinition.create({filename: '<filename>'});                                   
      **/
     create(data: IArticleFile): any {
         return super.baseCreate(this.createRoute, data);
@@ -55,7 +55,7 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
      * - `width` - width of derived image to update.                     
      * - `height` - height of derived image to update.                                        
      * @method                        
-     * @example baasicArticleFilesRouteDefinition.update({id: '<filename>'});
+     * @example articleFilesRouteDefinition.update({id: '<filename>'});
      **/
     update(data: IArticleFile): any {
         return super.baseUpdate(this.updateRoute, data);

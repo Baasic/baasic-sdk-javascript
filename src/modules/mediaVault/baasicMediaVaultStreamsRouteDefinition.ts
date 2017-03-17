@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMediaVaultStreamsRouteDefinition  
+ * @module mediaVaultStreamsRouteDefinition  
  * @description Baasic MediaVault Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -24,7 +24,7 @@ export class MediaVaultStreamsRouteDefinition extends BaseRouteDefinition {
      * - `width` - width of desired derived image.                     
      * - `height` - height of desired derived image.                                        
      * @method                    
-     * @example baasicMediaVaultRouteDefinition.get({id: '<path>'});                                   
+     * @example mediaVaultRouteDefinition.get({id: '<path>'});                                   
      **/
     get(data: any): any {
         if (this.utility.isObject(data)) {
@@ -38,7 +38,7 @@ export class MediaVaultStreamsRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this route should be expanded with the path which indicates where the stream will be saved.                     
      * @method                   
-     * @example baasicMediaVaultStreamsRouteDefinition.create({path: '<path>'});                                   
+     * @example mediaVaultStreamsRouteDefinition.create({path: '<path>'});                                   
      **/
     create(data: any): any {
         if (this.utility.isObject(data)) {
@@ -54,7 +54,7 @@ export class MediaVaultStreamsRouteDefinition extends BaseRouteDefinition {
      * - `width` - width of desired derived image.                     
      * - `height` - height of desired derived image.                                         
      * @method                   
-     * @example baasicMediaVaultStreamsRouteDefinition.update({id: '<path>'});                                   
+     * @example mediaVaultStreamsRouteDefinition.update({id: '<path>'});                                   
      **/
     update(data: any): any {
         if (this.utility.isObject(data)) {

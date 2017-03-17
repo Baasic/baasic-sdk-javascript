@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceRecurringCyclePeriodTypeBatchClient  
- * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceRecurringCyclePeriodTypeBatchClient` uses `baasicCommerceRecurringCyclePeriodTypeBatchRouteDefinition`. 
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceRecurringCyclePeriodTypeBatchClient` uses `commerceRecurringCyclePeriodTypeBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition, TYPES as c
 export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -34,7 +34,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.create(), this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.create(), this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -49,7 +49,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.update(), this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.update(), this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
@@ -64,7 +64,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

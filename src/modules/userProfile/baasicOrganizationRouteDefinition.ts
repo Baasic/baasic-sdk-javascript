@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicOrganizationRouteDefinition  
+ * @module organizationRouteDefinition  
  * @description Baasic Organization Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -24,12 +24,12 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
     public readonly deleteRoute: string = 'lookups/organizations/{id}';
 
     get batch(): OrganizationBatchRouteDefinition {
-        return this.baasicOrganizationBatchRouteDefinition;
+        return this.organizationBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.OrganizationBatchRouteDefinition) protected baasicOrganizationBatchRouteDefinition: OrganizationBatchRouteDefinition
+        @inject(userProfileTypes.OrganizationBatchRouteDefinition) protected organizationBatchRouteDefinition: OrganizationBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                 
@@ -41,7 +41,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example baasicOrganizationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example organizationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -52,7 +52,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Organization id which uniquely identifies resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example baasicOrganizationRouteDefinition.get(id, options);                               
+     * @example organizationRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -61,7 +61,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example baasicOrganizationRouteDefinition.create();                              
+     * @example organizationRouteDefinition.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -71,7 +71,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this URI template does not expose any additional options.                 
      * @method
      * @param data An organization object used to update specified organization resource.                        
-     * @example baasicOrganizationRouteDefinition.updata(data);                              
+     * @example organizationRouteDefinition.updata(data);                              
      **/
     update(data: IOrganization): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -81,7 +81,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
      * Parses delete route; this URI template does not expose any additional options.                 
      * @method
      * @param data An organization object used to delete specified organization resource.                        
-     * @example baasicOrganizationRouteDefinition.delete(data);                              
+     * @example organizationRouteDefinition.delete(data);                              
      **/
     delete(data: IOrganization): any {
         return super.baseDelete(this.deleteRoute, data);

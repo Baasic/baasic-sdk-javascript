@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleClient  
- * @description  Articles Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleClient` uses `baasicArticleRouteDefinition`. 
+ * @description  Articles Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleClient` uses `articleRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -29,12 +29,12 @@ export class ArticleClient {
     private utility: Utility = new Utility();
 
     /**
-     * Provides direct access to `baasicArticleRouteDefinition`.
+     * Provides direct access to `articleRouteDefinition`.
      * @method 
      * @example articleClient.routeDefinition.get();
      **/
     get routeDefinition(): ArticleRouteDefinition {
-        return this.baasicArticleRouteDefinition;
+        return this.articleRouteDefinition;
     }
 
     get comments(): ArticleInstanceCommentsClient {
@@ -69,7 +69,7 @@ export class ArticleClient {
         @inject(articleTypes.ArticleInstanceRatingsClient) protected articleInstanceRatingsClient: ArticleInstanceRatingsClient,
         @inject(articleTypes.ArticleInstanceTagsClient) protected articleInstanceTagsClient: ArticleInstanceTagsClient,
         @inject(articleTypes.ArticleInstanceSubscriptionsClient) protected articleInstanceSubscriptionsClient: ArticleInstanceSubscriptionsClient,
-        @inject(articleTypes.ArticleRouteDefinition) protected baasicArticleRouteDefinition: ArticleRouteDefinition,
+        @inject(articleTypes.ArticleRouteDefinition) protected articleRouteDefinition: ArticleRouteDefinition,
         @inject(articleTypes.ArticleACLClient) protected articleACLClient: ArticleACLClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -97,7 +97,7 @@ export class ArticleClient {
                 });                   
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticle>>> {
-        return this.apiClient.get<IQueryModel<IArticle>>(this.baasicArticleRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticle>>(this.articleRouteDefinition.find(options));
     }
 
     /**                 
@@ -115,7 +115,7 @@ export class ArticleClient {
                     });                
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticle>> {
-        return this.apiClient.get<IArticle>(this.baasicArticleRouteDefinition.get(id, options));
+        return this.apiClient.get<IArticle>(this.articleRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -139,11 +139,11 @@ export class ArticleClient {
                 });                 
      **/
     create(data: IArticle): PromiseLike<IHttpResponse<IArticle>> {
-        return this.apiClient.post<IArticle>(this.baasicArticleRouteDefinition.create(), this.baasicArticleRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticle>(this.articleRouteDefinition.create(), this.articleRouteDefinition.createParams(data));
     }
 
     /**                 
-     * Returns a promise that is resolved once the update article action has been performed; this action updates an article resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article action has been performed; this action updates an article resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('put').href; 
@@ -162,7 +162,7 @@ export class ArticleClient {
                         });                
      **/
     update(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.update(data), this.baasicArticleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleRouteDefinition.update(data), this.articleRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -189,7 +189,7 @@ export class ArticleClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove article action has been performed. If the action is successfully completed, the article resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article action has been performed. If the action is successfully completed, the article resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(article); 
      * let uri = params['model'].links('delete').href; 
@@ -207,11 +207,11 @@ export class ArticleClient {
                         });		               
      **/
     remove(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.articleRouteDefinition.delete(data));
     }
 
     /**                 
-     * Returns a promise that is resolved once the archive article action has been performed. This action sets the status of an article from "published" to "archive". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the archive article action has been performed. This action sets the status of an article from "published" to "archive". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('archive').href; 
@@ -230,7 +230,7 @@ export class ArticleClient {
                         });		               
      **/
     archive(data: IArticle, options: IArticleOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.archive(data), this.baasicArticleRouteDefinition.updateParams(options));
+        return this.apiClient.put<void>(this.articleRouteDefinition.archive(data), this.articleRouteDefinition.updateParams(options));
     }
 
     /**                 
@@ -252,11 +252,11 @@ export class ArticleClient {
                             });		               
      **/
     restore(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.restore(data), this.baasicArticleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleRouteDefinition.restore(data), this.articleRouteDefinition.updateParams(data));
     }
 
     /**                 
-     * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('unpublish').href; 
@@ -274,7 +274,7 @@ export class ArticleClient {
                             });		               
      **/
     unpublish(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.unpublish(data), this.baasicArticleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleRouteDefinition.unpublish(data), this.articleRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -292,7 +292,7 @@ export class ArticleClient {
                     });		               
      **/
     publish(data: IArticle, articleOptions: IArticleOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.publish(data), this.baasicArticleRouteDefinition.updateParams(articleOptions));
+        return this.apiClient.put<void>(this.articleRouteDefinition.publish(data), this.articleRouteDefinition.updateParams(articleOptions));
     }
 
     /**                 
@@ -307,7 +307,7 @@ export class ArticleClient {
                     });		               
      **/
     purge(options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleRouteDefinition.purge(options));
+        return this.apiClient.delete<void>(this.articleRouteDefinition.purge(options));
     }
 }
 

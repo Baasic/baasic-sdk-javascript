@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceCustomerPaymentMethodClient  
- * @description  Commerce CustomerPaymentMethod Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCustomerPaymentMethodClient` uses `baasicCommerceCustomerPaymentMethodRouteDefinition`. 
+ * @description  Commerce CustomerPaymentMethod Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCustomerPaymentMethodClient` uses `commerceCustomerPaymentMethodRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,12 +13,12 @@ import { CommerceCustomerPaymentMethodRouteDefinition, TYPES as commerceTypes } 
 export class CommerceCustomerPaymentMethodClient {
 
     get routeDefinition(): CommerceCustomerPaymentMethodRouteDefinition {
-        return this.baasicCommerceCustomerPaymentMethodRouteDefinition;
+        return this.commerceCustomerPaymentMethodRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceCustomerPaymentMethodRouteDefinition) protected baasicCommerceCustomerPaymentMethodRouteDefinition: CommerceCustomerPaymentMethodRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
+        @inject(commerceTypes.CommerceCustomerPaymentMethodRouteDefinition) protected commerceCustomerPaymentMethodRouteDefinition: CommerceCustomerPaymentMethodRouteDefinition,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -41,7 +41,7 @@ export class CommerceCustomerPaymentMethodClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.ApiClient.get(this.baasicCommerceCustomerPaymentMethodRouteDefinition.find(options));
+        return this.apiClient.get(this.commerceCustomerPaymentMethodRouteDefinition.find(options));
     }
 
     /**                 
@@ -56,11 +56,11 @@ export class CommerceCustomerPaymentMethodClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.get(this.baasicCommerceCustomerPaymentMethodRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceCustomerPaymentMethodRouteDefinition.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCustomerPaymentMethodRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCustomerPaymentMethodRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commerceCustomerPaymentMethod); 
      * var uri = params['model'].links('put').href; 
@@ -77,7 +77,7 @@ export class CommerceCustomerPaymentMethodClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.put<void>(this.baasicCommerceCustomerPaymentMethodRouteDefinition.update(data), this.baasicCommerceCustomerPaymentMethodRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceCustomerPaymentMethodRouteDefinition.update(data), this.commerceCustomerPaymentMethodRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -96,7 +96,7 @@ export class CommerceCustomerPaymentMethodClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.ApiClient.post(this.baasicCommerceCustomerPaymentMethodRouteDefinition.create(), this.baasicCommerceCustomerPaymentMethodRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceCustomerPaymentMethodRouteDefinition.create(), this.commerceCustomerPaymentMethodRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -116,7 +116,7 @@ export class CommerceCustomerPaymentMethodClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.ApiClient.delete<void>(this.baasicCommerceCustomerPaymentMethodRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.commerceCustomerPaymentMethodRouteDefinition.delete(data));
     }
 }
 

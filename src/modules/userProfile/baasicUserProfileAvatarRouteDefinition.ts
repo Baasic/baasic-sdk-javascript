@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserProfileAvatarRouteDefinition  
+ * @module userProfileAvatarRouteDefinition  
  * @description Baasic User Profile Avatar Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -22,12 +22,12 @@ export class UserProfileAvatarRouteDefinition extends BaseRouteDefinition {
     public readonly unlinkRoute: string = 'profiles/{userId}/avatars/unlink';
 
     get streams(): UserProfileAvatarStreamsRouteDefinition {
-        return this.baasicUserProfileAvatarStreamsRouteDefinition;
+        return this.userProfileAvatarStreamsRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.UserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: UserProfileAvatarStreamsRouteDefinition
+        @inject(userProfileTypes.UserProfileAvatarStreamsRouteDefinition) protected userProfileAvatarStreamsRouteDefinition: UserProfileAvatarStreamsRouteDefinition
     ) { super(appOptions); }
 
     /**                 
@@ -35,7 +35,7 @@ export class UserProfileAvatarRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
      * @param options Query resource options object.                       
-     * @example baasicUserProfileAvatarRouteDefinition.get({id: '<file-id>'});                               
+     * @example userProfileAvatarRouteDefinition.get({id: '<file-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -45,7 +45,7 @@ export class UserProfileAvatarRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this URI template does not expose any additional options.                 
      * @method
      * @param data A Profile Avatar object used to update specified Profile Avatar resource.                        
-     * @example baasicUserProfileAvatarRouteDefinition.update(data);                              
+     * @example userProfileAvatarRouteDefinition.update(data);                              
      **/
     update(data: IProfileAvatar): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -56,7 +56,7 @@ export class UserProfileAvatarRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved. 
      * @param data A Profile Avatar object used to link specified Profile Avatar resource.                      
-     * @example baasicUserProfileAvatarRouteDefinition.link({id: '<file-id>'});                              
+     * @example userProfileAvatarRouteDefinition.link({id: '<file-id>'});                              
      **/
     link(id: string, data: IProfileAvatar): any {
         let params = this.utility.extend({}, data);
@@ -69,7 +69,7 @@ export class UserProfileAvatarRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param data A Profile Avatar object used to unlink specified Profile Avatar resource.
      * @param options Query resource options object.                         
-     * @example baasicUserProfileAvatarRouteDefinition.unlink(data);                              
+     * @example userProfileAvatarRouteDefinition.unlink(data);                              
      **/
     unlink(data: IProfileAvatar, options?: any): any {
         if (!options) {

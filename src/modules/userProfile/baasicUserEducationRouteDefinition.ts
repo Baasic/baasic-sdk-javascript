@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserEducationRouteDefinition  
+ * @module userEducationRouteDefinition  
  * @description Baasic User Education Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -33,7 +33,7 @@ export class UserEducationRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example baasicUserEducationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example userEducationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -44,7 +44,7 @@ export class UserEducationRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param id User education id which uniquely identifies user education resource that needs to be retrieved. 
      * @param options Query resource options object.                      
-     * @example baasicUserEducationRouteDefinition.get(id);                               
+     * @example userEducationRouteDefinition.get(id);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -54,7 +54,7 @@ export class UserEducationRouteDefinition extends BaseRouteDefinition {
      * Parses create route; this URI template does not expose any additional options.                 
      * @method
      * @param data An user education object that needs to be inserted into the system.                        
-     * @example baasicUserEducationRouteDefinition.create(data);                              
+     * @example userEducationRouteDefinition.create(data);                              
      **/
     create(data: IUserEducation): any {
         return super.baseCreate(this.createRoute, data);
@@ -64,7 +64,7 @@ export class UserEducationRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this URI template does not expose any additional options.                 
      * @method
      * @param data An user education object used to update specified skill resource.                        
-     * @example baasicUserEducationRouteDefinition.update(data);                              
+     * @example userEducationRouteDefinition.update(data);                              
      **/
     update(data: IUserEducation): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -74,7 +74,7 @@ export class UserEducationRouteDefinition extends BaseRouteDefinition {
      * Parses delte route; this URI template does not expose any additional options.                 
      * @method
      * @param data An user education object used to delete specified skill resource.                        
-     * @example baasicUserEducationRouteDefinition.delete(data);                              
+     * @example userEducationRouteDefinition.delete(data);                              
      **/
     delete(data: IUserEducation): any {
         return super.baseDelete(this.deleteRoute, data);

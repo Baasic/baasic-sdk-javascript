@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module meteringACLClient  
- * @description  Metering ACL Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringACLClient` uses `baasicMeteringACLRouteDefinition`. 
+ * @description  Metering ACL Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringACLClient` uses `meteringACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { MeteringACLRouteDefinition, TYPES as meteringTypes } from 'modules/mete
 export class MeteringACLClient {
 
     constructor(
-        @inject(meteringTypes.MeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: MeteringACLRouteDefinition,
+        @inject(meteringTypes.MeteringACLRouteDefinition) protected meteringACLRouteDefinition: MeteringACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -31,7 +31,7 @@ export class MeteringACLClient {
                    });                     
     **/
     get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get<IACLPolicy[]>(this.baasicMeteringACLRouteDefinition.get(options));
+        return this.apiClient.get<IACLPolicy[]>(this.meteringACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -50,7 +50,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.put<IACLPolicy[]>(this.baasicMeteringACLRouteDefinition.update(options), this.baasicMeteringACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.meteringACLRouteDefinition.update(options), this.meteringACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -75,7 +75,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     removeByUser(id: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicMeteringACLRouteDefinition.deleteByUser(id, action, user, data));
+        return this.apiClient.delete<void>(this.meteringACLRouteDefinition.deleteByUser(id, action, user, data));
     }
 
     /**                     
@@ -100,7 +100,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     removeByRole(id: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicMeteringACLRouteDefinition.deleteByRole(id, action, role, data));
+        return this.apiClient.delete<void>(this.meteringACLRouteDefinition.deleteByRole(id, action, role, data));
     }
 }
 

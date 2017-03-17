@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module templatingBatchClient  
- * @description  Templating Batch Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingBatchClient` uses `baasicTemplatingBatchRouteDefinition`. 
+ * @description  Templating Batch Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingBatchClient` uses `templatingBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from 'inversify';
@@ -14,12 +14,12 @@ import { ITemplate } from 'modules/templating/contracts';
 export class TemplatingBatchClient {
 
     constructor(
-        @inject(templatingTypes.TemplatingBatchRouteDefinition) protected baasicTemplatingBatchRouteDefinition: TemplatingBatchRouteDefinition,
+        @inject(templatingTypes.TemplatingBatchRouteDefinition) protected templatingBatchRouteDefinition: TemplatingBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     get routeDefinition(): TemplatingBatchRouteDefinition {
-        return this.baasicTemplatingBatchRouteDefinition;
+        return this.templatingBatchRouteDefinition;
     }
 
     /**                     
@@ -36,7 +36,7 @@ export class TemplatingBatchClient {
                     });                     
     **/
     create(data: ITemplate[]): PromiseLike<IHttpResponse<IResponse[]>> {
-        return this.apiClient.post<IResponse[]>(this.baasicTemplatingBatchRouteDefinition.create(), this.baasicTemplatingBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IResponse[]>(this.templatingBatchRouteDefinition.create(), this.templatingBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -53,7 +53,7 @@ export class TemplatingBatchClient {
                     });                     
      **/
     update(data: ITemplate[]): PromiseLike<IHttpResponse<IResponse[]>> {
-        return this.apiClient.put<IResponse[]>(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<IResponse[]>(this.templatingBatchRouteDefinition.update(), this.templatingBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
@@ -70,7 +70,7 @@ export class TemplatingBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicTemplatingBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.templatingBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

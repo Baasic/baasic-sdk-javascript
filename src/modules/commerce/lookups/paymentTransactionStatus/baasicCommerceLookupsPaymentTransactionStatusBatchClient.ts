@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commercePaymentTransactionStatusBatchClient  
- * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionStatusBatchClient` uses `baasicCommercePaymentTransactionStatusBatchRouteDefinition`. 
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionStatusBatchClient` uses `commercePaymentTransactionStatusBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceLookupsPaymentTransactionStatusBatchRouteDefinition, TYPES as c
 export class CommerceLookupsPaymentTransactionStatusBatchClient {
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusBatchRouteDefinition) protected baasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition: CommerceLookupsPaymentTransactionStatusBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusBatchRouteDefinition) protected commerceLookupsPaymentTransactionStatusBatchRouteDefinition: CommerceLookupsPaymentTransactionStatusBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -33,7 +33,7 @@ export class CommerceLookupsPaymentTransactionStatusBatchClient {
                });                     
     **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition.create(), this.baasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.create(), this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -48,7 +48,7 @@ export class CommerceLookupsPaymentTransactionStatusBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition.update(), this.baasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.update(), this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
@@ -63,7 +63,7 @@ export class CommerceLookupsPaymentTransactionStatusBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

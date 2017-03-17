@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicLoginSocialRouteDefinition  
+ * @module loginSocialRouteDefinition  
  * @description Baasic Login Social Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Social Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -30,7 +30,7 @@ export class LoginSocialRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param provider Provider name or id for which the login URL should be generated.
      * @param returnUrl Redirect Uri for the provider which will be used when the user is redirected back to the application.                        
-     * @example baasicLoginSocialRouteDefinition.get({   provider : '<provider>',   returnUrl: '<returnUrl>' });                                
+     * @example loginSocialRouteDefinition.get({   provider : '<provider>',   returnUrl: '<returnUrl>' });                                
      **/
     get(provider: string, returnUrl: string): any {
         let params = {

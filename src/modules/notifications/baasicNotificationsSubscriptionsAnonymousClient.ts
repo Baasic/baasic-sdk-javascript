@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsSubscriptionsAnonymousClient  
- * @description  Notifications Subscriptions Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousClient` uses `baasicNotificationsSubscriptionsAnonymousRouteDefinition`. 
+ * @description  Notifications Subscriptions Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousClient` uses `notificationsSubscriptionsAnonymousRouteDefinition`. 
  */
 
 
@@ -15,11 +15,11 @@ import { IAnonymousSubscription } from 'modules/notifications/contracts';
 export class NotificationsSubscriptionsAnonymousClient {
 
     routeDefinition(): NotificationsSubscriptionsAnonymousRouteDefinition {
-        return this.baasicNotificationsSubscriptionsAnonymousRouteDefinition;
+        return this.notificationsSubscriptionsAnonymousRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected notificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -40,7 +40,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousSubscription): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.apiClient.post<IAnonymousSubscription>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.create(), this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousSubscription>(this.notificationsSubscriptionsAnonymousRouteDefinition.create(), this.notificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -66,7 +66,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAnonymousSubscription>>> {
-        return this.apiClient.get<IQueryModel<IAnonymousSubscription>>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.find())
+        return this.apiClient.get<IQueryModel<IAnonymousSubscription>>(this.notificationsSubscriptionsAnonymousRouteDefinition.find())
     }
 
     /**                          
@@ -84,11 +84,11 @@ export class NotificationsSubscriptionsAnonymousClient {
                     });                         
      */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.apiClient.get<IAnonymousSubscription>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.get(id, options));
+        return this.apiClient.get<IAnonymousSubscription>(this.notificationsSubscriptionsAnonymousRouteDefinition.get(id, options));
     }
 
     /**                          
-     * Returns a promise that is resolved once the remove anonymous subscription action has been performed. This action will remove a anonymous subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicNotificationsSubscriptionsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove anonymous subscription action has been performed. This action will remove a anonymous subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(subscription); 
      * var uri = params['model'].links('delete').href; 
@@ -106,11 +106,11 @@ export class NotificationsSubscriptionsAnonymousClient {
                             });						        
      */
     remove(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.notificationsSubscriptionsAnonymousRouteDefinition.delete(data));
     }
 
     /**                          
-     * Returns a promise that is resolved once the update anonymous subscription action has been performed; this action updates a anonymous subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicNotificationsSubscriptionsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update anonymous subscription action has been performed; this action updates a anonymous subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(subscription); 
      * let uri = params['model'].links('put').href; 
@@ -129,7 +129,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                         }); 				        
      */
     update(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.update(data), this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.notificationsSubscriptionsAnonymousRouteDefinition.update(data), this.notificationsSubscriptionsAnonymousRouteDefinition.updateParams(data));
     }
 }
 

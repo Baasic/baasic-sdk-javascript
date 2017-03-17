@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module meteringStatisticsClient  
- * @description  Metering Statistics Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringStatisticsClient` uses `baasicMeteringStatisticsRouteDefinition`. 
+ * @description  Metering Statistics Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringStatisticsClient` uses `meteringStatisticsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,7 +14,7 @@ import { IMeteringData } from 'modules/metering/contracts';
 export class MeteringStatisticsClient {
 
     constructor(
-        @inject(meteringTypes.MeteringStatisticsRouteDefinition) protected baasicMeteringStatisticsRouteDefinition: MeteringStatisticsRouteDefinition,
+        @inject(meteringTypes.MeteringStatisticsRouteDefinition) protected meteringStatisticsRouteDefinition: MeteringStatisticsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -41,7 +41,7 @@ export class MeteringStatisticsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMeteringData>>> {
-        return this.apiClient.get<IQueryModel<IMeteringData>>(this.baasicMeteringStatisticsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IMeteringData>>(this.meteringStatisticsRouteDefinition.find(options));
     }
 }
 

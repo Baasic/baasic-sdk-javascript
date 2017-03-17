@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCommercePaymentTransactionRouteDefinition  
+ * @module commercePaymentTransactionRouteDefinition  
  * @description Baasic Commerce PaymentTransaction Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce PaymentTransaction Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
@@ -41,7 +41,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example baasicCommercePaymentTransactionRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commercePaymentTransactionRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -50,7 +50,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommercePaymentTransactionRouteDefinition.get(id, options);                               
+     * @example commercePaymentTransactionRouteDefinition.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -59,7 +59,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses create route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommercePaymentTransactionRouteDefinition.create();                               
+     * @example commercePaymentTransactionRouteDefinition.create();                               
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -68,7 +68,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses update route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommercePaymentTransactionRouteDefinition.update(data);                               
+     * @example commercePaymentTransactionRouteDefinition.update(data);                               
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -77,7 +77,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses delete route; this route doesn't expose any properties.                 
      * @method                        
-     * @example baasicCommercePaymentTransactionRouteDefinition.delete(data);                               
+     * @example commercePaymentTransactionRouteDefinition.delete(data);                               
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicRegisterRouteDefinition  
+ * @module registerRouteDefinition  
  * @description Baasic Register Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Register Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -26,7 +26,7 @@ export class RegisterRouteDefinition extends BaseRouteDefinition {
     /** 			
      * Parses register route, this route doesn't support any additional properties. 			
      * @method        			
-     * @example baasicRegisterRouteDefinition.create();               			
+     * @example registerRouteDefinition.create();               			
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -36,7 +36,7 @@ export class RegisterRouteDefinition extends BaseRouteDefinition {
      * Parses activation route; route should be expanded with the `activationToken` which uniquely identifies the user account that needs to be activated. 			
      * @method
      * @param data Security code which uniquely identifies user account that needs to be activated.        			
-     * @example baasicRegisterRouteDefinition.activate({activationToken: '<activation-token>'});               			
+     * @example registerRouteDefinition.activate({activationToken: '<activation-token>'});               			
      **/
     activate(data: string): any {
         let params = this.modelMapper.getParams(data, undefined, 'activationToken');

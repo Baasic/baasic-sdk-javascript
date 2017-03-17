@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsSubscriptionsClient  
- * @description  Notifications Subscriptions Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsClient` uses `baasicNotificationsSubscriptionsRouteDefinition`. 
+ * @description  Notifications Subscriptions Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsClient` uses `notificationsSubscriptionsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -16,7 +16,7 @@ import {
 export class NotificationsSubscriptionsClient {
 
     get routeDefinition(): NotificationsSubscriptionsRouteDefinition {
-        return this.baasicNotificationsSubscriptionsRouteDefinition;
+        return this.notificationsSubscriptionsRouteDefinition;
     }
 
     get anonymous(): NotificationsSubscriptionsAnonymousClient {
@@ -28,7 +28,7 @@ export class NotificationsSubscriptionsClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsRouteDefinition) protected baasicNotificationsSubscriptionsRouteDefinition: NotificationsSubscriptionsRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsRouteDefinition) protected notificationsSubscriptionsRouteDefinition: NotificationsSubscriptionsRouteDefinition,
         @inject(notificationsTypes.NotificationsSubscriptionsAnonymousClient) protected notificationsSubscriptionsAnonymousClient: NotificationsSubscriptionsAnonymousClient,
         @inject(notificationsTypes.NotificationsSubscriptionsUsersClient) protected notificationsSubscriptionsUsersClient: NotificationsSubscriptionsUsersClient
     ) { }

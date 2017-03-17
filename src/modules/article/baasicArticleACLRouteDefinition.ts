@@ -24,7 +24,7 @@ export class ArticleACLRouteDefinition extends BaseRouteDefinition {
     /** 					
      * Parses get article acl route; this URI template should be expanded with the Id of the article.										
      * @method      					
-     * @example baasicArticleACLRouteDefinition.get({id: '<article-id>'}); 					
+     * @example articleACLRouteDefinition.get({id: '<article-id>'}); 					
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
@@ -34,7 +34,7 @@ export class ArticleACLRouteDefinition extends BaseRouteDefinition {
     /** 				
      * Parses update article acl route; this URI template should be expanded with the Id of the article.
      * @method      					
-     * @example baasicArticleACLRouteDefinition.update({id: '<article-id>'}); 					
+     * @example articleACLRouteDefinition.update({id: '<article-id>'}); 					
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
@@ -56,7 +56,7 @@ export class ArticleACLRouteDefinition extends BaseRouteDefinition {
      *               "Update"
      * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
      * @param data An ACL policy object that needs to be updated in the system.      					
-     * @example baasicArticleACLRouteDefinition.deleteByUser({     
+     * @example articleACLRouteDefinition.deleteByUser({     
                         id: '<article-id>',     
                         accessAction: '<access-action>',     
                         user: '<username>' 
@@ -85,7 +85,7 @@ export class ArticleACLRouteDefinition extends BaseRouteDefinition {
      *               "Update"
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
      * @param data An ACL policy object that needs to be updated in the system.      					
-     * @example baasicArticleACLRouteDefinition.deleteByRole({     
+     * @example articleACLRouteDefinition.deleteByRole({     
                     id: '<article-id>',    
                     accessAction: '<access-action>',     
                     role: '<role-name>' 

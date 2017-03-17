@@ -19,7 +19,7 @@ import { IArticleFile } from 'modules/article/contracts';
 export class ArticleFilesClient {
 
     get routeDefinition(): ArticleFilesRouteDefinition {
-        return this.baasicArticleFilesRouteDefinition;
+        return this.articleFilesRouteDefinition;
     }
 
     get streams(): ArticleFilesStreamsClient {
@@ -31,7 +31,7 @@ export class ArticleFilesClient {
     }
 
     constructor(
-        @inject(articleTypes.ArticleFilesRouteDefinition) protected baasicArticleFilesRouteDefinition: ArticleFilesRouteDefinition,
+        @inject(articleTypes.ArticleFilesRouteDefinition) protected articleFilesRouteDefinition: ArticleFilesRouteDefinition,
         @inject(articleTypes.ArticleFilesStreamsClient) protected articleFilesStreamsClient: ArticleFilesStreamsClient,
         @inject(articleTypes.ArticleFilesBatchClient) protected ArticleFilesBatchClient: ArticleFilesBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -57,7 +57,7 @@ export class ArticleFilesClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleFile>>> {
-        return this.apiClient.get<IQueryModel<IArticleFile>>(this.baasicArticleFilesRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticleFile>>(this.articleFilesRouteDefinition.find(options));
     }
 
     /**                 
@@ -75,7 +75,7 @@ export class ArticleFilesClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.apiClient.get(this.baasicArticleFilesRouteDefinition.get(id, options));
+        return this.apiClient.get(this.articleFilesRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -89,7 +89,7 @@ export class ArticleFilesClient {
      * @param options options object.
      * @returns A promise that is resolved once the unlink action has been performed.                          
      * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
-                    baasicArticleFilesRouteDefinition.remove(fileEntry)
+                    articleFilesRouteDefinition.remove(fileEntry)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -101,7 +101,7 @@ export class ArticleFilesClient {
         if (!options) {
             options = {};
         }
-        return this.apiClient.delete<void>(this.baasicArticleFilesRouteDefinition.unlink(data, options));
+        return this.apiClient.delete<void>(this.articleFilesRouteDefinition.unlink(data, options));
     }
 
     /**                  
@@ -124,7 +124,7 @@ export class ArticleFilesClient {
                        }); 				
     **/
     update(data: IArticleFile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleFilesRouteDefinition.update(data), this.baasicArticleFilesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleFilesRouteDefinition.update(data), this.articleFilesRouteDefinition.updateParams(data));
     }
 
     /** 
@@ -141,7 +141,7 @@ export class ArticleFilesClient {
                     });                 
      **/
     link(data: IArticleFile): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.apiClient.post(this.baasicArticleFilesRouteDefinition.link(), this.baasicArticleFilesRouteDefinition.createParams(data));
+        return this.apiClient.post(this.articleFilesRouteDefinition.link(), this.articleFilesRouteDefinition.createParams(data));
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsArticleModuleClient  
- * @description  Article Subscriptions Article Module Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
+ * @description  Article Subscriptions Article Module Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `articleSubscriptionsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,11 +14,11 @@ import { IArticleSubscription } from 'modules/article/contracts';
 export class ArticleSubscriptionsClient {
 
     get routeDefinition(): ArticleSubscriptionsRouteDefinition {
-        return this.baasicArticleSubscriptionsRouteDefinition;
+        return this.articleSubscriptionsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsRouteDefinition) protected baasicArticleSubscriptionsRouteDefinition: ArticleSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsRouteDefinition) protected articleSubscriptionsRouteDefinition: ArticleSubscriptionsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -34,7 +34,7 @@ export class ArticleSubscriptionsClient {
                    });                         
     **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicArticleSubscriptionsRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.articleSubscriptionsRouteDefinition.subscribe(data), data);
     }
 
     /**                         
@@ -49,7 +49,7 @@ export class ArticleSubscriptionsClient {
                    });                         
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicArticleSubscriptionsRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.articleSubscriptionsRouteDefinition.isSubscribed(data));
     }
 
     /**                         
@@ -63,6 +63,6 @@ export class ArticleSubscriptionsClient {
                         // perform error handling here 
                    });                          **/
     unSubscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleSubscriptionsRouteDefinition.unSubscribe(data));
+        return this.apiClient.delete<void>(this.articleSubscriptionsRouteDefinition.unSubscribe(data));
     }
 }

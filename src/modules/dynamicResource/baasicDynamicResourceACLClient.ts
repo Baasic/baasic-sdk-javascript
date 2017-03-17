@@ -1,6 +1,6 @@
 /**  
  * @module dynamicResourceACLClient  
- * @description  Dynamic Resource ACL Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceACLClient` uses `baasicDynamicResourceACLRouteDefinition`. 
+ * @description  Dynamic Resource ACL Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceACLClient` uses `dynamicResourceACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 export class DynamicResourceACLClient {
 
     constructor(
-        @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected dynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -30,7 +30,7 @@ export class DynamicResourceACLClient {
                     });                     
      **/
     get(options: IDynamicACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get(this.baasicDynamicResourceACLRouteDefinition.get(options));
+        return this.apiClient.get(this.dynamicResourceACLRouteDefinition.get(options));
     }
 
     /**                    
@@ -46,7 +46,7 @@ export class DynamicResourceACLClient {
                     }); 				    
      **/
     update(options: IDynamicACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.put<IACLPolicy[]>(this.baasicDynamicResourceACLRouteDefinition.update(options), this.baasicDynamicResourceACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.dynamicResourceACLRouteDefinition.update(options), this.dynamicResourceACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -70,7 +70,7 @@ export class DynamicResourceACLClient {
                         }); 				    
      **/
     removeByUser(action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicDynamicResourceACLRouteDefinition.deleteByUser(action, user, data));
+        return this.apiClient.delete<void>(this.dynamicResourceACLRouteDefinition.deleteByUser(action, user, data));
     }
 
     /**                     
@@ -94,7 +94,7 @@ export class DynamicResourceACLClient {
                         }); 				    
      **/
     removeByRole(action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicDynamicResourceACLRouteDefinition.deleteByRole(action, role, data));
+        return this.apiClient.delete<void>(this.dynamicResourceACLRouteDefinition.deleteByRole(action, role, data));
     }
 }
 

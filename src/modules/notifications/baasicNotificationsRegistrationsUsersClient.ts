@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsRegistrationsUsersClient  
- * @description  Notifications Registrations Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersClient` uses `baasicNotificationsRegistrationsUsersRouteDefinition`. 
+ * @description  Notifications Registrations Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersClient` uses `notificationsRegistrationsUsersRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -18,7 +18,7 @@ import { IUserRegistration } from 'modules/notifications/contracts';
 export class NotificationsRegistrationsUsersClient {
 
     get routeDefinition(): NotificationsRegistrationsUsersRouteDefinition {
-        return this.baasicNotificationsRegistrationsUsersRouteDefinition;
+        return this.notificationsRegistrationsUsersRouteDefinition;
     }
 
     get batch(): NotificationsRegistrationsUsersBatchClient {
@@ -26,7 +26,7 @@ export class NotificationsRegistrationsUsersClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsRegistrationsUsersRouteDefinition) protected baasicNotificationsRegistrationsUsersRouteDefinition: NotificationsRegistrationsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsUsersRouteDefinition) protected notificationsRegistrationsUsersRouteDefinition: NotificationsRegistrationsUsersRouteDefinition,
         @inject(notificationsTypes.NotificationsRegistrationsUsersBatchClient) protected notificationsRegistrationsUsersBatchClient: NotificationsRegistrationsUsersBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -49,7 +49,7 @@ export class NotificationsRegistrationsUsersClient {
                 });                         
      */
     create(data: IUserRegistration): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.apiClient.post<IUserRegistration>(this.baasicNotificationsRegistrationsUsersRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserRegistration>(this.notificationsRegistrationsUsersRouteDefinition.create(), this.notificationsRegistrationsUsersRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -75,7 +75,7 @@ export class NotificationsRegistrationsUsersClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserRegistration>>> {
-        return this.apiClient.get<IQueryModel<IUserRegistration>>(this.baasicNotificationsRegistrationsUsersRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserRegistration>>(this.notificationsRegistrationsUsersRouteDefinition.find(options));
     }
 
     /**                          
@@ -92,11 +92,11 @@ export class NotificationsRegistrationsUsersClient {
                    });                         
     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.apiClient.get<IUserRegistration>(this.baasicNotificationsRegistrationsUsersRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserRegistration>(this.notificationsRegistrationsUsersRouteDefinition.get(id, options));
     }
 
     /**                          
-     * Returns a promise that is resolved once the remove user registrations action has been performed. This action will remove a user registrations resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicNotificationsRegistrationsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove user registrations action has been performed. This action will remove a user registrations resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(registration); 
      * let uri = params['model'].links('delete').href; 
@@ -113,11 +113,11 @@ export class NotificationsRegistrationsUsersClient {
                         });						        
      */
     remove(data: IUserRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicNotificationsRegistrationsUsersRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.notificationsRegistrationsUsersRouteDefinition.delete(data));
     }
 
     /**                          
-     * Returns a promise that is resolved once the update user registration action has been performed; this action updates a user registration resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicNotificationsRegistrationsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects:                             
+     * Returns a promise that is resolved once the update user registration action has been performed; this action updates a user registration resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects:                             
      * ```                             
      * let params = modelMapper.updateParams(subsregistrationcription);                             
      * let uri = params['model'].links('put').href;                             
@@ -136,7 +136,7 @@ export class NotificationsRegistrationsUsersClient {
                         }); 				        
      */
     update(data: IUserRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicNotificationsRegistrationsUsersRouteDefinition.update(data), this.baasicNotificationsRegistrationsUsersRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.notificationsRegistrationsUsersRouteDefinition.update(data), this.notificationsRegistrationsUsersRouteDefinition.updateParams(data));
     }
 }
 

@@ -1,5 +1,5 @@
 export * from './diModule';
-export * from './baasicCommerceRouteDefinition';
+export * from './commerceRouteDefinition';
 export * from './commerceClient';
 export * from './lookups';
 export * from './customer';

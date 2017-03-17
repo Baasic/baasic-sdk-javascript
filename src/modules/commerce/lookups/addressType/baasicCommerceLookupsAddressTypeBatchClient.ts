@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module commerceLookupsAddressTypeBatchClient  
- * @description  Commerce Lookups Address Type Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsAddressTypesBatchClient` uses `baasicCommerceLookupsAddressTypeBatchRouteDefinition`. 
+ * @description  Commerce Lookups Address Type Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsAddressTypesBatchClient` uses `commerceLookupsAddressTypeBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,11 +13,11 @@ import { CommerceLookupsAddressTypeBatchRouteDefinition, TYPES as commerceTypes 
 export class CommerceLookupsAddressTypesBatchClient {
 
     get routeDefinition(): CommerceLookupsAddressTypeBatchRouteDefinition {
-        return this.baasicCommerceLookupsAddressTypeBatchRouteDefinition;
+        return this.commerceLookupsAddressTypeBatchRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsAddressTypeBatchRouteDefinition) protected baasicCommerceLookupsAddressTypeBatchRouteDefinition: CommerceLookupsAddressTypeBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsAddressTypeBatchRouteDefinition) protected commerceLookupsAddressTypeBatchRouteDefinition: CommerceLookupsAddressTypeBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -37,7 +37,7 @@ export class CommerceLookupsAddressTypesBatchClient {
                     });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicCommerceLookupsAddressTypeBatchRouteDefinition.create(), this.baasicCommerceLookupsAddressTypeBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.commerceLookupsAddressTypeBatchRouteDefinition.create(), this.commerceLookupsAddressTypeBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -52,7 +52,7 @@ export class CommerceLookupsAddressTypesBatchClient {
                        });                     
     **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicCommerceLookupsAddressTypeBatchRouteDefinition.update(), this.baasicCommerceLookupsAddressTypeBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.commerceLookupsAddressTypeBatchRouteDefinition.update(), this.commerceLookupsAddressTypeBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
@@ -67,7 +67,7 @@ export class CommerceLookupsAddressTypesBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicCommerceLookupsAddressTypeBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsAddressTypeBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

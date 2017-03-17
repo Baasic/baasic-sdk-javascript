@@ -17,11 +17,11 @@ import { IArticleFile } from 'modules/article/contracts';
 export class ArticleInstanceFilesBatchClient {
 
     get routeDefinition(): ArticleInstanceFilesBatchRouteDefinition {
-        return this.baasicArticleInstanceFilesBatchRouteDefinition;
+        return this.articleInstanceFilesBatchRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleInstanceFilesBatchRouteDefinition) protected baasicArticleInstanceFilesBatchRouteDefinition: ArticleInstanceFilesBatchRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesBatchRouteDefinition) protected articleInstanceFilesBatchRouteDefinition: ArticleInstanceFilesBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -49,7 +49,7 @@ export class ArticleInstanceFilesBatchClient {
                        });		                    
     **/
     unlink(articleId: string, data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.baasicArticleInstanceFilesBatchRouteDefinition.unlink(articleId), undefined, data);
+        return this.apiClient.delete<void>(this.articleInstanceFilesBatchRouteDefinition.unlink(articleId), undefined, data);
     }
 
     /**                   
@@ -67,7 +67,7 @@ export class ArticleInstanceFilesBatchClient {
                     });                   
      **/
     update(articleId: string, data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleInstanceFilesBatchRouteDefinition.update(articleId), this.baasicArticleInstanceFilesBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleInstanceFilesBatchRouteDefinition.update(articleId), this.articleInstanceFilesBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -85,7 +85,7 @@ export class ArticleInstanceFilesBatchClient {
                     });                   
      **/
     link(articleId: string, data: IArticleFile[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.baasicArticleInstanceFilesBatchRouteDefinition.link(articleId), this.baasicArticleInstanceFilesBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.articleInstanceFilesBatchRouteDefinition.link(articleId), this.articleInstanceFilesBatchRouteDefinition.createParams(data));
     }
 }
 

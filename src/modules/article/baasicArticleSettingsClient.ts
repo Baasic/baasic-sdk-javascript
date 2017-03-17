@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleSettingsClient  
- * @description  Article Settings Client provides an easy way to consume  Article Settings REST API end-points. In order to obtain needed routes `articleSettingsClient` uses `baasicArticleSettingsRouteDefinition`. 
+ * @description  Article Settings Client provides an easy way to consume  Article Settings REST API end-points. In order to obtain needed routes `articleSettingsClient` uses `articleSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,11 +19,11 @@ export class ArticleSettingsClient {
      * @example articleSettingsClient.routeDefinition.get().expand(expandObject);                 
      **/
     get routeDefinition(): ArticleSettingsRouteDefinition {
-        return this.baasicArticleSettingsRouteDefinition;
+        return this.articleSettingsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSettingsRouteDefinition) protected baasicArticleSettingsRouteDefinition: ArticleSettingsRouteDefinition,
+        @inject(articleTypes.ArticleSettingsRouteDefinition) protected articleSettingsRouteDefinition: ArticleSettingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -43,12 +43,12 @@ export class ArticleSettingsClient {
                     });                 
      **/
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.baasicArticleSettingsRouteDefinition.get(options));
+        return this.apiClient.get(this.articleSettingsRouteDefinition.get(options));
     }
 
 
     /**                  
-     * Returns a promise that is resolved once the update article settings action has been performed; this action updates article settings. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article settings action has been performed; this action updates article settings. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleSettings); 
      * let uri = params['model'].links('put').href; 
@@ -67,7 +67,7 @@ export class ArticleSettingsClient {
                         }); 				
      **/
     update(data: IArticleSettings): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.baasicArticleSettingsRouteDefinition.update(data), this.baasicArticleSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.articleSettingsRouteDefinition.update(data), this.articleSettingsRouteDefinition.updateParams(data));
     }
 }
 

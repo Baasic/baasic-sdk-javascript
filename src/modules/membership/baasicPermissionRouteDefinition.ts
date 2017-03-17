@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicLoginRouteDefinition  
+ * @module loginRouteDefinition  
  * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 import { injectable, inject } from "inversify";
@@ -50,7 +50,7 @@ export class PermissionRouteDefinition extends BaseRouteDefinition {
     * - `sort` - A string used to set the access policy property to sort the result collection by.				
     * @method        
     * @example 
-baasicPermissionRouteDefinition.find(
+permissionRouteDefinition.find(
 	'sectionName',
 	{searchQuery: '<search-phrase>'}
 );               
@@ -65,7 +65,7 @@ baasicPermissionRouteDefinition.find(
     * - `sort` - A string used to set the access action property to sort the result collection by.				
     * @method        
     * @example 
-baasicPermissionRouteDefinition.getActions(
+permissionRouteDefinition.getActions(
 {searchQuery: '<search-phrase>'}
 );               
     **/
@@ -81,7 +81,7 @@ baasicPermissionRouteDefinition.getActions(
     * - `rpp` - A value used to limit the size of result set per page.				
     * @method        
     * @example 
-baasicPermissionRouteDefinition.getRoles(
+permissionRouteDefinition.getRoles(
 {searchQuery: '<search-phrase>'}
 );               
     **/
@@ -97,7 +97,7 @@ baasicPermissionRouteDefinition.getRoles(
     * - `rpp` - A value used to limit the size of result set per page.				
     * @method        
     * @example 
-baasicPermissionRouteDefinition.getRoles(
+permissionRouteDefinition.getRoles(
 {searchQuery: '<search-phrase>'}
 );               
     **/
@@ -108,7 +108,7 @@ baasicPermissionRouteDefinition.getRoles(
     /**
     * Parses create permission route; this URI template doesn't expose any additional properties.
     * @method        
-    * @example baasicPermissionRouteDefinition.create({});               
+    * @example permissionRouteDefinition.create({});               
     **/
     create(): any {
         return super.baseCreate(this.createRoute);
