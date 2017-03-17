@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { Utility } from 'common';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     BaasicArticleACLClient,
     BaasicArticleUtility,
@@ -71,7 +71,7 @@ export class BaasicArticleClient {
         @inject(articleTypes.BaasicArticleInstanceSubscriptionsClient) protected baasicArticleInstanceSubscriptionsClient: BaasicArticleInstanceSubscriptionsClient,
         @inject(articleTypes.BaasicArticleRouteDefinition) protected baasicArticleRouteDefinition: BaasicArticleRouteDefinition,
         @inject(articleTypes.BaasicArticleACLClient) protected baasicArticleACLClient: BaasicArticleACLClient,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     public statuses: IArticleStatus = ArticleStatus;

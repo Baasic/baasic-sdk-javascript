@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IACLOptions, IACLPolicy, IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicMeteringACLRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 
 @injectable()
@@ -14,7 +14,7 @@ export class BaasicMeteringACLClient {
 
     constructor(
         @inject(meteringTypes.BaasicMeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: BaasicMeteringACLRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                     

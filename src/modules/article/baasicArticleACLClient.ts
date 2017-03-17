@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IACLPolicy, IACLOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleACLRouteDefinition, TYPES as articleTypes } from 'modules/article';
 
 @injectable()
@@ -18,7 +18,7 @@ export class BaasicArticleACLClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleACLRouteDefinition) protected baasicArticleACLRouteDefinition: BaasicArticleACLRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                     

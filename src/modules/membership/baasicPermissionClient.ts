@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { Utility } from 'common';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicPermissionRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAccessPolicy, IAccessAction, IRole, IUserInfo } from 'modules/membership/contracts';
 import { IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
@@ -29,7 +29,7 @@ export class BaasicPermissionClient {
 
     constructor(
         @inject(membershipTypes.BaasicPermissionRouteDefinition) protected baasicPermissionRouteDefinition: BaasicPermissionRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
         @inject(coreTYPES.IBaasicApp) private application: IBaasicApp
     ) { }
 

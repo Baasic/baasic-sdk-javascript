@@ -5,7 +5,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { IHttpHeaders, IHttpRequest, IHttpResponse, BaasicApiClient, TYPES as httpTYPES } from 'httpApi';
+import { IHttpHeaders, IHttpRequest, IHttpResponse, BaasicApiClient, httpTYPES } from 'httpApi';
 import { BaasicKeyValueRouteDefinition, TYPES } from 'modules/keyValue';
 import { IKeyValue } from 'modules/keyValue/contracts';
 

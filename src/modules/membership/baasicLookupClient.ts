@@ -9,7 +9,7 @@ import { IGetRequestOptions } from 'common/contracts';
 import { Utility } from 'common';
 import { ILookup } from 'modules/membership/contracts';
 import { BaasicLookupRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 
 @injectable()
 export class BaasicLookupClient {
@@ -22,7 +22,7 @@ export class BaasicLookupClient {
 
     constructor(
         @inject(membershipTypes.BaasicLookupRouteDefinition) protected baasicLookupRouteDefinition: BaasicLookupRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     private getResponseData(embed: string, data: any): any {

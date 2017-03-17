@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicOrganizationBatchClient, BaasicOrganizationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
@@ -24,7 +24,7 @@ export class BaasicOrganizationClient {
     constructor(
         @inject(userProfileTypes.BaasicOrganizationRouteDefinition) protected baasicOrganizationRouteDefinition: BaasicOrganizationRouteDefinition,
         @inject(userProfileTypes.BaasicOrganizationBatchClient) protected baasicOrganizationBatchClient: BaasicOrganizationBatchClient,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**                  

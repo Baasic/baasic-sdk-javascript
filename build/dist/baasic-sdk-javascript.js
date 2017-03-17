@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 35);
+/******/ 	return __webpack_require__(__webpack_require__.s = 38);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -82,31 +82,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 
-var container_1 = __webpack_require__(46);
+var container_1 = __webpack_require__(49);
 exports.Container = container_1.Container;
-var container_module_1 = __webpack_require__(47);
+var container_module_1 = __webpack_require__(50);
 exports.ContainerModule = container_module_1.ContainerModule;
-var injectable_1 = __webpack_require__(37);
+var injectable_1 = __webpack_require__(40);
 exports.injectable = injectable_1.injectable;
-var tagged_1 = __webpack_require__(41);
+var tagged_1 = __webpack_require__(44);
 exports.tagged = tagged_1.tagged;
-var named_1 = __webpack_require__(39);
+var named_1 = __webpack_require__(42);
 exports.named = named_1.named;
-var inject_1 = __webpack_require__(36);
+var inject_1 = __webpack_require__(39);
 exports.inject = inject_1.inject;
-var optional_1 = __webpack_require__(40);
+var optional_1 = __webpack_require__(43);
 exports.optional = optional_1.optional;
-var unmanaged_1 = __webpack_require__(43);
+var unmanaged_1 = __webpack_require__(46);
 exports.unmanaged = unmanaged_1.unmanaged;
-var multi_inject_1 = __webpack_require__(38);
+var multi_inject_1 = __webpack_require__(41);
 exports.multiInject = multi_inject_1.multiInject;
-var target_name_1 = __webpack_require__(42);
+var target_name_1 = __webpack_require__(45);
 exports.targetName = target_name_1.targetName;
 var guid_1 = __webpack_require__(17);
 exports.guid = guid_1.guid;
 var decorator_utils_1 = __webpack_require__(14);
 exports.decorate = decorator_utils_1.decorate;
-var constraint_helpers_1 = __webpack_require__(29);
+var constraint_helpers_1 = __webpack_require__(31);
 exports.traverseAncerstors = constraint_helpers_1.traverseAncerstors;
 exports.taggedConstraint = constraint_helpers_1.taggedConstraint;
 exports.namedConstraint = constraint_helpers_1.namedConstraint;
@@ -124,8 +124,14 @@ exports.getServiceIdentifierAsString = serialization_1.getServiceIdentifierAsStr
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(69));
-__export(__webpack_require__(70));
+var diModule_1 = __webpack_require__(32);
+exports.commonDIModule = diModule_1.diModule;
+var diModule_2 = __webpack_require__(32);
+exports.TYPES = diModule_2.TYPES;
+__export(__webpack_require__(68));
+__export(__webpack_require__(67));
+__export(__webpack_require__(65));
+__export(__webpack_require__(66));
 
 
 /***/ }),
@@ -137,11 +143,8 @@ __export(__webpack_require__(70));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(63));
-__export(__webpack_require__(66));
-__export(__webpack_require__(65));
-__export(__webpack_require__(62));
-__export(__webpack_require__(64));
+__export(__webpack_require__(71));
+__export(__webpack_require__(72));
 
 
 /***/ }),
@@ -153,8 +156,11 @@ __export(__webpack_require__(64));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(77));
-__export(__webpack_require__(76));
+var diModule_1 = __webpack_require__(33);
+exports.httpDIModule = diModule_1.diModule;
+var diModule_2 = __webpack_require__(33);
+exports.httpTYPES = diModule_2.TYPES;
+__export(__webpack_require__(78));
 
 
 /***/ }),
@@ -166,14 +172,14 @@ __export(__webpack_require__(76));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(145));
+__export(__webpack_require__(146));
+__export(__webpack_require__(140));
 __export(__webpack_require__(139));
-__export(__webpack_require__(138));
-__export(__webpack_require__(32));
-__export(__webpack_require__(144));
-__export(__webpack_require__(150));
-__export(__webpack_require__(194));
-__export(__webpack_require__(197));
+__export(__webpack_require__(35));
+__export(__webpack_require__(145));
+__export(__webpack_require__(151));
+__export(__webpack_require__(195));
+__export(__webpack_require__(198));
 
 
 /***/ }),
@@ -185,41 +191,41 @@ __export(__webpack_require__(197));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(137));
+__export(__webpack_require__(84));
 __export(__webpack_require__(136));
-__export(__webpack_require__(83));
 __export(__webpack_require__(135));
-__export(__webpack_require__(134));
-__export(__webpack_require__(31));
-__export(__webpack_require__(107));
-__export(__webpack_require__(98));
-__export(__webpack_require__(110));
-__export(__webpack_require__(88));
-__export(__webpack_require__(95));
-__export(__webpack_require__(112));
+__export(__webpack_require__(34));
+__export(__webpack_require__(108));
+__export(__webpack_require__(99));
 __export(__webpack_require__(111));
-__export(__webpack_require__(114));
+__export(__webpack_require__(89));
+__export(__webpack_require__(96));
 __export(__webpack_require__(113));
-__export(__webpack_require__(116));
+__export(__webpack_require__(112));
 __export(__webpack_require__(115));
-__export(__webpack_require__(118));
+__export(__webpack_require__(114));
 __export(__webpack_require__(117));
+__export(__webpack_require__(116));
+__export(__webpack_require__(119));
+__export(__webpack_require__(118));
+__export(__webpack_require__(123));
 __export(__webpack_require__(122));
 __export(__webpack_require__(121));
 __export(__webpack_require__(120));
-__export(__webpack_require__(119));
+__export(__webpack_require__(125));
 __export(__webpack_require__(124));
-__export(__webpack_require__(123));
+__export(__webpack_require__(128));
 __export(__webpack_require__(127));
-__export(__webpack_require__(126));
+__export(__webpack_require__(134));
 __export(__webpack_require__(133));
 __export(__webpack_require__(132));
 __export(__webpack_require__(131));
 __export(__webpack_require__(130));
 __export(__webpack_require__(129));
-__export(__webpack_require__(128));
-__export(__webpack_require__(125));
-__export(__webpack_require__(31));
-__export(__webpack_require__(137));
+__export(__webpack_require__(126));
+__export(__webpack_require__(34));
+__export(__webpack_require__(138));
 
 
 /***/ }),
@@ -1479,7 +1485,7 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61), __webpack_require__(332)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(64), __webpack_require__(332)))
 
 /***/ }),
 /* 11 */
@@ -1706,15 +1712,15 @@ exports.guid = guid;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(214));
 __export(__webpack_require__(213));
 __export(__webpack_require__(212));
-__export(__webpack_require__(211));
+__export(__webpack_require__(209));
 __export(__webpack_require__(208));
 __export(__webpack_require__(207));
 __export(__webpack_require__(206));
-__export(__webpack_require__(205));
+__export(__webpack_require__(211));
 __export(__webpack_require__(210));
-__export(__webpack_require__(209));
 
 
 /***/ }),
@@ -1726,13 +1732,13 @@ __export(__webpack_require__(209));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(205));
 __export(__webpack_require__(204));
 __export(__webpack_require__(203));
-__export(__webpack_require__(202));
-__export(__webpack_require__(199));
-__export(__webpack_require__(198));
-__export(__webpack_require__(201));
 __export(__webpack_require__(200));
+__export(__webpack_require__(199));
+__export(__webpack_require__(202));
+__export(__webpack_require__(201));
 
 
 /***/ }),
@@ -1870,7 +1876,22 @@ __export(__webpack_require__(326));
 
 "use strict";
 
-var binding_when_syntax_1 = __webpack_require__(24);
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(76));
+__export(__webpack_require__(77));
+var diModule_1 = __webpack_require__(73);
+exports.coreDIModule = diModule_1.diModule;
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var binding_when_syntax_1 = __webpack_require__(25);
 var BindingOnSyntax = (function () {
     function BindingOnSyntax(binding) {
         this._binding = binding;
@@ -1885,13 +1906,13 @@ exports.BindingOnSyntax = BindingOnSyntax;
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_on_syntax_1 = __webpack_require__(23);
-var constraint_helpers_1 = __webpack_require__(29);
+var binding_on_syntax_1 = __webpack_require__(24);
+var constraint_helpers_1 = __webpack_require__(31);
 var BindingWhenSyntax = (function () {
     function BindingWhenSyntax(binding) {
         this._binding = binding;
@@ -1989,7 +2010,7 @@ exports.BindingWhenSyntax = BindingWhenSyntax;
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1997,13 +2018,13 @@ exports.BindingWhenSyntax = BindingWhenSyntax;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(83));
 __export(__webpack_require__(82));
 __export(__webpack_require__(81));
-__export(__webpack_require__(80));
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2017,13 +2038,47 @@ __export(__webpack_require__(215));
 
 
 /***/ }),
-/* 27 */
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ApplicationSettings = __webpack_require__(26);
+exports.ApplicationSettings = ApplicationSettings;
+var Membership = __webpack_require__(9);
+exports.Membership = Membership;
+var UserProfile = __webpack_require__(7);
+exports.UserProfile = UserProfile;
+var KeyValue = __webpack_require__(27);
+exports.KeyValue = KeyValue;
+var ValueSet = __webpack_require__(22);
+exports.ValueSet = ValueSet;
+var Article = __webpack_require__(5);
+exports.Article = Article;
+var DynamicResource = __webpack_require__(19);
+exports.DynamicResource = DynamicResource;
+var MediaVault = __webpack_require__(16);
+exports.MediaVault = MediaVault;
+var Files = __webpack_require__(18);
+exports.Files = Files;
+var Templating = __webpack_require__(21);
+exports.Templating = Templating;
+var Metering = __webpack_require__(11);
+exports.Metering = Metering;
+var Notifications = __webpack_require__(6);
+exports.Notifications = Notifications;
+var Commerce = __webpack_require__(4);
+exports.Commerce = Commerce;
+
+
+/***/ }),
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var metadata_1 = __webpack_require__(12);
-var queryable_string_1 = __webpack_require__(53);
+var queryable_string_1 = __webpack_require__(56);
 var guid_1 = __webpack_require__(17);
 var METADATA_KEY = __webpack_require__(8);
 var Target = (function () {
@@ -2113,13 +2168,13 @@ exports.Target = Target;
 
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_when_syntax_1 = __webpack_require__(24);
-var binding_on_syntax_1 = __webpack_require__(23);
+var binding_when_syntax_1 = __webpack_require__(25);
+var binding_on_syntax_1 = __webpack_require__(24);
 var BindingWhenOnSyntax = (function () {
     function BindingWhenOnSyntax(binding) {
         this._binding = binding;
@@ -2180,7 +2235,7 @@ exports.BindingWhenOnSyntax = BindingWhenOnSyntax;
 
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2226,21 +2281,48 @@ exports.typeConstraint = typeConstraint;
 
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(74));
-__export(__webpack_require__(75));
-__export(__webpack_require__(71));
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(1);
+var TYPES = {
+    Utility: Symbol("Utility"),
+    ModelMapper: Symbol("ModelMapper"),
+    IHALParser: Symbol("IHALParser")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.Utility).to(common_1.Utility);
+    bind(TYPES.ModelMapper).to(common_1.ModelMapper);
+    bind(TYPES.IHALParser).toConstantValue(common_1.HALParser);
+});
+exports.diModule = diModule;
 
 
 /***/ }),
-/* 31 */
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(3);
+var TYPES = {
+    BaasicApiClient: Symbol("BaasicApiClient"),
+    IHttpClient: Symbol("IHttpClient")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.BaasicApiClient).to(httpApi_1.BaasicApiClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2263,7 +2345,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var httpApi_1 = __webpack_require__(3);
 var article_1 = __webpack_require__(5);
 var BaasicArticleClient = (function () {
@@ -2568,7 +2650,7 @@ BaasicArticleClient = __decorate([
     __param(4, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceSubscriptionsClient)),
     __param(5, inversify_1.inject(article_1.TYPES.BaasicArticleRouteDefinition)),
     __param(6, inversify_1.inject(article_1.TYPES.BaasicArticleACLClient)),
-    __param(7, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(7, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleInstanceCommentsClient,
         article_1.BaasicArticleInstanceFilesClient,
         article_1.BaasicArticleInstanceRatingsClient,
@@ -2588,7 +2670,7 @@ exports.BaasicArticleClient = BaasicArticleClient;
 
 
 /***/ }),
-/* 32 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2596,29 +2678,29 @@ exports.BaasicArticleClient = BaasicArticleClient;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(155));
-__export(__webpack_require__(165));
-__export(__webpack_require__(160));
-__export(__webpack_require__(176));
-__export(__webpack_require__(181));
-__export(__webpack_require__(186));
-__export(__webpack_require__(191));
-__export(__webpack_require__(170));
+__export(__webpack_require__(156));
+__export(__webpack_require__(166));
+__export(__webpack_require__(161));
+__export(__webpack_require__(177));
+__export(__webpack_require__(182));
+__export(__webpack_require__(187));
+__export(__webpack_require__(192));
 __export(__webpack_require__(171));
+__export(__webpack_require__(172));
 
 
 /***/ }),
-/* 33 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
-var core_1 = __webpack_require__(30);
-var _1 = __webpack_require__(35);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(23);
+var _1 = __webpack_require__(38);
 var httpApi_1 = __webpack_require__(3);
-var modules = __webpack_require__(214);
+var modules = __webpack_require__(28);
 var BaasicApp = (function () {
     function BaasicApp(apiKey, options) {
         this.apiKey = apiKey;
@@ -2629,11 +2711,11 @@ var BaasicApp = (function () {
         }
         this.settings = this.utility.extendAs({}, BaasicApp.defaultSettings, options || {});
         this.diModule = new _1.DIModule();
-        this.diModule.init(this, [common_1.diModule, core_1.diModule, httpApi_1.diModule, modules]);
+        this.diModule.init(this, [common_1.commonDIModule, core_1.coreDIModule, httpApi_1.httpDIModule, modules]);
         this.tokenHandler = this.diModule.kernel.get(contracts_1.TYPES.ITokenHandler);
         this.userHandler = this.diModule.kernel.get(contracts_1.TYPES.IUserHandler);
         this.eventHandler = this.diModule.kernel.get(contracts_1.TYPES.IEventHandler);
-        this.baasicApiClient = this.diModule.kernel.get(httpApi_1.TYPES.BaasicApiClient);
+        this.baasicApiClient = this.diModule.kernel.get(httpApi_1.httpTYPES.BaasicApiClient);
         this.membershipModule = this.diModule.kernel.get(modules.Membership.TYPES.Root);
         //Modules
         this.applicationSettingModule = this.diModule.kernel.get(modules.ApplicationSettings.TYPES.BaasicApplicationSettingsClient);
@@ -2679,7 +2761,7 @@ exports.BaasicApp = BaasicApp;
 
 
 /***/ }),
-/* 34 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2687,10 +2769,10 @@ exports.BaasicApp = BaasicApp;
 var inversify_1 = __webpack_require__(0);
 __webpack_require__(10);
 var httpApi_1 = __webpack_require__(3);
-var contracts_1 = __webpack_require__(1);
-var jQuery_1 = __webpack_require__(78);
-var localStorage_1 = __webpack_require__(73);
-var browserEvents_1 = __webpack_require__(68);
+var contracts_1 = __webpack_require__(2);
+var jQuery_1 = __webpack_require__(79);
+var localStorage_1 = __webpack_require__(75);
+var browserEvents_1 = __webpack_require__(70);
 var DIModule = (function () {
     function DIModule() {
         this.diModules = [];
@@ -2710,7 +2792,7 @@ var DIModule = (function () {
                 _this.kernel.bind(contracts_1.TYPES.IAppOptions).toConstantValue(appOptions);
                 _this.kernel.bind(contracts_1.TYPES.IBaasicAppOptions).toConstantValue(app.settings);
             }
-            _this.bindHandler(httpApi_1.TYPES.IHttpClient, app.settings.httpClient, jQuery_1.JQueryHttpClient);
+            _this.bindHandler(httpApi_1.httpTYPES.IHttpClient, app.settings.httpClient, jQuery_1.JQueryHttpClient);
             _this.bindHandlerWithOptions(contracts_1.TYPES.IStorageHandler, contracts_1.TYPES.IDefaultStorageConfig, app.settings.storageHandler, localStorage_1.LocalStorageHandler);
             _this.bindHandler(contracts_1.TYPES.IEventHandler, app.settings.eventHandler, browserEvents_1.BrowserEventHandler);
             _this.kernel.bind(contracts_1.TYPES.IBaasicApp).toConstantValue(app);
@@ -2760,7 +2842,7 @@ exports.DIModule = DIModule;
 
 
 /***/ }),
-/* 35 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2768,14 +2850,16 @@ exports.DIModule = DIModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(34));
-__export(__webpack_require__(33));
-var contracts_1 = __webpack_require__(1);
-exports.TokenTypes = contracts_1.TokenTypes;
+__export(__webpack_require__(1));
+__export(__webpack_require__(3));
+__export(__webpack_require__(23));
+__export(__webpack_require__(28));
+__export(__webpack_require__(37));
+__export(__webpack_require__(36));
 
 
 /***/ }),
-/* 36 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2798,7 +2882,7 @@ exports.inject = inject;
 
 
 /***/ }),
-/* 37 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2819,7 +2903,7 @@ exports.injectable = injectable;
 
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2842,7 +2926,7 @@ exports.multiInject = multiInject;
 
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2865,7 +2949,7 @@ exports.named = named;
 
 
 /***/ }),
-/* 40 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2888,7 +2972,7 @@ exports.optional = optional;
 
 
 /***/ }),
-/* 41 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2910,7 +2994,7 @@ exports.tagged = tagged;
 
 
 /***/ }),
-/* 42 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2928,7 +3012,7 @@ exports.targetName = targetName;
 
 
 /***/ }),
-/* 43 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2946,7 +3030,7 @@ exports.unmanaged = unmanaged;
 
 
 /***/ }),
-/* 44 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2988,7 +3072,7 @@ exports.Binding = Binding;
 
 
 /***/ }),
-/* 45 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3002,18 +3086,18 @@ exports.BindingCount = BindingCount;
 
 
 /***/ }),
-/* 46 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_1 = __webpack_require__(44);
-var lookup_1 = __webpack_require__(49);
-var planner_1 = __webpack_require__(52);
-var resolver_1 = __webpack_require__(57);
-var binding_to_syntax_1 = __webpack_require__(60);
+var binding_1 = __webpack_require__(47);
+var lookup_1 = __webpack_require__(52);
+var planner_1 = __webpack_require__(55);
+var resolver_1 = __webpack_require__(60);
+var binding_to_syntax_1 = __webpack_require__(63);
 var serialization_1 = __webpack_require__(20);
-var container_snapshot_1 = __webpack_require__(48);
+var container_snapshot_1 = __webpack_require__(51);
 var guid_1 = __webpack_require__(17);
 var ERROR_MSGS = __webpack_require__(13);
 var METADATA_KEY = __webpack_require__(8);
@@ -3235,7 +3319,7 @@ exports.Container = Container;
 
 
 /***/ }),
-/* 47 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3252,7 +3336,7 @@ exports.ContainerModule = ContainerModule;
 
 
 /***/ }),
-/* 48 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3272,7 +3356,7 @@ exports.ContainerSnapshot = ContainerSnapshot;
 
 
 /***/ }),
-/* 49 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3360,7 +3444,7 @@ exports.Lookup = Lookup;
 
 
 /***/ }),
-/* 50 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3380,7 +3464,7 @@ exports.Context = Context;
 
 
 /***/ }),
-/* 51 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3396,17 +3480,17 @@ exports.Plan = Plan;
 
 
 /***/ }),
-/* 52 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var plan_1 = __webpack_require__(51);
-var context_1 = __webpack_require__(50);
-var request_1 = __webpack_require__(55);
-var target_1 = __webpack_require__(27);
-var binding_count_1 = __webpack_require__(45);
-var reflection_utils_1 = __webpack_require__(54);
+var plan_1 = __webpack_require__(54);
+var context_1 = __webpack_require__(53);
+var request_1 = __webpack_require__(58);
+var target_1 = __webpack_require__(29);
+var binding_count_1 = __webpack_require__(48);
+var reflection_utils_1 = __webpack_require__(57);
 var metadata_1 = __webpack_require__(12);
 var ERROR_MSGS = __webpack_require__(13);
 var METADATA_KEY = __webpack_require__(8);
@@ -3538,7 +3622,7 @@ exports.createMockRequest = createMockRequest;
 
 
 /***/ }),
-/* 53 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3571,13 +3655,13 @@ exports.QueryableString = QueryableString;
 
 
 /***/ }),
-/* 54 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var serialization_1 = __webpack_require__(20);
-var target_1 = __webpack_require__(27);
+var target_1 = __webpack_require__(29);
 var ERROR_MSGS = __webpack_require__(13);
 var METADATA_KEY = __webpack_require__(8);
 var literal_types_1 = __webpack_require__(15);
@@ -3684,7 +3768,7 @@ function formatTargetMetadata(targetMetadata) {
 
 
 /***/ }),
-/* 55 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3711,7 +3795,7 @@ exports.Request = Request;
 
 
 /***/ }),
-/* 56 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3756,14 +3840,14 @@ exports.resolveInstance = resolveInstance;
 
 
 /***/ }),
-/* 57 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var literal_types_1 = __webpack_require__(15);
 var serialization_1 = __webpack_require__(20);
-var instantiation_1 = __webpack_require__(56);
+var instantiation_1 = __webpack_require__(59);
 var ERROR_MSGS = __webpack_require__(13);
 function _resolveRequest(request) {
     var bindings = request.bindings;
@@ -3830,13 +3914,13 @@ exports.resolve = resolve;
 
 
 /***/ }),
-/* 58 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var literal_types_1 = __webpack_require__(15);
-var binding_when_on_syntax_1 = __webpack_require__(28);
+var binding_when_on_syntax_1 = __webpack_require__(30);
 var BindingInSyntax = (function () {
     function BindingInSyntax(binding) {
         this._binding = binding;
@@ -3855,14 +3939,14 @@ exports.BindingInSyntax = BindingInSyntax;
 
 
 /***/ }),
-/* 59 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_in_syntax_1 = __webpack_require__(58);
-var binding_when_syntax_1 = __webpack_require__(24);
-var binding_on_syntax_1 = __webpack_require__(23);
+var binding_in_syntax_1 = __webpack_require__(61);
+var binding_when_syntax_1 = __webpack_require__(25);
+var binding_on_syntax_1 = __webpack_require__(24);
 var BindingInWhenOnSyntax = (function () {
     function BindingInWhenOnSyntax(binding) {
         this._binding = binding;
@@ -3930,13 +4014,13 @@ exports.BindingInWhenOnSyntax = BindingInWhenOnSyntax;
 
 
 /***/ }),
-/* 60 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_in_when_on_syntax_1 = __webpack_require__(59);
-var binding_when_on_syntax_1 = __webpack_require__(28);
+var binding_in_when_on_syntax_1 = __webpack_require__(62);
+var binding_when_on_syntax_1 = __webpack_require__(30);
 var literal_types_1 = __webpack_require__(15);
 var ERROR_MSGS = __webpack_require__(13);
 var BindingToSyntax = (function () {
@@ -4008,7 +4092,7 @@ exports.BindingToSyntax = BindingToSyntax;
 
 
 /***/ }),
-/* 61 */
+/* 64 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -4194,7 +4278,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 62 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4210,7 +4294,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var inversify_1 = __webpack_require__(0);
 var uritemplate = __webpack_require__(331);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var BaasicBaseRouteDefinition = (function () {
     function BaasicBaseRouteDefinition(appOptions) {
         this.appOptions = appOptions;
@@ -4343,34 +4427,12 @@ exports.BaasicBaseRouteDefinition = BaasicBaseRouteDefinition;
 
 
 /***/ }),
-/* 63 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var TYPES = {
-    Utility: Symbol("Utility"),
-    ModelMapper: Symbol("ModelMapper"),
-    IHALParser: Symbol("IHALParser")
-};
-exports.TYPES = TYPES;
-var diModule = new inversify_1.ContainerModule(function (bind) {
-    bind(TYPES.Utility).to(common_1.Utility);
-    bind(TYPES.ModelMapper).to(common_1.ModelMapper);
-    bind(TYPES.IHALParser).toConstantValue(common_1.HALParser);
-});
-exports.diModule = diModule;
-
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var utility = new common_1.Utility();
 //HAL Parser is based on https://github.com/Baasic/angular-hal & https://github.com/jasonaden/angular-hal implementation. Parser is used to parse [HAL (Hyptertext Application Language)](http://stateless.co/hal_specification.html) JSON structures into usable JavaScript objects.
 var __bind = function (fn, me) { return function () { return fn.apply(me, arguments); }; };
@@ -4481,7 +4543,7 @@ exports.HALParser = HALParser = new Parser('JavaScriptSDK');
 
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4490,7 +4552,7 @@ exports.HALParser = HALParser = new Parser('JavaScriptSDK');
  * @description This service is used to perform low level model or option transformations before they are sent to the Baasic back-end.
  **/
 
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var ModelMapper = (function () {
     function ModelMapper() {
         this.idPropertyName = 'id';
@@ -4600,7 +4662,7 @@ exports.ModelMapper = ModelMapper;
 
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4691,7 +4753,7 @@ exports.Utility = Utility;
 
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4708,8 +4770,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var inversify_1 = __webpack_require__(0);
 __webpack_require__(10);
 var utility = new common_1.Utility();
@@ -4809,7 +4871,7 @@ exports.BrowserEventHandler = BrowserEventHandler;
 
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4817,11 +4879,11 @@ exports.BrowserEventHandler = BrowserEventHandler;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(67));
+__export(__webpack_require__(69));
 
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4833,7 +4895,7 @@ exports.TokenTypes = {
 
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4852,14 +4914,14 @@ exports.TYPES = TYPES;
 
 
 /***/ }),
-/* 71 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
-var contracts_1 = __webpack_require__(1);
-var core_1 = __webpack_require__(30);
+var contracts_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(23);
 __webpack_require__(10);
 var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(contracts_1.TYPES.ITokenHandler).to(core_1.TokenHandler);
@@ -4869,7 +4931,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4886,7 +4948,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var inversify_1 = __webpack_require__(0);
 __webpack_require__(10);
 var LocalStorageHandler = (function () {
@@ -4929,7 +4991,7 @@ exports.LocalStorageHandler = LocalStorageHandler;
 
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4937,11 +4999,11 @@ exports.LocalStorageHandler = LocalStorageHandler;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(72));
+__export(__webpack_require__(74));
 
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4958,8 +5020,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var inversify_1 = __webpack_require__(0);
 __webpack_require__(10);
 var TokenHandler = (function () {
@@ -5079,7 +5141,7 @@ exports.TokenHandler = TokenHandler;
 
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5096,7 +5158,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var inversify_1 = __webpack_require__(0);
 __webpack_require__(10);
 var UserHandler = (function () {
@@ -5151,7 +5213,7 @@ exports.UserHandler = UserHandler;
 
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5171,8 +5233,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 var inversify_1 = __webpack_require__(0);
 __webpack_require__(10);
 var httpApi_1 = __webpack_require__(3);
-var contracts_1 = __webpack_require__(1);
-var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var BaasicApiClient = (function () {
     function BaasicApiClient(appOptions, httpClient, tokenHandler, halParser) {
         this.appOptions = appOptions;
@@ -5315,7 +5377,7 @@ var BaasicApiClient = (function () {
 BaasicApiClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.IHttpClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.IHttpClient)),
     __param(2, inversify_1.inject(contracts_1.TYPES.ITokenHandler)),
     __param(3, inversify_1.inject(common_1.TYPES.IHALParser)),
     __metadata("design:paramtypes", [Object, Object, Object, Object])
@@ -5325,26 +5387,7 @@ exports.BaasicApiClient = BaasicApiClient;
 
 
 /***/ }),
-/* 77 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var inversify_1 = __webpack_require__(0);
-var httpApi_1 = __webpack_require__(3);
-var TYPES = {
-    BaasicApiClient: Symbol("BaasicApiClient"),
-    IHttpClient: Symbol("IHttpClient")
-};
-exports.TYPES = TYPES;
-var diModule = new inversify_1.ContainerModule(function (bind) {
-    bind(TYPES.BaasicApiClient).to(httpApi_1.BaasicApiClient);
-});
-exports.diModule = diModule;
-
-
-/***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5352,11 +5395,11 @@ exports.diModule = diModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(79));
+__export(__webpack_require__(80));
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5435,7 +5478,7 @@ function parseHeaders(headers) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5459,7 +5502,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(3);
-var applicationSettings_1 = __webpack_require__(25);
+var applicationSettings_1 = __webpack_require__(26);
 var BaasicApplicationSettingsClient = (function () {
     function BaasicApplicationSettingsClient(baasicApplicationSettingsRouteDefinition, baasicApiClient) {
         this.baasicApplicationSettingsRouteDefinition = baasicApplicationSettingsRouteDefinition;
@@ -5518,7 +5561,7 @@ var BaasicApplicationSettingsClient = (function () {
 BaasicApplicationSettingsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(applicationSettings_1.TYPES.BaasicApplicationSettingsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [applicationSettings_1.BaasicApplicationSettingsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicApplicationSettingsClient);
@@ -5535,7 +5578,7 @@ exports.BaasicApplicationSettingsClient = BaasicApplicationSettingsClient;
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5563,8 +5606,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicApplicationSettingsRouteDefinition = (function (_super) {
     __extends(BaasicApplicationSettingsRouteDefinition, _super);
     function BaasicApplicationSettingsRouteDefinition(appOptions) {
@@ -5613,13 +5656,13 @@ exports.BaasicApplicationSettingsRouteDefinition = BaasicApplicationSettingsRout
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
-var applicationSettings_1 = __webpack_require__(25);
+var applicationSettings_1 = __webpack_require__(26);
 var TYPES = {
     BaasicApplicationSettingsClient: Symbol("BaasicApplicationSettingsClient"),
     BaasicApplicationSettingsRouteDefinition: Symbol("BaasicApplicationSettingsRouteDefinition")
@@ -5633,7 +5676,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5687,7 +5730,7 @@ exports.ALPHABET = ALPHABET;
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6037,7 +6080,7 @@ BaasicArticleInstanceCommentsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceCommentsRouteDefinition)),
     __param(1, inversify_1.inject(article_1.TYPES.BaasicArticleCommentRepliesClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleInstanceCommentsRouteDefinition,
         article_1.BaasicArticleInstanceCommentRepliesClient,
         httpApi_1.BaasicApiClient])
@@ -6052,7 +6095,7 @@ exports.BaasicArticleInstanceCommentsClient = BaasicArticleInstanceCommentsClien
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6399,7 +6442,7 @@ var BaasicArticleInstanceCommentRepliesClient = (function () {
 BaasicArticleInstanceCommentRepliesClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceCommentRepliesRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleInstanceCommentRepliesRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleInstanceCommentRepliesClient);
@@ -6413,7 +6456,7 @@ exports.BaasicArticleInstanceCommentRepliesClient = BaasicArticleInstanceComment
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6441,8 +6484,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleInstanceCommentRepliesRouteDefinition = (function (_super) {
     __extends(BaasicArticleInstanceCommentRepliesRouteDefinition, _super);
     function BaasicArticleInstanceCommentRepliesRouteDefinition(appOptions) {
@@ -6558,7 +6601,7 @@ exports.BaasicArticleInstanceCommentRepliesRouteDefinition = BaasicArticleInstan
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6586,8 +6629,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var article_1 = __webpack_require__(5);
 var BaasicArticleInstanceCommentsRouteDefinition = (function (_super) {
     __extends(BaasicArticleInstanceCommentsRouteDefinition, _super);
@@ -6779,7 +6822,7 @@ exports.BaasicArticleInstanceCommentsRouteDefinition = BaasicArticleInstanceComm
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6787,14 +6830,14 @@ exports.BaasicArticleInstanceCommentsRouteDefinition = BaasicArticleInstanceComm
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(86));
-__export(__webpack_require__(85));
 __export(__webpack_require__(87));
-__export(__webpack_require__(84));
+__export(__webpack_require__(86));
+__export(__webpack_require__(88));
+__export(__webpack_require__(85));
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6887,7 +6930,7 @@ var BaasicArticleInstanceFilesBatchClient = (function () {
 BaasicArticleInstanceFilesBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceFilesBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleInstanceFilesBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleInstanceFilesBatchClient);
@@ -6901,7 +6944,7 @@ exports.BaasicArticleInstanceFilesBatchClient = BaasicArticleInstanceFilesBatchC
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6929,8 +6972,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleInstanceFilesBatchRouteDefinition = (function (_super) {
     __extends(BaasicArticleInstanceFilesBatchRouteDefinition, _super);
     function BaasicArticleInstanceFilesBatchRouteDefinition(appOptions) {
@@ -6986,7 +7029,7 @@ exports.BaasicArticleInstanceFilesBatchRouteDefinition = BaasicArticleInstanceFi
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7152,7 +7195,7 @@ BaasicArticleInstanceFilesClient = __decorate([
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceFilesRouteDefinition)),
     __param(1, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceFilesStreamsClient)),
     __param(2, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceFilesBatchClient)),
-    __param(3, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(3, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleInstanceFilesRouteDefinition,
         article_1.BaasicArticleInstanceFilesStreamsClient,
         article_1.BaasicArticleInstanceFilesBatchClient,
@@ -7168,7 +7211,7 @@ exports.BaasicArticleInstanceFilesClient = BaasicArticleInstanceFilesClient;
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7196,8 +7239,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var article_1 = __webpack_require__(5);
 var BaasicArticleInstanceFilesRouteDefinition = (function (_super) {
     __extends(BaasicArticleInstanceFilesRouteDefinition, _super);
@@ -7316,7 +7359,7 @@ exports.BaasicArticleInstanceFilesRouteDefinition = BaasicArticleInstanceFilesRo
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7451,7 +7494,7 @@ var BaasicArticleInstanceFilesStreamsClient = (function () {
 BaasicArticleInstanceFilesStreamsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceFilesStreamsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleInstanceFilesStreamsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleInstanceFilesStreamsClient);
@@ -7465,7 +7508,7 @@ exports.BaasicArticleInstanceFilesStreamsClient = BaasicArticleInstanceFilesStre
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7493,8 +7536,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleInstanceFilesStreamsRouteDefinition = (function (_super) {
     __extends(BaasicArticleInstanceFilesStreamsRouteDefinition, _super);
     function BaasicArticleInstanceFilesStreamsRouteDefinition(appOptions) {
@@ -7562,7 +7605,7 @@ exports.BaasicArticleInstanceFilesStreamsRouteDefinition = BaasicArticleInstance
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7570,16 +7613,16 @@ exports.BaasicArticleInstanceFilesStreamsRouteDefinition = BaasicArticleInstance
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(95));
 __export(__webpack_require__(94));
-__export(__webpack_require__(93));
-__export(__webpack_require__(90));
-__export(__webpack_require__(89));
-__export(__webpack_require__(92));
 __export(__webpack_require__(91));
+__export(__webpack_require__(90));
+__export(__webpack_require__(93));
+__export(__webpack_require__(92));
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7751,7 +7794,7 @@ var BaasicArticleInstanceRatingsClient = (function () {
 BaasicArticleInstanceRatingsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceRatingsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleInstanceRatingsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleInstanceRatingsClient);
@@ -7768,7 +7811,7 @@ exports.BaasicArticleInstanceRatingsClient = BaasicArticleInstanceRatingsClient;
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7796,8 +7839,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleInstanceRatingsRouteDefinition = (function (_super) {
     __extends(BaasicArticleInstanceRatingsRouteDefinition, _super);
     function BaasicArticleInstanceRatingsRouteDefinition(appOptions) {
@@ -7907,7 +7950,7 @@ exports.BaasicArticleInstanceRatingsRouteDefinition = BaasicArticleInstanceRatin
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7915,12 +7958,12 @@ exports.BaasicArticleInstanceRatingsRouteDefinition = BaasicArticleInstanceRatin
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(98));
 __export(__webpack_require__(97));
-__export(__webpack_require__(96));
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7996,7 +8039,7 @@ exports.BaasicArticleInstanceSubscriptionsClient = BaasicArticleInstanceSubscrip
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8024,8 +8067,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var article_1 = __webpack_require__(5);
 var BaasicArticleInstanceSubscriptionsRouteDefinition = (function (_super) {
     __extends(BaasicArticleInstanceSubscriptionsRouteDefinition, _super);
@@ -8074,7 +8117,7 @@ exports.BaasicArticleInstanceSubscriptionsRouteDefinition = BaasicArticleInstanc
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8158,7 +8201,7 @@ var BaasicArticleSubscriptionsArticleClient = (function () {
 BaasicArticleSubscriptionsArticleClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleSubscriptionsArticleRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleSubscriptionsArticleRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleSubscriptionsArticleClient);
@@ -8166,7 +8209,7 @@ exports.BaasicArticleSubscriptionsArticleClient = BaasicArticleSubscriptionsArti
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8194,8 +8237,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleSubscriptionsArticleRouteDefinition = (function (_super) {
     __extends(BaasicArticleSubscriptionsArticleRouteDefinition, _super);
     function BaasicArticleSubscriptionsArticleRouteDefinition(appOptions) {
@@ -8247,7 +8290,7 @@ exports.BaasicArticleSubscriptionsArticleRouteDefinition = BaasicArticleSubscrip
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8331,7 +8374,7 @@ var BaasicArticleSubscriptionsCommentReportedClient = (function () {
 BaasicArticleSubscriptionsCommentReportedClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleSubscriptionsCommentReportedRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleSubscriptionsCommentReportedClient);
@@ -8339,7 +8382,7 @@ exports.BaasicArticleSubscriptionsCommentReportedClient = BaasicArticleSubscript
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8367,8 +8410,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleSubscriptionsCommentReportedRouteDefinition = (function (_super) {
     __extends(BaasicArticleSubscriptionsCommentReportedRouteDefinition, _super);
     function BaasicArticleSubscriptionsCommentReportedRouteDefinition(appOptions) {
@@ -8414,7 +8457,7 @@ exports.BaasicArticleSubscriptionsCommentReportedRouteDefinition = BaasicArticle
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8498,7 +8541,7 @@ var BaasicArticleSubscriptionsCommentRequiresModerationClient = (function () {
 BaasicArticleSubscriptionsCommentRequiresModerationClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleSubscriptionsCommentRequiresModerationClient);
@@ -8506,7 +8549,7 @@ exports.BaasicArticleSubscriptionsCommentRequiresModerationClient = BaasicArticl
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8534,8 +8577,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition = (function (_super) {
     __extends(BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition, _super);
     function BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition(appOptions) {
@@ -8581,7 +8624,7 @@ exports.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition = Baa
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8589,18 +8632,18 @@ exports.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition = Baa
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(103));
+__export(__webpack_require__(105));
+__export(__webpack_require__(107));
+__export(__webpack_require__(101));
 __export(__webpack_require__(102));
 __export(__webpack_require__(104));
 __export(__webpack_require__(106));
 __export(__webpack_require__(100));
-__export(__webpack_require__(101));
-__export(__webpack_require__(103));
-__export(__webpack_require__(105));
-__export(__webpack_require__(99));
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8737,7 +8780,7 @@ var BaasicArticleInstanceTagsClient = (function () {
 BaasicArticleInstanceTagsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleInstanceTagsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleInstanceTagsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleInstanceTagsClient);
@@ -8754,7 +8797,7 @@ exports.BaasicArticleInstanceTagsClient = BaasicArticleInstanceTagsClient;
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8782,8 +8825,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleInstanceTagsRouteDefinition = (function (_super) {
     __extends(BaasicArticleInstanceTagsRouteDefinition, _super);
     function BaasicArticleInstanceTagsRouteDefinition(appOptions) {
@@ -8869,7 +8912,7 @@ exports.BaasicArticleInstanceTagsRouteDefinition = BaasicArticleInstanceTagsRout
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8877,12 +8920,12 @@ exports.BaasicArticleInstanceTagsRouteDefinition = BaasicArticleInstanceTagsRout
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(110));
 __export(__webpack_require__(109));
-__export(__webpack_require__(108));
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9009,7 +9052,7 @@ var BaasicArticleACLClient = (function () {
 BaasicArticleACLClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleACLRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleACLRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleACLClient);
@@ -9026,7 +9069,7 @@ exports.BaasicArticleACLClient = BaasicArticleACLClient;
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9054,8 +9097,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleACLRouteDefinition = (function (_super) {
     __extends(BaasicArticleACLRouteDefinition, _super);
     function BaasicArticleACLRouteDefinition(appOptions) {
@@ -9165,7 +9208,7 @@ exports.BaasicArticleACLRouteDefinition = BaasicArticleACLRouteDefinition;
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9487,7 +9530,7 @@ var BaasicArticleCommentRepliesClient = (function () {
 BaasicArticleCommentRepliesClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleCommentRepliesRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleCommentRepliesRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleCommentRepliesClient);
@@ -9501,7 +9544,7 @@ exports.BaasicArticleCommentRepliesClient = BaasicArticleCommentRepliesClient;
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9529,8 +9572,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleCommentRepliesRouteDefinition = (function (_super) {
     __extends(BaasicArticleCommentRepliesRouteDefinition, _super);
     function BaasicArticleCommentRepliesRouteDefinition(appOptions) {
@@ -9695,7 +9738,7 @@ exports.BaasicArticleCommentRepliesRouteDefinition = BaasicArticleCommentReplies
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9989,7 +10032,7 @@ BaasicArticleCommentsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleCommentRepliesClient)),
     __param(1, inversify_1.inject(article_1.TYPES.BaasicArticleCommentsRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleCommentRepliesClient,
         article_1.BaasicArticleCommentsRouteDefinition,
         httpApi_1.BaasicApiClient])
@@ -10004,7 +10047,7 @@ exports.BaasicArticleCommentsClient = BaasicArticleCommentsClient;
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10032,8 +10075,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleCommentsRouteDefinition = (function (_super) {
     __extends(BaasicArticleCommentsRouteDefinition, _super);
     function BaasicArticleCommentsRouteDefinition(appOptions) {
@@ -10170,7 +10213,7 @@ exports.BaasicArticleCommentsRouteDefinition = BaasicArticleCommentsRouteDefinit
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10263,7 +10306,7 @@ var BaasicArticleFilesBatchClient = (function () {
 BaasicArticleFilesBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleFilesBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleFilesBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleFilesBatchClient);
@@ -10277,7 +10320,7 @@ exports.BaasicArticleFilesBatchClient = BaasicArticleFilesBatchClient;
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10305,8 +10348,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleFilesBatchRouteDefinition = (function (_super) {
     __extends(BaasicArticleFilesBatchRouteDefinition, _super);
     function BaasicArticleFilesBatchRouteDefinition(appOptions) {
@@ -10359,7 +10402,7 @@ exports.BaasicArticleFilesBatchRouteDefinition = BaasicArticleFilesBatchRouteDef
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10521,7 +10564,7 @@ BaasicArticleFilesClient = __decorate([
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleFilesRouteDefinition)),
     __param(1, inversify_1.inject(article_1.TYPES.BaasicArticleFilesStreamsClient)),
     __param(2, inversify_1.inject(article_1.TYPES.BaasicArticleFilesBatchClient)),
-    __param(3, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(3, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleFilesRouteDefinition,
         article_1.BaasicArticleFilesStreamsClient,
         article_1.BaasicArticleFilesBatchClient,
@@ -10537,7 +10580,7 @@ exports.BaasicArticleFilesClient = BaasicArticleFilesClient;
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10565,8 +10608,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var article_1 = __webpack_require__(5);
 var BaasicArticleFilesRouteDefinition = (function (_super) {
     __extends(BaasicArticleFilesRouteDefinition, _super);
@@ -10670,7 +10713,7 @@ exports.BaasicArticleFilesRouteDefinition = BaasicArticleFilesRouteDefinition;
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10805,7 +10848,7 @@ var BaasicArticleFilesStreamsClient = (function () {
 BaasicArticleFilesStreamsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleFilesStreamsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleFilesStreamsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleFilesStreamsClient);
@@ -10819,7 +10862,7 @@ exports.BaasicArticleFilesStreamsClient = BaasicArticleFilesStreamsClient;
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10847,8 +10890,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleFilesStreamsRouteDefinition = (function (_super) {
     __extends(BaasicArticleFilesStreamsRouteDefinition, _super);
     function BaasicArticleFilesStreamsRouteDefinition(appOptions) {
@@ -10910,7 +10953,7 @@ exports.BaasicArticleFilesStreamsRouteDefinition = BaasicArticleFilesStreamsRout
 
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11081,7 +11124,7 @@ var BaasicArticleRatingsClient = (function () {
 BaasicArticleRatingsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleRatingsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleRatingsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleRatingsClient);
@@ -11098,7 +11141,7 @@ exports.BaasicArticleRatingsClient = BaasicArticleRatingsClient;
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11126,8 +11169,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleRatingsRouteDefinition = (function (_super) {
     __extends(BaasicArticleRatingsRouteDefinition, _super);
     function BaasicArticleRatingsRouteDefinition(appOptions) {
@@ -11231,7 +11274,7 @@ exports.BaasicArticleRatingsRouteDefinition = BaasicArticleRatingsRouteDefinitio
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11259,8 +11302,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var article_1 = __webpack_require__(5);
 var BaasicArticleRouteDefinition = (function (_super) {
     __extends(BaasicArticleRouteDefinition, _super);
@@ -11482,7 +11525,7 @@ exports.BaasicArticleRouteDefinition = BaasicArticleRouteDefinition;
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11568,7 +11611,7 @@ var BaasicArticleSettingsClient = (function () {
 BaasicArticleSettingsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleSettingsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleSettingsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleSettingsClient);
@@ -11585,7 +11628,7 @@ exports.BaasicArticleSettingsClient = BaasicArticleSettingsClient;
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11613,8 +11656,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleSettingsRouteDefinition = (function (_super) {
     __extends(BaasicArticleSettingsRouteDefinition, _super);
     function BaasicArticleSettingsRouteDefinition(appOptions) {
@@ -11663,7 +11706,7 @@ exports.BaasicArticleSettingsRouteDefinition = BaasicArticleSettingsRouteDefinit
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11746,7 +11789,7 @@ var BaasicArticleSubscriptionsClient = (function () {
 BaasicArticleSubscriptionsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleSubscriptionsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleSubscriptionsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleSubscriptionsClient);
@@ -11754,7 +11797,7 @@ exports.BaasicArticleSubscriptionsClient = BaasicArticleSubscriptionsClient;
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11782,8 +11825,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleSubscriptionsRouteDefinition = (function (_super) {
     __extends(BaasicArticleSubscriptionsRouteDefinition, _super);
     function BaasicArticleSubscriptionsRouteDefinition(appOptions) {
@@ -11829,7 +11872,7 @@ exports.BaasicArticleSubscriptionsRouteDefinition = BaasicArticleSubscriptionsRo
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11962,7 +12005,7 @@ BaasicArticleTagsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleTagsRouteDefinition)),
     __param(1, inversify_1.inject(article_1.TYPES.BaasicArticleTagsSubscriptionsClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleTagsRouteDefinition,
         article_1.BaasicArticleTagsSubscriptionsClient,
         httpApi_1.BaasicApiClient])
@@ -11980,7 +12023,7 @@ exports.BaasicArticleTagsClient = BaasicArticleTagsClient;
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12008,8 +12051,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var article_1 = __webpack_require__(5);
 var BaasicArticleTagsRouteDefinition = (function (_super) {
     __extends(BaasicArticleTagsRouteDefinition, _super);
@@ -12096,7 +12139,7 @@ exports.BaasicArticleTagsRouteDefinition = BaasicArticleTagsRouteDefinition;
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12183,7 +12226,7 @@ var BaasicArticleTagsSubscriptionsClient = (function () {
 BaasicArticleTagsSubscriptionsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(article_1.TYPES.BaasicArticleTagsSubscriptionsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [article_1.BaasicArticleTagsSubscriptionsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicArticleTagsSubscriptionsClient);
@@ -12200,7 +12243,7 @@ exports.BaasicArticleTagsSubscriptionsClient = BaasicArticleTagsSubscriptionsCli
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12228,8 +12271,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicArticleTagsSubscriptionsRouteDefinition = (function (_super) {
     __extends(BaasicArticleTagsSubscriptionsRouteDefinition, _super);
     function BaasicArticleTagsSubscriptionsRouteDefinition(appOptions) {
@@ -12290,12 +12333,12 @@ exports.BaasicArticleTagsSubscriptionsRouteDefinition = BaasicArticleTagsSubscri
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var article_1 = __webpack_require__(5);
 var BaasicArticleUtility = (function () {
     function BaasicArticleUtility() {
@@ -12334,7 +12377,7 @@ exports.BaasicArticleUtility = BaasicArticleUtility;
 
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12357,7 +12400,7 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12467,7 +12510,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12520,7 +12563,7 @@ exports.Root = Root;
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12714,7 +12757,7 @@ BaasicCommerceClient = __decorate([
     __param(3, inversify_1.inject(commerce_1.TYPES.BaasicCommercePaymentTransactionClient)),
     __param(4, inversify_1.inject(commerce_1.TYPES.Lookups)),
     __param(5, inversify_1.inject(commerce_1.TYPES.BaasicCommerceRouteDefinition)),
-    __param(6, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(6, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceCustomerClient,
         commerce_1.BaasicCommerceInvoiceClient,
         commerce_1.BaasicCommerceProductClient,
@@ -12736,7 +12779,7 @@ exports.BaasicCommerceClient = BaasicCommerceClient;
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12764,8 +12807,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceRouteDefinition = (function (_super) {
     __extends(BaasicCommerceRouteDefinition, _super);
     function BaasicCommerceRouteDefinition(appOptions) {
@@ -12860,7 +12903,7 @@ exports.BaasicCommerceRouteDefinition = BaasicCommerceRouteDefinition;
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12984,7 +13027,7 @@ BaasicCommerceCustomerClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceCustomerPaymentMethodClient)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceCustomerRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceCustomerPaymentMethodClient,
         commerce_1.BaasicCommerceCustomerRouteDefinition,
         httpApi_1.BaasicApiClient])
@@ -13002,7 +13045,7 @@ exports.BaasicCommerceCustomerClient = BaasicCommerceCustomerClient;
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13137,7 +13180,7 @@ var BaasicCommerceCustomerPaymentMethodClient = (function () {
 BaasicCommerceCustomerPaymentMethodClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceCustomerPaymentMethodRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceCustomerPaymentMethodRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceCustomerPaymentMethodClient);
@@ -13154,7 +13197,7 @@ exports.BaasicCommerceCustomerPaymentMethodClient = BaasicCommerceCustomerPaymen
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13182,8 +13225,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceCustomerPaymentMethodRouteDefinition = (function (_super) {
     __extends(BaasicCommerceCustomerPaymentMethodRouteDefinition, _super);
     function BaasicCommerceCustomerPaymentMethodRouteDefinition(appOptions) {
@@ -13262,7 +13305,7 @@ exports.BaasicCommerceCustomerPaymentMethodRouteDefinition = BaasicCommerceCusto
 
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13290,8 +13333,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceCustomerRouteDefinition = (function (_super) {
     __extends(BaasicCommerceCustomerRouteDefinition, _super);
     function BaasicCommerceCustomerRouteDefinition(appOptions) {
@@ -13361,7 +13404,7 @@ exports.BaasicCommerceCustomerRouteDefinition = BaasicCommerceCustomerRouteDefin
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13369,14 +13412,14 @@ exports.BaasicCommerceCustomerRouteDefinition = BaasicCommerceCustomerRouteDefin
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(143));
-__export(__webpack_require__(140));
-__export(__webpack_require__(142));
+__export(__webpack_require__(144));
 __export(__webpack_require__(141));
+__export(__webpack_require__(143));
+__export(__webpack_require__(142));
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13486,7 +13529,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13610,7 +13653,7 @@ BaasicCommerceInvoiceClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceInvoiceRouteDefinition)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceInvoiceStreamsClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceInvoiceRouteDefinition,
         commerce_1.BaasicCommerceInvoiceStreamsClient,
         httpApi_1.BaasicApiClient])
@@ -13619,7 +13662,7 @@ exports.BaasicCommerceInvoiceClient = BaasicCommerceInvoiceClient;
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13647,8 +13690,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceInvoiceRouteDefinition = (function (_super) {
     __extends(BaasicCommerceInvoiceRouteDefinition, _super);
@@ -13733,7 +13776,7 @@ exports.BaasicCommerceInvoiceRouteDefinition = BaasicCommerceInvoiceRouteDefinit
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13805,7 +13848,7 @@ var BaasicCommerceInvoiceStreamsClient = (function () {
 BaasicCommerceInvoiceStreamsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceInvoiceStreamsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceInvoiceStreamsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceInvoiceStreamsClient);
@@ -13822,7 +13865,7 @@ exports.BaasicCommerceInvoiceStreamsClient = BaasicCommerceInvoiceStreamsClient;
 
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13850,8 +13893,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceInvoiceStreamsRouteDefinition = (function (_super) {
     __extends(BaasicCommerceInvoiceStreamsRouteDefinition, _super);
     function BaasicCommerceInvoiceStreamsRouteDefinition(appOptions) {
@@ -13894,7 +13937,7 @@ exports.BaasicCommerceInvoiceStreamsRouteDefinition = BaasicCommerceInvoiceStrea
 
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13902,14 +13945,14 @@ exports.BaasicCommerceInvoiceStreamsRouteDefinition = BaasicCommerceInvoiceStrea
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(150));
 __export(__webpack_require__(149));
 __export(__webpack_require__(148));
 __export(__webpack_require__(147));
-__export(__webpack_require__(146));
 
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13997,7 +14040,7 @@ var BaasicCommerceLookupsAddressTypesBatchClient = (function () {
 BaasicCommerceLookupsAddressTypesBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsAddressTypeBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsAddressTypeBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceLookupsAddressTypesBatchClient);
@@ -14014,7 +14057,7 @@ exports.BaasicCommerceLookupsAddressTypesBatchClient = BaasicCommerceLookupsAddr
 
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14042,8 +14085,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceLookupsAddressTypeBatchRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsAddressTypeBatchRouteDefinition, _super);
     function BaasicCommerceLookupsAddressTypeBatchRouteDefinition(appOptions) {
@@ -14099,7 +14142,7 @@ exports.BaasicCommerceLookupsAddressTypeBatchRouteDefinition = BaasicCommerceLoo
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14241,7 +14284,7 @@ BaasicCommerceLookupsAddressTypesClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsAddressTypeRouteDefinition)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsAddressTypesBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsAddressTypeRouteDefinition,
         commerce_1.BaasicCommerceLookupsAddressTypesBatchClient,
         httpApi_1.BaasicApiClient])
@@ -14259,7 +14302,7 @@ exports.BaasicCommerceLookupsAddressTypesClient = BaasicCommerceLookupsAddressTy
 
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14287,8 +14330,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceLookupsAddressTypeRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsAddressTypeRouteDefinition, _super);
@@ -14377,7 +14420,7 @@ exports.BaasicCommerceLookupsAddressTypeRouteDefinition = BaasicCommerceLookupsA
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14385,14 +14428,14 @@ exports.BaasicCommerceLookupsAddressTypeRouteDefinition = BaasicCommerceLookupsA
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(152));
-__export(__webpack_require__(151));
-__export(__webpack_require__(154));
 __export(__webpack_require__(153));
+__export(__webpack_require__(152));
+__export(__webpack_require__(155));
+__export(__webpack_require__(154));
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14474,7 +14517,7 @@ var BaasicCommerceLookupsCountryStateBatchClient = (function () {
 BaasicCommerceLookupsCountryStateBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsCountryStateBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsCountryStateBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceLookupsCountryStateBatchClient);
@@ -14491,7 +14534,7 @@ exports.BaasicCommerceLookupsCountryStateBatchClient = BaasicCommerceLookupsCoun
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14519,8 +14562,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceLookupsCountryStateBatchRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsCountryStateBatchRouteDefinition, _super);
     function BaasicCommerceLookupsCountryStateBatchRouteDefinition(appOptions) {
@@ -14576,7 +14619,7 @@ exports.BaasicCommerceLookupsCountryStateBatchRouteDefinition = BaasicCommerceLo
 
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14720,7 +14763,7 @@ BaasicCommerceLookupsCountryStateClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsCountryStateRouteDefinition)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsCountryStateBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsCountryStateRouteDefinition,
         commerce_1.BaasicCommerceLookupsCountryStateBatchClient,
         httpApi_1.BaasicApiClient])
@@ -14738,7 +14781,7 @@ exports.BaasicCommerceLookupsCountryStateClient = BaasicCommerceLookupsCountrySt
 
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14766,8 +14809,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceLookupsCountryStateRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsCountryStateRouteDefinition, _super);
@@ -14858,7 +14901,7 @@ exports.BaasicCommerceLookupsCountryStateRouteDefinition = BaasicCommerceLookups
 
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14866,14 +14909,14 @@ exports.BaasicCommerceLookupsCountryStateRouteDefinition = BaasicCommerceLookups
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(157));
-__export(__webpack_require__(156));
-__export(__webpack_require__(159));
 __export(__webpack_require__(158));
+__export(__webpack_require__(157));
+__export(__webpack_require__(160));
+__export(__webpack_require__(159));
 
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14954,7 +14997,7 @@ var BaasicCommerceLookupsCountryBatchClient = (function () {
 BaasicCommerceLookupsCountryBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsCountryBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsCountryBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceLookupsCountryBatchClient);
@@ -14971,7 +15014,7 @@ exports.BaasicCommerceLookupsCountryBatchClient = BaasicCommerceLookupsCountryBa
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14999,8 +15042,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceLookupsCountryBatchRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsCountryBatchRouteDefinition, _super);
     function BaasicCommerceLookupsCountryBatchRouteDefinition(appOptions) {
@@ -15056,7 +15099,7 @@ exports.BaasicCommerceLookupsCountryBatchRouteDefinition = BaasicCommerceLookups
 
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15198,7 +15241,7 @@ BaasicCommerceLookupsCountryClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsCountryRouteDefinition)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsCountryBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsCountryRouteDefinition,
         commerce_1.BaasicCommerceLookupsCountryBatchClient,
         httpApi_1.BaasicApiClient])
@@ -15216,7 +15259,7 @@ exports.BaasicCommerceLookupsCountryClient = BaasicCommerceLookupsCountryClient;
 
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15244,8 +15287,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceLookupsCountryRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsCountryRouteDefinition, _super);
@@ -15334,7 +15377,7 @@ exports.BaasicCommerceLookupsCountryRouteDefinition = BaasicCommerceLookupsCount
 
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15342,14 +15385,14 @@ exports.BaasicCommerceLookupsCountryRouteDefinition = BaasicCommerceLookupsCount
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(162));
-__export(__webpack_require__(161));
-__export(__webpack_require__(164));
 __export(__webpack_require__(163));
+__export(__webpack_require__(162));
+__export(__webpack_require__(165));
+__export(__webpack_require__(164));
 
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15430,7 +15473,7 @@ var BaasicCommerceLookupsInvoiceStatusBatchClient = (function () {
 BaasicCommerceLookupsInvoiceStatusBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceLookupsInvoiceStatusBatchClient);
@@ -15447,7 +15490,7 @@ exports.BaasicCommerceLookupsInvoiceStatusBatchClient = BaasicCommerceLookupsInv
 
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15475,8 +15518,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition, _super);
     function BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition(appOptions) {
@@ -15532,7 +15575,7 @@ exports.BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition = BaasicCommerceL
 
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15674,7 +15717,7 @@ BaasicCommerceLookupsInvoiceStatusClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsInvoiceStatusBatchClient)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsInvoiceStatusRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsInvoiceStatusBatchClient,
         commerce_1.BaasicCommerceLookupsInvoiceStatusRouteDefinition,
         httpApi_1.BaasicApiClient])
@@ -15692,7 +15735,7 @@ exports.BaasicCommerceLookupsInvoiceStatusClient = BaasicCommerceLookupsInvoiceS
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15720,8 +15763,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceLookupsInvoiceStatusRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsInvoiceStatusRouteDefinition, _super);
@@ -15811,7 +15854,7 @@ exports.BaasicCommerceLookupsInvoiceStatusRouteDefinition = BaasicCommerceLookup
 
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15819,14 +15862,14 @@ exports.BaasicCommerceLookupsInvoiceStatusRouteDefinition = BaasicCommerceLookup
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(167));
-__export(__webpack_require__(166));
-__export(__webpack_require__(169));
 __export(__webpack_require__(168));
+__export(__webpack_require__(167));
+__export(__webpack_require__(170));
+__export(__webpack_require__(169));
 
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15844,7 +15887,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var commerce_1 = __webpack_require__(4);
-var lookups_1 = __webpack_require__(32);
+var lookups_1 = __webpack_require__(35);
 var inversify_1 = __webpack_require__(0);
 __webpack_require__(10);
 var Lookups = (function () {
@@ -15883,7 +15926,7 @@ exports.Lookups = Lookups;
 
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15965,7 +16008,7 @@ var BaasicCommerceLookupsPaymentMethodBatchClient = (function () {
 BaasicCommerceLookupsPaymentMethodBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsPaymentMethodBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsPaymentMethodBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceLookupsPaymentMethodBatchClient);
@@ -15982,7 +16025,7 @@ exports.BaasicCommerceLookupsPaymentMethodBatchClient = BaasicCommerceLookupsPay
 
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16010,8 +16053,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceLookupsPaymentMethodBatchRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsPaymentMethodBatchRouteDefinition, _super);
     function BaasicCommerceLookupsPaymentMethodBatchRouteDefinition(appOptions) {
@@ -16067,7 +16110,7 @@ exports.BaasicCommerceLookupsPaymentMethodBatchRouteDefinition = BaasicCommerceL
 
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16209,7 +16252,7 @@ BaasicCommerceLookupsPaymentMethodClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsPaymentMethodBatchClient)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsPaymentMethodRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsPaymentMethodBatchClient,
         commerce_1.BaasicCommerceLookupsPaymentMethodRouteDefinition,
         httpApi_1.BaasicApiClient])
@@ -16227,7 +16270,7 @@ exports.BaasicCommerceLookupsPaymentMethodClient = BaasicCommerceLookupsPaymentM
 
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16255,8 +16298,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceLookupsPaymentMethodRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsPaymentMethodRouteDefinition, _super);
@@ -16346,7 +16389,7 @@ exports.BaasicCommerceLookupsPaymentMethodRouteDefinition = BaasicCommerceLookup
 
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16354,14 +16397,14 @@ exports.BaasicCommerceLookupsPaymentMethodRouteDefinition = BaasicCommerceLookup
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(173));
-__export(__webpack_require__(172));
-__export(__webpack_require__(175));
 __export(__webpack_require__(174));
+__export(__webpack_require__(173));
+__export(__webpack_require__(176));
+__export(__webpack_require__(175));
 
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16442,7 +16485,7 @@ var BaasicCommerceLookupsPaymentTransactionStatusBatchClient = (function () {
 BaasicCommerceLookupsPaymentTransactionStatusBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceLookupsPaymentTransactionStatusBatchClient);
@@ -16459,7 +16502,7 @@ exports.BaasicCommerceLookupsPaymentTransactionStatusBatchClient = BaasicCommerc
 
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16487,8 +16530,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition, _super);
     function BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition(appOptions) {
@@ -16544,7 +16587,7 @@ exports.BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition = Baas
 
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16686,7 +16729,7 @@ BaasicCommerceLookupsPaymentTransactionStatusClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsPaymentTransactionStatusBatchClient)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsPaymentTransactionStatusBatchClient,
         commerce_1.BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition,
         httpApi_1.BaasicApiClient])
@@ -16704,7 +16747,7 @@ exports.BaasicCommerceLookupsPaymentTransactionStatusClient = BaasicCommerceLook
 
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16732,8 +16775,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition, _super);
@@ -16823,7 +16866,7 @@ exports.BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition = BaasicCom
 
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16831,14 +16874,14 @@ exports.BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition = BaasicCom
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(178));
-__export(__webpack_require__(177));
-__export(__webpack_require__(180));
 __export(__webpack_require__(179));
+__export(__webpack_require__(178));
+__export(__webpack_require__(181));
+__export(__webpack_require__(180));
 
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16920,7 +16963,7 @@ var BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient = (function () {
 BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient);
@@ -16937,7 +16980,7 @@ exports.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient = BaasicCommerc
 
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16965,8 +17008,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition, _super);
     function BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition(appOptions) {
@@ -17022,7 +17065,7 @@ exports.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition = Baas
 
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17165,7 +17208,7 @@ BaasicCommerceLookupsRecurringCyclePeriodTypeClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient,
         commerce_1.BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition,
         httpApi_1.BaasicApiClient])
@@ -17183,7 +17226,7 @@ exports.BaasicCommerceLookupsRecurringCyclePeriodTypeClient = BaasicCommerceLook
 
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17211,8 +17254,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition, _super);
@@ -17302,7 +17345,7 @@ exports.BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition = BaasicCom
 
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17310,14 +17353,14 @@ exports.BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition = BaasicCom
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(183));
-__export(__webpack_require__(182));
-__export(__webpack_require__(185));
 __export(__webpack_require__(184));
+__export(__webpack_require__(183));
+__export(__webpack_require__(186));
+__export(__webpack_require__(185));
 
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17398,7 +17441,7 @@ var BaasicCommerceLookupsSubscriptionStatusBatchClient = (function () {
 BaasicCommerceLookupsSubscriptionStatusBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceLookupsSubscriptionStatusBatchClient);
@@ -17415,7 +17458,7 @@ exports.BaasicCommerceLookupsSubscriptionStatusBatchClient = BaasicCommerceLooku
 
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17443,8 +17486,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition, _super);
     function BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition(appOptions) {
@@ -17500,7 +17543,7 @@ exports.BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition = BaasicComm
 
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17642,7 +17685,7 @@ BaasicCommerceLookupsSubscriptionStatusClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsSubscriptionStatusBatchClient)),
     __param(1, inversify_1.inject(commerce_1.TYPES.BaasicCommerceLookupsSubscriptionStatusRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceLookupsSubscriptionStatusBatchClient,
         commerce_1.BaasicCommerceLookupsSubscriptionStatusRouteDefinition,
         httpApi_1.BaasicApiClient])
@@ -17660,7 +17703,7 @@ exports.BaasicCommerceLookupsSubscriptionStatusClient = BaasicCommerceLookupsSub
 
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17688,8 +17731,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var commerce_1 = __webpack_require__(4);
 var BaasicCommerceLookupsSubscriptionStatusRouteDefinition = (function (_super) {
     __extends(BaasicCommerceLookupsSubscriptionStatusRouteDefinition, _super);
@@ -17779,7 +17822,7 @@ exports.BaasicCommerceLookupsSubscriptionStatusRouteDefinition = BaasicCommerceL
 
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17787,14 +17830,14 @@ exports.BaasicCommerceLookupsSubscriptionStatusRouteDefinition = BaasicCommerceL
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(188));
-__export(__webpack_require__(187));
-__export(__webpack_require__(190));
 __export(__webpack_require__(189));
+__export(__webpack_require__(188));
+__export(__webpack_require__(191));
+__export(__webpack_require__(190));
 
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17923,7 +17966,7 @@ var BaasicCommercePaymentTransactionClient = (function () {
 BaasicCommercePaymentTransactionClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommercePaymentTransactionRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommercePaymentTransactionRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommercePaymentTransactionClient);
@@ -17940,7 +17983,7 @@ exports.BaasicCommercePaymentTransactionClient = BaasicCommercePaymentTransactio
 
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17968,8 +18011,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommercePaymentTransactionRouteDefinition = (function (_super) {
     __extends(BaasicCommercePaymentTransactionRouteDefinition, _super);
     function BaasicCommercePaymentTransactionRouteDefinition(appOptions) {
@@ -18055,7 +18098,7 @@ exports.BaasicCommercePaymentTransactionRouteDefinition = BaasicCommercePaymentT
 
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18063,12 +18106,12 @@ exports.BaasicCommercePaymentTransactionRouteDefinition = BaasicCommercePaymentT
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(194));
 __export(__webpack_require__(193));
-__export(__webpack_require__(192));
 
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18205,7 +18248,7 @@ var BaasicCommerceProductClient = (function () {
 BaasicCommerceProductClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(commerce_1.TYPES.BaasicCommerceProductRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [commerce_1.BaasicCommerceProductRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCommerceProductClient);
@@ -18222,7 +18265,7 @@ exports.BaasicCommerceProductClient = BaasicCommerceProductClient;
 
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18250,8 +18293,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCommerceProductRouteDefinition = (function (_super) {
     __extends(BaasicCommerceProductRouteDefinition, _super);
     function BaasicCommerceProductRouteDefinition(appOptions) {
@@ -18330,7 +18373,7 @@ exports.BaasicCommerceProductRouteDefinition = BaasicCommerceProductRouteDefinit
 
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18338,12 +18381,12 @@ exports.BaasicCommerceProductRouteDefinition = BaasicCommerceProductRouteDefinit
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(197));
 __export(__webpack_require__(196));
-__export(__webpack_require__(195));
 
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18453,7 +18496,7 @@ var BaasicDynamicResourceACLClient = (function () {
 BaasicDynamicResourceACLClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(dynamicResource_1.TYPES.BaasicDynamicResourceACLRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [dynamicResource_1.BaasicDynamicResourceACLRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicDynamicResourceACLClient);
@@ -18467,7 +18510,7 @@ exports.BaasicDynamicResourceACLClient = BaasicDynamicResourceACLClient;
 
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18494,8 +18537,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicDynamicResourceACLRouteDefinition = (function (_super) {
     __extends(BaasicDynamicResourceACLRouteDefinition, _super);
     function BaasicDynamicResourceACLRouteDefinition(appOptions) {
@@ -18585,7 +18628,7 @@ exports.BaasicDynamicResourceACLRouteDefinition = BaasicDynamicResourceACLRouteD
 
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18777,7 +18820,7 @@ BaasicDynamicResourceClient = __decorate([
     __param(0, inversify_1.inject(dynamicResource_1.TYPES.BaasicDynamicResourceRouteDefinition)),
     __param(1, inversify_1.inject(dynamicResource_1.TYPES.BaasicDynamicResourceACLClient)),
     __param(2, inversify_1.inject(dynamicResource_1.TYPES.BaasicDynamicSchemaClient)),
-    __param(3, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(3, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [dynamicResource_1.BaasicDynamicResourceRouteDefinition,
         dynamicResource_1.BaasicDynamicResourceACLClient,
         dynamicResource_1.BaasicDynamicSchemaClient,
@@ -18787,7 +18830,7 @@ exports.BaasicDynamicResourceClient = BaasicDynamicResourceClient;
 
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18814,9 +18857,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var dynamicResource_1 = __webpack_require__(19);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicDynamicResourceRouteDefinition = (function (_super) {
     __extends(BaasicDynamicResourceRouteDefinition, _super);
     function BaasicDynamicResourceRouteDefinition(appOptions, baasicDynamicResourceACLRouteDefinition, baasicDynamicSchemaRouteDefinition) {
@@ -18911,7 +18954,7 @@ exports.BaasicDynamicResourceRouteDefinition = BaasicDynamicResourceRouteDefinit
 
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19086,7 +19129,7 @@ var BaasicDynamicSchemaClient = (function () {
 BaasicDynamicSchemaClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(dynamicResource_1.TYPES.BaasicDynamicSchemaRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [dynamicResource_1.BaasicDynamicSchemaRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicDynamicSchemaClient);
@@ -19100,7 +19143,7 @@ exports.BaasicDynamicSchemaClient = BaasicDynamicSchemaClient;
 
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19127,8 +19170,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicDynamicSchemaRouteDefinition = (function (_super) {
     __extends(BaasicDynamicSchemaRouteDefinition, _super);
     function BaasicDynamicSchemaRouteDefinition(appOptions) {
@@ -19215,7 +19258,7 @@ exports.BaasicDynamicSchemaRouteDefinition = BaasicDynamicSchemaRouteDefinition;
 
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19243,7 +19286,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19352,7 +19395,7 @@ var BaasicFilesACLClient = (function () {
 BaasicFilesACLClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(files_1.TYPES.BaasicFilesACLRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [files_1.BaasicFilesACLRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicFilesACLClient);
@@ -19366,7 +19409,7 @@ exports.BaasicFilesACLClient = BaasicFilesACLClient;
 
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19394,8 +19437,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicFilesACLRouteDefinition = (function (_super) {
     __extends(BaasicFilesACLRouteDefinition, _super);
     function BaasicFilesACLRouteDefinition(appOptions) {
@@ -19493,7 +19536,7 @@ exports.BaasicFilesACLRouteDefinition = BaasicFilesACLRouteDefinition;
 
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19592,7 +19635,7 @@ var BaasicFilesBatchClient = (function () {
 BaasicFilesBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(files_1.TYPES.BaasicFilesBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [files_1.BaasicFilesBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicFilesBatchClient);
@@ -19606,7 +19649,7 @@ exports.BaasicFilesBatchClient = BaasicFilesBatchClient;
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19634,8 +19677,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicFilesBatchRouteDefinition = (function (_super) {
     __extends(BaasicFilesBatchRouteDefinition, _super);
     function BaasicFilesBatchRouteDefinition(appOptions) {
@@ -19688,7 +19731,7 @@ exports.BaasicFilesBatchRouteDefinition = BaasicFilesBatchRouteDefinition;
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19860,7 +19903,7 @@ var BaasicFilesClient = (function () {
 BaasicFilesClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(files_1.TYPES.BaasicFilesRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __param(2, inversify_1.inject(files_1.TYPES.BaasicFilesStreamsClient)),
     __param(3, inversify_1.inject(files_1.TYPES.BaasicFilesBatchClient)),
     __param(4, inversify_1.inject(files_1.TYPES.BaasicFilesACLClient)),
@@ -19880,7 +19923,7 @@ exports.BaasicFilesClient = BaasicFilesClient;
 
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19908,9 +19951,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var files_1 = __webpack_require__(18);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicFilesRouteDefinition = (function (_super) {
     __extends(BaasicFilesRouteDefinition, _super);
     function BaasicFilesRouteDefinition(appOptions, baasicFilesStreamsRouteDefinition) {
@@ -20000,7 +20043,7 @@ exports.BaasicFilesRouteDefinition = BaasicFilesRouteDefinition;
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20131,7 +20174,7 @@ var BaasicFilesStreamsClient = (function () {
 BaasicFilesStreamsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(files_1.TYPES.BaasicFilesStreamsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [files_1.BaasicFilesStreamsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicFilesStreamsClient);
@@ -20145,7 +20188,7 @@ exports.BaasicFilesStreamsClient = BaasicFilesStreamsClient;
 
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20173,8 +20216,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicFilesStreamsRouteDefinition = (function (_super) {
     __extends(BaasicFilesStreamsRouteDefinition, _super);
     function BaasicFilesStreamsRouteDefinition(appOptions) {
@@ -20246,7 +20289,7 @@ exports.BaasicFilesStreamsRouteDefinition = BaasicFilesStreamsRouteDefinition;
 
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20278,40 +20321,6 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 214 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var ApplicationSettings = __webpack_require__(25);
-exports.ApplicationSettings = ApplicationSettings;
-var Membership = __webpack_require__(9);
-exports.Membership = Membership;
-var UserProfile = __webpack_require__(7);
-exports.UserProfile = UserProfile;
-var KeyValue = __webpack_require__(26);
-exports.KeyValue = KeyValue;
-var ValueSet = __webpack_require__(22);
-exports.ValueSet = ValueSet;
-var Article = __webpack_require__(5);
-exports.Article = Article;
-var DynamicResource = __webpack_require__(19);
-exports.DynamicResource = DynamicResource;
-var MediaVault = __webpack_require__(16);
-exports.MediaVault = MediaVault;
-var Files = __webpack_require__(18);
-exports.Files = Files;
-var Templating = __webpack_require__(21);
-exports.Templating = Templating;
-var Metering = __webpack_require__(11);
-exports.Metering = Metering;
-var Notifications = __webpack_require__(6);
-exports.Notifications = Notifications;
-var Commerce = __webpack_require__(4);
-exports.Commerce = Commerce;
-
-
-/***/ }),
 /* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20335,7 +20344,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(3);
-var keyValue_1 = __webpack_require__(26);
+var keyValue_1 = __webpack_require__(27);
 var BaasicKeyValueClient = (function () {
     function BaasicKeyValueClient(baasicKeyValueRouteDefinition, baasicApiClient) {
         this.baasicKeyValueRouteDefinition = baasicKeyValueRouteDefinition;
@@ -20456,7 +20465,7 @@ var BaasicKeyValueClient = (function () {
 BaasicKeyValueClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(keyValue_1.TYPES.BaasicKeyValueRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [keyValue_1.BaasicKeyValueRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicKeyValueClient);
@@ -20501,8 +20510,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicKeyValueRouteDefinition = (function (_super) {
     __extends(BaasicKeyValueRouteDefinition, _super);
     function BaasicKeyValueRouteDefinition(appOptions) {
@@ -20592,7 +20601,7 @@ exports.BaasicKeyValueRouteDefinition = BaasicKeyValueRouteDefinition;
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
-var keyValue_1 = __webpack_require__(26);
+var keyValue_1 = __webpack_require__(27);
 var TYPES = {
     BaasicKeyValueClient: Symbol("BaasicKeyValueClient"),
     BaasicKeyValueRouteDefinition: Symbol("BaasicKeyValueRouteDefinition")
@@ -20688,7 +20697,7 @@ var BaasicMediaVaultBatchClient = (function () {
 BaasicMediaVaultBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(mediaVault_1.TYPES.BaasicMediaVaultBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [mediaVault_1.BaasicMediaVaultBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMediaVaultBatchClient);
@@ -20730,8 +20739,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMediaVaultBatchRouteDefinition = (function (_super) {
     __extends(BaasicMediaVaultBatchRouteDefinition, _super);
     function BaasicMediaVaultBatchRouteDefinition(appOptions) {
@@ -20939,7 +20948,7 @@ var BaasicMediaVaultClient = (function () {
 BaasicMediaVaultClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(mediaVault_1.TYPES.BaasicMediaVaultRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __param(2, inversify_1.inject(mediaVault_1.TYPES.BaasicMediaVaultStreamsClient)),
     __param(3, inversify_1.inject(mediaVault_1.TYPES.BaasicMediaVaultBatchClient)),
     __param(4, inversify_1.inject(mediaVault_1.TYPES.BaasicMediaVaultSettingsClient)),
@@ -21064,7 +21073,7 @@ var BaasicMediaVaultProcessingProviderSettingsClient = (function () {
 BaasicMediaVaultProcessingProviderSettingsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(mediaVault_1.TYPES.BaasicMediaVaultProcessingProviderSettingsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [mediaVault_1.BaasicMediaVaultProcessingProviderSettingsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMediaVaultProcessingProviderSettingsClient);
@@ -21106,8 +21115,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMediaVaultProcessingProviderSettingsRouteDefinition = (function (_super) {
     __extends(BaasicMediaVaultProcessingProviderSettingsRouteDefinition, _super);
     function BaasicMediaVaultProcessingProviderSettingsRouteDefinition(appOptions) {
@@ -21194,9 +21203,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var mediaVault_1 = __webpack_require__(16);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMediaVaultRouteDefinition = (function (_super) {
     __extends(BaasicMediaVaultRouteDefinition, _super);
     function BaasicMediaVaultRouteDefinition(appOptions, baasicMediaVaultStreamsRouteDefinition, baasicMediaVaultBatchRouteDefinition, baasicMediaVaultSettingsRouteDefinition, baasicMediaVaultProcessingProviderSettingsRouteDefinition) {
@@ -21381,7 +21390,7 @@ var BaasicMediaVaultSettingsClient = (function () {
 BaasicMediaVaultSettingsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(mediaVault_1.TYPES.BaasicMediaVaultSettingsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [mediaVault_1.BaasicMediaVaultSettingsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMediaVaultSettingsClient);
@@ -21423,8 +21432,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMediaVaultSettingsRouteDefinition = (function (_super) {
     __extends(BaasicMediaVaultSettingsRouteDefinition, _super);
     function BaasicMediaVaultSettingsRouteDefinition(appOptions) {
@@ -21597,7 +21606,7 @@ var BaasicMediaVaultStreamsClient = (function () {
 BaasicMediaVaultStreamsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(mediaVault_1.TYPES.BaasicMediaVaultStreamsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [mediaVault_1.BaasicMediaVaultStreamsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMediaVaultStreamsClient);
@@ -21639,8 +21648,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMediaVaultStreamsRouteDefinition = (function (_super) {
     __extends(BaasicMediaVaultStreamsRouteDefinition, _super);
     function BaasicMediaVaultStreamsRouteDefinition(appOptions) {
@@ -21771,8 +21780,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var httpApi_1 = __webpack_require__(3);
 var membership_1 = __webpack_require__(9);
 var BaasicLoginClient = (function () {
@@ -21899,7 +21908,7 @@ BaasicLoginClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicLoginRouteDefinition)),
     __param(1, inversify_1.inject(contracts_1.TYPES.ITokenHandler)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [membership_1.BaasicLoginRouteDefinition, Object, httpApi_1.BaasicApiClient])
 ], BaasicLoginClient);
 exports.BaasicLoginClient = BaasicLoginClient;
@@ -21940,8 +21949,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
  * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicLoginRouteDefinition = (function (_super) {
     __extends(BaasicLoginRouteDefinition, _super);
     function BaasicLoginRouteDefinition(appOptions) {
@@ -22004,7 +22013,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(3);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var membership_1 = __webpack_require__(9);
 var BaasicLoginSocialClient = (function () {
     function BaasicLoginSocialClient(baasicLoginSocialRouteDefinition, tokenHandler, baasicApiClient) {
@@ -22117,7 +22126,7 @@ BaasicLoginSocialClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicLoginSocialRouteDefinition)),
     __param(1, inversify_1.inject(contracts_1.TYPES.ITokenHandler)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [membership_1.BaasicLoginSocialRouteDefinition, Object, httpApi_1.BaasicApiClient])
 ], BaasicLoginSocialClient);
 exports.BaasicLoginSocialClient = BaasicLoginSocialClient;
@@ -22158,8 +22167,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicLoginSocialRouteDefinition = (function (_super) {
     __extends(BaasicLoginSocialRouteDefinition, _super);
     function BaasicLoginSocialRouteDefinition(appOptions) {
@@ -22234,7 +22243,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var membership_1 = __webpack_require__(9);
 var httpApi_1 = __webpack_require__(3);
 var BaasicLookupClient = (function () {
@@ -22296,7 +22305,7 @@ var BaasicLookupClient = (function () {
 BaasicLookupClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicLookupRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [membership_1.BaasicLookupRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicLookupClient);
@@ -22338,8 +22347,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicLookupRouteDefinition = (function (_super) {
     __extends(BaasicLookupRouteDefinition, _super);
     function BaasicLookupRouteDefinition(appOptions) {
@@ -22465,7 +22474,7 @@ var BaasicPasswordRecoveryClient = (function () {
 BaasicPasswordRecoveryClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicPasswordRecoveryRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [membership_1.BaasicPasswordRecoveryRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicPasswordRecoveryClient);
@@ -22507,8 +22516,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicPasswordRecoveryRouteDefinition = (function (_super) {
     __extends(BaasicPasswordRecoveryRouteDefinition, _super);
     function BaasicPasswordRecoveryRouteDefinition(appOptions) {
@@ -22569,10 +22578,10 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var httpApi_1 = __webpack_require__(3);
 var membership_1 = __webpack_require__(9);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicPermissionClient = (function () {
     function BaasicPermissionClient(baasicPermissionRouteDefinition, baasicApiClient, application) {
         this.baasicPermissionRouteDefinition = baasicPermissionRouteDefinition;
@@ -22879,7 +22888,7 @@ var BaasicPermissionClient = (function () {
 BaasicPermissionClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicPermissionRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __param(2, inversify_1.inject(contracts_1.TYPES.IBaasicApp)),
     __metadata("design:paramtypes", [membership_1.BaasicPermissionRouteDefinition,
         httpApi_1.BaasicApiClient, Object])
@@ -22922,8 +22931,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
  * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicPermissionRouteDefinition = (function (_super) {
     __extends(BaasicPermissionRouteDefinition, _super);
     function BaasicPermissionRouteDefinition(appOptions) {
@@ -23097,7 +23106,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(3);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var membership_1 = __webpack_require__(9);
 var BaasicRegisterClient = (function () {
     function BaasicRegisterClient(baasicRegisterRouteDefinition, baasicApiClient, tokenHandler) {
@@ -23177,7 +23186,7 @@ var BaasicRegisterClient = (function () {
 BaasicRegisterClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicRegisterRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __param(2, inversify_1.inject(contracts_1.TYPES.ITokenHandler)),
     __metadata("design:paramtypes", [membership_1.BaasicRegisterRouteDefinition,
         httpApi_1.BaasicApiClient, Object])
@@ -23220,8 +23229,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicRegisterRouteDefinition = (function (_super) {
     __extends(BaasicRegisterRouteDefinition, _super);
     function BaasicRegisterRouteDefinition(appOptions) {
@@ -23419,7 +23428,7 @@ var BaasicRoleClient = (function () {
 BaasicRoleClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicRoleRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [membership_1.BaasicRoleRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicRoleClient);
@@ -23461,8 +23470,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicRoleRouteDefinition = (function (_super) {
     __extends(BaasicRoleRouteDefinition, _super);
     function BaasicRoleRouteDefinition(appOptions) {
@@ -23839,7 +23848,7 @@ BaasicUserClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicUserRouteDefinition)),
     __param(1, inversify_1.inject(membership_1.TYPES.BaasicUserSocialLoginClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [membership_1.BaasicUserRouteDefinition,
         membership_1.BaasicUserSocialLoginClient,
         httpApi_1.BaasicApiClient])
@@ -23882,9 +23891,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var membership_1 = __webpack_require__(9);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserRouteDefinition = (function (_super) {
     __extends(BaasicUserRouteDefinition, _super);
     function BaasicUserRouteDefinition(appOptions, baasicUserSocialLoginRouteDefinition) {
@@ -24097,7 +24106,7 @@ var BaasicUserSocialLoginClient = (function () {
 BaasicUserSocialLoginClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(membership_1.TYPES.BaasicUserSocialLoginRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [membership_1.BaasicUserSocialLoginRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicUserSocialLoginClient);
@@ -24139,8 +24148,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserSocialLoginRouteDefinition = (function (_super) {
     __extends(BaasicUserSocialLoginRouteDefinition, _super);
     function BaasicUserSocialLoginRouteDefinition(appOptions) {
@@ -24437,7 +24446,7 @@ var BaasicMeteringACLClient = (function () {
 BaasicMeteringACLClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(metering_1.TYPES.BaasicMeteringACLRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [metering_1.BaasicMeteringACLRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMeteringACLClient);
@@ -24482,8 +24491,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMeteringACLRouteDefinition = (function (_super) {
     __extends(BaasicMeteringACLRouteDefinition, _super);
     function BaasicMeteringACLRouteDefinition(appOptions) {
@@ -24687,7 +24696,7 @@ var BaasicMeteringBatchClient = (function () {
 BaasicMeteringBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(metering_1.TYPES.BaasicMeteringBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [metering_1.BaasicMeteringBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMeteringBatchClient);
@@ -24732,8 +24741,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMeteringBatchRouteDefinition = (function (_super) {
     __extends(BaasicMeteringBatchRouteDefinition, _super);
     function BaasicMeteringBatchRouteDefinition(appOptions) {
@@ -24886,7 +24895,7 @@ var BaasicMeteringCategoryBatchClient = (function () {
 BaasicMeteringCategoryBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(metering_1.TYPES.BaasicMeteringCategoryBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [metering_1.BaasicMeteringCategoryBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMeteringCategoryBatchClient);
@@ -24930,8 +24939,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMeteringCategoryBatchRouteDefinition = (function (_super) {
     __extends(BaasicMeteringCategoryBatchRouteDefinition, _super);
     function BaasicMeteringCategoryBatchRouteDefinition(appOptions) {
@@ -25141,7 +25150,7 @@ var BaasicMeteringCategoryClient = (function () {
 BaasicMeteringCategoryClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(metering_1.TYPES.BaasicMeteringCategoryRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __param(2, inversify_1.inject(metering_1.TYPES.BaasicMeteringCategoryBatchClient)),
     __metadata("design:paramtypes", [metering_1.BaasicMeteringCategoryRouteDefinition,
         httpApi_1.BaasicApiClient,
@@ -25187,9 +25196,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var metering_1 = __webpack_require__(11);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMeteringCategoryRouteDefinition = (function (_super) {
     __extends(BaasicMeteringCategoryRouteDefinition, _super);
     function BaasicMeteringCategoryRouteDefinition(appOptions, baasicMeteringCategoryBatchRouteDefinition) {
@@ -25481,7 +25490,7 @@ var BaasicMeteringClient = (function () {
 BaasicMeteringClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(metering_1.TYPES.BaasicMeteringRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __param(2, inversify_1.inject(metering_1.TYPES.BaasicMeteringBatchClient)),
     __param(3, inversify_1.inject(metering_1.TYPES.BaasicMeteringStatisticsClient)),
     __param(4, inversify_1.inject(metering_1.TYPES.BaasicMeteringACLClient)),
@@ -25536,9 +25545,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
  * @description Baasic Metering Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
  */
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var metering_1 = __webpack_require__(11);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMeteringRouteDefinition = (function (_super) {
     __extends(BaasicMeteringRouteDefinition, _super);
     function BaasicMeteringRouteDefinition(appOptions, baasicMeteringBatchRouteDefinition, baasicMeteringStatisticsRouteDefinition, baasicMeteringACLRouteDefinition) {
@@ -25747,7 +25756,7 @@ var BaasicMeteringSettingsClient = (function () {
 BaasicMeteringSettingsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(metering_1.TYPES.BaasicMeteringSettingsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [metering_1.BaasicMeteringSettingsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMeteringSettingsClient);
@@ -25792,8 +25801,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMeteringSettingsRouteDefinition = (function (_super) {
     __extends(BaasicMeteringSettingsRouteDefinition, _super);
     function BaasicMeteringSettingsRouteDefinition(appOptions) {
@@ -25901,7 +25910,7 @@ var BaasicMeteringStatisticsClient = (function () {
 BaasicMeteringStatisticsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(metering_1.TYPES.BaasicMeteringStatisticsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [metering_1.BaasicMeteringStatisticsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicMeteringStatisticsClient);
@@ -25946,8 +25955,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicMeteringStatisticsRouteDefinition = (function (_super) {
     __extends(BaasicMeteringStatisticsRouteDefinition, _super);
     function BaasicMeteringStatisticsRouteDefinition(appOptions) {
@@ -26195,7 +26204,7 @@ var BaasicNotificationsPublishBatchClient = (function () {
 BaasicNotificationsPublishBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsPublishBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsPublishBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicNotificationsPublishBatchClient);
@@ -26237,8 +26246,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicNotificationsPublishBatchRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsPublishBatchRouteDefinition, _super);
     function BaasicNotificationsPublishBatchRouteDefinition(appOptions) {
@@ -26340,7 +26349,7 @@ BaasicNotificationsPublishClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsPublishRouteDefinition)),
     __param(1, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsPublishBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsPublishRouteDefinition,
         notifications_1.BaasicNotificationsPublishBatchClient,
         httpApi_1.BaasicApiClient])
@@ -26383,8 +26392,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var notifications_1 = __webpack_require__(6);
 var BaasicNotificationsPublishRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsPublishRouteDefinition, _super);
@@ -26519,7 +26528,7 @@ var BaasicNotificationsRegistrationsAnonymousBatchClient = (function () {
 BaasicNotificationsRegistrationsAnonymousBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicNotificationsRegistrationsAnonymousBatchClient);
@@ -26561,8 +26570,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition, _super);
     function BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition(appOptions) {
@@ -26768,7 +26777,7 @@ BaasicNotificationsRegistrationsAnonymousClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsRegistrationsAnonymousRouteDefinition)),
     __param(1, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsRegistrationsAnonymousBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsRegistrationsAnonymousRouteDefinition,
         notifications_1.BaasicNotificationsRegistrationsAnonymousBatchClient,
         httpApi_1.BaasicApiClient])
@@ -26811,8 +26820,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var notifications_1 = __webpack_require__(6);
 var BaasicNotificationsRegistrationsAnonymousRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsRegistrationsAnonymousRouteDefinition, _super);
@@ -27007,8 +27016,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var notifications_1 = __webpack_require__(6);
 var BaasicNotificationsRegistrationsRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsRegistrationsRouteDefinition, _super);
@@ -27148,7 +27157,7 @@ var BaasicNotificationsRegistrationsUsersBatchClient = (function () {
 BaasicNotificationsRegistrationsUsersBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsRegistrationsUsersBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsRegistrationsUsersBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicNotificationsRegistrationsUsersBatchClient);
@@ -27190,8 +27199,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicNotificationsRegistrationsUsersBatchRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsRegistrationsUsersBatchRouteDefinition, _super);
     function BaasicNotificationsRegistrationsUsersBatchRouteDefinition(appOptions) {
@@ -27398,7 +27407,7 @@ BaasicNotificationsRegistrationsUsersClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsRegistrationsUsersRouteDefinition)),
     __param(1, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsRegistrationsUsersBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsRegistrationsUsersRouteDefinition,
         notifications_1.BaasicNotificationsRegistrationsUsersBatchClient,
         httpApi_1.BaasicApiClient])
@@ -27441,8 +27450,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var notifications_1 = __webpack_require__(6);
 var BaasicNotificationsRegistrationsUsersRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsRegistrationsUsersRouteDefinition, _super);
@@ -27563,8 +27572,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var notifications_1 = __webpack_require__(6);
 var BaasicNotificationsRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsRouteDefinition, _super);
@@ -27709,7 +27718,7 @@ var BaasicNotificationsSettingsClient = (function () {
 BaasicNotificationsSettingsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsSettingsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsSettingsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicNotificationsSettingsClient);
@@ -27751,8 +27760,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicNotificationsSettingsRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsSettingsRouteDefinition, _super);
     function BaasicNotificationsSettingsRouteDefinition(appOptions) {
@@ -27891,7 +27900,7 @@ var BaasicNotificationsSubscriptionsAnonymousBatchClient = (function () {
 BaasicNotificationsSubscriptionsAnonymousBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicNotificationsSubscriptionsAnonymousBatchClient);
@@ -27933,8 +27942,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition, _super);
     function BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition(appOptions) {
@@ -28129,7 +28138,7 @@ var BaasicNotificationsSubscriptionsAnonymousClient = (function () {
 BaasicNotificationsSubscriptionsAnonymousClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsSubscriptionsAnonymousRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsSubscriptionsAnonymousRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicNotificationsSubscriptionsAnonymousClient);
@@ -28171,8 +28180,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var notifications_1 = __webpack_require__(6);
 var BaasicNotificationsSubscriptionsAnonymousRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsSubscriptionsAnonymousRouteDefinition, _super);
@@ -28368,8 +28377,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var notifications_1 = __webpack_require__(6);
 var BaasicNotificationsSubscriptionsRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsSubscriptionsRouteDefinition, _super);
@@ -28501,7 +28510,7 @@ var BaasicNotificationsSubscriptionsUsersBatchClient = (function () {
 BaasicNotificationsSubscriptionsUsersBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsSubscriptionsUsersBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsSubscriptionsUsersBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicNotificationsSubscriptionsUsersBatchClient);
@@ -28543,8 +28552,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicNotificationsSubscriptionsUsersBatchRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsSubscriptionsUsersBatchRouteDefinition, _super);
     function BaasicNotificationsSubscriptionsUsersBatchRouteDefinition(appOptions) {
@@ -28743,7 +28752,7 @@ BaasicNotificationsSubscriptionsUsersClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsSubscriptionsUsersRouteDefinition)),
     __param(1, inversify_1.inject(notifications_1.TYPES.BaasicNotificationsSubscriptionsUsersBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [notifications_1.BaasicNotificationsSubscriptionsUsersRouteDefinition,
         notifications_1.BaasicNotificationsSubscriptionsUsersBatchClient,
         httpApi_1.BaasicApiClient])
@@ -28786,8 +28795,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var notifications_1 = __webpack_require__(6);
 var BaasicNotificationsSubscriptionsUsersRouteDefinition = (function (_super) {
     __extends(BaasicNotificationsSubscriptionsUsersRouteDefinition, _super);
@@ -29037,7 +29046,7 @@ var BaasicTemplatingBatchClient = (function () {
 BaasicTemplatingBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(templating_1.TYPES.BaasicTemplatingBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [templating_1.BaasicTemplatingBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicTemplatingBatchClient);
@@ -29079,8 +29088,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicTemplatingBatchRouteDefinition = (function (_super) {
     __extends(BaasicTemplatingBatchRouteDefinition, _super);
     function BaasicTemplatingBatchRouteDefinition(appOptions) {
@@ -29281,7 +29290,7 @@ BaasicTemplatingClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(templating_1.TYPES.BaasicTemplatingRouteDefinition)),
     __param(1, inversify_1.inject(templating_1.TYPES.BaasicTemplatingBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [templating_1.BaasicTemplatingRouteDefinition,
         templating_1.BaasicTemplatingBatchClient,
         httpApi_1.BaasicApiClient])
@@ -29324,9 +29333,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var templating_1 = __webpack_require__(21);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicTemplatingRouteDefinition = (function (_super) {
     __extends(BaasicTemplatingRouteDefinition, _super);
     function BaasicTemplatingRouteDefinition(appOptions, baasicTemplatingBatchRouteDefinition) {
@@ -29527,7 +29536,7 @@ var BaasicCompanyBatchClient = (function () {
 BaasicCompanyBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicCompanyBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicCompanyBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicCompanyBatchClient);
@@ -29569,8 +29578,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCompanyBatchRouteDefinition = (function (_super) {
     __extends(BaasicCompanyBatchRouteDefinition, _super);
     function BaasicCompanyBatchRouteDefinition(appOptions) {
@@ -29775,7 +29784,7 @@ BaasicCompanyClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicCompanyBatchClient)),
     __param(1, inversify_1.inject(userProfile_1.TYPES.BaasicCompanyRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicCompanyBatchClient,
         userProfile_1.BaasicCompanyRouteDefinition,
         httpApi_1.BaasicApiClient])
@@ -29818,9 +29827,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var userProfile_1 = __webpack_require__(7);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicCompanyRouteDefinition = (function (_super) {
     __extends(BaasicCompanyRouteDefinition, _super);
     function BaasicCompanyRouteDefinition(appOptions, baasicCompanyBatchRouteDefinition) {
@@ -29989,7 +29998,7 @@ var BaasicOrganizationBatchClient = (function () {
 BaasicOrganizationBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicOrganizationBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicOrganizationBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicOrganizationBatchClient);
@@ -30031,8 +30040,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicOrganizationBatchRouteDefinition = (function (_super) {
     __extends(BaasicOrganizationBatchRouteDefinition, _super);
     function BaasicOrganizationBatchRouteDefinition(appOptions) {
@@ -30237,7 +30246,7 @@ BaasicOrganizationClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicOrganizationRouteDefinition)),
     __param(1, inversify_1.inject(userProfile_1.TYPES.BaasicOrganizationBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicOrganizationRouteDefinition,
         userProfile_1.BaasicOrganizationBatchClient,
         httpApi_1.BaasicApiClient])
@@ -30274,9 +30283,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var userProfile_1 = __webpack_require__(7);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicOrganizationRouteDefinition = (function (_super) {
     __extends(BaasicOrganizationRouteDefinition, _super);
     function BaasicOrganizationRouteDefinition(appOptions, baasicOrganizationBatchRouteDefinition) {
@@ -30452,7 +30461,7 @@ var BaasicSkillBatchClient = (function () {
 BaasicSkillBatchClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicSkillBatchRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicSkillBatchRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicSkillBatchClient);
@@ -30494,8 +30503,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicSkillBatchRouteDefinition = (function (_super) {
     __extends(BaasicSkillBatchRouteDefinition, _super);
     function BaasicSkillBatchRouteDefinition(appOptions) {
@@ -30699,7 +30708,7 @@ BaasicSkillClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicSkillRouteDefinition)),
     __param(1, inversify_1.inject(userProfile_1.TYPES.BaasicSkillBatchClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicSkillRouteDefinition,
         userProfile_1.BaasicSkillBatchClient,
         httpApi_1.BaasicApiClient])
@@ -30736,9 +30745,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var userProfile_1 = __webpack_require__(7);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicSkillRouteDefinition = (function (_super) {
     __extends(BaasicSkillRouteDefinition, _super);
     function BaasicSkillRouteDefinition(appOptions, baasicSkillBatchRouteDefinition) {
@@ -30958,7 +30967,7 @@ var BaasicUserEducationClient = (function () {
 BaasicUserEducationClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicUserEducationRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicUserEducationRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicUserEducationClient);
@@ -31000,8 +31009,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserEducationRouteDefinition = (function (_super) {
     __extends(BaasicUserEducationRouteDefinition, _super);
     function BaasicUserEducationRouteDefinition(appOptions) {
@@ -31207,7 +31216,7 @@ var BaasicUserProfileACLClient = (function () {
 BaasicUserProfileACLClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicUserProfileACLRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicUserProfileACLRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicUserProfileACLClient);
@@ -31252,8 +31261,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserProfileACLRouteDefinition = (function (_super) {
     __extends(BaasicUserProfileACLRouteDefinition, _super);
     function BaasicUserProfileACLRouteDefinition(appOptions) {
@@ -31486,7 +31495,7 @@ BaasicUserProfileAvatarClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicUserProfileAvatarRouteDefinition)),
     __param(1, inversify_1.inject(userProfile_1.TYPES.BaasicUserProfileAvatarStreamsClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicUserProfileAvatarRouteDefinition,
         userProfile_1.BaasicUserProfileAvatarStreamsClient,
         httpApi_1.BaasicApiClient])
@@ -31529,9 +31538,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var userProfile_1 = __webpack_require__(7);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserProfileAvatarRouteDefinition = (function (_super) {
     __extends(BaasicUserProfileAvatarRouteDefinition, _super);
     function BaasicUserProfileAvatarRouteDefinition(appOptions, baasicUserProfileAvatarStreamsRouteDefinition) {
@@ -31756,7 +31765,7 @@ var BaasicUserProfileAvatarStreamsClient = (function () {
 BaasicUserProfileAvatarStreamsClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicUserProfileAvatarStreamsRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicUserProfileAvatarStreamsRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicUserProfileAvatarStreamsClient);
@@ -31798,8 +31807,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserProfileAvatarStreamsRouteDefinition = (function (_super) {
     __extends(BaasicUserProfileAvatarStreamsRouteDefinition, _super);
     function BaasicUserProfileAvatarStreamsRouteDefinition(appOptions) {
@@ -32057,7 +32066,7 @@ BaasicUserProfileClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicUserProfileACLClient)),
     __param(1, inversify_1.inject(userProfile_1.TYPES.BaasicUserProfileRouteDefinition)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __param(3, inversify_1.inject(userProfile_1.TYPES.BaasicUserEducationClient)),
     __param(4, inversify_1.inject(userProfile_1.TYPES.BaasicUserProfileAvatarClient)),
     __param(5, inversify_1.inject(userProfile_1.TYPES.BaasicUserSkillClient)),
@@ -32111,9 +32120,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var userProfile_1 = __webpack_require__(7);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserProfileRouteDefinition = (function (_super) {
     __extends(BaasicUserProfileRouteDefinition, _super);
     function BaasicUserProfileRouteDefinition(appOptions, baasicUserProfileACLRouteDefinition) {
@@ -32345,7 +32354,7 @@ var BaasicUserSkillClient = (function () {
 BaasicUserSkillClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicUserSkillRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicUserSkillRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicUserSkillClient);
@@ -32387,8 +32396,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserSkillRouteDefinition = (function (_super) {
     __extends(BaasicUserSkillRouteDefinition, _super);
     function BaasicUserSkillRouteDefinition(appOptions) {
@@ -32602,7 +32611,7 @@ var BaasicUserWorkClient = (function () {
 BaasicUserWorkClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(userProfile_1.TYPES.BaasicUserWorkRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [userProfile_1.BaasicUserWorkRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicUserWorkClient);
@@ -32644,8 +32653,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicUserWorkRouteDefinition = (function (_super) {
     __extends(BaasicUserWorkRouteDefinition, _super);
     function BaasicUserWorkRouteDefinition(appOptions) {
@@ -32990,7 +32999,7 @@ BaasicValueSetClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(valueSet_1.TYPES.BaasicValueSetRouteDefinition)),
     __param(1, inversify_1.inject(valueSet_1.TYPES.BaasicValueSetItemClient)),
-    __param(2, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(2, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [valueSet_1.BaasicValueSetRouteDefinition,
         valueSet_1.BaasicValueSetItemClient,
         httpApi_1.BaasicApiClient])
@@ -33144,7 +33153,7 @@ var BaasicValueSetItemClient = (function () {
 BaasicValueSetItemClient = __decorate([
     inversify_1.injectable(),
     __param(0, inversify_1.inject(valueSet_1.TYPES.BaasicValueSetItemRouteDefinition)),
-    __param(1, inversify_1.inject(httpApi_1.TYPES.BaasicApiClient)),
+    __param(1, inversify_1.inject(httpApi_1.httpTYPES.BaasicApiClient)),
     __metadata("design:paramtypes", [valueSet_1.BaasicValueSetItemRouteDefinition,
         httpApi_1.BaasicApiClient])
 ], BaasicValueSetItemClient);
@@ -33188,8 +33197,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
  * @description Baasic Value Set Item Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
  */
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(1);
+var common_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicValueSetItemRouteDefinition = (function (_super) {
     __extends(BaasicValueSetItemRouteDefinition, _super);
     function BaasicValueSetItemRouteDefinition(appOptions) {
@@ -33307,9 +33316,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(1);
 var valueSet_1 = __webpack_require__(22);
-var contracts_1 = __webpack_require__(1);
+var contracts_1 = __webpack_require__(2);
 var BaasicValueSetRouteDefinition = (function (_super) {
     __extends(BaasicValueSetRouteDefinition, _super);
     function BaasicValueSetRouteDefinition(appOptions, baasicValueSetItemRouteDefinition) {

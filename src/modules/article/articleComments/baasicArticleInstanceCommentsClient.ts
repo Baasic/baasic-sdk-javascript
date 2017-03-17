@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     BaasicArticleInstanceCommentRepliesClient,
     BaasicArticleInstanceCommentsRouteDefinition,
@@ -36,7 +36,7 @@ export class BaasicArticleInstanceCommentsClient {
     constructor(
         @inject(articleTypes.BaasicArticleInstanceCommentsRouteDefinition) protected baasicArticleInstanceCommentsRouteDefinition: BaasicArticleInstanceCommentsRouteDefinition,
         @inject(articleTypes.BaasicArticleCommentRepliesClient) protected baasicArticleInstanceCommentsRepliesClient: BaasicArticleInstanceCommentRepliesClient,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
     ) { }
 
     /**

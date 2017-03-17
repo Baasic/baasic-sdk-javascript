@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceLookupsPaymentTransactionStatusBatchClient, BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
@@ -23,7 +23,7 @@ export class BaasicCommerceLookupsPaymentTransactionStatusClient {
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsPaymentTransactionStatusBatchClient) protected baasicCommerceLookupsPaymentTransactionStatusBatchClient: BaasicCommerceLookupsPaymentTransactionStatusBatchClient,
         @inject(commerceTypes.BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition) protected baasicCommerceLookupsPaymentTransactionStatusRouteDefinition: BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
     ) { }
 
     /**                  

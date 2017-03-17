@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, TYPES as httpTypes } from 'httpApi';
+import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     BaasicFilesACLClient,
     BaasicFilesBatchClient,
@@ -37,7 +37,7 @@ export class BaasicFilesClient {
 
     constructor(
         @inject(filesTypes.BaasicFilesRouteDefinition) protected baasicFilesRouteDefinition: BaasicFilesRouteDefinition,
-        @inject(httpTypes.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
         @inject(filesTypes.BaasicFilesStreamsClient) protected baasicFilesStreamsClient: BaasicFilesStreamsClient,
         @inject(filesTypes.BaasicFilesBatchClient) protected baasicFilesBatchClient: BaasicFilesBatchClient,
         @inject(filesTypes.BaasicFilesACLClient) protected baasicFilesACLClient: BaasicFilesACLClient

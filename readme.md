@@ -27,13 +27,13 @@ Please add the following lines of code after the jQuery include:
 
 ### Application Configuration
 
-To be able to use the library you will need to use the _baasicSdkJavaScript_ object on the global scope.
+To create the _BaasicApp_ you will need to use the _baasicSdkJavaScript_ object on the global scope.
 
 ```javascript
-//Note: this is only the option example, these are the defaults
+//Note: this is configuration example only, these are the defaults  
 var options = {    
     apiRootUrl: 'api.baasic.com',
-    apiVersion: 'v1',
+    apiVersion: '<version>',
     enableHALJSON: false
 };
 
