@@ -7,14 +7,14 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicNotificationsSubscriptionsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSubscriptionsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserSubscription } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsSubscriptionsUsersBatchClient {
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsUsersBatchRouteDefinition) protected baasicNotificationsSubscriptionsUsersBatchRouteDefinition: BaasicNotificationsSubscriptionsUsersBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchRouteDefinition) protected baasicNotificationsSubscriptionsUsersBatchRouteDefinition: NotificationsSubscriptionsUsersBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

@@ -7,13 +7,13 @@
 import { injectable, inject } from "inversify";
 import { IACLOptions, IACLPolicy, IBaasicQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicMeteringACLRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringACLRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 
 @injectable()
 export class MeteringACLClient {
 
     constructor(
-        @inject(meteringTypes.BaasicMeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: BaasicMeteringACLRouteDefinition,
+        @inject(meteringTypes.MeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: MeteringACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

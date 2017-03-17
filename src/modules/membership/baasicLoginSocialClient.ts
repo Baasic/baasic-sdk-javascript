@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
-import { BaasicLoginSocialRouteDefinition, TYPES as membershipTYPES } from 'modules/membership';
+import { LoginSocialRouteDefinition, TYPES as membershipTYPES } from 'modules/membership';
 import { ISocialLogin } from 'modules/membership/contracts';
 
 @injectable()
 export class LoginSocialClient {
 
-    get routeDefinition(): BaasicLoginSocialRouteDefinition {
+    get routeDefinition(): LoginSocialRouteDefinition {
         return this.baasicLoginSocialRouteDefinition;
     }
 
     constructor(
-        @inject(membershipTYPES.BaasicLoginSocialRouteDefinition) protected baasicLoginSocialRouteDefinition: BaasicLoginSocialRouteDefinition,
+        @inject(membershipTYPES.LoginSocialRouteDefinition) protected baasicLoginSocialRouteDefinition: LoginSocialRouteDefinition,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }

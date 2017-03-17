@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicArticleCommentRepliesRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
+import { ArticleCommentRepliesRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
 import { IArticleCommentReply, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
@@ -26,12 +26,12 @@ export class ArticleCommentRepliesClient {
      * @method 
      * @example baasicArticleCommentRepliesClient.routeDefinition.get();
      **/
-    get routeDefinition(): BaasicArticleCommentRepliesRouteDefinition {
+    get routeDefinition(): ArticleCommentRepliesRouteDefinition {
         return this.baasicArticleCommentRepliesRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleCommentRepliesRouteDefinition) protected baasicArticleCommentRepliesRouteDefinition: BaasicArticleCommentRepliesRouteDefinition,
+        @inject(articleTypes.ArticleCommentRepliesRouteDefinition) protected baasicArticleCommentRepliesRouteDefinition: ArticleCommentRepliesRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -120,7 +120,7 @@ export class ArticleCommentRepliesClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IArticleCommentReply>>(this.baasicArticleCommentRepliesRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IArticleCommentReply>>(this.baasicArticleCommentRepliesRouteDefinition.find(options));
     }
 
     /**

@@ -14,14 +14,14 @@ import { IUserInfo } from 'modules/membership/contracts';
 @injectable()
 export class LoginClient {
 
-    get routeDefinition(): BaasicLoginRouteDefinition {
+    get routeDefinition(): LoginRouteDefinition {
         return this.baasicLoginRouteDefinition;
     }
 
     private utility: Utility = new Utility();
 
     constructor(
-        @inject(membershipTypes.BaasicLoginRouteDefinition) protected baasicLoginRouteDefinition: BaasicLoginRouteDefinition,
+        @inject(membershipTypes.LoginRouteDefinition) protected baasicLoginRouteDefinition: LoginRouteDefinition,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }

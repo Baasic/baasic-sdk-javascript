@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicSkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { SkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
+export class SkillRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,13 +23,13 @@ export class BaasicSkillRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly deleteRoute: string = 'lookups/skills/{id}';
 
-    get batch(): BaasicSkillBatchRouteDefinition {
+    get batch(): SkillBatchRouteDefinition {
         return this.baasicSkillBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.BaasicSkillBatchRouteDefinition) protected baasicSkillBatchRouteDefinition: BaasicSkillBatchRouteDefinition
+        @inject(userProfileTypes.SkillBatchRouteDefinition) protected baasicSkillBatchRouteDefinition: SkillBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                 

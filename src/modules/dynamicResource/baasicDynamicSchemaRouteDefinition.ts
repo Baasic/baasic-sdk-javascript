@@ -4,13 +4,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicDynamicSchemaRouteDefinition extends BaasicBaseRouteDefinition {
+export class DynamicSchemaRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'schemas/{?searchQuery,page,rpp,sort,embed,fields}';
 

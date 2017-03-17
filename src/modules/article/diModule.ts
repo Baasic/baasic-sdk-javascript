@@ -1,100 +1,100 @@
 import { ContainerModule } from "inversify";
 import {
     ArticleCommentRepliesClient,
-    BaasicArticleCommentRepliesRouteDefinition,
+    ArticleCommentRepliesRouteDefinition,
     ArticleCommentsClient,
-    BaasicArticleCommentsRouteDefinition,
+    ArticleCommentsRouteDefinition,
     ArticleFilesBatchClient,
-    BaasicArticleFilesBatchRouteDefinition,
+    ArticleFilesBatchRouteDefinition,
     ArticleFilesClient,
-    BaasicArticleFilesRouteDefinition,
+    ArticleFilesRouteDefinition,
     ArticleFilesStreamsClient,
-    BaasicArticleFilesStreamsRouteDefinition,
+    ArticleFilesStreamsRouteDefinition,
     ArticleRatingsClient,
-    BaasicArticleRatingsRouteDefinition,
+    ArticleRatingsRouteDefinition,
     ArticleClient,
-    BaasicArticleRouteDefinition,
-    BaasicArticleSettingsRouteDefinition,
+    ArticleRouteDefinition,
+    ArticleSettingsRouteDefinition,
     ArticleSettingsClient,
     ArticleTagsClient,
-    BaasicArticleTagsRouteDefinition,
+    ArticleTagsRouteDefinition,
     ArticleTagsSubscriptionsClient,
-    BaasicArticleTagsSubscriptionsRouteDefinition,
-    BaasicArticleInstanceSubscriptionsRouteDefinition,
-    BaasicArticleSubscriptionsArticleRouteDefinition,
-    BaasicArticleSubscriptionsCommentReportedRouteDefinition,
-    BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
-    BaasicArticleSubscriptionsRouteDefinition,
+    ArticleTagsSubscriptionsRouteDefinition,
+    ArticleInstanceSubscriptionsRouteDefinition,
+    ArticleSubscriptionsArticleRouteDefinition,
+    ArticleSubscriptionsCommentReportedRouteDefinition,
+    ArticleSubscriptionsCommentRequiresModerationRouteDefinition,
+    ArticleSubscriptionsRouteDefinition,
     ArticleSubscriptionsClient,
     ArticleSubscriptionsArticleClient,
     ArticleSubscriptionsCommentReportedClient,
     ArticleSubscriptionsCommentRequiresModerationClient,
     ArticleInstanceSubscriptionsClient,
-    BaasicArticleInstanceRatingsRouteDefinition,
+    ArticleInstanceRatingsRouteDefinition,
     ArticleInstanceRatingsClient,
-    BaasicArticleInstanceTagsRouteDefinition,
+    ArticleInstanceTagsRouteDefinition,
     ArticleInstanceTagsClient,
-    BaasicArticleInstanceCommentsRouteDefinition,
+    ArticleInstanceCommentsRouteDefinition,
     ArticleInstanceCommentsClient,
-    BaasicArticleInstanceCommentRepliesRouteDefinition,
+    ArticleInstanceCommentRepliesRouteDefinition,
     ArticleInstanceCommentRepliesClient,
-    BaasicArticleInstanceFilesRouteDefinition,
+    ArticleInstanceFilesRouteDefinition,
     ArticleInstanceFilesClient,
-    BaasicArticleInstanceFilesStreamsRouteDefinition,
+    ArticleInstanceFilesStreamsRouteDefinition,
     ArticleInstanceFilesStreamsClient,
-    BaasicArticleInstanceFilesBatchRouteDefinition,
+    ArticleInstanceFilesBatchRouteDefinition,
     ArticleInstanceFilesBatchClient,
-    BaasicArticleACLRouteDefinition,
+    ArticleACLRouteDefinition,
     ArticleACLClient,
     Root
 } from 'modules/article';
 
 const TYPES = {
     ArticleCommentRepliesClient: Symbol("ArticleCommentRepliesClient"),
-    BaasicArticleCommentRepliesRouteDefinition: Symbol("BaasicArticleCommentRepliesRouteDefinition"),
+    ArticleCommentRepliesRouteDefinition: Symbol("ArticleCommentRepliesRouteDefinition"),
     ArticleCommentsClient: Symbol("ArticleCommentsClient"),
-    BaasicArticleCommentsRouteDefinition: Symbol("BaasicArticleCommentsRouteDefinition"),
+    ArticleCommentsRouteDefinition: Symbol("ArticleCommentsRouteDefinition"),
     ArticleFilesClient: Symbol("ArticleFilesClient"),
-    BaasicArticleFilesRouteDefinition: Symbol("BaasicArticleFilesRouteDefinition"),
+    ArticleFilesRouteDefinition: Symbol("ArticleFilesRouteDefinition"),
     ArticleFilesBatchClient: Symbol("ArticleFilesBatchClient"),
-    BaasicArticleFilesBatchRouteDefinition: Symbol("BaasicArticleFilesBatchRouteDefinition"),
+    ArticleFilesBatchRouteDefinition: Symbol("ArticleFilesBatchRouteDefinition"),
     ArticleFilesStreamsClient: Symbol("ArticleFilesStreamsClient"),
-    BaasicArticleFilesStreamsRouteDefinition: Symbol("BaasicArticleFilesStreamsRouteDefinition"),
+    ArticleFilesStreamsRouteDefinition: Symbol("ArticleFilesStreamsRouteDefinition"),
     ArticleRatingsClient: Symbol("ArticleRatingsClient"),
-    BaasicArticleRatingsRouteDefinition: Symbol("BaasicArticleRatingsRouteDefinition"),
+    ArticleRatingsRouteDefinition: Symbol("ArticleRatingsRouteDefinition"),
     ArticleClient: Symbol("ArticleClient"),
-    BaasicArticleRouteDefinition: Symbol("BaasicArticleRouteDefinition"),
+    ArticleRouteDefinition: Symbol("ArticleRouteDefinition"),
     ArticleSettingsClient: Symbol("ArticleSettingsClient"),
-    BaasicArticleSettingsRouteDefinition: Symbol("BaasicArticleSettingsRouteDefinition"),
+    ArticleSettingsRouteDefinition: Symbol("ArticleSettingsRouteDefinition"),
     ArticleTagsClient: Symbol("ArticleTagsClient"),
-    BaasicArticleTagsRouteDefinition: Symbol("BaasicArticleTagsRouteDefinition"),
+    ArticleTagsRouteDefinition: Symbol("ArticleTagsRouteDefinition"),
     ArticleTagsSubscriptionsClient: Symbol("ArticleTagsSubscriptionsClient"),
-    BaasicArticleTagsSubscriptionsRouteDefinition: Symbol("BaasicArticleTagsSubscriptionsRouteDefinition"),
-    BaasicArticleSubscriptionsArticleRouteDefinition: Symbol("BaasicArticleSubscriptionsArticleRouteDefinition"),
-    BaasicArticleSubscriptionsCommentReportedRouteDefinition: Symbol("BaasicArticleSubscriptionsCommentReportedRouteDefinition"),
-    BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: Symbol("BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition"),
-    BaasicArticleSubscriptionsRouteDefinition: Symbol("BaasicArticleSubscriptionsRouteDefinition"),
+    ArticleTagsSubscriptionsRouteDefinition: Symbol("ArticleTagsSubscriptionsRouteDefinition"),
+    ArticleSubscriptionsArticleRouteDefinition: Symbol("ArticleSubscriptionsArticleRouteDefinition"),
+    ArticleSubscriptionsCommentReportedRouteDefinition: Symbol("ArticleSubscriptionsCommentReportedRouteDefinition"),
+    ArticleSubscriptionsCommentRequiresModerationRouteDefinition: Symbol("ArticleSubscriptionsCommentRequiresModerationRouteDefinition"),
+    ArticleSubscriptionsRouteDefinition: Symbol("ArticleSubscriptionsRouteDefinition"),
     ArticleSubscriptionsClient: Symbol("ArticleSubscriptionsClient"),
     ArticleSubscriptionsArticleClient: Symbol("ArticleSubscriptionsArticleClient"),
     ArticleSubscriptionsCommentReportedClient: Symbol("ArticleSubscriptionsCommentReportedClient"),
     ArticleSubscriptionsCommentRequiresModerationClient: Symbol("ArticleSubscriptionsCommentRequiresModerationClient"),
     ArticleInstanceSubscriptionsClient: Symbol("ArticleInstanceSubscriptionsClient"),
-    BaasicArticleInstanceSubscriptionsRouteDefinition: Symbol("BaasicArticleInstanceSubscriptionsRouteDefinition"),
-    BaasicArticleInstanceRatingsRouteDefinition: Symbol("BaasicArticleInstanceRatingsRouteDefinition"),
+    ArticleInstanceSubscriptionsRouteDefinition: Symbol("ArticleInstanceSubscriptionsRouteDefinition"),
+    ArticleInstanceRatingsRouteDefinition: Symbol("ArticleInstanceRatingsRouteDefinition"),
     ArticleInstanceRatingsClient: Symbol("ArticleInstanceRatingsClient"),
-    BaasicArticleInstanceTagsRouteDefinition: Symbol("BaasicArticleInstanceTagsRouteDefinition"),
+    ArticleInstanceTagsRouteDefinition: Symbol("ArticleInstanceTagsRouteDefinition"),
     ArticleInstanceTagsClient: Symbol("ArticleInstanceTagsClient"),
-    BaasicArticleInstanceCommentsRouteDefinition: Symbol("BaasicArticleInstanceCommentsRouteDefinition"),
+    ArticleInstanceCommentsRouteDefinition: Symbol("ArticleInstanceCommentsRouteDefinition"),
     ArticleInstanceCommentsClient: Symbol("ArticleInstanceCommentsClient"),
-    BaasicArticleInstanceCommentRepliesRouteDefinition: Symbol("BaasicArticleInstanceCommentRepliesRouteDefinition"),
+    ArticleInstanceCommentRepliesRouteDefinition: Symbol("ArticleInstanceCommentRepliesRouteDefinition"),
     ArticleInstanceCommentRepliesClient: Symbol("ArticleInstanceCommentRepliesClient"),
-    BaasicArticleInstanceFilesRouteDefinition: Symbol("BaasicArticleInstanceFilesRouteDefinition"),
+    ArticleInstanceFilesRouteDefinition: Symbol("ArticleInstanceFilesRouteDefinition"),
     ArticleInstanceFilesClient: Symbol("ArticleInstanceFilesClient"),
-    BaasicArticleInstanceFilesStreamsRouteDefinition: Symbol("BaasicArticleInstanceFilesStreamsRouteDefinition"),
+    ArticleInstanceFilesStreamsRouteDefinition: Symbol("ArticleInstanceFilesStreamsRouteDefinition"),
     ArticleInstanceFilesStreamsClient: Symbol("ArticleInstanceFilesStreamsClient"),
-    BaasicArticleInstanceFilesBatchRouteDefinition: Symbol("BaasicArticleInstanceFilesBatchRouteDefinition"),
+    ArticleInstanceFilesBatchRouteDefinition: Symbol("ArticleInstanceFilesBatchRouteDefinition"),
     ArticleInstanceFilesBatchClient: Symbol("ArticleInstanceFilesBatchClient"),
-    BaasicArticleACLRouteDefinition: Symbol(" BaasicArticleACLRouteDefinition"),
+    ArticleACLRouteDefinition: Symbol(" ArticleACLRouteDefinition"),
     ArticleACLClient: Symbol("ArticleACLClient"),
     Root: Symbol("Root")
 };
@@ -102,51 +102,51 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicArticleCommentRepliesRouteDefinition>(TYPES.BaasicArticleCommentRepliesRouteDefinition).to(BaasicArticleCommentRepliesRouteDefinition);
+    bind<ArticleCommentRepliesRouteDefinition>(TYPES.ArticleCommentRepliesRouteDefinition).to(ArticleCommentRepliesRouteDefinition);
     bind<ArticleCommentRepliesClient>(TYPES.ArticleCommentRepliesClient).to(ArticleCommentRepliesClient);
-    bind<BaasicArticleCommentsRouteDefinition>(TYPES.BaasicArticleCommentsRouteDefinition).to(BaasicArticleCommentsRouteDefinition);
+    bind<ArticleCommentsRouteDefinition>(TYPES.ArticleCommentsRouteDefinition).to(ArticleCommentsRouteDefinition);
     bind<ArticleCommentsClient>(TYPES.ArticleCommentsClient).to(ArticleCommentsClient);
-    bind<BaasicArticleFilesBatchRouteDefinition>(TYPES.BaasicArticleFilesBatchRouteDefinition).to(BaasicArticleFilesBatchRouteDefinition);
+    bind<ArticleFilesBatchRouteDefinition>(TYPES.ArticleFilesBatchRouteDefinition).to(ArticleFilesBatchRouteDefinition);
     bind<ArticleFilesBatchClient>(TYPES.ArticleFilesBatchClient).to(ArticleFilesBatchClient);
-    bind<BaasicArticleFilesStreamsRouteDefinition>(TYPES.BaasicArticleFilesStreamsRouteDefinition).to(BaasicArticleFilesStreamsRouteDefinition);
+    bind<ArticleFilesStreamsRouteDefinition>(TYPES.ArticleFilesStreamsRouteDefinition).to(ArticleFilesStreamsRouteDefinition);
     bind<ArticleFilesStreamsClient>(TYPES.ArticleFilesStreamsClient).to(ArticleFilesStreamsClient);
-    bind<BaasicArticleFilesRouteDefinition>(TYPES.BaasicArticleFilesRouteDefinition).to(BaasicArticleFilesRouteDefinition);
+    bind<ArticleFilesRouteDefinition>(TYPES.ArticleFilesRouteDefinition).to(ArticleFilesRouteDefinition);
     bind<ArticleFilesClient>(TYPES.ArticleFilesClient).to(ArticleFilesClient);
-    bind<BaasicArticleRatingsRouteDefinition>(TYPES.BaasicArticleRatingsRouteDefinition).to(BaasicArticleRatingsRouteDefinition);
+    bind<ArticleRatingsRouteDefinition>(TYPES.ArticleRatingsRouteDefinition).to(ArticleRatingsRouteDefinition);
     bind<ArticleRatingsClient>(TYPES.ArticleRatingsClient).to(ArticleRatingsClient);
-    bind<BaasicArticleSettingsRouteDefinition>(TYPES.BaasicArticleSettingsRouteDefinition).to(BaasicArticleSettingsRouteDefinition);
+    bind<ArticleSettingsRouteDefinition>(TYPES.ArticleSettingsRouteDefinition).to(ArticleSettingsRouteDefinition);
     bind<ArticleSettingsClient>(TYPES.ArticleSettingsClient).to(ArticleSettingsClient);
-    bind<BaasicArticleTagsSubscriptionsRouteDefinition>(TYPES.BaasicArticleTagsSubscriptionsRouteDefinition).to(BaasicArticleTagsSubscriptionsRouteDefinition);
+    bind<ArticleTagsSubscriptionsRouteDefinition>(TYPES.ArticleTagsSubscriptionsRouteDefinition).to(ArticleTagsSubscriptionsRouteDefinition);
     bind<ArticleTagsSubscriptionsClient>(TYPES.ArticleTagsSubscriptionsClient).to(ArticleTagsSubscriptionsClient);
-    bind<BaasicArticleTagsRouteDefinition>(TYPES.BaasicArticleTagsRouteDefinition).to(BaasicArticleTagsRouteDefinition);
+    bind<ArticleTagsRouteDefinition>(TYPES.ArticleTagsRouteDefinition).to(ArticleTagsRouteDefinition);
     bind<ArticleTagsClient>(TYPES.ArticleTagsClient).to(ArticleTagsClient);
-    bind<BaasicArticleSubscriptionsArticleRouteDefinition>(TYPES.BaasicArticleSubscriptionsArticleRouteDefinition).to(BaasicArticleSubscriptionsArticleRouteDefinition);
-    bind<BaasicArticleSubscriptionsCommentReportedRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition).to(BaasicArticleSubscriptionsCommentReportedRouteDefinition);
-    bind<BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition>(TYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition).to(BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition);
-    bind<BaasicArticleSubscriptionsRouteDefinition>(TYPES.BaasicArticleSubscriptionsRouteDefinition).to(BaasicArticleSubscriptionsRouteDefinition);
+    bind<ArticleSubscriptionsArticleRouteDefinition>(TYPES.ArticleSubscriptionsArticleRouteDefinition).to(ArticleSubscriptionsArticleRouteDefinition);
+    bind<ArticleSubscriptionsCommentReportedRouteDefinition>(TYPES.ArticleSubscriptionsCommentReportedRouteDefinition).to(ArticleSubscriptionsCommentReportedRouteDefinition);
+    bind<ArticleSubscriptionsCommentRequiresModerationRouteDefinition>(TYPES.ArticleSubscriptionsCommentRequiresModerationRouteDefinition).to(ArticleSubscriptionsCommentRequiresModerationRouteDefinition);
+    bind<ArticleSubscriptionsRouteDefinition>(TYPES.ArticleSubscriptionsRouteDefinition).to(ArticleSubscriptionsRouteDefinition);
     bind<ArticleSubscriptionsArticleClient>(TYPES.ArticleSubscriptionsArticleClient).to(ArticleSubscriptionsArticleClient);
     bind<ArticleSubscriptionsCommentReportedClient>(TYPES.ArticleSubscriptionsCommentReportedClient).to(ArticleSubscriptionsCommentReportedClient);
     bind<ArticleSubscriptionsCommentRequiresModerationClient>(TYPES.ArticleSubscriptionsCommentRequiresModerationClient).to(ArticleSubscriptionsCommentRequiresModerationClient);
     bind<ArticleSubscriptionsClient>(TYPES.ArticleSubscriptionsClient).to(ArticleSubscriptionsClient);
-    bind<BaasicArticleInstanceRatingsRouteDefinition>(TYPES.BaasicArticleInstanceRatingsRouteDefinition).to(BaasicArticleInstanceRatingsRouteDefinition);
+    bind<ArticleInstanceRatingsRouteDefinition>(TYPES.ArticleInstanceRatingsRouteDefinition).to(ArticleInstanceRatingsRouteDefinition);
     bind<ArticleInstanceRatingsClient>(TYPES.ArticleInstanceRatingsClient).to(ArticleInstanceRatingsClient);
-    bind<BaasicArticleInstanceTagsRouteDefinition>(TYPES.BaasicArticleInstanceTagsRouteDefinition).to(BaasicArticleInstanceTagsRouteDefinition);
+    bind<ArticleInstanceTagsRouteDefinition>(TYPES.ArticleInstanceTagsRouteDefinition).to(ArticleInstanceTagsRouteDefinition);
     bind<ArticleInstanceTagsClient>(TYPES.ArticleInstanceTagsClient).to(ArticleInstanceTagsClient);
-    bind<BaasicArticleInstanceCommentsRouteDefinition>(TYPES.BaasicArticleInstanceCommentsRouteDefinition).to(BaasicArticleInstanceCommentsRouteDefinition);
+    bind<ArticleInstanceCommentsRouteDefinition>(TYPES.ArticleInstanceCommentsRouteDefinition).to(ArticleInstanceCommentsRouteDefinition);
     bind<ArticleInstanceCommentsClient>(TYPES.ArticleInstanceCommentsClient).to(ArticleInstanceCommentsClient);
-    bind<BaasicArticleInstanceCommentRepliesRouteDefinition>(TYPES.BaasicArticleInstanceCommentRepliesRouteDefinition).to(BaasicArticleInstanceCommentRepliesRouteDefinition);
+    bind<ArticleInstanceCommentRepliesRouteDefinition>(TYPES.ArticleInstanceCommentRepliesRouteDefinition).to(ArticleInstanceCommentRepliesRouteDefinition);
     bind<ArticleInstanceCommentRepliesClient>(TYPES.ArticleInstanceCommentRepliesClient).to(ArticleInstanceCommentRepliesClient);
-    bind<BaasicArticleInstanceFilesRouteDefinition>(TYPES.BaasicArticleInstanceFilesRouteDefinition).to(BaasicArticleInstanceFilesRouteDefinition);
+    bind<ArticleInstanceFilesRouteDefinition>(TYPES.ArticleInstanceFilesRouteDefinition).to(ArticleInstanceFilesRouteDefinition);
     bind<ArticleInstanceFilesClient>(TYPES.ArticleInstanceFilesClient).to(ArticleInstanceFilesClient);
-    bind<BaasicArticleInstanceFilesStreamsRouteDefinition>(TYPES.BaasicArticleInstanceFilesStreamsRouteDefinition).to(BaasicArticleInstanceFilesStreamsRouteDefinition);
+    bind<ArticleInstanceFilesStreamsRouteDefinition>(TYPES.ArticleInstanceFilesStreamsRouteDefinition).to(ArticleInstanceFilesStreamsRouteDefinition);
     bind<ArticleInstanceFilesStreamsClient>(TYPES.ArticleInstanceFilesStreamsClient).to(ArticleInstanceFilesStreamsClient);
-    bind<BaasicArticleInstanceFilesBatchRouteDefinition>(TYPES.BaasicArticleInstanceFilesBatchRouteDefinition).to(BaasicArticleInstanceFilesBatchRouteDefinition);
+    bind<ArticleInstanceFilesBatchRouteDefinition>(TYPES.ArticleInstanceFilesBatchRouteDefinition).to(ArticleInstanceFilesBatchRouteDefinition);
     bind<ArticleInstanceFilesBatchClient>(TYPES.ArticleInstanceFilesBatchClient).to(ArticleInstanceFilesBatchClient);
     bind<ArticleInstanceSubscriptionsClient>(TYPES.ArticleInstanceSubscriptionsClient).to(ArticleInstanceSubscriptionsClient);
-    bind<BaasicArticleInstanceSubscriptionsRouteDefinition>(TYPES.BaasicArticleInstanceSubscriptionsRouteDefinition).to(BaasicArticleInstanceSubscriptionsRouteDefinition);
-    bind<BaasicArticleACLRouteDefinition>(TYPES.BaasicArticleACLRouteDefinition).to(BaasicArticleACLRouteDefinition);
+    bind<ArticleInstanceSubscriptionsRouteDefinition>(TYPES.ArticleInstanceSubscriptionsRouteDefinition).to(ArticleInstanceSubscriptionsRouteDefinition);
+    bind<ArticleACLRouteDefinition>(TYPES.ArticleACLRouteDefinition).to(ArticleACLRouteDefinition);
     bind<ArticleACLClient>(TYPES.ArticleACLClient).to(ArticleACLClient);
-    bind<BaasicArticleRouteDefinition>(TYPES.BaasicArticleRouteDefinition).to(BaasicArticleRouteDefinition);
+    bind<ArticleRouteDefinition>(TYPES.ArticleRouteDefinition).to(ArticleRouteDefinition);
     bind<ArticleClient>(TYPES.ArticleClient).to(ArticleClient);
     bind<Root>(TYPES.Root).to(Root);
 });

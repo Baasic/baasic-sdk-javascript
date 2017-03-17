@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicMediaVaultProcessingProviderSettingsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import { MediaVaultProcessingProviderSettingsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 
 @injectable()
 export class MediaVaultProcessingProviderSettingsClient {
 
-    get routeDefinition(): BaasicMediaVaultProcessingProviderSettingsRouteDefinition {
+    get routeDefinition(): MediaVaultProcessingProviderSettingsRouteDefinition {
         return this.baasicMediaVaultProcessingProviderSettingsRouteDefinition;
     }
 
     constructor(
-        @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: BaasicMediaVaultProcessingProviderSettingsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: MediaVaultProcessingProviderSettingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -42,7 +42,7 @@ export class MediaVaultProcessingProviderSettingsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IPreprocessingProviderSettings>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IPreprocessingProviderSettings>>(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IPreprocessingProviderSettings>>(this.baasicMediaVaultProcessingProviderSettingsRouteDefinition.find(options));
     }
 
     /**                   

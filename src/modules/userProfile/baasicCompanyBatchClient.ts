@@ -6,14 +6,14 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { CompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 @injectable()
 export class CompanyBatchClient {
 
     constructor(
-        @inject(userProfileTypes.BaasicCompanyBatchRouteDefinition) protected baasicCompanyBatchRouteDefinition: BaasicCompanyBatchRouteDefinition,
+        @inject(userProfileTypes.CompanyBatchRouteDefinition) protected baasicCompanyBatchRouteDefinition: CompanyBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

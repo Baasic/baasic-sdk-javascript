@@ -5,14 +5,14 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicTemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
+import { TemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
+export class TemplatingRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'templates/{?searchQuery,page,rpp,sort,embed,fields,moduleNames}';
 
@@ -24,13 +24,13 @@ export class BaasicTemplatingRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly deleteRoute: string = 'templates/{id}';
 
-    get batch(): BaasicTemplatingBatchRouteDefinition {
+    get batch(): TemplatingBatchRouteDefinition {
         return this.baasicTemplatingBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(templatingTypes.BaasicTemplatingBatchRouteDefinition) protected baasicTemplatingBatchRouteDefinition: BaasicTemplatingBatchRouteDefinition
+        @inject(templatingTypes.TemplatingBatchRouteDefinition) protected baasicTemplatingBatchRouteDefinition: TemplatingBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                 

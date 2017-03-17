@@ -6,13 +6,13 @@
 
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleFilesStreamsRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'article-file-streams/{id}/{?width,height}';
 

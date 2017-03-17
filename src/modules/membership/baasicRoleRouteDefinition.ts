@@ -5,14 +5,14 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IRole } from 'modules/membership/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicRoleRouteDefinition extends BaasicBaseRouteDefinition {
+export class RoleRouteDefinition extends BaseRouteDefinition {
 
 
     /**                  

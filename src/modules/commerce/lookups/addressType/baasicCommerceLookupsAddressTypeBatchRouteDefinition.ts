@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicCommerceLookupsAddressTypeBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommerceLookupsAddressTypeBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'commerce/lookups/address-types/batch';
 

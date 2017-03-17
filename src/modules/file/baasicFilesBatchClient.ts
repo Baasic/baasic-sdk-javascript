@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicFilesBatchRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { FilesBatchRouteDefinition, TYPES as filesTypes } from 'modules/file';
 import { IFileEntry } from 'modules/file/contracts';
 
 @injectable()
 export class FilesBatchClient {
 
-    get routeDefinition(): BaasicFilesBatchRouteDefinition {
+    get routeDefinition(): FilesBatchRouteDefinition {
         return this.baasicFilesBatchRouteDefinition;
     }
 
     constructor(
-        @inject(filesTypes.BaasicFilesBatchRouteDefinition) protected baasicFilesBatchRouteDefinition: BaasicFilesBatchRouteDefinition,
+        @inject(filesTypes.FilesBatchRouteDefinition) protected baasicFilesBatchRouteDefinition: FilesBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

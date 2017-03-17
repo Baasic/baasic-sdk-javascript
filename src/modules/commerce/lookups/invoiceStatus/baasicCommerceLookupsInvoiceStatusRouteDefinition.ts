@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsInvoiceStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsInvoiceStatusRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommerceLookupsInvoiceStatusRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'commerce/lookups/invoice-statuses/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,12 +23,12 @@ export class BaasicCommerceLookupsInvoiceStatusRouteDefinition extends BaasicBas
 
     public readonly deleteRoute: string = 'commerce/lookups/invoice-statuses/{id}';
 
-    get batch(): BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition {
+    get batch(): CommerceLookupsInvoiceStatusBatchRouteDefinition {
         return this.basicCommerceLookupsInvoiceStatusBatchRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition) protected basicCommerceLookupsInvoiceStatusBatchRouteDefinition: BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsInvoiceStatusBatchRouteDefinition) protected basicCommerceLookupsInvoiceStatusBatchRouteDefinition: CommerceLookupsInvoiceStatusBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

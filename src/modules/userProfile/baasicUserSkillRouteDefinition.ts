@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IUserSkill } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicUserSkillRouteDefinition extends BaasicBaseRouteDefinition {
+export class UserSkillRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'profiles/{userId}/skills/{?searchQuery,page,rpp,sort,embed,fields}';
 

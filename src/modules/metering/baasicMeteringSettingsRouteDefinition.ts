@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions } from 'common/contracts';
 import { IMeteringSettings } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicMeteringSettingsRouteDefinition extends BaasicBaseRouteDefinition {
+export class MeteringSettingsRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'metering/settings/{id}/{?embed,fields}';
 

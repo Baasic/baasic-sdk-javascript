@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'commerce/lookups/recurring-cycle-period-types/{?searchQuery,page,rpp,sort,embed}';
 
@@ -23,12 +23,12 @@ export class BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition extend
 
     public readonly deleteRoute: string = 'commerce/lookups/recurring-cycle-period-types/{id}';
 
-    get batch(): BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition {
+    get batch(): CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition {
         return this.basicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected basicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected basicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

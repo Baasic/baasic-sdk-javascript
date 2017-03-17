@@ -4,19 +4,19 @@
  * @description Baasic Metering Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import {
-    BaasicMeteringACLRouteDefinition,
-    BaasicMeteringBatchRouteDefinition,
-    BaasicMeteringStatisticsRouteDefinition,
+    MeteringACLRouteDefinition,
+    MeteringBatchRouteDefinition,
+    MeteringStatisticsRouteDefinition,
     TYPES as meteringTypes
 } from 'modules/metering';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IMeteringData } from 'modules/metering/contracts';
 
 @injectable()
-export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
+export class MeteringRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'metering/data/{?applicationId,searchQuery,categories,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}';
 
@@ -30,23 +30,23 @@ export class BaasicMeteringRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly purgeRoute: string = 'metering/data/purge';
     
-    get batch(): BaasicMeteringBatchRouteDefinition {
+    get batch(): MeteringBatchRouteDefinition {
         return this.baasicMeteringBatchRouteDefinition;
     }
 
-    get statistics(): BaasicMeteringStatisticsRouteDefinition {
+    get statistics(): MeteringStatisticsRouteDefinition {
         return this.baasicMeteringStatisticsRouteDefinition;
     }
 
-    get acl(): BaasicMeteringACLRouteDefinition {
+    get acl(): MeteringACLRouteDefinition {
         return this.baasicMeteringACLRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(meteringTypes.BaasicMeteringBatchRouteDefinition) protected baasicMeteringBatchRouteDefinition: BaasicMeteringBatchRouteDefinition,
-        @inject(meteringTypes.BaasicMeteringStatisticsRouteDefinition) protected baasicMeteringStatisticsRouteDefinition: BaasicMeteringStatisticsRouteDefinition,
-        @inject(meteringTypes.BaasicMeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: BaasicMeteringACLRouteDefinition
+        @inject(meteringTypes.MeteringBatchRouteDefinition) protected baasicMeteringBatchRouteDefinition: MeteringBatchRouteDefinition,
+        @inject(meteringTypes.MeteringStatisticsRouteDefinition) protected baasicMeteringStatisticsRouteDefinition: MeteringStatisticsRouteDefinition,
+        @inject(meteringTypes.MeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: MeteringACLRouteDefinition
     ) { super(appOptions); }
 
     /**                 

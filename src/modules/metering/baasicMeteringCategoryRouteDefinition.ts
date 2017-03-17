@@ -4,14 +4,14 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicMeteringCategoryBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringCategoryBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefinition {
+export class MeteringCategoryRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'metering/categories/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,13 +23,13 @@ export class BaasicMeteringCategoryRouteDefinition extends BaasicBaseRouteDefini
 
     public readonly deleteRoute: string = 'metering/categories/{id}';
     
-    get batch(): BaasicMeteringCategoryBatchRouteDefinition {
+    get batch(): MeteringCategoryBatchRouteDefinition {
         return this.baasicMeteringCategoryBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(meteringTypes.BaasicMeteringCategoryBatchRouteDefinition) protected baasicMeteringCategoryBatchRouteDefinition: BaasicMeteringCategoryBatchRouteDefinition
+        @inject(meteringTypes.MeteringCategoryBatchRouteDefinition) protected baasicMeteringCategoryBatchRouteDefinition: MeteringCategoryBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                 

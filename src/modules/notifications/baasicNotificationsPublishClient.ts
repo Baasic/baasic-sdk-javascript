@@ -6,13 +6,13 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { NotificationsPublishBatchClient, BaasicNotificationsPublishRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsPublishBatchClient, NotificationsPublishRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { INotification } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsPublishClient {
 
-    routeDefinition(): BaasicNotificationsPublishRouteDefinition {
+    routeDefinition(): NotificationsPublishRouteDefinition {
         return this.baasicNotificationsPublishRouteDefinition;
     }
 
@@ -21,7 +21,7 @@ export class NotificationsPublishClient {
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: BaasicNotificationsPublishRouteDefinition,
+        @inject(notificationsTypes.NotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: NotificationsPublishRouteDefinition,
         @inject(notificationsTypes.NotificationsPublishBatchClient) protected baasicNotificationsPublishBatchClient: NotificationsPublishBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }

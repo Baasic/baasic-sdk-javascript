@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticle, IArticleCommentReply } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceCommentRepliesRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleInstanceCommentRepliesRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{?searchQuery,statuses,page,rpp,sort,embed,fields}';
 

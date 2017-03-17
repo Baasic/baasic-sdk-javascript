@@ -5,14 +5,14 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSubscriptionsAnonymousBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsSubscriptionsAnonymousRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'notifications/subscriptions/batch';
 
@@ -24,12 +24,12 @@ export class BaasicNotificationsSubscriptionsAnonymousRouteDefinition extends Ba
 
     public readonly updateRoute: string = 'notifications/subscriptions/anonymous/{id}';
 
-    get batch(): BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition {
+    get batch(): NotificationsSubscriptionsAnonymousBatchRouteDefinition {
         return this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition: BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition: NotificationsSubscriptionsAnonymousBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

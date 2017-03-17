@@ -6,14 +6,14 @@
 import { injectable, inject } from "inversify";
 import { IACLPolicy } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicDynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { DynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 
 @injectable()
 export class DynamicResourceACLClient {
 
     constructor(
-        @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

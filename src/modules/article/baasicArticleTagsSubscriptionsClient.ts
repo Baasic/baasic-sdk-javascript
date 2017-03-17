@@ -6,18 +6,18 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleTag, IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleTagsSubscriptionsClient {
 
-    get routeDefinition(): BaasicArticleTagsSubscriptionsRouteDefinition {
+    get routeDefinition(): ArticleTagsSubscriptionsRouteDefinition {
         return this.baasicArticleTagsSubscriptionsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: BaasicArticleTagsSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

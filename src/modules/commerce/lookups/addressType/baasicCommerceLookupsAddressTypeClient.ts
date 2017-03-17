@@ -9,14 +9,14 @@ import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     CommerceLookupsAddressTypesBatchClient,
-    BaasicCommerceLookupsAddressTypeRouteDefinition,
+    CommerceLookupsAddressTypeRouteDefinition,
     TYPES as commerceTypes
 } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsAddressTypesClient {
 
-    get routeDefinition(): BaasicCommerceLookupsAddressTypeRouteDefinition {
+    get routeDefinition(): CommerceLookupsAddressTypeRouteDefinition {
         return this.baasicCommerceLookupsAddressTypeRouteDefinition;
     }
 
@@ -25,7 +25,7 @@ export class CommerceLookupsAddressTypesClient {
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsAddressTypeRouteDefinition) protected baasicCommerceLookupsAddressTypeRouteDefinition: BaasicCommerceLookupsAddressTypeRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsAddressTypeRouteDefinition) protected baasicCommerceLookupsAddressTypeRouteDefinition: CommerceLookupsAddressTypeRouteDefinition,
         @inject(commerceTypes.CommerceLookupsAddressTypesBatchClient) protected baasicCommerceLookupsAddressTypesBatchClient: CommerceLookupsAddressTypesBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }

@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicCommerceLookupsCountryStateBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsCountryStateBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsCountryStateRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommerceLookupsCountryStateRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'commerce/lookups/states/{?countryId,searchQuery,page,rpp,sort,embed}';
 
@@ -23,12 +23,12 @@ export class BaasicCommerceLookupsCountryStateRouteDefinition extends BaasicBase
 
     public readonly deleteRoute: string = 'commerce/lookups/states/{id}';
 
-    get batch(): BaasicCommerceLookupsCountryStateBatchRouteDefinition {
+    get batch(): CommerceLookupsCountryStateBatchRouteDefinition {
         return this.baasicCommerceCountryStateBatchRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsCountryStateBatchRouteDefinition) protected baasicCommerceCountryStateBatchRouteDefinition: BaasicCommerceLookupsCountryStateBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsCountryStateBatchRouteDefinition) protected baasicCommerceCountryStateBatchRouteDefinition: CommerceLookupsCountryStateBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

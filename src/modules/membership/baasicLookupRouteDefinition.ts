@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTYPES } from 'common';
+import { BaseRouteDefinition, TYPES as commonTYPES } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicLookupRouteDefinition extends BaasicBaseRouteDefinition {
+export class LookupRouteDefinition extends BaseRouteDefinition {
 
     /**                  
     * Get route with route and query parameters.

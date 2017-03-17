@@ -1,15 +1,15 @@
 import { ContainerModule } from "inversify";
-import { ApplicationSettingsClient, BaasicApplicationSettingsRouteDefinition } from 'modules/applicationSettings';
+import { ApplicationSettingsClient, ApplicationSettingsRouteDefinition } from 'modules/applicationSettings';
 
 const TYPES = {
     ApplicationSettingsClient: Symbol("ApplicationSettingsClient"),
-    BaasicApplicationSettingsRouteDefinition: Symbol("BaasicApplicationSettingsRouteDefinition")
+    ApplicationSettingsRouteDefinition: Symbol("ApplicationSettingsRouteDefinition")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicApplicationSettingsRouteDefinition>(TYPES.BaasicApplicationSettingsRouteDefinition).to(BaasicApplicationSettingsRouteDefinition);
+    bind<ApplicationSettingsRouteDefinition>(TYPES.ApplicationSettingsRouteDefinition).to(ApplicationSettingsRouteDefinition);
     bind<ApplicationSettingsClient>(TYPES.ApplicationSettingsClient).to(ApplicationSettingsClient);
 });
 

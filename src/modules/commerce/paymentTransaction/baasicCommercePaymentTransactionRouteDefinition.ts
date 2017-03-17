@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicCommercePaymentTransactionRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'commerce/payment-transactions/{?customerId,searchQuery,invoiceStatusId,subscriptionId,paymentMethodId,firstName,lastName,transactionStatuses,page,rpp,sort,embed,fields}';
 

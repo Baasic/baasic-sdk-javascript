@@ -7,12 +7,12 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsSubscriptionStatusBatchClient, BaasicCommerceLookupsSubscriptionStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsSubscriptionStatusBatchClient, CommerceLookupsSubscriptionStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsSubscriptionStatusClient {
 
-    get routeDefinition(): BaasicCommerceLookupsSubscriptionStatusRouteDefinition {
+    get routeDefinition(): CommerceLookupsSubscriptionStatusRouteDefinition {
         return this.baasicCommerceLookupsSubscriptionStatusRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class CommerceLookupsSubscriptionStatusClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsSubscriptionStatusBatchClient) protected baasicCommerceLookupsSubscriptionStatusBatchClient: CommerceLookupsSubscriptionStatusBatchClient,
-        @inject(commerceTypes.BaasicCommerceLookupsSubscriptionStatusRouteDefinition) protected baasicCommerceLookupsSubscriptionStatusRouteDefinition: BaasicCommerceLookupsSubscriptionStatusRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsSubscriptionStatusRouteDefinition) protected baasicCommerceLookupsSubscriptionStatusRouteDefinition: CommerceLookupsSubscriptionStatusRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 

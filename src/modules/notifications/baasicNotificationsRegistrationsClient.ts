@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import {
     NotificationsRegistrationsAnonymousClient,
-    BaasicNotificationsRegistrationsRouteDefinition,
+    NotificationsRegistrationsRouteDefinition,
     NotificationsRegistrationsUsersClient,
     TYPES as notificationsTypes
 } from 'modules/notifications';
@@ -15,7 +15,7 @@ import {
 @injectable()
 export class NotificationsRegistrationsClient {
 
-    get routeDefinition(): BaasicNotificationsRegistrationsRouteDefinition {
+    get routeDefinition(): NotificationsRegistrationsRouteDefinition {
         return this.baasicNotificationsRegistrationsRouteDefinition;
     }
 
@@ -28,7 +28,7 @@ export class NotificationsRegistrationsClient {
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsRouteDefinition) protected baasicNotificationsRegistrationsRouteDefinition: BaasicNotificationsRegistrationsRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsRouteDefinition) protected baasicNotificationsRegistrationsRouteDefinition: NotificationsRegistrationsRouteDefinition,
         @inject(notificationsTypes.NotificationsRegistrationsAnonymousClient) protected baasicNotificationsRegistrationsAnonymousClient: NotificationsRegistrationsAnonymousClient,
         @inject(notificationsTypes.NotificationsRegistrationsUsersClient) protected baasicNotificationsRegistrationsUsersClient: NotificationsRegistrationsUsersClient
     ) { }

@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicSkillBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class SkillBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'profile/lookups/skills/batch';
 

@@ -9,14 +9,14 @@ import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     NotificationsSubscriptionsUsersBatchClient,
-    BaasicNotificationsSubscriptionsUsersRouteDefinition, TYPES as notificationsTypes
+    NotificationsSubscriptionsUsersRouteDefinition, TYPES as notificationsTypes
 } from 'modules/notifications';
 import { IUserSubscription } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsSubscriptionsUsersClient {
 
-    routeDefinition(): BaasicNotificationsSubscriptionsUsersRouteDefinition {
+    routeDefinition(): NotificationsSubscriptionsUsersRouteDefinition {
         return this.baasicNotificationsSubscriptionsUsersRouteDefinition;
     }
 
@@ -25,7 +25,7 @@ export class NotificationsSubscriptionsUsersClient {
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: BaasicNotificationsSubscriptionsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
         @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchClient) protected NotificationsSubscriptionsUsersBatchClient: NotificationsSubscriptionsUsersBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -73,7 +73,7 @@ export class NotificationsSubscriptionsUsersClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSubscription>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IUserSubscription>>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IUserSubscription>>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.find(options));
     }
 
     /**                          

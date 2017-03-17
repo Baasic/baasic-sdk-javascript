@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicMeteringSettingsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringSettingsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringSettings } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringSettingsClient {
 
-    get routeDefinition(): BaasicMeteringSettingsRouteDefinition {
+    get routeDefinition(): MeteringSettingsRouteDefinition {
         return this.baasicMeteringSettingsRouteDefinition;
     }
 
     constructor(
-        @inject(meteringTypes.BaasicMeteringSettingsRouteDefinition) protected baasicMeteringSettingsRouteDefinition: BaasicMeteringSettingsRouteDefinition,
+        @inject(meteringTypes.MeteringSettingsRouteDefinition) protected baasicMeteringSettingsRouteDefinition: MeteringSettingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

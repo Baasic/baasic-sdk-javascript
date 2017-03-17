@@ -8,7 +8,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicArticleRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IRating } from 'modules/article/contracts';
 
 @injectable()
@@ -19,12 +19,12 @@ export class ArticleRatingsClient {
      * @method                        
      * @example baasicArticleRatingsClient.routeDefinition.get(id);                 
      **/
-    get routeDefinition(): BaasicArticleRatingsRouteDefinition {
+    get routeDefinition(): ArticleRatingsRouteDefinition {
         return this.baasicArticleRatingsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleRatingsRouteDefinition) protected baasicArticleRatingsRouteDefinition: BaasicArticleRatingsRouteDefinition,
+        @inject(articleTypes.ArticleRatingsRouteDefinition) protected baasicArticleRatingsRouteDefinition: ArticleRatingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -69,7 +69,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.find(options));
     }
 
     /**                  
@@ -92,7 +92,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     findByUser(username: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.findByUser(username, options));
+        return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.findByUser(username, options));
     }
 
     /**                  

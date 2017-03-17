@@ -5,14 +5,14 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { FilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
 import { IFileEntry } from 'modules/file/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
+export class FilesRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'files/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -24,13 +24,13 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly linkRoute: string = 'files/link';
 
-    get streams(): BaasicFilesStreamsRouteDefinition {
+    get streams(): FilesStreamsRouteDefinition {
         return this.baasicFilesStreamsRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(filesTypes.BaasicFilesStreamsRouteDefinition) protected baasicFilesStreamsRouteDefinition: BaasicFilesStreamsRouteDefinition
+        @inject(filesTypes.FilesStreamsRouteDefinition) protected baasicFilesStreamsRouteDefinition: FilesStreamsRouteDefinition
     ) { super(appOptions); }
 
     /**                 

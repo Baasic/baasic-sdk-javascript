@@ -7,12 +7,12 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsRecurringCyclePeriodTypeBatchClient, BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsRecurringCyclePeriodTypeBatchClient, CommerceLookupsRecurringCyclePeriodTypeRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsRecurringCyclePeriodTypeClient {
 
-    get routeDefinition(): BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition {
+    get routeDefinition(): CommerceLookupsRecurringCyclePeriodTypeRouteDefinition {
         return this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchClient) protected baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient: CommerceLookupsRecurringCyclePeriodTypeBatchClient,
-        @inject(commerceTypes.BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition) protected baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition: BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeRouteDefinition) protected baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 

@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicCommerceLookupsAddressTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsAddressTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsAddressTypeRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommerceLookupsAddressTypeRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'commerce/lookups/address-types/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,12 +23,12 @@ export class BaasicCommerceLookupsAddressTypeRouteDefinition extends BaasicBaseR
 
     public readonly deleteRoute: string = 'commerce/lookups/address-types/{id}';
 
-    get batch(): BaasicCommerceLookupsAddressTypeBatchRouteDefinition {
+    get batch(): CommerceLookupsAddressTypeBatchRouteDefinition {
         return this.baasicCommerceLookupsAddressTypeBatchRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsAddressTypeBatchRouteDefinition) protected baasicCommerceLookupsAddressTypeBatchRouteDefinition: BaasicCommerceLookupsAddressTypeBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsAddressTypeBatchRouteDefinition) protected baasicCommerceLookupsAddressTypeBatchRouteDefinition: CommerceLookupsAddressTypeBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

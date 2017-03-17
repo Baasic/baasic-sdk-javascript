@@ -7,13 +7,13 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsInvoiceStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsInvoiceStatusBatchClient {
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition) protected baasicCommerceLookupsInvoiceStatusBatchRouteDefinition: BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsInvoiceStatusBatchRouteDefinition) protected baasicCommerceLookupsInvoiceStatusBatchRouteDefinition: CommerceLookupsInvoiceStatusBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

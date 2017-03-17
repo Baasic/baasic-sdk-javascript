@@ -9,7 +9,7 @@ import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleFilesBatchClient,
-    BaasicArticleFilesRouteDefinition,
+    ArticleFilesRouteDefinition,
     ArticleFilesStreamsClient,
     TYPES as articleTypes
 } from 'modules/article';
@@ -18,7 +18,7 @@ import { IArticleFile } from 'modules/article/contracts';
 @injectable()
 export class ArticleFilesClient {
 
-    get routeDefinition(): BaasicArticleFilesRouteDefinition {
+    get routeDefinition(): ArticleFilesRouteDefinition {
         return this.baasicArticleFilesRouteDefinition;
     }
 
@@ -31,7 +31,7 @@ export class ArticleFilesClient {
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleFilesRouteDefinition) protected baasicArticleFilesRouteDefinition: BaasicArticleFilesRouteDefinition,
+        @inject(articleTypes.ArticleFilesRouteDefinition) protected baasicArticleFilesRouteDefinition: ArticleFilesRouteDefinition,
         @inject(articleTypes.ArticleFilesStreamsClient) protected baasicArticleFilesStreamsClient: ArticleFilesStreamsClient,
         @inject(articleTypes.ArticleFilesBatchClient) protected ArticleFilesBatchClient: ArticleFilesBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
@@ -57,7 +57,7 @@ export class ArticleFilesClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleFile>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IArticleFile>>(this.baasicArticleFilesRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IArticleFile>>(this.baasicArticleFilesRouteDefinition.find(options));
     }
 
     /**                 

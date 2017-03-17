@@ -6,18 +6,18 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicUserEducationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserEducationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserEducation } from 'modules/userProfile/contracts';
 
 @injectable()
 export class UserEducationClient {
 
-    get routeDefinition(): BaasicUserEducationRouteDefinition {
+    get routeDefinition(): UserEducationRouteDefinition {
         return this.baasicUserEducationRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicUserEducationRouteDefinition) protected baasicUserEducationRouteDefinition: BaasicUserEducationRouteDefinition,
+        @inject(userProfileTypes.UserEducationRouteDefinition) protected baasicUserEducationRouteDefinition: UserEducationRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -41,7 +41,7 @@ export class UserEducationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserEducation>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IUserEducation>>(this.baasicUserEducationRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IUserEducation>>(this.baasicUserEducationRouteDefinition.find(options));
     }
 
     /**                 

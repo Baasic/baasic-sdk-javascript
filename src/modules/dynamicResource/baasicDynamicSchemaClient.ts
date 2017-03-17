@@ -6,7 +6,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { DynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
 
 @injectable()
@@ -17,12 +17,12 @@ export class DynamicSchemaClient {
      * @method                        
      * @example baasicDynamicSchemaClient.routeDefinition.get();                 
      **/
-    get routeDefinition(): BaasicDynamicSchemaRouteDefinition {
+    get routeDefinition(): DynamicSchemaRouteDefinition {
         return this.baasicDynamicSchemaRouteDefinition;
     }
 
     constructor(
-        @inject(dynamicResourceTypes.BaasicDynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -45,7 +45,7 @@ export class DynamicSchemaClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IResourceSchema>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IResourceSchema>>(this.baasicDynamicSchemaRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IResourceSchema>>(this.baasicDynamicSchemaRouteDefinition.find(options));
     }
 
     /**                  

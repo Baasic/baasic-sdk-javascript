@@ -8,18 +8,18 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicNotificationsSubscriptionsAnonymousRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSubscriptionsAnonymousRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsSubscriptionsAnonymousClient {
 
-    routeDefinition(): BaasicNotificationsSubscriptionsAnonymousRouteDefinition {
+    routeDefinition(): NotificationsSubscriptionsAnonymousRouteDefinition {
         return this.baasicNotificationsSubscriptionsAnonymousRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: BaasicNotificationsSubscriptionsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -66,7 +66,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IAnonymousSubscription>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IAnonymousSubscription>>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.find())
+        return this.baasicApiClient.get<IQueryModel<IAnonymousSubscription>>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.find())
     }
 
     /**                          

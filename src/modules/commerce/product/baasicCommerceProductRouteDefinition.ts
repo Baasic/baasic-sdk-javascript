@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicCommerceProductRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommerceProductRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields}';
 

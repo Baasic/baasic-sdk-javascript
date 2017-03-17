@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicCommerceRouteDefinition,
+    CommerceRouteDefinition,
     CommerceCustomerClient,
     CommerceInvoiceClient,
     CommerceProductClient,
@@ -40,7 +40,7 @@ export class CommerceClient {
         return this.lookup;
     }
 
-    get routeDefinition(): BaasicCommerceRouteDefinition {
+    get routeDefinition(): CommerceRouteDefinition {
         return this.baasicCommerceRouteDefinition;
     }
 
@@ -50,7 +50,7 @@ export class CommerceClient {
         @inject(commerceTypes.CommerceProductClient) protected baasicCommerceProductClient: CommerceProductClient,
         @inject(commerceTypes.CommercePaymentTransactionClient) protected baasicCommercePaymentTransactionClient: CommercePaymentTransactionClient,
         @inject(commerceTypes.Lookups) protected lookup: Lookups,
-        @inject(commerceTypes.BaasicCommerceRouteDefinition) protected baasicCommerceRouteDefinition: BaasicCommerceRouteDefinition,
+        @inject(commerceTypes.CommerceRouteDefinition) protected baasicCommerceRouteDefinition: CommerceRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

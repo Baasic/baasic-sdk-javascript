@@ -7,14 +7,14 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { UserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IUserSocialLogin } from 'modules/membership/contracts';
 
 @injectable()
 export class UserSocialLoginClient {
 
     constructor(
-        @inject(membershipTypes.BaasicUserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: BaasicUserSocialLoginRouteDefinition,
+        @inject(membershipTypes.UserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: UserSocialLoginRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -32,7 +32,7 @@ export class UserSocialLoginClient {
                     });                     
      **/
     get(username: string): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSocialLogin>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IUserSocialLogin>>(this.baasicUserSocialLoginRouteDefinition.get(username));
+        return this.baasicApiClient.get<IQueryModel<IUserSocialLogin>>(this.baasicUserSocialLoginRouteDefinition.get(username));
     }
 
     /**                     

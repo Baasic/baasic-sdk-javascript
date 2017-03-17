@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IFileEntry } from 'modules/file/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class FilesBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly updateRoute: string = 'files/batch';
 

@@ -10,7 +10,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     MediaVaultBatchClient,
     MediaVaultProcessingProviderSettingsClient,
-    BaasicMediaVaultRouteDefinition,
+    MediaVaultRouteDefinition,
     MediaVaultSettingsClient,
     MediaVaultStreamsClient,
     TYPES as mediaVaultTypes
@@ -20,7 +20,7 @@ import { IMediaEntry } from 'modules/mediaVault/contracts';
 @injectable()
 export class MediaVaultClient {
 
-    get routeDefinition(): BaasicMediaVaultRouteDefinition {
+    get routeDefinition(): MediaVaultRouteDefinition {
         return this.baasicMediaVaultRouteDefinition;
     }
 
@@ -41,7 +41,7 @@ export class MediaVaultClient {
     }
 
     constructor(
-        @inject(mediaVaultTypes.BaasicMediaVaultRouteDefinition) protected baasicMediaVaultRouteDefinition: BaasicMediaVaultRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultRouteDefinition) protected baasicMediaVaultRouteDefinition: MediaVaultRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
         @inject(mediaVaultTypes.MediaVaultStreamsClient) protected baasicMediaVaultStreamsClient: MediaVaultStreamsClient,
         @inject(mediaVaultTypes.MediaVaultBatchClient) protected baasicMediaVaultBatchClient: MediaVaultBatchClient,
@@ -69,7 +69,7 @@ export class MediaVaultClient {
               });                    
    **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IMediaEntry>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IMediaEntry>>(this.baasicMediaVaultRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IMediaEntry>>(this.baasicMediaVaultRouteDefinition.find(options));
     }
 
     /**                 

@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicMediaVaultProcessingProviderSettingsRouteDefinition extends BaasicBaseRouteDefinition {
+export class MediaVaultProcessingProviderSettingsRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'media-vault-preprocessing-settings/{?searchQuery,page,rpp,sort,embed,fields}';
 

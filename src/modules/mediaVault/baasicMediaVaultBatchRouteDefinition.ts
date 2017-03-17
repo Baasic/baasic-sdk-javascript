@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicMediaVaultBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class MediaVaultBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly updateRoute: string = 'media-vaults/batch';
 

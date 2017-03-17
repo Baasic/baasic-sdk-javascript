@@ -7,17 +7,17 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { FilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
 
 @injectable()
 export class FilesStreamsClient {
 
-    get routeDefinition(): BaasicFilesStreamsRouteDefinition {
+    get routeDefinition(): FilesStreamsRouteDefinition {
         return this.baasicFilesStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(filesTypes.BaasicFilesStreamsRouteDefinition) protected baasicFilesStreamsRouteDefinition: BaasicFilesStreamsRouteDefinition,
+        @inject(filesTypes.FilesStreamsRouteDefinition) protected baasicFilesStreamsRouteDefinition: FilesStreamsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

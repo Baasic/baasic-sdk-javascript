@@ -9,7 +9,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import {
     NotificationsRegistrationsAnonymousBatchClient,
-    BaasicNotificationsRegistrationsAnonymousRouteDefinition,
+    NotificationsRegistrationsAnonymousRouteDefinition,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 import { IAnonymousRegistration } from 'modules/notifications/contracts';
@@ -17,7 +17,7 @@ import { IAnonymousRegistration } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsRegistrationsAnonymousClient {
 
-    get routeDefinition(): BaasicNotificationsRegistrationsAnonymousRouteDefinition {
+    get routeDefinition(): NotificationsRegistrationsAnonymousRouteDefinition {
         return this.baasicNotificationsRegistrationsAnonymousRouteDefinition;
     }
 
@@ -26,7 +26,7 @@ export class NotificationsRegistrationsAnonymousClient {
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: BaasicNotificationsRegistrationsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: NotificationsRegistrationsAnonymousRouteDefinition,
         @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchClient) protected baasicNotificationsRegistrationsAnonymousBatchClient: NotificationsRegistrationsAnonymousBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsAnonymousClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IAnonymousRegistration>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IAnonymousRegistration>>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IAnonymousRegistration>>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.find(options));
     }
 
     /**                          

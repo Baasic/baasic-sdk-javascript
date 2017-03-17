@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicNotificationsSettingsRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsSettingsRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'notifications/settings/{id}';
 

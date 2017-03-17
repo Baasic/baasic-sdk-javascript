@@ -9,7 +9,7 @@ import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleInstanceCommentRepliesClient,
-    BaasicArticleInstanceCommentsRouteDefinition,
+    ArticleInstanceCommentsRouteDefinition,
     CommentStatus,
     TYPES as articleTypes
 } from 'modules/article';
@@ -25,7 +25,7 @@ export class ArticleInstanceCommentsClient {
    **/
     public statuses: ICommentStatus = CommentStatus;
 
-    get routeDefinition(): BaasicArticleInstanceCommentsRouteDefinition {
+    get routeDefinition(): ArticleInstanceCommentsRouteDefinition {
         return this.baasicArticleInstanceCommentsRouteDefinition;
     }
 
@@ -34,7 +34,7 @@ export class ArticleInstanceCommentsClient {
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleInstanceCommentsRouteDefinition) protected baasicArticleInstanceCommentsRouteDefinition: BaasicArticleInstanceCommentsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceCommentsRouteDefinition) protected baasicArticleInstanceCommentsRouteDefinition: ArticleInstanceCommentsRouteDefinition,
         @inject(articleTypes.ArticleCommentRepliesClient) protected baasicArticleInstanceCommentsRepliesClient: ArticleInstanceCommentRepliesClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -125,7 +125,7 @@ export class ArticleInstanceCommentsClient {
                 });
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleComment>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IArticleComment>>(this.baasicArticleInstanceCommentsRouteDefinition.find(articleId, options));
+        return this.baasicApiClient.get<IQueryModel<IArticleComment>>(this.baasicArticleInstanceCommentsRouteDefinition.find(articleId, options));
     }
 
     /**

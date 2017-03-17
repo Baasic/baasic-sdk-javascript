@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import {
     NotificationsSubscriptionsAnonymousClient,
-    BaasicNotificationsSubscriptionsRouteDefinition,
+    NotificationsSubscriptionsRouteDefinition,
     NotificationsSubscriptionsUsersClient,
     TYPES as notificationsTypes
 } from 'modules/notifications';
@@ -15,7 +15,7 @@ import {
 @injectable()
 export class NotificationsSubscriptionsClient {
 
-    get routeDefinition(): BaasicNotificationsSubscriptionsRouteDefinition {
+    get routeDefinition(): NotificationsSubscriptionsRouteDefinition {
         return this.baasicNotificationsSubscriptionsRouteDefinition;
     }
 
@@ -28,7 +28,7 @@ export class NotificationsSubscriptionsClient {
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsRouteDefinition) protected baasicNotificationsSubscriptionsRouteDefinition: BaasicNotificationsSubscriptionsRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsRouteDefinition) protected baasicNotificationsSubscriptionsRouteDefinition: NotificationsSubscriptionsRouteDefinition,
         @inject(notificationsTypes.NotificationsSubscriptionsAnonymousClient) protected baasicNotificationsSubscriptionsAnonymousClient: NotificationsSubscriptionsAnonymousClient,
         @inject(notificationsTypes.NotificationsSubscriptionsUsersClient) protected baasicNotificationsSubscriptionsUsersClient: NotificationsSubscriptionsUsersClient
     ) { }

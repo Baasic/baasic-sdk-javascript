@@ -5,7 +5,7 @@ import { ModelMapper, Utility } from 'common';
 import { IAppOptions, TYPES as coreTYPES } from 'core/contracts';
 
 @injectable()
-export abstract class BaasicBaseRouteDefinition {
+export abstract class BaseRouteDefinition {
 
     protected utility: Utility;
     protected modelMapper: ModelMapper;

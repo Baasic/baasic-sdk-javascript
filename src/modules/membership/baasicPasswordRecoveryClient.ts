@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicPasswordRecoveryRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { PasswordRecoveryRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRequestPasswordReset, IResetPassword } from 'modules/membership/contracts';
 
 @injectable()
@@ -17,12 +17,12 @@ export class PasswordRecoveryClient {
      * @method                        
      * @example baasicPasswordRecoveryClient.routeDefinition.requestReset(data);                 
      **/
-    get routeDefinition(): BaasicPasswordRecoveryRouteDefinition {
+    get routeDefinition(): PasswordRecoveryRouteDefinition {
         return this.baasicPasswordRecoveryRouteDefinition;
     }
 
     constructor(
-        @inject(membershipTypes.BaasicPasswordRecoveryRouteDefinition) protected baasicPasswordRecoveryRouteDefinition: BaasicPasswordRecoveryRouteDefinition,
+        @inject(membershipTypes.PasswordRecoveryRouteDefinition) protected baasicPasswordRecoveryRouteDefinition: PasswordRecoveryRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

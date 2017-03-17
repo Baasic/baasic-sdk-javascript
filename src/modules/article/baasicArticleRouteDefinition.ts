@@ -5,22 +5,22 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, Utility } from 'common';
+import { BaseRouteDefinition, Utility } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    BaasicArticleACLRouteDefinition,
-    BaasicArticleSubscriptionsRouteDefinition,
-    BaasicArticleInstanceCommentsRouteDefinition,
-    BaasicArticleInstanceFilesRouteDefinition,
-    BaasicArticleInstanceRatingsRouteDefinition,
-    BaasicArticleInstanceTagsRouteDefinition,
+    ArticleACLRouteDefinition,
+    ArticleSubscriptionsRouteDefinition,
+    ArticleInstanceCommentsRouteDefinition,
+    ArticleInstanceFilesRouteDefinition,
+    ArticleInstanceRatingsRouteDefinition,
+    ArticleInstanceTagsRouteDefinition,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticle, IArticleOptions } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'articles/{?searchQuery,page,rpp,sort,embed,fields,statuses,tags,startDate,endDate}';
 
@@ -42,37 +42,37 @@ export class BaasicArticleRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly unpublishRoute: string = 'articles/{id}/unpublish';
 
-    get subscriptions(): BaasicArticleSubscriptionsRouteDefinition {
+    get subscriptions(): ArticleSubscriptionsRouteDefinition {
         return this.baasicArticleSubscriptionsRouteDefinition;
     }
 
-    get comments(): BaasicArticleInstanceCommentsRouteDefinition {
+    get comments(): ArticleInstanceCommentsRouteDefinition {
         return this.baasicArticleInstanceCommentsRouteDefinition;
     }
 
-    get files(): BaasicArticleInstanceFilesRouteDefinition {
+    get files(): ArticleInstanceFilesRouteDefinition {
         return this.baasicArticleInstanceFilesRouteDefinition;
     }
 
-    get ratings(): BaasicArticleInstanceRatingsRouteDefinition {
+    get ratings(): ArticleInstanceRatingsRouteDefinition {
         return this.baasicArticleInstanceRatingsRouteDefinition;
     }
 
-    get tags(): BaasicArticleInstanceTagsRouteDefinition {
+    get tags(): ArticleInstanceTagsRouteDefinition {
         return this.baasicArticleInstanceTagsRouteDefinition;
     }
 
-    get acl(): BaasicArticleACLRouteDefinition {
+    get acl(): ArticleACLRouteDefinition {
         return this.baasicArticleACLRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleSubscriptionsRouteDefinition) protected baasicArticleSubscriptionsRouteDefinition: BaasicArticleSubscriptionsRouteDefinition,
-        @inject(articleTypes.BaasicArticleInstanceCommentsRouteDefinition) protected baasicArticleInstanceCommentsRouteDefinition: BaasicArticleInstanceCommentsRouteDefinition,
-        @inject(articleTypes.BaasicArticleInstanceFilesRouteDefinition) protected baasicArticleInstanceFilesRouteDefinition: BaasicArticleInstanceFilesRouteDefinition,
-        @inject(articleTypes.BaasicArticleInstanceRatingsRouteDefinition) protected baasicArticleInstanceRatingsRouteDefinition: BaasicArticleInstanceRatingsRouteDefinition,
-        @inject(articleTypes.BaasicArticleInstanceTagsRouteDefinition) protected baasicArticleInstanceTagsRouteDefinition: BaasicArticleInstanceTagsRouteDefinition,
-        @inject(articleTypes.BaasicArticleACLRouteDefinition) protected baasicArticleACLRouteDefinition: BaasicArticleACLRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsRouteDefinition) protected baasicArticleSubscriptionsRouteDefinition: ArticleSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceCommentsRouteDefinition) protected baasicArticleInstanceCommentsRouteDefinition: ArticleInstanceCommentsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesRouteDefinition) protected baasicArticleInstanceFilesRouteDefinition: ArticleInstanceFilesRouteDefinition,
+        @inject(articleTypes.ArticleInstanceRatingsRouteDefinition) protected baasicArticleInstanceRatingsRouteDefinition: ArticleInstanceRatingsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceTagsRouteDefinition) protected baasicArticleInstanceTagsRouteDefinition: ArticleInstanceTagsRouteDefinition,
+        @inject(articleTypes.ArticleACLRouteDefinition) protected baasicArticleACLRouteDefinition: ArticleACLRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
     { super(appOptions); }

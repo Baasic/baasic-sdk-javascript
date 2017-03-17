@@ -5,18 +5,18 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    BaasicArticleFilesBatchRouteDefinition,
-    BaasicArticleFilesStreamsRouteDefinition,
+    ArticleFilesBatchRouteDefinition,
+    ArticleFilesStreamsRouteDefinition,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'article-files/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -28,17 +28,17 @@ export class BaasicArticleFilesRouteDefinition extends BaasicBaseRouteDefinition
 
     public readonly updateRoute: string = 'article-files/{id}';
     
-    get streams(): BaasicArticleFilesStreamsRouteDefinition {
+    get streams(): ArticleFilesStreamsRouteDefinition {
         return this.baasicArticleFilesStreamsRouteDefinition;
     }
 
-    get batch(): BaasicArticleFilesBatchRouteDefinition {
+    get batch(): ArticleFilesBatchRouteDefinition {
         return this.baasicArticleFilesBatchRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleFilesStreamsRouteDefinition) protected baasicArticleFilesStreamsRouteDefinition: BaasicArticleFilesStreamsRouteDefinition,
-        @inject(articleTypes.BaasicArticleFilesBatchRouteDefinition) protected baasicArticleFilesBatchRouteDefinition: BaasicArticleFilesBatchRouteDefinition,
+        @inject(articleTypes.ArticleFilesStreamsRouteDefinition) protected baasicArticleFilesStreamsRouteDefinition: ArticleFilesStreamsRouteDefinition,
+        @inject(articleTypes.ArticleFilesBatchRouteDefinition) protected baasicArticleFilesBatchRouteDefinition: ArticleFilesBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

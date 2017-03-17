@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IGetRequestOptions } from 'common/contracts';
 import { Utility } from 'common';
 import { ILookup } from 'modules/membership/contracts';
-import { BaasicLookupRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { LookupRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 
 @injectable()
@@ -16,12 +16,12 @@ export class LookupClient {
 
     private utility: Utility = new Utility();
 
-    get routeDefinition(): BaasicLookupRouteDefinition {
+    get routeDefinition(): LookupRouteDefinition {
         return this.baasicLookupRouteDefinition;
     }
 
     constructor(
-        @inject(membershipTypes.BaasicLookupRouteDefinition) protected baasicLookupRouteDefinition: BaasicLookupRouteDefinition,
+        @inject(membershipTypes.LookupRouteDefinition) protected baasicLookupRouteDefinition: LookupRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

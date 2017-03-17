@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IAnonymousRegistration } from 'modules/notifications/contracts';
 
-export class BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsRegistrationsAnonymousBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'notifications/registrations/anonymous/batch';
 

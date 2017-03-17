@@ -9,7 +9,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import {
     NotificationsRegistrationsUsersBatchClient,
-    BaasicNotificationsRegistrationsUsersRouteDefinition,
+    NotificationsRegistrationsUsersRouteDefinition,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
@@ -17,7 +17,7 @@ import { IUserRegistration } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsRegistrationsUsersClient {
 
-    get routeDefinition(): BaasicNotificationsRegistrationsUsersRouteDefinition {
+    get routeDefinition(): NotificationsRegistrationsUsersRouteDefinition {
         return this.baasicNotificationsRegistrationsUsersRouteDefinition;
     }
 
@@ -26,7 +26,7 @@ export class NotificationsRegistrationsUsersClient {
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsUsersRouteDefinition) protected baasicNotificationsRegistrationsUsersRouteDefinition: BaasicNotificationsRegistrationsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsUsersRouteDefinition) protected baasicNotificationsRegistrationsUsersRouteDefinition: NotificationsRegistrationsUsersRouteDefinition,
         @inject(notificationsTypes.NotificationsRegistrationsUsersBatchClient) protected baasicNotificationsRegistrationsUsersBatchClient: NotificationsRegistrationsUsersBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -75,7 +75,7 @@ export class NotificationsRegistrationsUsersClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserRegistration>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IUserRegistration>>(this.baasicNotificationsRegistrationsUsersRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IUserRegistration>>(this.baasicNotificationsRegistrationsUsersRouteDefinition.find(options));
     }
 
     /**                          

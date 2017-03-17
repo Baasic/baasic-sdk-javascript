@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicUserRouteDefinition,
+    UserRouteDefinition,
     UserSocialLoginClient,
     TYPES as membershipTypes
 } from 'modules/membership';
@@ -23,7 +23,7 @@ export class UserClient {
      * @method                        
      * @example baasicUserClient.routeDefinition.get();                 
      **/
-    get routeDefinition(): BaasicUserRouteDefinition {
+    get routeDefinition(): UserRouteDefinition {
         return this.baasicUserRouteDefinition;
     }
 
@@ -32,7 +32,7 @@ export class UserClient {
     }
 
     constructor(
-        @inject(membershipTypes.BaasicUserRouteDefinition) protected baasicUserRouteDefinition: BaasicUserRouteDefinition,
+        @inject(membershipTypes.UserRouteDefinition) protected baasicUserRouteDefinition: UserRouteDefinition,
         @inject(membershipTypes.UserSocialLoginClient) protected baasicUserSocialLoginClient: UserSocialLoginClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -72,7 +72,7 @@ export class UserClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IAppUser>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IAppUser>>(this.baasicUserRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IAppUser>>(this.baasicUserRouteDefinition.find(options));
     }
 
     /**                  

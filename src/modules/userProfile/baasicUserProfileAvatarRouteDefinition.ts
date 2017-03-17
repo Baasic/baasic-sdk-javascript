@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicUserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefinition {
+export class UserProfileAvatarRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'profiles/{id}/avatars/{?embed,fields}';
 
@@ -21,13 +21,13 @@ export class BaasicUserProfileAvatarRouteDefinition extends BaasicBaseRouteDefin
 
     public readonly unlinkRoute: string = 'profiles/{userId}/avatars/unlink';
 
-    get streams(): BaasicUserProfileAvatarStreamsRouteDefinition {
+    get streams(): UserProfileAvatarStreamsRouteDefinition {
         return this.baasicUserProfileAvatarStreamsRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.BaasicUserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: BaasicUserProfileAvatarStreamsRouteDefinition
+        @inject(userProfileTypes.UserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: UserProfileAvatarStreamsRouteDefinition
     ) { super(appOptions); }
 
     /**                 

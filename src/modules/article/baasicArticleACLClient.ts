@@ -7,17 +7,17 @@
 import { injectable, inject } from "inversify";
 import { IACLPolicy, IACLOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicArticleACLRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleACLRouteDefinition, TYPES as articleTypes } from 'modules/article';
 
 @injectable()
 export class ArticleACLClient {
 
-    get routeDefinition(): BaasicArticleACLRouteDefinition {
+    get routeDefinition(): ArticleACLRouteDefinition {
         return this.baasicArticleACLRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleACLRouteDefinition) protected baasicArticleACLRouteDefinition: BaasicArticleACLRouteDefinition,
+        @inject(articleTypes.ArticleACLRouteDefinition) protected baasicArticleACLRouteDefinition: ArticleACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicUserWorkRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserWorkRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserWork } from 'modules/userProfile/contracts';
 
 @injectable()
 export class UserWorkClient {
 
-    routeDefinition(): BaasicUserWorkRouteDefinition {
+    routeDefinition(): UserWorkRouteDefinition {
         return this.baasicUserWorkRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicUserWorkRouteDefinition) protected baasicUserWorkRouteDefinition: BaasicUserWorkRouteDefinition,
+        @inject(userProfileTypes.UserWorkRouteDefinition) protected baasicUserWorkRouteDefinition: UserWorkRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -42,7 +42,7 @@ export class UserWorkClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserWork>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IUserWork>>(this.baasicUserWorkRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IUserWork>>(this.baasicUserWorkRouteDefinition.find(options));
     }
 
     /**                 

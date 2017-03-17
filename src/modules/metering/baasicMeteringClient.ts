@@ -10,7 +10,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     MeteringACLClient,
     MeteringBatchClient,
-    BaasicMeteringRouteDefinition,
+    MeteringRouteDefinition,
     MeteringStatisticsClient,
     MeteringCategoryClient,
     MeteringSettingsClient,
@@ -21,7 +21,7 @@ import { IMeteringData } from 'modules/metering/contracts';
 @injectable()
 export class MeteringClient {
 
-    get routeDefinition(): BaasicMeteringRouteDefinition {
+    get routeDefinition(): MeteringRouteDefinition {
         return this.baasicMeteringRouteDefinition;
     }
 
@@ -46,7 +46,7 @@ export class MeteringClient {
     }
 
     constructor(
-        @inject(meteringTypes.BaasicMeteringRouteDefinition) protected baasicMeteringRouteDefinition: BaasicMeteringRouteDefinition,
+        @inject(meteringTypes.MeteringRouteDefinition) protected baasicMeteringRouteDefinition: MeteringRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
         @inject(meteringTypes.MeteringBatchClient) protected baasicMeteringBatchClient: MeteringBatchClient,
         @inject(meteringTypes.MeteringStatisticsClient) protected baasicMeteringStatisticsClient: MeteringStatisticsClient,
@@ -75,7 +75,7 @@ export class MeteringClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IMeteringData>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IMeteringData>>(this.baasicMeteringRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IMeteringData>>(this.baasicMeteringRouteDefinition.find(options));
     }
 
     /**                 

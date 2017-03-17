@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
-import { BaasicRegisterRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { RegisterRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser, IRegisterUser } from 'modules/membership/contracts';
 
 @injectable()
@@ -18,12 +18,12 @@ export class RegisterClient {
      * @method                        
      * @example baasicRegisterClient.routeDefinition.get();                 
      **/
-    get routeDefinition(): BaasicRegisterRouteDefinition {
+    get routeDefinition(): RegisterRouteDefinition {
         return this.baasicRegisterRouteDefinition;
     }
 
     constructor(
-        @inject(membershipTypes.BaasicRegisterRouteDefinition) protected baasicRegisterRouteDefinition: BaasicRegisterRouteDefinition,
+        @inject(membershipTypes.RegisterRouteDefinition) protected baasicRegisterRouteDefinition: RegisterRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
     ) { }

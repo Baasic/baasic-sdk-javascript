@@ -4,12 +4,12 @@
  * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IAccessPolicy, IAccessAction } from 'modules/membership/contracts';
 
 @injectable()
-export class BaasicPermissionRouteDefinition extends BaasicBaseRouteDefinition {
+export class PermissionRouteDefinition extends BaseRouteDefinition {
 
     /**                  
     * Find route with route and query parameters.

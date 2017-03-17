@@ -11,7 +11,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleACLClient,
     BaasicArticleUtility,
-    BaasicArticleRouteDefinition,
+    ArticleRouteDefinition,
     ArticleInstanceSubscriptionsClient,
     ArticleInstanceCommentsClient,
     ArticleInstanceFilesClient,
@@ -33,7 +33,7 @@ export class ArticleClient {
      * @method 
      * @example baasicArticleClient.routeDefinition.get();
      **/
-    get routeDefinition(): BaasicArticleRouteDefinition {
+    get routeDefinition(): ArticleRouteDefinition {
         return this.baasicArticleRouteDefinition;
     }
 
@@ -69,7 +69,7 @@ export class ArticleClient {
         @inject(articleTypes.ArticleInstanceRatingsClient) protected baasicArticleInstanceRatingsClient: ArticleInstanceRatingsClient,
         @inject(articleTypes.ArticleInstanceTagsClient) protected baasicArticleInstanceTagsClient: ArticleInstanceTagsClient,
         @inject(articleTypes.ArticleInstanceSubscriptionsClient) protected baasicArticleInstanceSubscriptionsClient: ArticleInstanceSubscriptionsClient,
-        @inject(articleTypes.BaasicArticleRouteDefinition) protected baasicArticleRouteDefinition: BaasicArticleRouteDefinition,
+        @inject(articleTypes.ArticleRouteDefinition) protected baasicArticleRouteDefinition: ArticleRouteDefinition,
         @inject(articleTypes.ArticleACLClient) protected baasicArticleACLClient: ArticleACLClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -97,7 +97,7 @@ export class ArticleClient {
                 });                   
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticle>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IArticle>>(this.baasicArticleRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IArticle>>(this.baasicArticleRouteDefinition.find(options));
     }
 
     /**                 

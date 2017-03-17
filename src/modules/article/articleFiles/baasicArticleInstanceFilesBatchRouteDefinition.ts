@@ -5,12 +5,12 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleInstanceFilesBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly unlinkRoute: string = 'articles/{articleId}/files/batch/unlink';
 

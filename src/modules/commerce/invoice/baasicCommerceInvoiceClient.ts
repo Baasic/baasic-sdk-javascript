@@ -12,7 +12,7 @@ import { CommerceInvoiceRouteDefinition, CommerceInvoiceStreamsClient, TYPES as 
 @injectable()
 export class CommerceInvoiceClient {
 
-    get routeDefinition(): BaasicCommerceInvoiceRouteDefinition {
+    get routeDefinition(): CommerceInvoiceRouteDefinition {
         return this.baasicCommerceInvoiceRouteDefinition;
     }
 
@@ -21,7 +21,7 @@ export class CommerceInvoiceClient {
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceInvoiceRouteDefinition) protected baasicCommerceInvoiceRouteDefinition: BaasicCommerceInvoiceRouteDefinition,
+        @inject(commerceTypes.CommerceInvoiceRouteDefinition) protected baasicCommerceInvoiceRouteDefinition: CommerceInvoiceRouteDefinition,
         @inject(commerceTypes.CommerceInvoiceStreamsClient) protected baasicCommerceInvoiceStreamsClient: CommerceInvoiceStreamsClient,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }

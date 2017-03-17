@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import {
-    BaasicArticleInstanceSubscriptionsRouteDefinition,
+    ArticleInstanceSubscriptionsRouteDefinition,
     ArticleSubscriptionsArticleClient,
     ArticleSubscriptionsCommentReportedClient,
     ArticleSubscriptionsCommentRequiresModerationClient,
@@ -30,7 +30,7 @@ export class ArticleInstanceSubscriptionsClient {
         return this.baasicArticleSubscriptionsCommentRequiresModerationClient;
     }
 
-    get routeDefinition(): BaasicArticleInstanceSubscriptionsRouteDefinition {
+    get routeDefinition(): ArticleInstanceSubscriptionsRouteDefinition {
         return this.baasicArticleInstanceSubscriptionsRouteDefinition;
     }
 
@@ -38,7 +38,7 @@ export class ArticleInstanceSubscriptionsClient {
         @inject(articleTypes.ArticleSubscriptionsCommentReportedClient) protected baasicArticleSubscriptionsCommentReportedClient: ArticleSubscriptionsCommentReportedClient,
         @inject(articleTypes.ArticleSubscriptionsArticleClient) protected baasicArticleSubscriptionsArticleClient: ArticleSubscriptionsArticleClient,
         @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationClient) protected baasicArticleSubscriptionsCommentRequiresModerationClient: ArticleSubscriptionsCommentRequiresModerationClient,
-        @inject(articleTypes.BaasicArticleInstanceSubscriptionsRouteDefinition) protected baasicArticleInstanceSubscriptionsRouteDefinition: BaasicArticleInstanceSubscriptionsRouteDefinition
+        @inject(articleTypes.ArticleInstanceSubscriptionsRouteDefinition) protected baasicArticleInstanceSubscriptionsRouteDefinition: ArticleInstanceSubscriptionsRouteDefinition
     )
     { }
 }

@@ -7,13 +7,13 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MeteringCategoryBatchClient, BaasicMeteringCategoryRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringCategoryBatchClient, MeteringCategoryRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringCategoryClient {
 
-    get routeDefinition(): BaasicMeteringCategoryRouteDefinition {
+    get routeDefinition(): MeteringCategoryRouteDefinition {
         return this.baasicMeteringCategoryRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class MeteringCategoryClient {
     }
 
     constructor(
-        @inject(meteringTypes.BaasicMeteringCategoryRouteDefinition) protected baasicMeteringCategoryRouteDefinition: BaasicMeteringCategoryRouteDefinition,
+        @inject(meteringTypes.MeteringCategoryRouteDefinition) protected baasicMeteringCategoryRouteDefinition: MeteringCategoryRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
         @inject(meteringTypes.MeteringCategoryBatchClient) protected baasicMeteringCategoryBatchClient: MeteringCategoryBatchClient
     ) { }

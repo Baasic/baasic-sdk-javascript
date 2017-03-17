@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import { IMeteringData } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicMeteringStatisticsRouteDefinition extends BaasicBaseRouteDefinition {
+export class MeteringStatisticsRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'metering/statistics/{category}/{?applicationIds,rateBy,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}';
     

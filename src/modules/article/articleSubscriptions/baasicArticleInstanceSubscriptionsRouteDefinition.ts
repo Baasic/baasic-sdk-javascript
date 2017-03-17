@@ -5,35 +5,35 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    BaasicArticleSubscriptionsCommentReportedRouteDefinition,
-    BaasicArticleSubscriptionsArticleRouteDefinition,
-    BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
+    ArticleSubscriptionsCommentReportedRouteDefinition,
+    ArticleSubscriptionsArticleRouteDefinition,
+    ArticleSubscriptionsCommentRequiresModerationRouteDefinition,
     TYPES as articleTYPES
 } from 'modules/article';
 
 @injectable()
-export class BaasicArticleInstanceSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleInstanceSubscriptionsRouteDefinition extends BaseRouteDefinition {
 
-    get commentReported(): BaasicArticleSubscriptionsCommentReportedRouteDefinition {
+    get commentReported(): ArticleSubscriptionsCommentReportedRouteDefinition {
         return this.baasicArticleSubscriptionsCommentReportedRouteDefinition;
     }
 
-    get article(): BaasicArticleSubscriptionsArticleRouteDefinition {
+    get article(): ArticleSubscriptionsArticleRouteDefinition {
         return this.baasicArticleSubscriptionsArticleRouteDefinition;
     }
 
-    get commentRequiresModeration(): BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition {
+    get commentRequiresModeration(): ArticleSubscriptionsCommentRequiresModerationRouteDefinition {
         return this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition;
     }
 
     constructor(
-        @inject(articleTYPES.BaasicArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: BaasicArticleSubscriptionsCommentReportedRouteDefinition,
-        @inject(articleTYPES.BaasicArticleSubscriptionsArticleRouteDefinition) protected baasicArticleSubscriptionsArticleRouteDefinition: BaasicArticleSubscriptionsArticleRouteDefinition,
-        @inject(articleTYPES.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
+        @inject(articleTYPES.ArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: ArticleSubscriptionsCommentReportedRouteDefinition,
+        @inject(articleTYPES.ArticleSubscriptionsArticleRouteDefinition) protected baasicArticleSubscriptionsArticleRouteDefinition: ArticleSubscriptionsArticleRouteDefinition,
+        @inject(articleTYPES.ArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: ArticleSubscriptionsCommentRequiresModerationRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
     { super(appOptions); }

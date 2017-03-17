@@ -5,22 +5,22 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicNotificationsPublishBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsPublishBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 
 @injectable()
-export class BaasicNotificationsPublishRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsPublishRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'notifications/publish';
 
-    batch(): BaasicNotificationsPublishBatchRouteDefinition {
+    batch(): NotificationsPublishBatchRouteDefinition {
         return this.baasicNotificationsPublishBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.BaasicNotificationsPublishBatchRouteDefinition) protected baasicNotificationsPublishBatchRouteDefinition: BaasicNotificationsPublishBatchRouteDefinition
+        @inject(notificationsTypes.NotificationsPublishBatchRouteDefinition) protected baasicNotificationsPublishBatchRouteDefinition: NotificationsPublishBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                      

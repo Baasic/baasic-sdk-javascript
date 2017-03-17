@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicUserProfileACLRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserProfileACLRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserProfile } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition {
+export class UserProfileRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'profiles/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,13 +23,13 @@ export class BaasicUserProfileRouteDefinition extends BaasicBaseRouteDefinition 
 
     public readonly deleteRoute: string = 'profiles/{id}';
 
-    get acl(): BaasicUserProfileACLRouteDefinition {
+    get acl(): UserProfileACLRouteDefinition {
         return this.baasicUserProfileACLRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.BaasicUserProfileACLRouteDefinition) protected baasicUserProfileACLRouteDefinition: BaasicUserProfileACLRouteDefinition
+        @inject(userProfileTypes.UserProfileACLRouteDefinition) protected baasicUserProfileACLRouteDefinition: UserProfileACLRouteDefinition
     ) { super(appOptions); }
 
     /**                 

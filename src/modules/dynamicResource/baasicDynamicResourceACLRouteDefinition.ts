@@ -4,13 +4,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IACLPolicy } from 'common/contracts';
 import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicDynamicResourceACLRouteDefinition extends BaasicBaseRouteDefinition {
+export class DynamicResourceACLRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'resources/{schemaName}/{id}/acl/{?fields}';
 

@@ -7,18 +7,18 @@
 import { injectable, inject } from 'inversify';
 import { IBaasicResponse } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicTemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
+import { TemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 @injectable()
 export class TemplatingBatchClient {
 
     constructor(
-        @inject(templatingTypes.BaasicTemplatingBatchRouteDefinition) protected baasicTemplatingBatchRouteDefinition: BaasicTemplatingBatchRouteDefinition,
+        @inject(templatingTypes.TemplatingBatchRouteDefinition) protected baasicTemplatingBatchRouteDefinition: TemplatingBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
-    get routeDefinition(): BaasicTemplatingBatchRouteDefinition {
+    get routeDefinition(): TemplatingBatchRouteDefinition {
         return this.baasicTemplatingBatchRouteDefinition;
     }
 
@@ -36,7 +36,7 @@ export class TemplatingBatchClient {
                     });                     
     **/
     create(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
-        return this.baasicApiClient.post<IBaasicResponse[]>(this.baasicTemplatingBatchRouteDefinition.create(), this.baasicTemplatingBatchRouteDefinition.createParams(data));
+        return this.baasicApiClient.post<IResponse[]>(this.baasicTemplatingBatchRouteDefinition.create(), this.baasicTemplatingBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -53,7 +53,7 @@ export class TemplatingBatchClient {
                     });                     
      **/
     update(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
-        return this.baasicApiClient.put<IBaasicResponse[]>(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data));
+        return this.baasicApiClient.put<IResponse[]>(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data));
     }
 
     /**                     

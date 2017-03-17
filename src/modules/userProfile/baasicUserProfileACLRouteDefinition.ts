@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IACLOptions, IACLPolicy } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicUserProfileACLRouteDefinition extends BaasicBaseRouteDefinition {
+export class UserProfileACLRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'profiles/{id}/acl/{?fields}';
 

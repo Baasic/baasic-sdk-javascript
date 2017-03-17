@@ -8,7 +8,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicArticleInstanceRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleInstanceRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IRating } from 'modules/article/contracts';
 
 @injectable()
@@ -19,12 +19,12 @@ export class ArticleInstanceRatingsClient {
      * @method                        
      * @example baasicArticleInstanceRatingsClient.routeDefinition.get(id);                 
      **/
-    get routeDefinition(): BaasicArticleInstanceRatingsRouteDefinition {
+    get routeDefinition(): ArticleInstanceRatingsRouteDefinition {
         return this.baasicArticleInstanceRatingsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleInstanceRatingsRouteDefinition) protected baasicArticleInstanceRatingsRouteDefinition: BaasicArticleInstanceRatingsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceRatingsRouteDefinition) protected baasicArticleInstanceRatingsRouteDefinition: ArticleInstanceRatingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -66,7 +66,7 @@ export class ArticleInstanceRatingsClient {
                 });                     
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.find(articleId, options));
+        return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.find(articleId, options));
     }
 
     /**                  
@@ -90,7 +90,7 @@ export class ArticleInstanceRatingsClient {
                 });                     
      **/
     findByUser(articleId: string, username: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
+        return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
     }
 
     /**                  

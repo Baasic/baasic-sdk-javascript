@@ -6,17 +6,17 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicUserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 
 @injectable()
 export class UserProfileAvatarStreamsClient {
 
-    get routeDefinition(): BaasicUserProfileAvatarStreamsRouteDefinition {
+    get routeDefinition(): UserProfileAvatarStreamsRouteDefinition {
         return this.baasicUserProfileAvatarStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicUserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: BaasicUserProfileAvatarStreamsRouteDefinition,
+        @inject(userProfileTypes.UserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: UserProfileAvatarStreamsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

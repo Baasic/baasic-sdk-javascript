@@ -34,13 +34,13 @@ export class ArticleCommentsClient {
      * @method 
      * @example baasicArticleCommentsRouteDefinition.routeDefinition.get();
      **/
-    get routeDefinition(): BaasicArticleCommentsRouteDefinition {
+    get routeDefinition(): ArticleCommentsRouteDefinition {
         return this.baasicArticleCommentsRouteDefinition;
     }
 
     constructor(
         @inject(articleTypes.ArticleCommentRepliesClient) protected baasicArticleCommentRepliesClient: ArticleCommentRepliesClient,
-        @inject(articleTypes.BaasicArticleCommentsRouteDefinition) protected baasicArticleCommentsRouteDefinition: BaasicArticleCommentsRouteDefinition,
+        @inject(articleTypes.ArticleCommentsRouteDefinition) protected baasicArticleCommentsRouteDefinition: ArticleCommentsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -129,7 +129,7 @@ export class ArticleCommentsClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleComment>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IArticleComment>>(this.baasicArticleCommentsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IArticleComment>>(this.baasicArticleCommentsRouteDefinition.find(options));
     }
 
     /**

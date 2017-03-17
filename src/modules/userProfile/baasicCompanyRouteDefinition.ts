@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicCompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { CompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
+export class CompanyRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'lookups/companies/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,13 +23,13 @@ export class BaasicCompanyRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly deleteRoute: string = 'lookups/companies/{id}';
 
-    get batch(): BaasicCompanyBatchRouteDefinition {
+    get batch(): CompanyBatchRouteDefinition {
         return this.baasicCompanyBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.BaasicCompanyBatchRouteDefinition) protected baasicCompanyBatchRouteDefinition: BaasicCompanyBatchRouteDefinition
+        @inject(userProfileTypes.CompanyBatchRouteDefinition) protected baasicCompanyBatchRouteDefinition: CompanyBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                 

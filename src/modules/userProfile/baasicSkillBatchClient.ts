@@ -6,14 +6,14 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicSkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { SkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
 @injectable()
 export class SkillBatchClient {
 
     constructor(
-        @inject(userProfileTypes.BaasicSkillBatchRouteDefinition) protected baasicSkillBatchRouteDefinition: BaasicSkillBatchRouteDefinition,
+        @inject(userProfileTypes.SkillBatchRouteDefinition) protected baasicSkillBatchRouteDefinition: SkillBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

@@ -6,18 +6,18 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicMeteringCategoryBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringCategoryBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringCategoryBatchClient {
 
-    get routeDefinition(): BaasicMeteringCategoryBatchRouteDefinition {
+    get routeDefinition(): MeteringCategoryBatchRouteDefinition {
         return this.baasicMeteringCategoryBatchRouteDefinition;
     }
 
     constructor(
-        @inject(meteringTypes.BaasicMeteringCategoryBatchRouteDefinition) protected baasicMeteringCategoryBatchRouteDefinition: BaasicMeteringCategoryBatchRouteDefinition,
+        @inject(meteringTypes.MeteringCategoryBatchRouteDefinition) protected baasicMeteringCategoryBatchRouteDefinition: MeteringCategoryBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

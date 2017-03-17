@@ -8,7 +8,7 @@ import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     DynamicResourceACLClient,
-    BaasicDynamicResourceRouteDefinition,
+    DynamicResourceRouteDefinition,
     DynamicSchemaClient,
     TYPES as dynamicResourceTypes
 } from 'modules/dynamicResource';
@@ -22,7 +22,7 @@ export class DynamicResourceClient {
      * @method                        
      * @example baasicDynamicResourceClient.routeDefinition.get(schemaName, id, options)                 
      **/
-    get routeDefinition(): BaasicDynamicResourceRouteDefinition {
+    get routeDefinition(): DynamicResourceRouteDefinition {
         return this.baasicDynamicResourceRouteDefinition;
     }
 
@@ -35,7 +35,7 @@ export class DynamicResourceClient {
     }
 
     constructor(
-        @inject(dynamicResourceTypes.BaasicDynamicResourceRouteDefinition) protected baasicDynamicResourceRouteDefinition: BaasicDynamicResourceRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicResourceRouteDefinition) protected baasicDynamicResourceRouteDefinition: DynamicResourceRouteDefinition,
         @inject(dynamicResourceTypes.DynamicResourceACLClient) protected baasicDynamicResourceACLClient: DynamicResourceACLClient,
         @inject(dynamicResourceTypes.DynamicSchemaClient) protected baasicDynamicSchemaClient: DynamicSchemaClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
@@ -62,7 +62,7 @@ export class DynamicResourceClient {
                 });                    
      **/
     find(schemaName: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IDynamicObject>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IDynamicObject>>(this.baasicDynamicResourceRouteDefinition.find(schemaName, options));
+        return this.baasicApiClient.get<IQueryModel<IDynamicObject>>(this.baasicDynamicResourceRouteDefinition.find(schemaName, options));
     }
 
     /**                  

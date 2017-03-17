@@ -7,19 +7,19 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicArticleInstanceTagsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleInstanceTagsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IArticleTag } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleInstanceTagsClient {
 
-    get routeDefinition(): BaasicArticleInstanceTagsRouteDefinition {
+    get routeDefinition(): ArticleInstanceTagsRouteDefinition {
         return this.baasicArticleInstanceTagsRouteDefinition;
     }
 
 
     constructor(
-        @inject(articleTypes.BaasicArticleInstanceTagsRouteDefinition) protected baasicArticleInstanceTagsRouteDefinition: BaasicArticleInstanceTagsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceTagsRouteDefinition) protected baasicArticleInstanceTagsRouteDefinition: ArticleInstanceTagsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -41,7 +41,7 @@ export class ArticleInstanceTagsClient {
                 });                    
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleTag>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IArticleTag>>(this.baasicArticleInstanceTagsRouteDefinition.find(articleId, options));
+        return this.baasicApiClient.get<IQueryModel<IArticleTag>>(this.baasicArticleInstanceTagsRouteDefinition.find(articleId, options));
     }
 
     /**                 

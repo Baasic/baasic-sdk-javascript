@@ -5,20 +5,20 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import {
-    BaasicMediaVaultBatchRouteDefinition,
-    BaasicMediaVaultProcessingProviderSettingsRouteDefinition,
-    BaasicMediaVaultSettingsRouteDefinition,
-    BaasicMediaVaultStreamsRouteDefinition,
+    MediaVaultBatchRouteDefinition,
+    MediaVaultProcessingProviderSettingsRouteDefinition,
+    MediaVaultSettingsRouteDefinition,
+    MediaVaultStreamsRouteDefinition,
     TYPES as mediaVaultTypes
 } from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
+export class MediaVaultRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'media-vaults/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -28,28 +28,28 @@ export class BaasicMediaVaultRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly deleteRoute: string = 'media-vaults/{id}/{?height,width}';
     
-    get streams(): BaasicMediaVaultStreamsRouteDefinition {
+    get streams(): MediaVaultStreamsRouteDefinition {
         return this.baasicMediaVaultStreamsRouteDefinition;
     }
 
-    get batch(): BaasicMediaVaultBatchRouteDefinition {
+    get batch(): MediaVaultBatchRouteDefinition {
         return this.baasicMediaVaultBatchRouteDefinition;
     }
 
-    get settings(): BaasicMediaVaultSettingsRouteDefinition {
+    get settings(): MediaVaultSettingsRouteDefinition {
         return this.baasicMediaVaultSettingsRouteDefinition;
     }
 
-    get processingProviderSettings(): BaasicMediaVaultProcessingProviderSettingsRouteDefinition {
+    get processingProviderSettings(): MediaVaultProcessingProviderSettingsRouteDefinition {
         return this.baasicMediaVaultProcessingProviderSettingsRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(mediaVaultTypes.BaasicMediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: BaasicMediaVaultStreamsRouteDefinition,
-        @inject(mediaVaultTypes.BaasicMediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: BaasicMediaVaultBatchRouteDefinition,
-        @inject(mediaVaultTypes.BaasicMediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: BaasicMediaVaultSettingsRouteDefinition,
-        @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: BaasicMediaVaultProcessingProviderSettingsRouteDefinition
+        @inject(mediaVaultTypes.MediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: MediaVaultStreamsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: MediaVaultBatchRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: MediaVaultSettingsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: MediaVaultProcessingProviderSettingsRouteDefinition
     ) { super(appOptions); }
 
     /**                 

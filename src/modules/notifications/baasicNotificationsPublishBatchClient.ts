@@ -6,14 +6,14 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicNotificationsPublishBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsPublishBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { INotification } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsPublishBatchClient {
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsPublishBatchRouteDefinition) protected baasicNotificationsPublishBatchRouteDefinition: BaasicNotificationsPublishBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsPublishBatchRouteDefinition) protected baasicNotificationsPublishBatchRouteDefinition: NotificationsPublishBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

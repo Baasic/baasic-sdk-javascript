@@ -3,13 +3,13 @@
  * @description Baasic Value Set Item Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 import { injectable, inject } from 'inversify';
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IValueSetItem } from 'modules/valueSet/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicValueSetItemRouteDefinition extends BaasicBaseRouteDefinition {
+export class ValueSetItemRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}';
 

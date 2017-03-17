@@ -5,14 +5,14 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicArticleInstanceCommentRepliesRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleInstanceCommentRepliesRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IArticleComment } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'articles/{articleId}/comments/{?searchQuery,statuses,page,rpp,sort,embed,fields}';
 
@@ -42,12 +42,12 @@ export class BaasicArticleInstanceCommentsRouteDefinition extends BaasicBaseRout
 
     public readonly unspamRoute: string = 'articles/{articleId}/comments/{id}/unspam';
     
-    get replies(): BaasicArticleInstanceCommentRepliesRouteDefinition {
+    get replies(): ArticleInstanceCommentRepliesRouteDefinition {
         return this.baasicArticleInstanceCommentRepliesRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleInstanceCommentRepliesRouteDefinition) protected baasicArticleInstanceCommentRepliesRouteDefinition: BaasicArticleInstanceCommentRepliesRouteDefinition,
+        @inject(articleTypes.ArticleInstanceCommentRepliesRouteDefinition) protected baasicArticleInstanceCommentRepliesRouteDefinition: ArticleInstanceCommentRepliesRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

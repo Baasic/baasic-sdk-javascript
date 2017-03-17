@@ -1,36 +1,36 @@
 import { ContainerModule } from "inversify";
 import {
     FilesACLClient,
-    BaasicFilesACLRouteDefinition,
-    BaasicFilesBatchRouteDefinition,
+    FilesACLRouteDefinition,
+    FilesBatchRouteDefinition,
     FilesBatchClient,
-    BaasicFilesRouteDefinition,
+    FilesRouteDefinition,
     FilesClient,
-    BaasicFilesStreamsRouteDefinition,
+    FilesStreamsRouteDefinition,
     FilesStreamsClient
 } from 'modules/file';
 
 const TYPES = {
     FilesACLClient: Symbol("FilesACLClient"),
-    BaasicFilesACLRouteDefinition: Symbol("BaasicFilesACLRouteDefinition"),
-    BaasicFilesBatchRouteDefinition: Symbol("BaasicFilesBatchRouteDefinition"),
+    FilesACLRouteDefinition: Symbol("FilesACLRouteDefinition"),
+    FilesBatchRouteDefinition: Symbol("FilesBatchRouteDefinition"),
     FilesBatchClient: Symbol("FilesBatchClient"),
-    BaasicFilesRouteDefinition: Symbol("BaasicFilesRouteDefinition"),
+    FilesRouteDefinition: Symbol("FilesRouteDefinition"),
     FilesClient: Symbol("FilesClient"),
-    BaasicFilesStreamsRouteDefinition: Symbol("BaasicFilesStreamsRouteDefinition"),
+    FilesStreamsRouteDefinition: Symbol("FilesStreamsRouteDefinition"),
     FilesStreamsClient: Symbol("FilesStreamsClient")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicFilesBatchRouteDefinition>(TYPES.BaasicFilesBatchRouteDefinition).to(BaasicFilesBatchRouteDefinition);
+    bind<FilesBatchRouteDefinition>(TYPES.FilesBatchRouteDefinition).to(FilesBatchRouteDefinition);
     bind<FilesBatchClient>(TYPES.FilesBatchClient).to(FilesBatchClient);
-    bind<BaasicFilesStreamsRouteDefinition>(TYPES.BaasicFilesStreamsRouteDefinition).to(BaasicFilesStreamsRouteDefinition);
+    bind<FilesStreamsRouteDefinition>(TYPES.FilesStreamsRouteDefinition).to(FilesStreamsRouteDefinition);
     bind<FilesStreamsClient>(TYPES.FilesStreamsClient).to(FilesStreamsClient);
-    bind<BaasicFilesACLRouteDefinition>(TYPES.BaasicFilesACLRouteDefinition).to(BaasicFilesACLRouteDefinition);
+    bind<FilesACLRouteDefinition>(TYPES.FilesACLRouteDefinition).to(FilesACLRouteDefinition);
     bind<FilesACLClient>(TYPES.FilesACLClient).to(FilesACLClient);
-    bind<BaasicFilesRouteDefinition>(TYPES.BaasicFilesRouteDefinition).to(BaasicFilesRouteDefinition);
+    bind<FilesRouteDefinition>(TYPES.FilesRouteDefinition).to(FilesRouteDefinition);
     bind<FilesClient>(TYPES.FilesClient).to(FilesClient);
 });
 

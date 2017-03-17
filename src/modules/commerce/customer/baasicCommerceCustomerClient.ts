@@ -16,13 +16,13 @@ export class CommerceCustomerClient {
         return this.baasicCommerceCustomerPaymentMethodClient;
     }
 
-    get routeDefinition(): BaasicCommerceCustomerRouteDefinition {
+    get routeDefinition(): CommerceCustomerRouteDefinition {
         return this.baasicCommerceCustomerRouteDefinition;
     }
 
     constructor(
         @inject(commerceTypes.CommerceCustomerPaymentMethodClient) protected baasicCommerceCustomerPaymentMethodClient: CommerceCustomerPaymentMethodClient,
-        @inject(commerceTypes.BaasicCommerceCustomerRouteDefinition) protected baasicCommerceCustomerRouteDefinition: BaasicCommerceCustomerRouteDefinition,
+        @inject(commerceTypes.CommerceCustomerRouteDefinition) protected baasicCommerceCustomerRouteDefinition: CommerceCustomerRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 

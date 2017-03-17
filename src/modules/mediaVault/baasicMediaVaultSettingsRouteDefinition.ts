@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicMediaVaultSettingsRouteDefinition extends BaasicBaseRouteDefinition {
+export class MediaVaultSettingsRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'media-vault-settings';
 

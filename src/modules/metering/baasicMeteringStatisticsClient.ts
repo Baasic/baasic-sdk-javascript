@@ -7,14 +7,14 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicMeteringStatisticsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringStatisticsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringData } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringStatisticsClient {
 
     constructor(
-        @inject(meteringTypes.BaasicMeteringStatisticsRouteDefinition) protected baasicMeteringStatisticsRouteDefinition: BaasicMeteringStatisticsRouteDefinition,
+        @inject(meteringTypes.MeteringStatisticsRouteDefinition) protected baasicMeteringStatisticsRouteDefinition: MeteringStatisticsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -41,7 +41,7 @@ export class MeteringStatisticsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IMeteringData>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IMeteringData>>(this.baasicMeteringStatisticsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IMeteringData>>(this.baasicMeteringStatisticsRouteDefinition.find(options));
     }
 }
 

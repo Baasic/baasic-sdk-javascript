@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicCommerceInvoiceStreamsRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceInvoiceStreamsRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceInvoiceRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'commerce/invoices/{?customerId,invoiceStatusId,subscriptionId,dateCreatedMin,dateCreatedMax,searchQuery,page,rpp,sort,embed,fields}';
 
@@ -21,12 +21,12 @@ export class BaasicCommerceInvoiceRouteDefinition extends BaasicBaseRouteDefinit
 
     public readonly deleteRoute: string = 'commerce/invoices/{id}';
 
-    get streams(): BaasicCommerceInvoiceStreamsRouteDefinition {
+    get streams(): CommerceInvoiceStreamsRouteDefinition {
         return this.baasicCommerceInvoiceStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceInvoiceStreamsRouteDefinition) protected baasicCommerceInvoiceStreamsRouteDefinition: BaasicCommerceInvoiceStreamsRouteDefinition,
+        @inject(commerceTypes.CommerceInvoiceStreamsRouteDefinition) protected baasicCommerceInvoiceStreamsRouteDefinition: CommerceInvoiceStreamsRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicUserSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserSkill } from 'modules/userProfile/contracts';
 
 @injectable()
 export class UserSkillClient {
 
-    get routeDefinition(): BaasicUserSkillRouteDefinition {
+    get routeDefinition(): UserSkillRouteDefinition {
         return this.baasicUserSkillRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicUserSkillRouteDefinition) protected baasicUserSkillRouteDefinition: BaasicUserSkillRouteDefinition,
+        @inject(userProfileTypes.UserSkillRouteDefinition) protected baasicUserSkillRouteDefinition: UserSkillRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -42,7 +42,7 @@ export class UserSkillClient {
                 });                    
      **/
     find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSkill>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IUserSkill>>(this.baasicUserSkillRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IUserSkill>>(this.baasicUserSkillRouteDefinition.find(options));
     }
 
     /**                 

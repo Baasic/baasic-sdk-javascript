@@ -6,17 +6,17 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicNotificationsSettingsRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSettingsRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 
 @injectable()
 export class NotificationsSettingsClient {
 
-    get routeDefinition(): BaasicNotificationsSettingsRouteDefinition {
+    get routeDefinition(): NotificationsSettingsRouteDefinition {
         return this.baasicNotificationsSettingsRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsSettingsRouteDefinition) protected baasicNotificationsSettingsRouteDefinition: BaasicNotificationsSettingsRouteDefinition,
+        @inject(notificationsTypes.NotificationsSettingsRouteDefinition) protected baasicNotificationsSettingsRouteDefinition: NotificationsSettingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

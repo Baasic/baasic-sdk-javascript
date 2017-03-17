@@ -5,13 +5,13 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleSettings } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleSettingsRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleSettingsRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'article-settings/{?embed,fields}';
 

@@ -7,19 +7,19 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicMediaVaultSettingsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import { MediaVaultSettingsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 import { IMediaVaultSettings } from 'modules/mediaVault/contracts';
 
 @injectable()
 export class MediaVaultSettingsClient {
 
 
-    get routeDefinition(): BaasicMediaVaultSettingsRouteDefinition {
+    get routeDefinition(): MediaVaultSettingsRouteDefinition {
         return this.baasicMediaVaultSettingsRouteDefinition;
     }
 
     constructor(
-        @inject(mediaVaultTypes.BaasicMediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: BaasicMediaVaultSettingsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultSettingsRouteDefinition) protected baasicMediaVaultSettingsRouteDefinition: MediaVaultSettingsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

@@ -7,12 +7,12 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsPaymentTransactionStatusBatchClient, BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsPaymentTransactionStatusBatchClient, CommerceLookupsPaymentTransactionStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsPaymentTransactionStatusClient {
 
-    get routeDefinition(): BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition {
+    get routeDefinition(): CommerceLookupsPaymentTransactionStatusRouteDefinition {
         return this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusBatchClient) protected baasicCommerceLookupsPaymentTransactionStatusBatchClient: CommerceLookupsPaymentTransactionStatusBatchClient,
-        @inject(commerceTypes.BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition) protected baasicCommerceLookupsPaymentTransactionStatusRouteDefinition: BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusRouteDefinition) protected baasicCommerceLookupsPaymentTransactionStatusRouteDefinition: CommerceLookupsPaymentTransactionStatusRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 

@@ -4,13 +4,13 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicValueSetItemRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
+import { ValueSetItemRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
+export class ValueSetRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'value-sets/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -22,13 +22,13 @@ export class BaasicValueSetRouteDefinition extends BaasicBaseRouteDefinition {
 
     public readonly deleteRoute: string = 'value-sets/{id}';
 
-    get items(): BaasicValueSetItemRouteDefinition {
+    get items(): ValueSetItemRouteDefinition {
         return this.baasicValueSetItemRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(valueSetTypes.BaasicValueSetItemRouteDefinition) protected baasicValueSetItemRouteDefinition: BaasicValueSetItemRouteDefinition
+        @inject(valueSetTypes.ValueSetItemRouteDefinition) protected baasicValueSetItemRouteDefinition: ValueSetItemRouteDefinition
     ) { super(appOptions); }
 
     /**                 

@@ -5,13 +5,13 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticle, IArticleTag } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceTagsRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'articles/{articleId}/tags/{?searchQuery,page,rpp,sort,embed,fields}';
 

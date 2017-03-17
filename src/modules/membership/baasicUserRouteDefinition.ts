@@ -5,14 +5,14 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { UserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser } from 'modules/membership/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
+export class UserRouteDefinition extends BaseRouteDefinition {
 
     /**                  
     * Find route with route and query parameters.
@@ -59,13 +59,13 @@ export class BaasicUserRouteDefinition extends BaasicBaseRouteDefinition {
     **/
     public disapproveRoute: string = 'users/{id}/disapprove';
 
-    get socialLogin(): BaasicUserSocialLoginRouteDefinition {
+    get socialLogin(): UserSocialLoginRouteDefinition {
         return this.baasicUserSocialLoginRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(membershipTypes.BaasicUserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: BaasicUserSocialLoginRouteDefinition
+        @inject(membershipTypes.UserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: UserSocialLoginRouteDefinition
     ) { super(appOptions); }
 
     /**                 

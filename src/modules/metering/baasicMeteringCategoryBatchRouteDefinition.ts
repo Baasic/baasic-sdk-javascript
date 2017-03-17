@@ -4,13 +4,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import { IMeteringCategory } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicMeteringCategoryBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class MeteringCategoryBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'metering/categories/batch';
 

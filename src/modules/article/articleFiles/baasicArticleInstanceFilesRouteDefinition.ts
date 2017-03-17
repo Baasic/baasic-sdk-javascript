@@ -5,18 +5,18 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    BaasicArticleInstanceFilesBatchRouteDefinition,
-    BaasicArticleInstanceFilesStreamsRouteDefinition,
+    ArticleInstanceFilesBatchRouteDefinition,
+    ArticleInstanceFilesStreamsRouteDefinition,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleInstanceFilesRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'articles/{articleId}/files/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -30,17 +30,17 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
 
     public readonly updateRoute: string = 'articles/{articleId}/comments/{id}';
 
-    get streams(): BaasicArticleInstanceFilesStreamsRouteDefinition {
+    get streams(): ArticleInstanceFilesStreamsRouteDefinition {
         return this.baasicArticleInstanceFilesStreamsRouteDefinition;
     }
 
-    get batch(): BaasicArticleInstanceFilesBatchRouteDefinition {
+    get batch(): ArticleInstanceFilesBatchRouteDefinition {
         return this.baasicArticleInstanceFilesBatchRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleInstanceFilesStreamsRouteDefinition) protected baasicArticleInstanceFilesStreamsRouteDefinition: BaasicArticleInstanceFilesStreamsRouteDefinition,
-        @inject(articleTypes.BaasicArticleInstanceFilesBatchRouteDefinition) protected baasicArticleInstanceFilesBatchRouteDefinition: BaasicArticleInstanceFilesBatchRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesStreamsRouteDefinition) protected baasicArticleInstanceFilesStreamsRouteDefinition: ArticleInstanceFilesStreamsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesBatchRouteDefinition) protected baasicArticleInstanceFilesBatchRouteDefinition: ArticleInstanceFilesBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

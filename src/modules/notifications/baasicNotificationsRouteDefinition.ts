@@ -5,41 +5,41 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    BaasicNotificationsPublishRouteDefinition,
-    BaasicNotificationsSubscriptionsRouteDefinition,
-    BaasicNotificationsRegistrationsRouteDefinition,
-    BaasicNotificationsSettingsRouteDefinition,
+    NotificationsPublishRouteDefinition,
+    NotificationsSubscriptionsRouteDefinition,
+    NotificationsRegistrationsRouteDefinition,
+    NotificationsSettingsRouteDefinition,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 
 @injectable()
-export class BaasicNotificationsRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsRouteDefinition extends BaseRouteDefinition {
 
-    get publish(): BaasicNotificationsPublishRouteDefinition {
+    get publish(): NotificationsPublishRouteDefinition {
         return this.baasicNotificationsPublishRouteDefinition;
     }
 
-    get subscriptions(): BaasicNotificationsSubscriptionsRouteDefinition {
+    get subscriptions(): NotificationsSubscriptionsRouteDefinition {
         return this.basicNotificationsSubscriptionsRouteDefinition;
     }
 
-    get registrations(): BaasicNotificationsRegistrationsRouteDefinition {
+    get registrations(): NotificationsRegistrationsRouteDefinition {
         return this.baasicNotificationsRegistrationsRouteDefinition;
     }
 
-    get settings(): BaasicNotificationsSettingsRouteDefinition {
+    get settings(): NotificationsSettingsRouteDefinition {
         return this.baasicNotificationsSettingsRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.BaasicNotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: BaasicNotificationsPublishRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsRouteDefinition) protected basicNotificationsSubscriptionsRouteDefinition: BaasicNotificationsSubscriptionsRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsRouteDefinition) protected baasicNotificationsRegistrationsRouteDefinition: BaasicNotificationsRegistrationsRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsSettingsRouteDefinition) protected baasicNotificationsSettingsRouteDefinition: BaasicNotificationsSettingsRouteDefinition
+        @inject(notificationsTypes.NotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: NotificationsPublishRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsRouteDefinition) protected basicNotificationsSubscriptionsRouteDefinition: NotificationsSubscriptionsRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsRouteDefinition) protected baasicNotificationsRegistrationsRouteDefinition: NotificationsRegistrationsRouteDefinition,
+        @inject(notificationsTypes.NotificationsSettingsRouteDefinition) protected baasicNotificationsSettingsRouteDefinition: NotificationsSettingsRouteDefinition
     ) { super(appOptions); }
 }
 

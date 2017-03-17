@@ -5,29 +5,29 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    BaasicNotificationsRegistrationsAnonymousRouteDefinition,
-    BaasicNotificationsRegistrationsUsersRouteDefinition,
+    NotificationsRegistrationsAnonymousRouteDefinition,
+    NotificationsRegistrationsUsersRouteDefinition,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 
 @injectable()
-export class BaasicNotificationsRegistrationsRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsRegistrationsRouteDefinition extends BaseRouteDefinition {
 
-    get users(): BaasicNotificationsRegistrationsUsersRouteDefinition {
+    get users(): NotificationsRegistrationsUsersRouteDefinition {
         return this.baasicNotificationsRegistrationsUsersRouteDefinition;
     }
 
-    get anonymous(): BaasicNotificationsRegistrationsAnonymousRouteDefinition {
+    get anonymous(): NotificationsRegistrationsAnonymousRouteDefinition {
         return this.baasicNotificationsRegistrationsAnonymousRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsUsersRouteDefinition) protected baasicNotificationsRegistrationsUsersRouteDefinition: BaasicNotificationsRegistrationsUsersRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: BaasicNotificationsRegistrationsAnonymousRouteDefinition
+        @inject(notificationsTypes.NotificationsRegistrationsUsersRouteDefinition) protected baasicNotificationsRegistrationsUsersRouteDefinition: NotificationsRegistrationsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: NotificationsRegistrationsAnonymousRouteDefinition
     ) { super(appOptions); }
 }
 

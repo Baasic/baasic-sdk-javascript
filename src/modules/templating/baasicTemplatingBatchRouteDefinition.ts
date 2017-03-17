@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicTemplatingBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class TemplatingBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'templates/batch';
 

@@ -7,17 +7,17 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicMediaVaultStreamsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import { MediaVaultStreamsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 
 @injectable()
 export class MediaVaultStreamsClient {
 
-    get routeDefinition(): BaasicMediaVaultStreamsRouteDefinition {
+    get routeDefinition(): MediaVaultStreamsRouteDefinition {
         return this.baasicMediaVaultStreamsRouteDefinition;
     }
 
     constructor(
-        @inject(mediaVaultTypes.BaasicMediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: BaasicMediaVaultStreamsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: MediaVaultStreamsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

@@ -9,7 +9,7 @@ import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleTagsSubscriptionsClient,
-    BaasicArticleTagsRouteDefinition,
+    ArticleTagsRouteDefinition,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleTag } from 'modules/article/contracts';
@@ -17,7 +17,7 @@ import { IArticleTag } from 'modules/article/contracts';
 @injectable()
 export class ArticleTagsClient {
 
-    get routeDefinition(): BaasicArticleTagsRouteDefinition {
+    get routeDefinition(): ArticleTagsRouteDefinition {
         return this.baasicArticleTagsRouteDefinition;
     }
 
@@ -26,7 +26,7 @@ export class ArticleTagsClient {
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleTagsRouteDefinition) protected baasicArticleTagsRouteDefinition: BaasicArticleTagsRouteDefinition,
+        @inject(articleTypes.ArticleTagsRouteDefinition) protected baasicArticleTagsRouteDefinition: ArticleTagsRouteDefinition,
         @inject(articleTypes.ArticleTagsSubscriptionsClient) protected baasicArticleTagsSubscriptionsClient: ArticleTagsSubscriptionsClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -51,7 +51,7 @@ export class ArticleTagsClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleTag>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IArticleTag>>(this.baasicArticleTagsRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IArticleTag>>(this.baasicArticleTagsRouteDefinition.find(options));
     }
 
     /**                 

@@ -6,12 +6,12 @@
 
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import {
     NotificationsPublishClient,
     NotificationsSubscriptionsClient,
     NotificationsRegistrationsClient,
-    BaasicNotificationsRouteDefinition,
+    NotificationsRouteDefinition,
     NotificationsSettingsClient,
     TYPES as notificationsTypes
 } from 'modules/notifications';
@@ -19,7 +19,7 @@ import {
 @injectable()
 export class NotificationsClient {
 
-    get routeDefinition(): BaasicNotificationsRouteDefinition {
+    get routeDefinition(): NotificationsRouteDefinition {
         return this.baasicNotificationsRouteDefinition;
     }
 
@@ -44,7 +44,7 @@ export class NotificationsClient {
         @inject(notificationsTypes.NotificationsSubscriptionsClient) protected basicNotificationsSubscriptionsClient: NotificationsSubscriptionsClient,
         @inject(notificationsTypes.NotificationsRegistrationsClient) protected baasicNotificationsRegistrationsClient: NotificationsRegistrationsClient,
         @inject(notificationsTypes.NotificationsSettingsClient) protected baasicNotificationsSettingsClient: NotificationsSettingsClient,
-        @inject(notificationsTypes.BaasicNotificationsRouteDefinition) protected baasicNotificationsRouteDefinition: BaasicNotificationsRouteDefinition
+        @inject(notificationsTypes.NotificationsRouteDefinition) protected baasicNotificationsRouteDefinition: NotificationsRouteDefinition
     ) { }
 }
 

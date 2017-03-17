@@ -5,28 +5,28 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    BaasicNotificationsSubscriptionsUsersRouteDefinition,
-    BaasicNotificationsSubscriptionsAnonymousRouteDefinition,
+    NotificationsSubscriptionsUsersRouteDefinition,
+    NotificationsSubscriptionsAnonymousRouteDefinition,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 
 @injectable()
-export class BaasicNotificationsSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsSubscriptionsRouteDefinition extends BaseRouteDefinition {
 
-    get users(): BaasicNotificationsSubscriptionsUsersRouteDefinition {
+    get users(): NotificationsSubscriptionsUsersRouteDefinition {
         return this.baasicNotificationsSubscriptionsUsersRouteDefinition;
     }
 
-    get anonymous(): BaasicNotificationsSubscriptionsAnonymousRouteDefinition {
+    get anonymous(): NotificationsSubscriptionsAnonymousRouteDefinition {
         return this.baasicNotificationsSubscriptionsAnonymousRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: BaasicNotificationsSubscriptionsAnonymousRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: BaasicNotificationsSubscriptionsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 }

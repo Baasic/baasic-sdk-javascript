@@ -4,13 +4,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicDynamicResourceACLRouteDefinition, BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { DynamicResourceACLRouteDefinition, DynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinition {
+export class DynamicResourceRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -24,18 +24,18 @@ export class BaasicDynamicResourceRouteDefinition extends BaasicBaseRouteDefinit
 
     public readonly deleteRoute: string = 'resources/{schemaName}/{id}';
     
-    get acl(): BaasicDynamicResourceACLRouteDefinition {
+    get acl(): DynamicResourceACLRouteDefinition {
         return this.baasicDynamicResourceACLRouteDefinition;
     }
 
-    get dynamicSchema(): BaasicDynamicSchemaRouteDefinition {
+    get dynamicSchema(): DynamicSchemaRouteDefinition {
         return this.baasicDynamicSchemaRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition,
-        @inject(dynamicResourceTypes.BaasicDynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
     ) { super(appOptions); }
 
     /** 				

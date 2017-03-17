@@ -7,13 +7,13 @@
 import { injectable, inject } from 'inversify';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { TemplatingBatchClient, BaasicTemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
+import { TemplatingBatchClient, TemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 @injectable()
 export class TemplatingClient {
 
-    get routeDefinition(): BaasicTemplatingRouteDefinition {
+    get routeDefinition(): TemplatingRouteDefinition {
         return this.baasicTemplatingRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class TemplatingClient {
     }
 
     constructor(
-        @inject(templatingTypes.BaasicTemplatingRouteDefinition) protected baasicTemplatingRouteDefinition: BaasicTemplatingRouteDefinition,
+        @inject(templatingTypes.TemplatingRouteDefinition) protected baasicTemplatingRouteDefinition: TemplatingRouteDefinition,
         @inject(templatingTypes.TemplatingBatchClient) protected baasicTemplatingBatchClient: TemplatingBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -47,7 +47,7 @@ export class TemplatingClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ITemplate>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<ITemplate>>(this.baasicTemplatingRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<ITemplate>>(this.baasicTemplatingRouteDefinition.find(options));
     }
 
     /**                 

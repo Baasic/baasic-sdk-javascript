@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicRoleRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { RoleRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRole } from 'modules/membership/contracts';
 
 @injectable()
@@ -18,12 +18,12 @@ export class RoleClient {
      * @method                        
      * @example baasicRoleClient.routeDefinition.get().expand(expandObject);                 
      **/
-    get routeDefinition(): BaasicRoleRouteDefinition {
+    get routeDefinition(): RoleRouteDefinition {
         return this.baasicRoleRouteDefinition;
     }
 
     constructor(
-        @inject(membershipTypes.BaasicRoleRouteDefinition) protected baasicRoleRouteDefinition: BaasicRoleRouteDefinition,
+        @inject(membershipTypes.RoleRouteDefinition) protected baasicRoleRouteDefinition: RoleRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -47,7 +47,7 @@ export class RoleClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRole>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IRole>>(this.baasicRoleRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IRole>>(this.baasicRoleRouteDefinition.find(options));
     }
 
     /**                  

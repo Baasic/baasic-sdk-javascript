@@ -1,30 +1,30 @@
 import { ContainerModule } from "inversify";
 import {
     DynamicResourceACLClient,
-    BaasicDynamicResourceACLRouteDefinition,
+    DynamicResourceACLRouteDefinition,
     DynamicResourceClient,
-    BaasicDynamicResourceRouteDefinition,
+    DynamicResourceRouteDefinition,
     DynamicSchemaClient,
-    BaasicDynamicSchemaRouteDefinition
+    DynamicSchemaRouteDefinition
 } from 'modules/dynamicResource';
 
 const TYPES = {
     DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
-    BaasicDynamicResourceACLRouteDefinition: Symbol("BaasicDynamicResourceACLRouteDefinition"),
+    DynamicResourceACLRouteDefinition: Symbol("DynamicResourceACLRouteDefinition"),
     DynamicResourceClient: Symbol("DynamicResourceClient"),
-    BaasicDynamicResourceRouteDefinition: Symbol("BaasicDynamicResourceRouteDefinition"),
+    DynamicResourceRouteDefinition: Symbol("DynamicResourceRouteDefinition"),
     DynamicSchemaClient: Symbol("DynamicSchemaClient"),
-    BaasicDynamicSchemaRouteDefinition: Symbol("BaasicDynamicSchemaRouteDefinition")
+    DynamicSchemaRouteDefinition: Symbol("DynamicSchemaRouteDefinition")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicDynamicResourceACLRouteDefinition>(TYPES.BaasicDynamicResourceACLRouteDefinition).to(BaasicDynamicResourceACLRouteDefinition);
+    bind<DynamicResourceACLRouteDefinition>(TYPES.DynamicResourceACLRouteDefinition).to(DynamicResourceACLRouteDefinition);
     bind<DynamicResourceACLClient>(TYPES.DynamicResourceACLClient).to(DynamicResourceACLClient);
-    bind<BaasicDynamicResourceRouteDefinition>(TYPES.BaasicDynamicResourceRouteDefinition).to(BaasicDynamicResourceRouteDefinition);
+    bind<DynamicResourceRouteDefinition>(TYPES.DynamicResourceRouteDefinition).to(DynamicResourceRouteDefinition);
     bind<DynamicResourceClient>(TYPES.DynamicResourceClient).to(DynamicResourceClient);
-    bind<BaasicDynamicSchemaRouteDefinition>(TYPES.BaasicDynamicSchemaRouteDefinition).to(BaasicDynamicSchemaRouteDefinition);
+    bind<DynamicSchemaRouteDefinition>(TYPES.DynamicSchemaRouteDefinition).to(DynamicSchemaRouteDefinition);
     bind<DynamicSchemaClient>(TYPES.DynamicSchemaClient).to(DynamicSchemaClient);
 });
 

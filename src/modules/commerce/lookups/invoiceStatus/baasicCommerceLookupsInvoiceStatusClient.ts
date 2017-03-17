@@ -7,12 +7,12 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsInvoiceStatusBatchClient, BaasicCommerceLookupsInvoiceStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsInvoiceStatusBatchClient, CommerceLookupsInvoiceStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsInvoiceStatusClient {
 
-    get routeDefinition(): BaasicCommerceLookupsInvoiceStatusRouteDefinition {
+    get routeDefinition(): CommerceLookupsInvoiceStatusRouteDefinition {
         return this.baasicCommerceLookupsInvoiceStatusRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class CommerceLookupsInvoiceStatusClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsInvoiceStatusBatchClient) protected baasicCommerceLookupsInvoiceStatusBatchClient: CommerceLookupsInvoiceStatusBatchClient,
-        @inject(commerceTypes.BaasicCommerceLookupsInvoiceStatusRouteDefinition) protected baasicCommerceLookupsInvoiceStatusRouteDefinition: BaasicCommerceLookupsInvoiceStatusRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsInvoiceStatusRouteDefinition) protected baasicCommerceLookupsInvoiceStatusRouteDefinition: CommerceLookupsInvoiceStatusRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 

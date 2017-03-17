@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicNotificationsRegistrationsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsRegistrationsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsRegistrationsUsersBatchClient {
 
-    get routeDefinition(): BaasicNotificationsRegistrationsUsersBatchRouteDefinition {
+    get routeDefinition(): NotificationsRegistrationsUsersBatchRouteDefinition {
         return this.baasicNotificationsRegistrationsUsersBatchRouteDefinition;
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsUsersBatchRouteDefinition) protected baasicNotificationsRegistrationsUsersBatchRouteDefinition: BaasicNotificationsRegistrationsUsersBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected baasicNotificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

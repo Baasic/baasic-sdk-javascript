@@ -5,13 +5,13 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IRating } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleRatingsRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleRatingsRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'article-ratings';
 

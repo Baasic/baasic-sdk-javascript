@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IUserRegistration } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsRegistrationsUsersBatchRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsRegistrationsUsersBatchRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'notifications/registrations/batch';
 

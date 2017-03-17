@@ -9,7 +9,7 @@ import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     UserProfileACLClient,
-    BaasicUserProfileRouteDefinition,
+    UserProfileRouteDefinition,
     UserEducationClient,
     UserProfileAvatarClient,
     UserSkillClient,
@@ -25,7 +25,7 @@ export class UserProfileClient {
         return this.baasicUserProfileACLClient;
     }
 
-    get routeDefinition(): BaasicUserProfileRouteDefinition {
+    get routeDefinition(): UserProfileRouteDefinition {
         return this.baasicUserProfileRouteDefinition;
     }
 
@@ -44,7 +44,7 @@ export class UserProfileClient {
 
     constructor(
         @inject(userProfileTypes.UserProfileACLClient) protected baasicUserProfileACLClient: UserProfileACLClient,
-        @inject(userProfileTypes.BaasicUserProfileRouteDefinition) protected baasicUserProfileRouteDefinition: BaasicUserProfileRouteDefinition,
+        @inject(userProfileTypes.UserProfileRouteDefinition) protected baasicUserProfileRouteDefinition: UserProfileRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
 
         @inject(userProfileTypes.UserEducationClient) protected baasicUserEducationClient: UserEducationClient,
@@ -73,7 +73,7 @@ export class UserProfileClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserProfile>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IUserProfile>>(this.baasicUserProfileRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IUserProfile>>(this.baasicUserProfileRouteDefinition.find(options));
     }
 
     /**                 

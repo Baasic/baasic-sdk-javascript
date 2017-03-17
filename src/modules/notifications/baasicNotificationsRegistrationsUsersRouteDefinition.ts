@@ -5,14 +5,14 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicNotificationsRegistrationsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsRegistrationsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsRegistrationsUsersRouteDefinition extends BaasicBaseRouteDefinition {
+export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDefinition {
 
     public readonly createRoute: string = 'notifications/registrations';
 
@@ -24,13 +24,13 @@ export class BaasicNotificationsRegistrationsUsersRouteDefinition extends Baasic
 
     public readonly updateRoute: string = 'notifications/registrations/{id}';
 
-    get batch(): BaasicNotificationsRegistrationsUsersBatchRouteDefinition {
+    get batch(): NotificationsRegistrationsUsersBatchRouteDefinition {
         return this.baasicNotificationsRegistrationsUsersBatchRouteDefinition;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsUsersBatchRouteDefinition) protected baasicNotificationsRegistrationsUsersBatchRouteDefinition: BaasicNotificationsRegistrationsUsersBatchRouteDefinition
+        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected baasicNotificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition
     ) { super(appOptions); }
 
     /**                          

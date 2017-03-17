@@ -6,7 +6,7 @@
 import { injectable, inject } from 'inversify';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ValueSetItemClient, BaasicValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
+import { ValueSetItemClient, ValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 
 @injectable()
@@ -22,12 +22,12 @@ export class ValueSetClient {
      * @method
      * @example baasicValueSetClient.routeDefinition.get().expand(expandObject);
     **/
-    get routeDefinition(): BaasicValueSetRouteDefinition {
+    get routeDefinition(): ValueSetRouteDefinition {
         return this.baasicValueSetRouteDefinition;
     }
 
     constructor(
-        @inject(valueSetTypes.BaasicValueSetRouteDefinition) protected baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
+        @inject(valueSetTypes.ValueSetRouteDefinition) protected baasicValueSetRouteDefinition: ValueSetRouteDefinition,
         @inject(valueSetTypes.ValueSetItemClient) protected baasicValueSetItemClient: ValueSetItemClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -52,7 +52,7 @@ export class ValueSetClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSet>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IValueSet>>(this.baasicValueSetRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IValueSet>>(this.baasicValueSetRouteDefinition.find(options));
     }
 
     /**

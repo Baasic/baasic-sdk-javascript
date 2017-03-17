@@ -5,13 +5,13 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleTag } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleTagsSubscriptionsRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleTagsSubscriptionsRouteDefinition extends BaseRouteDefinition {
 
     public readonly subscribeRoute: string = 'article-tags/{id}/subscriptions';
 

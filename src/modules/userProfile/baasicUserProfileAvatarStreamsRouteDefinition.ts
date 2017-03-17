@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class BaasicUserProfileAvatarStreamsRouteDefinition extends BaasicBaseRouteDefinition {
+export class UserProfileAvatarStreamsRouteDefinition extends BaseRouteDefinition {
 
     public readonly getRoute: string = 'profiles/{id}/avatar-streams/{?width,height}';
 

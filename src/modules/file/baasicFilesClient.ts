@@ -10,7 +10,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     FilesACLClient,
     FilesBatchClient,
-    BaasicFilesRouteDefinition,
+    FilesRouteDefinition,
     FilesStreamsClient,
     TYPES as filesTypes
 } from 'modules/file';
@@ -19,7 +19,7 @@ import { IFileEntry } from 'modules/file/contracts';
 @injectable()
 export class FilesClient {
 
-    get routeDefinition(): BaasicFilesRouteDefinition {
+    get routeDefinition(): FilesRouteDefinition {
         return this.baasicFilesRouteDefinition;
     }
 
@@ -36,7 +36,7 @@ export class FilesClient {
     }
 
     constructor(
-        @inject(filesTypes.BaasicFilesRouteDefinition) protected baasicFilesRouteDefinition: BaasicFilesRouteDefinition,
+        @inject(filesTypes.FilesRouteDefinition) protected baasicFilesRouteDefinition: FilesRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
         @inject(filesTypes.FilesStreamsClient) protected baasicFilesStreamsClient: FilesStreamsClient,
         @inject(filesTypes.FilesBatchClient) protected baasicFilesBatchClient: FilesBatchClient,
@@ -63,7 +63,7 @@ export class FilesClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IFileEntry>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IFileEntry>>(this.baasicFilesRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IFileEntry>>(this.baasicFilesRouteDefinition.find(options));
     }
 
     /**                 

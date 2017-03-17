@@ -5,13 +5,13 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleSubscriptionsCommentRequiresModerationRouteDefinition extends BaseRouteDefinition {
 
     public readonly subscribeRoute: string = 'articles/subscriptions/comment-requires-moderation';
 

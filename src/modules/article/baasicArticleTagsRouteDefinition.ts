@@ -5,14 +5,14 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleTag } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition {
+export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'article-tags/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -22,12 +22,12 @@ export class BaasicArticleTagsRouteDefinition extends BaasicBaseRouteDefinition 
 
     public readonly deleteRoute: string = 'article-tags/{id}';
     
-    get subscriptions(): BaasicArticleTagsSubscriptionsRouteDefinition {
+    get subscriptions(): ArticleTagsSubscriptionsRouteDefinition {
         return this.baasicArticleTagsSubscriptionsRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: BaasicArticleTagsSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
     { super(appOptions); }

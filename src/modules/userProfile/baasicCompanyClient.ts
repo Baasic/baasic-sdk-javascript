@@ -7,13 +7,13 @@
 import { injectable, inject } from "inversify";
 import { IGetRequestOptions, IOptions, IBaasicQueryModel } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CompanyBatchClient, BaasicCompanyRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { CompanyBatchClient, CompanyRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 @injectable()
 export class CompanyClient {
 
-    get routeDefinition(): BaasicCompanyRouteDefinition {
+    get routeDefinition(): CompanyRouteDefinition {
         return this.baasicCompanyRouteDefinition;
     }
 
@@ -23,7 +23,7 @@ export class CompanyClient {
 
     constructor(
         @inject(userProfileTypes.CompanyBatchClient) protected baasicCompanyBatchClient: CompanyBatchClient,
-        @inject(userProfileTypes.BaasicCompanyRouteDefinition) protected baasicCompanyRouteDefinition: BaasicCompanyRouteDefinition,
+        @inject(userProfileTypes.CompanyRouteDefinition) protected baasicCompanyRouteDefinition: CompanyRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -47,7 +47,7 @@ export class CompanyClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ICompany>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<ICompany>>(this.baasicCompanyRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<ICompany>>(this.baasicCompanyRouteDefinition.find(options));
     }
 
     /**                 

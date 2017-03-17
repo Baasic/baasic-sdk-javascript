@@ -13,7 +13,7 @@ import { IProfileAvatar } from 'modules/userProfile/contracts';
 @injectable()
 export class UserProfileAvatarClient {
 
-    get routeDefinition(): BaasicUserProfileAvatarRouteDefinition {
+    get routeDefinition(): UserProfileAvatarRouteDefinition {
         return this.baasicUserProfileAvatarRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class UserProfileAvatarClient {
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicUserProfileAvatarRouteDefinition) protected baasicUserProfileAvatarRouteDefinition: BaasicUserProfileAvatarRouteDefinition,
+        @inject(userProfileTypes.UserProfileAvatarRouteDefinition) protected baasicUserProfileAvatarRouteDefinition: UserProfileAvatarRouteDefinition,
         @inject(userProfileTypes.UserProfileAvatarStreamsClient) protected baasicUserProfileAvatarStreamsClient: UserProfileAvatarStreamsClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }

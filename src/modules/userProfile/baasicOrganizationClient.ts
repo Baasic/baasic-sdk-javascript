@@ -7,13 +7,13 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { OrganizationBatchClient, BaasicOrganizationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { OrganizationBatchClient, OrganizationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
 @injectable()
 export class OrganizationClient {
 
-    get routeDefinition(): BaasicOrganizationRouteDefinition {
+    get routeDefinition(): OrganizationRouteDefinition {
         return this.baasicOrganizationRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class OrganizationClient {
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicOrganizationRouteDefinition) protected baasicOrganizationRouteDefinition: BaasicOrganizationRouteDefinition,
+        @inject(userProfileTypes.OrganizationRouteDefinition) protected baasicOrganizationRouteDefinition: OrganizationRouteDefinition,
         @inject(userProfileTypes.OrganizationBatchClient) protected baasicOrganizationBatchClient: OrganizationBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -47,7 +47,7 @@ export class OrganizationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IOrganization>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IOrganization>>(this.baasicOrganizationRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<IOrganization>>(this.baasicOrganizationRouteDefinition.find(options));
     }
 
     /**                 

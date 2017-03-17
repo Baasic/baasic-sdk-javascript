@@ -6,18 +6,18 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicOrganizationBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { OrganizationBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
 @injectable()
 export class OrganizationBatchClient {
 
-    get routeDefinition(): BaasicOrganizationBatchRouteDefinition {
+    get routeDefinition(): OrganizationBatchRouteDefinition {
         return this.baasicOrganizationBatchRouteDefinition;
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicOrganizationBatchRouteDefinition) protected baasicOrganizationBatchRouteDefinition: BaasicOrganizationBatchRouteDefinition,
+        @inject(userProfileTypes.OrganizationBatchRouteDefinition) protected baasicOrganizationBatchRouteDefinition: OrganizationBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 

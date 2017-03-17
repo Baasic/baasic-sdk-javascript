@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicArticleInstanceCommentRepliesRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
+import { ArticleInstanceCommentRepliesRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IArticleCommentReply, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
@@ -26,12 +26,12 @@ export class ArticleInstanceCommentRepliesClient {
      * @method 
      * @example baasicArticleInstanceCommentRepliesClient.routeDefinition.get();
      **/
-    get routeDefinition(): BaasicArticleInstanceCommentRepliesRouteDefinition {
+    get routeDefinition(): ArticleInstanceCommentRepliesRouteDefinition {
         return this.baasicArticleInstanceCommentRepliesRouteDefinition;
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleInstanceCommentRepliesRouteDefinition) protected baasicArticleInstanceCommentRepliesRouteDefinition: BaasicArticleInstanceCommentRepliesRouteDefinition,
+        @inject(articleTypes.ArticleInstanceCommentRepliesRouteDefinition) protected baasicArticleInstanceCommentRepliesRouteDefinition: ArticleInstanceCommentRepliesRouteDefinition,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
@@ -122,7 +122,7 @@ export class ArticleInstanceCommentRepliesClient {
                 });
      **/
     find(articleId: string, commentId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<IArticleCommentReply>>(this.baasicArticleInstanceCommentRepliesRouteDefinition.find(articleId, commentId, options));
+        return this.baasicApiClient.get<IQueryModel<IArticleCommentReply>>(this.baasicArticleInstanceCommentRepliesRouteDefinition.find(articleId, commentId, options));
     }
 
     /**

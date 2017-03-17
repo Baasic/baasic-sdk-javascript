@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicBaseRouteDefinition } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsSubscriptionStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsSubscriptionStatusRouteDefinition extends BaasicBaseRouteDefinition {
+export class CommerceLookupsSubscriptionStatusRouteDefinition extends BaseRouteDefinition {
 
     public readonly findRoute: string = 'commerce/lookups/subscription-statuses/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,12 +23,12 @@ export class BaasicCommerceLookupsSubscriptionStatusRouteDefinition extends Baas
 
     public readonly deleteRoute: string = 'commerce/lookups/subscription-statuses/{id}';
 
-    get batch(): BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition {
+    get batch(): CommerceLookupsSubscriptionStatusBatchRouteDefinition {
         return this.basicCommerceLookupsSubscriptionStatusBatchRouteDefinition;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition) protected basicCommerceLookupsSubscriptionStatusBatchRouteDefinition: BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsSubscriptionStatusBatchRouteDefinition) protected basicCommerceLookupsSubscriptionStatusBatchRouteDefinition: CommerceLookupsSubscriptionStatusBatchRouteDefinition,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 

@@ -7,13 +7,13 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { SkillBatchClient, BaasicSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { SkillBatchClient, SkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
 @injectable()
 export class SkillClient {
 
-    get routeDefinition(): BaasicSkillRouteDefinition {
+    get routeDefinition(): SkillRouteDefinition {
         return this.baasicSkillRouteDefinition;
     }
 
@@ -22,7 +22,7 @@ export class SkillClient {
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicSkillRouteDefinition) protected baasicSkillRouteDefinition: BaasicSkillRouteDefinition,
+        @inject(userProfileTypes.SkillRouteDefinition) protected baasicSkillRouteDefinition: SkillRouteDefinition,
         @inject(userProfileTypes.SkillBatchClient) protected baasicSkillBatchClient: SkillBatchClient,
         @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
@@ -47,7 +47,7 @@ export class SkillClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ISkill>>> {
-        return this.baasicApiClient.get<IBaasicQueryModel<ISkill>>(this.baasicSkillRouteDefinition.find(options));
+        return this.baasicApiClient.get<IQueryModel<ISkill>>(this.baasicSkillRouteDefinition.find(options));
     }
 
     /**                 
