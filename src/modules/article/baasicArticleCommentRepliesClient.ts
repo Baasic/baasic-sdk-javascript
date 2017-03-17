@@ -5,7 +5,7 @@
 */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ArticleCommentRepliesRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
 import { IArticleCommentReply, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
@@ -119,7 +119,7 @@ export class ArticleCommentRepliesClient {
                     // perform error handling here 
                 });
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleCommentReply>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleCommentReply>>> {
         return this.baasicApiClient.get<IQueryModel<IArticleCommentReply>>(this.baasicArticleCommentRepliesRouteDefinition.find(options));
     }
 

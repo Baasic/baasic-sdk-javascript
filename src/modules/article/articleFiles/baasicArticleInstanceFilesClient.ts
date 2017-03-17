@@ -5,7 +5,7 @@
 */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleInstanceFilesBatchClient,
@@ -57,7 +57,7 @@ export class ArticleInstanceFilesClient {
                     // perform error handling here 
                 });
      **/
-    find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IArticleFile>>> {
+    find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleFile>>> {
         return this.baasicApiClient.get<IQueryModel<IArticleFile>>(this.baasicArticleInstanceFilesRouteDefinition.find(articleId, options));
     }
 

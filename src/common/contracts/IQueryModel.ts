@@ -1,4 +1,4 @@
-export interface IBaasicQueryModel<T> {
+export interface IQueryModel<T> {
     embed: string,
     item: T[],
     page: number,

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IACLOptions, IACLPolicy } from 'common/contracts';
+import { IQueryModel, IACLOptions, IACLPolicy } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { FilesACLRouteDefinition, TYPES as filesTypes } from 'modules/file';
 

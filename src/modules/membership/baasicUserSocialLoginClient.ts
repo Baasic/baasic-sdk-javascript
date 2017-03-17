@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel } from 'common/contracts';
+import { IQueryModel } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { UserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IUserSocialLogin } from 'modules/membership/contracts';
@@ -31,7 +31,7 @@ export class UserSocialLoginClient {
                         // perform error handling here 
                     });                     
      **/
-    get(username: string): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSocialLogin>>> {
+    get(username: string): PromiseLike<IHttpResponse<IQueryModel<IUserSocialLogin>>> {
         return this.baasicApiClient.get<IQueryModel<IUserSocialLogin>>(this.baasicUserSocialLoginRouteDefinition.get(username));
     }
 

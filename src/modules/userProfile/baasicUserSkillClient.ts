@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { UserSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserSkill } from 'modules/userProfile/contracts';
@@ -41,7 +41,7 @@ export class UserSkillClient {
                      // perform error handling here 
                 });                    
      **/
-    find(options: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserSkill>>> {
+    find(options: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserSkill>>> {
         return this.baasicApiClient.get<IQueryModel<IUserSkill>>(this.baasicUserSkillRouteDefinition.find(options));
     }
 

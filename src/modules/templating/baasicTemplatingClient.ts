@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { TemplatingBatchClient, TemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
@@ -46,7 +46,7 @@ export class TemplatingClient {
                      // perform error handling here 
                 });                    
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<ITemplate>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ITemplate>>> {
         return this.baasicApiClient.get<IQueryModel<ITemplate>>(this.baasicTemplatingRouteDefinition.find(options));
     }
 

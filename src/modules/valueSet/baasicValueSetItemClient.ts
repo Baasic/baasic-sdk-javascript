@@ -3,7 +3,7 @@
  * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `baasicValueSetItemClient` uses `baasicValueSetItemRouteDefinition`. 
  */
 import { injectable, inject } from 'inversify';
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ValueSetItemRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSetItem } from 'modules/valueSet/contracts';
@@ -35,7 +35,7 @@ export class ValueSetItemClient {
                     // perform error handling here 
                 });
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSetItem>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSetItem>>> {
         return this.baasicApiClient.get<IQueryModel<IValueSetItem>>(this.baasicValueSetItemRouteDefinition.find(options));
     }
 

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { RoleRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRole } from 'modules/membership/contracts';
@@ -46,7 +46,7 @@ export class RoleClient {
                     // perform error handling here 
                 });                     
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRole>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
         return this.baasicApiClient.get<IQueryModel<IRole>>(this.baasicRoleRouteDefinition.find(options));
     }
 

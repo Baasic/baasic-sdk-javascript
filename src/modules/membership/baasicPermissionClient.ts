@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IOptions } from 'common/contracts';
+import { IQueryModel, IOptions } from 'common/contracts';
 import { Utility } from 'common';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { PermissionRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
@@ -317,11 +317,11 @@ export class PermissionClient {
         return data === undefined || data === null || data === '';
     }
 
-    private getRoles(options): PromiseLike<IHttpResponse<IBaasicQueryModel<IRole>>> {
+    private getRoles(options): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
         return this.baasicApiClient.get(this.baasicPermissionRouteDefinition.getRoles(options));
     }
 
-    private getUsers(options): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserInfo>>> {
+    private getUsers(options): PromiseLike<IHttpResponse<IQueryModel<IUserInfo>>> {
         return this.baasicApiClient.get(this.baasicPermissionRouteDefinition.getUsers(options));
     }
 

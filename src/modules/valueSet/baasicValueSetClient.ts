@@ -4,7 +4,7 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ValueSetItemClient, ValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
@@ -51,7 +51,7 @@ export class ValueSetClient {
                     // perform error handling here 
                 });
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IValueSet>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSet>>> {
         return this.baasicApiClient.get<IQueryModel<IValueSet>>(this.baasicValueSetRouteDefinition.find(options));
     }
 

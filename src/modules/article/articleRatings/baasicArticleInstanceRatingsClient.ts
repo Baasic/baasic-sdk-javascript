@@ -6,7 +6,7 @@
 
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ArticleInstanceRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IRating } from 'modules/article/contracts';
@@ -65,7 +65,7 @@ export class ArticleInstanceRatingsClient {
                     // perform error handling here 
                 });                     
      **/
-    find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
+    find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
         return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.find(articleId, options));
     }
 
@@ -89,7 +89,7 @@ export class ArticleInstanceRatingsClient {
                     // perform error handling here 
                 });                     
      **/
-    findByUser(articleId: string, username: string, options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IRating>>> {
+    findByUser(articleId: string, username: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
         return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
     }
 

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     CommerceRouteDefinition,
@@ -71,7 +71,7 @@ export class CommerceClient {
                      // perform error handling here 
                 });                     
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
         return this.baasicApiClient.get(this.baasicCommerceRouteDefinition.find(options));
     }
 

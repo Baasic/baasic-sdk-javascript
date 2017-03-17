@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     UserProfileACLClient,
@@ -72,7 +72,7 @@ export class UserProfileClient {
                      // perform error handling here 
                 });                     
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserProfile>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserProfile>>> {
         return this.baasicApiClient.get<IQueryModel<IUserProfile>>(this.baasicUserProfileRouteDefinition.find(options));
     }
 

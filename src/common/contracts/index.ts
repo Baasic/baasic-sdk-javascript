@@ -1,5 +1,5 @@
 export * from './IBaasicModel';
-export * from './IBaasicQueryModel';
+export * from './IQueryModel';
 export * from './IOptions';
 export * from './IACL';
 export * from './IACLAction';

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { MeteringCategoryBatchClient, MeteringCategoryRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
@@ -46,7 +46,7 @@ export class MeteringCategoryClient {
                      // perform error handling here 
                 });                     
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IMeteringCategory>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMeteringCategory>>> {
         return this.baasicApiClient.get(this.baasicMeteringCategoryRouteDefinition.find(options));
     }
 

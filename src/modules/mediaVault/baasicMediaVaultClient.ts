@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     MediaVaultBatchClient,
@@ -68,7 +68,7 @@ export class MediaVaultClient {
                    // perform error handling here 
               });                    
    **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IMediaEntry>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMediaEntry>>> {
         return this.baasicApiClient.get<IQueryModel<IMediaEntry>>(this.baasicMediaVaultRouteDefinition.find(options));
     }
 

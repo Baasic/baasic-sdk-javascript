@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import {
     NotificationsRegistrationsUsersBatchClient,
     NotificationsRegistrationsUsersRouteDefinition,
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsUsersClient {
                     // perform error handling here 
                });                            
     */
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IUserRegistration>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserRegistration>>> {
         return this.baasicApiClient.get<IQueryModel<IUserRegistration>>(this.baasicNotificationsRegistrationsUsersRouteDefinition.find(options));
     }
 

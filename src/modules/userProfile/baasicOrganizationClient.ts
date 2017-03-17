@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { OrganizationBatchClient, OrganizationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
@@ -46,7 +46,7 @@ export class OrganizationClient {
                      // perform error handling here 
                 });                    
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<IOrganization>>> {
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IOrganization>>> {
         return this.baasicApiClient.get<IQueryModel<IOrganization>>(this.baasicOrganizationRouteDefinition.find(options));
     }
 
