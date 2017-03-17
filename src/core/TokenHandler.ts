@@ -1,7 +1,6 @@
 import { Utility } from 'common';
 import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { injectable, inject } from "inversify";
-import 'reflect-metadata';
 
 @injectable()
 export class TokenHandler implements ITokenHandler {

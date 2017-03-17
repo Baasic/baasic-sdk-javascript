@@ -1,6 +1,5 @@
 import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient } from 'httpApi';
 import { injectable, inject } from "inversify";
-import 'reflect-metadata';
 
 declare var $: any;
 

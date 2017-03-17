@@ -1,6 +1,5 @@
 import { IStorageHandler, IDefaultStorageConfig, TYPES } from 'core/contracts';
 import { injectable, inject, optional } from "inversify";
-import 'reflect-metadata';
 
 @injectable()
 export class LocalStorageHandler implements IStorageHandler {

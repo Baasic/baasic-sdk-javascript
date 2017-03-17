@@ -1,7 +1,6 @@
 import { Utility } from 'common';
 import { IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { injectable, inject } from "inversify";
-import 'reflect-metadata';
 
 declare var $: any;
 let utility = new Utility();

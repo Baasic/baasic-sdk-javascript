@@ -8,7 +8,6 @@ import {
 } from 'modules/userProfile';
 
 import { injectable, inject } from "inversify";
-import 'reflect-metadata';
 
 @injectable()
 export class Root {

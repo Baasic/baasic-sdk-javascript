@@ -14,17 +14,6 @@
     },
     "exclude": [
         "node_modules",
-        "build",
-        "src/modules/applicationSettings",
-        "src/modules/article",
-        "src/modules/commerce",
-        "src/modules/dynamicResource",
-        "src/modules/metering",
-        "src/modules/files",
-        "src/modules/mediaVault",
-        "src/modules/notifications",
-        "src/modules/templating",
-        "src/modules/userProfile",
-        "src/modules/valueSet"
+        "build"
     ]
 }

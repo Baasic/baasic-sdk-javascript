@@ -3,7 +3,6 @@ import { IStorageHandler, IEventHandler, IBaasicAppOptions, ITokenHandler, IUser
 import { TokenHandler, UserHandler } from 'core';
 import { BrowserEventHandler } from 'core/browserEvents';
 import { LocalStorageHandler } from 'core/localStorage';
-import 'reflect-metadata';
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<ITokenHandler>(TYPES.ITokenHandler).to(TokenHandler);

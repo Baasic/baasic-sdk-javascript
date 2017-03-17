@@ -1,6 +1,5 @@
 import { IEventHandler, IUserHandler, IStorageHandler, IUser, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 import { injectable, inject } from "inversify";
-import 'reflect-metadata';
 
 @injectable()
 export class UserHandler implements IUserHandler {
