@@ -1,6 +1,6 @@
 export * from './diModule';
 export * from './baasicCommerceRouteDefinition';
-export * from './baasicCommerceClient';
+export * from './commerceClient';
 export * from './lookups';
 export * from './customer';
 export * from './invoice';

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceInvoiceStatusBatchClient  
- * @description  Commerce Invoice Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceStatusBatchClient` uses `baasicCommerceInvoiceStatusBatchRouteDefinition`. 
+ * @module commerceInvoiceStatusBatchClient  
+ * @description  Commerce Invoice Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceStatusBatchClient` uses `baasicCommerceInvoiceStatusBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,13 +14,13 @@ export class CommerceLookupsInvoiceStatusBatchClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsInvoiceStatusBatchRouteDefinition) protected baasicCommerceLookupsInvoiceStatusBatchRouteDefinition: CommerceLookupsInvoiceStatusBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.                     
      * @method                         
-     * @example baasicCommerceLookupsInvoiceStatusBatchClient.create([{    
+     * @example commerceLookupsInvoiceStatusBatchClient.create([{    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
                     description: '<description>' 
@@ -33,13 +33,13 @@ export class CommerceLookupsInvoiceStatusBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.create(), this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.create(), this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.createParams(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.                     
      * @method                        
-     * @example baasicCommerceLookupsInvoiceStatusBatchClient.update(InvoiceStatuses)   
+     * @example commerceLookupsInvoiceStatusBatchClient.update(InvoiceStatuses)   
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -48,13 +48,13 @@ export class CommerceLookupsInvoiceStatusBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.update(), this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.update(), this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.                     
      * @method                         
-     * @example baasicCommerceLookupsInvoiceStatusBatchClient.remove(InvoiceStatusIds)   
+     * @example commerceLookupsInvoiceStatusBatchClient.remove(InvoiceStatusIds)   
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -63,7 +63,7 @@ export class CommerceLookupsInvoiceStatusBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicCommerceLookupsInvoiceStatusBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

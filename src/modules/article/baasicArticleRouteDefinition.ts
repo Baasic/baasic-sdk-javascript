@@ -187,7 +187,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
      * ```                 
      * @method                        
      * @example // article is a resource previously fetched using get action.				 
-                    baasicArticleClient.unpublish(article)
+                    articleClient.unpublish(article)
                         .then(function (data) {  
                             // perform success action here 
                         },

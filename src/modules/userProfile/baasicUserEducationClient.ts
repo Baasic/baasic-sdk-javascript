@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserEducationClient  * @description  User Education Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @module userEducationClient  * @description  User Education Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
@@ -18,7 +18,7 @@ export class UserEducationClient {
 
     constructor(
         @inject(userProfileTypes.UserEducationRouteDefinition) protected baasicUserEducationRouteDefinition: UserEducationRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -26,7 +26,7 @@ export class UserEducationClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicUserEducationClient.find({   
+     * @example userEducationClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -41,13 +41,13 @@ export class UserEducationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserEducation>>> {
-        return this.baasicApiClient.get<IQueryModel<IUserEducation>>(this.baasicUserEducationRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserEducation>>(this.baasicUserEducationRouteDefinition.find(options));
     }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the user education resource.                 
      * @method                        
-     * @example baasicUserEducationClient.get(id)
+     * @example userEducationClient.get(id)
                     .then(function (data) {   
                         // perform success action here 
                     }, 
@@ -56,7 +56,7 @@ export class UserEducationClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserEducation>> {
-        return this.baasicApiClient.get<IUserEducation>(this.baasicUserEducationRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserEducation>(this.baasicUserEducationRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -64,7 +64,7 @@ export class UserEducationClient {
      * @method 
      * @param data An user education object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create user education action has been performed.
-     * @example baasicUserEducationClient.create({   
+     * @example userEducationClient.create({   
                     organizationName : '<organization-name>',   
                     summary: '<summary>',   
                     userId: '<user-id>' 
@@ -77,7 +77,7 @@ export class UserEducationClient {
                 });                 
      **/
     create(data: IUserEducation): PromiseLike<IHttpResponse<IUserEducation>> {
-        return this.baasicApiClient.post<IUserEducation>(this.baasicUserEducationRouteDefinition.create(data), this.baasicUserEducationRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserEducation>(this.baasicUserEducationRouteDefinition.create(data), this.baasicUserEducationRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -91,7 +91,7 @@ export class UserEducationClient {
      * @returns A promise that is resolved once the update user education action has been performed.                       
      * @example // education is a resource previously fetched using get action. 
                     education.degree = '<degree>'; 
-                    baasicUserEducationClient.update(education)
+                    userEducationClient.update(education)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -100,7 +100,7 @@ export class UserEducationClient {
                         }); 				        
      **/
     update(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicUserEducationRouteDefinition.update(data), this.baasicUserEducationRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicUserEducationRouteDefinition.update(data), this.baasicUserEducationRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -111,7 +111,7 @@ export class UserEducationClient {
      * ```                  
      * @method                         
      * @example // education is a resource previously fetched using get action.				 
-                    baasicUserEducationClient.remove(education)
+                    userEducationClient.remove(education)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -120,7 +120,7 @@ export class UserEducationClient {
                         });						        
      **/
     remove(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicUserEducationRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicUserEducationRouteDefinition.delete(data));
     }
 }
 

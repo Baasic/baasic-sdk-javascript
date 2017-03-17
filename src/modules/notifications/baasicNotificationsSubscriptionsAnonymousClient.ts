@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsAnonymousClient  
- * @description  Notifications Subscriptions Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsAnonymousClient` uses `baasicNotificationsSubscriptionsAnonymousRouteDefinition`. 
+ * @module notificationsSubscriptionsAnonymousClient  
+ * @description  Notifications Subscriptions Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousClient` uses `baasicNotificationsSubscriptionsAnonymousRouteDefinition`. 
  */
 
 
@@ -20,7 +20,7 @@ export class NotificationsSubscriptionsAnonymousClient {
 
     constructor(
         @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                          
@@ -28,7 +28,7 @@ export class NotificationsSubscriptionsAnonymousClient {
      * @method 
      * @param data An AnonymousSubscription object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create anonymous subscription action has been performed.                          
-     * @example baasicNotificationsSubscriptionsAnonymousClient.create({     
+     * @example notificationsSubscriptionsAnonymousClient.create({     
                     channel: '<channel-name>',     
                     registrationId: '<registration-id>' 
                 })
@@ -40,7 +40,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousSubscription): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.baasicApiClient.post<IAnonymousSubscription>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.create(), this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousSubscription>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.create(), this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -48,7 +48,7 @@ export class NotificationsSubscriptionsAnonymousClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                              
-     * @example baasicNotificationsSubscriptionsAnonymousClient.find({     
+     * @example notificationsSubscriptionsAnonymousClient.find({     
                     pageNumber : 1,     
                     pageSize : 10,     
                     orderBy : '<field>',     
@@ -66,7 +66,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAnonymousSubscription>>> {
-        return this.baasicApiClient.get<IQueryModel<IAnonymousSubscription>>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.find())
+        return this.apiClient.get<IQueryModel<IAnonymousSubscription>>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.find())
     }
 
     /**                          
@@ -75,7 +75,7 @@ export class NotificationsSubscriptionsAnonymousClient {
      * @param id The subscription identifier which uniquely identifies AnonymousSubscription resource that needs to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                             
-     * @example baasicNotificationsSubscriptionsAnonymousClient.get('<subscription-id>')
+     * @example notificationsSubscriptionsAnonymousClient.get('<subscription-id>')
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -84,7 +84,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                     });                         
      */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.baasicApiClient.get<IAnonymousSubscription>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.get(id, options));
+        return this.apiClient.get<IAnonymousSubscription>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.get(id, options));
     }
 
     /**                          
@@ -97,7 +97,7 @@ export class NotificationsSubscriptionsAnonymousClient {
      * @param data The subscription identifier used to delete specific subscription resource in the system.
      * @returns A promise that is resolved once the remove anonymous subscription action has been performed.                                 
      * @example // subscription is a resource previously fetched using get action.				 
-                        baasicNotificationsSubscriptionsAnonymousClient.remove(subscription)
+                        notificationsSubscriptionsAnonymousClient.remove(subscription)
                             .then(function (data) {     
                                 // perform success action here 
                             },
@@ -106,7 +106,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                             });						        
      */
     remove(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.delete(data));
     }
 
     /**                          
@@ -120,7 +120,7 @@ export class NotificationsSubscriptionsAnonymousClient {
      * @returns A promise that is resolved once the update anonymous subscription action has been performed.
      * @example // subscription is a resource previously fetched using get action. 
                     subscription.channel = '<channel-name>'; 
-                    baasicNotificationsSubscriptionsAnonymousClient.update(subscription) 
+                    notificationsSubscriptionsAnonymousClient.update(subscription) 
                         .then(function (data) {         
                             // perform success action here 
                         },
@@ -129,7 +129,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                         }); 				        
      */
     update(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.update(data), this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.update(data), this.baasicNotificationsSubscriptionsAnonymousRouteDefinition.updateParams(data));
     }
 }
 

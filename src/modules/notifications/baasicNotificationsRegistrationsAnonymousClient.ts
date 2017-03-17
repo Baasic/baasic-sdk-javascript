@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsRegistrationsAnonymousClient  
- * @description  Notifications Registrations Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsAnonymousClient` uses `baasicNotificationsRegistrationsAnonymousRouteDefinition`. 
+ * @module notificationsRegistrationsAnonymousClient  
+ * @description  Notifications Registrations Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousClient` uses `baasicNotificationsRegistrationsAnonymousRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -22,13 +22,13 @@ export class NotificationsRegistrationsAnonymousClient {
     }
 
     get batch(): NotificationsRegistrationsAnonymousBatchClient {
-        return this.baasicNotificationsRegistrationsAnonymousBatchClient;
+        return this.notificationsRegistrationsAnonymousBatchClient;
     }
 
     constructor(
         @inject(notificationsTypes.NotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: NotificationsRegistrationsAnonymousRouteDefinition,
-        @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchClient) protected baasicNotificationsRegistrationsAnonymousBatchClient: NotificationsRegistrationsAnonymousBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchClient) protected notificationsRegistrationsAnonymousBatchClient: NotificationsRegistrationsAnonymousBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                          
@@ -36,7 +36,7 @@ export class NotificationsRegistrationsAnonymousClient {
      * @method
      * @param data An AnonymousRegistration object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create anonymous registration action has been performed.                        
-     * @example baasicNotificationsRegistrationsAnonymousClient.create({     
+     * @example notificationsRegistrationsAnonymousClient.create({     
                     provider: '<provider-name>',     
                     providerdata: <provider-data>,     
                     expirationData: '<expiration-date>' 
@@ -49,7 +49,7 @@ export class NotificationsRegistrationsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousRegistration): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
-        return this.baasicApiClient.post<IAnonymousRegistration>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.create(), this.baasicNotificationsRegistrationsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousRegistration>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.create(), this.baasicNotificationsRegistrationsAnonymousRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -57,7 +57,7 @@ export class NotificationsRegistrationsAnonymousClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                                
-     * @example baasicNotificationsRegistrationsAnonymousClient.find({     
+     * @example notificationsRegistrationsAnonymousClient.find({     
                    pageNumber : 1,     
                    pageSize : 10,     
                    orderBy : '<field>',     
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsAnonymousClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAnonymousRegistration>>> {
-        return this.baasicApiClient.get<IQueryModel<IAnonymousRegistration>>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IAnonymousRegistration>>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.find(options));
     }
 
     /**                          
@@ -83,7 +83,7 @@ export class NotificationsRegistrationsAnonymousClient {
      * @param id The registration identifier which uniquely identifies AnonymousRegistration resource that needs to be retrieved.
      * @param options Query resource options object. 
      * @returns A promise that is resolved once the get action has been performed.                                
-     * @example baasicNotificationsRegistrationsAnonymousClient.get('<registration-id>')
+     * @example notificationsRegistrationsAnonymousClient.get('<registration-id>')
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -92,7 +92,7 @@ export class NotificationsRegistrationsAnonymousClient {
                     });                         
      */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
-        return this.baasicApiClient.get(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.get(id, options));
+        return this.apiClient.get(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.get(id, options));
     }
 
     /**                          
@@ -105,7 +105,7 @@ export class NotificationsRegistrationsAnonymousClient {
      * @param data An object used to delete specified AnonymousRegistration resource. 
      * @returns A promise that is resolved once the remove anonymous registration action has been performed.                                
      * @example // registration is a resource previously fetched using get action.				 
-                    baasicNotificationsRegistrationsAnonymousClient.remove(registration) 
+                    notificationsRegistrationsAnonymousClient.remove(registration) 
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -114,7 +114,7 @@ export class NotificationsRegistrationsAnonymousClient {
                         });						        
      */
     remove(data: IAnonymousRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.delete(data));
     }
 
     /**                          
@@ -128,7 +128,7 @@ export class NotificationsRegistrationsAnonymousClient {
      * @returns A promise that is resolved once the update anonymous registration action has been performed                                  
      * @example // registration is a resource previously fetched using get action. 
                         subscription.provider = '<provider-name>'; 
-                        baasicNotificationsRegistrationsAnonymousClient.update(registration)
+                        notificationsRegistrationsAnonymousClient.update(registration)
                             .then(function (data) {         
                                 // perform success action here 
                             },
@@ -137,7 +137,7 @@ export class NotificationsRegistrationsAnonymousClient {
                             }); 				        
      */
     update(data: IAnonymousRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.update(data), this.baasicNotificationsRegistrationsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsRegistrationsAnonymousRouteDefinition.update(data), this.baasicNotificationsRegistrationsAnonymousRouteDefinition.updateParams(data));
     }
 }
 

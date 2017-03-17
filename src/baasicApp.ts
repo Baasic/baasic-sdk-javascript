@@ -22,7 +22,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly tokenHandler: ITokenHandler;
     public readonly userHandler: IUserHandler;
     public readonly eventHandler: IEventHandler;
-    public readonly baasicApiClient: ApiClient;
+    public readonly apiClient: ApiClient;
 
     public readonly membershipModule: modules.Membership.Root;
     //Modules
@@ -53,7 +53,7 @@ export class BaasicApp implements IBaasicApp {
         this.tokenHandler = this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
         this.userHandler = this.diModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
         this.eventHandler = this.diModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
-        this.baasicApiClient = this.diModule.kernel.get<ApiClient>(httpTYPES.ApiClient);
+        this.apiClient = this.diModule.kernel.get<ApiClient>(httpTYPES.ApiClient);
 
         this.membershipModule = this.diModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
         //Modules

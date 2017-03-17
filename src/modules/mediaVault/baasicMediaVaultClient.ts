@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMediaVaultClient  
+ * @module mediaVaultClient  
  * @description  Media Vault Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -25,28 +25,28 @@ export class MediaVaultClient {
     }
 
     get streams(): MediaVaultStreamsClient {
-        return this.baasicMediaVaultStreamsClient;
+        return this.mediaVaultStreamsClient;
     }
 
     get batch(): MediaVaultBatchClient {
-        return this.baasicMediaVaultBatchClient;
+        return this.mediaVaultBatchClient;
     }
 
     get settings(): MediaVaultSettingsClient {
-        return this.baasicMediaVaultSettingsClient;
+        return this.mediaVaultSettingsClient;
     }
 
     get processingProviderSettings(): MediaVaultProcessingProviderSettingsClient {
-        return this.baasicMediaVaultProcessingProviderSettingsClient;
+        return this.mediaVaultProcessingProviderSettingsClient;
     }
 
     constructor(
         @inject(mediaVaultTypes.MediaVaultRouteDefinition) protected baasicMediaVaultRouteDefinition: MediaVaultRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
-        @inject(mediaVaultTypes.MediaVaultStreamsClient) protected baasicMediaVaultStreamsClient: MediaVaultStreamsClient,
-        @inject(mediaVaultTypes.MediaVaultBatchClient) protected baasicMediaVaultBatchClient: MediaVaultBatchClient,
-        @inject(mediaVaultTypes.MediaVaultSettingsClient) protected baasicMediaVaultSettingsClient: MediaVaultSettingsClient,
-        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsClient) protected baasicMediaVaultProcessingProviderSettingsClient: MediaVaultProcessingProviderSettingsClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
+        @inject(mediaVaultTypes.MediaVaultStreamsClient) protected mediaVaultStreamsClient: MediaVaultStreamsClient,
+        @inject(mediaVaultTypes.MediaVaultBatchClient) protected mediaVaultBatchClient: MediaVaultBatchClient,
+        @inject(mediaVaultTypes.MediaVaultSettingsClient) protected mediaVaultSettingsClient: MediaVaultSettingsClient,
+        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsClient) protected mediaVaultProcessingProviderSettingsClient: MediaVaultProcessingProviderSettingsClient
     ) { }
 
     /**                  
@@ -54,7 +54,7 @@ export class MediaVaultClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                          
-     * @example baasicMediaVaultClient.find({
+     * @example mediaVaultClient.find({
                   pageNumber : 1,   
                   pageSize : 10,   
                   orderBy : '<field>',   
@@ -69,7 +69,7 @@ export class MediaVaultClient {
               });                    
    **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMediaEntry>>> {
-        return this.baasicApiClient.get<IQueryModel<IMediaEntry>>(this.baasicMediaVaultRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IMediaEntry>>(this.baasicMediaVaultRouteDefinition.find(options));
     }
 
     /**                 
@@ -78,7 +78,7 @@ export class MediaVaultClient {
      * @param id Media vault id which uniquely identifies media vault resource that needs to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                         
-     * @example baasicMediaVaultClient.get('<media-vault-id>')
+     * @example mediaVaultClient.get('<media-vault-id>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -87,7 +87,7 @@ export class MediaVaultClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMediaEntry>> {
-        return this.baasicApiClient.get<IMediaEntry>(this.baasicMediaVaultRouteDefinition.get(id, options));
+        return this.apiClient.get<IMediaEntry>(this.baasicMediaVaultRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class MediaVaultClient {
      * @returns A promise that is resolved once the update media vault action has been performed.                          
      * @example // mediaVaultEntry is a media vault resource previously fetched using get action. 
                     mediaVaultEntry.description = '<description>'; 
-                    baasicMediaVaultClient.update(mediaVaultEntry)
+                    mediaVaultClient.update(mediaVaultEntry)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -110,7 +110,7 @@ export class MediaVaultClient {
                         }); 				
      **/
     update(data: IMediaEntry): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMediaVaultRouteDefinition.updateParams(data), this.baasicMediaVaultRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicMediaVaultRouteDefinition.updateParams(data), this.baasicMediaVaultRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -123,7 +123,7 @@ export class MediaVaultClient {
      * @param data Media vault object used to delete specific Media vault resource from the system.
      * @param options Options object.                        
      * @example // mediaVaultEntry is a media vault resource previously fetched using get action. The following action will remove the original media vault resource and all accompanying derived media vault resources.		
-                   baasicMediaVaultClient.remove(mediaVaultEntry)
+                   mediaVaultClient.remove(mediaVaultEntry)
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -131,7 +131,7 @@ export class MediaVaultClient {
                             // perform error handling here 
                        }); 
                // mediaVaultEntry is a media vault resource previously fetched using get action. The following action will remove derived media vault resource only.		 
-                   baasicMediaVaultClient.remove(mediaVaultEntry, {width: <width>, height: <height>})
+                   mediaVaultClient.remove(mediaVaultEntry, {width: <width>, height: <height>})
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -140,7 +140,7 @@ export class MediaVaultClient {
                        });						
     **/
     remove(data: IMediaEntry, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMediaVaultRouteDefinition.delete(data, options));
+        return this.apiClient.delete<void>(this.baasicMediaVaultRouteDefinition.delete(data, options));
     }
 }
 

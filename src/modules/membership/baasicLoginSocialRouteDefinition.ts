@@ -44,7 +44,7 @@ export class LoginSocialRouteDefinition extends BaseRouteDefinition {
      * Parses post social login route which can be expanded with additional items. Supported items are:                     
      * - `provider` - Provider name or Id being used to login with.                     
      * @method                           
-     * @example baasicLoginSocialClient.post({ provider : '<provider>' });                                
+     * @example loginSocialClient.post({ provider : '<provider>' });                                
      **/
     post(provider: string, options?: any): any {
         return super.baseCreate(this.postRoute, { provider: provider, options: options });

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicFilesBatchClient  
+ * @module filesBatchClient  
  * @description  Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -19,7 +19,7 @@ export class FilesBatchClient {
 
     constructor(
         @inject(filesTypes.FilesBatchRouteDefinition) protected baasicFilesBatchRouteDefinition: FilesBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                   
@@ -27,7 +27,7 @@ export class FilesBatchClient {
      * @method 
      * @param data A collection of file objects used to update specified file resources.
      * @returns A promise that is resolved once the update action has been performed.                      
-     * @example baasicFilesClient.update(files)
+     * @example filesClient.update(files)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -36,7 +36,7 @@ export class FilesBatchClient {
                     });                   
      **/
     update(data: IFileEntry[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicFilesBatchRouteDefinition.update(), this.baasicFilesBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicFilesBatchRouteDefinition.update(), this.baasicFilesBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -44,7 +44,7 @@ export class FilesBatchClient {
      * @method
      * @param data A collection of file objects that need to be inserted into the system.
      * @returns A promise that is resolved once the link action has been performed.                       
-     * @example baasicFilesBatchClient.link(files)
+     * @example filesBatchClient.link(files)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -53,7 +53,7 @@ export class FilesBatchClient {
                     });                   
      **/
     link(data: IFileEntry[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicFilesBatchRouteDefinition.link(), this.baasicFilesBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicFilesBatchRouteDefinition.link(), this.baasicFilesBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -62,7 +62,7 @@ export class FilesBatchClient {
      * @param data Collection of file delete requests which uniquely identifies file resources that need to be deleted.                        
      * @returns A promise that is resolved once the unlink action has been performed. 
      * @example // Remove original file resources                
-                    baasicFilesBatchClient.unlink([{ id: '<file-id>' }])
+                    filesBatchClient.unlink([{ id: '<file-id>' }])
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -70,7 +70,7 @@ export class FilesBatchClient {
                             // perform error handling here 
                         });		
                 // Remove derived file resources  
-                    baasicFilesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
+                    filesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -79,7 +79,7 @@ export class FilesBatchClient {
                         });		                    
      **/
     unlink(data: Object[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicFilesBatchRouteDefinition.unlink(), undefined, data);
+        return this.apiClient.delete<void>(this.baasicFilesBatchRouteDefinition.unlink(), undefined, data);
     }
 }
 

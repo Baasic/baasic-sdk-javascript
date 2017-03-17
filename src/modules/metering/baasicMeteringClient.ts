@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicMeteringClient  
- * @description  Metering Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringClient` uses `baasicMeteringRouteDefinition`. 
+ * @module meteringClient  
+ * @description  Metering Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringClient` uses `baasicMeteringRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -26,33 +26,33 @@ export class MeteringClient {
     }
 
     get batch(): MeteringBatchClient {
-        return this.baasicMeteringBatchClient;
+        return this.meteringBatchClient;
     }
 
     get statistics(): MeteringStatisticsClient {
-        return this.baasicMeteringStatisticsClient;
+        return this.meteringStatisticsClient;
     }
 
     get acl(): MeteringACLClient {
-        return this.baasicMeteringACLClient;
+        return this.meteringACLClient;
     }
 
     get settings(): MeteringSettingsClient {
-        return this.baasicMeteringSettingsClient;
+        return this.meteringSettingsClient;
     }
 
     get category(): MeteringCategoryClient {
-        return this.baasicMeteringCategoryClient;
+        return this.meteringCategoryClient;
     }
 
     constructor(
         @inject(meteringTypes.MeteringRouteDefinition) protected baasicMeteringRouteDefinition: MeteringRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
-        @inject(meteringTypes.MeteringBatchClient) protected baasicMeteringBatchClient: MeteringBatchClient,
-        @inject(meteringTypes.MeteringStatisticsClient) protected baasicMeteringStatisticsClient: MeteringStatisticsClient,
-        @inject(meteringTypes.MeteringACLClient) protected baasicMeteringACLClient: MeteringACLClient,
-        @inject(meteringTypes.MeteringCategoryClient) protected baasicMeteringCategoryClient: MeteringCategoryClient,
-        @inject(meteringTypes.MeteringSettingsClient) protected baasicMeteringSettingsClient: MeteringSettingsClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
+        @inject(meteringTypes.MeteringBatchClient) protected meteringBatchClient: MeteringBatchClient,
+        @inject(meteringTypes.MeteringStatisticsClient) protected meteringStatisticsClient: MeteringStatisticsClient,
+        @inject(meteringTypes.MeteringACLClient) protected meteringACLClient: MeteringACLClient,
+        @inject(meteringTypes.MeteringCategoryClient) protected meteringCategoryClient: MeteringCategoryClient,
+        @inject(meteringTypes.MeteringSettingsClient) protected meteringSettingsClient: MeteringSettingsClient,
     ) { }
 
     /**                  
@@ -60,7 +60,7 @@ export class MeteringClient {
      * @method 
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicMeteringClient.find({   
+     * @example meteringClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -75,7 +75,7 @@ export class MeteringClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMeteringData>>> {
-        return this.baasicApiClient.get<IQueryModel<IMeteringData>>(this.baasicMeteringRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IMeteringData>>(this.baasicMeteringRouteDefinition.find(options));
     }
 
     /**                 
@@ -84,7 +84,7 @@ export class MeteringClient {
      * @param id MeteringData id which uniquely identifies MeteringData resource that needs to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                        
-     * @example baasicMeteringClient.get()
+     * @example meteringClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -93,7 +93,7 @@ export class MeteringClient {
                     });                 
      **/
     get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IMeteringData>> {
-        return this.baasicApiClient.get<IMeteringData>(this.baasicMeteringRouteDefinition.get(id, options));
+        return this.apiClient.get<IMeteringData>(this.baasicMeteringRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class MeteringClient {
      * @method 
      * @param data An MeteringData object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create metering action has been performed                        
-     * @example baasicMeteringClient.create({   
+     * @example meteringClient.create({   
                     category : '<category-name>',   
                     name : '<sub-category-name>',   
                     value: '<value>' 
@@ -114,7 +114,7 @@ export class MeteringClient {
                 });                 
       **/
     create(data: IMeteringData): PromiseLike<IHttpResponse<IMeteringData>> {
-        return this.baasicApiClient.post<IMeteringData>(this.baasicMeteringRouteDefinition.create(), this.baasicMeteringRouteDefinition.createParams(data));
+        return this.apiClient.post<IMeteringData>(this.baasicMeteringRouteDefinition.create(), this.baasicMeteringRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -128,7 +128,7 @@ export class MeteringClient {
      * @returns A promise that is resolved once the update metering action has been performed.                         
      * @example // meteringData is a resource previously fetched using get action. 
                     meteringData.value = '<some-new-value>'; 
-                    baasicMeteringClient.update(meteringData)
+                    meteringClient.update(meteringData)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -137,7 +137,7 @@ export class MeteringClient {
                         }); 				
      **/
     update(data: IMeteringData): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMeteringRouteDefinition.update(data), this.baasicMeteringRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicMeteringRouteDefinition.update(data), this.baasicMeteringRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -150,7 +150,7 @@ export class MeteringClient {
      * @param data An metering data object used to remove specified MeteringData resource.                         
      * @returns A promise that is resolved once the remove action has been performed. 
      * @example // meteringData is a resource previously fetched using get action.				 
-                        baasicMeteringClient.remove(meteringData)
+                        meteringClient.remove(meteringData)
                             .then(function (data) {   
                                 // perform success action here 
                             },
@@ -159,14 +159,14 @@ export class MeteringClient {
                             });						
      **/
     remove(data: IMeteringData): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMeteringRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicMeteringRouteDefinition.delete(data));
     }
 
     /**                  
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all metering resources from the system if successfully completed.                  
      * @method
      * @returns A promise that is resolved once the purge action has been performed.                         
-     * @example baasicMeteringClient.purge()
+     * @example meteringClient.purge()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -175,7 +175,7 @@ export class MeteringClient {
                     });						
      **/
     purge(): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMeteringRouteDefinition.purge());
+        return this.apiClient.delete<void>(this.baasicMeteringRouteDefinition.purge());
     }
 }
 

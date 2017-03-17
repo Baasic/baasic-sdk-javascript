@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicArticleSubscriptionsCommentReportedClient  
- * @description  Article Subscriptions Comment Reported Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsCommentReportedClient` uses `baasicArticleSubscriptionsCommentReportedRouteDefinition`. 
+ * @module articleSubscriptionsCommentReportedClient  
+ * @description  Article Subscriptions Comment Reported Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentReportedClient` uses `baasicArticleSubscriptionsCommentReportedRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,13 +19,13 @@ export class ArticleSubscriptionsCommentReportedClient {
 
     constructor(
         @inject(articleTypes.ArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: ArticleSubscriptionsCommentReportedRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                         
      * Returns a promise that is resolved once the subscribe action has been performed.                         
      * @method                        
-     * @example baasicArticleSubscriptionsCommentReportedClient.subscribe(data)
+     * @example articleSubscriptionsCommentReportedClient.subscribe(data)
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -34,13 +34,13 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                         
      **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.subscribe(data), data);
     }
 
     /**                         
      * Returns a promise that is resolved once the isSubscribed action has been performed.                         
      * @method                        
-     * @example baasicArticleSubscriptionsCommentReportedClient.isSubscribed(data)
+     * @example articleSubscriptionsCommentReportedClient.isSubscribed(data)
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -49,13 +49,13 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                          
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.isSubscribed(data));
     }
 
     /**                         
      * Returns a promise that is commentReported once the unSubscribe action has been performed.                         
      * @method                         
-     * @example baasicArticleSubscriptionsCommentReportedClient.isSubscribed(data)
+     * @example articleSubscriptionsCommentReportedClient.isSubscribed(data)
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -64,6 +64,6 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                           
      **/
     unSubscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.unSubscribe(data), undefined, data);
+        return this.apiClient.delete<void>(this.baasicArticleSubscriptionsCommentReportedRouteDefinition.unSubscribe(data), undefined, data);
     }
 }

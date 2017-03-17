@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicMediaVaultBatchClient  
+ * @module mediaVaultBatchClient  
  * @description  Media Vault Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -19,7 +19,7 @@ export class MediaVaultBatchClient {
 
     constructor(
         @inject(mediaVaultTypes.MediaVaultBatchRouteDefinition) protected baasicMediaVaultBatchRouteDefinition: MediaVaultBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                   
@@ -27,7 +27,7 @@ export class MediaVaultBatchClient {
      * @method
      * @param data A collection of media vault objects used to update specified media vault resources.
      * @returns A promise that is resolved once the update action has been performed.                          
-     * @example baasicMediaVaultStreamsClient.update(files)
+     * @example mediaVaultStreamsClient.update(files)
                    .then(function (data) {   
                        // perform success action here 
                    },
@@ -36,7 +36,7 @@ export class MediaVaultBatchClient {
                    });                   
     **/
     update(data: IMediaEntry[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMediaVaultBatchRouteDefinition.update(), this.baasicMediaVaultBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicMediaVaultBatchRouteDefinition.update(), this.baasicMediaVaultBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -44,7 +44,7 @@ export class MediaVaultBatchClient {
      * @method
      * @param data Collection of media vault delete requests which uniquely identifies media vault resources that need to be deleted.                         
      * @example // Remove original media vault resources		 
-                        baasicMediaVaultBatchClient.remove([{ id: '<media-vault-id>' }])
+                        mediaVaultBatchClient.remove([{ id: '<media-vault-id>' }])
                             .then(function (data) {   
                                 // perform success action here 
                             },
@@ -52,7 +52,7 @@ export class MediaVaultBatchClient {
                                  // perform error handling here 
                             });	
                 // Remove derived media vault resources		 
-                        baasicMediaVaultBatchClient.remove([{ id: '<media-vault-id>', fileFormat: { width: <width>, height: <height> } }])
+                        mediaVaultBatchClient.remove([{ id: '<media-vault-id>', fileFormat: { width: <width>, height: <height> } }])
                             .then(function (data) {   
                                 // perform success action here 
                             },
@@ -61,7 +61,7 @@ export class MediaVaultBatchClient {
                             });	  	                  
      **/
     remove(data: any[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMediaVaultBatchRouteDefinition.delete(), undefined, data);
+        return this.apiClient.delete<void>(this.baasicMediaVaultBatchRouteDefinition.delete(), undefined, data);
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsPublishBatchClient  
- * @description  Notifications Publish Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsPublishBatchClient` uses `baasicNotificationsPublishBatchRouteDefinition`. 
+ * @module notificationsPublishBatchClient  
+ * @description  Notifications Publish Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsPublishBatchClient` uses `baasicNotificationsPublishBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,7 +14,7 @@ export class NotificationsPublishBatchClient {
 
     constructor(
         @inject(notificationsTypes.NotificationsPublishBatchRouteDefinition) protected baasicNotificationsPublishBatchRouteDefinition: NotificationsPublishBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**         
@@ -22,7 +22,7 @@ export class NotificationsPublishBatchClient {
      * @method 
      * @param data The notification collection.
      * @returns A promise that is resolved once the create notification action has been performed.                              
-     * @example baasicNotificationsPublishBatchClient.create([{        
+     * @example notificationsPublishBatchClient.create([{        
                     channels: ['<channel-name', '<channel-name>'],     
                     moduleName: '<module-name>',     
                     templateName: '<template-name>',     
@@ -39,7 +39,7 @@ export class NotificationsPublishBatchClient {
                 });                         
      */
     create(data: INotification[]): PromiseLike<IHttpResponse<INotification[]>> {
-        return this.baasicApiClient.post<INotification[]>(this.baasicNotificationsPublishBatchRouteDefinition.create(), this.baasicNotificationsPublishBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<INotification[]>(this.baasicNotificationsPublishBatchRouteDefinition.create(), this.baasicNotificationsPublishBatchRouteDefinition.createParams(data));
     }
 }
 

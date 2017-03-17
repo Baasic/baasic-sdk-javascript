@@ -1,6 +1,6 @@
 /**  
- * @module baasicDynamicSchemaClient  
- * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `baasicDynamicSchemaClient` uses `baasicDynamicSchemaRouteDefinition`. 
+ * @module dynamicSchemaClient  
+ * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `dynamicSchemaClient` uses `baasicDynamicSchemaRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -15,7 +15,7 @@ export class DynamicSchemaClient {
     /**                 
      * Provides direct access to `baasicDynamicSchemaRouteDefinition`.                 
      * @method                        
-     * @example baasicDynamicSchemaClient.routeDefinition.get();                 
+     * @example dynamicSchemaClient.routeDefinition.get();                 
      **/
     get routeDefinition(): DynamicSchemaRouteDefinition {
         return this.baasicDynamicSchemaRouteDefinition;
@@ -23,14 +23,14 @@ export class DynamicSchemaClient {
 
     constructor(
         @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resource schemas matching the given criteria.                  
      * @method
      * @param options Options object.                      
-     * @example baasicDynamicSchemaClient.find({ 
+     * @example dynamicSchemaClient.find({ 
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -45,7 +45,7 @@ export class DynamicSchemaClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IResourceSchema>>> {
-        return this.baasicApiClient.get<IQueryModel<IResourceSchema>>(this.baasicDynamicSchemaRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IResourceSchema>>(this.baasicDynamicSchemaRouteDefinition.find(options));
     }
 
     /**                  
@@ -53,7 +53,7 @@ export class DynamicSchemaClient {
      * @method
      * @param name Name of dynamic resource schema which need to be retrieved.
      * @param options Options object.                         
-     * @example baasicDynamicSchemaClient.get('<schema-name>')
+     * @example dynamicSchemaClient.get('<schema-name>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -62,14 +62,14 @@ export class DynamicSchemaClient {
                     });                 
      **/
     get(name: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.baasicApiClient.get<IResourceSchema>(this.baasicDynamicSchemaRouteDefinition.get(name, options));
+        return this.apiClient.get<IResourceSchema>(this.baasicDynamicSchemaRouteDefinition.get(name, options));
     }
 
     /**                 
      * Returns a promise that is resolved once the create action has been performed; this action creates a new dynamic resource schema item.                 
      * @method
      * @param data A dynamic resource schema object that needs to be inserted into the system.                        
-     * @example baasicDynamicSchemaClient.create({   
+     * @example dynamicSchemaClient.create({   
                     schema : {  
                         type : 'object',     
                         properties : { 
@@ -96,7 +96,7 @@ export class DynamicSchemaClient {
                 });                 
      **/
     create(data: IResourceSchema): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.baasicApiClient.post<IResourceSchema>(this.baasicDynamicSchemaRouteDefinition.create(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
+        return this.apiClient.post<IResourceSchema>(this.baasicDynamicSchemaRouteDefinition.create(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -109,7 +109,7 @@ export class DynamicSchemaClient {
      * @param data A dynamic schema object used to update specified dynamic resource schema.                         
      * @example // dynamicResourceSchema is a resource previously fetched using get action. 
                     dynamicResourceSchema.description = '<description>'; 
-                    baasicDynamicSchemaClient.update(dynamicResourceSchema)
+                    dynamicSchemaClient.update(dynamicResourceSchema)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -118,7 +118,7 @@ export class DynamicSchemaClient {
                         }); 				
      **/
     update(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicDynamicSchemaRouteDefinition.update(data), this.baasicDynamicSchemaRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicDynamicSchemaRouteDefinition.update(data), this.baasicDynamicSchemaRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -130,7 +130,7 @@ export class DynamicSchemaClient {
      * @method
      * @param data A dynamic schema object used to delete specified dynamic resource schema.                        
      * @example // dynamicResourceSchema is a resource previously fetched using get action.				 
-                    baasicDynamicSchemaClient.remove(dynamicResourceSchema)
+                    dynamicSchemaClient.remove(dynamicResourceSchema)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -139,7 +139,7 @@ export class DynamicSchemaClient {
                         });						
      **/
     remove(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicDynamicSchemaRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicDynamicSchemaRouteDefinition.delete(data));
     }
 
     /**                 
@@ -158,7 +158,7 @@ export class DynamicSchemaClient {
                 });					    
      **/
     generate(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicDynamicSchemaRouteDefinition.generate(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicDynamicSchemaRouteDefinition.generate(), this.baasicDynamicSchemaRouteDefinition.createParams(data));
     }
 }
 

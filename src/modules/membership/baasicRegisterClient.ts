@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicRegisterClient  
- * @description  Register Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `baasicRegisterClient` uses `baasicRegisterRouteDefinition`. 
+ * @module registerClient  
+ * @description  Register Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `registerClient` uses `baasicRegisterRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -16,7 +16,7 @@ export class RegisterClient {
     /**                 
      * Provides direct access to `baasicRegisterRouteDefinition`.                 
      * @method                        
-     * @example baasicRegisterClient.routeDefinition.get();                 
+     * @example registerClient.routeDefinition.get();                 
      **/
     get routeDefinition(): RegisterRouteDefinition {
         return this.baasicRegisterRouteDefinition;
@@ -24,7 +24,7 @@ export class RegisterClient {
 
     constructor(
         @inject(membershipTypes.RegisterRouteDefinition) protected baasicRegisterRouteDefinition: RegisterRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
     ) { }
 
@@ -32,7 +32,7 @@ export class RegisterClient {
      * Returns a promise that is resolved once the register create has been performed. This action will create a new user if completed successfully. Created user is not approved immediately, instead an activation e-mail is sent to the user. 
      * @param data A user account object that needs to be inserted into the system.                
      * @method                        
-     * @example baasicRegisterClient.create({   
+     * @example registerClient.create({   
                     activationUrl : '<activation-url>',   
                     challengeIdentifier : '<challenge-identifier>',   
                     challengeResponse : '<challenge-response>',   
@@ -49,7 +49,7 @@ export class RegisterClient {
                 .finally (function () {});                 
      **/
     create(data: IRegisterUser): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.baasicApiClient.post(this.baasicRegisterRouteDefinition.create(), this.baasicRegisterRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicRegisterRouteDefinition.create(), this.baasicRegisterRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -57,7 +57,7 @@ export class RegisterClient {
      * @param data Security code which uniquely identifies user account that needs to be activated.
      * @returns A promise that is resolved once the account activation action has been performed.           
      * @method                        
-     * @example baasicRegisterClient.activate({   
+     * @example registerClient.activate({   
                    activationToken : '<activation-token>' 
                })
                .then(function (data) {   
@@ -70,7 +70,7 @@ export class RegisterClient {
     **/
     activate(data: string): PromiseLike<any> {
         var self = this;
-        var promise = this.baasicApiClient.put<any>(this.baasicRegisterRouteDefinition.activate(data), data);
+        var promise = this.apiClient.put<any>(this.baasicRegisterRouteDefinition.activate(data), data);
         promise.then<any>(function (data) {
             let token: IToken = {
                 token: data.data.access_token,

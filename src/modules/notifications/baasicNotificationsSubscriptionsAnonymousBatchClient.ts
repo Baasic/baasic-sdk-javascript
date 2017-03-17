@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsAnonymousBatchClient  
- * @description  Notifications Subscriptions Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsAnonymousBatchClient` uses `baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition`. 
+ * @module notificationsSubscriptionsAnonymousBatchClient  
+ * @description  Notifications Subscriptions Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousBatchClient` uses `baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,7 +19,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
 
     constructor(
         @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition: NotificationsSubscriptionsAnonymousBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                              
@@ -27,7 +27,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
      * @method
      * @param data AnonymousSubscription objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create anonymous subscription action has been performed.
-     * @example baasicNotificationsSubscriptionsAnonymousBatchClient.create([{     
+     * @example notificationsSubscriptionsAnonymousBatchClient.create([{     
                     channel: '<channel-name>',     
                     registrationId: '<registration-id>' ž
                 }])
@@ -39,7 +39,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
                 });                             
      */
     create(data: IAnonymousSubscription[]): PromiseLike<IHttpResponse<IAnonymousSubscription[]>> {
-        return this.baasicApiClient.post(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.create(), this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.create(), this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.createParams(data));
     }
 
     /**                              
@@ -47,7 +47,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
      * @method
      * @param ids The subscription ids which uniquely identify AnonymousSubscription resources that need to be deleted.
      * @returns a promise that is resolved once the remove action has been performed.                                   
-     * @example baasicNotificationsSubscriptionsAnonymousBatchClient.remove(subscriptionIds)
+     * @example notificationsSubscriptionsAnonymousBatchClient.remove(subscriptionIds)
                    .then(function (data) {     
                        // perform success action here 
                    },
@@ -56,7 +56,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
                    });		                            
     */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              
@@ -64,7 +64,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
      * @method
      * @param data AnonymousSubscription objects used to update specified AnonymousSubscription resources.
      * @returns A promise that is resolved once the update anonymous subscriptions action has been performed.                                     
-     * @example baasicNotificationsSubscriptionsAnonymousBatchClient.update(subscriptions)
+     * @example notificationsSubscriptionsAnonymousBatchClient.update(subscriptions)
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -73,7 +73,7 @@ export class NotificationsSubscriptionsAnonymousBatchClient {
                     });                             
      */
     update(data: IAnonymousSubscription[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.update(), this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.update(), this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition.updateParams(data));
     }
 }
 

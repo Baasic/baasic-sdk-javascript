@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsAddressTypeClient  
- * @description  Commerce Lookups Address Type Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsAddressTypesClient` uses `baasicCommerceLookupsAddressTypeRouteDefinition`. 
+ * @module commerceLookupsAddressTypeClient  
+ * @description  Commerce Lookups Address Type Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsAddressTypesClient` uses `baasicCommerceLookupsAddressTypeRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -21,19 +21,19 @@ export class CommerceLookupsAddressTypesClient {
     }
 
     get batch(): CommerceLookupsAddressTypesBatchClient {
-        return this.baasicCommerceLookupsAddressTypesBatchClient;
+        return this.commerceLookupsAddressTypesBatchClient;
     }
 
     constructor(
         @inject(commerceTypes.CommerceLookupsAddressTypeRouteDefinition) protected baasicCommerceLookupsAddressTypeRouteDefinition: CommerceLookupsAddressTypeRouteDefinition,
-        @inject(commerceTypes.CommerceLookupsAddressTypesBatchClient) protected baasicCommerceLookupsAddressTypesBatchClient: CommerceLookupsAddressTypesBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(commerceTypes.CommerceLookupsAddressTypesBatchClient) protected commerceLookupsAddressTypesBatchClient: CommerceLookupsAddressTypesBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceLookupsAddressTypeClient.find({   
+     * @example commerceLookupsAddressTypeClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -48,13 +48,13 @@ export class CommerceLookupsAddressTypesClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.baasicApiClient.get(this.baasicCommerceLookupsAddressTypeRouteDefinition.find(options));
+        return this.apiClient.get(this.baasicCommerceLookupsAddressTypeRouteDefinition.find(options));
     }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceLookupsAddressTypeClient.get()
+     * @example commerceLookupsAddressTypeClient.get()
                    .then(function (data) {   
                        // perform success action here 
                    },
@@ -63,13 +63,13 @@ export class CommerceLookupsAddressTypesClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicCommerceLookupsAddressTypeRouteDefinition.get(id, options));
+        return this.apiClient.get(this.baasicCommerceLookupsAddressTypeRouteDefinition.get(id, options));
     }
 
     /**                  
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.                  
      * @method                         
-     * @example baasicCommerceLookupsAddressTypeClient.create({    
+     * @example commerceLookupsAddressTypeClient.create({    
                        name : '<name>',   
                        abrv: '<abbreviation>',   
                        description: '<description>' 
@@ -82,7 +82,7 @@ export class CommerceLookupsAddressTypesClient {
                    });                  
     **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceLookupsAddressTypeRouteDefinition.create(), this.baasicCommerceLookupsAddressTypeRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicCommerceLookupsAddressTypeRouteDefinition.create(), this.baasicCommerceLookupsAddressTypeRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -94,7 +94,7 @@ export class CommerceLookupsAddressTypesClient {
      * @method                         
      * @example // commerceAddressType is a resource previously fetched using get action. 
                     commerceAddressType.description = '<description>'; 
-                    baasicCommerceLookupsAddressTypeClient.update(commerceAddressType) 
+                    commerceLookupsAddressTypeClient.update(commerceAddressType) 
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -103,7 +103,7 @@ export class CommerceLookupsAddressTypesClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicCommerceLookupsAddressTypeRouteDefinition.update(data), this.baasicCommerceLookupsAddressTypeRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicCommerceLookupsAddressTypeRouteDefinition.update(data), this.baasicCommerceLookupsAddressTypeRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -114,7 +114,7 @@ export class CommerceLookupsAddressTypesClient {
      * ```                  
      * @method                         
      * @example // commerceAddressType is a resource previously fetched using get action.				 
-                    baasicCommerceLookupsAddressTypeClient.remove(commerceAddressType) 
+                    commerceLookupsAddressTypeClient.remove(commerceAddressType) 
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -123,7 +123,7 @@ export class CommerceLookupsAddressTypesClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCommerceLookupsAddressTypeRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicCommerceLookupsAddressTypeRouteDefinition.delete(data));
     }
 }
 

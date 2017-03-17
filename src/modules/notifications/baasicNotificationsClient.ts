@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsClient  
- * @description  Notifications Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsClient` uses `baasicNotificationsRouteDefinition`. 
+ * @module notificationsClient  
+ * @description  Notifications Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsClient` uses `baasicNotificationsRouteDefinition`. 
  */
 
 
@@ -24,7 +24,7 @@ export class NotificationsClient {
     }
 
     get publish(): NotificationsPublishClient {
-        return this.baasicNotificationsPublishClient;
+        return this.notificationsPublishClient;
     }
 
     get subscriptions(): NotificationsSubscriptionsClient {
@@ -32,18 +32,18 @@ export class NotificationsClient {
     }
 
     get registrations(): NotificationsRegistrationsClient {
-        return this.baasicNotificationsRegistrationsClient;
+        return this.notificationsRegistrationsClient;
     }
 
     get settings(): NotificationsSettingsClient {
-        return this.baasicNotificationsSettingsClient;
+        return this.notificationsSettingsClient;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsPublishClient) protected baasicNotificationsPublishClient: NotificationsPublishClient,
+        @inject(notificationsTypes.NotificationsPublishClient) protected notificationsPublishClient: NotificationsPublishClient,
         @inject(notificationsTypes.NotificationsSubscriptionsClient) protected basicNotificationsSubscriptionsClient: NotificationsSubscriptionsClient,
-        @inject(notificationsTypes.NotificationsRegistrationsClient) protected baasicNotificationsRegistrationsClient: NotificationsRegistrationsClient,
-        @inject(notificationsTypes.NotificationsSettingsClient) protected baasicNotificationsSettingsClient: NotificationsSettingsClient,
+        @inject(notificationsTypes.NotificationsRegistrationsClient) protected notificationsRegistrationsClient: NotificationsRegistrationsClient,
+        @inject(notificationsTypes.NotificationsSettingsClient) protected notificationsSettingsClient: NotificationsSettingsClient,
         @inject(notificationsTypes.NotificationsRouteDefinition) protected baasicNotificationsRouteDefinition: NotificationsRouteDefinition
     ) { }
 }

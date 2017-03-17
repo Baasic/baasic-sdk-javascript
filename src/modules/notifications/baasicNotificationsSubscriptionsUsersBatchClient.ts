@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsUsersBatchClient  
- * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsUsersBatchUsersClient` uses `baasicNotificationsSubscriptionsUsersBatchRouteDefinition`. 
+ * @module notificationsSubscriptionsUsersBatchClient  
+ * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersBatchUsersClient` uses `baasicNotificationsSubscriptionsUsersBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -15,7 +15,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
 
     constructor(
         @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchRouteDefinition) protected baasicNotificationsSubscriptionsUsersBatchRouteDefinition: NotificationsSubscriptionsUsersBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                              
@@ -23,7 +23,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
      * @method
      * @param data UserSubscription collection that need to be inserted into the system. 
      * @returns A promise that is resolved once the create user subscription action has been performed.                                    
-     * @example baasicNotificationsSubscriptionsUsersBatchClient.create([{     
+     * @example notificationsSubscriptionsUsersBatchClient.create([{     
                     channel: '<channel-name>',     
                     userId: '<user-id>' 
                 }])
@@ -35,7 +35,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                 });                             
      */
     create(data: IUserSubscription[]): PromiseLike<IHttpResponse<IUserSubscription[]>> {
-        return this.baasicApiClient.post<IUserSubscription[]>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSubscription[]>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.createParams(data));
     }
 
     /**                              
@@ -43,7 +43,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
      * @method 
      * @param ids The subscription ids which uniquely identify UserSubscription resources that need to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.                                
-     * @example baasicNotificationsSubscriptionsUsersBatchClient.remove(subscriptionIds)
+     * @example notificationsSubscriptionsUsersBatchClient.remove(subscriptionIds)
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -52,7 +52,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                     });		                            
      */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              
@@ -60,7 +60,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
      * @method 
      * @param data UserSubscription objects used to update specified UserSubscription resources.
      * @returns A promise that is resolved once the update user subscriptions action has been performed.                                   
-     * @example baasicNotificationsSubscriptionsUsersBatchClient.update(subscriptions)
+     * @example notificationsSubscriptionsUsersBatchClient.update(subscriptions)
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -69,7 +69,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                     });                             
      */
     update(data: IUserSubscription[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.update(), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.update(), this.baasicNotificationsSubscriptionsUsersBatchRouteDefinition.updateParams(data));
     }
 }
 

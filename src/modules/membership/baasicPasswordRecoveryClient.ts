@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicPasswordRecoveryClient  
- * @description  Password Recovery Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `baasicPasswordRecoveryClient` uses `baasicPasswordRecoveryRouteDefinition`. 
+ * @module passwordRecoveryClient  
+ * @description  Password Recovery Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `passwordRecoveryClient` uses `baasicPasswordRecoveryRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
@@ -15,7 +15,7 @@ export class PasswordRecoveryClient {
     /**                 
      * Provides direct access to `baasicPasswordRecoveryRouteDefinition`.                 
      * @method                        
-     * @example baasicPasswordRecoveryClient.routeDefinition.requestReset(data);                 
+     * @example passwordRecoveryClient.routeDefinition.requestReset(data);                 
      **/
     get routeDefinition(): PasswordRecoveryRouteDefinition {
         return this.baasicPasswordRecoveryRouteDefinition;
@@ -23,14 +23,14 @@ export class PasswordRecoveryClient {
 
     constructor(
         @inject(membershipTypes.PasswordRecoveryRouteDefinition) protected baasicPasswordRecoveryRouteDefinition: PasswordRecoveryRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /** 				
      * Returns a promise that is resolved once the password recovery requestReset action is completed. This action initiates the password recovery process for the user.			
      * @method
      * @param data A password recovery object which contains parameters required for the password retrieval request. 	 				
-     * @example baasicPasswordRecoveryClient.requestReset({ 
+     * @example passwordRecoveryClient.requestReset({ 
                     challengeIdentifier : '<challenge-identifier>',   
                     challengeResponse : '<challenge-response>',   
                     recoverUrl : '<recover-url>',   
@@ -45,14 +45,14 @@ export class PasswordRecoveryClient {
                 .finally (function () {});								
      */
     requestReset(data: IRequestPasswordReset): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicPasswordRecoveryRouteDefinition.passwordRecovery(), data);
+        return this.apiClient.post(this.baasicPasswordRecoveryRouteDefinition.passwordRecovery(), data);
     }
 
     /** 				
      * Returns a promise that is resolved once the password reset action is completed. This updates user's password selection. 		
      * @method
      * @param data Password recovery object used to update user's current password selection.		 				
-     * @example baasicPasswordRecoveryClient.reset({   
+     * @example passwordRecoveryClient.reset({   
                     newPassword : '<new-password>',   
                     passwordRecoveryToken : '<password-recovery-token>' 
                 })
@@ -65,7 +65,7 @@ export class PasswordRecoveryClient {
                 .finally (function () {});							
      */
     reset(data: IResetPassword): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicPasswordRecoveryRouteDefinition.passwordRecovery(), data);
+        return this.apiClient.put(this.baasicPasswordRecoveryRouteDefinition.passwordRecovery(), data);
     }
 }
 

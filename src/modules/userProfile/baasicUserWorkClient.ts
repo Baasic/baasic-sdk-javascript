@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserWorkClient  
+ * @module userWorkClient  
  * @description  User Work Client provides  route templates which can be expanded to  REST URIs. Various services can use  User Work Route Client to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -19,7 +19,7 @@ export class UserWorkClient {
 
     constructor(
         @inject(userProfileTypes.UserWorkRouteDefinition) protected baasicUserWorkRouteDefinition: UserWorkRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -27,7 +27,7 @@ export class UserWorkClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicUserWorkClient.find({   
+     * @example userWorkClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -42,7 +42,7 @@ export class UserWorkClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserWork>>> {
-        return this.baasicApiClient.get<IQueryModel<IUserWork>>(this.baasicUserWorkRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserWork>>(this.baasicUserWorkRouteDefinition.find(options));
     }
 
     /**                 
@@ -50,7 +50,7 @@ export class UserWorkClient {
      * @method
      * @param id User work id which uniquely identifies resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example baasicUserWorkClient.get()
+     * @example userWorkClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     }, 
@@ -59,7 +59,7 @@ export class UserWorkClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserWork>> {
-        return this.baasicApiClient.get<IUserWork>(this.baasicUserWorkRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserWork>(this.baasicUserWorkRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -67,7 +67,7 @@ export class UserWorkClient {
      * @method
      * @param data An user work object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create user work action has been performed.
-     * @example baasicUserWorkClient.create({ companyName : '<company-name>', userId: '<user-id>' })
+     * @example userWorkClient.create({ companyName : '<company-name>', userId: '<user-id>' })
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -76,7 +76,7 @@ export class UserWorkClient {
                     });                 
      **/
     create(data: IUserWork): PromiseLike<IHttpResponse<IUserWork>> {
-        return this.baasicApiClient.post<IUserWork>(this.baasicUserWorkRouteDefinition.create(data), this.baasicUserWorkRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserWork>(this.baasicUserWorkRouteDefinition.create(data), this.baasicUserWorkRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -90,7 +90,7 @@ export class UserWorkClient {
      * @returns A promise that is resolved once the update user work action has been performed.                         
      * @example // work is a resource previously fetched using get action. 
                     work.companyName = '<company-name>'; 
-                    baasicUserWorkClient.update(work)
+                    userWorkClient.update(work)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -99,7 +99,7 @@ export class UserWorkClient {
                         }); 				        
      **/
     update(data: IUserWork): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicUserWorkRouteDefinition.update(data), this.baasicUserWorkRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicUserWorkRouteDefinition.update(data), this.baasicUserWorkRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -110,7 +110,7 @@ export class UserWorkClient {
      * ```                  
      * @method                         
      * @example // work is a resource previously fetched using get action.				 
-                       baasicUserWorkClient.remove(work)
+                       userWorkClient.remove(work)
                            .then(function (data) {   
                                // perform success action here 
                            },
@@ -119,7 +119,7 @@ export class UserWorkClient {
                            });						        
     **/
     remove(data: IUserWork): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicUserWorkRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicUserWorkRouteDefinition.delete(data));
     }
 }
 

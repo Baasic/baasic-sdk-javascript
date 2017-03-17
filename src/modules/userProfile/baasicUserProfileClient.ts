@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicUserProfileClient  
- * @description  User Profile Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileClient` uses `baasicUserProfileRouteDefinition`. 
+ * @module userProfileClient  
+ * @description  User Profile Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `userProfileClient` uses `baasicUserProfileRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -22,7 +22,7 @@ import { IUserProfile } from 'modules/userProfile/contracts';
 export class UserProfileClient {
 
     get acl(): UserProfileACLClient {
-        return this.baasicUserProfileACLClient;
+        return this.userProfileACLClient;
     }
 
     get routeDefinition(): UserProfileRouteDefinition {
@@ -30,27 +30,27 @@ export class UserProfileClient {
     }
 
     get education(): UserEducationClient {
-        return this.baasicUserEducationClient;
+        return this.userEducationClient;
     }
     get avatar(): UserProfileAvatarClient {
-        return this.baasicUserProfileAvatarClient;
+        return this.userProfileAvatarClient;
     }
     get skill(): UserSkillClient {
-        return this.baasicUserSkillClient;
+        return this.userSkillClient;
     }
     get work(): UserWorkClient {
-        return this.baasicUserWorkClient;
+        return this.userWorkClient;
     }
 
     constructor(
-        @inject(userProfileTypes.UserProfileACLClient) protected baasicUserProfileACLClient: UserProfileACLClient,
+        @inject(userProfileTypes.UserProfileACLClient) protected userProfileACLClient: UserProfileACLClient,
         @inject(userProfileTypes.UserProfileRouteDefinition) protected baasicUserProfileRouteDefinition: UserProfileRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
 
-        @inject(userProfileTypes.UserEducationClient) protected baasicUserEducationClient: UserEducationClient,
-        @inject(userProfileTypes.UserProfileAvatarClient) protected baasicUserProfileAvatarClient: UserProfileAvatarClient,
-        @inject(userProfileTypes.UserSkillClient) protected baasicUserSkillClient: UserSkillClient,
-        @inject(userProfileTypes.UserWorkClient) protected baasicUserWorkClient: UserWorkClient,
+        @inject(userProfileTypes.UserEducationClient) protected userEducationClient: UserEducationClient,
+        @inject(userProfileTypes.UserProfileAvatarClient) protected userProfileAvatarClient: UserProfileAvatarClient,
+        @inject(userProfileTypes.UserSkillClient) protected userSkillClient: UserSkillClient,
+        @inject(userProfileTypes.UserWorkClient) protected userWorkClient: UserWorkClient,
     ) { }
 
     /**                  
@@ -73,7 +73,7 @@ export class UserProfileClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserProfile>>> {
-        return this.baasicApiClient.get<IQueryModel<IUserProfile>>(this.baasicUserProfileRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserProfile>>(this.baasicUserProfileRouteDefinition.find(options));
     }
 
     /**                 
@@ -82,7 +82,7 @@ export class UserProfileClient {
      * @param id User profile id which uniquely identifies user profile resource that needs to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                       
-     * @example baasicUserProfileClient.get()
+     * @example userProfileClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -91,7 +91,7 @@ export class UserProfileClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.baasicApiClient.get<IUserProfile>(this.baasicUserProfileRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserProfile>(this.baasicUserProfileRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -99,7 +99,7 @@ export class UserProfileClient {
      * @method
      * @param data An user profile object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create user profile action has been performed.                         
-     * @example baasicUserProfileClient.create({   
+     * @example userProfileClient.create({   
                     firstName : '<first-name>',   
                     lastName : '<last-name>',   
                     displayName: '<nick-name>' 
@@ -111,7 +111,7 @@ export class UserProfileClient {
                 });                  
      **/
     create(data: IUserProfile): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.baasicApiClient.post<IUserProfile>(this.baasicUserProfileRouteDefinition.create(), this.baasicUserProfileRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserProfile>(this.baasicUserProfileRouteDefinition.create(), this.baasicUserProfileRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -125,7 +125,7 @@ export class UserProfileClient {
      * @returns A promise that is resolved once the update user profile action has been performed.                         
      * @example // userProfile is a resource previously fetched using get action. 
                        userProfile.displayName = '<nick-name>'; 
-                       baasicUserProfileClient.update(userProfile)
+                       userProfileClient.update(userProfile)
                            .then(function (data) {   
                                // perform success action here 
                            },
@@ -134,7 +134,7 @@ export class UserProfileClient {
                            }); 				
     **/
     update(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicUserProfileRouteDefinition.update(data), this.baasicUserProfileRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicUserProfileRouteDefinition.update(data), this.baasicUserProfileRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -147,7 +147,7 @@ export class UserProfileClient {
      * @param data An user profile object used to delete specified user profile resource.     
      * @returns A promise that is resolved once the remove action has been performed.                        
      * @example // userProfile is a resource previously fetched using get action.				 
-                    baasicUserProfileClient.remove(userProfile)
+                    userProfileClient.remove(userProfile)
                         .then(function (data) {   
                             // perform success action here 
                         }, 
@@ -156,7 +156,7 @@ export class UserProfileClient {
                         });						
      **/
     remove(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicUserProfileRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicUserProfileRouteDefinition.delete(data));
     }
 }
 

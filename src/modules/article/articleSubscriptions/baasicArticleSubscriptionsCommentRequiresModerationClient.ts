@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicArticleSubscriptionsCommentRequiresModerationClient  
- * @description  Article Subscriptions Comment Requires Moderation Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsCommentRequiresModerationClient` uses `baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition`. 
+ * @module articleSubscriptionsCommentRequiresModerationClient  
+ * @description  Article Subscriptions Comment Requires Moderation Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentRequiresModerationClient` uses `baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,13 +19,13 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
 
     constructor(
         @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: ArticleSubscriptionsCommentRequiresModerationRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                         
      * Returns a promise that is resolved once the subscribe action has been performed.                         
      * @method                         
-     * @example baasicArticleCommentRequiresModerationClient.subscribe(data)
+     * @example articleCommentRequiresModerationClient.subscribe(data)
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -34,13 +34,13 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                         
      **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.subscribe(data), data);
     }
 
     /**                         
      * Returns a promise that is resolved once the isSubscribed action has been performed.                         
      * @method                         
-     * @example baasicArticleCommentRequiresModerationClient.isSubscribed(data)
+     * @example articleCommentRequiresModerationClient.isSubscribed(data)
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -49,13 +49,13 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                         
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.isSubscribed(data));
     }
 
     /**                         
      * Returns a promise that is commentReported once the unSubscribe action has been performed.                         
      * @method                        
-     * @example baasicArticleCommentRequiresModerationClient.unSubscribed(data)
+     * @example articleCommentRequiresModerationClient.unSubscribed(data)
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -64,6 +64,6 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                        
      **/
     unSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.unSubscribe(data));
+        return this.apiClient.delete<void>(this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition.unSubscribe(data));
     }
 }

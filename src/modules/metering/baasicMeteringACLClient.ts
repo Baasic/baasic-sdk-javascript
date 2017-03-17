@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicMeteringACLClient  
- * @description  Metering ACL Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringACLClient` uses `baasicMeteringACLRouteDefinition`. 
+ * @module meteringACLClient  
+ * @description  Metering ACL Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringACLClient` uses `baasicMeteringACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,7 +14,7 @@ export class MeteringACLClient {
 
     constructor(
         @inject(meteringTypes.MeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: MeteringACLRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
@@ -22,7 +22,7 @@ export class MeteringACLClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                            
-     * @example baasicMeteringClient.get({id: '<id>'})
+     * @example meteringClient.get({id: '<id>'})
                    .then(function (data) {   
                        // perform success action here 
                    },
@@ -31,7 +31,7 @@ export class MeteringACLClient {
                    });                     
     **/
     get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.get<IACLPolicy[]>(this.baasicMeteringACLRouteDefinition.get(options));
+        return this.apiClient.get<IACLPolicy[]>(this.baasicMeteringACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -41,7 +41,7 @@ export class MeteringACLClient {
      * @example let options = {id : '<id>'}; 
                 let aclObj =  {  actionId: '<action-id'>,  roleId: '<roleId>',  userId: '<userId>' }; 
                 options[baasicConstants.modelPropertyName] = aclObj; 
-                baasicMeteringACLClient.update(options)
+                meteringACLClient.update(options)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -50,7 +50,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicMeteringACLRouteDefinition.update(options), this.baasicMeteringACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.baasicMeteringACLRouteDefinition.update(options), this.baasicMeteringACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -66,7 +66,7 @@ export class MeteringACLClient {
      * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
      * @param data ACL Policy object used to delete specified item in the system.
      * @returns A promise that is resolved once the removeByUser action has been performed.                    
-     * @example baasicMeteringACLClient.removeByUser('<id>', '<access-action>', '<username>')
+     * @example meteringACLClient.removeByUser('<id>', '<access-action>', '<username>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -75,7 +75,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     removeByUser(id: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMeteringACLRouteDefinition.deleteByUser(id, action, user, data));
+        return this.apiClient.delete<void>(this.baasicMeteringACLRouteDefinition.deleteByUser(id, action, user, data));
     }
 
     /**                     
@@ -91,7 +91,7 @@ export class MeteringACLClient {
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
      * @param data ACL Policy object used to delete specified item in the system.
      * @returns A promise that is resolved once the removeByRole action has been performed.                   
-     * @example baasicMeteringACLClient.removeByRole('<id>', '<access-action>', '<role-name>')
+     * @example meteringACLClient.removeByRole('<id>', '<access-action>', '<role-name>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -100,7 +100,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     removeByRole(id: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMeteringACLRouteDefinition.deleteByRole(id, action, role, data));
+        return this.apiClient.delete<void>(this.baasicMeteringACLRouteDefinition.deleteByRole(id, action, role, data));
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsPublishClient  
- * @description  Notifications Publish Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsPublishClient` uses `baasicNotificationsPublishRouteDefinition`. 
+ * @module notificationsPublishClient  
+ * @description  Notifications Publish Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsPublishClient` uses `baasicNotificationsPublishRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,13 +17,13 @@ export class NotificationsPublishClient {
     }
 
     batch(): NotificationsPublishBatchClient {
-        return this.baasicNotificationsPublishBatchClient;
+        return this.notificationsPublishBatchClient;
     }
 
     constructor(
         @inject(notificationsTypes.NotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: NotificationsPublishRouteDefinition,
-        @inject(notificationsTypes.NotificationsPublishBatchClient) protected baasicNotificationsPublishBatchClient: NotificationsPublishBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(notificationsTypes.NotificationsPublishBatchClient) protected notificationsPublishBatchClient: NotificationsPublishBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                      
@@ -31,7 +31,7 @@ export class NotificationsPublishClient {
      * @method
      * @param data The notification.
      * @returns A promise that is resolved once the create notification action has been performed.                       
-     * @example baasicNotificationsPublishClient.create({     
+     * @example notificationsPublishClient.create({     
                     channels: ['<channel-name', '<channel-name>'],     
                     moduleName: '<module-name>',     
                     templateName: '<template-name>',     
@@ -48,7 +48,7 @@ export class NotificationsPublishClient {
                 });                      
      */
     create(data: INotification): PromiseLike<IHttpResponse<INotification>> {
-        return this.baasicApiClient.post<INotification>(this.baasicNotificationsPublishRouteDefinition.create(), this.baasicNotificationsPublishRouteDefinition.createParams(data));
+        return this.apiClient.post<INotification>(this.baasicNotificationsPublishRouteDefinition.create(), this.baasicNotificationsPublishRouteDefinition.createParams(data));
     }
 }
 

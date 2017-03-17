@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicApplicationSettingsClient  
- * @description  Application Settings Client provides an easy way to consume  Application Settings REST API end-points. In order to obtain needed routes `baasicApplicationSettingsClient` uses `baasicApplicationSettingsRouteDefinition`. 
+ * @module applicationSettingsClient  
+ * @description  Application Settings Client provides an easy way to consume  Application Settings REST API end-points. In order to obtain needed routes `applicationSettingsClient` uses `baasicApplicationSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -24,14 +24,14 @@ export class ApplicationSettingsClient {
 
     constructor(
         @inject(applicationTypes.ApplicationSettingsRouteDefinition) protected baasicApplicationSettingsRouteDefinition: ApplicationSettingsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the application settings resource.                 
      * @method
      * @param options Query resource options object.                        
-     * @example baasicApplicationSettingsClient.get()
+     * @example applicationSettingsClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -40,7 +40,7 @@ export class ApplicationSettingsClient {
                     });                 
      **/
     get(options: IOptions): PromiseLike<IHttpResponse<IApplication>> {
-        return this.baasicApiClient.get<IApplication>(this.baasicApplicationSettingsRouteDefinition.get(options));
+        return this.apiClient.get<IApplication>(this.baasicApplicationSettingsRouteDefinition.get(options));
     }
 
     /**                  
@@ -53,7 +53,7 @@ export class ApplicationSettingsClient {
      * @param data An application object used to update application settings of the specified application resource.                         
      * @example // appSettings is a resource previously fetched using get action. 
                     appSettings.allowAnyOrigin = true; 
-                    baasicApplicationSettingsClient.update(appSettings)
+                    applicationSettingsClient.update(appSettings)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -62,7 +62,7 @@ export class ApplicationSettingsClient {
                         }); 				
      **/
     update(data: IApplication): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicApplicationSettingsRouteDefinition.update(data), this.baasicApplicationSettingsRouteDefinition.updateParams(data));
     }
 }
 

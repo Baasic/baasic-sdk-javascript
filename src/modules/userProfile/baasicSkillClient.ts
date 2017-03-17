@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicSkillClient  
+ * @module skillClient  
  * @description  Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -18,13 +18,13 @@ export class SkillClient {
     }
 
     get batch(): SkillBatchClient {
-        return this.baasicSkillBatchClient;
+        return this.skillBatchClient;
     }
 
     constructor(
         @inject(userProfileTypes.SkillRouteDefinition) protected baasicSkillRouteDefinition: SkillRouteDefinition,
-        @inject(userProfileTypes.SkillBatchClient) protected baasicSkillBatchClient: SkillBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(userProfileTypes.SkillBatchClient) protected skillBatchClient: SkillBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -32,7 +32,7 @@ export class SkillClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicSkillClient.find({   
+     * @example skillClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -47,7 +47,7 @@ export class SkillClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ISkill>>> {
-        return this.baasicApiClient.get<IQueryModel<ISkill>>(this.baasicSkillRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ISkill>>(this.baasicSkillRouteDefinition.find(options));
     }
 
     /**                 
@@ -55,7 +55,7 @@ export class SkillClient {
      * @method
      * @param id Skill id which uniquely identifies skill resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example baasicSkillClient.get(id, options)
+     * @example skillClient.get(id, options)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -64,7 +64,7 @@ export class SkillClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ISkill>> {
-        return this.baasicApiClient.get<ISkill>(this.baasicSkillRouteDefinition.get(id, options));
+        return this.apiClient.get<ISkill>(this.baasicSkillRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -72,7 +72,7 @@ export class SkillClient {
      * @method
      * @param data A skill object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create skill action has been performed.                         
-     * @example baasicSkillClient.create({   
+     * @example skillClient.create({   
                     description : '<description>',   
                     name : '<name>',   
                     slug: '<slug>' 
@@ -85,7 +85,7 @@ export class SkillClient {
                 });                 
      **/
     create(data: ISkill): PromiseLike<IHttpResponse<ISkill>> {
-        return this.baasicApiClient.post<ISkill>(this.baasicSkillRouteDefinition.create(), this.baasicSkillRouteDefinition.createParams(data));
+        return this.apiClient.post<ISkill>(this.baasicSkillRouteDefinition.create(), this.baasicSkillRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -99,7 +99,7 @@ export class SkillClient {
      * @returns A promise that is resolved once the update skill action has been performed.                          
      * @example // skill is a resource previously fetched using get action. 
                     skill.description = '<description>'; 
-                    baasicSkillClient.update(skill)
+                    skillClient.update(skill)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -108,7 +108,7 @@ export class SkillClient {
                         }); 				       
      **/
     update(data: ISkill): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicSkillRouteDefinition.update(data), this.baasicSkillRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicSkillRouteDefinition.update(data), this.baasicSkillRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -121,7 +121,7 @@ export class SkillClient {
      * @param A skill object used to delete specified skill resource.
      * @returns A promise that is resolved once the remove action has been performed.                          
      * @example // skill is a resource previously fetched using get action.				 
-                       baasicSkillClient.remove(skill)
+                       skillClient.remove(skill)
                            .then(function (data) {   
                                // perform success action here 
                            }, 
@@ -130,6 +130,6 @@ export class SkillClient {
                            });						        
     **/
     remove(data: ISkill): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicSkillRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicSkillRouteDefinition.delete(data));
     }
 }

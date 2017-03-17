@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleFilesClient  
+ * @module articleFilesClient  
  * @description  Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -23,7 +23,7 @@ export class ArticleFilesClient {
     }
 
     get streams(): ArticleFilesStreamsClient {
-        return this.baasicArticleFilesStreamsClient;
+        return this.articleFilesStreamsClient;
     }
 
     get batch(): ArticleFilesBatchClient {
@@ -32,9 +32,9 @@ export class ArticleFilesClient {
 
     constructor(
         @inject(articleTypes.ArticleFilesRouteDefinition) protected baasicArticleFilesRouteDefinition: ArticleFilesRouteDefinition,
-        @inject(articleTypes.ArticleFilesStreamsClient) protected baasicArticleFilesStreamsClient: ArticleFilesStreamsClient,
+        @inject(articleTypes.ArticleFilesStreamsClient) protected articleFilesStreamsClient: ArticleFilesStreamsClient,
         @inject(articleTypes.ArticleFilesBatchClient) protected ArticleFilesBatchClient: ArticleFilesBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -42,7 +42,7 @@ export class ArticleFilesClient {
      * @method 
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicArticleFilesClient.find({   
+     * @example articleFilesClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -57,7 +57,7 @@ export class ArticleFilesClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleFile>>> {
-        return this.baasicApiClient.get<IQueryModel<IArticleFile>>(this.baasicArticleFilesRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticleFile>>(this.baasicArticleFilesRouteDefinition.find(options));
     }
 
     /**                 
@@ -66,7 +66,7 @@ export class ArticleFilesClient {
      * @param id Article file id which uniquely identifies article resource that needs to be retrieved.                       
      * @param options Options object that contains embed data.
      * @returns A promise that is resolved once the get action has been performed. 
-     * @example baasicArticleFilesClient.get('<file-id>')
+     * @example articleFilesClient.get('<file-id>')
                    .then(function (data) {   
                        // perform success action here 
                    },
@@ -75,7 +75,7 @@ export class ArticleFilesClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.baasicApiClient.get(this.baasicArticleFilesRouteDefinition.get(id, options));
+        return this.apiClient.get(this.baasicArticleFilesRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class ArticleFilesClient {
         if (!options) {
             options = {};
         }
-        return this.baasicApiClient.delete<void>(this.baasicArticleFilesRouteDefinition.unlink(data, options));
+        return this.apiClient.delete<void>(this.baasicArticleFilesRouteDefinition.unlink(data, options));
     }
 
     /**                  
@@ -115,7 +115,7 @@ export class ArticleFilesClient {
      * @returns A promise that is resolved once the update file action has been performed.                          
      * @example // fileEntry is a file resource previously fetched using get action. 
                    fileEntry.description = '<description>'; 
-                   baasicArticleFilesClient.update(fileEntry)
+                   articleFilesClient.update(fileEntry)
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -124,7 +124,7 @@ export class ArticleFilesClient {
                        }); 				
     **/
     update(data: IArticleFile): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleFilesRouteDefinition.update(data), this.baasicArticleFilesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleFilesRouteDefinition.update(data), this.baasicArticleFilesRouteDefinition.updateParams(data));
     }
 
     /** 
@@ -132,7 +132,7 @@ export class ArticleFilesClient {
      * @method
      * @param data Article file object.
      * @returns A promise that is resolved once the link action has been performed.                          
-     * @example baasicArticleFilesClient.link(fileObject)
+     * @example articleFilesClient.link(fileObject)
                     .then(function (response, status, headers, config) {   
                         // perform success handling here 
                     },
@@ -141,7 +141,7 @@ export class ArticleFilesClient {
                     });                 
      **/
     link(data: IArticleFile): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.baasicApiClient.post(this.baasicArticleFilesRouteDefinition.link(), this.baasicArticleFilesRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicArticleFilesRouteDefinition.link(), this.baasicArticleFilesRouteDefinition.createParams(data));
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module baasicArticleTagsDefinition  
- * @description  Article Tags Definition provides an easy way to consume  Article Tags REST API end-points. `baasicArticleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
+ * @description  Article Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
@@ -22,13 +22,13 @@ export class ArticleTagsClient {
     }
 
     get subscriptions(): ArticleTagsSubscriptionsClient {
-        return this.baasicArticleTagsSubscriptionsClient;
+        return this.articleTagsSubscriptionsClient;
     }
 
     constructor(
         @inject(articleTypes.ArticleTagsRouteDefinition) protected baasicArticleTagsRouteDefinition: ArticleTagsRouteDefinition,
-        @inject(articleTypes.ArticleTagsSubscriptionsClient) protected baasicArticleTagsSubscriptionsClient: ArticleTagsSubscriptionsClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(articleTypes.ArticleTagsSubscriptionsClient) protected articleTagsSubscriptionsClient: ArticleTagsSubscriptionsClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                 
@@ -36,7 +36,7 @@ export class ArticleTagsClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicArticleTagsClient.find({  
+     * @example articleTagsClient.find({  
                     pageNumber : 1,  
                     pageSize : 10, 
                     orderBy : '<field>',  
@@ -51,7 +51,7 @@ export class ArticleTagsClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleTag>>> {
-        return this.baasicApiClient.get<IQueryModel<IArticleTag>>(this.baasicArticleTagsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticleTag>>(this.baasicArticleTagsRouteDefinition.find(options));
     }
 
     /**                 
@@ -60,7 +60,7 @@ export class ArticleTagsClient {
      * @param id Article tag id or slug that uniquely identifies article tag resource that needs to be retrieved.
      * @param options Options object that contains embed data.
      * @returns A promise that is resolved once the get action has been performed. 
-     * @example baasicArticleTagsClient.get('<articleTag-id>')
+     * @example articleTagsClient.get('<articleTag-id>')
                    .then(function (data) {  
                        // perform success action here 
                    },
@@ -69,7 +69,7 @@ export class ArticleTagsClient {
                    });                
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.baasicApiClient.get<IArticleTag>(this.baasicArticleTagsRouteDefinition.get(id, options));
+        return this.apiClient.get<IArticleTag>(this.baasicArticleTagsRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -83,7 +83,7 @@ export class ArticleTagsClient {
      * @returns A promise that is resolved once the update article tag action has been performed.                           
      * @example // articleTag is a resource previously fetched using get action. 
                     articleTag.tag = '<new-tag>'; 
-                    baasicArticleTagsClient.update(articleTag)
+                    articleTagsClient.update(articleTag)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -92,7 +92,7 @@ export class ArticleTagsClient {
                         });                
      **/
     update(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleTagsRouteDefinition.update(data), this.baasicArticleTagsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleTagsRouteDefinition.update(data), this.baasicArticleTagsRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -105,7 +105,7 @@ export class ArticleTagsClient {
      * @param data An article tag object used to delete specified article tag resource.
      * @returns A promise that is resolved once the remove article tag action has been performed.                         
      * @example // articleTag is a resource previously fetched using get action.
-                    baasicArticleTagsClient.remove(articleTag)
+                    articleTagsClient.remove(articleTag)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -114,7 +114,7 @@ export class ArticleTagsClient {
                         });						
      **/
     remove(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleTagsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicArticleTagsRouteDefinition.delete(data));
     }
 }
 

@@ -1,6 +1,6 @@
 /**  
- * @module baasicDynamicResourceClient  
- * @description  Dynamic Resource Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `baasicDynamicResourceClient` uses `baasicDynamicResourceRouteDefinition`. 
+ * @module dynamicResourceClient  
+ * @description  Dynamic Resource Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceClient` uses `baasicDynamicResourceRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -20,25 +20,25 @@ export class DynamicResourceClient {
     /**                 
      * Provides direct access to `baasicDynamicResourceRouteDefinition`.                 
      * @method                        
-     * @example baasicDynamicResourceClient.routeDefinition.get(schemaName, id, options)                 
+     * @example dynamicResourceClient.routeDefinition.get(schemaName, id, options)                 
      **/
     get routeDefinition(): DynamicResourceRouteDefinition {
         return this.baasicDynamicResourceRouteDefinition;
     }
 
     get acl(): DynamicResourceACLClient {
-        return this.baasicDynamicResourceACLClient;
+        return this.dynamicResourceACLClient;
     }
 
     get schema(): DynamicSchemaClient {
-        return this.baasicDynamicSchemaClient;
+        return this.dynamicSchemaClient;
     }
 
     constructor(
         @inject(dynamicResourceTypes.DynamicResourceRouteDefinition) protected baasicDynamicResourceRouteDefinition: DynamicResourceRouteDefinition,
-        @inject(dynamicResourceTypes.DynamicResourceACLClient) protected baasicDynamicResourceACLClient: DynamicResourceACLClient,
-        @inject(dynamicResourceTypes.DynamicSchemaClient) protected baasicDynamicSchemaClient: DynamicSchemaClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(dynamicResourceTypes.DynamicResourceACLClient) protected dynamicResourceACLClient: DynamicResourceACLClient,
+        @inject(dynamicResourceTypes.DynamicSchemaClient) protected dynamicSchemaClient: DynamicSchemaClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -47,7 +47,7 @@ export class DynamicResourceClient {
      * @param schemaName Name of dynamic resource schema whose dynamic resources need to be retrieved.
      * @param options Query resource options object.
      * @returns Promise that is resolved once the find action has been performed.               
-     * @example baasicDynamicResourceClient.find('<schema-name>', {   
+     * @example dynamicResourceClient.find('<schema-name>', {   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -62,13 +62,13 @@ export class DynamicResourceClient {
                 });                    
      **/
     find(schemaName: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IDynamicObject>>> {
-        return this.baasicApiClient.get<IQueryModel<IDynamicObject>>(this.baasicDynamicResourceRouteDefinition.find(schemaName, options));
+        return this.apiClient.get<IQueryModel<IDynamicObject>>(this.baasicDynamicResourceRouteDefinition.find(schemaName, options));
     }
 
     /**                  
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified dynamic resource.                  
      * @method                         
-     * @example baasicDynamicResourceClient.get('<schema-name>', '<dynamic-resource-id>')
+     * @example dynamicResourceClient.get('<schema-name>', '<dynamic-resource-id>')
                     .then(function (data) {   
                         // perform success action here 
                     }, 
@@ -77,7 +77,7 @@ export class DynamicResourceClient {
                     });                 
      **/
     get(schemaName: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IDynamicObject>> {
-        return this.baasicApiClient.get<IDynamicObject>(this.baasicDynamicResourceRouteDefinition.get(id, schemaName, options));
+        return this.apiClient.get<IDynamicObject>(this.baasicDynamicResourceRouteDefinition.get(id, schemaName, options));
     }
 
     /**                  
@@ -85,7 +85,7 @@ export class DynamicResourceClient {
      * @method
      * @param schemaName Name of dynamic resource schema that needs to be updated with new dynamic resource.
      * @param data A JSON object that needs to be inserted into the system as dynamic resource. JSON object is an unordered collection of zero or more key/value pairs structured using the standard JSON syntax rules.                         
-     * @example baasicDynamicResourceClient.create('<schema-name>', {   
+     * @example dynamicResourceClient.create('<schema-name>', {   
                     id : '',   
                     description : '<description>'  
                 })
@@ -97,7 +97,7 @@ export class DynamicResourceClient {
                 });                  
      **/
     create(schemaName: string, data: any): PromiseLike<IHttpResponse<IDynamicObject>> {
-        return this.baasicApiClient.post<IDynamicObject>(this.baasicDynamicResourceRouteDefinition.create(schemaName, data), this.baasicDynamicResourceRouteDefinition.createParams(schemaName, data));
+        return this.apiClient.post<IDynamicObject>(this.baasicDynamicResourceRouteDefinition.create(schemaName, data), this.baasicDynamicResourceRouteDefinition.createParams(schemaName, data));
     }
 
     /**                  
@@ -111,7 +111,7 @@ export class DynamicResourceClient {
      * @param options Options object.                        
      * @example // dynamicResource is a resource previously fetched using get action. 
                     dynamicResource.description = '<description>'; 
-                    baasicDynamicResourceClient.update(dynamicResource, {   
+                    dynamicResourceClient.update(dynamicResource, {   
                         query: "where field = 'value' " 
                     })
                     .then(function (data) {   
@@ -122,7 +122,7 @@ export class DynamicResourceClient {
                     }); 				
      **/
     update(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicDynamicResourceRouteDefinition.update(data, options), this.baasicDynamicResourceRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicDynamicResourceRouteDefinition.update(data, options), this.baasicDynamicResourceRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -137,7 +137,7 @@ export class DynamicResourceClient {
      * @example // dynamicResource is a resource previously fetched using get action. 
                     dynamicResource.description = '<new-description>'; 
                     dynamicResource.newField = '<newfield-value>'; 
-                    baasicDynamicResourceClient.patch(dynamicResource, {   
+                    dynamicResourceClient.patch(dynamicResource, {   
                         query: "where field = 'value' " 
                     })
                     .then(function (data) {   
@@ -149,7 +149,7 @@ export class DynamicResourceClient {
                     }); 				
      **/
     patch(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.patch<void>(this.baasicDynamicResourceRouteDefinition.patch(data, options), this.baasicDynamicResourceRouteDefinition.updateParams(data));
+        return this.apiClient.patch<void>(this.baasicDynamicResourceRouteDefinition.patch(data, options), this.baasicDynamicResourceRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -161,7 +161,7 @@ export class DynamicResourceClient {
      * @method
      * @param data JSON object used to delete specified dynamic resource. JSON object is an unordered collection of zero or more key/value pairs structured using the standard JSON syntax rules.                         
      * @example // dynamicResource is a resource previously fetched using get action.				 
-                    baasicDynamicResourceClient.remove(dynamicResource, {   
+                    dynamicResourceClient.remove(dynamicResource, {   
                         query: "where field = 'value' " 
                     })
                     .then(function (data) {   
@@ -172,6 +172,6 @@ export class DynamicResourceClient {
                     });						
      **/
     remove(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicDynamicResourceRouteDefinition.delete(data, options));
+        return this.apiClient.delete<void>(this.baasicDynamicResourceRouteDefinition.delete(data, options));
     }
 }

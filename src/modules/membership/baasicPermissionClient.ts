@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicPermissionClient  
- * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `baasicPermissionClient` uses `baasicPermissionRouteDefinition`. 
+ * @module permissionClient  
+ * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `permissionClient` uses `baasicPermissionRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -21,7 +21,7 @@ export class PermissionClient {
     /**                 
      * Provides direct access to `baasicPermissionRouteDefinition`.                 
      * @method                        
-     * @example baasicPermissionClient.routeDefinition.get().expand(expandObject);                 
+     * @example permissionClient.routeDefinition.get().expand(expandObject);                 
      **/
     get routeDefinition(): PermissionRouteDefinition {
         return this.baasicPermissionRouteDefinition;
@@ -29,7 +29,7 @@ export class PermissionClient {
 
     constructor(
         @inject(membershipTypes.PermissionRouteDefinition) protected baasicPermissionRouteDefinition: PermissionRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(coreTYPES.IBaasicApp) private application: IBaasicApp
     ) { }
 
@@ -38,7 +38,7 @@ export class PermissionClient {
      * @method
      * @param options Query resource options object. 
      * @returns A promise that is resolved once the find action has beend performed.                            
-     * @example baasicPermissionClient.find({   
+     * @example permissionClient.find({   
                     section : '<access-section>',   
                     search : '<search-phrase>' 
                 })
@@ -50,14 +50,14 @@ export class PermissionClient {
                 });                     
      **/
     find(section: string, options?: any): PromiseLike<IHttpResponse<IAccessPolicy[]>> {
-        return this.baasicApiClient.get<IAccessPolicy[]>(this.baasicPermissionRouteDefinition.find(section, options));
+        return this.apiClient.get<IAccessPolicy[]>(this.baasicPermissionRouteDefinition.find(section, options));
     }
 
     /**
     * Returns a promise that is resolved once the getActions action has been performed. Success response returns a list of access policies that match the specified search parameters.
     * @method        
     * @example 
-            baasicPermissionClient.getActions({
+            permissionClient.getActions({
             search : '<search-phrase>'
             })
             .success(function (collection) {
@@ -68,14 +68,14 @@ export class PermissionClient {
             });    
     **/
     getActions(options?: any): PromiseLike<IHttpResponse<IAccessAction[]>> {
-        return this.baasicApiClient.get<IAccessAction[]>(this.baasicPermissionRouteDefinition.getActions(options));
+        return this.apiClient.get<IAccessAction[]>(this.baasicPermissionRouteDefinition.getActions(options));
     }
 
     /**
     * Returns a promise that is resolved once the getPermissionSubjects action has been performed. Success response returns a list of matching user and role resources.
     * @method        
     * @example 
-            baasicPermissionClient.getPermissionSubjects({
+            permissionClient.getPermissionSubjects({
             orderBy : '<field>',
             orderDirection : '<asc|desc>',
             search : '<search-phrase>'
@@ -135,7 +135,7 @@ export class PermissionClient {
      * @method        
      * @example 
             // readAction and updateActions are resources previously fetched using getActions.
-            baasicPermissionClient.create({
+            permissionClient.create({
             actions : [readAction, updateAction],
             section : '<section-name>',
             userName : '<userName>'
@@ -148,14 +148,14 @@ export class PermissionClient {
             });
     **/
     create(data: IAccessPolicy): PromiseLike<IHttpResponse<IAccessPolicy[]>> {
-        return this.baasicApiClient.post<IAccessPolicy[]>(this.baasicPermissionRouteDefinition.create(), data);
+        return this.apiClient.post<IAccessPolicy[]>(this.baasicPermissionRouteDefinition.create(), data);
     }
     /**
     * Returns a promise that is resolved once the remove action has been performed. If the action is successfully complete, an access policy assigned to the specified role and section will be removed. 
     * @method        
     * @example 
             // permission is a resource previously fetched using get action.				 
-            baasicPermissionClient.remove(permission)
+            permissionClient.remove(permission)
             .success(function (data) {
             // perform success action here
             })
@@ -164,21 +164,21 @@ export class PermissionClient {
             });		
    **/
     remove(data: IAccessPolicy): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicPermissionRouteDefinition.remove(data));
+        return this.apiClient.delete(this.baasicPermissionRouteDefinition.remove(data));
     }
     /**
     * Creates a new in-memory permission object.
     * @method        
     * @example 
-            // action collection are lookup items fetched using baasicLookupClient.get action.
+            // action collection are lookup items fetched using lookupClient.get action.
             var actionCollection;
-            return baasicLookupClient.get()
+            return lookupClient.get()
             .success(function (data) {
             actionCollection = data;
             })
             .error(function (data, status, headers, config) {});
-            // subjectItem is an item fetched using baasicPermissionClient.getPermissionSubjects action.
-            baasicPermissionClient.createPermission('<section-Name>', actionCollection, subjectItem);
+            // subjectItem is an item fetched using permissionClient.getPermissionSubjects action.
+            permissionClient.createPermission('<section-Name>', actionCollection, subjectItem);
    **/
     createPermission(section: string, actions: IAccessAction[], membershipItem: any): any {
         var permission = {
@@ -201,7 +201,7 @@ export class PermissionClient {
     /**
     * Finds a permission in a given permission collection.
     * @method        
-    * @example baasicPermissionClient.findPermission(permissionObj, permissionCollection);
+    * @example permissionClient.findPermission(permissionObj, permissionCollection);
    **/
     findPermission(permission, permissionCollection) {
         for (var i = 0; i < permissionCollection.length; i++) {
@@ -218,7 +218,7 @@ export class PermissionClient {
     /**
     * Checks if a permission object exists in a given permission collection.
     * @method        
-    * @example baasicPermissionClient.exists(permissionObj, permissionCollection);
+    * @example permissionClient.exists(permissionObj, permissionCollection);
    **/
     exists(permission, permissionCollection) {
         return this.findPermission(permission, permissionCollection) !== undefined;
@@ -226,7 +226,7 @@ export class PermissionClient {
     /**
     * Returns a promise that is resolved once the togglePermission action has been completed. The action will internally either call a `remove` or `create` action based on given criteria.
     * @method        
-    * @example baasicPermissionClient.togglePermission(permissionObj, action);
+    * @example permissionClient.togglePermission(permissionObj, action);
     **/
     togglePermission(permission, action) {
         var requestPermission = {
@@ -246,7 +246,7 @@ export class PermissionClient {
     /**
     * Fetches and returns and object containing all existing module permissions.
     * @method        
-    * @example baasicPermissionClient.getModulePermissions('<section-name>');
+    * @example permissionClient.getModulePermissions('<section-name>');
     **/
     getModulePermissions(section) {
         var permission = {
@@ -318,11 +318,11 @@ export class PermissionClient {
     }
 
     private getRoles(options): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
-        return this.baasicApiClient.get(this.baasicPermissionRouteDefinition.getRoles(options));
+        return this.apiClient.get(this.baasicPermissionRouteDefinition.getRoles(options));
     }
 
     private getUsers(options): PromiseLike<IHttpResponse<IQueryModel<IUserInfo>>> {
-        return this.baasicApiClient.get(this.baasicPermissionRouteDefinition.getUsers(options));
+        return this.apiClient.get(this.baasicPermissionRouteDefinition.getUsers(options));
     }
 
     private firstCharToLowerCase(text) {

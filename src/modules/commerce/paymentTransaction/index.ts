@@ -1,2 +1,2 @@
 export * from './baasicCommercePaymentTransactionRouteDefinition';
-export * from './baasicCommercePaymentTransactionClient';
+export * from './commercePaymentTransactionClient';

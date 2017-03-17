@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceClient  
- * @description  Commerce Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceClient` uses `baasicCommerceRouteDefinition`. 
+ * @module commerceClient  
+ * @description  Commerce Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceClient` uses `baasicCommerceRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -21,19 +21,19 @@ import {
 export class CommerceClient {
 
     get customers(): CommerceCustomerClient {
-        return this.baasicCommerceCustomerClient;
+        return this.commerceCustomerClient;
     }
 
     get invoices(): CommerceInvoiceClient {
-        return this.baasicCommerceInvoiceClient;
+        return this.commerceInvoiceClient;
     }
 
     get products(): CommerceProductClient {
-        return this.baasicCommerceProductClient;
+        return this.commerceProductClient;
     }
 
     get paymentTransactions(): CommercePaymentTransactionClient {
-        return this.baasicCommercePaymentTransactionClient;
+        return this.commercePaymentTransactionClient;
     }
 
     get lookups(): Lookups {
@@ -45,19 +45,19 @@ export class CommerceClient {
     }
 
     constructor(
-        @inject(commerceTypes.CommerceCustomerClient) protected baasicCommerceCustomerClient: CommerceCustomerClient,
-        @inject(commerceTypes.CommerceInvoiceClient) protected baasicCommerceInvoiceClient: CommerceInvoiceClient,
-        @inject(commerceTypes.CommerceProductClient) protected baasicCommerceProductClient: CommerceProductClient,
-        @inject(commerceTypes.CommercePaymentTransactionClient) protected baasicCommercePaymentTransactionClient: CommercePaymentTransactionClient,
+        @inject(commerceTypes.CommerceCustomerClient) protected commerceCustomerClient: CommerceCustomerClient,
+        @inject(commerceTypes.CommerceInvoiceClient) protected commerceInvoiceClient: CommerceInvoiceClient,
+        @inject(commerceTypes.CommerceProductClient) protected commerceProductClient: CommerceProductClient,
+        @inject(commerceTypes.CommercePaymentTransactionClient) protected commercePaymentTransactionClient: CommercePaymentTransactionClient,
         @inject(commerceTypes.Lookups) protected lookup: Lookups,
         @inject(commerceTypes.CommerceRouteDefinition) protected baasicCommerceRouteDefinition: CommerceRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceClient.find({   
+     * @example commerceClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -72,13 +72,13 @@ export class CommerceClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.baasicApiClient.get(this.baasicCommerceRouteDefinition.find(options));
+        return this.apiClient.get(this.baasicCommerceRouteDefinition.find(options));
     }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceClient.get('<id>', {})
+     * @example commerceClient.get('<id>', {})
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -87,13 +87,13 @@ export class CommerceClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicCommerceRouteDefinition.get(id, options));
+        return this.apiClient.get(this.baasicCommerceRouteDefinition.get(id, options));
     }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceClient.validateVAT({ countryCode: 'DE', vatId: 'DE999999999' })
+     * @example commerceClient.validateVAT({ countryCode: 'DE', vatId: 'DE999999999' })
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -102,13 +102,13 @@ export class CommerceClient {
                     });                 
      **/
     validateVAT(countryCode: string, vatId: string): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicCommerceRouteDefinition.validateVAT(countryCode, vatId));
+        return this.apiClient.get(this.baasicCommerceRouteDefinition.validateVAT(countryCode, vatId));
     }
 
     /**                  
      * Returns a promise that is resolved once the subscribe pre-process commerce action has been performed; this action performes pre-subscribe operations such as getting client tokens etc.                  
      * @method                         
-     * @example baasicCommerceClient.preprocess({   
+     * @example commerceClient.preprocess({   
                     systemName : '<system-name>',   
                     productId : '<product-id>',   
                     customerId: '<id>' 
@@ -121,13 +121,13 @@ export class CommerceClient {
                 });                  
      **/
     preprocess(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceRouteDefinition.preprocess(), this.baasicCommerceRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicCommerceRouteDefinition.preprocess(), this.baasicCommerceRouteDefinition.createParams(data));
     }
 
     /**                  
      * Returns a promise that is resolved once the subscribe commerce action has been performed; this action creates a new commerce subscription resource.                  
      * @method                         
-     * @example baasicCommerceClient.subscribe({   
+     * @example commerceClient.subscribe({   
                     systemName : '<system-name>',  
                     productId : '<product-id>',   
                     customer: {     
@@ -144,13 +144,13 @@ export class CommerceClient {
                 });                  
      **/
     subscribe(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceRouteDefinition.subscribe(), this.baasicCommerceRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicCommerceRouteDefinition.subscribe(), this.baasicCommerceRouteDefinition.createParams(data));
     }
 
     /**                  
      * Returns a promise that is resolved once the cancel subscription action has been performed. This action will remove a commerce subscription resource from the system if successfully completed. This route obtain routes from `baasicCommerceRouteDefinition` route template. Here is an example of how execute this action:                  
      * @method                         
-     * @example	baasicCommerceClient.cancel({   
+     * @example	commerceClient.cancel({   
                     systemName: '<system-name>',   
                     id: '<subscription-id>',   
                     requestRefund: <true/false>,   
@@ -164,7 +164,7 @@ export class CommerceClient {
                 });						
      **/
     cancel(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCommerceRouteDefinition.cancel(data));
+        return this.apiClient.delete<void>(this.baasicCommerceRouteDefinition.cancel(data));
     }
 }
 

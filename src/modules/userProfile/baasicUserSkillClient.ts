@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserSkillClient  
+ * @module userSkillClient  
  * @description  User Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 
@@ -19,7 +19,7 @@ export class UserSkillClient {
 
     constructor(
         @inject(userProfileTypes.UserSkillRouteDefinition) protected baasicUserSkillRouteDefinition: UserSkillRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -27,7 +27,7 @@ export class UserSkillClient {
      * @method 
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicUserSkillClient.find({   
+     * @example userSkillClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -42,7 +42,7 @@ export class UserSkillClient {
                 });                    
      **/
     find(options: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserSkill>>> {
-        return this.baasicApiClient.get<IQueryModel<IUserSkill>>(this.baasicUserSkillRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserSkill>>(this.baasicUserSkillRouteDefinition.find(options));
     }
 
     /**                 
@@ -51,7 +51,7 @@ export class UserSkillClient {
      * @param id User profile id or display name which uniquely identifies user profile whose skill resources need to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                        
-     * @example baasicUserSkillClient.get()
+     * @example userSkillClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     }, 
@@ -60,7 +60,7 @@ export class UserSkillClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserSkill>> {
-        return this.baasicApiClient.get<IUserSkill>(this.baasicUserSkillRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserSkill>(this.baasicUserSkillRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -68,7 +68,7 @@ export class UserSkillClient {
      * @method 
      * @param data An user skill object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create user skill action has been performed.                       
-     * @example baasicUserSkillClient.create({ skillName : '<skill-name>', userId: '<user-id>' })
+     * @example userSkillClient.create({ skillName : '<skill-name>', userId: '<user-id>' })
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -77,7 +77,7 @@ export class UserSkillClient {
                     });                 
      **/
     create(data: IUserSkill): PromiseLike<IHttpResponse<IUserSkill>> {
-        return this.baasicApiClient.post<IUserSkill>(this.baasicUserSkillRouteDefinition.create(data), this.baasicUserSkillRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSkill>(this.baasicUserSkillRouteDefinition.create(data), this.baasicUserSkillRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -91,7 +91,7 @@ export class UserSkillClient {
      * @returns A promise that is resolved once the update user skill action has been performed.
      * @example // skill is a resource previously fetched using get action. 
                        skill.description = '<description>'; 
-                       baasicUserSkillClient.update(skill)
+                       userSkillClient.update(skill)
                            .then(function (data) {   
                                // perform success action here 
                            },
@@ -100,7 +100,7 @@ export class UserSkillClient {
                            }); 				        
     **/
     update(data: IUserSkill): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicUserSkillRouteDefinition.update(data), this.baasicUserSkillRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicUserSkillRouteDefinition.update(data), this.baasicUserSkillRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -113,7 +113,7 @@ export class UserSkillClient {
      * @param data An user skill object used to delete specific user skill resource in the system.
      * @returns A promise that is resolved once the remove action has been performed.                          
      * @example // skill is a resource previously fetched using get action.				 
-                    baasicUserSkillClient.remove(skill)
+                    userSkillClient.remove(skill)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -122,7 +122,7 @@ export class UserSkillClient {
                         });						        
      **/
     remove(data: IUserSkill): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicUserSkillRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicUserSkillRouteDefinition.delete(data));
     }
 }
 

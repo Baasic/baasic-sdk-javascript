@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicCompanyClient  
+ * @module companyClient  
  * @description  Company Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -18,13 +18,13 @@ export class CompanyClient {
     }
 
     get batch(): CompanyBatchClient {
-        return this.baasicCompanyBatchClient;
+        return this.companyBatchClient;
     }
 
     constructor(
-        @inject(userProfileTypes.CompanyBatchClient) protected baasicCompanyBatchClient: CompanyBatchClient,
+        @inject(userProfileTypes.CompanyBatchClient) protected companyBatchClient: CompanyBatchClient,
         @inject(userProfileTypes.CompanyRouteDefinition) protected baasicCompanyRouteDefinition: CompanyRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -32,7 +32,7 @@ export class CompanyClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                      
-     * @example baasicCompanyClient.find({   
+     * @example companyClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -47,7 +47,7 @@ export class CompanyClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ICompany>>> {
-        return this.baasicApiClient.get<IQueryModel<ICompany>>(this.baasicCompanyRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ICompany>>(this.baasicCompanyRouteDefinition.find(options));
     }
 
     /**                 
@@ -56,7 +56,7 @@ export class CompanyClient {
      * @param id Company id which uniquely identifies resource that needs to be retrieved.
      * @returns A promise that is resolved once the get action has been performed.
      * @param options Query resource options object.                        
-     * @example baasicCompanyClient.get()
+     * @example companyClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -65,7 +65,7 @@ export class CompanyClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICompany>> {
-        return this.baasicApiClient.get<ICompany>(this.baasicCompanyRouteDefinition.get(id, options));
+        return this.apiClient.get<ICompany>(this.baasicCompanyRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -73,7 +73,7 @@ export class CompanyClient {
      * @method
      * @param data A company object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create company action has been performed.                         
-     * @example baasicCompanyClient.create({   
+     * @example companyClient.create({   
                     description : '<description>',   
                     name : '<name>',   
                     slug: '<slug>' 
@@ -86,7 +86,7 @@ export class CompanyClient {
                 });                 
      **/
     create(data: ICompany): PromiseLike<IHttpResponse<ICompany>> {
-        return this.baasicApiClient.post<ICompany>(this.baasicCompanyRouteDefinition.create(), this.baasicCompanyRouteDefinition.createParams(data));
+        return this.apiClient.post<ICompany>(this.baasicCompanyRouteDefinition.create(), this.baasicCompanyRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -109,7 +109,7 @@ export class CompanyClient {
                         }); 				        
      **/
     update(data: ICompany): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicCompanyRouteDefinition.update(data), this.baasicCompanyRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicCompanyRouteDefinition.update(data), this.baasicCompanyRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -122,7 +122,7 @@ export class CompanyClient {
      * @param data A company object used to delete specified company resource.
      * @returns A promise that is resolved once the remove action has been performed.                          
      * @example // company is a resource previously fetched using get action.				 
-                    baasicCompanyClient.remove(company)
+                    companyClient.remove(company)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -131,7 +131,7 @@ export class CompanyClient {
                     });						        
      **/
     remove(data: ICompany): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCompanyRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicCompanyRouteDefinition.delete(data));
     }
 }
 

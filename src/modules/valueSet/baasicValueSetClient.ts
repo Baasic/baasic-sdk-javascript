@@ -1,5 +1,5 @@
 /**  
- * @module baasicValueSetClient
+ * @module valueSetClient
  * @description  Value Set Client provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`. 
  */
 
@@ -14,13 +14,13 @@ export class ValueSetClient {
 
 
     get items(): ValueSetItemClient {
-        return this.baasicValueSetItemClient;
+        return this.valueSetItemClient;
     }
 
     /**
      * Provides direct access to `baasicValueSetRouteDefinition`.
      * @method
-     * @example baasicValueSetClient.routeDefinition.get().expand(expandObject);
+     * @example valueSetClient.routeDefinition.get().expand(expandObject);
     **/
     get routeDefinition(): ValueSetRouteDefinition {
         return this.baasicValueSetRouteDefinition;
@@ -28,8 +28,8 @@ export class ValueSetClient {
 
     constructor(
         @inject(valueSetTypes.ValueSetRouteDefinition) protected baasicValueSetRouteDefinition: ValueSetRouteDefinition,
-        @inject(valueSetTypes.ValueSetItemClient) protected baasicValueSetItemClient: ValueSetItemClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(valueSetTypes.ValueSetItemClient) protected valueSetItemClient: ValueSetItemClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**
@@ -37,7 +37,7 @@ export class ValueSetClient {
      * @param options query resource options object
      * @returns A promise that is resolved once the find action has beend performed.
      * @method 
-     * @example baasicValueSetClient.find({
+     * @example valueSetClient.find({
                     pageNumber: 1,
                     pageSize : 10,
                     orderBy : '<field>',
@@ -52,7 +52,7 @@ export class ValueSetClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSet>>> {
-        return this.baasicApiClient.get<IQueryModel<IValueSet>>(this.baasicValueSetRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IValueSet>>(this.baasicValueSetRouteDefinition.find(options));
     }
 
     /**
@@ -61,7 +61,7 @@ export class ValueSetClient {
      * @param options query resource options object
      * @returns A promise that is resolved once the get action has been performed.
      * @method
-     * @example baasicValueSetClient.get('<value-set-name>')
+     * @example valueSetClient.get('<value-set-name>')
                    .success(function (data) {   
                        // perform success action here 
                    })
@@ -70,7 +70,7 @@ export class ValueSetClient {
                    });
     **/
     get(setName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.baasicApiClient.get<IValueSet>(this.baasicValueSetRouteDefinition.get(setName, options));
+        return this.apiClient.get<IValueSet>(this.baasicValueSetRouteDefinition.get(setName, options));
     }
 
     /**
@@ -78,7 +78,7 @@ export class ValueSetClient {
      * @param data A key value object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create value set action has beend performed.
      * @method
-     * @example baasicValueSetClient.create({
+     * @example valueSetClient.create({
                     name: '<value-set-name>',
                     description: '<description>',
                     values: [{value: '<value>'}]
@@ -91,7 +91,7 @@ export class ValueSetClient {
                 });
      **/
     create(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.baasicApiClient.post<IValueSet>(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
+        return this.apiClient.post<IValueSet>(this.baasicValueSetRouteDefinition.create(), this.baasicValueSetRouteDefinition.createParams(data));
     }
 
     /**
@@ -105,7 +105,7 @@ export class ValueSetClient {
      * @method
      * @example // valueSet is a resource previously fetched using get action. 
                     valueSet.name = '<new-name>'; 
-                    baasicValueSetClient.update(valueSet)
+                    valueSetClient.update(valueSet)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -114,11 +114,11 @@ export class ValueSetClient {
                         });
      **/
     update(data: IValueSet): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicValueSetRouteDefinition.update(data), this.baasicValueSetRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will delete a value set resource if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicValueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will delete a value set resource if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(valueSet); 
      * let uri = params['model'].links('delete').href; 
@@ -126,7 +126,7 @@ export class ValueSetClient {
      * @param data A value set object used to delete specified value set resource.                  
      * @method                         
      * @example // valueSet is a resource previously fetched using get action.				 
-                    baasicValueSetClient.remove(valueSet)
+                    valueSetClient.remove(valueSet)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -135,7 +135,7 @@ export class ValueSetClient {
                         });						
      **/
     remove(data: IValueSet): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicValueSetRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicValueSetRouteDefinition.delete(data));
     }
 }
 

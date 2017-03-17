@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceCountryClient  
- * @description  Commerce Country Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCountryClient` uses `baasicCommerceCountryRouteDefinition`. 
+ * @module commerceCountryClient  
+ * @description  Commerce Country Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryClient` uses `baasicCommerceCountryRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,19 +17,19 @@ export class CommerceLookupsCountryClient {
     }
 
     get batch(): CommerceLookupsCountryBatchClient {
-        return this.baasicCommerceLookupsCountryBatchClient;
+        return this.commerceLookupsCountryBatchClient;
     }
 
     constructor(
         @inject(commerceTypes.CommerceLookupsCountryRouteDefinition) protected baasicCommerceLookupsCountryRouteDefinition: CommerceLookupsCountryRouteDefinition,
-        @inject(commerceTypes.CommerceLookupsCountryBatchClient) protected baasicCommerceLookupsCountryBatchClient: CommerceLookupsCountryBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(commerceTypes.CommerceLookupsCountryBatchClient) protected commerceLookupsCountryBatchClient: CommerceLookupsCountryBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceLookupsCountryClient.find({   
+     * @example commerceLookupsCountryClient.find({   
                    pageNumber : 1,   
                    pageSize : 10,   
                    orderBy : '<field>',  
@@ -44,13 +44,13 @@ export class CommerceLookupsCountryClient {
                });                     
     **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.baasicApiClient.get(this.baasicCommerceLookupsCountryRouteDefinition.find(options));
+        return this.apiClient.get(this.baasicCommerceLookupsCountryRouteDefinition.find(options));
     }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceLookupsCountryClient.get('<country-id>') 
+     * @example commerceLookupsCountryClient.get('<country-id>') 
                    .then(function (data) {   
                        // perform success action here 
                    },
@@ -59,13 +59,13 @@ export class CommerceLookupsCountryClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicCommerceLookupsCountryRouteDefinition.get(id, options));
+        return this.apiClient.get(this.baasicCommerceLookupsCountryRouteDefinition.get(id, options));
     }
 
     /**                  
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.                  
      * @method                         
-     * @example baasicCommerceLookupsCountryClient.create({    
+     * @example commerceLookupsCountryClient.create({    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
                     description: '<description>' 
@@ -78,7 +78,7 @@ export class CommerceLookupsCountryClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceLookupsCountryRouteDefinition.create(), this.baasicCommerceLookupsCountryRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicCommerceLookupsCountryRouteDefinition.create(), this.baasicCommerceLookupsCountryRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -90,7 +90,7 @@ export class CommerceLookupsCountryClient {
      * @method                         
      * @example // commerceCountry is a resource previously fetched using get action. 
                         commerceCountry.phoneCode = '<phone-code>'; 
-                        baasicCommerceLookupsCountryClient.update(commerceCountry)
+                        commerceLookupsCountryClient.update(commerceCountry)
                             .then(function (data) {   
                                 // perform success action here 
                             },
@@ -99,7 +99,7 @@ export class CommerceLookupsCountryClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicCommerceLookupsCountryRouteDefinition.update(data), this.baasicCommerceLookupsCountryRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicCommerceLookupsCountryRouteDefinition.update(data), this.baasicCommerceLookupsCountryRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -110,7 +110,7 @@ export class CommerceLookupsCountryClient {
      * ```                  
      * @method                         
      * @example // commerceCountry is a resource previously fetched using get action.				 
-                    baasicCommerceLookupsCountryClient.remove(commerceCountry) 
+                    commerceLookupsCountryClient.remove(commerceCountry) 
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -119,7 +119,7 @@ export class CommerceLookupsCountryClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCommerceLookupsCountryRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicCommerceLookupsCountryRouteDefinition.delete(data));
     }
 }
 

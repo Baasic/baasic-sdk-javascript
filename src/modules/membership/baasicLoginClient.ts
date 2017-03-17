@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicLoginClient  
- * @description  Login Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `baasicLoginClient` uses `baasicLoginRouteDefinition`. 
+ * @module loginClient  
+ * @description  Login Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `loginClient` uses `baasicLoginRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -23,13 +23,13 @@ export class LoginClient {
     constructor(
         @inject(membershipTypes.LoginRouteDefinition) protected baasicLoginRouteDefinition: LoginRouteDefinition,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
      * Returns a promise that is resolved once the login action has been performed. This action logs user into the application and success response returns the token resource.                  
      * @method                         
-     * @example baasicLoginClient.login({   
+     * @example loginClient.login({   
                     username : '<username>',   
                     password : '<password>',   
                     options : ['session', 'sliding'] 
@@ -56,8 +56,8 @@ export class LoginClient {
             password: settings.password
         });
         var self = this;
-        return this.baasicApiClient.createPromise<any>((resolve, reject) => {
-            self.baasicApiClient.post<any>(self.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
+        return this.apiClient.createPromise<any>((resolve, reject) => {
+            self.apiClient.post<any>(self.baasicLoginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
                 .then<any>(function (data) {
                     let token: IToken = {
                         token: data.data.access_token,
@@ -77,7 +77,7 @@ export class LoginClient {
     /** 				
      * Returns a promise that is resolved once the loadUserData action has been performed. This action retrieves the account information of the currently logged in user. Retrieved account information will contain permission collection which identifies access policies assigned to the user and application sections. 				
      * @method 				
-     * @example baasicLoginClient.loadUserData()
+     * @example loginClient.loadUserData()
                     .then(function (data) {   
                         // perform success actions here 
                     },
@@ -88,7 +88,7 @@ export class LoginClient {
      */
     loadUserData(data: any): IUserInfo {
         data = data || {};
-        return this.baasicApiClient.get<IUserInfo>(this.baasicLoginRouteDefinition.login(data), { 'Accept': 'application/json; charset=UTF-8' });
+        return this.apiClient.get<IUserInfo>(this.baasicLoginRouteDefinition.login(data), { 'Accept': 'application/json; charset=UTF-8' });
     }
 
     /** 				
@@ -98,7 +98,7 @@ export class LoginClient {
      * @param type Token type.
      * @returns A promise that is resolved once the logout action has been performed.  				
      * @example let token = baasicAuthorizationService.getAccessToken(); 
-                baasicLoginClient.logout(token.access_token, token.token_type)
+                loginClient.logout(token.access_token, token.token_type)
                 .then(function (data) {   
                     // perform success handling here 
                 }, function() {
@@ -112,8 +112,8 @@ export class LoginClient {
             type: type
         };
         var self = this;
-        return this.baasicApiClient.createPromise<void>((resolve, reject) => {
-            self.baasicApiClient.delete<void>(self.baasicLoginRouteDefinition.login({}), null, data)
+        return this.apiClient.createPromise<void>((resolve, reject) => {
+            self.apiClient.delete<void>(self.baasicLoginRouteDefinition.login({}), null, data)
                 .then(function (result) {
                     self.tokenHandler.store(null);
                     resolve();

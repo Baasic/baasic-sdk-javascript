@@ -1,6 +1,6 @@
 /**  
- * @module baasicKeyValueClient 
- * @description  Key Value Client provides an easy way to consume  Key Value REST API end-points. In order to obtain needed routes `baasicKeyValueClient` uses `baasicKeyValueRouteClient`. 
+ * @module keyValueClient 
+ * @description  Key Value Client provides an easy way to consume  Key Value REST API end-points. In order to obtain needed routes `keyValueClient` uses `baasicKeyValueRouteClient`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -15,7 +15,7 @@ export class KeyValueClient {
     /**
      * Provides direct access to `baasicKeyValueRouteDefinition`.
      * @method
-     * @example baasicKeyValueClient.routeDefinition.get();
+     * @example keyValueClient.routeDefinition.get();
      **/
     get routeDefinition(): KeyValueRouteDefinition {
         return this.baasicKeyValueRouteDefinition;
@@ -23,7 +23,7 @@ export class KeyValueClient {
 
     constructor(
         @inject(TYPES.KeyValueRouteDefinition) protected baasicKeyValueRouteDefinition: KeyValueRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) {
     }
 
@@ -32,7 +32,7 @@ export class KeyValueClient {
      * @param options query resource options object
      * @returns A promise that is resolved once the find action has beend performed.
      * @method
-     * @example baasicKeyValueClient.find({
+     * @example keyValueClient.find({
                  pageNumber: 1, 
                  pageSize: 10, 
                  orderBy: '<field>', 
@@ -47,7 +47,7 @@ export class KeyValueClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IKeyValue>>> {
-        return this.baasicApiClient.get(this.baasicKeyValueRouteDefinition.find(options));
+        return this.apiClient.get(this.baasicKeyValueRouteDefinition.find(options));
     }
 
     /**
@@ -56,7 +56,7 @@ export class KeyValueClient {
      * @param options query resource options object
      * @returns A promise that is resolved once the get action has beend performed.
      * @method
-     * @example baasicKeyValueClient.get('<key-value-id>')
+     * @example keyValueClient.get('<key-value-id>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -65,7 +65,7 @@ export class KeyValueClient {
                     });                  
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IKeyValue>> {
-        return this.baasicApiClient.get<IKeyValue>(this.baasicKeyValueRouteDefinition.get(id, options));
+        return this.apiClient.get<IKeyValue>(this.baasicKeyValueRouteDefinition.get(id, options));
     }
 
     /**
@@ -73,7 +73,7 @@ export class KeyValueClient {
      * @param data A key value object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create key value action has beend performed.
      * @method
-     * @example baasicKeyValueClient.create({key: '<key>', value: '<value>', })
+     * @example keyValueClient.create({key: '<key>', value: '<value>', })
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -82,7 +82,7 @@ export class KeyValueClient {
                     });
      */
     create(data: IKeyValue): PromiseLike<IHttpResponse<IKeyValue>> {
-        return this.baasicApiClient.post<IKeyValue>(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
+        return this.apiClient.post<IKeyValue>(this.baasicKeyValueRouteDefinition.create(), this.baasicKeyValueRouteDefinition.createParams(data));
     }
 
     /**
@@ -96,7 +96,7 @@ export class KeyValueClient {
      * @method
      * @example // keyValue is a resource previously fetched using get action. 
                    keyValue.value = '<new-value>'; 
-                   baasicKeyValueClient.update(keyValue)
+                   keyValueClient.update(keyValue)
                    .then(function (data) {   
                        // perform success action here 
                     },
@@ -105,7 +105,7 @@ export class KeyValueClient {
                     }); 				
      **/
     update(data: IKeyValue): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicKeyValueRouteDefinition.update(data), this.baasicKeyValueRouteDefinition.updateParams(data));
     }
 
     /**
@@ -118,7 +118,7 @@ export class KeyValueClient {
      * @returns A promise that is resolved once the remove action has been performed.          
      * @method 
      * @example // keyValue is a resource previously fetched using get action.				 
-                    baasicKeyValueClient.remove(keyValue) 
+                    keyValueClient.remove(keyValue) 
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -127,7 +127,7 @@ export class KeyValueClient {
                     });
      **/
     remove(data: IKeyValue): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
+        return this.apiClient.delete<void>(this.baasicKeyValueRouteDefinition.delete(data), this.baasicKeyValueRouteDefinition.deleteParams(data));
     }
 }
 

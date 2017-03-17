@@ -1,2 +1,2 @@
 export * from './baasicArticleInstanceTagsRouteDefinition';
-export * from './baasicArticleInstanceTagsClient';
+export * from './articleInstanceTagsClient';

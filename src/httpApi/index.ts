@@ -7,6 +7,6 @@ export * from './IHttpResponse';
 
 export * from './IHttpClient';
 
-export * from './baasicApiClient';
+export * from './apiClient';
 
 

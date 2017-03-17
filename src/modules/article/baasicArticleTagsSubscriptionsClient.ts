@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module baasicArticleTagsSubscriptionsDefinition  
- * @description  Article Tags Subscriptions Definition provides an easy way to consume  Article Tags REST API end-points. `baasicArticleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
+ * @description  Article Tags Subscriptions Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
@@ -18,13 +18,13 @@ export class ArticleTagsSubscriptionsClient {
 
     constructor(
         @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
      * Returns a promise that is resolved once the subscribe action has been performed. This action subscribes an user to the specified tag.                     
      * @method             
-     * @example baasicArticleTagsSubscriptionsClient.subscribe(tag, user) 
+     * @example articleTagsSubscriptionsClient.subscribe(tag, user) 
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -33,14 +33,14 @@ export class ArticleTagsSubscriptionsClient {
                     });                     
      **/
     subscribe(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<IArticleSubscription>> {
-        return this.baasicApiClient.post(this.baasicArticleTagsSubscriptionsRouteDefinition.subscribe(tag, data), this.baasicArticleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
+        return this.apiClient.post(this.baasicArticleTagsSubscriptionsRouteDefinition.subscribe(tag, data), this.baasicArticleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
     }
 
     /**                    
      * Returns a promise that is resolved once the isSubscribed action has been performed. This action checks if a user is subscribed to the specified tag.
      * @param                     
      * @method                     
-     * @example baasicArticleTagsSubscriptionsClient.isSubscribed(tag, user)
+     * @example articleTagsSubscriptionsClient.isSubscribed(tag, user)
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -49,7 +49,7 @@ export class ArticleTagsSubscriptionsClient {
                     });                     
      **/
     isSubscribed(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<IArticleSubscription>> {
-        return this.baasicApiClient.get(this.baasicArticleTagsSubscriptionsRouteDefinition.isSubscribed(tag, data));
+        return this.apiClient.get(this.baasicArticleTagsSubscriptionsRouteDefinition.isSubscribed(tag, data));
     }
 
     /**                     
@@ -57,7 +57,7 @@ export class ArticleTagsSubscriptionsClient {
      * @param tag tag object
      * @param data data object                     
      * @method subscriptions.unSubscribe                     
-     * @example baasicArticleTagsSubscriptionsClient.unSubscribe(tag, user)
+     * @example articleTagsSubscriptionsClient.unSubscribe(tag, user)
                    .then(function (data) { 
                        // perform success action here 
                    },
@@ -66,7 +66,7 @@ export class ArticleTagsSubscriptionsClient {
                    });                     
     **/
     unSubscribe(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleTagsSubscriptionsRouteDefinition.unSubscribe(tag, data), this.baasicArticleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
+        return this.apiClient.delete<void>(this.baasicArticleTagsSubscriptionsRouteDefinition.unSubscribe(tag, data), this.baasicArticleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
     }
 }
 

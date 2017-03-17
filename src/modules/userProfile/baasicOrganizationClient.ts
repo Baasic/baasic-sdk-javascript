@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicOrganizationClient  
+ * @module organizationClient  
  * @description  Organization Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -18,13 +18,13 @@ export class OrganizationClient {
     }
 
     get batch(): OrganizationBatchClient {
-        return this.baasicOrganizationBatchClient;
+        return this.organizationBatchClient;
     }
 
     constructor(
         @inject(userProfileTypes.OrganizationRouteDefinition) protected baasicOrganizationRouteDefinition: OrganizationRouteDefinition,
-        @inject(userProfileTypes.OrganizationBatchClient) protected baasicOrganizationBatchClient: OrganizationBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(userProfileTypes.OrganizationBatchClient) protected organizationBatchClient: OrganizationBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -32,7 +32,7 @@ export class OrganizationClient {
      * @method
      * @param options Query resource options object. 
      * @returns A promise that is resolved once the find action has been performed.                      
-     * @example baasicOrganizationClient.find({   
+     * @example organizationClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -47,7 +47,7 @@ export class OrganizationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IOrganization>>> {
-        return this.baasicApiClient.get<IQueryModel<IOrganization>>(this.baasicOrganizationRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IOrganization>>(this.baasicOrganizationRouteDefinition.find(options));
     }
 
     /**                 
@@ -56,7 +56,7 @@ export class OrganizationClient {
      * @param id Organization id which uniquely identifies resource that needs to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                       
-     * @example baasicOrganizationClient.get(id, options)
+     * @example organizationClient.get(id, options)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -65,7 +65,7 @@ export class OrganizationClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.baasicApiClient.get<IOrganization>(this.baasicOrganizationRouteDefinition.get(id, options));
+        return this.apiClient.get<IOrganization>(this.baasicOrganizationRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -73,7 +73,7 @@ export class OrganizationClient {
      * @method
      * @param data An organization object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create organization action has been performed.                          
-     * @example baasicOrganizationClient.create({   
+     * @example organizationClient.create({   
                     description : '<description>',   
                     name : '<name>',   
                     slug: '<slug>' 
@@ -86,7 +86,7 @@ export class OrganizationClient {
                 });                 
      **/
     create(data: IOrganization): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.baasicApiClient.post<IOrganization>(this.baasicOrganizationRouteDefinition.create(), this.baasicOrganizationRouteDefinition.createParams(data));
+        return this.apiClient.post<IOrganization>(this.baasicOrganizationRouteDefinition.create(), this.baasicOrganizationRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -100,7 +100,7 @@ export class OrganizationClient {
      * @returns A promise that is resolved once the update organization action has been performed.                         
      * @example // organization is a resource previously fetched using get action. 
                     organization.description = '<description>'; 
-                    baasicOrganizationClient.update(organization)
+                    organizationClient.update(organization)
                         .then(function (data) {   
                             // perform success action here 
                         }, 
@@ -109,7 +109,7 @@ export class OrganizationClient {
                         }); 				        
      **/
     update(data: IOrganization): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicOrganizationRouteDefinition.update(data), this.baasicOrganizationRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicOrganizationRouteDefinition.update(data), this.baasicOrganizationRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -122,7 +122,7 @@ export class OrganizationClient {
      * @param data An organization object used to delete specified organization resource.
      * @returns A promise that is resolved once the remove action has been performed.                         
      * @example // organization is a resource previously fetched using get action.				 
-                       baasicOrganizationClient.remove(organization)
+                       organizationClient.remove(organization)
                            .then(function (data) {   
                                // perform success action here 
                            },
@@ -131,6 +131,6 @@ export class OrganizationClient {
                            });						        
     **/
     remove(data: IOrganization): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicOrganizationRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicOrganizationRouteDefinition.delete(data));
     }
 }

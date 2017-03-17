@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicUserClient  
- * @description  User Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `baasicUserClient` uses `baasicUserRouteDefinition`. 
+ * @module userClient  
+ * @description  User Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userClient` uses `baasicUserRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -21,27 +21,27 @@ export class UserClient {
     /**                 
      * Provides direct access to `baasicUserRouteDefinition`.                 
      * @method                        
-     * @example baasicUserClient.routeDefinition.get();                 
+     * @example userClient.routeDefinition.get();                 
      **/
     get routeDefinition(): UserRouteDefinition {
         return this.baasicUserRouteDefinition;
     }
 
     get socialLogin(): UserSocialLoginClient {
-        return this.baasicUserSocialLoginClient;
+        return this.userSocialLoginClient;
     }
 
     constructor(
         @inject(membershipTypes.UserRouteDefinition) protected baasicUserRouteDefinition: UserRouteDefinition,
-        @inject(membershipTypes.UserSocialLoginClient) protected baasicUserSocialLoginClient: UserSocialLoginClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(membershipTypes.UserSocialLoginClient) protected userSocialLoginClient: UserSocialLoginClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
      * Returns a promise that is resolved once the exists action has been performed. This action checks if user exists in the application.            
      * @method
      * @param username A username which uniquely identifies an application user.                           
-     * @example baasicUserClient.exists('<username>')
+     * @example userClient.exists('<username>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -50,14 +50,14 @@ export class UserClient {
                     });                   
      **/
     exists(username: string, options?: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicUserRouteDefinition.exists(username, options));
+        return this.apiClient.get(this.baasicUserRouteDefinition.exists(username, options));
     }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user resources matching the given criteria.                  
      * @method
      * @param options Query resource options object.                         
-     * @example baasicUserClient.find({   
+     * @example userClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -72,7 +72,7 @@ export class UserClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAppUser>>> {
-        return this.baasicApiClient.get<IQueryModel<IAppUser>>(this.baasicUserRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IAppUser>>(this.baasicUserRouteDefinition.find(options));
     }
 
     /**                  
@@ -81,7 +81,7 @@ export class UserClient {
      * @param id A username or id which uniquely identifies an application user whose account information needs to be retrieved.
      * @param options Query resources options.
      * @returns A promise that is resolved once the get action has been performed.                           
-     * @example baasicUserClient.get({   
+     * @example userClient.get({   
                     username : '<username>',   
                     embed : '<embedded-resource>' 
                 })
@@ -93,7 +93,7 @@ export class UserClient {
                 });                  
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.baasicApiClient.get<IAppUser>(this.baasicUserRouteDefinition.get(id, options));
+        return this.apiClient.get<IAppUser>(this.baasicUserRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class UserClient {
      * @method
      * @param data An user object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create user action has been performed.                                        
-     * @example baasicUserClient.create({   
+     * @example userClient.create({   
                     confirmPassword : '<password>',   
                     email : '<email>',   
                     password : '<password>',   
@@ -118,7 +118,7 @@ export class UserClient {
                 });                  
      **/
     create(data: INewUser): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.baasicApiClient.post<IAppUser>(this.baasicUserRouteDefinition.create(), this.baasicUserRouteDefinition.createParams(data));
+        return this.apiClient.post<IAppUser>(this.baasicUserRouteDefinition.create(), this.baasicUserRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -133,7 +133,7 @@ export class UserClient {
      * @example // user is a resource previously fetched using get action. 
                     user.roles = ['<role-name>', '<new-role-name>']; 
                     user.email = '<new-email>'; 
-                    baasicUserClient.update(user)
+                    userClient.update(user)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -142,7 +142,7 @@ export class UserClient {
                         }); 				
      **/
     update(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserRouteDefinition.update(data), this.baasicUserRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.baasicUserRouteDefinition.update(data), this.baasicUserRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -155,7 +155,7 @@ export class UserClient {
      * @param data  A user object used to delete specified user resource.
      * @returns A promise that is resolved once the remove user action has been performed.                           
      * @example // user is a resource previously fetched using get action.				 
-                    baasicUserClient.remove(user)
+                    userClient.remove(user)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -164,7 +164,7 @@ export class UserClient {
                         });						
      **/
     remove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserRouteDefinition.delete(data));
+        return this.apiClient.delete(this.baasicUserRouteDefinition.delete(data));
     }
 
     /**                  
@@ -177,7 +177,7 @@ export class UserClient {
      * @param data A user object used to unlock specified user resource.
      * @returns A promise that is resolved once the unlock user action has been performed.                            
      * @example //  user is a resource previously fetched using get action.				 
-                        baasicUserClient.unlock(user)
+                        userClient.unlock(user)
                             .then(function (data) {   
                                 // perform success action here 
                             },
@@ -186,7 +186,7 @@ export class UserClient {
                             });						
      **/
     unlock(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserRouteDefinition.unlock(data), data);
+        return this.apiClient.put(this.baasicUserRouteDefinition.unlock(data), data);
     }
 
     /**                 
@@ -199,7 +199,7 @@ export class UserClient {
      * @param data A user object used to lock specified user resource.
      * @returns A promise that is resolved once the lock user action has been performed.                          
      * @example // user is a resource previously fetched using get action.				 
-                    baasicUserClient.lock(user)
+                    userClient.lock(user)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -208,7 +208,7 @@ export class UserClient {
                         });						
      **/
     lock(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserRouteDefinition.lock(data), data);
+        return this.apiClient.put(this.baasicUserRouteDefinition.lock(data), data);
     }
 
     /**                  
@@ -221,7 +221,7 @@ export class UserClient {
      * @param data A user object used to approve specified user resource. 
      * @returns A promise that is resolved once the approve user action has been performed.                         
      * @example // user is a resource previously fetched using get action.				 
-                    baasicUserClient.approve(user)
+                    userClient.approve(user)
                         .then(function (data) {   
                             // perform success action here 
                         })
@@ -230,7 +230,7 @@ export class UserClient {
                         });						
      **/
     approve(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserRouteDefinition.approve(data), data);
+        return this.apiClient.put(this.baasicUserRouteDefinition.approve(data), data);
     }
 
     /**                  
@@ -241,7 +241,7 @@ export class UserClient {
      * ```                  
      * @method                         
      * @example // user is a resource previously fetched using get action.				 
-                    baasicUserClient.disapprove(user).then(function (data) {   
+                    userClient.disapprove(user).then(function (data) {   
                         // perform success action here 
                     },
                      function (response, status, headers, config) {   
@@ -249,7 +249,7 @@ export class UserClient {
                     });						
      **/
     disapprove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserRouteDefinition.disapprove(data), data);
+        return this.apiClient.put(this.baasicUserRouteDefinition.disapprove(data), data);
     }
 
     /**                  
@@ -258,7 +258,7 @@ export class UserClient {
      * @param username A username or id which uniquely identifies user resource.
      * @param data A new password object used to update specified user password resource.
      * @returns A promise that is resolved once the changedPassword action has been performed.     
-     * @example baasicUserClient.changePassword('<username>', {   
+     * @example userClient.changePassword('<username>', {   
                     newPassword : '<new-password>',   
                     sendMailNotification : false 
                 })
@@ -271,7 +271,7 @@ export class UserClient {
                 .finally (function () {}); 
      **/
     changePassword(username: string, data: INewPassword): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.put(this.baasicUserRouteDefinition.changePassword(username), data);
+        return this.apiClient.put(this.baasicUserRouteDefinition.changePassword(username), data);
     }
 }
 

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicOrganizationBatchClient  
+ * @module organizationBatchClient  
  * @description  Organization Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -18,7 +18,7 @@ export class OrganizationBatchClient {
 
     constructor(
         @inject(userProfileTypes.OrganizationBatchRouteDefinition) protected baasicOrganizationBatchRouteDefinition: OrganizationBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                   
@@ -26,7 +26,7 @@ export class OrganizationBatchClient {
      * @method
      * @param data A collection of organization objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create organization action has been performed.                          
-     * @example   baasicOrganizationBatchClient.create([{     
+     * @example   organizationBatchClient.create([{     
                     description : '<description>',     
                     name : '<name>',     
                     slug: '<slug>'   
@@ -39,7 +39,7 @@ export class OrganizationBatchClient {
                    });                   
      **/
     create(data: IOrganization[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicOrganizationBatchRouteDefinition.create(), this.baasicOrganizationBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicOrganizationBatchRouteDefinition.create(), this.baasicOrganizationBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -47,7 +47,7 @@ export class OrganizationBatchClient {
      * @method
      * @param data A collection of organization objects used to update specified organization resources.
      * @returns A promise that is resolved once the update organization action has been performed.                         
-     * @example   baasicOrganizationBatchClient.update(organizations)
+     * @example   organizationBatchClient.update(organizations)
                     .then(function (data) {     
                         // perform success action here   
                     }, 
@@ -56,13 +56,13 @@ export class OrganizationBatchClient {
                     });                   
      **/
     update(data: IOrganization[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicOrganizationBatchRouteDefinition.update(), this.baasicOrganizationBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicOrganizationBatchRouteDefinition.update(), this.baasicOrganizationBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
      * Returns a promise that is resolved once the remove action has been performed. This action will remove organization resources from the system if successfully completed.                   
      * @method                         
-     * @example baasicOrganizationBatchClient.remove(organizationIds)
+     * @example organizationBatchClient.remove(organizationIds)
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -71,7 +71,7 @@ export class OrganizationBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicOrganizationBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicOrganizationBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSettingsClient  
- * @description  Notifications Settings Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSettingsClient` uses `baasicNotificationsSettingsRouteDefinition`. 
+ * @module notificationsSettingsClient  
+ * @description  Notifications Settings Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSettingsClient` uses `baasicNotificationsSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,7 +17,7 @@ export class NotificationsSettingsClient {
 
     constructor(
         @inject(notificationsTypes.NotificationsSettingsRouteDefinition) protected baasicNotificationsSettingsRouteDefinition: NotificationsSettingsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                      
@@ -25,7 +25,7 @@ export class NotificationsSettingsClient {
      * @method                            
      * @param provider The notification provider name.
      * @returns A promise that is resolved once the get action has been performed. 
-     * @example baasicNotificationsSettingsClient.get('<provider-name>')
+     * @example notificationsSettingsClient.get('<provider-name>')
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -34,7 +34,7 @@ export class NotificationsSettingsClient {
                     });                     
      */
     get(provider: string): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicNotificationsSettingsRouteDefinition.get(provider));
+        return this.apiClient.get(this.baasicNotificationsSettingsRouteDefinition.get(provider));
     }
 
     /**                      
@@ -47,7 +47,7 @@ export class NotificationsSettingsClient {
      * @param data The notification settings.
      * @returns A promise that is resolved once the update settings action has been performed.                               
      * @example // settings is a resource previously fetched using get action. 
-                    baasicNotificationsSettingsClient.update(settings) 
+                    notificationsSettingsClient.update(settings) 
                         .then(function (data) {         
                             // perform success action here 
                         },
@@ -56,7 +56,7 @@ export class NotificationsSettingsClient {
                         });                     
      */
     update(data: Object): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsSettingsRouteDefinition.update(data), this.baasicNotificationsSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsSettingsRouteDefinition.update(data), this.baasicNotificationsSettingsRouteDefinition.updateParams(data));
     }
 }
 

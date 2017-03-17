@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicArticleSettingsClient  
- * @description  Article Settings Client provides an easy way to consume  Article Settings REST API end-points. In order to obtain needed routes `baasicArticleSettingsClient` uses `baasicArticleSettingsRouteDefinition`. 
+ * @module articleSettingsClient  
+ * @description  Article Settings Client provides an easy way to consume  Article Settings REST API end-points. In order to obtain needed routes `articleSettingsClient` uses `baasicArticleSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -16,7 +16,7 @@ export class ArticleSettingsClient {
     /**                 
      * Provides direct access to `baasicArticleSettingsRouteService`.                 
      * @method                        
-     * @example baasicArticleSettingsClient.routeDefinition.get().expand(expandObject);                 
+     * @example articleSettingsClient.routeDefinition.get().expand(expandObject);                 
      **/
     get routeDefinition(): ArticleSettingsRouteDefinition {
         return this.baasicArticleSettingsRouteDefinition;
@@ -24,7 +24,7 @@ export class ArticleSettingsClient {
 
     constructor(
         @inject(articleTypes.ArticleSettingsRouteDefinition) protected baasicArticleSettingsRouteDefinition: ArticleSettingsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
 
@@ -34,7 +34,7 @@ export class ArticleSettingsClient {
      * @method
      * @param options Options object that contains embed data.
      * @returns A promise that is resolved once the get action has been performed.                          
-     * @example baasicArticleSettingsClient.get()
+     * @example articleSettingsClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -43,7 +43,7 @@ export class ArticleSettingsClient {
                     });                 
      **/
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicArticleSettingsRouteDefinition.get(options));
+        return this.apiClient.get(this.baasicArticleSettingsRouteDefinition.get(options));
     }
 
 
@@ -58,7 +58,7 @@ export class ArticleSettingsClient {
      * @returns A promise that is resolved once the update article settings action has been performed.                          
      * @example // articleSettings is a resource previously fetched using get action. 
                     articleSettings.allowArchive = true; 
-                    baasicArticleSettingsClient.update(articleSettings)
+                    articleSettingsClient.update(articleSettings)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -67,7 +67,7 @@ export class ArticleSettingsClient {
                         }); 				
      **/
     update(data: IArticleSettings): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleSettingsRouteDefinition.update(data), this.baasicArticleSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleSettingsRouteDefinition.update(data), this.baasicArticleSettingsRouteDefinition.updateParams(data));
     }
 }
 

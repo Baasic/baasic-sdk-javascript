@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicRoleClient  
- * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `baasicRoleClient` uses `baasicRoleRouteDefinition`. 
+ * @module roleClient  
+ * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `roleClient` uses `baasicRoleRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -16,7 +16,7 @@ export class RoleClient {
     /**                 
      * Provides direct access to `baasicRoleRouteDefinition`.                 
      * @method                        
-     * @example baasicRoleClient.routeDefinition.get().expand(expandObject);                 
+     * @example roleClient.routeDefinition.get().expand(expandObject);                 
      **/
     get routeDefinition(): RoleRouteDefinition {
         return this.baasicRoleRouteDefinition;
@@ -24,7 +24,7 @@ export class RoleClient {
 
     constructor(
         @inject(membershipTypes.RoleRouteDefinition) protected baasicRoleRouteDefinition: RoleRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -32,7 +32,7 @@ export class RoleClient {
      * @method
      * @param options Query resource options object. 
      * @returns A promise that is resolved once the find action has beend performed.                            
-     * @example baasicRoleClient.find({   
+     * @example roleClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -47,7 +47,7 @@ export class RoleClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
-        return this.baasicApiClient.get<IQueryModel<IRole>>(this.baasicRoleRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IRole>>(this.baasicRoleRouteDefinition.find(options));
     }
 
     /**                  
@@ -56,7 +56,7 @@ export class RoleClient {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.              
      * @method                         
-     * @example baasicRoleClient.get('<role-id>')
+     * @example roleClient.get('<role-id>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -65,7 +65,7 @@ export class RoleClient {
                     });                  
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRole>> {
-        return this.baasicApiClient.get<IRole>(this.baasicRoleRouteDefinition.get(id, options));
+        return this.apiClient.get<IRole>(this.baasicRoleRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -73,7 +73,7 @@ export class RoleClient {
      * @method
      * @param data A role object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create action has beend performed.                                  
-     * @example baasicRoleClient.create({ 
+     * @example roleClient.create({ 
                     description : '<description>',   
                     name : '<name>' 
                 })
@@ -85,11 +85,11 @@ export class RoleClient {
                 });                  
      **/
     create(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.baasicApiClient.post<IRole>(this.baasicRoleRouteDefinition.create(), this.baasicRoleRouteDefinition.createParams(data));
+        return this.apiClient.post<IRole>(this.baasicRoleRouteDefinition.create(), this.baasicRoleRouteDefinition.createParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update role action has been performed; this action updates a role. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicRoleClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update role action has been performed; this action updates a role. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `roleClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(role); 
      * let uri = params['model'].links('put').href; 
@@ -99,7 +99,7 @@ export class RoleClient {
      * @returns A promise that is resolved once the update role action has been performed.                              
      * @example // role is a resource previously fetched using get action. 
                     role.name = '<new-name>'; 
-                    baasicRoleClient.update(role)
+                    roleClient.update(role)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -108,11 +108,11 @@ export class RoleClient {
                         }); 				
      **/
     update(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.baasicApiClient.put(this.baasicRoleRouteDefinition.update(data), this.baasicRoleRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.baasicRoleRouteDefinition.update(data), this.baasicRoleRouteDefinition.updateParams(data));
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove role action has been performed. This action will remove a role from the system, if completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicRoleClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove role action has been performed. This action will remove a role from the system, if completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `roleClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(role); 
      * let uri = params['model'].links('delete').href; ```  
@@ -120,7 +120,7 @@ export class RoleClient {
      * @returns A promise that is resolved once the remove action has been performed.                
      * @method                         
      * @example // Role is a resource previously fetched using get action.				 
-                    baasicRoleClient.remove(role)
+                    roleClient.remove(role)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -129,7 +129,7 @@ export class RoleClient {
                         });						
      **/
     remove(data: IRole): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicRoleRouteDefinition.delete(data));
+        return this.apiClient.delete(this.baasicRoleRouteDefinition.delete(data));
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsRecurringCyclePeriodTypeClient  
- * @description  Commerce Lookups RecurringCyclePeriodType Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsRecurringCyclePeriodTypeClient` uses `baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition`. 
+ * @module commerceLookupsRecurringCyclePeriodTypeClient  
+ * @description  Commerce Lookups RecurringCyclePeriodType Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsRecurringCyclePeriodTypeClient` uses `baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,11 +17,11 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
     }
 
     get batch(): CommerceLookupsRecurringCyclePeriodTypeBatchClient {
-        return this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient;
+        return this.commerceLookupsRecurringCyclePeriodTypeBatchClient;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchClient) protected baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient: CommerceLookupsRecurringCyclePeriodTypeBatchClient,
+        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchClient) protected commerceLookupsRecurringCyclePeriodTypeBatchClient: CommerceLookupsRecurringCyclePeriodTypeBatchClient,
         @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeRouteDefinition) protected baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
@@ -29,7 +29,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceLookupsRecurringCyclePeriodTypeClient.find({   
+     * @example commerceLookupsRecurringCyclePeriodTypeClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',  
@@ -50,7 +50,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceLookupsRecurringCyclePeriodTypeClient.get('<recurring-cycle-period-type-id>') 
+     * @example commerceLookupsRecurringCyclePeriodTypeClient.get('<recurring-cycle-period-type-id>') 
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -71,7 +71,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
      * @method                         
      * @example // commerceRecurringPeriodType is a resource previously fetched using get action. 
                         commerceRecurringPeriodType.description = '<description>'; 
-                        baasicCommerceLookupsRecurringCyclePeriodTypeClient.update(commerceRecurringPeriodType) 
+                        commerceLookupsRecurringCyclePeriodTypeClient.update(commerceRecurringPeriodType) 
                             .then(function (data) {   
                                 // perform success action here 
                             },
@@ -86,7 +86,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
     /**                  
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.                  
      * @method                         
-     * @example baasicCommerceLookupsRecurringCyclePeriodTypeClient.create({    
+     * @example commerceLookupsRecurringCyclePeriodTypeClient.create({    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
                     description: '<description>',   
@@ -111,7 +111,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
      * ```                  
      * @method                         
      * @example // commerceRecurringPeriodType is a resource previously fetched using get action.				 
-                        baasicCommerceLookupsRecurringCyclePeriodTypeClient.remove(commerceRecurringPeriodType) 
+                        commerceLookupsRecurringCyclePeriodTypeClient.remove(commerceRecurringPeriodType) 
                             .then(function (data) {   
                                 // perform success action here 
                             },

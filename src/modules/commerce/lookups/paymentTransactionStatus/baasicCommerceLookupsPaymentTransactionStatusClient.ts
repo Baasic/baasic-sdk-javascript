@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsPaymentTransactionStatusClient  
- * @description  Commerce Lookups PaymentTransactionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsPaymentTransactionStatusClient` uses `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition`. 
+ * @module commerceLookupsPaymentTransactionStatusClient  
+ * @description  Commerce Lookups PaymentTransactionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentTransactionStatusClient` uses `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,11 +17,11 @@ export class CommerceLookupsPaymentTransactionStatusClient {
     }
 
     get batch(): CommerceLookupsPaymentTransactionStatusBatchClient {
-        return this.baasicCommerceLookupsPaymentTransactionStatusBatchClient;
+        return this.commerceLookupsPaymentTransactionStatusBatchClient;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusBatchClient) protected baasicCommerceLookupsPaymentTransactionStatusBatchClient: CommerceLookupsPaymentTransactionStatusBatchClient,
+        @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusBatchClient) protected commerceLookupsPaymentTransactionStatusBatchClient: CommerceLookupsPaymentTransactionStatusBatchClient,
         @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusRouteDefinition) protected baasicCommerceLookupsPaymentTransactionStatusRouteDefinition: CommerceLookupsPaymentTransactionStatusRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
@@ -29,7 +29,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceLookupsPaymentTransactionStatusClient.find({   
+     * @example commerceLookupsPaymentTransactionStatusClient.find({   
                         pageNumber : 1,   
                         pageSize : 10,   
                         orderBy : '<field>',   
@@ -50,7 +50,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceLookupsPaymentTransactionStatusClient.get() 
+     * @example commerceLookupsPaymentTransactionStatusClient.get() 
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -71,7 +71,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
      * @method                         
      * @example // commercePaymentTransactionStatus is a resource previously fetched using get action. 
                     commercePaymentTransactionStatus.description = '<description>'; 
-                    baasicCommerceLookupsPaymentTransactionStatusClient.update(commercePaymentTransactionStatus) 
+                    commerceLookupsPaymentTransactionStatusClient.update(commercePaymentTransactionStatus) 
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -86,7 +86,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
     /**                  
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.                  
      * @method                         
-     * @example baasicCommerceLookupsPaymentTransactionStatusClient.create({    
+     * @example commerceLookupsPaymentTransactionStatusClient.create({    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
                     description: '<description>' 
@@ -110,7 +110,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
      * ```                  
      * @method                         
      * @example // commercePaymentTransactionStatus is a resource previously fetched using get action.				 
-                        baasicCommerceLookupsPaymentTransactionStatusClient.remove(commercePaymentTransactionStatus) 
+                        commerceLookupsPaymentTransactionStatusClient.remove(commercePaymentTransactionStatus) 
                             .then(function (data) {   
                                 // perform success action here 
                             },

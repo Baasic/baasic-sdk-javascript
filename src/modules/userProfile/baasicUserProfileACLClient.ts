@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicUserProfileACLClient  
- * @description  User Profile ACL Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileACLClient` uses `baasicUserProfileACLRouteDefinition`. 
+ * @module userProfileACLClient  
+ * @description  User Profile ACL Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `userProfileACLClient` uses `baasicUserProfileACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -18,7 +18,7 @@ export class UserProfileACLClient {
 
     constructor(
         @inject(userProfileTypes.UserProfileACLRouteDefinition) protected baasicUserProfileACLRouteDefinition: UserProfileACLRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
@@ -26,7 +26,7 @@ export class UserProfileACLClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                          
-     * @example baasicUserProfileACLClient.get({id: '<profile-id>'})
+     * @example userProfileACLClient.get({id: '<profile-id>'})
                     .then(function (data) {   
                         // perform success action here 
                     }, 
@@ -35,7 +35,7 @@ export class UserProfileACLClient {
                     });                     
      **/
     get(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.get<IACLPolicy[]>(this.baasicUserProfileACLRouteDefinition.get(options));
+        return this.apiClient.get<IACLPolicy[]>(this.baasicUserProfileACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -46,7 +46,7 @@ export class UserProfileACLClient {
      * @example let options = {id : '<profile-id>'}; 
                 let aclObj =  {  actionId: '<action-id'>,  roleId: '<roleId>',  userId: '<userId>' }; 
                 options[baasicConstants.modelPropertyName] = aclObj; 
-                baasicUserProfileACLClient.update(options)
+                userProfileACLClient.update(options)
                     .then(function (data) {   
                         // perform success action here 
                     }, 
@@ -55,7 +55,7 @@ export class UserProfileACLClient {
                     }); 				    
      **/
     update(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicUserProfileACLRouteDefinition.update(options), this.baasicUserProfileACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.baasicUserProfileACLRouteDefinition.update(options), this.baasicUserProfileACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -71,7 +71,7 @@ export class UserProfileACLClient {
      * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
      * @param data ACL policy object used to delete specified ACL policy resource.
      * @returns A promise that is resolved once the removeByUser action has been performed.                         
-     * @example baasicUserProfileACLClient.removeByUser('<profile-id>', '<access-action>', '<username>')
+     * @example userProfileACLClient.removeByUser('<profile-id>', '<access-action>', '<username>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -80,7 +80,7 @@ export class UserProfileACLClient {
                     }); 				    
      **/
     removeByUser(profileId: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicUserProfileACLRouteDefinition.deleteByUser(profileId, action, user, data));
+        return this.apiClient.delete<void>(this.baasicUserProfileACLRouteDefinition.deleteByUser(profileId, action, user, data));
     }
 
     /**                     
@@ -96,7 +96,7 @@ export class UserProfileACLClient {
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
      * @param data  ACL policy object used to delete specified ACL policy resource.
      * @returns A promise that is resolved once the removeByRole action has been performed.                           
-     * @example baasicUserProfileACLClient.removeByRole('<profile-id>', '<access-action>', '<role-name>')
+     * @example userProfileACLClient.removeByRole('<profile-id>', '<access-action>', '<role-name>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -105,7 +105,7 @@ export class UserProfileACLClient {
                     }); 				    
      **/
     removeByRole(profileId: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicUserProfileACLRouteDefinition.deleteByRole(profileId, action, role, data));
+        return this.apiClient.delete<void>(this.baasicUserProfileACLRouteDefinition.deleteByRole(profileId, action, role, data));
     }
 }
 

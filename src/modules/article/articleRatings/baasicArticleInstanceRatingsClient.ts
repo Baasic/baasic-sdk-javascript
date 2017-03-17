@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicArticleSubRatingsClient  
- * @description  Article Sub Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `baasicArticleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `baasicArticleService` functions allow management between article and article rating. In order to obtain needed routes `baasicArticleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
+ * @module articleSubRatingsClient  
+ * @description  Article Sub Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `articleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `articleService` functions allow management between article and article rating. In order to obtain needed routes `articleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
 */
 
 
@@ -17,7 +17,7 @@ export class ArticleInstanceRatingsClient {
     /**                 
      * Provides direct access to `baasicArticleRatingsRouteDefinition`.                
      * @method                        
-     * @example baasicArticleInstanceRatingsClient.routeDefinition.get(id);                 
+     * @example articleInstanceRatingsClient.routeDefinition.get(id);                 
      **/
     get routeDefinition(): ArticleInstanceRatingsRouteDefinition {
         return this.baasicArticleInstanceRatingsRouteDefinition;
@@ -25,7 +25,7 @@ export class ArticleInstanceRatingsClient {
 
     constructor(
         @inject(articleTypes.ArticleInstanceRatingsRouteDefinition) protected baasicArticleInstanceRatingsRouteDefinition: ArticleInstanceRatingsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**       
@@ -33,7 +33,7 @@ export class ArticleInstanceRatingsClient {
      * @method 
      * @param data An article rating object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create article rating action has been performed.                       
-     * @example baasicArticleInstanceRatingsClient.create({ articleId : '<article-id>', rating : 5, userId : '<user-id>' })
+     * @example articleInstanceRatingsClient.create({ articleId : '<article-id>', rating : 5, userId : '<user-id>' })
                     .then(function (data) { 
                         // perform success action here 
                     },
@@ -42,7 +42,7 @@ export class ArticleInstanceRatingsClient {
                     });                   
      **/
     create(data: IRating): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.post<IRating>(this.baasicArticleInstanceRatingsRouteDefinition.create(data), this.baasicArticleInstanceRatingsRouteDefinition.createParams(data));
+        return this.apiClient.post<IRating>(this.baasicArticleInstanceRatingsRouteDefinition.create(data), this.baasicArticleInstanceRatingsRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -51,7 +51,7 @@ export class ArticleInstanceRatingsClient {
      * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                          
-     * @example baasicArticleInstanceRatingsClient.find({ 
+     * @example articleInstanceRatingsClient.find({ 
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -66,7 +66,7 @@ export class ArticleInstanceRatingsClient {
                 });                     
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.find(articleId, options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.find(articleId, options));
     }
 
     /**                  
@@ -76,7 +76,7 @@ export class ArticleInstanceRatingsClient {
      * @param username Username which uniquely identifies a user which has created an article rating.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the findByUser action has been performed.                            
-     * @example baasicArticleInstanceRatingsClient.find('<username>', {   
+     * @example articleInstanceRatingsClient.find('<username>', {   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -90,7 +90,7 @@ export class ArticleInstanceRatingsClient {
                 });                     
      **/
     findByUser(articleId: string, username: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.baasicArticleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
     }
 
     /**                  
@@ -100,7 +100,7 @@ export class ArticleInstanceRatingsClient {
      * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
      * @param options Options object that contains embed data.
      * @returns A promise that is resolved once the get action has been performed.                           
-     * @example baasicArticleInstanceRatingsClient.get('<articleRating-id>')
+     * @example articleInstanceRatingsClient.get('<articleRating-id>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -109,7 +109,7 @@ export class ArticleInstanceRatingsClient {
                     });                 
      **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.get<IRating>(this.baasicArticleInstanceRatingsRouteDefinition.get(articleId, id, options));
+        return this.apiClient.get<IRating>(this.baasicArticleInstanceRatingsRouteDefinition.get(articleId, id, options));
     }
 
     /**                  
@@ -123,7 +123,7 @@ export class ArticleInstanceRatingsClient {
      * @returns A promise that is resolved once the update article rating action has been performed.                           
      * @example // articleRating is a resource previously fetched using get action. 
                     articleRating.rating = 4; 
-                    baasicArticleInstanceRatingsClient.update(articleRating)
+                    articleInstanceRatingsClient.update(articleRating)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -132,7 +132,7 @@ export class ArticleInstanceRatingsClient {
                         }); 				
      **/
     update(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleInstanceRatingsRouteDefinition.update(data), this.baasicArticleInstanceRatingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleInstanceRatingsRouteDefinition.update(data), this.baasicArticleInstanceRatingsRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -145,7 +145,7 @@ export class ArticleInstanceRatingsClient {
      * @param data Rating resource resource that needs to be deleted.                        
      * @returns a promise that is resolved once the remove article rating action has been performed.
      * @example // articleRating is a resource previously fetched using get action.				 
-                    baasicArticleInstanceRatingsClient.remove(articleRating)
+                    articleInstanceRatingsClient.remove(articleRating)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -154,11 +154,11 @@ export class ArticleInstanceRatingsClient {
                         });						
      **/
     remove(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceRatingsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicArticleInstanceRatingsRouteDefinition.delete(data));
     }
 
     /**                     
-     * Returns a promise that is resolved once the removeAll article rating action has been performed. If the action is successfully completed, the article rating resources will be permanently removed from the system for a specified article resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleInstanceRouteClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the removeAll article rating action has been performed. If the action is successfully completed, the article rating resources will be permanently removed from the system for a specified article resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleInstanceRouteClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      *  ``` 
      * let params = modelMapper.removeParams(article); 
      * let uri = params['model'].links('delete-ratings-by-article').href; 
@@ -167,7 +167,7 @@ export class ArticleInstanceRatingsClient {
      * @param data Article object whose ratings needs to be deleted.
      * @returns A promise that is resolved once the removeAll article rating action has been performed.                     
      * @example // article is a resource previously fetched using get action.					
-                    baasicArticleInstanceRatingsClient.removeAll(article)
+                    articleInstanceRatingsClient.removeAll(article)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -176,7 +176,7 @@ export class ArticleInstanceRatingsClient {
                         });						    
      **/
     removeAll(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceRatingsRouteDefinition.deleteAll(data));
+        return this.apiClient.delete<void>(this.baasicArticleInstanceRatingsRouteDefinition.deleteAll(data));
     }
 }
 

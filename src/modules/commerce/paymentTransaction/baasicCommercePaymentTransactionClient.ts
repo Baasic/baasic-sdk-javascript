@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommercePaymentTransactionClient  
- * @description  Commerce PaymentTransaction Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommercePaymentTransactionClient` uses `baasicCommercePaymentTransactionRouteDefinition`. 
+ * @module commercePaymentTransactionClient  
+ * @description  Commerce PaymentTransaction Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionClient` uses `baasicCommercePaymentTransactionRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -24,7 +24,7 @@ export class CommercePaymentTransactionClient {
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommercePaymentTransactionClient.find({   
+     * @example commercePaymentTransactionClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -45,7 +45,7 @@ export class CommercePaymentTransactionClient {
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommercePaymentTransactionClient.get()
+     * @example commercePaymentTransactionClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -60,7 +60,7 @@ export class CommercePaymentTransactionClient {
     /**                 
      * Returns a promise that is resolved once the create action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommercePaymentTransactionClient.create(data)
+     * @example commercePaymentTransactionClient.create(data)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -81,7 +81,7 @@ export class CommercePaymentTransactionClient {
      * @method                         
      * @example // commercePaymentTransaction is a resource previously fetched using get action. 
                         commercePaymentTransaction.amount : 100; 
-                        baasicCommercePaymentTransactionClient.update(commercePaymentTransaction)
+                        commercePaymentTransactionClient.update(commercePaymentTransaction)
                             .then(function (data) {   
                                 // perform success action here 
                             },
@@ -101,7 +101,7 @@ export class CommercePaymentTransactionClient {
      * ```                  
      * @method                         
      * @example // commercePaymentTransaction is a resource previously fetched using get action.				 
-                        baasicCommercePaymentTransactionClient.remove(commercePaymentTransaction)
+                        commercePaymentTransactionClient.remove(commercePaymentTransaction)
                             .then(function (data) {   
                                 // perform success action here 
                             },

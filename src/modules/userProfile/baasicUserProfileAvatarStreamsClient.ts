@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserProfileAvatarStreamsClient  
+ * @module userProfileAvatarStreamsClient  
  * @description  User Profile Avatar Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -17,7 +17,7 @@ export class UserProfileAvatarStreamsClient {
 
     constructor(
         @inject(userProfileTypes.UserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: UserProfileAvatarStreamsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
@@ -26,7 +26,7 @@ export class UserProfileAvatarStreamsClient {
      * @param data User unique identifier.
      * @returns A promise that is resolved once the get action has been performed.                           
      * @example // Request the original file stream              
-                    baasicUserProfileAvatarStreamsClient.get({id: '<file-id>'})
+                    userProfileAvatarStreamsClient.get({id: '<file-id>'})
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -34,7 +34,7 @@ export class UserProfileAvatarStreamsClient {
                              // perform error handling here 
                         });                    
                     // Request derived file stream                
-                    baasicUserProfileAvatarStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+                    userProfileAvatarStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -43,14 +43,14 @@ export class UserProfileAvatarStreamsClient {
                         });                     
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).                     
      * @method                          
      * @example // Request the original blob                
-                    baasicUserProfileAvatarStreamsClient.getBlob('<file-id>')
+                    userProfileAvatarStreamsClient.getBlob('<file-id>')
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -58,7 +58,7 @@ export class UserProfileAvatarStreamsClient {
                              // perform error handling here 
                         }); 
                         // Request derived blob                 
-                        baasicUserProfileAvatarStreamsClient.getBlob({id: '<file-id>', width: <width>, height: <height>})
+                        userProfileAvatarStreamsClient.getBlob({id: '<file-id>', width: <width>, height: <height>})
                             .then(function (data) {     
                                 // perform success action here 
                             },
@@ -67,7 +67,7 @@ export class UserProfileAvatarStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.baasicUserProfileAvatarStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                     
@@ -77,7 +77,7 @@ export class UserProfileAvatarStreamsClient {
      * @param data
      * @param stream
      * @returns A promise that is resolved once the create file stream action has been performed.                    
-     * @example baasicUserProfileAvatarStreamsClient.create('<file-id>', '<filename'>, <blob>)
+     * @example userProfileAvatarStreamsClient.create('<file-id>', '<filename'>, <blob>)
                     .then(function (data) {  
                         // perform success action here 
                     },
@@ -88,7 +88,7 @@ export class UserProfileAvatarStreamsClient {
     create(id: string, data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.baasicApiClient.post(this.baasicUserProfileAvatarStreamsRouteDefinition.create(id, data), data, { 'Content-Type': undefined });
+        return this.apiClient.post(this.baasicUserProfileAvatarStreamsRouteDefinition.create(id, data), data, { 'Content-Type': undefined });
     }
 
     /**                     
@@ -98,7 +98,7 @@ export class UserProfileAvatarStreamsClient {
      * @param stream
      * @returns A promise that is resolved once the update file stream action has been performed.                     
      * @example // Update original file stream 
-                    baasicUserProfileAvatarStreamsClient.update('<file-id>', <file-stream>)
+                    userProfileAvatarStreamsClient.update('<file-id>', <file-stream>)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -106,7 +106,7 @@ export class UserProfileAvatarStreamsClient {
                              // perform error handling here 
                         }); 
                         // Update derived file stream 
-                        baasicUserProfileAvatarStreamsClient.update({id: '<file-id>', width: <width>, height: <height>}, <file-stream>)
+                        userProfileAvatarStreamsClient.update({id: '<file-id>', width: <width>, height: <height>}, <file-stream>)
                             .then(function (data) {  
                                 // perform success action here 
                             },
@@ -117,7 +117,7 @@ export class UserProfileAvatarStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.baasicApiClient.put(this.baasicUserProfileAvatarStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.baasicUserProfileAvatarStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
     }
 }
 

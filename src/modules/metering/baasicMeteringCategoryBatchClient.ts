@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicMeteringCategoryBatchClient  
- * @description  Metering Category Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringCategoryBatchClient` uses `baasicMeteringCategoryBatchRouteDefinition`. 
+ * @module meteringCategoryBatchClient  
+ * @description  Metering Category Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringCategoryBatchClient` uses `baasicMeteringCategoryBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -18,7 +18,7 @@ export class MeteringCategoryBatchClient {
 
     constructor(
         @inject(meteringTypes.MeteringCategoryBatchRouteDefinition) protected baasicMeteringCategoryBatchRouteDefinition: MeteringCategoryBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                   
@@ -26,7 +26,7 @@ export class MeteringCategoryBatchClient {
      * @method
      * @param data An MeteringCategory objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create category action has been performed.                        
-     * @example  baasicMeteringCategoryBatchClient.create([{     
+     * @example  meteringCategoryBatchClient.create([{     
                     aggregateFunction : '<aggregateFunction>',     
                     category : '<name>',    
                      defaultSamplingRate: '<defaultSamplingRate>',     
@@ -42,7 +42,7 @@ export class MeteringCategoryBatchClient {
                 });                   
      **/
     create(data: IMeteringCategory[]): PromiseLike<IHttpResponse<IMeteringCategory[]>> {
-        return this.baasicApiClient.post<IMeteringCategory[]>(this.baasicMeteringCategoryBatchRouteDefinition.create(), this.baasicMeteringCategoryBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IMeteringCategory[]>(this.baasicMeteringCategoryBatchRouteDefinition.create(), this.baasicMeteringCategoryBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -50,7 +50,7 @@ export class MeteringCategoryBatchClient {
      * @method
      * @param data An MeteringCategory objects used to update specified MeteringCategory resources.
      * @returns A promise that is resolved once the update category action has been performed.                      
-     * @example   baasicMeteringCategoryClient.update(companies)
+     * @example   meteringCategoryClient.update(companies)
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -59,7 +59,7 @@ export class MeteringCategoryBatchClient {
                     });                   
      **/
     update(data: IMeteringCategory[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMeteringCategoryBatchRouteDefinition.update(), this.baasicMeteringCategoryBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicMeteringCategoryBatchRouteDefinition.update(), this.baasicMeteringCategoryBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -67,7 +67,7 @@ export class MeteringCategoryBatchClient {
      * @method
      * @param ids MeteringCategory ids which uniquely identify MeteringCategory resources that need to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.                         
-     * @example baasicCompanyClient.remove(companyIds)
+     * @example companyClient.remove(companyIds)
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -76,7 +76,7 @@ export class MeteringCategoryBatchClient {
                     });		                  
      **/
     delete(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMeteringCategoryBatchRouteDefinition.delete(), this.baasicMeteringCategoryBatchRouteDefinition.deleteParams(ids));
+        return this.apiClient.delete<void>(this.baasicMeteringCategoryBatchRouteDefinition.delete(), this.baasicMeteringCategoryBatchRouteDefinition.deleteParams(ids));
     }
 }
 

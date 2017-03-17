@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicTemplatingClient  
- * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `baasicTemplatingClient` uses `baasicTemplatingRouteDefinition`. 
+ * @module templatingClient  
+ * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingClient` uses `baasicTemplatingRouteDefinition`. 
  */
 
 import { injectable, inject } from 'inversify';
@@ -18,13 +18,13 @@ export class TemplatingClient {
     }
 
     get batch(): TemplatingBatchClient {
-        return this.baasicTemplatingBatchClient;
+        return this.templatingBatchClient;
     }
 
     constructor(
         @inject(templatingTypes.TemplatingRouteDefinition) protected baasicTemplatingRouteDefinition: TemplatingRouteDefinition,
-        @inject(templatingTypes.TemplatingBatchClient) protected baasicTemplatingBatchClient: TemplatingBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(templatingTypes.TemplatingBatchClient) protected templatingBatchClient: TemplatingBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                 
@@ -32,7 +32,7 @@ export class TemplatingClient {
      * @method
      * @param options Query resource options.
      * @returns A promise that is resolved once the find action has been performed.                        
-     * @example baasicTemplatingClient.find({  
+     * @example templatingClient.find({  
                     pageNumber : 1,  
                     pageSize : 10,  
                     orderBy : '<field>',  
@@ -47,7 +47,7 @@ export class TemplatingClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ITemplate>>> {
-        return this.baasicApiClient.get<IQueryModel<ITemplate>>(this.baasicTemplatingRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ITemplate>>(this.baasicTemplatingRouteDefinition.find(options));
     }
 
     /**                 
@@ -55,7 +55,7 @@ export class TemplatingClient {
      * @method
      * @param id Template id which uniquely identifies Template resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example baasicTemplatingClient.get('<template-id>')
+     * @example templatingClient.get('<template-id>')
                    .then(function (data) {  
                        // perform success action here 
                    },
@@ -64,7 +64,7 @@ export class TemplatingClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.baasicApiClient.get<ITemplate>(this.baasicTemplatingRouteDefinition.get(id, options));
+        return this.apiClient.get<ITemplate>(this.baasicTemplatingRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -72,7 +72,7 @@ export class TemplatingClient {
      * @method
      * @param data An Template object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create template action has been performed.                       
-     * @example baasicTemplatingClient.create({  content : '<content>',  templateId : '<template-id>' })
+     * @example templatingClient.create({  content : '<content>',  templateId : '<template-id>' })
                     .then(function (data) {  
                         // perform success action here 
                     },
@@ -81,7 +81,7 @@ export class TemplatingClient {
                     });                 
      **/
     create(data: ITemplate): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.baasicApiClient.post<ITemplate>(this.baasicTemplatingRouteDefinition.create(), this.baasicTemplatingRouteDefinition.createParams(data));
+        return this.apiClient.post<ITemplate>(this.baasicTemplatingRouteDefinition.create(), this.baasicTemplatingRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -95,7 +95,7 @@ export class TemplatingClient {
      * @returns A promise that is resolved once the update template action has been performed.                       
      * @example // template is a resource previously fetched using get action. 
                     template.content = '<new-content>'; 
-                    baasicTemplatingClient.update(template)
+                    templatingClient.update(template)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -104,7 +104,7 @@ export class TemplatingClient {
                         });                
      **/
     update(data: ITemplate): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicTemplatingRouteDefinition.update(data), this.baasicTemplatingRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicTemplatingRouteDefinition.update(data), this.baasicTemplatingRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -117,7 +117,7 @@ export class TemplatingClient {
      * @param data An template object used to delete specified Template resource.
      * @returns A promise that is resolved once the remove action has been performed.                       
      * @example // template is a resource previously fetched using get action.				 
-                    baasicTemplatingClient.remove(template)
+                    templatingClient.remove(template)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -126,7 +126,7 @@ export class TemplatingClient {
                         });		               
      **/
     remove(data: ITemplate): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicTemplatingRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicTemplatingRouteDefinition.delete(data));
     }
 }
 

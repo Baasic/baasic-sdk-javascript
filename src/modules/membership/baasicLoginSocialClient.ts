@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicLoginSocialClient  
- * @description  Login Social Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `baasicLoginSocialClient` uses `baasicLoginSocialRouteDefinition`. 
+ * @module loginSocialClient  
+ * @description  Login Social Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `loginSocialClient` uses `baasicLoginSocialRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -20,7 +20,7 @@ export class LoginSocialClient {
     constructor(
         @inject(membershipTYPES.LoginSocialRouteDefinition) protected baasicLoginSocialRouteDefinition: LoginSocialRouteDefinition,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
@@ -29,7 +29,7 @@ export class LoginSocialClient {
      * @param provider Provider name or id for which the login URL should be generated.
      * @param returnUrl Redirect Uri for the provider which will be used when the user is redirected back to the application.
      * @returns A promise that is resolved once the get action has been performed.                     
-     * @example baasicLoginSocialClient.get('<provider>', '<returnUrl>')
+     * @example loginSocialClient.get('<provider>', '<returnUrl>')
                     .then(function (collection) {   
                         // perform success action here 
                     },
@@ -38,7 +38,7 @@ export class LoginSocialClient {
                     });                     
      **/
     get(provider: string, returnUrl: string): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicLoginSocialRouteDefinition.get(provider, returnUrl));
+        return this.apiClient.get(this.baasicLoginSocialRouteDefinition.get(provider, returnUrl));
     }
 
     /**                     
@@ -56,7 +56,7 @@ export class LoginSocialClient {
                     password : '<password>',   
                     returnUrl : '<returnUrl>' 
                 };                    
-                baasicLoginSocialClient.post('<provider>', postData)
+                loginSocialClient.post('<provider>', postData)
                     .then(function (collection) {  
                         // perform success action here 
                     },
@@ -70,8 +70,8 @@ export class LoginSocialClient {
             params.options = options;
         }
         var self = this;
-        return this.baasicApiClient.createPromise<any>((resolve, reject) => {
-            self.baasicApiClient.post<any>(self.baasicLoginSocialRouteDefinition.post(provider, options), self.baasicLoginSocialRouteDefinition.createParams(data),
+        return this.apiClient.createPromise<any>((resolve, reject) => {
+            self.apiClient.post<any>(self.baasicLoginSocialRouteDefinition.post(provider, options), self.baasicLoginSocialRouteDefinition.createParams(data),
                 { 'Content-Type': 'application/json; charset=UTF-8' })
                 .then<any>(function (data) {
                     if (data) {

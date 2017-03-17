@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsSubscriptionStatusClient  
- * @description  Commerce Lookups SubscriptionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsSubscriptionStatusClient` uses `baasicCommerceLookupsSubscriptionStatusRouteDefinition`. 
+ * @module commerceLookupsSubscriptionStatusClient  
+ * @description  Commerce Lookups SubscriptionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsSubscriptionStatusClient` uses `baasicCommerceLookupsSubscriptionStatusRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,11 +17,11 @@ export class CommerceLookupsSubscriptionStatusClient {
     }
 
     get batch(): CommerceLookupsSubscriptionStatusBatchClient {
-        return this.baasicCommerceLookupsSubscriptionStatusBatchClient;
+        return this.commerceLookupsSubscriptionStatusBatchClient;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsSubscriptionStatusBatchClient) protected baasicCommerceLookupsSubscriptionStatusBatchClient: CommerceLookupsSubscriptionStatusBatchClient,
+        @inject(commerceTypes.CommerceLookupsSubscriptionStatusBatchClient) protected commerceLookupsSubscriptionStatusBatchClient: CommerceLookupsSubscriptionStatusBatchClient,
         @inject(commerceTypes.CommerceLookupsSubscriptionStatusRouteDefinition) protected baasicCommerceLookupsSubscriptionStatusRouteDefinition: CommerceLookupsSubscriptionStatusRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
@@ -29,7 +29,7 @@ export class CommerceLookupsSubscriptionStatusClient {
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceLookupsSubscriptionStatusClient.find({   
+     * @example commerceLookupsSubscriptionStatusClient.find({   
                         pageNumber : 1,   
                         pageSize : 10,   
                         orderBy : '<field>',   
@@ -50,7 +50,7 @@ export class CommerceLookupsSubscriptionStatusClient {
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceLookupsSubscriptionStatusClient.get()
+     * @example commerceLookupsSubscriptionStatusClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -71,7 +71,7 @@ export class CommerceLookupsSubscriptionStatusClient {
      * @method                         
      * @example // commerceSubscriptionStatus is a resource previously fetched using get action. 
                     commerceSubscriptionStatus.description = '<description>'; 
-                    baasicCommerceLookupsSubscriptionStatusClient.update(commerceSubscriptionStatus)
+                    commerceLookupsSubscriptionStatusClient.update(commerceSubscriptionStatus)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -86,7 +86,7 @@ export class CommerceLookupsSubscriptionStatusClient {
     /**                  
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.                  
      * @method                         
-     * @example baasicCommerceLookupsSubscriptionStatusClient.create({    
+     * @example commerceLookupsSubscriptionStatusClient.create({    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
                     description: '<description>' 
@@ -110,7 +110,7 @@ export class CommerceLookupsSubscriptionStatusClient {
      * ```                  
      * @method                         
      * @example // commerceSubscriptionStatus is a resource previously fetched using get action.				 
-                    baasicCommerceLookupsSubscriptionStatusClient.remove(commerceSubscriptionStatus)
+                    commerceLookupsSubscriptionStatusClient.remove(commerceSubscriptionStatus)
                         .then(function (data) {   
                             // perform success action here 
                         },

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicMeteringSettingsClient  
- * @description  Metering Settings Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringSettingsClient` uses `baasicMeteringSettingsRouteDefinition`. 
+ * @module meteringSettingsClient  
+ * @description  Metering Settings Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringSettingsClient` uses `baasicMeteringSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,13 +19,13 @@ export class MeteringSettingsClient {
 
     constructor(
         @inject(meteringTypes.MeteringSettingsRouteDefinition) protected baasicMeteringSettingsRouteDefinition: MeteringSettingsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the metering resource.                 
      * @method                        
-     * @example baasicMeteringSettingsClient.get()
+     * @example meteringSettingsClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -34,7 +34,7 @@ export class MeteringSettingsClient {
                     });                 
      **/
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMeteringSettings>> {
-        return this.baasicApiClient.get<IMeteringSettings>(this.baasicMeteringSettingsRouteDefinition.get(options));
+        return this.apiClient.get<IMeteringSettings>(this.baasicMeteringSettingsRouteDefinition.get(options));
     }
 
     /**                  
@@ -48,7 +48,7 @@ export class MeteringSettingsClient {
      * @returns A promise that is resolved once the update metering action has been performed.                         
      * @example // meteringSettings is a resource previously fetched using get action. 
                     meteringSettings.dataRetentionPeriod = 60; 
-                    baasicMeteringSettingsClient.update(meteringSettings)
+                    meteringSettingsClient.update(meteringSettings)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -57,7 +57,7 @@ export class MeteringSettingsClient {
                         }); 				
      **/
     update(data: IMeteringSettings): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMeteringSettingsRouteDefinition.update(data), this.baasicMeteringSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicMeteringSettingsRouteDefinition.update(data), this.baasicMeteringSettingsRouteDefinition.updateParams(data));
     }
 }
 

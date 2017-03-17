@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleInstanceFilesBatchClient  
+ * @module articleInstanceFilesBatchClient  
  * @description  Article Instance Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -22,7 +22,7 @@ export class ArticleInstanceFilesBatchClient {
 
     constructor(
         @inject(articleTypes.ArticleInstanceFilesBatchRouteDefinition) protected baasicArticleInstanceFilesBatchRouteDefinition: ArticleInstanceFilesBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                   
@@ -32,7 +32,7 @@ export class ArticleInstanceFilesBatchClient {
      * @param data Collection of article delete requests which uniquely identifies article files that need to be deleted.
      * @returns A promise that is resolved once the unlink action has been performed.                           
      * @example // Remove original file resources                
-                   baasicArticleInstanceFilesBatchClient.unlink([{ id: '<file-id>' }])
+                   articleInstanceFilesBatchClient.unlink([{ id: '<file-id>' }])
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -40,7 +40,7 @@ export class ArticleInstanceFilesBatchClient {
                            // perform error handling here 
                        });		
                // Remove derived file resources  
-                   baasicArticleInstanceFilesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
+                   articleInstanceFilesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -49,7 +49,7 @@ export class ArticleInstanceFilesBatchClient {
                        });		                    
     **/
     unlink(articleId: string, data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceFilesBatchRouteDefinition.unlink(articleId), undefined, data);
+        return this.apiClient.delete<void>(this.baasicArticleInstanceFilesBatchRouteDefinition.unlink(articleId), undefined, data);
     }
 
     /**                   
@@ -58,7 +58,7 @@ export class ArticleInstanceFilesBatchClient {
      * @param articleId Article slug or id which uniquely identifies article whose article file need to be updated.
      * @param data Article file object that need to be updated in the system.
      * @returns A promise that is resolved once the update action has been performed.                         
-     * @example baasicArticleInstanceFilesBatchClient.update(files)
+     * @example articleInstanceFilesBatchClient.update(files)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -67,7 +67,7 @@ export class ArticleInstanceFilesBatchClient {
                     });                   
      **/
     update(articleId: string, data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleInstanceFilesBatchRouteDefinition.update(articleId), this.baasicArticleInstanceFilesBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleInstanceFilesBatchRouteDefinition.update(articleId), this.baasicArticleInstanceFilesBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -76,7 +76,7 @@ export class ArticleInstanceFilesBatchClient {
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be linked.
      * @param data A collection of article file objects that need to be inserted into the system.
      * @returns A promise that is resolved once the link action has been performed.                          
-     * @example baasicArticleInstanceFilesBatchClient.link(files)
+     * @example articleInstanceFilesBatchClient.link(files)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -85,7 +85,7 @@ export class ArticleInstanceFilesBatchClient {
                     });                   
      **/
     link(articleId: string, data: IArticleFile[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicArticleInstanceFilesBatchRouteDefinition.link(articleId), this.baasicArticleInstanceFilesBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicArticleInstanceFilesBatchRouteDefinition.link(articleId), this.baasicArticleInstanceFilesBatchRouteDefinition.createParams(data));
     }
 }
 

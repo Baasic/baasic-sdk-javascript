@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicArticleRatingsClient  
- * @description  Article Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `baasicArticleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `baasicArticleService` functions allow management between article and article rating. In order to obtain needed routes `baasicArticleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
+ * @module articleRatingsClient  
+ * @description  Article Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `articleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `articleService` functions allow management between article and article rating. In order to obtain needed routes `articleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
 */
 
 
@@ -17,7 +17,7 @@ export class ArticleRatingsClient {
     /**                 
      * Provides direct access to `baasicArticleRatingsRouteDefinition`.                
      * @method                        
-     * @example baasicArticleRatingsClient.routeDefinition.get(id);                 
+     * @example articleRatingsClient.routeDefinition.get(id);                 
      **/
     get routeDefinition(): ArticleRatingsRouteDefinition {
         return this.baasicArticleRatingsRouteDefinition;
@@ -25,7 +25,7 @@ export class ArticleRatingsClient {
 
     constructor(
         @inject(articleTypes.ArticleRatingsRouteDefinition) protected baasicArticleRatingsRouteDefinition: ArticleRatingsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**       
@@ -33,7 +33,7 @@ export class ArticleRatingsClient {
      * @method 
      * @param data An article rating object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create article rating action has been performed.                      
-     * @example baasicArticleRatingsClient.create({ 
+     * @example articleRatingsClient.create({ 
                     articleId : '<article-id>', 
                     rating : 5, 
                     userId : '<user-id>' 
@@ -46,7 +46,7 @@ export class ArticleRatingsClient {
                 });                   
      **/
     create(data: IRating): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.post<IRating>(this.baasicArticleRatingsRouteDefinition.create(data), this.baasicArticleRatingsRouteDefinition.createParams(data));
+        return this.apiClient.post<IRating>(this.baasicArticleRatingsRouteDefinition.create(data), this.baasicArticleRatingsRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -54,7 +54,7 @@ export class ArticleRatingsClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicArticleRatingsClient.find({ 
+     * @example articleRatingsClient.find({ 
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -69,7 +69,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.find(options));
     }
 
     /**                  
@@ -78,7 +78,7 @@ export class ArticleRatingsClient {
      * @param username Username which uniquely identifies a user which has created an article rating.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the findByUser action has been performed.                        
-     * @example baasicArticleRatingsClient.find('<username>', {   
+     * @example articleRatingsClient.find('<username>', {   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -92,7 +92,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     findByUser(username: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.baasicApiClient.get<IQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.findByUser(username, options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.baasicArticleRatingsRouteDefinition.findByUser(username, options));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class ArticleRatingsClient {
      * @param id Id which uniquely identifies article rating resource that needs to be retrieved.
      * @param options Options object that contains embed data.
      * @returns A promise that is resolved once the get action has been performed.                           
-     * @example baasicArticleRatingsClient.get('<articleRating-id>')
+     * @example articleRatingsClient.get('<articleRating-id>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -110,7 +110,7 @@ export class ArticleRatingsClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
-        return this.baasicApiClient.get<IRating>(this.baasicArticleRatingsRouteDefinition.get(id, options));
+        return this.apiClient.get<IRating>(this.baasicArticleRatingsRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -124,7 +124,7 @@ export class ArticleRatingsClient {
      * @returns A promise that is resolved once the update article rating action has been performed.                          
      * @example // articleRating is a resource previously fetched using get action. 
                     articleRating.rating = 4; 
-                    baasicArticleRatingsClient.update(articleRating)
+                    articleRatingsClient.update(articleRating)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -133,7 +133,7 @@ export class ArticleRatingsClient {
                         }); 				
      **/
     update(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleRatingsRouteDefinition.update(data), this.baasicArticleRatingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleRatingsRouteDefinition.update(data), this.baasicArticleRatingsRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -146,7 +146,7 @@ export class ArticleRatingsClient {
      * @param data An article object used to delete specified article rating resource.
      * @returns A promise that is resolved once the remove article rating action has been performed.                          
      * @example // articleRating is a resource previously fetched using get action.				 
-                    baasicArticleRatingsClient.remove(articleRating)
+                    articleRatingsClient.remove(articleRating)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -155,7 +155,7 @@ export class ArticleRatingsClient {
                         });						
      **/
     remove(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleRatingsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicArticleRatingsRouteDefinition.delete(data));
     }
 }
 

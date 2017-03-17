@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicMeteringBatchClient  
- * @description  Metering Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringBatchClient` uses `baasicMeteringBatchRouteDefinition`. 
+ * @module meteringBatchClient  
+ * @description  Metering Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringBatchClient` uses `baasicMeteringBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,7 +19,7 @@ export class MeteringBatchClient {
 
     constructor(
         @inject(meteringTypes.MeteringBatchRouteDefinition) protected baasicMeteringBatchRouteDefinition: MeteringBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                   
@@ -27,7 +27,7 @@ export class MeteringBatchClient {
      * @method
      * @param data An MeteringData objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create data action has been performed.                        
-     * @example  baasicMeteringBatchClient.create([{     
+     * @example  meteringBatchClient.create([{     
                     applicationId : '<applicationId>',     
                     category : '<category>',     
                     name: '<name>',     
@@ -41,7 +41,7 @@ export class MeteringBatchClient {
                 });                   
      **/
     create(data: IMeteringData[]): PromiseLike<IHttpResponse<IMeteringData[]>> {
-        return this.baasicApiClient.post(this.baasicMeteringBatchRouteDefinition.create(), this.baasicMeteringBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicMeteringBatchRouteDefinition.create(), this.baasicMeteringBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -49,7 +49,7 @@ export class MeteringBatchClient {
      * @method
      * @param data An MeteringData objects used to update specified MeteringData resources.
      * @returns A promise that is resolved once the update data action has been performed.
-     * @example   baasicMeteringBatchClient.update(companies)
+     * @example   meteringBatchClient.update(companies)
                         .then(function (data) {     
                             // perform success action here   
                         },
@@ -58,7 +58,7 @@ export class MeteringBatchClient {
                         });                   
      **/
     update(data: IMeteringData[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMeteringBatchRouteDefinition.update(), this.baasicMeteringBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicMeteringBatchRouteDefinition.update(), this.baasicMeteringBatchRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -66,7 +66,7 @@ export class MeteringBatchClient {
      * @method   
      * @param ids MeteringData ids which uniquely identify MeteringData resources that need to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.                    
-     * @example baasicMeteringClient.remove(companyIds)
+     * @example meteringClient.remove(companyIds)
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -75,7 +75,7 @@ export class MeteringBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMeteringBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicMeteringBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

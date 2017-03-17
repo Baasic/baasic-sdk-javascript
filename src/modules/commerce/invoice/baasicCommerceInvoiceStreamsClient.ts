@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceInvoiceStreamsClient  
- * @description  Commerce Invoice Streams Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceStreamsClient` uses `baasicCommerceInvoiceStreamsRouteDefinition`. 
+ * @module commerceInvoiceStreamsClient  
+ * @description  Commerce Invoice Streams Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceStreamsClient` uses `baasicCommerceInvoiceStreamsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -26,7 +26,7 @@ export class CommerceInvoiceStreamsClient {
      * Returns a promise that is resolved once the get action has been performed. Success response returns the invoice stream if successfully completed.                     
      * @method                         
      * @example // commerceInvoice is a resource previously fetched using get action.	
-                    baasicCommerceInvoiceStreamsClient.get({id: commerceInvoice.id})
+                    commerceInvoiceStreamsClient.get({id: commerceInvoice.id})
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -42,7 +42,7 @@ export class CommerceInvoiceStreamsClient {
      * Returns a promise that is resolved once the get action has been performed. Success response returns the invoice stream as a blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).                     
      * @method                           
      * @example // Request the original blob                
-                        baasicCommerceInvoiceClient.getBlobl({id: commerceInvoice.id})
+                        commerceInvoiceClient.getBlobl({id: commerceInvoice.id})
                             .then(function (data) {     
                                 // perform success action here 
                             },

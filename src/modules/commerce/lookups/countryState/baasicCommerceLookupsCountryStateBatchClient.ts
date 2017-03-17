@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceCountryStateBatchClient  
- * @description  Commerce Country State Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCountryStateBatchClient` uses `baasicCommerceCountryStateBatchRouteDefinition`. 
+ * @module commerceCountryStateBatchClient  
+ * @description  Commerce Country State Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryStateBatchClient` uses `baasicCommerceCountryStateBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,13 +14,13 @@ export class CommerceLookupsCountryStateBatchClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsCountryStateBatchRouteDefinition) protected baasicCommerceLookupsCountryStateBatchRouteDefinition: CommerceLookupsCountryStateBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.                     
      * @method                            
-     * @example baasicCommerceLookupsCountryStateBatchClient.create([{   
+     * @example commerceLookupsCountryStateBatchClient.create([{   
                     countryId: '<country-id>',    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
@@ -34,13 +34,13 @@ export class CommerceLookupsCountryStateBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.create(), this.baasicCommerceLookupsCountryStateBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.create(), this.baasicCommerceLookupsCountryStateBatchRouteDefinition.createParams(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.                     
      * @method                        
-     * @example baasicCommerceLookupsCountryStateBatchClient.update(commerceCountryStates)
+     * @example commerceLookupsCountryStateBatchClient.update(commerceCountryStates)
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -49,13 +49,13 @@ export class CommerceLookupsCountryStateBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.update(), this.baasicCommerceLookupsCountryStateBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.update(), this.baasicCommerceLookupsCountryStateBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.                     
      * @method                       
-     * @example baasicCommerceLookupsCountryStateBatchClient.remove(commerceCountryStateIds)
+     * @example commerceLookupsCountryStateBatchClient.remove(commerceCountryStateIds)
                    .then(function (data) {     
                        // perform success action here   
                    }, 
@@ -64,7 +64,7 @@ export class CommerceLookupsCountryStateBatchClient {
                    });		                    
     **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicCommerceLookupsCountryStateBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

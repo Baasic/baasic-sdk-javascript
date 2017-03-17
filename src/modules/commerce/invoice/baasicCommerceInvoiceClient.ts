@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceInvoiceClient  
- * @description  Commerce Invoice Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceClient` uses `baasicCommerceInvoiceRouteDefinition`. 
+ * @module commerceInvoiceClient  
+ * @description  Commerce Invoice Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceClient` uses `baasicCommerceInvoiceRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,19 +17,19 @@ export class CommerceInvoiceClient {
     }
 
     get streams(): CommerceInvoiceStreamsClient {
-        return this.baasicCommerceInvoiceStreamsClient;
+        return this.commerceInvoiceStreamsClient;
     }
 
     constructor(
         @inject(commerceTypes.CommerceInvoiceRouteDefinition) protected baasicCommerceInvoiceRouteDefinition: CommerceInvoiceRouteDefinition,
-        @inject(commerceTypes.CommerceInvoiceStreamsClient) protected baasicCommerceInvoiceStreamsClient: CommerceInvoiceStreamsClient,
+        @inject(commerceTypes.CommerceInvoiceStreamsClient) protected commerceInvoiceStreamsClient: CommerceInvoiceStreamsClient,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceInvoiceClient.find({   
+     * @example commerceInvoiceClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -50,7 +50,7 @@ export class CommerceInvoiceClient {
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceInvoiceClient.get()
+     * @example commerceInvoiceClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -71,7 +71,7 @@ export class CommerceInvoiceClient {
      * @method                         
      * @example // commerceInvoice is a resource previously fetched using get action. 
                     commerceInvoice.invoiceStatusId : '<new-invoice-status-id>'; 
-                    baasicCommerceInvoiceClient.update(commerceInvoice)
+                    commerceInvoiceClient.update(commerceInvoice)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -91,7 +91,7 @@ export class CommerceInvoiceClient {
      * ```                  
      * @method                         
      * @example // commerceInvoice is a resource previously fetched using get action.				 
-                        baasicCommerceInvoiceClient.remove(commerceInvoice) 
+                        commerceInvoiceClient.remove(commerceInvoice) 
                             .then(function (data) {   
                                 // perform success action here 
                             },

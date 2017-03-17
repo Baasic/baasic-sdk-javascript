@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleInstanceFilesStreamsClient  
+ * @module articleInstanceFilesStreamsClient  
  * @description  Article Instance Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -19,7 +19,7 @@ export class ArticleInstanceFilesStreamsClient {
 
     constructor(
         @inject(articleTypes.ArticleInstanceFilesStreamsRouteDefinition) protected baasicArticleInstanceFilesStreamsRouteDefinition: ArticleInstanceFilesStreamsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
@@ -29,7 +29,7 @@ export class ArticleInstanceFilesStreamsClient {
      * @param data Article File object used to identify stream that needs to be retrieved from the system.                             
      * @returns A promise that is resolved once the get action has been performed. 
      * @example // Request the original file stream              
-                    baasicArticleInstanceFilesStreamsClient.get({id: '<file-id>'})
+                    articleInstanceFilesStreamsClient.get({id: '<file-id>'})
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -38,7 +38,7 @@ export class ArticleInstanceFilesStreamsClient {
                         });
 
                 // Request derived file stream                
-                        baasicArticleInstanceFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+                        articleInstanceFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
                             .then(function (data) {     
                                 // perform success action here 
                             },
@@ -47,7 +47,7 @@ export class ArticleInstanceFilesStreamsClient {
                             });                     
      **/
     get(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceFilesStreamsRouteDefinition.get(articleId, data));
+        return this.apiClient.get(this.baasicArticleInstanceFilesStreamsRouteDefinition.get(articleId, data));
     }
 
     /**                     
@@ -57,7 +57,7 @@ export class ArticleInstanceFilesStreamsClient {
      * @param data Article File object used to identify stream that needs to be retrieved from the system.    
      * @returns A promise that is resolved once the get action has been performed.                            
      * @example // Request the original blob                
-                    baasicArticleInstanceFilesStreamsClient.getBlob('<file-id>')
+                    articleInstanceFilesStreamsClient.getBlob('<file-id>')
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -66,7 +66,7 @@ export class ArticleInstanceFilesStreamsClient {
                         }); 
                         
                 // Request derived blob                 
-                        baasicArticleInstanceFilesStreamsClient.getBlob({
+                        articleInstanceFilesStreamsClient.getBlob({
                             id: '<file-id>', 
                             width: <width>, 
                             height: <height>
@@ -79,7 +79,7 @@ export class ArticleInstanceFilesStreamsClient {
                         });                     
      **/
     getBlob(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicArticleInstanceFilesStreamsRouteDefinition.get(articleId, data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.baasicArticleInstanceFilesStreamsRouteDefinition.get(articleId, data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -90,7 +90,7 @@ export class ArticleInstanceFilesStreamsClient {
      * @param stream                     
      * @returns A promise that is resolved once the update file stream action has been performed.
      * @example // Update original file stream 
-                    baasicArticleInstanceFilesStreamsClient.update('<file-id>', <file-stream>)
+                    articleInstanceFilesStreamsClient.update('<file-id>', <file-stream>)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -98,7 +98,7 @@ export class ArticleInstanceFilesStreamsClient {
                             // perform error handling here 
                         }); 
                 // Update derived file stream 
-                    baasicArticleInstanceFilesStreamsClient.update({id: '<file-id>', width: <width>, height: <height>}, <file-stream>)
+                    articleInstanceFilesStreamsClient.update({id: '<file-id>', width: <width>, height: <height>}, <file-stream>)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -109,7 +109,7 @@ export class ArticleInstanceFilesStreamsClient {
     update(articleId: string, data: IArticleFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.baasicApiClient.put(this.baasicArticleInstanceFilesStreamsRouteDefinition.update(articleId, data), formData, { 'Content-Type': undefined });
+        return this.apiClient.put(this.baasicArticleInstanceFilesStreamsRouteDefinition.update(articleId, data), formData, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -119,7 +119,7 @@ export class ArticleInstanceFilesStreamsClient {
      * @param data Article File object that need to be inserted into the system.
      * @param stream
      * @returns A promise that is resolved once the create file stream action has been performed.                      
-     * @example baasicArticleInstanceFilesStreamsClient.create('<file-id>', <blob>)
+     * @example articleInstanceFilesStreamsClient.create('<file-id>', <blob>)
                    .then(function (data) {  
                         // perform success action here 
                    },
@@ -130,7 +130,7 @@ export class ArticleInstanceFilesStreamsClient {
     create(articleId: string, data: IArticleFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.baasicApiClient.post(this.baasicArticleInstanceFilesStreamsRouteDefinition.create(articleId, data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.baasicArticleInstanceFilesStreamsRouteDefinition.create(articleId, data), formData, { 'Content-Type': undefined });
     }
 }
 

@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicLookupClient 
- * @description  Lookup Client provides an easy way to consume  Lookup REST API end-points. In order to obtain needed routes `baasicLookupClient` uses `baasicLookupRouteDefinition`. 
+ * @module lookupClient 
+ * @description  Lookup Client provides an easy way to consume  Lookup REST API end-points. In order to obtain needed routes `lookupClient` uses `baasicLookupRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -22,7 +22,7 @@ export class LookupClient {
 
     constructor(
         @inject(membershipTypes.LookupRouteDefinition) protected baasicLookupRouteDefinition: LookupRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     private getResponseData(embed: string, data: any): any {
@@ -44,7 +44,7 @@ export class LookupClient {
      * @method
      * @param options Options object that contains comma separated list of related resources to be contained within the current representation.                         
      * @returns A promise that is resolved once the get action has been performed. 
-     * @example baasicLookupClient.get()
+     * @example lookupClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -56,8 +56,8 @@ export class LookupClient {
         let embed = options.embed || 'role,accessAction,accessSection,snProvider';
         var opt = this.utility.extend({}, options, { embed: embed });
         var self = this;
-        return this.baasicApiClient.createPromise<any>((resolve, reject) => {
-            self.baasicApiClient.get(this.baasicLookupRouteDefinition.get(opt))
+        return this.apiClient.createPromise<any>((resolve, reject) => {
+            self.apiClient.get(this.baasicLookupRouteDefinition.get(opt))
                 .then<any>(function (data) {
                     data.data = self.getResponseData(embed, data.data);
                     resolve(data);

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicFilesClient  
+ * @module filesClient  
  * @description  Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -24,23 +24,23 @@ export class FilesClient {
     }
 
     get streams(): FilesStreamsClient {
-        return this.baasicFilesStreamsClient;
+        return this.filesStreamsClient;
     }
 
     get batch(): FilesBatchClient {
-        return this.baasicFilesBatchClient;
+        return this.filesBatchClient;
     }
 
     get acl(): FilesACLClient {
-        return this.baasicFilesACLClient;
+        return this.filesACLClient;
     }
 
     constructor(
         @inject(filesTypes.FilesRouteDefinition) protected baasicFilesRouteDefinition: FilesRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
-        @inject(filesTypes.FilesStreamsClient) protected baasicFilesStreamsClient: FilesStreamsClient,
-        @inject(filesTypes.FilesBatchClient) protected baasicFilesBatchClient: FilesBatchClient,
-        @inject(filesTypes.FilesACLClient) protected baasicFilesACLClient: FilesACLClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
+        @inject(filesTypes.FilesStreamsClient) protected filesStreamsClient: FilesStreamsClient,
+        @inject(filesTypes.FilesBatchClient) protected filesBatchClient: FilesBatchClient,
+        @inject(filesTypes.FilesACLClient) protected filesACLClient: FilesACLClient
     ) { }
 
     /**                  
@@ -48,7 +48,7 @@ export class FilesClient {
      * @method 
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicFilesClient.find({   
+     * @example filesClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -63,7 +63,7 @@ export class FilesClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IFileEntry>>> {
-        return this.baasicApiClient.get<IQueryModel<IFileEntry>>(this.baasicFilesRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IFileEntry>>(this.baasicFilesRouteDefinition.find(options));
     }
 
     /**                 
@@ -72,7 +72,7 @@ export class FilesClient {
      * @param id File id which uniquely identifies file resource that needs to be retrieved.
      * @param options Query resource options object. 
      * @returns A promise that is resolved once the get action has been performed.                      
-     * @example baasicFilesClient.get('<file-id>')
+     * @example filesClient.get('<file-id>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -81,7 +81,7 @@ export class FilesClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IFileEntry>> {
-        return this.baasicApiClient.get<IFileEntry>(this.baasicFilesRouteDefinition.get(id, options));
+        return this.apiClient.get<IFileEntry>(this.baasicFilesRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -94,7 +94,7 @@ export class FilesClient {
      * @param data A file entry object used to update specific file entry resource in the system.                          
      * @example // fileEntry is a file resource previously fetched using get action. 
                     fileEntry.description = '<description>'; 
-                    baasicFilesClient.update(fileEntry)
+                    filesClient.update(fileEntry)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -103,7 +103,7 @@ export class FilesClient {
                         }); 				
      **/
     update(data: IFileEntry): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicFilesRouteDefinition.update(data), this.baasicFilesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicFilesRouteDefinition.update(data), this.baasicFilesRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -117,7 +117,7 @@ export class FilesClient {
      * @param options
      * @returns A promise that is resolved once the unlink action has been performed.                         
      * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
-                    baasicFilesClient.unlink(fileEntry) 
+                    filesClient.unlink(fileEntry) 
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -125,7 +125,7 @@ export class FilesClient {
                              // perform error handling here 
                         }); 
                 // fileEntry is a file resource previously fetched using get action. The following action will remove derived file resource only.		 
-                    baasicFilesClient.unlink(fileEntry, {width: <width>, height: <height>})
+                    filesClient.unlink(fileEntry, {width: <width>, height: <height>})
                         .then(function (data) {   
                             // perform success action here 
                     },
@@ -134,7 +134,7 @@ export class FilesClient {
                     });						
      **/
     unlink(data: IFileEntry, options?: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicFilesRouteDefinition.unlink(data, options));
+        return this.apiClient.delete<void>(this.baasicFilesRouteDefinition.unlink(data, options));
     }
 
     /**                  
@@ -142,7 +142,7 @@ export class FilesClient {
      * @method
      * @param data A file object that need to be inserted into the system.
      * @returns A promise that is resolved once the link action has been performed.                      
-     * @example baasicFilesClient.link(fileObject)
+     * @example filesClient.link(fileObject)
                    .then(function (data) {   
                        // perform success action here 
                    },
@@ -151,7 +151,7 @@ export class FilesClient {
                    });                 
     **/
     link(data: IFileEntry): PromiseLike<IHttpResponse<IFileEntry>> {
-        return this.baasicApiClient.post(this.baasicFilesRouteDefinition.link(), this.baasicFilesRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicFilesRouteDefinition.link(), this.baasicFilesRouteDefinition.createParams(data));
     }
 }
 

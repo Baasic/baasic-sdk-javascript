@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module baasicArticleInstanceTagsDefinition  
- * @description  Article Instance Tags Definition provides an easy way to consume  Article Tags REST API end-points. `baasicArticleInstanceTagsRouteClient` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleInstanceTagsClient` uses `baasicArticleInstanceTagsRouteDefinition`. 
+ * @description  Article Instance Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleInstanceTagsRouteClient` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleInstanceTagsClient` uses `baasicArticleInstanceTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
@@ -20,13 +20,13 @@ export class ArticleInstanceTagsClient {
 
     constructor(
         @inject(articleTypes.ArticleInstanceTagsRouteDefinition) protected baasicArticleInstanceTagsRouteDefinition: ArticleInstanceTagsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                 
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article tag resources matching the given criteria.                 
      * @method                        
-     * @example baasicArticleInstanceTagsClient.find({  
+     * @example articleInstanceTagsClient.find({  
                     pageNumber : 1,  
                     pageSize : 10, 
                     orderBy : '<field>',  
@@ -41,7 +41,7 @@ export class ArticleInstanceTagsClient {
                 });                    
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleTag>>> {
-        return this.baasicApiClient.get<IQueryModel<IArticleTag>>(this.baasicArticleInstanceTagsRouteDefinition.find(articleId, options));
+        return this.apiClient.get<IQueryModel<IArticleTag>>(this.baasicArticleInstanceTagsRouteDefinition.find(articleId, options));
     }
 
     /**                 
@@ -49,7 +49,7 @@ export class ArticleInstanceTagsClient {
      * @param id tag id
      * @param options options object               
      * @method                        
-     * @example baasicArticleInstanceTagsClient.get('<articleTag-id>')
+     * @example articleInstanceTagsClient.get('<articleTag-id>')
                    .then(function (data) {  
                        // perform success action here 
                    },
@@ -58,13 +58,13 @@ export class ArticleInstanceTagsClient {
                    });                
     **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.baasicApiClient.get<IArticleTag>(this.baasicArticleInstanceTagsRouteDefinition.get(articleId, id, options));
+        return this.apiClient.get<IArticleTag>(this.baasicArticleInstanceTagsRouteDefinition.get(articleId, id, options));
     }
 
     /**                     
      * Returns a promise that is resolved once the create article tag action has been performed; this action creates a new tag for an article.                     
      * @method                       
-     * @example baasicArticleInstanceTagsClient.create({   
+     * @example articleInstanceTagsClient.create({   
                     articleId : '<article-id>',   
                     tag : {     
                         slug : '<slug>',     
@@ -80,7 +80,7 @@ export class ArticleInstanceTagsClient {
                 });                     
      **/
     create(data: IArticleTag): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.baasicApiClient.post<IArticleTag>(this.baasicArticleInstanceTagsRouteDefinition.create(data), this.baasicArticleInstanceTagsRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleTag>(this.baasicArticleInstanceTagsRouteDefinition.create(data), this.baasicArticleInstanceTagsRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -91,7 +91,7 @@ export class ArticleInstanceTagsClient {
      * ```                 
      * @method                        
      * @example // articleTag is a resource previously fetched using get action.
-                    baasicArticleInstanceTagsClient.remove(articleTag)
+                    articleInstanceTagsClient.remove(articleTag)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -100,7 +100,7 @@ export class ArticleInstanceTagsClient {
                         });						
      **/
     remove(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceTagsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicArticleInstanceTagsRouteDefinition.delete(data));
     }
 
     /**                     
@@ -111,7 +111,7 @@ export class ArticleInstanceTagsClient {
      * ```                     
      * @method                     
      * @example // article is a resource previously fetched using get action.					
-                    baasicArticleInstanceTagsClient.removeAll(article)
+                    articleInstanceTagsClient.removeAll(article)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -120,7 +120,7 @@ export class ArticleInstanceTagsClient {
                         });						    
      **/
     removeAll(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceTagsRouteDefinition.deleteAll(data));
+        return this.apiClient.delete<void>(this.baasicArticleInstanceTagsRouteDefinition.deleteAll(data));
     }
 }
 

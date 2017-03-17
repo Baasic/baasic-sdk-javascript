@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicArticleSubscriptionsClient  
- * @description  Articles Subscriptions Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
+ * @module articleSubscriptionsClient  
+ * @description  Articles Subscriptions Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,15 +19,15 @@ import { IArticle, IArticleOptions } from 'modules/article/contracts';
 export class ArticleInstanceSubscriptionsClient {
 
     get commentReported(): ArticleSubscriptionsCommentReportedClient {
-        return this.baasicArticleSubscriptionsCommentReportedClient;
+        return this.articleSubscriptionsCommentReportedClient;
     }
 
     get article(): ArticleSubscriptionsArticleClient {
-        return this.baasicArticleSubscriptionsArticleClient;
+        return this.articleSubscriptionsArticleClient;
     }
 
     get commentRequiresModeration(): ArticleSubscriptionsCommentRequiresModerationClient {
-        return this.baasicArticleSubscriptionsCommentRequiresModerationClient;
+        return this.articleSubscriptionsCommentRequiresModerationClient;
     }
 
     get routeDefinition(): ArticleInstanceSubscriptionsRouteDefinition {
@@ -35,9 +35,9 @@ export class ArticleInstanceSubscriptionsClient {
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsCommentReportedClient) protected baasicArticleSubscriptionsCommentReportedClient: ArticleSubscriptionsCommentReportedClient,
-        @inject(articleTypes.ArticleSubscriptionsArticleClient) protected baasicArticleSubscriptionsArticleClient: ArticleSubscriptionsArticleClient,
-        @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationClient) protected baasicArticleSubscriptionsCommentRequiresModerationClient: ArticleSubscriptionsCommentRequiresModerationClient,
+        @inject(articleTypes.ArticleSubscriptionsCommentReportedClient) protected articleSubscriptionsCommentReportedClient: ArticleSubscriptionsCommentReportedClient,
+        @inject(articleTypes.ArticleSubscriptionsArticleClient) protected articleSubscriptionsArticleClient: ArticleSubscriptionsArticleClient,
+        @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationClient) protected articleSubscriptionsCommentRequiresModerationClient: ArticleSubscriptionsCommentRequiresModerationClient,
         @inject(articleTypes.ArticleInstanceSubscriptionsRouteDefinition) protected baasicArticleInstanceSubscriptionsRouteDefinition: ArticleInstanceSubscriptionsRouteDefinition
     )
     { }

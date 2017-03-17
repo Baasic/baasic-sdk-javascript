@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsUsersClient  
- * @description  Notifications Subscriptions Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsUsersClient` uses `baasicNotificationsSubscriptionsUsersRouteDefinition`. 
+ * @module notificationsSubscriptionsUsersClient  
+ * @description  Notifications Subscriptions Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersClient` uses `baasicNotificationsSubscriptionsUsersRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -27,7 +27,7 @@ export class NotificationsSubscriptionsUsersClient {
     constructor(
         @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
         @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchClient) protected NotificationsSubscriptionsUsersBatchClient: NotificationsSubscriptionsUsersBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                          
@@ -35,7 +35,7 @@ export class NotificationsSubscriptionsUsersClient {
      * @method
      * @param data An UserSubscription object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create user subscription action has been performed.                           
-     * @example baasicNotificationsSubscriptionsUsersClient.create({     
+     * @example notificationsSubscriptionsUsersClient.create({     
                     channel: '<channel-name>',     
                     userId: '<user-id>' 
                 })
@@ -47,7 +47,7 @@ export class NotificationsSubscriptionsUsersClient {
                 });                         
      */
     create(data: IUserSubscription): PromiseLike<IHttpResponse<IUserSubscription>> {
-        return this.baasicApiClient.post<IUserSubscription>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSubscription>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.create(), this.baasicNotificationsSubscriptionsUsersRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -55,7 +55,7 @@ export class NotificationsSubscriptionsUsersClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                               
-     * @example baasicNotificationsSubscriptionsUsersClient.find({     
+     * @example notificationsSubscriptionsUsersClient.find({     
                     pageNumber : 1,     
                     pageSize : 10,     
                     orderBy : '<field>',     
@@ -73,7 +73,7 @@ export class NotificationsSubscriptionsUsersClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserSubscription>>> {
-        return this.baasicApiClient.get<IQueryModel<IUserSubscription>>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserSubscription>>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.find(options));
     }
 
     /**                          
@@ -82,7 +82,7 @@ export class NotificationsSubscriptionsUsersClient {
      * @param id The subscription identifier which uniquely identifies UserSubscription resource that needs to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                               
-     * @example baasicNotificationsSubscriptionsUsersClient.get('<subscription-id>')
+     * @example notificationsSubscriptionsUsersClient.get('<subscription-id>')
                    .then(function (data) {     
                        // perform success action here 
                    },
@@ -91,7 +91,7 @@ export class NotificationsSubscriptionsUsersClient {
                    });                         
     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserSubscription>> {
-        return this.baasicApiClient.get(this.baasicNotificationsSubscriptionsUsersRouteDefinition.get(id, options));
+        return this.apiClient.get(this.baasicNotificationsSubscriptionsUsersRouteDefinition.get(id, options));
     }
 
     /**                          
@@ -104,7 +104,7 @@ export class NotificationsSubscriptionsUsersClient {
      * @param data An object used to delete specified UserSubscription resource.
      * @returns A promise that is resolved once the remove user subscription action has been performed.                                  
      * @example // subscription is a resource previously fetched using get action.				 
-                    baasicNotificationsSubscriptionsUsersClient.remove(subscription)
+                    notificationsSubscriptionsUsersClient.remove(subscription)
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -113,7 +113,7 @@ export class NotificationsSubscriptionsUsersClient {
                         });		                        
      */
     remove(data: IUserSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.delete(data));
     }
 
     /**                          
@@ -126,7 +126,7 @@ export class NotificationsSubscriptionsUsersClient {
      * @param data An object used to update specified UserSubscription resource.                                 
      * @example // subscription is a resource previously fetched using get action. 
                        subscription.channel = '<channel-name>'; 
-                       baasicNotificationsSubscriptionsUsersClient.update(subscription)
+                       notificationsSubscriptionsUsersClient.update(subscription)
                            .then(function (data) {     
                                // perform success action here 
                            },
@@ -135,7 +135,7 @@ export class NotificationsSubscriptionsUsersClient {
                            }); 				        
     */
     update(data: IUserSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.update(data), this.baasicNotificationsSubscriptionsUsersRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsSubscriptionsUsersRouteDefinition.update(data), this.baasicNotificationsSubscriptionsUsersRouteDefinition.updateParams(data));
     }
 }
 

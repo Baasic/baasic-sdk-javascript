@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceLookupsInvoiceStatusClient  
- * @description  Commerce Lookups InvoiceStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsInvoiceStatusClient` uses `baasicCommerceLookupsInvoiceStatusRouteDefinition`. 
+ * @module commerceLookupsInvoiceStatusClient  
+ * @description  Commerce Lookups InvoiceStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsInvoiceStatusClient` uses `baasicCommerceLookupsInvoiceStatusRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,11 +17,11 @@ export class CommerceLookupsInvoiceStatusClient {
     }
 
     get batch(): CommerceLookupsInvoiceStatusBatchClient {
-        return this.baasicCommerceLookupsInvoiceStatusBatchClient;
+        return this.commerceLookupsInvoiceStatusBatchClient;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsInvoiceStatusBatchClient) protected baasicCommerceLookupsInvoiceStatusBatchClient: CommerceLookupsInvoiceStatusBatchClient,
+        @inject(commerceTypes.CommerceLookupsInvoiceStatusBatchClient) protected commerceLookupsInvoiceStatusBatchClient: CommerceLookupsInvoiceStatusBatchClient,
         @inject(commerceTypes.CommerceLookupsInvoiceStatusRouteDefinition) protected baasicCommerceLookupsInvoiceStatusRouteDefinition: CommerceLookupsInvoiceStatusRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
@@ -29,7 +29,7 @@ export class CommerceLookupsInvoiceStatusClient {
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceLookupsInvoiceStatusClient.find({   
+     * @example commerceLookupsInvoiceStatusClient.find({   
                         pageNumber : 1,   
                         pageSize : 10,   
                         orderBy : '<field>',   
@@ -50,7 +50,7 @@ export class CommerceLookupsInvoiceStatusClient {
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceLookupsInvoiceStatusClient.get()
+     * @example commerceLookupsInvoiceStatusClient.get()
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -71,7 +71,7 @@ export class CommerceLookupsInvoiceStatusClient {
      * @method                         
      * @example // commerceInvoiceStatus is a resource previously fetched using get action. 
                     commerceInvoiceStatus.description = '<description>'; 
-                    baasicCommerceLookupsInvoiceStatusClient.update(commerceInvoiceStatus)
+                    commerceLookupsInvoiceStatusClient.update(commerceInvoiceStatus)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -86,7 +86,7 @@ export class CommerceLookupsInvoiceStatusClient {
     /**                  
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.                  
      * @method                         
-     * @example baasicCommerceLookupsInvoiceStatusClient.create({    
+     * @example commerceLookupsInvoiceStatusClient.create({    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
                     description: '<description>' 
@@ -110,7 +110,7 @@ export class CommerceLookupsInvoiceStatusClient {
      * ```                  
      * @method                         
      * @example // commerceInvoiceStatus is a resource previously fetched using get action.				 
-                    baasicCommerceLookupsInvoiceStatusClient.remove(commerceInvoiceStatus)
+                    commerceLookupsInvoiceStatusClient.remove(commerceInvoiceStatus)
                         .then(function (data) {   
                             // perform success action here 
                         },

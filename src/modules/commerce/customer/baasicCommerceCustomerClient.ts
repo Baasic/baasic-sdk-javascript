@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceCustomerClient  
- * @description  Commerce Customer Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCustomerClient` uses `baasicCommerceCustomerRouteDefinition`. 
+ * @module commerceCustomerClient  
+ * @description  Commerce Customer Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCustomerClient` uses `baasicCommerceCustomerRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -13,7 +13,7 @@ import { CommerceCustomerRouteDefinition, CommerceCustomerPaymentMethodClient, T
 export class CommerceCustomerClient {
 
     get paymentMethods(): CommerceCustomerPaymentMethodClient {
-        return this.baasicCommerceCustomerPaymentMethodClient;
+        return this.commerceCustomerPaymentMethodClient;
     }
 
     get routeDefinition(): CommerceCustomerRouteDefinition {
@@ -21,7 +21,7 @@ export class CommerceCustomerClient {
     }
 
     constructor(
-        @inject(commerceTypes.CommerceCustomerPaymentMethodClient) protected baasicCommerceCustomerPaymentMethodClient: CommerceCustomerPaymentMethodClient,
+        @inject(commerceTypes.CommerceCustomerPaymentMethodClient) protected commerceCustomerPaymentMethodClient: CommerceCustomerPaymentMethodClient,
         @inject(commerceTypes.CommerceCustomerRouteDefinition) protected baasicCommerceCustomerRouteDefinition: CommerceCustomerRouteDefinition,
         @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
@@ -29,7 +29,7 @@ export class CommerceCustomerClient {
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceCustomerClient.find({   
+     * @example commerceCustomerClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -50,7 +50,7 @@ export class CommerceCustomerClient {
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceCustomerClient.get(id)
+     * @example commerceCustomerClient.get(id)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -65,13 +65,13 @@ export class CommerceCustomerClient {
     /**                  
      * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCustomerRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
-     * let params = baasicApiClient.removeParams(commerceCustomer); 
+     * let params = apiClient.removeParams(commerceCustomer); 
      * let uri = params['model'].links('put').href; 
      * ```                  
      * @method                         
      * @example // commerceCustomer is a resource previously fetched using get action. 
                     commerceCustomer.isDefault : true; 
-                    baasicCommerceCustomerClient.update(commerceCustomer)
+                    commerceCustomerClient.update(commerceCustomer)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -86,12 +86,12 @@ export class CommerceCustomerClient {
     /**                  
      * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCustomerRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
-     * let params = baasicApiClient.removeParams(commerceCustomer); 
+     * let params = apiClient.removeParams(commerceCustomer); 
      * let uri = params['model'].links('delete').href; 
      * ```                  
      * @method                         
      * @example // commerceCustomer is a resource previously fetched using get action.				 
-                    baasicCommerceCustomerClient.remove(commerceCustomer)
+                    commerceCustomerClient.remove(commerceCustomer)
                         .then(function (data) {   
                             // perform success action here 
                         },

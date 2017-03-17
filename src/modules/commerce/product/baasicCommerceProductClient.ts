@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceProductClient  
- * @description  Commerce Product Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceProductClient` uses `baasicCommerceProductRouteDefinition`. 
+ * @module commerceProductClient  
+ * @description  Commerce Product Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceProductClient` uses `baasicCommerceProductRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -24,7 +24,7 @@ export class CommerceProductClient {
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceProductClient.find({   
+     * @example commerceProductClient.find({   
                    pageNumber : 1,   
                    pageSize : 10,   
                    orderBy : '<field>',   
@@ -45,7 +45,7 @@ export class CommerceProductClient {
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceProductClient.get()
+     * @example commerceProductClient.get()
                       .then(function (data) {   
                           // perform success action here 
                       },
@@ -60,7 +60,7 @@ export class CommerceProductClient {
     /**                  
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.                  
      * @method                         
-     * @example baasicCommerceProductClient.create({   
+     * @example commerceProductClient.create({   
                     name : '<product-name>',   
                     slug : '<slug>',   
                     shortDescription : '<short-description>',   
@@ -89,7 +89,7 @@ export class CommerceProductClient {
      * @method                         
      * @example // commerceProduct is a resource previously fetched using get action. 
                         commerceProduct.shortDescription : '<short-description>'; 
-                        baasicCommerceProductClient.update(commerceProduct)
+                        commerceProductClient.update(commerceProduct)
                             .then(function (data) {   
                                 // perform success action here 
                             },
@@ -109,7 +109,7 @@ export class CommerceProductClient {
      * ```                  
      * @method                         
      * @example // commerceProduct is a resource previously fetched using get action.				 
-                    baasicCommerceProductClient.remove(commerceProduct)
+                    commerceProductClient.remove(commerceProduct)
                         .then(function (data) {   
                             // perform success action here 
                         },

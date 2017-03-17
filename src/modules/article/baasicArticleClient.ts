@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicArticleClient  
- * @description  Articles Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleClient` uses `baasicArticleRouteDefinition`. 
+ * @module articleClient  
+ * @description  Articles Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleClient` uses `baasicArticleRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -31,47 +31,47 @@ export class ArticleClient {
     /**
      * Provides direct access to `baasicArticleRouteDefinition`.
      * @method 
-     * @example baasicArticleClient.routeDefinition.get();
+     * @example articleClient.routeDefinition.get();
      **/
     get routeDefinition(): ArticleRouteDefinition {
         return this.baasicArticleRouteDefinition;
     }
 
     get comments(): ArticleInstanceCommentsClient {
-        return this.baasicArticleInstanceCommentsClient;
+        return this.articleInstanceCommentsClient;
     }
 
     get files(): ArticleInstanceFilesClient {
-        return this.baasicArticleInstanceFilesClient;
+        return this.articleInstanceFilesClient;
     }
 
     get tags(): ArticleInstanceTagsClient {
-        return this.baasicArticleInstanceTagsClient;
+        return this.articleInstanceTagsClient;
     }
 
     get ratings(): ArticleInstanceRatingsClient {
-        return this.baasicArticleInstanceRatingsClient;
+        return this.articleInstanceRatingsClient;
     }
 
     get subscriptions(): ArticleInstanceSubscriptionsClient {
-        return this.baasicArticleInstanceSubscriptionsClient;
+        return this.articleInstanceSubscriptionsClient;
     }
 
     get acl(): ArticleACLClient {
-        return this.baasicArticleACLClient;
+        return this.articleACLClient;
     }
 
     public articleUtility: BaasicArticleUtility = new BaasicArticleUtility();
 
     constructor(
-        @inject(articleTypes.ArticleInstanceCommentsClient) protected baasicArticleInstanceCommentsClient: ArticleInstanceCommentsClient,
-        @inject(articleTypes.ArticleInstanceFilesClient) protected baasicArticleInstanceFilesClient: ArticleInstanceFilesClient,
-        @inject(articleTypes.ArticleInstanceRatingsClient) protected baasicArticleInstanceRatingsClient: ArticleInstanceRatingsClient,
-        @inject(articleTypes.ArticleInstanceTagsClient) protected baasicArticleInstanceTagsClient: ArticleInstanceTagsClient,
-        @inject(articleTypes.ArticleInstanceSubscriptionsClient) protected baasicArticleInstanceSubscriptionsClient: ArticleInstanceSubscriptionsClient,
+        @inject(articleTypes.ArticleInstanceCommentsClient) protected articleInstanceCommentsClient: ArticleInstanceCommentsClient,
+        @inject(articleTypes.ArticleInstanceFilesClient) protected articleInstanceFilesClient: ArticleInstanceFilesClient,
+        @inject(articleTypes.ArticleInstanceRatingsClient) protected articleInstanceRatingsClient: ArticleInstanceRatingsClient,
+        @inject(articleTypes.ArticleInstanceTagsClient) protected articleInstanceTagsClient: ArticleInstanceTagsClient,
+        @inject(articleTypes.ArticleInstanceSubscriptionsClient) protected articleInstanceSubscriptionsClient: ArticleInstanceSubscriptionsClient,
         @inject(articleTypes.ArticleRouteDefinition) protected baasicArticleRouteDefinition: ArticleRouteDefinition,
-        @inject(articleTypes.ArticleACLClient) protected baasicArticleACLClient: ArticleACLClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(articleTypes.ArticleACLClient) protected articleACLClient: ArticleACLClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     public statuses: IArticleStatus = ArticleStatus;
@@ -82,7 +82,7 @@ export class ArticleClient {
      * @method
      * @param options A promise that is resolved once the find action has been performed.
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicArticleClient.find({  
+     * @example articleClient.find({  
                     pageNumber : 1,  
                     pageSize : 10,  
                     orderBy : '<field>',  
@@ -97,7 +97,7 @@ export class ArticleClient {
                 });                   
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticle>>> {
-        return this.baasicApiClient.get<IQueryModel<IArticle>>(this.baasicArticleRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticle>>(this.baasicArticleRouteDefinition.find(options));
     }
 
     /**                 
@@ -106,7 +106,7 @@ export class ArticleClient {
      * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
      * @param options Options object that contains embed items.
      * @returns a promise that is resolved once the get action has been performed.                       
-     * @example baasicArticleClient.get('<article-id>')
+     * @example articleClient.get('<article-id>')
                     .then(function (data) {  
                         // perform success action here 
                     },
@@ -115,7 +115,7 @@ export class ArticleClient {
                     });                
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticle>> {
-        return this.baasicApiClient.get<IArticle>(this.baasicArticleRouteDefinition.get(id, options));
+        return this.apiClient.get<IArticle>(this.baasicArticleRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -123,7 +123,7 @@ export class ArticleClient {
      * @method 
      * @param data An article object that needs to be inserted into the system.
      * @returns a promise that is resolved once the create article action has been performed.                        
-     * @example baasicArticleClient.create({  
+     * @example articleClient.create({  
                     publishDate : new Date(),  
                     title : '<title>',  
                     content : '<content>',  
@@ -139,7 +139,7 @@ export class ArticleClient {
                 });                 
      **/
     create(data: IArticle): PromiseLike<IHttpResponse<IArticle>> {
-        return this.baasicApiClient.post<IArticle>(this.baasicArticleRouteDefinition.create(), this.baasicArticleRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticle>(this.baasicArticleRouteDefinition.create(), this.baasicArticleRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -153,7 +153,7 @@ export class ArticleClient {
      * @returns A promise that is resolved once the update article action has been performed.
      * @example // article is a resource previously fetched using get action. 
                     article.title = '<title>'; 
-                    baasicArticleClient.update(article)
+                    articleClient.update(article)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -162,7 +162,7 @@ export class ArticleClient {
                         });                
      **/
     update(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleRouteDefinition.update(data), this.baasicArticleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.update(data), this.baasicArticleRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -171,7 +171,7 @@ export class ArticleClient {
      * @param data An article object that needs to be inserted into the system.                        
      * @returns A promise that is resolved once the saveDraft article action has been performed.
      * @example // article is a resource previously fetched using get action. 
-                        baasicArticleClient.saveDraft(article)
+                        articleClient.saveDraft(article)
                             .then(function (data) {  
                                 // perform success action here 
                             },
@@ -198,7 +198,7 @@ export class ArticleClient {
      * @param data An article object that needs to be removed from the system.
      * @returns A promise that is resolved once the remove article action has been performed.                          
      * @example // article is a resource previously fetched using get action.				 
-                    baasicArticleClient.remove(article)
+                    articleClient.remove(article)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -207,7 +207,7 @@ export class ArticleClient {
                         });		               
      **/
     remove(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicArticleRouteDefinition.delete(data));
     }
 
     /**                 
@@ -221,7 +221,7 @@ export class ArticleClient {
      * @param options Notification options.
      * @returns A promise that is resolved once the archive article action has been performed. 
      * @example // article is a resource previously fetched using get action.				 
-                    baasicArticleClient.archive(article, articleOptions)
+                    articleClient.archive(article, articleOptions)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -230,7 +230,7 @@ export class ArticleClient {
                         });		               
      **/
     archive(data: IArticle, options: IArticleOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleRouteDefinition.archive(data), this.baasicArticleRouteDefinition.updateParams(options));
+        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.archive(data), this.baasicArticleRouteDefinition.updateParams(options));
     }
 
     /**                 
@@ -243,7 +243,7 @@ export class ArticleClient {
      * @param data Article object.
      * @returns A promise that is resolved once the restore article action has been performed.                         
      * @example // article is a resource previously fetched using get action.				 
-                        baasicArticleClient.restore(article)
+                        articleClient.restore(article)
                             .then(function (data) {  
                                 // perform success action here 
                             },
@@ -252,7 +252,7 @@ export class ArticleClient {
                             });		               
      **/
     restore(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleRouteDefinition.restore(data), this.baasicArticleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.restore(data), this.baasicArticleRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -265,7 +265,7 @@ export class ArticleClient {
      * @param data An article object.
      * @returns A promise that is resolved once the unpublish article action has been performed.                       
      * @example 	// article is a resource previously fetched using get action.				 
-                        baasicArticleClient.unpublish(article)
+                        articleClient.unpublish(article)
                             .then(function (data) {  
                                 // perform success action here 
                             },
@@ -274,7 +274,7 @@ export class ArticleClient {
                             });		               
      **/
     unpublish(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleRouteDefinition.unpublish(data), this.baasicArticleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.unpublish(data), this.baasicArticleRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -283,7 +283,7 @@ export class ArticleClient {
      * @param data An article object.
      * @param articleOptions Notification options.
      * @returns A promise that is resolved once the unpublish article action has been performed.                              
-     * @example baasicArticleClient.publish(article, articleOptions)
+     * @example articleClient.publish(article, articleOptions)
                     .then(function (data) {  
                         // perform success action here 
                     },
@@ -292,13 +292,13 @@ export class ArticleClient {
                     });		               
      **/
     publish(data: IArticle, articleOptions: IArticleOptions): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleRouteDefinition.publish(data), this.baasicArticleRouteDefinition.updateParams(articleOptions));
+        return this.apiClient.put<void>(this.baasicArticleRouteDefinition.publish(data), this.baasicArticleRouteDefinition.updateParams(articleOptions));
     }
 
     /**                 
      * Returns a promise that is resolved once the purge articles action has been performed. Please note that all article resources will be deleted from the system once the action is successfully completed and therefore it can only be executed by user assigned to account owner role.                 
      * @method                        
-     * @example baasicArticleClient.purge({})
+     * @example articleClient.purge({})
                     .then(function (data) {  
                         // perform success action here 
                     },
@@ -307,7 +307,7 @@ export class ArticleClient {
                     });		               
      **/
     purge(options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleRouteDefinition.purge(options));
+        return this.apiClient.delete<void>(this.baasicArticleRouteDefinition.purge(options));
     }
 }
 

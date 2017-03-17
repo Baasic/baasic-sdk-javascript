@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsRegistrationsUsersClient  
- * @description  Notifications Registrations Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsUsersClient` uses `baasicNotificationsRegistrationsUsersRouteDefinition`. 
+ * @module notificationsRegistrationsUsersClient  
+ * @description  Notifications Registrations Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersClient` uses `baasicNotificationsRegistrationsUsersRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -22,13 +22,13 @@ export class NotificationsRegistrationsUsersClient {
     }
 
     get batch(): NotificationsRegistrationsUsersBatchClient {
-        return this.baasicNotificationsRegistrationsUsersBatchClient;
+        return this.notificationsRegistrationsUsersBatchClient;
     }
 
     constructor(
         @inject(notificationsTypes.NotificationsRegistrationsUsersRouteDefinition) protected baasicNotificationsRegistrationsUsersRouteDefinition: NotificationsRegistrationsUsersRouteDefinition,
-        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchClient) protected baasicNotificationsRegistrationsUsersBatchClient: NotificationsRegistrationsUsersBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchClient) protected notificationsRegistrationsUsersBatchClient: NotificationsRegistrationsUsersBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                          
@@ -36,7 +36,7 @@ export class NotificationsRegistrationsUsersClient {
      * @method 
      * @param data An UserRegistration object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create user registration action has been performed.
-     * @example baasicNotificationsRegistrationsUsersClient.create({     
+     * @example notificationsRegistrationsUsersClient.create({     
                     provider: '<provider-name>',     
                     providerData: <provider-data>,     
                     userId: '<user-id>' 
@@ -49,7 +49,7 @@ export class NotificationsRegistrationsUsersClient {
                 });                         
      */
     create(data: IUserRegistration): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.baasicApiClient.post<IUserRegistration>(this.baasicNotificationsRegistrationsUsersRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserRegistration>(this.baasicNotificationsRegistrationsUsersRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -57,7 +57,7 @@ export class NotificationsRegistrationsUsersClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                              
-     * @example baasicNotificationsRegistrationsUsersClient.find({     
+     * @example notificationsRegistrationsUsersClient.find({     
                    pageNumber : 1,     
                    pageSize : 10,     
                    orderBy : '<field>',     
@@ -75,7 +75,7 @@ export class NotificationsRegistrationsUsersClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserRegistration>>> {
-        return this.baasicApiClient.get<IQueryModel<IUserRegistration>>(this.baasicNotificationsRegistrationsUsersRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserRegistration>>(this.baasicNotificationsRegistrationsUsersRouteDefinition.find(options));
     }
 
     /**                          
@@ -83,7 +83,7 @@ export class NotificationsRegistrationsUsersClient {
      * @method
      * @param id The registration identifier which uniquely identifies UserRegistration resource that needs to be retrieved.
      * @param options Query resource options object.                               
-     * @example baasicNotificationsRegistrationsUsersClient.get('<registration-id>') 
+     * @example notificationsRegistrationsUsersClient.get('<registration-id>') 
                    .then(function (data) {     
                        // perform success action here 
                    },
@@ -92,7 +92,7 @@ export class NotificationsRegistrationsUsersClient {
                    });                         
     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.baasicApiClient.get<IUserRegistration>(this.baasicNotificationsRegistrationsUsersRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserRegistration>(this.baasicNotificationsRegistrationsUsersRouteDefinition.get(id, options));
     }
 
     /**                          
@@ -104,7 +104,7 @@ export class NotificationsRegistrationsUsersClient {
      * @method
      * @param data An object used to delete specified UserRegistration resource.                                 
      * @example // registration is a resource previously fetched using get action.				 
-                    baasicNotificationsRegistrationsUsersClient.remove(registration)
+                    notificationsRegistrationsUsersClient.remove(registration)
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -113,7 +113,7 @@ export class NotificationsRegistrationsUsersClient {
                         });						        
      */
     remove(data: IUserRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsRegistrationsUsersRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicNotificationsRegistrationsUsersRouteDefinition.delete(data));
     }
 
     /**                          
@@ -127,7 +127,7 @@ export class NotificationsRegistrationsUsersClient {
      * @returns A promise that is resolved once the update user registration action has been performed.                                
      * @example // registration is a resource previously fetched using get action.                             
                     registration.provider = '<provider-name>';                             
-                    baasicNotificationsRegistrationsUsersClient.update(registration)                             
+                    notificationsRegistrationsUsersClient.update(registration)                             
                         .then(function (data) {                                  
                             // perform success action here                            
                         },
@@ -136,7 +136,7 @@ export class NotificationsRegistrationsUsersClient {
                         }); 				        
      */
     update(data: IUserRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsRegistrationsUsersRouteDefinition.update(data), this.baasicNotificationsRegistrationsUsersRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsRegistrationsUsersRouteDefinition.update(data), this.baasicNotificationsRegistrationsUsersRouteDefinition.updateParams(data));
     }
 }
 

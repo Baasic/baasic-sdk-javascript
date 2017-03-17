@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicUserProfileAvatarClient  
+ * @module userProfileAvatarClient  
  * @description  User Profile Avatar Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -18,13 +18,13 @@ export class UserProfileAvatarClient {
     }
 
     get streams(): UserProfileAvatarStreamsClient {
-        return this.baasicUserProfileAvatarStreamsClient;
+        return this.userProfileAvatarStreamsClient;
     }
 
     constructor(
         @inject(userProfileTypes.UserProfileAvatarRouteDefinition) protected baasicUserProfileAvatarRouteDefinition: UserProfileAvatarRouteDefinition,
-        @inject(userProfileTypes.UserProfileAvatarStreamsClient) protected baasicUserProfileAvatarStreamsClient: UserProfileAvatarStreamsClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(userProfileTypes.UserProfileAvatarStreamsClient) protected userProfileAvatarStreamsClient: UserProfileAvatarStreamsClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                 
@@ -33,7 +33,7 @@ export class UserProfileAvatarClient {
      * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                        
-     * @example baasicUserProfileAvatarClient.get('<file-id>')
+     * @example userProfileAvatarClient.get('<file-id>')
                    .then(function (data) {   
                        // perform success action here 
                    },
@@ -42,7 +42,7 @@ export class UserProfileAvatarClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IProfileAvatar>> {
-        return this.baasicApiClient.get<IProfileAvatar>(this.baasicUserProfileAvatarRouteDefinition.get(id, options));
+        return this.apiClient.get<IProfileAvatar>(this.baasicUserProfileAvatarRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -56,7 +56,7 @@ export class UserProfileAvatarClient {
      * @returns A promise that is resolved once the update file action has been performed.                         
      * @example // fileEntry is a file resource previously fetched using get action. 
                        fileEntry.description = '<description>'; 
-                       baasicUserProfileAvatarClient.update(fileEntry)
+                       userProfileAvatarClient.update(fileEntry)
                            .then(function (data) {   
                                // perform success action here 
                            },
@@ -65,7 +65,7 @@ export class UserProfileAvatarClient {
                                 // perform error handling here 
     **/
     update(data: IProfileAvatar): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicUserProfileAvatarRouteDefinition.update(data), data);
+        return this.apiClient.put<void>(this.baasicUserProfileAvatarRouteDefinition.update(data), data);
     }
 
     /**                 
@@ -74,7 +74,7 @@ export class UserProfileAvatarClient {
      * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
      * @param data A profile avatar file object that need to be inserted into the system. 
      * @returns A promise that is resolved once the link action has been performed.                       
-     * @example baasicUserProfileAvatarClient.link(fileObject)
+     * @example userProfileAvatarClient.link(fileObject)
                     .then(function (data) {  
                         // perform success action here 
                     },
@@ -83,7 +83,7 @@ export class UserProfileAvatarClient {
                     });                
      **/
     link(id: string, data: IProfileAvatar): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicUserProfileAvatarRouteDefinition.link(id, data), this.baasicUserProfileAvatarRouteDefinition.createParams(data, id));
+        return this.apiClient.post(this.baasicUserProfileAvatarRouteDefinition.link(id, data), this.baasicUserProfileAvatarRouteDefinition.createParams(data, id));
     }
 
     /**                 
@@ -106,7 +106,7 @@ export class UserProfileAvatarClient {
                         });                
      **/
     unlink(data: IProfileAvatar, options?: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.delete(this.baasicUserProfileAvatarRouteDefinition.unlink(data, options));
+        return this.apiClient.delete(this.baasicUserProfileAvatarRouteDefinition.unlink(data, options));
     }
 }
 

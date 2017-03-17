@@ -1,6 +1,6 @@
 /**  
- * @module baasicValueSetItemClient
- * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `baasicValueSetItemClient` uses `baasicValueSetItemRouteDefinition`. 
+ * @module valueSetItemClient
+ * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `valueSetItemClient` uses `baasicValueSetItemRouteDefinition`. 
  */
 import { injectable, inject } from 'inversify';
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
@@ -13,7 +13,7 @@ export class ValueSetItemClient {
 
     constructor(
         @inject(valueSetTypes.ValueSetItemRouteDefinition) protected baasicValueSetItemRouteDefinition: ValueSetItemRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**
@@ -21,7 +21,7 @@ export class ValueSetItemClient {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.
      * @method items.find
-     * @example baasicValueSetItemClient.find({
+     * @example valueSetItemClient.find({
                     setName: '<value-set-name>',
                     pageNumber : 1, 
                     pageSize : 10, 
@@ -36,7 +36,7 @@ export class ValueSetItemClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSetItem>>> {
-        return this.baasicApiClient.get<IQueryModel<IValueSetItem>>(this.baasicValueSetItemRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IValueSetItem>>(this.baasicValueSetItemRouteDefinition.find(options));
     }
 
     /**
@@ -46,7 +46,7 @@ export class ValueSetItemClient {
      * @param options query resource options object
      * @returns A promise that is resolved once the get action has been performed.
      * @method items.get
-     * @example baasicValueSetItemClient.get('<value-set-name>', '<set-item-id>')
+     * @example valueSetItemClient.get('<value-set-name>', '<set-item-id>')
                    .then(function (data) {   
                         // perform success action here 
                 },
@@ -55,7 +55,7 @@ export class ValueSetItemClient {
                 });
      **/
     get(setName: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.baasicApiClient.get<IValueSetItem>(this.baasicValueSetItemRouteDefinition.get(setName, id, options));
+        return this.apiClient.get<IValueSetItem>(this.baasicValueSetItemRouteDefinition.get(setName, id, options));
     }
 
     /**
@@ -63,7 +63,7 @@ export class ValueSetItemClient {
      * @method
      * @param data A value set item object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create value set item action has been performed.
-     * @example baasicValueSetItemClient.create({
+     * @example valueSetItemClient.create({
                     setId: '<value-set-id>', 
                     value: '<value>'
                 })
@@ -75,11 +75,11 @@ export class ValueSetItemClient {
                 });
      **/
     create(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.baasicApiClient.post<IValueSetItem>(this.baasicValueSetItemRouteDefinition.create(data), this.baasicValueSetItemRouteDefinition.createParams(data));
+        return this.apiClient.post<IValueSetItem>(this.baasicValueSetItemRouteDefinition.create(data), this.baasicValueSetItemRouteDefinition.createParams(data));
     }
 
     /**
-     * Returns a promise that is resolved once the update value set item action has been performed; this action updates a value set item resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicValueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update value set item action has been performed; this action updates a value set item resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(valueSetItem); 
      * let uri = params['model'].links('put').href; 
@@ -89,7 +89,7 @@ export class ValueSetItemClient {
      * @returns A promise that is resolved once the update value set item action has been performed.
      * @example // valueSetItem is a resource previously fetched using get action. 
                 valueSetItem.value = '<new-value>'; 
-                baasicValueSetItemClient.update(valueSetItem)
+                valueSetItemClient.update(valueSetItem)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -98,11 +98,11 @@ export class ValueSetItemClient {
                     });
      **/
     update(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.baasicApiClient.put<IValueSetItem>(this.baasicValueSetItemRouteDefinition.update(data), this.baasicValueSetItemRouteDefinition.updateParams(data));
+        return this.apiClient.put<IValueSetItem>(this.baasicValueSetItemRouteDefinition.update(data), this.baasicValueSetItemRouteDefinition.updateParams(data));
     }
 
     /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will delete a value set item if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicValueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will delete a value set item if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(valueSetItem); 
      * let uri = params['model'].links('delete').href; 
@@ -111,7 +111,7 @@ export class ValueSetItemClient {
      * @returns A promise that is resolved once the remove action has been performed.
      * @method 
      * @example // valueSetItem is a resource previously fetched using get action.
-                baasicValueSetItemClient.remove(valueSetItem)
+                valueSetItemClient.remove(valueSetItem)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -120,7 +120,7 @@ export class ValueSetItemClient {
                     });
      **/
     remove(data: IValueSetItem): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicValueSetItemRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicValueSetItemRouteDefinition.delete(data));
     }
 }
 

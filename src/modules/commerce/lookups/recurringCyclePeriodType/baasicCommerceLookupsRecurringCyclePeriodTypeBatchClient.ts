@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceRecurringCyclePeriodTypeBatchClient  
- * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceRecurringCyclePeriodTypeBatchClient` uses `baasicCommerceRecurringCyclePeriodTypeBatchRouteDefinition`. 
+ * @module commerceRecurringCyclePeriodTypeBatchClient  
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceRecurringCyclePeriodTypeBatchClient` uses `baasicCommerceRecurringCyclePeriodTypeBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -14,13 +14,13 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.                     
      * @method                            
-     * @example baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient.create([{    
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchClient.create([{    
                     name : '<name>',   
                     abrv: '<abbreviation>',   
                     description: '<description>',   
@@ -34,13 +34,13 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.create(), this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.create(), this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.createParams(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.                     
      * @method                           
-     * @example   baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient.update(commerceRecurringPeriodTypes)   
+     * @example   commerceLookupsRecurringCyclePeriodTypeBatchClient.update(commerceRecurringPeriodTypes)   
                     .then(function (data) {     
                         // perform success action here   
                     },
@@ -49,13 +49,13 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.update(), this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.update(), this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.updateParams(data));
     }
 
     /**                     
      * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.                     
      * @method                           
-     * @example baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient.remove(commerceRecurringPeriodTypeIds)  
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchClient.remove(commerceRecurringPeriodTypeIds)  
                     .then(function (data) {     
                         // perform success action here   
                     },   
@@ -64,7 +64,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

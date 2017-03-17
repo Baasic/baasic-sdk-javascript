@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsRegistrationsUsersBatchClient  
- * @description  Notifications Registrations Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsUsersBatchClient` uses `baasicNotificationsRegistrationsUsersBatchRouteDefinition`. 
+ * @module notificationsRegistrationsUsersBatchClient  
+ * @description  Notifications Registrations Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersBatchClient` uses `baasicNotificationsRegistrationsUsersBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,7 +19,7 @@ export class NotificationsRegistrationsUsersBatchClient {
 
     constructor(
         @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected baasicNotificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                              
@@ -27,7 +27,7 @@ export class NotificationsRegistrationsUsersBatchClient {
      * @method
      * @param data UserRegistration collection that need to be inserted into the system.                                   
      * @returns A promise that is resolved once the create user registration action has been performed. 
-     * @example baasicNotificationsRegistrationsUsersBatchClient.create([{     
+     * @example notificationsRegistrationsUsersBatchClient.create([{     
                     provider: '<provider-name>',     
                     providerData: <provider-data>,     
                     userId: '<user-id>' 
@@ -40,7 +40,7 @@ export class NotificationsRegistrationsUsersBatchClient {
                 });                             
      */
     create(data: IUserRegistration[]): PromiseLike<IHttpResponse<IUserRegistration[]>> {
-        return this.baasicApiClient.post<IUserRegistration[]>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserRegistration[]>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.create(), this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.createParams(data));
     }
 
     /**                              
@@ -48,7 +48,7 @@ export class NotificationsRegistrationsUsersBatchClient {
      * @method 
      * @param ids The subscription ids which uniquely identify UserRegistration resources that need to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.                                    
-     * @example baasicNotificationsRegistrationsUsersBatchClient.remove(subscriptionIds)
+     * @example notificationsRegistrationsUsersBatchClient.remove(subscriptionIds)
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -57,7 +57,7 @@ export class NotificationsRegistrationsUsersBatchClient {
                     });		                            
      */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              
@@ -65,7 +65,7 @@ export class NotificationsRegistrationsUsersBatchClient {
      * @method
      * @param data UserRegistration objects used to update specified UserRegistration resources.
      * @returns A promise that is resolved once the update user registration action has been performed.                                
-     * @example baasicNotificationsRegistrationsUsersBatchClient.update(registrations)
+     * @example notificationsRegistrationsUsersBatchClient.update(registrations)
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsUsersBatchClient {
                     });                             
      */
     update(data: IUserRegistration[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.update(), this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.update(), this.baasicNotificationsRegistrationsUsersBatchRouteDefinition.updateParams(data));
     }
 }
 

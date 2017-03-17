@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsRegistrationsAnonymousBatchClient  
- * @description  Notifications Registrations Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsAnonymousBatchClient` uses `baasicNotificationsRegistrationsAnonymousBatchRouteDefinition`. 
+ * @module notificationsRegistrationsAnonymousBatchClient  
+ * @description  Notifications Registrations Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousBatchClient` uses `baasicNotificationsRegistrationsAnonymousBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -22,7 +22,7 @@ export class NotificationsRegistrationsAnonymousBatchClient {
 
     constructor(
         @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchRouteDefinition) protected baasicNotificationsRegistrationsAnonymousBatchRouteDefinition: NotificationsRegistrationsAnonymousBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                              
@@ -30,7 +30,7 @@ export class NotificationsRegistrationsAnonymousBatchClient {
      * @method
      * @param data AnonymousRegistration objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create anonymous registration action has been performed.                                     
-     * @example baasicNotificationsRegistrationsAnonymousBatchClient.create([{     
+     * @example notificationsRegistrationsAnonymousBatchClient.create([{     
                     provider: '<provider-name>',     
                     providerData: <provider-data>,     
                     expirationDate: <expiration-date> 
@@ -43,7 +43,7 @@ export class NotificationsRegistrationsAnonymousBatchClient {
                 });                             
      */
     create(data: IAnonymousRegistration[]): PromiseLike<IHttpResponse<IAnonymousRegistration[]>> {
-        return this.baasicApiClient.post(this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.create(), this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.create(), this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.createParams(data));
     }
 
     /**                              
@@ -51,7 +51,7 @@ export class NotificationsRegistrationsAnonymousBatchClient {
      * @method
      * @param ids The registration ids which uniquely identify AnonymousRegistration resources that need to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.                                    
-     * @example baasicNotificationsRegistrationsAnonymousBatchClient.remove(subscriptionIds) 
+     * @example notificationsRegistrationsAnonymousBatchClient.remove(subscriptionIds) 
                    .then(function (data) {     
                        // perform success action here 
                    },
@@ -60,7 +60,7 @@ export class NotificationsRegistrationsAnonymousBatchClient {
                    });		                            
     */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.delete(), undefined, ids);
     }
 
     /**                              
@@ -68,7 +68,7 @@ export class NotificationsRegistrationsAnonymousBatchClient {
      * @method
      * @param data AnonymousRegistration objects used to update specified AnonymousRegistration resources.
      * @returns A promise that is resolved once the update anonymous registration action has been performed.                                     
-     * @example baasicNotificationsRegistrationsAnonymousBatchClient.update(registrations)
+     * @example notificationsRegistrationsAnonymousBatchClient.update(registrations)
                     .then(function (data) {     
                         // perform success action here 
                     },
@@ -77,7 +77,7 @@ export class NotificationsRegistrationsAnonymousBatchClient {
                     });                             
      */
     update(data: IAnonymousRegistration[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.update(), this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.update(), this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition.updateParams(data));
     }
 }
 

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicSkillBatchClient  
+ * @module skillBatchClient  
  * @description Baasic Skill Batch Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -14,7 +14,7 @@ export class SkillBatchClient {
 
     constructor(
         @inject(userProfileTypes.SkillBatchRouteDefinition) protected baasicSkillBatchRouteDefinition: SkillBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                   
@@ -22,7 +22,7 @@ export class SkillBatchClient {
      * @method
      * @param data A collection of skill objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create skill action has been performed.                         
-     * @example   baasicSkillClient.create([{     
+     * @example   skillClient.create([{     
                     description : '<description>',     
                     name : '<name>',     
                     slug: '<slug>'   
@@ -35,7 +35,7 @@ export class SkillBatchClient {
                   });                   
      **/
     create(data: ISkill[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicSkillBatchRouteDefinition.create(), this.baasicSkillBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicSkillBatchRouteDefinition.create(), this.baasicSkillBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -43,7 +43,7 @@ export class SkillBatchClient {
      * @method
      * @param data A collection of skill objects used to update specified skill resources.
      * @returns A promise that is resolved once the update skill action has been performed.                         
-     * @example   baasicSkillBatchClient.update(companies)
+     * @example   skillBatchClient.update(companies)
                     .then(function (data) {     
                         // perform success action here   
                     }, 
@@ -52,7 +52,7 @@ export class SkillBatchClient {
                     });                   
      **/
     update(data: ISkill[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicSkillBatchRouteDefinition.update(), this.baasicSkillBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicSkillBatchRouteDefinition.update(), this.baasicSkillBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -60,7 +60,7 @@ export class SkillBatchClient {
      * @method
      * @param ids Collection of skill ids which uniquely identifies skill resources that need to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.                        
-     * @example baasicSkillBatchClient.remove(skillIds)
+     * @example skillBatchClient.remove(skillIds)
                     .then(function (data) {     
                         // perform success action here   
                     }, 
@@ -69,7 +69,7 @@ export class SkillBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicSkillBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.baasicSkillBatchRouteDefinition.delete(), undefined, ids);
     }
 }
 

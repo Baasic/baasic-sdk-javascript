@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicNotificationsSubscriptionsClient  
- * @description  Notifications Subscriptions Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsClient` uses `baasicNotificationsSubscriptionsRouteDefinition`. 
+ * @module notificationsSubscriptionsClient  
+ * @description  Notifications Subscriptions Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsClient` uses `baasicNotificationsSubscriptionsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -20,17 +20,17 @@ export class NotificationsSubscriptionsClient {
     }
 
     get anonymous(): NotificationsSubscriptionsAnonymousClient {
-        return this.baasicNotificationsSubscriptionsAnonymousClient;
+        return this.notificationsSubscriptionsAnonymousClient;
     }
 
     get users(): NotificationsSubscriptionsUsersClient {
-        return this.baasicNotificationsSubscriptionsUsersClient;
+        return this.notificationsSubscriptionsUsersClient;
     }
 
     constructor(
         @inject(notificationsTypes.NotificationsSubscriptionsRouteDefinition) protected baasicNotificationsSubscriptionsRouteDefinition: NotificationsSubscriptionsRouteDefinition,
-        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousClient) protected baasicNotificationsSubscriptionsAnonymousClient: NotificationsSubscriptionsAnonymousClient,
-        @inject(notificationsTypes.NotificationsSubscriptionsUsersClient) protected baasicNotificationsSubscriptionsUsersClient: NotificationsSubscriptionsUsersClient
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousClient) protected notificationsSubscriptionsAnonymousClient: NotificationsSubscriptionsAnonymousClient,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersClient) protected notificationsSubscriptionsUsersClient: NotificationsSubscriptionsUsersClient
     ) { }
 }
 

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleFilesBatchClient  
+ * @module articleFilesBatchClient  
  * @description  Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -22,14 +22,14 @@ export class ArticleFilesBatchClient {
 
     constructor(
         @inject(articleTypes.ArticleFilesBatchRouteDefinition) protected baasicArticleFilesBatchRouteDefinition: ArticleFilesBatchRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                   
      * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system.                   
      * @method                         
      * @example // Remove original file resources                
-                   baasicArticleFilesBatchClient.unlink([{ id: '<file-id>' }])
+                   articleFilesBatchClient.unlink([{ id: '<file-id>' }])
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -37,7 +37,7 @@ export class ArticleFilesBatchClient {
                            // perform error handling here 
                        });		
                // Remove derived file resources  
-                   baasicArticleFilesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
+                   articleFilesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -46,13 +46,13 @@ export class ArticleFilesBatchClient {
                        });		                    
     **/
     unlink(data: Object[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleFilesBatchRouteDefinition.unlink(), undefined, data);
+        return this.apiClient.delete<void>(this.baasicArticleFilesBatchRouteDefinition.unlink(), undefined, data);
     }
 
     /**                   
      * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.                  
      * @method                        
-     * @example baasicArticleFilesClient.batch.update(files)
+     * @example articleFilesClient.batch.update(files)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -61,13 +61,13 @@ export class ArticleFilesBatchClient {
                     });                   
      **/
     update(data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleFilesBatchRouteDefinition.update(), this.baasicArticleFilesBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleFilesBatchRouteDefinition.update(), this.baasicArticleFilesBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
      * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).                   
      * @method                         
-     * @example baasicArticleFilesClient.batch.link(files)
+     * @example articleFilesClient.batch.link(files)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -76,7 +76,7 @@ export class ArticleFilesBatchClient {
                     });                   
      **/
     link(data: IArticleFile[]): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicArticleFilesBatchRouteDefinition.link(), this.baasicArticleFilesBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicArticleFilesBatchRouteDefinition.link(), this.baasicArticleFilesBatchRouteDefinition.createParams(data));
     }
 }
 

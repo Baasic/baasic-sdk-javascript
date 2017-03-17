@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicFilesACLClient  
+ * @module filesACLClient  
  * @description  Files ACL Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
@@ -18,7 +18,7 @@ export class FilesACLClient {
 
     constructor(
         @inject(filesTypes.FilesACLRouteDefinition) protected baasicFilesACLRouteDefinition: FilesACLRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                     
@@ -26,7 +26,7 @@ export class FilesACLClient {
      * @method
      * @param options ACL options object.
      * @returns A promise that is resolved once the get action has been performed.                           
-     * @example baasicFilesACLClient.get({id: '<file-id>'})
+     * @example filesACLClient.get({id: '<file-id>'})
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -35,7 +35,7 @@ export class FilesACLClient {
                     });                     
      **/
     get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.get(this.baasicFilesACLRouteDefinition.get(options));
+        return this.apiClient.get(this.baasicFilesACLRouteDefinition.get(options));
     }
 
     /**                     
@@ -45,7 +45,7 @@ export class FilesACLClient {
      * @example let options = {id : '<file-id>'}; 
                 let aclObj =  {  actionId: '<action-id>',  roleId: '<role-id>',  userId: '<user-id>' }; 
                 options[baasicConstants.modelPropertyName] = aclObj; 
-                baasicFilesACLClient.update(options)
+                filesACLClient.update(options)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -54,7 +54,7 @@ export class FilesACLClient {
                     }); 				    
      **/
     update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.baasicApiClient.put<IACLPolicy[]>(this.baasicFilesACLRouteDefinition.update(options), this.baasicFilesACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.baasicFilesACLRouteDefinition.update(options), this.baasicFilesACLRouteDefinition.updateParams(options));
     }
 
     /**                     
@@ -69,7 +69,7 @@ export class FilesACLClient {
      *               "Update"
      * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
      * @returns A promise that is resolved once the removeByUser action has been performed.             
-     * @example baasicFilesACLClient.removeByUser('<file-id>', '<access-action>', '<username>')
+     * @example filesACLClient.removeByUser('<file-id>', '<access-action>', '<username>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -78,13 +78,13 @@ export class FilesACLClient {
                     }); 				    
      **/
     removeByUser(id: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicFilesACLRouteDefinition.deleteByUser(id, action, user, data));
+        return this.apiClient.delete<void>(this.baasicFilesACLRouteDefinition.deleteByUser(id, action, user, data));
     }
 
     /**                     
      * Returns a promise that is resolved once the removeByRole action has been performed. This action deletes ACL policy assigned to the specified role and file resource.                     
      * @method                         
-     * @example baasicFilesACLClient.removeByRole('<file-id>', '<access-action>', '<role-name>')
+     * @example filesACLClient.removeByRole('<file-id>', '<access-action>', '<role-name>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -93,7 +93,7 @@ export class FilesACLClient {
                     }); 				    
      **/
     removeByRole(id: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicFilesACLRouteDefinition.deleteByRole(id, action, role, data));
+        return this.apiClient.delete<void>(this.baasicFilesACLRouteDefinition.deleteByRole(id, action, role, data));
     }
 }
 

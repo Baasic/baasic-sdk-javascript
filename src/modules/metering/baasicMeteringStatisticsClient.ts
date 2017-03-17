@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicMeteringStatisticsClient  
- * @description  Metering Statistics Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringStatisticsClient` uses `baasicMeteringStatisticsRouteDefinition`. 
+ * @module meteringStatisticsClient  
+ * @description  Metering Statistics Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringStatisticsClient` uses `baasicMeteringStatisticsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -15,7 +15,7 @@ export class MeteringStatisticsClient {
 
     constructor(
         @inject(meteringTypes.MeteringStatisticsRouteDefinition) protected baasicMeteringStatisticsRouteDefinition: MeteringStatisticsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                    
@@ -23,7 +23,7 @@ export class MeteringStatisticsClient {
      * @method  
      * @param options Query resource options object. 
      * @returns A promise that is resolved once the find action has been performed.                         
-     * @example baasicMeteringClient.find({     
+     * @example meteringClient.find({     
                     pageNumber : 1,     
                     pageSize : 10,     
                     orderBy : '<field>',     
@@ -41,7 +41,7 @@ export class MeteringStatisticsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMeteringData>>> {
-        return this.baasicApiClient.get<IQueryModel<IMeteringData>>(this.baasicMeteringStatisticsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IMeteringData>>(this.baasicMeteringStatisticsRouteDefinition.find(options));
     }
 }
 

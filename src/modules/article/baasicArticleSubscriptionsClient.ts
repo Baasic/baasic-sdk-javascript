@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicArticleSubscriptionsArticleModuleClient  
- * @description  Article Subscriptions Article Module Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
+ * @module articleSubscriptionsArticleModuleClient  
+ * @description  Article Subscriptions Article Module Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -19,13 +19,13 @@ export class ArticleSubscriptionsClient {
 
     constructor(
         @inject(articleTypes.ArticleSubscriptionsRouteDefinition) protected baasicArticleSubscriptionsRouteDefinition: ArticleSubscriptionsRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                         
      * Returns a promise that is resolved once the subscribe action has been performed. This action subscribes an user to the article module.                         
      * @method                        
-     * @example baasicArticleSubscriptionsArticleModuleClient.subscribe(data)
+     * @example articleSubscriptionsArticleModuleClient.subscribe(data)
                    .then(function (data) { 
                        // perform success action here 
                    },
@@ -34,13 +34,13 @@ export class ArticleSubscriptionsClient {
                    });                         
     **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicArticleSubscriptionsRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.baasicArticleSubscriptionsRouteDefinition.subscribe(data), data);
     }
 
     /**                         
      * Returns a promise that is resolved once the isSubscribed action has been performed. This action checks if a user is subscribed to the article module.                         
      * @method                       
-     * @example baasicArticleSubscriptionsArticleModuleClient.isSubscribe(data)
+     * @example articleSubscriptionsArticleModuleClient.isSubscribe(data)
                    .then(function (data) { 
                        // perform success action here 
                    },
@@ -49,13 +49,13 @@ export class ArticleSubscriptionsClient {
                    });                         
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicArticleSubscriptionsRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.baasicArticleSubscriptionsRouteDefinition.isSubscribed(data));
     }
 
     /**                         
      * Returns a promise that is resolved once the unSubscribe action has been performed. This action unsubscribes a user from the article module.                         
      * @method                        
-     * @example baasicArticleSubscriptionsArticleModuleClient.unSubscribe(data)
+     * @example articleSubscriptionsArticleModuleClient.unSubscribe(data)
                    .then(function (data) { 
                        // perform success action here 
                    },
@@ -63,6 +63,6 @@ export class ArticleSubscriptionsClient {
                         // perform error handling here 
                    });                          **/
     unSubscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleSubscriptionsRouteDefinition.unSubscribe(data));
+        return this.apiClient.delete<void>(this.baasicArticleSubscriptionsRouteDefinition.unSubscribe(data));
     }
 }

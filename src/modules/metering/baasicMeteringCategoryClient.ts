@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicMeteringCategoryClient  
- * @description  Metering Category Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringCategoryClient` uses `baasicMeteringCategoryRouteDefinition`. 
+ * @module meteringCategoryClient  
+ * @description  Metering Category Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringCategoryClient` uses `baasicMeteringCategoryRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -18,13 +18,13 @@ export class MeteringCategoryClient {
     }
 
     get batch(): MeteringCategoryBatchClient {
-        return this.baasicMeteringCategoryBatchClient;
+        return this.meteringCategoryBatchClient;
     }
 
     constructor(
         @inject(meteringTypes.MeteringCategoryRouteDefinition) protected baasicMeteringCategoryRouteDefinition: MeteringCategoryRouteDefinition,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
-        @inject(meteringTypes.MeteringCategoryBatchClient) protected baasicMeteringCategoryBatchClient: MeteringCategoryBatchClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
+        @inject(meteringTypes.MeteringCategoryBatchClient) protected meteringCategoryBatchClient: MeteringCategoryBatchClient
     ) { }
 
     /**                  
@@ -32,7 +32,7 @@ export class MeteringCategoryClient {
      * @method
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                          
-     * @example baasicMeteringCategoryClient.find({   
+     * @example meteringCategoryClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -47,7 +47,7 @@ export class MeteringCategoryClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMeteringCategory>>> {
-        return this.baasicApiClient.get(this.baasicMeteringCategoryRouteDefinition.find(options));
+        return this.apiClient.get(this.baasicMeteringCategoryRouteDefinition.find(options));
     }
 
     /**                 
@@ -56,7 +56,7 @@ export class MeteringCategoryClient {
      * @param id MeteringCategory id which uniquely identifies MeteringCategory resource that needs to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.                        
-     * @example baasicMeteringCategoryClient.get(id)
+     * @example meteringCategoryClient.get(id)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -65,7 +65,7 @@ export class MeteringCategoryClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMeteringCategory>> {
-        return this.baasicApiClient.get(this.baasicMeteringCategoryRouteDefinition.get(id, options));
+        return this.apiClient.get(this.baasicMeteringCategoryRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -73,7 +73,7 @@ export class MeteringCategoryClient {
      * @method 
      * @param data An MeteringCategory object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create metering action has been performed.                         
-     * @example baasicMeteringCategoryClient.create({   
+     * @example meteringCategoryClient.create({   
                     category : '<category-name>',   
                     unitName : 'Kb',   
                     unitFactor: 1,   
@@ -88,7 +88,7 @@ export class MeteringCategoryClient {
                 });                  
      **/
     create(data: IMeteringCategory): PromiseLike<IHttpResponse<IMeteringCategory>> {
-        return this.baasicApiClient.post(this.baasicMeteringCategoryRouteDefinition.create(), this.baasicMeteringCategoryRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicMeteringCategoryRouteDefinition.create(), this.baasicMeteringCategoryRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -102,7 +102,7 @@ export class MeteringCategoryClient {
      * @returns A promise that is resolved once the remove action has been performed.                            
      * @example // meteringCategory is a resource previously fetched using get action. 
                     meteringCategory.defaultSamplingRate = 'Day'; 
-                    baasicMeteringCategoryClient.update(meteringCategory)
+                    meteringCategoryClient.update(meteringCategory)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -111,7 +111,7 @@ export class MeteringCategoryClient {
                         }); 				
      **/
     update(data: IMeteringCategory): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicMeteringCategoryRouteDefinition.update(data), this.baasicMeteringCategoryRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicMeteringCategoryRouteDefinition.update(data), this.baasicMeteringCategoryRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -124,7 +124,7 @@ export class MeteringCategoryClient {
      * @param data An meteringCategory object used to update specified MeteringCategory resource. 
      * @returns A promise that is resolved once the remove action has been performed.                        
      * @example // meteringCategory is a resource previously fetched using get action.				 
-                    baasicMeteringCategoryClient.remove(meteringCategory)
+                    meteringCategoryClient.remove(meteringCategory)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -133,7 +133,7 @@ export class MeteringCategoryClient {
                         });						
      **/
     remove(data: IMeteringCategory): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicMeteringCategoryRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicMeteringCategoryRouteDefinition.delete(data));
     }
 }
 

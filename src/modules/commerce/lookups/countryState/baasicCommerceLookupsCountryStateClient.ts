@@ -1,7 +1,7 @@
 /* globals module */
 /**  
- * @module baasicCommerceCountryStateClient  
- * @description  Commerce Country State Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCountryStateClient` uses `baasicCommerceCountryStateRouteDefinition`. 
+ * @module commerceCountryStateClient  
+ * @description  Commerce Country State Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryStateClient` uses `baasicCommerceCountryStateRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -17,19 +17,19 @@ export class CommerceLookupsCountryStateClient {
     }
 
     get batch(): CommerceLookupsCountryStateBatchClient {
-        return this.baasicCommerceLookupsCountryStateBatchClient;
+        return this.commerceLookupsCountryStateBatchClient;
     }
 
     constructor(
         @inject(commerceTypes.CommerceLookupsCountryStateRouteDefinition) protected baasicCommerceLookupsCountryStateRouteDefinition: CommerceLookupsCountryStateRouteDefinition,
-        @inject(commerceTypes.CommerceLookupsCountryStateBatchClient) protected baasicCommerceLookupsCountryStateBatchClient: CommerceLookupsCountryStateBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(commerceTypes.CommerceLookupsCountryStateBatchClient) protected commerceLookupsCountryStateBatchClient: CommerceLookupsCountryStateBatchClient,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.                  
      * @method                         
-     * @example baasicCommerceLookupsCountryStateClient.find({   
+     * @example commerceLookupsCountryStateClient.find({   
                     countryId: '<country-id>'   
                     pageNumber : 1,   
                     pageSize : 10,   
@@ -45,13 +45,13 @@ export class CommerceLookupsCountryStateClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.baasicApiClient.get(this.baasicCommerceLookupsCountryStateRouteDefinition.find(options));
+        return this.apiClient.get(this.baasicCommerceLookupsCountryStateRouteDefinition.find(options));
     }
 
     /**                 
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.                 
      * @method                        
-     * @example baasicCommerceLookupsCountryStateClient.get('<state-id>')
+     * @example commerceLookupsCountryStateClient.get('<state-id>')
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -60,13 +60,13 @@ export class CommerceLookupsCountryStateClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.get(this.baasicCommerceLookupsCountryStateRouteDefinition.get(id, options));
+        return this.apiClient.get(this.baasicCommerceLookupsCountryStateRouteDefinition.get(id, options));
     }
 
     /**                  
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.                  
      * @method                         
-     * @example baasicCommerceLookupsCountryStateClient.create({    
+     * @example commerceLookupsCountryStateClient.create({    
                       countryId : '<country-id>',   
                       name: '<name>',   
                       abrv: '<abrv>',   
@@ -80,7 +80,7 @@ export class CommerceLookupsCountryStateClient {
                   });                  
    **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.baasicApiClient.post(this.baasicCommerceLookupsCountryStateRouteDefinition.create(), this.baasicCommerceLookupsCountryStateRouteDefinition.createParams(data));
+        return this.apiClient.post(this.baasicCommerceLookupsCountryStateRouteDefinition.create(), this.baasicCommerceLookupsCountryStateRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -92,7 +92,7 @@ export class CommerceLookupsCountryStateClient {
      * @method                         
      * @example // commerceCountryState is a resource previously fetched using get action. 
                     commerceCountryState.description = '<description>'; 
-                    baasicCommerceLookupsCountryStateClient.update(commerceCountryState)
+                    commerceLookupsCountryStateClient.update(commerceCountryState)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -101,7 +101,7 @@ export class CommerceLookupsCountryStateClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicCommerceLookupsCountryStateRouteDefinition.update(data), this.baasicCommerceLookupsCountryStateRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicCommerceLookupsCountryStateRouteDefinition.update(data), this.baasicCommerceLookupsCountryStateRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -112,7 +112,7 @@ export class CommerceLookupsCountryStateClient {
      * ```                  
      * @method                         
      * @example // commerceCountryState is a resource previously fetched using get action.				 
-                   baasicCommerceLookupsCountryStateClient.remove(commerceCountryState)
+                   commerceLookupsCountryStateClient.remove(commerceCountryState)
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -121,7 +121,7 @@ export class CommerceLookupsCountryStateClient {
                        });						
     **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicCommerceLookupsCountryStateRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.baasicCommerceLookupsCountryStateRouteDefinition.delete(data));
     }
 }
 

@@ -1,6 +1,6 @@
 /* globals module */
 /**  
- * @module baasicArticleInstanceFilesClient  
+ * @module articleInstanceFilesClient  
  * @description  Article Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
@@ -23,7 +23,7 @@ export class ArticleInstanceFilesClient {
     }
 
     get streams(): ArticleInstanceFilesStreamsClient {
-        return this.baasicArticleInstanceFilesStreamsClient;
+        return this.articleInstanceFilesStreamsClient;
     }
 
     get batch(): ArticleInstanceFilesBatchClient {
@@ -32,9 +32,9 @@ export class ArticleInstanceFilesClient {
 
     constructor(
         @inject(articleTypes.ArticleInstanceFilesRouteDefinition) protected baasicArticleInstanceFilesRouteDefinition: ArticleInstanceFilesRouteDefinition,
-        @inject(articleTypes.ArticleInstanceFilesStreamsClient) protected baasicArticleInstanceFilesStreamsClient: ArticleInstanceFilesStreamsClient,
+        @inject(articleTypes.ArticleInstanceFilesStreamsClient) protected articleInstanceFilesStreamsClient: ArticleInstanceFilesStreamsClient,
         @inject(articleTypes.ArticleInstanceFilesBatchClient) protected ArticleInstanceFilesBatchClient: ArticleInstanceFilesBatchClient,
-        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**                  
@@ -43,7 +43,7 @@ export class ArticleInstanceFilesClient {
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be retrieved.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.                        
-     * @example baasicArticleInstanceFilesClient.find({   
+     * @example articleInstanceFilesClient.find({   
                     pageNumber : 1,   
                     pageSize : 10,   
                     orderBy : '<field>',   
@@ -58,7 +58,7 @@ export class ArticleInstanceFilesClient {
                 });
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleFile>>> {
-        return this.baasicApiClient.get<IQueryModel<IArticleFile>>(this.baasicArticleInstanceFilesRouteDefinition.find(articleId, options));
+        return this.apiClient.get<IQueryModel<IArticleFile>>(this.baasicArticleInstanceFilesRouteDefinition.find(articleId, options));
     }
 
     /**                 
@@ -68,7 +68,7 @@ export class ArticleInstanceFilesClient {
      * @param id Article file id which uniquely identifies article file that needs to be retrieved.
      * @param options options object that contains embed data.
      * @returns A promise that is resolved once the get action has been performed.                         
-     * @example baasicArticleInstanceFilesClient.get('<file-id>')
+     * @example articleInstanceFilesClient.get('<file-id>')
                    .then(function (data) {   
                        // perform success action here 
                    },
@@ -77,7 +77,7 @@ export class ArticleInstanceFilesClient {
                    });                 
     **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.baasicApiClient.get<IArticleFile>(this.baasicArticleInstanceFilesRouteDefinition.get(articleId, id, options));
+        return this.apiClient.get<IArticleFile>(this.baasicArticleInstanceFilesRouteDefinition.get(articleId, id, options));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class ArticleInstanceFilesClient {
                         }); 				
      **/
     unlink(articleId: string, data: IArticleFile, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceFilesRouteDefinition.unlink(articleId, data, options));
+        return this.apiClient.delete<void>(this.baasicArticleInstanceFilesRouteDefinition.unlink(articleId, data, options));
     }
 
     /**                      
@@ -116,7 +116,7 @@ export class ArticleInstanceFilesClient {
      * @param options
      * @returns A promise that is resolved once the unlink by article action has been performed.                           
      * @example // fileEntry is a file resource previously fetched using get action.		 
-                    baasicArticleInstanceFilesClient.unlinkByArticle(fileEntry)
+                    articleInstanceFilesClient.unlinkByArticle(fileEntry)
                         .then(function (data) { 
                             // perform success action here 
                         },
@@ -125,7 +125,7 @@ export class ArticleInstanceFilesClient {
                         });                     
      **/
     unlinkByArticle(articleId: string, data: IArticleFile, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.delete<void>(this.baasicArticleInstanceFilesRouteDefinition.unlink(articleId, data, options));
+        return this.apiClient.delete<void>(this.baasicArticleInstanceFilesRouteDefinition.unlink(articleId, data, options));
     }
 
     /**                  
@@ -140,7 +140,7 @@ export class ArticleInstanceFilesClient {
      * @returns A promise that is resolved once the update file action has been performed.                          
      * @example // fileEntry is a file resource previously fetched using get action. 
                    fileEntry.description = '<description>'; 
-                   baasicArticleInstanceFilesClient.update(fileEntry)
+                   articleInstanceFilesClient.update(fileEntry)
                        .then(function (data) {   
                            // perform success action here 
                        },
@@ -149,7 +149,7 @@ export class ArticleInstanceFilesClient {
                        }); 				
     **/
     update(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<void>> {
-        return this.baasicApiClient.put<void>(this.baasicArticleInstanceFilesRouteDefinition.update(articleId, data), this.baasicArticleInstanceFilesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.baasicArticleInstanceFilesRouteDefinition.update(articleId, data), this.baasicArticleInstanceFilesRouteDefinition.updateParams(data));
     }
 
     /** 
@@ -158,7 +158,7 @@ export class ArticleInstanceFilesClient {
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be linked.
      * @param data
      * @returns A promise that is resolved once the link action has been performed.                        
-     * @example baasicArticleInstanceFilesClient.link(fileObject)
+     * @example articleInstanceFilesClient.link(fileObject)
                     .then(function (response, status, headers, config) {   
                         // perform success handling here 
                     },
@@ -167,7 +167,7 @@ export class ArticleInstanceFilesClient {
                     });                 
      **/
     link(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.baasicApiClient.post<IArticleFile>(this.baasicArticleInstanceFilesRouteDefinition.link(articleId, data), this.baasicArticleInstanceFilesRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleFile>(this.baasicArticleInstanceFilesRouteDefinition.link(articleId, data), this.baasicArticleInstanceFilesRouteDefinition.createParams(data));
     }
 }
 

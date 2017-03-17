@@ -119,7 +119,7 @@ baasicPermissionRouteDefinition.getRoles(
      * @returns A promise that is resolved once the remove action has been performed.                
      * @method                         
      * @example // Permission is a resource previously fetched using get action.				 
-                    baasicPermissionClient.remove(permission)
+                    permissionClient.remove(permission)
                         .then(function (data) {   
                             // perform success action here 
                         },
