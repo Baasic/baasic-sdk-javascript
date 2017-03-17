@@ -8,7 +8,7 @@ import {
     BaasicFilesClient,
     BaasicFilesStreamsRouteDefinition,
     BaasicFilesStreamsClient
-} from 'modules/files';
+} from 'modules/file';
 
 const TYPES = {
     BaasicFilesACLClient: Symbol("BaasicFilesACLClient"),

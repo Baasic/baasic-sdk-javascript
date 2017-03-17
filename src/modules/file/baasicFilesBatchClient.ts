@@ -7,8 +7,8 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicFilesBatchRouteDefinition, TYPES as filesTypes } from 'modules/files';
-import { IFileEntry } from 'modules/files/contracts';
+import { BaasicFilesBatchRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { IFileEntry } from 'modules/file/contracts';
 
 @injectable()
 export class BaasicFilesBatchClient {

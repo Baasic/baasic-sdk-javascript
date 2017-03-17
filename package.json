@@ -31,6 +31,8 @@
     "typescript": "^2.1.6",
     "webpack": "^2.2.1",
     "webpack-merge": "^2.6.1",
-    "webpack-uglify-js-plugin": "^1.1.9"
+    "webpack-uglify-js-plugin": "^1.1.9",
+    "typedoc": "0.5.7",
+    "typedoc-webpack-plugin": "1.1.3"
   }
 }

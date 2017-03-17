@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
-import { IFileEntry } from 'modules/files/contracts';
+import { IFileEntry } from 'modules/file/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
@@ -17,7 +17,7 @@ export class BaasicFilesBatchRouteDefinition extends BaasicBaseRouteDefinition {
     public readonly linkRoute: string = 'files/batch/link';
 
     public readonly unlinkRoute: string = 'files/batch/unlink';
-    
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     

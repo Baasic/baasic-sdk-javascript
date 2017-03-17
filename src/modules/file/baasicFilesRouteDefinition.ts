@@ -7,8 +7,8 @@
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/files';
-import { IFileEntry } from 'modules/files/contracts';
+import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { IFileEntry } from 'modules/file/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
@@ -23,7 +23,7 @@ export class BaasicFilesRouteDefinition extends BaasicBaseRouteDefinition {
     public readonly unlinkRoute: string = 'files/unlink/{id}/{?height,width}';
 
     public readonly linkRoute: string = 'files/link';
-    
+
     get streams(): BaasicFilesStreamsRouteDefinition {
         return this.baasicFilesStreamsRouteDefinition;
     }

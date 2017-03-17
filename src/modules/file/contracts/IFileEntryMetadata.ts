@@ -1,4 +1,4 @@
-import { IDerivedEntry, IUserInfo } from 'modules/files/contracts';
+import { IDerivedEntry, IUserInfo } from 'modules/file/contracts';
 
 
 export interface IFileEntryMetadata {

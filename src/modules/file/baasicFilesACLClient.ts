@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IACLOptions, IACLPolicy } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicFilesACLRouteDefinition, TYPES as filesTypes } from 'modules/files';
+import { BaasicFilesACLRouteDefinition, TYPES as filesTypes } from 'modules/file';
 
 @injectable()
 export class BaasicFilesACLClient {

@@ -13,8 +13,8 @@ import {
     BaasicFilesRouteDefinition,
     BaasicFilesStreamsClient,
     TYPES as filesTypes
-} from 'modules/files';
-import { IFileEntry } from 'modules/files/contracts';
+} from 'modules/file';
+import { IFileEntry } from 'modules/file/contracts';
 
 @injectable()
 export class BaasicFilesClient {

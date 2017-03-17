@@ -1,5 +1,5 @@
 import { IBaasicModel } from 'common/contracts';
-import { IUserInfo } from 'modules/files/contracts';
+import { IUserInfo } from 'modules/file/contracts';
 import { IMediaVaultDerivedEntry } from 'modules/mediaVault/contracts';
 
 export interface IMediaEntry extends IBaasicModel {

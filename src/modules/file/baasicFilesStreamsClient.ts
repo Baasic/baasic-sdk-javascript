@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/files';
+import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
 
 @injectable()
 export class BaasicFilesStreamsClient {

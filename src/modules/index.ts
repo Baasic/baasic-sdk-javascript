@@ -14,7 +14,7 @@ import * as DynamicResource from './dynamicResource';
 export { DynamicResource };
 import * as MediaVault from './mediaVault';
 export { MediaVault };
-import * as Files from './files';
+import * as Files from './file';
 export { Files };
 import * as Templating from './templating';
 export { Templating };
