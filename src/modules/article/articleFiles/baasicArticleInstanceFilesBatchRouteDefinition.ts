@@ -17,7 +17,7 @@ export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRo
     public readonly updateRoute: string = 'articles/{articleId}/files/batch';
 
     public readonly linkRoute: string = 'articles/{articleId}/files/batch/link';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -25,6 +25,7 @@ export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRo
     /**                     
      * Parses unlink route; this URI template does not expose any additional options.                                                        
      * @method
+     * @param articleId Article file id of the original article file used to identify article files on which delete action should be performed.
      * @example baasicArticleInstanceFilesBatchRouteDefinition.unlink(articleId);                                  
      **/
     unlink(articleId: string): any {
@@ -34,7 +35,8 @@ export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRo
 
     /**                     
      * Parses update route; this URI template does not expose any additional options.  
-     * @method                           
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be updated.                           
      * @example baasicArticleInstanceFilesStreamsRouteDefinition.update(articleId);                                  
      **/
     update(articleId: string): any {
@@ -44,7 +46,8 @@ export class BaasicArticleInstanceFilesBatchRouteDefinition extends BaasicBaseRo
 
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
-     * @method                           
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be linked.                           
      * @example baasicArticleInstanceFilesStreamsRouteDefinition.link(articleId);                                  
      **/
     link(articleId: string): any {

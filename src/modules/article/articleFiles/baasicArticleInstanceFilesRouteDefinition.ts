@@ -51,7 +51,9 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the file property to sort the result collection by. 	
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be retrieved.
+     * @param options Query resource options object.                        
      * @example baasicArticleInstanceFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(articleId: string, options?: IOptions): any {
@@ -62,7 +64,10 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
 
     /**                 
      * Parses get route; this route should be expanded with the Id of the file resource.
-     * @method 
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be retrieved.
+     * @param id Article file id which uniquely identifies article file that needs to be retrieved.
+     * @param options options object that contains embed data. 
      * @example baasicArticleInstanceFilesRouteDefinition.get({id: '<file-id>'});
      **/
     get(articleId: string, id: string, options?: IGetRequestOptions): any {
@@ -74,7 +79,10 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
 
     /**
      * Parses link route; this URI template does not expose any additional options.
-     * @method  
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be deleted.
+     * @param data
+     * @param options  
      * @example baasicArticleInstanceFilesRouteDefinition.link();
      **/
     link(articleId: string, data: IArticleFile): any {
@@ -85,7 +93,10 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
 
     /**
      * Parses unlink route; this URI template does not expose any additional options.
-     * @method  
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be deleted.
+     * @param data
+     * @param options  
      * @example baasicArticleFilesRouteDefinition.unlink(data);
      **/
     unlink(articleId: string, data: IArticleFile, options: Object): any {
@@ -97,6 +108,14 @@ export class BaasicArticleInstanceFilesRouteDefinition extends BaasicBaseRouteDe
         return super.baseDelete(this.unlinkRoute, params, options, 'unlink');
     }
 
+    /**
+     * Parses unlink by article route; this URI template does not expose any additional options.
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be deleted.
+     * @param data
+     * @param options  
+     * @example baasicArticleFilesRouteDefinition.unlinkByArticle(data);
+     **/
     unlinkByArticle(articleId: string, data: IArticleFile, options?: any) {
         if (!options) {
             options = {};

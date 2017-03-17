@@ -27,7 +27,10 @@ export class BaasicArticleInstanceFilesBatchClient {
 
     /**                   
      * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system.                   
-     * @method                         
+     * @method
+     * @param articleId Article file id of the original article file used to identify article files on which delete action should be performed.
+     * @param data Collection of article delete requests which uniquely identifies article files that need to be deleted.
+     * @returns A promise that is resolved once the unlink action has been performed.                           
      * @example // Remove original file resources                
                    baasicArticleInstanceFilesBatchClient.unlink([{ id: '<file-id>' }])
                        .then(function (data) {   
@@ -51,8 +54,11 @@ export class BaasicArticleInstanceFilesBatchClient {
 
     /**                   
      * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.                  
-     * @method batch.update                         
-     * @example baasicArticleInstanceFilesClient.batch.update(files)
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be updated.
+     * @param data Article file object that need to be updated in the system.
+     * @returns A promise that is resolved once the update action has been performed.                         
+     * @example baasicArticleInstanceFilesBatchClient.update(files)
                     .then(function (data) {   
                         // perform success action here 
                     },
@@ -66,8 +72,11 @@ export class BaasicArticleInstanceFilesBatchClient {
 
     /**                   
      * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).                   
-     * @method batch.link                         
-     * @example baasicArticleInstanceFilesClient.batch.link(files)
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be linked.
+     * @param data A collection of article file objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.                          
+     * @example baasicArticleInstanceFilesBatchClient.link(files)
                     .then(function (data) {   
                         // perform success action here 
                     },
