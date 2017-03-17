@@ -5,7 +5,7 @@ export { TYPES } from './diModule';
 
 export * from './utility';
 export * from './modelMapper';
-export * from './baseRouteDefinition';
+export * from './baasicbaseRouteDefinition';
 export * from './halParser';
 
 
