@@ -24,7 +24,10 @@ export class BaasicArticleInstanceFilesStreamsClient {
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.                     
-     * @method streams.get                            
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be retrieved.
+     * @param data Article File object used to identify stream that needs to be retrieved from the system.                             
+     * @returns A promise that is resolved once the get action has been performed. 
      * @example // Request the original file stream              
                     baasicArticleInstanceFilesStreamsClient.get({id: '<file-id>'})
                         .then(function (data) {     
@@ -43,13 +46,16 @@ export class BaasicArticleInstanceFilesStreamsClient {
                                  // perform error handling here 
                             });                     
      **/
-    get(articleId: string, data: any): PromiseLike<IHttpResponse<any>> {
+    get(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.get(this.baasicArticleInstanceFilesStreamsRouteDefinition.get(articleId, data));
     }
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).                     
-     * @method streams.getBlob                            
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be retrieved.
+     * @param data Article File object used to identify stream that needs to be retrieved from the system.    
+     * @returns A promise that is resolved once the get action has been performed.                            
      * @example // Request the original blob                
                     baasicArticleInstanceFilesStreamsClient.getBlob('<file-id>')
                         .then(function (data) {     
@@ -72,13 +78,17 @@ export class BaasicArticleInstanceFilesStreamsClient {
                             // perform error handling here 
                         });                     
      **/
-    getBlob(articleId: string, data: any): PromiseLike<IHttpResponse<any>> {
+    getBlob(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<any>> {
         return this.baasicApiClient.get(this.baasicArticleInstanceFilesStreamsRouteDefinition.get(articleId, data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
      * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).                      
-     * @method streams.update                      
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be updated.
+     * @param data Article File object used to identify stream that needs to be updated.
+     * @param stream                     
+     * @returns A promise that is resolved once the update file stream action has been performed.
      * @example // Update original file stream 
                     baasicArticleInstanceFilesStreamsClient.update('<file-id>', <file-stream>)
                         .then(function (data) {   
@@ -96,7 +106,7 @@ export class BaasicArticleInstanceFilesStreamsClient {
                             // perform error handling here 
                         });                     
      **/
-    update(articleId: string, data: any, stream: any): PromiseLike<IHttpResponse<any>> {
+    update(articleId: string, data: IArticleFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
         return this.baasicApiClient.put(this.baasicArticleInstanceFilesStreamsRouteDefinition.update(articleId, data), formData, { 'Content-Type': undefined });
@@ -104,7 +114,11 @@ export class BaasicArticleInstanceFilesStreamsClient {
 
     /**                      
      * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).                      
-     * @method streams.create                      
+     * @method 
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be inserted.
+     * @param data Article File object that need to be inserted into the system.
+     * @param stream
+     * @returns A promise that is resolved once the create file stream action has been performed.                      
      * @example baasicArticleInstanceFilesStreamsClient.create('<file-id>', <blob>)
                    .then(function (data) {  
                         // perform success action here 

@@ -25,7 +25,7 @@ export class Lookups {
         @inject(TYPES.BaasicCommerceLookupsCountryStateClient) public countryStates: BaasicCommerceLookupsCountryStateClient,
         @inject(TYPES.BaasicCommerceLookupsPaymentMethodClient) public paymentMethods: BaasicCommerceLookupsPaymentMethodClient,
         @inject(TYPES.BaasicCommerceLookupsPaymentTransactionStatusClient) public paymentTransactionStatuses: BaasicCommerceLookupsPaymentTransactionStatusClient,
-        @inject(TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeClient) public recurringCyclePerioedTypes: BaasicCommerceLookupsRecurringCyclePeriodTypeClient,
+        @inject(TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeClient) public recurringCyclePeriodTypes: BaasicCommerceLookupsRecurringCyclePeriodTypeClient,
         @inject(TYPES.BaasicCommerceLookupsSubscriptionStatusClient) public subscriptionStatuses: BaasicCommerceLookupsSubscriptionStatusClient,
         @inject(TYPES.BaasicCommerceLookupsInvoiceStatusClient) public invoiceStatuses: BaasicCommerceLookupsInvoiceStatusClient
     ) {

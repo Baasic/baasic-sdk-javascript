@@ -30,7 +30,9 @@ export class BaasicArticleInstanceRatingsClient {
 
     /**       
      * Returns a promise that is resolved once the create article rating action has been performed; this action creates a new rating for an article.                   
-     * @method                       
+     * @method 
+     * @param data An article rating object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create article rating action has been performed.                       
      * @example baasicArticleInstanceRatingsClient.create({ articleId : '<article-id>', rating : 5, userId : '<user-id>' })
                     .then(function (data) { 
                         // perform success action here 
@@ -45,7 +47,10 @@ export class BaasicArticleInstanceRatingsClient {
 
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article rating resources matching the given criteria.                  
-     * @method                         
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.                          
      * @example baasicArticleInstanceRatingsClient.find({ 
                     pageNumber : 1,   
                     pageSize : 10,   
@@ -66,7 +71,11 @@ export class BaasicArticleInstanceRatingsClient {
 
     /**                  
      * Returns a promise that is resolved once the findByUser action has been performed. Success response returns a list of article rating resources filtered by username.                  
-     * @method                         
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
+     * @param username Username which uniquely identifies a user which has created an article rating.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the findByUser action has been performed.                            
      * @example baasicArticleInstanceRatingsClient.find('<username>', {   
                     pageNumber : 1,   
                     pageSize : 10,   
@@ -86,7 +95,11 @@ export class BaasicArticleInstanceRatingsClient {
 
     /**                  
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article rating resource.                  
-     * @method                         
+     * @method 
+     * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
+     * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed.                           
      * @example baasicArticleInstanceRatingsClient.get('<articleRating-id>')
                     .then(function (data) {   
                         // perform success action here 
@@ -105,7 +118,9 @@ export class BaasicArticleInstanceRatingsClient {
      * let params = modelMapper.removeParams(articleRating); 
      * let uri = params['model'].links('put').href; 
      * ```                  
-     * @method                         
+     * @method
+     * @param data An article object used to update specified article resource.
+     * @returns A promise that is resolved once the update article rating action has been performed.                           
      * @example // articleRating is a resource previously fetched using get action. 
                     articleRating.rating = 4; 
                     baasicArticleInstanceRatingsClient.update(articleRating)
@@ -126,7 +141,9 @@ export class BaasicArticleInstanceRatingsClient {
      * let params = modelMapper.removeParams(articleRating); 
      * let uri = params['model'].links('delete').href; 
      * ```                 
-     * @method                        
+     * @method
+     * @param data Rating resource resource that needs to be deleted.                        
+     * @returns a promise that is resolved once the remove article rating action has been performed.
      * @example // articleRating is a resource previously fetched using get action.				 
                     baasicArticleInstanceRatingsClient.remove(articleRating)
                         .then(function (data) {   
@@ -146,7 +163,9 @@ export class BaasicArticleInstanceRatingsClient {
      * let params = modelMapper.removeParams(article); 
      * let uri = params['model'].links('delete-ratings-by-article').href; 
      * ```                     
-     * @method                     
+     * @method
+     * @param data Article object whose ratings needs to be deleted.
+     * @returns A promise that is resolved once the removeAll article rating action has been performed.                     
      * @example // article is a resource previously fetched using get action.					
                     baasicArticleInstanceRatingsClient.removeAll(article)
                         .then(function (data) {   

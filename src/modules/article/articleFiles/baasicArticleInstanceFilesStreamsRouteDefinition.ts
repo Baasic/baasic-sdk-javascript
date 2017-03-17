@@ -19,7 +19,7 @@ export class BaasicArticleInstanceFilesStreamsRouteDefinition extends BaasicBase
     public readonly createRoute: string = 'articles/{articleId}/file-streams/{filename}';
 
     public readonly updateRoute: string = 'articles/{articleId}/file-streams/{id}';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -29,6 +29,8 @@ export class BaasicArticleInstanceFilesStreamsRouteDefinition extends BaasicBase
      * - `width` - width of desired derived image.  
      * - `height` - height of desired derived image. 
      * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be retrieved.
+     * @param data Article File object used to identify stream that needs to be retrieved from the system.    
      * @example baasicArticleInstanceFilesRouteDefinition.get({id: '<filename>'});
      **/
     get(articleId: string, data: any): any {
@@ -44,7 +46,9 @@ export class BaasicArticleInstanceFilesStreamsRouteDefinition extends BaasicBase
 
     /**                     
      * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.                     
-     * @method 
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be inserted.
+     * @param data Article File object that need to be inserted into the system. 
      * @example baasicArticleInstanceFilesRouteDefinition.create({filename: '<filename>'});                                   
      **/
     create(articleId: string, data: IArticleFile): any {
@@ -57,7 +61,9 @@ export class BaasicArticleInstanceFilesStreamsRouteDefinition extends BaasicBase
      * Parses update route; this route should be expanded with the id of the previously saved resource. Additional supported items are:                     
      * - `width` - width of derived image to update.                     
      * - `height` - height of derived image to update.                                        
-     * @method                        
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article file need to be updated.
+     * @param data Article File object used to identify stream that needs to be updated.                        
      * @example baasicArticleFilesRouteDefinition.update({id: '<filename>'});
      **/
     update(articleId: string, data: IArticleFile): any {
