@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IPolicy extends IBaasicModel {
+export interface IPolicy extends IModel {
     action: string,
     roleId?: string,
     roleName?: string,

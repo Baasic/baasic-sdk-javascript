@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IOwner extends IBaasicModel {
+export interface IOwner extends IModel {
     displayName?: string,
     id: string
 }

@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IPreprocessingProviderSettings extends IBaasicModel {
+export interface IPreprocessingProviderSettings extends IModel {
     abrv: string,
     name: string
 }

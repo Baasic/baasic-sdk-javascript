@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IKeyValue extends IBaasicModel {
+export interface IKeyValue extends IModel {
     key: string,
     value: string
 }

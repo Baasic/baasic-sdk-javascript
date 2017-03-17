@@ -1,7 +1,7 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 import { ICompany } from 'modules/userProfile/contracts';
 
-export interface IUserProfileWork extends IBaasicModel {
+export interface IUserProfileWork extends IModel {
     company?: ICompany,
     companyId?: string,
     companyName?: string,

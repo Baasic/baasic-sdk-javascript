@@ -1,5 +1,5 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IMeteringSettings extends IBaasicModel {
+export interface IMeteringSettings extends IModel {
     dataRetentionPerion: number
 }

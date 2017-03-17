@@ -1,6 +1,6 @@
 import { IException } from 'common/contracts';
 
-export interface IBaasicResponse {
+export interface IResponse {
     details: string,
     error: IException,
     errorCode: number,

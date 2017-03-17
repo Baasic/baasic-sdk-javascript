@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface ISnProvider extends IBaasicModel {
+export interface ISnProvider extends IModel {
     abrv?: string,
     hasEmail?: string,
     name?: string

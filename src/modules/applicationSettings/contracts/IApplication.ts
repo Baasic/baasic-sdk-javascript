@@ -1,8 +1,8 @@
 import { IApplicationRole } from 'modules/applicationSettings/contracts';
 import { ISNProvider } from 'modules/applicationSettings/contracts';
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IApplication extends IBaasicModel {
+export interface IApplication extends IModel {
     allowAnyOrigin?: boolean,
     allowUserRegistration?: boolean,
     applicationTitle: string,

@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IMeteringData extends IBaasicModel {
+export interface IMeteringData extends IModel {
     application?: string,
     applicationId?: string,
     category?: string,

@@ -1,4 +1,4 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 import { IUser } from 'modules/notifications/contracts';
 
 export interface IUserRegistration {

@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IAnonymousRegistration extends IBaasicModel {
+export interface IAnonymousRegistration extends IModel {
     expirationDate?: string,
     provider: string,
     providerData: Object

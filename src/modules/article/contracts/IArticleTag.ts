@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IArticleTag extends IBaasicModel {
+export interface IArticleTag extends IModel {
     slug?: string,
     sortOrder?: number,
     tag: string

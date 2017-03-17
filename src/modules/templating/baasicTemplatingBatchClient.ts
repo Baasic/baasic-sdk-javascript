@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { IBaasicResponse } from 'common/contracts';
+import { IResponse } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { TemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
@@ -35,7 +35,7 @@ export class TemplatingBatchClient {
                         // perform error handling here     
                     });                     
     **/
-    create(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
+    create(data: ITemplate[]): PromiseLike<IHttpResponse<IResponse[]>> {
         return this.baasicApiClient.post<IResponse[]>(this.baasicTemplatingBatchRouteDefinition.create(), this.baasicTemplatingBatchRouteDefinition.createParams(data));
     }
 
@@ -52,7 +52,7 @@ export class TemplatingBatchClient {
                          // perform error handling here     
                     });                     
      **/
-    update(data: ITemplate[]): PromiseLike<IHttpResponse<IBaasicResponse[]>> {
+    update(data: ITemplate[]): PromiseLike<IHttpResponse<IResponse[]>> {
         return this.baasicApiClient.put<IResponse[]>(this.baasicTemplatingBatchRouteDefinition.update(), this.baasicTemplatingBatchRouteDefinition.updateParams(data));
     }
 

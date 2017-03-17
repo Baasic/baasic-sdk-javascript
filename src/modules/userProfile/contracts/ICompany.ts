@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface ICompany extends IBaasicModel {
+export interface ICompany extends IModel {
     description?: string,
     name: string,
     slug?: string

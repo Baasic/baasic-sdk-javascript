@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IRequestPasswordReset extends IBaasicModel {
+export interface IRequestPasswordReset extends IModel {
     challengeIdentifier?: string,
     challengeResponse?: string,
     recoverUrl: string,

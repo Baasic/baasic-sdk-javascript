@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IUserSocialLogin extends IBaasicModel {
+export interface IUserSocialLogin extends IModel {
     abrv: string,
     isConfigured: boolean,
     isConnected: boolean,

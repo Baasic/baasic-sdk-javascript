@@ -1,5 +1,5 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IUserInfo extends IBaasicModel {
+export interface IUserInfo extends IModel {
     displayName?: string
 }

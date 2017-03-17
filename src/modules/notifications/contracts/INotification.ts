@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface INotification extends IBaasicModel {
+export interface INotification extends IModel {
     channels: string[],
     templateContext?: Object,
     templateId: string

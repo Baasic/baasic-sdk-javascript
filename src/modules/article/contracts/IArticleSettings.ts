@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IArticleSettings extends IBaasicModel {
+export interface IArticleSettings extends IModel {
     allowArchive: boolean,
     allowComments: boolean,
     allowRating: boolean,

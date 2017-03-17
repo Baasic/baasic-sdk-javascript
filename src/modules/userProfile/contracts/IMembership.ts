@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IMembership extends IBaasicModel {
+export interface IMembership extends IModel {
     userName?: string,
     id?: string  
 }

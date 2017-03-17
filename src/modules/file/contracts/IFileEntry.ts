@@ -1,6 +1,6 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 import { IFileEntryMetadata, IPolicy } from 'modules/file/contracts';
 
-export interface IFileEntry extends IBaasicModel, IFileEntryMetadata {
+export interface IFileEntry extends IModel, IFileEntryMetadata {
     policies?: IPolicy[]
 }

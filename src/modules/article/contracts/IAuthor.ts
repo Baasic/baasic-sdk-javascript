@@ -1,5 +1,5 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 
-export interface IAuthor extends IBaasicModel {
+export interface IAuthor extends IModel {
     displayName?: string
 }

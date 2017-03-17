@@ -1,8 +1,8 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 import { IUserInfo } from 'modules/file/contracts';
 import { IMediaVaultDerivedEntry } from 'modules/mediaVault/contracts';
 
-export interface IMediaEntry extends IBaasicModel {
+export interface IMediaEntry extends IModel {
     derivedEntries?: IMediaVaultDerivedEntry[],
     description?: string,
     fileExtensions?: string,

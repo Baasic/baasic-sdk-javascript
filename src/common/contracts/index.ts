@@ -1,4 +1,4 @@
-export * from './IBaasicModel';
+export * from './IModel';
 export * from './IQueryModel';
 export * from './IOptions';
 export * from './IACL';
@@ -8,5 +8,5 @@ export * from './IACLUser';
 export * from './IACLOptions';
 export * from './IACLPolicy';
 export * from './IException';
-export * from './IBaasicResponse';
+export * from './IResponse';
 export * from './IGetRequestOptions';

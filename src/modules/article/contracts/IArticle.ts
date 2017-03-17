@@ -1,7 +1,7 @@
-import { IBaasicModel } from 'common/contracts';
+import { IModel } from 'common/contracts';
 import { IArticleComment, IArticleFile, IAuthor, IArticleTag, IRating } from 'modules/article/contracts';
 
-export interface IArticle extends IBaasicModel {
+export interface IArticle extends IModel {
     allowComments?: boolean,
     archiveDate?: string,
     author?: IAuthor,
