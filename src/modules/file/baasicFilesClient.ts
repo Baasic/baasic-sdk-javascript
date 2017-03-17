@@ -1,46 +1,46 @@
 /* globals module */
 /**  
  * @module baasicFilesClient  
- * @description Baasic Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicFilesACLClient,
-    BaasicFilesBatchClient,
+    FilesACLClient,
+    FilesBatchClient,
     BaasicFilesRouteDefinition,
-    BaasicFilesStreamsClient,
+    FilesStreamsClient,
     TYPES as filesTypes
 } from 'modules/file';
 import { IFileEntry } from 'modules/file/contracts';
 
 @injectable()
-export class BaasicFilesClient {
+export class FilesClient {
 
     get routeDefinition(): BaasicFilesRouteDefinition {
         return this.baasicFilesRouteDefinition;
     }
 
-    get streams(): BaasicFilesStreamsClient {
+    get streams(): FilesStreamsClient {
         return this.baasicFilesStreamsClient;
     }
 
-    get batch(): BaasicFilesBatchClient {
+    get batch(): FilesBatchClient {
         return this.baasicFilesBatchClient;
     }
 
-    get acl(): BaasicFilesACLClient {
+    get acl(): FilesACLClient {
         return this.baasicFilesACLClient;
     }
 
     constructor(
         @inject(filesTypes.BaasicFilesRouteDefinition) protected baasicFilesRouteDefinition: BaasicFilesRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
-        @inject(filesTypes.BaasicFilesStreamsClient) protected baasicFilesStreamsClient: BaasicFilesStreamsClient,
-        @inject(filesTypes.BaasicFilesBatchClient) protected baasicFilesBatchClient: BaasicFilesBatchClient,
-        @inject(filesTypes.BaasicFilesACLClient) protected baasicFilesACLClient: BaasicFilesACLClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
+        @inject(filesTypes.FilesStreamsClient) protected baasicFilesStreamsClient: FilesStreamsClient,
+        @inject(filesTypes.FilesBatchClient) protected baasicFilesBatchClient: FilesBatchClient,
+        @inject(filesTypes.FilesACLClient) protected baasicFilesACLClient: FilesACLClient
     ) { }
 
     /**                  

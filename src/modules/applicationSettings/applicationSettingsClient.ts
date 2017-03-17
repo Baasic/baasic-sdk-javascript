@@ -1,22 +1,22 @@
 /* globals module */
 /**  
  * @module baasicApplicationSettingsClient  
- * @description Baasic Application Settings Client provides an easy way to consume Baasic Application Settings REST API end-points. In order to obtain needed routes `baasicApplicationSettingsClient` uses `baasicApplicationSettingsRouteDefinition`. 
+ * @description  Application Settings Client provides an easy way to consume  Application Settings REST API end-points. In order to obtain needed routes `baasicApplicationSettingsClient` uses `baasicApplicationSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicApplicationSettingsRouteDefinition, TYPES as applicationTypes } from 'modules/applicationSettings';
 import { IApplication } from 'modules/applicationSettings/contracts';
 
 @injectable()
-export class BaasicApplicationSettingsClient {
+export class ApplicationSettingsClient {
 
     /**                 
      * Provides direct access to `baasicApplicationSettingsRouteDefinition`.                 
      * @method                        
-     * @example BaasicApplicationSettingsClient.routeDefinition.get(options)                 
+     * @example ApplicationSettingsClient.routeDefinition.get(options)                 
      **/
     get routeDefinition(): BaasicApplicationSettingsRouteDefinition {
         return this.baasicApplicationSettingsRouteDefinition;
@@ -24,7 +24,7 @@ export class BaasicApplicationSettingsClient {
 
     constructor(
         @inject(applicationTypes.BaasicApplicationSettingsRouteDefinition) protected baasicApplicationSettingsRouteDefinition: BaasicApplicationSettingsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                 

@@ -1,40 +1,40 @@
 /* globals module */
 /**  
  * @module baasicArticleFilesClient  
- * @description Baasic Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicArticleFilesBatchClient,
+    ArticleFilesBatchClient,
     BaasicArticleFilesRouteDefinition,
-    BaasicArticleFilesStreamsClient,
+    ArticleFilesStreamsClient,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleFilesClient {
+export class ArticleFilesClient {
 
     get routeDefinition(): BaasicArticleFilesRouteDefinition {
         return this.baasicArticleFilesRouteDefinition;
     }
 
-    get streams(): BaasicArticleFilesStreamsClient {
+    get streams(): ArticleFilesStreamsClient {
         return this.baasicArticleFilesStreamsClient;
     }
 
-    get batch(): BaasicArticleFilesBatchClient {
-        return this.BaasicArticleFilesBatchClient;
+    get batch(): ArticleFilesBatchClient {
+        return this.ArticleFilesBatchClient;
     }
 
     constructor(
         @inject(articleTypes.BaasicArticleFilesRouteDefinition) protected baasicArticleFilesRouteDefinition: BaasicArticleFilesRouteDefinition,
-        @inject(articleTypes.BaasicArticleFilesStreamsClient) protected baasicArticleFilesStreamsClient: BaasicArticleFilesStreamsClient,
-        @inject(articleTypes.BaasicArticleFilesBatchClient) protected BaasicArticleFilesBatchClient: BaasicArticleFilesBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(articleTypes.ArticleFilesStreamsClient) protected baasicArticleFilesStreamsClient: ArticleFilesStreamsClient,
+        @inject(articleTypes.ArticleFilesBatchClient) protected ArticleFilesBatchClient: ArticleFilesBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

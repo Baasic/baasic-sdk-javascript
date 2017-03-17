@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicUserWorkClient  
- * @description Baasic User Work Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Work Route Client to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  User Work Client provides  route templates which can be expanded to  REST URIs. Various services can use  User Work Route Client to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicUserWorkRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserWork } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicUserWorkClient {
+export class UserWorkClient {
 
     routeDefinition(): BaasicUserWorkRouteDefinition {
         return this.baasicUserWorkRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicUserWorkClient {
 
     constructor(
         @inject(userProfileTypes.BaasicUserWorkRouteDefinition) protected baasicUserWorkRouteDefinition: BaasicUserWorkRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

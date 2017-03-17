@@ -1,18 +1,18 @@
 /* globals module */
 /**  
  * @module baasicCommerceCustomerClient  
- * @description Baasic Commerce Customer Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCustomerClient` uses `baasicCommerceCustomerRouteDefinition`. 
+ * @description  Commerce Customer Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCustomerClient` uses `baasicCommerceCustomerRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCommerceCustomerRouteDefinition, BaasicCommerceCustomerPaymentMethodClient, TYPES as commerceTypes } from 'modules/commerce';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { CommerceCustomerRouteDefinition, CommerceCustomerPaymentMethodClient, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceCustomerClient {
+export class CommerceCustomerClient {
 
-    get paymentMethods(): BaasicCommerceCustomerPaymentMethodClient {
+    get paymentMethods(): CommerceCustomerPaymentMethodClient {
         return this.baasicCommerceCustomerPaymentMethodClient;
     }
 
@@ -21,9 +21,9 @@ export class BaasicCommerceCustomerClient {
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceCustomerPaymentMethodClient) protected baasicCommerceCustomerPaymentMethodClient: BaasicCommerceCustomerPaymentMethodClient,
+        @inject(commerceTypes.CommerceCustomerPaymentMethodClient) protected baasicCommerceCustomerPaymentMethodClient: CommerceCustomerPaymentMethodClient,
         @inject(commerceTypes.BaasicCommerceCustomerRouteDefinition) protected baasicCommerceCustomerRouteDefinition: BaasicCommerceCustomerRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class BaasicCommerceCustomerClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
-        return this.BaasicApiClient.get(this.baasicCommerceCustomerRouteDefinition.find(options));
+        return this.ApiClient.get(this.baasicCommerceCustomerRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,7 +59,7 @@ export class BaasicCommerceCustomerClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommerceCustomerRouteDefinition.get(id, options));
+        return this.ApiClient.get(this.baasicCommerceCustomerRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -80,7 +80,7 @@ export class BaasicCommerceCustomerClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.put<void>(this.baasicCommerceCustomerRouteDefinition.update(data), this.baasicCommerceCustomerRouteDefinition.updateParams(data));
+        return this.ApiClient.put<void>(this.baasicCommerceCustomerRouteDefinition.update(data), this.baasicCommerceCustomerRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -100,7 +100,7 @@ export class BaasicCommerceCustomerClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.delete<void>(this.baasicCommerceCustomerRouteDefinition.delete(data));
+        return this.ApiClient.delete<void>(this.baasicCommerceCustomerRouteDefinition.delete(data));
     }
 }
 

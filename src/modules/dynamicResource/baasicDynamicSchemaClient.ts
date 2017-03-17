@@ -1,16 +1,16 @@
 /**  
  * @module baasicDynamicSchemaClient  
- * @description Baasic Dynamic Schema Client provides an easy way to consume Baasic Dynamic Schema REST API end-points. In order to obtain needed routes `baasicDynamicSchemaClient` uses `baasicDynamicSchemaRouteDefinition`. 
+ * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `baasicDynamicSchemaClient` uses `baasicDynamicSchemaRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicDynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
 
 @injectable()
-export class BaasicDynamicSchemaClient {
+export class DynamicSchemaClient {
 
     /**                 
      * Provides direct access to `baasicDynamicSchemaRouteDefinition`.                 
@@ -23,7 +23,7 @@ export class BaasicDynamicSchemaClient {
 
     constructor(
         @inject(dynamicResourceTypes.BaasicDynamicSchemaRouteDefinition) protected baasicDynamicSchemaRouteDefinition: BaasicDynamicSchemaRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

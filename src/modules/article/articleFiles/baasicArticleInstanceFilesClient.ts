@@ -1,40 +1,40 @@
 /* globals module */
 /**  
  * @module baasicArticleInstanceFilesClient  
- * @description Baasic Article Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Article Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicArticleInstanceFilesBatchClient,
+    ArticleInstanceFilesBatchClient,
     BaasicArticleInstanceFilesRouteDefinition,
-    BaasicArticleInstanceFilesStreamsClient,
+    ArticleInstanceFilesStreamsClient,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceFilesClient {
+export class ArticleInstanceFilesClient {
 
     get routeDefinition(): BaasicArticleInstanceFilesRouteDefinition {
         return this.baasicArticleInstanceFilesRouteDefinition;
     }
 
-    get streams(): BaasicArticleInstanceFilesStreamsClient {
+    get streams(): ArticleInstanceFilesStreamsClient {
         return this.baasicArticleInstanceFilesStreamsClient;
     }
 
-    get batch(): BaasicArticleInstanceFilesBatchClient {
-        return this.BaasicArticleInstanceFilesBatchClient;
+    get batch(): ArticleInstanceFilesBatchClient {
+        return this.ArticleInstanceFilesBatchClient;
     }
 
     constructor(
         @inject(articleTypes.BaasicArticleInstanceFilesRouteDefinition) protected baasicArticleInstanceFilesRouteDefinition: BaasicArticleInstanceFilesRouteDefinition,
-        @inject(articleTypes.BaasicArticleInstanceFilesStreamsClient) protected baasicArticleInstanceFilesStreamsClient: BaasicArticleInstanceFilesStreamsClient,
-        @inject(articleTypes.BaasicArticleInstanceFilesBatchClient) protected BaasicArticleInstanceFilesBatchClient: BaasicArticleInstanceFilesBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(articleTypes.ArticleInstanceFilesStreamsClient) protected baasicArticleInstanceFilesStreamsClient: ArticleInstanceFilesStreamsClient,
+        @inject(articleTypes.ArticleInstanceFilesBatchClient) protected ArticleInstanceFilesBatchClient: ArticleInstanceFilesBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

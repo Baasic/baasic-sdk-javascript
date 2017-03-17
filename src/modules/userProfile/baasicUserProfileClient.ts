@@ -1,27 +1,27 @@
 /* globals module */
 /**  
  * @module baasicUserProfileClient  
- * @description Baasic User Profile Client provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileClient` uses `baasicUserProfileRouteDefinition`. 
+ * @description  User Profile Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileClient` uses `baasicUserProfileRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicUserProfileACLClient,
+    UserProfileACLClient,
     BaasicUserProfileRouteDefinition,
-    BaasicUserEducationClient,
-    BaasicUserProfileAvatarClient,
-    BaasicUserSkillClient,
-    BaasicUserWorkClient,
+    UserEducationClient,
+    UserProfileAvatarClient,
+    UserSkillClient,
+    UserWorkClient,
     TYPES as userProfileTypes
 } from 'modules/userProfile';
 import { IUserProfile } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicUserProfileClient {
+export class UserProfileClient {
 
-    get acl(): BaasicUserProfileACLClient {
+    get acl(): UserProfileACLClient {
         return this.baasicUserProfileACLClient;
     }
 
@@ -29,28 +29,28 @@ export class BaasicUserProfileClient {
         return this.baasicUserProfileRouteDefinition;
     }
 
-    get education(): BaasicUserEducationClient {
+    get education(): UserEducationClient {
         return this.baasicUserEducationClient;
     }
-    get avatar(): BaasicUserProfileAvatarClient {
+    get avatar(): UserProfileAvatarClient {
         return this.baasicUserProfileAvatarClient;
     }
-    get skill(): BaasicUserSkillClient {
+    get skill(): UserSkillClient {
         return this.baasicUserSkillClient;
     }
-    get work(): BaasicUserWorkClient {
+    get work(): UserWorkClient {
         return this.baasicUserWorkClient;
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicUserProfileACLClient) protected baasicUserProfileACLClient: BaasicUserProfileACLClient,
+        @inject(userProfileTypes.UserProfileACLClient) protected baasicUserProfileACLClient: UserProfileACLClient,
         @inject(userProfileTypes.BaasicUserProfileRouteDefinition) protected baasicUserProfileRouteDefinition: BaasicUserProfileRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
 
-        @inject(userProfileTypes.BaasicUserEducationClient) protected baasicUserEducationClient: BaasicUserEducationClient,
-        @inject(userProfileTypes.BaasicUserProfileAvatarClient) protected baasicUserProfileAvatarClient: BaasicUserProfileAvatarClient,
-        @inject(userProfileTypes.BaasicUserSkillClient) protected baasicUserSkillClient: BaasicUserSkillClient,
-        @inject(userProfileTypes.BaasicUserWorkClient) protected baasicUserWorkClient: BaasicUserWorkClient,
+        @inject(userProfileTypes.UserEducationClient) protected baasicUserEducationClient: UserEducationClient,
+        @inject(userProfileTypes.UserProfileAvatarClient) protected baasicUserProfileAvatarClient: UserProfileAvatarClient,
+        @inject(userProfileTypes.UserSkillClient) protected baasicUserSkillClient: UserSkillClient,
+        @inject(userProfileTypes.UserWorkClient) protected baasicUserWorkClient: UserWorkClient,
     ) { }
 
     /**                  

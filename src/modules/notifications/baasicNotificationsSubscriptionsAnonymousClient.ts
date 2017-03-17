@@ -1,18 +1,18 @@
 /* globals module */
 /**  
  * @module baasicNotificationsSubscriptionsAnonymousClient  
- * @description Baasic Notifications Subscriptions Anonymous Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsAnonymousClient` uses `baasicNotificationsSubscriptionsAnonymousRouteDefinition`. 
+ * @description  Notifications Subscriptions Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsAnonymousClient` uses `baasicNotificationsSubscriptionsAnonymousRouteDefinition`. 
  */
 
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicNotificationsSubscriptionsAnonymousRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsSubscriptionsAnonymousClient {
+export class NotificationsSubscriptionsAnonymousClient {
 
     routeDefinition(): BaasicNotificationsSubscriptionsAnonymousRouteDefinition {
         return this.baasicNotificationsSubscriptionsAnonymousRouteDefinition;
@@ -20,7 +20,7 @@ export class BaasicNotificationsSubscriptionsAnonymousClient {
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsSubscriptionsAnonymousRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousRouteDefinition: BaasicNotificationsSubscriptionsAnonymousRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                          

@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module baasicNotificationsPublishClient  
- * @description Baasic Notifications Publish Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsPublishClient` uses `baasicNotificationsPublishRouteDefinition`. 
+ * @description  Notifications Publish Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsPublishClient` uses `baasicNotificationsPublishRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicNotificationsPublishBatchClient, BaasicNotificationsPublishRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { NotificationsPublishBatchClient, BaasicNotificationsPublishRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { INotification } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsPublishClient {
+export class NotificationsPublishClient {
 
     routeDefinition(): BaasicNotificationsPublishRouteDefinition {
         return this.baasicNotificationsPublishRouteDefinition;
     }
 
-    batch(): BaasicNotificationsPublishBatchClient {
+    batch(): NotificationsPublishBatchClient {
         return this.baasicNotificationsPublishBatchClient;
     }
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsPublishRouteDefinition) protected baasicNotificationsPublishRouteDefinition: BaasicNotificationsPublishRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsPublishBatchClient) protected baasicNotificationsPublishBatchClient: BaasicNotificationsPublishBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(notificationsTypes.NotificationsPublishBatchClient) protected baasicNotificationsPublishBatchClient: NotificationsPublishBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                      

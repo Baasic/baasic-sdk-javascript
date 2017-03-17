@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicCommerceProductClient  
- * @description Baasic Commerce Product Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceProductClient` uses `baasicCommerceProductRouteDefinition`. 
+ * @description  Commerce Product Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceProductClient` uses `baasicCommerceProductRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceProductRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceProductClient {
+export class CommerceProductClient {
 
     get routeDefinition(): BaasicCommerceProductRouteDefinition {
         return this.baasicCommerceProductRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicCommerceProductClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceProductRouteDefinition) protected baasicCommerceProductRouteDefinition: BaasicCommerceProductRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
     /**                  
@@ -39,7 +39,7 @@ export class BaasicCommerceProductClient {
                });                     
     **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
-        return this.BaasicApiClient.get(this.baasicCommerceProductRouteDefinition.find(options));
+        return this.ApiClient.get(this.baasicCommerceProductRouteDefinition.find(options));
     }
 
     /**                 
@@ -54,7 +54,7 @@ export class BaasicCommerceProductClient {
                       });                 
    **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommerceProductRouteDefinition.get(id, options));
+        return this.ApiClient.get(this.baasicCommerceProductRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -77,7 +77,7 @@ export class BaasicCommerceProductClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.post(this.baasicCommerceProductRouteDefinition.create(), this.baasicCommerceProductRouteDefinition.createParams(data));
+        return this.ApiClient.post(this.baasicCommerceProductRouteDefinition.create(), this.baasicCommerceProductRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -98,7 +98,7 @@ export class BaasicCommerceProductClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.put<void>(this.baasicCommerceProductRouteDefinition.update(data), this.baasicCommerceProductRouteDefinition.updateParams(data));
+        return this.ApiClient.put<void>(this.baasicCommerceProductRouteDefinition.update(data), this.baasicCommerceProductRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -118,7 +118,7 @@ export class BaasicCommerceProductClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.delete<void>(this.baasicCommerceProductRouteDefinition.delete(data));
+        return this.ApiClient.delete<void>(this.baasicCommerceProductRouteDefinition.delete(data));
     }
 }
 

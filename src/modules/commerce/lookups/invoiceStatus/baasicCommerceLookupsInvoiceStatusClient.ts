@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module baasicCommerceLookupsInvoiceStatusClient  
- * @description Baasic Commerce Lookups InvoiceStatus Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsInvoiceStatusClient` uses `baasicCommerceLookupsInvoiceStatusRouteDefinition`. 
+ * @description  Commerce Lookups InvoiceStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsInvoiceStatusClient` uses `baasicCommerceLookupsInvoiceStatusRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCommerceLookupsInvoiceStatusBatchClient, BaasicCommerceLookupsInvoiceStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { CommerceLookupsInvoiceStatusBatchClient, BaasicCommerceLookupsInvoiceStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsInvoiceStatusClient {
+export class CommerceLookupsInvoiceStatusClient {
 
     get routeDefinition(): BaasicCommerceLookupsInvoiceStatusRouteDefinition {
         return this.baasicCommerceLookupsInvoiceStatusRouteDefinition;
     }
 
-    get batch(): BaasicCommerceLookupsInvoiceStatusBatchClient {
+    get batch(): CommerceLookupsInvoiceStatusBatchClient {
         return this.baasicCommerceLookupsInvoiceStatusBatchClient;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsInvoiceStatusBatchClient) protected baasicCommerceLookupsInvoiceStatusBatchClient: BaasicCommerceLookupsInvoiceStatusBatchClient,
+        @inject(commerceTypes.CommerceLookupsInvoiceStatusBatchClient) protected baasicCommerceLookupsInvoiceStatusBatchClient: CommerceLookupsInvoiceStatusBatchClient,
         @inject(commerceTypes.BaasicCommerceLookupsInvoiceStatusRouteDefinition) protected baasicCommerceLookupsInvoiceStatusRouteDefinition: BaasicCommerceLookupsInvoiceStatusRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class BaasicCommerceLookupsInvoiceStatusClient {
                     });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
-        return this.BaasicApiClient.get(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.find(options));
+        return this.ApiClient.get(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,7 +59,7 @@ export class BaasicCommerceLookupsInvoiceStatusClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.get(id, options));
+        return this.ApiClient.get(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -80,7 +80,7 @@ export class BaasicCommerceLookupsInvoiceStatusClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.put<void>(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.update(data), this.baasicCommerceLookupsInvoiceStatusRouteDefinition.updateParams(data));
+        return this.ApiClient.put<void>(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.update(data), this.baasicCommerceLookupsInvoiceStatusRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -99,7 +99,7 @@ export class BaasicCommerceLookupsInvoiceStatusClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.post(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.create(), this.baasicCommerceLookupsInvoiceStatusRouteDefinition.createParams(data));
+        return this.ApiClient.post(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.create(), this.baasicCommerceLookupsInvoiceStatusRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -119,7 +119,7 @@ export class BaasicCommerceLookupsInvoiceStatusClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.delete<void>(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.delete(data));
+        return this.ApiClient.delete<void>(this.baasicCommerceLookupsInvoiceStatusRouteDefinition.delete(data));
     }
 }
 

@@ -1,30 +1,30 @@
 /* globals module */
 /**  
  * @module baasicMeteringCategoryClient  
- * @description Baasic Metering Category Client provides an easy way to consume Baasic Metering REST API end-points. In order to obtain a needed routes `baasicMeteringCategoryClient` uses `baasicMeteringCategoryRouteDefinition`. 
+ * @description  Metering Category Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringCategoryClient` uses `baasicMeteringCategoryRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicMeteringCategoryBatchClient, BaasicMeteringCategoryRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { MeteringCategoryBatchClient, BaasicMeteringCategoryRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
 
 @injectable()
-export class BaasicMeteringCategoryClient {
+export class MeteringCategoryClient {
 
     get routeDefinition(): BaasicMeteringCategoryRouteDefinition {
         return this.baasicMeteringCategoryRouteDefinition;
     }
 
-    get batch(): BaasicMeteringCategoryBatchClient {
+    get batch(): MeteringCategoryBatchClient {
         return this.baasicMeteringCategoryBatchClient;
     }
 
     constructor(
         @inject(meteringTypes.BaasicMeteringCategoryRouteDefinition) protected baasicMeteringCategoryRouteDefinition: BaasicMeteringCategoryRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
-        @inject(meteringTypes.BaasicMeteringCategoryBatchClient) protected baasicMeteringCategoryBatchClient: BaasicMeteringCategoryBatchClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
+        @inject(meteringTypes.MeteringCategoryBatchClient) protected baasicMeteringCategoryBatchClient: MeteringCategoryBatchClient
     ) { }
 
     /**                  

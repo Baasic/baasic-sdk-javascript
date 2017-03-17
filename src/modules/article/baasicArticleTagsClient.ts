@@ -1,34 +1,34 @@
 /* globals module */
 /**  
  * @module baasicArticleTagsDefinition  
- * @description Baasic Article Tags Definition provides an easy way to consume Baasic Article Tags REST API end-points. `baasicArticleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
+ * @description  Article Tags Definition provides an easy way to consume  Article Tags REST API end-points. `baasicArticleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicArticleTagsSubscriptionsClient,
+    ArticleTagsSubscriptionsClient,
     BaasicArticleTagsRouteDefinition,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleTag } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleTagsClient {
+export class ArticleTagsClient {
 
     get routeDefinition(): BaasicArticleTagsRouteDefinition {
         return this.baasicArticleTagsRouteDefinition;
     }
 
-    get subscriptions(): BaasicArticleTagsSubscriptionsClient {
+    get subscriptions(): ArticleTagsSubscriptionsClient {
         return this.baasicArticleTagsSubscriptionsClient;
     }
 
     constructor(
         @inject(articleTypes.BaasicArticleTagsRouteDefinition) protected baasicArticleTagsRouteDefinition: BaasicArticleTagsRouteDefinition,
-        @inject(articleTypes.BaasicArticleTagsSubscriptionsClient) protected baasicArticleTagsSubscriptionsClient: BaasicArticleTagsSubscriptionsClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(articleTypes.ArticleTagsSubscriptionsClient) protected baasicArticleTagsSubscriptionsClient: ArticleTagsSubscriptionsClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                 

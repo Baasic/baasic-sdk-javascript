@@ -1,38 +1,38 @@
 /* globals module */
 /**  
  * @module baasicCommerceClient  
- * @description Baasic Commerce Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceClient` uses `baasicCommerceRouteDefinition`. 
+ * @description  Commerce Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceClient` uses `baasicCommerceRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     BaasicCommerceRouteDefinition,
-    BaasicCommerceCustomerClient,
-    BaasicCommerceInvoiceClient,
-    BaasicCommerceProductClient,
-    BaasicCommercePaymentTransactionClient,
+    CommerceCustomerClient,
+    CommerceInvoiceClient,
+    CommerceProductClient,
+    CommercePaymentTransactionClient,
     Lookups,
     TYPES as commerceTypes
 } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceClient {
+export class CommerceClient {
 
-    get customers(): BaasicCommerceCustomerClient {
+    get customers(): CommerceCustomerClient {
         return this.baasicCommerceCustomerClient;
     }
 
-    get invoices(): BaasicCommerceInvoiceClient {
+    get invoices(): CommerceInvoiceClient {
         return this.baasicCommerceInvoiceClient;
     }
 
-    get products(): BaasicCommerceProductClient {
+    get products(): CommerceProductClient {
         return this.baasicCommerceProductClient;
     }
 
-    get paymentTransactions(): BaasicCommercePaymentTransactionClient {
+    get paymentTransactions(): CommercePaymentTransactionClient {
         return this.baasicCommercePaymentTransactionClient;
     }
 
@@ -45,13 +45,13 @@ export class BaasicCommerceClient {
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceCustomerClient) protected baasicCommerceCustomerClient: BaasicCommerceCustomerClient,
-        @inject(commerceTypes.BaasicCommerceInvoiceClient) protected baasicCommerceInvoiceClient: BaasicCommerceInvoiceClient,
-        @inject(commerceTypes.BaasicCommerceProductClient) protected baasicCommerceProductClient: BaasicCommerceProductClient,
-        @inject(commerceTypes.BaasicCommercePaymentTransactionClient) protected baasicCommercePaymentTransactionClient: BaasicCommercePaymentTransactionClient,
+        @inject(commerceTypes.CommerceCustomerClient) protected baasicCommerceCustomerClient: CommerceCustomerClient,
+        @inject(commerceTypes.CommerceInvoiceClient) protected baasicCommerceInvoiceClient: CommerceInvoiceClient,
+        @inject(commerceTypes.CommerceProductClient) protected baasicCommerceProductClient: CommerceProductClient,
+        @inject(commerceTypes.CommercePaymentTransactionClient) protected baasicCommercePaymentTransactionClient: CommercePaymentTransactionClient,
         @inject(commerceTypes.Lookups) protected lookup: Lookups,
         @inject(commerceTypes.BaasicCommerceRouteDefinition) protected baasicCommerceRouteDefinition: BaasicCommerceRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicMediaVaultStreamsClient  
- * @description Baasic Media Vault Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Media Vault Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicMediaVaultStreamsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 
 @injectable()
-export class BaasicMediaVaultStreamsClient {
+export class MediaVaultStreamsClient {
 
     get routeDefinition(): BaasicMediaVaultStreamsRouteDefinition {
         return this.baasicMediaVaultStreamsRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicMediaVaultStreamsClient {
 
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultStreamsRouteDefinition) protected baasicMediaVaultStreamsRouteDefinition: BaasicMediaVaultStreamsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

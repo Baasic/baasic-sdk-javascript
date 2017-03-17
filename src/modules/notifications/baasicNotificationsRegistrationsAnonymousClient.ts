@@ -1,34 +1,34 @@
 /* globals module */
 /**  
  * @module baasicNotificationsRegistrationsAnonymousClient  
- * @description Baasic Notifications Registrations Anonymous Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsAnonymousClient` uses `baasicNotificationsRegistrationsAnonymousRouteDefinition`. 
+ * @description  Notifications Registrations Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsAnonymousClient` uses `baasicNotificationsRegistrationsAnonymousRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import {
-    BaasicNotificationsRegistrationsAnonymousBatchClient,
+    NotificationsRegistrationsAnonymousBatchClient,
     BaasicNotificationsRegistrationsAnonymousRouteDefinition,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 import { IAnonymousRegistration } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsRegistrationsAnonymousClient {
+export class NotificationsRegistrationsAnonymousClient {
 
     get routeDefinition(): BaasicNotificationsRegistrationsAnonymousRouteDefinition {
         return this.baasicNotificationsRegistrationsAnonymousRouteDefinition;
     }
 
-    get batch(): BaasicNotificationsRegistrationsAnonymousBatchClient {
+    get batch(): NotificationsRegistrationsAnonymousBatchClient {
         return this.baasicNotificationsRegistrationsAnonymousBatchClient;
     }
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsRegistrationsAnonymousRouteDefinition) protected baasicNotificationsRegistrationsAnonymousRouteDefinition: BaasicNotificationsRegistrationsAnonymousRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsAnonymousBatchClient) protected baasicNotificationsRegistrationsAnonymousBatchClient: BaasicNotificationsRegistrationsAnonymousBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchClient) protected baasicNotificationsRegistrationsAnonymousBatchClient: NotificationsRegistrationsAnonymousBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                          

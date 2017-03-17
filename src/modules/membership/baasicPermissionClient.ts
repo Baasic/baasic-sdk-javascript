@@ -1,19 +1,19 @@
 /* globals module */
 /**  
  * @module baasicPermissionClient  
- * @description Baasic Role Client provides an easy way to consume Baasic Role REST API end-points. In order to obtain needed routes `baasicPermissionClient` uses `baasicPermissionRouteDefinition`. 
+ * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `baasicPermissionClient` uses `baasicPermissionRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import { Utility } from 'common';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicPermissionRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAccessPolicy, IAccessAction, IRole, IUserInfo } from 'modules/membership/contracts';
 import { IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 
 @injectable()
-export class BaasicPermissionClient {
+export class PermissionClient {
 
     private utility: Utility = new Utility();
     private permissionHash = {};
@@ -29,7 +29,7 @@ export class BaasicPermissionClient {
 
     constructor(
         @inject(membershipTypes.BaasicPermissionRouteDefinition) protected baasicPermissionRouteDefinition: BaasicPermissionRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
         @inject(coreTYPES.IBaasicApp) private application: IBaasicApp
     ) { }
 

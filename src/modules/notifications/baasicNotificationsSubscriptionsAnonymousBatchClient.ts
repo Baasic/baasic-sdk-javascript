@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicNotificationsSubscriptionsAnonymousBatchClient  
- * @description Baasic Notifications Subscriptions Anonymous Batch Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsAnonymousBatchClient` uses `baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition`. 
+ * @description  Notifications Subscriptions Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsAnonymousBatchClient` uses `baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsSubscriptionsAnonymousBatchClient {
+export class NotificationsSubscriptionsAnonymousBatchClient {
 
     get routeDefinition(): BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition {
         return this.baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicNotificationsSubscriptionsAnonymousBatchClient {
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition) protected baasicNotificationsSubscriptionsAnonymousBatchRouteDefinition: BaasicNotificationsSubscriptionsAnonymousBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                              

@@ -1,21 +1,21 @@
 /**  
  * @module baasicDynamicResourceClient  
- * @description Baasic Dynamic Resource Client provides an easy way to consume Baasic Dynamic Resource REST API end-points. In order to obtain needed routes `baasicDynamicResourceClient` uses `baasicDynamicResourceRouteDefinition`. 
+ * @description  Dynamic Resource Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `baasicDynamicResourceClient` uses `baasicDynamicResourceRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicDynamicResourceACLClient,
+    DynamicResourceACLClient,
     BaasicDynamicResourceRouteDefinition,
-    BaasicDynamicSchemaClient,
+    DynamicSchemaClient,
     TYPES as dynamicResourceTypes
 } from 'modules/dynamicResource';
 import { IDynamicObject } from 'modules/dynamicResource/contracts';
 
 @injectable()
-export class BaasicDynamicResourceClient {
+export class DynamicResourceClient {
 
     /**                 
      * Provides direct access to `baasicDynamicResourceRouteDefinition`.                 
@@ -26,19 +26,19 @@ export class BaasicDynamicResourceClient {
         return this.baasicDynamicResourceRouteDefinition;
     }
 
-    get acl(): BaasicDynamicResourceACLClient {
+    get acl(): DynamicResourceACLClient {
         return this.baasicDynamicResourceACLClient;
     }
 
-    get schema(): BaasicDynamicSchemaClient {
+    get schema(): DynamicSchemaClient {
         return this.baasicDynamicSchemaClient;
     }
 
     constructor(
         @inject(dynamicResourceTypes.BaasicDynamicResourceRouteDefinition) protected baasicDynamicResourceRouteDefinition: BaasicDynamicResourceRouteDefinition,
-        @inject(dynamicResourceTypes.BaasicDynamicResourceACLClient) protected baasicDynamicResourceACLClient: BaasicDynamicResourceACLClient,
-        @inject(dynamicResourceTypes.BaasicDynamicSchemaClient) protected baasicDynamicSchemaClient: BaasicDynamicSchemaClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(dynamicResourceTypes.DynamicResourceACLClient) protected baasicDynamicResourceACLClient: DynamicResourceACLClient,
+        @inject(dynamicResourceTypes.DynamicSchemaClient) protected baasicDynamicSchemaClient: DynamicSchemaClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicFilesBatchClient  
- * @description Baasic Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicFilesBatchRouteDefinition, TYPES as filesTypes } from 'modules/file';
 import { IFileEntry } from 'modules/file/contracts';
 
 @injectable()
-export class BaasicFilesBatchClient {
+export class FilesBatchClient {
 
     get routeDefinition(): BaasicFilesBatchRouteDefinition {
         return this.baasicFilesBatchRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicFilesBatchClient {
 
     constructor(
         @inject(filesTypes.BaasicFilesBatchRouteDefinition) protected baasicFilesBatchRouteDefinition: BaasicFilesBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                   

@@ -1,22 +1,22 @@
 /* globals module */
 /**  
  * @module baasicArticleClient  
- * @description Baasic Articles Client provides an easy way to consume Baasic Articles REST API end-points. In order to obtain needed routes `baasicArticleClient` uses `baasicArticleRouteDefinition`. 
+ * @description  Articles Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleClient` uses `baasicArticleRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { Utility } from 'common';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicArticleACLClient,
+    ArticleACLClient,
     BaasicArticleUtility,
     BaasicArticleRouteDefinition,
-    BaasicArticleInstanceSubscriptionsClient,
-    BaasicArticleInstanceCommentsClient,
-    BaasicArticleInstanceFilesClient,
-    BaasicArticleInstanceRatingsClient,
-    BaasicArticleInstanceTagsClient,
+    ArticleInstanceSubscriptionsClient,
+    ArticleInstanceCommentsClient,
+    ArticleInstanceFilesClient,
+    ArticleInstanceRatingsClient,
+    ArticleInstanceTagsClient,
     ArticleStatus,
     CommentStatus,
     TYPES as articleTypes
@@ -24,7 +24,7 @@ import {
 import { IArticle, IArticleOptions, IArticleStatus, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleClient {
+export class ArticleClient {
 
     private utility: Utility = new Utility();
 
@@ -37,41 +37,41 @@ export class BaasicArticleClient {
         return this.baasicArticleRouteDefinition;
     }
 
-    get comments(): BaasicArticleInstanceCommentsClient {
+    get comments(): ArticleInstanceCommentsClient {
         return this.baasicArticleInstanceCommentsClient;
     }
 
-    get files(): BaasicArticleInstanceFilesClient {
+    get files(): ArticleInstanceFilesClient {
         return this.baasicArticleInstanceFilesClient;
     }
 
-    get tags(): BaasicArticleInstanceTagsClient {
+    get tags(): ArticleInstanceTagsClient {
         return this.baasicArticleInstanceTagsClient;
     }
 
-    get ratings(): BaasicArticleInstanceRatingsClient {
+    get ratings(): ArticleInstanceRatingsClient {
         return this.baasicArticleInstanceRatingsClient;
     }
 
-    get subscriptions(): BaasicArticleInstanceSubscriptionsClient {
+    get subscriptions(): ArticleInstanceSubscriptionsClient {
         return this.baasicArticleInstanceSubscriptionsClient;
     }
 
-    get acl(): BaasicArticleACLClient {
+    get acl(): ArticleACLClient {
         return this.baasicArticleACLClient;
     }
 
     public articleUtility: BaasicArticleUtility = new BaasicArticleUtility();
 
     constructor(
-        @inject(articleTypes.BaasicArticleInstanceCommentsClient) protected baasicArticleInstanceCommentsClient: BaasicArticleInstanceCommentsClient,
-        @inject(articleTypes.BaasicArticleInstanceFilesClient) protected baasicArticleInstanceFilesClient: BaasicArticleInstanceFilesClient,
-        @inject(articleTypes.BaasicArticleInstanceRatingsClient) protected baasicArticleInstanceRatingsClient: BaasicArticleInstanceRatingsClient,
-        @inject(articleTypes.BaasicArticleInstanceTagsClient) protected baasicArticleInstanceTagsClient: BaasicArticleInstanceTagsClient,
-        @inject(articleTypes.BaasicArticleInstanceSubscriptionsClient) protected baasicArticleInstanceSubscriptionsClient: BaasicArticleInstanceSubscriptionsClient,
+        @inject(articleTypes.ArticleInstanceCommentsClient) protected baasicArticleInstanceCommentsClient: ArticleInstanceCommentsClient,
+        @inject(articleTypes.ArticleInstanceFilesClient) protected baasicArticleInstanceFilesClient: ArticleInstanceFilesClient,
+        @inject(articleTypes.ArticleInstanceRatingsClient) protected baasicArticleInstanceRatingsClient: ArticleInstanceRatingsClient,
+        @inject(articleTypes.ArticleInstanceTagsClient) protected baasicArticleInstanceTagsClient: ArticleInstanceTagsClient,
+        @inject(articleTypes.ArticleInstanceSubscriptionsClient) protected baasicArticleInstanceSubscriptionsClient: ArticleInstanceSubscriptionsClient,
         @inject(articleTypes.BaasicArticleRouteDefinition) protected baasicArticleRouteDefinition: BaasicArticleRouteDefinition,
-        @inject(articleTypes.BaasicArticleACLClient) protected baasicArticleACLClient: BaasicArticleACLClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(articleTypes.ArticleACLClient) protected baasicArticleACLClient: ArticleACLClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     public statuses: IArticleStatus = ArticleStatus;

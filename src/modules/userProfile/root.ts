@@ -1,9 +1,9 @@
 import {
-    BaasicUserProfileACLClient, BaasicUserProfileRouteDefinition,
-    BaasicUserProfileClient,
-    BaasicCompanyClient,
-    BaasicOrganizationClient,
-    BaasicSkillClient,
+    UserProfileACLClient, BaasicUserProfileRouteDefinition,
+    UserProfileClient,
+    CompanyClient,
+    OrganizationClient,
+    SkillClient,
     TYPES
 } from 'modules/userProfile';
 
@@ -14,10 +14,10 @@ import 'reflect-metadata';
 export class Root {
 
     constructor(
-        @inject(TYPES.BaasicUserProfileClient) public profile: BaasicUserProfileClient,
-        @inject(TYPES.BaasicCompanyClient) public company: BaasicCompanyClient,
-        @inject(TYPES.BaasicOrganizationClient) public organization: BaasicOrganizationClient,
-        @inject(TYPES.BaasicSkillClient) public skill: BaasicSkillClient
+        @inject(TYPES.UserProfileClient) public profile: UserProfileClient,
+        @inject(TYPES.CompanyClient) public company: CompanyClient,
+        @inject(TYPES.OrganizationClient) public organization: OrganizationClient,
+        @inject(TYPES.SkillClient) public skill: SkillClient
     ) {
     }
 

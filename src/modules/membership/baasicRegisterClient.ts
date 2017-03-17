@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicRegisterClient  
- * @description Baasic Register Client provides an easy way to consume Baasic Application Registration REST API end-points. In order to obtain needed routes `baasicRegisterClient` uses `baasicRegisterRouteDefinition`. 
+ * @description  Register Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `baasicRegisterClient` uses `baasicRegisterRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
 import { BaasicRegisterRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser, IRegisterUser } from 'modules/membership/contracts';
 
 @injectable()
-export class BaasicRegisterClient {
+export class RegisterClient {
 
     /**                 
      * Provides direct access to `baasicRegisterRouteDefinition`.                 
@@ -24,7 +24,7 @@ export class BaasicRegisterClient {
 
     constructor(
         @inject(membershipTypes.BaasicRegisterRouteDefinition) protected baasicRegisterRouteDefinition: BaasicRegisterRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
     ) { }
 

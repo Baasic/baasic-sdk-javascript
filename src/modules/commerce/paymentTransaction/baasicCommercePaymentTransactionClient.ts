@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicCommercePaymentTransactionClient  
- * @description Baasic Commerce PaymentTransaction Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommercePaymentTransactionClient` uses `baasicCommercePaymentTransactionRouteDefinition`. 
+ * @description  Commerce PaymentTransaction Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommercePaymentTransactionClient` uses `baasicCommercePaymentTransactionRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommercePaymentTransactionRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommercePaymentTransactionClient {
+export class CommercePaymentTransactionClient {
 
     get routeDefinition(): BaasicCommercePaymentTransactionRouteDefinition {
         return this.baasicCommercePaymentTransactionRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicCommercePaymentTransactionClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommercePaymentTransactionRouteDefinition) protected baasicCommercePaymentTransactionRouteDefinition: BaasicCommercePaymentTransactionRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
     /**                  
@@ -39,7 +39,7 @@ export class BaasicCommercePaymentTransactionClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
-        return this.BaasicApiClient.get(this.baasicCommercePaymentTransactionRouteDefinition.find(options));
+        return this.ApiClient.get(this.baasicCommercePaymentTransactionRouteDefinition.find(options));
     }
 
     /**                 
@@ -54,7 +54,7 @@ export class BaasicCommercePaymentTransactionClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommercePaymentTransactionRouteDefinition.get(id, options));
+        return this.ApiClient.get(this.baasicCommercePaymentTransactionRouteDefinition.get(id, options));
     }
 
     /**                 
@@ -69,7 +69,7 @@ export class BaasicCommercePaymentTransactionClient {
                     });                 
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.post(this.baasicCommercePaymentTransactionRouteDefinition.create(), this.baasicCommercePaymentTransactionRouteDefinition.createParams(data));
+        return this.ApiClient.post(this.baasicCommercePaymentTransactionRouteDefinition.create(), this.baasicCommercePaymentTransactionRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -90,7 +90,7 @@ export class BaasicCommercePaymentTransactionClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.put<void>(this.baasicCommercePaymentTransactionRouteDefinition.update(data), this.baasicCommercePaymentTransactionRouteDefinition.updateParams(data));
+        return this.ApiClient.put<void>(this.baasicCommercePaymentTransactionRouteDefinition.update(data), this.baasicCommercePaymentTransactionRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -110,7 +110,7 @@ export class BaasicCommercePaymentTransactionClient {
                             });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.delete<void>(this.baasicCommercePaymentTransactionRouteDefinition.delete(data));
+        return this.ApiClient.delete<void>(this.baasicCommercePaymentTransactionRouteDefinition.delete(data));
     }
 }
 

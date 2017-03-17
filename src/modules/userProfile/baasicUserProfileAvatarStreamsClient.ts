@@ -1,15 +1,15 @@
 /* globals module */
 /**  
  * @module baasicUserProfileAvatarStreamsClient  
- * @description Baasic User Profile Avatar Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  User Profile Avatar Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicUserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 
 @injectable()
-export class BaasicUserProfileAvatarStreamsClient {
+export class UserProfileAvatarStreamsClient {
 
     get routeDefinition(): BaasicUserProfileAvatarStreamsRouteDefinition {
         return this.baasicUserProfileAvatarStreamsRouteDefinition;
@@ -17,7 +17,7 @@ export class BaasicUserProfileAvatarStreamsClient {
 
     constructor(
         @inject(userProfileTypes.BaasicUserProfileAvatarStreamsRouteDefinition) protected baasicUserProfileAvatarStreamsRouteDefinition: BaasicUserProfileAvatarStreamsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

@@ -1,11 +1,11 @@
 import {
-    BaasicArticleClient,
-    BaasicArticleCommentsClient,
-    BaasicArticleFilesClient,
-    BaasicArticleRatingsClient,
-    BaasicArticleSubscriptionsClient,
-    BaasicArticleTagsClient,
-    BaasicArticleSettingsClient,
+    ArticleClient,
+    ArticleCommentsClient,
+    ArticleFilesClient,
+    ArticleRatingsClient,
+    ArticleSubscriptionsClient,
+    ArticleTagsClient,
+    ArticleSettingsClient,
     TYPES
 } from 'modules/article';
 
@@ -17,13 +17,13 @@ import 'reflect-metadata';
 export class Root {
 
     constructor(
-        @inject(TYPES.BaasicArticleClient) public articles: BaasicArticleClient,
-        @inject(TYPES.BaasicArticleCommentsClient) public comments: BaasicArticleCommentsClient,
-        @inject(TYPES.BaasicArticleFilesClient) public files: BaasicArticleFilesClient,
-        @inject(TYPES.BaasicArticleRatingsClient) public ratings: BaasicArticleRatingsClient,
-        @inject(TYPES.BaasicArticleSubscriptionsClient) public subscriptions: BaasicArticleSubscriptionsClient,
-        @inject(TYPES.BaasicArticleTagsClient) public tags: BaasicArticleTagsClient,
-        @inject(TYPES.BaasicArticleSettingsClient) public settings: BaasicArticleSettingsClient
+        @inject(TYPES.ArticleClient) public articles: ArticleClient,
+        @inject(TYPES.ArticleCommentsClient) public comments: ArticleCommentsClient,
+        @inject(TYPES.ArticleFilesClient) public files: ArticleFilesClient,
+        @inject(TYPES.ArticleRatingsClient) public ratings: ArticleRatingsClient,
+        @inject(TYPES.ArticleSubscriptionsClient) public subscriptions: ArticleSubscriptionsClient,
+        @inject(TYPES.ArticleTagsClient) public tags: ArticleTagsClient,
+        @inject(TYPES.ArticleSettingsClient) public settings: ArticleSettingsClient
 
     ) {
     }

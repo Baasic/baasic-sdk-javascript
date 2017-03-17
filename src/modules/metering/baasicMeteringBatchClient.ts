@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicMeteringBatchClient  
- * @description Baasic Metering Batch Client provides an easy way to consume Baasic Metering REST API end-points. In order to obtain a needed routes `baasicMeteringBatchClient` uses `baasicMeteringBatchRouteDefinition`. 
+ * @description  Metering Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringBatchClient` uses `baasicMeteringBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicMeteringBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringData } from 'modules/metering/contracts';
 
 @injectable()
-export class BaasicMeteringBatchClient {
+export class MeteringBatchClient {
 
     get routeDefinition(): BaasicMeteringBatchRouteDefinition {
         return this.baasicMeteringBatchRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicMeteringBatchClient {
 
     constructor(
         @inject(meteringTypes.BaasicMeteringBatchRouteDefinition) protected baasicMeteringBatchRouteDefinition: BaasicMeteringBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                   

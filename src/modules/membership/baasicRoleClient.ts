@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicRoleClient  
- * @description Baasic Role Client provides an easy way to consume Baasic Role REST API end-points. In order to obtain needed routes `baasicRoleClient` uses `baasicRoleRouteDefinition`. 
+ * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `baasicRoleClient` uses `baasicRoleRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicRoleRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRole } from 'modules/membership/contracts';
 
 @injectable()
-export class BaasicRoleClient {
+export class RoleClient {
 
     /**                 
      * Provides direct access to `baasicRoleRouteDefinition`.                 
@@ -24,7 +24,7 @@ export class BaasicRoleClient {
 
     constructor(
         @inject(membershipTypes.BaasicRoleRouteDefinition) protected baasicRoleRouteDefinition: BaasicRoleRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

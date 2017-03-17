@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module baasicCommercePaymentMethodBatchClient  
- * @description Baasic Commerce Payment Method Batch Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommercePaymentMethodBatchClient` uses `baasicCommercePaymentMethodBatchRouteDefinition`. 
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommercePaymentMethodBatchClient` uses `baasicCommercePaymentMethodBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceLookupsPaymentMethodBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsPaymentMethodBatchClient {
+export class CommerceLookupsPaymentMethodBatchClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsPaymentMethodBatchRouteDefinition) protected baasicCommerceLookupsPaymentMethodBatchRouteDefinition: BaasicCommerceLookupsPaymentMethodBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

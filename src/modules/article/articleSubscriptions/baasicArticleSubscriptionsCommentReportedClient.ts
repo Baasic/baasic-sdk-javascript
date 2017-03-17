@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicArticleSubscriptionsCommentReportedClient  
- * @description Baasic Article Subscriptions Comment Reported Client provides an easy way to consume Baasic Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsCommentReportedClient` uses `baasicArticleSubscriptionsCommentReportedRouteDefinition`. 
+ * @description  Article Subscriptions Comment Reported Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsCommentReportedClient` uses `baasicArticleSubscriptionsCommentReportedRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleSubscriptionsCommentReportedRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleSubscriptionsCommentReportedClient {
+export class ArticleSubscriptionsCommentReportedClient {
 
     get routeDefinition(): BaasicArticleSubscriptionsCommentReportedRouteDefinition {
         return this.baasicArticleSubscriptionsCommentReportedRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicArticleSubscriptionsCommentReportedClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleSubscriptionsCommentReportedRouteDefinition) protected baasicArticleSubscriptionsCommentReportedRouteDefinition: BaasicArticleSubscriptionsCommentReportedRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                         

@@ -1,19 +1,19 @@
 import { ContainerModule } from "inversify";
 import {
-    BaasicDynamicResourceACLClient,
+    DynamicResourceACLClient,
     BaasicDynamicResourceACLRouteDefinition,
-    BaasicDynamicResourceClient,
+    DynamicResourceClient,
     BaasicDynamicResourceRouteDefinition,
-    BaasicDynamicSchemaClient,
+    DynamicSchemaClient,
     BaasicDynamicSchemaRouteDefinition
 } from 'modules/dynamicResource';
 
 const TYPES = {
-    BaasicDynamicResourceACLClient: Symbol("BaasicDynamicResourceACLClient"),
+    DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
     BaasicDynamicResourceACLRouteDefinition: Symbol("BaasicDynamicResourceACLRouteDefinition"),
-    BaasicDynamicResourceClient: Symbol("BaasicDynamicResourceClient"),
+    DynamicResourceClient: Symbol("DynamicResourceClient"),
     BaasicDynamicResourceRouteDefinition: Symbol("BaasicDynamicResourceRouteDefinition"),
-    BaasicDynamicSchemaClient: Symbol("BaasicDynamicSchemaClient"),
+    DynamicSchemaClient: Symbol("DynamicSchemaClient"),
     BaasicDynamicSchemaRouteDefinition: Symbol("BaasicDynamicSchemaRouteDefinition")
 };
 
@@ -21,11 +21,11 @@ export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicDynamicResourceACLRouteDefinition>(TYPES.BaasicDynamicResourceACLRouteDefinition).to(BaasicDynamicResourceACLRouteDefinition);
-    bind<BaasicDynamicResourceACLClient>(TYPES.BaasicDynamicResourceACLClient).to(BaasicDynamicResourceACLClient);
+    bind<DynamicResourceACLClient>(TYPES.DynamicResourceACLClient).to(DynamicResourceACLClient);
     bind<BaasicDynamicResourceRouteDefinition>(TYPES.BaasicDynamicResourceRouteDefinition).to(BaasicDynamicResourceRouteDefinition);
-    bind<BaasicDynamicResourceClient>(TYPES.BaasicDynamicResourceClient).to(BaasicDynamicResourceClient);
+    bind<DynamicResourceClient>(TYPES.DynamicResourceClient).to(DynamicResourceClient);
     bind<BaasicDynamicSchemaRouteDefinition>(TYPES.BaasicDynamicSchemaRouteDefinition).to(BaasicDynamicSchemaRouteDefinition);
-    bind<BaasicDynamicSchemaClient>(TYPES.BaasicDynamicSchemaClient).to(BaasicDynamicSchemaClient);
+    bind<DynamicSchemaClient>(TYPES.DynamicSchemaClient).to(DynamicSchemaClient);
 });
 
 export { diModule };

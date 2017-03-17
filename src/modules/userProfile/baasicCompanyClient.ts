@@ -1,30 +1,30 @@
 /* globals module */
 /**  
  * @module baasicCompanyClient  
- * @description Baasic Company Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Company Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IGetRequestOptions, IOptions, IBaasicQueryModel } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCompanyBatchClient, BaasicCompanyRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { CompanyBatchClient, BaasicCompanyRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicCompanyClient {
+export class CompanyClient {
 
     get routeDefinition(): BaasicCompanyRouteDefinition {
         return this.baasicCompanyRouteDefinition;
     }
 
-    get batch(): BaasicCompanyBatchClient {
+    get batch(): CompanyBatchClient {
         return this.baasicCompanyBatchClient;
     }
 
     constructor(
-        @inject(userProfileTypes.BaasicCompanyBatchClient) protected baasicCompanyBatchClient: BaasicCompanyBatchClient,
+        @inject(userProfileTypes.CompanyBatchClient) protected baasicCompanyBatchClient: CompanyBatchClient,
         @inject(userProfileTypes.BaasicCompanyRouteDefinition) protected baasicCompanyRouteDefinition: BaasicCompanyRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

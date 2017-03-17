@@ -1,52 +1,52 @@
 /* globals module */
 /**  
  * @module baasicMediaVaultClient  
- * @description Baasic Media Vault Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Media Vault Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicMediaVaultBatchClient,
-    BaasicMediaVaultProcessingProviderSettingsClient,
+    MediaVaultBatchClient,
+    MediaVaultProcessingProviderSettingsClient,
     BaasicMediaVaultRouteDefinition,
-    BaasicMediaVaultSettingsClient,
-    BaasicMediaVaultStreamsClient,
+    MediaVaultSettingsClient,
+    MediaVaultStreamsClient,
     TYPES as mediaVaultTypes
 } from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 
 @injectable()
-export class BaasicMediaVaultClient {
+export class MediaVaultClient {
 
     get routeDefinition(): BaasicMediaVaultRouteDefinition {
         return this.baasicMediaVaultRouteDefinition;
     }
 
-    get streams(): BaasicMediaVaultStreamsClient {
+    get streams(): MediaVaultStreamsClient {
         return this.baasicMediaVaultStreamsClient;
     }
 
-    get batch(): BaasicMediaVaultBatchClient {
+    get batch(): MediaVaultBatchClient {
         return this.baasicMediaVaultBatchClient;
     }
 
-    get settings(): BaasicMediaVaultSettingsClient {
+    get settings(): MediaVaultSettingsClient {
         return this.baasicMediaVaultSettingsClient;
     }
 
-    get processingProviderSettings(): BaasicMediaVaultProcessingProviderSettingsClient {
+    get processingProviderSettings(): MediaVaultProcessingProviderSettingsClient {
         return this.baasicMediaVaultProcessingProviderSettingsClient;
     }
 
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultRouteDefinition) protected baasicMediaVaultRouteDefinition: BaasicMediaVaultRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
-        @inject(mediaVaultTypes.BaasicMediaVaultStreamsClient) protected baasicMediaVaultStreamsClient: BaasicMediaVaultStreamsClient,
-        @inject(mediaVaultTypes.BaasicMediaVaultBatchClient) protected baasicMediaVaultBatchClient: BaasicMediaVaultBatchClient,
-        @inject(mediaVaultTypes.BaasicMediaVaultSettingsClient) protected baasicMediaVaultSettingsClient: BaasicMediaVaultSettingsClient,
-        @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsClient) protected baasicMediaVaultProcessingProviderSettingsClient: BaasicMediaVaultProcessingProviderSettingsClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
+        @inject(mediaVaultTypes.MediaVaultStreamsClient) protected baasicMediaVaultStreamsClient: MediaVaultStreamsClient,
+        @inject(mediaVaultTypes.MediaVaultBatchClient) protected baasicMediaVaultBatchClient: MediaVaultBatchClient,
+        @inject(mediaVaultTypes.MediaVaultSettingsClient) protected baasicMediaVaultSettingsClient: MediaVaultSettingsClient,
+        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsClient) protected baasicMediaVaultProcessingProviderSettingsClient: MediaVaultProcessingProviderSettingsClient
     ) { }
 
     /**                  

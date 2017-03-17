@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicCommerceLookupsAddressTypeBatchClient  
- * @description Baasic Commerce Lookups Address Type Batch Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsAddressTypesBatchClient` uses `baasicCommerceLookupsAddressTypeBatchRouteDefinition`. 
+ * @description  Commerce Lookups Address Type Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsAddressTypesBatchClient` uses `baasicCommerceLookupsAddressTypeBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceLookupsAddressTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsAddressTypesBatchClient {
+export class CommerceLookupsAddressTypesBatchClient {
 
     get routeDefinition(): BaasicCommerceLookupsAddressTypeBatchRouteDefinition {
         return this.baasicCommerceLookupsAddressTypeBatchRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicCommerceLookupsAddressTypesBatchClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsAddressTypeBatchRouteDefinition) protected baasicCommerceLookupsAddressTypeBatchRouteDefinition: BaasicCommerceLookupsAddressTypeBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

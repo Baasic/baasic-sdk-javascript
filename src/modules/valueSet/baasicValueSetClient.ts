@@ -1,19 +1,19 @@
 /**  
  * @module baasicValueSetClient
- * @description Baasic Value Set Client provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`. 
+ * @description  Value Set Client provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`. 
  */
 
 import { injectable, inject } from 'inversify';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicValueSetItemClient, BaasicValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ValueSetItemClient, BaasicValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 
 @injectable()
-export class BaasicValueSetClient {
+export class ValueSetClient {
 
 
-    get items(): BaasicValueSetItemClient {
+    get items(): ValueSetItemClient {
         return this.baasicValueSetItemClient;
     }
 
@@ -28,8 +28,8 @@ export class BaasicValueSetClient {
 
     constructor(
         @inject(valueSetTypes.BaasicValueSetRouteDefinition) protected baasicValueSetRouteDefinition: BaasicValueSetRouteDefinition,
-        @inject(valueSetTypes.BaasicValueSetItemClient) protected baasicValueSetItemClient: BaasicValueSetItemClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(valueSetTypes.ValueSetItemClient) protected baasicValueSetItemClient: ValueSetItemClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**

@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicFilesStreamsClient  
- * @description Baasic Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicFilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
 
 @injectable()
-export class BaasicFilesStreamsClient {
+export class FilesStreamsClient {
 
     get routeDefinition(): BaasicFilesStreamsRouteDefinition {
         return this.baasicFilesStreamsRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicFilesStreamsClient {
 
     constructor(
         @inject(filesTypes.BaasicFilesStreamsRouteDefinition) protected baasicFilesStreamsRouteDefinition: BaasicFilesStreamsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

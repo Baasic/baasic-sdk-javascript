@@ -1,35 +1,35 @@
 import { ContainerModule } from "inversify";
 import {
-    BaasicMeteringACLClient,
+    MeteringACLClient,
     BaasicMeteringACLRouteDefinition,
-    BaasicMeteringBatchClient,
+    MeteringBatchClient,
     BaasicMeteringBatchRouteDefinition,
-    BaasicMeteringCategoryBatchClient,
+    MeteringCategoryBatchClient,
     BaasicMeteringCategoryBatchRouteDefinition,
     BaasicMeteringCategoryRouteDefinition,
-    BaasicMeteringCategoryClient,
+    MeteringCategoryClient,
     BaasicMeteringRouteDefinition,
-    BaasicMeteringClient,
+    MeteringClient,
     BaasicMeteringSettingsRouteDefinition,
-    BaasicMeteringSettingsClient,
-    BaasicMeteringStatisticsClient,
+    MeteringSettingsClient,
+    MeteringStatisticsClient,
     BaasicMeteringStatisticsRouteDefinition
 } from 'modules/metering';
 
 const TYPES = {
-    BaasicMeteringACLClient: Symbol("BaasicMeteringACLClient"),
+    MeteringACLClient: Symbol("MeteringACLClient"),
     BaasicMeteringACLRouteDefinition: Symbol("BaasicMeteringACLRouteDefinition"),
-    BaasicMeteringBatchClient: Symbol("BaasicMeteringBatchClient"),
+    MeteringBatchClient: Symbol("MeteringBatchClient"),
     BaasicMeteringBatchRouteDefinition: Symbol("BaasicMeteringBatchRouteDefinition"),
-    BaasicMeteringCategoryBatchClient: Symbol("BaasicMeteringCategoryBatchClient"),
+    MeteringCategoryBatchClient: Symbol("MeteringCategoryBatchClient"),
     BaasicMeteringCategoryBatchRouteDefinition: Symbol("BaasicMeteringCategoryBatchRouteDefinition"),
     BaasicMeteringCategoryRouteDefinition: Symbol("BaasicMeteringCategoryRouteDefinition"),
-    BaasicMeteringCategoryClient: Symbol("BaasicMeteringCategoryClient"),
+    MeteringCategoryClient: Symbol("MeteringCategoryClient"),
     BaasicMeteringRouteDefinition: Symbol("BaasicMeteringRouteDefinition"),
-    BaasicMeteringClient: Symbol("BaasicMeteringClient"),
+    MeteringClient: Symbol("MeteringClient"),
     BaasicMeteringSettingsRouteDefinition: Symbol("BaasicMeteringSettingsRouteDefinition"),
-    BaasicMeteringSettingsClient: Symbol("BaasicMeteringSettingsClient"),
-    BaasicMeteringStatisticsClient: Symbol("BaasicMeteringStatisticsClient"),
+    MeteringSettingsClient: Symbol("MeteringSettingsClient"),
+    MeteringStatisticsClient: Symbol("MeteringStatisticsClient"),
     BaasicMeteringStatisticsRouteDefinition: Symbol("BaasicMeteringStatisticsRouteDefinition")
 };
 
@@ -37,19 +37,19 @@ export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicMeteringCategoryBatchRouteDefinition>(TYPES.BaasicMeteringCategoryBatchRouteDefinition).to(BaasicMeteringCategoryBatchRouteDefinition);
-    bind<BaasicMeteringCategoryBatchClient>(TYPES.BaasicMeteringCategoryBatchClient).to(BaasicMeteringCategoryBatchClient);
+    bind<MeteringCategoryBatchClient>(TYPES.MeteringCategoryBatchClient).to(MeteringCategoryBatchClient);
     bind<BaasicMeteringCategoryRouteDefinition>(TYPES.BaasicMeteringCategoryRouteDefinition).to(BaasicMeteringCategoryRouteDefinition);
-    bind<BaasicMeteringCategoryClient>(TYPES.BaasicMeteringCategoryClient).to(BaasicMeteringCategoryClient);
+    bind<MeteringCategoryClient>(TYPES.MeteringCategoryClient).to(MeteringCategoryClient);
     bind<BaasicMeteringBatchRouteDefinition>(TYPES.BaasicMeteringBatchRouteDefinition).to(BaasicMeteringBatchRouteDefinition);
-    bind<BaasicMeteringBatchClient>(TYPES.BaasicMeteringBatchClient).to(BaasicMeteringBatchClient);
+    bind<MeteringBatchClient>(TYPES.MeteringBatchClient).to(MeteringBatchClient);
     bind<BaasicMeteringStatisticsRouteDefinition>(TYPES.BaasicMeteringStatisticsRouteDefinition).to(BaasicMeteringStatisticsRouteDefinition);
-    bind<BaasicMeteringStatisticsClient>(TYPES.BaasicMeteringStatisticsClient).to(BaasicMeteringStatisticsClient);
+    bind<MeteringStatisticsClient>(TYPES.MeteringStatisticsClient).to(MeteringStatisticsClient);
     bind<BaasicMeteringACLRouteDefinition>(TYPES.BaasicMeteringACLRouteDefinition).to(BaasicMeteringACLRouteDefinition);
-    bind<BaasicMeteringACLClient>(TYPES.BaasicMeteringACLClient).to(BaasicMeteringACLClient);
+    bind<MeteringACLClient>(TYPES.MeteringACLClient).to(MeteringACLClient);
     bind<BaasicMeteringRouteDefinition>(TYPES.BaasicMeteringRouteDefinition).to(BaasicMeteringRouteDefinition);
-    bind<BaasicMeteringClient>(TYPES.BaasicMeteringClient).to(BaasicMeteringClient);
+    bind<MeteringClient>(TYPES.MeteringClient).to(MeteringClient);
     bind<BaasicMeteringSettingsRouteDefinition>(TYPES.BaasicMeteringSettingsRouteDefinition).to(BaasicMeteringSettingsRouteDefinition);
-    bind<BaasicMeteringSettingsClient>(TYPES.BaasicMeteringSettingsClient).to(BaasicMeteringSettingsClient);
+    bind<MeteringSettingsClient>(TYPES.MeteringSettingsClient).to(MeteringSettingsClient);
 });
 
 export { diModule };

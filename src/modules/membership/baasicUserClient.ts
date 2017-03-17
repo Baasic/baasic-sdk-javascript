@@ -1,22 +1,22 @@
 /* globals module */
 /**  
  * @module baasicUserClient  
- * @description Baasic User Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicUserClient` uses `baasicUserRouteDefinition`. 
+ * @description  User Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `baasicUserClient` uses `baasicUserRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     BaasicUserRouteDefinition,
-    BaasicUserSocialLoginClient,
+    UserSocialLoginClient,
     TYPES as membershipTypes
 } from 'modules/membership';
 import { IAppUser, INewUser, INewPassword } from 'modules/membership/contracts';
 import { ModelMapper } from 'common';
 
 @injectable()
-export class BaasicUserClient {
+export class UserClient {
 
     /**                 
      * Provides direct access to `baasicUserRouteDefinition`.                 
@@ -27,14 +27,14 @@ export class BaasicUserClient {
         return this.baasicUserRouteDefinition;
     }
 
-    get socialLogin(): BaasicUserSocialLoginClient {
+    get socialLogin(): UserSocialLoginClient {
         return this.baasicUserSocialLoginClient;
     }
 
     constructor(
         @inject(membershipTypes.BaasicUserRouteDefinition) protected baasicUserRouteDefinition: BaasicUserRouteDefinition,
-        @inject(membershipTypes.BaasicUserSocialLoginClient) protected baasicUserSocialLoginClient: BaasicUserSocialLoginClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(membershipTypes.UserSocialLoginClient) protected baasicUserSocialLoginClient: UserSocialLoginClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

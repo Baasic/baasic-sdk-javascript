@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module baasicCommerceCountryStateClient  
- * @description Baasic Commerce Country State Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCountryStateClient` uses `baasicCommerceCountryStateRouteDefinition`. 
+ * @description  Commerce Country State Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCountryStateClient` uses `baasicCommerceCountryStateRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCommerceLookupsCountryStateBatchClient, BaasicCommerceLookupsCountryStateRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { CommerceLookupsCountryStateBatchClient, BaasicCommerceLookupsCountryStateRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsCountryStateClient {
+export class CommerceLookupsCountryStateClient {
 
     get routeDefinition(): BaasicCommerceLookupsCountryStateRouteDefinition {
         return this.baasicCommerceLookupsCountryStateRouteDefinition;
     }
 
-    get batch(): BaasicCommerceLookupsCountryStateBatchClient {
+    get batch(): CommerceLookupsCountryStateBatchClient {
         return this.baasicCommerceLookupsCountryStateBatchClient;
     }
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsCountryStateRouteDefinition) protected baasicCommerceLookupsCountryStateRouteDefinition: BaasicCommerceLookupsCountryStateRouteDefinition,
-        @inject(commerceTypes.BaasicCommerceLookupsCountryStateBatchClient) protected baasicCommerceLookupsCountryStateBatchClient: BaasicCommerceLookupsCountryStateBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(commerceTypes.CommerceLookupsCountryStateBatchClient) protected baasicCommerceLookupsCountryStateBatchClient: CommerceLookupsCountryStateBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

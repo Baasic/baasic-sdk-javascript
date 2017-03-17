@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module baasicCommerceInvoiceStatusBatchClient  
- * @description Baasic Commerce Invoice Stauts Batch Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceStatusBatchClient` uses `baasicCommerceInvoiceStatusBatchRouteDefinition`. 
+ * @description  Commerce Invoice Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceStatusBatchClient` uses `baasicCommerceInvoiceStatusBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsInvoiceStatusBatchClient {
+export class CommerceLookupsInvoiceStatusBatchClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition) protected baasicCommerceLookupsInvoiceStatusBatchRouteDefinition: BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

@@ -5,16 +5,16 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicSkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicSkillBatchClient {
+export class SkillBatchClient {
 
     constructor(
         @inject(userProfileTypes.BaasicSkillBatchRouteDefinition) protected baasicSkillBatchRouteDefinition: BaasicSkillBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                   

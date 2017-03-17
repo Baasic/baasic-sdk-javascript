@@ -2,14 +2,14 @@ import {
     TYPES
 } from 'modules/commerce';
 import {
-    BaasicCommerceLookupsAddressTypesClient,
-    BaasicCommerceLookupsCountryClient,
-    BaasicCommerceLookupsCountryStateClient,
-    BaasicCommerceLookupsPaymentMethodClient,
-    BaasicCommerceLookupsPaymentTransactionStatusClient,
-    BaasicCommerceLookupsRecurringCyclePeriodTypeClient,
-    BaasicCommerceLookupsSubscriptionStatusClient,
-    BaasicCommerceLookupsInvoiceStatusClient
+    CommerceLookupsAddressTypesClient,
+    CommerceLookupsCountryClient,
+    CommerceLookupsCountryStateClient,
+    CommerceLookupsPaymentMethodClient,
+    CommerceLookupsPaymentTransactionStatusClient,
+    CommerceLookupsRecurringCyclePeriodTypeClient,
+    CommerceLookupsSubscriptionStatusClient,
+    CommerceLookupsInvoiceStatusClient
 } from 'modules/commerce/lookups';
 
 
@@ -20,14 +20,14 @@ import 'reflect-metadata';
 export class Lookups {
 
     constructor(
-        @inject(TYPES.BaasicCommerceLookupsAddressTypesClient) public addressTypes: BaasicCommerceLookupsAddressTypesClient,
-        @inject(TYPES.BaasicCommerceLookupsCountryClient) public countries: BaasicCommerceLookupsCountryClient,
-        @inject(TYPES.BaasicCommerceLookupsCountryStateClient) public countryStates: BaasicCommerceLookupsCountryStateClient,
-        @inject(TYPES.BaasicCommerceLookupsPaymentMethodClient) public paymentMethods: BaasicCommerceLookupsPaymentMethodClient,
-        @inject(TYPES.BaasicCommerceLookupsPaymentTransactionStatusClient) public paymentTransactionStatuses: BaasicCommerceLookupsPaymentTransactionStatusClient,
-        @inject(TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeClient) public recurringCyclePeriodTypes: BaasicCommerceLookupsRecurringCyclePeriodTypeClient,
-        @inject(TYPES.BaasicCommerceLookupsSubscriptionStatusClient) public subscriptionStatuses: BaasicCommerceLookupsSubscriptionStatusClient,
-        @inject(TYPES.BaasicCommerceLookupsInvoiceStatusClient) public invoiceStatuses: BaasicCommerceLookupsInvoiceStatusClient
+        @inject(TYPES.CommerceLookupsAddressTypesClient) public addressTypes: CommerceLookupsAddressTypesClient,
+        @inject(TYPES.CommerceLookupsCountryClient) public countries: CommerceLookupsCountryClient,
+        @inject(TYPES.CommerceLookupsCountryStateClient) public countryStates: CommerceLookupsCountryStateClient,
+        @inject(TYPES.CommerceLookupsPaymentMethodClient) public paymentMethods: CommerceLookupsPaymentMethodClient,
+        @inject(TYPES.CommerceLookupsPaymentTransactionStatusClient) public paymentTransactionStatuses: CommerceLookupsPaymentTransactionStatusClient,
+        @inject(TYPES.CommerceLookupsRecurringCyclePeriodTypeClient) public recurringCyclePeriodTypes: CommerceLookupsRecurringCyclePeriodTypeClient,
+        @inject(TYPES.CommerceLookupsSubscriptionStatusClient) public subscriptionStatuses: CommerceLookupsSubscriptionStatusClient,
+        @inject(TYPES.CommerceLookupsInvoiceStatusClient) public invoiceStatuses: CommerceLookupsInvoiceStatusClient
     ) {
     }
 

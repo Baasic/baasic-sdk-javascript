@@ -1,101 +1,101 @@
 import { ContainerModule } from "inversify";
 import {
-    BaasicCommerceCustomerPaymentMethodClient,
+    CommerceCustomerPaymentMethodClient,
     BaasicCommerceCustomerPaymentMethodRouteDefinition,
-    BaasicCommerceCustomerClient,
+    CommerceCustomerClient,
     BaasicCommerceCustomerRouteDefinition,
-    BaasicCommerceInvoiceClient,
+    CommerceInvoiceClient,
     BaasicCommerceInvoiceRouteDefinition,
-    BaasicCommerceInvoiceStreamsClient,
+    CommerceInvoiceStreamsClient,
     BaasicCommerceInvoiceStreamsRouteDefinition,
-    BaasicCommercePaymentTransactionClient,
+    CommercePaymentTransactionClient,
     BaasicCommercePaymentTransactionRouteDefinition,
-    BaasicCommerceProductClient,
+    CommerceProductClient,
     BaasicCommerceProductRouteDefinition,
-    BaasicCommerceClient,
+    CommerceClient,
     BaasicCommerceRouteDefinition,
-    BaasicCommerceLookupsAddressTypesBatchClient,
+    CommerceLookupsAddressTypesBatchClient,
     BaasicCommerceLookupsAddressTypeBatchRouteDefinition,
-    BaasicCommerceLookupsAddressTypesClient,
+    CommerceLookupsAddressTypesClient,
     BaasicCommerceLookupsAddressTypeRouteDefinition,
-    BaasicCommerceLookupsCountryBatchClient,
+    CommerceLookupsCountryBatchClient,
     BaasicCommerceLookupsCountryBatchRouteDefinition,
-    BaasicCommerceLookupsCountryClient,
+    CommerceLookupsCountryClient,
     BaasicCommerceLookupsCountryRouteDefinition,
-    BaasicCommerceLookupsCountryStateBatchClient,
+    CommerceLookupsCountryStateBatchClient,
     BaasicCommerceLookupsCountryStateBatchRouteDefinition,
-    BaasicCommerceLookupsCountryStateClient,
+    CommerceLookupsCountryStateClient,
     BaasicCommerceLookupsCountryStateRouteDefinition,
-    BaasicCommerceLookupsPaymentMethodBatchClient,
+    CommerceLookupsPaymentMethodBatchClient,
     BaasicCommerceLookupsPaymentMethodBatchRouteDefinition,
-    BaasicCommerceLookupsPaymentMethodClient,
+    CommerceLookupsPaymentMethodClient,
     BaasicCommerceLookupsPaymentMethodRouteDefinition,
-    BaasicCommerceLookupsPaymentTransactionStatusBatchClient,
+    CommerceLookupsPaymentTransactionStatusBatchClient,
     BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition,
-    BaasicCommerceLookupsPaymentTransactionStatusClient,
+    CommerceLookupsPaymentTransactionStatusClient,
     BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition,
-    BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient,
+    CommerceLookupsRecurringCyclePeriodTypeBatchClient,
     BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
-    BaasicCommerceLookupsRecurringCyclePeriodTypeClient,
+    CommerceLookupsRecurringCyclePeriodTypeClient,
     BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition,
-    BaasicCommerceLookupsSubscriptionStatusBatchClient,
+    CommerceLookupsSubscriptionStatusBatchClient,
     BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition,
-    BaasicCommerceLookupsSubscriptionStatusClient,
+    CommerceLookupsSubscriptionStatusClient,
     BaasicCommerceLookupsSubscriptionStatusRouteDefinition,
     BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition,
     BaasicCommerceLookupsInvoiceStatusRouteDefinition,
-    BaasicCommerceLookupsInvoiceStatusBatchClient,
-    BaasicCommerceLookupsInvoiceStatusClient,
+    CommerceLookupsInvoiceStatusBatchClient,
+    CommerceLookupsInvoiceStatusClient,
     Lookups
 } from 'modules/commerce';
 
 const TYPES = {
-    BaasicCommerceCustomerPaymentMethodClient: Symbol("BaasicCommerceCustomerPaymentMethodClient"),
+    CommerceCustomerPaymentMethodClient: Symbol("CommerceCustomerPaymentMethodClient"),
     BaasicCommerceCustomerPaymentMethodRouteDefinition: Symbol("BaasicCommerceCustomerPaymentMethodRouteDefinition"),
-    BaasicCommerceCustomerClient: Symbol("BaasicCommerceCustomerClient"),
+    CommerceCustomerClient: Symbol("CommerceCustomerClient"),
     BaasicCommerceCustomerRouteDefinition: Symbol("BaasicCommerceCustomerRouteDefinition"),
-    BaasicCommerceInvoiceClient: Symbol("BaasicCommerceInvoiceClient"),
+    CommerceInvoiceClient: Symbol("CommerceInvoiceClient"),
     BaasicCommerceInvoiceRouteDefinition: Symbol("BaasicCommerceInvoiceRouteDefinition"),
-    BaasicCommerceInvoiceStreamsClient: Symbol("BaasicCommerceInvoiceStreamsClient"),
+    CommerceInvoiceStreamsClient: Symbol("CommerceInvoiceStreamsClient"),
     BaasicCommerceInvoiceStreamsRouteDefinition: Symbol("BaasicCommerceInvoiceStreamsRouteDefinition"),
-    BaasicCommercePaymentTransactionClient: Symbol("BaasicCommercePaymentTransactionClient"),
+    CommercePaymentTransactionClient: Symbol("CommercePaymentTransactionClient"),
     BaasicCommercePaymentTransactionRouteDefinition: Symbol("BaasicCommercePaymentTransactionRouteDefinition"),
-    BaasicCommerceProductClient: Symbol("BaasicCommerceProductClient"),
+    CommerceProductClient: Symbol("CommerceProductClient"),
     BaasicCommerceProductRouteDefinition: Symbol("BaasicCommerceProductRouteDefinition"),
-    BaasicCommerceClient: Symbol("BaasicCommerceClient"),
+    CommerceClient: Symbol("CommerceClient"),
     BaasicCommerceRouteDefinition: Symbol("BaasicCommerceRouteDefinition"),
-    BaasicCommerceLookupsAddressTypesBatchClient: Symbol("BaasicCommerceLookupsAddressTypesBatchClient"),
+    CommerceLookupsAddressTypesBatchClient: Symbol("CommerceLookupsAddressTypesBatchClient"),
     BaasicCommerceLookupsAddressTypeBatchRouteDefinition: Symbol("BaasicCommerceLookupsAddressTypeBatchRouteDefinition"),
-    BaasicCommerceLookupsAddressTypesClient: Symbol("BaasicCommerceLookupsAddressTypesClient"),
+    CommerceLookupsAddressTypesClient: Symbol("CommerceLookupsAddressTypesClient"),
     BaasicCommerceLookupsAddressTypeRouteDefinition: Symbol("BaasicCommerceLookupsAddressTypeRouteDefinition"),
-    BaasicCommerceLookupsCountryBatchClient: Symbol("BaasicCommerceLookupsCountryBatchClient"),
+    CommerceLookupsCountryBatchClient: Symbol("CommerceLookupsCountryBatchClient"),
     BaasicCommerceLookupsCountryBatchRouteDefinition: Symbol("BaasicCommerceLookupsCountryBatchRouteDefinition"),
-    BaasicCommerceLookupsCountryClient: Symbol("BaasicCommerceLookupsCountryClient"),
+    CommerceLookupsCountryClient: Symbol("CommerceLookupsCountryClient"),
     BaasicCommerceLookupsCountryRouteDefinition: Symbol("BaasicCommerceLookupsCountryRouteDefinition"),
-    BaasicCommerceLookupsCountryStateBatchClient: Symbol("BaasicCommerceLookupsCountryStateBatchClient"),
+    CommerceLookupsCountryStateBatchClient: Symbol("CommerceLookupsCountryStateBatchClient"),
     BaasicCommerceLookupsCountryStateBatchRouteDefinition: Symbol("BaasicCommerceLookupsCountryStateBatchRouteDefinition"),
-    BaasicCommerceLookupsCountryStateClient: Symbol("BaasicCommerceLookupsCountryStateClient"),
+    CommerceLookupsCountryStateClient: Symbol("CommerceLookupsCountryStateClient"),
     BaasicCommerceLookupsCountryStateRouteDefinition: Symbol("BaasicCommerceLookupsCountryStateRouteDefinition"),
-    BaasicCommerceLookupsPaymentMethodBatchClient: Symbol("BaasicCommerceLookupsPaymentMethodBatchClient"),
+    CommerceLookupsPaymentMethodBatchClient: Symbol("CommerceLookupsPaymentMethodBatchClient"),
     BaasicCommerceLookupsPaymentMethodBatchRouteDefinition: Symbol("BaasicCommerceLookupsPaymentMethodBatchRouteDefinition"),
-    BaasicCommerceLookupsPaymentMethodClient: Symbol("BaasicCommerceLookupsPaymentMethodClient"),
+    CommerceLookupsPaymentMethodClient: Symbol("CommerceLookupsPaymentMethodClient"),
     BaasicCommerceLookupsPaymentMethodRouteDefinition: Symbol("BaasicCommerceLookupsPaymentMethodRouteDefinition"),
-    BaasicCommerceLookupsPaymentTransactionStatusBatchClient: Symbol("BaasicCommerceLookupsPaymentTransactionStatusBatchClient"),
+    CommerceLookupsPaymentTransactionStatusBatchClient: Symbol("CommerceLookupsPaymentTransactionStatusBatchClient"),
     BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition: Symbol("BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition"),
-    BaasicCommerceLookupsPaymentTransactionStatusClient: Symbol("BaasicCommerceLookupsPaymentTransactionStatusClient"),
+    CommerceLookupsPaymentTransactionStatusClient: Symbol("CommerceLookupsPaymentTransactionStatusClient"),
     BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition: Symbol("BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition"),
-    BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient: Symbol("BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient"),
+    CommerceLookupsRecurringCyclePeriodTypeBatchClient: Symbol("CommerceLookupsRecurringCyclePeriodTypeBatchClient"),
     BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: Symbol("BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition"),
-    BaasicCommerceLookupsRecurringCyclePeriodTypeClient: Symbol("BaasicCommerceLookupsRecurringCyclePeriodTypeClient"),
+    CommerceLookupsRecurringCyclePeriodTypeClient: Symbol("CommerceLookupsRecurringCyclePeriodTypeClient"),
     BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition: Symbol("BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition"),
-    BaasicCommerceLookupsSubscriptionStatusBatchClient: Symbol("BaasicCommerceLookupsSubscriptionStatusBatchClient"),
+    CommerceLookupsSubscriptionStatusBatchClient: Symbol("CommerceLookupsSubscriptionStatusBatchClient"),
     BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition: Symbol("BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition"),
-    BaasicCommerceLookupsSubscriptionStatusClient: Symbol("BaasicCommerceLookupsSubscriptionStatusClient"),
+    CommerceLookupsSubscriptionStatusClient: Symbol("CommerceLookupsSubscriptionStatusClient"),
     BaasicCommerceLookupsSubscriptionStatusRouteDefinition: Symbol("BaasicCommerceLookupsSubscriptionStatusRouteDefinition"),
     BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition: Symbol("BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition"),
     BaasicCommerceLookupsInvoiceStatusRouteDefinition: Symbol("BaasicCommerceLookupsInvoiceStatusRouteDefinition"),
-    BaasicCommerceLookupsInvoiceStatusBatchClient: Symbol("BaasicCommerceLookupsInvoiceStatusBatchClient"),
-    BaasicCommerceLookupsInvoiceStatusClient: Symbol("BaasicCommerceLookupsInvoiceStatusClient"),
+    CommerceLookupsInvoiceStatusBatchClient: Symbol("CommerceLookupsInvoiceStatusBatchClient"),
+    CommerceLookupsInvoiceStatusClient: Symbol("CommerceLookupsInvoiceStatusClient"),
     Lookups: Symbol("Lookups")
 
 };
@@ -104,51 +104,51 @@ export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicCommerceCustomerPaymentMethodRouteDefinition>(TYPES.BaasicCommerceCustomerPaymentMethodRouteDefinition).to(BaasicCommerceCustomerPaymentMethodRouteDefinition);
-    bind<BaasicCommerceCustomerPaymentMethodClient>(TYPES.BaasicCommerceCustomerPaymentMethodClient).to(BaasicCommerceCustomerPaymentMethodClient);
+    bind<CommerceCustomerPaymentMethodClient>(TYPES.CommerceCustomerPaymentMethodClient).to(CommerceCustomerPaymentMethodClient);
     bind<BaasicCommerceCustomerRouteDefinition>(TYPES.BaasicCommerceCustomerRouteDefinition).to(BaasicCommerceCustomerRouteDefinition);
-    bind<BaasicCommerceCustomerClient>(TYPES.BaasicCommerceCustomerClient).to(BaasicCommerceCustomerClient);
+    bind<CommerceCustomerClient>(TYPES.CommerceCustomerClient).to(CommerceCustomerClient);
     bind<BaasicCommerceInvoiceStreamsRouteDefinition>(TYPES.BaasicCommerceInvoiceStreamsRouteDefinition).to(BaasicCommerceInvoiceStreamsRouteDefinition);
-    bind<BaasicCommerceInvoiceStreamsClient>(TYPES.BaasicCommerceInvoiceStreamsClient).to(BaasicCommerceInvoiceStreamsClient);
-    bind<BaasicCommerceInvoiceClient>(TYPES.BaasicCommerceInvoiceClient).to(BaasicCommerceInvoiceClient);
+    bind<CommerceInvoiceStreamsClient>(TYPES.CommerceInvoiceStreamsClient).to(CommerceInvoiceStreamsClient);
+    bind<CommerceInvoiceClient>(TYPES.CommerceInvoiceClient).to(CommerceInvoiceClient);
     bind<BaasicCommerceInvoiceRouteDefinition>(TYPES.BaasicCommerceInvoiceRouteDefinition).to(BaasicCommerceInvoiceRouteDefinition);
     bind<BaasicCommercePaymentTransactionRouteDefinition>(TYPES.BaasicCommercePaymentTransactionRouteDefinition).to(BaasicCommercePaymentTransactionRouteDefinition);
-    bind<BaasicCommercePaymentTransactionClient>(TYPES.BaasicCommercePaymentTransactionClient).to(BaasicCommercePaymentTransactionClient);
+    bind<CommercePaymentTransactionClient>(TYPES.CommercePaymentTransactionClient).to(CommercePaymentTransactionClient);
     bind<BaasicCommerceProductRouteDefinition>(TYPES.BaasicCommerceProductRouteDefinition).to(BaasicCommerceProductRouteDefinition);
-    bind<BaasicCommerceProductClient>(TYPES.BaasicCommerceProductClient).to(BaasicCommerceProductClient);
+    bind<CommerceProductClient>(TYPES.CommerceProductClient).to(CommerceProductClient);
     bind<BaasicCommerceRouteDefinition>(TYPES.BaasicCommerceRouteDefinition).to(BaasicCommerceRouteDefinition);
-    bind<BaasicCommerceClient>(TYPES.BaasicCommerceClient).to(BaasicCommerceClient);
+    bind<CommerceClient>(TYPES.CommerceClient).to(CommerceClient);
     bind<BaasicCommerceLookupsAddressTypeBatchRouteDefinition>(TYPES.BaasicCommerceLookupsAddressTypeBatchRouteDefinition).to(BaasicCommerceLookupsAddressTypeBatchRouteDefinition);
-    bind<BaasicCommerceLookupsAddressTypesBatchClient>(TYPES.BaasicCommerceLookupsAddressTypesBatchClient).to(BaasicCommerceLookupsAddressTypesBatchClient);
+    bind<CommerceLookupsAddressTypesBatchClient>(TYPES.CommerceLookupsAddressTypesBatchClient).to(CommerceLookupsAddressTypesBatchClient);
     bind<BaasicCommerceLookupsAddressTypeRouteDefinition>(TYPES.BaasicCommerceLookupsAddressTypeRouteDefinition).to(BaasicCommerceLookupsAddressTypeRouteDefinition);
-    bind<BaasicCommerceLookupsAddressTypesClient>(TYPES.BaasicCommerceLookupsAddressTypesClient).to(BaasicCommerceLookupsAddressTypesClient);
+    bind<CommerceLookupsAddressTypesClient>(TYPES.CommerceLookupsAddressTypesClient).to(CommerceLookupsAddressTypesClient);
     bind<BaasicCommerceLookupsCountryBatchRouteDefinition>(TYPES.BaasicCommerceLookupsCountryBatchRouteDefinition).to(BaasicCommerceLookupsCountryBatchRouteDefinition);
-    bind<BaasicCommerceLookupsCountryBatchClient>(TYPES.BaasicCommerceLookupsCountryBatchClient).to(BaasicCommerceLookupsCountryBatchClient);
+    bind<CommerceLookupsCountryBatchClient>(TYPES.CommerceLookupsCountryBatchClient).to(CommerceLookupsCountryBatchClient);
     bind<BaasicCommerceLookupsCountryRouteDefinition>(TYPES.BaasicCommerceLookupsCountryRouteDefinition).to(BaasicCommerceLookupsCountryRouteDefinition);
-    bind<BaasicCommerceLookupsCountryClient>(TYPES.BaasicCommerceLookupsCountryClient).to(BaasicCommerceLookupsCountryClient);
+    bind<CommerceLookupsCountryClient>(TYPES.CommerceLookupsCountryClient).to(CommerceLookupsCountryClient);
     bind<BaasicCommerceLookupsCountryStateBatchRouteDefinition>(TYPES.BaasicCommerceLookupsCountryStateBatchRouteDefinition).to(BaasicCommerceLookupsCountryStateBatchRouteDefinition);
-    bind<BaasicCommerceLookupsCountryStateBatchClient>(TYPES.BaasicCommerceLookupsCountryStateBatchClient).to(BaasicCommerceLookupsCountryStateBatchClient);
+    bind<CommerceLookupsCountryStateBatchClient>(TYPES.CommerceLookupsCountryStateBatchClient).to(CommerceLookupsCountryStateBatchClient);
     bind<BaasicCommerceLookupsCountryStateRouteDefinition>(TYPES.BaasicCommerceLookupsCountryStateRouteDefinition).to(BaasicCommerceLookupsCountryStateRouteDefinition);
-    bind<BaasicCommerceLookupsCountryStateClient>(TYPES.BaasicCommerceLookupsCountryStateClient).to(BaasicCommerceLookupsCountryStateClient);
+    bind<CommerceLookupsCountryStateClient>(TYPES.CommerceLookupsCountryStateClient).to(CommerceLookupsCountryStateClient);
     bind<BaasicCommerceLookupsPaymentMethodBatchRouteDefinition>(TYPES.BaasicCommerceLookupsPaymentMethodBatchRouteDefinition).to(BaasicCommerceLookupsPaymentMethodBatchRouteDefinition);
-    bind<BaasicCommerceLookupsPaymentMethodBatchClient>(TYPES.BaasicCommerceLookupsPaymentMethodBatchClient).to(BaasicCommerceLookupsPaymentMethodBatchClient);
+    bind<CommerceLookupsPaymentMethodBatchClient>(TYPES.CommerceLookupsPaymentMethodBatchClient).to(CommerceLookupsPaymentMethodBatchClient);
     bind<BaasicCommerceLookupsPaymentMethodRouteDefinition>(TYPES.BaasicCommerceLookupsPaymentMethodRouteDefinition).to(BaasicCommerceLookupsPaymentMethodRouteDefinition);
-    bind<BaasicCommerceLookupsPaymentMethodClient>(TYPES.BaasicCommerceLookupsPaymentMethodClient).to(BaasicCommerceLookupsPaymentMethodClient);
+    bind<CommerceLookupsPaymentMethodClient>(TYPES.CommerceLookupsPaymentMethodClient).to(CommerceLookupsPaymentMethodClient);
     bind<BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition>(TYPES.BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition).to(BaasicCommerceLookupsPaymentTransactionStatusBatchRouteDefinition);
-    bind<BaasicCommerceLookupsPaymentTransactionStatusBatchClient>(TYPES.BaasicCommerceLookupsPaymentTransactionStatusBatchClient).to(BaasicCommerceLookupsPaymentTransactionStatusBatchClient);
+    bind<CommerceLookupsPaymentTransactionStatusBatchClient>(TYPES.CommerceLookupsPaymentTransactionStatusBatchClient).to(CommerceLookupsPaymentTransactionStatusBatchClient);
     bind<BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition>(TYPES.BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition).to(BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition);
-    bind<BaasicCommerceLookupsPaymentTransactionStatusClient>(TYPES.BaasicCommerceLookupsPaymentTransactionStatusClient).to(BaasicCommerceLookupsPaymentTransactionStatusClient);
+    bind<CommerceLookupsPaymentTransactionStatusClient>(TYPES.CommerceLookupsPaymentTransactionStatusClient).to(CommerceLookupsPaymentTransactionStatusClient);
     bind<BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition>(TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition).to(BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition);
-    bind<BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient>(TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient).to(BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient);
+    bind<CommerceLookupsRecurringCyclePeriodTypeBatchClient>(TYPES.CommerceLookupsRecurringCyclePeriodTypeBatchClient).to(CommerceLookupsRecurringCyclePeriodTypeBatchClient);
     bind<BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition>(TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition).to(BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition);
-    bind<BaasicCommerceLookupsRecurringCyclePeriodTypeClient>(TYPES.BaasicCommerceLookupsRecurringCyclePeriodTypeClient).to(BaasicCommerceLookupsRecurringCyclePeriodTypeClient);
+    bind<CommerceLookupsRecurringCyclePeriodTypeClient>(TYPES.CommerceLookupsRecurringCyclePeriodTypeClient).to(CommerceLookupsRecurringCyclePeriodTypeClient);
     bind<BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition>(TYPES.BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition).to(BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition);
-    bind<BaasicCommerceLookupsSubscriptionStatusBatchClient>(TYPES.BaasicCommerceLookupsSubscriptionStatusBatchClient).to(BaasicCommerceLookupsSubscriptionStatusBatchClient);
+    bind<CommerceLookupsSubscriptionStatusBatchClient>(TYPES.CommerceLookupsSubscriptionStatusBatchClient).to(CommerceLookupsSubscriptionStatusBatchClient);
     bind<BaasicCommerceLookupsSubscriptionStatusRouteDefinition>(TYPES.BaasicCommerceLookupsSubscriptionStatusRouteDefinition).to(BaasicCommerceLookupsSubscriptionStatusRouteDefinition);
-    bind<BaasicCommerceLookupsSubscriptionStatusClient>(TYPES.BaasicCommerceLookupsSubscriptionStatusClient).to(BaasicCommerceLookupsSubscriptionStatusClient);
+    bind<CommerceLookupsSubscriptionStatusClient>(TYPES.CommerceLookupsSubscriptionStatusClient).to(CommerceLookupsSubscriptionStatusClient);
     bind<BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition>(TYPES.BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition).to(BaasicCommerceLookupsInvoiceStatusBatchRouteDefinition);
     bind<BaasicCommerceLookupsInvoiceStatusRouteDefinition>(TYPES.BaasicCommerceLookupsInvoiceStatusRouteDefinition).to(BaasicCommerceLookupsInvoiceStatusRouteDefinition);
-    bind<BaasicCommerceLookupsInvoiceStatusBatchClient>(TYPES.BaasicCommerceLookupsInvoiceStatusBatchClient).to(BaasicCommerceLookupsInvoiceStatusBatchClient);
-    bind<BaasicCommerceLookupsInvoiceStatusClient>(TYPES.BaasicCommerceLookupsInvoiceStatusClient).to(BaasicCommerceLookupsInvoiceStatusClient);
+    bind<CommerceLookupsInvoiceStatusBatchClient>(TYPES.CommerceLookupsInvoiceStatusBatchClient).to(CommerceLookupsInvoiceStatusBatchClient);
+    bind<CommerceLookupsInvoiceStatusClient>(TYPES.CommerceLookupsInvoiceStatusClient).to(CommerceLookupsInvoiceStatusClient);
     bind<Lookups>(TYPES.Lookups).to(Lookups);
 });
 

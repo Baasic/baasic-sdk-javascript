@@ -1,30 +1,30 @@
 /* globals module */
 /**  
  * @module baasicOrganizationClient  
- * @description Baasic Organization Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Organization Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicOrganizationBatchClient, BaasicOrganizationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { OrganizationBatchClient, BaasicOrganizationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicOrganizationClient {
+export class OrganizationClient {
 
     get routeDefinition(): BaasicOrganizationRouteDefinition {
         return this.baasicOrganizationRouteDefinition;
     }
 
-    get batch(): BaasicOrganizationBatchClient {
+    get batch(): OrganizationBatchClient {
         return this.baasicOrganizationBatchClient;
     }
 
     constructor(
         @inject(userProfileTypes.BaasicOrganizationRouteDefinition) protected baasicOrganizationRouteDefinition: BaasicOrganizationRouteDefinition,
-        @inject(userProfileTypes.BaasicOrganizationBatchClient) protected baasicOrganizationBatchClient: BaasicOrganizationBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(userProfileTypes.OrganizationBatchClient) protected baasicOrganizationBatchClient: OrganizationBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

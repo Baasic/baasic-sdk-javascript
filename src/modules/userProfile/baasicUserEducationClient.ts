@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module baasicUserEducationClient  * @description Baasic User Education Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @module baasicUserEducationClient  * @description  User Education Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicUserEducationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserEducation } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicUserEducationClient {
+export class UserEducationClient {
 
     get routeDefinition(): BaasicUserEducationRouteDefinition {
         return this.baasicUserEducationRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicUserEducationClient {
 
     constructor(
         @inject(userProfileTypes.BaasicUserEducationRouteDefinition) protected baasicUserEducationRouteDefinition: BaasicUserEducationRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

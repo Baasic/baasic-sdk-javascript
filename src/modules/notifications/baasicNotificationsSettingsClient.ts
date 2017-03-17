@@ -1,15 +1,15 @@
 /* globals module */
 /**  
  * @module baasicNotificationsSettingsClient  
- * @description Baasic Notifications Settings Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSettingsClient` uses `baasicNotificationsSettingsRouteDefinition`. 
+ * @description  Notifications Settings Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSettingsClient` uses `baasicNotificationsSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicNotificationsSettingsRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 
 @injectable()
-export class BaasicNotificationsSettingsClient {
+export class NotificationsSettingsClient {
 
     get routeDefinition(): BaasicNotificationsSettingsRouteDefinition {
         return this.baasicNotificationsSettingsRouteDefinition;
@@ -17,7 +17,7 @@ export class BaasicNotificationsSettingsClient {
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsSettingsRouteDefinition) protected baasicNotificationsSettingsRouteDefinition: BaasicNotificationsSettingsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                      

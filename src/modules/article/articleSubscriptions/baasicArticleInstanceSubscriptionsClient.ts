@@ -1,32 +1,32 @@
 /* globals module */
 /**  
  * @module baasicArticleSubscriptionsClient  
- * @description Baasic Articles Subscriptions Client provides an easy way to consume Baasic Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
+ * @description  Articles Subscriptions Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsClient` uses `baasicArticleSubscriptionsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import {
     BaasicArticleInstanceSubscriptionsRouteDefinition,
-    BaasicArticleSubscriptionsArticleClient,
-    BaasicArticleSubscriptionsCommentReportedClient,
-    BaasicArticleSubscriptionsCommentRequiresModerationClient,
+    ArticleSubscriptionsArticleClient,
+    ArticleSubscriptionsCommentReportedClient,
+    ArticleSubscriptionsCommentRequiresModerationClient,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticle, IArticleOptions } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceSubscriptionsClient {
+export class ArticleInstanceSubscriptionsClient {
 
-    get commentReported(): BaasicArticleSubscriptionsCommentReportedClient {
+    get commentReported(): ArticleSubscriptionsCommentReportedClient {
         return this.baasicArticleSubscriptionsCommentReportedClient;
     }
 
-    get article(): BaasicArticleSubscriptionsArticleClient {
+    get article(): ArticleSubscriptionsArticleClient {
         return this.baasicArticleSubscriptionsArticleClient;
     }
 
-    get commentRequiresModeration(): BaasicArticleSubscriptionsCommentRequiresModerationClient {
+    get commentRequiresModeration(): ArticleSubscriptionsCommentRequiresModerationClient {
         return this.baasicArticleSubscriptionsCommentRequiresModerationClient;
     }
 
@@ -35,9 +35,9 @@ export class BaasicArticleInstanceSubscriptionsClient {
     }
 
     constructor(
-        @inject(articleTypes.BaasicArticleSubscriptionsCommentReportedClient) protected baasicArticleSubscriptionsCommentReportedClient: BaasicArticleSubscriptionsCommentReportedClient,
-        @inject(articleTypes.BaasicArticleSubscriptionsArticleClient) protected baasicArticleSubscriptionsArticleClient: BaasicArticleSubscriptionsArticleClient,
-        @inject(articleTypes.BaasicArticleSubscriptionsCommentRequiresModerationClient) protected baasicArticleSubscriptionsCommentRequiresModerationClient: BaasicArticleSubscriptionsCommentRequiresModerationClient,
+        @inject(articleTypes.ArticleSubscriptionsCommentReportedClient) protected baasicArticleSubscriptionsCommentReportedClient: ArticleSubscriptionsCommentReportedClient,
+        @inject(articleTypes.ArticleSubscriptionsArticleClient) protected baasicArticleSubscriptionsArticleClient: ArticleSubscriptionsArticleClient,
+        @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationClient) protected baasicArticleSubscriptionsCommentRequiresModerationClient: ArticleSubscriptionsCommentRequiresModerationClient,
         @inject(articleTypes.BaasicArticleInstanceSubscriptionsRouteDefinition) protected baasicArticleInstanceSubscriptionsRouteDefinition: BaasicArticleInstanceSubscriptionsRouteDefinition
     )
     { }

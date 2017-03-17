@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module baasicCommerceInvoiceClient  
- * @description Baasic Commerce Invoice Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceClient` uses `baasicCommerceInvoiceRouteDefinition`. 
+ * @description  Commerce Invoice Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceClient` uses `baasicCommerceInvoiceRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCommerceInvoiceRouteDefinition, BaasicCommerceInvoiceStreamsClient, TYPES as commerceTypes } from 'modules/commerce';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { CommerceInvoiceRouteDefinition, CommerceInvoiceStreamsClient, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceInvoiceClient {
+export class CommerceInvoiceClient {
 
     get routeDefinition(): BaasicCommerceInvoiceRouteDefinition {
         return this.baasicCommerceInvoiceRouteDefinition;
     }
 
-    get streams(): BaasicCommerceInvoiceStreamsClient {
+    get streams(): CommerceInvoiceStreamsClient {
         return this.baasicCommerceInvoiceStreamsClient;
     }
 
     constructor(
         @inject(commerceTypes.BaasicCommerceInvoiceRouteDefinition) protected baasicCommerceInvoiceRouteDefinition: BaasicCommerceInvoiceRouteDefinition,
-        @inject(commerceTypes.BaasicCommerceInvoiceStreamsClient) protected baasicCommerceInvoiceStreamsClient: BaasicCommerceInvoiceStreamsClient,
-        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(commerceTypes.CommerceInvoiceStreamsClient) protected baasicCommerceInvoiceStreamsClient: CommerceInvoiceStreamsClient,
+        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class BaasicCommerceInvoiceClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
-        return this.BaasicApiClient.get(this.baasicCommerceInvoiceRouteDefinition.find(options));
+        return this.ApiClient.get(this.baasicCommerceInvoiceRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,7 +59,7 @@ export class BaasicCommerceInvoiceClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommerceInvoiceRouteDefinition.get(id, options));
+        return this.ApiClient.get(this.baasicCommerceInvoiceRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -80,7 +80,7 @@ export class BaasicCommerceInvoiceClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.put<void>(this.baasicCommerceInvoiceRouteDefinition.update(data), this.baasicCommerceInvoiceRouteDefinition.updateParams(data));
+        return this.ApiClient.put<void>(this.baasicCommerceInvoiceRouteDefinition.update(data), this.baasicCommerceInvoiceRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -100,6 +100,6 @@ export class BaasicCommerceInvoiceClient {
                             });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.delete<void>(this.baasicCommerceInvoiceRouteDefinition.delete(data));
+        return this.ApiClient.delete<void>(this.baasicCommerceInvoiceRouteDefinition.delete(data));
     }
 }

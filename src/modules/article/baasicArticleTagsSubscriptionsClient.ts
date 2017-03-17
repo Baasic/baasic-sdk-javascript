@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicArticleTagsSubscriptionsDefinition  
- * @description Baasic Article Tags Subscriptions Definition provides an easy way to consume Baasic Article Tags REST API end-points. `baasicArticleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
+ * @description  Article Tags Subscriptions Definition provides an easy way to consume  Article Tags REST API end-points. `baasicArticleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleTagsDefinition` uses `baasicArticleTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleTag, IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleTagsSubscriptionsClient {
+export class ArticleTagsSubscriptionsClient {
 
     get routeDefinition(): BaasicArticleTagsSubscriptionsRouteDefinition {
         return this.baasicArticleTagsSubscriptionsRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicArticleTagsSubscriptionsClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleTagsSubscriptionsRouteDefinition) protected baasicArticleTagsSubscriptionsRouteDefinition: BaasicArticleTagsSubscriptionsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

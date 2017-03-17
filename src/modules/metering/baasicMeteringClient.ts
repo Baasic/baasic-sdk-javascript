@@ -1,58 +1,58 @@
 /* globals module */
 /**  
  * @module baasicMeteringClient  
- * @description Baasic Metering Client provides an easy way to consume Baasic Metering REST API end-points. In order to obtain a needed routes `baasicMeteringClient` uses `baasicMeteringRouteDefinition`. 
+ * @description  Metering Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringClient` uses `baasicMeteringRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicMeteringACLClient,
-    BaasicMeteringBatchClient,
+    MeteringACLClient,
+    MeteringBatchClient,
     BaasicMeteringRouteDefinition,
-    BaasicMeteringStatisticsClient,
-    BaasicMeteringCategoryClient,
-    BaasicMeteringSettingsClient,
+    MeteringStatisticsClient,
+    MeteringCategoryClient,
+    MeteringSettingsClient,
     TYPES as meteringTypes
 } from 'modules/metering';
 import { IMeteringData } from 'modules/metering/contracts';
 
 @injectable()
-export class BaasicMeteringClient {
+export class MeteringClient {
 
     get routeDefinition(): BaasicMeteringRouteDefinition {
         return this.baasicMeteringRouteDefinition;
     }
 
-    get batch(): BaasicMeteringBatchClient {
+    get batch(): MeteringBatchClient {
         return this.baasicMeteringBatchClient;
     }
 
-    get statistics(): BaasicMeteringStatisticsClient {
+    get statistics(): MeteringStatisticsClient {
         return this.baasicMeteringStatisticsClient;
     }
 
-    get acl(): BaasicMeteringACLClient {
+    get acl(): MeteringACLClient {
         return this.baasicMeteringACLClient;
     }
 
-    get settings(): BaasicMeteringSettingsClient {
+    get settings(): MeteringSettingsClient {
         return this.baasicMeteringSettingsClient;
     }
 
-    get category(): BaasicMeteringCategoryClient {
+    get category(): MeteringCategoryClient {
         return this.baasicMeteringCategoryClient;
     }
 
     constructor(
         @inject(meteringTypes.BaasicMeteringRouteDefinition) protected baasicMeteringRouteDefinition: BaasicMeteringRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient,
-        @inject(meteringTypes.BaasicMeteringBatchClient) protected baasicMeteringBatchClient: BaasicMeteringBatchClient,
-        @inject(meteringTypes.BaasicMeteringStatisticsClient) protected baasicMeteringStatisticsClient: BaasicMeteringStatisticsClient,
-        @inject(meteringTypes.BaasicMeteringACLClient) protected baasicMeteringACLClient: BaasicMeteringACLClient,
-        @inject(meteringTypes.BaasicMeteringCategoryClient) protected baasicMeteringCategoryClient: BaasicMeteringCategoryClient,
-        @inject(meteringTypes.BaasicMeteringSettingsClient) protected baasicMeteringSettingsClient: BaasicMeteringSettingsClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient,
+        @inject(meteringTypes.MeteringBatchClient) protected baasicMeteringBatchClient: MeteringBatchClient,
+        @inject(meteringTypes.MeteringStatisticsClient) protected baasicMeteringStatisticsClient: MeteringStatisticsClient,
+        @inject(meteringTypes.MeteringACLClient) protected baasicMeteringACLClient: MeteringACLClient,
+        @inject(meteringTypes.MeteringCategoryClient) protected baasicMeteringCategoryClient: MeteringCategoryClient,
+        @inject(meteringTypes.MeteringSettingsClient) protected baasicMeteringSettingsClient: MeteringSettingsClient,
     ) { }
 
     /**                  

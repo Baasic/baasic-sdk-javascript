@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicMediaVaultProcessingProviderSettingsClient  
- * @description Baasic Media Vault Processing Provider Settings Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Processing Provider Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Media Vault Processing Provider Settings Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Processing Provider Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicMediaVaultProcessingProviderSettingsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 
 @injectable()
-export class BaasicMediaVaultProcessingProviderSettingsClient {
+export class MediaVaultProcessingProviderSettingsClient {
 
     get routeDefinition(): BaasicMediaVaultProcessingProviderSettingsRouteDefinition {
         return this.baasicMediaVaultProcessingProviderSettingsRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicMediaVaultProcessingProviderSettingsClient {
 
     constructor(
         @inject(mediaVaultTypes.BaasicMediaVaultProcessingProviderSettingsRouteDefinition) protected baasicMediaVaultProcessingProviderSettingsRouteDefinition: BaasicMediaVaultProcessingProviderSettingsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                    

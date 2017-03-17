@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicFilesACLClient  
- * @description Baasic Files ACL Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Files ACL Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IACLOptions, IACLPolicy } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicFilesACLRouteDefinition, TYPES as filesTypes } from 'modules/file';
 
 @injectable()
-export class BaasicFilesACLClient {
+export class FilesACLClient {
 
     routeDefinition(): BaasicFilesACLRouteDefinition {
         return this.baasicFilesACLRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicFilesACLClient {
 
     constructor(
         @inject(filesTypes.BaasicFilesACLRouteDefinition) protected baasicFilesACLRouteDefinition: BaasicFilesACLRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

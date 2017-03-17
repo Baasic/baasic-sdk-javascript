@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicArticleInstanceFilesStreamsClient  
- * @description Baasic Article Instance Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Article Instance Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleInstanceFilesStreamsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceFilesStreamsClient {
+export class ArticleInstanceFilesStreamsClient {
 
     get routeDefinition(): BaasicArticleInstanceFilesStreamsRouteDefinition {
         return this.baasicArticleInstanceFilesStreamsRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicArticleInstanceFilesStreamsClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleInstanceFilesStreamsRouteDefinition) protected baasicArticleInstanceFilesStreamsRouteDefinition: BaasicArticleInstanceFilesStreamsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

@@ -1,21 +1,21 @@
 /* globals module */
 /**  
  * @module baasicNotificationsSubscriptionsUsersBatchClient  
- * @description Baasic Notifications Subscriptions Users Batch Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsUsersBatchUsersClient` uses `baasicNotificationsSubscriptionsUsersBatchRouteDefinition`. 
+ * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsUsersBatchUsersClient` uses `baasicNotificationsSubscriptionsUsersBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicNotificationsSubscriptionsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserSubscription } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsSubscriptionsUsersBatchClient {
+export class NotificationsSubscriptionsUsersBatchClient {
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsSubscriptionsUsersBatchRouteDefinition) protected baasicNotificationsSubscriptionsUsersBatchRouteDefinition: BaasicNotificationsSubscriptionsUsersBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                              

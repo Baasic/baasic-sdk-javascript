@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicMeteringSettingsClient  
- * @description Baasic Metering Settings Client provides an easy way to consume Baasic Metering REST API end-points. In order to obtain a needed routes `baasicMeteringSettingsClient` uses `baasicMeteringSettingsRouteDefinition`. 
+ * @description  Metering Settings Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringSettingsClient` uses `baasicMeteringSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicMeteringSettingsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringSettings } from 'modules/metering/contracts';
 
 @injectable()
-export class BaasicMeteringSettingsClient {
+export class MeteringSettingsClient {
 
     get routeDefinition(): BaasicMeteringSettingsRouteDefinition {
         return this.baasicMeteringSettingsRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicMeteringSettingsClient {
 
     constructor(
         @inject(meteringTypes.BaasicMeteringSettingsRouteDefinition) protected baasicMeteringSettingsRouteDefinition: BaasicMeteringSettingsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                 

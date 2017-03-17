@@ -1,15 +1,15 @@
 import { ContainerModule } from "inversify";
-import { BaasicApiClient } from 'httpApi';
+import { ApiClient } from 'httpApi';
 
 const TYPES = {
-    BaasicApiClient: Symbol("BaasicApiClient"),
+    ApiClient: Symbol("ApiClient"),
     IHttpClient: Symbol("IHttpClient")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<BaasicApiClient>(TYPES.BaasicApiClient).to(BaasicApiClient);
+    bind<ApiClient>(TYPES.ApiClient).to(ApiClient);
 });
 
 export { diModule };

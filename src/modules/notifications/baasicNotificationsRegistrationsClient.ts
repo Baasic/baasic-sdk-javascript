@@ -1,36 +1,36 @@
 /* globals module */
 /**  
  * @module baasicNotificationsRegistrationsClient  
- * @description Baasic Notifications Registrations Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsClient` uses `baasicNotificationsRegistrationsRouteDefinition`. 
+ * @description  Notifications Registrations Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsClient` uses `baasicNotificationsRegistrationsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import {
-    BaasicNotificationsRegistrationsAnonymousClient,
+    NotificationsRegistrationsAnonymousClient,
     BaasicNotificationsRegistrationsRouteDefinition,
-    BaasicNotificationsRegistrationsUsersClient,
+    NotificationsRegistrationsUsersClient,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 
 @injectable()
-export class BaasicNotificationsRegistrationsClient {
+export class NotificationsRegistrationsClient {
 
     get routeDefinition(): BaasicNotificationsRegistrationsRouteDefinition {
         return this.baasicNotificationsRegistrationsRouteDefinition;
     }
 
-    get anonymous(): BaasicNotificationsRegistrationsAnonymousClient {
+    get anonymous(): NotificationsRegistrationsAnonymousClient {
         return this.baasicNotificationsRegistrationsAnonymousClient;
     }
 
-    get users(): BaasicNotificationsRegistrationsUsersClient {
+    get users(): NotificationsRegistrationsUsersClient {
         return this.baasicNotificationsRegistrationsUsersClient;
     }
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsRegistrationsRouteDefinition) protected baasicNotificationsRegistrationsRouteDefinition: BaasicNotificationsRegistrationsRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsAnonymousClient) protected baasicNotificationsRegistrationsAnonymousClient: BaasicNotificationsRegistrationsAnonymousClient,
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsUsersClient) protected baasicNotificationsRegistrationsUsersClient: BaasicNotificationsRegistrationsUsersClient
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousClient) protected baasicNotificationsRegistrationsAnonymousClient: NotificationsRegistrationsAnonymousClient,
+        @inject(notificationsTypes.NotificationsRegistrationsUsersClient) protected baasicNotificationsRegistrationsUsersClient: NotificationsRegistrationsUsersClient
     ) { }
 }
 

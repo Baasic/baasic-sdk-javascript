@@ -1,21 +1,21 @@
 /* globals module */
 /**  
  * @module baasicMeteringStatisticsClient  
- * @description Baasic Metering Statistics Client provides an easy way to consume Baasic Metering REST API end-points. In order to obtain a needed routes `baasicMeteringStatisticsClient` uses `baasicMeteringStatisticsRouteDefinition`. 
+ * @description  Metering Statistics Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringStatisticsClient` uses `baasicMeteringStatisticsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicMeteringStatisticsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringData } from 'modules/metering/contracts';
 
 @injectable()
-export class BaasicMeteringStatisticsClient {
+export class MeteringStatisticsClient {
 
     constructor(
         @inject(meteringTypes.BaasicMeteringStatisticsRouteDefinition) protected baasicMeteringStatisticsRouteDefinition: BaasicMeteringStatisticsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                    

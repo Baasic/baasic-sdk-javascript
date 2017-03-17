@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicUserSkillClient  
- * @description Baasic User Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ * @description  User Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicUserSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserSkill } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicUserSkillClient {
+export class UserSkillClient {
 
     get routeDefinition(): BaasicUserSkillRouteDefinition {
         return this.baasicUserSkillRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicUserSkillClient {
 
     constructor(
         @inject(userProfileTypes.BaasicUserSkillRouteDefinition) protected baasicUserSkillRouteDefinition: BaasicUserSkillRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

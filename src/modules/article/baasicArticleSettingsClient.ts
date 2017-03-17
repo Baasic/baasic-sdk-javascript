@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicArticleSettingsClient  
- * @description Baasic Article Settings Client provides an easy way to consume Baasic Article Settings REST API end-points. In order to obtain needed routes `baasicArticleSettingsClient` uses `baasicArticleSettingsRouteDefinition`. 
+ * @description  Article Settings Client provides an easy way to consume  Article Settings REST API end-points. In order to obtain needed routes `baasicArticleSettingsClient` uses `baasicArticleSettingsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleSettingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleSettings } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleSettingsClient {
+export class ArticleSettingsClient {
 
     /**                 
      * Provides direct access to `baasicArticleSettingsRouteService`.                 
@@ -24,7 +24,7 @@ export class BaasicArticleSettingsClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleSettingsRouteDefinition) protected baasicArticleSettingsRouteDefinition: BaasicArticleSettingsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
 

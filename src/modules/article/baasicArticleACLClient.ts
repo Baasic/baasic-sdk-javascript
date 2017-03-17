@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicArticleACLClient  
- * @description Baasic Article ACL Client provides an easy way to consume Baasic Articles REST API end-points. In order to obtain needed routes `baasicArticleACLClient` uses `baasicArticleACLRouteDefinition`. 
+ * @description  Article ACL Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleACLClient` uses `baasicArticleACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IACLPolicy, IACLOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleACLRouteDefinition, TYPES as articleTypes } from 'modules/article';
 
 @injectable()
-export class BaasicArticleACLClient {
+export class ArticleACLClient {
 
     get routeDefinition(): BaasicArticleACLRouteDefinition {
         return this.baasicArticleACLRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicArticleACLClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleACLRouteDefinition) protected baasicArticleACLRouteDefinition: BaasicArticleACLRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

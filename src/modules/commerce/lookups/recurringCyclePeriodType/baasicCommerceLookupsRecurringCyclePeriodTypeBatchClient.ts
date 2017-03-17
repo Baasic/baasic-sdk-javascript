@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module baasicCommerceRecurringCyclePeriodTypeBatchClient  
- * @description Baasic Commerce Payment Method Batch Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceRecurringCyclePeriodTypeBatchClient` uses `baasicCommerceRecurringCyclePeriodTypeBatchRouteDefinition`. 
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceRecurringCyclePeriodTypeBatchClient` uses `baasicCommerceRecurringCyclePeriodTypeBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient {
+export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected baasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: BaasicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

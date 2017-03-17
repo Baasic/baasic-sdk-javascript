@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicArticleCommentRepliesClient
- * @description Baasic Article Comment Replies Client provides an easy way to consume Baasic Article Comment Replies REST API end-points. `baasicArticleCommentRepliesService` functions enable performing standard CRUD operations directly on article comment reply resources, whereas the `baasicArticleClient` functions allow management between article and article comment reply. In order to obtain needed routes `baasicArticleCommentRepliesService` uses `baasicArticleCommentRepliesRouteDefinition`. 
+ * @description  Article Comment Replies Client provides an easy way to consume  Article Comment Replies REST API end-points. `baasicArticleCommentRepliesService` functions enable performing standard CRUD operations directly on article comment reply resources, whereas the `baasicArticleClient` functions allow management between article and article comment reply. In order to obtain needed routes `baasicArticleCommentRepliesService` uses `baasicArticleCommentRepliesRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleCommentRepliesRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
 import { IArticleCommentReply, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleCommentRepliesClient {
+export class ArticleCommentRepliesClient {
 
 
     /**
@@ -32,7 +32,7 @@ export class BaasicArticleCommentRepliesClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleCommentRepliesRouteDefinition) protected baasicArticleCommentRepliesRouteDefinition: BaasicArticleCommentRepliesRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**

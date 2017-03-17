@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicArticleSubscriptionsArticleClient  
- * @description Baasic Article Subscriptions Article Client provides an easy way to consume Baasic Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsArticleClient` uses `baasicArticleSubscriptionsArticleRouteDefinition`. 
+ * @description  Article Subscriptions Article Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsArticleClient` uses `baasicArticleSubscriptionsArticleRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleSubscriptionsArticleRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleSubscriptionsArticleClient {
+export class ArticleSubscriptionsArticleClient {
 
     get routeDefinition(): BaasicArticleSubscriptionsArticleRouteDefinition {
         return this.baasicArticleSubscriptionsArticleRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicArticleSubscriptionsArticleClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleSubscriptionsArticleRouteDefinition) protected baasicArticleSubscriptionsArticleRouteDefinition: BaasicArticleSubscriptionsArticleRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                         

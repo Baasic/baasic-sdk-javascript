@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module baasicCompanyBatchClient  
- * @description Baasic Company Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Company Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicCompanyBatchClient {
+export class CompanyBatchClient {
 
     constructor(
         @inject(userProfileTypes.BaasicCompanyBatchRouteDefinition) protected baasicCompanyBatchRouteDefinition: BaasicCompanyBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                   

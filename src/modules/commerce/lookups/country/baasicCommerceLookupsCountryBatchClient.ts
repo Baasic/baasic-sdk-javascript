@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module baasicCommerceCountryBatchClient  
- * @description Baasic Commerce Country Batch Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCountryBatchClient` uses `baasicCommerceCountryBatchRouteDefinition`. 
+ * @description  Commerce Country Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceCountryBatchClient` uses `baasicCommerceCountryBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceLookupsCountryBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsCountryBatchClient {
+export class CommerceLookupsCountryBatchClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsCountryBatchRouteDefinition) protected baasicCommerceLookupsCountryBatchRouteDefinition: BaasicCommerceLookupsCountryBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

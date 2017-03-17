@@ -1,30 +1,30 @@
 /* globals module */
 /**  
  * @module baasicUserProfileAvatarClient  
- * @description Baasic User Profile Avatar Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  User Profile Avatar Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicUserProfileAvatarRouteDefinition, BaasicUserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { UserProfileAvatarRouteDefinition, UserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicUserProfileAvatarClient {
+export class UserProfileAvatarClient {
 
     get routeDefinition(): BaasicUserProfileAvatarRouteDefinition {
         return this.baasicUserProfileAvatarRouteDefinition;
     }
 
-    get streams(): BaasicUserProfileAvatarStreamsClient {
+    get streams(): UserProfileAvatarStreamsClient {
         return this.baasicUserProfileAvatarStreamsClient;
     }
 
     constructor(
         @inject(userProfileTypes.BaasicUserProfileAvatarRouteDefinition) protected baasicUserProfileAvatarRouteDefinition: BaasicUserProfileAvatarRouteDefinition,
-        @inject(userProfileTypes.BaasicUserProfileAvatarStreamsClient) protected baasicUserProfileAvatarStreamsClient: BaasicUserProfileAvatarStreamsClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(userProfileTypes.UserProfileAvatarStreamsClient) protected baasicUserProfileAvatarStreamsClient: UserProfileAvatarStreamsClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                 

@@ -1,45 +1,45 @@
 import { ContainerModule } from "inversify";
 import {
     BaasicLoginRouteDefinition,
-    BaasicLoginClient,
+    LoginClient,
     BaasicLoginSocialRouteDefinition,
-    BaasicLoginSocialClient,
-    BaasicPasswordRecoveryClient,
+    LoginSocialClient,
+    PasswordRecoveryClient,
     BaasicPasswordRecoveryRouteDefinition,
-    BaasicRegisterClient,
+    RegisterClient,
     BaasicRegisterRouteDefinition,
-    BaasicRoleClient,
+    RoleClient,
     BaasicRoleRouteDefinition,
-    BaasicUserSocialLoginClient,
+    UserSocialLoginClient,
     BaasicUserSocialLoginRouteDefinition,
-    BaasicUserClient,
+    UserClient,
     BaasicUserRouteDefinition,
     BaasicPermissionRouteDefinition,
-    BaasicPermissionClient,
+    PermissionClient,
     BaasicLookupRouteDefinition,
-    BaasicLookupClient,
+    LookupClient,
     Root
 } from 'modules/membership';
 
 const TYPES = {
     BaasicLoginRouteDefinition: Symbol("BaasicLoginRouteDefinition"),
-    BaasicLoginClient: Symbol("BaasicLoginClient"),
+    LoginClient: Symbol("LoginClient"),
     BaasicLoginSocialRouteDefinition: Symbol("BaasicLoginSocialRouteDefinition"),
-    BaasicLoginSocialClient: Symbol("BaasicLoginSocialClient"),
-    BaasicPasswordRecoveryClient: Symbol("BaasicPasswordRecoveryClient"),
+    LoginSocialClient: Symbol("LoginSocialClient"),
+    PasswordRecoveryClient: Symbol("PasswordRecoveryClient"),
     BaasicPasswordRecoveryRouteDefinition: Symbol("BaasicPasswordRecoveryRouteDefinition"),
-    BaasicRegisterClient: Symbol("BaasicRegisterClient"),
+    RegisterClient: Symbol("RegisterClient"),
     BaasicRegisterRouteDefinition: Symbol("BaasicRegisterRouteDefinition"),
-    BaasicRoleClient: Symbol("BaasicRoleClient"),
+    RoleClient: Symbol("RoleClient"),
     BaasicRoleRouteDefinition: Symbol("BaasicRoleRouteDefinition"),
-    BaasicUserSocialLoginClient: Symbol("BaasicUserSocialLoginClient"),
+    UserSocialLoginClient: Symbol("UserSocialLoginClient"),
     BaasicUserSocialLoginRouteDefinition: Symbol("BaasicUserSocialLoginRouteDefinition"),
-    BaasicUserClient: Symbol("BaasicUserClient"),
+    UserClient: Symbol("UserClient"),
     BaasicUserRouteDefinition: Symbol("BaasicUserRouteDefinition"),
     BaasicPermissionRouteDefinition: Symbol("BaasicPermissionRouteDefinition"),
-    BaasicPermissionClient: Symbol("BaasicPermissionClient"),
+    PermissionClient: Symbol("PermissionClient"),
     BaasicLookupRouteDefinition: Symbol("BaasicLookupRouteDefinition"),
-    BaasicLookupClient: Symbol("BaasicLookupClient"),
+    LookupClient: Symbol("LookupClient"),
     Root: Symbol("Membership-Root")
 };
 
@@ -47,23 +47,23 @@ export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BaasicLoginSocialRouteDefinition>(TYPES.BaasicLoginSocialRouteDefinition).to(BaasicLoginSocialRouteDefinition);
-    bind<BaasicLoginSocialClient>(TYPES.BaasicLoginSocialClient).to(BaasicLoginSocialClient);
+    bind<LoginSocialClient>(TYPES.LoginSocialClient).to(LoginSocialClient);
     bind<BaasicLoginRouteDefinition>(TYPES.BaasicLoginRouteDefinition).to(BaasicLoginRouteDefinition);
-    bind<BaasicLoginClient>(TYPES.BaasicLoginClient).to(BaasicLoginClient);
+    bind<LoginClient>(TYPES.LoginClient).to(LoginClient);
     bind<BaasicPasswordRecoveryRouteDefinition>(TYPES.BaasicPasswordRecoveryRouteDefinition).to(BaasicPasswordRecoveryRouteDefinition);
-    bind<BaasicPasswordRecoveryClient>(TYPES.BaasicPasswordRecoveryClient).to(BaasicPasswordRecoveryClient);
+    bind<PasswordRecoveryClient>(TYPES.PasswordRecoveryClient).to(PasswordRecoveryClient);
     bind<BaasicRegisterRouteDefinition>(TYPES.BaasicRegisterRouteDefinition).to(BaasicRegisterRouteDefinition);
-    bind<BaasicRegisterClient>(TYPES.BaasicRegisterClient).to(BaasicRegisterClient);
+    bind<RegisterClient>(TYPES.RegisterClient).to(RegisterClient);
     bind<BaasicRoleRouteDefinition>(TYPES.BaasicRoleRouteDefinition).to(BaasicRoleRouteDefinition);
-    bind<BaasicRoleClient>(TYPES.BaasicRoleClient).to(BaasicRoleClient);
+    bind<RoleClient>(TYPES.RoleClient).to(RoleClient);
     bind<BaasicUserSocialLoginRouteDefinition>(TYPES.BaasicUserSocialLoginRouteDefinition).to(BaasicUserSocialLoginRouteDefinition);
-    bind<BaasicUserSocialLoginClient>(TYPES.BaasicUserSocialLoginClient).to(BaasicUserSocialLoginClient);
+    bind<UserSocialLoginClient>(TYPES.UserSocialLoginClient).to(UserSocialLoginClient);
     bind<BaasicUserRouteDefinition>(TYPES.BaasicUserRouteDefinition).to(BaasicUserRouteDefinition);
-    bind<BaasicUserClient>(TYPES.BaasicUserClient).to(BaasicUserClient);
+    bind<UserClient>(TYPES.UserClient).to(UserClient);
     bind<BaasicPermissionRouteDefinition>(TYPES.BaasicPermissionRouteDefinition).to(BaasicPermissionRouteDefinition);
-    bind<BaasicPermissionClient>(TYPES.BaasicPermissionClient).to(BaasicPermissionClient);
+    bind<PermissionClient>(TYPES.PermissionClient).to(PermissionClient);
     bind<BaasicLookupRouteDefinition>(TYPES.BaasicLookupRouteDefinition).to(BaasicLookupRouteDefinition);
-    bind<BaasicLookupClient>(TYPES.BaasicLookupClient).to(BaasicLookupClient);
+    bind<LookupClient>(TYPES.LookupClient).to(LookupClient);
     bind<Root>(TYPES.Root).to(Root);
 });
 

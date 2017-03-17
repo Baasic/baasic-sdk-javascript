@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicPasswordRecoveryClient  
- * @description Baasic Password Recovery Client provides an easy way to consume Baasic Password Recovery REST API end-points. In order to obtain needed routes `baasicPasswordRecoveryClient` uses `baasicPasswordRecoveryRouteDefinition`. 
+ * @description  Password Recovery Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `baasicPasswordRecoveryClient` uses `baasicPasswordRecoveryRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicPasswordRecoveryRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IRequestPasswordReset, IResetPassword } from 'modules/membership/contracts';
 
 @injectable()
-export class BaasicPasswordRecoveryClient {
+export class PasswordRecoveryClient {
 
     /**                 
      * Provides direct access to `baasicPasswordRecoveryRouteDefinition`.                 
@@ -23,7 +23,7 @@ export class BaasicPasswordRecoveryClient {
 
     constructor(
         @inject(membershipTypes.BaasicPasswordRecoveryRouteDefinition) protected baasicPasswordRecoveryRouteDefinition: BaasicPasswordRecoveryRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /** 				

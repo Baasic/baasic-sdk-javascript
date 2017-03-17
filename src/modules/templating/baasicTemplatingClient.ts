@@ -1,30 +1,30 @@
 /* globals module */
 /**  
  * @module baasicTemplatingClient  
- * @description Baasic Templating Client provides an easy way to consume Baasic Templating REST API end-points. In order to obtain a needed routes `baasicTemplatingClient` uses `baasicTemplatingRouteDefinition`. 
+ * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `baasicTemplatingClient` uses `baasicTemplatingRouteDefinition`. 
  */
 
 import { injectable, inject } from 'inversify';
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicTemplatingBatchClient, BaasicTemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { TemplatingBatchClient, BaasicTemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 @injectable()
-export class BaasicTemplatingClient {
+export class TemplatingClient {
 
     get routeDefinition(): BaasicTemplatingRouteDefinition {
         return this.baasicTemplatingRouteDefinition;
     }
 
-    get batch(): BaasicTemplatingBatchClient {
+    get batch(): TemplatingBatchClient {
         return this.baasicTemplatingBatchClient;
     }
 
     constructor(
         @inject(templatingTypes.BaasicTemplatingRouteDefinition) protected baasicTemplatingRouteDefinition: BaasicTemplatingRouteDefinition,
-        @inject(templatingTypes.BaasicTemplatingBatchClient) protected baasicTemplatingBatchClient: BaasicTemplatingBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(templatingTypes.TemplatingBatchClient) protected baasicTemplatingBatchClient: TemplatingBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                 

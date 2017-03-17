@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module baasicCommerceSubscriptionStatusBatchClient  
- * @description Baasic Commerce Subscription Stauts Batch Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceSubscriptionStatusBatchClient` uses `baasicCommerceSubscriptionStatusBatchRouteDefinition`. 
+ * @description  Commerce Subscription Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceSubscriptionStatusBatchClient` uses `baasicCommerceSubscriptionStatusBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsSubscriptionStatusBatchClient {
+export class CommerceLookupsSubscriptionStatusBatchClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition) protected baasicCommerceLookupsSubscriptionStatusBatchRouteDefinition: BaasicCommerceLookupsSubscriptionStatusBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

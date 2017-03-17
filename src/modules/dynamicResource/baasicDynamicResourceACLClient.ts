@@ -1,20 +1,20 @@
 /**  
  * @module baasicDynamicResourceACLClient  
- * @description Baasic Dynamic Resource ACL Client provides an easy way to consume Baasic Dynamic Resource REST API end-points. In order to obtain needed routes `baasicDynamicResourceACLClient` uses `baasicDynamicResourceACLRouteDefinition`. 
+ * @description  Dynamic Resource ACL Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `baasicDynamicResourceACLClient` uses `baasicDynamicResourceACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IACLPolicy } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicDynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 
 @injectable()
-export class BaasicDynamicResourceACLClient {
+export class DynamicResourceACLClient {
 
     constructor(
         @inject(dynamicResourceTypes.BaasicDynamicResourceACLRouteDefinition) protected baasicDynamicResourceACLRouteDefinition: BaasicDynamicResourceACLRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

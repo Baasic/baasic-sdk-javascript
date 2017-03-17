@@ -1,11 +1,11 @@
 /* globals module */
 /**  
  * @module baasicNotificationsRegistrationsAnonymousBatchClient  
- * @description Baasic Notifications Registrations Anonymous Batch Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsAnonymousBatchClient` uses `baasicNotificationsRegistrationsAnonymousBatchRouteDefinition`. 
+ * @description  Notifications Registrations Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsRegistrationsAnonymousBatchClient` uses `baasicNotificationsRegistrationsAnonymousBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
 import {
     BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition,
@@ -14,7 +14,7 @@ import {
 import { IAnonymousRegistration } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsRegistrationsAnonymousBatchClient {
+export class NotificationsRegistrationsAnonymousBatchClient {
 
     get routeDefinition(): BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition {
         return this.baasicNotificationsRegistrationsAnonymousBatchRouteDefinition;
@@ -22,7 +22,7 @@ export class BaasicNotificationsRegistrationsAnonymousBatchClient {
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition) protected baasicNotificationsRegistrationsAnonymousBatchRouteDefinition: BaasicNotificationsRegistrationsAnonymousBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                              

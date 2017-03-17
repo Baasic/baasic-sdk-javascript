@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicArticleInstanceTagsDefinition  
- * @description Baasic Article Instance Tags Definition provides an easy way to consume Baasic Article Tags REST API end-points. `baasicArticleInstanceTagsRouteClient` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleInstanceTagsClient` uses `baasicArticleInstanceTagsRouteDefinition`. 
+ * @description  Article Instance Tags Definition provides an easy way to consume  Article Tags REST API end-points. `baasicArticleInstanceTagsRouteClient` functions enable performing standard CRUD operations directly on article tag resources, whereas the `baasicArticleClient` functions allow management between article and article tag. In order to obtain needed routes `baasicArticleInstanceTagsClient` uses `baasicArticleInstanceTagsRouteDefinition`. 
 */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleInstanceTagsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IArticleTag } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceTagsClient {
+export class ArticleInstanceTagsClient {
 
     get routeDefinition(): BaasicArticleInstanceTagsRouteDefinition {
         return this.baasicArticleInstanceTagsRouteDefinition;
@@ -20,7 +20,7 @@ export class BaasicArticleInstanceTagsClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleInstanceTagsRouteDefinition) protected baasicArticleInstanceTagsRouteDefinition: BaasicArticleInstanceTagsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                 

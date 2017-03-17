@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicOrganizationBatchClient  
- * @description Baasic Organization Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Organization Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicOrganizationBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicOrganizationBatchClient {
+export class OrganizationBatchClient {
 
     get routeDefinition(): BaasicOrganizationBatchRouteDefinition {
         return this.baasicOrganizationBatchRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicOrganizationBatchClient {
 
     constructor(
         @inject(userProfileTypes.BaasicOrganizationBatchRouteDefinition) protected baasicOrganizationBatchRouteDefinition: BaasicOrganizationBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                   

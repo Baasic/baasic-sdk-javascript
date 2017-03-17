@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module baasicCommerceLookupsRecurringCyclePeriodTypeClient  
- * @description Baasic Commerce Lookups RecurringCyclePeriodType Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsRecurringCyclePeriodTypeClient` uses `baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition`. 
+ * @description  Commerce Lookups RecurringCyclePeriodType Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsRecurringCyclePeriodTypeClient` uses `baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient, BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { CommerceLookupsRecurringCyclePeriodTypeBatchClient, BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsRecurringCyclePeriodTypeClient {
+export class CommerceLookupsRecurringCyclePeriodTypeClient {
 
     get routeDefinition(): BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition {
         return this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition;
     }
 
-    get batch(): BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient {
+    get batch(): CommerceLookupsRecurringCyclePeriodTypeBatchClient {
         return this.baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient) protected baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient: BaasicCommerceLookupsRecurringCyclePeriodTypeBatchClient,
+        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchClient) protected baasicCommerceLookupsRecurringCyclePeriodTypeBatchClient: CommerceLookupsRecurringCyclePeriodTypeBatchClient,
         @inject(commerceTypes.BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition) protected baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition: BaasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class BaasicCommerceLookupsRecurringCyclePeriodTypeClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
-        return this.BaasicApiClient.get(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.find(options));
+        return this.ApiClient.get(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,7 +59,7 @@ export class BaasicCommerceLookupsRecurringCyclePeriodTypeClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.get(id, options));
+        return this.ApiClient.get(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -80,7 +80,7 @@ export class BaasicCommerceLookupsRecurringCyclePeriodTypeClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.put<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.update(data), this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.updateParams(data));
+        return this.ApiClient.put<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.update(data), this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -100,7 +100,7 @@ export class BaasicCommerceLookupsRecurringCyclePeriodTypeClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.post(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.create(), this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.createParams(data));
+        return this.ApiClient.post(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.create(), this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -120,7 +120,7 @@ export class BaasicCommerceLookupsRecurringCyclePeriodTypeClient {
                             });						                   
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.delete<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.delete(data));
+        return this.ApiClient.delete<void>(this.baasicCommerceLookupsRecurringCyclePeriodTypeRouteDefinition.delete(data));
     }
 }
 

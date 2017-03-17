@@ -1,14 +1,14 @@
 /* globals module */
 /**  
  * @module baasicArticleInstanceCommentsClient  
- * @description Baasic Article Instance Comments Client provides an easy way to consume Baasic Article Comments REST API end-points. `baasicArticleCommentsClient` functions enable performing standard CRUD operations directly on article comment resources, whereas the `baasicArticleClient` functions allow management between article and article comments. In order to obtain needed routes `baasicArticleCommentsClient` uses `baasicArticleCommentsRouteDefinition`. 
+ * @description  Article Instance Comments Client provides an easy way to consume  Article Comments REST API end-points. `baasicArticleCommentsClient` functions enable performing standard CRUD operations directly on article comment resources, whereas the `baasicArticleClient` functions allow management between article and article comments. In order to obtain needed routes `baasicArticleCommentsClient` uses `baasicArticleCommentsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicArticleInstanceCommentRepliesClient,
+    ArticleInstanceCommentRepliesClient,
     BaasicArticleInstanceCommentsRouteDefinition,
     CommentStatus,
     TYPES as articleTypes
@@ -16,7 +16,7 @@ import {
 import { IArticle, IArticleComment, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceCommentsClient {
+export class ArticleInstanceCommentsClient {
 
     /**
    * Contains a reference to valid list of article comment states. It returns an object containing all article comment states.
@@ -29,14 +29,14 @@ export class BaasicArticleInstanceCommentsClient {
         return this.baasicArticleInstanceCommentsRouteDefinition;
     }
 
-    get replies(): BaasicArticleInstanceCommentRepliesClient {
+    get replies(): ArticleInstanceCommentRepliesClient {
         return this.baasicArticleInstanceCommentsRepliesClient;
     }
 
     constructor(
         @inject(articleTypes.BaasicArticleInstanceCommentsRouteDefinition) protected baasicArticleInstanceCommentsRouteDefinition: BaasicArticleInstanceCommentsRouteDefinition,
-        @inject(articleTypes.BaasicArticleCommentRepliesClient) protected baasicArticleInstanceCommentsRepliesClient: BaasicArticleInstanceCommentRepliesClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(articleTypes.ArticleCommentRepliesClient) protected baasicArticleInstanceCommentsRepliesClient: ArticleInstanceCommentRepliesClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**

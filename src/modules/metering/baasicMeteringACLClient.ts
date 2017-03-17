@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module baasicMeteringACLClient  
- * @description Baasic Metering ACL Client provides an easy way to consume Baasic Metering REST API end-points. In order to obtain a needed routes `baasicMeteringACLClient` uses `baasicMeteringACLRouteDefinition`. 
+ * @description  Metering ACL Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `baasicMeteringACLClient` uses `baasicMeteringACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IACLOptions, IACLPolicy, IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicMeteringACLRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
 
 @injectable()
-export class BaasicMeteringACLClient {
+export class MeteringACLClient {
 
     constructor(
         @inject(meteringTypes.BaasicMeteringACLRouteDefinition) protected baasicMeteringACLRouteDefinition: BaasicMeteringACLRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

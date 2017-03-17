@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module baasicNotificationsPublishBatchClient  
- * @description Baasic Notifications Publish Batch Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsPublishBatchClient` uses `baasicNotificationsPublishBatchRouteDefinition`. 
+ * @description  Notifications Publish Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsPublishBatchClient` uses `baasicNotificationsPublishBatchRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicNotificationsPublishBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
 import { INotification } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsPublishBatchClient {
+export class NotificationsPublishBatchClient {
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsPublishBatchRouteDefinition) protected baasicNotificationsPublishBatchRouteDefinition: BaasicNotificationsPublishBatchRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**         

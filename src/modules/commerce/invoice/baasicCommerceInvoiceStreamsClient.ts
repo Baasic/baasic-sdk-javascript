@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicCommerceInvoiceStreamsClient  
- * @description Baasic Commerce Invoice Streams Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceStreamsClient` uses `baasicCommerceInvoiceStreamsRouteDefinition`. 
+ * @description  Commerce Invoice Streams Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceInvoiceStreamsClient` uses `baasicCommerceInvoiceStreamsRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicCommerceInvoiceStreamsRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceInvoiceStreamsClient {
+export class CommerceInvoiceStreamsClient {
 
     get routeDefinition(): BaasicCommerceInvoiceStreamsRouteDefinition {
         return this.baasicCommerceInvoiceStreamsRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicCommerceInvoiceStreamsClient {
 
     constructor(
         @inject(commerceTypes.BaasicCommerceInvoiceStreamsRouteDefinition) protected baasicCommerceInvoiceStreamsRouteDefinition: BaasicCommerceInvoiceStreamsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
 
@@ -35,7 +35,7 @@ export class BaasicCommerceInvoiceStreamsClient {
                         });                                        
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommerceInvoiceStreamsRouteDefinition.get(data));
+        return this.ApiClient.get(this.baasicCommerceInvoiceStreamsRouteDefinition.get(data));
     }
 
     /**                     
@@ -51,7 +51,7 @@ export class BaasicCommerceInvoiceStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommerceInvoiceStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.ApiClient.get(this.baasicCommerceInvoiceStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
     }
 }
 

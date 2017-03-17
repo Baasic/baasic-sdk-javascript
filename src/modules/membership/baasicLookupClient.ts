@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module baasicLookupClient 
- * @description Baasic Lookup Client provides an easy way to consume Baasic Lookup REST API end-points. In order to obtain needed routes `baasicLookupClient` uses `baasicLookupRouteDefinition`. 
+ * @description  Lookup Client provides an easy way to consume  Lookup REST API end-points. In order to obtain needed routes `baasicLookupClient` uses `baasicLookupRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -9,10 +9,10 @@ import { IGetRequestOptions } from 'common/contracts';
 import { Utility } from 'common';
 import { ILookup } from 'modules/membership/contracts';
 import { BaasicLookupRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 
 @injectable()
-export class BaasicLookupClient {
+export class LookupClient {
 
     private utility: Utility = new Utility();
 
@@ -22,7 +22,7 @@ export class BaasicLookupClient {
 
     constructor(
         @inject(membershipTypes.BaasicLookupRouteDefinition) protected baasicLookupRouteDefinition: BaasicLookupRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     private getResponseData(embed: string, data: any): any {

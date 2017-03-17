@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module baasicArticleSubscriptionsCommentRequiresModerationClient  
- * @description Baasic Article Subscriptions Comment Requires Moderation Client provides an easy way to consume Baasic Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsCommentRequiresModerationClient` uses `baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition`. 
+ * @description  Article Subscriptions Comment Requires Moderation Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `baasicArticleSubscriptionsCommentRequiresModerationClient` uses `baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleSubscriptionsCommentRequiresModerationClient {
+export class ArticleSubscriptionsCommentRequiresModerationClient {
 
     get routeDefinition(): BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition {
         return this.baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition;
@@ -19,7 +19,7 @@ export class BaasicArticleSubscriptionsCommentRequiresModerationClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected baasicArticleSubscriptionsCommentRequiresModerationRouteDefinition: BaasicArticleSubscriptionsCommentRequiresModerationRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                         

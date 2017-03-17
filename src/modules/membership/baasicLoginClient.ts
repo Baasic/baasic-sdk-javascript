@@ -1,18 +1,18 @@
 /* globals module */
 /**  
  * @module baasicLoginClient  
- * @description Baasic Login Client provides an easy way to consume Baasic Application Registration REST API end-points. In order to obtain needed routes `baasicLoginClient` uses `baasicLoginRouteDefinition`. 
+ * @description  Login Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `baasicLoginClient` uses `baasicLoginRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { Utility } from 'common';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicLoginRouteDefinition, BaasicLoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { LoginRouteDefinition, LoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
 import { IUserInfo } from 'modules/membership/contracts';
 
 @injectable()
-export class BaasicLoginClient {
+export class LoginClient {
 
     get routeDefinition(): BaasicLoginRouteDefinition {
         return this.baasicLoginRouteDefinition;
@@ -23,7 +23,7 @@ export class BaasicLoginClient {
     constructor(
         @inject(membershipTypes.BaasicLoginRouteDefinition) protected baasicLoginRouteDefinition: BaasicLoginRouteDefinition,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

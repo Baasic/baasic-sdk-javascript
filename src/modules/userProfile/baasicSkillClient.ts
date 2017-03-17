@@ -1,30 +1,30 @@
 /* globals module */
 /**  
  * @module baasicSkillClient  
- * @description Baasic Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @description  Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicSkillBatchClient, BaasicSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { SkillBatchClient, BaasicSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
 @injectable()
-export class BaasicSkillClient {
+export class SkillClient {
 
     get routeDefinition(): BaasicSkillRouteDefinition {
         return this.baasicSkillRouteDefinition;
     }
 
-    get batch(): BaasicSkillBatchClient {
+    get batch(): SkillBatchClient {
         return this.baasicSkillBatchClient;
     }
 
     constructor(
         @inject(userProfileTypes.BaasicSkillRouteDefinition) protected baasicSkillRouteDefinition: BaasicSkillRouteDefinition,
-        @inject(userProfileTypes.BaasicSkillBatchClient) protected baasicSkillBatchClient: BaasicSkillBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(userProfileTypes.SkillBatchClient) protected baasicSkillBatchClient: SkillBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  

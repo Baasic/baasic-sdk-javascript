@@ -6,7 +6,7 @@ import { IHALParser, HALParser, TYPES as commonTYPES } from 'common';
 
 
 @injectable()
-export class BaasicApiClient {
+export class ApiClient {
     private wwwAuthenticateTokenizer = (function () {
         let ws = '(?:(?:\\r\\n)?[ \\t])+',
             token = '(?:[\\x21\\x23-\\x27\\x2A\\x2B\\x2D\\x2E\\x30-\\x39\\x3F\\x41-\\x5A\\x5E-\\x7A\\x7C\\x7E]+)',

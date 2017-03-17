@@ -1,16 +1,16 @@
 /* globals module */
 /**  
  * @module baasicUserProfileACLClient  
- * @description Baasic User Profile ACL Client provides an easy way to consume Baasic User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileACLClient` uses `baasicUserProfileACLRouteDefinition`. 
+ * @description  User Profile ACL Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `baasicUserProfileACLClient` uses `baasicUserProfileACLRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IACLOptions, IACLPolicy } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicUserProfileACLRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
 
 @injectable()
-export class BaasicUserProfileACLClient {
+export class UserProfileACLClient {
 
     get routeDefinition(): BaasicUserProfileACLRouteDefinition {
         return this.baasicUserProfileACLRouteDefinition;
@@ -18,7 +18,7 @@ export class BaasicUserProfileACLClient {
 
     constructor(
         @inject(userProfileTypes.BaasicUserProfileACLRouteDefinition) protected baasicUserProfileACLRouteDefinition: BaasicUserProfileACLRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

@@ -1,33 +1,33 @@
 /* globals module */
 /**  
  * @module baasicNotificationsSubscriptionsUsersClient  
- * @description Baasic Notifications Subscriptions Users Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsUsersClient` uses `baasicNotificationsSubscriptionsUsersRouteDefinition`. 
+ * @description  Notifications Subscriptions Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsSubscriptionsUsersClient` uses `baasicNotificationsSubscriptionsUsersRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicNotificationsSubscriptionsUsersBatchClient,
+    NotificationsSubscriptionsUsersBatchClient,
     BaasicNotificationsSubscriptionsUsersRouteDefinition, TYPES as notificationsTypes
 } from 'modules/notifications';
 import { IUserSubscription } from 'modules/notifications/contracts';
 
 @injectable()
-export class BaasicNotificationsSubscriptionsUsersClient {
+export class NotificationsSubscriptionsUsersClient {
 
     routeDefinition(): BaasicNotificationsSubscriptionsUsersRouteDefinition {
         return this.baasicNotificationsSubscriptionsUsersRouteDefinition;
     }
 
-    batch(): BaasicNotificationsSubscriptionsUsersBatchClient {
-        return this.BaasicNotificationsSubscriptionsUsersBatchClient;
+    batch(): NotificationsSubscriptionsUsersBatchClient {
+        return this.NotificationsSubscriptionsUsersBatchClient;
     }
 
     constructor(
         @inject(notificationsTypes.BaasicNotificationsSubscriptionsUsersRouteDefinition) protected baasicNotificationsSubscriptionsUsersRouteDefinition: BaasicNotificationsSubscriptionsUsersRouteDefinition,
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsUsersBatchClient) protected BaasicNotificationsSubscriptionsUsersBatchClient: BaasicNotificationsSubscriptionsUsersBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchClient) protected NotificationsSubscriptionsUsersBatchClient: NotificationsSubscriptionsUsersBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                          

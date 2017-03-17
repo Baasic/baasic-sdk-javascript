@@ -1,49 +1,49 @@
 /* globals module */
 /**  
  * @module baasicNotificationsClient  
- * @description Baasic Notifications Client provides an easy way to consume Baasic Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsClient` uses `baasicNotificationsRouteDefinition`. 
+ * @description  Notifications Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `baasicNotificationsClient` uses `baasicNotificationsRouteDefinition`. 
  */
 
 
 import { injectable, inject } from "inversify";
 import { BaasicBaseRouteDefinition } from 'common';
 import {
-    BaasicNotificationsPublishClient,
-    BaasicNotificationsSubscriptionsClient,
-    BaasicNotificationsRegistrationsClient,
+    NotificationsPublishClient,
+    NotificationsSubscriptionsClient,
+    NotificationsRegistrationsClient,
     BaasicNotificationsRouteDefinition,
-    BaasicNotificationsSettingsClient,
+    NotificationsSettingsClient,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 
 @injectable()
-export class BaasicNotificationsClient {
+export class NotificationsClient {
 
     get routeDefinition(): BaasicNotificationsRouteDefinition {
         return this.baasicNotificationsRouteDefinition;
     }
 
-    get publish(): BaasicNotificationsPublishClient {
+    get publish(): NotificationsPublishClient {
         return this.baasicNotificationsPublishClient;
     }
 
-    get subscriptions(): BaasicNotificationsSubscriptionsClient {
+    get subscriptions(): NotificationsSubscriptionsClient {
         return this.basicNotificationsSubscriptionsClient;
     }
 
-    get registrations(): BaasicNotificationsRegistrationsClient {
+    get registrations(): NotificationsRegistrationsClient {
         return this.baasicNotificationsRegistrationsClient;
     }
 
-    get settings(): BaasicNotificationsSettingsClient {
+    get settings(): NotificationsSettingsClient {
         return this.baasicNotificationsSettingsClient;
     }
 
     constructor(
-        @inject(notificationsTypes.BaasicNotificationsPublishClient) protected baasicNotificationsPublishClient: BaasicNotificationsPublishClient,
-        @inject(notificationsTypes.BaasicNotificationsSubscriptionsClient) protected basicNotificationsSubscriptionsClient: BaasicNotificationsSubscriptionsClient,
-        @inject(notificationsTypes.BaasicNotificationsRegistrationsClient) protected baasicNotificationsRegistrationsClient: BaasicNotificationsRegistrationsClient,
-        @inject(notificationsTypes.BaasicNotificationsSettingsClient) protected baasicNotificationsSettingsClient: BaasicNotificationsSettingsClient,
+        @inject(notificationsTypes.NotificationsPublishClient) protected baasicNotificationsPublishClient: NotificationsPublishClient,
+        @inject(notificationsTypes.NotificationsSubscriptionsClient) protected basicNotificationsSubscriptionsClient: NotificationsSubscriptionsClient,
+        @inject(notificationsTypes.NotificationsRegistrationsClient) protected baasicNotificationsRegistrationsClient: NotificationsRegistrationsClient,
+        @inject(notificationsTypes.NotificationsSettingsClient) protected baasicNotificationsSettingsClient: NotificationsSettingsClient,
         @inject(notificationsTypes.BaasicNotificationsRouteDefinition) protected baasicNotificationsRouteDefinition: BaasicNotificationsRouteDefinition
     ) { }
 }

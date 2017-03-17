@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module baasicCommerceLookupsPaymentTransactionStatusClient  
- * @description Baasic Commerce Lookups PaymentTransactionStatus Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsPaymentTransactionStatusClient` uses `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition`. 
+ * @description  Commerce Lookups PaymentTransactionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsPaymentTransactionStatusClient` uses `baasicCommerceLookupsPaymentTransactionStatusRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { BaasicCommerceLookupsPaymentTransactionStatusBatchClient, BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { CommerceLookupsPaymentTransactionStatusBatchClient, BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsPaymentTransactionStatusClient {
+export class CommerceLookupsPaymentTransactionStatusClient {
 
     get routeDefinition(): BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition {
         return this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition;
     }
 
-    get batch(): BaasicCommerceLookupsPaymentTransactionStatusBatchClient {
+    get batch(): CommerceLookupsPaymentTransactionStatusBatchClient {
         return this.baasicCommerceLookupsPaymentTransactionStatusBatchClient;
     }
 
     constructor(
-        @inject(commerceTypes.BaasicCommerceLookupsPaymentTransactionStatusBatchClient) protected baasicCommerceLookupsPaymentTransactionStatusBatchClient: BaasicCommerceLookupsPaymentTransactionStatusBatchClient,
+        @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusBatchClient) protected baasicCommerceLookupsPaymentTransactionStatusBatchClient: CommerceLookupsPaymentTransactionStatusBatchClient,
         @inject(commerceTypes.BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition) protected baasicCommerceLookupsPaymentTransactionStatusRouteDefinition: BaasicCommerceLookupsPaymentTransactionStatusRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected BaasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected ApiClient: ApiClient
     ) { }
 
     /**                  
@@ -44,7 +44,7 @@ export class BaasicCommerceLookupsPaymentTransactionStatusClient {
                     });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IBaasicQueryModel<any>>> {
-        return this.BaasicApiClient.get(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.find(options));
+        return this.ApiClient.get(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.find(options));
     }
 
     /**                 
@@ -59,7 +59,7 @@ export class BaasicCommerceLookupsPaymentTransactionStatusClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.get(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.get(id, options));
+        return this.ApiClient.get(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.get(id, options));
     }
 
     /**                  
@@ -80,7 +80,7 @@ export class BaasicCommerceLookupsPaymentTransactionStatusClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.put<void>(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.update(data), this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.updateParams(data));
+        return this.ApiClient.put<void>(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.update(data), this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -99,7 +99,7 @@ export class BaasicCommerceLookupsPaymentTransactionStatusClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.BaasicApiClient.post(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.create(), this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.createParams(data));
+        return this.ApiClient.post(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.create(), this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -119,7 +119,7 @@ export class BaasicCommerceLookupsPaymentTransactionStatusClient {
                             });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.BaasicApiClient.delete<void>(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.delete(data));
+        return this.ApiClient.delete<void>(this.baasicCommerceLookupsPaymentTransactionStatusRouteDefinition.delete(data));
     }
 }
 

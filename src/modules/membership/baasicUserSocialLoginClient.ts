@@ -1,21 +1,21 @@
 /* globals module */
 /**  
  * @module baasicUserSocialLoginClient  
- * @description Baasic User Social Login Client provides an easy way to consume Baasic User REST API end-points. In order to obtain needed routes `baasicUserSocialLoginClient` uses `baasicUserSocialLoginRouteDefinition`. 
+ * @description  User Social Login Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `baasicUserSocialLoginClient` uses `baasicUserSocialLoginRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicUserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
 import { IUserSocialLogin } from 'modules/membership/contracts';
 
 @injectable()
-export class BaasicUserSocialLoginClient {
+export class UserSocialLoginClient {
 
     constructor(
         @inject(membershipTypes.BaasicUserSocialLoginRouteDefinition) protected baasicUserSocialLoginRouteDefinition: BaasicUserSocialLoginRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                     

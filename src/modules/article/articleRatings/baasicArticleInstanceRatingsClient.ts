@@ -1,18 +1,18 @@
 /* globals module */
 /**  
  * @module baasicArticleSubRatingsClient  
- * @description Baasic Article Sub Ratings Client provides an easy way to consume Baasic Article Ratings REST API end-points. `baasicArticleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `baasicArticleService` functions allow management between article and article rating. In order to obtain needed routes `baasicArticleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
+ * @description  Article Sub Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `baasicArticleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `baasicArticleService` functions allow management between article and article rating. In order to obtain needed routes `baasicArticleRatingsClient` uses `baasicArticleRatingsRouteDefinition`. 
 */
 
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { BaasicArticleInstanceRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IRating } from 'modules/article/contracts';
 
 @injectable()
-export class BaasicArticleInstanceRatingsClient {
+export class ArticleInstanceRatingsClient {
 
     /**                 
      * Provides direct access to `baasicArticleRatingsRouteDefinition`.                
@@ -25,7 +25,7 @@ export class BaasicArticleInstanceRatingsClient {
 
     constructor(
         @inject(articleTypes.BaasicArticleInstanceRatingsRouteDefinition) protected baasicArticleInstanceRatingsRouteDefinition: BaasicArticleInstanceRatingsRouteDefinition,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**       

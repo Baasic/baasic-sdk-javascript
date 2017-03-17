@@ -1,33 +1,33 @@
 /* globals module */
 /**  
  * @module baasicCommerceLookupsAddressTypeClient  
- * @description Baasic Commerce Lookups Address Type Client provides an easy way to consume Baasic Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsAddressTypesClient` uses `baasicCommerceLookupsAddressTypeRouteDefinition`. 
+ * @description  Commerce Lookups Address Type Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `baasicCommerceLookupsAddressTypesClient` uses `baasicCommerceLookupsAddressTypeRouteDefinition`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IBaasicQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
-import { BaasicApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    BaasicCommerceLookupsAddressTypesBatchClient,
+    CommerceLookupsAddressTypesBatchClient,
     BaasicCommerceLookupsAddressTypeRouteDefinition,
     TYPES as commerceTypes
 } from 'modules/commerce';
 
 @injectable()
-export class BaasicCommerceLookupsAddressTypesClient {
+export class CommerceLookupsAddressTypesClient {
 
     get routeDefinition(): BaasicCommerceLookupsAddressTypeRouteDefinition {
         return this.baasicCommerceLookupsAddressTypeRouteDefinition;
     }
 
-    get batch(): BaasicCommerceLookupsAddressTypesBatchClient {
+    get batch(): CommerceLookupsAddressTypesBatchClient {
         return this.baasicCommerceLookupsAddressTypesBatchClient;
     }
 
     constructor(
         @inject(commerceTypes.BaasicCommerceLookupsAddressTypeRouteDefinition) protected baasicCommerceLookupsAddressTypeRouteDefinition: BaasicCommerceLookupsAddressTypeRouteDefinition,
-        @inject(commerceTypes.BaasicCommerceLookupsAddressTypesBatchClient) protected baasicCommerceLookupsAddressTypesBatchClient: BaasicCommerceLookupsAddressTypesBatchClient,
-        @inject(httpTYPES.BaasicApiClient) protected baasicApiClient: BaasicApiClient
+        @inject(commerceTypes.CommerceLookupsAddressTypesBatchClient) protected baasicCommerceLookupsAddressTypesBatchClient: CommerceLookupsAddressTypesBatchClient,
+        @inject(httpTYPES.ApiClient) protected baasicApiClient: ApiClient
     ) { }
 
     /**                  
