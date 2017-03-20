@@ -8,7 +8,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { NotificationsSubscriptionsAnonymousRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSubscriptionsAnonymousRouteDefinition, NotificationsSubscriptionsAnonymousBatchClient, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
 
 @injectable()
@@ -18,8 +18,13 @@ export class NotificationsSubscriptionsAnonymousClient {
         return this.notificationsSubscriptionsAnonymousRouteDefinition;
     }
 
+    get batch(): NotificationsSubscriptionsAnonymousBatchClient {
+        return this.notificationsSubscriptionsAnonymousBatchClient;
+    }
+
     constructor(
         @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected notificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchClient) protected notificationsSubscriptionsAnonymousBatchClient: NotificationsSubscriptionsAnonymousBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
