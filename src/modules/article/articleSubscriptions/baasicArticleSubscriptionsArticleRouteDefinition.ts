@@ -26,7 +26,9 @@ export class ArticleSubscriptionsArticleRouteDefinition extends BaseRouteDefinit
 
     /**                         
      * Parses article subscribe route which must be expanded with id of the article.                         
-     * @method subscriptions.article.subscribe                         
+     * @method
+     * @param article The article identifier.
+     * @param data The subscribe information.                        
      * @example articleSubscriptionsArticleRouteDefinition.subscribe({id: '<article-id>'});                          
      **/
     subscribe(article: IArticle, data: IArticleSubscription): any {
@@ -36,7 +38,9 @@ export class ArticleSubscriptionsArticleRouteDefinition extends BaseRouteDefinit
 
     /**                          
      * Parses article isSubscribed route which must be expanded with subscriber Id and the id of the article.                          
-     * @method subscriptions.article.isSubscribed                          
+     * @method
+     * @param article The article identifier.
+     * @param data The subscriber identifier.                          
      * @example articleRouteDefinition.subscriptions.article.isSubscribed.expand({id: '<article-id>', subscriberId: '<subscriber-id>' });                           
      **/
     isSubscribed(article: IArticle, data: IArticleSubscription): any {
@@ -46,7 +50,9 @@ export class ArticleSubscriptionsArticleRouteDefinition extends BaseRouteDefinit
 
     /**                         
      * Parses article unSubscribe route which must be expanded with the id of the article.                         
-     * @method subscriptions.articleModule.unSubscribe                         
+     * @method
+     * @param article The article identifier.
+     * @param data The unsubscribe information.                         
      * @example articleSubscriptionsArticleRouteDefinition.unSubscribe({id: '<article-id>'});                                                    
      **/
     unSubscribe(article: IArticle, data: IArticleSubscription): any {

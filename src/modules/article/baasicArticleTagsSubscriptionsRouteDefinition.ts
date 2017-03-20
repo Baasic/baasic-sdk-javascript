@@ -26,7 +26,9 @@ export class ArticleTagsSubscriptionsRouteDefinition extends BaseRouteDefinition
 
     /**                     
      * Parses subscribe route which must be expanded with id of the tag.                     
-     * @method              
+     * @method
+     * @param tag article tag object.
+     * @param data The subscribe information.              
      * @example articleTagsSubscriptionsRouteDefinition.subscribe( {id: '<tag-id>'} );                       
      **/
     subscribe(tag: IArticleTag, data: any): any {
@@ -36,7 +38,9 @@ export class ArticleTagsSubscriptionsRouteDefinition extends BaseRouteDefinition
 
     /**                      
      * Parses isSubscribed route which must be expanded with subscriber id and the id of the tag.                      
-     * @method                     
+     * @method
+     * @param tag Article tag object.
+     * @param data The subscriber identifier.                     
      * @example articleSubscriptionsRouteDefinition.isSubscribed({ id: '<tag-id>', subscriberId: '<subscriber-id>' });                       
      **/
     isSubscribed(tag: IArticleTag, data: any): any {
@@ -46,7 +50,9 @@ export class ArticleTagsSubscriptionsRouteDefinition extends BaseRouteDefinition
 
     /**  
      * Parses unSubscribe route which must be expanded with the id of the article.                     
-     * @method                    
+     * @method
+     * @param tag Article tag object.
+     * @param data The unsubscribe information.                    
      * @example articleUnSubscribeRouteDefinition.unSubscribe({id: '<tag-id>'});                                                 
      **/
     unSubscribe(tag: IArticleTag, data: any): any {

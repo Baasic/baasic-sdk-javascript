@@ -24,7 +24,9 @@ export class ArticleFilesStreamsClient {
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.                     
-     * @method streams.get                            
+     * @method
+     * @param data Article file id of the original article file used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.                             
      * @example // Request the original file stream              
                     articleFilesStreamsClient.get({id: '<file-id>'})
                         .then(function (data) {     
@@ -49,7 +51,9 @@ export class ArticleFilesStreamsClient {
 
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).                     
-     * @method streams.getBlob                            
+     * @method
+     * @param data Article file id of the original article file used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.                              
      * @example // Request the original blob                
                     articleFilesStreamsClient.getBlob('<file-id>')
                         .then(function (data) {     
@@ -78,7 +82,10 @@ export class ArticleFilesStreamsClient {
 
     /**                      
      * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).                      
-     * @method streams.update                      
+     * @method
+     * @param data article file used to identify stream that needs to be updated.
+     * @param stream
+     * @returns A promise that is resolved once the update file stream action has been performed.                       
      * @example // Update original file stream 
                     articleFilesStreamsClient.update('<file-id>', <file-stream>)
                         .then(function (data) {   
@@ -104,7 +111,10 @@ export class ArticleFilesStreamsClient {
 
     /**                      
      * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).                      
-     * @method streams.create                      
+     * @method
+     * @param data article file that needs to be saved into the system.
+     * @param stream
+     * @returns A promise that is resolved once the create file stream action has been performed.                       
      * @example articleFilesStreamsClient.create('<file-id>', <blob>)
                    .then(function (data) {  
                         // perform success action here 

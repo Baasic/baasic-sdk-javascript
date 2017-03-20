@@ -35,7 +35,9 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
      * - `rpp` - A value used to limit the size of result set per page. 				
      * - `sort` - A string used to set the article tag property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose tag resources need to be retrieved.
+     * @param options Query resource options object.      				
      * @example articleInstanceTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
      **/
     find(articleId: string, options?: IOptions): any {
@@ -47,7 +49,10 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose tag resource needs to be retrieved.
+     * @param id A slug or id which uniquely identifies article tag resource that needs to be retrieved.
+     * @param options Options object that contains embed data.  				
      * @example articleInstanceTagsRouteDefinition.get({id: '<articleTag-id>'});               				
      **/
     get(articleId: string, id: string, options?: IGetRequestOptions): any {
@@ -59,7 +64,8 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method
+     * @param data An article tag value that needs to be inserted as new article tag resource into the system.      				
      * @example articleInstanceTagsRouteDefinition.create({id: '<articleTag-id>'});               				
      **/
     create(data: IArticleTag): any {
@@ -69,7 +75,8 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method
+     * @param data Article Tag object that needs to be removed from the system.      				
      * @example articleInstanceTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
      **/
     delete(data: IArticleTag): any {
@@ -79,7 +86,8 @@ export class ArticleInstanceTagsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
-     * @method      				
+     * @method
+     * @param data Article object whoose tags needs to be removed from the system.      				
      * @example articleInstanceTagsRouteDefinition.deleteAll({id: '<articleTag-id>'});               				
      **/
     deleteAll(data: IArticle): any {

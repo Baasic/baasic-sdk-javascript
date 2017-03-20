@@ -26,7 +26,8 @@ export class ArticleSubscriptionsCommentRequiresModerationRouteDefinition extend
 
     /**                          
      * Parses commentRequiresModeration subscribe route which doesn't support any additional options.                          
-     * @method subscriptions.commentRequiresModeration.subscribe                          
+     * @method
+     * @param data The subscribe information.                          
      * @example articleSubscriptionsCommentRequiresModerationRouteDefinition.subscribe(data);                         
      **/
     subscribe(data: IArticleSubscription): any {
@@ -35,7 +36,8 @@ export class ArticleSubscriptionsCommentRequiresModerationRouteDefinition extend
 
     /**                          
      * Parses commentRequiresModeration isSubscribed route which must be expanded with subscriber Id.                          
-     * @method subscriptions.commentRequiresModeration.isSubscribed                          
+     * @method
+     * @param data The subscribe information.                       
      * @example articleSubscriptionsCommentRequiresModerationRouteDefinition.isSubscribed({subscriberId: '<subscriber-id>'});                           
      **/
     isSubscribed(data: IArticleSubscription): any {
@@ -44,7 +46,8 @@ export class ArticleSubscriptionsCommentRequiresModerationRouteDefinition extend
 
     /**                         
      * Parses commentRequiresModeration unSubscribe route which doesn't support any additional options.                         
-     * @method subscriptions.commentRequiresModeration.unSubscribe                         
+     * @method
+     * @param data The unsubscribe information.                      
      * @example articleSubscriptionsCommentRequiresModerationRouteDefinition.unSubscribe(data)                        
      **/
     unSubscribe(data: IArticleSubscription): any {

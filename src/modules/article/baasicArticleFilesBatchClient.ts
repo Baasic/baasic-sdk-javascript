@@ -27,7 +27,9 @@ export class ArticleFilesBatchClient {
 
     /**                   
      * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system.                   
-     * @method                         
+     * @method
+     * @param data Collection of article files that needs to be deleted.
+     * @returns A promise that is resolved once the unlink action has been performed.                          
      * @example // Remove original file resources                
                    articleFilesBatchClient.unlink([{ id: '<file-id>' }])
                        .then(function (data) {   
@@ -45,13 +47,15 @@ export class ArticleFilesBatchClient {
                            // perform error handling here 
                        });		                    
     **/
-    unlink(data: Object[]): PromiseLike<IHttpResponse<void>> {
+    unlink(data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.articleFilesBatchRouteDefinition.unlink(), undefined, data);
     }
 
     /**                   
      * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.                  
-     * @method                        
+     * @method
+     * @param data A collection of article files objects used to update specified article files.
+     * @returns A promise that is resolved once the update action has been performed.                       
      * @example articleFilesClient.batch.update(files)
                     .then(function (data) {   
                         // perform success action here 
@@ -66,7 +70,9 @@ export class ArticleFilesBatchClient {
 
     /**                   
      * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).                   
-     * @method                         
+     * @method
+     * @param data A collection of article file objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.                          
      * @example articleFilesClient.batch.link(files)
                     .then(function (data) {   
                         // perform success action here 

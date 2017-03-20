@@ -23,7 +23,10 @@ export class ArticleTagsSubscriptionsClient {
 
     /**                     
      * Returns a promise that is resolved once the subscribe action has been performed. This action subscribes an user to the specified tag.                     
-     * @method             
+     * @method
+     * @param tag article tag object.
+     * @param data The subscribe information.
+     * @returns A promise that is resolved once the subscribe action has been performed.              
      * @example articleTagsSubscriptionsClient.subscribe(tag, user) 
                     .then(function (data) { 
                         // perform success action here 
@@ -37,9 +40,11 @@ export class ArticleTagsSubscriptionsClient {
     }
 
     /**                    
-     * Returns a promise that is resolved once the isSubscribed action has been performed. This action checks if a user is subscribed to the specified tag.
-     * @param                     
-     * @method                     
+     * Returns a promise that is resolved once the isSubscribed action has been performed. This action checks if a user is subscribed to the specified tag.                   
+     * @method
+     * @param tag Article tag object.
+     * @param data The subscriber identifier.
+     * @returns A promise that is resolved once the isSubscribed action has been performed.                      
      * @example articleTagsSubscriptionsClient.isSubscribed(tag, user)
                     .then(function (data) { 
                         // perform success action here 
@@ -53,10 +58,11 @@ export class ArticleTagsSubscriptionsClient {
     }
 
     /**                     
-     * Returns a promise that is resolved once the unSubscribe action has been performed. This action unsubscribes a user from the specified tag.
-     * @param tag tag object
-     * @param data data object                     
-     * @method subscriptions.unSubscribe                     
+     * Returns a promise that is resolved once the unSubscribe action has been performed. This action unsubscribes a user from the specified tag.                   
+     * @method
+     * @param tag Article tag object.
+     * @param data The unsubscribe information.
+     * @returns A promise that is resolved once the unSubscribe action has been performed.                     
      * @example articleTagsSubscriptionsClient.unSubscribe(tag, user)
                    .then(function (data) { 
                        // perform success action here 

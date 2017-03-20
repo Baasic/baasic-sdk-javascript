@@ -25,7 +25,10 @@ export class ArticleInstanceTagsClient {
 
     /**                 
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article tag resources matching the given criteria.                 
-     * @method                        
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose tag resources need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.                         
      * @example articleInstanceTagsClient.find({  
                     pageNumber : 1,  
                     pageSize : 10, 
@@ -45,10 +48,12 @@ export class ArticleInstanceTagsClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article tag resource.  
-     * @param id tag id
-     * @param options options object               
-     * @method                        
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article tag resource.              
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose tag resource needs to be retrieved.
+     * @param id A slug or id which uniquely identifies article tag resource that needs to be retrieved.
+     * @param options Options object that contains embed data.  	
+     * @returns A promise that is resolved once the get action has been performed.
      * @example articleInstanceTagsClient.get('<articleTag-id>')
                    .then(function (data) {  
                        // perform success action here 
@@ -63,7 +68,9 @@ export class ArticleInstanceTagsClient {
 
     /**                     
      * Returns a promise that is resolved once the create article tag action has been performed; this action creates a new tag for an article.                     
-     * @method                       
+     * @method
+     * @param data An article tag value that needs to be inserted as new article tag resource into the system.
+     * @returns A promise that is resolved once the create article tag action has been performed.                         
      * @example articleInstanceTagsClient.create({   
                     articleId : '<article-id>',   
                     tag : {     
@@ -89,7 +96,9 @@ export class ArticleInstanceTagsClient {
      * let params = modelMapper.removeParams(articleTag); 
      * let uri = params['model'].links('delete').href; 
      * ```                 
-     * @method                        
+     * @method
+     * @param data Article Tag object that needs to be removed from the system.
+     * @returns A promise that is resolved once the remove article tag action has been performed.                         
      * @example // articleTag is a resource previously fetched using get action.
                     articleInstanceTagsClient.remove(articleTag)
                         .then(function (data) {   
@@ -109,7 +118,9 @@ export class ArticleInstanceTagsClient {
      * let params = modelMapper.removeParams(article); 
      * let uri = params['model'].links('delete-tags-by-article').href; 
      * ```                     
-     * @method                     
+     * @method
+     * @param data Article object whoose tags needs to be removed from the system.
+     * @returns A promise that is resolved once the removeAll article tag action has been performed.                      
      * @example // article is a resource previously fetched using get action.					
                     articleInstanceTagsClient.removeAll(article)
                         .then(function (data) {   

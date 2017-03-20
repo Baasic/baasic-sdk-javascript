@@ -20,7 +20,7 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
 
     public readonly updateRoute: string = 'article-file-streams/{id}/{?width,height}';
 
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
@@ -30,6 +30,7 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
      * - `width` - width of desired derived image.  
      * - `height` - height of desired derived image. 
      * @method
+     * @param data Article file id of the original article file used to identify stream that needs to be retrieved from the system.
      * @example articleFilesRouteDefinition.get({id: '<filename>'});
      **/
     get(data: any): any {
@@ -43,7 +44,8 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
 
     /**                     
      * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.                     
-     * @method 
+     * @method
+     * @param data article file that needs to be saved into the system. 
      * @example articleFilesRouteDefinition.create({filename: '<filename>'});                                   
      **/
     create(data: IArticleFile): any {
@@ -54,7 +56,8 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this route should be expanded with the id of the previously saved resource. Additional supported items are:                     
      * - `width` - width of derived image to update.                     
      * - `height` - height of derived image to update.                                        
-     * @method                        
+     * @method
+     * @param data article file used to identify stream that needs to be updated.                        
      * @example articleFilesRouteDefinition.update({id: '<filename>'});
      **/
     update(data: IArticleFile): any {

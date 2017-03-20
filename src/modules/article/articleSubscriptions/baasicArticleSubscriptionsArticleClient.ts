@@ -24,7 +24,10 @@ export class ArticleSubscriptionsArticleClient {
 
     /**                         
      * Returns a promise that is resolved once the subscribe action has been performed. This action subscribes an user to the specified article.                         
-     * @method                         
+     * @method 
+     * @param article The article identifier.
+     * @param data The subscribe information.
+     * @returns A promise that is resolved once the subscribe action has been performed.                         
      * @example articleSubscriptionsArticleClient.subscribe(article, user)
                     .then(function (data) { 
                         // perform success action here 
@@ -39,7 +42,10 @@ export class ArticleSubscriptionsArticleClient {
 
     /**                         
      * Returns a promise that is resolved once the isSubscribed action has been performed. This action checks if a user is subscribed to the specified article.                         
-     * @method                       
+     * @method
+     * @param article The article identifier.
+     * @param data The subscriber identifier.
+     * @returns A promise that is resolved once the isSubscribed action has been performed.                        
      * @example articleSubscriptionsArticleClient.subscribe(article, user)
                     .then(function (data) { 
                         // perform success action here 
@@ -54,7 +60,10 @@ export class ArticleSubscriptionsArticleClient {
 
     /**                         
      * Returns a promise that is resolved once the unSubscribe action has been performed. This action unsubscribes a user from the specified article.                         
-     * @method                        
+     * @method
+     * @param article The article identifier.
+     * @param data The unsubscribe information.
+     * @returns A promise that is resolved once the unSubscribe action has been performed.                           
      * @example articleSubscriptionsArticleClient.subscribe(article, user)
                     .then(function (data) { 
                         // perform success action here 
