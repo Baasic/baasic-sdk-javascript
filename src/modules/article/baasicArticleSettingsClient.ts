@@ -29,8 +29,7 @@ export class ArticleSettingsClient {
 
 
     /**                  
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the article settings. 
-     * @param options options object                 
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the article settings.                 
      * @method
      * @param options Options object that contains embed data.
      * @returns A promise that is resolved once the get action has been performed.                          

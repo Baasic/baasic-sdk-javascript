@@ -156,7 +156,7 @@ export class ArticleInstanceFilesClient {
      * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the Article Files module (For example: file resources from the Media Vault module can be linked directly into the Article Files module).                  
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be linked.
-     * @param data
+     * @param data A article file object that need to be inserted into the system.
      * @returns A promise that is resolved once the link action has been performed.                        
      * @example articleInstanceFilesClient.link(fileObject)
                     .then(function (response, status, headers, config) {   
