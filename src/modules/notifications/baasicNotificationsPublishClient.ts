@@ -16,7 +16,7 @@ export class NotificationsPublishClient {
         return this.notificationsPublishRouteDefinition;
     }
 
-    batch(): NotificationsPublishBatchClient {
+    get batch(): NotificationsPublishBatchClient {
         return this.notificationsPublishBatchClient;
     }
 
