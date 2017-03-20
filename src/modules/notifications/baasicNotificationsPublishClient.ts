@@ -12,7 +12,7 @@ import { INotification } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsPublishClient {
 
-    routeDefinition(): NotificationsPublishRouteDefinition {
+    get routeDefinition(): NotificationsPublishRouteDefinition {
         return this.notificationsPublishRouteDefinition;
     }
 
@@ -48,7 +48,7 @@ export class NotificationsPublishClient {
                 });                      
      */
     create(data: INotification): PromiseLike<IHttpResponse<INotification>> {
-        return this.apiClient.post<INotification>(this.notificationsPublishRouteDefinition.create(), this.notificationsPublishRouteDefinition.createParams(data));
+        return this.apiClient.post<INotification>(this.routeDefinition.create(), this.notificationsPublishRouteDefinition.createParams(data));
     }
 }
 

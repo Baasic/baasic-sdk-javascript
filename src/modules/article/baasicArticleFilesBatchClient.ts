@@ -65,7 +65,7 @@ export class ArticleFilesBatchClient {
                     });                   
      **/
     update(data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleFilesBatchRouteDefinition.update(), this.articleFilesBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.articleFilesBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -82,7 +82,7 @@ export class ArticleFilesBatchClient {
                     });                   
      **/
     link(data: IArticleFile[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.articleFilesBatchRouteDefinition.link(), this.articleFilesBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.link(), this.articleFilesBatchRouteDefinition.createParams(data));
     }
 }
 

@@ -118,7 +118,7 @@ export class UserClient {
                 });                  
      **/
     create(data: INewUser): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.apiClient.post<IAppUser>(this.userRouteDefinition.create(), this.userRouteDefinition.createParams(data));
+        return this.apiClient.post<IAppUser>(this.routeDefinition.create(), this.userRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -142,7 +142,7 @@ export class UserClient {
                         }); 				
      **/
     update(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.userRouteDefinition.update(data), this.userRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.routeDefinition.update(data), this.userRouteDefinition.updateParams(data));
     }
 
     /**                  

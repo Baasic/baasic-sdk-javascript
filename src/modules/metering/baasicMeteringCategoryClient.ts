@@ -88,7 +88,7 @@ export class MeteringCategoryClient {
                 });                  
      **/
     create(data: IMeteringCategory): PromiseLike<IHttpResponse<IMeteringCategory>> {
-        return this.apiClient.post(this.meteringCategoryRouteDefinition.create(), this.meteringCategoryRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.meteringCategoryRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -111,7 +111,7 @@ export class MeteringCategoryClient {
                         }); 				
      **/
     update(data: IMeteringCategory): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.meteringCategoryRouteDefinition.update(data), this.meteringCategoryRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.meteringCategoryRouteDefinition.updateParams(data));
     }
 
     /**                  

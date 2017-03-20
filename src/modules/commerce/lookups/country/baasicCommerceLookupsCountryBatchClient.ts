@@ -12,6 +12,10 @@ import { CommerceLookupsCountryBatchRouteDefinition, TYPES as commerceTypes } fr
 @injectable()
 export class CommerceLookupsCountryBatchClient {
 
+    get routeDefinition(): CommerceLookupsCountryBatchRouteDefinition {
+        return this.commerceLookupsCountryBatchRouteDefinition;
+    }
+
     constructor(
         @inject(commerceTypes.CommerceLookupsCountryBatchRouteDefinition) protected commerceLookupsCountryBatchRouteDefinition: CommerceLookupsCountryBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -33,7 +37,7 @@ export class CommerceLookupsCountryBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceLookupsCountryBatchRouteDefinition.create(), this.commerceLookupsCountryBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.commerceLookupsCountryBatchRouteDefinition.createParams(data));
     }
 
     /**                    
@@ -48,7 +52,7 @@ export class CommerceLookupsCountryBatchClient {
                       });                     
    **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceLookupsCountryBatchRouteDefinition.update(), this.commerceLookupsCountryBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.commerceLookupsCountryBatchRouteDefinition.updateParams(data));
     }
 
     /**                     

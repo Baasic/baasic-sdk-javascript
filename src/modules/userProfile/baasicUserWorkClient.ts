@@ -13,7 +13,7 @@ import { IUserWork } from 'modules/userProfile/contracts';
 @injectable()
 export class UserWorkClient {
 
-    routeDefinition(): UserWorkRouteDefinition {
+    get routeDefinition(): UserWorkRouteDefinition {
         return this.userWorkRouteDefinition;
     }
 
@@ -76,7 +76,7 @@ export class UserWorkClient {
                     });                 
      **/
     create(data: IUserWork): PromiseLike<IHttpResponse<IUserWork>> {
-        return this.apiClient.post<IUserWork>(this.userWorkRouteDefinition.create(data), this.userWorkRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserWork>(this.routeDefinition.create(data), this.userWorkRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -99,7 +99,7 @@ export class UserWorkClient {
                         }); 				        
      **/
     update(data: IUserWork): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.userWorkRouteDefinition.update(data), this.userWorkRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.userWorkRouteDefinition.updateParams(data));
     }
 
     /**                  

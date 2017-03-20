@@ -91,7 +91,7 @@ export class ValueSetClient {
                 });
      **/
     create(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.apiClient.post<IValueSet>(this.valueSetRouteDefinition.create(), this.valueSetRouteDefinition.createParams(data));
+        return this.apiClient.post<IValueSet>(this.routeDefinition.create(), this.valueSetRouteDefinition.createParams(data));
     }
 
     /**
@@ -114,7 +114,7 @@ export class ValueSetClient {
                         });
      **/
     update(data: IValueSet): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.valueSetRouteDefinition.update(data), this.valueSetRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.valueSetRouteDefinition.updateParams(data));
     }
 
     /**                  

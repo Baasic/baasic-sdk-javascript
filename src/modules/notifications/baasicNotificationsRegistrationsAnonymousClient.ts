@@ -49,7 +49,7 @@ export class NotificationsRegistrationsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousRegistration): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
-        return this.apiClient.post<IAnonymousRegistration>(this.notificationsRegistrationsAnonymousRouteDefinition.create(), this.notificationsRegistrationsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousRegistration>(this.routeDefinition.create(), this.notificationsRegistrationsAnonymousRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -137,7 +137,7 @@ export class NotificationsRegistrationsAnonymousClient {
                             }); 				        
      */
     update(data: IAnonymousRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.notificationsRegistrationsAnonymousRouteDefinition.update(data), this.notificationsRegistrationsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.notificationsRegistrationsAnonymousRouteDefinition.updateParams(data));
     }
 }
 

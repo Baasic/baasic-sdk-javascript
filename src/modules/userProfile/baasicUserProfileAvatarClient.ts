@@ -83,7 +83,7 @@ export class UserProfileAvatarClient {
                     });                
      **/
     link(id: string, data: IProfileAvatar): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.userProfileAvatarRouteDefinition.link(id, data), this.userProfileAvatarRouteDefinition.createParams(data, id));
+        return this.apiClient.post(this.routeDefinition.link(id, data), this.userProfileAvatarRouteDefinition.createParams(data, id));
     }
 
     /**                 

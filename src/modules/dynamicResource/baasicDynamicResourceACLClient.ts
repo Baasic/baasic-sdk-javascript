@@ -12,6 +12,10 @@ import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 @injectable()
 export class DynamicResourceACLClient {
 
+    get routeDefinition(): DynamicResourceACLRouteDefinition {
+        return this.dynamicResourceACLRouteDefinition;
+    }
+
     constructor(
         @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected dynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -46,7 +50,7 @@ export class DynamicResourceACLClient {
                     }); 				    
      **/
     update(options: IDynamicACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.put<IACLPolicy[]>(this.dynamicResourceACLRouteDefinition.update(options), this.dynamicResourceACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.routeDefinition.update(options), this.dynamicResourceACLRouteDefinition.updateParams(options));
     }
 
     /**                     

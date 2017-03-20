@@ -41,7 +41,7 @@ export class MeteringBatchClient {
                 });                   
      **/
     create(data: IMeteringData[]): PromiseLike<IHttpResponse<IMeteringData[]>> {
-        return this.apiClient.post(this.meteringBatchRouteDefinition.create(), this.meteringBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.meteringBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -58,7 +58,7 @@ export class MeteringBatchClient {
                         });                   
      **/
     update(data: IMeteringData[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.meteringBatchRouteDefinition.update(), this.meteringBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.meteringBatchRouteDefinition.updateParams(data));
     }
 
     /**                  

@@ -86,7 +86,7 @@ export class OrganizationClient {
                 });                 
      **/
     create(data: IOrganization): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.apiClient.post<IOrganization>(this.organizationRouteDefinition.create(), this.organizationRouteDefinition.createParams(data));
+        return this.apiClient.post<IOrganization>(this.routeDefinition.create(), this.organizationRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -109,7 +109,7 @@ export class OrganizationClient {
                         }); 				        
      **/
     update(data: IOrganization): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.organizationRouteDefinition.update(data), this.organizationRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.organizationRouteDefinition.updateParams(data));
     }
 
     /**                  

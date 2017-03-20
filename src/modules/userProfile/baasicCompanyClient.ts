@@ -86,7 +86,7 @@ export class CompanyClient {
                 });                 
      **/
     create(data: ICompany): PromiseLike<IHttpResponse<ICompany>> {
-        return this.apiClient.post<ICompany>(this.companyRouteDefinition.create(), this.companyRouteDefinition.createParams(data));
+        return this.apiClient.post<ICompany>(this.routeDefinition.create(), this.companyRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -109,7 +109,7 @@ export class CompanyClient {
                         }); 				        
      **/
     update(data: ICompany): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.companyRouteDefinition.update(data), this.companyRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.companyRouteDefinition.updateParams(data));
     }
 
     /**                  

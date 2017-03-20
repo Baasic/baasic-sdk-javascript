@@ -14,7 +14,7 @@ import { IAnonymousSubscription } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsSubscriptionsAnonymousClient {
 
-    routeDefinition(): NotificationsSubscriptionsAnonymousRouteDefinition {
+    get routeDefinition(): NotificationsSubscriptionsAnonymousRouteDefinition {
         return this.notificationsSubscriptionsAnonymousRouteDefinition;
     }
 
@@ -40,7 +40,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousSubscription): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.apiClient.post<IAnonymousSubscription>(this.notificationsSubscriptionsAnonymousRouteDefinition.create(), this.notificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousSubscription>(this.routeDefinition.create(), this.notificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -129,7 +129,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                         }); 				        
      */
     update(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.notificationsSubscriptionsAnonymousRouteDefinition.update(data), this.notificationsSubscriptionsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.notificationsSubscriptionsAnonymousRouteDefinition.updateParams(data));
     }
 }
 

@@ -85,7 +85,7 @@ export class SkillClient {
                 });                 
      **/
     create(data: ISkill): PromiseLike<IHttpResponse<ISkill>> {
-        return this.apiClient.post<ISkill>(this.skillRouteDefinition.create(), this.skillRouteDefinition.createParams(data));
+        return this.apiClient.post<ISkill>(this.routeDefinition.create(), this.skillRouteDefinition.createParams(data));
     }
 
     /**                  
@@ -108,7 +108,7 @@ export class SkillClient {
                         }); 				       
      **/
     update(data: ISkill): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.skillRouteDefinition.update(data), this.skillRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.skillRouteDefinition.updateParams(data));
     }
 
     /**                  

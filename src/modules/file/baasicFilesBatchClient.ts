@@ -36,7 +36,7 @@ export class FilesBatchClient {
                     });                   
      **/
     update(data: IFileEntry[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.filesBatchRouteDefinition.update(), this.filesBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.filesBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
@@ -53,7 +53,7 @@ export class FilesBatchClient {
                     });                   
      **/
     link(data: IFileEntry[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.filesBatchRouteDefinition.link(), this.filesBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.link(), this.filesBatchRouteDefinition.createParams(data));
     }
 
     /**                   

@@ -80,7 +80,7 @@ export class CommerceLookupsPaymentMethodClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceLookupsPaymentMethodRouteDefinition.update(data), this.commerceLookupsPaymentMethodRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.commerceLookupsPaymentMethodRouteDefinition.updateParams(data));
     }
 
     /**                  
@@ -99,7 +99,7 @@ export class CommerceLookupsPaymentMethodClient {
                     });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceLookupsPaymentMethodRouteDefinition.create(), this.commerceLookupsPaymentMethodRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.commerceLookupsPaymentMethodRouteDefinition.createParams(data));
     }
 
     /**                  

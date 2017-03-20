@@ -81,7 +81,7 @@ export class TemplatingClient {
                     });                 
      **/
     create(data: ITemplate): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.apiClient.post<ITemplate>(this.templatingRouteDefinition.create(), this.templatingRouteDefinition.createParams(data));
+        return this.apiClient.post<ITemplate>(this.routeDefinition.create(), this.templatingRouteDefinition.createParams(data));
     }
 
     /**                 
@@ -104,7 +104,7 @@ export class TemplatingClient {
                         });                
      **/
     update(data: ITemplate): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.templatingRouteDefinition.update(data), this.templatingRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.templatingRouteDefinition.updateParams(data));
     }
 
     /**                 

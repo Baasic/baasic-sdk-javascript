@@ -82,7 +82,7 @@ export class KeyValueClient {
                     });
      */
     create(data: IKeyValue): PromiseLike<IHttpResponse<IKeyValue>> {
-        return this.apiClient.post<IKeyValue>(this.keyValueRouteDefinition.create(), this.keyValueRouteDefinition.createParams(data));
+        return this.apiClient.post<IKeyValue>(this.routeDefinition.create(), this.keyValueRouteDefinition.createParams(data));
     }
 
     /**
@@ -105,7 +105,7 @@ export class KeyValueClient {
                     }); 				
      **/
     update(data: IKeyValue): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.keyValueRouteDefinition.update(data), this.keyValueRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.keyValueRouteDefinition.updateParams(data));
     }
 
     /**
@@ -127,7 +127,7 @@ export class KeyValueClient {
                     });
      **/
     remove(data: IKeyValue): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.keyValueRouteDefinition.delete(data), this.keyValueRouteDefinition.deleteParams(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data), this.keyValueRouteDefinition.deleteParams(data));
     }
 }
 

@@ -12,6 +12,10 @@ import { CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition, TYPES as c
 @injectable()
 export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
 
+    get routeDefinition(): CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition {
+        return this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition;
+    }
+
     constructor(
         @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -34,7 +38,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.create(), this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -49,7 +53,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.update(), this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.updateParams(data));
     }
 
     /**                     

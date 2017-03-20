@@ -36,7 +36,7 @@ export class TemplatingBatchClient {
                     });                     
     **/
     create(data: ITemplate[]): PromiseLike<IHttpResponse<IResponse[]>> {
-        return this.apiClient.post<IResponse[]>(this.templatingBatchRouteDefinition.create(), this.templatingBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IResponse[]>(this.routeDefinition.create(), this.templatingBatchRouteDefinition.createParams(data));
     }
 
     /**                     
@@ -53,7 +53,7 @@ export class TemplatingBatchClient {
                     });                     
      **/
     update(data: ITemplate[]): PromiseLike<IHttpResponse<IResponse[]>> {
-        return this.apiClient.put<IResponse[]>(this.templatingBatchRouteDefinition.update(), this.templatingBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<IResponse[]>(this.routeDefinition.update(), this.templatingBatchRouteDefinition.updateParams(data));
     }
 
     /**                     

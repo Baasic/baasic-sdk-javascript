@@ -36,7 +36,7 @@ export class ArticleTagsSubscriptionsClient {
                     });                     
      **/
     subscribe(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<IArticleSubscription>> {
-        return this.apiClient.post(this.articleTagsSubscriptionsRouteDefinition.subscribe(tag, data), this.articleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
+        return this.apiClient.post(this.routeDefinition.subscribe(tag, data), this.articleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
     }
 
     /**                    
@@ -72,7 +72,7 @@ export class ArticleTagsSubscriptionsClient {
                    });                     
     **/
     unSubscribe(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleTagsSubscriptionsRouteDefinition.unSubscribe(tag, data), this.articleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
+        return this.apiClient.delete<void>(this.routeDefinition.unSubscribe(tag, data), this.articleTagsSubscriptionsRouteDefinition.subscribeParams(tag, data));
     }
 }
 

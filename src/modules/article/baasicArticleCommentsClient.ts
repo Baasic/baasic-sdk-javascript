@@ -64,7 +64,7 @@ export class ArticleCommentsClient {
                         });
      **/
     approve(data: IArticleComment, options: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentsRouteDefinition.approve(data), this.articleCommentsRouteDefinition.updateParams(options));
+        return this.apiClient.put<void>(this.routeDefinition.approve(data), this.articleCommentsRouteDefinition.updateParams(options));
     }
 
     /**
@@ -86,7 +86,7 @@ export class ArticleCommentsClient {
                         });
      **/
     unapprove(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentsRouteDefinition.unapprove(data), this.articleCommentsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unapprove(data), this.articleCommentsRouteDefinition.updateParams(data));
     }
 
     /**
@@ -106,7 +106,7 @@ export class ArticleCommentsClient {
                     });
      **/
     create(data: IArticleComment): PromiseLike<IHttpResponse<IArticleComment>> {
-        return this.apiClient.post<IArticleComment>(this.articleCommentsRouteDefinition.create(data), this.articleCommentsRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleComment>(this.routeDefinition.create(data), this.articleCommentsRouteDefinition.createParams(data));
     }
 
     /**
@@ -151,7 +151,7 @@ export class ArticleCommentsClient {
                         });		                
      **/
     flag(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentsRouteDefinition.flag(data), this.articleCommentsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.flag(data), this.articleCommentsRouteDefinition.updateParams(data));
     }
 
     /**
@@ -173,7 +173,7 @@ export class ArticleCommentsClient {
                         });
      **/
     unflag(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentsRouteDefinition.unflag(data), this.articleCommentsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unflag(data), this.articleCommentsRouteDefinition.updateParams(data));
     }
 
     /**
@@ -236,7 +236,7 @@ export class ArticleCommentsClient {
                         });
      **/
     report(data: IArticleComment, options: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentsRouteDefinition.report(data), this.articleCommentsRouteDefinition.updateParams(options));
+        return this.apiClient.put<void>(this.routeDefinition.report(data), this.articleCommentsRouteDefinition.updateParams(options));
     }
 
     /**
@@ -258,7 +258,7 @@ export class ArticleCommentsClient {
                         });
      **/
     unreport(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentsRouteDefinition.unreport(data), this.articleCommentsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unreport(data), this.articleCommentsRouteDefinition.updateParams(data));
     }
 
     /**                 
@@ -280,7 +280,7 @@ export class ArticleCommentsClient {
                         });		                
      **/
     update(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentsRouteDefinition.update(data), this.articleCommentsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.articleCommentsRouteDefinition.updateParams(data));
     }
 }
 

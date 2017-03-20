@@ -55,7 +55,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     approve(data: IArticleCommentReply, options: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.approve(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.approve(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -77,7 +77,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     unapprove(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.unapprove(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unapprove(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -97,7 +97,7 @@ export class ArticleCommentRepliesClient {
                 });
      **/
     create(data: IArticleCommentReply): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.apiClient.post<IArticleCommentReply>(this.articleCommentRepliesRouteDefinition.create(data), this.articleCommentRepliesRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleCommentReply>(this.routeDefinition.create(data), this.articleCommentRepliesRouteDefinition.createParams(data));
     }
 
     /**
@@ -142,7 +142,7 @@ export class ArticleCommentRepliesClient {
                             });
      **/
     flag(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.flag(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.flag(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -163,7 +163,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     unflag(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.unflag(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unflag(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -226,7 +226,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     report(data: IArticleCommentReply, options?: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.report(data), this.articleCommentRepliesRouteDefinition.updateParams(options));
+        return this.apiClient.put<void>(this.routeDefinition.report(data), this.articleCommentRepliesRouteDefinition.updateParams(options));
     }
 
     /**
@@ -248,7 +248,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     unreport(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.unreport(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unreport(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -270,7 +270,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     spam(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.spam(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.spam(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -292,7 +292,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     unspam(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.unspam(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unspam(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
     }
 
     /**
@@ -314,7 +314,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     update(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleCommentRepliesRouteDefinition.update(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.articleCommentRepliesRouteDefinition.updateParams(data));
     }
 }
 

@@ -110,7 +110,7 @@ export class MediaVaultClient {
                         }); 				
      **/
     update(data: IMediaEntry): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.mediaVaultRouteDefinition.updateParams(data), this.mediaVaultRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.updateParams(data), this.mediaVaultRouteDefinition.updateParams(data));
     }
 
     /**                  

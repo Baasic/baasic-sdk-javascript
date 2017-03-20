@@ -16,7 +16,7 @@ import { IUserSubscription } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsSubscriptionsUsersClient {
 
-    routeDefinition(): NotificationsSubscriptionsUsersRouteDefinition {
+    get routeDefinition(): NotificationsSubscriptionsUsersRouteDefinition {
         return this.notificationsSubscriptionsUsersRouteDefinition;
     }
 
@@ -47,7 +47,7 @@ export class NotificationsSubscriptionsUsersClient {
                 });                         
      */
     create(data: IUserSubscription): PromiseLike<IHttpResponse<IUserSubscription>> {
-        return this.apiClient.post<IUserSubscription>(this.notificationsSubscriptionsUsersRouteDefinition.create(), this.notificationsSubscriptionsUsersRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSubscription>(this.routeDefinition.create(), this.notificationsSubscriptionsUsersRouteDefinition.createParams(data));
     }
 
     /**                          
@@ -135,7 +135,7 @@ export class NotificationsSubscriptionsUsersClient {
                            }); 				        
     */
     update(data: IUserSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.notificationsSubscriptionsUsersRouteDefinition.update(data), this.notificationsSubscriptionsUsersRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.notificationsSubscriptionsUsersRouteDefinition.updateParams(data));
     }
 }
 

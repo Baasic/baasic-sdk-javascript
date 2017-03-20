@@ -83,7 +83,7 @@ export class MediaVaultProcessingProviderSettingsClient {
                         }); 			
      **/
     update(data: IPreprocessingProviderSettings): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.mediaVaultProcessingProviderSettingsRouteDefinition.update(data), this.mediaVaultProcessingProviderSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.mediaVaultProcessingProviderSettingsRouteDefinition.updateParams(data));
     }
 }
 

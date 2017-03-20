@@ -39,7 +39,7 @@ export class OrganizationBatchClient {
                    });                   
      **/
     create(data: IOrganization[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.organizationBatchRouteDefinition.create(), this.organizationBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.organizationBatchRouteDefinition.createParams(data));
     }
 
     /**                   
@@ -56,7 +56,7 @@ export class OrganizationBatchClient {
                     });                   
      **/
     update(data: IOrganization[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.organizationBatchRouteDefinition.update(), this.organizationBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.organizationBatchRouteDefinition.updateParams(data));
     }
 
     /**                   

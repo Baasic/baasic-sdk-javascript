@@ -36,7 +36,7 @@ export class MediaVaultBatchClient {
                    });                   
     **/
     update(data: IMediaEntry[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.mediaVaultBatchRouteDefinition.update(), this.mediaVaultBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.mediaVaultBatchRouteDefinition.updateParams(data));
     }
 
     /**                   
