@@ -26,7 +26,8 @@ export class ArticleSubscriptionsRouteDefinition extends BaseRouteDefinition {
 
     /**                          
      * Parses article module subscribe route which doesn't support any additional options.                          
-     * @method                          
+     * @method
+     * @param data The subscribe information.                          
      * @example articleSubscriptionsRouteDefinition.subscribe(data);                           
      **/
     subscribe(data: IArticleSubscription): any {
@@ -35,7 +36,8 @@ export class ArticleSubscriptionsRouteDefinition extends BaseRouteDefinition {
 
     /**                          
      * Parses article module isSubscribed route which must be expanded with subscriber Id                          
-     * @method                    
+     * @method
+     * @param data The subscribe information.                    
      * @example articleSubscriptionsRouteDefinition.isSubscribed({subscriberId: '<subscriber-id>'});                           
      **/
     isSubscribed(data: IArticleSubscription): any {
@@ -44,7 +46,8 @@ export class ArticleSubscriptionsRouteDefinition extends BaseRouteDefinition {
 
     /**                         
      * Parses article module unSubscribe route which doesn't support any additional options.                         
-     * @method                        
+     * @method
+     * @param data The subscribe information.                        
      * @example articleSubscriptionsRouteDefinition.unSubscribe(data);                          
      **/
     unSubscribe(data: IArticleSubscription): any {

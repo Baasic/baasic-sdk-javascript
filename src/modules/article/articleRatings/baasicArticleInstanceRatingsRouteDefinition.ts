@@ -34,7 +34,8 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
 
     /**                 
      * Parses create article rating route; this URI does not support any additional embed items.                 
-     * @method                     
+     * @method 
+     * @param data An article rating object that needs to be inserted into the system.                    
      * @example articleInstanceRatingsRouteDefinition.create(data);                 
      **/
     create(data: IRating): any {
@@ -48,7 +49,9 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the article rating property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method 
+     * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
+     * @param options Query resource options object.                       
      * @example articleInstanceRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
      **/
     find(articleId: string, options?: IOptions): any {
@@ -64,7 +67,10 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the article rating property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
+     * @param username Username which uniquely identifies a user which has created an article rating.
+     * @param options Query resource options object.                        
      * @example articleInstanceRatingsRouteDefinition.find({username: '<username>'});                               
      **/
     findByUser(articleId: string, username: string, options?: IOptions): any {
@@ -77,7 +83,10 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system. Additional expand supported items are: 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
-     * @method                        
+     * @method 
+     * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
+     * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
+     * @param options Options object that contains embed data.                       
      * @example articleInstanceRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
      **/
     get(articleId, id: string, options?: IGetRequestOptions): any {
@@ -88,7 +97,8 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
 
     /**                 
      * Parses update article rating route; this URI does not support any additional embed items.                 
-     * @method                     
+     * @method
+     * @param data An article object used to update specified article resource.                     
      * @example articleInstanceRatingsRouteDefinition.update(data);                 
      **/
     update(data: IRating): any {
@@ -97,7 +107,8 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
 
     /**                 
     * Parses delete article rating route; this URI does not support any additional embed items.                 
-    * @method                     
+    * @method
+    * @param data Rating resource resource that needs to be deleted.                     
     * @example articleInstanceRatingsRouteDefinition.delete(data);                 
     **/
     delete(data: IRating): any {
@@ -106,7 +117,8 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
 
     /**                 
     * Parses delete article rating route; this URI does not support any additional embed items.                 
-    * @method                     
+    * @method
+    * @param data Article object whose ratings needs to be deleted.                     
     * @example articleInstanceRatingsRouteDefinition.deleteAll(data);                 
     **/
     deleteAll(data: IArticle): any {

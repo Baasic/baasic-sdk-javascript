@@ -18,7 +18,7 @@ export class ArticleSubscriptionsCommentReportedRouteDefinition extends BaseRout
     public readonly isSubscribedRoute: string = 'articles/subscriptions/comment-reported/{subscriberId}';
 
     public readonly unSubscribeRoute: string = 'articles/subscriptions/comment-reported';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
@@ -26,7 +26,8 @@ export class ArticleSubscriptionsCommentReportedRouteDefinition extends BaseRout
 
     /**                         
      * Parses commentReported subscribe route which doesn't support any additional options.                         
-     * @method subscriptions.commentReported.subscribe                         
+     * @method
+     * @param data The subscribe information.                         
      * @example articleSubscriptionsCommentReportedRouteDefinition.subscribe(data);                        
      **/
     subscribe(data: IArticleSubscription): any {
@@ -35,7 +36,8 @@ export class ArticleSubscriptionsCommentReportedRouteDefinition extends BaseRout
 
     /**                          
      * Parses commentReported isSubscribed route which must be expanded with subscriber Id.                          
-     * @method                         
+     * @method
+     * @param data The subscribe information.                          
      * @example articleSubscriptionsCommentReportedRouteDefinition.isSubscribed({subscriberId: '<subscriber-id>'});                           
      **/
     isSubscribed(data: IArticleSubscription): any {
@@ -44,7 +46,8 @@ export class ArticleSubscriptionsCommentReportedRouteDefinition extends BaseRout
 
     /**                         
      * Parses commentReported unSubscribe route which doesn't support any additional options.                         
-     * @method subscriptions.commentReported.unSubscribe                         
+     * @method
+     * @param data The unsubscribe information.                       
      * @example articleSubscriptionsCommentReportedRouteDefinition.unSubscribe(data);                        
      **/
     unSubscribe(data: IArticleSubscription): any {

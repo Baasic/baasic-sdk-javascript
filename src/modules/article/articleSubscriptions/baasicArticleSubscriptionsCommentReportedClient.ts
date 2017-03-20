@@ -23,8 +23,10 @@ export class ArticleSubscriptionsCommentReportedClient {
     ) { }
 
     /**                         
-     * Returns a promise that is resolved once the subscribe action has been performed.                         
-     * @method                        
+     * Subscribes user to article comment reported updates. Returns a promise that is resolved once the subscribe action has been performed.                         
+     * @method
+     * @param data The subscribe information.
+     * @returns A promise that is resolved once the subscribe action has been performed.                         
      * @example articleSubscriptionsCommentReportedClient.subscribe(data)
                     .then(function (data) { 
                         // perform success action here 
@@ -38,8 +40,10 @@ export class ArticleSubscriptionsCommentReportedClient {
     }
 
     /**                         
-     * Returns a promise that is resolved once the isSubscribed action has been performed.                         
-     * @method                        
+     * Determines whether user is subscribed to article comment reported updates. Returns a promise that is resolved once the isSubscribed action has been performed.                         
+     * @method
+     * @param data The subscribe information.
+     * @returns A promise that is resolved once the isSubscribed action has been performed.                         
      * @example articleSubscriptionsCommentReportedClient.isSubscribed(data)
                     .then(function (data) { 
                         // perform success action here 
@@ -53,8 +57,10 @@ export class ArticleSubscriptionsCommentReportedClient {
     }
 
     /**                         
-     * Returns a promise that is commentReported once the unSubscribe action has been performed.                         
-     * @method                         
+     * Unsubscribe user from article comment reported updates. Returns a promise that is commentReported once the unSubscribe action has been performed.                         
+     * @method
+     * @param data The unsubscribe information.
+     * @returns A promise that is commentReported once the unSubscribe action has been performed.                           
      * @example articleSubscriptionsCommentReportedClient.isSubscribed(data)
                     .then(function (data) { 
                         // perform success action here 

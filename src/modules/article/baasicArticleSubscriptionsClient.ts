@@ -23,8 +23,10 @@ export class ArticleSubscriptionsClient {
     ) { }
 
     /**                         
-     * Returns a promise that is resolved once the subscribe action has been performed. This action subscribes an user to the article module.                         
-     * @method                        
+     * Subscribes user or existing user to article module updates. Returns a promise that is resolved once the subscribe action has been performed. This action subscribes an user to the article module.                         
+     * @method
+     * @param data The subscribe information.
+     * @returns A promise that is resolved once the subscribe action has been performed.                          
      * @example articleSubscriptionsArticleModuleClient.subscribe(data)
                    .then(function (data) { 
                        // perform success action here 
@@ -38,8 +40,10 @@ export class ArticleSubscriptionsClient {
     }
 
     /**                         
-     * Returns a promise that is resolved once the isSubscribed action has been performed. This action checks if a user is subscribed to the article module.                         
-     * @method                       
+     * Determines whether existing or anonymous user are subscribed to article module updates. Returns a promise that is resolved once the isSubscribed action has been performed. This action checks if a user is subscribed to the article module.                         
+     * @method
+     * @param data The subscribe information.
+     * @returns A promise that is resolved once the isSubscribed action has been performed.                         
      * @example articleSubscriptionsArticleModuleClient.isSubscribe(data)
                    .then(function (data) { 
                        // perform success action here 
@@ -53,8 +57,10 @@ export class ArticleSubscriptionsClient {
     }
 
     /**                         
-     * Returns a promise that is resolved once the unSubscribe action has been performed. This action unsubscribes a user from the article module.                         
-     * @method                        
+     * Unsubscribe existing or anonymous user from article module updates. Returns a promise that is resolved once the unSubscribe action has been performed. This action unsubscribes a user from the article module.                         
+     * @method
+     * @param data The subscribe information.
+     * @returns A promise that is resolved once the unSubscribe action has been performed.                          
      * @example articleSubscriptionsArticleModuleClient.unSubscribe(data)
                    .then(function (data) { 
                        // perform success action here 
