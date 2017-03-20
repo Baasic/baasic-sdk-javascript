@@ -3,8 +3,6 @@ import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaa
 import { coreDIModule as coreDIModule } from 'core';
 import { DIModule } from './';
 import { httpDIModule as httpDIModule, ApiClient, httpTYPES } from 'httpApi';
-import { Container } from "inversify";
-
 import * as modules from 'modules';
 
 export class BaasicApp implements IBaasicApp {
@@ -45,8 +43,12 @@ export class BaasicApp implements IBaasicApp {
         if (!this.apiKey) {
             throw new Error("API Key is required.");
         }
+        let opt: Partial<IBaasicAppOptions> = {};
+        if (options) {
+            opt = options;
+        }
 
-        this.settings = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.defaultSettings, options || {});
+        this.settings = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.defaultSettings, opt);
         this.diModule = new DIModule();
         this.diModule.init(this, [commonDIModule, coreDIModule, httpDIModule, modules]);
 

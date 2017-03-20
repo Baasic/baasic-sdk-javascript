@@ -4,7 +4,7 @@
  **/
 
 import { IOptions } from 'common/contracts';
-import { Utility, TYPES } from 'common';
+import { Utility } from 'common';
 
 export class ModelMapper {
 

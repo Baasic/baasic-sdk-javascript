@@ -1,8 +1,8 @@
-import { injectable, inject } from "inversify";
 import * as uritemplate from 'uritemplate';
 import { IOptions } from 'common/contracts';
 import { ModelMapper, Utility } from 'common';
-import { IAppOptions, TYPES as coreTYPES } from 'core/contracts';
+import { IAppOptions } from 'core/contracts';
+import { injectable } from "inversify";
 
 @injectable()
 export abstract class BaseRouteDefinition {
@@ -106,7 +106,8 @@ export abstract class BaseRouteDefinition {
     }
 
     createParams(data: any, prop?: string): any {
-        return this.modelMapper.createParams(data)[this.modelMapper.modelPropertyName];
+        let propertyName: string = prop || this.modelMapper.modelPropertyName;
+        return this.modelMapper.createParams(data)[propertyName];
     }
 
     updateParams(data: any): any {
