@@ -72,7 +72,7 @@ export class UserClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAppUser>>> {
-        return this.apiClient.get<IQueryModel<IAppUser>>(this.userRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IAppUser>>(this.routeDefinition.find(options));
     }
 
     /**                  
@@ -164,7 +164,7 @@ export class UserClient {
                         });						
      **/
     remove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.userRouteDefinition.delete(data));
+        return this.apiClient.delete(this.routeDefinition.delete(data));
     }
 
     /**                  

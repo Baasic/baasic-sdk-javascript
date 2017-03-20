@@ -33,7 +33,7 @@ export class ArticleACLClient {
                     });                     
      **/
     get(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get<IACLPolicy[]>(this.articleACLRouteDefinition.get(options));
+        return this.apiClient.get<IACLPolicy[]>(this.routeDefinition.get(options));
     }
 
     /**                     

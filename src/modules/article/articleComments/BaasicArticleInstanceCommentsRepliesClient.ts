@@ -207,7 +207,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     remove(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleInstanceCommentRepliesRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                         
@@ -229,7 +229,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });		                        
      **/
     removeAll(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleInstanceCommentRepliesRouteDefinition.deleteAll(data));
+        return this.apiClient.delete<void>(this.routeDefinition.deleteAll(data));
     }
 
     /**

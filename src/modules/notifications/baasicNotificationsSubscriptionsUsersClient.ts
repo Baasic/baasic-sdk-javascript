@@ -73,7 +73,7 @@ export class NotificationsSubscriptionsUsersClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserSubscription>>> {
-        return this.apiClient.get<IQueryModel<IUserSubscription>>(this.notificationsSubscriptionsUsersRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserSubscription>>(this.routeDefinition.find(options));
     }
 
     /**                          
@@ -113,7 +113,7 @@ export class NotificationsSubscriptionsUsersClient {
                         });		                        
      */
     remove(data: IUserSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsSubscriptionsUsersRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                          

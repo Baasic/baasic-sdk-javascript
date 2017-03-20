@@ -34,7 +34,7 @@ export class DynamicResourceACLClient {
                     });                     
      **/
     get(options: IDynamicACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get(this.dynamicResourceACLRouteDefinition.get(options));
+        return this.apiClient.get(this.routeDefinition.get(options));
     }
 
     /**                    

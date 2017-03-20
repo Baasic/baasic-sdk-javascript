@@ -154,7 +154,7 @@ export class ArticleInstanceRatingsClient {
                         });						
      **/
     remove(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleInstanceRatingsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                     
@@ -176,7 +176,7 @@ export class ArticleInstanceRatingsClient {
                         });						    
      **/
     removeAll(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleInstanceRatingsRouteDefinition.deleteAll(data));
+        return this.apiClient.delete<void>(this.routeDefinition.deleteAll(data));
     }
 }
 

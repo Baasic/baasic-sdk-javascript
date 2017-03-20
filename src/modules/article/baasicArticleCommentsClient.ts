@@ -129,7 +129,7 @@ export class ArticleCommentsClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleComment>>> {
-        return this.apiClient.get<IQueryModel<IArticleComment>>(this.articleCommentsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticleComment>>(this.routeDefinition.find(options));
     }
 
     /**
@@ -213,7 +213,7 @@ export class ArticleCommentsClient {
                            });
     **/
     remove(data: IArticleComment): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleCommentsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /** 

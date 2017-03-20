@@ -47,7 +47,7 @@ export class KeyValueClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IKeyValue>>> {
-        return this.apiClient.get(this.keyValueRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**

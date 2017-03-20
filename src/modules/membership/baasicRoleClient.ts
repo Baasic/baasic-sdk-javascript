@@ -47,7 +47,7 @@ export class RoleClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
-        return this.apiClient.get<IQueryModel<IRole>>(this.roleRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IRole>>(this.routeDefinition.find(options));
     }
 
     /**                  
@@ -129,7 +129,7 @@ export class RoleClient {
                         });						
      **/
     remove(data: IRole): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.roleRouteDefinition.delete(data));
+        return this.apiClient.delete(this.routeDefinition.delete(data));
     }
 }
 

@@ -47,7 +47,7 @@ export class MeteringCategoryClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMeteringCategory>>> {
-        return this.apiClient.get(this.meteringCategoryRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -133,7 +133,7 @@ export class MeteringCategoryClient {
                         });						
      **/
     remove(data: IMeteringCategory): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.meteringCategoryRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

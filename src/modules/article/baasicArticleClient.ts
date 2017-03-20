@@ -97,7 +97,7 @@ export class ArticleClient {
                 });                   
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticle>>> {
-        return this.apiClient.get<IQueryModel<IArticle>>(this.articleRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticle>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -207,7 +207,7 @@ export class ArticleClient {
                         });		               
      **/
     remove(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                 
@@ -307,7 +307,7 @@ export class ArticleClient {
                     });		               
      **/
     purge(options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleRouteDefinition.purge(options));
+        return this.apiClient.delete<void>(this.routeDefinition.purge(options));
     }
 }
 

@@ -69,7 +69,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.apiClient.get<IQueryModel<IRating>>(this.articleRatingsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.routeDefinition.find(options));
     }
 
     /**                  
@@ -155,7 +155,7 @@ export class ArticleRatingsClient {
                         });						
      **/
     remove(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleRatingsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

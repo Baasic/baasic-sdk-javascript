@@ -74,7 +74,7 @@ export class NotificationsRegistrationsAnonymousClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAnonymousRegistration>>> {
-        return this.apiClient.get<IQueryModel<IAnonymousRegistration>>(this.notificationsRegistrationsAnonymousRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IAnonymousRegistration>>(this.routeDefinition.find(options));
     }
 
     /**                          
@@ -114,7 +114,7 @@ export class NotificationsRegistrationsAnonymousClient {
                         });						        
      */
     remove(data: IAnonymousRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsRegistrationsAnonymousRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                          

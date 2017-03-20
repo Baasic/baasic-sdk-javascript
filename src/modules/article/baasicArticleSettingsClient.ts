@@ -42,7 +42,7 @@ export class ArticleSettingsClient {
                     });                 
      **/
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.articleSettingsRouteDefinition.get(options));
+        return this.apiClient.get(this.routeDefinition.get(options));
     }
 
 

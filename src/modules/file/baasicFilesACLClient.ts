@@ -35,7 +35,7 @@ export class FilesACLClient {
                     });                     
      **/
     get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get(this.filesACLRouteDefinition.get(options));
+        return this.apiClient.get(this.routeDefinition.get(options));
     }
 
     /**                     

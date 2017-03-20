@@ -106,7 +106,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                             });						        
      */
     remove(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsSubscriptionsAnonymousRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                          

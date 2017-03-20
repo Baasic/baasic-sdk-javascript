@@ -47,7 +47,7 @@ export class TemplatingClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ITemplate>>> {
-        return this.apiClient.get<IQueryModel<ITemplate>>(this.templatingRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ITemplate>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -126,7 +126,7 @@ export class TemplatingClient {
                         });		               
      **/
     remove(data: ITemplate): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.templatingRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

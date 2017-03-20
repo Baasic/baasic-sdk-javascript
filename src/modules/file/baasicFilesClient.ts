@@ -63,7 +63,7 @@ export class FilesClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IFileEntry>>> {
-        return this.apiClient.get<IQueryModel<IFileEntry>>(this.filesRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IFileEntry>>(this.routeDefinition.find(options));
     }
 
     /**                 

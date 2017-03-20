@@ -36,7 +36,7 @@ export class MediaVaultSettingsClient {
                     });                     
      **/
     get(): PromiseLike<IHttpResponse<IMediaVaultSettings>> {
-        return this.apiClient.get<IMediaVaultSettings>(this.mediaVaultSettingsRouteDefinition.get());
+        return this.apiClient.get<IMediaVaultSettings>(this.routeDefinition.get());
     }
 
     /**                   

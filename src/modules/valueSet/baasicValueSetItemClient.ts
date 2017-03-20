@@ -40,7 +40,7 @@ export class ValueSetItemClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSetItem>>> {
-        return this.apiClient.get<IQueryModel<IValueSetItem>>(this.valueSetItemRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IValueSetItem>>(this.routeDefinition.find(options));
     }
 
     /**
@@ -124,7 +124,7 @@ export class ValueSetItemClient {
                     });
      **/
     remove(data: IValueSetItem): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.valueSetItemRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

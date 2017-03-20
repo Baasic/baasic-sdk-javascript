@@ -35,7 +35,7 @@ export class MeteringACLClient {
                    });                     
     **/
     get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get<IACLPolicy[]>(this.meteringACLRouteDefinition.get(options));
+        return this.apiClient.get<IACLPolicy[]>(this.routeDefinition.get(options));
     }
 
     /**                     

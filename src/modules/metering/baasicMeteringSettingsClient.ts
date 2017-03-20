@@ -34,7 +34,7 @@ export class MeteringSettingsClient {
                     });                 
      **/
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMeteringSettings>> {
-        return this.apiClient.get<IMeteringSettings>(this.meteringSettingsRouteDefinition.get(options));
+        return this.apiClient.get<IMeteringSettings>(this.routeDefinition.get(options));
     }
 
     /**                  

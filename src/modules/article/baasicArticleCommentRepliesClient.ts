@@ -120,7 +120,7 @@ export class ArticleCommentRepliesClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleCommentReply>>> {
-        return this.apiClient.get<IQueryModel<IArticleCommentReply>>(this.articleCommentRepliesRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticleCommentReply>>(this.routeDefinition.find(options));
     }
 
     /**
@@ -203,7 +203,7 @@ export class ArticleCommentRepliesClient {
                         });
      **/
     remove(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleCommentRepliesRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**

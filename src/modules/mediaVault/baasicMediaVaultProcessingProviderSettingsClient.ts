@@ -42,7 +42,7 @@ export class MediaVaultProcessingProviderSettingsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IPreprocessingProviderSettings>>> {
-        return this.apiClient.get<IQueryModel<IPreprocessingProviderSettings>>(this.mediaVaultProcessingProviderSettingsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IPreprocessingProviderSettings>>(this.routeDefinition.find(options));
     }
 
     /**                   

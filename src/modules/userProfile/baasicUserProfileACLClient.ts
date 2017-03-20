@@ -35,7 +35,7 @@ export class UserProfileACLClient {
                     });                     
      **/
     get(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get<IACLPolicy[]>(this.userProfileACLRouteDefinition.get(options));
+        return this.apiClient.get<IACLPolicy[]>(this.routeDefinition.get(options));
     }
 
     /**                     

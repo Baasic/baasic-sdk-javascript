@@ -47,7 +47,7 @@ export class CompanyClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ICompany>>> {
-        return this.apiClient.get<IQueryModel<ICompany>>(this.companyRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ICompany>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -131,7 +131,7 @@ export class CompanyClient {
                     });						        
      **/
     remove(data: ICompany): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.companyRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

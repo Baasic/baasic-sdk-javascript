@@ -34,7 +34,7 @@ export class NotificationsSettingsClient {
                     });                     
      */
     get(provider: string): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.notificationsSettingsRouteDefinition.get(provider));
+        return this.apiClient.get(this.routeDefinition.get(provider));
     }
 
     /**                      

@@ -43,7 +43,7 @@ export class UserProfileAvatarStreamsClient {
                         });                     
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.userProfileAvatarStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.routeDefinition.get(data));
     }
 
     /**                     

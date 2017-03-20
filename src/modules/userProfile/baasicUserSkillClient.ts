@@ -42,7 +42,7 @@ export class UserSkillClient {
                 });                    
      **/
     find(options: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserSkill>>> {
-        return this.apiClient.get<IQueryModel<IUserSkill>>(this.userSkillRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserSkill>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -122,7 +122,7 @@ export class UserSkillClient {
                         });						        
      **/
     remove(data: IUserSkill): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.userSkillRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

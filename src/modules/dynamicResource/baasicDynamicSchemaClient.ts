@@ -45,7 +45,7 @@ export class DynamicSchemaClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IResourceSchema>>> {
-        return this.apiClient.get<IQueryModel<IResourceSchema>>(this.dynamicSchemaRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IResourceSchema>>(this.routeDefinition.find(options));
     }
 
     /**                  
@@ -139,7 +139,7 @@ export class DynamicSchemaClient {
                         });						
      **/
     remove(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.dynamicSchemaRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                 

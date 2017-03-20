@@ -72,7 +72,7 @@ export class CommerceClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.apiClient.get(this.commerceRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -164,7 +164,7 @@ export class CommerceClient {
                 });						
      **/
     cancel(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceRouteDefinition.cancel(data));
+        return this.apiClient.delete<void>(this.routeDefinition.cancel(data));
     }
 }
 

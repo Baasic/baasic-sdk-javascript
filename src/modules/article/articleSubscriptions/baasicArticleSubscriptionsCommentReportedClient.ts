@@ -53,7 +53,7 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                          
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.articleSubscriptionsCommentReportedRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.routeDefinition.isSubscribed(data));
     }
 
     /**                         

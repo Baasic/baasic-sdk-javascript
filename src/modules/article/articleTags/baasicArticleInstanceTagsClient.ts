@@ -109,7 +109,7 @@ export class ArticleInstanceTagsClient {
                         });						
      **/
     remove(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleInstanceTagsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                     
@@ -131,7 +131,7 @@ export class ArticleInstanceTagsClient {
                         });						    
      **/
     removeAll(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleInstanceTagsRouteDefinition.deleteAll(data));
+        return this.apiClient.delete<void>(this.routeDefinition.deleteAll(data));
     }
 }
 

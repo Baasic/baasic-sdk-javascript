@@ -42,7 +42,7 @@ export class UserWorkClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserWork>>> {
-        return this.apiClient.get<IQueryModel<IUserWork>>(this.userWorkRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserWork>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -119,7 +119,7 @@ export class UserWorkClient {
                            });						        
     **/
     remove(data: IUserWork): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.userWorkRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

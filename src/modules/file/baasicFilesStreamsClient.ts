@@ -44,7 +44,7 @@ export class FilesStreamsClient {
                         });                     
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.filesStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.routeDefinition.get(data));
     }
 
     /**                     
