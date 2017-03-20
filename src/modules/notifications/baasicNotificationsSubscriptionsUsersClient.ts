@@ -20,7 +20,7 @@ export class NotificationsSubscriptionsUsersClient {
         return this.notificationsSubscriptionsUsersRouteDefinition;
     }
 
-    batch(): NotificationsSubscriptionsUsersBatchClient {
+    get batch(): NotificationsSubscriptionsUsersBatchClient {
         return this.NotificationsSubscriptionsUsersBatchClient;
     }
 
