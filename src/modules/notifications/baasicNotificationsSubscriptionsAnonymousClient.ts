@@ -40,7 +40,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousSubscription): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.apiClient.post<IAnonymousSubscription>(this.routeDefinition.create(), this.notificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousSubscription>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                          
@@ -129,7 +129,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                         }); 				        
      */
     update(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.notificationsSubscriptionsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

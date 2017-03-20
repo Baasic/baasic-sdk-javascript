@@ -49,7 +49,7 @@ export class NotificationsRegistrationsUsersClient {
                 });                         
      */
     create(data: IUserRegistration): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.apiClient.post<IUserRegistration>(this.routeDefinition.create(), this.notificationsRegistrationsUsersRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserRegistration>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                          
@@ -136,7 +136,7 @@ export class NotificationsRegistrationsUsersClient {
                         }); 				        
      */
     update(data: IUserRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.notificationsRegistrationsUsersRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

@@ -42,7 +42,7 @@ export class MeteringCategoryBatchClient {
                 });                   
      **/
     create(data: IMeteringCategory[]): PromiseLike<IHttpResponse<IMeteringCategory[]>> {
-        return this.apiClient.post<IMeteringCategory[]>(this.routeDefinition.create(), this.meteringCategoryBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IMeteringCategory[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                   
@@ -59,7 +59,7 @@ export class MeteringCategoryBatchClient {
                     });                   
      **/
     update(data: IMeteringCategory[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(), this.meteringCategoryBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                   
@@ -76,7 +76,7 @@ export class MeteringCategoryBatchClient {
                     });		                  
      **/
     delete(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.delete(), this.meteringCategoryBatchRouteDefinition.deleteParams(ids));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(ids));
     }
 }
 

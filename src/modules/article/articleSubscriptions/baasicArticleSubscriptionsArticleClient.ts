@@ -37,7 +37,7 @@ export class ArticleSubscriptionsArticleClient {
                     });                         
      **/
     subscribe(article: IArticle, data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.subscribe(article, data), this.articleSubscriptionsArticleRouteDefinition.subscribeParams(article, data));
+        return this.apiClient.post(this.routeDefinition.subscribe(article, data), this.routeDefinition.subscribeParams(article, data));
     }
 
     /**                         

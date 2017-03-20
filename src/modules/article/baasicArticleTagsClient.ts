@@ -92,7 +92,7 @@ export class ArticleTagsClient {
                         });                
      **/
     update(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.articleTagsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 

@@ -49,7 +49,7 @@ export class RegisterClient {
                 .finally (function () {});                 
      **/
     create(data: IRegisterUser): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.registerRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                 

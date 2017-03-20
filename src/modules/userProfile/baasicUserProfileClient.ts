@@ -111,7 +111,7 @@ export class UserProfileClient {
                 });                  
      **/
     create(data: IUserProfile): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.apiClient.post<IUserProfile>(this.routeDefinition.create(), this.userProfileRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserProfile>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -134,7 +134,7 @@ export class UserProfileClient {
                            }); 				
     **/
     update(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.userProfileRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

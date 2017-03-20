@@ -80,7 +80,7 @@ export class CommerceCustomerClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.commerceCustomerRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

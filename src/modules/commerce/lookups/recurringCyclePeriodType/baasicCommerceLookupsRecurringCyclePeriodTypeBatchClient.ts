@@ -38,7 +38,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                     
@@ -53,7 +53,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(), this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                     

@@ -37,7 +37,7 @@ export class CommerceLookupsInvoiceStatusBatchClient {
                 });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.commerceLookupsInvoiceStatusBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                     
@@ -52,7 +52,7 @@ export class CommerceLookupsInvoiceStatusBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(), this.commerceLookupsInvoiceStatusBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                     

@@ -77,7 +77,7 @@ export class CommerceProductClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.commerceProductRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -98,7 +98,7 @@ export class CommerceProductClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.commerceProductRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

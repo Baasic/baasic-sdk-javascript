@@ -50,7 +50,7 @@ export class DynamicResourceACLClient {
                     }); 				    
      **/
     update(options: IDynamicACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.put<IACLPolicy[]>(this.routeDefinition.update(options), this.dynamicResourceACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
     }
 
     /**                     

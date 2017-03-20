@@ -96,7 +96,7 @@ export class DynamicSchemaClient {
                 });                 
      **/
     create(data: IResourceSchema): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.apiClient.post<IResourceSchema>(this.routeDefinition.create(), this.dynamicSchemaRouteDefinition.createParams(data));
+        return this.apiClient.post<IResourceSchema>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -118,7 +118,7 @@ export class DynamicSchemaClient {
                         }); 				
      **/
     update(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.dynamicSchemaRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -158,7 +158,7 @@ export class DynamicSchemaClient {
                 });					    
      **/
     generate(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.generate(), this.dynamicSchemaRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.generate(), this.routeDefinition.createParams(data));
     }
 }
 

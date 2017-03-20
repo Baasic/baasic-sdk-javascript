@@ -77,7 +77,7 @@ export class UserSkillClient {
                     });                 
      **/
     create(data: IUserSkill): PromiseLike<IHttpResponse<IUserSkill>> {
-        return this.apiClient.post<IUserSkill>(this.routeDefinition.create(data), this.userSkillRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSkill>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -100,7 +100,7 @@ export class UserSkillClient {
                            }); 				        
     **/
     update(data: IUserSkill): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.userSkillRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

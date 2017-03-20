@@ -57,7 +57,7 @@ export class MeteringSettingsClient {
                         }); 				
      **/
     update(data: IMeteringSettings): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.meteringSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

@@ -80,7 +80,7 @@ export class CommerceLookupsCountryStateClient {
                   });                  
    **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.commerceLookupsCountryStateRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class CommerceLookupsCountryStateClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.commerceLookupsCountryStateRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

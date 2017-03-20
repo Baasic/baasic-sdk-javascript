@@ -87,7 +87,7 @@ export class ArticleInstanceTagsClient {
                 });                     
      **/
     create(data: IArticleTag): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.apiClient.post<IArticleTag>(this.routeDefinition.create(data), this.articleInstanceTagsRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleTag>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**                 

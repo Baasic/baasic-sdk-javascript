@@ -80,7 +80,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.commerceLookupsPaymentTransactionStatusRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -99,7 +99,7 @@ export class CommerceLookupsPaymentTransactionStatusClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.commerceLookupsPaymentTransactionStatusRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  

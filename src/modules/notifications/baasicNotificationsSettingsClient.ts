@@ -56,7 +56,7 @@ export class NotificationsSettingsClient {
                         });                     
      */
     update(data: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.notificationsSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

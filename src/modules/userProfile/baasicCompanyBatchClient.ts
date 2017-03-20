@@ -39,7 +39,7 @@ export class CompanyBatchClient {
                  });                   
      **/
     create(data: ICompany[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.companyBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                   
@@ -56,7 +56,7 @@ export class CompanyBatchClient {
                     });                   
      **/
     update(data: ICompany[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.routeDefinition.update(), this.companyBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                   

@@ -54,7 +54,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     approve(data: IArticleCommentReply, options: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.approve(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.approve(data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -76,7 +76,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     unapprove(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.unapprove(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unapprove(data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -97,7 +97,7 @@ export class ArticleInstanceCommentRepliesClient {
                 });
      **/
     create(articleId: string, data: IArticleCommentReply): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.apiClient.post<IArticleCommentReply>(this.routeDefinition.create(articleId, data), this.articleInstanceCommentRepliesRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleCommentReply>(this.routeDefinition.create(articleId, data), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -144,7 +144,7 @@ export class ArticleInstanceCommentRepliesClient {
                             });
      **/
     flag(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.flag(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.flag(data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -165,7 +165,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     unflag(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.unflag(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unflag(data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -252,7 +252,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     report(data: IArticleCommentReply, options?: INotificationConfiguration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.report(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(options));
+        return this.apiClient.put<void>(this.routeDefinition.report(data), this.routeDefinition.updateParams(options));
     }
 
     /**
@@ -274,7 +274,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     unreport(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.unreport(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unreport(data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -296,7 +296,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     spam(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.spam(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.spam(data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -318,7 +318,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     unspam(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.unspam(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unspam(data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -340,7 +340,7 @@ export class ArticleInstanceCommentRepliesClient {
                         });
      **/
     update(data: IArticleCommentReply): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.articleInstanceCommentRepliesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

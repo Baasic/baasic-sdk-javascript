@@ -43,7 +43,7 @@ export class NotificationsPublishBatchClient {
                 });                         
      */
     create(data: INotification[]): PromiseLike<IHttpResponse<INotification[]>> {
-        return this.apiClient.post<INotification[]>(this.routeDefinition.create(), this.notificationsPublishBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<INotification[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 }
 

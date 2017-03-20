@@ -62,7 +62,7 @@ export class ApplicationSettingsClient {
                         }); 				
      **/
     update(data: IApplication): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.applicationSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

@@ -66,7 +66,7 @@ export class ArticleSettingsClient {
                         }); 				
      **/
     update(data: IArticleSettings): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.articleSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

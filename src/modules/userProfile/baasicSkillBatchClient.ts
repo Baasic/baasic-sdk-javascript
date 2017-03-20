@@ -39,7 +39,7 @@ export class SkillBatchClient {
                   });                   
      **/
     create(data: ISkill[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.skillBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                   
@@ -56,7 +56,7 @@ export class SkillBatchClient {
                     });                   
      **/
     update(data: ISkill[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(), this.skillBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                   

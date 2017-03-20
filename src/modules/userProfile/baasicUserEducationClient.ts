@@ -77,7 +77,7 @@ export class UserEducationClient {
                 });                 
      **/
     create(data: IUserEducation): PromiseLike<IHttpResponse<IUserEducation>> {
-        return this.apiClient.post<IUserEducation>(this.routeDefinition.create(data), this.userEducationRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserEducation>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -100,7 +100,7 @@ export class UserEducationClient {
                         }); 				        
      **/
     update(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.userEducationRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

@@ -76,7 +76,7 @@ export class UserWorkClient {
                     });                 
      **/
     create(data: IUserWork): PromiseLike<IHttpResponse<IUserWork>> {
-        return this.apiClient.post<IUserWork>(this.routeDefinition.create(data), this.userWorkRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserWork>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**                 
@@ -99,7 +99,7 @@ export class UserWorkClient {
                         }); 				        
      **/
     update(data: IUserWork): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.userWorkRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

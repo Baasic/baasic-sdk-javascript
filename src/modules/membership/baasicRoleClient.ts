@@ -85,7 +85,7 @@ export class RoleClient {
                 });                  
      **/
     create(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.post<IRole>(this.routeDefinition.create(), this.roleRouteDefinition.createParams(data));
+        return this.apiClient.post<IRole>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -108,7 +108,7 @@ export class RoleClient {
                         }); 				
      **/
     update(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.put(this.routeDefinition.update(data), this.roleRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

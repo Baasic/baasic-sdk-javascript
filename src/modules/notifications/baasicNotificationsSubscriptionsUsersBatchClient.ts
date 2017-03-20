@@ -39,7 +39,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                 });                             
      */
     create(data: IUserSubscription[]): PromiseLike<IHttpResponse<IUserSubscription[]>> {
-        return this.apiClient.post<IUserSubscription[]>(this.routeDefinition.create(), this.notificationsSubscriptionsUsersBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSubscription[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                              
@@ -73,7 +73,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                     });                             
      */
     update(data: IUserSubscription[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(), this.notificationsSubscriptionsUsersBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 }
 

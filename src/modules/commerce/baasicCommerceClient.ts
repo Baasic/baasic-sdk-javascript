@@ -121,7 +121,7 @@ export class CommerceClient {
                 });                  
      **/
     preprocess(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.preprocess(), this.commerceRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.preprocess(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -144,7 +144,7 @@ export class CommerceClient {
                 });                  
      **/
     subscribe(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.subscribe(), this.commerceRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.subscribe(), this.routeDefinition.createParams(data));
     }
 
     /**                  
