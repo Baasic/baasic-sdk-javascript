@@ -20,5 +20,6 @@ module.exports = webpackMerge(commonConfig, {
                 warnings: false
             }
         })
-    ]
+    ],
+    devtool: 'source-map'
 });
