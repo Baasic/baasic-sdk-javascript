@@ -11,6 +11,10 @@ import { IValueSetItem } from 'modules/valueSet/contracts';
 @injectable()
 export class ValueSetItemClient {
 
+    get routeDefinition(): ValueSetItemRouteDefinition {
+        return this.valueSetItemRouteDefinition;
+    }
+
     constructor(
         @inject(valueSetTypes.ValueSetItemRouteDefinition) protected valueSetItemRouteDefinition: ValueSetItemRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -36,7 +40,7 @@ export class ValueSetItemClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSetItem>>> {
-        return this.apiClient.get<IQueryModel<IValueSetItem>>(this.valueSetItemRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IValueSetItem>>(this.routeDefinition.find(options));
     }
 
     /**
@@ -75,7 +79,7 @@ export class ValueSetItemClient {
                 });
      **/
     create(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.apiClient.post<IValueSetItem>(this.valueSetItemRouteDefinition.create(data), this.valueSetItemRouteDefinition.createParams(data));
+        return this.apiClient.post<IValueSetItem>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -98,7 +102,7 @@ export class ValueSetItemClient {
                     });
      **/
     update(data: IValueSetItem): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.apiClient.put<IValueSetItem>(this.valueSetItemRouteDefinition.update(data), this.valueSetItemRouteDefinition.updateParams(data));
+        return this.apiClient.put<IValueSetItem>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -120,7 +124,7 @@ export class ValueSetItemClient {
                     });
      **/
     remove(data: IValueSetItem): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.valueSetItemRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

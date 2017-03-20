@@ -97,7 +97,7 @@ export class ArticleClient {
                 });                   
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticle>>> {
-        return this.apiClient.get<IQueryModel<IArticle>>(this.articleRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticle>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -139,7 +139,7 @@ export class ArticleClient {
                 });                 
      **/
     create(data: IArticle): PromiseLike<IHttpResponse<IArticle>> {
-        return this.apiClient.post<IArticle>(this.articleRouteDefinition.create(), this.articleRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticle>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                 
@@ -162,7 +162,7 @@ export class ArticleClient {
                         });                
      **/
     update(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleRouteDefinition.update(data), this.articleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -207,7 +207,7 @@ export class ArticleClient {
                         });		               
      **/
     remove(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                 
@@ -230,7 +230,7 @@ export class ArticleClient {
                         });		               
      **/
     archive(data: IArticle, options: IArticleOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleRouteDefinition.archive(data), this.articleRouteDefinition.updateParams(options));
+        return this.apiClient.put<void>(this.routeDefinition.archive(data), this.routeDefinition.updateParams(options));
     }
 
     /**                 
@@ -252,7 +252,7 @@ export class ArticleClient {
                             });		               
      **/
     restore(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleRouteDefinition.restore(data), this.articleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.restore(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -274,7 +274,7 @@ export class ArticleClient {
                             });		               
      **/
     unpublish(data: IArticle): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleRouteDefinition.unpublish(data), this.articleRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.unpublish(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -292,7 +292,7 @@ export class ArticleClient {
                     });		               
      **/
     publish(data: IArticle, articleOptions: IArticleOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleRouteDefinition.publish(data), this.articleRouteDefinition.updateParams(articleOptions));
+        return this.apiClient.put<void>(this.routeDefinition.publish(data), this.routeDefinition.updateParams(articleOptions));
     }
 
     /**                 
@@ -307,7 +307,7 @@ export class ArticleClient {
                     });		               
      **/
     purge(options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleRouteDefinition.purge(options));
+        return this.apiClient.delete<void>(this.routeDefinition.purge(options));
     }
 }
 

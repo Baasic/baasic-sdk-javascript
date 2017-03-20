@@ -49,7 +49,7 @@ export class NotificationsRegistrationsUsersClient {
                 });                         
      */
     create(data: IUserRegistration): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.apiClient.post<IUserRegistration>(this.notificationsRegistrationsUsersRouteDefinition.create(), this.notificationsRegistrationsUsersRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserRegistration>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                          
@@ -75,7 +75,7 @@ export class NotificationsRegistrationsUsersClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserRegistration>>> {
-        return this.apiClient.get<IQueryModel<IUserRegistration>>(this.notificationsRegistrationsUsersRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserRegistration>>(this.routeDefinition.find(options));
     }
 
     /**                          
@@ -113,7 +113,7 @@ export class NotificationsRegistrationsUsersClient {
                         });						        
      */
     remove(data: IUserRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsRegistrationsUsersRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                          
@@ -136,7 +136,7 @@ export class NotificationsRegistrationsUsersClient {
                         }); 				        
      */
     update(data: IUserRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.notificationsRegistrationsUsersRouteDefinition.update(data), this.notificationsRegistrationsUsersRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

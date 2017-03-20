@@ -42,7 +42,7 @@ export class MediaVaultProcessingProviderSettingsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IPreprocessingProviderSettings>>> {
-        return this.apiClient.get<IQueryModel<IPreprocessingProviderSettings>>(this.mediaVaultProcessingProviderSettingsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IPreprocessingProviderSettings>>(this.routeDefinition.find(options));
     }
 
     /**                   
@@ -83,7 +83,7 @@ export class MediaVaultProcessingProviderSettingsClient {
                         }); 			
      **/
     update(data: IPreprocessingProviderSettings): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.mediaVaultProcessingProviderSettingsRouteDefinition.update(data), this.mediaVaultProcessingProviderSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

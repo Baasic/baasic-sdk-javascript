@@ -39,7 +39,7 @@ export class CommerceProductClient {
                });                     
     **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.apiClient.get(this.commerceProductRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -77,7 +77,7 @@ export class CommerceProductClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceProductRouteDefinition.create(), this.commerceProductRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -98,7 +98,7 @@ export class CommerceProductClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceProductRouteDefinition.update(data), this.commerceProductRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -118,7 +118,7 @@ export class CommerceProductClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceProductRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

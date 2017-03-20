@@ -52,7 +52,7 @@ export class ValueSetClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IValueSet>>> {
-        return this.apiClient.get<IQueryModel<IValueSet>>(this.valueSetRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IValueSet>>(this.routeDefinition.find(options));
     }
 
     /**
@@ -91,7 +91,7 @@ export class ValueSetClient {
                 });
      **/
     create(data: IValueSet): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.apiClient.post<IValueSet>(this.valueSetRouteDefinition.create(), this.valueSetRouteDefinition.createParams(data));
+        return this.apiClient.post<IValueSet>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -114,7 +114,7 @@ export class ValueSetClient {
                         });
      **/
     update(data: IValueSet): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.valueSetRouteDefinition.update(data), this.valueSetRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -135,7 +135,7 @@ export class ValueSetClient {
                         });						
      **/
     remove(data: IValueSet): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.valueSetRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

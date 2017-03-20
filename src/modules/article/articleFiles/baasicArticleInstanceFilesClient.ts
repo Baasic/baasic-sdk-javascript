@@ -149,7 +149,7 @@ export class ArticleInstanceFilesClient {
                        }); 				
     **/
     update(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleInstanceFilesRouteDefinition.update(articleId, data), this.articleInstanceFilesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(articleId, data), this.routeDefinition.updateParams(data));
     }
 
     /** 
@@ -167,7 +167,7 @@ export class ArticleInstanceFilesClient {
                     });                 
      **/
     link(articleId: string, data: IArticleFile): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.apiClient.post<IArticleFile>(this.articleInstanceFilesRouteDefinition.link(articleId, data), this.articleInstanceFilesRouteDefinition.createParams(data));
+        return this.apiClient.post<IArticleFile>(this.routeDefinition.link(articleId, data), this.routeDefinition.createParams(data));
     }
 }
 

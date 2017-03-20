@@ -19,14 +19,19 @@ module.exports = {
      * Rule for which files should be transpiled via typescript loader.
      */
     module: {
-        rules: [
-            {
-                test: /\.ts$/,
-                use: [{
-                    loader: 'ts-loader'
-                }]
-            }
-        ]
+        rules: [{
+            test: /\.ts$/,
+            use: [{
+                loader: 'ts-loader',
+                options: {
+                    transpileOnly: true,
+                    compilerOptions: {
+                        "importHelpers": true,
+                        "noEmitHelpers": true
+                    }
+                }
+            }]
+        }]
     },
     resolve: {
         /**

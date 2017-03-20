@@ -45,7 +45,7 @@ export class CommerceLookupsCountryStateClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.apiClient.get(this.commerceLookupsCountryStateRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -80,7 +80,7 @@ export class CommerceLookupsCountryStateClient {
                   });                  
    **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceLookupsCountryStateRouteDefinition.create(), this.commerceLookupsCountryStateRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class CommerceLookupsCountryStateClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceLookupsCountryStateRouteDefinition.update(data), this.commerceLookupsCountryStateRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -121,7 +121,7 @@ export class CommerceLookupsCountryStateClient {
                        });						
     **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceLookupsCountryStateRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

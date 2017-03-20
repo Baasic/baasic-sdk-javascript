@@ -1,7 +1,7 @@
 import { injectable, inject } from "inversify";
 import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, httpTYPES } from 'httpApi';
 import { ITokenHandler, IAppOptions, TYPES as coreTYPES } from 'core/contracts';
-import { IHALParser, HALParser, TYPES as commonTYPES } from 'common';
+import { IHALParser, TYPES as commonTYPES } from 'common';
 
 
 @injectable()

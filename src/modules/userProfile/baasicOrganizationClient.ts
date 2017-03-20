@@ -47,7 +47,7 @@ export class OrganizationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IOrganization>>> {
-        return this.apiClient.get<IQueryModel<IOrganization>>(this.organizationRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IOrganization>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -86,7 +86,7 @@ export class OrganizationClient {
                 });                 
      **/
     create(data: IOrganization): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.apiClient.post<IOrganization>(this.organizationRouteDefinition.create(), this.organizationRouteDefinition.createParams(data));
+        return this.apiClient.post<IOrganization>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -109,7 +109,7 @@ export class OrganizationClient {
                         }); 				        
      **/
     update(data: IOrganization): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.organizationRouteDefinition.update(data), this.organizationRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -131,6 +131,6 @@ export class OrganizationClient {
                            });						        
     **/
     remove(data: IOrganization): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.organizationRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }

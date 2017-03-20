@@ -53,7 +53,7 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                         
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.articleSubscriptionsCommentRequiresModerationRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.routeDefinition.isSubscribed(data));
     }
 
     /**                         
@@ -70,6 +70,6 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                        
      **/
     unSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleSubscriptionsCommentRequiresModerationRouteDefinition.unSubscribe(data));
+        return this.apiClient.delete<void>(this.routeDefinition.unSubscribe(data));
     }
 }

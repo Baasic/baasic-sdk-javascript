@@ -47,7 +47,7 @@ export class SkillClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ISkill>>> {
-        return this.apiClient.get<IQueryModel<ISkill>>(this.skillRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ISkill>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -85,7 +85,7 @@ export class SkillClient {
                 });                 
      **/
     create(data: ISkill): PromiseLike<IHttpResponse<ISkill>> {
-        return this.apiClient.post<ISkill>(this.skillRouteDefinition.create(), this.skillRouteDefinition.createParams(data));
+        return this.apiClient.post<ISkill>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -108,7 +108,7 @@ export class SkillClient {
                         }); 				       
      **/
     update(data: ISkill): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.skillRouteDefinition.update(data), this.skillRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -130,6 +130,6 @@ export class SkillClient {
                            });						        
     **/
     remove(data: ISkill): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.skillRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }

@@ -72,7 +72,7 @@ export class UserClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAppUser>>> {
-        return this.apiClient.get<IQueryModel<IAppUser>>(this.userRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IAppUser>>(this.routeDefinition.find(options));
     }
 
     /**                  
@@ -118,7 +118,7 @@ export class UserClient {
                 });                  
      **/
     create(data: INewUser): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.apiClient.post<IAppUser>(this.userRouteDefinition.create(), this.userRouteDefinition.createParams(data));
+        return this.apiClient.post<IAppUser>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -142,7 +142,7 @@ export class UserClient {
                         }); 				
      **/
     update(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.userRouteDefinition.update(data), this.userRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -164,7 +164,7 @@ export class UserClient {
                         });						
      **/
     remove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.userRouteDefinition.delete(data));
+        return this.apiClient.delete(this.routeDefinition.delete(data));
     }
 
     /**                  

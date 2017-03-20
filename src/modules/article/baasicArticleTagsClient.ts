@@ -51,7 +51,7 @@ export class ArticleTagsClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleTag>>> {
-        return this.apiClient.get<IQueryModel<IArticleTag>>(this.articleTagsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticleTag>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -92,7 +92,7 @@ export class ArticleTagsClient {
                         });                
      **/
     update(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleTagsRouteDefinition.update(data), this.articleTagsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -114,7 +114,7 @@ export class ArticleTagsClient {
                         });						
      **/
     remove(data: IArticleTag): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleTagsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

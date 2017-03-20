@@ -86,7 +86,7 @@ export class LoginClient {
                     })
                     .finally (function () {});							
      */
-    loadUserData(data: any): IUserInfo {
+    loadUserData(data: any): PromiseLike<IHttpResponse<IUserInfo>> {
         data = data || {};
         return this.apiClient.get<IUserInfo>(this.loginRouteDefinition.login(data), { 'Accept': 'application/json; charset=UTF-8' });
     }

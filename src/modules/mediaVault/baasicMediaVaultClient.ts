@@ -69,7 +69,7 @@ export class MediaVaultClient {
               });                    
    **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMediaEntry>>> {
-        return this.apiClient.get<IQueryModel<IMediaEntry>>(this.mediaVaultRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IMediaEntry>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -110,7 +110,7 @@ export class MediaVaultClient {
                         }); 				
      **/
     update(data: IMediaEntry): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.mediaVaultRouteDefinition.updateParams(data), this.mediaVaultRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.updateParams(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

@@ -53,7 +53,7 @@ export class ArticleSubscriptionsClient {
                    });                         
      **/
     isSubscribed(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.articleSubscriptionsRouteDefinition.isSubscribed(data));
+        return this.apiClient.get(this.routeDefinition.isSubscribed(data));
     }
 
     /**                         
@@ -69,6 +69,6 @@ export class ArticleSubscriptionsClient {
                         // perform error handling here 
                    });                          **/
     unSubscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleSubscriptionsRouteDefinition.unSubscribe(data));
+        return this.apiClient.delete<void>(this.routeDefinition.unSubscribe(data));
     }
 }

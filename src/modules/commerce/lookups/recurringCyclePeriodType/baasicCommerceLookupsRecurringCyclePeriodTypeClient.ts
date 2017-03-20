@@ -44,7 +44,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.apiClient.get(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -80,7 +80,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.update(data), this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -100,7 +100,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.create(), this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -120,7 +120,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeClient {
                             });						                   
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceLookupsRecurringCyclePeriodTypeRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

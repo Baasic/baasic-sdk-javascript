@@ -12,7 +12,7 @@
     "build:dev": "npm run clean:build && npm run build:tsc && webpack --config webpack.dev.js --bail",
     "build:prod": "npm run clean:build && npm run build:tsc && webpack --config webpack.prod.js --bail",
     "build:docs": "npm run clean:build && webpack --config webpack.docs.js --bail",
-    "build:tsc": "tsc --outDir build/lib --declaration --declarationDir build/lib/types",
+    "build:tsc": "tsc -diagnostics --outDir build/lib --declaration --declarationDir build/lib/types",
     "clean:build": "rimraf build"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "@types/webpack": "^2.2.5",
     "npm-run-all": "^4.0.1",
     "rimraf": "^2.5.4",
+    "tslib": "1.6.0",
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.6",
     "webpack": "^2.2.1",

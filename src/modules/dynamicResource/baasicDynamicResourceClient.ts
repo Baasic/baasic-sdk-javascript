@@ -97,7 +97,7 @@ export class DynamicResourceClient {
                 });                  
      **/
     create(schemaName: string, data: any): PromiseLike<IHttpResponse<IDynamicObject>> {
-        return this.apiClient.post<IDynamicObject>(this.dynamicResourceRouteDefinition.create(schemaName, data), this.dynamicResourceRouteDefinition.createParams(schemaName, data));
+        return this.apiClient.post<IDynamicObject>(this.routeDefinition.create(schemaName, data), this.routeDefinition.createParams(schemaName, data));
     }
 
     /**                  
@@ -122,7 +122,7 @@ export class DynamicResourceClient {
                     }); 				
      **/
     update(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.dynamicResourceRouteDefinition.update(data, options), this.dynamicResourceRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data, options), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -149,7 +149,7 @@ export class DynamicResourceClient {
                     }); 				
      **/
     patch(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.patch<void>(this.dynamicResourceRouteDefinition.patch(data, options), this.dynamicResourceRouteDefinition.updateParams(data));
+        return this.apiClient.patch<void>(this.routeDefinition.patch(data, options), this.routeDefinition.updateParams(data));
     }
 
     /**                  

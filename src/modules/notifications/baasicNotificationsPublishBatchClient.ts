@@ -12,6 +12,10 @@ import { INotification } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsPublishBatchClient {
 
+    get routeDefinition(): NotificationsPublishBatchRouteDefinition {
+        return this.notificationsPublishBatchRouteDefinition;
+    }
+
     constructor(
         @inject(notificationsTypes.NotificationsPublishBatchRouteDefinition) protected notificationsPublishBatchRouteDefinition: NotificationsPublishBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -39,7 +43,7 @@ export class NotificationsPublishBatchClient {
                 });                         
      */
     create(data: INotification[]): PromiseLike<IHttpResponse<INotification[]>> {
-        return this.apiClient.post<INotification[]>(this.notificationsPublishBatchRouteDefinition.create(), this.notificationsPublishBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<INotification[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 }
 

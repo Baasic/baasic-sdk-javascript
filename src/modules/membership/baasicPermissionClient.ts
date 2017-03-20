@@ -68,7 +68,7 @@ export class PermissionClient {
             });    
     **/
     getActions(options?: any): PromiseLike<IHttpResponse<IAccessAction[]>> {
-        return this.apiClient.get<IAccessAction[]>(this.permissionRouteDefinition.getActions(options));
+        return this.apiClient.get<IAccessAction[]>(this.routeDefinition.getActions(options));
     }
 
     /**
@@ -164,7 +164,7 @@ export class PermissionClient {
             });		
    **/
     remove(data: IAccessPolicy): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.permissionRouteDefinition.remove(data));
+        return this.apiClient.delete(this.routeDefinition.remove(data));
     }
     /**
     * Creates a new in-memory permission object.
@@ -318,11 +318,11 @@ export class PermissionClient {
     }
 
     private getRoles(options): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
-        return this.apiClient.get(this.permissionRouteDefinition.getRoles(options));
+        return this.apiClient.get(this.routeDefinition.getRoles(options));
     }
 
     private getUsers(options): PromiseLike<IHttpResponse<IQueryModel<IUserInfo>>> {
-        return this.apiClient.get(this.permissionRouteDefinition.getUsers(options));
+        return this.apiClient.get(this.routeDefinition.getUsers(options));
     }
 
     private firstCharToLowerCase(text) {

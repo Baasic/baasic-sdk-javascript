@@ -44,7 +44,7 @@ export class CommerceLookupsInvoiceStatusClient {
                     });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.apiClient.get(this.commerceLookupsInvoiceStatusRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -80,7 +80,7 @@ export class CommerceLookupsInvoiceStatusClient {
                         }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceLookupsInvoiceStatusRouteDefinition.update(data), this.commerceLookupsInvoiceStatusRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -99,7 +99,7 @@ export class CommerceLookupsInvoiceStatusClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceLookupsInvoiceStatusRouteDefinition.create(), this.commerceLookupsInvoiceStatusRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -119,7 +119,7 @@ export class CommerceLookupsInvoiceStatusClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceLookupsInvoiceStatusRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

@@ -73,7 +73,7 @@ export class UserProfileClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserProfile>>> {
-        return this.apiClient.get<IQueryModel<IUserProfile>>(this.userProfileRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserProfile>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -111,7 +111,7 @@ export class UserProfileClient {
                 });                  
      **/
     create(data: IUserProfile): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.apiClient.post<IUserProfile>(this.userProfileRouteDefinition.create(), this.userProfileRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserProfile>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -134,7 +134,7 @@ export class UserProfileClient {
                            }); 				
     **/
     update(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.userProfileRouteDefinition.update(data), this.userProfileRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -156,7 +156,7 @@ export class UserProfileClient {
                         });						
      **/
     remove(data: IUserProfile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.userProfileRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

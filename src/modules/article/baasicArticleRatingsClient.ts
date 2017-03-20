@@ -46,7 +46,7 @@ export class ArticleRatingsClient {
                 });                   
      **/
     create(data: IRating): PromiseLike<IHttpResponse<IRating>> {
-        return this.apiClient.post<IRating>(this.articleRatingsRouteDefinition.create(data), this.articleRatingsRouteDefinition.createParams(data));
+        return this.apiClient.post<IRating>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -69,7 +69,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.apiClient.get<IQueryModel<IRating>>(this.articleRatingsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.routeDefinition.find(options));
     }
 
     /**                  
@@ -133,7 +133,7 @@ export class ArticleRatingsClient {
                         }); 				
      **/
     update(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleRatingsRouteDefinition.update(data), this.articleRatingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -155,7 +155,7 @@ export class ArticleRatingsClient {
                         });						
      **/
     remove(data: IRating): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleRatingsRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

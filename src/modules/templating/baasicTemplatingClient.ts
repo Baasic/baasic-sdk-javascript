@@ -47,7 +47,7 @@ export class TemplatingClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ITemplate>>> {
-        return this.apiClient.get<IQueryModel<ITemplate>>(this.templatingRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<ITemplate>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -81,7 +81,7 @@ export class TemplatingClient {
                     });                 
      **/
     create(data: ITemplate): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.apiClient.post<ITemplate>(this.templatingRouteDefinition.create(), this.templatingRouteDefinition.createParams(data));
+        return this.apiClient.post<ITemplate>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                 
@@ -104,7 +104,7 @@ export class TemplatingClient {
                         });                
      **/
     update(data: ITemplate): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.templatingRouteDefinition.update(data), this.templatingRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -126,7 +126,7 @@ export class TemplatingClient {
                         });		               
      **/
     remove(data: ITemplate): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.templatingRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

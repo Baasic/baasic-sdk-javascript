@@ -49,7 +49,7 @@ export class NotificationsRegistrationsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousRegistration): PromiseLike<IHttpResponse<IAnonymousRegistration>> {
-        return this.apiClient.post<IAnonymousRegistration>(this.notificationsRegistrationsAnonymousRouteDefinition.create(), this.notificationsRegistrationsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousRegistration>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                          
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsAnonymousClient {
                });                            
     */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAnonymousRegistration>>> {
-        return this.apiClient.get<IQueryModel<IAnonymousRegistration>>(this.notificationsRegistrationsAnonymousRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IAnonymousRegistration>>(this.routeDefinition.find(options));
     }
 
     /**                          
@@ -114,7 +114,7 @@ export class NotificationsRegistrationsAnonymousClient {
                         });						        
      */
     remove(data: IAnonymousRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsRegistrationsAnonymousRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                          
@@ -137,7 +137,7 @@ export class NotificationsRegistrationsAnonymousClient {
                             }); 				        
      */
     update(data: IAnonymousRegistration): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.notificationsRegistrationsAnonymousRouteDefinition.update(data), this.notificationsRegistrationsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

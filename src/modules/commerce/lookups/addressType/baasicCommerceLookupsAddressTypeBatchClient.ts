@@ -37,7 +37,7 @@ export class CommerceLookupsAddressTypesBatchClient {
                     });                     
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceLookupsAddressTypeBatchRouteDefinition.create(), this.commerceLookupsAddressTypeBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                     
@@ -52,7 +52,7 @@ export class CommerceLookupsAddressTypesBatchClient {
                        });                     
     **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceLookupsAddressTypeBatchRouteDefinition.update(), this.commerceLookupsAddressTypeBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                     

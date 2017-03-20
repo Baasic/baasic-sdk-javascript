@@ -10,7 +10,11 @@
             "./src/typings"
         ],
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "importHelpers": true,
+        "noEmitHelpers": true
+        //,"noUnusedLocals": true
+        //,"noUnusedParameters": true
     },
     "exclude": [
         "node_modules",

@@ -57,7 +57,7 @@ export class ArticleFilesClient {
                 });
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleFile>>> {
-        return this.apiClient.get<IQueryModel<IArticleFile>>(this.articleFilesRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IArticleFile>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -124,7 +124,7 @@ export class ArticleFilesClient {
                        }); 				
     **/
     update(data: IArticleFile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.articleFilesRouteDefinition.update(data), this.articleFilesRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /** 
@@ -141,7 +141,7 @@ export class ArticleFilesClient {
                     });                 
      **/
     link(data: IArticleFile): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.apiClient.post(this.articleFilesRouteDefinition.link(), this.articleFilesRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
     }
 }
 

@@ -12,6 +12,10 @@ import { CommerceLookupsPaymentTransactionStatusBatchRouteDefinition, TYPES as c
 @injectable()
 export class CommerceLookupsPaymentTransactionStatusBatchClient {
 
+    get routeDefinition(): CommerceLookupsPaymentTransactionStatusBatchRouteDefinition {
+        return this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition;
+    }
+
     constructor(
         @inject(commerceTypes.CommerceLookupsPaymentTransactionStatusBatchRouteDefinition) protected commerceLookupsPaymentTransactionStatusBatchRouteDefinition: CommerceLookupsPaymentTransactionStatusBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -33,7 +37,7 @@ export class CommerceLookupsPaymentTransactionStatusBatchClient {
                });                     
     **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.create(), this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                     
@@ -48,7 +52,7 @@ export class CommerceLookupsPaymentTransactionStatusBatchClient {
                     });                     
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.update(), this.commerceLookupsPaymentTransactionStatusBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                     

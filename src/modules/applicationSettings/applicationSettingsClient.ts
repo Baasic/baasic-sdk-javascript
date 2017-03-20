@@ -40,7 +40,7 @@ export class ApplicationSettingsClient {
                     });                 
      **/
     get(options: IOptions): PromiseLike<IHttpResponse<IApplication>> {
-        return this.apiClient.get<IApplication>(this.applicationSettingsRouteDefinition.get(options));
+        return this.apiClient.get<IApplication>(this.routeDefinition.get(options));
     }
 
     /**                  
@@ -62,7 +62,7 @@ export class ApplicationSettingsClient {
                         }); 				
      **/
     update(data: IApplication): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.applicationSettingsRouteDefinition.update(data), this.applicationSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

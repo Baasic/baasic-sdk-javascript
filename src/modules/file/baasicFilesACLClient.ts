@@ -12,7 +12,7 @@ import { FilesACLRouteDefinition, TYPES as filesTypes } from 'modules/file';
 @injectable()
 export class FilesACLClient {
 
-    routeDefinition(): FilesACLRouteDefinition {
+    get routeDefinition(): FilesACLRouteDefinition {
         return this.filesACLRouteDefinition;
     }
 
@@ -35,7 +35,7 @@ export class FilesACLClient {
                     });                     
      **/
     get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get(this.filesACLRouteDefinition.get(options));
+        return this.apiClient.get(this.routeDefinition.get(options));
     }
 
     /**                     
@@ -54,7 +54,7 @@ export class FilesACLClient {
                     }); 				    
      **/
     update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.put<IACLPolicy[]>(this.filesACLRouteDefinition.update(options), this.filesACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
     }
 
     /**                     

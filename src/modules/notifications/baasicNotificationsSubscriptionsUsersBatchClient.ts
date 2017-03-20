@@ -13,6 +13,10 @@ import { IUserSubscription } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsSubscriptionsUsersBatchClient {
 
+    get routeDefinition(): NotificationsSubscriptionsUsersBatchRouteDefinition {
+        return this.notificationsSubscriptionsUsersBatchRouteDefinition;
+    }
+
     constructor(
         @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchRouteDefinition) protected notificationsSubscriptionsUsersBatchRouteDefinition: NotificationsSubscriptionsUsersBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -35,7 +39,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                 });                             
      */
     create(data: IUserSubscription[]): PromiseLike<IHttpResponse<IUserSubscription[]>> {
-        return this.apiClient.post<IUserSubscription[]>(this.notificationsSubscriptionsUsersBatchRouteDefinition.create(), this.notificationsSubscriptionsUsersBatchRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserSubscription[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                              
@@ -69,7 +73,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                     });                             
      */
     update(data: IUserSubscription[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.notificationsSubscriptionsUsersBatchRouteDefinition.update(), this.notificationsSubscriptionsUsersBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 }
 

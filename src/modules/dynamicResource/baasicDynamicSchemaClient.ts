@@ -45,7 +45,7 @@ export class DynamicSchemaClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IResourceSchema>>> {
-        return this.apiClient.get<IQueryModel<IResourceSchema>>(this.dynamicSchemaRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IResourceSchema>>(this.routeDefinition.find(options));
     }
 
     /**                  
@@ -96,7 +96,7 @@ export class DynamicSchemaClient {
                 });                 
      **/
     create(data: IResourceSchema): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.apiClient.post<IResourceSchema>(this.dynamicSchemaRouteDefinition.create(), this.dynamicSchemaRouteDefinition.createParams(data));
+        return this.apiClient.post<IResourceSchema>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -118,7 +118,7 @@ export class DynamicSchemaClient {
                         }); 				
      **/
     update(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.dynamicSchemaRouteDefinition.update(data), this.dynamicSchemaRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -139,7 +139,7 @@ export class DynamicSchemaClient {
                         });						
      **/
     remove(data: IResourceSchema): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.dynamicSchemaRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                 
@@ -158,7 +158,7 @@ export class DynamicSchemaClient {
                 });					    
      **/
     generate(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.dynamicSchemaRouteDefinition.generate(), this.dynamicSchemaRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.generate(), this.routeDefinition.createParams(data));
     }
 }
 

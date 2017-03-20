@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRouteDefinition } from 'common';
 import { IOptions } from 'common/contracts';
 import { IApplication } from 'modules/applicationSettings/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';

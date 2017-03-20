@@ -12,6 +12,10 @@ import { ISkill } from 'modules/userProfile/contracts';
 @injectable()
 export class SkillBatchClient {
 
+    get routeDefinition(): SkillBatchRouteDefinition {
+        return this.skillBatchRouteDefinition;
+    }
+
     constructor(
         @inject(userProfileTypes.SkillBatchRouteDefinition) protected skillBatchRouteDefinition: SkillBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -35,7 +39,7 @@ export class SkillBatchClient {
                   });                   
      **/
     create(data: ISkill[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.skillBatchRouteDefinition.create(), this.skillBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                   
@@ -52,7 +56,7 @@ export class SkillBatchClient {
                     });                   
      **/
     update(data: ISkill[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.skillBatchRouteDefinition.update(), this.skillBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                   

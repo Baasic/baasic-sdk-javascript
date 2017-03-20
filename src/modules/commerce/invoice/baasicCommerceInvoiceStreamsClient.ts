@@ -35,7 +35,7 @@ export class CommerceInvoiceStreamsClient {
                         });                                        
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.commerceInvoiceStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.routeDefinition.get(data));
     }
 
     /**                     

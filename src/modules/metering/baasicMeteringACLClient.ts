@@ -12,6 +12,10 @@ import { MeteringACLRouteDefinition, TYPES as meteringTypes } from 'modules/mete
 @injectable()
 export class MeteringACLClient {
 
+    get routeDefinition(): MeteringACLRouteDefinition {
+        return this.meteringACLRouteDefinition;
+    }
+
     constructor(
         @inject(meteringTypes.MeteringACLRouteDefinition) protected meteringACLRouteDefinition: MeteringACLRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -31,7 +35,7 @@ export class MeteringACLClient {
                    });                     
     **/
     get(options?: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.get<IACLPolicy[]>(this.meteringACLRouteDefinition.get(options));
+        return this.apiClient.get<IACLPolicy[]>(this.routeDefinition.get(options));
     }
 
     /**                     
@@ -50,7 +54,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
-        return this.apiClient.put<IACLPolicy[]>(this.meteringACLRouteDefinition.update(options), this.meteringACLRouteDefinition.updateParams(options));
+        return this.apiClient.put<IACLPolicy[]>(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
     }
 
     /**                     

@@ -34,7 +34,7 @@ export class MeteringSettingsClient {
                     });                 
      **/
     get(options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMeteringSettings>> {
-        return this.apiClient.get<IMeteringSettings>(this.meteringSettingsRouteDefinition.get(options));
+        return this.apiClient.get<IMeteringSettings>(this.routeDefinition.get(options));
     }
 
     /**                  
@@ -57,7 +57,7 @@ export class MeteringSettingsClient {
                         }); 				
      **/
     update(data: IMeteringSettings): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.meteringSettingsRouteDefinition.update(data), this.meteringSettingsRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

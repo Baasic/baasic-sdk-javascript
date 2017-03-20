@@ -47,7 +47,7 @@ export class RoleClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
-        return this.apiClient.get<IQueryModel<IRole>>(this.roleRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IRole>>(this.routeDefinition.find(options));
     }
 
     /**                  
@@ -85,7 +85,7 @@ export class RoleClient {
                 });                  
      **/
     create(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.post<IRole>(this.roleRouteDefinition.create(), this.roleRouteDefinition.createParams(data));
+        return this.apiClient.post<IRole>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -108,7 +108,7 @@ export class RoleClient {
                         }); 				
      **/
     update(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.put(this.roleRouteDefinition.update(data), this.roleRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -129,7 +129,7 @@ export class RoleClient {
                         });						
      **/
     remove(data: IRole): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.roleRouteDefinition.delete(data));
+        return this.apiClient.delete(this.routeDefinition.delete(data));
     }
 }
 

@@ -47,7 +47,7 @@ export class MeteringCategoryClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMeteringCategory>>> {
-        return this.apiClient.get(this.meteringCategoryRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -88,7 +88,7 @@ export class MeteringCategoryClient {
                 });                  
      **/
     create(data: IMeteringCategory): PromiseLike<IHttpResponse<IMeteringCategory>> {
-        return this.apiClient.post(this.meteringCategoryRouteDefinition.create(), this.meteringCategoryRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -111,7 +111,7 @@ export class MeteringCategoryClient {
                         }); 				
      **/
     update(data: IMeteringCategory): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.meteringCategoryRouteDefinition.update(data), this.meteringCategoryRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -133,7 +133,7 @@ export class MeteringCategoryClient {
                         });						
      **/
     remove(data: IMeteringCategory): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.meteringCategoryRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

@@ -9,6 +9,7 @@ var __bind = function (fn, me) { return function () { return fn.apply(me, argume
 var removeNamespace;
 removeNamespace = function (name, ns) {
     ns = ns ? ns + ':' : '';
+    if (ns) {}
     if (name.substr(0, ns.length) === ns) {
         return name.substr(ns.length);
     } else {

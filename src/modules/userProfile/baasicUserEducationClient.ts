@@ -41,7 +41,7 @@ export class UserEducationClient {
                 });                    
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IUserEducation>>> {
-        return this.apiClient.get<IQueryModel<IUserEducation>>(this.userEducationRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IUserEducation>>(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -77,7 +77,7 @@ export class UserEducationClient {
                 });                 
      **/
     create(data: IUserEducation): PromiseLike<IHttpResponse<IUserEducation>> {
-        return this.apiClient.post<IUserEducation>(this.userEducationRouteDefinition.create(data), this.userEducationRouteDefinition.createParams(data));
+        return this.apiClient.post<IUserEducation>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -100,7 +100,7 @@ export class UserEducationClient {
                         }); 				        
      **/
     update(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.userEducationRouteDefinition.update(data), this.userEducationRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -120,7 +120,7 @@ export class UserEducationClient {
                         });						        
      **/
     remove(data: IUserEducation): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.userEducationRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

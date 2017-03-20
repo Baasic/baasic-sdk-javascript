@@ -13,6 +13,15 @@ import { IUserSocialLogin } from 'modules/membership/contracts';
 @injectable()
 export class UserSocialLoginClient {
 
+    /**                 
+      * Provides direct access to `userSocialLoginRouteDefinition`.                 
+      * @method                        
+      * @example userSocialLoginClient.routeDefinition.get().expand(expandObject);                 
+      **/
+    get routeDefinition(): UserSocialLoginRouteDefinition {
+        return this.userSocialLoginRouteDefinition;
+    }
+
     constructor(
         @inject(membershipTypes.UserSocialLoginRouteDefinition) protected userSocialLoginRouteDefinition: UserSocialLoginRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -32,7 +41,7 @@ export class UserSocialLoginClient {
                     });                     
      **/
     get(username: string): PromiseLike<IHttpResponse<IQueryModel<IUserSocialLogin>>> {
-        return this.apiClient.get<IQueryModel<IUserSocialLogin>>(this.userSocialLoginRouteDefinition.get(username));
+        return this.apiClient.get<IQueryModel<IUserSocialLogin>>(this.routeDefinition.get(username));
     }
 
     /**                     

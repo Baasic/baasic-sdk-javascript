@@ -41,7 +41,7 @@ export class CommerceCustomerPaymentMethodClient {
                 });                     
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
-        return this.apiClient.get(this.commerceCustomerPaymentMethodRouteDefinition.find(options));
+        return this.apiClient.get(this.routeDefinition.find(options));
     }
 
     /**                 
@@ -77,7 +77,7 @@ export class CommerceCustomerPaymentMethodClient {
                             }); 				
      **/
     update(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.commerceCustomerPaymentMethodRouteDefinition.update(data), this.commerceCustomerPaymentMethodRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                 
@@ -96,7 +96,7 @@ export class CommerceCustomerPaymentMethodClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.commerceCustomerPaymentMethodRouteDefinition.create(), this.commerceCustomerPaymentMethodRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                 
@@ -116,7 +116,7 @@ export class CommerceCustomerPaymentMethodClient {
                         });						
      **/
     remove(data: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceCustomerPaymentMethodRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 }
 

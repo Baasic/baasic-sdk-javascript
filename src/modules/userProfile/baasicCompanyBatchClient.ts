@@ -12,6 +12,10 @@ import { ICompany } from 'modules/userProfile/contracts';
 @injectable()
 export class CompanyBatchClient {
 
+    get routeDefinition(): CompanyBatchRouteDefinition {
+        return this.companyBatchRouteDefinition;
+    }
+
     constructor(
         @inject(userProfileTypes.CompanyBatchRouteDefinition) protected companyBatchRouteDefinition: CompanyBatchRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -35,7 +39,7 @@ export class CompanyBatchClient {
                  });                   
      **/
     create(data: ICompany[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.companyBatchRouteDefinition.create(), this.companyBatchRouteDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                   
@@ -52,7 +56,7 @@ export class CompanyBatchClient {
                     });                   
      **/
     update(data: ICompany[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.companyBatchRouteDefinition.update(), this.companyBatchRouteDefinition.updateParams(data));
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                   

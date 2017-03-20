@@ -42,7 +42,7 @@ export class MediaVaultStreamsClient {
                             });                     
      **/
     get(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.mediaVaultStreamsRouteDefinition.get(data));
+        return this.apiClient.get(this.routeDefinition.get(data));
     }
 
     /**                     

@@ -8,18 +8,23 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { NotificationsSubscriptionsAnonymousRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSubscriptionsAnonymousRouteDefinition, NotificationsSubscriptionsAnonymousBatchClient, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsSubscriptionsAnonymousClient {
 
-    routeDefinition(): NotificationsSubscriptionsAnonymousRouteDefinition {
+    get routeDefinition(): NotificationsSubscriptionsAnonymousRouteDefinition {
         return this.notificationsSubscriptionsAnonymousRouteDefinition;
+    }
+
+    get batch(): NotificationsSubscriptionsAnonymousBatchClient {
+        return this.notificationsSubscriptionsAnonymousBatchClient;
     }
 
     constructor(
         @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected notificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchClient) protected notificationsSubscriptionsAnonymousBatchClient: NotificationsSubscriptionsAnonymousBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -40,7 +45,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                         
      */
     create(data: IAnonymousSubscription): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.apiClient.post<IAnonymousSubscription>(this.notificationsSubscriptionsAnonymousRouteDefinition.create(), this.notificationsSubscriptionsAnonymousRouteDefinition.createParams(data));
+        return this.apiClient.post<IAnonymousSubscription>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                          
@@ -106,7 +111,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                             });						        
      */
     remove(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsSubscriptionsAnonymousRouteDefinition.delete(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**                          
@@ -129,7 +134,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                         }); 				        
      */
     update(data: IAnonymousSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.notificationsSubscriptionsAnonymousRouteDefinition.update(data), this.notificationsSubscriptionsAnonymousRouteDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 }
 

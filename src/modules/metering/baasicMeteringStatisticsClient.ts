@@ -13,6 +13,15 @@ import { IMeteringData } from 'modules/metering/contracts';
 @injectable()
 export class MeteringStatisticsClient {
 
+    /**                 
+      * Provides direct access to `meteringStatisticsRouteDefinition`.                 
+      * @method                        
+      * @example meteringStatisticsClient.routeDefinition.get(expandObject);                 
+      **/
+    get routeDefinition(): MeteringStatisticsRouteDefinition {
+        return this.meteringStatisticsRouteDefinition;
+    }
+
     constructor(
         @inject(meteringTypes.MeteringStatisticsRouteDefinition) protected meteringStatisticsRouteDefinition: MeteringStatisticsRouteDefinition,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -41,7 +50,7 @@ export class MeteringStatisticsClient {
                 });                      
      **/
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMeteringData>>> {
-        return this.apiClient.get<IQueryModel<IMeteringData>>(this.meteringStatisticsRouteDefinition.find(options));
+        return this.apiClient.get<IQueryModel<IMeteringData>>(this.routeDefinition.find(options));
     }
 }
 
