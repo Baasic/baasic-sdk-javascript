@@ -3,8 +3,8 @@
   "version": "2.0.0-rc.3",
   "description": "JavaScript SDK provides core functionality for building web and mobile applications on [Baasic](http://www.baasic.com/).",
   "main": [
-    "/build/dist/baasic-sdk-javascript.js",
-    "/build/dist/baasic-sdk-javascript.min.js"
+    "build/dist/baasic-sdk-javascript.js",
+    "build/dist/baasic-sdk-javascript.min.js"
   ],
   "keywords": [],
   "author": "Mono Software",
