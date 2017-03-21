@@ -15,6 +15,42 @@ export class BrowserEventHandler implements IEventHandler {
 		@inject(coreTYPES.IBaasicApp) private application: IBaasicApp
 	) {
 		this.messageBusKey = 'baasic-message-bus-' + this.application.getApiKey();
+
+		if ($) {
+			this.triggerEvent = (eventName, data) => {
+				var event = utility.extend($.Event(eventName), data);
+				$(document).trigger(event);
+			};
+		} else if (CustomEvent && typeof CustomEvent === 'function') {
+			this.triggerEvent = (eventName, data) => {
+				var event = utility.extend(new CustomEvent(eventName), data);
+				document.dispatchEvent(event);
+			};
+		} else if (document.createEvent) {
+			this.triggerEvent = (eventName, data) => {
+				var event = utility.extend(document.createEvent('CustomEvent'), data);
+				event.initEvent(eventName, true, true);
+				document.dispatchEvent(event); 
+			};
+		} else {
+			this.triggerEvent = (eventName, data) => {
+				let doc: any = document;
+				var event = utility.extend(doc.createEventObject(), data);
+				event.eventType = eventName;
+				doc.fireEvent('on' + event.eventType, event);
+			};
+		}
+
+		if ($) {
+			this.addEvent = (eventName, func) => $(window).on(eventName, func);
+		} else if (window.addEventListener) {
+			this.addEvent = (eventName, func) => window.addEventListener(eventName, func, false);
+		} else if ((<any>window).attachEvent) {
+			this.addEvent = (eventName, func) => (<any>window).attachEvent('on' + eventName, func);
+		} else {
+			this.addEvent = (eventName, func) => window['on' + eventName] = func;
+		}
+
 		this.initEventing();
 	}
 
@@ -27,67 +63,11 @@ export class BrowserEventHandler implements IEventHandler {
 		}));
 	}
 
+	triggerEvent: (eventName: string, data: any) => void;
 
-	triggerEvent(eventName: string, data: any): void {
-		var element = document;
+	addEvent: (eventName: string, func: any) => void;
 
-		$ !== undefined ?
-			function (element, eventName, additionalData) {
-				var event = utility.extend($.Event(eventName), additionalData);
-				$(element).trigger(event);
-			} :
-			function (element, eventName, additionalData) {
-				var event; // The custom event that will be created
-
-				if (CustomEvent && typeof CustomEvent === 'function') {
-					event = utility.extend(new CustomEvent(eventName));
-					element.dispatchEvent(event);
-				} else if (document.createEvent) {
-					event = document.createEvent('CustomEvent');
-					event.initEvent(eventName, true, true);
-
-					if (additionalData) {
-						utility.extend(event, additionalData);
-					}
-
-					if (element.dispatchEvent) {
-						element.dispatchEvent(event);
-					} else {
-						document.dispatchEvent(event);
-					}
-				} else {
-					event = document.createEvent('CustomEvent');
-					event.eventType = eventName;
-
-					if (additionalData) {
-						utility.extend(event, additionalData);
-					}
-					element.fireEvent('on' + event.eventType, event);
-				}
-			};
-	}
-
-	addEvent(eventName: string, func: any): void {
-		var elem = window;
-
-		$ !== undefined ?
-			function (evnt, elem, func) {
-				$(elem).on(evnt, func);
-			} :
-			function (evnt, elem, func) {
-				if (elem.addEventListener) {
-					elem.addEventListener(evnt, func, false);
-				}
-				else if (elem.attachEvent) {
-					elem.attachEvent('on' + evnt, func);
-				}
-				else {
-					elem['on' + evnt] = func;
-				}
-			};
-	}
-
-	initEventing(): void {
+	private initEventing(): void {
 		this.addEvent('storage', function (e) {
 			e = e || event;
 			if (e.originalEvent) {
@@ -105,6 +85,3 @@ export class BrowserEventHandler implements IEventHandler {
 		});
 	}
 };
-
-
-
