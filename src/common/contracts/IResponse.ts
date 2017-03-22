@@ -1,8 +1,6 @@
-import { IException } from 'common/contracts';
-
 export interface IResponse {
     details: string,
-    error: IException,
+    error: any,
     errorCode: number,
     message: string,
     response: Object,

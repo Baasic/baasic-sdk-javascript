@@ -16,7 +16,9 @@ export class BrowserEventHandler implements IEventHandler {
 	) {
 		this.messageBusKey = 'baasic-message-bus-' + this.application.getApiKey();
 
-		if ($) {
+		let jQueryLoaded: boolean = (window as any).jQuery;
+
+		if (jQueryLoaded) {
 			this.triggerEvent = (eventName, data) => {
 				var event = utility.extend($.Event(eventName), data);
 				$(document).trigger(event);
@@ -30,7 +32,7 @@ export class BrowserEventHandler implements IEventHandler {
 			this.triggerEvent = (eventName, data) => {
 				var event = utility.extend(document.createEvent('CustomEvent'), data);
 				event.initEvent(eventName, true, true);
-				document.dispatchEvent(event); 
+				document.dispatchEvent(event);
 			};
 		} else {
 			this.triggerEvent = (eventName, data) => {
@@ -41,7 +43,7 @@ export class BrowserEventHandler implements IEventHandler {
 			};
 		}
 
-		if ($) {
+		if (jQueryLoaded) {
 			this.addEvent = (eventName, func) => $(window).on(eventName, func);
 		} else if (window.addEventListener) {
 			this.addEvent = (eventName, func) => window.addEventListener(eventName, func, false);
