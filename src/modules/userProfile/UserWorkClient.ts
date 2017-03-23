@@ -59,7 +59,7 @@ export class UserWorkClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserWork>> {
-        return this.apiClient.get<IUserWork>(this.userWorkRoute.get(id, options));
+        return this.apiClient.get<IUserWork>(this.routeDefinition.get(id, options));
     }
 
     /**                  
