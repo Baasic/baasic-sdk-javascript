@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module filesBatchRouteDefinition  
+ * @module filesBatchRoute  
  * @description Baasic Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IFileEntry } from 'modules/file/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class FilesBatchRouteDefinition extends BaseRouteDefinition {
+export class FilesBatchRoute extends BaseRoute {
 
     public readonly updateRoute: string = 'files/batch';
 
@@ -23,7 +23,7 @@ export class FilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                       
-     * @example filesBatchRouteDefinition.update();                                  
+     * @example filesBatchRoute.update();                                  
      **/
     update(): any {
         return super.baseCreate(this.updateRoute, {});
@@ -32,7 +32,7 @@ export class FilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example filesBatchRouteDefinition.link();                                  
+     * @example filesBatchRoute.link();                                  
      **/
     link(): any {
         return super.baseCreate(this.linkRoute, {});
@@ -41,7 +41,7 @@ export class FilesBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses unlink route; this URI template does not expose any additional options.                                                        
      * @method                       
-     * @example filesBatchRouteDefinition.unlink();                                  
+     * @example filesBatchRoute.unlink();                                  
      **/
     unlink(): any {
         return super.baseCreate(this.unlinkRoute, {});

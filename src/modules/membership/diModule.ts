@@ -1,44 +1,44 @@
 import { ContainerModule } from "inversify";
 import {
-    LoginRouteDefinition,
+    LoginRoute,
     LoginClient,
-    LoginSocialRouteDefinition,
+    LoginSocialRoute,
     LoginSocialClient,
     PasswordRecoveryClient,
-    PasswordRecoveryRouteDefinition,
+    PasswordRecoveryRoute,
     RegisterClient,
-    RegisterRouteDefinition,
+    RegisterRoute,
     RoleClient,
-    RoleRouteDefinition,
+    RoleRoute,
     UserSocialLoginClient,
-    UserSocialLoginRouteDefinition,
+    UserSocialLoginRoute,
     UserClient,
-    UserRouteDefinition,
-    PermissionRouteDefinition,
+    UserRoute,
+    PermissionRoute,
     PermissionClient,
-    LookupRouteDefinition,
+    LookupRoute,
     LookupClient,
     Root
 } from 'modules/membership';
 
 const TYPES = {
-    LoginRouteDefinition: Symbol("LoginRouteDefinition"),
+    LoginRoute: Symbol("LoginRoute"),
     LoginClient: Symbol("LoginClient"),
-    LoginSocialRouteDefinition: Symbol("LoginSocialRouteDefinition"),
+    LoginSocialRoute: Symbol("LoginSocialRoute"),
     LoginSocialClient: Symbol("LoginSocialClient"),
     PasswordRecoveryClient: Symbol("PasswordRecoveryClient"),
-    PasswordRecoveryRouteDefinition: Symbol("PasswordRecoveryRouteDefinition"),
+    PasswordRecoveryRoute: Symbol("PasswordRecoveryRoute"),
     RegisterClient: Symbol("RegisterClient"),
-    RegisterRouteDefinition: Symbol("RegisterRouteDefinition"),
+    RegisterRoute: Symbol("RegisterRoute"),
     RoleClient: Symbol("RoleClient"),
-    RoleRouteDefinition: Symbol("RoleRouteDefinition"),
+    RoleRoute: Symbol("RoleRoute"),
     UserSocialLoginClient: Symbol("UserSocialLoginClient"),
-    UserSocialLoginRouteDefinition: Symbol("UserSocialLoginRouteDefinition"),
+    UserSocialLoginRoute: Symbol("UserSocialLoginRoute"),
     UserClient: Symbol("UserClient"),
-    UserRouteDefinition: Symbol("UserRouteDefinition"),
-    PermissionRouteDefinition: Symbol("PermissionRouteDefinition"),
+    UserRoute: Symbol("UserRoute"),
+    PermissionRoute: Symbol("PermissionRoute"),
     PermissionClient: Symbol("PermissionClient"),
-    LookupRouteDefinition: Symbol("LookupRouteDefinition"),
+    LookupRoute: Symbol("LookupRoute"),
     LookupClient: Symbol("LookupClient"),
     Root: Symbol("Membership-Root")
 };
@@ -46,23 +46,23 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<LoginSocialRouteDefinition>(TYPES.LoginSocialRouteDefinition).to(LoginSocialRouteDefinition);
+    bind<LoginSocialRoute>(TYPES.LoginSocialRoute).to(LoginSocialRoute);
     bind<LoginSocialClient>(TYPES.LoginSocialClient).to(LoginSocialClient);
-    bind<LoginRouteDefinition>(TYPES.LoginRouteDefinition).to(LoginRouteDefinition);
+    bind<LoginRoute>(TYPES.LoginRoute).to(LoginRoute);
     bind<LoginClient>(TYPES.LoginClient).to(LoginClient);
-    bind<PasswordRecoveryRouteDefinition>(TYPES.PasswordRecoveryRouteDefinition).to(PasswordRecoveryRouteDefinition);
+    bind<PasswordRecoveryRoute>(TYPES.PasswordRecoveryRoute).to(PasswordRecoveryRoute);
     bind<PasswordRecoveryClient>(TYPES.PasswordRecoveryClient).to(PasswordRecoveryClient);
-    bind<RegisterRouteDefinition>(TYPES.RegisterRouteDefinition).to(RegisterRouteDefinition);
+    bind<RegisterRoute>(TYPES.RegisterRoute).to(RegisterRoute);
     bind<RegisterClient>(TYPES.RegisterClient).to(RegisterClient);
-    bind<RoleRouteDefinition>(TYPES.RoleRouteDefinition).to(RoleRouteDefinition);
+    bind<RoleRoute>(TYPES.RoleRoute).to(RoleRoute);
     bind<RoleClient>(TYPES.RoleClient).to(RoleClient);
-    bind<UserSocialLoginRouteDefinition>(TYPES.UserSocialLoginRouteDefinition).to(UserSocialLoginRouteDefinition);
+    bind<UserSocialLoginRoute>(TYPES.UserSocialLoginRoute).to(UserSocialLoginRoute);
     bind<UserSocialLoginClient>(TYPES.UserSocialLoginClient).to(UserSocialLoginClient);
-    bind<UserRouteDefinition>(TYPES.UserRouteDefinition).to(UserRouteDefinition);
+    bind<UserRoute>(TYPES.UserRoute).to(UserRoute);
     bind<UserClient>(TYPES.UserClient).to(UserClient);
-    bind<PermissionRouteDefinition>(TYPES.PermissionRouteDefinition).to(PermissionRouteDefinition);
+    bind<PermissionRoute>(TYPES.PermissionRoute).to(PermissionRoute);
     bind<PermissionClient>(TYPES.PermissionClient).to(PermissionClient);
-    bind<LookupRouteDefinition>(TYPES.LookupRouteDefinition).to(LookupRouteDefinition);
+    bind<LookupRoute>(TYPES.LookupRoute).to(LookupRoute);
     bind<LookupClient>(TYPES.LookupClient).to(LookupClient);
     bind<Root>(TYPES.Root).to(Root);
 });

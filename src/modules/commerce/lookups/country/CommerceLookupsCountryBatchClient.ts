@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module commerceCountryBatchClient  
- * @description  Commerce Country Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryBatchClient` uses `commerceCountryBatchRouteDefinition`. 
+ * @description  Commerce Country Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryBatchClient` uses `commerceCountryBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsCountryBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsCountryBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsCountryBatchClient {
 
-    get routeDefinition(): CommerceLookupsCountryBatchRouteDefinition {
-        return this.commerceLookupsCountryBatchRouteDefinition;
+    get routeDefinition(): CommerceLookupsCountryBatchRoute {
+        return this.commerceLookupsCountryBatchRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsCountryBatchRouteDefinition) protected commerceLookupsCountryBatchRouteDefinition: CommerceLookupsCountryBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsCountryBatchRoute) protected commerceLookupsCountryBatchRoute: CommerceLookupsCountryBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -67,7 +67,7 @@ export class CommerceLookupsCountryBatchClient {
                    });		                    
     **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceLookupsCountryBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsCountryBatchRoute.delete(), undefined, ids);
     }
 }
 

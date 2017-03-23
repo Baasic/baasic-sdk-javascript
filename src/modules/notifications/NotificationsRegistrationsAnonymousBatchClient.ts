@@ -1,14 +1,14 @@
 /* globals module */
 /**  
  * @module notificationsRegistrationsAnonymousBatchClient  
- * @description  Notifications Registrations Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousBatchClient` uses `notificationsRegistrationsAnonymousBatchRouteDefinition`. 
+ * @description  Notifications Registrations Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousBatchClient` uses `notificationsRegistrationsAnonymousBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IQueryModel, IOptions } from 'common/contracts';
 import {
-    NotificationsRegistrationsAnonymousBatchRouteDefinition,
+    NotificationsRegistrationsAnonymousBatchRoute,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 import { IAnonymousRegistration } from 'modules/notifications/contracts';
@@ -16,12 +16,12 @@ import { IAnonymousRegistration } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsRegistrationsAnonymousBatchClient {
 
-    get routeDefinition(): NotificationsRegistrationsAnonymousBatchRouteDefinition {
-        return this.notificationsRegistrationsAnonymousBatchRouteDefinition;
+    get routeDefinition(): NotificationsRegistrationsAnonymousBatchRoute {
+        return this.notificationsRegistrationsAnonymousBatchRoute;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchRouteDefinition) protected notificationsRegistrationsAnonymousBatchRouteDefinition: NotificationsRegistrationsAnonymousBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchRoute) protected notificationsRegistrationsAnonymousBatchRoute: NotificationsRegistrationsAnonymousBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -60,7 +60,7 @@ export class NotificationsRegistrationsAnonymousBatchClient {
                    });		                            
     */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsRegistrationsAnonymousBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.notificationsRegistrationsAnonymousBatchRoute.delete(), undefined, ids);
     }
 
     /**                              

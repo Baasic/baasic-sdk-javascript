@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module articleClient  
- * @description  Articles Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleClient` uses `articleRouteDefinition`. 
+ * @description  Articles Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleClient` uses `articleRoute`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -11,7 +11,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleACLClient,
     BaasicArticleUtility,
-    ArticleRouteDefinition,
+    ArticleRoute,
     ArticleInstanceSubscriptionsClient,
     ArticleInstanceCommentsClient,
     ArticleInstanceFilesClient,
@@ -29,12 +29,12 @@ export class ArticleClient {
     private utility: Utility = new Utility();
 
     /**
-     * Provides direct access to `articleRouteDefinition`.
+     * Provides direct access to `articleRoute`.
      * @method 
      * @example articleClient.routeDefinition.get();
      **/
-    get routeDefinition(): ArticleRouteDefinition {
-        return this.articleRouteDefinition;
+    get routeDefinition(): ArticleRoute {
+        return this.articleRoute;
     }
 
     get comments(): ArticleInstanceCommentsClient {
@@ -69,7 +69,7 @@ export class ArticleClient {
         @inject(articleTypes.ArticleInstanceRatingsClient) protected articleInstanceRatingsClient: ArticleInstanceRatingsClient,
         @inject(articleTypes.ArticleInstanceTagsClient) protected articleInstanceTagsClient: ArticleInstanceTagsClient,
         @inject(articleTypes.ArticleInstanceSubscriptionsClient) protected articleInstanceSubscriptionsClient: ArticleInstanceSubscriptionsClient,
-        @inject(articleTypes.ArticleRouteDefinition) protected articleRouteDefinition: ArticleRouteDefinition,
+        @inject(articleTypes.ArticleRoute) protected articleRoute: ArticleRoute,
         @inject(articleTypes.ArticleACLClient) protected articleACLClient: ArticleACLClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -115,7 +115,7 @@ export class ArticleClient {
                     });                
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticle>> {
-        return this.apiClient.get<IArticle>(this.articleRouteDefinition.get(id, options));
+        return this.apiClient.get<IArticle>(this.articleRoute.get(id, options));
     }
 
     /**                 
@@ -143,7 +143,7 @@ export class ArticleClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the update article action has been performed; this action updates an article resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article action has been performed; this action updates an article resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('put').href; 
@@ -189,7 +189,7 @@ export class ArticleClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove article action has been performed. If the action is successfully completed, the article resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article action has been performed. If the action is successfully completed, the article resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(article); 
      * let uri = params['model'].links('delete').href; 
@@ -211,7 +211,7 @@ export class ArticleClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the archive article action has been performed. This action sets the status of an article from "published" to "archive". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the archive article action has been performed. This action sets the status of an article from "published" to "archive". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('archive').href; 
@@ -256,7 +256,7 @@ export class ArticleClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('unpublish').href; 

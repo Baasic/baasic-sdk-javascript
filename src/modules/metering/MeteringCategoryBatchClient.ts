@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module meteringCategoryBatchClient  
- * @description  Metering Category Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringCategoryBatchClient` uses `meteringCategoryBatchRouteDefinition`. 
+ * @description  Metering Category Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringCategoryBatchClient` uses `meteringCategoryBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MeteringCategoryBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringCategoryBatchRoute, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringCategoryBatchClient {
 
-    get routeDefinition(): MeteringCategoryBatchRouteDefinition {
-        return this.meteringCategoryBatchRouteDefinition;
+    get routeDefinition(): MeteringCategoryBatchRoute {
+        return this.meteringCategoryBatchRoute;
     }
 
     constructor(
-        @inject(meteringTypes.MeteringCategoryBatchRouteDefinition) protected meteringCategoryBatchRouteDefinition: MeteringCategoryBatchRouteDefinition,
+        @inject(meteringTypes.MeteringCategoryBatchRoute) protected meteringCategoryBatchRoute: MeteringCategoryBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 

@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module meteringSettingsClient  
- * @description  Metering Settings Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringSettingsClient` uses `meteringSettingsRouteDefinition`. 
+ * @description  Metering Settings Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringSettingsClient` uses `meteringSettingsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MeteringSettingsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringSettingsRoute, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringSettings } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringSettingsClient {
 
-    get routeDefinition(): MeteringSettingsRouteDefinition {
-        return this.meteringSettingsRouteDefinition;
+    get routeDefinition(): MeteringSettingsRoute {
+        return this.meteringSettingsRoute;
     }
 
     constructor(
-        @inject(meteringTypes.MeteringSettingsRouteDefinition) protected meteringSettingsRouteDefinition: MeteringSettingsRouteDefinition,
+        @inject(meteringTypes.MeteringSettingsRoute) protected meteringSettingsRoute: MeteringSettingsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -38,7 +38,7 @@ export class MeteringSettingsClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update metering action has been performed; this action updates a metering resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update metering action has been performed; this action updates a metering resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(meteringSettings); 
      * let uri = params['model'].links('put').href; 

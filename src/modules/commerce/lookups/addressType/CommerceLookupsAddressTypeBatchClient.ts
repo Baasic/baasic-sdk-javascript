@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module commerceLookupsAddressTypeBatchClient  
- * @description  Commerce Lookups Address Type Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsAddressTypesBatchClient` uses `commerceLookupsAddressTypeBatchRouteDefinition`. 
+ * @description  Commerce Lookups Address Type Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsAddressTypesBatchClient` uses `commerceLookupsAddressTypeBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsAddressTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsAddressTypeBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsAddressTypesBatchClient {
 
-    get routeDefinition(): CommerceLookupsAddressTypeBatchRouteDefinition {
-        return this.commerceLookupsAddressTypeBatchRouteDefinition;
+    get routeDefinition(): CommerceLookupsAddressTypeBatchRoute {
+        return this.commerceLookupsAddressTypeBatchRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsAddressTypeBatchRouteDefinition) protected commerceLookupsAddressTypeBatchRouteDefinition: CommerceLookupsAddressTypeBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsAddressTypeBatchRoute) protected commerceLookupsAddressTypeBatchRoute: CommerceLookupsAddressTypeBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -67,7 +67,7 @@ export class CommerceLookupsAddressTypesBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceLookupsAddressTypeBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsAddressTypeBatchRoute.delete(), undefined, ids);
     }
 }
 

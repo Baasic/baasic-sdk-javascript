@@ -1,16 +1,16 @@
 /**  
- * @module dynamicResourceRouteDefinition  
+ * @module dynamicResourceRoute  
  * @description Baasic Dynamic Resource Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Resource Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { DynamicResourceACLRouteDefinition, DynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { DynamicResourceACLRoute, DynamicSchemaRoute, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class DynamicResourceRouteDefinition extends BaseRouteDefinition {
+export class DynamicResourceRoute extends BaseRoute {
 
     public readonly findRoute: string = 'resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -24,18 +24,18 @@ export class DynamicResourceRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'resources/{schemaName}/{id}';
     
-    get acl(): DynamicResourceACLRouteDefinition {
-        return this.dynamicResourceACLRouteDefinition;
+    get acl(): DynamicResourceACLRoute {
+        return this.dynamicResourceACLRoute;
     }
 
-    get dynamicSchema(): DynamicSchemaRouteDefinition {
-        return this.dynamicSchemaRouteDefinition;
+    get dynamicSchema(): DynamicSchemaRoute {
+        return this.dynamicSchemaRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected dynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
-        @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected dynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicResourceACLRoute) protected dynamicResourceACLRoute: DynamicResourceACLRoute,
+        @inject(dynamicResourceTypes.DynamicSchemaRoute) protected dynamicSchemaRoute: DynamicSchemaRoute,
     ) { super(appOptions); }
 
     /** 				
@@ -48,7 +48,7 @@ export class DynamicResourceRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method
      * @param options query resource options object      				
-     * @example dynamicResourceRouteDefinition.find(options); 				
+     * @example dynamicResourceRoute.find(options); 				
      **/
     find(schemaName: string, options: IOptions): any {
         return super.baseFind(this.findRoute, this.utility.extend({ schemaName: schemaName }, options));
@@ -61,7 +61,7 @@ export class DynamicResourceRouteDefinition extends BaseRouteDefinition {
      * @param id Unique identifier of dynamic resources
      * @param schemaName schema name
      * @param options query resource options object
-     * @example dynamicResourceRouteDefinition.get(id, schemaName, options);               				
+     * @example dynamicResourceRoute.get(id, schemaName, options);               				
      **/
     get(id: string, schemaName: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, this.utility.extend({ schemaName: schemaName }, options));

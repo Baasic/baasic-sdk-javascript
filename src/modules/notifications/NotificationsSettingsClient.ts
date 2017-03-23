@@ -1,22 +1,22 @@
 /* globals module */
 /**  
  * @module notificationsSettingsClient  
- * @description  Notifications Settings Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSettingsClient` uses `notificationsSettingsRouteDefinition`. 
+ * @description  Notifications Settings Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSettingsClient` uses `notificationsSettingsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { NotificationsSettingsRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSettingsRoute, TYPES as notificationsTypes } from 'modules/notifications';
 
 @injectable()
 export class NotificationsSettingsClient {
 
-    get routeDefinition(): NotificationsSettingsRouteDefinition {
-        return this.notificationsSettingsRouteDefinition;
+    get routeDefinition(): NotificationsSettingsRoute {
+        return this.notificationsSettingsRoute;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSettingsRouteDefinition) protected notificationsSettingsRouteDefinition: NotificationsSettingsRouteDefinition,
+        @inject(notificationsTypes.NotificationsSettingsRoute) protected notificationsSettingsRoute: NotificationsSettingsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -38,7 +38,7 @@ export class NotificationsSettingsClient {
     }
 
     /**                      
-     * Returns a promise that is resolved once the update settings action has been performed; this action updates a settings resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update settings action has been performed; this action updates a settings resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(settings); 
      * let uri = params['model'].links('put').href; 

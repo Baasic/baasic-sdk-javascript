@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module companyRouteDefinition  
+ * @module companyRoute  
  * @description Baasic Company Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { CompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { CompanyBatchRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class CompanyRouteDefinition extends BaseRouteDefinition {
+export class CompanyRoute extends BaseRoute {
 
     public readonly findRoute: string = 'lookups/companies/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,13 +23,13 @@ export class CompanyRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'lookups/companies/{id}';
 
-    get batch(): CompanyBatchRouteDefinition {
-        return this.companyBatchRouteDefinition;
+    get batch(): CompanyBatchRoute {
+        return this.companyBatchRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.CompanyBatchRouteDefinition) protected companyBatchRouteDefinition: CompanyBatchRouteDefinition
+        @inject(userProfileTypes.CompanyBatchRoute) protected companyBatchRoute: CompanyBatchRoute
     ) { super(appOptions); }
 
     /**                 
@@ -41,7 +41,7 @@ export class CompanyRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.       
-     * @example companyRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example companyRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -50,7 +50,7 @@ export class CompanyRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example companyRouteDefinition.create();                              
+     * @example companyRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -61,7 +61,7 @@ export class CompanyRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Company id which uniquely identifies resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example companyRouteDefinition.get();                               
+     * @example companyRoute.get();                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);

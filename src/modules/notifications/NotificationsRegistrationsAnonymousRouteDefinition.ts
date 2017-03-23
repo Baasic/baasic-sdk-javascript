@@ -1,18 +1,18 @@
 /* globals module */
 /**  
- * @module notificationsRegistrationsAnonymousRouteDefinition  
+ * @module notificationsRegistrationsAnonymousRoute  
  * @description Baasic Notifications Registrations Anonymous Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Anonymous Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { NotificationsRegistrationsAnonymousBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsRegistrationsAnonymousBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousRegistration } from 'modules/notifications/contracts';
 
 @injectable()
-export class NotificationsRegistrationsAnonymousRouteDefinition extends BaseRouteDefinition {
+export class NotificationsRegistrationsAnonymousRoute extends BaseRoute {
 
     public readonly createRoute: string = 'notifications/registrations/anonymous';
 
@@ -24,19 +24,19 @@ export class NotificationsRegistrationsAnonymousRouteDefinition extends BaseRout
 
     public readonly deleteRoute: string = 'notifications/registrations/anonymous/{id}';
 
-    get batch(): NotificationsRegistrationsAnonymousBatchRouteDefinition {
-        return this.notificationsRegistrationsAnonymousBatchRouteDefinition;
+    get batch(): NotificationsRegistrationsAnonymousBatchRoute {
+        return this.notificationsRegistrationsAnonymousBatchRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchRouteDefinition) protected notificationsRegistrationsAnonymousBatchRouteDefinition: NotificationsRegistrationsAnonymousBatchRouteDefinition
+        @inject(notificationsTypes.NotificationsRegistrationsAnonymousBatchRoute) protected notificationsRegistrationsAnonymousBatchRoute: NotificationsRegistrationsAnonymousBatchRoute
     ) { super(appOptions); }
 
     /**                          
      * Parses create anonymous registrations route; this route does not expose any additional options                          
      * @method                        
-     * @example notificationsRegistrationsAnonymousRouteDefinition.create();                          
+     * @example notificationsRegistrationsAnonymousRoute.create();                          
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -52,7 +52,7 @@ export class NotificationsRegistrationsAnonymousRouteDefinition extends BaseRout
      * - `embed` - Comma separated list of resources to be contained within the current representation.                          
      * @method
      * @param options Query resource options object.                                 
-     * @example notificationsRegistrationsAnonymousRouteDefinition.find({     
+     * @example notificationsRegistrationsAnonymousRoute.find({     
                    searchQuery: '<search-phrase>',     
                    providers: '<provider-name>,<provider-name>' 
                });                          
@@ -66,7 +66,7 @@ export class NotificationsRegistrationsAnonymousRouteDefinition extends BaseRout
      * @method
      * @param id The registration identifier which uniquely identifies AnonymousRegistration resource that needs to be retrieved.
      * @param options Query resource options object.                       
-     * @example notificationsRegistrationsAnonymousRouteDefinition.get({ id: '<registration-id>' });                          
+     * @example notificationsRegistrationsAnonymousRoute.get({ id: '<registration-id>' });                          
      */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -76,7 +76,7 @@ export class NotificationsRegistrationsAnonymousRouteDefinition extends BaseRout
      * Parses update anonymous registrations route; this route should be expanded with the Id of anonymous registrations resource.                          
      * @method
      * @param data An object used to update specified AnonymousRegistration resource.               
-     * @example notificationsRegistrationsAnonymousRouteDefinition.update(data);                          
+     * @example notificationsRegistrationsAnonymousRoute.update(data);                          
      */
     update(data: IAnonymousRegistration): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -86,7 +86,7 @@ export class NotificationsRegistrationsAnonymousRouteDefinition extends BaseRout
      * Parses delete anonymous registrations route; this route should be expanded with the Id of anonymous registrations resource.                          
      * @method
      * @param data An object used to delete specified AnonymousRegistration resource.               
-     * @example notificationsRegistrationsAnonymousRouteDefinition.delete(data);                          
+     * @example notificationsRegistrationsAnonymousRoute.delete(data);                          
      */
     delete(data: IAnonymousRegistration): any {
         return super.baseDelete(this.deleteRoute, data);

@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module commercePaymentTransactionRouteDefinition  
+ * @module commercePaymentTransactionRoute  
  * @description Baasic Commerce PaymentTransaction Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce PaymentTransaction Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefinition {
+export class CommercePaymentTransactionRoute extends BaseRoute {
 
     public readonly findRoute: string = 'commerce/payment-transactions/{?customerId,searchQuery,invoiceStatusId,subscriptionId,paymentMethodId,firstName,lastName,transactionStatuses,page,rpp,sort,embed,fields}';
 
@@ -41,7 +41,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example commercePaymentTransactionRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commercePaymentTransactionRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -50,7 +50,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commercePaymentTransactionRouteDefinition.get(id, options);                               
+     * @example commercePaymentTransactionRoute.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -59,7 +59,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses create route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commercePaymentTransactionRouteDefinition.create();                               
+     * @example commercePaymentTransactionRoute.create();                               
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -68,7 +68,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses update route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commercePaymentTransactionRouteDefinition.update(data);                               
+     * @example commercePaymentTransactionRoute.update(data);                               
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -77,7 +77,7 @@ export class CommercePaymentTransactionRouteDefinition extends BaseRouteDefiniti
     /**                 
      * Parses delete route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commercePaymentTransactionRouteDefinition.delete(data);                               
+     * @example commercePaymentTransactionRoute.delete(data);                               
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

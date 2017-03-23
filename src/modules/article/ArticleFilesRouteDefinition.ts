@@ -1,22 +1,22 @@
 /* globals module */
 /**  
- * @module articleFilesRouteDefinition  
+ * @module articleFilesRoute  
  * @description Baasic Article Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    ArticleFilesBatchRouteDefinition,
-    ArticleFilesStreamsRouteDefinition,
+    ArticleFilesBatchRoute,
+    ArticleFilesStreamsRoute,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
-export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
+export class ArticleFilesRoute extends BaseRoute {
 
     public readonly findRoute: string = 'article-files/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -28,17 +28,17 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
 
     public readonly updateRoute: string = 'article-files/{id}';
     
-    get streams(): ArticleFilesStreamsRouteDefinition {
-        return this.articleFilesStreamsRouteDefinition;
+    get streams(): ArticleFilesStreamsRoute {
+        return this.articleFilesStreamsRoute;
     }
 
-    get batch(): ArticleFilesBatchRouteDefinition {
-        return this.articleFilesBatchRouteDefinition;
+    get batch(): ArticleFilesBatchRoute {
+        return this.articleFilesBatchRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleFilesStreamsRouteDefinition) protected articleFilesStreamsRouteDefinition: ArticleFilesStreamsRouteDefinition,
-        @inject(articleTypes.ArticleFilesBatchRouteDefinition) protected articleFilesBatchRouteDefinition: ArticleFilesBatchRouteDefinition,
+        @inject(articleTypes.ArticleFilesStreamsRoute) protected articleFilesStreamsRoute: ArticleFilesStreamsRoute,
+        @inject(articleTypes.ArticleFilesBatchRoute) protected articleFilesBatchRoute: ArticleFilesBatchRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -51,7 +51,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example articleFilesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example articleFilesRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -62,7 +62,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param id Article file id which uniquely identifies article resource that needs to be retrieved.
      * @param options Options object that contains embed data.
-     * @example articleFilesRouteDefinition.get({id: '<file-id>'});
+     * @example articleFilesRoute.get({id: '<file-id>'});
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -71,7 +71,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
     /**
      * Parses link route; this URI template does not expose any additional options.
      * @method  
-     * @example articleFilesRouteDefinition.link();
+     * @example articleFilesRoute.link();
      **/
     link(): any {
         return super.baseCreate(this.linkRoute, {});
@@ -80,7 +80,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
     /**
      * Parses unlink route; this URI template does not expose any additional options.
      * @method  
-     * @example articleFilesRouteDefinition.unlink(data);
+     * @example articleFilesRoute.unlink(data);
      **/
     unlink(data: IArticleFile, options: Object): any {
         return super.baseDelete(this.unlinkRoute, data, options, 'unlink');
@@ -89,7 +89,7 @@ export class ArticleFilesRouteDefinition extends BaseRouteDefinition {
     /**
      * Parses update route; this URI template does not expose any additional options.
      * @method  
-     * @example articleFilesRouteDefinition.update(data);
+     * @example articleFilesRoute.update(data);
      **/
     update(data: any): any {
         if (!this.utility.isObject(data)) {

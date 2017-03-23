@@ -7,14 +7,14 @@
 import { injectable, inject } from "inversify";
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { UserProfileAvatarRouteDefinition, UserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserProfileAvatarRoute, UserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';
 
 @injectable()
 export class UserProfileAvatarClient {
 
-    get routeDefinition(): UserProfileAvatarRouteDefinition {
-        return this.userProfileAvatarRouteDefinition;
+    get routeDefinition(): UserProfileAvatarRoute {
+        return this.userProfileAvatarRoute;
     }
 
     get streams(): UserProfileAvatarStreamsClient {
@@ -22,7 +22,7 @@ export class UserProfileAvatarClient {
     }
 
     constructor(
-        @inject(userProfileTypes.UserProfileAvatarRouteDefinition) protected userProfileAvatarRouteDefinition: UserProfileAvatarRouteDefinition,
+        @inject(userProfileTypes.UserProfileAvatarRoute) protected userProfileAvatarRoute: UserProfileAvatarRoute,
         @inject(userProfileTypes.UserProfileAvatarStreamsClient) protected userProfileAvatarStreamsClient: UserProfileAvatarStreamsClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -42,11 +42,11 @@ export class UserProfileAvatarClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IProfileAvatar>> {
-        return this.apiClient.get<IProfileAvatar>(this.userProfileAvatarRouteDefinition.get(id, options));
+        return this.apiClient.get<IProfileAvatar>(this.userProfileAvatarRoute.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileAvatarRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileAvatarRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(fileEntry); 
      * let uri = params['model'].links('put').href; 
@@ -65,7 +65,7 @@ export class UserProfileAvatarClient {
                                 // perform error handling here 
     **/
     update(data: IProfileAvatar): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.userProfileAvatarRouteDefinition.update(data), data);
+        return this.apiClient.put<void>(this.userProfileAvatarRoute.update(data), data);
     }
 
     /**                 
@@ -87,7 +87,7 @@ export class UserProfileAvatarClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply userProfileAvatarRouteDefinition route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply userProfileAvatarRoute route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(fileEntry); 
      * let uri = params['model'].links('unlink').href; 
@@ -97,7 +97,7 @@ export class UserProfileAvatarClient {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the unlink action has been performed.                          
      * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
-                    userProfileAvatarRouteDefinition.remove(fileEntry)
+                    userProfileAvatarRoute.remove(fileEntry)
                         .then(function (data) {  
                             // perform success action here 
                         },
@@ -106,7 +106,7 @@ export class UserProfileAvatarClient {
                         });                
      **/
     unlink(data: IProfileAvatar, options?: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.userProfileAvatarRouteDefinition.unlink(data, options));
+        return this.apiClient.delete(this.userProfileAvatarRoute.unlink(data, options));
     }
 }
 

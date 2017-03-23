@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { FilesBatchRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { FilesBatchRoute, TYPES as filesTypes } from 'modules/file';
 import { IFileEntry } from 'modules/file/contracts';
 
 @injectable()
 export class FilesBatchClient {
 
-    get routeDefinition(): FilesBatchRouteDefinition {
-        return this.filesBatchRouteDefinition;
+    get routeDefinition(): FilesBatchRoute {
+        return this.filesBatchRoute;
     }
 
     constructor(
-        @inject(filesTypes.FilesBatchRouteDefinition) protected filesBatchRouteDefinition: FilesBatchRouteDefinition,
+        @inject(filesTypes.FilesBatchRoute) protected filesBatchRoute: FilesBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -79,7 +79,7 @@ export class FilesBatchClient {
                         });		                    
      **/
     unlink(data: Object[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.filesBatchRouteDefinition.unlink(), undefined, data);
+        return this.apiClient.delete<void>(this.filesBatchRoute.unlink(), undefined, data);
     }
 }
 

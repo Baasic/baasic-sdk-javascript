@@ -1,30 +1,30 @@
 /* globals module */
 /**  
  * @module articleRatingsClient  
- * @description  Article Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `articleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `articleService` functions allow management between article and article rating. In order to obtain needed routes `articleRatingsClient` uses `articleRatingsRouteDefinition`. 
+ * @description  Article Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `articleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `articleService` functions allow management between article and article rating. In order to obtain needed routes `articleRatingsClient` uses `articleRatingsRoute`. 
 */
 
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleRatingsRoute, TYPES as articleTypes } from 'modules/article';
 import { IRating } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleRatingsClient {
 
     /**                 
-     * Provides direct access to `articleRatingsRouteDefinition`.                
+     * Provides direct access to `articleRatingsRoute`.                
      * @method                        
      * @example articleRatingsClient.routeDefinition.get(id);                 
      **/
-    get routeDefinition(): ArticleRatingsRouteDefinition {
-        return this.articleRatingsRouteDefinition;
+    get routeDefinition(): ArticleRatingsRoute {
+        return this.articleRatingsRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleRatingsRouteDefinition) protected articleRatingsRouteDefinition: ArticleRatingsRouteDefinition,
+        @inject(articleTypes.ArticleRatingsRoute) protected articleRatingsRoute: ArticleRatingsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -92,7 +92,7 @@ export class ArticleRatingsClient {
                 });                     
      **/
     findByUser(username: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.apiClient.get<IQueryModel<IRating>>(this.articleRatingsRouteDefinition.findByUser(username, options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.articleRatingsRoute.findByUser(username, options));
     }
 
     /**                  
@@ -110,11 +110,11 @@ export class ArticleRatingsClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
-        return this.apiClient.get<IRating>(this.articleRatingsRouteDefinition.get(id, options));
+        return this.apiClient.get<IRating>(this.articleRatingsRoute.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update article rating action has been performed; this action updates an article rating. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article rating action has been performed; this action updates an article rating. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleRating); 
      * let uri = params['model'].links('put').href; 
@@ -137,7 +137,7 @@ export class ArticleRatingsClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove article rating action has been performed. If the action is successfully completed, the article rating resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article rating action has been performed. If the action is successfully completed, the article rating resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleRating); 
      * let uri = params['model'].links('delete').href; 

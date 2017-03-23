@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module commerceLookupsCountryBatchRouteDefinition  
+ * @module commerceLookupsCountryBatchRoute  
  * @description Baasic Commerce Lookups Country Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class CommerceLookupsCountryBatchRouteDefinition extends BaseRouteDefinition {
+export class CommerceLookupsCountryBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'commerce/lookups/countries/batch';
 
@@ -25,7 +25,7 @@ export class CommerceLookupsCountryBatchRouteDefinition extends BaseRouteDefinit
     /**                      
      * Parses create commerce country batch route; this route does not expose any additional options                      
      * @method                   
-     * @example commerceLookupsCountryRouteDefinition.create();                      
+     * @example commerceLookupsCountryRoute.create();                      
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -34,7 +34,7 @@ export class CommerceLookupsCountryBatchRouteDefinition extends BaseRouteDefinit
     /**                      
      * Parses remove commerce country batch route; this route does not expose any additional options                      
      * @method                  
-     * @example commerceLookupsCountryRouteDefinition.update();                      
+     * @example commerceLookupsCountryRoute.update();                      
      */
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -43,7 +43,7 @@ export class CommerceLookupsCountryBatchRouteDefinition extends BaseRouteDefinit
     /**                      
      * Parses remove commerce country batch route; this route does not expose any additional options                      
      * @method                  
-     * @example commerceLookupsCountryRouteDefinition.remove();                      
+     * @example commerceLookupsCountryRoute.remove();                      
      */
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module articleInstanceCommentRepliesRouteDefinition  
+ * @module articleInstanceCommentRepliesRoute  
  * @description Baasic Article Instance Comment Replies Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Instance Comment Replies Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticle, IArticleCommentReply } from 'modules/article/contracts';
 
 @injectable()
-export class ArticleInstanceCommentRepliesRouteDefinition extends BaseRouteDefinition {
+export class ArticleInstanceCommentRepliesRoute extends BaseRoute {
 
     public readonly findRoute: string = 'articles/{articleId}/comments/{commentId}/replies/{?searchQuery,statuses,page,rpp,sort,embed,fields}';
 
@@ -58,7 +58,7 @@ export class ArticleInstanceCommentRepliesRouteDefinition extends BaseRouteDefin
      * @param articleId Article id which uniquely identifies article whose comment reply resources need to be retrieved.
      * @param commentId Comment id which uniquely identifies comment whose reply resources need to be retrieved.
      * @param options Query resource options.
-     * @example articleCommentRepliesRouteDefinition.find({ searchQuery: '<search-phrase>' });
+     * @example articleCommentRepliesRoute.find({ searchQuery: '<search-phrase>' });
      **/
     find(articleId: string, commentId: string, options?: IOptions): any {
         let params = this.modelMapper.findParams(options);
@@ -72,7 +72,7 @@ export class ArticleInstanceCommentRepliesRouteDefinition extends BaseRouteDefin
      * - `id` - Id which uniquely identifies article comment reply resource that needs to be retrieved.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method 
-     * @example articleCommentRepliesRouteDefinition.get({ id: '<comment-reply-id>' });
+     * @example articleCommentRepliesRoute.get({ id: '<comment-reply-id>' });
      **/
     get(articleId: string, commentId: string, replyId: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
@@ -84,7 +84,7 @@ export class ArticleInstanceCommentRepliesRouteDefinition extends BaseRouteDefin
     /**
      * Parses create article comment reply route; this URI template does not support any additional items.
      * @method
-     * @example articleCommentRepliesRouteDefinition.create(data);
+     * @example articleCommentRepliesRoute.create(data);
      **/
     create(articleId: string, data: IArticleCommentReply): any {
         let params = this.utility.extend({}, data);

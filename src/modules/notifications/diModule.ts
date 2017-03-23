@@ -2,95 +2,95 @@ import { ContainerModule } from "inversify";
 import {
     NotificationsClient,
     NotificationsPublishBatchClient,
-    NotificationsPublishBatchRouteDefinition,
-    NotificationsPublishRouteDefinition,
+    NotificationsPublishBatchRoute,
+    NotificationsPublishRoute,
     NotificationsPublishClient,
     NotificationsRegistrationsAnonymousBatchClient,
-    NotificationsRegistrationsAnonymousBatchRouteDefinition,
+    NotificationsRegistrationsAnonymousBatchRoute,
     NotificationsRegistrationsAnonymousClient,
-    NotificationsRegistrationsAnonymousRouteDefinition,
-    NotificationsRegistrationsRouteDefinition,
-    NotificationsRegistrationsUsersBatchRouteDefinition,
+    NotificationsRegistrationsAnonymousRoute,
+    NotificationsRegistrationsRoute,
+    NotificationsRegistrationsUsersBatchRoute,
     NotificationsRegistrationsUsersBatchClient,
     NotificationsRegistrationsUsersClient,
-    NotificationsRegistrationsUsersRouteDefinition,
-    NotificationsRouteDefinition,
+    NotificationsRegistrationsUsersRoute,
+    NotificationsRoute,
     NotificationsRegistrationsClient,
     NotificationsSubscriptionsAnonymousBatchClient,
-    NotificationsSubscriptionsAnonymousBatchRouteDefinition,
-    NotificationsSubscriptionsAnonymousRouteDefinition,
+    NotificationsSubscriptionsAnonymousBatchRoute,
+    NotificationsSubscriptionsAnonymousRoute,
     NotificationsSubscriptionsAnonymousClient,
     NotificationsSubscriptionsClient,
-    NotificationsSubscriptionsRouteDefinition,
+    NotificationsSubscriptionsRoute,
     NotificationsSubscriptionsUsersBatchClient,
-    NotificationsSubscriptionsUsersBatchRouteDefinition,
+    NotificationsSubscriptionsUsersBatchRoute,
     NotificationsSubscriptionsUsersClient,
-    NotificationsSubscriptionsUsersRouteDefinition,
-    NotificationsSettingsRouteDefinition,
+    NotificationsSubscriptionsUsersRoute,
+    NotificationsSettingsRoute,
     NotificationsSettingsClient
 } from 'modules/notifications';
 
 const TYPES = {
     NotificationsClient: Symbol("NotificationsClient"),
     NotificationsPublishBatchClient: Symbol("NotificationsPublishBatchClient"),
-    NotificationsPublishBatchRouteDefinition: Symbol("NotificationsPublishBatchRouteDefinition"),
-    NotificationsPublishRouteDefinition: Symbol("NotificationsPublishRouteDefinition"),
+    NotificationsPublishBatchRoute: Symbol("NotificationsPublishBatchRoute"),
+    NotificationsPublishRoute: Symbol("NotificationsPublishRoute"),
     NotificationsPublishClient: Symbol("NotificationsPublishClient"),
     NotificationsRegistrationsAnonymousBatchClient: Symbol("NotificationsRegistrationsAnonymousBatchClient"),
-    NotificationsRegistrationsAnonymousBatchRouteDefinition: Symbol("NotificationsRegistrationsAnonymousBatchRouteDefinition"),
+    NotificationsRegistrationsAnonymousBatchRoute: Symbol("NotificationsRegistrationsAnonymousBatchRoute"),
     NotificationsRegistrationsAnonymousClient: Symbol("BasicNotificationsRegistrationsAnonymousClient"),
-    NotificationsRegistrationsAnonymousRouteDefinition: Symbol("NotificationsRegistrationsAnonymousRouteDefinition"),
-    NotificationsRegistrationsRouteDefinition: Symbol("NotificationsRegistrationsRouteDefinition"),
-    NotificationsRegistrationsUsersBatchRouteDefinition: Symbol("NotificationsRegistrationsUsersBatchRouteDefinition"),
+    NotificationsRegistrationsAnonymousRoute: Symbol("NotificationsRegistrationsAnonymousRoute"),
+    NotificationsRegistrationsRoute: Symbol("NotificationsRegistrationsRoute"),
+    NotificationsRegistrationsUsersBatchRoute: Symbol("NotificationsRegistrationsUsersBatchRoute"),
     NotificationsRegistrationsUsersBatchClient: Symbol("NotificationsRegistrationsUsersBatchClient"),
     NotificationsRegistrationsUsersClient: Symbol("NotificationsRegistrationsUsersClient"),
-    NotificationsRegistrationsUsersRouteDefinition: Symbol("NotificationsRegistrationsUsersRouteDefinition"),
-    NotificationsRouteDefinition: Symbol("NotificationsRouteDefinition"),
+    NotificationsRegistrationsUsersRoute: Symbol("NotificationsRegistrationsUsersRoute"),
+    NotificationsRoute: Symbol("NotificationsRoute"),
     NotificationsRegistrationsClient: Symbol("NotificationsRegistrationsClient"),
     NotificationsSubscriptionsClient: Symbol("NotificationsSubscriptionsClient"),
-    NotificationsSubscriptionsRouteDefinition: Symbol("NotificationsSubscriptionsRouteDefinition"),
+    NotificationsSubscriptionsRoute: Symbol("NotificationsSubscriptionsRoute"),
     NotificationsSubscriptionsAnonymousBatchClient: Symbol("NotificationsSubscriptionsAnonymousBatchClient"),
-    NotificationsSubscriptionsAnonymousBatchRouteDefinition: Symbol("NotificationsSubscriptionsAnonymousBatchRouteDefinition"),
-    NotificationsSubscriptionsAnonymousRouteDefinition: Symbol("NotificationsSubscriptionsAnonymousRouteDefinition"),
+    NotificationsSubscriptionsAnonymousBatchRoute: Symbol("NotificationsSubscriptionsAnonymousBatchRoute"),
+    NotificationsSubscriptionsAnonymousRoute: Symbol("NotificationsSubscriptionsAnonymousRoute"),
     NotificationsSubscriptionsAnonymousClient: Symbol("NotificationsSubscriptionsAnonymousClient"),
-    NotificationsSubscriptionsUsersRouteDefinition: Symbol("BasicNotificationsSubscriptionsRouteDefinition"),
+    NotificationsSubscriptionsUsersRoute: Symbol("BasicNotificationsSubscriptionsRoute"),
     NotificationsSubscriptionsUsersBatchClient: Symbol("NotificationsSubscriptionsUsersBatchClient"),
-    NotificationsSubscriptionsUsersBatchRouteDefinition: Symbol("NotificationsSubscriptionsUsersBatchRouteDefinition"),
+    NotificationsSubscriptionsUsersBatchRoute: Symbol("NotificationsSubscriptionsUsersBatchRoute"),
     NotificationsSubscriptionsUsersClient: Symbol("NotificationsSubscriptionsUsersClient"),
-    NotificationsSettingsRouteDefinition: Symbol("NotificationsSettingsRouteDefinition"),
+    NotificationsSettingsRoute: Symbol("NotificationsSettingsRoute"),
     NotificationsSettingsClient: Symbol("NotificationsSettingsClient")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<NotificationsPublishBatchRouteDefinition>(TYPES.NotificationsPublishBatchRouteDefinition).to(NotificationsPublishBatchRouteDefinition);
+    bind<NotificationsPublishBatchRoute>(TYPES.NotificationsPublishBatchRoute).to(NotificationsPublishBatchRoute);
     bind<NotificationsPublishBatchClient>(TYPES.NotificationsPublishBatchClient).to(NotificationsPublishBatchClient);
-    bind<NotificationsPublishRouteDefinition>(TYPES.NotificationsPublishRouteDefinition).to(NotificationsPublishRouteDefinition);
+    bind<NotificationsPublishRoute>(TYPES.NotificationsPublishRoute).to(NotificationsPublishRoute);
     bind<NotificationsPublishClient>(TYPES.NotificationsPublishClient).to(NotificationsPublishClient);
-    bind<NotificationsSubscriptionsUsersBatchRouteDefinition>(TYPES.NotificationsSubscriptionsUsersBatchRouteDefinition).to(NotificationsSubscriptionsUsersBatchRouteDefinition);
+    bind<NotificationsSubscriptionsUsersBatchRoute>(TYPES.NotificationsSubscriptionsUsersBatchRoute).to(NotificationsSubscriptionsUsersBatchRoute);
     bind<NotificationsSubscriptionsUsersBatchClient>(TYPES.NotificationsSubscriptionsUsersBatchClient).to(NotificationsSubscriptionsUsersBatchClient);
-    bind<NotificationsSubscriptionsUsersRouteDefinition>(TYPES.NotificationsSubscriptionsUsersRouteDefinition).to(NotificationsSubscriptionsUsersRouteDefinition);
+    bind<NotificationsSubscriptionsUsersRoute>(TYPES.NotificationsSubscriptionsUsersRoute).to(NotificationsSubscriptionsUsersRoute);
     bind<NotificationsSubscriptionsUsersClient>(TYPES.NotificationsSubscriptionsUsersClient).to(NotificationsSubscriptionsUsersClient);
-    bind<NotificationsSubscriptionsAnonymousRouteDefinition>(TYPES.NotificationsSubscriptionsAnonymousRouteDefinition).to(NotificationsSubscriptionsAnonymousRouteDefinition);
-    bind<NotificationsSubscriptionsAnonymousBatchRouteDefinition>(TYPES.NotificationsSubscriptionsAnonymousBatchRouteDefinition).to(NotificationsSubscriptionsAnonymousBatchRouteDefinition);
+    bind<NotificationsSubscriptionsAnonymousRoute>(TYPES.NotificationsSubscriptionsAnonymousRoute).to(NotificationsSubscriptionsAnonymousRoute);
+    bind<NotificationsSubscriptionsAnonymousBatchRoute>(TYPES.NotificationsSubscriptionsAnonymousBatchRoute).to(NotificationsSubscriptionsAnonymousBatchRoute);
     bind<NotificationsSubscriptionsAnonymousBatchClient>(TYPES.NotificationsSubscriptionsAnonymousBatchClient).to(NotificationsSubscriptionsAnonymousBatchClient);
     bind<NotificationsSubscriptionsAnonymousClient>(TYPES.NotificationsSubscriptionsAnonymousClient).to(NotificationsSubscriptionsAnonymousClient);
-    bind<NotificationsSubscriptionsRouteDefinition>(TYPES.NotificationsSubscriptionsRouteDefinition).to(NotificationsSubscriptionsRouteDefinition);
+    bind<NotificationsSubscriptionsRoute>(TYPES.NotificationsSubscriptionsRoute).to(NotificationsSubscriptionsRoute);
     bind<NotificationsSubscriptionsClient>(TYPES.NotificationsSubscriptionsClient).to(NotificationsSubscriptionsClient);
-    bind<NotificationsRegistrationsUsersBatchRouteDefinition>(TYPES.NotificationsRegistrationsUsersBatchRouteDefinition).to(NotificationsRegistrationsUsersBatchRouteDefinition);
+    bind<NotificationsRegistrationsUsersBatchRoute>(TYPES.NotificationsRegistrationsUsersBatchRoute).to(NotificationsRegistrationsUsersBatchRoute);
     bind<NotificationsRegistrationsUsersBatchClient>(TYPES.NotificationsRegistrationsUsersBatchClient).to(NotificationsRegistrationsUsersBatchClient);
-    bind<NotificationsRegistrationsUsersRouteDefinition>(TYPES.NotificationsRegistrationsUsersRouteDefinition).to(NotificationsRegistrationsUsersRouteDefinition);
+    bind<NotificationsRegistrationsUsersRoute>(TYPES.NotificationsRegistrationsUsersRoute).to(NotificationsRegistrationsUsersRoute);
     bind<NotificationsRegistrationsUsersClient>(TYPES.NotificationsRegistrationsUsersClient).to(NotificationsRegistrationsUsersClient);
-    bind<NotificationsRegistrationsAnonymousBatchRouteDefinition>(TYPES.NotificationsRegistrationsAnonymousBatchRouteDefinition).to(NotificationsRegistrationsAnonymousBatchRouteDefinition);
+    bind<NotificationsRegistrationsAnonymousBatchRoute>(TYPES.NotificationsRegistrationsAnonymousBatchRoute).to(NotificationsRegistrationsAnonymousBatchRoute);
     bind<NotificationsRegistrationsAnonymousBatchClient>(TYPES.NotificationsRegistrationsAnonymousBatchClient).to(NotificationsRegistrationsAnonymousBatchClient);
-    bind<NotificationsRegistrationsAnonymousRouteDefinition>(TYPES.NotificationsRegistrationsAnonymousRouteDefinition).to(NotificationsRegistrationsAnonymousRouteDefinition);
+    bind<NotificationsRegistrationsAnonymousRoute>(TYPES.NotificationsRegistrationsAnonymousRoute).to(NotificationsRegistrationsAnonymousRoute);
     bind<NotificationsRegistrationsAnonymousClient>(TYPES.NotificationsRegistrationsAnonymousClient).to(NotificationsRegistrationsAnonymousClient);
-    bind<NotificationsRegistrationsRouteDefinition>(TYPES.NotificationsRegistrationsRouteDefinition).to(NotificationsRegistrationsRouteDefinition);
+    bind<NotificationsRegistrationsRoute>(TYPES.NotificationsRegistrationsRoute).to(NotificationsRegistrationsRoute);
     bind<NotificationsRegistrationsClient>(TYPES.NotificationsRegistrationsClient).to(NotificationsRegistrationsClient);
-    bind<NotificationsSettingsRouteDefinition>(TYPES.NotificationsSettingsRouteDefinition).to(NotificationsSettingsRouteDefinition);
+    bind<NotificationsSettingsRoute>(TYPES.NotificationsSettingsRoute).to(NotificationsSettingsRoute);
     bind<NotificationsSettingsClient>(TYPES.NotificationsSettingsClient).to(NotificationsSettingsClient);
-    bind<NotificationsRouteDefinition>(TYPES.NotificationsRouteDefinition).to(NotificationsRouteDefinition);
+    bind<NotificationsRoute>(TYPES.NotificationsRoute).to(NotificationsRoute);
     bind<NotificationsClient>(TYPES.NotificationsClient).to(NotificationsClient);
 });
 

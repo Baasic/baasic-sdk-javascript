@@ -1,15 +1,15 @@
 /* globals module */
 /**  
- * @module userProfileACLRouteDefinition  
+ * @module userProfileACLRoute  
  * @description Baasic User ACL Profile Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile ACL Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IACLOptions, IACLPolicy } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class UserProfileACLRouteDefinition extends BaseRouteDefinition {
+export class UserProfileACLRoute extends BaseRoute {
 
     public readonly getRoute: string = 'profiles/{id}/acl/{?fields}';
 
@@ -25,7 +25,7 @@ export class UserProfileACLRouteDefinition extends BaseRouteDefinition {
      * Parses get user profile acl route; this URI template should be expanded with the Id of the user profile resource.										
      * @method 
      * @param options Query resource options object.     					
-     * @example userProfileACLRouteDefinition.get({id: '<profile-id>'}); 					
+     * @example userProfileACLRoute.get({id: '<profile-id>'}); 					
      **/
     get(options?: IACLOptions): any {
         let params = this.utility.extend({}, options);
@@ -36,7 +36,7 @@ export class UserProfileACLRouteDefinition extends BaseRouteDefinition {
      * Parses update user profile acl route; this URI template should be expanded with the Id of the user profile.										
      * @method
      * @param options ACL options object.    					
-     * @example userProfileACLRouteDefinition.update({id: '<profile-id>'}); 					
+     * @example userProfileACLRoute.update({id: '<profile-id>'}); 					
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
@@ -63,7 +63,7 @@ export class UserProfileACLRouteDefinition extends BaseRouteDefinition {
      *               "Update" 
      * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
      * @param data ACL policy object used to delete specified ACL policy resource.      					
-     * @example userProfileACLRouteDefinition.deleteByUser({ id: '<profile-id>', accessAction: '<access-action>', user: '<username>' }); 					
+     * @example userProfileACLRoute.deleteByUser({ id: '<profile-id>', accessAction: '<access-action>', user: '<username>' }); 					
      **/
     deleteByUser(profileId: string, action: string, user: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);
@@ -88,7 +88,7 @@ export class UserProfileACLRouteDefinition extends BaseRouteDefinition {
      *               "Update"
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
      * @param data  ACL policy object used to delete specified ACL policy resource.      					
-     * @example userProfileACLRouteDefinition.deleteByRole.expand({ id: '<profile-id>', accessAction: '<access-action>', role: '<role-name>' }); 					
+     * @example userProfileACLRoute.deleteByRole.expand({ id: '<profile-id>', accessAction: '<access-action>', role: '<role-name>' }); 					
      **/
     deleteByRole(profileId: string, action: string, role: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);

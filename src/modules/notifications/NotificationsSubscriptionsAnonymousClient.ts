@@ -1,21 +1,21 @@
 /* globals module */
 /**  
  * @module notificationsSubscriptionsAnonymousClient  
- * @description  Notifications Subscriptions Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousClient` uses `notificationsSubscriptionsAnonymousRouteDefinition`. 
+ * @description  Notifications Subscriptions Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousClient` uses `notificationsSubscriptionsAnonymousRoute`. 
  */
 
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { NotificationsSubscriptionsAnonymousRouteDefinition, NotificationsSubscriptionsAnonymousBatchClient, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSubscriptionsAnonymousRoute, NotificationsSubscriptionsAnonymousBatchClient, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsSubscriptionsAnonymousClient {
 
-    get routeDefinition(): NotificationsSubscriptionsAnonymousRouteDefinition {
-        return this.notificationsSubscriptionsAnonymousRouteDefinition;
+    get routeDefinition(): NotificationsSubscriptionsAnonymousRoute {
+        return this.notificationsSubscriptionsAnonymousRoute;
     }
 
     get batch(): NotificationsSubscriptionsAnonymousBatchClient {
@@ -23,7 +23,7 @@ export class NotificationsSubscriptionsAnonymousClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected notificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRoute) protected notificationsSubscriptionsAnonymousRoute: NotificationsSubscriptionsAnonymousRoute,
         @inject(notificationsTypes.NotificationsSubscriptionsAnonymousBatchClient) protected notificationsSubscriptionsAnonymousBatchClient: NotificationsSubscriptionsAnonymousBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -71,7 +71,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAnonymousSubscription>>> {
-        return this.apiClient.get<IQueryModel<IAnonymousSubscription>>(this.notificationsSubscriptionsAnonymousRouteDefinition.find())
+        return this.apiClient.get<IQueryModel<IAnonymousSubscription>>(this.notificationsSubscriptionsAnonymousRoute.find())
     }
 
     /**                          
@@ -89,11 +89,11 @@ export class NotificationsSubscriptionsAnonymousClient {
                     });                         
      */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAnonymousSubscription>> {
-        return this.apiClient.get<IAnonymousSubscription>(this.notificationsSubscriptionsAnonymousRouteDefinition.get(id, options));
+        return this.apiClient.get<IAnonymousSubscription>(this.notificationsSubscriptionsAnonymousRoute.get(id, options));
     }
 
     /**                          
-     * Returns a promise that is resolved once the remove anonymous subscription action has been performed. This action will remove a anonymous subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove anonymous subscription action has been performed. This action will remove a anonymous subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsAnonymousRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(subscription); 
      * var uri = params['model'].links('delete').href; 
@@ -115,7 +115,7 @@ export class NotificationsSubscriptionsAnonymousClient {
     }
 
     /**                          
-     * Returns a promise that is resolved once the update anonymous subscription action has been performed; this action updates a anonymous subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsAnonymousRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update anonymous subscription action has been performed; this action updates a anonymous subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsAnonymousRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(subscription); 
      * let uri = params['model'].links('put').href; 

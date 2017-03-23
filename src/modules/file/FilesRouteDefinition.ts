@@ -1,18 +1,18 @@
 /* globals module */
 /**  
- * @module filesRouteDefinition  
+ * @module filesRoute  
  * @description Baasic Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { FilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { FilesStreamsRoute, TYPES as filesTypes } from 'modules/file';
 import { IFileEntry } from 'modules/file/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class FilesRouteDefinition extends BaseRouteDefinition {
+export class FilesRoute extends BaseRoute {
 
     public readonly findRoute: string = 'files/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -24,13 +24,13 @@ export class FilesRouteDefinition extends BaseRouteDefinition {
 
     public readonly linkRoute: string = 'files/link';
 
-    get streams(): FilesStreamsRouteDefinition {
-        return this.filesStreamsRouteDefinition;
+    get streams(): FilesStreamsRoute {
+        return this.filesStreamsRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(filesTypes.FilesStreamsRouteDefinition) protected filesStreamsRouteDefinition: FilesStreamsRouteDefinition
+        @inject(filesTypes.FilesStreamsRoute) protected filesStreamsRoute: FilesStreamsRoute
     ) { super(appOptions); }
 
     /**                 
@@ -42,7 +42,7 @@ export class FilesRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example filesRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example filesRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -53,7 +53,7 @@ export class FilesRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param id File id which uniquely identifies file resource that needs to be retrieved.
      * @param options Query resource options object.                           
-     * @example filesRouteDefinition.get({id: '<file-id>'});                               
+     * @example filesRoute.get({id: '<file-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -63,7 +63,7 @@ export class FilesRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this route should be expanded with the Id of the file resource.                 
      * @method 
      * @param data A file entry object used to update specific file entry resource in the system.                           
-     * @example filesRouteDefinition.get({id: '<file-id>'});                               
+     * @example filesRoute.get({id: '<file-id>'});                               
      **/
     update(data: IFileEntry): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -73,7 +73,7 @@ export class FilesRouteDefinition extends BaseRouteDefinition {
      * Parses unlink route; this route should be expanded with the Id of the file resource.                 
      * @method 
      * @param data A file entry object used to update specific file entry resource in the system.                           
-     * @example filesRouteDefinition.unlink({id: '<file-id>'});                               
+     * @example filesRoute.unlink({id: '<file-id>'});                               
      **/
     unlink(data: IFileEntry, options?: Object): any {
         return super.baseDelete(this.unlinkRoute, data, options, 'unlink');
@@ -83,7 +83,7 @@ export class FilesRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses link route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example filesRouteDefinition.link();                              
+     * @example filesRoute.link();                              
      **/
     link(): any {
         return super.baseCreate(this.linkRoute, {});

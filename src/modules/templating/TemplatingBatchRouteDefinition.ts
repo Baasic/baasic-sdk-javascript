@@ -1,15 +1,15 @@
 /*global module */
 /**  
- * @module templatingBatchRouteDefinition  
+ * @module templatingBatchRoute  
  * @description Baasic Templating Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Templating Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from 'inversify';
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class TemplatingBatchRouteDefinition extends BaseRouteDefinition {
+export class TemplatingBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'templates/batch';
 
@@ -22,7 +22,7 @@ export class TemplatingBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example templatingBatchRouteDefinition.create();                                  
+     * @example templatingBatchRoute.create();                                  
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -31,7 +31,7 @@ export class TemplatingBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example templatingBatchRouteDefinition.update();                                  
+     * @example templatingBatchRoute.update();                                  
      **/
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -40,7 +40,7 @@ export class TemplatingBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses remove route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example templatingBatchRouteDefinition.delete();                                  
+     * @example templatingBatchRoute.delete();                                  
      **/
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

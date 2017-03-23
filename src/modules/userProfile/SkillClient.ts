@@ -7,14 +7,14 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { SkillBatchClient, SkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { SkillBatchClient, SkillRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
 @injectable()
 export class SkillClient {
 
-    get routeDefinition(): SkillRouteDefinition {
-        return this.skillRouteDefinition;
+    get routeDefinition(): SkillRoute {
+        return this.skillRoute;
     }
 
     get batch(): SkillBatchClient {
@@ -22,7 +22,7 @@ export class SkillClient {
     }
 
     constructor(
-        @inject(userProfileTypes.SkillRouteDefinition) protected skillRouteDefinition: SkillRouteDefinition,
+        @inject(userProfileTypes.SkillRoute) protected skillRoute: SkillRoute,
         @inject(userProfileTypes.SkillBatchClient) protected skillBatchClient: SkillBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -64,7 +64,7 @@ export class SkillClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ISkill>> {
-        return this.apiClient.get<ISkill>(this.skillRouteDefinition.get(id, options));
+        return this.apiClient.get<ISkill>(this.skillRoute.get(id, options));
     }
 
     /**                  
@@ -89,7 +89,7 @@ export class SkillClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update skill action has been performed; this action updates a skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `skillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update skill action has been performed; this action updates a skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `skillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(skill); 
      * let uri = params['model'].links('put').href; 
@@ -112,7 +112,7 @@ export class SkillClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `skillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `skillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(skill); 
      * let uri = params['model'].links('delete').href; 

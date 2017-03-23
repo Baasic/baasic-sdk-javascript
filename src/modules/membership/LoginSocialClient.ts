@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module loginSocialClient  
- * @description  Login Social Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `loginSocialClient` uses `loginSocialRouteDefinition`. 
+ * @description  Login Social Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `loginSocialClient` uses `loginSocialRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
-import { LoginSocialRouteDefinition, TYPES as membershipTYPES } from 'modules/membership';
+import { LoginSocialRoute, TYPES as membershipTYPES } from 'modules/membership';
 import { ISocialLogin } from 'modules/membership/contracts';
 
 @injectable()
 export class LoginSocialClient {
 
-    get routeDefinition(): LoginSocialRouteDefinition {
-        return this.loginSocialRouteDefinition;
+    get routeDefinition(): LoginSocialRoute {
+        return this.loginSocialRoute;
     }
 
     constructor(
-        @inject(membershipTYPES.LoginSocialRouteDefinition) protected loginSocialRouteDefinition: LoginSocialRouteDefinition,
+        @inject(membershipTYPES.LoginSocialRoute) protected loginSocialRoute: LoginSocialRoute,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -38,7 +38,7 @@ export class LoginSocialClient {
                     });                     
      **/
     get(provider: string, returnUrl: string): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.loginSocialRouteDefinition.get(provider, returnUrl));
+        return this.apiClient.get(this.loginSocialRoute.get(provider, returnUrl));
     }
 
     /**                     
@@ -71,7 +71,7 @@ export class LoginSocialClient {
         }
         var self = this;
         return this.apiClient.createPromise<any>((resolve, reject) => {
-            self.apiClient.post<any>(self.loginSocialRouteDefinition.post(provider, options), self.loginSocialRouteDefinition.createParams(data),
+            self.apiClient.post<any>(self.loginSocialRoute.post(provider, options), self.loginSocialRoute.createParams(data),
                 { 'Content-Type': 'application/json; charset=UTF-8' })
                 .then<any>(function (data) {
                     if (data) {

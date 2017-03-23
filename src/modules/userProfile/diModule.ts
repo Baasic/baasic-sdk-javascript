@@ -1,92 +1,92 @@
 import { ContainerModule } from "inversify";
 import {
     CompanyBatchClient,
-    CompanyBatchRouteDefinition,
+    CompanyBatchRoute,
     CompanyClient,
-    CompanyRouteDefinition,
+    CompanyRoute,
     OrganizationBatchClient,
-    OrganizationBatchRouteDefinition,
+    OrganizationBatchRoute,
     OrganizationClient,
-    OrganizationRouteDefinition,
+    OrganizationRoute,
     SkillBatchClient,
-    SkillBatchRouteDefinition,
+    SkillBatchRoute,
     SkillClient,
-    SkillRouteDefinition,
+    SkillRoute,
     UserEducationClient,
-    UserEducationRouteDefinition,
+    UserEducationRoute,
     UserProfileACLClient,
-    UserProfileACLRouteDefinition,
+    UserProfileACLRoute,
     UserProfileAvatarClient,
-    UserProfileAvatarRouteDefinition,
+    UserProfileAvatarRoute,
     UserProfileAvatarStreamsClient,
-    UserProfileAvatarStreamsRouteDefinition,
+    UserProfileAvatarStreamsRoute,
     UserProfileClient,
-    UserProfileRouteDefinition,
+    UserProfileRoute,
     UserSkillClient,
-    UserSkillRouteDefinition,
+    UserSkillRoute,
     UserWorkClient,
-    UserWorkRouteDefinition,
+    UserWorkRoute,
     Root
 } from 'modules/userProfile';
 
 const TYPES = {
     CompanyBatchClient: Symbol("CompanyBatchClient"),
-    CompanyBatchRouteDefinition: Symbol("CompanyBatchRouteDefinition"),
+    CompanyBatchRoute: Symbol("CompanyBatchRoute"),
     CompanyClient: Symbol("CompanyClient"),
-    CompanyRouteDefinition: Symbol("CompanyRouteDefinition"),
+    CompanyRoute: Symbol("CompanyRoute"),
     OrganizationBatchClient: Symbol("OrganizationBatchClient"),
-    OrganizationBatchRouteDefinition: Symbol("OrganizationBatchRouteDefinition"),
+    OrganizationBatchRoute: Symbol("OrganizationBatchRoute"),
     OrganizationClient: Symbol("OrganizationClient"),
-    OrganizationRouteDefinition: Symbol("OrganizationRouteDefinition"),
+    OrganizationRoute: Symbol("OrganizationRoute"),
     SkillBatchClient: Symbol("SkillBatchClient"),
-    SkillBatchRouteDefinition: Symbol("SkillBatchRouteDefinition"),
+    SkillBatchRoute: Symbol("SkillBatchRoute"),
     SkillClient: Symbol("SkillClient"),
-    SkillRouteDefinition: Symbol("SkillRouteDefinition"),
+    SkillRoute: Symbol("SkillRoute"),
     UserEducationClient: Symbol("UserEducationClient"),
-    UserEducationRouteDefinition: Symbol("UserEducationRouteDefinition"),
+    UserEducationRoute: Symbol("UserEducationRoute"),
     UserProfileACLClient: Symbol("UserProfileACLClient"),
-    UserProfileACLRouteDefinition: Symbol("UserProfileACLRouteDefinition"),
+    UserProfileACLRoute: Symbol("UserProfileACLRoute"),
     UserProfileAvatarClient: Symbol("UserProfileAvatarClient"),
-    UserProfileAvatarRouteDefinition: Symbol("UserProfileAvatarRouteDefinition"),
+    UserProfileAvatarRoute: Symbol("UserProfileAvatarRoute"),
     UserProfileAvatarStreamsClient: Symbol("UserProfileAvatarStreamsClient"),
-    UserProfileAvatarStreamsRouteDefinition: Symbol("UserProfileAvatarStreamsClient"),
+    UserProfileAvatarStreamsRoute: Symbol("UserProfileAvatarStreamsClient"),
     UserProfileClient: Symbol("UserProfileClient"),
-    UserProfileRouteDefinition: Symbol("UserProfileRouteDefinition"),
+    UserProfileRoute: Symbol("UserProfileRoute"),
     UserSkillClient: Symbol("UserSkillClient"),
-    UserSkillRouteDefinition: Symbol("UserSkillRouteDefinition"),
+    UserSkillRoute: Symbol("UserSkillRoute"),
     UserWorkClient: Symbol("UserWorkClient"),
-    UserWorkRouteDefinition: Symbol("UserWorkRouteDefinition"),
+    UserWorkRoute: Symbol("UserWorkRoute"),
     Root: Symbol("UserProfile-Root")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<CompanyBatchRouteDefinition>(TYPES.CompanyBatchRouteDefinition).to(CompanyBatchRouteDefinition);
+    bind<CompanyBatchRoute>(TYPES.CompanyBatchRoute).to(CompanyBatchRoute);
     bind<CompanyBatchClient>(TYPES.CompanyBatchClient).to(CompanyBatchClient);
-    bind<CompanyRouteDefinition>(TYPES.CompanyRouteDefinition).to(CompanyRouteDefinition);
+    bind<CompanyRoute>(TYPES.CompanyRoute).to(CompanyRoute);
     bind<CompanyClient>(TYPES.CompanyClient).to(CompanyClient);
-    bind<OrganizationBatchRouteDefinition>(TYPES.OrganizationBatchRouteDefinition).to(OrganizationBatchRouteDefinition);
+    bind<OrganizationBatchRoute>(TYPES.OrganizationBatchRoute).to(OrganizationBatchRoute);
     bind<OrganizationBatchClient>(TYPES.OrganizationBatchClient).to(OrganizationBatchClient);
-    bind<OrganizationRouteDefinition>(TYPES.OrganizationRouteDefinition).to(OrganizationRouteDefinition);
+    bind<OrganizationRoute>(TYPES.OrganizationRoute).to(OrganizationRoute);
     bind<OrganizationClient>(TYPES.OrganizationClient).to(OrganizationClient);
-    bind<SkillBatchRouteDefinition>(TYPES.SkillBatchRouteDefinition).to(SkillBatchRouteDefinition);
+    bind<SkillBatchRoute>(TYPES.SkillBatchRoute).to(SkillBatchRoute);
     bind<SkillBatchClient>(TYPES.SkillBatchClient).to(SkillBatchClient);
-    bind<SkillRouteDefinition>(TYPES.SkillRouteDefinition).to(SkillRouteDefinition);
+    bind<SkillRoute>(TYPES.SkillRoute).to(SkillRoute);
     bind<SkillClient>(TYPES.SkillClient).to(SkillClient);
-    bind<UserEducationRouteDefinition>(TYPES.UserEducationRouteDefinition).to(UserEducationRouteDefinition);
+    bind<UserEducationRoute>(TYPES.UserEducationRoute).to(UserEducationRoute);
     bind<UserEducationClient>(TYPES.UserEducationClient).to(UserEducationClient);
-    bind<UserProfileACLRouteDefinition>(TYPES.UserProfileACLRouteDefinition).to(UserProfileACLRouteDefinition);
+    bind<UserProfileACLRoute>(TYPES.UserProfileACLRoute).to(UserProfileACLRoute);
     bind<UserProfileACLClient>(TYPES.UserProfileACLClient).to(UserProfileACLClient);
-    bind<UserProfileAvatarStreamsRouteDefinition>(TYPES.UserProfileAvatarStreamsRouteDefinition).to(UserProfileAvatarStreamsRouteDefinition);
+    bind<UserProfileAvatarStreamsRoute>(TYPES.UserProfileAvatarStreamsRoute).to(UserProfileAvatarStreamsRoute);
     bind<UserProfileAvatarStreamsClient>(TYPES.UserProfileAvatarStreamsClient).to(UserProfileAvatarStreamsClient);
-    bind<UserProfileAvatarRouteDefinition>(TYPES.UserProfileAvatarRouteDefinition).to(UserProfileAvatarRouteDefinition);
+    bind<UserProfileAvatarRoute>(TYPES.UserProfileAvatarRoute).to(UserProfileAvatarRoute);
     bind<UserProfileAvatarClient>(TYPES.UserProfileAvatarClient).to(UserProfileAvatarClient);
-    bind<UserProfileRouteDefinition>(TYPES.UserProfileRouteDefinition).to(UserProfileRouteDefinition);
+    bind<UserProfileRoute>(TYPES.UserProfileRoute).to(UserProfileRoute);
     bind<UserProfileClient>(TYPES.UserProfileClient).to(UserProfileClient);
-    bind<UserSkillRouteDefinition>(TYPES.UserSkillRouteDefinition).to(UserSkillRouteDefinition);
+    bind<UserSkillRoute>(TYPES.UserSkillRoute).to(UserSkillRoute);
     bind<UserSkillClient>(TYPES.UserSkillClient).to(UserSkillClient);
-    bind<UserWorkRouteDefinition>(TYPES.UserWorkRouteDefinition).to(UserWorkRouteDefinition);
+    bind<UserWorkRoute>(TYPES.UserWorkRoute).to(UserWorkRoute);
     bind<UserWorkClient>(TYPES.UserWorkClient).to(UserWorkClient);
     bind<Root>(TYPES.Root).to(Root);
 });

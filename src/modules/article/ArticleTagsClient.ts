@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module baasicArticleTagsDefinition  
- * @description  Article Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleTagsDefinition` uses `articleTagsRouteDefinition`. 
+ * @description  Article Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleTagsDefinition` uses `articleTagsRoute`. 
 */
 
 import { injectable, inject } from "inversify";
@@ -9,7 +9,7 @@ import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleTagsSubscriptionsClient,
-    ArticleTagsRouteDefinition,
+    ArticleTagsRoute,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleTag } from 'modules/article/contracts';
@@ -17,8 +17,8 @@ import { IArticleTag } from 'modules/article/contracts';
 @injectable()
 export class ArticleTagsClient {
 
-    get routeDefinition(): ArticleTagsRouteDefinition {
-        return this.articleTagsRouteDefinition;
+    get routeDefinition(): ArticleTagsRoute {
+        return this.articleTagsRoute;
     }
 
     get subscriptions(): ArticleTagsSubscriptionsClient {
@@ -26,7 +26,7 @@ export class ArticleTagsClient {
     }
 
     constructor(
-        @inject(articleTypes.ArticleTagsRouteDefinition) protected articleTagsRouteDefinition: ArticleTagsRouteDefinition,
+        @inject(articleTypes.ArticleTagsRoute) protected articleTagsRoute: ArticleTagsRoute,
         @inject(articleTypes.ArticleTagsSubscriptionsClient) protected articleTagsSubscriptionsClient: ArticleTagsSubscriptionsClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -69,11 +69,11 @@ export class ArticleTagsClient {
                    });                
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleTag>> {
-        return this.apiClient.get<IArticleTag>(this.articleTagsRouteDefinition.get(id, options));
+        return this.apiClient.get<IArticleTag>(this.articleTagsRoute.get(id, options));
     }
 
     /**                 
-     * Returns a promise that is resolved once the update article tag action has been performed; this action updates a tag. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleTagsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article tag action has been performed; this action updates a tag. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleTagsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleTag); 
      * let uri = params['model'].links('put').href; 
@@ -96,7 +96,7 @@ export class ArticleTagsClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove article tag action has been performed. If the action is successfully completed, the article tag resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleTagsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article tag action has been performed. If the action is successfully completed, the article tag resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleTagsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleTag); 
      * let uri = params['model'].links('delete').href; 

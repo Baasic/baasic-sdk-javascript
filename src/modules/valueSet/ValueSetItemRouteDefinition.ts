@@ -1,15 +1,15 @@
 /**  
- * @module valueSetItemRouteDefinition
+ * @module valueSetItemRoute
  * @description Baasic Value Set Item Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 import { injectable, inject } from 'inversify';
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IValueSetItem } from 'modules/valueSet/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class ValueSetItemRouteDefinition extends BaseRouteDefinition {
+export class ValueSetItemRoute extends BaseRoute {
 
     public readonly findRoute: string = 'value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -33,7 +33,7 @@ export class ValueSetItemRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 					
      * @method items.find
      * @param options Options object.       					
-     * @example valueSetItemRouteDefinition.find(options);               					
+     * @example valueSetItemRoute.find(options);               					
      **/
     find(options: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -47,7 +47,7 @@ export class ValueSetItemRouteDefinition extends BaseRouteDefinition {
      * @param setName Value set name.
      * @param id Value set id.
      * @param options Query resource options object.        					
-     * @example valueSetItemRouteDefinition.get(setName, id, options);               					
+     * @example valueSetItemRoute.get(setName, id, options);               					
      **/
     get(setName: string, id: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
@@ -59,7 +59,7 @@ export class ValueSetItemRouteDefinition extends BaseRouteDefinition {
      * Parses create value set item route; the URI template should be expanded with the value set name. 					
      * @method
      * @param data A value set item object that needs to be inserted into the system.         					
-     * @example valueSetItemRouteDefinition.create(data);              					
+     * @example valueSetItemRoute.create(data);              					
      **/
     create(data: IValueSetItem): any {
         return super.baseCreate(this.createRoute, data);
@@ -69,7 +69,7 @@ export class ValueSetItemRouteDefinition extends BaseRouteDefinition {
      * Parses update value set item route.
      * @method
      * @param data A value set item object used to update specified value set resource.
-     * @example valueSetItemRouteDefinition.update(data);
+     * @example valueSetItemRoute.update(data);
      */
     update(data: IValueSetItem): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -79,7 +79,7 @@ export class ValueSetItemRouteDefinition extends BaseRouteDefinition {
      * Parses delete value set item route.
      * @method
      * @param data A value set item object used to delete specified value set resource.
-     * @example valueSetItemRouteDefinition.delete(data);
+     * @example valueSetItemRoute.delete(data);
      */
     delete(data: IValueSetItem): any {
         return super.baseDelete(this.deleteRoute, data);

@@ -9,7 +9,7 @@ import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleFilesBatchClient,
-    ArticleFilesRouteDefinition,
+    ArticleFilesRoute,
     ArticleFilesStreamsClient,
     TYPES as articleTypes
 } from 'modules/article';
@@ -18,8 +18,8 @@ import { IArticleFile } from 'modules/article/contracts';
 @injectable()
 export class ArticleFilesClient {
 
-    get routeDefinition(): ArticleFilesRouteDefinition {
-        return this.articleFilesRouteDefinition;
+    get routeDefinition(): ArticleFilesRoute {
+        return this.articleFilesRoute;
     }
 
     get streams(): ArticleFilesStreamsClient {
@@ -31,7 +31,7 @@ export class ArticleFilesClient {
     }
 
     constructor(
-        @inject(articleTypes.ArticleFilesRouteDefinition) protected articleFilesRouteDefinition: ArticleFilesRouteDefinition,
+        @inject(articleTypes.ArticleFilesRoute) protected articleFilesRoute: ArticleFilesRoute,
         @inject(articleTypes.ArticleFilesStreamsClient) protected articleFilesStreamsClient: ArticleFilesStreamsClient,
         @inject(articleTypes.ArticleFilesBatchClient) protected ArticleFilesBatchClient: ArticleFilesBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -75,7 +75,7 @@ export class ArticleFilesClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.apiClient.get(this.articleFilesRouteDefinition.get(id, options));
+        return this.apiClient.get(this.articleFilesRoute.get(id, options));
     }
 
     /**                  
@@ -89,7 +89,7 @@ export class ArticleFilesClient {
      * @param options options object.
      * @returns A promise that is resolved once the unlink action has been performed.                          
      * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
-                    articleFilesRouteDefinition.remove(fileEntry)
+                    articleFilesRoute.remove(fileEntry)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -101,7 +101,7 @@ export class ArticleFilesClient {
         if (!options) {
             options = {};
         }
-        return this.apiClient.delete<void>(this.articleFilesRouteDefinition.unlink(data, options));
+        return this.apiClient.delete<void>(this.articleFilesRoute.unlink(data, options));
     }
 
     /**                  

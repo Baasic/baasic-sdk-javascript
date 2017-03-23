@@ -1,16 +1,16 @@
 /**  
- * @module valueSetRouteDefinition
+ * @module valueSetRoute
  * @description Baasic Value Set Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from 'inversify';
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { ValueSetItemRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
+import { ValueSetItemRoute, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class ValueSetRouteDefinition extends BaseRouteDefinition {
+export class ValueSetRoute extends BaseRoute {
 
     public readonly findRoute: string = 'value-sets/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -22,13 +22,13 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'value-sets/{id}';
 
-    get items(): ValueSetItemRouteDefinition {
-        return this.valueSetItemRouteDefinition;
+    get items(): ValueSetItemRoute {
+        return this.valueSetItemRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(valueSetTypes.ValueSetItemRouteDefinition) protected valueSetItemRouteDefinition: ValueSetItemRouteDefinition
+        @inject(valueSetTypes.ValueSetItemRoute) protected valueSetItemRoute: ValueSetItemRoute
     ) { super(appOptions); }
 
     /**                 
@@ -40,7 +40,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example valueSetRouteDefinition.find(options);                               
+     * @example valueSetRoute.find(options);                               
      **/
     find(options: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -51,7 +51,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param setName Value Set name.
      * @param options Query resource options object.                       
-     * @example valueSetRouteDefinition.get(setName, options);                               
+     * @example valueSetRoute.get(setName, options);                               
      **/
     get(setName: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, setName, options, 'setName');
@@ -60,7 +60,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create value set route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example valueSetRouteDefinition.create();                              
+     * @example valueSetRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -70,7 +70,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
      * Parses update value set route.
      * @method
      * @param data Value set object used to update specified value set resource.
-     * @example valueSetRouteDefinition.update(data);
+     * @example valueSetRoute.update(data);
      */
     update(data: IValueSet): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -80,7 +80,7 @@ export class ValueSetRouteDefinition extends BaseRouteDefinition {
      * Parses delete value set route.
      * @method
      * @param data A value set object used to delete specified value set resource.
-     * @example valueSetRouteDefinition.delete(data);
+     * @example valueSetRoute.delete(data);
      */
     delete(data: IValueSet): any {
         return super.baseDelete(this.deleteRoute, data);

@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module articleACLClient  
- * @description  Article ACL Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleACLClient` uses `articleACLRouteDefinition`. 
+ * @description  Article ACL Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleACLClient` uses `articleACLRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IACLPolicy, IACLOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleACLRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleACLRoute, TYPES as articleTypes } from 'modules/article';
 
 @injectable()
 export class ArticleACLClient {
 
-    get routeDefinition(): ArticleACLRouteDefinition {
-        return this.articleACLRouteDefinition;
+    get routeDefinition(): ArticleACLRoute {
+        return this.articleACLRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleACLRouteDefinition) protected articleACLRouteDefinition: ArticleACLRouteDefinition,
+        @inject(articleTypes.ArticleACLRoute) protected articleACLRoute: ArticleACLRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -82,7 +82,7 @@ export class ArticleACLClient {
                     }); 				    
      **/
     removeByUser(articleId: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleACLRouteDefinition.deleteByUser(articleId, action, user, data));
+        return this.apiClient.delete<void>(this.articleACLRoute.deleteByUser(articleId, action, user, data));
     }
 
     /**                     
@@ -107,7 +107,7 @@ export class ArticleACLClient {
                     }); 				    
      **/
     removeByRole(articleId: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleACLRouteDefinition.deleteByRole(articleId, action, role, data));
+        return this.apiClient.delete<void>(this.articleACLRoute.deleteByRole(articleId, action, role, data));
     }
 }
 

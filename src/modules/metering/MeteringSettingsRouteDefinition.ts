@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module meteringSettingsRouteDefinition  
+ * @module meteringSettingsRoute  
  * @description Baasic Metering Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Settings Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions } from 'common/contracts';
 import { IMeteringSettings } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class MeteringSettingsRouteDefinition extends BaseRouteDefinition {
+export class MeteringSettingsRoute extends BaseRoute {
 
     public readonly getRoute: string = 'metering/settings/{id}/{?embed,fields}';
 
@@ -22,7 +22,7 @@ export class MeteringSettingsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example meteringSettingsRouteDefinition.get();                               
+     * @example meteringSettingsRoute.get();                               
      **/
     get(options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, undefined, options);
@@ -32,7 +32,7 @@ export class MeteringSettingsRouteDefinition extends BaseRouteDefinition {
     * Parses updatea route; this route doesn't expose any properties.                 
     * @method 
     * @param data An meteringSetting object used to update specified MeteringSetting resource.                       
-    * @example meteringSettingsRouteDefinition.update(data);                               
+    * @example meteringSettingsRoute.update(data);                               
     **/
     update(data: IMeteringSettings): any {
         return super.baseUpdate(this.updateRoute, data);

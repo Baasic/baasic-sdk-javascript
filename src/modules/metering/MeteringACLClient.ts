@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module meteringACLClient  
- * @description  Metering ACL Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringACLClient` uses `meteringACLRouteDefinition`. 
+ * @description  Metering ACL Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringACLClient` uses `meteringACLRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IACLOptions, IACLPolicy, IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MeteringACLRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringACLRoute, TYPES as meteringTypes } from 'modules/metering';
 
 @injectable()
 export class MeteringACLClient {
 
-    get routeDefinition(): MeteringACLRouteDefinition {
-        return this.meteringACLRouteDefinition;
+    get routeDefinition(): MeteringACLRoute {
+        return this.meteringACLRoute;
     }
 
     constructor(
-        @inject(meteringTypes.MeteringACLRouteDefinition) protected meteringACLRouteDefinition: MeteringACLRouteDefinition,
+        @inject(meteringTypes.MeteringACLRoute) protected meteringACLRoute: MeteringACLRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -79,7 +79,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     removeByUser(id: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.meteringACLRouteDefinition.deleteByUser(id, action, user, data));
+        return this.apiClient.delete<void>(this.meteringACLRoute.deleteByUser(id, action, user, data));
     }
 
     /**                     
@@ -104,7 +104,7 @@ export class MeteringACLClient {
                     }); 				    
      **/
     removeByRole(id: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.meteringACLRouteDefinition.deleteByRole(id, action, role, data));
+        return this.apiClient.delete<void>(this.meteringACLRoute.deleteByRole(id, action, role, data));
     }
 }
 

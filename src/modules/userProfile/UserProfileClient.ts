@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module userProfileClient  
- * @description  User Profile Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `userProfileClient` uses `userProfileRouteDefinition`. 
+ * @description  User Profile Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `userProfileClient` uses `userProfileRoute`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -9,7 +9,7 @@ import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     UserProfileACLClient,
-    UserProfileRouteDefinition,
+    UserProfileRoute,
     UserEducationClient,
     UserProfileAvatarClient,
     UserSkillClient,
@@ -25,8 +25,8 @@ export class UserProfileClient {
         return this.userProfileACLClient;
     }
 
-    get routeDefinition(): UserProfileRouteDefinition {
-        return this.userProfileRouteDefinition;
+    get routeDefinition(): UserProfileRoute {
+        return this.userProfileRoute;
     }
 
     get education(): UserEducationClient {
@@ -44,7 +44,7 @@ export class UserProfileClient {
 
     constructor(
         @inject(userProfileTypes.UserProfileACLClient) protected userProfileACLClient: UserProfileACLClient,
-        @inject(userProfileTypes.UserProfileRouteDefinition) protected userProfileRouteDefinition: UserProfileRouteDefinition,
+        @inject(userProfileTypes.UserProfileRoute) protected userProfileRoute: UserProfileRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
 
         @inject(userProfileTypes.UserEducationClient) protected userEducationClient: UserEducationClient,
@@ -91,7 +91,7 @@ export class UserProfileClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserProfile>> {
-        return this.apiClient.get<IUserProfile>(this.userProfileRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserProfile>(this.userProfileRoute.get(id, options));
     }
 
     /**                  
@@ -115,7 +115,7 @@ export class UserProfileClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update user profile action has been performed; this action updates a user profile resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user profile action has been performed; this action updates a user profile resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(userProfile); 
      * let uri = params['model'].links('put').href; 
@@ -138,7 +138,7 @@ export class UserProfileClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user profile resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user profile resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(userProfile); 
      * let uri = params['model'].links('delete').href; 

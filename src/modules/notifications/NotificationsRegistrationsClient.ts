@@ -1,13 +1,13 @@
 /* globals module */
 /**  
  * @module notificationsRegistrationsClient  
- * @description  Notifications Registrations Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsClient` uses `notificationsRegistrationsRouteDefinition`. 
+ * @description  Notifications Registrations Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsClient` uses `notificationsRegistrationsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import {
     NotificationsRegistrationsAnonymousClient,
-    NotificationsRegistrationsRouteDefinition,
+    NotificationsRegistrationsRoute,
     NotificationsRegistrationsUsersClient,
     TYPES as notificationsTypes
 } from 'modules/notifications';
@@ -15,8 +15,8 @@ import {
 @injectable()
 export class NotificationsRegistrationsClient {
 
-    get routeDefinition(): NotificationsRegistrationsRouteDefinition {
-        return this.notificationsRegistrationsRouteDefinition;
+    get routeDefinition(): NotificationsRegistrationsRoute {
+        return this.notificationsRegistrationsRoute;
     }
 
     get anonymous(): NotificationsRegistrationsAnonymousClient {
@@ -28,7 +28,7 @@ export class NotificationsRegistrationsClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsRegistrationsRouteDefinition) protected notificationsRegistrationsRouteDefinition: NotificationsRegistrationsRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsRoute) protected notificationsRegistrationsRoute: NotificationsRegistrationsRoute,
         @inject(notificationsTypes.NotificationsRegistrationsAnonymousClient) protected notificationsRegistrationsAnonymousClient: NotificationsRegistrationsAnonymousClient,
         @inject(notificationsTypes.NotificationsRegistrationsUsersClient) protected notificationsRegistrationsUsersClient: NotificationsRegistrationsUsersClient
     ) { }

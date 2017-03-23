@@ -1,19 +1,19 @@
 /* globals module */
 /**  
  * @module commerceLookupsPaymentMethodClient  
- * @description  Commerce Lookups PaymentMethod Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentMethodClient` uses `commerceLookupsPaymentMethodRouteDefinition`. 
+ * @description  Commerce Lookups PaymentMethod Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentMethodClient` uses `commerceLookupsPaymentMethodRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsPaymentMethodBatchClient, CommerceLookupsPaymentMethodRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsPaymentMethodBatchClient, CommerceLookupsPaymentMethodRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsPaymentMethodClient {
 
-    get routeDefinition(): CommerceLookupsPaymentMethodRouteDefinition {
-        return this.commerceLookupsPaymentMethodRouteDefinition;
+    get routeDefinition(): CommerceLookupsPaymentMethodRoute {
+        return this.commerceLookupsPaymentMethodRoute;
     }
 
     get batch(): CommerceLookupsPaymentMethodBatchClient {
@@ -22,7 +22,7 @@ export class CommerceLookupsPaymentMethodClient {
 
     constructor(
         @inject(commerceTypes.CommerceLookupsPaymentMethodBatchClient) protected commerceLookupsPaymentMethodBatchClient: CommerceLookupsPaymentMethodBatchClient,
-        @inject(commerceTypes.CommerceLookupsPaymentMethodRouteDefinition) protected commerceLookupsPaymentMethodRouteDefinition: CommerceLookupsPaymentMethodRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsPaymentMethodRoute) protected commerceLookupsPaymentMethodRoute: CommerceLookupsPaymentMethodRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -59,11 +59,11 @@ export class CommerceLookupsPaymentMethodClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.commerceLookupsPaymentMethodRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceLookupsPaymentMethodRoute.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransactionStatus); 
      * let uri = params['model'].links('put').href; 
@@ -103,7 +103,7 @@ export class CommerceLookupsPaymentMethodClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransactionStatus); 
      * let uri = params['model'].links('delete').href; 

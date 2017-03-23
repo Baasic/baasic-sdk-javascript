@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsArticleModuleClient  
- * @description  Article Subscriptions Article Module Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `articleSubscriptionsRouteDefinition`. 
+ * @description  Article Subscriptions Article Module Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `articleSubscriptionsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleSubscriptionsRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleSubscriptionsClient {
 
-    get routeDefinition(): ArticleSubscriptionsRouteDefinition {
-        return this.articleSubscriptionsRouteDefinition;
+    get routeDefinition(): ArticleSubscriptionsRoute {
+        return this.articleSubscriptionsRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsRouteDefinition) protected articleSubscriptionsRouteDefinition: ArticleSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsRoute) protected articleSubscriptionsRoute: ArticleSubscriptionsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -36,7 +36,7 @@ export class ArticleSubscriptionsClient {
                    });                         
     **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.articleSubscriptionsRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.articleSubscriptionsRoute.subscribe(data), data);
     }
 
     /**                         

@@ -7,17 +7,17 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MediaVaultStreamsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import { MediaVaultStreamsRoute, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 
 @injectable()
 export class MediaVaultStreamsClient {
 
-    get routeDefinition(): MediaVaultStreamsRouteDefinition {
-        return this.mediaVaultStreamsRouteDefinition;
+    get routeDefinition(): MediaVaultStreamsRoute {
+        return this.mediaVaultStreamsRoute;
     }
 
     constructor(
-        @inject(mediaVaultTypes.MediaVaultStreamsRouteDefinition) protected mediaVaultStreamsRouteDefinition: MediaVaultStreamsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultStreamsRoute) protected mediaVaultStreamsRoute: MediaVaultStreamsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -66,7 +66,7 @@ export class MediaVaultStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.mediaVaultStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.mediaVaultStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -83,7 +83,7 @@ export class MediaVaultStreamsClient {
     create(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.mediaVaultStreamsRouteDefinition.create(data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.mediaVaultStreamsRoute.create(data), formData, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -109,7 +109,7 @@ export class MediaVaultStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.mediaVaultStreamsRouteDefinition.update(data), formData, { 'Content-Type': undefined });
+        return this.apiClient.put(this.mediaVaultStreamsRoute.update(data), formData, { 'Content-Type': undefined });
     }
 }
 

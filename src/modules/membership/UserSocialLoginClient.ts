@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module userSocialLoginClient  
- * @description  User Social Login Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userSocialLoginClient` uses `userSocialLoginRouteDefinition`. 
+ * @description  User Social Login Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userSocialLoginClient` uses `userSocialLoginRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { UserSocialLoginRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { UserSocialLoginRoute, TYPES as membershipTypes } from 'modules/membership';
 import { IUserSocialLogin } from 'modules/membership/contracts';
 
 @injectable()
 export class UserSocialLoginClient {
 
     /**                 
-      * Provides direct access to `userSocialLoginRouteDefinition`.                 
+      * Provides direct access to `userSocialLoginRoute`.                 
       * @method                        
       * @example userSocialLoginClient.routeDefinition.get().expand(expandObject);                 
       **/
-    get routeDefinition(): UserSocialLoginRouteDefinition {
-        return this.userSocialLoginRouteDefinition;
+    get routeDefinition(): UserSocialLoginRoute {
+        return this.userSocialLoginRoute;
     }
 
     constructor(
-        @inject(membershipTypes.UserSocialLoginRouteDefinition) protected userSocialLoginRouteDefinition: UserSocialLoginRouteDefinition,
+        @inject(membershipTypes.UserSocialLoginRoute) protected userSocialLoginRoute: UserSocialLoginRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -59,7 +59,7 @@ export class UserSocialLoginClient {
                     });                     
      **/
     remove(username: string, provider: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.userSocialLoginRouteDefinition.remove(username, provider));
+        return this.apiClient.delete<void>(this.userSocialLoginRoute.remove(username, provider));
     }
 }
 

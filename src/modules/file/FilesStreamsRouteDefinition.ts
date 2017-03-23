@@ -1,15 +1,15 @@
 /* globals module */
 /**  
- * @module filesStreamsRouteDefinition  
+ * @module filesStreamsRoute  
  * @description Baasic Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class FilesStreamsRouteDefinition extends BaseRouteDefinition {
+export class FilesStreamsRoute extends BaseRoute {
 
     public readonly getRoute: string = 'file-streams/{id}/{?width,height}';
 
@@ -24,7 +24,7 @@ export class FilesStreamsRouteDefinition extends BaseRouteDefinition {
      * - `width` - width of desired derived image.                     
      * - `height` - height of desired derived image.                     
      * @method                 
-     * @example filesStreamsRouteDefinition.get({id: '<path>'});                                   
+     * @example filesStreamsRoute.get({id: '<path>'});                                   
      **/
     get(data: any): any {
         if (!this.utility.isObject(data)) {
@@ -40,7 +40,7 @@ export class FilesStreamsRouteDefinition extends BaseRouteDefinition {
      * - `width` - width of derived image to update.                     
      * - `height` - height of derived image to update.                                        
      * @method                      
-     * @example filesStreamsRouteDefinition.update({id: '<path>'});                                   
+     * @example filesStreamsRoute.update({id: '<path>'});                                   
      **/
     update(data: any): any {
         if (!this.utility.isObject(data)) {
@@ -54,7 +54,7 @@ export class FilesStreamsRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this route should be expanded with the path which indicates where the stream will be saved.                     
      * @method                     
-     * @example filesStreamsRouteDefinition.create({path: '<path>'});                                   
+     * @example filesStreamsRoute.create({path: '<path>'});                                   
      **/
     create(data: any) {
         if (!this.utility.isObject(data)) {

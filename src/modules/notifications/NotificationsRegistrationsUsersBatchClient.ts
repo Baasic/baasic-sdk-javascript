@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module notificationsRegistrationsUsersBatchClient  
- * @description  Notifications Registrations Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersBatchClient` uses `notificationsRegistrationsUsersBatchRouteDefinition`. 
+ * @description  Notifications Registrations Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersBatchClient` uses `notificationsRegistrationsUsersBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IQueryModel, IOptions } from 'common/contracts';
-import { NotificationsRegistrationsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsRegistrationsUsersBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsRegistrationsUsersBatchClient {
 
-    get routeDefinition(): NotificationsRegistrationsUsersBatchRouteDefinition {
-        return this.notificationsRegistrationsUsersBatchRouteDefinition;
+    get routeDefinition(): NotificationsRegistrationsUsersBatchRoute {
+        return this.notificationsRegistrationsUsersBatchRoute;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected notificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRoute) protected notificationsRegistrationsUsersBatchRoute: NotificationsRegistrationsUsersBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -57,7 +57,7 @@ export class NotificationsRegistrationsUsersBatchClient {
                     });		                            
      */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsRegistrationsUsersBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.notificationsRegistrationsUsersBatchRoute.delete(), undefined, ids);
     }
 
     /**                              

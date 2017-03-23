@@ -1,28 +1,28 @@
 /**  
  * @module dynamicSchemaClient  
- * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `dynamicSchemaClient` uses `dynamicSchemaRouteDefinition`. 
+ * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `dynamicSchemaClient` uses `dynamicSchemaRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { DynamicSchemaRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { DynamicSchemaRoute, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IResourceSchema } from 'modules/dynamicResource/contracts';
 
 @injectable()
 export class DynamicSchemaClient {
 
     /**                 
-     * Provides direct access to `dynamicSchemaRouteDefinition`.                 
+     * Provides direct access to `dynamicSchemaRoute`.                 
      * @method                        
      * @example dynamicSchemaClient.routeDefinition.get();                 
      **/
-    get routeDefinition(): DynamicSchemaRouteDefinition {
-        return this.dynamicSchemaRouteDefinition;
+    get routeDefinition(): DynamicSchemaRoute {
+        return this.dynamicSchemaRoute;
     }
 
     constructor(
-        @inject(dynamicResourceTypes.DynamicSchemaRouteDefinition) protected dynamicSchemaRouteDefinition: DynamicSchemaRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicSchemaRoute) protected dynamicSchemaRoute: DynamicSchemaRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -62,7 +62,7 @@ export class DynamicSchemaClient {
                     });                 
      **/
     get(name: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IResourceSchema>> {
-        return this.apiClient.get<IResourceSchema>(this.dynamicSchemaRouteDefinition.get(name, options));
+        return this.apiClient.get<IResourceSchema>(this.dynamicSchemaRoute.get(name, options));
     }
 
     /**                 
@@ -100,7 +100,7 @@ export class DynamicSchemaClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update dynamic resource schema action has been performed; this action updates a dynamic resource schema item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update dynamic resource schema action has been performed; this action updates a dynamic resource schema item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(dynamicResourceSchema); 
      * let uri = params['model'].links('put').href; 
@@ -122,7 +122,7 @@ export class DynamicSchemaClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource schema item from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource schema item from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(dynamicResourceSchema); 
      * let uri = params['model'].links('delete').href; 

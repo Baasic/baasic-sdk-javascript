@@ -6,18 +6,18 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { SkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { SkillBatchRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 
 @injectable()
 export class SkillBatchClient {
 
-    get routeDefinition(): SkillBatchRouteDefinition {
-        return this.skillBatchRouteDefinition;
+    get routeDefinition(): SkillBatchRoute {
+        return this.skillBatchRoute;
     }
 
     constructor(
-        @inject(userProfileTypes.SkillBatchRouteDefinition) protected skillBatchRouteDefinition: SkillBatchRouteDefinition,
+        @inject(userProfileTypes.SkillBatchRoute) protected skillBatchRoute: SkillBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -73,7 +73,7 @@ export class SkillBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.skillBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.skillBatchRoute.delete(), undefined, ids);
     }
 }
 

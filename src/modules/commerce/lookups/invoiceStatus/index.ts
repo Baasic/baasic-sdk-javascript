@@ -1,4 +1,4 @@
-export * from './commerceLookupsInvoiceStatusBatchRouteDefinition';
+export * from './commerceLookupsInvoiceStatusBatchRoute';
 export * from './commerceLookupsInvoiceStatusBatchClient';
-export * from './commerceLookupsInvoiceStatusRouteDefinition';
+export * from './commerceLookupsInvoiceStatusRoute';
 export * from './commerceLookupsInvoiceStatusClient';

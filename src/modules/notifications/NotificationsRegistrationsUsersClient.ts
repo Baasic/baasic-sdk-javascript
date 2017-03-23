@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsRegistrationsUsersClient  
- * @description  Notifications Registrations Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersClient` uses `notificationsRegistrationsUsersRouteDefinition`. 
+ * @description  Notifications Registrations Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersClient` uses `notificationsRegistrationsUsersRoute`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -9,7 +9,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import {
     NotificationsRegistrationsUsersBatchClient,
-    NotificationsRegistrationsUsersRouteDefinition,
+    NotificationsRegistrationsUsersRoute,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
@@ -17,8 +17,8 @@ import { IUserRegistration } from 'modules/notifications/contracts';
 @injectable()
 export class NotificationsRegistrationsUsersClient {
 
-    get routeDefinition(): NotificationsRegistrationsUsersRouteDefinition {
-        return this.notificationsRegistrationsUsersRouteDefinition;
+    get routeDefinition(): NotificationsRegistrationsUsersRoute {
+        return this.notificationsRegistrationsUsersRoute;
     }
 
     get batch(): NotificationsRegistrationsUsersBatchClient {
@@ -26,7 +26,7 @@ export class NotificationsRegistrationsUsersClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsRegistrationsUsersRouteDefinition) protected notificationsRegistrationsUsersRouteDefinition: NotificationsRegistrationsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsRegistrationsUsersRoute) protected notificationsRegistrationsUsersRoute: NotificationsRegistrationsUsersRoute,
         @inject(notificationsTypes.NotificationsRegistrationsUsersBatchClient) protected notificationsRegistrationsUsersBatchClient: NotificationsRegistrationsUsersBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -92,11 +92,11 @@ export class NotificationsRegistrationsUsersClient {
                    });                         
     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserRegistration>> {
-        return this.apiClient.get<IUserRegistration>(this.notificationsRegistrationsUsersRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserRegistration>(this.notificationsRegistrationsUsersRoute.get(id, options));
     }
 
     /**                          
-     * Returns a promise that is resolved once the remove user registrations action has been performed. This action will remove a user registrations resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove user registrations action has been performed. This action will remove a user registrations resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsUsersRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(registration); 
      * let uri = params['model'].links('delete').href; 
@@ -117,7 +117,7 @@ export class NotificationsRegistrationsUsersClient {
     }
 
     /**                          
-     * Returns a promise that is resolved once the update user registration action has been performed; this action updates a user registration resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects:                             
+     * Returns a promise that is resolved once the update user registration action has been performed; this action updates a user registration resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsUsersRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:                             
      * ```                             
      * let params = modelMapper.updateParams(subsregistrationcription);                             
      * let uri = params['model'].links('put').href;                             

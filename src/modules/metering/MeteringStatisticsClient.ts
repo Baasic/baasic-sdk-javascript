@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module meteringStatisticsClient  
- * @description  Metering Statistics Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringStatisticsClient` uses `meteringStatisticsRouteDefinition`. 
+ * @description  Metering Statistics Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringStatisticsClient` uses `meteringStatisticsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MeteringStatisticsRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringStatisticsRoute, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringData } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringStatisticsClient {
 
     /**                 
-      * Provides direct access to `meteringStatisticsRouteDefinition`.                 
+      * Provides direct access to `meteringStatisticsRoute`.                 
       * @method                        
       * @example meteringStatisticsClient.routeDefinition.get(expandObject);                 
       **/
-    get routeDefinition(): MeteringStatisticsRouteDefinition {
-        return this.meteringStatisticsRouteDefinition;
+    get routeDefinition(): MeteringStatisticsRoute {
+        return this.meteringStatisticsRoute;
     }
 
     constructor(
-        @inject(meteringTypes.MeteringStatisticsRouteDefinition) protected meteringStatisticsRouteDefinition: MeteringStatisticsRouteDefinition,
+        @inject(meteringTypes.MeteringStatisticsRoute) protected meteringStatisticsRoute: MeteringStatisticsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 

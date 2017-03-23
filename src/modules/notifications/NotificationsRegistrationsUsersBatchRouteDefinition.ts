@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module notificationsRegistrationsUsersBatchRouteDefinition  
+ * @module notificationsRegistrationsUsersBatchRoute  
  * @description Baasic Notifications Registrations Users Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Users Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IUserRegistration } from 'modules/notifications/contracts';
 
 @injectable()
-export class NotificationsRegistrationsUsersBatchRouteDefinition extends BaseRouteDefinition {
+export class NotificationsRegistrationsUsersBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'notifications/registrations/batch';
 
@@ -26,7 +26,7 @@ export class NotificationsRegistrationsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses create users registrations batch route; this route does not expose any additional options                              
      * @method                            
-     * @example notificationsRegistrationsUsersBatchRouteDefinition.create();                              
+     * @example notificationsRegistrationsUsersBatchRoute.create();                              
      */
     create(): any {
         return this.baseCreate(this.createRoute, {});
@@ -35,7 +35,7 @@ export class NotificationsRegistrationsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses remove users registrations batch route; this route does not expose any additional options                              
      * @method                            
-     * @example notificationsRegistrationsUsersBatchRouteDefinition.delete();                              
+     * @example notificationsRegistrationsUsersBatchRoute.delete();                              
      */
     delete(): any {
         return this.baseDelete(this.deleteRoute, {});
@@ -44,7 +44,7 @@ export class NotificationsRegistrationsUsersBatchRouteDefinition extends BaseRou
     /**                              
      * Parses update users registrations batch route; this route does not expose any additional options                              
      * @method                             
-     * @example notificationsRegistrationsUsersBatchRouteDefinition.update();                              
+     * @example notificationsRegistrationsUsersBatchRoute.update();                              
      */
     update(): any {
         return this.baseUpdate(this.updateRoute, {});

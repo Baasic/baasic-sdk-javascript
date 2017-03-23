@@ -1,36 +1,36 @@
 import { ContainerModule } from "inversify";
 import {
     FilesACLClient,
-    FilesACLRouteDefinition,
-    FilesBatchRouteDefinition,
+    FilesACLRoute,
+    FilesBatchRoute,
     FilesBatchClient,
-    FilesRouteDefinition,
+    FilesRoute,
     FilesClient,
-    FilesStreamsRouteDefinition,
+    FilesStreamsRoute,
     FilesStreamsClient
 } from 'modules/file';
 
 const TYPES = {
     FilesACLClient: Symbol("FilesACLClient"),
-    FilesACLRouteDefinition: Symbol("FilesACLRouteDefinition"),
-    FilesBatchRouteDefinition: Symbol("FilesBatchRouteDefinition"),
+    FilesACLRoute: Symbol("FilesACLRoute"),
+    FilesBatchRoute: Symbol("FilesBatchRoute"),
     FilesBatchClient: Symbol("FilesBatchClient"),
-    FilesRouteDefinition: Symbol("FilesRouteDefinition"),
+    FilesRoute: Symbol("FilesRoute"),
     FilesClient: Symbol("FilesClient"),
-    FilesStreamsRouteDefinition: Symbol("FilesStreamsRouteDefinition"),
+    FilesStreamsRoute: Symbol("FilesStreamsRoute"),
     FilesStreamsClient: Symbol("FilesStreamsClient")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<FilesBatchRouteDefinition>(TYPES.FilesBatchRouteDefinition).to(FilesBatchRouteDefinition);
+    bind<FilesBatchRoute>(TYPES.FilesBatchRoute).to(FilesBatchRoute);
     bind<FilesBatchClient>(TYPES.FilesBatchClient).to(FilesBatchClient);
-    bind<FilesStreamsRouteDefinition>(TYPES.FilesStreamsRouteDefinition).to(FilesStreamsRouteDefinition);
+    bind<FilesStreamsRoute>(TYPES.FilesStreamsRoute).to(FilesStreamsRoute);
     bind<FilesStreamsClient>(TYPES.FilesStreamsClient).to(FilesStreamsClient);
-    bind<FilesACLRouteDefinition>(TYPES.FilesACLRouteDefinition).to(FilesACLRouteDefinition);
+    bind<FilesACLRoute>(TYPES.FilesACLRoute).to(FilesACLRoute);
     bind<FilesACLClient>(TYPES.FilesACLClient).to(FilesACLClient);
-    bind<FilesRouteDefinition>(TYPES.FilesRouteDefinition).to(FilesRouteDefinition);
+    bind<FilesRoute>(TYPES.FilesRoute).to(FilesRoute);
     bind<FilesClient>(TYPES.FilesClient).to(FilesClient);
 });
 

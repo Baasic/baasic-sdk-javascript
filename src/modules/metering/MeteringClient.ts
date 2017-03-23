@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module meteringClient  
- * @description  Metering Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringClient` uses `meteringRouteDefinition`. 
+ * @description  Metering Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringClient` uses `meteringRoute`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -10,7 +10,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     MeteringACLClient,
     MeteringBatchClient,
-    MeteringRouteDefinition,
+    MeteringRoute,
     MeteringStatisticsClient,
     MeteringCategoryClient,
     MeteringSettingsClient,
@@ -21,8 +21,8 @@ import { IMeteringData } from 'modules/metering/contracts';
 @injectable()
 export class MeteringClient {
 
-    get routeDefinition(): MeteringRouteDefinition {
-        return this.meteringRouteDefinition;
+    get routeDefinition(): MeteringRoute {
+        return this.meteringRoute;
     }
 
     get batch(): MeteringBatchClient {
@@ -46,7 +46,7 @@ export class MeteringClient {
     }
 
     constructor(
-        @inject(meteringTypes.MeteringRouteDefinition) protected meteringRouteDefinition: MeteringRouteDefinition,
+        @inject(meteringTypes.MeteringRoute) protected meteringRoute: MeteringRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(meteringTypes.MeteringBatchClient) protected meteringBatchClient: MeteringBatchClient,
         @inject(meteringTypes.MeteringStatisticsClient) protected meteringStatisticsClient: MeteringStatisticsClient,
@@ -93,7 +93,7 @@ export class MeteringClient {
                     });                 
      **/
     get(id: string, options?: IOptions): PromiseLike<IHttpResponse<IMeteringData>> {
-        return this.apiClient.get<IMeteringData>(this.meteringRouteDefinition.get(id, options));
+        return this.apiClient.get<IMeteringData>(this.meteringRoute.get(id, options));
     }
 
     /**                  
@@ -118,7 +118,7 @@ export class MeteringClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update metering action has been performed; this action updates a metering resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update metering action has been performed; this action updates a metering resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(meteringData); 
      * let uri = params['model'].links('put').href; 
@@ -141,7 +141,7 @@ export class MeteringClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a metering resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a metering resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(meteringData); 
      * let uri = params['model'].links('delete').href; 

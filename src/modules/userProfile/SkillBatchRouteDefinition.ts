@@ -1,14 +1,14 @@
 /* globals module */
 /**  
- * @module skillBatchRouteDefinition  
+ * @module skillBatchRoute  
  * @description Baasic Skill Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class SkillBatchRouteDefinition extends BaseRouteDefinition {
+export class SkillBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'profile/lookups/skills/batch';
 
@@ -21,7 +21,7 @@ export class SkillBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     
      * @method                           
-     * @example skillBatchRouteDefinition.create();                                  
+     * @example skillBatchRoute.create();                                  
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -30,7 +30,7 @@ export class SkillBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
       * Parses update route; this URI template does not expose any additional options.                     
       * @method                           
-      * @example skillBatchRouteDefinition.update();                                  
+      * @example skillBatchRoute.update();                                  
       **/
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -39,7 +39,7 @@ export class SkillBatchRouteDefinition extends BaseRouteDefinition {
     /**                     
       * Parses delete route; this URI template does not expose any additional options.                     
       * @method                           
-      * @example skillBatchRouteDefinition.delete();                                  
+      * @example skillBatchRoute.delete();                                  
       **/
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

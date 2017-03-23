@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module commerceRecurringCyclePeriodTypeBatchClient  
- * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceRecurringCyclePeriodTypeBatchClient` uses `commerceRecurringCyclePeriodTypeBatchRouteDefinition`. 
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceRecurringCyclePeriodTypeBatchClient` uses `commerceRecurringCyclePeriodTypeBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsRecurringCyclePeriodTypeBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
 
-    get routeDefinition(): CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition {
-        return this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition;
+    get routeDefinition(): CommerceLookupsRecurringCyclePeriodTypeBatchRoute {
+        return this.commerceLookupsRecurringCyclePeriodTypeBatchRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRoute) protected commerceLookupsRecurringCyclePeriodTypeBatchRoute: CommerceLookupsRecurringCyclePeriodTypeBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -68,7 +68,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsRecurringCyclePeriodTypeBatchRoute.delete(), undefined, ids);
     }
 }
 

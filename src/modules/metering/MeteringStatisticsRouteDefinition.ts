@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module meteringStatisticsRouteDefinition  
+ * @module meteringStatisticsRoute  
  * @description Baasic Metering Statistics Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Statistics Route Definition Service to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import { IMeteringData } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class MeteringStatisticsRouteDefinition extends BaseRouteDefinition {
+export class MeteringStatisticsRoute extends BaseRoute {
 
     public readonly findRoute: string = 'metering/statistics/{category}/{?applicationIds,rateBy,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}';
     
@@ -35,7 +35,7 @@ export class MeteringStatisticsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                     
      * @method
      * @param options Query resource options object.                           
-     * @example meteringStatisticsRouteDefinition.find({category: '<category-name-or-id>'});                                   
+     * @example meteringStatisticsRoute.find({category: '<category-name-or-id>'});                                   
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);

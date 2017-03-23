@@ -1,23 +1,23 @@
 /**  
  * @module dynamicResourceACLClient  
- * @description  Dynamic Resource ACL Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceACLClient` uses `dynamicResourceACLRouteDefinition`. 
+ * @description  Dynamic Resource ACL Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceACLClient` uses `dynamicResourceACLRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IACLPolicy } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { DynamicResourceACLRouteDefinition, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
+import { DynamicResourceACLRoute, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
 import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
 
 @injectable()
 export class DynamicResourceACLClient {
 
-    get routeDefinition(): DynamicResourceACLRouteDefinition {
-        return this.dynamicResourceACLRouteDefinition;
+    get routeDefinition(): DynamicResourceACLRoute {
+        return this.dynamicResourceACLRoute;
     }
 
     constructor(
-        @inject(dynamicResourceTypes.DynamicResourceACLRouteDefinition) protected dynamicResourceACLRouteDefinition: DynamicResourceACLRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicResourceACLRoute) protected dynamicResourceACLRoute: DynamicResourceACLRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -74,7 +74,7 @@ export class DynamicResourceACLClient {
                         }); 				    
      **/
     removeByUser(action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.dynamicResourceACLRouteDefinition.deleteByUser(action, user, data));
+        return this.apiClient.delete<void>(this.dynamicResourceACLRoute.deleteByUser(action, user, data));
     }
 
     /**                     
@@ -98,7 +98,7 @@ export class DynamicResourceACLClient {
                         }); 				    
      **/
     removeByRole(action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.dynamicResourceACLRouteDefinition.deleteByRole(action, role, data));
+        return this.apiClient.delete<void>(this.dynamicResourceACLRoute.deleteByRole(action, role, data));
     }
 }
 

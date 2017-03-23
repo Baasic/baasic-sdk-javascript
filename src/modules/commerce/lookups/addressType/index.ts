@@ -1,4 +1,4 @@
-export * from './commerceLookupsAddressTypeBatchRouteDefinition';
+export * from './commerceLookupsAddressTypeBatchRoute';
 export * from './commerceLookupsAddressTypeBatchClient';
-export * from './commerceLookupsAddressTypeRouteDefinition';
+export * from './commerceLookupsAddressTypeRoute';
 export * from './commerceLookupsAddressTypeClient';

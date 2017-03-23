@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module registerClient  
- * @description  Register Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `registerClient` uses `registerRouteDefinition`. 
+ * @description  Register Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `registerClient` uses `registerRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
-import { RegisterRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { RegisterRoute, TYPES as membershipTypes } from 'modules/membership';
 import { IAppUser, IRegisterUser } from 'modules/membership/contracts';
 
 @injectable()
 export class RegisterClient {
 
     /**                 
-     * Provides direct access to `registerRouteDefinition`.                 
+     * Provides direct access to `registerRoute`.                 
      * @method                        
      * @example registerClient.routeDefinition.get();                 
      **/
-    get routeDefinition(): RegisterRouteDefinition {
-        return this.registerRouteDefinition;
+    get routeDefinition(): RegisterRoute {
+        return this.registerRoute;
     }
 
     constructor(
-        @inject(membershipTypes.RegisterRouteDefinition) protected registerRouteDefinition: RegisterRouteDefinition,
+        @inject(membershipTypes.RegisterRoute) protected registerRoute: RegisterRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
     ) { }
@@ -70,7 +70,7 @@ export class RegisterClient {
     **/
     activate(data: string): PromiseLike<any> {
         var self = this;
-        var promise = this.apiClient.put<any>(this.registerRouteDefinition.activate(data), data);
+        var promise = this.apiClient.put<any>(this.registerRoute.activate(data), data);
         promise.then<any>(function (data) {
             let token: IToken = {
                 token: data.data.access_token,

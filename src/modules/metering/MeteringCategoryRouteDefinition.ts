@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module meteringCategoryRouteDefinition  * @description Baasic Metering Category Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Category Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
+ * @module meteringCategoryRoute  * @description Baasic Metering Category Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Category Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { MeteringCategoryBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringCategoryBatchRoute, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class MeteringCategoryRouteDefinition extends BaseRouteDefinition {
+export class MeteringCategoryRoute extends BaseRoute {
 
     public readonly findRoute: string = 'metering/categories/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,13 +23,13 @@ export class MeteringCategoryRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'metering/categories/{id}';
     
-    get batch(): MeteringCategoryBatchRouteDefinition {
-        return this.meteringCategoryBatchRouteDefinition;
+    get batch(): MeteringCategoryBatchRoute {
+        return this.meteringCategoryBatchRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(meteringTypes.MeteringCategoryBatchRouteDefinition) protected meteringCategoryBatchRouteDefinition: MeteringCategoryBatchRouteDefinition
+        @inject(meteringTypes.MeteringCategoryBatchRoute) protected meteringCategoryBatchRoute: MeteringCategoryBatchRoute
     ) { super(appOptions); }
 
     /**                 
@@ -41,7 +41,7 @@ export class MeteringCategoryRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method 
      * @param options Query resource options object.                       
-     * @example meteringCategoryRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example meteringCategoryRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -52,7 +52,7 @@ export class MeteringCategoryRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id MeteringCategory id which uniquely identifies MeteringCategory resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example meteringCategoryRouteDefinition.get(id);                               
+     * @example meteringCategoryRoute.get(id);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -61,7 +61,7 @@ export class MeteringCategoryRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create metering category route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example meteringCategoryRouteDefinition.create();                              
+     * @example meteringCategoryRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -71,7 +71,7 @@ export class MeteringCategoryRouteDefinition extends BaseRouteDefinition {
      * Parses update metering category route; this URI template does not expose any additional options.                 
      * @method
      * @param data An meteringCategory object used to update specified MeteringCategory resource.                                            
-     * @example meteringCategoryRouteDefinition.update();                              
+     * @example meteringCategoryRoute.update();                              
      **/
     update(data: IMeteringCategory): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -81,7 +81,7 @@ export class MeteringCategoryRouteDefinition extends BaseRouteDefinition {
      * Parses delete metering category route; this URI template does not expose any additional options.                 
      * @method
      * @param data An meteringCategory object used to delete specified MeteringCategory resource.                                            
-     * @example meteringCategoryRouteDefinition.delete();                              
+     * @example meteringCategoryRoute.delete();                              
      **/
     delete(data: IMeteringCategory): any {
         return super.baseDelete(this.deleteRoute, data);

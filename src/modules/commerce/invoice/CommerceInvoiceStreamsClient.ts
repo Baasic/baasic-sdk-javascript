@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module commerceInvoiceStreamsClient  
- * @description  Commerce Invoice Streams Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceStreamsClient` uses `commerceInvoiceStreamsRouteDefinition`. 
+ * @description  Commerce Invoice Streams Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceStreamsClient` uses `commerceInvoiceStreamsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceInvoiceStreamsRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceInvoiceStreamsRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceInvoiceStreamsClient {
 
-    get routeDefinition(): CommerceInvoiceStreamsRouteDefinition {
-        return this.commerceInvoiceStreamsRouteDefinition;
+    get routeDefinition(): CommerceInvoiceStreamsRoute {
+        return this.commerceInvoiceStreamsRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceInvoiceStreamsRouteDefinition) protected commerceInvoiceStreamsRouteDefinition: CommerceInvoiceStreamsRouteDefinition,
+        @inject(commerceTypes.CommerceInvoiceStreamsRoute) protected commerceInvoiceStreamsRoute: CommerceInvoiceStreamsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -51,7 +51,7 @@ export class CommerceInvoiceStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.commerceInvoiceStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.commerceInvoiceStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
     }
 }
 

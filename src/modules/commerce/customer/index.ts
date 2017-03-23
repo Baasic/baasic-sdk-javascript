@@ -1,4 +1,4 @@
-export * from './commerceCustomerRouteDefinition';
+export * from './commerceCustomerRoute';
 export * from './commerceCustomerClient';
-export * from './commerceCustomerPaymentMethodRouteDefinition';
+export * from './commerceCustomerPaymentMethodRoute';
 export * from './commerceCustomerPaymentMethodClient';

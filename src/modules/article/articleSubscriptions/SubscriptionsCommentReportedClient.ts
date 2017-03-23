@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsCommentReportedClient  
- * @description  Article Subscriptions Comment Reported Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentReportedClient` uses `articleSubscriptionsCommentReportedRouteDefinition`. 
+ * @description  Article Subscriptions Comment Reported Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentReportedClient` uses `articleSubscriptionsCommentReportedRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleSubscriptionsCommentReportedRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleSubscriptionsCommentReportedRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleSubscriptionsCommentReportedClient {
 
-    get routeDefinition(): ArticleSubscriptionsCommentReportedRouteDefinition {
-        return this.articleSubscriptionsCommentReportedRouteDefinition;
+    get routeDefinition(): ArticleSubscriptionsCommentReportedRoute {
+        return this.articleSubscriptionsCommentReportedRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsCommentReportedRouteDefinition) protected articleSubscriptionsCommentReportedRouteDefinition: ArticleSubscriptionsCommentReportedRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsCommentReportedRoute) protected articleSubscriptionsCommentReportedRoute: ArticleSubscriptionsCommentReportedRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -36,7 +36,7 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                         
      **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.articleSubscriptionsCommentReportedRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.articleSubscriptionsCommentReportedRoute.subscribe(data), data);
     }
 
     /**                         
@@ -70,6 +70,6 @@ export class ArticleSubscriptionsCommentReportedClient {
                     });                           
      **/
     unSubscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleSubscriptionsCommentReportedRouteDefinition.unSubscribe(data), undefined, data);
+        return this.apiClient.delete<void>(this.articleSubscriptionsCommentReportedRoute.unSubscribe(data), undefined, data);
     }
 }

@@ -6,18 +6,18 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CompanyBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { CompanyBatchRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 @injectable()
 export class CompanyBatchClient {
 
-    get routeDefinition(): CompanyBatchRouteDefinition {
-        return this.companyBatchRouteDefinition;
+    get routeDefinition(): CompanyBatchRoute {
+        return this.companyBatchRoute;
     }
 
     constructor(
-        @inject(userProfileTypes.CompanyBatchRouteDefinition) protected companyBatchRouteDefinition: CompanyBatchRouteDefinition,
+        @inject(userProfileTypes.CompanyBatchRoute) protected companyBatchRoute: CompanyBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -73,7 +73,7 @@ export class CompanyBatchClient {
                    });		                  
     **/
     remove(ids: string[]): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.companyBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete(this.companyBatchRoute.delete(), undefined, ids);
     }
 }
 

@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module baasicArticleTagsSubscriptionsDefinition  
- * @description  Article Tags Subscriptions Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleTagsDefinition` uses `articleTagsRouteDefinition`. 
+ * @description  Article Tags Subscriptions Definition provides an easy way to consume  Article Tags REST API end-points. `articleTagsDefinition` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleTagsDefinition` uses `articleTagsRoute`. 
 */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleTagsSubscriptionsRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticleTag, IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleTagsSubscriptionsClient {
 
-    get routeDefinition(): ArticleTagsSubscriptionsRouteDefinition {
-        return this.articleTagsSubscriptionsRouteDefinition;
+    get routeDefinition(): ArticleTagsSubscriptionsRoute {
+        return this.articleTagsSubscriptionsRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected articleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleTagsSubscriptionsRoute) protected articleTagsSubscriptionsRoute: ArticleTagsSubscriptionsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -54,7 +54,7 @@ export class ArticleTagsSubscriptionsClient {
                     });                     
      **/
     isSubscribed(tag: IArticleTag, data: any): PromiseLike<IHttpResponse<IArticleSubscription>> {
-        return this.apiClient.get(this.articleTagsSubscriptionsRouteDefinition.isSubscribed(tag, data));
+        return this.apiClient.get(this.articleTagsSubscriptionsRoute.isSubscribed(tag, data));
     }
 
     /**                     

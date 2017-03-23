@@ -1,7 +1,7 @@
 /* globals module */
 /**  
  * @module notificationsSubscriptionsUsersClient  
- * @description  Notifications Subscriptions Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersClient` uses `notificationsSubscriptionsUsersRouteDefinition`. 
+ * @description  Notifications Subscriptions Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersClient` uses `notificationsSubscriptionsUsersRoute`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -9,15 +9,15 @@ import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     NotificationsSubscriptionsUsersBatchClient,
-    NotificationsSubscriptionsUsersRouteDefinition, TYPES as notificationsTypes
+    NotificationsSubscriptionsUsersRoute, TYPES as notificationsTypes
 } from 'modules/notifications';
 import { IUserSubscription } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsSubscriptionsUsersClient {
 
-    get routeDefinition(): NotificationsSubscriptionsUsersRouteDefinition {
-        return this.notificationsSubscriptionsUsersRouteDefinition;
+    get routeDefinition(): NotificationsSubscriptionsUsersRoute {
+        return this.notificationsSubscriptionsUsersRoute;
     }
 
     get batch(): NotificationsSubscriptionsUsersBatchClient {
@@ -25,7 +25,7 @@ export class NotificationsSubscriptionsUsersClient {
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected notificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersRoute) protected notificationsSubscriptionsUsersRoute: NotificationsSubscriptionsUsersRoute,
         @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchClient) protected NotificationsSubscriptionsUsersBatchClient: NotificationsSubscriptionsUsersBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -91,11 +91,11 @@ export class NotificationsSubscriptionsUsersClient {
                    });                         
     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserSubscription>> {
-        return this.apiClient.get(this.notificationsSubscriptionsUsersRouteDefinition.get(id, options));
+        return this.apiClient.get(this.notificationsSubscriptionsUsersRoute.get(id, options));
     }
 
     /**                          
-     * Returns a promise that is resolved once the remove user subscription action has been performed. This action will remove a user subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove user subscription action has been performed. This action will remove a user subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsUsersRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(subscription); 
      * let uri = params['model'].links('delete').href; 
@@ -117,7 +117,7 @@ export class NotificationsSubscriptionsUsersClient {
     }
 
     /**                          
-     * Returns a promise that is resolved once the update user subscription action has been performed; this action updates a user subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsUsersRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user subscription action has been performed; this action updates a user subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsUsersRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(subscription); 
      * let uri = params['model'].links('put').href; 

@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MediaVaultBatchRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import { MediaVaultBatchRoute, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 
 @injectable()
 export class MediaVaultBatchClient {
 
-    get routeDefinition(): MediaVaultBatchRouteDefinition {
-        return this.mediaVaultBatchRouteDefinition;
+    get routeDefinition(): MediaVaultBatchRoute {
+        return this.mediaVaultBatchRoute;
     }
 
     constructor(
-        @inject(mediaVaultTypes.MediaVaultBatchRouteDefinition) protected mediaVaultBatchRouteDefinition: MediaVaultBatchRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultBatchRoute) protected mediaVaultBatchRoute: MediaVaultBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -61,7 +61,7 @@ export class MediaVaultBatchClient {
                             });	  	                  
      **/
     remove(data: any[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.mediaVaultBatchRouteDefinition.delete(), undefined, data);
+        return this.apiClient.delete<void>(this.mediaVaultBatchRoute.delete(), undefined, data);
     }
 }
 

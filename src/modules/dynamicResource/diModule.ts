@@ -1,30 +1,30 @@
 import { ContainerModule } from "inversify";
 import {
     DynamicResourceACLClient,
-    DynamicResourceACLRouteDefinition,
+    DynamicResourceACLRoute,
     DynamicResourceClient,
-    DynamicResourceRouteDefinition,
+    DynamicResourceRoute,
     DynamicSchemaClient,
-    DynamicSchemaRouteDefinition
+    DynamicSchemaRoute
 } from 'modules/dynamicResource';
 
 const TYPES = {
     DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
-    DynamicResourceACLRouteDefinition: Symbol("DynamicResourceACLRouteDefinition"),
+    DynamicResourceACLRoute: Symbol("DynamicResourceACLRoute"),
     DynamicResourceClient: Symbol("DynamicResourceClient"),
-    DynamicResourceRouteDefinition: Symbol("DynamicResourceRouteDefinition"),
+    DynamicResourceRoute: Symbol("DynamicResourceRoute"),
     DynamicSchemaClient: Symbol("DynamicSchemaClient"),
-    DynamicSchemaRouteDefinition: Symbol("DynamicSchemaRouteDefinition")
+    DynamicSchemaRoute: Symbol("DynamicSchemaRoute")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<DynamicResourceACLRouteDefinition>(TYPES.DynamicResourceACLRouteDefinition).to(DynamicResourceACLRouteDefinition);
+    bind<DynamicResourceACLRoute>(TYPES.DynamicResourceACLRoute).to(DynamicResourceACLRoute);
     bind<DynamicResourceACLClient>(TYPES.DynamicResourceACLClient).to(DynamicResourceACLClient);
-    bind<DynamicResourceRouteDefinition>(TYPES.DynamicResourceRouteDefinition).to(DynamicResourceRouteDefinition);
+    bind<DynamicResourceRoute>(TYPES.DynamicResourceRoute).to(DynamicResourceRoute);
     bind<DynamicResourceClient>(TYPES.DynamicResourceClient).to(DynamicResourceClient);
-    bind<DynamicSchemaRouteDefinition>(TYPES.DynamicSchemaRouteDefinition).to(DynamicSchemaRouteDefinition);
+    bind<DynamicSchemaRoute>(TYPES.DynamicSchemaRoute).to(DynamicSchemaRoute);
     bind<DynamicSchemaClient>(TYPES.DynamicSchemaClient).to(DynamicSchemaClient);
 });
 

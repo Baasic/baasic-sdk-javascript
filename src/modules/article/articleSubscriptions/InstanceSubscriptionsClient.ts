@@ -1,13 +1,13 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsClient  
- * @description  Articles Subscriptions Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `articleSubscriptionsRouteDefinition`. 
+ * @description  Articles Subscriptions Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsClient` uses `articleSubscriptionsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import {
-    ArticleInstanceSubscriptionsRouteDefinition,
+    ArticleInstanceSubscriptionsRoute,
     ArticleSubscriptionsArticleClient,
     ArticleSubscriptionsCommentReportedClient,
     ArticleSubscriptionsCommentRequiresModerationClient,
@@ -30,15 +30,15 @@ export class ArticleInstanceSubscriptionsClient {
         return this.articleSubscriptionsCommentRequiresModerationClient;
     }
 
-    get routeDefinition(): ArticleInstanceSubscriptionsRouteDefinition {
-        return this.articleInstanceSubscriptionsRouteDefinition;
+    get routeDefinition(): ArticleInstanceSubscriptionsRoute {
+        return this.articleInstanceSubscriptionsRoute;
     }
 
     constructor(
         @inject(articleTypes.ArticleSubscriptionsCommentReportedClient) protected articleSubscriptionsCommentReportedClient: ArticleSubscriptionsCommentReportedClient,
         @inject(articleTypes.ArticleSubscriptionsArticleClient) protected articleSubscriptionsArticleClient: ArticleSubscriptionsArticleClient,
         @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationClient) protected articleSubscriptionsCommentRequiresModerationClient: ArticleSubscriptionsCommentRequiresModerationClient,
-        @inject(articleTypes.ArticleInstanceSubscriptionsRouteDefinition) protected articleInstanceSubscriptionsRouteDefinition: ArticleInstanceSubscriptionsRouteDefinition
+        @inject(articleTypes.ArticleInstanceSubscriptionsRoute) protected articleInstanceSubscriptionsRoute: ArticleInstanceSubscriptionsRoute
     )
     { }
 }

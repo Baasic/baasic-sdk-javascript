@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module commerceInvoiceRouteDefinition  
+ * @module commerceInvoiceRoute  
  * @description Baasic Commerce Invoice Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Invoice Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { CommerceInvoiceStreamsRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceInvoiceStreamsRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
+export class CommerceInvoiceRoute extends BaseRoute {
 
     public readonly findRoute: string = 'commerce/invoices/{?customerId,invoiceStatusId,subscriptionId,dateCreatedMin,dateCreatedMax,searchQuery,page,rpp,sort,embed,fields}';
 
@@ -21,12 +21,12 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'commerce/invoices/{id}';
 
-    get streams(): CommerceInvoiceStreamsRouteDefinition {
-        return this.commerceInvoiceStreamsRouteDefinition;
+    get streams(): CommerceInvoiceStreamsRoute {
+        return this.commerceInvoiceStreamsRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceInvoiceStreamsRouteDefinition) protected commerceInvoiceStreamsRouteDefinition: CommerceInvoiceStreamsRouteDefinition,
+        @inject(commerceTypes.CommerceInvoiceStreamsRoute) protected commerceInvoiceStreamsRoute: CommerceInvoiceStreamsRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -43,7 +43,7 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example commerceInvoiceRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceInvoiceRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -52,7 +52,7 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commerceInvoiceRouteDefinition.get(id, options);                               
+     * @example commerceInvoiceRoute.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -61,7 +61,7 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses update route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commerceInvoiceRouteDefinition.update(data);                               
+     * @example commerceInvoiceRoute.update(data);                               
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -70,7 +70,7 @@ export class CommerceInvoiceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses delete route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commerceInvoiceRouteDefinition.delete(data);                               
+     * @example commerceInvoiceRoute.delete(data);                               
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

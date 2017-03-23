@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module meteringBatchClient  
- * @description  Metering Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringBatchClient` uses `meteringBatchRouteDefinition`. 
+ * @description  Metering Batch Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringBatchClient` uses `meteringBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MeteringBatchRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringBatchRoute, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringData } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringBatchClient {
 
-    get routeDefinition(): MeteringBatchRouteDefinition {
-        return this.meteringBatchRouteDefinition;
+    get routeDefinition(): MeteringBatchRoute {
+        return this.meteringBatchRoute;
     }
 
     constructor(
-        @inject(meteringTypes.MeteringBatchRouteDefinition) protected meteringBatchRouteDefinition: MeteringBatchRouteDefinition,
+        @inject(meteringTypes.MeteringBatchRoute) protected meteringBatchRoute: MeteringBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -75,7 +75,7 @@ export class MeteringBatchClient {
                     });		                  
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.meteringBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.meteringBatchRoute.delete(), undefined, ids);
     }
 }
 

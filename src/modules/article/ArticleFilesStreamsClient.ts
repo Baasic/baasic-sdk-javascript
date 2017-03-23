@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleFilesStreamsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleFilesStreamsRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleFilesStreamsClient {
 
-    get routeDefinition(): ArticleFilesStreamsRouteDefinition {
-        return this.articleFilesStreamsRouteDefinition;
+    get routeDefinition(): ArticleFilesStreamsRoute {
+        return this.articleFilesStreamsRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleFilesStreamsRouteDefinition) protected articleFilesStreamsRouteDefinition: ArticleFilesStreamsRouteDefinition,
+        @inject(articleTypes.ArticleFilesStreamsRoute) protected articleFilesStreamsRoute: ArticleFilesStreamsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -77,7 +77,7 @@ export class ArticleFilesStreamsClient {
                         });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.articleFilesStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.articleFilesStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -106,7 +106,7 @@ export class ArticleFilesStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.articleFilesStreamsRouteDefinition.update(data), formData, { 'Content-Type': undefined });
+        return this.apiClient.put(this.articleFilesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -126,7 +126,7 @@ export class ArticleFilesStreamsClient {
     create(data: IArticleFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.articleFilesStreamsRouteDefinition.create(data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.articleFilesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
     }
 }
 

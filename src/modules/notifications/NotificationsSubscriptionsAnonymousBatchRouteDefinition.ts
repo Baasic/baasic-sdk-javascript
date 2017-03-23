@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module notificationsSubscriptionsAnonymousBatchRouteDefinition  
+ * @module notificationsSubscriptionsAnonymousBatchRoute  
  * @description Baasic Notifications Subscriptions Anonymous Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Subscriptions Anonymous Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';
 
 @injectable()
-export class NotificationsSubscriptionsAnonymousBatchRouteDefinition extends BaseRouteDefinition {
+export class NotificationsSubscriptionsAnonymousBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'notifications/subscriptions/anonymous/batch';
 
@@ -26,7 +26,7 @@ export class NotificationsSubscriptionsAnonymousBatchRouteDefinition extends Bas
     /**                              
      * Parses create anonymous subscription batch route; this route does not expose any additional options                              
      * @method                              
-     * @example notificationsSubscriptionsAnonymousBatchRouteDefinition.create();                              
+     * @example notificationsSubscriptionsAnonymousBatchRoute.create();                              
      */
     create(): any {
         return this.baseCreate(this.createRoute, {});
@@ -44,7 +44,7 @@ export class NotificationsSubscriptionsAnonymousBatchRouteDefinition extends Bas
     /**                              
      * Parses update anonymous subscription batch route; this route does not expose any additional options                              
      * @method                              
-     * @example notificationsSubscriptionsAnonymousBatchRouteDefinition.update();                              
+     * @example notificationsSubscriptionsAnonymousBatchRoute.update();                              
      */
     update(): any {
         return this.baseUpdate(this.updateRoute, {});

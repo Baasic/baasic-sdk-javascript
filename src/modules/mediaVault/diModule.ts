@@ -1,42 +1,42 @@
 import { ContainerModule } from "inversify";
 import {
-    MediaVaultBatchRouteDefinition,
+    MediaVaultBatchRoute,
     MediaVaultBatchClient,
-    MediaVaultRouteDefinition,
+    MediaVaultRoute,
     MediaVaultProcessingProviderSettingsClient,
-    MediaVaultProcessingProviderSettingsRouteDefinition,
+    MediaVaultProcessingProviderSettingsRoute,
     MediaVaultClient,
-    MediaVaultSettingsRouteDefinition,
+    MediaVaultSettingsRoute,
     MediaVaultSettingsClient,
-    MediaVaultStreamsRouteDefinition,
+    MediaVaultStreamsRoute,
     MediaVaultStreamsClient
 } from 'modules/mediaVault';
 
 const TYPES = {
-    MediaVaultBatchRouteDefinition: Symbol("MediaVaultBatchRouteDefinition"),
+    MediaVaultBatchRoute: Symbol("MediaVaultBatchRoute"),
     MediaVaultBatchClient: Symbol("MediaVaultBatchClient"),
-    MediaVaultRouteDefinition: Symbol("MediaVaultRouteDefinition"),
+    MediaVaultRoute: Symbol("MediaVaultRoute"),
     MediaVaultProcessingProviderSettingsClient: Symbol("MediaVaultProcessingProviderSettingsClient"),
-    MediaVaultProcessingProviderSettingsRouteDefinition: Symbol("MediaVaultProcessingProviderSettingsRouteDefinition"),
+    MediaVaultProcessingProviderSettingsRoute: Symbol("MediaVaultProcessingProviderSettingsRoute"),
     MediaVaultClient: Symbol("MediaVaultClient"),
-    MediaVaultSettingsRouteDefinition: Symbol("MediaVaultSettingsRouteDefinition"),
+    MediaVaultSettingsRoute: Symbol("MediaVaultSettingsRoute"),
     MediaVaultSettingsClient: Symbol("MediaVaultSettingsClient"),
-    MediaVaultStreamsRouteDefinition: Symbol("MediaVaultStreamsRouteDefinition"),
+    MediaVaultStreamsRoute: Symbol("MediaVaultStreamsRoute"),
     MediaVaultStreamsClient: Symbol("MediaVaultStreamsClient")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<MediaVaultStreamsRouteDefinition>(TYPES.MediaVaultStreamsRouteDefinition).to(MediaVaultStreamsRouteDefinition);
+    bind<MediaVaultStreamsRoute>(TYPES.MediaVaultStreamsRoute).to(MediaVaultStreamsRoute);
     bind<MediaVaultStreamsClient>(TYPES.MediaVaultStreamsClient).to(MediaVaultStreamsClient);
-    bind<MediaVaultBatchRouteDefinition>(TYPES.MediaVaultBatchRouteDefinition).to(MediaVaultBatchRouteDefinition);
+    bind<MediaVaultBatchRoute>(TYPES.MediaVaultBatchRoute).to(MediaVaultBatchRoute);
     bind<MediaVaultBatchClient>(TYPES.MediaVaultBatchClient).to(MediaVaultBatchClient);
-    bind<MediaVaultSettingsRouteDefinition>(TYPES.MediaVaultSettingsRouteDefinition).to(MediaVaultSettingsRouteDefinition);
+    bind<MediaVaultSettingsRoute>(TYPES.MediaVaultSettingsRoute).to(MediaVaultSettingsRoute);
     bind<MediaVaultSettingsClient>(TYPES.MediaVaultSettingsClient).to(MediaVaultSettingsClient);
-    bind<MediaVaultProcessingProviderSettingsRouteDefinition>(TYPES.MediaVaultProcessingProviderSettingsRouteDefinition).to(MediaVaultProcessingProviderSettingsRouteDefinition);
+    bind<MediaVaultProcessingProviderSettingsRoute>(TYPES.MediaVaultProcessingProviderSettingsRoute).to(MediaVaultProcessingProviderSettingsRoute);
     bind<MediaVaultProcessingProviderSettingsClient>(TYPES.MediaVaultProcessingProviderSettingsClient).to(MediaVaultProcessingProviderSettingsClient);
-    bind<MediaVaultRouteDefinition>(TYPES.MediaVaultRouteDefinition).to(MediaVaultRouteDefinition);
+    bind<MediaVaultRoute>(TYPES.MediaVaultRoute).to(MediaVaultRoute);
     bind<MediaVaultClient>(TYPES.MediaVaultClient).to(MediaVaultClient);
 });
 

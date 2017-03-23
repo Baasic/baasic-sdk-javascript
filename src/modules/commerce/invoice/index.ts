@@ -1,4 +1,4 @@
-export * from './commerceInvoiceStreamsRouteDefinition';
+export * from './commerceInvoiceStreamsRoute';
 export * from './commerceInvoiceStreamsClient';
-export * from './commerceInvoiceRouteDefinition';
+export * from './commerceInvoiceRoute';
 export * from './commerceInvoiceClient';

@@ -1,6 +1,6 @@
 /**  
  * @module dynamicResourceClient  
- * @description  Dynamic Resource Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceClient` uses `dynamicResourceRouteDefinition`. 
+ * @description  Dynamic Resource Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceClient` uses `dynamicResourceRoute`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -8,7 +8,7 @@ import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     DynamicResourceACLClient,
-    DynamicResourceRouteDefinition,
+    DynamicResourceRoute,
     DynamicSchemaClient,
     TYPES as dynamicResourceTypes
 } from 'modules/dynamicResource';
@@ -18,12 +18,12 @@ import { IDynamicObject } from 'modules/dynamicResource/contracts';
 export class DynamicResourceClient {
 
     /**                 
-     * Provides direct access to `dynamicResourceRouteDefinition`.                 
+     * Provides direct access to `dynamicResourceRoute`.                 
      * @method                        
      * @example dynamicResourceClient.routeDefinition.get(schemaName, id, options)                 
      **/
-    get routeDefinition(): DynamicResourceRouteDefinition {
-        return this.dynamicResourceRouteDefinition;
+    get routeDefinition(): DynamicResourceRoute {
+        return this.dynamicResourceRoute;
     }
 
     get acl(): DynamicResourceACLClient {
@@ -35,7 +35,7 @@ export class DynamicResourceClient {
     }
 
     constructor(
-        @inject(dynamicResourceTypes.DynamicResourceRouteDefinition) protected dynamicResourceRouteDefinition: DynamicResourceRouteDefinition,
+        @inject(dynamicResourceTypes.DynamicResourceRoute) protected dynamicResourceRoute: DynamicResourceRoute,
         @inject(dynamicResourceTypes.DynamicResourceACLClient) protected dynamicResourceACLClient: DynamicResourceACLClient,
         @inject(dynamicResourceTypes.DynamicSchemaClient) protected dynamicSchemaClient: DynamicSchemaClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -62,7 +62,7 @@ export class DynamicResourceClient {
                 });                    
      **/
     find(schemaName: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IDynamicObject>>> {
-        return this.apiClient.get<IQueryModel<IDynamicObject>>(this.dynamicResourceRouteDefinition.find(schemaName, options));
+        return this.apiClient.get<IQueryModel<IDynamicObject>>(this.dynamicResourceRoute.find(schemaName, options));
     }
 
     /**                  
@@ -77,7 +77,7 @@ export class DynamicResourceClient {
                     });                 
      **/
     get(schemaName: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IDynamicObject>> {
-        return this.apiClient.get<IDynamicObject>(this.dynamicResourceRouteDefinition.get(id, schemaName, options));
+        return this.apiClient.get<IDynamicObject>(this.dynamicResourceRoute.get(id, schemaName, options));
     }
 
     /**                  
@@ -101,7 +101,7 @@ export class DynamicResourceClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update action has been performed; this action updates a dynamic resource item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update action has been performed; this action updates a dynamic resource item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(dynamicResource); 
      * let uri = params['model'].links('put').href; 
@@ -126,7 +126,7 @@ export class DynamicResourceClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the patch action has been performed; this action patches an existing dynamic resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the patch action has been performed; this action patches an existing dynamic resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(dynamicResource); 
      * let uri = params['model'].links('patch').href; 
@@ -153,7 +153,7 @@ export class DynamicResourceClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(dynamicResource); 
      * let uri = params['model'].links('delete').href; 
@@ -172,6 +172,6 @@ export class DynamicResourceClient {
                     });						
      **/
     remove(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.dynamicResourceRouteDefinition.delete(data, options));
+        return this.apiClient.delete<void>(this.dynamicResourceRoute.delete(data, options));
     }
 }

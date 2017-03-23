@@ -1,17 +1,17 @@
 /* globals module */
 /**  
  * @module notificationsClient  
- * @description  Notifications Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsClient` uses `notificationsRouteDefinition`. 
+ * @description  Notifications Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsClient` uses `notificationsRoute`. 
  */
 
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import {
     NotificationsPublishClient,
     NotificationsSubscriptionsClient,
     NotificationsRegistrationsClient,
-    NotificationsRouteDefinition,
+    NotificationsRoute,
     NotificationsSettingsClient,
     TYPES as notificationsTypes
 } from 'modules/notifications';
@@ -19,8 +19,8 @@ import {
 @injectable()
 export class NotificationsClient {
 
-    get routeDefinition(): NotificationsRouteDefinition {
-        return this.notificationsRouteDefinition;
+    get routeDefinition(): NotificationsRoute {
+        return this.notificationsRoute;
     }
 
     get publish(): NotificationsPublishClient {
@@ -44,7 +44,7 @@ export class NotificationsClient {
         @inject(notificationsTypes.NotificationsSubscriptionsClient) protected basicNotificationsSubscriptionsClient: NotificationsSubscriptionsClient,
         @inject(notificationsTypes.NotificationsRegistrationsClient) protected notificationsRegistrationsClient: NotificationsRegistrationsClient,
         @inject(notificationsTypes.NotificationsSettingsClient) protected notificationsSettingsClient: NotificationsSettingsClient,
-        @inject(notificationsTypes.NotificationsRouteDefinition) protected notificationsRouteDefinition: NotificationsRouteDefinition
+        @inject(notificationsTypes.NotificationsRoute) protected notificationsRoute: NotificationsRoute
     ) { }
 }
 

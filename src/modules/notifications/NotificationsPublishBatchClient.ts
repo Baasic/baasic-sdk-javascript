@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module notificationsPublishBatchClient  
- * @description  Notifications Publish Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsPublishBatchClient` uses `notificationsPublishBatchRouteDefinition`. 
+ * @description  Notifications Publish Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsPublishBatchClient` uses `notificationsPublishBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { NotificationsPublishBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsPublishBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
 import { INotification } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsPublishBatchClient {
 
-    get routeDefinition(): NotificationsPublishBatchRouteDefinition {
-        return this.notificationsPublishBatchRouteDefinition;
+    get routeDefinition(): NotificationsPublishBatchRoute {
+        return this.notificationsPublishBatchRoute;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsPublishBatchRouteDefinition) protected notificationsPublishBatchRouteDefinition: NotificationsPublishBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsPublishBatchRoute) protected notificationsPublishBatchRoute: NotificationsPublishBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 

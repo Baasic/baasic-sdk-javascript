@@ -1,4 +1,4 @@
-export * from './commerceLookupsCountryStateBatchRouteDefinition';
+export * from './commerceLookupsCountryStateBatchRoute';
 export * from './commerceLookupsCountryStateBatchClient';
-export * from './commerceLookupsCountryStateRouteDefinition';
+export * from './commerceLookupsCountryStateRoute';
 export * from './commerceLookupsCountryStateClient';

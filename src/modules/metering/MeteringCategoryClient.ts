@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module meteringCategoryClient  
- * @description  Metering Category Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringCategoryClient` uses `meteringCategoryRouteDefinition`. 
+ * @description  Metering Category Client provides an easy way to consume  Metering REST API end-points. In order to obtain a needed routes `meteringCategoryClient` uses `meteringCategoryRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MeteringCategoryBatchClient, MeteringCategoryRouteDefinition, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringCategoryBatchClient, MeteringCategoryRoute, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';
 
 @injectable()
 export class MeteringCategoryClient {
 
-    get routeDefinition(): MeteringCategoryRouteDefinition {
-        return this.meteringCategoryRouteDefinition;
+    get routeDefinition(): MeteringCategoryRoute {
+        return this.meteringCategoryRoute;
     }
 
     get batch(): MeteringCategoryBatchClient {
@@ -22,7 +22,7 @@ export class MeteringCategoryClient {
     }
 
     constructor(
-        @inject(meteringTypes.MeteringCategoryRouteDefinition) protected meteringCategoryRouteDefinition: MeteringCategoryRouteDefinition,
+        @inject(meteringTypes.MeteringCategoryRoute) protected meteringCategoryRoute: MeteringCategoryRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(meteringTypes.MeteringCategoryBatchClient) protected meteringCategoryBatchClient: MeteringCategoryBatchClient
     ) { }
@@ -65,7 +65,7 @@ export class MeteringCategoryClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMeteringCategory>> {
-        return this.apiClient.get(this.meteringCategoryRouteDefinition.get(id, options));
+        return this.apiClient.get(this.meteringCategoryRoute.get(id, options));
     }
 
     /**                  
@@ -92,7 +92,7 @@ export class MeteringCategoryClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update metering action has been performed; this action updates a metering resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringCategoryRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update metering action has been performed; this action updates a metering resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringCategoryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapepr.updateParams(meteringCategory); 
      * let uri = params['model'].links('put').href; 
@@ -115,7 +115,7 @@ export class MeteringCategoryClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a metering resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringCategoryRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a metering resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringCategoryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ```
      * let params = modelMapper.removeParams(meteringCategory); 
      * let uri = params['model'].links('delete').href; 

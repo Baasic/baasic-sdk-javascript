@@ -1,18 +1,18 @@
 /* globals module */
 /**  
- * @module articleTagsRouteDefinition  
+ * @module articleTagsRoute  
  * @description Baasic Article Tags Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Tags Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { ArticleTagsSubscriptionsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleTagsSubscriptionsRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticleTag } from 'modules/article/contracts';
 
 @injectable()
-export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
+export class ArticleTagsRoute extends BaseRoute {
 
     public readonly findRoute: string = 'article-tags/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -22,12 +22,12 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'article-tags/{id}';
     
-    get subscriptions(): ArticleTagsSubscriptionsRouteDefinition {
-        return this.articleTagsSubscriptionsRouteDefinition;
+    get subscriptions(): ArticleTagsSubscriptionsRoute {
+        return this.articleTagsSubscriptionsRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleTagsSubscriptionsRouteDefinition) protected articleTagsSubscriptionsRouteDefinition: ArticleTagsSubscriptionsRouteDefinition,
+        @inject(articleTypes.ArticleTagsSubscriptionsRoute) protected articleTagsSubscriptionsRoute: ArticleTagsSubscriptionsRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
     { super(appOptions); }
@@ -41,7 +41,7 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method
      * @param options Query resource options object.      				
-     * @example articleTagsRouteDefinition.find().expand({searchQuery: '<search-phrase>'});               				
+     * @example articleTagsRoute.find().expand({searchQuery: '<search-phrase>'});               				
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -53,7 +53,7 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Article tag id or slug that uniquely identifies article tag resource that needs to be retrieved.
      * @param options Options object that contains embed data.      				
-     * @example articleTagsRouteDefinition.get({id: '<articleTag-id>'});               				
+     * @example articleTagsRoute.get({id: '<articleTag-id>'});               				
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -64,7 +64,7 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method 
      * @param data An article tag object used to update specified article tag resource.     				
-     * @example articleTagsRouteDefinition.update({id: '<articleTag-id>'});               				
+     * @example articleTagsRoute.update({id: '<articleTag-id>'});               				
      **/
     update(data: IArticleTag): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -75,7 +75,7 @@ export class ArticleTagsRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation. 				
      * @method
      * @param data An article tag object used to delete specified article tag resource.      				
-     * @example articleTagsRouteDefinition.delete({id: '<articleTag-id>'});               				
+     * @example articleTagsRoute.delete({id: '<articleTag-id>'});               				
      **/
     delete(data: IArticleTag): any {
         return super.baseDelete(this.deleteRoute, data);

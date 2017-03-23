@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module roleClient  
- * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `roleClient` uses `roleRouteDefinition`. 
+ * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `roleClient` uses `roleRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { RoleRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { RoleRoute, TYPES as membershipTypes } from 'modules/membership';
 import { IRole } from 'modules/membership/contracts';
 
 @injectable()
 export class RoleClient {
 
     /**                 
-     * Provides direct access to `roleRouteDefinition`.                 
+     * Provides direct access to `roleRoute`.                 
      * @method                        
      * @example roleClient.routeDefinition.get().expand(expandObject);                 
      **/
-    get routeDefinition(): RoleRouteDefinition {
-        return this.roleRouteDefinition;
+    get routeDefinition(): RoleRoute {
+        return this.roleRoute;
     }
 
     constructor(
-        @inject(membershipTypes.RoleRouteDefinition) protected roleRouteDefinition: RoleRouteDefinition,
+        @inject(membershipTypes.RoleRoute) protected roleRoute: RoleRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -65,7 +65,7 @@ export class RoleClient {
                     });                  
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.get<IRole>(this.roleRouteDefinition.get(id, options));
+        return this.apiClient.get<IRole>(this.roleRoute.get(id, options));
     }
 
     /**                  

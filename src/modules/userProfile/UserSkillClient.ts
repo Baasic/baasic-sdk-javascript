@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { UserSkillRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserSkillRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserSkill } from 'modules/userProfile/contracts';
 
 @injectable()
 export class UserSkillClient {
 
-    get routeDefinition(): UserSkillRouteDefinition {
-        return this.userSkillRouteDefinition;
+    get routeDefinition(): UserSkillRoute {
+        return this.userSkillRoute;
     }
 
     constructor(
-        @inject(userProfileTypes.UserSkillRouteDefinition) protected userSkillRouteDefinition: UserSkillRouteDefinition,
+        @inject(userProfileTypes.UserSkillRoute) protected userSkillRoute: UserSkillRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -60,7 +60,7 @@ export class UserSkillClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserSkill>> {
-        return this.apiClient.get<IUserSkill>(this.userSkillRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserSkill>(this.userSkillRoute.get(id, options));
     }
 
     /**                  
@@ -81,7 +81,7 @@ export class UserSkillClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update user skill action has been performed; this action updates a user skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userSkillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user skill action has been performed; this action updates a user skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userSkillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(skill); 
      * let uri = params['model'].links('put').href; 
@@ -104,7 +104,7 @@ export class UserSkillClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userSkillRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userSkillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(skill); 
      * let uri = params['model'].links('delete').href; 

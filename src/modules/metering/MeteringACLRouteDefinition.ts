@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module meteringACLRouteDefinition  
+ * @module meteringACLRoute  
  * @description Baasic Metering ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering ACL Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IACLOptions, IACLPolicy } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class MeteringACLRouteDefinition extends BaseRouteDefinition {
+export class MeteringACLRoute extends BaseRoute {
 
     public readonly getRoute: string = 'metering/data/{id}/acl/{?fields}';
 
@@ -26,7 +26,7 @@ export class MeteringACLRouteDefinition extends BaseRouteDefinition {
      * Parses get metering acl route; this URI template should be expanded with the Id of the metering.										
      * @method    					
      * @param options ACL options object.
-     * @example meteringACLRouteDefinition.get({id: '<id>'}); 					
+     * @example meteringACLRoute.get({id: '<id>'}); 					
      **/
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
@@ -37,7 +37,7 @@ export class MeteringACLRouteDefinition extends BaseRouteDefinition {
      * Parses update metering acl route; this URI template should be expanded with the Id of the metering.										
      * @method 
      * @param options ACL options object.   					
-     * @example meteringACLRouteDefinition.update({id: '<id>'}); 					
+     * @example meteringACLRoute.update({id: '<id>'}); 					
      **/
     update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
@@ -59,7 +59,7 @@ export class MeteringACLRouteDefinition extends BaseRouteDefinition {
      *               "Update"  
      * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
      * @param data ACL Policy object used to delete specified item in the system.      					
-     * @example meteringACLRouteDefinition.deleteByUser({    
+     * @example meteringACLRoute.deleteByUser({    
                     id: '<id>',    
                     accessAction: '<access-action>',    
                     user: '<username>' 
@@ -88,7 +88,7 @@ export class MeteringACLRouteDefinition extends BaseRouteDefinition {
      *               "Update"  
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
      * @param data ACL Policy object used to delete specified item in the system.    					
-     * @example meteringACLRouteDefinition.deleteByRole({ id: '<id>', accessAction: '<access-action>', role: '<role-name>'}); 					
+     * @example meteringACLRoute.deleteByRole({ id: '<id>', accessAction: '<access-action>', role: '<role-name>'}); 					
      **/
     deleteByRole(id: string, action: string, role: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);

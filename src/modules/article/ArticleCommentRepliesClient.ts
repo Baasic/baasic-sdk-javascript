@@ -1,13 +1,13 @@
 /* globals module */
 /**  
  * @module articleCommentRepliesClient
- * @description  Article Comment Replies Client provides an easy way to consume  Article Comment Replies REST API end-points. `articleCommentRepliesService` functions enable performing standard CRUD operations directly on article comment reply resources, whereas the `articleClient` functions allow management between article and article comment reply. In order to obtain needed routes `articleCommentRepliesService` uses `articleCommentRepliesRouteDefinition`. 
+ * @description  Article Comment Replies Client provides an easy way to consume  Article Comment Replies REST API end-points. `articleCommentRepliesService` functions enable performing standard CRUD operations directly on article comment reply resources, whereas the `articleClient` functions allow management between article and article comment reply. In order to obtain needed routes `articleCommentRepliesService` uses `articleCommentRepliesRoute`. 
 */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleCommentRepliesRouteDefinition, CommentStatus, TYPES as articleTypes } from 'modules/article';
+import { ArticleCommentRepliesRoute, CommentStatus, TYPES as articleTypes } from 'modules/article';
 import { IArticleCommentReply, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
 
 @injectable()
@@ -22,21 +22,21 @@ export class ArticleCommentRepliesClient {
     public statuses: ICommentStatus = CommentStatus;
 
     /**
-     * Provides direct access to `articleCommentRepliesRouteDefinition`.
+     * Provides direct access to `articleCommentRepliesRoute`.
      * @method 
      * @example articleCommentRepliesClient.routeDefinition.get();
      **/
-    get routeDefinition(): ArticleCommentRepliesRouteDefinition {
-        return this.articleCommentRepliesRouteDefinition;
+    get routeDefinition(): ArticleCommentRepliesRoute {
+        return this.articleCommentRepliesRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleCommentRepliesRouteDefinition) protected articleCommentRepliesRouteDefinition: ArticleCommentRepliesRouteDefinition,
+        @inject(articleTypes.ArticleCommentRepliesRoute) protected articleCommentRepliesRoute: ArticleCommentRepliesRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
     /**
-     * Returns a promise that is resolved once the approve article comment reply action has been performed. This action sets the state of an article comment reply to "approved". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the approve article comment reply action has been performed. This action sets the state of an article comment reply to "approved". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-approve').href; 
@@ -59,7 +59,7 @@ export class ArticleCommentRepliesClient {
     }
 
     /**
-     * Returns a promise that is resolved once the unapprove article comment reply action has been performed. This action sets the state of an article comment reply to "unapproved". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unapprove article comment reply action has been performed. This action sets the state of an article comment reply to "unapproved". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-unapprove').href; 
@@ -124,7 +124,7 @@ export class ArticleCommentRepliesClient {
     }
 
     /**
-     * Returns a promise that is resolved once the flag article comment reply action has been performed. This action sets the state of an article comment reply to "flagged". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the flag article comment reply action has been performed. This action sets the state of an article comment reply to "flagged". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-flag').href; 
@@ -146,7 +146,7 @@ export class ArticleCommentRepliesClient {
     }
 
     /**
-     * Returns a promise that is resolved once the unflag article comment reply action has been performed. This action removes the "flagged" comment reply state. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unflag article comment reply action has been performed. This action removes the "flagged" comment reply state. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-unflag').href; 
@@ -181,11 +181,11 @@ export class ArticleCommentRepliesClient {
                     });
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleCommentReply>> {
-        return this.apiClient.get<IArticleCommentReply>(this.articleCommentRepliesRouteDefinition.get(id, options));
+        return this.apiClient.get<IArticleCommentReply>(this.articleCommentRepliesRoute.get(id, options));
     }
 
     /**
-     * Returns a promise that is resolved once the remove article comment reply action has been performed. If the action is successfully completed, the article comment reply resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article comment reply action has been performed. If the action is successfully completed, the article comment reply resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = apiClient.removeParams(articleCommentReply); 
      * let uri = params['model'].links('delete').href; 
@@ -207,7 +207,7 @@ export class ArticleCommentRepliesClient {
     }
 
     /**
-     * Returns a promise that is resolved once the report article comment reply action has been performed. This action sets the state of an article comment reply to "reported". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the report article comment reply action has been performed. This action sets the state of an article comment reply to "reported". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-report').href; 
@@ -230,7 +230,7 @@ export class ArticleCommentRepliesClient {
     }
 
     /**
-     * Returns a promise that is resolved once the unreport article comment reply action has been performed. This action removes the "reported" comment reply state. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unreport article comment reply action has been performed. This action removes the "reported" comment reply state. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-unreport').href; 
@@ -252,7 +252,7 @@ export class ArticleCommentRepliesClient {
     }
 
     /**
-     * Returns a promise that is resolved once the mark as spam article comment reply action has been performed. This action sets the state of an article comment reply to "spam". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the mark as spam article comment reply action has been performed. This action sets the state of an article comment reply to "spam". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-spam').href; 
@@ -274,7 +274,7 @@ export class ArticleCommentRepliesClient {
     }
 
     /**
-     * Returns a promise that is resolved once the unspam article comment reply action has been performed. This action removes the "spam" comment reply state. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unspam article comment reply action has been performed. This action removes the "spam" comment reply state. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('comment-unspam').href; 
@@ -296,7 +296,7 @@ export class ArticleCommentRepliesClient {
     }
 
     /**
-     * Returns a promise that is resolved once the update article comment reply action has been performed; this action updates an article comment reply resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article comment reply action has been performed; this action updates an article comment reply resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleCommentRepliesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(articleCommentReply); 
      * let uri = params['model'].links('put').href; 

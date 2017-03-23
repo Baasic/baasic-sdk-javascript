@@ -1,18 +1,18 @@
 /* globals module */
 /**  
- * @module articleFilesStreamsRouteDefinition  
+ * @module articleFilesStreamsRoute  
  * @description Baasic Article Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleFile } from 'modules/article/contracts';
 
 @injectable()
-export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
+export class ArticleFilesStreamsRoute extends BaseRoute {
 
     public readonly getRoute: string = 'article-file-streams/{id}/{?width,height}';
 
@@ -31,7 +31,7 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
      * - `height` - height of desired derived image. 
      * @method
      * @param data Article file id of the original article file used to identify stream that needs to be retrieved from the system.
-     * @example articleFilesRouteDefinition.get({id: '<filename>'});
+     * @example articleFilesRoute.get({id: '<filename>'});
      **/
     get(data: any): any {
         if (!this.utility.isObject(data)) {
@@ -46,7 +46,7 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
      * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.                     
      * @method
      * @param data article file that needs to be saved into the system. 
-     * @example articleFilesRouteDefinition.create({filename: '<filename>'});                                   
+     * @example articleFilesRoute.create({filename: '<filename>'});                                   
      **/
     create(data: IArticleFile): any {
         return super.baseCreate(this.createRoute, data);
@@ -58,7 +58,7 @@ export class ArticleFilesStreamsRouteDefinition extends BaseRouteDefinition {
      * - `height` - height of derived image to update.                                        
      * @method
      * @param data article file used to identify stream that needs to be updated.                        
-     * @example articleFilesRouteDefinition.update({id: '<filename>'});
+     * @example articleFilesRoute.update({id: '<filename>'});
      **/
     update(data: IArticleFile): any {
         return super.baseUpdate(this.updateRoute, data);

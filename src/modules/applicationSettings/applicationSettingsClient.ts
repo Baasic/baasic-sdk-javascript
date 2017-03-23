@@ -1,29 +1,29 @@
 /* globals module */
 /**  
  * @module applicationSettingsClient  
- * @description  Application Settings Client provides an easy way to consume  Application Settings REST API end-points. In order to obtain needed routes `applicationSettingsClient` uses `applicationSettingsRouteDefinition`. 
+ * @description  Application Settings Client provides an easy way to consume  Application Settings REST API end-points. In order to obtain needed routes `applicationSettingsClient` uses `applicationSettingsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ApplicationSettingsRouteDefinition, TYPES as applicationTypes } from 'modules/applicationSettings';
+import { ApplicationSettingsRoute, TYPES as applicationTypes } from 'modules/applicationSettings';
 import { IApplication } from 'modules/applicationSettings/contracts';
 
 @injectable()
 export class ApplicationSettingsClient {
 
     /**                 
-     * Provides direct access to `applicationSettingsRouteDefinition`.                 
+     * Provides direct access to `applicationSettingsRoute`.                 
      * @method                        
      * @example ApplicationSettingsClient.routeDefinition.get(options)                 
      **/
-    get routeDefinition(): ApplicationSettingsRouteDefinition {
-        return this.applicationSettingsRouteDefinition;
+    get routeDefinition(): ApplicationSettingsRoute {
+        return this.applicationSettingsRoute;
     }
 
     constructor(
-        @inject(applicationTypes.ApplicationSettingsRouteDefinition) protected applicationSettingsRouteDefinition: ApplicationSettingsRouteDefinition,
+        @inject(applicationTypes.ApplicationSettingsRoute) protected applicationSettingsRoute: ApplicationSettingsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -44,7 +44,7 @@ export class ApplicationSettingsClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update application settings action has been performed. This action updates the application setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't use `applicationSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update application settings action has been performed. This action updates the application setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't use `applicationSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(appSettings); 
      * let uri = params['model'].links('put').href;				 

@@ -1,25 +1,25 @@
 /* globals module */
 /**  
  * @module templatingBatchClient  
- * @description  Templating Batch Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingBatchClient` uses `templatingBatchRouteDefinition`. 
+ * @description  Templating Batch Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingBatchClient` uses `templatingBatchRoute`. 
  */
 
 import { injectable, inject } from 'inversify';
 import { IResponse } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { TemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
+import { TemplatingBatchRoute, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 @injectable()
 export class TemplatingBatchClient {
 
     constructor(
-        @inject(templatingTypes.TemplatingBatchRouteDefinition) protected templatingBatchRouteDefinition: TemplatingBatchRouteDefinition,
+        @inject(templatingTypes.TemplatingBatchRoute) protected templatingBatchRoute: TemplatingBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
-    get routeDefinition(): TemplatingBatchRouteDefinition {
-        return this.templatingBatchRouteDefinition;
+    get routeDefinition(): TemplatingBatchRoute {
+        return this.templatingBatchRoute;
     }
 
     /**                     
@@ -70,7 +70,7 @@ export class TemplatingBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.templatingBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.templatingBatchRoute.delete(), undefined, ids);
     }
 }
 

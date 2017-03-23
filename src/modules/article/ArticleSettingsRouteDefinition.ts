@@ -1,17 +1,17 @@
 /* globals module */
 /**  
-* @module articleSettingsRouteDefinition  
+* @module articleSettingsRoute  
 * @description Baasic Article Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleSettings } from 'modules/article/contracts';
 
 @injectable()
-export class ArticleSettingsRouteDefinition extends BaseRouteDefinition {
+export class ArticleSettingsRoute extends BaseRoute {
 
     public readonly getRoute: string = 'article-settings/{?embed,fields}';
 
@@ -27,7 +27,7 @@ export class ArticleSettingsRouteDefinition extends BaseRouteDefinition {
      * Parses get article settings route; this URI template doesn't expose any additional properties.								
      * @method 	
      * @param options Options object that contains embed data.			
-     * @example articleSettingsRouteDefinition.get(options);               				
+     * @example articleSettingsRoute.get(options);               				
      **/
     get(options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, undefined, options);
@@ -37,7 +37,7 @@ export class ArticleSettingsRouteDefinition extends BaseRouteDefinition {
      * Parses update article settings route; this URI template doesn't expose any additional properties.								
      * @method
      * @param options Options object that contains embed data. 				
-     * @example articleSettingsRouteDefinition.update(data);               				
+     * @example articleSettingsRoute.update(data);               				
      **/
     update(data: IArticleSettings): any {
         return super.baseUpdate(this.updateRoute, data);

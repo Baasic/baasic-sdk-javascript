@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module notificationsRegistrationsAnonymousBatchRouteDefinition  
+ * @module notificationsRegistrationsAnonymousBatchRoute  
  * @description Baasic Notifications Registrations Anonymous Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Anonymous Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IAnonymousRegistration } from 'modules/notifications/contracts';
 
-export class NotificationsRegistrationsAnonymousBatchRouteDefinition extends BaseRouteDefinition {
+export class NotificationsRegistrationsAnonymousBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'notifications/registrations/anonymous/batch';
 
@@ -23,7 +23,7 @@ export class NotificationsRegistrationsAnonymousBatchRouteDefinition extends Bas
     /**                              
      * Parses create anonymous registrations batch route; this route does not expose any additional options                              
      * @method                            
-     * @example notificationsRegistrationsAnonymousBatchRouteDefinition.create();                              
+     * @example notificationsRegistrationsAnonymousBatchRoute.create();                              
      */
     create(): any {
         return this.baseCreate(this.createRoute, {});
@@ -32,7 +32,7 @@ export class NotificationsRegistrationsAnonymousBatchRouteDefinition extends Bas
     /**                              
      * Parses delete anonymous registrations batch route; this route does not expose any additional options                              
      * @method                             
-     * @example notificationsRegistrationsAnonymousBatchRouteDefinition.delete();                              
+     * @example notificationsRegistrationsAnonymousBatchRoute.delete();                              
      */
     delete(): any {
         return this.baseDelete(this.deleteRoute, {});
@@ -41,7 +41,7 @@ export class NotificationsRegistrationsAnonymousBatchRouteDefinition extends Bas
     /**                              
      * Parses update anonymous registrations batch route; this route does not expose any additional options                              
      * @method                              
-     * @example notificationsRegistrationsAnonymousBatchRouteDefinition.update();                              
+     * @example notificationsRegistrationsAnonymousBatchRoute.update();                              
      */
     update(): any {
         return this.baseUpdate('notifications/registrations/anonymous/batch', {});

@@ -1,14 +1,14 @@
 /* globals module */
 /**  
  * @module userClient  
- * @description  User Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userClient` uses `userRouteDefinition`. 
+ * @description  User Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userClient` uses `userRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    UserRouteDefinition,
+    UserRoute,
     UserSocialLoginClient,
     TYPES as membershipTypes
 } from 'modules/membership';
@@ -19,12 +19,12 @@ import { ModelMapper } from 'common';
 export class UserClient {
 
     /**                 
-     * Provides direct access to `userRouteDefinition`.                 
+     * Provides direct access to `userRoute`.                 
      * @method                        
      * @example userClient.routeDefinition.get();                 
      **/
-    get routeDefinition(): UserRouteDefinition {
-        return this.userRouteDefinition;
+    get routeDefinition(): UserRoute {
+        return this.userRoute;
     }
 
     get socialLogin(): UserSocialLoginClient {
@@ -32,7 +32,7 @@ export class UserClient {
     }
 
     constructor(
-        @inject(membershipTypes.UserRouteDefinition) protected userRouteDefinition: UserRouteDefinition,
+        @inject(membershipTypes.UserRoute) protected userRoute: UserRoute,
         @inject(membershipTypes.UserSocialLoginClient) protected userSocialLoginClient: UserSocialLoginClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -50,7 +50,7 @@ export class UserClient {
                     });                   
      **/
     exists(username: string, options?: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.userRouteDefinition.exists(username, options));
+        return this.apiClient.get(this.userRoute.exists(username, options));
     }
 
     /**                  
@@ -93,7 +93,7 @@ export class UserClient {
                 });                  
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IAppUser>> {
-        return this.apiClient.get<IAppUser>(this.userRouteDefinition.get(id, options));
+        return this.apiClient.get<IAppUser>(this.userRoute.get(id, options));
     }
 
     /**                  
@@ -122,7 +122,7 @@ export class UserClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update user action has been performed; this action updates a user. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user action has been performed; this action updates a user. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('put').href; 
@@ -146,7 +146,7 @@ export class UserClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove user action has been performed. This action will remove a user from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove user action has been performed. This action will remove a user from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('delete').href; 
@@ -168,7 +168,7 @@ export class UserClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the unlock user action has been performed. This action will unlock the user resource which was previously locked either manually or automatically by the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unlock user action has been performed. This action will unlock the user resource which was previously locked either manually or automatically by the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('unlock').href; 
@@ -186,11 +186,11 @@ export class UserClient {
                             });						
      **/
     unlock(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.userRouteDefinition.unlock(data), data);
+        return this.apiClient.put(this.userRoute.unlock(data), data);
     }
 
     /**                 
-     * Returns a promise that is resolved once the lock user action has been performed. This action will lock the user resource out of the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the lock user action has been performed. This action will lock the user resource out of the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('lock').href; 
@@ -208,11 +208,11 @@ export class UserClient {
                         });						
      **/
     lock(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.userRouteDefinition.lock(data), data);
+        return this.apiClient.put(this.userRoute.lock(data), data);
     }
 
     /**                  
-     * Returns a promise that is resolved once the approve user action has been performed. This action will mark the user resource as 'approved' in the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the approve user action has been performed. This action will mark the user resource as 'approved' in the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('approve').href; 
@@ -230,11 +230,11 @@ export class UserClient {
                         });						
      **/
     approve(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.userRouteDefinition.approve(data), data);
+        return this.apiClient.put(this.userRoute.approve(data), data);
     }
 
     /**                  
-     * Returns a promise that is resolved once the disapprove user action has been performed. This action will mark the user resource as 'not approved' in the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the disapprove user action has been performed. This action will mark the user resource as 'not approved' in the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(user); 
      * let uri = params['model'].links('disapprove').href; 
@@ -249,7 +249,7 @@ export class UserClient {
                     });						
      **/
     disapprove(data: IAppUser): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.userRouteDefinition.disapprove(data), data);
+        return this.apiClient.put(this.userRoute.disapprove(data), data);
     }
 
     /**                  
@@ -271,7 +271,7 @@ export class UserClient {
                 .finally (function () {}); 
      **/
     changePassword(username: string, data: INewPassword): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.userRouteDefinition.changePassword(username), data);
+        return this.apiClient.put(this.userRoute.changePassword(username), data);
     }
 }
 

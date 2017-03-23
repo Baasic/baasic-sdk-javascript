@@ -1,15 +1,15 @@
 /* globals module */
 /**  
- *@module lookupRouteDefinition  
+ *@module lookupRoute  
  * @description Baasic Lookup Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Lookup Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTYPES } from 'common';
+import { BaseRoute, TYPES as commonTYPES } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class LookupRouteDefinition extends BaseRouteDefinition {
+export class LookupRoute extends BaseRoute {
 
     /**                  
     * Get route with route and query parameters.

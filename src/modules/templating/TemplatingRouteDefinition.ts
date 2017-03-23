@@ -1,18 +1,18 @@
 /*global module */
 /**  
- * @module templatingRouteDefinition  
+ * @module templatingRoute  
  * @description Baasic Templating Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Templating Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from 'inversify';
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { TemplatingBatchRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
+import { TemplatingBatchRoute, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class TemplatingRouteDefinition extends BaseRouteDefinition {
+export class TemplatingRoute extends BaseRoute {
 
     public readonly findRoute: string = 'templates/{?searchQuery,page,rpp,sort,embed,fields,moduleNames}';
 
@@ -24,13 +24,13 @@ export class TemplatingRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'templates/{id}';
 
-    get batch(): TemplatingBatchRouteDefinition {
-        return this.templatingBatchRouteDefinition;
+    get batch(): TemplatingBatchRoute {
+        return this.templatingBatchRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(templatingTypes.TemplatingBatchRouteDefinition) protected templatingBatchRouteDefinition: TemplatingBatchRouteDefinition
+        @inject(templatingTypes.TemplatingBatchRoute) protected templatingBatchRoute: TemplatingBatchRoute
     ) { super(appOptions); }
 
     /**                 
@@ -42,7 +42,7 @@ export class TemplatingRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options.                        
-     * @example templatingRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example templatingRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -53,7 +53,7 @@ export class TemplatingRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Template id which uniquely identifies Template resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example templatingRouteDefinition.get({id: '<template-id>'});                               
+     * @example templatingRoute.get({id: '<template-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -62,7 +62,7 @@ export class TemplatingRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example templatingRouteDefinition.create();                              
+     * @example templatingRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -72,7 +72,7 @@ export class TemplatingRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this URI template does not expose any additional options.                 
      * @method
      * @param data An template object used to update specified Template resource.                        
-     * @example templatingRouteDefinition.update(data);                              
+     * @example templatingRoute.update(data);                              
      **/
     update(data: ITemplate): any {
         return super.baseUpdate(this.updateRoute, data)
@@ -82,7 +82,7 @@ export class TemplatingRouteDefinition extends BaseRouteDefinition {
      * Parses delete route; this URI template does not expose any additional options.                 
      * @method
      * @param data An template object used to delete specified Template resource.                        
-     * @example templatingRouteDefinition.update(data);                              
+     * @example templatingRoute.update(data);                              
      **/
     delete(data: ITemplate): any {
         return super.baseDelete(this.deleteRoute, data);

@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module organizationRouteDefinition  
+ * @module organizationRoute  
  * @description Baasic Organization Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { OrganizationBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { OrganizationBatchRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class OrganizationRouteDefinition extends BaseRouteDefinition {
+export class OrganizationRoute extends BaseRoute {
 
     public readonly findRoute: string = 'lookups/organizations/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,13 +23,13 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'lookups/organizations/{id}';
 
-    get batch(): OrganizationBatchRouteDefinition {
-        return this.organizationBatchRouteDefinition;
+    get batch(): OrganizationBatchRoute {
+        return this.organizationBatchRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.OrganizationBatchRouteDefinition) protected organizationBatchRouteDefinition: OrganizationBatchRouteDefinition
+        @inject(userProfileTypes.OrganizationBatchRoute) protected organizationBatchRoute: OrganizationBatchRoute
     ) { super(appOptions); }
 
     /**                 
@@ -41,7 +41,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example organizationRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example organizationRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -52,7 +52,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Organization id which uniquely identifies resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example organizationRouteDefinition.get(id, options);                               
+     * @example organizationRoute.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -61,7 +61,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example organizationRouteDefinition.create();                              
+     * @example organizationRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -71,7 +71,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this URI template does not expose any additional options.                 
      * @method
      * @param data An organization object used to update specified organization resource.                        
-     * @example organizationRouteDefinition.updata(data);                              
+     * @example organizationRoute.updata(data);                              
      **/
     update(data: IOrganization): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -81,7 +81,7 @@ export class OrganizationRouteDefinition extends BaseRouteDefinition {
      * Parses delete route; this URI template does not expose any additional options.                 
      * @method
      * @param data An organization object used to delete specified organization resource.                        
-     * @example organizationRouteDefinition.delete(data);                              
+     * @example organizationRoute.delete(data);                              
      **/
     delete(data: IOrganization): any {
         return super.baseDelete(this.deleteRoute, data);

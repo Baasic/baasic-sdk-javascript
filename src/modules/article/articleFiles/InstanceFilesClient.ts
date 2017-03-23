@@ -9,7 +9,7 @@ import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     ArticleInstanceFilesBatchClient,
-    ArticleInstanceFilesRouteDefinition,
+    ArticleInstanceFilesRoute,
     ArticleInstanceFilesStreamsClient,
     TYPES as articleTypes
 } from 'modules/article';
@@ -18,8 +18,8 @@ import { IArticleFile } from 'modules/article/contracts';
 @injectable()
 export class ArticleInstanceFilesClient {
 
-    get routeDefinition(): ArticleInstanceFilesRouteDefinition {
-        return this.articleInstanceFilesRouteDefinition;
+    get routeDefinition(): ArticleInstanceFilesRoute {
+        return this.articleInstanceFilesRoute;
     }
 
     get streams(): ArticleInstanceFilesStreamsClient {
@@ -31,7 +31,7 @@ export class ArticleInstanceFilesClient {
     }
 
     constructor(
-        @inject(articleTypes.ArticleInstanceFilesRouteDefinition) protected articleInstanceFilesRouteDefinition: ArticleInstanceFilesRouteDefinition,
+        @inject(articleTypes.ArticleInstanceFilesRoute) protected articleInstanceFilesRoute: ArticleInstanceFilesRoute,
         @inject(articleTypes.ArticleInstanceFilesStreamsClient) protected articleInstanceFilesStreamsClient: ArticleInstanceFilesStreamsClient,
         @inject(articleTypes.ArticleInstanceFilesBatchClient) protected ArticleInstanceFilesBatchClient: ArticleInstanceFilesBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -58,7 +58,7 @@ export class ArticleInstanceFilesClient {
                 });
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IArticleFile>>> {
-        return this.apiClient.get<IQueryModel<IArticleFile>>(this.articleInstanceFilesRouteDefinition.find(articleId, options));
+        return this.apiClient.get<IQueryModel<IArticleFile>>(this.articleInstanceFilesRoute.find(articleId, options));
     }
 
     /**                 
@@ -77,7 +77,7 @@ export class ArticleInstanceFilesClient {
                    });                 
     **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IArticleFile>> {
-        return this.apiClient.get<IArticleFile>(this.articleInstanceFilesRouteDefinition.get(articleId, id, options));
+        return this.apiClient.get<IArticleFile>(this.articleInstanceFilesRoute.get(articleId, id, options));
     }
 
     /**                  
@@ -92,7 +92,7 @@ export class ArticleInstanceFilesClient {
      * @param options
      * @returns A promise that is resolved once the unlink action has been performed.                         
      * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
-                    articleInstanceFilesRouteDefinition.remove(fileEntry)
+                    articleInstanceFilesRoute.remove(fileEntry)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -101,7 +101,7 @@ export class ArticleInstanceFilesClient {
                         }); 				
      **/
     unlink(articleId: string, data: IArticleFile, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleInstanceFilesRouteDefinition.unlink(articleId, data, options));
+        return this.apiClient.delete<void>(this.articleInstanceFilesRoute.unlink(articleId, data, options));
     }
 
     /**                      
@@ -125,7 +125,7 @@ export class ArticleInstanceFilesClient {
                         });                     
      **/
     unlinkByArticle(articleId: string, data: IArticleFile, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleInstanceFilesRouteDefinition.unlink(articleId, data, options));
+        return this.apiClient.delete<void>(this.articleInstanceFilesRoute.unlink(articleId, data, options));
     }
 
     /**                  

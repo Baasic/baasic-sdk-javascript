@@ -10,7 +10,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     MediaVaultBatchClient,
     MediaVaultProcessingProviderSettingsClient,
-    MediaVaultRouteDefinition,
+    MediaVaultRoute,
     MediaVaultSettingsClient,
     MediaVaultStreamsClient,
     TYPES as mediaVaultTypes
@@ -20,8 +20,8 @@ import { IMediaEntry } from 'modules/mediaVault/contracts';
 @injectable()
 export class MediaVaultClient {
 
-    get routeDefinition(): MediaVaultRouteDefinition {
-        return this.mediaVaultRouteDefinition;
+    get routeDefinition(): MediaVaultRoute {
+        return this.mediaVaultRoute;
     }
 
     get streams(): MediaVaultStreamsClient {
@@ -41,7 +41,7 @@ export class MediaVaultClient {
     }
 
     constructor(
-        @inject(mediaVaultTypes.MediaVaultRouteDefinition) protected mediaVaultRouteDefinition: MediaVaultRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultRoute) protected mediaVaultRoute: MediaVaultRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(mediaVaultTypes.MediaVaultStreamsClient) protected mediaVaultStreamsClient: MediaVaultStreamsClient,
         @inject(mediaVaultTypes.MediaVaultBatchClient) protected mediaVaultBatchClient: MediaVaultBatchClient,
@@ -87,11 +87,11 @@ export class MediaVaultClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IMediaEntry>> {
-        return this.apiClient.get<IMediaEntry>(this.mediaVaultRouteDefinition.get(id, options));
+        return this.apiClient.get<IMediaEntry>(this.mediaVaultRoute.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update media vault action has been performed; this action will update a media vault resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaVaultRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update media vault action has been performed; this action will update a media vault resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaVaultRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(mediaVaultEntry); 
      * let uri = params['model'].links('put').href; 
@@ -140,7 +140,7 @@ export class MediaVaultClient {
                        });						
     **/
     remove(data: IMediaEntry, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.mediaVaultRouteDefinition.delete(data, options));
+        return this.apiClient.delete<void>(this.mediaVaultRoute.delete(data, options));
     }
 }
 

@@ -1,24 +1,24 @@
 /* globals module */
 /**  
- * @module mediaVaultRouteDefinition  
+ * @module mediaVaultRoute  
  * @description Baasic Media Vault Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import {
-    MediaVaultBatchRouteDefinition,
-    MediaVaultProcessingProviderSettingsRouteDefinition,
-    MediaVaultSettingsRouteDefinition,
-    MediaVaultStreamsRouteDefinition,
+    MediaVaultBatchRoute,
+    MediaVaultProcessingProviderSettingsRoute,
+    MediaVaultSettingsRoute,
+    MediaVaultStreamsRoute,
     TYPES as mediaVaultTypes
 } from 'modules/mediaVault';
 import { IMediaEntry } from 'modules/mediaVault/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class MediaVaultRouteDefinition extends BaseRouteDefinition {
+export class MediaVaultRoute extends BaseRoute {
 
     public readonly findRoute: string = 'media-vaults/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -28,28 +28,28 @@ export class MediaVaultRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'media-vaults/{id}/{?height,width}';
     
-    get streams(): MediaVaultStreamsRouteDefinition {
-        return this.mediaVaultStreamsRouteDefinition;
+    get streams(): MediaVaultStreamsRoute {
+        return this.mediaVaultStreamsRoute;
     }
 
-    get batch(): MediaVaultBatchRouteDefinition {
-        return this.mediaVaultBatchRouteDefinition;
+    get batch(): MediaVaultBatchRoute {
+        return this.mediaVaultBatchRoute;
     }
 
-    get settings(): MediaVaultSettingsRouteDefinition {
-        return this.mediaVaultSettingsRouteDefinition;
+    get settings(): MediaVaultSettingsRoute {
+        return this.mediaVaultSettingsRoute;
     }
 
-    get processingProviderSettings(): MediaVaultProcessingProviderSettingsRouteDefinition {
-        return this.mediaVaultProcessingProviderSettingsRouteDefinition;
+    get processingProviderSettings(): MediaVaultProcessingProviderSettingsRoute {
+        return this.mediaVaultProcessingProviderSettingsRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(mediaVaultTypes.MediaVaultStreamsRouteDefinition) protected mediaVaultStreamsRouteDefinition: MediaVaultStreamsRouteDefinition,
-        @inject(mediaVaultTypes.MediaVaultBatchRouteDefinition) protected mediaVaultBatchRouteDefinition: MediaVaultBatchRouteDefinition,
-        @inject(mediaVaultTypes.MediaVaultSettingsRouteDefinition) protected mediaVaultSettingsRouteDefinition: MediaVaultSettingsRouteDefinition,
-        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsRouteDefinition) protected mediaVaultProcessingProviderSettingsRouteDefinition: MediaVaultProcessingProviderSettingsRouteDefinition
+        @inject(mediaVaultTypes.MediaVaultStreamsRoute) protected mediaVaultStreamsRoute: MediaVaultStreamsRoute,
+        @inject(mediaVaultTypes.MediaVaultBatchRoute) protected mediaVaultBatchRoute: MediaVaultBatchRoute,
+        @inject(mediaVaultTypes.MediaVaultSettingsRoute) protected mediaVaultSettingsRoute: MediaVaultSettingsRoute,
+        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsRoute) protected mediaVaultProcessingProviderSettingsRoute: MediaVaultProcessingProviderSettingsRoute
     ) { super(appOptions); }
 
     /**                 
@@ -61,7 +61,7 @@ export class MediaVaultRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example mediaVaultRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example mediaVaultRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -72,7 +72,7 @@ export class MediaVaultRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param id Media vault id which uniquely identifies media vault resource that needs to be retrieved.
      * @param options Query resource options object.                       
-     * @example mediaVaultRouteDefinition.get({id: '<media-vault-id>'});                               
+     * @example mediaVaultRoute.get({id: '<media-vault-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -82,7 +82,7 @@ export class MediaVaultRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this route should be expanded with the Id of media vault resource.                 
      * @method 
      * @param data Media vault object used to update specific Media vault resource in the system.                 
-     * @example mediaVaultRouteDefinition.get({id: '<media-vault-id>'});                               
+     * @example mediaVaultRoute.get({id: '<media-vault-id>'});                               
      **/
     update(data: IMediaEntry): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -93,7 +93,7 @@ export class MediaVaultRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param data Media vault object used to update specific Media vault resource in the system. 
      * @param options Options object.                
-     * @example mediaVaultRouteDefinition.delete({id: '<media-vault-id>'});                               
+     * @example mediaVaultRoute.delete({id: '<media-vault-id>'});                               
      **/
     delete(data: IMediaEntry, options?: Object): any {
         return super.baseDelete(this.deleteRoute, data, options);

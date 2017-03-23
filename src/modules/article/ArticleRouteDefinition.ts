@@ -1,26 +1,26 @@
 /* globals module */
 /**  
- * @module articleRouteDefinition  
+ * @module articleRoute  
  * @description Baasic Article Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, Utility } from 'common';
+import { BaseRoute, Utility } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    ArticleACLRouteDefinition,
-    ArticleSubscriptionsRouteDefinition,
-    ArticleInstanceCommentsRouteDefinition,
-    ArticleInstanceFilesRouteDefinition,
-    ArticleInstanceRatingsRouteDefinition,
-    ArticleInstanceTagsRouteDefinition,
+    ArticleACLRoute,
+    ArticleSubscriptionsRoute,
+    ArticleInstanceCommentsRoute,
+    ArticleInstanceFilesRoute,
+    ArticleInstanceRatingsRoute,
+    ArticleInstanceTagsRoute,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticle, IArticleOptions } from 'modules/article/contracts';
 
 @injectable()
-export class ArticleRouteDefinition extends BaseRouteDefinition {
+export class ArticleRoute extends BaseRoute {
 
     public readonly findRoute: string = 'articles/{?searchQuery,page,rpp,sort,embed,fields,statuses,tags,startDate,endDate}';
 
@@ -42,37 +42,37 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
 
     public readonly unpublishRoute: string = 'articles/{id}/unpublish';
 
-    get subscriptions(): ArticleSubscriptionsRouteDefinition {
-        return this.articleSubscriptionsRouteDefinition;
+    get subscriptions(): ArticleSubscriptionsRoute {
+        return this.articleSubscriptionsRoute;
     }
 
-    get comments(): ArticleInstanceCommentsRouteDefinition {
-        return this.articleInstanceCommentsRouteDefinition;
+    get comments(): ArticleInstanceCommentsRoute {
+        return this.articleInstanceCommentsRoute;
     }
 
-    get files(): ArticleInstanceFilesRouteDefinition {
-        return this.articleInstanceFilesRouteDefinition;
+    get files(): ArticleInstanceFilesRoute {
+        return this.articleInstanceFilesRoute;
     }
 
-    get ratings(): ArticleInstanceRatingsRouteDefinition {
-        return this.articleInstanceRatingsRouteDefinition;
+    get ratings(): ArticleInstanceRatingsRoute {
+        return this.articleInstanceRatingsRoute;
     }
 
-    get tags(): ArticleInstanceTagsRouteDefinition {
-        return this.articleInstanceTagsRouteDefinition;
+    get tags(): ArticleInstanceTagsRoute {
+        return this.articleInstanceTagsRoute;
     }
 
-    get acl(): ArticleACLRouteDefinition {
-        return this.articleACLRouteDefinition;
+    get acl(): ArticleACLRoute {
+        return this.articleACLRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsRouteDefinition) protected articleSubscriptionsRouteDefinition: ArticleSubscriptionsRouteDefinition,
-        @inject(articleTypes.ArticleInstanceCommentsRouteDefinition) protected articleInstanceCommentsRouteDefinition: ArticleInstanceCommentsRouteDefinition,
-        @inject(articleTypes.ArticleInstanceFilesRouteDefinition) protected articleInstanceFilesRouteDefinition: ArticleInstanceFilesRouteDefinition,
-        @inject(articleTypes.ArticleInstanceRatingsRouteDefinition) protected articleInstanceRatingsRouteDefinition: ArticleInstanceRatingsRouteDefinition,
-        @inject(articleTypes.ArticleInstanceTagsRouteDefinition) protected articleInstanceTagsRouteDefinition: ArticleInstanceTagsRouteDefinition,
-        @inject(articleTypes.ArticleACLRouteDefinition) protected articleACLRouteDefinition: ArticleACLRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsRoute) protected articleSubscriptionsRoute: ArticleSubscriptionsRoute,
+        @inject(articleTypes.ArticleInstanceCommentsRoute) protected articleInstanceCommentsRoute: ArticleInstanceCommentsRoute,
+        @inject(articleTypes.ArticleInstanceFilesRoute) protected articleInstanceFilesRoute: ArticleInstanceFilesRoute,
+        @inject(articleTypes.ArticleInstanceRatingsRoute) protected articleInstanceRatingsRoute: ArticleInstanceRatingsRoute,
+        @inject(articleTypes.ArticleInstanceTagsRoute) protected articleInstanceTagsRoute: ArticleInstanceTagsRoute,
+        @inject(articleTypes.ArticleACLRoute) protected articleACLRoute: ArticleACLRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     )
     { super(appOptions); }
@@ -91,7 +91,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
      * - `tags` - A value used to restrict the search to article resources with these tags. Multiple tags should be comma separated.        				                
      * @method
      * @param options A promise that is resolved once the find action has been performed.                        
-     * @example articleRouteDefinition.find.expand({searchQuery: '<search-phrase>'});                               
+     * @example articleRoute.find.expand({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IArticleOptions): any {
         var opt = options || {};
@@ -106,7 +106,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
      * @param options Options object that contains embed items.                        
-     * @example articleRouteDefinition.get({id: '<article-id>'});                               
+     * @example articleRoute.get({id: '<article-id>'});                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -116,7 +116,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
      * Parses publish article route which must be expanded with the Id of the previously created article resource in the system.                 
      * @method
      * @param data An article object.                       
-     * @example articleRouteDefinition.publish.expand({id: '<article-id>'});                               
+     * @example articleRoute.publish.expand({id: '<article-id>'});                               
      **/
     publish(data: IArticle): any {
         return super.baseGet(this.publishRoute, data);
@@ -125,7 +125,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses purge article route, this URI template doesn't expose any additional properties.                 
      * @method                        
-     * @example articleRouteDefinition.purge();                               
+     * @example articleRoute.purge();                               
      **/
     purge(options: Object): any {
         return super.baseCreate(this.purgeRoute, options);
@@ -134,7 +134,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create article route; this URI template doesn't expose any additional properties.                 
      * @method                        
-     * @example articleRouteDefinition.create();                               
+     * @example articleRoute.create();                               
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -144,7 +144,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
      * Parses update article route; this URI template doesn't expose any additional properties.                 
      * @method
      * @param data An article object that needs to be updated into the system.                         
-     * @example articleRouteDefinition.update(data);                               
+     * @example articleRoute.update(data);                               
      **/
     update(data: IArticle): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -154,7 +154,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
      * Parses delete article route; this URI template doesn't expose any additional properties.                 
      * @method 
      * @param data An article object that needs to be removed from the system.                       
-     * @example articleRouteDefinition.delete(data);                               
+     * @example articleRoute.delete(data);                               
      **/
     delete(data: IArticle): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -164,7 +164,7 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
      * Parses archive article route; this URI template doesn't expose any additional properties.                 
      * @method 
      * @param data An article object.                        
-     * @example articleRouteDefinition.archive(data);                               
+     * @example articleRoute.archive(data);                               
      **/
     archive(data: IArticle): any {
         return super.baseUpdate(this.archiveRoute, data, undefined, 'archive');
@@ -173,14 +173,14 @@ export class ArticleRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses restore article route; this URI template doesn't expose any additional properties.                 
      * @method                        
-     * @example articleRouteDefinition.restore(data);                               
+     * @example articleRoute.restore(data);                               
      **/
     restore(data: IArticle): any {
         return super.baseUpdate(this.restoreRoute, data, undefined, 'restore');
     }
 
     /**                 
-     * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(article); 
      * let uri = params['model'].links('unpublish').href; 

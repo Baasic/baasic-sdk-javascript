@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module commerceLookupsRecurringCyclePeriodTypeRouteDefinition  
+ * @module commerceLookupsRecurringCyclePeriodTypeRoute  
  * @description Baasic Commerce Lookups RecurringCyclePeriodType Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups RecurringCyclePeriodType Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsRecurringCyclePeriodTypeBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class CommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends BaseRouteDefinition {
+export class CommerceLookupsRecurringCyclePeriodTypeRoute extends BaseRoute {
 
     public readonly findRoute: string = 'commerce/lookups/recurring-cycle-period-types/{?searchQuery,page,rpp,sort,embed}';
 
@@ -23,12 +23,12 @@ export class CommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends Base
 
     public readonly deleteRoute: string = 'commerce/lookups/recurring-cycle-period-types/{id}';
 
-    get batch(): CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition {
-        return this.basicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition;
+    get batch(): CommerceLookupsRecurringCyclePeriodTypeBatchRoute {
+        return this.basicCommerceLookupsRecurringCyclePeriodTypeBatchRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition) protected basicCommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition: CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsRecurringCyclePeriodTypeBatchRoute) protected basicCommerceLookupsRecurringCyclePeriodTypeBatchRoute: CommerceLookupsRecurringCyclePeriodTypeBatchRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -41,7 +41,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends Base
      * - `embed` - Comma separated list of resources to be contained within the current representation.                
      * @method                        
      * @param options Query resource options.
-     * @example commerceLookupsRecurringCyclePeriodTypeRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -50,7 +50,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends Base
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commerceLookupsRecurringCyclePeriodTypeRouteDefinition.get();                               
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.get();                               
      **/
     get(id: string, options: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, options);
@@ -59,7 +59,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends Base
     /**                 
      * Parses create commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsRecurringCyclePeriodTypeRouteDefinition.create();                              
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -68,7 +68,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends Base
     /**                 
      * Parses update commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsRecurringCyclePeriodTypeRouteDefinition.update(data);                              
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.update(data);                              
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -77,7 +77,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeRouteDefinition extends Base
     /**                 
      * Parses delete commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsRecurringCyclePeriodTypeRouteDefinition.delete(data);                              
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.delete(data);                              
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

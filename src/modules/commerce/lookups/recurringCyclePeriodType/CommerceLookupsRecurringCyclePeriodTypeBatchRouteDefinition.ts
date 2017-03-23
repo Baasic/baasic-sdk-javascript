@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition  
+ * @module commerceLookupsRecurringCyclePeriodTypeBatchRoute  
  * @description Baasic Commerce Lookups Recurring Cycle Period Type Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition extends BaseRouteDefinition {
+export class CommerceLookupsRecurringCyclePeriodTypeBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'commerce/lookups/recurring-cycle-period-types/batch';
 
@@ -25,7 +25,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition extends
     /**                      
      * Parses create commerce country state batch route; this route does not expose any additional options                      
      * @method                    
-     * @example commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.create();                      
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.create();                      
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -34,7 +34,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition extends
     /**                      
      * Parses remove commerce country state batch route; this route does not expose any additional options                      
      * @method                
-     * @example commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.update();                      
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.update();                      
      */
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
@@ -43,7 +43,7 @@ export class CommerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition extends
     /**                      
      * Parses remove commerce country state batch route; this route does not expose any additional options                      
      * @method                    
-     * @example commerceLookupsRecurringCyclePeriodTypeBatchRouteDefinition.remove();                      
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.remove();                      
      */
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

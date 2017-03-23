@@ -1,22 +1,22 @@
 /**  
  * @module valueSetItemClient
- * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `valueSetItemClient` uses `valueSetItemRouteDefinition`. 
+ * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `valueSetItemClient` uses `valueSetItemRoute`. 
  */
 import { injectable, inject } from 'inversify';
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ValueSetItemRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
+import { ValueSetItemRoute, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSetItem } from 'modules/valueSet/contracts';
 
 @injectable()
 export class ValueSetItemClient {
 
-    get routeDefinition(): ValueSetItemRouteDefinition {
-        return this.valueSetItemRouteDefinition;
+    get routeDefinition(): ValueSetItemRoute {
+        return this.valueSetItemRoute;
     }
 
     constructor(
-        @inject(valueSetTypes.ValueSetItemRouteDefinition) protected valueSetItemRouteDefinition: ValueSetItemRouteDefinition,
+        @inject(valueSetTypes.ValueSetItemRoute) protected valueSetItemRoute: ValueSetItemRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -59,7 +59,7 @@ export class ValueSetItemClient {
                 });
      **/
     get(setName: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSetItem>> {
-        return this.apiClient.get<IValueSetItem>(this.valueSetItemRouteDefinition.get(setName, id, options));
+        return this.apiClient.get<IValueSetItem>(this.valueSetItemRoute.get(setName, id, options));
     }
 
     /**

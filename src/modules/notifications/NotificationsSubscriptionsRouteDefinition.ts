@@ -1,32 +1,32 @@
 /* globals module */
 /**  
- * @module notificationsSubscriptionsRouteDefinition  
+ * @module notificationsSubscriptionsRoute  
  * @description Baasic Notifications Subscriptions Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    NotificationsSubscriptionsUsersRouteDefinition,
-    NotificationsSubscriptionsAnonymousRouteDefinition,
+    NotificationsSubscriptionsUsersRoute,
+    NotificationsSubscriptionsAnonymousRoute,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 
 @injectable()
-export class NotificationsSubscriptionsRouteDefinition extends BaseRouteDefinition {
+export class NotificationsSubscriptionsRoute extends BaseRoute {
 
-    get users(): NotificationsSubscriptionsUsersRouteDefinition {
-        return this.notificationsSubscriptionsUsersRouteDefinition;
+    get users(): NotificationsSubscriptionsUsersRoute {
+        return this.notificationsSubscriptionsUsersRoute;
     }
 
-    get anonymous(): NotificationsSubscriptionsAnonymousRouteDefinition {
-        return this.notificationsSubscriptionsAnonymousRouteDefinition;
+    get anonymous(): NotificationsSubscriptionsAnonymousRoute {
+        return this.notificationsSubscriptionsAnonymousRoute;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRouteDefinition) protected notificationsSubscriptionsAnonymousRouteDefinition: NotificationsSubscriptionsAnonymousRouteDefinition,
-        @inject(notificationsTypes.NotificationsSubscriptionsUsersRouteDefinition) protected notificationsSubscriptionsUsersRouteDefinition: NotificationsSubscriptionsUsersRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsAnonymousRoute) protected notificationsSubscriptionsAnonymousRoute: NotificationsSubscriptionsAnonymousRoute,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersRoute) protected notificationsSubscriptionsUsersRoute: NotificationsSubscriptionsUsersRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 }

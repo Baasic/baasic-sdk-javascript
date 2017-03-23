@@ -1,15 +1,15 @@
 import { ContainerModule } from "inversify";
-import { KeyValueClient, KeyValueRouteDefinition } from 'modules/keyValue';
+import { KeyValueClient, KeyValueRoute } from 'modules/keyValue';
 
 const TYPES = {
     KeyValueClient: Symbol("KeyValueClient"),
-    KeyValueRouteDefinition: Symbol("KeyValueRouteDefinition")
+    KeyValueRoute: Symbol("KeyValueRoute")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<KeyValueRouteDefinition>(TYPES.KeyValueRouteDefinition).to(KeyValueRouteDefinition);
+    bind<KeyValueRoute>(TYPES.KeyValueRoute).to(KeyValueRoute);
     bind<KeyValueClient>(TYPES.KeyValueClient).to(KeyValueClient);
 });
 

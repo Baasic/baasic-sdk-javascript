@@ -1,15 +1,15 @@
 /* globals module */
 /**  
- * @module articleInstanceFilesBatchRouteDefinition  
+ * @module articleInstanceFilesBatchRoute  
  * @description Baasic Article Instance Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class ArticleInstanceFilesBatchRouteDefinition extends BaseRouteDefinition {
+export class ArticleInstanceFilesBatchRoute extends BaseRoute {
 
     public readonly unlinkRoute: string = 'articles/{articleId}/files/batch/unlink';
 
@@ -25,7 +25,7 @@ export class ArticleInstanceFilesBatchRouteDefinition extends BaseRouteDefinitio
      * Parses unlink route; this URI template does not expose any additional options.                                                        
      * @method
      * @param articleId Article file id of the original article file used to identify article files on which delete action should be performed.
-     * @example articleInstanceFilesBatchRouteDefinition.unlink(articleId);                                  
+     * @example articleInstanceFilesBatchRoute.unlink(articleId);                                  
      **/
     unlink(articleId: string): any {
         let params = { articleId: articleId };
@@ -36,7 +36,7 @@ export class ArticleInstanceFilesBatchRouteDefinition extends BaseRouteDefinitio
      * Parses update route; this URI template does not expose any additional options.  
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article file need to be updated.                           
-     * @example articleInstanceFilesStreamsRouteDefinition.update(articleId);                                  
+     * @example articleInstanceFilesStreamsRoute.update(articleId);                                  
      **/
     update(articleId: string): any {
         let params = { articleId: articleId };
@@ -47,7 +47,7 @@ export class ArticleInstanceFilesBatchRouteDefinition extends BaseRouteDefinitio
      * Parses update route; this URI template does not expose any additional options.                     
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article files need to be linked.                           
-     * @example articleInstanceFilesStreamsRouteDefinition.link(articleId);                                  
+     * @example articleInstanceFilesStreamsRoute.link(articleId);                                  
      **/
     link(articleId: string): any {
         let params = { articleId: articleId };

@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module commercePaymentTransactionClient  
- * @description  Commerce PaymentTransaction Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionClient` uses `commercePaymentTransactionRouteDefinition`. 
+ * @description  Commerce PaymentTransaction Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionClient` uses `commercePaymentTransactionRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommercePaymentTransactionRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommercePaymentTransactionRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommercePaymentTransactionClient {
 
-    get routeDefinition(): CommercePaymentTransactionRouteDefinition {
-        return this.commercePaymentTransactionRouteDefinition;
+    get routeDefinition(): CommercePaymentTransactionRoute {
+        return this.commercePaymentTransactionRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommercePaymentTransactionRouteDefinition) protected commercePaymentTransactionRouteDefinition: CommercePaymentTransactionRouteDefinition,
+        @inject(commerceTypes.CommercePaymentTransactionRoute) protected commercePaymentTransactionRoute: CommercePaymentTransactionRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -54,7 +54,7 @@ export class CommercePaymentTransactionClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.commercePaymentTransactionRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commercePaymentTransactionRoute.get(id, options));
     }
 
     /**                 
@@ -73,7 +73,7 @@ export class CommercePaymentTransactionClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commercePaymentTransactionRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commercePaymentTransactionRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransaction); 
      * let uri = params['model'].links('put').href; 
@@ -94,7 +94,7 @@ export class CommercePaymentTransactionClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commercePaymentTransactionRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commercePaymentTransactionRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commercePaymentTransaction); 
      * let uri = params['model'].links('delete').href; 

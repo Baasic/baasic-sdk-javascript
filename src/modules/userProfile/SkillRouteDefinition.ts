@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module skillRouteDefinition  
+ * @module skillRoute  
  * @description Baasic Skill Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
-import { SkillBatchRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { SkillBatchRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class SkillRouteDefinition extends BaseRouteDefinition {
+export class SkillRoute extends BaseRoute {
 
     public readonly findRoute: string = 'profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,13 +23,13 @@ export class SkillRouteDefinition extends BaseRouteDefinition {
 
     public readonly deleteRoute: string = 'lookups/skills/{id}';
 
-    get batch(): SkillBatchRouteDefinition {
-        return this.skillBatchRouteDefinition;
+    get batch(): SkillBatchRoute {
+        return this.skillBatchRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(userProfileTypes.SkillBatchRouteDefinition) protected skillBatchRouteDefinition: SkillBatchRouteDefinition
+        @inject(userProfileTypes.SkillBatchRoute) protected skillBatchRoute: SkillBatchRoute
     ) { super(appOptions); }
 
     /**                 
@@ -41,7 +41,7 @@ export class SkillRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example skillRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example skillRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -52,7 +52,7 @@ export class SkillRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Skill id which uniquely identifies skill resource that needs to be retrieved.
      * @param options Query resource options object.                        
-     * @example skillRouteDefinition.get(id, options);                               
+     * @example skillRoute.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -61,7 +61,7 @@ export class SkillRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example skillRouteDefinition.create();                              
+     * @example skillRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -71,7 +71,7 @@ export class SkillRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this URI template does not expose any additional options.                 
      * @method
      * @param data A skill object used to update specified skill resource.                        
-     * @example skillRouteDefinition.update(data);                              
+     * @example skillRoute.update(data);                              
      **/
     update(data: ISkill): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -81,7 +81,7 @@ export class SkillRouteDefinition extends BaseRouteDefinition {
      * Parses delete route; this URI template does not expose any additional options.                 
      * @method
      * @param data A skill object used to delete specified skill resource.                        
-     * @example skillRouteDefinition.delete(data);                              
+     * @example skillRoute.delete(data);                              
      **/
     delete(data: ISkill): any {
         return super.baseDelete(this.deleteRoute, data);

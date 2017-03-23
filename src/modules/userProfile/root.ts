@@ -1,5 +1,5 @@
 import {
-    UserProfileACLClient, UserProfileRouteDefinition,
+    UserProfileACLClient, UserProfileRoute,
     UserProfileClient,
     CompanyClient,
     OrganizationClient,

@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
-    ArticleFilesBatchRouteDefinition,
+    ArticleFilesBatchRoute,
     TYPES as articleTypes
 } from 'modules/article';
 import { IArticleFile } from 'modules/article/contracts';
@@ -16,12 +16,12 @@ import { IArticleFile } from 'modules/article/contracts';
 @injectable()
 export class ArticleFilesBatchClient {
 
-    get routeDefinition(): ArticleFilesBatchRouteDefinition {
-        return this.articleFilesBatchRouteDefinition;
+    get routeDefinition(): ArticleFilesBatchRoute {
+        return this.articleFilesBatchRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleFilesBatchRouteDefinition) protected articleFilesBatchRouteDefinition: ArticleFilesBatchRouteDefinition,
+        @inject(articleTypes.ArticleFilesBatchRoute) protected articleFilesBatchRoute: ArticleFilesBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -48,7 +48,7 @@ export class ArticleFilesBatchClient {
                        });		                    
     **/
     unlink(data: IArticleFile[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.articleFilesBatchRouteDefinition.unlink(), undefined, data);
+        return this.apiClient.delete<void>(this.articleFilesBatchRoute.unlink(), undefined, data);
     }
 
     /**                   

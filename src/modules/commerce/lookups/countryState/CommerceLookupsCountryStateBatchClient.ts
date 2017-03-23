@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module commerceCountryStateBatchClient  
- * @description  Commerce Country State Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryStateBatchClient` uses `commerceCountryStateBatchRouteDefinition`. 
+ * @description  Commerce Country State Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryStateBatchClient` uses `commerceCountryStateBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsCountryStateBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsCountryStateBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsCountryStateBatchClient {
 
-    get routeDefinition(): CommerceLookupsCountryStateBatchRouteDefinition {
-        return this.commerceLookupsCountryStateBatchRouteDefinition;
+    get routeDefinition(): CommerceLookupsCountryStateBatchRoute {
+        return this.commerceLookupsCountryStateBatchRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsCountryStateBatchRouteDefinition) protected commerceLookupsCountryStateBatchRouteDefinition: CommerceLookupsCountryStateBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsCountryStateBatchRoute) protected commerceLookupsCountryStateBatchRoute: CommerceLookupsCountryStateBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -68,7 +68,7 @@ export class CommerceLookupsCountryStateBatchClient {
                    });		                    
     **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceLookupsCountryStateBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsCountryStateBatchRoute.delete(), undefined, ids);
     }
 }
 

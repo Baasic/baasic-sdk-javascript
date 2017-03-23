@@ -1,28 +1,28 @@
 /* globals module */
 /**  
  * @module passwordRecoveryClient  
- * @description  Password Recovery Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `passwordRecoveryClient` uses `passwordRecoveryRouteDefinition`. 
+ * @description  Password Recovery Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `passwordRecoveryClient` uses `passwordRecoveryRoute`. 
 */
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { PasswordRecoveryRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { PasswordRecoveryRoute, TYPES as membershipTypes } from 'modules/membership';
 import { IRequestPasswordReset, IResetPassword } from 'modules/membership/contracts';
 
 @injectable()
 export class PasswordRecoveryClient {
 
     /**                 
-     * Provides direct access to `passwordRecoveryRouteDefinition`.                 
+     * Provides direct access to `passwordRecoveryRoute`.                 
      * @method                        
      * @example passwordRecoveryClient.routeDefinition.requestReset(data);                 
      **/
-    get routeDefinition(): PasswordRecoveryRouteDefinition {
-        return this.passwordRecoveryRouteDefinition;
+    get routeDefinition(): PasswordRecoveryRoute {
+        return this.passwordRecoveryRoute;
     }
 
     constructor(
-        @inject(membershipTypes.PasswordRecoveryRouteDefinition) protected passwordRecoveryRouteDefinition: PasswordRecoveryRouteDefinition,
+        @inject(membershipTypes.PasswordRecoveryRoute) protected passwordRecoveryRoute: PasswordRecoveryRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -45,7 +45,7 @@ export class PasswordRecoveryClient {
                 .finally (function () {});								
      */
     requestReset(data: IRequestPasswordReset): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.passwordRecoveryRouteDefinition.passwordRecovery(), data);
+        return this.apiClient.post(this.passwordRecoveryRoute.passwordRecovery(), data);
     }
 
     /** 				
@@ -65,7 +65,7 @@ export class PasswordRecoveryClient {
                 .finally (function () {});							
      */
     reset(data: IResetPassword): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.passwordRecoveryRouteDefinition.passwordRecovery(), data);
+        return this.apiClient.put(this.passwordRecoveryRoute.passwordRecovery(), data);
     }
 }
 

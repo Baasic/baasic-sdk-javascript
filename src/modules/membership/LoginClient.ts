@@ -1,27 +1,27 @@
 /* globals module */
 /**  
  * @module loginClient  
- * @description  Login Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `loginClient` uses `loginRouteDefinition`. 
+ * @description  Login Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `loginClient` uses `loginRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { Utility } from 'common';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { LoginRouteDefinition, LoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
+import { LoginRoute, LoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
 import { IUserInfo } from 'modules/membership/contracts';
 
 @injectable()
 export class LoginClient {
 
-    get routeDefinition(): LoginRouteDefinition {
-        return this.loginRouteDefinition;
+    get routeDefinition(): LoginRoute {
+        return this.loginRoute;
     }
 
     private utility: Utility = new Utility();
 
     constructor(
-        @inject(membershipTypes.LoginRouteDefinition) protected loginRouteDefinition: LoginRouteDefinition,
+        @inject(membershipTypes.LoginRoute) protected loginRoute: LoginRoute,
         @inject(coreTYPES.ITokenHandler) protected tokenHandler: ITokenHandler,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -57,7 +57,7 @@ export class LoginClient {
         });
         var self = this;
         return this.apiClient.createPromise<any>((resolve, reject) => {
-            self.apiClient.post<any>(self.loginRouteDefinition.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
+            self.apiClient.post<any>(self.loginRoute.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
                 .then<any>(function (data) {
                     let token: IToken = {
                         token: data.data.access_token,
@@ -88,7 +88,7 @@ export class LoginClient {
      */
     loadUserData(data: any): PromiseLike<IHttpResponse<IUserInfo>> {
         data = data || {};
-        return this.apiClient.get<IUserInfo>(this.loginRouteDefinition.login(data), { 'Accept': 'application/json; charset=UTF-8' });
+        return this.apiClient.get<IUserInfo>(this.loginRoute.login(data), { 'Accept': 'application/json; charset=UTF-8' });
     }
 
     /** 				
@@ -113,7 +113,7 @@ export class LoginClient {
         };
         var self = this;
         return this.apiClient.createPromise<void>((resolve, reject) => {
-            self.apiClient.delete<void>(self.loginRouteDefinition.login({}), null, data)
+            self.apiClient.delete<void>(self.loginRoute.login({}), null, data)
                 .then(function (result) {
                     self.tokenHandler.store(null);
                     resolve();

@@ -1,23 +1,23 @@
 import { ContainerModule } from 'inversify';
 import { 
     TemplatingBatchClient, 
-    TemplatingBatchRouteDefinition, 
+    TemplatingBatchRoute, 
     TemplatingClient, 
-    TemplatingRouteDefinition } from 'modules/templating';
+    TemplatingRoute } from 'modules/templating';
 
 const TYPES = {
     TemplatingBatchClient: Symbol("TemplatingBatchClient"),
-    TemplatingBatchRouteDefinition: Symbol("TemplatingBatchRouteDefinition"),
+    TemplatingBatchRoute: Symbol("TemplatingBatchRoute"),
     TemplatingClient: Symbol("TemplatingClient"),
-    TemplatingRouteDefinition: Symbol("TemplatingRouteDefinition")
+    TemplatingRoute: Symbol("TemplatingRoute")
 };
 
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
-    bind<TemplatingBatchRouteDefinition>(TYPES.TemplatingBatchRouteDefinition).to(TemplatingBatchRouteDefinition);
+    bind<TemplatingBatchRoute>(TYPES.TemplatingBatchRoute).to(TemplatingBatchRoute);
     bind<TemplatingBatchClient>(TYPES.TemplatingBatchClient).to(TemplatingBatchClient);
-    bind<TemplatingRouteDefinition>(TYPES.TemplatingRouteDefinition).to(TemplatingRouteDefinition);
+    bind<TemplatingRoute>(TYPES.TemplatingRoute).to(TemplatingRoute);
     bind<TemplatingClient>(TYPES.TemplatingClient).to(TemplatingClient);
 });
 

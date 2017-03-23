@@ -1,15 +1,15 @@
 /* globals module */
 /**  
- * @module passwordRecoveryRouteDefinition  
+ * @module passwordRecoveryRoute  
  * @description Baasic Password Recovery Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Password Recovery Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class PasswordRecoveryRouteDefinition extends BaseRouteDefinition {
+export class PasswordRecoveryRoute extends BaseRoute {
 
     /**                  
     * Password recovery route with route and query parameters.
@@ -21,7 +21,7 @@ export class PasswordRecoveryRouteDefinition extends BaseRouteDefinition {
     /**                  
      * Parses recover-password route, recover-password route doesn't expose any additional properties.                  
      * @method                         
-     * @example passwordRecoveryRouteDefinition.passwordRecovery();                                
+     * @example passwordRecoveryRoute.passwordRecovery();                                
      **/
     passwordRecovery(): any {
         return super.baseCreate(this.passwordRecoveryRoute, {});

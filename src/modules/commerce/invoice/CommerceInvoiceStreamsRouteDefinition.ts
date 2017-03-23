@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module commerceInvoiceStreamsRouteDefinition  
+ * @module commerceInvoiceStreamsRoute  
  * @description Baasic Commerce Invoice Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Invoice Streams Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class CommerceInvoiceStreamsRouteDefinition extends BaseRouteDefinition {
+export class CommerceInvoiceStreamsRoute extends BaseRoute {
 
     public readonly getRoute: string = 'commerce/invoice-streams/{id}';
 
@@ -22,7 +22,7 @@ export class CommerceInvoiceStreamsRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commerceInvoiceStremsRouteDefinition.get(data);                               
+     * @example commerceInvoiceStremsRoute.get(data);                               
      **/
     get(data: any): any {
         if (!this.utility.isObject(data)) {

@@ -5,7 +5,7 @@ import { IAppOptions } from 'core/contracts';
 import { injectable } from "inversify";
 
 @injectable()
-export abstract class BaseRouteDefinition {
+export abstract class BaseRoute {
 
     protected utility: Utility;
     protected modelMapper: ModelMapper;
@@ -37,7 +37,7 @@ export abstract class BaseRouteDefinition {
       * Parses get resource route which must be expanded with the Id of the previously created resource in the system.
       * @returns get resource uri
       * @method 
-      * @example baseRouteDefinition.get(route, id);
+      * @example baseRoute.get(route, id);
       **/
     protected baseGet(route: string, id?: any, options?: any, propName?: string): any {
         return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
@@ -47,7 +47,7 @@ export abstract class BaseRouteDefinition {
       * Parses get resource route which must be expanded with the Id of the previously created resource in the system.
       * @returns get resource uri
       * @method 
-      * @example baseRouteDefinition.create();
+      * @example baseRoute.create();
       **/
     protected baseCreate(route: string, data?: any): any {
         return uritemplate.parse(route).expand(data);
@@ -57,7 +57,7 @@ export abstract class BaseRouteDefinition {
      * Parses get resource route.
      * @returns update resource uri
      * @method
-     * @example baseRouteDefinition.update();
+     * @example baseRoute.update();
      */
     protected baseUpdate(route: string, data: any, options?: IOptions, linkName?: string): any {
         let link: string = linkName ? linkName : 'put';
@@ -83,7 +83,7 @@ export abstract class BaseRouteDefinition {
      * Parses delete resource route.
      * @returns delete resource uri.
      * @method
-     * @example baseRouteDefinition.delete();
+     * @example baseRoute.delete();
      */
     protected baseDelete(route: string, data: any, options?: IOptions, linkName?: string): any {
         let link: string = linkName ? linkName : 'delete';
@@ -121,7 +121,7 @@ export abstract class BaseRouteDefinition {
     /**                 
      * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.                 
      * @method                 
-     * @example baseRouteDefinition.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
+     * @example baseRoute.parse('<route>/{?embed,fields,options}').expand({embed: '<embedded-resource>'});                 
      **/
     parse(route: string): any {
         return uritemplate.parse(route);

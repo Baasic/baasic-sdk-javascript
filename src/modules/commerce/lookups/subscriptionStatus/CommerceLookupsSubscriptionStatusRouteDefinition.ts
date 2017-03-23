@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module commerceLookupsSubscriptionStatusRouteDefinition  
+ * @module commerceLookupsSubscriptionStatusRoute  
  * @description Baasic Commerce Lookups SubscriptionStatus Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups SubscriptionStatus Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { CommerceLookupsSubscriptionStatusBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsSubscriptionStatusBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class CommerceLookupsSubscriptionStatusRouteDefinition extends BaseRouteDefinition {
+export class CommerceLookupsSubscriptionStatusRoute extends BaseRoute {
 
     public readonly findRoute: string = 'commerce/lookups/subscription-statuses/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -23,12 +23,12 @@ export class CommerceLookupsSubscriptionStatusRouteDefinition extends BaseRouteD
 
     public readonly deleteRoute: string = 'commerce/lookups/subscription-statuses/{id}';
 
-    get batch(): CommerceLookupsSubscriptionStatusBatchRouteDefinition {
-        return this.basicCommerceLookupsSubscriptionStatusBatchRouteDefinition;
+    get batch(): CommerceLookupsSubscriptionStatusBatchRoute {
+        return this.basicCommerceLookupsSubscriptionStatusBatchRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsSubscriptionStatusBatchRouteDefinition) protected basicCommerceLookupsSubscriptionStatusBatchRouteDefinition: CommerceLookupsSubscriptionStatusBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsSubscriptionStatusBatchRoute) protected basicCommerceLookupsSubscriptionStatusBatchRoute: CommerceLookupsSubscriptionStatusBatchRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -41,7 +41,7 @@ export class CommerceLookupsSubscriptionStatusRouteDefinition extends BaseRouteD
      * - `embed` - Comma separated list of resources to be contained within the current representation.                
      * @method                        
      * @param options Query resource options.
-     * @example commerceLookupsSubscriptionStatusRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceLookupsSubscriptionStatusRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -50,7 +50,7 @@ export class CommerceLookupsSubscriptionStatusRouteDefinition extends BaseRouteD
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commerceLookupsSubscriptionStatusRouteDefinition.get();                               
+     * @example commerceLookupsSubscriptionStatusRoute.get();                               
      **/
     get(id: string, options: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, options);
@@ -59,7 +59,7 @@ export class CommerceLookupsSubscriptionStatusRouteDefinition extends BaseRouteD
     /**                 
      * Parses create commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsSubscriptionStatusRouteDefinition.create();                              
+     * @example commerceLookupsSubscriptionStatusRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -68,7 +68,7 @@ export class CommerceLookupsSubscriptionStatusRouteDefinition extends BaseRouteD
     /**                 
      * Parses update commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsSubscriptionStatusRouteDefinition.update(data);                              
+     * @example commerceLookupsSubscriptionStatusRoute.update(data);                              
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -77,7 +77,7 @@ export class CommerceLookupsSubscriptionStatusRouteDefinition extends BaseRouteD
     /**                 
      * Parses delete commerce payment method route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsSubscriptionStatusRouteDefinition.delete(data);                              
+     * @example commerceLookupsSubscriptionStatusRoute.delete(data);                              
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

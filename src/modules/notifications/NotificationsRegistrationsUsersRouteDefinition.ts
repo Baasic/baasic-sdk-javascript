@@ -1,18 +1,18 @@
 /* globals module */
 /**  
- * @module notificationsRegistrationsUsersRouteDefinition  
+ * @module notificationsRegistrationsUsersRoute  
  * @description Baasic Notifications Registrations Users Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Users Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { NotificationsRegistrationsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsRegistrationsUsersBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserRegistration } from 'modules/notifications/contracts';
 
 @injectable()
-export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDefinition {
+export class NotificationsRegistrationsUsersRoute extends BaseRoute {
 
     public readonly createRoute: string = 'notifications/registrations';
 
@@ -24,19 +24,19 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
 
     public readonly updateRoute: string = 'notifications/registrations/{id}';
 
-    get batch(): NotificationsRegistrationsUsersBatchRouteDefinition {
-        return this.notificationsRegistrationsUsersBatchRouteDefinition;
+    get batch(): NotificationsRegistrationsUsersBatchRoute {
+        return this.notificationsRegistrationsUsersBatchRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRouteDefinition) protected notificationsRegistrationsUsersBatchRouteDefinition: NotificationsRegistrationsUsersBatchRouteDefinition
+        @inject(notificationsTypes.NotificationsRegistrationsUsersBatchRoute) protected notificationsRegistrationsUsersBatchRoute: NotificationsRegistrationsUsersBatchRoute
     ) { super(appOptions); }
 
     /**                          
      * Parses create users registrations route; this route does not expose any additional options                          
      * @method                         
-     * @example notificationsRegistrationsUsersRouteDefinition.create();                          
+     * @example notificationsRegistrationsUsersRoute.create();                          
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -53,7 +53,7 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
      * - `embed` - Comma separated list of resources to be contained within the current representation.                          
      * @method 
      * @param options Query resource options object.                                
-     * @example notificationsRegistrationsUsersRouteDefinition.find({ searchQuery: '<search-phrase>', providers: '<provider-name>,<provider-name>' });                          
+     * @example notificationsRegistrationsUsersRoute.find({ searchQuery: '<search-phrase>', providers: '<provider-name>,<provider-name>' });                          
      */
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -64,7 +64,7 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
      * @method
      * @param id The registration identifier which uniquely identifies UserRegistration resource that needs to be retrieved.
      * @param options Query resource options object.                       
-     * @example notificationsRegistrationsUsersRouteDefinition.get({ id: '<registration-id>' });                          
+     * @example notificationsRegistrationsUsersRoute.get({ id: '<registration-id>' });                          
      */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -74,7 +74,7 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
      * Parses delete users registrations route; this route should be expanded with the Id of users registrations resource.                         
      * @method
      * @param data An object used to delete specified UserRegistration resource.                          
-     * @example notificationsRegistrationsUsersRouteDefinition.delete(data);                          
+     * @example notificationsRegistrationsUsersRoute.delete(data);                          
      */
     delete(data: IUserRegistration): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -84,7 +84,7 @@ export class NotificationsRegistrationsUsersRouteDefinition extends BaseRouteDef
      * Parses update users registrations route; this route should be expanded with the Id of users registrations resource.                         
      * @method
      * @param data An object used to update specified UserRegistration resource.                          
-     * @example notificationsRegistrationsUsersRouteDefinition.update(data);                          
+     * @example notificationsRegistrationsUsersRoute.update(data);                          
      */
     update(data: IUserRegistration): any {
         return super.baseUpdate(this.updateRoute, data);

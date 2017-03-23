@@ -6,23 +6,23 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { IHttpHeaders, IHttpRequest, IHttpResponse, ApiClient, httpTYPES } from 'httpApi';
-import { KeyValueRouteDefinition, TYPES } from 'modules/keyValue';
+import { KeyValueRoute, TYPES } from 'modules/keyValue';
 import { IKeyValue } from 'modules/keyValue/contracts';
 
 @injectable()
 export class KeyValueClient {
 
     /**
-     * Provides direct access to `keyValueRouteDefinition`.
+     * Provides direct access to `keyValueRoute`.
      * @method
      * @example keyValueClient.routeDefinition.get();
      **/
-    get routeDefinition(): KeyValueRouteDefinition {
-        return this.keyValueRouteDefinition;
+    get routeDefinition(): KeyValueRoute {
+        return this.keyValueRoute;
     }
 
     constructor(
-        @inject(TYPES.KeyValueRouteDefinition) protected keyValueRouteDefinition: KeyValueRouteDefinition,
+        @inject(TYPES.KeyValueRoute) protected keyValueRoute: KeyValueRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) {
     }
@@ -65,7 +65,7 @@ export class KeyValueClient {
                     });                  
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IKeyValue>> {
-        return this.apiClient.get<IKeyValue>(this.keyValueRouteDefinition.get(id, options));
+        return this.apiClient.get<IKeyValue>(this.keyValueRoute.get(id, options));
     }
 
     /**

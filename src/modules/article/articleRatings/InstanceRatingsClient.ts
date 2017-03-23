@@ -1,30 +1,30 @@
 /* globals module */
 /**  
  * @module articleSubRatingsClient  
- * @description  Article Sub Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `articleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `articleService` functions allow management between article and article rating. In order to obtain needed routes `articleRatingsClient` uses `articleRatingsRouteDefinition`. 
+ * @description  Article Sub Ratings Client provides an easy way to consume  Article Ratings REST API end-points. `articleRatingsClient` functions enable performing standard CRUD operations directly on article rating resources, whereas the `articleService` functions allow management between article and article rating. In order to obtain needed routes `articleRatingsClient` uses `articleRatingsRoute`. 
 */
 
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleInstanceRatingsRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleInstanceRatingsRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IRating } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleInstanceRatingsClient {
 
     /**                 
-     * Provides direct access to `articleRatingsRouteDefinition`.                
+     * Provides direct access to `articleRatingsRoute`.                
      * @method                        
      * @example articleInstanceRatingsClient.routeDefinition.get(id);                 
      **/
-    get routeDefinition(): ArticleInstanceRatingsRouteDefinition {
-        return this.articleInstanceRatingsRouteDefinition;
+    get routeDefinition(): ArticleInstanceRatingsRoute {
+        return this.articleInstanceRatingsRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleInstanceRatingsRouteDefinition) protected articleInstanceRatingsRouteDefinition: ArticleInstanceRatingsRouteDefinition,
+        @inject(articleTypes.ArticleInstanceRatingsRoute) protected articleInstanceRatingsRoute: ArticleInstanceRatingsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -66,7 +66,7 @@ export class ArticleInstanceRatingsClient {
                 });                     
      **/
     find(articleId: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.apiClient.get<IQueryModel<IRating>>(this.articleInstanceRatingsRouteDefinition.find(articleId, options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.articleInstanceRatingsRoute.find(articleId, options));
     }
 
     /**                  
@@ -90,7 +90,7 @@ export class ArticleInstanceRatingsClient {
                 });                     
      **/
     findByUser(articleId: string, username: string, options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRating>>> {
-        return this.apiClient.get<IQueryModel<IRating>>(this.articleInstanceRatingsRouteDefinition.findByUser(articleId, username, options));
+        return this.apiClient.get<IQueryModel<IRating>>(this.articleInstanceRatingsRoute.findByUser(articleId, username, options));
     }
 
     /**                  
@@ -109,11 +109,11 @@ export class ArticleInstanceRatingsClient {
                     });                 
      **/
     get(articleId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRating>> {
-        return this.apiClient.get<IRating>(this.articleInstanceRatingsRouteDefinition.get(articleId, id, options));
+        return this.apiClient.get<IRating>(this.articleInstanceRatingsRoute.get(articleId, id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update article rating action has been performed; this action updates an article rating. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update article rating action has been performed; this action updates an article rating. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleRating); 
      * let uri = params['model'].links('put').href; 
@@ -136,7 +136,7 @@ export class ArticleInstanceRatingsClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the remove article rating action has been performed. If the action is successfully completed, the article rating resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove article rating action has been performed. If the action is successfully completed, the article rating resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRatingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(articleRating); 
      * let uri = params['model'].links('delete').href; 

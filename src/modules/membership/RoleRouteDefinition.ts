@@ -1,18 +1,18 @@
 /* globals module */
 /**  
- * @module roleRouteDefinition  
+ * @module roleRoute  
  * @description Baasic Role Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Role Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IRole } from 'modules/membership/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class RoleRouteDefinition extends BaseRouteDefinition {
+export class RoleRoute extends BaseRoute {
 
 
     /**                  
@@ -47,7 +47,7 @@ export class RoleRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the role property to sort the result collection by.                 
      * @method
      * @param options Query resource options object.                        
-     * @example roleRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example roleRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -58,7 +58,7 @@ export class RoleRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id Role unique indentifer.
      * @param options Query resource options object.                        
-     * @example roleRouteDefinition.get().expand({id: '<role-id>'});                               
+     * @example roleRoute.get().expand({id: '<role-id>'});                               
      **/
     get(id: string, options?: IOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -67,7 +67,7 @@ export class RoleRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create role route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example roleRouteDefinition.create();                               
+     * @example roleRoute.create();                               
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -77,7 +77,7 @@ export class RoleRouteDefinition extends BaseRouteDefinition {
      * Parses update role route.
      * @method
      * @param data A role object used to update specified role resource.
-     * @example roleRouteDefinition.update(data);
+     * @example roleRoute.update(data);
      */
     update(data: IRole): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -87,7 +87,7 @@ export class RoleRouteDefinition extends BaseRouteDefinition {
      * Parses delete role route.
      * @method
      * @param data A role object used to delete specified role resource.
-     * @example roleRouteDefinition.delete(data);
+     * @example roleRoute.delete(data);
      */
     delete(data: IRole): any {
         return super.baseDelete(this.removeRoute, data);

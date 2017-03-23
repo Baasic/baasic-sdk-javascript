@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module userWorkRouteDefinition  
+ * @module userWorkRoute  
  * @description Baasic User Work Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Work Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IUserWork } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class UserWorkRouteDefinition extends BaseRouteDefinition {
+export class UserWorkRoute extends BaseRoute {
 
     public readonly findRoute: string = 'profiles/{userId}/work/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -33,7 +33,7 @@ export class UserWorkRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example userWorkRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example userWorkRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -44,7 +44,7 @@ export class UserWorkRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param id User work id which uniquely identifies resource that needs to be retrieved.
      * @param options Query resource options object.                       
-     * @example userWorkRouteDefinition.get(id, options);                               
+     * @example userWorkRoute.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -54,7 +54,7 @@ export class UserWorkRouteDefinition extends BaseRouteDefinition {
      * Parses create route; this URI template does not expose any additional options.                 
      * @method
      * @param data An user work object that needs to be inserted into the system.                        
-     * @example userWorkRouteDefinition.create(data);                              
+     * @example userWorkRoute.create(data);                              
      **/
     create(data: IUserWork): any {
         return super.baseCreate(this.createRoute, data);
@@ -64,7 +64,7 @@ export class UserWorkRouteDefinition extends BaseRouteDefinition {
       * Parses update route; this URI template does not expose any additional options.                 
       * @method
       * @param data An user work object used to update specified user work resource.              
-      * @example userWorkRouteDefinition.create(data);                              
+      * @example userWorkRoute.create(data);                              
       **/
     update(data: IUserWork): any {
         return super.baseUpdate(this.updateRoute, data);

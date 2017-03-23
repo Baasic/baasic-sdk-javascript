@@ -7,14 +7,14 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { OrganizationBatchClient, OrganizationRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { OrganizationBatchClient, OrganizationRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';
 
 @injectable()
 export class OrganizationClient {
 
-    get routeDefinition(): OrganizationRouteDefinition {
-        return this.organizationRouteDefinition;
+    get routeDefinition(): OrganizationRoute {
+        return this.organizationRoute;
     }
 
     get batch(): OrganizationBatchClient {
@@ -22,7 +22,7 @@ export class OrganizationClient {
     }
 
     constructor(
-        @inject(userProfileTypes.OrganizationRouteDefinition) protected organizationRouteDefinition: OrganizationRouteDefinition,
+        @inject(userProfileTypes.OrganizationRoute) protected organizationRoute: OrganizationRoute,
         @inject(userProfileTypes.OrganizationBatchClient) protected organizationBatchClient: OrganizationBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -65,7 +65,7 @@ export class OrganizationClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IOrganization>> {
-        return this.apiClient.get<IOrganization>(this.organizationRouteDefinition.get(id, options));
+        return this.apiClient.get<IOrganization>(this.organizationRoute.get(id, options));
     }
 
     /**                  
@@ -90,7 +90,7 @@ export class OrganizationClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update organization action has been performed; this action updates an organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `organizationRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update organization action has been performed; this action updates an organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `organizationRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(organization); 
      * let uri = params['model'].links('put').href; 
@@ -113,7 +113,7 @@ export class OrganizationClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove an organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `organizationRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove an organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `organizationRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(organization); 
      * let uri = params['model'].links('delete').href; 

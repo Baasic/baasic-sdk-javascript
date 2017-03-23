@@ -1,32 +1,32 @@
 /* globals module */
 /**  
- * @module notificationsPublishRouteDefinition  
+ * @module notificationsPublishRoute  
  * @description Baasic Notifications Publish Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { NotificationsPublishBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsPublishBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
 
 @injectable()
-export class NotificationsPublishRouteDefinition extends BaseRouteDefinition {
+export class NotificationsPublishRoute extends BaseRoute {
 
     public readonly createRoute: string = 'notifications/publish';
 
-    batch(): NotificationsPublishBatchRouteDefinition {
-        return this.notificationsPublishBatchRouteDefinition;
+    batch(): NotificationsPublishBatchRoute {
+        return this.notificationsPublishBatchRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.NotificationsPublishBatchRouteDefinition) protected notificationsPublishBatchRouteDefinition: NotificationsPublishBatchRouteDefinition
+        @inject(notificationsTypes.NotificationsPublishBatchRoute) protected notificationsPublishBatchRoute: NotificationsPublishBatchRoute
     ) { super(appOptions); }
 
     /**                      
      * Parses create publish route; this route does not expose any additional options.                      
      * @method                     
-     * @example notificationsPublishRouteDefinition.create();                      
+     * @example notificationsPublishRoute.create();                      
      */
     create(): any {
         return super.baseCreate(this.createRoute, {});

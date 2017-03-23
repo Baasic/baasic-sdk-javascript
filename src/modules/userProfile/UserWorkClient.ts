@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { UserWorkRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserWorkRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IUserWork } from 'modules/userProfile/contracts';
 
 @injectable()
 export class UserWorkClient {
 
-    get routeDefinition(): UserWorkRouteDefinition {
-        return this.userWorkRouteDefinition;
+    get routeDefinition(): UserWorkRoute {
+        return this.userWorkRoute;
     }
 
     constructor(
-        @inject(userProfileTypes.UserWorkRouteDefinition) protected userWorkRouteDefinition: UserWorkRouteDefinition,
+        @inject(userProfileTypes.UserWorkRoute) protected userWorkRoute: UserWorkRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -59,7 +59,7 @@ export class UserWorkClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IUserWork>> {
-        return this.apiClient.get<IUserWork>(this.userWorkRouteDefinition.get(id, options));
+        return this.apiClient.get<IUserWork>(this.userWorkRoute.get(id, options));
     }
 
     /**                  
@@ -80,7 +80,7 @@ export class UserWorkClient {
     }
 
     /**                 
-     * Returns a promise that is resolved once the update user work action has been performed; this action updates a user work resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userWorkRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update user work action has been performed; this action updates a user work resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userWorkRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(work); 
      * let uri = params['model'].links('put').href; 
@@ -103,7 +103,7 @@ export class UserWorkClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user work resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userWorkRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user work resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userWorkRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(work); 
      * let uri = params['model'].links('delete').href; 

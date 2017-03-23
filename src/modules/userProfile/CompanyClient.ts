@@ -7,14 +7,14 @@
 import { injectable, inject } from "inversify";
 import { IGetRequestOptions, IOptions, IQueryModel } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CompanyBatchClient, CompanyRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { CompanyBatchClient, CompanyRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ICompany } from 'modules/userProfile/contracts';
 
 @injectable()
 export class CompanyClient {
 
-    get routeDefinition(): CompanyRouteDefinition {
-        return this.companyRouteDefinition;
+    get routeDefinition(): CompanyRoute {
+        return this.companyRoute;
     }
 
     get batch(): CompanyBatchClient {
@@ -23,7 +23,7 @@ export class CompanyClient {
 
     constructor(
         @inject(userProfileTypes.CompanyBatchClient) protected companyBatchClient: CompanyBatchClient,
-        @inject(userProfileTypes.CompanyRouteDefinition) protected companyRouteDefinition: CompanyRouteDefinition,
+        @inject(userProfileTypes.CompanyRoute) protected companyRoute: CompanyRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -65,7 +65,7 @@ export class CompanyClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICompany>> {
-        return this.apiClient.get<ICompany>(this.companyRouteDefinition.get(id, options));
+        return this.apiClient.get<ICompany>(this.companyRoute.get(id, options));
     }
 
     /**                  
@@ -90,7 +90,7 @@ export class CompanyClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the update company action has been performed; this action updates a company resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `companyRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update company action has been performed; this action updates a company resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `companyRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(company); 
      * let uri = params['model'].links('put').href; 
@@ -113,7 +113,7 @@ export class CompanyClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a company resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `companyRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a company resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `companyRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(company); 
      * let uri = params['model'].links('delete').href; 

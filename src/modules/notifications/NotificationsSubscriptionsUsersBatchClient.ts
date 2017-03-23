@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module notificationsSubscriptionsUsersBatchClient  
- * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersBatchUsersClient` uses `notificationsSubscriptionsUsersBatchRouteDefinition`. 
+ * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersBatchUsersClient` uses `notificationsSubscriptionsUsersBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { NotificationsSubscriptionsUsersBatchRouteDefinition, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSubscriptionsUsersBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
 import { IUserSubscription } from 'modules/notifications/contracts';
 
 @injectable()
 export class NotificationsSubscriptionsUsersBatchClient {
 
-    get routeDefinition(): NotificationsSubscriptionsUsersBatchRouteDefinition {
-        return this.notificationsSubscriptionsUsersBatchRouteDefinition;
+    get routeDefinition(): NotificationsSubscriptionsUsersBatchRoute {
+        return this.notificationsSubscriptionsUsersBatchRoute;
     }
 
     constructor(
-        @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchRouteDefinition) protected notificationsSubscriptionsUsersBatchRouteDefinition: NotificationsSubscriptionsUsersBatchRouteDefinition,
+        @inject(notificationsTypes.NotificationsSubscriptionsUsersBatchRoute) protected notificationsSubscriptionsUsersBatchRoute: NotificationsSubscriptionsUsersBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -56,7 +56,7 @@ export class NotificationsSubscriptionsUsersBatchClient {
                     });		                            
      */
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.notificationsSubscriptionsUsersBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.notificationsSubscriptionsUsersBatchRoute.delete(), undefined, ids);
     }
 
     /**                              

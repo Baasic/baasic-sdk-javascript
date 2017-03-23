@@ -1,22 +1,22 @@
 /* globals module */
 /**  
- * @module meteringRouteDefinition  
+ * @module meteringRoute  
  * @description Baasic Metering Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
 import {
-    MeteringACLRouteDefinition,
-    MeteringBatchRouteDefinition,
-    MeteringStatisticsRouteDefinition,
+    MeteringACLRoute,
+    MeteringBatchRoute,
+    MeteringStatisticsRoute,
     TYPES as meteringTypes
 } from 'modules/metering';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IMeteringData } from 'modules/metering/contracts';
 
 @injectable()
-export class MeteringRouteDefinition extends BaseRouteDefinition {
+export class MeteringRoute extends BaseRoute {
 
     public readonly findRoute: string = 'metering/data/{?applicationId,searchQuery,categories,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}';
 
@@ -30,23 +30,23 @@ export class MeteringRouteDefinition extends BaseRouteDefinition {
 
     public readonly purgeRoute: string = 'metering/data/purge';
     
-    get batch(): MeteringBatchRouteDefinition {
-        return this.meteringBatchRouteDefinition;
+    get batch(): MeteringBatchRoute {
+        return this.meteringBatchRoute;
     }
 
-    get statistics(): MeteringStatisticsRouteDefinition {
-        return this.meteringStatisticsRouteDefinition;
+    get statistics(): MeteringStatisticsRoute {
+        return this.meteringStatisticsRoute;
     }
 
-    get acl(): MeteringACLRouteDefinition {
-        return this.meteringACLRouteDefinition;
+    get acl(): MeteringACLRoute {
+        return this.meteringACLRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(meteringTypes.MeteringBatchRouteDefinition) protected meteringBatchRouteDefinition: MeteringBatchRouteDefinition,
-        @inject(meteringTypes.MeteringStatisticsRouteDefinition) protected meteringStatisticsRouteDefinition: MeteringStatisticsRouteDefinition,
-        @inject(meteringTypes.MeteringACLRouteDefinition) protected meteringACLRouteDefinition: MeteringACLRouteDefinition
+        @inject(meteringTypes.MeteringBatchRoute) protected meteringBatchRoute: MeteringBatchRoute,
+        @inject(meteringTypes.MeteringStatisticsRoute) protected meteringStatisticsRoute: MeteringStatisticsRoute,
+        @inject(meteringTypes.MeteringACLRoute) protected meteringACLRoute: MeteringACLRoute
     ) { super(appOptions); }
 
     /**                 
@@ -67,7 +67,7 @@ export class MeteringRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
      * @param options Query resource options object.                        
-     * @example meteringRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example meteringRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -78,7 +78,7 @@ export class MeteringRouteDefinition extends BaseRouteDefinition {
      * @method  
      * @param id MeteringData id which uniquely identifies MeteringData resource that needs to be retrieved.
      * @param options Query resource options object.                      
-     * @example meteringRouteDefinition.get();                               
+     * @example meteringRoute.get();                               
      **/
     get(id: string, options?: IOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -87,7 +87,7 @@ export class MeteringRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses create metering route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example meteringRouteDefinition.create();                              
+     * @example meteringRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -97,7 +97,7 @@ export class MeteringRouteDefinition extends BaseRouteDefinition {
      * Parses update metering route; this URI template does not expose any additional options.                 
      * @method                        
      * @param data An metering data object used to update specified MeteringData resource.
-     * @example meteringRouteDefinition.update(data);                              
+     * @example meteringRoute.update(data);                              
      **/
     update(data: IMeteringData): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -107,7 +107,7 @@ export class MeteringRouteDefinition extends BaseRouteDefinition {
      * Parses delete metering route; this URI template does not expose any additional options.                 
      * @method                        
      * @param data An metering data object used to delete specified MeteringData resource.
-     * @example meteringRouteDefinition.delete(data);                              
+     * @example meteringRoute.delete(data);                              
      **/
     delete(data: IMeteringData): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -116,7 +116,7 @@ export class MeteringRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses purge metering data route: this URI template does not expose any additional options.                 
      * @method                 
-     * @example meteringRouteDefinition.purge();                  
+     * @example meteringRoute.purge();                  
      **/
     purge(): any {
         return super.baseDelete(this.purgeRoute, {});

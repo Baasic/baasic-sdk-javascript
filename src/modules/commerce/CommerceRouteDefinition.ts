@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module commerceRouteDefinition  
+ * @module commerceRoute  
  * @description Baasic Commerce Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Product Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class CommerceRouteDefinition extends BaseRouteDefinition {
+export class CommerceRoute extends BaseRoute {
 
     public readonly findRoute: string = 'commerce/subscriptions/{?customerId,systemName,searchQuery,plan,statuses,productId,firstName,lastName,page,rpp,sort,embed,fields}';
 
@@ -43,7 +43,7 @@ export class CommerceRouteDefinition extends BaseRouteDefinition {
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example commerceRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -52,7 +52,7 @@ export class CommerceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commerceRouteDefinition.get(id, options);                               
+     * @example commerceRoute.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -61,7 +61,7 @@ export class CommerceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses validate VAT route; this route doesn't expose any properties.                 
      * @method                        
-     * @example commerceRouteDefinition.validateVAT({ countryCode: 'DE', vatId: 'DE999999999' });                               
+     * @example commerceRoute.validateVAT({ countryCode: 'DE', vatId: 'DE999999999' });                               
      **/
     validateVAT(countryCode: string, vatId: string): any {
         return super.baseCreate(this.validateVATRoute, { countryCode: countryCode, vatId: vatId });
@@ -70,7 +70,7 @@ export class CommerceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses subscription pre-process commerce route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceRouteDefinition.preprocess();                              
+     * @example commerceRoute.preprocess();                              
      **/
     preprocess(): any {
         return super.baseCreate(this.preprocessRoute, {});
@@ -79,7 +79,7 @@ export class CommerceRouteDefinition extends BaseRouteDefinition {
     /**                 
      * Parses subscription commerce route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceRouteDefinition.subscribe();                              
+     * @example commerceRoute.subscribe();                              
      **/
     subscribe(): any {
         return super.baseCreate(this.subscribeRoute, {});
@@ -88,7 +88,7 @@ export class CommerceRouteDefinition extends BaseRouteDefinition {
     /**                
      * Parses cancel subscription commerce route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceRouteDefinition.cancel({ systemName: '<system-name>' });                              
+     * @example commerceRoute.cancel({ systemName: '<system-name>' });                              
      **/
     cancel(data: any): any {
         return super.baseCreate(this.cancelRoute, data);

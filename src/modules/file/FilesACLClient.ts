@@ -7,17 +7,17 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IACLOptions, IACLPolicy } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { FilesACLRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { FilesACLRoute, TYPES as filesTypes } from 'modules/file';
 
 @injectable()
 export class FilesACLClient {
 
-    get routeDefinition(): FilesACLRouteDefinition {
-        return this.filesACLRouteDefinition;
+    get routeDefinition(): FilesACLRoute {
+        return this.filesACLRoute;
     }
 
     constructor(
-        @inject(filesTypes.FilesACLRouteDefinition) protected filesACLRouteDefinition: FilesACLRouteDefinition,
+        @inject(filesTypes.FilesACLRoute) protected filesACLRoute: FilesACLRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -78,7 +78,7 @@ export class FilesACLClient {
                     }); 				    
      **/
     removeByUser(id: string, action: string, user: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.filesACLRouteDefinition.deleteByUser(id, action, user, data));
+        return this.apiClient.delete<void>(this.filesACLRoute.deleteByUser(id, action, user, data));
     }
 
     /**                     
@@ -93,7 +93,7 @@ export class FilesACLClient {
                     }); 				    
      **/
     removeByRole(id: string, action: string, role: string, data: IACLPolicy): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.filesACLRouteDefinition.deleteByRole(id, action, role, data));
+        return this.apiClient.delete<void>(this.filesACLRoute.deleteByRole(id, action, role, data));
     }
 }
 

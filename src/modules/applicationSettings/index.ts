@@ -1,3 +1,3 @@
 export * from './diModule';
-export * from './applicationSettingsRouteDefinition';
+export * from './applicationSettingsRoute';
 export * from './applicationSettingsClient';

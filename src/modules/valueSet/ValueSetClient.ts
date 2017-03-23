@@ -6,7 +6,7 @@
 import { injectable, inject } from 'inversify';
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ValueSetItemClient, ValueSetRouteDefinition, TYPES as valueSetTypes } from 'modules/valueSet';
+import { ValueSetItemClient, ValueSetRoute, TYPES as valueSetTypes } from 'modules/valueSet';
 import { IValueSet } from 'modules/valueSet/contracts';
 
 @injectable()
@@ -18,16 +18,16 @@ export class ValueSetClient {
     }
 
     /**
-     * Provides direct access to `valueSetRouteDefinition`.
+     * Provides direct access to `valueSetRoute`.
      * @method
      * @example valueSetClient.routeDefinition.get().expand(expandObject);
     **/
-    get routeDefinition(): ValueSetRouteDefinition {
-        return this.valueSetRouteDefinition;
+    get routeDefinition(): ValueSetRoute {
+        return this.valueSetRoute;
     }
 
     constructor(
-        @inject(valueSetTypes.ValueSetRouteDefinition) protected valueSetRouteDefinition: ValueSetRouteDefinition,
+        @inject(valueSetTypes.ValueSetRoute) protected valueSetRoute: ValueSetRoute,
         @inject(valueSetTypes.ValueSetItemClient) protected valueSetItemClient: ValueSetItemClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -70,7 +70,7 @@ export class ValueSetClient {
                    });
     **/
     get(setName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IValueSet>> {
-        return this.apiClient.get<IValueSet>(this.valueSetRouteDefinition.get(setName, options));
+        return this.apiClient.get<IValueSet>(this.valueSetRoute.get(setName, options));
     }
 
     /**

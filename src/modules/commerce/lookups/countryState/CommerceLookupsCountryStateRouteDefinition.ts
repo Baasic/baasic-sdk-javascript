@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module commerceLookupsCountryRouteDefinition  
+ * @module commerceLookupsCountryRoute  
  * @description Baasic Commerce Lookups Country Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { CommerceLookupsCountryStateBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsCountryStateBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
-export class CommerceLookupsCountryStateRouteDefinition extends BaseRouteDefinition {
+export class CommerceLookupsCountryStateRoute extends BaseRoute {
 
     public readonly findRoute: string = 'commerce/lookups/states/{?countryId,searchQuery,page,rpp,sort,embed}';
 
@@ -23,12 +23,12 @@ export class CommerceLookupsCountryStateRouteDefinition extends BaseRouteDefinit
 
     public readonly deleteRoute: string = 'commerce/lookups/states/{id}';
 
-    get batch(): CommerceLookupsCountryStateBatchRouteDefinition {
-        return this.commerceCountryStateBatchRouteDefinition;
+    get batch(): CommerceLookupsCountryStateBatchRoute {
+        return this.commerceCountryStateBatchRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsCountryStateBatchRouteDefinition) protected commerceCountryStateBatchRouteDefinition: CommerceLookupsCountryStateBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsCountryStateBatchRoute) protected commerceCountryStateBatchRoute: CommerceLookupsCountryStateBatchRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -41,7 +41,7 @@ export class CommerceLookupsCountryStateRouteDefinition extends BaseRouteDefinit
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example commerceLookupsCountryStateRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example commerceLookupsCountryStateRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -51,7 +51,7 @@ export class CommerceLookupsCountryStateRouteDefinition extends BaseRouteDefinit
      * Parses get commerce country state route which can be expanded with additional options. Supported items are:                 
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method                        
-     * @example commerceLookupsCountryStateRouteDefinition.get(id, options);                               
+     * @example commerceLookupsCountryStateRoute.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -60,7 +60,7 @@ export class CommerceLookupsCountryStateRouteDefinition extends BaseRouteDefinit
     /**                 
      * Parses create commerce country state route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsCountryStateRouteDefinition.create();                              
+     * @example commerceLookupsCountryStateRoute.create();                              
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
@@ -69,7 +69,7 @@ export class CommerceLookupsCountryStateRouteDefinition extends BaseRouteDefinit
     /**                 
      * Parses update commerce country state route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsCountryStateRouteDefinition.update(data);                              
+     * @example commerceLookupsCountryStateRoute.update(data);                              
      **/
     update(data: any): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -78,7 +78,7 @@ export class CommerceLookupsCountryStateRouteDefinition extends BaseRouteDefinit
     /**                 
      * Parses delete commerce country state route; this URI template does not expose any additional options.                 
      * @method                        
-     * @example commerceLookupsCountryStateRouteDefinition.delete(data);                              
+     * @example commerceLookupsCountryStateRoute.delete(data);                              
      **/
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);

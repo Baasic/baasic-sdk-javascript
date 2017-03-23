@@ -7,17 +7,17 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { FilesStreamsRouteDefinition, TYPES as filesTypes } from 'modules/file';
+import { FilesStreamsRoute, TYPES as filesTypes } from 'modules/file';
 
 @injectable()
 export class FilesStreamsClient {
 
-    get routeDefinition(): FilesStreamsRouteDefinition {
-        return this.filesStreamsRouteDefinition;
+    get routeDefinition(): FilesStreamsRoute {
+        return this.filesStreamsRoute;
     }
 
     constructor(
-        @inject(filesTypes.FilesStreamsRouteDefinition) protected filesStreamsRouteDefinition: FilesStreamsRouteDefinition,
+        @inject(filesTypes.FilesStreamsRoute) protected filesStreamsRoute: FilesStreamsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -68,7 +68,7 @@ export class FilesStreamsClient {
                         });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.filesStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.filesStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -94,7 +94,7 @@ export class FilesStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.filesStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.filesStreamsRoute.update(data), data, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -111,7 +111,7 @@ export class FilesStreamsClient {
     create(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.filesStreamsRouteDefinition.create(data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
     }
 }
 

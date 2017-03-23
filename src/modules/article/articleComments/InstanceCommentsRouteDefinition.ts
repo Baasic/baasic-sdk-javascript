@@ -1,18 +1,18 @@
 /* globals module */
 /**  
- * @module articleInstanceCommentsRouteDefinition  
+ * @module articleInstanceCommentsRoute  
  * @description Baasic Article Instance Comments Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Instance Comments Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { ArticleInstanceCommentRepliesRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleInstanceCommentRepliesRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IArticleComment } from 'modules/article/contracts';
 
 @injectable()
-export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition {
+export class ArticleInstanceCommentsRoute extends BaseRoute {
 
     public readonly findRoute: string = 'articles/{articleId}/comments/{?searchQuery,statuses,page,rpp,sort,embed,fields}';
 
@@ -42,12 +42,12 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
 
     public readonly unspamRoute: string = 'articles/{articleId}/comments/{id}/unspam';
     
-    get replies(): ArticleInstanceCommentRepliesRouteDefinition {
-        return this.articleInstanceCommentRepliesRouteDefinition;
+    get replies(): ArticleInstanceCommentRepliesRoute {
+        return this.articleInstanceCommentRepliesRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleInstanceCommentRepliesRouteDefinition) protected articleInstanceCommentRepliesRouteDefinition: ArticleInstanceCommentRepliesRouteDefinition,
+        @inject(articleTypes.ArticleInstanceCommentRepliesRoute) protected articleInstanceCommentRepliesRoute: ArticleInstanceCommentRepliesRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
@@ -63,7 +63,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose comment resources need to be retrieved.
      * @param options Query resource options object.
-     * @example articleInstanceCommentsRouteDefinition.find({ searchQuery: '<search-phrase>' });
+     * @example articleInstanceCommentsRoute.find({ searchQuery: '<search-phrase>' });
      **/
     find(articleId: string, options?: IOptions): any {
         let params = this.modelMapper.findParams(options);
@@ -79,7 +79,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * @param articleId Article slug or id which uniquely identifies article whose comment resource needs to be retrieved.
      * @param commentId Id which identifies article comment resource that needs to be retrieved.
      * @param options Options object that contains embed data.
-     * @example articleInstanceCommentsRouteDefinition.get().expand({ id: '<comment-id>' }); 
+     * @example articleInstanceCommentsRoute.get().expand({ id: '<comment-id>' }); 
      **/
     get(articleId: string, commentId?: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
@@ -92,7 +92,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses create route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object that needs to be inserted into the system.
-     * @example articleInstanceCommentsRouteDefinition.create(data);
+     * @example articleInstanceCommentsRoute.create(data);
      **/
     create(data: IArticleComment): any {
         return super.baseCreate(this.createRoute, data);
@@ -102,7 +102,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses update route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comments object used to update specified article comment resource.
-     * @example articleInstanceCommentsRouteDefinition.update(data);
+     * @example articleInstanceCommentsRoute.update(data);
      **/
     update(data: IArticleComment): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -112,7 +112,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses delete route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comments object used to delete specified article comment resource.
-     * @example articleInstanceCommentsRouteDefinition.delete(data);
+     * @example articleInstanceCommentsRoute.delete(data);
      **/
     delete(data: IArticleComment): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -122,7 +122,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses delete all route; this URI template doesnt support any additional options.
      * @method
      * @param data An article object used to delete specified article comment resource.
-     * @example articleInstanceCommentsRouteDefinition.deleteAll(data);
+     * @example articleInstanceCommentsRoute.deleteAll(data);
      **/
     deleteAll(data: IArticle): any {
         return super.baseDelete(this.deleteAllRoute, data, undefined, 'delete-comments-by-article');
@@ -132,7 +132,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses approve route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object.
-     * @example articleInstanceCommentsRouteDefinition.approve(data);
+     * @example articleInstanceCommentsRoute.approve(data);
      **/
     approve(data: IArticleComment): any {
         return super.baseUpdate(this.approveRoute, data, undefined, 'comment-approve');
@@ -142,7 +142,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses unapprove route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object.
-     * @example articleInstanceCommentsRouteDefinition.unapprove(data);
+     * @example articleInstanceCommentsRoute.unapprove(data);
      **/
     unapprove(data: IArticleComment): any {
         return super.baseUpdate(this.unapproveRoute, data, undefined, 'comment-unapprove');
@@ -152,7 +152,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses flag route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object.
-     * @example articleInstanceCommentsRouteDefinition.flag(data);
+     * @example articleInstanceCommentsRoute.flag(data);
      **/
     flag(data: IArticleComment): any {
         return super.baseUpdate(this.flagRoute, data, undefined, 'comment-flag');
@@ -162,7 +162,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses unflag route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object.
-     * @example articleInstanceCommentsRouteDefinition.unflag(data);
+     * @example articleInstanceCommentsRoute.unflag(data);
      **/
     unflag(data: IArticleComment): any {
         return super.baseUpdate(this.unflagRoute, data, undefined, 'comment-unflag');
@@ -172,7 +172,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses report route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object.
-     * @example articleInstanceCommentsRouteDefinition.report(data);
+     * @example articleInstanceCommentsRoute.report(data);
      **/
     report(data: IArticleComment): any {
         return super.baseUpdate(this.reportRoute, data, undefined, 'comment-report');
@@ -182,7 +182,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses unreport route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object.
-     * @example articleInstanceCommentsRouteDefinition.unreport(data);
+     * @example articleInstanceCommentsRoute.unreport(data);
      **/
     unreport(data: IArticleComment): any {
         return super.baseUpdate(this.unreportRoute, data, undefined, 'comment-unreport')
@@ -192,7 +192,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses spam route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object.
-     * @example articleInstanceCommentsRouteDefinition.spam(data);
+     * @example articleInstanceCommentsRoute.spam(data);
      **/
     spam(data: IArticleComment): any {
         return super.baseUpdate(this.spamRoute, data, undefined, 'comment-spam');
@@ -202,7 +202,7 @@ export class ArticleInstanceCommentsRouteDefinition extends BaseRouteDefinition 
      * Parses unspam route; this URI template doesnt support any additional options.
      * @method
      * @param data An article comment object.
-     * @example articleInstanceCommentsRouteDefinition.unspam(data);
+     * @example articleInstanceCommentsRoute.unspam(data);
      **/
     unspam(data: IArticleComment): any {
         return super.baseUpdate(this.unspamRoute, data, undefined, 'comment-unspam');

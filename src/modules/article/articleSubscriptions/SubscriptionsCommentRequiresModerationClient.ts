@@ -1,24 +1,24 @@
 /* globals module */
 /**  
  * @module articleSubscriptionsCommentRequiresModerationClient  
- * @description  Article Subscriptions Comment Requires Moderation Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentRequiresModerationClient` uses `articleSubscriptionsCommentRequiresModerationRouteDefinition`. 
+ * @description  Article Subscriptions Comment Requires Moderation Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleSubscriptionsCommentRequiresModerationClient` uses `articleSubscriptionsCommentRequiresModerationRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { ArticleSubscriptionsCommentRequiresModerationRouteDefinition, TYPES as articleTypes } from 'modules/article';
+import { ArticleSubscriptionsCommentRequiresModerationRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticleSubscription } from 'modules/article/contracts';
 
 @injectable()
 export class ArticleSubscriptionsCommentRequiresModerationClient {
 
-    get routeDefinition(): ArticleSubscriptionsCommentRequiresModerationRouteDefinition {
-        return this.articleSubscriptionsCommentRequiresModerationRouteDefinition;
+    get routeDefinition(): ArticleSubscriptionsCommentRequiresModerationRoute {
+        return this.articleSubscriptionsCommentRequiresModerationRoute;
     }
 
     constructor(
-        @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationRouteDefinition) protected articleSubscriptionsCommentRequiresModerationRouteDefinition: ArticleSubscriptionsCommentRequiresModerationRouteDefinition,
+        @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationRoute) protected articleSubscriptionsCommentRequiresModerationRoute: ArticleSubscriptionsCommentRequiresModerationRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -36,7 +36,7 @@ export class ArticleSubscriptionsCommentRequiresModerationClient {
                     });                         
      **/
     subscribe(data: IArticleSubscription): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.articleSubscriptionsCommentRequiresModerationRouteDefinition.subscribe(data), data);
+        return this.apiClient.post(this.articleSubscriptionsCommentRequiresModerationRoute.subscribe(data), data);
     }
 
     /**                         

@@ -1,5 +1,5 @@
 export * from './diModule';
-export * from './templatingBatchRouteDefinition';
+export * from './templatingBatchRoute';
 export * from './templatingBatchClient';
-export * from './templatingRouteDefinition';
+export * from './templatingRoute';
 export * from './templatingClient';

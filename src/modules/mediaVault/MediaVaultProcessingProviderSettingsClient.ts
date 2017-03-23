@@ -7,18 +7,18 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { MediaVaultProcessingProviderSettingsRouteDefinition, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import { MediaVaultProcessingProviderSettingsRoute, TYPES as mediaVaultTypes } from 'modules/mediaVault';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 
 @injectable()
 export class MediaVaultProcessingProviderSettingsClient {
 
-    get routeDefinition(): MediaVaultProcessingProviderSettingsRouteDefinition {
-        return this.mediaVaultProcessingProviderSettingsRouteDefinition;
+    get routeDefinition(): MediaVaultProcessingProviderSettingsRoute {
+        return this.mediaVaultProcessingProviderSettingsRoute;
     }
 
     constructor(
-        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsRouteDefinition) protected mediaVaultProcessingProviderSettingsRouteDefinition: MediaVaultProcessingProviderSettingsRouteDefinition,
+        @inject(mediaVaultTypes.MediaVaultProcessingProviderSettingsRoute) protected mediaVaultProcessingProviderSettingsRoute: MediaVaultProcessingProviderSettingsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -60,11 +60,11 @@ export class MediaVaultProcessingProviderSettingsClient {
                     });                   
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IPreprocessingProviderSettings>> {
-        return this.apiClient.get<IPreprocessingProviderSettings>(this.mediaVaultProcessingProviderSettingsRouteDefinition.get(id, options));
+        return this.apiClient.get<IPreprocessingProviderSettings>(this.mediaVaultProcessingProviderSettingsRoute.get(id, options));
     }
 
     /**                   
-     * Returns a promise that is resolved once the update action has been performed; this action updates a media vault processing provider setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaVaultProcessingProviderSettingsRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update action has been performed; this action updates a media vault processing provider setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaVaultProcessingProviderSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.updateParams(processingProviderSetting); 
      * let uri = params['model'].links('put').href; 

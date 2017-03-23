@@ -1,17 +1,17 @@
 /* globals module */
 /**  
- * @module articleInstanceRatingsRouteDefinition  
+ * @module articleInstanceRatingsRoute  
  * @description Baasic Article Instance Ratings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Sub Ratings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticle, IRating } from 'modules/article/contracts';
 
 @injectable()
-export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
+export class ArticleInstanceRatingsRoute extends BaseRoute {
 
     public readonly createRoute: string = 'articles/{articleId}/ratings/';
 
@@ -36,7 +36,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * Parses create article rating route; this URI does not support any additional embed items.                 
      * @method 
      * @param data An article rating object that needs to be inserted into the system.                    
-     * @example articleInstanceRatingsRouteDefinition.create(data);                 
+     * @example articleInstanceRatingsRoute.create(data);                 
      **/
     create(data: IRating): any {
         return super.baseCreate(this.createRoute, data);
@@ -52,7 +52,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * @method 
      * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
      * @param options Query resource options object.                       
-     * @example articleInstanceRatingsRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example articleInstanceRatingsRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(articleId: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
@@ -71,7 +71,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
      * @param username Username which uniquely identifies a user which has created an article rating.
      * @param options Query resource options object.                        
-     * @example articleInstanceRatingsRouteDefinition.find({username: '<username>'});                               
+     * @example articleInstanceRatingsRoute.find({username: '<username>'});                               
      **/
     findByUser(articleId: string, username: string, options?: IOptions): any {
         let params = this.utility.extend({}, options);
@@ -87,7 +87,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * @param articleId Article slug or id which uniquely identifies article whose rating resources need to be retrieved.
      * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
      * @param options Options object that contains embed data.                       
-     * @example articleInstanceRatingsRouteDefinition.get({id: '<articleRating-id>'});                               
+     * @example articleInstanceRatingsRoute.get({id: '<articleRating-id>'});                               
      **/
     get(articleId, id: string, options?: IGetRequestOptions): any {
         let params = this.utility.extend({}, options);
@@ -99,7 +99,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
      * Parses update article rating route; this URI does not support any additional embed items.                 
      * @method
      * @param data An article object used to update specified article resource.                     
-     * @example articleInstanceRatingsRouteDefinition.update(data);                 
+     * @example articleInstanceRatingsRoute.update(data);                 
      **/
     update(data: IRating): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -109,7 +109,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
     * Parses delete article rating route; this URI does not support any additional embed items.                 
     * @method
     * @param data Rating resource resource that needs to be deleted.                     
-    * @example articleInstanceRatingsRouteDefinition.delete(data);                 
+    * @example articleInstanceRatingsRoute.delete(data);                 
     **/
     delete(data: IRating): any {
         return super.baseDelete(this.deleteRoute, data);
@@ -119,7 +119,7 @@ export class ArticleInstanceRatingsRouteDefinition extends BaseRouteDefinition {
     * Parses delete article rating route; this URI does not support any additional embed items.                 
     * @method
     * @param data Article object whose ratings needs to be deleted.                     
-    * @example articleInstanceRatingsRouteDefinition.deleteAll(data);                 
+    * @example articleInstanceRatingsRoute.deleteAll(data);                 
     **/
     deleteAll(data: IArticle): any {
         return super.baseDelete(this.deleteAllRoute, data, undefined, 'delete-ratings-by-article');

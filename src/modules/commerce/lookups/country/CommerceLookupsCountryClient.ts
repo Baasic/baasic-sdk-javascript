@@ -1,19 +1,19 @@
 /* globals module */
 /**  
  * @module commerceCountryClient  
- * @description  Commerce Country Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryClient` uses `commerceCountryRouteDefinition`. 
+ * @description  Commerce Country Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryClient` uses `commerceCountryRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsCountryBatchClient, CommerceLookupsCountryRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsCountryBatchClient, CommerceLookupsCountryRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsCountryClient {
 
-    get routeDefinition(): CommerceLookupsCountryRouteDefinition {
-        return this.commerceLookupsCountryRouteDefinition;
+    get routeDefinition(): CommerceLookupsCountryRoute {
+        return this.commerceLookupsCountryRoute;
     }
 
     get batch(): CommerceLookupsCountryBatchClient {
@@ -21,7 +21,7 @@ export class CommerceLookupsCountryClient {
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsCountryRouteDefinition) protected commerceLookupsCountryRouteDefinition: CommerceLookupsCountryRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsCountryRoute) protected commerceLookupsCountryRoute: CommerceLookupsCountryRoute,
         @inject(commerceTypes.CommerceLookupsCountryBatchClient) protected commerceLookupsCountryBatchClient: CommerceLookupsCountryBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -59,7 +59,7 @@ export class CommerceLookupsCountryClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.commerceLookupsCountryRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceLookupsCountryRoute.get(id, options));
     }
 
     /**                  
@@ -103,7 +103,7 @@ export class CommerceLookupsCountryClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCountryRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCountryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commerceCountry); 
      * let uri = params['model'].links('delete').href; 

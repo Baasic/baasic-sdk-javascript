@@ -1,20 +1,20 @@
 /* globals module */
 /**  
  * @module templatingClient  
- * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingClient` uses `templatingRouteDefinition`. 
+ * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingClient` uses `templatingRoute`. 
  */
 
 import { injectable, inject } from 'inversify';
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { TemplatingBatchClient, TemplatingRouteDefinition, TYPES as templatingTypes } from 'modules/templating';
+import { TemplatingBatchClient, TemplatingRoute, TYPES as templatingTypes } from 'modules/templating';
 import { ITemplate } from 'modules/templating/contracts';
 
 @injectable()
 export class TemplatingClient {
 
-    get routeDefinition(): TemplatingRouteDefinition {
-        return this.templatingRouteDefinition;
+    get routeDefinition(): TemplatingRoute {
+        return this.templatingRoute;
     }
 
     get batch(): TemplatingBatchClient {
@@ -22,7 +22,7 @@ export class TemplatingClient {
     }
 
     constructor(
-        @inject(templatingTypes.TemplatingRouteDefinition) protected templatingRouteDefinition: TemplatingRouteDefinition,
+        @inject(templatingTypes.TemplatingRoute) protected templatingRoute: TemplatingRoute,
         @inject(templatingTypes.TemplatingBatchClient) protected templatingBatchClient: TemplatingBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -64,7 +64,7 @@ export class TemplatingClient {
                    });                 
     **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ITemplate>> {
-        return this.apiClient.get<ITemplate>(this.templatingRouteDefinition.get(id, options));
+        return this.apiClient.get<ITemplate>(this.templatingRoute.get(id, options));
     }
 
     /**                 

@@ -1,14 +1,14 @@
 /* globals module */
 /**  
  * @module permissionClient  
- * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `permissionClient` uses `permissionRouteDefinition`. 
+ * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `permissionClient` uses `permissionRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
 import { Utility } from 'common';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { PermissionRouteDefinition, TYPES as membershipTypes } from 'modules/membership';
+import { PermissionRoute, TYPES as membershipTypes } from 'modules/membership';
 import { IAccessPolicy, IAccessAction, IRole, IUserInfo } from 'modules/membership/contracts';
 import { IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 
@@ -19,16 +19,16 @@ export class PermissionClient {
     private permissionHash = {};
 
     /**                 
-     * Provides direct access to `permissionRouteDefinition`.                 
+     * Provides direct access to `permissionRoute`.                 
      * @method                        
      * @example permissionClient.routeDefinition.get().expand(expandObject);                 
      **/
-    get routeDefinition(): PermissionRouteDefinition {
-        return this.permissionRouteDefinition;
+    get routeDefinition(): PermissionRoute {
+        return this.permissionRoute;
     }
 
     constructor(
-        @inject(membershipTypes.PermissionRouteDefinition) protected permissionRouteDefinition: PermissionRouteDefinition,
+        @inject(membershipTypes.PermissionRoute) protected permissionRoute: PermissionRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(coreTYPES.IBaasicApp) private application: IBaasicApp
     ) { }
@@ -50,7 +50,7 @@ export class PermissionClient {
                 });                     
      **/
     find(section: string, options?: any): PromiseLike<IHttpResponse<IAccessPolicy[]>> {
-        return this.apiClient.get<IAccessPolicy[]>(this.permissionRouteDefinition.find(section, options));
+        return this.apiClient.get<IAccessPolicy[]>(this.permissionRoute.find(section, options));
     }
 
     /**
@@ -148,7 +148,7 @@ export class PermissionClient {
             });
     **/
     create(data: IAccessPolicy): PromiseLike<IHttpResponse<IAccessPolicy[]>> {
-        return this.apiClient.post<IAccessPolicy[]>(this.permissionRouteDefinition.create(), data);
+        return this.apiClient.post<IAccessPolicy[]>(this.permissionRoute.create(), data);
     }
     /**
     * Returns a promise that is resolved once the remove action has been performed. If the action is successfully complete, an access policy assigned to the specified role and section will be removed. 

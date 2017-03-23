@@ -1,45 +1,45 @@
 /* globals module */
 /**  
- * @module notificationsRouteDefinition  
+ * @module notificationsRoute  
  * @description Baasic Notifications Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition } from 'common';
+import { BaseRoute } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
-    NotificationsPublishRouteDefinition,
-    NotificationsSubscriptionsRouteDefinition,
-    NotificationsRegistrationsRouteDefinition,
-    NotificationsSettingsRouteDefinition,
+    NotificationsPublishRoute,
+    NotificationsSubscriptionsRoute,
+    NotificationsRegistrationsRoute,
+    NotificationsSettingsRoute,
     TYPES as notificationsTypes
 } from 'modules/notifications';
 
 @injectable()
-export class NotificationsRouteDefinition extends BaseRouteDefinition {
+export class NotificationsRoute extends BaseRoute {
 
-    get publish(): NotificationsPublishRouteDefinition {
-        return this.notificationsPublishRouteDefinition;
+    get publish(): NotificationsPublishRoute {
+        return this.notificationsPublishRoute;
     }
 
-    get subscriptions(): NotificationsSubscriptionsRouteDefinition {
-        return this.basicNotificationsSubscriptionsRouteDefinition;
+    get subscriptions(): NotificationsSubscriptionsRoute {
+        return this.basicNotificationsSubscriptionsRoute;
     }
 
-    get registrations(): NotificationsRegistrationsRouteDefinition {
-        return this.notificationsRegistrationsRouteDefinition;
+    get registrations(): NotificationsRegistrationsRoute {
+        return this.notificationsRegistrationsRoute;
     }
 
-    get settings(): NotificationsSettingsRouteDefinition {
-        return this.notificationsSettingsRouteDefinition;
+    get settings(): NotificationsSettingsRoute {
+        return this.notificationsSettingsRoute;
     }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(notificationsTypes.NotificationsPublishRouteDefinition) protected notificationsPublishRouteDefinition: NotificationsPublishRouteDefinition,
-        @inject(notificationsTypes.NotificationsSubscriptionsRouteDefinition) protected basicNotificationsSubscriptionsRouteDefinition: NotificationsSubscriptionsRouteDefinition,
-        @inject(notificationsTypes.NotificationsRegistrationsRouteDefinition) protected notificationsRegistrationsRouteDefinition: NotificationsRegistrationsRouteDefinition,
-        @inject(notificationsTypes.NotificationsSettingsRouteDefinition) protected notificationsSettingsRouteDefinition: NotificationsSettingsRouteDefinition
+        @inject(notificationsTypes.NotificationsPublishRoute) protected notificationsPublishRoute: NotificationsPublishRoute,
+        @inject(notificationsTypes.NotificationsSubscriptionsRoute) protected basicNotificationsSubscriptionsRoute: NotificationsSubscriptionsRoute,
+        @inject(notificationsTypes.NotificationsRegistrationsRoute) protected notificationsRegistrationsRoute: NotificationsRegistrationsRoute,
+        @inject(notificationsTypes.NotificationsSettingsRoute) protected notificationsSettingsRoute: NotificationsSettingsRoute
     ) { super(appOptions); }
 }
 

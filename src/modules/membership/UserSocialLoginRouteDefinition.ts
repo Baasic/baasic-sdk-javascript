@@ -1,15 +1,15 @@
 /* globals module */
 /**  
- * @module userSocialLoginRouteDefinition  
+ * @module userSocialLoginRoute  
  * @description Baasic User Social Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
-export class UserSocialLoginRouteDefinition extends BaseRouteDefinition {
+export class UserSocialLoginRoute extends BaseRoute {
 
     /**                  
     * Get route with route and query parameters.
@@ -27,7 +27,7 @@ export class UserSocialLoginRouteDefinition extends BaseRouteDefinition {
      * Parses get social login route, URI template should be expanded with the username of the user resource whose social login connections should be retrieved.                     
      * @method
      * @param username A username or id which uniquely identifies user resource whose social login connections need to be retrieved.                           
-     * @example userSocialLoginRouteDefinition.get('<username>');
+     * @example userSocialLoginRoute.get('<username>');
      **/
     get(username: string): any {
         return super.baseGet(this.getRoute, username, { username: username });
@@ -40,7 +40,7 @@ export class UserSocialLoginRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param username A username which uniquely identifies an application user whose social login connection needs to be removed.
      * @param provider Provider from which to disconnect the login resource from.               
-     * @example userSocialLoginRouteDefinition.remove('<username>', '<provider>');
+     * @example userSocialLoginRoute.remove('<username>', '<provider>');
      **/
     remove(username: string, provider: any): any {
         let params;

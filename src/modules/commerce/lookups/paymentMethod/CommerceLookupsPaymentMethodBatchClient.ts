@@ -1,23 +1,23 @@
 /* globals module */
 /**  
  * @module commercePaymentMethodBatchClient  
- * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentMethodBatchClient` uses `commercePaymentMethodBatchRouteDefinition`. 
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentMethodBatchClient` uses `commercePaymentMethodBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceLookupsPaymentMethodBatchRouteDefinition, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsPaymentMethodBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceLookupsPaymentMethodBatchClient {
 
-    get routeDefinition(): CommerceLookupsPaymentMethodBatchRouteDefinition {
-        return this.commerceLookupsPaymentMethodBatchRouteDefinition;
+    get routeDefinition(): CommerceLookupsPaymentMethodBatchRoute {
+        return this.commerceLookupsPaymentMethodBatchRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceLookupsPaymentMethodBatchRouteDefinition) protected commerceLookupsPaymentMethodBatchRouteDefinition: CommerceLookupsPaymentMethodBatchRouteDefinition,
+        @inject(commerceTypes.CommerceLookupsPaymentMethodBatchRoute) protected commerceLookupsPaymentMethodBatchRoute: CommerceLookupsPaymentMethodBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -68,7 +68,7 @@ export class CommerceLookupsPaymentMethodBatchClient {
                     });		                    
      **/
     remove(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.commerceLookupsPaymentMethodBatchRouteDefinition.delete(), undefined, ids);
+        return this.apiClient.delete<void>(this.commerceLookupsPaymentMethodBatchRoute.delete(), undefined, ids);
     }
 }
 

@@ -6,17 +6,17 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { UserProfileAvatarStreamsRouteDefinition, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserProfileAvatarStreamsRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 
 @injectable()
 export class UserProfileAvatarStreamsClient {
 
-    get routeDefinition(): UserProfileAvatarStreamsRouteDefinition {
-        return this.userProfileAvatarStreamsRouteDefinition;
+    get routeDefinition(): UserProfileAvatarStreamsRoute {
+        return this.userProfileAvatarStreamsRoute;
     }
 
     constructor(
-        @inject(userProfileTypes.UserProfileAvatarStreamsRouteDefinition) protected userProfileAvatarStreamsRouteDefinition: UserProfileAvatarStreamsRouteDefinition,
+        @inject(userProfileTypes.UserProfileAvatarStreamsRoute) protected userProfileAvatarStreamsRoute: UserProfileAvatarStreamsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -67,7 +67,7 @@ export class UserProfileAvatarStreamsClient {
                             });                     
      **/
     getBlob(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.userProfileAvatarStreamsRouteDefinition.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.userProfileAvatarStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                     
@@ -88,7 +88,7 @@ export class UserProfileAvatarStreamsClient {
     create(id: string, data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.userProfileAvatarStreamsRouteDefinition.create(id, data), data, { 'Content-Type': undefined });
+        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), data, { 'Content-Type': undefined });
     }
 
     /**                     
@@ -117,7 +117,7 @@ export class UserProfileAvatarStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.userProfileAvatarStreamsRouteDefinition.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), data, { 'Content-Type': undefined });
     }
 }
 

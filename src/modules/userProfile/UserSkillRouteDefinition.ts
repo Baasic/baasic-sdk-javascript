@@ -1,16 +1,16 @@
 /* globals module */
 /**  
- * @module userSkillRouteDefinition  
+ * @module userSkillRoute  
  * @description Baasic User Skill Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRouteDefinition, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from 'common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IUserSkill } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
-export class UserSkillRouteDefinition extends BaseRouteDefinition {
+export class UserSkillRoute extends BaseRoute {
 
     public readonly findRoute: string = 'profiles/{userId}/skills/{?searchQuery,page,rpp,sort,embed,fields}';
 
@@ -33,7 +33,7 @@ export class UserSkillRouteDefinition extends BaseRouteDefinition {
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method 
      * @param options Query resource options object.                       
-     * @example userSkillRouteDefinition.find({searchQuery: '<search-phrase>'});                               
+     * @example userSkillRoute.find({searchQuery: '<search-phrase>'});                               
      **/
     find(options?: IOptions): any {
         return super.baseFind(this.findRoute, options);
@@ -44,7 +44,7 @@ export class UserSkillRouteDefinition extends BaseRouteDefinition {
      * @method
      * @param id User profile id or display name which uniquely identifies user profile whose skill resources need to be retrieved.
      * @param options Query resource options object.                        
-     * @example userSkillRouteDefinition.get(id, options);                               
+     * @example userSkillRoute.get(id, options);                               
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -54,7 +54,7 @@ export class UserSkillRouteDefinition extends BaseRouteDefinition {
      * Parses create route; this URI template does not expose any additional options.                 
      * @method
      * @param data An user skill object that needs to be inserted into the system.                        
-     * @example userSkillRouteDefinition.create(data);                              
+     * @example userSkillRoute.create(data);                              
      **/
     create(data: IUserSkill): any {
         return super.baseCreate(this.createRoute, data);
@@ -64,7 +64,7 @@ export class UserSkillRouteDefinition extends BaseRouteDefinition {
      * Parses update route; this URI template does not expose any additional options.                 
      * @method
      * @param data An user skill object used to update specific user skill resource in the system.                
-     * @example userSkillRouteDefinition.update(data);                              
+     * @example userSkillRoute.update(data);                              
      **/
     update(data: IUserSkill): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -74,7 +74,7 @@ export class UserSkillRouteDefinition extends BaseRouteDefinition {
      * Parses delete route; this URI template does not expose any additional options.                 
      * @method
      * @param data An user skill object used to delete specific user skill resource in the system.                
-     * @example userSkillRouteDefinition.delete(data);                              
+     * @example userSkillRoute.delete(data);                              
      **/
     delete(data: IUserSkill): any {
         return super.baseDelete(this.deleteRoute, data);

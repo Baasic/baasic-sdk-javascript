@@ -1,19 +1,19 @@
 /* globals module */
 /**  
  * @module commerceInvoiceClient  
- * @description  Commerce Invoice Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceClient` uses `commerceInvoiceRouteDefinition`. 
+ * @description  Commerce Invoice Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceClient` uses `commerceInvoiceRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { CommerceInvoiceRouteDefinition, CommerceInvoiceStreamsClient, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceInvoiceRoute, CommerceInvoiceStreamsClient, TYPES as commerceTypes } from 'modules/commerce';
 
 @injectable()
 export class CommerceInvoiceClient {
 
-    get routeDefinition(): CommerceInvoiceRouteDefinition {
-        return this.commerceInvoiceRouteDefinition;
+    get routeDefinition(): CommerceInvoiceRoute {
+        return this.commerceInvoiceRoute;
     }
 
     get streams(): CommerceInvoiceStreamsClient {
@@ -21,7 +21,7 @@ export class CommerceInvoiceClient {
     }
 
     constructor(
-        @inject(commerceTypes.CommerceInvoiceRouteDefinition) protected commerceInvoiceRouteDefinition: CommerceInvoiceRouteDefinition,
+        @inject(commerceTypes.CommerceInvoiceRoute) protected commerceInvoiceRoute: CommerceInvoiceRoute,
         @inject(commerceTypes.CommerceInvoiceStreamsClient) protected commerceInvoiceStreamsClient: CommerceInvoiceStreamsClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
@@ -59,11 +59,11 @@ export class CommerceInvoiceClient {
                     });                 
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.commerceInvoiceRouteDefinition.get(id, options));
+        return this.apiClient.get(this.commerceInvoiceRoute.get(id, options));
     }
 
     /**                  
-     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceInvoiceRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceInvoiceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commerceInvoice); 
      * let uri = params['model'].links('put').href; 
@@ -84,7 +84,7 @@ export class CommerceInvoiceClient {
     }
 
     /**                  
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceInvoiceRouteDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceInvoiceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
      * ``` 
      * let params = modelMapper.removeParams(commerceInvoice); 
      * let uri = params['model'].links('delete').href; 
