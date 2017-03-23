@@ -1,2 +1,2 @@
-export * from './baasiccommerceProductRouteDefinition';
-export * from './baasiccommerceProductClient';
+export * from './commerceProductRouteDefinition';
+export * from './commerceProductClient';
