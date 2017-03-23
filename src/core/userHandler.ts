@@ -18,7 +18,7 @@ export class UserHandler implements IUserHandler {
         this.userInfoKey = 'baasic-user-info-' + this.application.getApiKey();
 
         this.user = {
-            isAuthenticated: function () {
+            isAuthenticated: () => {
                 var token = this.application.getAccessToken();
                 return token !== undefined && token !== null && (token.expireTime === undefined || token.expireTime === null || (token.expireTime - new Date().getTime()) > 0);
             }
