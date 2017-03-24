@@ -1,10 +1,10 @@
 {
   "name": "baasic-sdk-javascript",
-  "version": "2.0.0-rc.4",
+  "version": "2.0.0-rc.8",
   "description": "JavaScript SDK provides core functionality for building web and mobile applications on [Baasic](http://www.baasic.com/).",
   "keywords": ["Baasic", "BaaS", "sdk", "JavaScript", "Backend", "browser", "client-side"],
   "homepage": "http://www.baasic.com/",
-  "main": "build/lib/index.js",
+  "main": "build/dist/baasic-sdk-javascript.js",
   "types": "build/lib/types/index.d.ts",
   "scripts": {
     "start": "npm run watch",
@@ -23,10 +23,12 @@
     "type": "git",
     "url": "https://github.com/baasic/baasic-sdk-javascript.git"
   },
+  "files": [
+    "build/dist/*",
+    "build/lib/types/*"
+  ],
   "dependencies": {
-    "baasic-uritemplate": "Baasic/uritemplate-js",
-    "inversify": "^3.1.0",
-    "reflect-metadata": "^0.1.9"
+    "baasic-uritemplate": "Baasic/uritemplate-js"
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
@@ -40,6 +42,8 @@
     "webpack-merge": "^2.6.1",
     "webpack-uglify-js-plugin": "^1.1.9",
     "typedoc": "0.5.7",
-    "typedoc-webpack-plugin": "1.1.3"
+    "typedoc-webpack-plugin": "1.1.3",
+    "inversify": "^3.1.0",
+    "reflect-metadata": "^0.1.9"
   }
 }
