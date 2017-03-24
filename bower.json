@@ -5,9 +5,14 @@
   "main": [
     "build/dist/baasic-sdk-javascript.js"
   ],
-  "keywords": [],
+  "keywords": ["Baasic", "BaaS", "sdk", "JavaScript", "Backend", "browser", "client-side"],
+  "homepage": "http://www.baasic.com/",
   "author": "Mono Software",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baasic/baasic-sdk-javascript.git"
+  },
   "ignore": [
     "**/.*",
     "package.json",
@@ -16,10 +21,9 @@
     "src"
   ],
   "dependencies": {
-    "baasic-uritemplate": "Baasic/uritemplate-js"
-  },
-  "devDependencies": {
+    "baasic-uritemplate": "Baasic/uritemplate-js",
     "inversify": "^3.1.0",
     "reflect-metadata": "^0.1.9"
-  }
+  },
+  "devDependencies": {}
 }
