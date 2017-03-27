@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IACLPolicy, IACLOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 

@@ -5,7 +5,7 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from 'common';
+import { BaseRoute } from '../../common';
 import { IOptions } from 'common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleTag } from 'modules/article/contracts';

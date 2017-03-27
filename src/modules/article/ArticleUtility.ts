@@ -1,4 +1,4 @@
-import { Utility } from 'common';
+import { Utility } from '../../common';
 import { ALPHABET as alphabet } from 'modules/article';
 
 export class BaasicArticleUtility {

@@ -4,7 +4,7 @@
  * @description Baasic Metering Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services. 
  */
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IOptions } from 'common/contracts';
 import {
     MeteringACLRoute,

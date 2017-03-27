@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IPreprocessingProviderSettings } from 'modules/mediaVault/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';

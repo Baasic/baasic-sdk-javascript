@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { OrganizationBatchRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IOrganization } from 'modules/userProfile/contracts';

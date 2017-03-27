@@ -1,5 +1,5 @@
-import { Utility } from 'common';
-import { IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
+import { Utility } from '../../common';
+import { IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from '../contracts';
 import { injectable, inject } from "inversify";
 
 declare var $: any;

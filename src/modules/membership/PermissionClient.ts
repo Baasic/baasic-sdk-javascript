@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from 'common/contracts';
-import { Utility } from 'common';
+import { Utility } from '../../common';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { PermissionRoute, TYPES as membershipTypes } from 'modules/membership';
 import { IAccessPolicy, IAccessAction, IRole, IUserInfo } from 'modules/membership/contracts';

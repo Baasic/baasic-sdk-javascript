@@ -4,7 +4,7 @@ import {
     Utility,
     IHALParser,
     HALParser
-} from 'common';
+} from './';
 
 const TYPES = {
     Utility: Symbol("Utility"),

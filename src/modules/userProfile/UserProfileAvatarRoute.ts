@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from 'common';
+import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { UserProfileAvatarStreamsRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';

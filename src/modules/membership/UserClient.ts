@@ -13,7 +13,7 @@ import {
     TYPES as membershipTypes
 } from 'modules/membership';
 import { IAppUser, INewUser, INewPassword } from 'modules/membership/contracts';
-import { ModelMapper } from 'common';
+import { ModelMapper } from '../../common';
 
 @injectable()
 export class UserClient {

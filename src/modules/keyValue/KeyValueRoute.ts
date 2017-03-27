@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTYPES } from 'common';
+import { BaseRoute, TYPES as commonTYPES } from '../../common';
 import { IGetRequestOptions, IOptions } from 'common/contracts';
 import { IKeyValue } from 'modules/keyValue/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
