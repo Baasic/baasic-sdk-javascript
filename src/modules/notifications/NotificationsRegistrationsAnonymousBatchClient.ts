@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { IQueryModel, IOptions } from '../../common/contracts';;
 import {
     NotificationsRegistrationsAnonymousBatchRoute,

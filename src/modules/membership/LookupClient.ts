@@ -9,7 +9,7 @@ import { IGetRequestOptions } from '../../common/contracts';;
 import { Utility } from '../../common';
 import { ILookup } from 'modules/membership/contracts';
 import { LookupRoute, TYPES as membershipTypes } from 'modules/membership';
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 
 @injectable()
 export class LookupClient {

@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
 import { IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { IRole } from 'modules/membership/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
