@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { NotificationsSettingsRoute, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsSettingsRoute, TYPES as notificationsTypes } from './';
 
 @injectable()
 export class NotificationsSettingsClient {

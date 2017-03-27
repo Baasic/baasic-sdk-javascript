@@ -10,7 +10,7 @@ import { IQueryModel, IOptions } from '../../common/contracts';;
 import {
     NotificationsRegistrationsAnonymousBatchRoute,
     TYPES as notificationsTypes
-} from 'modules/notifications';
+} from './';
 import { IAnonymousRegistration } from './contracts';
 
 @injectable()

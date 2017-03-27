@@ -20,7 +20,7 @@ import {
     ArticleStatus,
     CommentStatus,
     TYPES as articleTypes
-} from 'modules/article';
+} from './';
 import { IArticle, IArticleOptions, IArticleStatus, ICommentStatus } from './contracts';
 
 @injectable()

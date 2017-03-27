@@ -5,7 +5,7 @@ import {
     OrganizationClient,
     SkillClient,
     TYPES
-} from 'modules/userProfile';
+} from './';
 
 import { injectable, inject } from "inversify";
 

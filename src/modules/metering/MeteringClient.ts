@@ -15,7 +15,7 @@ import {
     MeteringCategoryClient,
     MeteringSettingsClient,
     TYPES as meteringTypes
-} from 'modules/metering';
+} from './';
 import { IMeteringData } from './contracts';
 
 @injectable()

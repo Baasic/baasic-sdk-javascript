@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { IQueryModel, IOptions } from '../../common/contracts';;
-import { NotificationsRegistrationsUsersBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsRegistrationsUsersBatchRoute, TYPES as notificationsTypes } from './';
 import { IUserRegistration } from './contracts';
 
 @injectable()

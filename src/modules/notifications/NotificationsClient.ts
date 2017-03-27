@@ -14,7 +14,7 @@ import {
     NotificationsRoute,
     NotificationsSettingsClient,
     TYPES as notificationsTypes
-} from 'modules/notifications';
+} from './';
 
 @injectable()
 export class NotificationsClient {

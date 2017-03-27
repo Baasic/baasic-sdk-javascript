@@ -6,7 +6,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IHttpHeaders, IHttpRequest, IHttpResponse, ApiClient, httpTYPES } from '../../httpApi';
-import { KeyValueRoute, TYPES } from 'modules/keyValue';
+import { KeyValueRoute, TYPES } from './';
 import { IKeyValue } from './contracts';
 
 @injectable()

@@ -11,7 +11,7 @@ import {
     NotificationsRegistrationsAnonymousBatchClient,
     NotificationsRegistrationsAnonymousRoute,
     TYPES as notificationsTypes
-} from 'modules/notifications';
+} from './';
 import { IAnonymousRegistration } from './contracts';
 
 @injectable()

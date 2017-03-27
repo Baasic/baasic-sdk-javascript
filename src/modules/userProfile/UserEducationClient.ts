@@ -6,7 +6,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { UserEducationRoute, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserEducationRoute, TYPES as userProfileTypes } from './';
 import { IUserEducation } from './contracts';
 
 @injectable()

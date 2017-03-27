@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { NotificationsRegistrationsAnonymousBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsRegistrationsAnonymousBatchRoute, TYPES as notificationsTypes } from './';
 import { IAnonymousRegistration } from './contracts';
 
 @injectable()

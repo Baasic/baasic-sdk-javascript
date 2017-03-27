@@ -13,7 +13,7 @@ import {
     MediaVaultSettingsRoute,
     MediaVaultStreamsRoute,
     TYPES as mediaVaultTypes
-} from 'modules/mediaVault';
+} from './';
 import { IMediaEntry } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 

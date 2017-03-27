@@ -47,7 +47,7 @@ import {
     CommerceLookupsInvoiceStatusBatchClient,
     CommerceLookupsInvoiceStatusClient,
     Lookups
-} from 'modules/commerce';
+} from './';
 
 const TYPES = {
     CommerceCustomerPaymentMethodClient: Symbol("CommerceCustomerPaymentMethodClient"),

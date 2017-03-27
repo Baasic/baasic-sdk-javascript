@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { UserProfileAvatarStreamsRoute, TYPES as userProfileTypes } from 'modules/userProfile';
+import { UserProfileAvatarStreamsRoute, TYPES as userProfileTypes } from './';
 
 @injectable()
 export class UserProfileAvatarStreamsClient {

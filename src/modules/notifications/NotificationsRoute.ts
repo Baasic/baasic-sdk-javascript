@@ -13,7 +13,7 @@ import {
     NotificationsRegistrationsRoute,
     NotificationsSettingsRoute,
     TYPES as notificationsTypes
-} from 'modules/notifications';
+} from './';
 
 @injectable()
 export class NotificationsRoute extends BaseRoute {

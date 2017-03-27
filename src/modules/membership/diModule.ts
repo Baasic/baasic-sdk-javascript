@@ -19,7 +19,7 @@ import {
     LookupRoute,
     LookupClient,
     Root
-} from 'modules/membership';
+} from './';
 
 const TYPES = {
     LoginRoute: Symbol("LoginRoute"),

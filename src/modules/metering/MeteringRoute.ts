@@ -11,7 +11,7 @@ import {
     MeteringBatchRoute,
     MeteringStatisticsRoute,
     TYPES as meteringTypes
-} from 'modules/metering';
+} from './';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IMeteringData } from './contracts';
 

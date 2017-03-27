@@ -14,7 +14,7 @@ import {
     MediaVaultSettingsClient,
     MediaVaultStreamsClient,
     TYPES as mediaVaultTypes
-} from 'modules/mediaVault';
+} from './';
 import { IMediaEntry } from './contracts';
 
 @injectable()

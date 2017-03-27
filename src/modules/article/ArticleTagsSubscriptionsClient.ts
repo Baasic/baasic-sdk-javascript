@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { ArticleTagsSubscriptionsRoute, TYPES as articleTypes } from 'modules/article';
+import { ArticleTagsSubscriptionsRoute, TYPES as articleTypes } from './';
 import { IArticleTag, IArticleSubscription } from './contracts';
 
 @injectable()

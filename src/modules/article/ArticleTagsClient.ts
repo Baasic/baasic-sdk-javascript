@@ -11,7 +11,7 @@ import {
     ArticleTagsSubscriptionsClient,
     ArticleTagsRoute,
     TYPES as articleTypes
-} from 'modules/article';
+} from './';
 import { IArticleTag } from './contracts';
 
 @injectable()

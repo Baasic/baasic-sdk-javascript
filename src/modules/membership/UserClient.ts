@@ -11,7 +11,7 @@ import {
     UserRoute,
     UserSocialLoginClient,
     TYPES as membershipTypes
-} from 'modules/membership';
+} from './';
 import { IAppUser, INewUser, INewPassword } from './contracts';
 import { ModelMapper } from '../../common';
 

@@ -14,7 +14,7 @@ import {
     MeteringSettingsClient,
     MeteringStatisticsClient,
     MeteringStatisticsRoute
-} from 'modules/metering';
+} from './';
 
 const TYPES = {
     MeteringACLClient: Symbol("MeteringACLClient"),

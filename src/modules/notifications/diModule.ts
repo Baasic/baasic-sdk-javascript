@@ -28,7 +28,7 @@ import {
     NotificationsSubscriptionsUsersRoute,
     NotificationsSettingsRoute,
     NotificationsSettingsClient
-} from 'modules/notifications';
+} from './';
 
 const TYPES = {
     NotificationsClient: Symbol("NotificationsClient"),

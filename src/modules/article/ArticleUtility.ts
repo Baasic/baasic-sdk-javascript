@@ -1,5 +1,5 @@
 import { Utility } from '../../common';
-import { ALPHABET as alphabet } from 'modules/article';
+import { ALPHABET as alphabet } from './';
 
 export class BaasicArticleUtility {
 

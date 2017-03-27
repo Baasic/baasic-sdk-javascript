@@ -9,7 +9,7 @@ import {
     PermissionClient,
     LookupClient,
     TYPES
-} from 'modules/membership';
+} from './';
 
 import { injectable, inject } from "inversify";
 

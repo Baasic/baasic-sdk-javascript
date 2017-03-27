@@ -10,7 +10,7 @@ import {
     NotificationsRegistrationsRoute,
     NotificationsRegistrationsUsersClient,
     TYPES as notificationsTypes
-} from 'modules/notifications';
+} from './';
 
 @injectable()
 export class NotificationsRegistrationsClient {

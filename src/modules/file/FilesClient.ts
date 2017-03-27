@@ -13,7 +13,7 @@ import {
     FilesRoute,
     FilesStreamsClient,
     TYPES as filesTypes
-} from 'modules/file';
+} from './';
 import { IFileEntry } from './contracts';
 
 @injectable()

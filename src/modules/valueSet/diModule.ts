@@ -4,7 +4,7 @@ import {
     ValueSetItemClient,
     ValueSetItemRoute,
     ValueSetRoute
-} from 'modules/valueSet';
+} from './';
 
 const TYPES = {
     ValueSetClient: Symbol("ValueSetClient"),

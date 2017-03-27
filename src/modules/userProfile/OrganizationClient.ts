@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { OrganizationBatchClient, OrganizationRoute, TYPES as userProfileTypes } from 'modules/userProfile';
+import { OrganizationBatchClient, OrganizationRoute, TYPES as userProfileTypes } from './';
 import { IOrganization } from './contracts';
 
 @injectable()

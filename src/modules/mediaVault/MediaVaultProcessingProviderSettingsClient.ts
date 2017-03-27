@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { MediaVaultProcessingProviderSettingsRoute, TYPES as mediaVaultTypes } from 'modules/mediaVault';
+import { MediaVaultProcessingProviderSettingsRoute, TYPES as mediaVaultTypes } from './';
 import { IPreprocessingProviderSettings } from './contracts';
 
 @injectable()

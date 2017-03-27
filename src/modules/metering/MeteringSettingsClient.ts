@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { MeteringSettingsRoute, TYPES as meteringTypes } from 'modules/metering';
+import { MeteringSettingsRoute, TYPES as meteringTypes } from './';
 import { IMeteringSettings } from './contracts';
 
 @injectable()

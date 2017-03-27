@@ -47,7 +47,7 @@ import {
     ArticleACLRoute,
     ArticleACLClient,
     Root
-} from 'modules/article';
+} from './';
 
 const TYPES = {
     ArticleCommentRepliesClient: Symbol("ArticleCommentRepliesClient"),

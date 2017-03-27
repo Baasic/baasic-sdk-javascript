@@ -11,7 +11,7 @@ import {
     DynamicResourceRoute,
     DynamicSchemaClient,
     TYPES as dynamicResourceTypes
-} from 'modules/dynamicResource';
+} from './';
 import { IDynamicObject } from './contracts';
 
 @injectable()

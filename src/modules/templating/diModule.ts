@@ -3,7 +3,7 @@ import {
     TemplatingBatchClient, 
     TemplatingBatchRoute, 
     TemplatingClient, 
-    TemplatingRoute } from 'modules/templating';
+    TemplatingRoute } from './';
 
 const TYPES = {
     TemplatingBatchClient: Symbol("TemplatingBatchClient"),

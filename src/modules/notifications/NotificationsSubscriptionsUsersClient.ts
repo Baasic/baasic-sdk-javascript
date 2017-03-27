@@ -10,7 +10,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import {
     NotificationsSubscriptionsUsersBatchClient,
     NotificationsSubscriptionsUsersRoute, TYPES as notificationsTypes
-} from 'modules/notifications';
+} from './';
 import { IUserSubscription } from './contracts';
 
 @injectable()

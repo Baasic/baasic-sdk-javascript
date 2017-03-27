@@ -27,7 +27,7 @@ import {
     UserWorkClient,
     UserWorkRoute,
     Root
-} from 'modules/userProfile';
+} from './';
 
 const TYPES = {
     CompanyBatchClient: Symbol("CompanyBatchClient"),

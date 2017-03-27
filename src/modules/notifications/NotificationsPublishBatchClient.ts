@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { NotificationsPublishBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsPublishBatchRoute, TYPES as notificationsTypes } from './';
 import { INotification } from './contracts';
 
 @injectable()

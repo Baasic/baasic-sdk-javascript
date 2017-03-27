@@ -7,7 +7,7 @@ import {
     ArticleTagsClient,
     ArticleSettingsClient,
     TYPES
-} from 'modules/article';
+} from './';
 
 
 import { injectable, inject } from "inversify";

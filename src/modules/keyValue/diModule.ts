@@ -1,5 +1,5 @@
 import { ContainerModule } from "inversify";
-import { KeyValueClient, KeyValueRoute } from 'modules/keyValue';
+import { KeyValueClient, KeyValueRoute } from './';
 
 const TYPES = {
     KeyValueClient: Symbol("KeyValueClient"),

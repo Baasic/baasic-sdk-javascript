@@ -15,7 +15,7 @@ import {
     UserSkillClient,
     UserWorkClient,
     TYPES as userProfileTypes
-} from 'modules/userProfile';
+} from './';
 import { IUserProfile } from './contracts';
 
 @injectable()

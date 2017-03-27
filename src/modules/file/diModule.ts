@@ -8,7 +8,7 @@ import {
     FilesClient,
     FilesStreamsRoute,
     FilesStreamsClient
-} from 'modules/file';
+} from './';
 
 const TYPES = {
     FilesACLClient: Symbol("FilesACLClient"),

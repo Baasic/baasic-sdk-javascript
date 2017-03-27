@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { BaseRoute } from '../../common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { NotificationsPublishBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
+import { NotificationsPublishBatchRoute, TYPES as notificationsTypes } from './';
 
 @injectable()
 export class NotificationsPublishRoute extends BaseRoute {

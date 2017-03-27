@@ -5,7 +5,7 @@
 import { injectable, inject } from 'inversify';
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { ValueSetItemRoute, TYPES as valueSetTypes } from 'modules/valueSet';
+import { ValueSetItemRoute, TYPES as valueSetTypes } from './';
 import { IValueSetItem } from './contracts';
 
 @injectable()

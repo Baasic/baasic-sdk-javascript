@@ -11,7 +11,7 @@ import {
     NotificationsRegistrationsUsersBatchClient,
     NotificationsRegistrationsUsersRoute,
     TYPES as notificationsTypes
-} from 'modules/notifications';
+} from './';
 import { IUserRegistration } from './contracts';
 
 @injectable()

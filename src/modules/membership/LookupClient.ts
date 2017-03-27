@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IGetRequestOptions } from '../../common/contracts';;
 import { Utility } from '../../common';
 import { ILookup } from './contracts';
-import { LookupRoute, TYPES as membershipTypes } from 'modules/membership';
+import { LookupRoute, TYPES as membershipTypes } from './';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 
 @injectable()

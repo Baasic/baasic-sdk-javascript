@@ -10,7 +10,7 @@ import {
     MediaVaultSettingsClient,
     MediaVaultStreamsRoute,
     MediaVaultStreamsClient
-} from 'modules/mediaVault';
+} from './';
 
 const TYPES = {
     MediaVaultBatchRoute: Symbol("MediaVaultBatchRoute"),

@@ -6,7 +6,7 @@ import {
     DynamicResourceRoute,
     DynamicSchemaClient,
     DynamicSchemaRoute
-} from 'modules/dynamicResource';
+} from './';
 
 const TYPES = {
     DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
