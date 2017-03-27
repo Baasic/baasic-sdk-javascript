@@ -12,7 +12,7 @@ import {
     MeteringStatisticsRoute,
     TYPES as meteringTypes
 } from './';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 import { IMeteringData } from './contracts';
 
 @injectable()

@@ -9,7 +9,7 @@ import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { FilesStreamsRoute, TYPES as filesTypes } from './';
 import { IFileEntry } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()
 export class FilesRoute extends BaseRoute {

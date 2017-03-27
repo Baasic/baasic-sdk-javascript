@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IUserSkill } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 export class UserSkillRoute extends BaseRoute {
 

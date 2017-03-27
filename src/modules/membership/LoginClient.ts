@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { Utility } from '../../common';
-import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
+import { IToken, ITokenHandler, TYPES as coreTYPES } from '../../core/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { LoginRoute, LoginSocialClient, TYPES as membershipTypes } from './';
 import { IUserInfo } from './contracts';

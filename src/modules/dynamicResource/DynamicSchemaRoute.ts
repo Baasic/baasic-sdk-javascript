@@ -7,7 +7,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IResourceSchema } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()
 export class DynamicSchemaRoute extends BaseRoute {

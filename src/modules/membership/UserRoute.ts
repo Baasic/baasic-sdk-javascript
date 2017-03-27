@@ -9,7 +9,7 @@ import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
 import { IOptions } from '../../common/contracts';;
 import { UserSocialLoginRoute, TYPES as membershipTypes } from './';
 import { IAppUser } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()
 export class UserRoute extends BaseRoute {

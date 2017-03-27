@@ -9,7 +9,7 @@ import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
 import { IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { IRole } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()
 export class RoleRoute extends BaseRoute {

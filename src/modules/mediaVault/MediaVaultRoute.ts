@@ -15,7 +15,7 @@ import {
     TYPES as mediaVaultTypes
 } from './';
 import { IMediaEntry } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()
 export class MediaVaultRoute extends BaseRoute {

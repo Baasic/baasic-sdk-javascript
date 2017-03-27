@@ -9,7 +9,7 @@ import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { UserProfileAvatarStreamsRoute, TYPES as userProfileTypes } from './';
 import { IProfileAvatar } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 export class UserProfileAvatarRoute extends BaseRoute {
 
