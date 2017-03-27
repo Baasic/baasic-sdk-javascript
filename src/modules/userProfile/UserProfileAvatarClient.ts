@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IGetRequestOptions, IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { UserProfileAvatarRoute, UserProfileAvatarStreamsClient, TYPES as userProfileTypes } from 'modules/userProfile';
 import { IProfileAvatar } from 'modules/userProfile/contracts';

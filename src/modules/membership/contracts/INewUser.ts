@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';;
 import { IAppUser, IUserIdentity } from 'modules/membership/contracts';
 
 export interface INewUser extends IModel, IAppUser, IUserIdentity {

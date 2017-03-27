@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';;
 import { IMembership, IProfileAvatar, IUserEducation, IUserProfileSkill, IUserProfileWork } from 'modules/userProfile/contracts';
 
 export interface IUserProfile extends IModel {

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { MeteringCategoryBatchClient, MeteringCategoryRoute, TYPES as meteringTypes } from 'modules/metering';
 import { IMeteringCategory } from 'modules/metering/contracts';

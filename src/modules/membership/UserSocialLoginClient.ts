@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel } from 'common/contracts';
+import { IQueryModel } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { UserSocialLoginRoute, TYPES as membershipTypes } from 'modules/membership';
 import { IUserSocialLogin } from 'modules/membership/contracts';

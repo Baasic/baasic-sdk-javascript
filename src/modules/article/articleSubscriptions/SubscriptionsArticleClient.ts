@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from 'common/contracts';
+import { IQueryModel, IOptions } from '../../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ArticleSubscriptionsArticleRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticle, IArticleSubscription } from 'modules/article/contracts';

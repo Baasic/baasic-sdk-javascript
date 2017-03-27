@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ArticleCommentsRoute, ArticleCommentRepliesClient, CommentStatus, TYPES as articleTypes } from 'modules/article';
 import { IArticleComment, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';

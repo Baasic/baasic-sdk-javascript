@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IGetRequestOptions } from 'common/contracts';
+import { IGetRequestOptions } from '../../common/contracts';;
 import { Utility } from '../../common';
 import { ILookup } from 'modules/membership/contracts';
 import { LookupRoute, TYPES as membershipTypes } from 'modules/membership';

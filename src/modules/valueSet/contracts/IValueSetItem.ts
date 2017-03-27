@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';;
 
 export interface IValueSetItem extends IModel {
     setId?: string,

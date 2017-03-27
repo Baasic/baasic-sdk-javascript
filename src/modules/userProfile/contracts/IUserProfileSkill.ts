@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';;
 import { ISkill } from 'modules/userProfile/contracts';
 
 export interface IUserProfileSkill extends IModel {

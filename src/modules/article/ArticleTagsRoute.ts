@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { ArticleTagsSubscriptionsRoute, TYPES as articleTypes } from 'modules/article';
 import { IArticleTag } from 'modules/article/contracts';

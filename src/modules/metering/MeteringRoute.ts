@@ -5,7 +5,7 @@
  */
 import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IOptions } from 'common/contracts';
+import { IOptions } from '../../common/contracts';;
 import {
     MeteringACLRoute,
     MeteringBatchRoute,

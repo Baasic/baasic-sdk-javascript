@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';;
 
 export interface IMeteringCategory extends IModel {
     aggregateFunction: string,

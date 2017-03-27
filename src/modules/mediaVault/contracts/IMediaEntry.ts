@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';;
 import { IUserInfo } from 'modules/file/contracts';
 import { IMediaVaultDerivedEntry } from 'modules/mediaVault/contracts';
 

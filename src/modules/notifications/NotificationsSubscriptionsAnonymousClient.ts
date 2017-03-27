@@ -6,7 +6,7 @@
 
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { NotificationsSubscriptionsAnonymousRoute, NotificationsSubscriptionsAnonymousBatchClient, TYPES as notificationsTypes } from 'modules/notifications';
 import { IAnonymousSubscription } from 'modules/notifications/contracts';

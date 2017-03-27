@@ -4,7 +4,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IHttpHeaders, IHttpRequest, IHttpResponse, ApiClient, httpTYPES } from 'httpApi';
 import { KeyValueRoute, TYPES } from 'modules/keyValue';
 import { IKeyValue } from 'modules/keyValue/contracts';

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IACLPolicy, IACLOptions } from 'common/contracts';
+import { IACLPolicy, IACLOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ArticleACLRoute, TYPES as articleTypes } from 'modules/article';
 

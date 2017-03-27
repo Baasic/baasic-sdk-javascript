@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from 'common/contracts';
+import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { SkillBatchRoute, TYPES as userProfileTypes } from 'modules/userProfile';
 import { ISkill } from 'modules/userProfile/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
