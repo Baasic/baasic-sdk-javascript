@@ -3,8 +3,8 @@
  * @description This service is used to perform low level model or option transformations before they are sent to the Baasic back-end.
  **/
 
-import { IOptions } from 'common/contracts';
-import { Utility } from 'common';
+import { IOptions } from './contracts';
+import { Utility } from './';
 
 export class ModelMapper {
 

@@ -1,6 +1,6 @@
 import { ContainerModule } from "inversify";
-import { ITokenHandler, IUserHandler, TYPES } from 'core/contracts';
-import { TokenHandler, UserHandler } from 'core';
+import { ITokenHandler, IUserHandler, TYPES } from './contracts';
+import { TokenHandler, UserHandler } from './';
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<ITokenHandler>(TYPES.ITokenHandler).to(TokenHandler);

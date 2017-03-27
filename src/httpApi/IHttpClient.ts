@@ -1,4 +1,4 @@
-import { IHttpRequest, IHttpResponse } from 'httpApi';
+import { IHttpRequest, IHttpResponse } from './';
 
 export interface IHttpClient {
     request: <ResponseType>(request: IHttpRequest) => PromiseLike<IHttpResponse<ResponseType>>,

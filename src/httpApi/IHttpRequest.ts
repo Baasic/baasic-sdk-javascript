@@ -1,4 +1,4 @@
-import { IHttpHeaders } from 'httpApi';
+import { IHttpHeaders } from './';
 
 export interface IHttpRequest {
     headers?: IHttpHeaders,

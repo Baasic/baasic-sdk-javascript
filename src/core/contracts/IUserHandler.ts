@@ -1,4 +1,4 @@
-import { IUser } from 'core/contracts';
+import { IUser } from './';
 
 export interface IUserHandler {
     getUser(): IUser;

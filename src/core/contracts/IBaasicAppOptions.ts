@@ -1,4 +1,4 @@
-import { IStorageHandler, IEventHandler, IDefaultStorageConfig } from 'core/contracts';
+import { IStorageHandler, IEventHandler, IDefaultStorageConfig } from './';
 import { IHttpClient } from 'httpApi';
 
 export interface IBaasicAppOptions {

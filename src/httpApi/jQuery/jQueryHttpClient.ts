@@ -1,4 +1,4 @@
-import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient } from 'httpApi';
+import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient } from '../';
 import { injectable } from "inversify";
 
 declare var $: any;

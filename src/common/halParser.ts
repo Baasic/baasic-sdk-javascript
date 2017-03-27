@@ -1,4 +1,4 @@
-import { Utility, IHALParser } from 'common';
+import { Utility, IHALParser } from './';
 
 let utility = new Utility();
 

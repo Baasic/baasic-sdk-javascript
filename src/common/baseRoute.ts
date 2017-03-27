@@ -1,7 +1,7 @@
 import * as uritemplate from 'uritemplate';
-import { IOptions } from 'common/contracts';
-import { ModelMapper, Utility } from 'common';
-import { IAppOptions } from 'core/contracts';
+import { IOptions } from './contracts';
+import { ModelMapper, Utility } from './';
+import { IAppOptions } from '../core/contracts';
 import { injectable } from "inversify";
 
 @injectable()

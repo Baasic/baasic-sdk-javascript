@@ -1,4 +1,4 @@
-import { IStorageHandler, IDefaultStorageConfig, TYPES } from 'core/contracts';
+import { IStorageHandler, IDefaultStorageConfig, TYPES } from '../contracts';
 import { injectable, inject, optional } from "inversify";
 
 @injectable()

@@ -1,11 +1,11 @@
 {
   "name": "baasic-sdk-javascript",
-  "version": "2.0.0-rc.8",
+  "version": "2.0.0-rc.9",
   "description": "JavaScript SDK provides core functionality for building web and mobile applications on [Baasic](http://www.baasic.com/).",
   "keywords": ["Baasic", "BaaS", "sdk", "JavaScript", "Backend", "browser", "client-side"],
   "homepage": "http://www.baasic.com/",
   "main": "build/dist/baasic-sdk-javascript.js",
-  "types": "build/lib/types/index.d.ts",
+  "types": "build/lib/index.d.ts",
   "scripts": {
     "start": "npm run watch",
     "watch": "run-p watch:*",
@@ -14,7 +14,7 @@
     "build:dev": "npm run clean:build && npm run build:tsc && webpack --config webpack.dev.js --bail",
     "build:prod": "npm run clean:build && npm run build:tsc && webpack --config webpack.prod.js --bail",
     "build:docs": "npm run clean:build && webpack --config webpack.docs.js --bail",
-    "build:tsc": "tsc -diagnostics --outDir build/lib --declaration --declarationDir build/lib/types",
+    "build:tsc": "tsc -diagnostics --outDir build/lib --declaration --declarationDir build/lib",
     "clean:build": "rimraf build"
   },
   "author": "Mono Software",
@@ -25,7 +25,7 @@
   },
   "files": [
     "build/dist/*",
-    "build/lib/types/*"
+    "build/lib/*"
   ],
   "dependencies": {
     "baasic-uritemplate": "Baasic/uritemplate-js"

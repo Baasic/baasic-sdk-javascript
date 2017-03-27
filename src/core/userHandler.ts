@@ -1,4 +1,4 @@
-import { IEventHandler, IUserHandler, IStorageHandler, IUser, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
+import { IEventHandler, IUserHandler, IStorageHandler, IUser, IBaasicApp, TYPES as coreTYPES } from './contracts';
 import { injectable, inject } from "inversify";
 
 @injectable()

@@ -51,5 +51,6 @@ module.exports = {
         filename: 'baasic-sdk-javascript.js',
         library: 'baasicSdkJavaScript',
         libraryTarget: 'umd'
-    }
-}
+    },
+    plugins: []
+};

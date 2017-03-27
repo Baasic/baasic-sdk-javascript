@@ -1,4 +1,4 @@
-import { IACL, IACLAction, IACLRole, IACLUser } from 'common/contracts';
+import { IACL, IACLAction, IACLRole, IACLUser } from './';
 
 export interface IACLPolicy extends IACL {
     action: IACLAction,
