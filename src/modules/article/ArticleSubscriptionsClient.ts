@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { ArticleSubscriptionsRoute, TYPES as articleTypes } from 'modules/article';
-import { IArticleSubscription } from 'modules/article/contracts';
+import { IArticleSubscription } from './contracts';
 
 @injectable()
 export class ArticleSubscriptionsClient {

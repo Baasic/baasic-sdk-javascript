@@ -1,5 +1,5 @@
 import { IModel } from '../../../common/contracts';;
-import { IOrganization, IUserProfile } from 'modules/userProfile/contracts';
+import { IOrganization, IUserProfile } from './';
 
 export interface IUserEducation extends IModel {
     degree?: string,

@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { SkillBatchRoute, TYPES as userProfileTypes } from 'modules/userProfile';
-import { ISkill } from 'modules/userProfile/contracts';
+import { ISkill } from './contracts';
 
 @injectable()
 export class SkillBatchClient {

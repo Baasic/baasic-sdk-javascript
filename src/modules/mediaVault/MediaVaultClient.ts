@@ -15,7 +15,7 @@ import {
     MediaVaultStreamsClient,
     TYPES as mediaVaultTypes
 } from 'modules/mediaVault';
-import { IMediaEntry } from 'modules/mediaVault/contracts';
+import { IMediaEntry } from './contracts';
 
 @injectable()
 export class MediaVaultClient {

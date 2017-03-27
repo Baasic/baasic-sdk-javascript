@@ -1,5 +1,5 @@
 import { IModel } from '../../../common/contracts';;
-import { IOwner } from 'modules/dynamicResource/contracts';
+import { IOwner } from './';
 
 export interface IResourceSchema extends IModel {
     description?: string,

@@ -8,7 +8,7 @@ import { injectable, inject } from 'inversify';
 import { IResponse } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { TemplatingBatchRoute, TYPES as templatingTypes } from 'modules/templating';
-import { ITemplate } from 'modules/templating/contracts';
+import { ITemplate } from './contracts';
 
 @injectable()
 export class TemplatingBatchClient {

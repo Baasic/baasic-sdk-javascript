@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { ApplicationSettingsRoute, TYPES as applicationTypes } from 'modules/applicationSettings';
-import { IApplication } from 'modules/applicationSettings/contracts';
+import { IApplication } from './contracts';
 
 @injectable()
 export class ApplicationSettingsClient {

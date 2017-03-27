@@ -1,6 +1,6 @@
 import { IModel } from '../../../common/contracts';;
-import { IUserInfo } from 'modules/file/contracts';
-import { IMediaVaultDerivedEntry } from 'modules/mediaVault/contracts';
+import { IUserInfo } from '../../membership/contracts';
+import { IMediaVaultDerivedEntry } from './';
 
 export interface IMediaEntry extends IModel {
     derivedEntries?: IMediaVaultDerivedEntry[],

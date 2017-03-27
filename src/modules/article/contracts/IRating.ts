@@ -1,5 +1,5 @@
 import { IModel } from '../../../common/contracts';;
-import { IArticle, IAuthor } from 'modules/article/contracts';
+import { IArticle, IAuthor } from './';
 
 export interface IRating extends IModel {
     article?: IArticle,

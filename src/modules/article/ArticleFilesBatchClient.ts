@@ -11,7 +11,7 @@ import {
     ArticleFilesBatchRoute,
     TYPES as articleTypes
 } from 'modules/article';
-import { IArticleFile } from 'modules/article/contracts';
+import { IArticleFile } from './contracts';
 
 @injectable()
 export class ArticleFilesBatchClient {

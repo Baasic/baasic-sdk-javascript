@@ -14,7 +14,7 @@ import {
     FilesStreamsClient,
     TYPES as filesTypes
 } from 'modules/file';
-import { IFileEntry } from 'modules/file/contracts';
+import { IFileEntry } from './contracts';
 
 @injectable()
 export class FilesClient {

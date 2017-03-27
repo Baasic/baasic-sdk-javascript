@@ -21,7 +21,7 @@ import {
     CommentStatus,
     TYPES as articleTypes
 } from 'modules/article';
-import { IArticle, IArticleOptions, IArticleStatus, ICommentStatus } from 'modules/article/contracts';
+import { IArticle, IArticleOptions, IArticleStatus, ICommentStatus } from './contracts';
 
 @injectable()
 export class ArticleClient {

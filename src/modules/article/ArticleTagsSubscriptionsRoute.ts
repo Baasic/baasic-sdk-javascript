@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute } from '../../common';
 import { IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { IArticleTag } from 'modules/article/contracts';
+import { IArticleTag } from './contracts';
 
 @injectable()
 export class ArticleTagsSubscriptionsRoute extends BaseRoute {

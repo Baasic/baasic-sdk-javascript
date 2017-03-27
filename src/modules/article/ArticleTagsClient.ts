@@ -12,7 +12,7 @@ import {
     ArticleTagsRoute,
     TYPES as articleTypes
 } from 'modules/article';
-import { IArticleTag } from 'modules/article/contracts';
+import { IArticleTag } from './contracts';
 
 @injectable()
 export class ArticleTagsClient {

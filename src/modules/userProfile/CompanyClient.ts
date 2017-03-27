@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IGetRequestOptions, IOptions, IQueryModel } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { CompanyBatchClient, CompanyRoute, TYPES as userProfileTypes } from 'modules/userProfile';
-import { ICompany } from 'modules/userProfile/contracts';
+import { ICompany } from './contracts';
 
 @injectable()
 export class CompanyClient {

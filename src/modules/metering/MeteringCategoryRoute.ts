@@ -7,7 +7,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { MeteringCategoryBatchRoute, TYPES as meteringTypes } from 'modules/metering';
-import { IMeteringCategory } from 'modules/metering/contracts';
+import { IMeteringCategory } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()

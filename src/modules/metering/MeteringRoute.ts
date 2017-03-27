@@ -13,7 +13,7 @@ import {
     TYPES as meteringTypes
 } from 'modules/metering';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { IMeteringData } from 'modules/metering/contracts';
+import { IMeteringData } from './contracts';
 
 @injectable()
 export class MeteringRoute extends BaseRoute {

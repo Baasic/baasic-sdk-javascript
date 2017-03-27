@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute } from '../../../common';
 import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { IArticle, IArticleCommentReply } from 'modules/article/contracts';
+import { IArticle, IArticleCommentReply } from '../contracts';
 
 @injectable()
 export class ArticleInstanceCommentRepliesRoute extends BaseRoute {

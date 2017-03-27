@@ -12,7 +12,7 @@ import {
     DynamicSchemaClient,
     TYPES as dynamicResourceTypes
 } from 'modules/dynamicResource';
-import { IDynamicObject } from 'modules/dynamicResource/contracts';
+import { IDynamicObject } from './contracts';
 
 @injectable()
 export class DynamicResourceClient {

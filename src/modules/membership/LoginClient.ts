@@ -9,7 +9,7 @@ import { Utility } from '../../common';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { LoginRoute, LoginSocialClient, TYPES as membershipTypes } from 'modules/membership';
-import { IUserInfo } from 'modules/membership/contracts';
+import { IUserInfo } from './contracts';
 
 @injectable()
 export class LoginClient {

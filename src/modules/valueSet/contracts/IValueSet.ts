@@ -1,4 +1,4 @@
-import { IValueSetItem } from 'modules/valueSet/contracts';
+import { IValueSetItem } from './';
 import { IModel } from '../../../common/contracts';;
 
 export interface IValueSet extends IModel {

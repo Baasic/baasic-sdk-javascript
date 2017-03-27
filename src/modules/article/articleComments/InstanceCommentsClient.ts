@@ -13,7 +13,7 @@ import {
     CommentStatus,
     TYPES as articleTypes
 } from 'modules/article';
-import { IArticle, IArticleComment, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
+import { IArticle, IArticleComment, INotificationConfiguration, ICommentStatus } from '../contracts';
 
 @injectable()
 export class ArticleInstanceCommentsClient {

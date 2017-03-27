@@ -1,4 +1,4 @@
-import { IArticleStatus, ICommentStatus } from 'modules/article/contracts';
+import { IArticleStatus, ICommentStatus } from './contracts';
 
 let ArticleStatus: IArticleStatus = {
     none: 0,

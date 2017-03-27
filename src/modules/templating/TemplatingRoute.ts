@@ -8,7 +8,7 @@ import { injectable, inject } from 'inversify';
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { TemplatingBatchRoute, TYPES as templatingTypes } from 'modules/templating';
-import { ITemplate } from 'modules/templating/contracts';
+import { ITemplate } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()

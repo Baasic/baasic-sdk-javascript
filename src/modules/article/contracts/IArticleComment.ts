@@ -1,5 +1,5 @@
 import { IModel } from '../../../common/contracts';;
-import { IArticle, IArticleCommentMetadata } from 'modules/article/contracts';
+import { IArticle, IArticleCommentMetadata } from './';
 
 export interface IArticleComment extends IModel, IArticleCommentMetadata {
     article?: IArticle,

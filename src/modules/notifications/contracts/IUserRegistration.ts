@@ -1,5 +1,5 @@
 import { IModel } from '../../../common/contracts';;
-import { IUser } from 'modules/notifications/contracts';
+import { IUser } from './';
 
 export interface IUserRegistration {
     provider: string,

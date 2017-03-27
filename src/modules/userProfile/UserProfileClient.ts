@@ -16,7 +16,7 @@ import {
     UserWorkClient,
     TYPES as userProfileTypes
 } from 'modules/userProfile';
-import { IUserProfile } from 'modules/userProfile/contracts';
+import { IUserProfile } from './contracts';
 
 @injectable()
 export class UserProfileClient {

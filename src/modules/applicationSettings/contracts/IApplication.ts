@@ -1,5 +1,4 @@
-import { IApplicationRole } from 'modules/applicationSettings/contracts';
-import { ISNProvider } from 'modules/applicationSettings/contracts';
+import { IApplicationRole, ISNProvider } from './';
 import { IModel } from '../../../common/contracts';;
 
 export interface IApplication extends IModel {

@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { BaseRoute } from '../../common';
 import { IOptions } from '../../common/contracts';
-import { IApplication } from 'modules/applicationSettings/contracts';
+import { IApplication } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()

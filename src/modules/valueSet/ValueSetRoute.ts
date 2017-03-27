@@ -7,7 +7,7 @@ import { injectable, inject } from 'inversify';
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ValueSetItemRoute, TYPES as valueSetTypes } from 'modules/valueSet';
-import { IValueSet } from 'modules/valueSet/contracts';
+import { IValueSet } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class ValueSetRoute extends BaseRoute {

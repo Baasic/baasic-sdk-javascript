@@ -9,7 +9,7 @@ import { BaseRoute } from '../../../common';
 import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { ArticleInstanceCommentRepliesRoute, TYPES as articleTypes } from 'modules/article';
-import { IArticle, IArticleComment } from 'modules/article/contracts';
+import { IArticle, IArticleComment } from '../contracts';
 
 @injectable()
 export class ArticleInstanceCommentsRoute extends BaseRoute {

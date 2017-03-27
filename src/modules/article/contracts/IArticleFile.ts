@@ -1,5 +1,5 @@
 import { IModel } from '../../../common/contracts';;
-import { IArticleFileEntry } from 'modules/article/contracts';
+import { IArticleFileEntry } from './';
 
 export interface IArticleFile extends IModel {
     articleFileEntry?: IArticleFileEntry,

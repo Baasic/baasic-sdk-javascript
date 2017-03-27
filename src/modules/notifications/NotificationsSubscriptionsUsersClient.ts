@@ -11,7 +11,7 @@ import {
     NotificationsSubscriptionsUsersBatchClient,
     NotificationsSubscriptionsUsersRoute, TYPES as notificationsTypes
 } from 'modules/notifications';
-import { IUserSubscription } from 'modules/notifications/contracts';
+import { IUserSubscription } from './contracts';
 
 @injectable()
 export class NotificationsSubscriptionsUsersClient {

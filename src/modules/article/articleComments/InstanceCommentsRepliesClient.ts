@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import { ArticleInstanceCommentRepliesRoute, CommentStatus, TYPES as articleTypes } from 'modules/article';
-import { IArticle, IArticleCommentReply, INotificationConfiguration, ICommentStatus } from 'modules/article/contracts';
+import { IArticle, IArticleCommentReply, INotificationConfiguration, ICommentStatus } from '../contracts';
 
 @injectable()
 export class ArticleInstanceCommentRepliesClient {

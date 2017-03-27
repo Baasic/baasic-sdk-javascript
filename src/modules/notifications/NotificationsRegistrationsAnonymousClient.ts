@@ -12,7 +12,7 @@ import {
     NotificationsRegistrationsAnonymousRoute,
     TYPES as notificationsTypes
 } from 'modules/notifications';
-import { IAnonymousRegistration } from 'modules/notifications/contracts';
+import { IAnonymousRegistration } from './contracts';
 
 @injectable()
 export class NotificationsRegistrationsAnonymousClient {

@@ -7,7 +7,7 @@ import { injectable, inject } from "inversify";
 import { IACLPolicy } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { DynamicResourceACLRoute, TYPES as dynamicResourceTypes } from 'modules/dynamicResource';
-import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
+import { IDynamicACLOptions } from './contracts';
 
 @injectable()
 export class DynamicResourceACLClient {

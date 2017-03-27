@@ -14,7 +14,7 @@ import {
     MediaVaultStreamsRoute,
     TYPES as mediaVaultTypes
 } from 'modules/mediaVault';
-import { IMediaEntry } from 'modules/mediaVault/contracts';
+import { IMediaEntry } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()

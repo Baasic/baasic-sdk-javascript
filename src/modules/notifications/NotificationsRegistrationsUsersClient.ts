@@ -12,7 +12,7 @@ import {
     NotificationsRegistrationsUsersRoute,
     TYPES as notificationsTypes
 } from 'modules/notifications';
-import { IUserRegistration } from 'modules/notifications/contracts';
+import { IUserRegistration } from './contracts';
 
 @injectable()
 export class NotificationsRegistrationsUsersClient {

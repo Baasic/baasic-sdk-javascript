@@ -12,7 +12,7 @@ import {
     UserSocialLoginClient,
     TYPES as membershipTypes
 } from 'modules/membership';
-import { IAppUser, INewUser, INewPassword } from 'modules/membership/contracts';
+import { IAppUser, INewUser, INewPassword } from './contracts';
 import { ModelMapper } from '../../common';
 
 @injectable()

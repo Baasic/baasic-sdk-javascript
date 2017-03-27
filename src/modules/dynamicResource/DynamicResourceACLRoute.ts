@@ -6,7 +6,7 @@
 import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IACLPolicy } from '../../common/contracts';;
-import { IDynamicACLOptions } from 'modules/dynamicResource/contracts';
+import { IDynamicACLOptions } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()

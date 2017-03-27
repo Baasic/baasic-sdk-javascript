@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { UserSkillRoute, TYPES as userProfileTypes } from 'modules/userProfile';
-import { IUserSkill } from 'modules/userProfile/contracts';
+import { IUserSkill } from './contracts';
 
 @injectable()
 export class UserSkillClient {

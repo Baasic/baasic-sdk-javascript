@@ -1,5 +1,5 @@
 import { IModel } from '../../../common/contracts';;
-import { ICompany } from 'modules/userProfile/contracts';
+import { ICompany } from './';
 
 export interface IUserProfileWork extends IModel {
     company?: ICompany,

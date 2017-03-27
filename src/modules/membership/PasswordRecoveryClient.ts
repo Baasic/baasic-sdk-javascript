@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { PasswordRecoveryRoute, TYPES as membershipTypes } from 'modules/membership';
-import { IRequestPasswordReset, IResetPassword } from 'modules/membership/contracts';
+import { IRequestPasswordReset, IResetPassword } from './contracts';
 
 @injectable()
 export class PasswordRecoveryClient {

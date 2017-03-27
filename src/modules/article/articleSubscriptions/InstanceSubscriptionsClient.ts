@@ -13,7 +13,7 @@ import {
     ArticleSubscriptionsCommentRequiresModerationClient,
     TYPES as articleTypes
 } from 'modules/article';
-import { IArticle, IArticleOptions } from 'modules/article/contracts';
+import { IArticle, IArticleOptions } from '../contracts';
 
 @injectable()
 export class ArticleInstanceSubscriptionsClient {

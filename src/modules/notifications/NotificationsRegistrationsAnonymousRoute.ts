@@ -9,7 +9,7 @@ import { BaseRoute } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { NotificationsRegistrationsAnonymousBatchRoute, TYPES as notificationsTypes } from 'modules/notifications';
-import { IAnonymousRegistration } from 'modules/notifications/contracts';
+import { IAnonymousRegistration } from './contracts';
 
 @injectable()
 export class NotificationsRegistrationsAnonymousRoute extends BaseRoute {

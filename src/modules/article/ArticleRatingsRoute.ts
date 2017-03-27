@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { IRating } from 'modules/article/contracts';
+import { IRating } from './contracts';
 
 @injectable()
 export class ArticleRatingsRoute extends BaseRoute {

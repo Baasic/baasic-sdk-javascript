@@ -7,7 +7,7 @@ import { injectable, inject } from 'inversify';
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { ValueSetItemClient, ValueSetRoute, TYPES as valueSetTypes } from 'modules/valueSet';
-import { IValueSet } from 'modules/valueSet/contracts';
+import { IValueSet } from './contracts';
 
 @injectable()
 export class ValueSetClient {
