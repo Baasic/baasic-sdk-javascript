@@ -12,7 +12,7 @@ import {
     ArticleSubscriptionsCommentReportedClient,
     ArticleSubscriptionsCommentRequiresModerationClient,
     TYPES as articleTypes
-} from 'modules/article';
+} from '../';
 import { IArticle, IArticleOptions } from '../contracts';
 
 @injectable()

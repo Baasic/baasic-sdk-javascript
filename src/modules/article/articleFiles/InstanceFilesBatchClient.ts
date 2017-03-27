@@ -9,7 +9,7 @@ import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
     ArticleInstanceFilesBatchRoute,
     TYPES as articleTypes
-} from 'modules/article';
+} from '../';
 import { IArticleFile } from '../contracts';
 
 @injectable()

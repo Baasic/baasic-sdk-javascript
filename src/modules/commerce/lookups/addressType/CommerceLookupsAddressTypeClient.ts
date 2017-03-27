@@ -11,7 +11,7 @@ import {
     CommerceLookupsAddressTypesBatchClient,
     CommerceLookupsAddressTypeRoute,
     TYPES as commerceTypes
-} from 'modules/commerce';
+} from '../../';
 
 @injectable()
 export class CommerceLookupsAddressTypesClient {

@@ -1,6 +1,6 @@
 import {
     TYPES
-} from 'modules/commerce';
+} from '../';
 import {
     CommerceLookupsAddressTypesClient,
     CommerceLookupsCountryClient,
@@ -10,7 +10,7 @@ import {
     CommerceLookupsRecurringCyclePeriodTypeClient,
     CommerceLookupsSubscriptionStatusClient,
     CommerceLookupsInvoiceStatusClient
-} from 'modules/commerce/lookups';
+} from './';
 
 
 import { injectable, inject } from "inversify";

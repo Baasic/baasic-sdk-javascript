@@ -12,7 +12,7 @@ import {
     ArticleInstanceCommentsRoute,
     CommentStatus,
     TYPES as articleTypes
-} from 'modules/article';
+} from '../';
 import { IArticle, IArticleComment, INotificationConfiguration, ICommentStatus } from '../contracts';
 
 @injectable()

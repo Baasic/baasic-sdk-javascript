@@ -13,7 +13,7 @@ import {
     ArticleSubscriptionsArticleRoute,
     ArticleSubscriptionsCommentRequiresModerationRoute,
     TYPES as articleTYPES
-} from 'modules/article';
+} from '../';
 
 @injectable()
 export class ArticleInstanceSubscriptionsRoute extends BaseRoute {

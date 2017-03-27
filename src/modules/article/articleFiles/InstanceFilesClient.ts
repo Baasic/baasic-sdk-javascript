@@ -12,7 +12,7 @@ import {
     ArticleInstanceFilesRoute,
     ArticleInstanceFilesStreamsClient,
     TYPES as articleTypes
-} from 'modules/article';
+} from '../';
 import { IArticleFile } from '../contracts';
 
 @injectable()

@@ -8,7 +8,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
-import { ArticleInstanceRatingsRoute, TYPES as articleTypes } from 'modules/article';
+import { ArticleInstanceRatingsRoute, TYPES as articleTypes } from '../';
 import { IArticle, IRating } from '../contracts';
 
 @injectable()

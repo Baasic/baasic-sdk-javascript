@@ -15,7 +15,7 @@ import {
     CommercePaymentTransactionClient,
     Lookups,
     TYPES as commerceTypes
-} from 'modules/commerce';
+} from './';
 
 @injectable()
 export class CommerceClient {

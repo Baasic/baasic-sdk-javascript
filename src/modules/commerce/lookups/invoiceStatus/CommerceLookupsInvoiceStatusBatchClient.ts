@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../../httpApi';
-import { CommerceLookupsInvoiceStatusBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsInvoiceStatusBatchRoute, TYPES as commerceTypes } from '../../';
 
 @injectable()
 export class CommerceLookupsInvoiceStatusBatchClient {

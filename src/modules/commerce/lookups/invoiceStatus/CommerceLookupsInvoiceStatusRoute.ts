@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute } from '../../../../common';
 import { IGetRequestOptions, IOptions } from '../../../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
-import { CommerceLookupsInvoiceStatusBatchRoute, TYPES as commerceTypes } from 'modules/commerce';
+import { CommerceLookupsInvoiceStatusBatchRoute, TYPES as commerceTypes } from '../../';
 
 @injectable()
 export class CommerceLookupsInvoiceStatusRoute extends BaseRoute {
