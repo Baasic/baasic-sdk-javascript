@@ -1,5 +1,5 @@
 import { IStorageHandler, IEventHandler, IDefaultStorageConfig } from './';
-import { IHttpClient } from 'httpApi';
+import { IHttpClient } from '../../httpApi';
 
 export interface IBaasicAppOptions {
     useSSL: boolean,

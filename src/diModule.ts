@@ -1,10 +1,10 @@
 import { Container, interfaces, ContainerModule } from "inversify";
 import 'reflect-metadata';
-import { IHttpClient, httpTYPES } from 'httpApi';
-import { IStorageHandler, IDefaultStorageConfig, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
-import { JQueryHttpClient } from 'httpApi/jQuery';
-import { LocalStorageHandler } from 'core/localStorage';
-import { BrowserEventHandler } from 'core/browserEvents';
+import { IHttpClient, httpTYPES } from './httpApi';
+import { IStorageHandler, IDefaultStorageConfig, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES } from './core/contracts';
+import { JQueryHttpClient } from './httpApi/jQuery';
+import { LocalStorageHandler } from './core/localStorage';
+import { BrowserEventHandler } from './core/browserEvents';
 
 
 export class DIModule {
