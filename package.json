@@ -1,6 +1,6 @@
 {
   "name": "baasic-sdk-javascript",
-  "version": "2.0.0-rc.10",
+  "version": "2.0.0-rc.11",
   "description": "JavaScript SDK provides core functionality for building web and mobile applications on [Baasic](http://www.baasic.com/).",
   "keywords": ["Baasic", "BaaS", "sdk", "JavaScript", "Backend", "browser", "client-side"],
   "homepage": "http://www.baasic.com/",
@@ -30,6 +30,7 @@
   "dependencies": {
     "baasic-uritemplate": "Baasic/uritemplate-js",
     "inversify": "^3.1.0",
+    "tslib": "1.6.0",
     "reflect-metadata": "^0.1.9"
   },
   "devDependencies": {
@@ -37,7 +38,6 @@
     "@types/webpack": "^2.2.5",
     "npm-run-all": "^4.0.1",
     "rimraf": "^2.5.4",
-    "tslib": "1.6.0",
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.6",
     "webpack": "^2.2.1",
