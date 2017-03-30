@@ -1,5 +1,4 @@
 import { Container, interfaces, ContainerModule } from "inversify";
-import 'reflect-metadata';
 import { IHttpClient, httpTYPES } from './httpApi';
 import { IStorageHandler, IDefaultStorageConfig, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES } from './core/contracts';
 import { JQueryHttpClient } from './httpApi/jQuery';
