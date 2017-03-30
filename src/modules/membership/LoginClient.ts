@@ -9,7 +9,7 @@ import { Utility } from '../../common';
 import { IToken, ITokenHandler, TYPES as coreTYPES } from '../../core/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { LoginRoute, LoginSocialClient, TYPES as membershipTypes } from './';
-import { IUserInfo } from './contracts';
+import { IUserInfo, ILoginData } from './contracts';
 
 @injectable()
 export class LoginClient {
@@ -42,7 +42,7 @@ export class LoginClient {
                 })
                 .finally (function () {});                        
      **/
-    login(data: any): PromiseLike<any> {
+    login(data: ILoginData): PromiseLike<any> {
         let settings = this.utility.extend({}, data);
         if (settings.options) {
             let options = settings.options;
