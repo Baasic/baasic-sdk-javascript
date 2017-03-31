@@ -22,8 +22,11 @@ Please add the following lines of code after the jQuery include:
 <script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
 <script src='/js/hal-parser.js'></script>
 <script src='/js/uritemplate-min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reflect-metadata/0.1.10/Reflect.min.js"></script>
 <script src='/js/baasic-sdk-javascript-2.0.0.min.js'></script>
 ```
+
+*Note:* Baasic JavaScript SDK depends on [reflect-metadata](https://github.com/rbuckton/reflect-metadata) package, in order to use the sdk directly and not as a part of another JavaScript framework reflect-metadata should be manually imported into the project. Other Baasic SDKs or frameworks may handle this dependency automatically.
 
 ### Application Configuration
 
