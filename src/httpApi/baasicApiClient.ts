@@ -146,7 +146,11 @@ export class ApiClient {
 
     private getHeader(headers: any, key: string): string {
         if (headers) {
-            return headers[key] || headers[key.toLowerCase()];
+            var header = headers[key] || headers[key.toLowerCase()];
+            if (Array.isArray(header)) {
+                header = header.join(';');
+            }
+            return header;
         }
         return undefined;
     }

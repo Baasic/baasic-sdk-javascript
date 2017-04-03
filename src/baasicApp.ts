@@ -1,5 +1,5 @@
 import { Utility, commonDIModule } from './common';
-import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, IEventHandler, IBaasicApp, TYPES as coreTYPES } from './core/contracts';
+import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, IBaasicOptions, IEventHandler, IBaasicApp, TYPES as coreTYPES } from './core/contracts';
 import { coreDIModule as coreDIModule } from './core';
 import { DIModule } from './';
 import { httpDIModule as httpDIModule, ApiClient, httpTYPES } from './httpApi';
@@ -38,12 +38,12 @@ export class BaasicApp implements IBaasicApp {
     public readonly commerceModule: modules.Commerce.CommerceClient;
 
 
-    constructor(private apiKey: string, private options?: Partial<IBaasicAppOptions>) {
+    constructor(private apiKey: string, private options?: Partial<IBaasicOptions>) {
         this.utility = new Utility();
         if (!this.apiKey) {
             throw new Error("API Key is required.");
         }
-        let opt: Partial<IBaasicAppOptions> = {};
+        let opt: Partial<IBaasicOptions> = {};
         if (options) {
             opt = options;
         }
