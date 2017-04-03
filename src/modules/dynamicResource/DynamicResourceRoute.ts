@@ -23,7 +23,7 @@ export class DynamicResourceRoute extends BaseRoute {
     public readonly patchRoute: string = 'resources/{schemaName}/{id}/{?embed,fields}';
 
     public readonly deleteRoute: string = 'resources/{schemaName}/{id}';
-    
+
     get acl(): DynamicResourceACLRoute {
         return this.dynamicResourceACLRoute;
     }
@@ -72,16 +72,19 @@ export class DynamicResourceRoute extends BaseRoute {
         return super.baseCreate(this.createRoute, params);
     }
 
-    update(data: any, options: IOptions): any {
-        return super.baseUpdate(this.updateRoute, data, options);
+    update(schemaName: string, data: any, options?: any): any {
+        let opt = options || {};
+        return super.baseUpdate(this.updateRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
     }
 
-    patch(data: any, options: IOptions): any {
-        return super.baseUpdate(this.patchRoute, data, options, 'patch');
+    patch(schemaName: string, data: any, options?: any): any {
+        let opt = options || {};
+        return super.baseUpdate(this.patchRoute, data, this.utility.extend({ schemaName: schemaName }, opt), 'patch');
     }
 
-    delete(data: any, options: IOptions): any {
-        return super.baseDelete(this.deleteRoute, data, options);
+    delete(schemaName: string, data: any, options?: any): any {
+        let opt = options || {};
+        return super.baseDelete(this.deleteRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
     }
 
     createParams(schemaName: string, data: any): any {
