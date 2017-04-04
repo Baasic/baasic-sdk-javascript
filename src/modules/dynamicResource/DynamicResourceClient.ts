@@ -97,7 +97,7 @@ export class DynamicResourceClient {
                 });                  
      **/
     create(schemaName: string, data: any): PromiseLike<IHttpResponse<IDynamicObject>> {
-        return this.apiClient.post<IDynamicObject>(this.routeDefinition.create(schemaName, data), this.routeDefinition.createParams(schemaName, data));
+        return this.apiClient.post<IDynamicObject>(this.routeDefinition.create(schemaName), this.routeDefinition.createParams(data));
     }
 
     /**                  

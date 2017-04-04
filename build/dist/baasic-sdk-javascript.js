@@ -16673,7 +16673,7 @@ var DynamicResourceClient = (function () {
                 });
      **/
     DynamicResourceClient.prototype.create = function (schemaName, data) {
-        return this.apiClient.post(this.routeDefinition.create(schemaName, data), this.routeDefinition.createParams(schemaName, data));
+        return this.apiClient.post(this.routeDefinition.create(schemaName), this.routeDefinition.createParams(data));
     };
     /**
      * Returns a promise that is resolved once the update action has been performed; this action updates a dynamic resource item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
@@ -16833,8 +16833,8 @@ var DynamicResourceRoute = (function (_super) {
     DynamicResourceRoute.prototype.get = function (id, schemaName, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, this.utility.extend({ schemaName: schemaName }, options));
     };
-    DynamicResourceRoute.prototype.create = function (schemaName, data) {
-        var params = this.modelMapper.getParams(schemaName, data, 'schemaName');
+    DynamicResourceRoute.prototype.create = function (schemaName) {
+        var params = this.modelMapper.getParams(schemaName, undefined, 'schemaName');
         return _super.prototype.baseCreate.call(this, this.createRoute, params);
     };
     DynamicResourceRoute.prototype.update = function (schemaName, data, options) {
@@ -16848,10 +16848,6 @@ var DynamicResourceRoute = (function (_super) {
     DynamicResourceRoute.prototype.delete = function (schemaName, data, options) {
         var opt = options || {};
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
-    };
-    DynamicResourceRoute.prototype.createParams = function (schemaName, data) {
-        var params = this.modelMapper.getParams(schemaName, data, 'schemaName');
-        return _super.prototype.createParams.call(this, params);
     };
     return DynamicResourceRoute;
 }(common_1.BaseRoute));

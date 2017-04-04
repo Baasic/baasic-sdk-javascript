@@ -67,8 +67,8 @@ export class DynamicResourceRoute extends BaseRoute {
         return super.baseGet(this.getRoute, id, this.utility.extend({ schemaName: schemaName }, options));
     }
 
-    create(schemaName: string, data: any): any {
-        let params = this.modelMapper.getParams(schemaName, data, 'schemaName');
+    create(schemaName: string): any {
+        let params = this.modelMapper.getParams(schemaName, undefined, 'schemaName');
         return super.baseCreate(this.createRoute, params);
     }
 
@@ -85,11 +85,6 @@ export class DynamicResourceRoute extends BaseRoute {
     delete(schemaName: string, data: any, options?: any): any {
         let opt = options || {};
         return super.baseDelete(this.deleteRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
-    }
-
-    createParams(schemaName: string, data: any): any {
-        let params = this.modelMapper.getParams(schemaName, data, 'schemaName');
-        return super.createParams(params);
     }
 }
 
