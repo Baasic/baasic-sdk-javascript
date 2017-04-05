@@ -8,6 +8,5 @@ export interface IBaasicOptions {
     enableHALJSON?: boolean,
     storageHandler?: () => IStorageHandler | IDefaultStorageConfig,
     httpClient?: () => IHttpClient,
-    eventHandler?: () => IEventHandler,
-    promiseFactory?: <RType>(resolve: (data: RType) => void, reject: (data: any) => void) => PromiseLike<RType>
+    eventHandler?: () => IEventHandler
 }
