@@ -4,7 +4,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { IQueryModel, IGetRequestOptions, IOptions, IQueryOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import {
     DynamicResourceACLClient,
@@ -121,8 +121,8 @@ export class DynamicResourceClient {
                          // perform error handling here 
                     }); 				
      **/
-    update(schemaName: string, data: any, options?: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(schemaName, data, options), this.routeDefinition.updateParams(data));
+    update(data: any, options?: IQueryOptions): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.put<void>(this.routeDefinition.update(data, options), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -148,8 +148,8 @@ export class DynamicResourceClient {
                         
                     }); 				
      **/
-    patch(schemaName: string, data: any, options?: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.patch<void>(this.routeDefinition.patch(schemaName, data, options), this.routeDefinition.updateParams(data));
+    patch(data: any, options?: IQueryOptions): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.patch<void>(this.routeDefinition.patch(data, options), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -171,7 +171,7 @@ export class DynamicResourceClient {
                          // perform error handling here 
                     });						
      **/
-    remove(schemaName: string, data: any, options?: any): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.dynamicResourceRoute.delete(schemaName, data, options));
+    remove(data: any, options?: IQueryOptions): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.dynamicResourceRoute.delete(data, options));
     }
 }
