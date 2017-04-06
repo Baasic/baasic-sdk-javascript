@@ -1,6 +1,6 @@
 import { IModel } from '../../../common/contracts';;
 
-export interface IFileEntry extends IModel {
+export interface IProfileAvatarFileEntry extends IModel {
     derivedEntries?: Object[],
     description?: string,
     fileExtension?: string,

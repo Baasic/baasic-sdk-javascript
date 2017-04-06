@@ -1,7 +1,7 @@
 import { IModel } from '../../../common/contracts';;
-import { IFileEntry } from './'; 
+import { IProfileAvatarFileEntry } from './';
 
 export interface IProfileAvatar extends IModel {
-    avatarFileEntry?: IFileEntry,
+    avatarFileEntry?: IProfileAvatarFileEntry,
     avatarFileEntryId?: string
 }

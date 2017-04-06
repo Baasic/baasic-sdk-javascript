@@ -2,7 +2,7 @@ export * from './ICompany';
 export * from './IOrganization';
 export * from './ISkill';
 export * from './IUserEducation';
-export * from './IFileEntry';
+export * from './IProfileAvatarFileEntry';
 export * from './IProfileAvatar';
 export * from './IMembership';
 export * from './IUserProfileSkill';

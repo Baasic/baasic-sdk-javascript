@@ -19,4 +19,4 @@ export * from './permissionClient';
 export * from './lookupRoute';
 export * from './lookupClient';
 export * from './root';
-
+export * from './contracts';

@@ -15,3 +15,4 @@ export {
 } from "./core/contracts";
 
 export * from './common';
+export * from './modules';

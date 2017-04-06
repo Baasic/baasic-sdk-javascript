@@ -9,3 +9,4 @@ export * from './MediaVaultProcessingProviderSettingsRoute';
 export * from './MediaVaultProcessingProviderSettingsClient';
 export * from './MediaVaultRoute';
 export * from './MediaVaultClient';
+export * from './contracts';

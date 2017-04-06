@@ -27,3 +27,4 @@ export * from './notificationsSettingsRoute';
 export * from './notificationsSettingsClient';
 export * from './notificationsRoute';
 export * from './notificationsClient';
+export * from './contracts';

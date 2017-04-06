@@ -7,3 +7,4 @@ export * from './filesACLRoute';
 export * from './filesACLClient';
 export * from './filesRoute';
 export * from './filesClient';
+export * from './contracts';
