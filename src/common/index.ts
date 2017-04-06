@@ -7,5 +7,6 @@ export * from './utility';
 export * from './modelMapper';
 export * from './baseRoute';
 export * from './halParser';
+export * from './contracts';
 
 

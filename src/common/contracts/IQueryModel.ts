@@ -1,5 +1,6 @@
 export interface IQueryModel<T> {
-    embed: string,
+    embed?: string,
+    fields?: string,
     item: T[],
     page: number,
     recordsPerPage: number,

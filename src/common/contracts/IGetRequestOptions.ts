@@ -1,3 +1,4 @@
 export interface IGetRequestOptions {
-    embed?: string
+    embed?: string,
+    fields?: string
 }

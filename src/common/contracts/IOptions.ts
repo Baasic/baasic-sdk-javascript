@@ -3,5 +3,7 @@ export interface IOptions {
     pageSize?: number,
     orderBy?: string,
     orderDirection?: string,
-    search?: string
+    search?: string,
+    embed?: string,
+    fields?: string
 }
