@@ -5,7 +5,7 @@
 
 import { injectable, inject } from "inversify";
 import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { IGetRequestOptions, IOptions, IQueryOptions } from '../../common/contracts';;
 import { DynamicResourceACLRoute, DynamicSchemaRoute, TYPES as dynamicResourceTypes } from './';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
@@ -18,12 +18,12 @@ export class DynamicResourceRoute extends BaseRoute {
 
     public readonly createRoute: string = 'resources/{schemaName}';
 
-    public readonly updateRoute: string = 'resources/{schemaName}/{id}/{?embed,fields}';
+    public readonly updateRoute: string = 'resources/{schemaName}/{id}/{?embed,fields,query}';
 
-    public readonly patchRoute: string = 'resources/{schemaName}/{id}/{?embed,fields}';
+    public readonly patchRoute: string = 'resources/{schemaName}/{id}/{?embed,fields,query}';
 
-    public readonly deleteRoute: string = 'resources/{schemaName}/{id}';
-    
+    public readonly deleteRoute: string = 'resources/{schemaName}/{id}/{?query}';
+
     get acl(): DynamicResourceACLRoute {
         return this.dynamicResourceACLRoute;
     }
@@ -67,26 +67,23 @@ export class DynamicResourceRoute extends BaseRoute {
         return super.baseGet(this.getRoute, id, this.utility.extend({ schemaName: schemaName }, options));
     }
 
-    create(schemaName: string, data: any): any {
-        let params = this.modelMapper.getParams(schemaName, data, 'schemaName');
+    create(schemaName: string): any {
+        let params = this.modelMapper.getParams(schemaName, undefined, 'schemaName');
         return super.baseCreate(this.createRoute, params);
     }
 
-    update(data: any, options: IOptions): any {
+    update(data: any, options?: IQueryOptions): any {
         return super.baseUpdate(this.updateRoute, data, options);
     }
 
-    patch(data: any, options: IOptions): any {
-        return super.baseUpdate(this.patchRoute, data, options, 'patch');
+    patch(schemaName: string, data: any, options?: any): any {
+        let opt = options || {};
+        return super.baseUpdate(this.patchRoute, data, this.utility.extend({ schemaName: schemaName }, opt), 'patch');
     }
 
-    delete(data: any, options: IOptions): any {
-        return super.baseDelete(this.deleteRoute, data, options);
-    }
-
-    createParams(schemaName: string, data: any): any {
-        let params = this.modelMapper.getParams(schemaName, data, 'schemaName');
-        return super.createParams(params);
+    delete(schemaName: string, data: any, options?: any): any {
+        let opt = options || {};
+        return super.baseDelete(this.deleteRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
     }
 }
 

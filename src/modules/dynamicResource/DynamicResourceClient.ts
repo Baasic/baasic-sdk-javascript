@@ -4,7 +4,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { IQueryModel, IGetRequestOptions, IOptions, IQueryOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import {
     DynamicResourceACLClient,
@@ -97,7 +97,7 @@ export class DynamicResourceClient {
                 });                  
      **/
     create(schemaName: string, data: any): PromiseLike<IHttpResponse<IDynamicObject>> {
-        return this.apiClient.post<IDynamicObject>(this.routeDefinition.create(schemaName, data), this.routeDefinition.createParams(schemaName, data));
+        return this.apiClient.post<IDynamicObject>(this.routeDefinition.create(schemaName), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -121,7 +121,7 @@ export class DynamicResourceClient {
                          // perform error handling here 
                     }); 				
      **/
-    update(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
+    update(data: any, options?: IQueryOptions): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data, options), this.routeDefinition.updateParams(data));
     }
 
@@ -148,7 +148,7 @@ export class DynamicResourceClient {
                         
                     }); 				
      **/
-    patch(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
+    patch(data: any, options?: IQueryOptions): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.patch<void>(this.routeDefinition.patch(data, options), this.routeDefinition.updateParams(data));
     }
 
@@ -171,7 +171,7 @@ export class DynamicResourceClient {
                          // perform error handling here 
                     });						
      **/
-    remove(data: any, options: IOptions): PromiseLike<IHttpResponse<void>> {
+    remove(data: any, options?: IQueryOptions): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.dynamicResourceRoute.delete(data, options));
     }
 }
