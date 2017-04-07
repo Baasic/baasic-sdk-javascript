@@ -9,7 +9,8 @@ import {
 const TYPES = {
     Utility: Symbol("Utility"),
     ModelMapper: Symbol("ModelMapper"),
-    IHALParser: Symbol("IHALParser")
+    IHALParser: Symbol("IHALParser"),
+    IURLFactory: Symbol("IURLFactory")
 };
 
 export { TYPES };
