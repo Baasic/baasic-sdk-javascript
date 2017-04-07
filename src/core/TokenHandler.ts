@@ -117,7 +117,6 @@ export class TokenHandler implements ITokenHandler {
 
 
     initEventing(): void {
-        debugger;
         this.eventHandler.addEvent('tokenExpired', function (e) {
             e = e || event;
             if (e.originalEvent) {
