@@ -1,5 +1,7 @@
 import { IStorageHandler, IEventHandler, IDefaultStorageConfig } from './';
+import { IURLFactory } from '../../common/contracts';
 import { IHttpClient } from '../../httpApi';
+
 
 export interface IBaasicOptions {
     useSSL: boolean,
@@ -8,5 +10,6 @@ export interface IBaasicOptions {
     enableHALJSON?: boolean,
     storageHandler?: () => IStorageHandler | IDefaultStorageConfig,
     httpClient?: () => IHttpClient,
-    eventHandler?: () => IEventHandler
+    eventHandler?: () => IEventHandler,
+    urlFactory?: IURLFactory
 }

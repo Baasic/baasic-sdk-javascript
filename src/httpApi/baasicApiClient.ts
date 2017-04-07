@@ -2,6 +2,7 @@ import { injectable, inject } from "inversify";
 import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, httpTYPES } from './';
 import { ITokenHandler, IAppOptions, TYPES as coreTYPES } from '../core/contracts';
 import { IHALParser, TYPES as commonTYPES } from '../common';
+import { IURLFactory } from '../common/contracts';
 
 
 @injectable()
@@ -18,7 +19,8 @@ export class ApiClient {
         @inject(coreTYPES.IAppOptions) private appOptions: IAppOptions,
         @inject(httpTYPES.IHttpClient) private httpClient: IHttpClient,
         @inject(coreTYPES.ITokenHandler) private tokenHandler: ITokenHandler,
-        @inject(commonTYPES.IHALParser) private halParser: IHALParser
+        @inject(commonTYPES.IHALParser) private halParser: IHALParser,
+        @inject(commonTYPES.IURLFactory) private urlFactory: IURLFactory
     ) {
         this.createPromise = httpClient.createPromise;
     }
@@ -111,7 +113,7 @@ export class ApiClient {
         if (typeof url === "string") {
             let rootUrl = this.appOptions.apiUrl.toString();
             if (url.indexOf(rootUrl) < 0) {
-                return new URL(`${rootUrl}${url}`);
+                return this.urlFactory(`${rootUrl}${url}`);
             }
         }
         return <URL>url;

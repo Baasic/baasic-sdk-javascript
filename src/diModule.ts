@@ -4,7 +4,8 @@ import { IStorageHandler, IDefaultStorageConfig, TokenType, TokenTypes, IToken, 
 import { JQueryHttpClient } from './httpApi/jQuery';
 import { LocalStorageHandler } from './core/localStorage';
 import { BrowserEventHandler } from './core/browserEvents';
-
+import { IURLFactory } from './common/contracts'
+import { TYPES as commonTypes } from './common'
 
 export class DIModule {
     diModules: interfaces.ContainerModule[] = [];
@@ -15,19 +16,21 @@ export class DIModule {
             if (app.settings) {
                 let appOptions: IAppOptions = {
                     apiKey: apiKey,
-                    apiUrl: new URL(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${apiKey}/`),
+                    apiUrl: app.settings.urlFactory(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${apiKey}/`),
                     enableHALJSON: app.settings.enableHALJSON
                 };
                 app.settings.apiUrl = appOptions.apiUrl;
                 this.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);
 
                 this.kernel.bind<Partial<IBaasicAppOptions>>(coreTYPES.IBaasicAppOptions).toConstantValue(app.settings);
+                this.kernel.bind<IURLFactory>(commonTypes.IURLFactory).toConstantValue(app.settings.urlFactory);
             }
 
             this.bindHandler<IHttpClient>(httpTYPES.IHttpClient, app.settings.httpClient, JQueryHttpClient);
             this.bindHandlerWithOptions<IStorageHandler, IDefaultStorageConfig>(coreTYPES.IStorageHandler, coreTYPES.IDefaultStorageConfig, app.settings.storageHandler, LocalStorageHandler);
             this.bindHandler<IEventHandler>(coreTYPES.IEventHandler, app.settings.eventHandler, BrowserEventHandler);
 
+            
             this.kernel.bind<IBaasicApp>(coreTYPES.IBaasicApp).toConstantValue(app);
 
         });

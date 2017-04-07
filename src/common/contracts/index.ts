@@ -9,4 +9,5 @@ export * from './IACLOptions';
 export * from './IACLPolicy';
 export * from './IResponse';
 export * from './IGetRequestOptions';
+export * from './IURLFactory';
 export * from './IQueryOptions';
