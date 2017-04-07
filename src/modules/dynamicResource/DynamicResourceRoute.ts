@@ -73,7 +73,8 @@ export class DynamicResourceRoute extends BaseRoute {
     }
 
     update(schemaName: string, data: any, options?: IQueryOptions): any {
-        return super.baseUpdate(this.updateRoute, data, options);
+        let opt = options || {};
+        return super.baseUpdate(this.updateRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
     }
 
     patch(schemaName: string, data: any, options?: any): any {
