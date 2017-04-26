@@ -13,10 +13,16 @@ export class DIModule {
     init(app: IBaasicApp, modules: any[]): void {
         let diModule = new ContainerModule((bind) => {
             let apiKey = app.getApiKey();
+            var urlBuilder = [ `${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}` ];
+            if (app.settings.apiVersion) {
+                urlBuilder.push(app.settings.apiVersion);
+            }
+            urlBuilder.push(apiKey);
+            
             if (app.settings) {
                 let appOptions: IAppOptions = {
                     apiKey: apiKey,
-                    apiUrl: app.settings.urlFactory(`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}/${app.settings.apiVersion}/${apiKey}/`),
+                    apiUrl: app.settings.urlFactory(urlBuilder.join('/')),
                     enableHALJSON: app.settings.enableHALJSON
                 };
                 app.settings.apiUrl = appOptions.apiUrl;
