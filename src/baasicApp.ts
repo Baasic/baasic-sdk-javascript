@@ -13,8 +13,7 @@ export class BaasicApp implements IBaasicApp {
         useSSL: true,
         apiRootUrl: 'api.baasic.com',
         apiVersion: 'v1',
-        enableHALJSON: false,
-        urlFactory: (url: string, base?: string) => new URL(url, base)
+        enableHALJSON: false
     };
 
     public readonly settings: Partial<IBaasicAppOptions>;

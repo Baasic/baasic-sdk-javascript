@@ -1,3 +1,5 @@
+import * as Symbol from "es6-symbol";
+
 const TYPES = {
     IBaasicAppOptions: Symbol("IBaasicAppOptions"),
     IAppOptions: Symbol("IAppOptions"),

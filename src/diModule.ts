@@ -1,4 +1,5 @@
 import { Container, interfaces, ContainerModule } from "inversify";
+import * as URL from 'url-polyfill';
 import { IHttpClient, httpTYPES } from './httpApi';
 import { IStorageHandler, IDefaultStorageConfig, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES } from './core/contracts';
 import { JQueryHttpClient } from './httpApi/jQuery';
@@ -20,16 +21,18 @@ export class DIModule {
             urlBuilder.push(apiKey);
             
             if (app.settings) {
+                var urlFactory = (url: string, base?: string) => new URL(url, base);
+
                 let appOptions: IAppOptions = {
                     apiKey: apiKey,
-                    apiUrl: app.settings.urlFactory(urlBuilder.join('/')),
+                    apiUrl: urlFactory(urlBuilder.join('/')),
                     enableHALJSON: app.settings.enableHALJSON
                 };
                 app.settings.apiUrl = appOptions.apiUrl;
                 this.kernel.bind<IAppOptions>(coreTYPES.IAppOptions).toConstantValue(appOptions);
 
                 this.kernel.bind<Partial<IBaasicAppOptions>>(coreTYPES.IBaasicAppOptions).toConstantValue(app.settings);
-                this.kernel.bind<IURLFactory>(commonTypes.IURLFactory).toConstantValue(app.settings.urlFactory);
+                this.kernel.bind<IURLFactory>(commonTypes.IURLFactory).toConstantValue(urlFactory);
             }
 
             this.bindHandler<IHttpClient>(httpTYPES.IHttpClient, app.settings.httpClient, JQueryHttpClient);

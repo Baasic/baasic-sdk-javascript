@@ -1,4 +1,5 @@
 import { ContainerModule } from "inversify";
+import * as Symbol from "es6-symbol";
 import { ApiClient } from './';
 
 const TYPES = {
