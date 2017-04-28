@@ -2,7 +2,7 @@ import { IHttpHeaders } from './';
 
 export interface IHttpRequest {
     headers?: IHttpHeaders,
-    url: URL,
+    url: string,
     method: string
     data?: any;
 }

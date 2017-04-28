@@ -7,7 +7,7 @@ export interface IBaasicApp {
     getAccessToken(): IToken;
     updateAccessToken(value: IToken);
     getApiKey(): string;
-    getApiUrl(): URL;
+    getApiUrl(): string;
     getUser(): IUser;
     setUser(userInfo: IUser): void;
 }

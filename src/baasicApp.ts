@@ -85,7 +85,7 @@ export class BaasicApp implements IBaasicApp {
         return this.apiKey;
     }
 
-    getApiUrl(): URL {
+    getApiUrl(): string {
         return this.settings.apiUrl;
     }
 

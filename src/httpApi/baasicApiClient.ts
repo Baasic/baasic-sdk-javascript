@@ -2,11 +2,10 @@ import { injectable, inject } from "inversify";
 import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, httpTYPES } from './';
 import { ITokenHandler, IAppOptions, TYPES as coreTYPES } from '../core/contracts';
 import { IHALParser, TYPES as commonTYPES } from '../common';
-import { IURLFactory } from '../common/contracts';
-
 
 @injectable()
 export class ApiClient {
+    private static readonly  httpTest = new RegExp("^(http|https)://", "i");
     private wwwAuthenticateTokenizer = (function () {
         let ws = '(?:(?:\\r\\n)?[ \\t])+',
             token = '(?:[\\x21\\x23-\\x27\\x2A\\x2B\\x2D\\x2E\\x30-\\x39\\x3F\\x41-\\x5A\\x5E-\\x7A\\x7C\\x7E]+)',
@@ -19,8 +18,7 @@ export class ApiClient {
         @inject(coreTYPES.IAppOptions) private appOptions: IAppOptions,
         @inject(httpTYPES.IHttpClient) private httpClient: IHttpClient,
         @inject(coreTYPES.ITokenHandler) private tokenHandler: ITokenHandler,
-        @inject(commonTYPES.IHALParser) private halParser: IHALParser,
-        @inject(commonTYPES.IURLFactory) private urlFactory: IURLFactory
+        @inject(commonTYPES.IHALParser) private halParser: IHALParser
     ) {
         this.createPromise = httpClient.createPromise;
     }
@@ -89,37 +87,37 @@ export class ApiClient {
         return promise;
     }
 
-    get<TResponse>(url: URL | string, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
+    get<TResponse>(url: string, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
         return this.internalRequest<TResponse>(url, "GET", undefined, headers);
     }
 
-    delete<TResponse>(url: URL | string, headers?: IHttpHeaders, data?: any): PromiseLike<IHttpResponse<TResponse>> {
+    delete<TResponse>(url: string, headers?: IHttpHeaders, data?: any): PromiseLike<IHttpResponse<TResponse>> {
         return this.internalRequest<TResponse>(url, "DELETE", data, headers);
     }
 
-    post<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
+    post<TResponse>(url: string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
         return this.internalRequest<TResponse>(url, "POST", data, headers);
     }
 
-    put<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
+    put<TResponse>(url: string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
         return this.internalRequest<TResponse>(url, "PUT", data, headers);
     }
 
-    patch<TResponse>(url: URL | string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
+    patch<TResponse>(url: string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
         return this.internalRequest<TResponse>(url, "PATCH", data, headers);
     }
 
-    private compileUrl(url: URL | string): URL {
-        if (typeof url === "string") {
-            let rootUrl = this.appOptions.apiUrl.toString();
+    private compileUrl(url:string): string {
+        if (!ApiClient.httpTest.test(url)) {
+            let rootUrl = this.appOptions.apiUrl;
             if (url.indexOf(rootUrl) < 0) {
-                return this.urlFactory(`${rootUrl}${url}`);
+                return`${rootUrl}${url}`;
             }
         }
-        return <URL>url;
+        return url;
     }
 
-    private internalRequest<TResponse>(url: URL | string, method: string, data?: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
+    private internalRequest<TResponse>(url: string, method: string, data?: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
         url = this.compileUrl(url);
 
         let request: IHttpRequest = {

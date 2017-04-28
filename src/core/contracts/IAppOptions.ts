@@ -1,5 +1,5 @@
 export interface IAppOptions {
     apiKey: string,
-    apiUrl?: URL,
+    apiUrl?: string,
     enableHALJSON?: boolean
 }
