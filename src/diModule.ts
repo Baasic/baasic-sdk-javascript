@@ -17,6 +17,7 @@ export class DIModule {
                 urlBuilder.push(app.settings.apiVersion);
             }
             urlBuilder.push(apiKey);
+            urlBuilder.push('');
             
             if (app.settings) {
 

@@ -49,6 +49,7 @@ export class BaasicApp implements IBaasicApp {
         }
 
         this.settings = this.utility.extendAs<Readonly<IBaasicAppOptions>>({}, BaasicApp.defaultSettings, opt);
+
         this.diModule = new DIModule();
         this.diModule.init(this, [commonDIModule, coreDIModule, httpDIModule, modules]);
 

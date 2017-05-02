@@ -1865,6 +1865,7 @@ var DIModule = (function () {
                 urlBuilder.push(app.settings.apiVersion);
             }
             urlBuilder.push(apiKey);
+            urlBuilder.push('');
             if (app.settings) {
                 var appOptions = {
                     apiKey: apiKey,
