@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
 import { IOptions } from '../../common/contracts';;
 import { UserSocialLoginRoute, TYPES as membershipTypes } from './';
-import { IAppUser } from './contracts';
+import { IAppUser, IUserOptions } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()
@@ -17,7 +17,7 @@ export class UserRoute extends BaseRoute {
     /**                  
     * Find route with route and query parameters.
     **/
-    public findRoute: string = 'users/{?searchQuery,page,rpp,sort,embed,fields}';
+    public findRoute: string = 'users/{?searchQuery,userIds,roleIds,roleNames,isApproved,isLocked,page,rpp,sort,embed,fields}';
     /**                  
     * Get route with route and query parameters.
     **/
@@ -78,7 +78,7 @@ export class UserRoute extends BaseRoute {
      * @method                        
      * @example userRoute.find({searchQuery: '<search-phrase>'});                              
      **/
-    find(options: IOptions): any {
+    find(options: IUserOptions): any {
         return super.baseFind(this.findRoute, options);
     }
 

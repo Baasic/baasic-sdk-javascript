@@ -16,4 +16,5 @@ export * from './IRole';
 export * from './ISnProvider';
 export * from './ILookup';
 export * from './ILookupOptions';
+export * from './IUserOptions';
 export * from './ILoginData';

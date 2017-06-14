@@ -12,7 +12,7 @@ import {
     UserSocialLoginClient,
     TYPES as membershipTypes
 } from './';
-import { IAppUser, INewUser, INewPassword } from './contracts';
+import { IAppUser, INewUser, INewPassword, IUserOptions } from './contracts';
 import { ModelMapper } from '../../common';
 
 @injectable()
@@ -71,7 +71,7 @@ export class UserClient {
                     // perform error handling here 
                 });                     
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAppUser>>> {
+    find(options?: IUserOptions): PromiseLike<IHttpResponse<IQueryModel<IAppUser>>> {
         return this.apiClient.get<IQueryModel<IAppUser>>(this.routeDefinition.find(options));
     }
 
