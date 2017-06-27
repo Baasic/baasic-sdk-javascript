@@ -5,7 +5,7 @@ import { IHALParser, TYPES as commonTYPES } from '../common';
 
 @injectable()
 export class ApiClient {
-    private static readonly  httpTest = new RegExp("^(http|https)://", "i");
+    private static readonly httpTest = new RegExp("^(http|https)://", "i");
     private wwwAuthenticateTokenizer = (function () {
         let ws = '(?:(?:\\r\\n)?[ \\t])+',
             token = '(?:[\\x21\\x23-\\x27\\x2A\\x2B\\x2D\\x2E\\x30-\\x39\\x3F\\x41-\\x5A\\x5E-\\x7A\\x7C\\x7E]+)',
@@ -107,11 +107,11 @@ export class ApiClient {
         return this.internalRequest<TResponse>(url, "PATCH", data, headers);
     }
 
-    private compileUrl(url:string): string {
+    private compileUrl(url: string): string {
         if (!ApiClient.httpTest.test(url)) {
             let rootUrl = this.appOptions.apiUrl;
             if (url.indexOf(rootUrl) < 0) {
-                return`${rootUrl}${url}`;
+                return `${rootUrl}${url}`;
             }
         }
         return url;
@@ -156,7 +156,7 @@ export class ApiClient {
     }
 
     private parseWWWAuthenticateHeader(value: string) {
-        if (value) {
+        if (typeof value === 'string') {
             var tokens = value.match(this.wwwAuthenticateTokenizer);
             if (tokens && tokens.length > 0) {
                 var wwwAutheniticate: any = {
