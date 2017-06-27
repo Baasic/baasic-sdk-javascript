@@ -70,7 +70,8 @@ export abstract class BaseRoute {
                 return uritemplate.parse(route).expand(model);
             }
         } else {
-            let opt = this.utility.extend(model, options);
+            let modelCopy = this.utility.extend({}, model);
+            let opt = this.utility.extend(modelCopy, options);
             if (this.appOptions.enableHALJSON && model.links) {
                 return uritemplate.parse(model.links(link).href).expand(opt);
             } else {
