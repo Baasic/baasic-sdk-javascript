@@ -32,11 +32,12 @@ export class ApiClient {
 
         var headers = request.headers || (request.headers = {});
         var authToken = this.tokenHandler.get();
+        var syncToken = false;
         if (authToken) {
+            syncToken = authToken.sliding_window !== undefined;
             /*jshint camelcase: false */
             headers["AUTHORIZATION"] = `BEARER ${authToken.token}`;
         }
-
 
         if (request.data && !this.headerExists(headers, 'Content-Type')) {
             headers['Content-Type'] = 'application/json; charset=UTF-8';
@@ -51,6 +52,7 @@ export class ApiClient {
         var self = this;
         var promise = this.httpClient.request<TResponse>(request);
         promise.then<IHttpResponse<TResponse>>(function (data) {
+            if (syncToken) self.tokenHandler.syncToken(authToken);
             var contentType = self.getHeader(data.headers, 'Content-Type');
             if (contentType && contentType.toLowerCase().indexOf('application/hal+json') !== -1) {
                 data.data = self.halParser.parse(data.data);
