@@ -52,7 +52,7 @@ export class ApiClient {
         var self = this;
         var promise = this.httpClient.request<TResponse>(request);
         promise.then<IHttpResponse<TResponse>>(function (data) {
-            if (syncToken) self.tokenHandler.syncToken(authToken);
+            if (syncToken) self.tokenHandler.store(authToken);
             var contentType = self.getHeader(data.headers, 'Content-Type');
             if (contentType && contentType.toLowerCase().indexOf('application/hal+json') !== -1) {
                 data.data = self.halParser.parse(data.data);
@@ -157,26 +157,31 @@ export class ApiClient {
         return undefined;
     }
 
-    private parseWWWAuthenticateHeader(value: string) {
+    private parseWWWAuthenticateHeader(value: string | string[]) {
+        var tokens;
         if (typeof value === 'string') {
-            var tokens = value.match(this.wwwAuthenticateTokenizer);
-            if (tokens && tokens.length > 0) {
-                var wwwAutheniticate: any = {
-                    scheme: tokens[0]
-                };
+            tokens = value.match(this.wwwAuthenticateTokenizer);
+        } else if (Array.isArray(value)) {
+            tokens = value[0].split(' ').concat(value.slice(1));
+        }
+        
+        if (tokens && tokens.length > 0) {
+            var wwwAutheniticate: any = {
+                scheme: tokens[0]
+            };
 
-                if (tokens.length > 1) {
-                    var details = {};
-                    for (var i = 1, l = tokens.length; i < l; i++) {
-                        var values = tokens[i].split('=');
-                        details[values[0]] = this.unquote(values[1]);
-                    }
-
-                    wwwAutheniticate.details = details;
+            if (tokens.length > 1) {
+                var details = {};
+                for (var i = 1, l = tokens.length; i < l; i++) {
+                    var values = tokens[i].split('=');
+                    details[values[0]] = this.unquote(values[1]);
                 }
 
-                return wwwAutheniticate;
+                wwwAutheniticate.details = details;
             }
+
+            return wwwAutheniticate;
         }
+        
     }
 };

@@ -100,16 +100,11 @@ export class TokenHandler implements ITokenHandler {
 
     syncToken(newToken: IToken): void {
         clearTimeout(this.userAccessTokenTimerHandle);
-        if (newToken !== undefined && newToken !== null) {
-            if (!newToken.expireTime) {
-                let expiresIn = newToken.expires_in;
-                let slidingWindow = newToken.sliding_window;
-                /*jshint camelcase: true */
-                if (expiresIn) {
-                    newToken.expireTime = new Date().getTime() + (expiresIn * 1000);
-                } else if (slidingWindow) {
-                    newToken.expireTime = new Date().getTime() + (slidingWindow * 1000);
-                }
+        if (newToken) {
+            if (newToken.expires_in && !newToken.expireTime) {
+                newToken.expireTime = new Date().getTime() + (newToken.expires_in * 1000);
+            } else if (newToken.sliding_window) {
+                newToken.expireTime = new Date().getTime() + (newToken.sliding_window * 1000);
             }
             this.userAccessTokenTimerHandle = this.setExpirationTimer(newToken);
         }
