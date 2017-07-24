@@ -60,30 +60,24 @@ export class ApiClient {
             return data;
         },
             (response: IHttpResponse<any>) => {
-                var wwwAuthenticate = this.parseWWWAuthenticateHeader(response.headers['WWW-Authenticate']);
-                if (wwwAuthenticate) {
-                    if (wwwAuthenticate.scheme.toLowerCase() === 'bearer') {
-                        var details = wwwAuthenticate.details;
-                        if (details) {
-                            if (details.error) {
-                                switch (details.error) {
-                                    case 'invalid_token':
-                                        this.tokenHandler.store(null);
-                                        break;
-                                    case 'invalid_request':
-                                        /*jshint camelcase: false */
-                                        switch (details.error_description) {
-                                            /*jshint camelcase: true */
-                                            case 'Missing or invalid session':
-                                                this.tokenHandler.store(null);
-                                                break;
-                                        }
-                                        break;
-                                }
+                var err = response.data;
+                if (err && err.error) {
+                    switch (err.error) {
+                        case 'invalid_token':
+                            this.tokenHandler.store(null);
+                            break;
+                        case 'invalid_request':
+                            /*jshint camelcase: false */
+                            switch (err.error_description) {
+                                /*jshint camelcase: true */
+                                case 'Missing or invalid session':
+                                    this.tokenHandler.store(null);
+                                    break;
                             }
-                        }
+                            break;
                     }
                 }
+                
                 return response;
             });
         return promise;
