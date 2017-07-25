@@ -60,21 +60,23 @@ export class ApiClient {
             return data;
         },
             (response: IHttpResponse<any>) => {
-                var err = response.data;
-                if (err && err.error) {
-                    switch (err.error) {
-                        case 'invalid_token':
-                            this.tokenHandler.store(null);
-                            break;
-                        case 'invalid_request':
-                            /*jshint camelcase: false */
-                            switch (err.error_description) {
-                                /*jshint camelcase: true */
-                                case 'Missing or invalid session':
-                                    this.tokenHandler.store(null);
-                                    break;
-                            }
-                            break;
+                if (response.statusCode === 401) {
+                    var err = response.data;
+                    if (err && err.details) {
+                        switch (err.details) {
+                            case 'invalid_token':
+                                this.tokenHandler.store(null);
+                                break;
+                            case 'invalid_request':
+                                /*jshint camelcase: false */
+                                switch (err.message) {
+                                    /*jshint camelcase: true */
+                                    case 'Missing or invalid session':
+                                        this.tokenHandler.store(null);
+                                        break;
+                                }
+                                break;
+                        }
                     }
                 }
                 
