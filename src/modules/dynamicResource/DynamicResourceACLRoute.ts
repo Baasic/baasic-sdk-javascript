@@ -83,7 +83,8 @@ export class DynamicResourceACLRoute extends BaseRoute {
     }
 
     updateParams(options: IDynamicACLOptions): any {
-        return options.acl;
+        let params = this.utility.extend({}, options);
+        return params[this.modelMapper.modelPropertyName];
     }
 }
 
