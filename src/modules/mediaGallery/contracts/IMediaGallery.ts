@@ -1,5 +1,5 @@
 import { IModel } from '../../../common/contracts';
-import { IMediaGalleryFile } from './';
+import { IMediaGalleryFile, IFileUserInfo } from './';
 
 export interface IMediaGallery extends IModel {
     description?: string,
@@ -7,6 +7,6 @@ export interface IMediaGallery extends IModel {
     name: string,
     abrv?: string,
     userId: string,
-    // user?: IUser,
+    user?: IFileUserInfo,
     fileEntries?: IMediaGalleryFile[];
 }

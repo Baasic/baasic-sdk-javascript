@@ -9,10 +9,9 @@ import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import {
     MediaGalleryBatchClient,
-    MediaGalleryProcessingProviderSettingsClient,
     MediaGalleryRoute,
     MediaGallerySettingsClient,
-    MediaGalleryStreamsClient,
+    MediaGalleryFileStreamsClient,
     TYPES as mediaGalleryTypes
 } from './';
 import { IMediaGallery, IMediaGalleryOptions } from './contracts';
@@ -24,7 +23,7 @@ export class MediaGalleryClient {
         return this.mediaGalleryRoute;
     }
 
-    get streams(): MediaGalleryStreamsClient {
+    get streams(): MediaGalleryFileStreamsClient {
         return this.mediaGalleryStreamsClient;
     }
 
@@ -43,10 +42,9 @@ export class MediaGalleryClient {
     constructor(
         @inject(mediaGalleryTypes.MediaGalleryRoute) protected mediaGalleryRoute: MediaGalleryRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
-        @inject(mediaGalleryTypes.MediaGalleryStreamsClient) protected mediaGalleryStreamsClient: MediaGalleryStreamsClient,
+        @inject(mediaGalleryTypes.MediaGalleryFileStreamsClient) protected mediaGalleryStreamsClient: MediaGalleryFileStreamsClient,
         @inject(mediaGalleryTypes.MediaGalleryBatchClient) protected mediaGalleryBatchClient: MediaGalleryBatchClient,
-        @inject(mediaGalleryTypes.MediaGallerySettingsClient) protected mediaGallerySettingsClient: MediaGallerySettingsClient,
-        @inject(mediaGalleryTypes.MediaGalleryProcessingProviderSettingsClient) protected mediaGalleryProcessingProviderSettingsClient: MediaGalleryProcessingProviderSettingsClient
+        @inject(mediaGalleryTypes.MediaGallerySettingsClient) protected mediaGallerySettingsClient: MediaGallerySettingsClient        
     ) { }
 
     /**                  

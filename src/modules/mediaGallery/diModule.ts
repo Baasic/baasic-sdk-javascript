@@ -11,6 +11,8 @@ import {
     MediaGalleryInstanceFilesBatchRoute,
     MediaGalleryInstanceFilesClient,
     MediaGalleryInstanceFilesRoute,
+    MediaGalleryInstanceFileStreamClient,
+    MediaGalleryInstanceFileStreamRoute,
     MediaGalleryFileBatchClient,
     MediaGalleryFileBatchRoute,
     MediaGalleryFileClient,
@@ -28,10 +30,14 @@ const TYPES = {
     MediaGalleryInstanceFilesBatchRoute: Symbol("MediaGalleryInstanceFilesBatchRoute"),
     MediaGalleryInstanceFilesClient: Symbol("MediaGalleryInstanceFilesClient"),
     MediaGalleryInstanceFilesRoute: Symbol("MediaGalleryInstanceFilesRoute"),
+    MediaGalleryInstanceFileStreamClient: Symbol("MediaGalleryInstanceFileStreamClient"),
+    MediaGalleryInstanceFileStreamRoute: Symbol("MediaGalleryInstanceFileStreamRoute"),
     MediaGalleryFileBatchClient: Symbol("MediaGalleryFileBatchClient"),
     MediaGalleryFileBatchRoute: Symbol("MediaGalleryFileBatchRoute"),
     MediaGalleryFileClient: Symbol("MediaGalleryFileClient"),
-    MediaGalleryFileRoute: Symbol("MediaGalleryFileRoute")
+    MediaGalleryFileRoute: Symbol("MediaGalleryFileRoute"),
+    MediaGalleryFileStreamsClient: Symbol("MediaGalleryFileStreamsClient"),
+    MediaGalleryFileStreamsRoute: Symbol("MediaGalleryFileStreamsRoute")
 };
 
 export { TYPES };
@@ -51,6 +57,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<MediaGalleryFileBatchRoute>(TYPES.MediaGalleryFileBatchRoute).to(MediaGalleryFileBatchRoute);
     bind<MediaGalleryFileClient>(TYPES.MediaGalleryFileClient).to(MediaGalleryFileClient);
     bind<MediaGalleryFileRoute>(TYPES.MediaGalleryFileRoute).to(MediaGalleryFileRoute);
+    bind<MediaGalleryInstanceFileStreamClient>(TYPES.MediaGalleryInstanceFileStreamClient).to(MediaGalleryInstanceFileStreamClient);
+    bind<MediaGalleryInstanceFileStreamRoute>(TYPES.MediaGalleryInstanceFileStreamRoute).to(MediaGalleryInstanceFileStreamRoute);
 });
 
 export { diModule };
