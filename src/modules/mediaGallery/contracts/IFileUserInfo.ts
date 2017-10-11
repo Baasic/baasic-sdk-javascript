@@ -1,6 +1,6 @@
 import { IModel } from '../../../common/contracts';
 
-export interface IEmbedFileUserInfo extends IModel {
+export interface IFileUserInfo extends IModel {
     displayName?: string,
     id: string
 }

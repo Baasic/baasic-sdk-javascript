@@ -6,7 +6,15 @@ import {
     MediaGalleryBatchClient, 
     MediaGalleryBatchRoute,    
     MediaGallerySettingsClient, 
-    MediaGallerySettingsRoute
+    MediaGallerySettingsRoute,
+    MediaGalleryInstanceFilesBatchClient,
+    MediaGalleryInstanceFilesBatchRoute,
+    MediaGalleryInstanceFilesClient,
+    MediaGalleryInstanceFilesRoute,
+    MediaGalleryFileBatchClient,
+    MediaGalleryFileBatchRoute,
+    MediaGalleryFileClient,
+    MediaGalleryFileRoute
 } from './';
 
 const TYPES = {
@@ -15,7 +23,15 @@ const TYPES = {
     MediaGalleryBatchClient: Symbol("MediaGalleryBatchClient"),
     MediaGalleryBatchRoute: Symbol("MediaGalleryBatchRoute"),
     MediaGallerySettingsClient: Symbol("MediaGallerySettingsClient"),
-    MediaGallerySettingsRoute: Symbol("MediaGallerySettingsRoute")
+    MediaGallerySettingsRoute: Symbol("MediaGallerySettingsRoute"),
+    MediaGalleryInstanceFilesBatchClient: Symbol("MediaGalleryInstanceFilesBatchClient"),
+    MediaGalleryInstanceFilesBatchRoute: Symbol("MediaGalleryInstanceFilesBatchRoute"),
+    MediaGalleryInstanceFilesClient: Symbol("MediaGalleryInstanceFilesClient"),
+    MediaGalleryInstanceFilesRoute: Symbol("MediaGalleryInstanceFilesRoute"),
+    MediaGalleryFileBatchClient: Symbol("MediaGalleryFileBatchClient"),
+    MediaGalleryFileBatchRoute: Symbol("MediaGalleryFileBatchRoute"),
+    MediaGalleryFileClient: Symbol("MediaGalleryFileClient"),
+    MediaGalleryFileRoute: Symbol("MediaGalleryFileRoute")
 };
 
 export { TYPES };
@@ -27,5 +43,14 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<MediaGalleryBatchRoute>(TYPES.MediaGalleryBatchRoute).to(MediaGalleryBatchRoute);
     bind<MediaGallerySettingsClient>(TYPES.MediaGallerySettingsClient).to(MediaGallerySettingsClient);
     bind<MediaGallerySettingsRoute>(TYPES.MediaGallerySettingsRoute).to(MediaGallerySettingsRoute);
+    bind<MediaGalleryInstanceFilesBatchClient>(TYPES.MediaGalleryInstanceFilesBatchClient).to(MediaGalleryInstanceFilesBatchClient);
+    bind<MediaGalleryInstanceFilesBatchRoute>(TYPES.MediaGalleryInstanceFilesBatchRoute).to(MediaGalleryInstanceFilesBatchRoute);
+    bind<MediaGalleryInstanceFilesClient>(TYPES.MediaGalleryInstanceFilesClient).to(MediaGalleryInstanceFilesClient);
+    bind<MediaGalleryInstanceFilesRoute>(TYPES.MediaGalleryInstanceFilesRoute).to(MediaGalleryInstanceFilesRoute);    
+    bind<MediaGalleryFileBatchClient>(TYPES.MediaGalleryFileBatchClient).to(MediaGalleryFileBatchClient);
+    bind<MediaGalleryFileBatchRoute>(TYPES.MediaGalleryFileBatchRoute).to(MediaGalleryFileBatchRoute);
+    bind<MediaGalleryFileClient>(TYPES.MediaGalleryFileClient).to(MediaGalleryFileClient);
+    bind<MediaGalleryFileRoute>(TYPES.MediaGalleryFileRoute).to(MediaGalleryFileRoute);
 });
+
 export { diModule };

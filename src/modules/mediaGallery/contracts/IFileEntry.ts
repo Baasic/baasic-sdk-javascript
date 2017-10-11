@@ -1,8 +1,8 @@
 import { IModel } from '../../../common/contracts';
-import { IEmbedDerivedEntry, IEmbedFileUserInfo } from './';
+import { IDerivedEntry, IFileUserInfo } from './';
 
-export interface IEmbedFileEntry extends IModel {
-    derivedEntries?: IEmbedDerivedEntry[],
+export interface IFileEntry extends IModel {
+    derivedEntries?: IDerivedEntry[],
     description?: string,
     fileExtension?: string,
     fileName?: string,
@@ -10,7 +10,7 @@ export interface IEmbedFileEntry extends IModel {
     height?: number,
     json?: string, 
     metaData?: Object,
-    ownerUser?: IEmbedFileUserInfo,
+    ownerUser?: IFileUserInfo,
     ownerUserId?: string,
     path?: string,
     width?: number
