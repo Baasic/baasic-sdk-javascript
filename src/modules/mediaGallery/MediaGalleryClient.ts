@@ -11,7 +11,6 @@ import {
     MediaGalleryBatchClient,
     MediaGalleryRoute,
     MediaGallerySettingsClient,
-    MediaGalleryFileStreamsClient,
     TYPES as mediaGalleryTypes
 } from './';
 import { IMediaGallery, IMediaGalleryOptions } from './contracts';
@@ -23,10 +22,6 @@ export class MediaGalleryClient {
         return this.mediaGalleryRoute;
     }
 
-    get streams(): MediaGalleryFileStreamsClient {
-        return this.mediaGalleryStreamsClient;
-    }
-
     get batch(): MediaGalleryBatchClient {
         return this.mediaGalleryBatchClient;
     }
@@ -35,14 +30,9 @@ export class MediaGalleryClient {
         return this.mediaGallerySettingsClient;
     }
 
-    get processingProviderSettings(): MediaGalleryProcessingProviderSettingsClient {
-        return this.mediaGalleryProcessingProviderSettingsClient;
-    }
-
     constructor(
         @inject(mediaGalleryTypes.MediaGalleryRoute) protected mediaGalleryRoute: MediaGalleryRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
-        @inject(mediaGalleryTypes.MediaGalleryFileStreamsClient) protected mediaGalleryStreamsClient: MediaGalleryFileStreamsClient,
         @inject(mediaGalleryTypes.MediaGalleryBatchClient) protected mediaGalleryBatchClient: MediaGalleryBatchClient,
         @inject(mediaGalleryTypes.MediaGallerySettingsClient) protected mediaGallerySettingsClient: MediaGallerySettingsClient        
     ) { }

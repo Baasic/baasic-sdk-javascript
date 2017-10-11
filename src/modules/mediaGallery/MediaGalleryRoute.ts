@@ -9,7 +9,8 @@ import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import {    
     TYPES as mediaGalleryTypes,
-    MediaGalleryBatchRoute
+    MediaGalleryBatchRoute,
+    MediaGallerySettingsRoute
 } from './';
 import { IMediaGallery, IMediaGalleryOptions } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
@@ -29,9 +30,6 @@ export class MediaGalleryRoute extends BaseRoute {
 
     public readonly purgeRoute: string = 'media-galleries/purge';
     
-    get streams(): MediaGalleryStreamsRoute {
-        return this.mediaGalleryStreamsRoute;
-    }
 
     get batch(): MediaGalleryBatchRoute {
         return this.mediaGalleryBatchRoute;
@@ -41,16 +39,11 @@ export class MediaGalleryRoute extends BaseRoute {
         return this.mediaGallerySettingsRoute;
     }
 
-    get processingProviderSettings(): MediaGalleryProcessingProviderSettingsRoute {
-        return this.mediaGalleryProcessingProviderSettingsRoute;
-    }
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(mediaGalleryTypes.MediaGalleryStreamsRoute) protected mediaGalleryStreamsRoute: MediaGalleryStreamsRoute,
         @inject(mediaGalleryTypes.MediaGalleryBatchRoute) protected mediaGalleryBatchRoute: MediaGalleryBatchRoute,
-        @inject(mediaGalleryTypes.MediaGallerySettingsRoute) protected mediaGallerySettingsRoute: MediaGallerySettingsRoute,
-        @inject(mediaGalleryTypes.MediaGalleryProcessingProviderSettingsRoute) protected mediaGalleryProcessingProviderSettingsRoute: MediaGalleryProcessingProviderSettingsRoute
+        @inject(mediaGalleryTypes.MediaGallerySettingsRoute) protected mediaGallerySettingsRoute: MediaGallerySettingsRoute,        
     ) { super(appOptions); }
 
     /**                 

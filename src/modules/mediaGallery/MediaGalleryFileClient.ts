@@ -135,22 +135,6 @@ export class MediaGalleryFileClient {
     create(data: IMediaGalleryFile): PromiseLike<IHttpResponse<IMediaGalleryFile>> {
         return this.apiClient.post<IMediaGalleryFile>(this.routeDefinition.link(data), this.routeDefinition.createParams(data));
     }
-
-    /**                   
-     * Returns a promise that is resolved once the purge action has been performed. This action will remove all media gallery resources from the system if successfully completed.
-     * @method                     
-     * @example // Remove original media gallery resources		 
-                        mediaGalleryClient.purge()
-                            .then(function (data) {   
-                                // perform success action here 
-                            },
-                             function (response, status, headers, config) {   
-                                 // perform error handling here 
-                            });	 	                  
-     **/
-    purge(): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.purge());
-    }
 }
 
 /**  
