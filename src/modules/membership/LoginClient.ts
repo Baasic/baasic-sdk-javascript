@@ -106,17 +106,17 @@ export class LoginClient {
                 }) 
                 .finally (function () {});								
      */
-    logout(token: string, type: string): PromiseLike<void> {
+    logout(token: string, type: string): PromiseLike<any> {
         let data = {
             token: token,
             type: type
         };
         var self = this;
-        return this.apiClient.createPromise<void>((resolve, reject) => {
-            self.apiClient.delete<void>(self.loginRoute.login({}), null, data)
+        return this.apiClient.createPromise<any>((resolve, reject) => {
+            self.apiClient.delete<any>(self.loginRoute.login({}), null, data)
                 .then(function (result) {
                     self.tokenHandler.store(null);
-                    resolve();
+                    resolve(result);
                 }, (result) => {
                     reject(result);
                 });
