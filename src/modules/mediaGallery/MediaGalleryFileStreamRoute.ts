@@ -1,24 +1,24 @@
 /* globals module */
 /**  
- * @module MediaGalleryInstanceFilesStreamsRoute  
- * @description Baasic Media Gallery Instance Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @module MediaGalleryFilesStreamsRoute  
+ * @description Baasic Media Gallery  Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
-import { IMediaGalleryFile } from '../contracts';
+import { BaseRoute } from '../../common';
+import { IOptions } from '../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IMediaGalleryFile } from './contracts';
 
 @injectable()
-export class MediaGalleryInstanceFileStreamRoute extends BaseRoute {
+export class MediaGalleryFileStreamRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'media-galleries/{mediaGalleryId}/file-streams/{id}';
+    public readonly getRoute: string = 'media-gallery-file-streams/{id}';
 
-    public readonly createRoute: string = 'media-galleries/{mediaGalleryId}/file-streams/{filename}';
+    public readonly createRoute: string = 'media-gallery-file-streams/{filename}';
 
-    public readonly updateRoute: string = 'media-galleries/{mediaGalleryId}/file-streams/{id}';
+    public readonly updateRoute: string = 'media-gallery-file-streams/{id}';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
@@ -29,16 +29,16 @@ export class MediaGalleryInstanceFileStreamRoute extends BaseRoute {
      * @method
      * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery file need to be retrieved.
      * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.    
-     * @example mediaGalleryInstanceFileStreamRoute.get(id);
+     * @example mediaGalleryFileStreamRoute.get(id);
      **/
-    get(mediaGalleryId: string, data: any): any {
+    get(id: string, data: any): any {
         if (!this.utility.isObject(data)) {
             data = {
-                id: data
+                mediaGalleryId: data
             };
         }
         let params = this.utility.extend({}, data);
-        params.mediaGalleryId = mediaGalleryId;
+        params.id = id;
         return super.baseGet(this.getRoute, params);
     }
 
@@ -47,11 +47,11 @@ export class MediaGalleryInstanceFileStreamRoute extends BaseRoute {
      * @method
      * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery file need to be inserted.
      * @param data Media Gallery File object that need to be inserted into the system. 
-     * @example mediaGalleryInstanceFileStreamRoute.create({filename: '<filename>'});                                   
+     * @example mediaGalleryFileStreamRoute.create({filename: '<filename>'});                                   
      **/
-    create(mediaGalleryId: string, data: IMediaGalleryFile): any {
+    create(id: string, data: IMediaGalleryFile): any {
         let params = this.utility.extend({}, data);
-        params.mediaGalleryId = mediaGalleryId;
+        params.id = id;
         return super.baseCreate(this.createRoute, params);
     }
 
@@ -62,11 +62,11 @@ export class MediaGalleryInstanceFileStreamRoute extends BaseRoute {
      * @method
      * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery file need to be updated.
      * @param data Media Gallery File object used to identify stream that needs to be updated.                        
-     * @example mediaGalleryInstanceFileStreamRoute.update({id: '<filename>'});
+     * @example mediaGalleryFileStreamRoute.update({id: '<filename>'});
      **/
-    update(mediaGalleryId: string, data: IMediaGalleryFile): any {
+    update(id: string, data: IMediaGalleryFile): any {
         let params = this.utility.extend({}, data);
-        params.mediaGalleryId = mediaGalleryId;
+        params.id = id;
         return super.baseUpdate(this.updateRoute, data);
     }
 }

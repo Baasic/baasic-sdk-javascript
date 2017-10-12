@@ -11,8 +11,8 @@ import {
     MediaGalleryInstanceFilesBatchRoute,
     MediaGalleryInstanceFilesClient,
     MediaGalleryInstanceFilesRoute,
-    MediaGalleryInstanceFileStreamClient,
-    MediaGalleryInstanceFileStreamRoute,
+    MediaGalleryFileStreamClient,
+    MediaGalleryFileStreamRoute,
     MediaGalleryFileBatchClient,
     MediaGalleryFileBatchRoute,
     MediaGalleryFileClient,
@@ -30,8 +30,8 @@ const TYPES = {
     MediaGalleryInstanceFilesBatchRoute: Symbol("MediaGalleryInstanceFilesBatchRoute"),
     MediaGalleryInstanceFilesClient: Symbol("MediaGalleryInstanceFilesClient"),
     MediaGalleryInstanceFilesRoute: Symbol("MediaGalleryInstanceFilesRoute"),
-    MediaGalleryInstanceFileStreamClient: Symbol("MediaGalleryInstanceFileStreamClient"),
-    MediaGalleryInstanceFileStreamRoute: Symbol("MediaGalleryInstanceFileStreamRoute"),
+    MediaGalleryFileStreamClient: Symbol("MediaGalleryFileStreamClient"),
+    MediaGalleryFileStreamRoute: Symbol("MediaGalleryFileStreamRoute"),
     MediaGalleryFileBatchClient: Symbol("MediaGalleryFileBatchClient"),
     MediaGalleryFileBatchRoute: Symbol("MediaGalleryFileBatchRoute"),
     MediaGalleryFileClient: Symbol("MediaGalleryFileClient"),
@@ -57,8 +57,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<MediaGalleryFileBatchRoute>(TYPES.MediaGalleryFileBatchRoute).to(MediaGalleryFileBatchRoute);
     bind<MediaGalleryFileClient>(TYPES.MediaGalleryFileClient).to(MediaGalleryFileClient);
     bind<MediaGalleryFileRoute>(TYPES.MediaGalleryFileRoute).to(MediaGalleryFileRoute);
-    bind<MediaGalleryInstanceFileStreamClient>(TYPES.MediaGalleryInstanceFileStreamClient).to(MediaGalleryInstanceFileStreamClient);
-    bind<MediaGalleryInstanceFileStreamRoute>(TYPES.MediaGalleryInstanceFileStreamRoute).to(MediaGalleryInstanceFileStreamRoute);
+    bind<MediaGalleryFileStreamClient>(TYPES.MediaGalleryFileStreamClient).to(MediaGalleryFileStreamClient);
+    bind<MediaGalleryFileStreamRoute>(TYPES.MediaGalleryFileStreamRoute).to(MediaGalleryFileStreamRoute);
 });
 
 export { diModule };

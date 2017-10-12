@@ -1,24 +1,24 @@
 /* globals module */
 /**  
- * @module mediaGalleryInstanceFilesStreamsClient  
- * @description  Media GalleryInstance Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
+ * @module mediaGalleryFilesStreamsClient  
+ * @description  Media Gallery Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services. 
 */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
-import { MediaGalleryInstanceFileStreamRoute, TYPES as mediaGalleryTypes } from '../';
-import { IMediaGalleryFile } from '../contracts';
+import { IQueryModel, IOptions } from '../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { MediaGalleryFileStreamRoute, TYPES as mediaGalleryTypes } from './';
+import { IMediaGalleryFile } from './contracts';
 
 @injectable()
-export class MediaGalleryInstanceFileStreamClient {
+export class MediaGalleryFileStreamClient {
 
-    get routeDefinition(): MediaGalleryInstanceFileStreamRoute {
-        return this.mediaGalleryInstanceFilesStreamsRoute;
+    get routeDefinition(): MediaGalleryFileStreamRoute {
+        return this.mediaGalleryFilesStreamsRoute;
     }
 
     constructor(
-        @inject(mediaGalleryTypes.MediaGalleryInstanceFileStreamRoute) protected mediaGalleryInstanceFilesStreamsRoute: MediaGalleryInstanceFileStreamRoute,
+        @inject(mediaGalleryTypes.MediaGalleryFileStreamRoute) protected mediaGalleryFilesStreamsRoute: MediaGalleryFileStreamRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -29,7 +29,7 @@ export class MediaGalleryInstanceFileStreamClient {
      * @param data Media GalleryFile object used to identify stream that needs to be retrieved from the system.                             
      * @returns A promise that is resolved once the get action has been performed. 
      * @example // Request the original file stream              
-                    mediaGalleryInstanceFilesStreamsClient.get({id: '<file-id>'})
+                    mediaGalleryFilesStreamsClient.get({id: '<file-id>'})
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -38,7 +38,7 @@ export class MediaGalleryInstanceFileStreamClient {
                         });                    
      **/
     get(mediaGalleryId: string, data: IMediaGalleryFile): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.mediaGalleryInstanceFilesStreamsRoute.get(mediaGalleryId, data));
+        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(mediaGalleryId, data));
     }
 
     /**                     
@@ -48,7 +48,7 @@ export class MediaGalleryInstanceFileStreamClient {
      * @param data Media GalleryFile object used to identify stream that needs to be retrieved from the system.    
      * @returns A promise that is resolved once the get action has been performed.                            
      * @example // Request the original blob                
-                    mediaGalleryInstanceFilesStreamsClient.getBlob('<file-id>')
+                    mediaGalleryFilesStreamsClient.getBlob('<file-id>')
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -57,7 +57,7 @@ export class MediaGalleryInstanceFileStreamClient {
                         });                   
      **/
     getBlob(mediaGalleryId: string, data: IMediaGalleryFile): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.mediaGalleryInstanceFilesStreamsRoute.get(mediaGalleryId, data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(mediaGalleryId, data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -68,7 +68,7 @@ export class MediaGalleryInstanceFileStreamClient {
      * @param stream                     
      * @returns A promise that is resolved once the update file stream action has been performed.
      * @example // Update original file stream 
-                    mediaGalleryInstanceFilesStreamsClient.update('<file-id>', <file-stream>)
+                    mediaGalleryFilesStreamsClient.update('<file-id>', <file-stream>)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -79,7 +79,7 @@ export class MediaGalleryInstanceFileStreamClient {
     update(mediaGalleryId: string, data: IMediaGalleryFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.mediaGalleryInstanceFilesStreamsRoute.update(mediaGalleryId, data), formData, { 'Content-Type': undefined });
+        return this.apiClient.put(this.mediaGalleryFilesStreamsRoute.update(mediaGalleryId, data), formData, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -89,7 +89,7 @@ export class MediaGalleryInstanceFileStreamClient {
      * @param data Media GalleryFile object that need to be inserted into the system.
      * @param stream
      * @returns A promise that is resolved once the create file stream action has been performed.                      
-     * @example mediaGalleryInstanceFilesStreamsClient.create('<file-id>', <blob>)
+     * @example mediaGalleryFilesStreamsClient.create('<file-id>', <blob>)
                    .then(function (data) {  
                         // perform success action here 
                    },
@@ -100,7 +100,7 @@ export class MediaGalleryInstanceFileStreamClient {
     create(mediaGalleryId: string, data: IMediaGalleryFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.mediaGalleryInstanceFilesStreamsRoute.create(mediaGalleryId, data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.mediaGalleryFilesStreamsRoute.create(mediaGalleryId, data), formData, { 'Content-Type': undefined });
     }
 }
 

@@ -9,5 +9,7 @@ export * from './MediaGalleryFileRoute';
 export * from './MediaGalleryFileClient';
 export * from './MediaGalleryFileBatchRoute';
 export * from './MediaGalleryFileBatchClient';
+export * from './MediaGalleryFileStreamRoute';
+export * from './MediaGalleryFileStreamClient';
 export * from './contracts';
 export * from './mediaGalleryFiles';
