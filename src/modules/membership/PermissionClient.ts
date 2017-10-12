@@ -287,26 +287,28 @@ export class PermissionClient {
         var user = userContainer.user;
         var hasPermission = false;
 
-        if (user.permissions) {
-            var tokens = authorization.split('.');
-            if (tokens.length > 0) {
-                var section = tokens[0];
-
-                var sectionPermissions = user.permissions[section];
-                if (sectionPermissions) {
-                    if (tokens.length > 1) {
-                        var action = tokens[1].toLowerCase();
-                        for (var i = 0; i < sectionPermissions.length; i++) {
-                            if (sectionPermissions[i].toLowerCase() === action) {
-                                hasPermission = true;
-                                break;
+        if (user) {
+            if (user.permissions) {
+                var tokens = authorization.split('.');
+                if (tokens.length > 0) {
+                    var section = tokens[0];
+    
+                    var sectionPermissions = user.permissions[section];
+                    if (sectionPermissions) {
+                        if (tokens.length > 1) {
+                            var action = tokens[1].toLowerCase();
+                            for (var i = 0; i < sectionPermissions.length; i++) {
+                                if (sectionPermissions[i].toLowerCase() === action) {
+                                    hasPermission = true;
+                                    break;
+                                }
                             }
+                        } else {
+                            hasPermission = true;
                         }
-                    } else {
-                        hasPermission = true;
                     }
                 }
-            }
+            }    
         }
 
         this.permissionHash[apiKey][authorization] = hasPermission;
