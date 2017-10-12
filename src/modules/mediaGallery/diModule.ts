@@ -16,7 +16,8 @@ import {
     MediaGalleryFileBatchClient,
     MediaGalleryFileBatchRoute,
     MediaGalleryFileClient,
-    MediaGalleryFileRoute
+    MediaGalleryFileRoute,
+    Root
 } from './';
 
 const TYPES = {
@@ -37,7 +38,8 @@ const TYPES = {
     MediaGalleryFileClient: Symbol("MediaGalleryFileClient"),
     MediaGalleryFileRoute: Symbol("MediaGalleryFileRoute"),
     MediaGalleryFileStreamsClient: Symbol("MediaGalleryFileStreamsClient"),
-    MediaGalleryFileStreamsRoute: Symbol("MediaGalleryFileStreamsRoute")
+    MediaGalleryFileStreamsRoute: Symbol("MediaGalleryFileStreamsRoute"),
+    Root: Symbol("Root")
 };
 
 export { TYPES };
@@ -59,6 +61,7 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<MediaGalleryFileRoute>(TYPES.MediaGalleryFileRoute).to(MediaGalleryFileRoute);
     bind<MediaGalleryFileStreamClient>(TYPES.MediaGalleryFileStreamClient).to(MediaGalleryFileStreamClient);
     bind<MediaGalleryFileStreamRoute>(TYPES.MediaGalleryFileStreamRoute).to(MediaGalleryFileStreamRoute);
+    bind<Root>(TYPES.Root).to(Root);
 });
 
 export { diModule };

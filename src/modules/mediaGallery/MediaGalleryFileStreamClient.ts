@@ -25,7 +25,7 @@ export class MediaGalleryFileStreamClient {
     /**                     
      * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.                     
      * @method
-     * @param mediaGalleryId Media Galleryslug or id which uniquely identifies media gallery whose media gallery file need to be retrieved.
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery file need to be retrieved.
      * @param data Media GalleryFile object used to identify stream that needs to be retrieved from the system.                             
      * @returns A promise that is resolved once the get action has been performed. 
      * @example // Request the original file stream              
@@ -37,8 +37,8 @@ export class MediaGalleryFileStreamClient {
                             // perform error handling here 
                         });                    
      **/
-    get(mediaGalleryId: string, data: IMediaGalleryFile): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(mediaGalleryId, data));
+    get(id: string, data: IMediaGalleryFile): PromiseLike<IHttpResponse<any>> {
+        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(id, data));
     }
 
     /**                     
@@ -56,8 +56,8 @@ export class MediaGalleryFileStreamClient {
                             // perform error handling here 
                         });                   
      **/
-    getBlob(mediaGalleryId: string, data: IMediaGalleryFile): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(mediaGalleryId, data), { 'Accept': 'application/octet-stream' });
+    getBlob(id: string, data: IMediaGalleryFile): PromiseLike<IHttpResponse<any>> {
+        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(id, data), { 'Accept': 'application/octet-stream' });
     }
 
     /**                      
@@ -76,10 +76,10 @@ export class MediaGalleryFileStreamClient {
                             // perform error handling here 
                         });                    
      **/
-    update(mediaGalleryId: string, data: IMediaGalleryFile, stream: any): PromiseLike<IHttpResponse<any>> {
+    update(id: string, data: IMediaGalleryFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.mediaGalleryFilesStreamsRoute.update(mediaGalleryId, data), formData, { 'Content-Type': undefined });
+        return this.apiClient.put(this.mediaGalleryFilesStreamsRoute.update(id, data), formData, { 'Content-Type': undefined });
     }
 
     /**                      
@@ -97,10 +97,10 @@ export class MediaGalleryFileStreamClient {
                        // perform error handling here 
                    });                     
     **/
-    create(mediaGalleryId: string, data: IMediaGalleryFile, stream: any): PromiseLike<IHttpResponse<any>> {
+    create(id: string, data: IMediaGalleryFile, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.mediaGalleryFilesStreamsRoute.create(mediaGalleryId, data), formData, { 'Content-Type': undefined });
+        return this.apiClient.post(this.mediaGalleryFilesStreamsRoute.create(id, data), formData, { 'Content-Type': undefined });
     }
 }
 

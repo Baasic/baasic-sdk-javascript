@@ -25,21 +25,13 @@ export class MediaGalleryInstanceFilesBatchClient {
     ) { }
 
     /**                   
-     * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system.                   
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system.                   
      * @method
      * @param mediaGalleryId Media Gallery file id of the original media gallery file used to identify media gallery files on which delete action should be performed.
      * @param data Collection of media gallery delete requests which uniquely identifies media gallery files that need to be deleted.
      * @returns A promise that is resolved once the unlink action has been performed.                           
      * @example // Remove original file resources                
                    mediaGalleryInstanceFilesBatchClient.unlink([{ id: '<file-id>' }])
-                       .then(function (data) {   
-                           // perform success action here 
-                       },
-                        function (response, status, headers, config) {   
-                           // perform error handling here 
-                       });		
-               // Remove derived file resources  
-                   mediaGalleryInstanceFilesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
                        .then(function (data) {   
                            // perform success action here 
                        },

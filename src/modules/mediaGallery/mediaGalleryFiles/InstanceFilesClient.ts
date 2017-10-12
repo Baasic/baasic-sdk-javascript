@@ -88,8 +88,8 @@ export class MediaGalleryInstanceFilesClient {
      * @param data
      * @param options
      * @returns A promise that is resolved once the unlink action has been performed.                         
-     * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.			 
-                    mediaGalleryInstanceFilesRoute.remove(fileEntry)
+     * @example // fileEntry is a file resource previously fetched using get action. The following action will unlink the original file resource and all accompanying derived file resources.			 
+                    mediaGalleryInstanceFilesRoute.unlink(fileEntry)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -121,8 +121,8 @@ export class MediaGalleryInstanceFilesClient {
                              // perform error handling here 
                         });                     
      **/
-    unlinkByMediaGallery(mediaGalleryId: string, data: IMediaGalleryFile, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.mediaGalleryInstanceFilesRoute.unlink(mediaGalleryId, data, options));
+    unlinkByMediaGallery(mediaGalleryId: string,  options: Object): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.mediaGalleryInstanceFilesRoute.unlinkByMediaGallery(mediaGalleryId, options));
     }
 
     /**                  
@@ -152,7 +152,7 @@ export class MediaGalleryInstanceFilesClient {
     /** 
      * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the Media GalleryFiles module (For example: file resources from the Media Vault module can be linked directly into the Media GalleryFiles module).                  
      * @method
-     * @param mediaGalleryId Media Galleryslug or id which uniquely identifies media gallery whose media gallery files need to be linked.
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery files need to be linked.
      * @param data A media gallery file object that need to be inserted into the system.
      * @returns A promise that is resolved once the link action has been performed.                        
      * @example mediaGalleryInstanceFilesClient.link(fileObject)

@@ -13,3 +13,4 @@ export * from './MediaGalleryFileStreamRoute';
 export * from './MediaGalleryFileStreamClient';
 export * from './contracts';
 export * from './mediaGalleryFiles';
+export * from './root';
