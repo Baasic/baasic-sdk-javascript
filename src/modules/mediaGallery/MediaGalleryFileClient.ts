@@ -95,7 +95,7 @@ export class MediaGalleryFileClient {
                         }); 				
      **/
     update(data: IMediaGalleryFile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.updateParams(data), this.routeDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**                  

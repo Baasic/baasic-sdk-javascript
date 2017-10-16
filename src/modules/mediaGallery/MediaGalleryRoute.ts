@@ -88,11 +88,11 @@ export class MediaGalleryRoute extends BaseRoute {
     /**                 
      * Parses delete route; this route should be expanded with the Id of media gallery resource.                 
      * @method 
-     * @param id Media gallery object id used to delete specific Media gallery resource in the system. 
-     * @example mediaGalleryRoute.delete({id: '<media-gallery-id>'});                               
+     * @param data Media gallery object of specific Media gallery resource in the system. 
+     * @example mediaGalleryRoute.delete(<media-gallery>);                               
      **/
-    delete(id: string): any {
-        return super.baseDelete(this.deleteRoute, id);
+    delete(data: IMediaGallery): any {
+        return super.baseDelete(this.deleteRoute, data);
     }
 
      /**

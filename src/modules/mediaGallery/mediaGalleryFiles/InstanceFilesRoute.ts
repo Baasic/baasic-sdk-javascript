@@ -82,7 +82,7 @@ export class MediaGalleryInstanceFilesRoute extends BaseRoute {
     link(mediaGalleryId: string, data: IMediaGalleryFile): any {
         let params = this.utility.extend({}, data);
         params.mediaGalleryId = mediaGalleryId;
-        return super.baseCreate(this.linkRoute, {});
+        return super.baseCreate(this.linkRoute, params);
     }
 
     /**
