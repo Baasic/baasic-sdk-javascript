@@ -14,9 +14,9 @@ import { IMediaGalleryFile } from './contracts';
 @injectable()
 export class MediaGalleryFileStreamRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'media-gallery-file-streams/{id}';
+    public readonly getRoute: string = 'media-gallery-file-streams/{id}/{?mediaGalleryId}';
 
-    public readonly createRoute: string = 'media-gallery-file-streams/{filename}';
+    public readonly createRoute: string = 'media-gallery-file-streams/{filename}/{?mediaGalleryId}';
 
     public readonly updateRoute: string = 'media-gallery-file-streams/{id}';
 
@@ -27,7 +27,7 @@ export class MediaGalleryFileStreamRoute extends BaseRoute {
     /**                     
      * Parses get route; this route should be expanded with id of desired file stream. 
      * @method
-     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery file need to be retrieved.
+     * @param id Media Gallery File id which uniquely identifies media gallery whose media gallery file need to be retrieved.
      * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.    
      * @example mediaGalleryFileStreamRoute.get(id);
      **/
@@ -45,14 +45,11 @@ export class MediaGalleryFileStreamRoute extends BaseRoute {
     /**                     
      * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.                     
      * @method
-     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery file need to be inserted.
      * @param data Media Gallery File object that need to be inserted into the system. 
      * @example mediaGalleryFileStreamRoute.create({filename: '<filename>'});                                   
      **/
-    create(id: string, data: IMediaGalleryFile): any {
-        let params = this.utility.extend({}, data);
-        params.id = id;
-        return super.baseCreate(this.createRoute, params);
+    create(data: IMediaGalleryFile): any {
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                     
@@ -64,9 +61,7 @@ export class MediaGalleryFileStreamRoute extends BaseRoute {
      * @param data Media Gallery File object used to identify stream that needs to be updated.                        
      * @example mediaGalleryFileStreamRoute.update({id: '<filename>'});
      **/
-    update(id: string, data: IMediaGalleryFile): any {
-        let params = this.utility.extend({}, data);
-        params.id = id;
+    update(data: IMediaGalleryFile): any {      
         return super.baseUpdate(this.updateRoute, data);
     }
 }

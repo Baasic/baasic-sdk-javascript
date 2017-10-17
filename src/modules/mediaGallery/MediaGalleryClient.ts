@@ -129,7 +129,7 @@ export class MediaGalleryClient {
                             // perform error handling here 
                        });                						
     **/
-    remove(id: string): PromiseLike<IHttpResponse<void>> {
+    remove(id: IMediaGallery): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(id));
     }
 
