@@ -111,7 +111,7 @@ export class FilesStreamsClient {
     create(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { 'Content-Type': 'multipart/form-data' });
+        return this.apiClient.post(this.filesStreamsRoute.create(data), formData);
     }
 }
 
