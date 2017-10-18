@@ -4832,9 +4832,6 @@ var ApiClient = ApiClient_1 = (function () {
             /*jshint camelcase: false */
             headers["AUTHORIZATION"] = "BEARER " + authToken.token;
         }
-        if (request.data && !this.headerExists(headers, 'Content-Type')) {
-            headers['Content-Type'] = 'application/json; charset=UTF-8';
-        }
         if (this.appOptions.enableHALJSON) {
             if (!this.headerExists(headers, 'Accept')) {
                 headers["Accept"] = 'application/hal+json; charset=UTF-8';
@@ -18960,7 +18957,7 @@ var FilesStreamsClient = (function () {
     FilesStreamsClient.prototype.update = function (data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.filesStreamsRoute.update(data), data, { 'Content-Type': 'multipart/form-data' });
+        return this.apiClient.put(this.filesStreamsRoute.update(data), data, { 'Content-Type': undefined });
     };
     /**
      * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
@@ -18975,8 +18972,8 @@ var FilesStreamsClient = (function () {
     **/
     FilesStreamsClient.prototype.create = function (data, stream) {
         var formData = new FormData();
-        formData.append('file', stream);
-        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { 'Content-Type': 'multipart/form-data' });
+        formData.append('file', stream, stream.name);
+        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, {});
     };
     return FilesStreamsClient;
 }());

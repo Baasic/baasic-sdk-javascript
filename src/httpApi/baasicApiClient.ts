@@ -39,10 +39,6 @@ export class ApiClient {
             headers["AUTHORIZATION"] = `BEARER ${authToken.token}`;
         }
 
-        if (request.data && !this.headerExists(headers, 'Content-Type')) {
-            headers['Content-Type'] = 'application/json; charset=UTF-8';
-        }
-
         if (this.appOptions.enableHALJSON) {
             if (!this.headerExists(headers, 'Accept')) {
                 headers["Accept"] = 'application/hal+json; charset=UTF-8';
