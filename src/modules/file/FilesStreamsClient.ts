@@ -94,7 +94,7 @@ export class FilesStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.filesStreamsRoute.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.filesStreamsRoute.update(data), data, { });
     }
 
     /**                      
@@ -110,7 +110,7 @@ export class FilesStreamsClient {
     **/
     create(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
-        formData.append('file', stream, stream.name);
+        formData.append('file', stream);
         return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { });
     }
 }
