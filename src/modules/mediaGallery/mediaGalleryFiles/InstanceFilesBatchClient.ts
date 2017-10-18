@@ -49,7 +49,7 @@ export class MediaGalleryInstanceFilesBatchClient {
      * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery file need to be updated.
      * @param data Media Gallery file object that need to be updated in the system.
      * @returns A promise that is resolved once the update action has been performed.                         
-     * @example mediaGalleryInstanceFilesBatchClient.update(files)
+     * @example mediaGalleryInstanceFilesBatchClient.update('<media-gallery-id>', files)
                     .then(function (data) {   
                         // perform success action here 
                     },
