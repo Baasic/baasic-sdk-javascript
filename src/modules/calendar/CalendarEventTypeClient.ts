@@ -1,0 +1,146 @@
+/* globals module */
+/**
+ * @module calendarEventTypeClient
+ * @description  Calendar Event Type Client provides an easy way to consume Calendar Event Type REST API end-points. In order to obtain needed routes `calendarEventTypeClient` uses `calendarEventTypeRoute`. 
+ */
+
+import { injectable, inject } from "inversify";
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import {
+    TYPES as calendarTypes,
+    CalendarEventTypeRoute
+} from './';
+import { ICalendarEventType } from './contracts';
+
+@injectable()
+export class CalendarEventTypeClient {
+
+    get routeDefinition(): CalendarEventTypeRoute {
+        return this.calendarEventTypeRoute;
+    }
+
+    constructor(
+        @inject(calendarTypes.CalendarEventTypeRoute) protected calendarEventTypeRoute: CalendarEventTypeRoute,
+        @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
+    ) { }
+
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of Calendar Event Type resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example calendarEventTypeClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>',
+                    ids : <identifiers>,
+                    from : <start-date>,
+                    to : <end-date>
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventType>>> {
+        return this.apiClient.get<IQueryModel<ICalendarEventType>>(this.routeDefinition.find(options));
+    }
+
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the Calendar Event Type resource.
+     * @method
+     * @param id Calendar Event Type id which uniquely identifies Calendar Event Type resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example calendarEventTypeClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventType>> {
+        return this.apiClient.get<ICalendarEventType>(this.routeDefinition.get(id, options));
+    }
+
+    /**
+     * Returns a promise that is resolved once the create Calendar Event Type action has been performed; this action creates a new Calendar Event Type resource.
+     * @method
+     * @param data A Calendar Event Type object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create Calendar Event Type action has been performed.
+     * @example calendarEventTypeClient.create({
+                    abrv : '<abrv>',
+                    json : '<json>',
+                    name: '<name>'
+                }.then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    create(data: ICalendarEventType): PromiseLike<IHttpResponse<ICalendarEventType>> {
+        return this.apiClient.post<ICalendarEventType>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    }
+
+    /**
+     * Returns a promise that is resolved once the update Calendar Event Type action has been performed; this action updates a Calendar Event Type resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(calendarEventType);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A Calendar Event Type object used to update specified Calendar Event Type resource.
+     * @returns A promise that is resolved once the update Calendar Event Type action has been performed.
+     * @example calendarEventType is a resource previously fetched using get action.
+                       calendarEventType.name = '<name>';
+                       calendarEventTypeClient.update(calendarEventType)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    update(data: ICalendarEventType): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    }
+
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a Calendar Event Type resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(calendarEventType);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An calendarEventType object used to delete specified Calendar Event Type resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example calendarEventType is a resource previously fetched using get action.
+                    calendarEventTypeClient.remove(calendarEventType)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    remove(data: ICalendarEventType): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
+    }
+}
+
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */
