@@ -12,8 +12,38 @@ import { ICalendarEventStatus } from './contracts';
 
 export class CalendarEventStatusBatchRoute extends BaseRoute {
 
+    public readonly createRoute: string = 'calendar-lookups/statuses/batch';
+    public readonly updateRoute: string = 'calendar-lookups/statuses/batch';
+    public readonly deleteRoute: string = 'calendar-lookups/statuses/batch';
+
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example calendarEventStatusBatchRoute.create();
+     **/
+    create(): any {
+        return super.baseCreate(this.createRoute, {});
+    }
+
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example calendarEventStatusBatchRoute.update();
+     **/
+    update(): any {
+        return super.baseUpdate(this.updateRoute, {});
+    }
+
+    /**
+     * Parses delte route; this URI template does not expose any additional options.
+     * @method
+     * @example calendarEventStatusBatchRoute.delete();
+     **/
+    delete(): any {
+        return super.baseDelete(this.deleteRoute, {});
+    }
 }
 
 /**  
