@@ -66,7 +66,7 @@ export class CalendarEventStatusBatchClient {
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will remove CalendarEventStatus resources from the system if successfully completed.
      * @method
-     * @param data CalendarEventStatusIds which uniquely identify CalendarEventStatus resources to be deleted.
+     * @param data CalendarEventStatus Ids which uniquely identify CalendarEventStatus resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventStatusIds are identifiers which uniquely identify CalendarEventStatus resources.
                     calendarEventStatusBatchClient.remove(calendarEventStatusIds)

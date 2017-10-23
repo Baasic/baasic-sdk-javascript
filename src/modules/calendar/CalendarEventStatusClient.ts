@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarEventStatusRoute
 } from './';
-import { ICalendarEventStatus } from './contracts';
+import { ICalendarEventStatus, IGetCalendarLookupOptions } from './contracts';
 
 @injectable()
 export class CalendarEventStatusClient {
@@ -29,7 +29,7 @@ export class CalendarEventStatusClient {
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEventStatus resources matching the given criteria.
      * @method
-     * @param options Query resource options object.
+     * @param options Query resource GetCalendarLookupOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarEventStatusClient.find({
                     pageNumber : 1,
@@ -48,7 +48,7 @@ export class CalendarEventStatusClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventStatus>>> {
+    find(options?: IGetCalendarLookupOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventStatus>>> {
         return this.apiClient.get<IQueryModel<ICalendarEventStatus>>(this.routeDefinition.find(options));
     }
 

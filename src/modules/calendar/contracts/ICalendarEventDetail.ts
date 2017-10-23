@@ -2,7 +2,7 @@ import { IModel } from '../../../common/contracts';
 
 import { IUserInfo } from './';
 
-export interface IEventDetail extends IModel {
+export interface ICalendarEventDetail extends IModel {
     ContactAddress?: string;
     ContactCity?: string;
     ContactCountry?: string;

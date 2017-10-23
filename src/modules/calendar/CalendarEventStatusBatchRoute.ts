@@ -1,7 +1,7 @@
 /* globals module */
 /**
  * @module calendarEventStatusBatchRoute
- * @description BaasicEventStatusBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicEvantStatusBatchRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ * @description BaasicCalendarEventStatusBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEvantStatusBatchRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 
 import { injectable, inject } from "inversify";

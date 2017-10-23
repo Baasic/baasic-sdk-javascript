@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarEventTypeRoute
 } from './';
-import { ICalendarEventType } from './contracts';
+import { ICalendarEventType, IGetCalendarLookupOptions } from './contracts';
 
 @injectable()
 export class CalendarEventTypeClient {
@@ -28,7 +28,7 @@ export class CalendarEventTypeClient {
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEventType resources matching the given criteria.
      * @method
-     * @param options Query resource options object.
+     * @param options Query resource GetCalendarLookupOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarEventTypeClient.find({
                     pageNumber : 1,
@@ -47,7 +47,7 @@ export class CalendarEventTypeClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventType>>> {
+    find(options?: IGetCalendarLookupOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventType>>> {
         return this.apiClient.get<IQueryModel<ICalendarEventType>>(this.routeDefinition.find(options));
     }
 
@@ -75,8 +75,8 @@ export class CalendarEventTypeClient {
      * @param data A CalendarEventType object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEventType action has been performed.
      * @example calendarEventTypeClient.create({
-                    abrv : '<abrv>',
-                    json : '<json>',
+                    abrv: '<abrv>',
+                    json: '<json>',
                     name: '<name>'
                 }.then(function (data) {
                     // perform success action here
@@ -96,7 +96,7 @@ export class CalendarEventTypeClient {
      * let uri = params['model'].links('put').href;
      * ```
      * @method
-     * @param data A Calendar Event Type object used to update specified CalendarEventType resource.
+     * @param data A CalendarEventType object used to update specified CalendarEventType resource.
      * @returns A promise that is resolved once the update CalendarEventType action has been performed.
      * @example calendarEventType is a resource previously fetched using get action.
                     calendarEventType.name = '<name>';

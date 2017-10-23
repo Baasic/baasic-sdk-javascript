@@ -31,8 +31,8 @@ export class CalendarEventTypeBatchClient {
      * @param data CalendarEventType objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEventTypes action has been performed.
      * @example calendarEventTypeBatchClient.create([{
-                    abrv : '<abrv>',
-                    json : '<json>',
+                    abrv: '<abrv>',
+                    json: '<json>',
                     name: '<name>'
                 }]).then(function (data) {
                     // perform success action here
@@ -66,7 +66,7 @@ export class CalendarEventTypeBatchClient {
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will remove CalendarEventType resources from the system if successfully completed.
      * @method
-     * @param data CalendarEventTypeIds which uniquely identify CalendarEventType resources to be deleted.
+     * @param data CalendarEventType Ids which uniquely identify CalendarEventType resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventTypeIds are identifiers which uniquely identify CalendarEventType resources.
                     calendarEventTypeBatchClient.remove(calendarEventTypeIds)
