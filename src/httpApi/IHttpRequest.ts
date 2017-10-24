@@ -5,4 +5,5 @@ export interface IHttpRequest {
     url: string,
     method: string
     data?: any;
+    responseType?: string
 }
