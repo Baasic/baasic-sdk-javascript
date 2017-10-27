@@ -26,14 +26,23 @@ export class CalendarEventBatchClient {
     ) { }
 
     /**
-     * Returns a promise that is resolved once the create CalendarEvents action has been performed; this action creates new CalendarEvent resources.
+     * Returns a promise that is resolved once the create CalendarEvents action has been performed. This action creates new CalendarEvent resources.
      * @method
      * @param data CalendarEvent objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEvents action has been performed.
      * @example calendarEventBatchClient.create([{
-                    abrv : '<abrv>',
-                    json : '<json>',
-                    name: '<name>'
+                    author: <user-info>,
+                    authorId: '<author-id>',
+                    calendar: <calendar>,
+                    calendarId: '<calendar-id>',
+                    description: '<description>',
+                    detail: <calendar-event-detail>,
+                    endTime: '<end-time>',
+                    isAllDay: <true|false>,
+                    isRecurring: <true|false>,
+                    json: '<json>',
+                    startTime: '<start-time>',
+                    title: '<title'>
                 }]).then(function (data) {
                     // perform success action here
                 },

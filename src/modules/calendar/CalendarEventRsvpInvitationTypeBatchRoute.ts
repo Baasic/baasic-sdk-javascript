@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
-import { ICalendarEventRSVPInvitationType } from './contracts';
+import { ICalendarEventRSVPAttendeeInvitationType } from './contracts';
 
 export class CalendarEventRsvpInvitationTypeBatchRoute extends BaseRoute {
 
@@ -19,7 +19,7 @@ export class CalendarEventRsvpInvitationTypeBatchRoute extends BaseRoute {
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
-     * Parses create route; this URI template does not expose any additional options.
+     * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeBatchRoute.create();
      **/
@@ -28,7 +28,7 @@ export class CalendarEventRsvpInvitationTypeBatchRoute extends BaseRoute {
     }
 
     /**
-     * Parses update route; this URI template does not expose any additional options.
+     * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeBatchRoute.update();
      **/
@@ -37,7 +37,7 @@ export class CalendarEventRsvpInvitationTypeBatchRoute extends BaseRoute {
     }
 
     /**
-     * Parses delte route; this URI template does not expose any additional options.
+     * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeBatchRoute.delete();
      **/

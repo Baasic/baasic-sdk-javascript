@@ -26,13 +26,13 @@ export class CalendarEventStatusBatchClient {
     ) { }
 
     /**
-     * Returns a promise that is resolved once the create CalendarEventStatuses action has been performed; this action creates new CalendarEventStatus resources.
+     * Returns a promise that is resolved once the create CalendarEventStatuses action has been performed. This action creates new CalendarEventStatus resources.
      * @method
      * @param data CalendarEventStatus objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEventStatuses action has been performed.
      * @example calendarEventStatusBatchClient.create([{
-                    abrv : '<abrv>',
-                    json : '<json>',
+                    abrv: '<abrv>',
+                    json: '<json>',
                     name: '<name>'
                 }]).then(function (data) {
                     // perform success action here
@@ -46,7 +46,7 @@ export class CalendarEventStatusBatchClient {
     }
 
     /**
-     * Returns a promise that is resolved once the update CalendarEventStatuses action has been performed; this action updates CalendarEventStatuse resources. 
+     * Returns a promise that is resolved once the update CalendarEventStatuses action has been performed. This action updates CalendarEventStatuse resources. 
      * @method
      * @param data CalendarEventStatus objects used to update specified CalendarEventStatus resources.
      * @returns A promise that is resolved once the update CalendarEventStatuses action has been performed.

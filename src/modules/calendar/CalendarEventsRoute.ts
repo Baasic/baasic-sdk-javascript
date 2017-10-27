@@ -1,7 +1,7 @@
 /* globals module */
 /**
- * @module calendarEventRoute
- * @description BaasicCalendarEventRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ * @module calendarEventsRoute
+ * @description BaasicCalendarEventsRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventsRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 
 import { injectable, inject } from "inversify";
@@ -11,14 +11,13 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from './contracts';
 
-export class CalendarEventRoute extends BaseRoute {
+export class CalendarEventsRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'calendar-events/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
-    public readonly getRoute: string = 'calendar-events/{id}/{?embed, fields}';
-    public readonly createRoute: string = 'calendar-events';
-    public readonly updateRoute: string = 'calendar-events/{id}';
-    public readonly deleteRoute: string = 'calendar-events/{id}';
-    public readonly purgeRoute: string = 'calendar-events/{id}/purge';
+    public readonly findRoute: string = 'calendars/{calendarId}/events/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
+    public readonly getRoute: string = 'calendars/{calendarId}/events/{id}/{?embed, fields}';
+    public readonly createRoute: string = 'calendars/{calendarId}/events/{id}';
+    public readonly updateRoute: string = 'calendars/{calendarId}/events/{id}';
+    public readonly deleteRoute: string = 'calendars/{calendarId}/events/{id}';
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
@@ -39,7 +38,7 @@ export class CalendarEventRoute extends BaseRoute {
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
      * @method
      * @param options Query resource GetCalendarEventOptions object.
-     * @example calendarEventRoute.find({searchQuery: '<search-phrase>'});
+     * @example calendarEventsRoute.find({searchQuery: '<search-phrase>'});
      **/
     find(options?: IGetCalendarEventOptions): any {
         var opt;
@@ -59,7 +58,7 @@ export class CalendarEventRoute extends BaseRoute {
      * @method
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
      * @param options Query resource options object.
-     * @example calendarEventRoute.get(id);
+     * @example calendarEventsRoute.get(id);
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -69,7 +68,7 @@ export class CalendarEventRoute extends BaseRoute {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEvent object that needs to be inserted into the system.
-     * @example calendarEventRoute.create(data);
+     * @example calendarEventsRoute.create(data);
      **/
     create(data: ICalendarEvent): any {
         return super.baseCreate(this.createRoute, data);
@@ -79,7 +78,7 @@ export class CalendarEventRoute extends BaseRoute {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEvent object used to update specified CalendarEvent resource.
-     * @example calendarEventRoute.update(data);
+     * @example calendarEventsRoute.update(data);
      **/
     update(data: ICalendarEvent): any {
         return super.baseUpdate(this.updateRoute, data);
@@ -89,20 +88,10 @@ export class CalendarEventRoute extends BaseRoute {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEvent object used to delete specified CalendarEvent resource.
-     * @example calendarEventRoute.delete(data);
+     * @example calendarEventsRoute.delete(data);
      **/
     delete(data: ICalendarEvent): any {
         return super.baseDelete(this.deleteRoute, data);
-    }
-
-    /**
-     * Parses purge route. This URI template does not expose any additional options.
-     * @method
-     * @param data A Calendar object that will have all of it's events purged.
-     * @example calendarEventRoute.purge(calendar);
-     */
-    purge(data: ICalendar): any {
-        return super.baseDelete(this.purgeRoute, data);
     }
 
     protected getToDate(options: any) {

@@ -9,7 +9,7 @@ import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
-import { ICalendarEventRSVPInvitationType, IGetCalendarLookupOptions } from './contracts';
+import { ICalendarEventRSVPAttendeeInvitationType, IGetCalendarLookupOptions } from './contracts';
 
 export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
 
@@ -24,14 +24,14 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
 
     /**
      * Parses find route which can be expanded with additional options. Supported items are:
-     * - `searchQuery` - A string referencing CalendarEventRsvpInvitationType properties using the phrase or BQL (Baasic Query Language) search.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain CalendarEventRsvpInvitationType subset from the storage.
+     * - `searchQuery` - A string referencing CalendarEventRsvpAttendeeInvitationType properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain CalendarEventRsvpAttendeeInvitationType subset from the storage.
      * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the CalendarEventRsvpInvitationType property to sort the result collection by.
+     * - `sort` - A string used to set the CalendarEventRsvpAttendeeInvitationType property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use events starting from this date
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use events ending to this date.
-     * - `ids` - TODO: what are ids?
+     * - `ids` - CalendarEventRsvpAttendeeInvitationType ids which uniquely identify CalendarEventRsvpAttendeeInvitationType resources that need to be retrieved.
      * @method
      * @param options Query resource GetCalendarLookupOptions object.
      * @example calendarEventRsvpInvitationTypeRoute.find({searchQuery: '<search-phrase>'});
@@ -49,9 +49,10 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
     }
 
     /**
-     * Parses get route; this route doesn't expose any properties.
+     * Parses get route which must be expanded with the id of the previously created CalendarEventRsvpAttendeeInvitationType resource. The route can be expanded using additional options. Supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method
-     * @param id CalendarEventRsvpInvitationType id which uniquely identifies CalendarEventRsvpInvitationType resource that needs to be retrieved.
+     * @param id CalendarEventRsvpAttendeeInvitationType id which uniquely identifies CalendarEventRsvpInvitationType resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarEventRsvpInvitationTypeRoute.get(id);
      **/
@@ -60,37 +61,37 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
     }
 
     /**
-     * Parses create route; this URI template does not expose any additional options.
+     * Parses create route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEventRsvpInvitationType object that needs to be inserted into the system.
      * @example calendarEventRsvpInvitationTypeRoute.create(data);
      **/
-    create(data: ICalendarEventRSVPInvitationType): any {
+    create(data: ICalendarEventRSVPAttendeeInvitationType): any {
         return super.baseCreate(this.createRoute, data);
     }
 
     /**
-     * Parses update route; this URI template does not expose any additional options.
+     * Parses update route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEventRsvpInvitationType object used to update specified CalendarEventRsvpInvitationType resource.
      * @example calendarEventRsvpInvitationTypeRoute.update(data);
      **/
-    update(data: ICalendarEventRSVPInvitationType): any {
+    update(data: ICalendarEventRSVPAttendeeInvitationType): any {
         return super.baseUpdate(this.updateRoute, data);
     }
 
     /**
-     * Parses delte route; this URI template does not expose any additional options.
+     * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEventRsvpInvitationType object used to delete specified CalendarEventRsvpInvitationType resource.
      * @example calendarEventRsvpInvitationTypeRoute.delete(data);
      **/
-    delete(data: ICalendarEventRSVPInvitationType): any {
+    delete(data: ICalendarEventRSVPAttendeeInvitationType): any {
         return super.baseDelete(this.deleteRoute, data);
     }
 
     /**
-     * Parses purge route; this URI template does not expose any additional options.
+     * Parses purge route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeRoute.purge();
      */

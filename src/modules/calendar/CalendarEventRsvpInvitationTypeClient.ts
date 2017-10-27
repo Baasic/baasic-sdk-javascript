@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarEventRsvpInvitationTypeRoute
 } from './';
-import { ICalendarEventRSVPInvitationType, IGetCalendarLookupOptions } from './contracts';
+import { ICalendarEventRSVPAttendeeInvitationType, IGetCalendarLookupOptions } from './contracts';
 
 @injectable()
 export class CalendarEventRsvpInvitationTypeClient {
@@ -27,19 +27,19 @@ export class CalendarEventRsvpInvitationTypeClient {
 
 
     /**
-     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEventRsvpInvitationType resources matching the given criteria.
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEventRsvpAttendeeInvitationType resources matching the given criteria.
      * @method
      * @param options Query resource GetCalendarLookupOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarEventRsvpInvitationTypeClient.find({
-                    pageNumber : 1,
-                    pageSize : 10,
-                    orderBy : '<field>',
-                    orderDirection : '<asc|desc>',
-                    search : '<search-phrase>',
-                    ids : <identifiers>,
-                    from : <start-date>,
-                    to : <end-date>
+                    pageNumber: 1,
+                    pageSize: 10,
+                    orderBy: '<field>',
+                    orderDirection: '<asc|desc>',
+                    search: '<search-phrase>',
+                    ids: <identifiers>,
+                    from: <start-date>,
+                    to: <end-date>
                 })
                 .then(function (collection) {
                     // perform success action here
@@ -48,17 +48,17 @@ export class CalendarEventRsvpInvitationTypeClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IGetCalendarLookupOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRSVPInvitationType>>> {
-        return this.apiClient.get<IQueryModel<ICalendarEventRSVPInvitationType>>(this.routeDefinition.find(options));
+    find(options?: IGetCalendarLookupOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRSVPAttendeeInvitationType>>> {
+        return this.apiClient.get<IQueryModel<ICalendarEventRSVPAttendeeInvitationType>>(this.routeDefinition.find(options));
     }
 
     /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the CalendarEventRsvpInvitationType resource.
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the CalendarEventRsvpAttendeeInvitationType resource.
      * @method
-     * @param id CalendarEventRsvpInvitationType id which uniquely identifies CalendarEventRsvpInvitationType resource that needs to be retrieved.
-     * @param options Query resource options object.
+     * @param id CalendarEventRsvpAttendeeInvitationType id which uniquely identifies CalendarEventRsvpAttendeeInvitationType resource that needs to be retrieved.
+     * @param options Query resource GetRequestOptions object.
      * @returns A promise that is resolved once the get action has been performed.
-     * @example calendarEventRsvpInvitationTypeClient.get()
+     * @example calendarEventRsvpInvitationTypeClient.get(id)
                     .then(function (data) {
                         // perform success action here
                     },
@@ -66,18 +66,18 @@ export class CalendarEventRsvpInvitationTypeClient {
                          // perform error handling here
                     });
      **/
-    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRSVPInvitationType>> {
-        return this.apiClient.get<ICalendarEventRSVPInvitationType>(this.routeDefinition.get(id, options));
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRSVPAttendeeInvitationType>> {
+        return this.apiClient.get<ICalendarEventRSVPAttendeeInvitationType>(this.routeDefinition.get(id, options));
     }
 
     /**
-     * Returns a promise that is resolved once the create CalendarEventRsvpInvitationType action has been performed; this action creates a new CalendarEventRsvpInvitationType resource.
+     * Returns a promise that is resolved once the create CalendarEventRsvpAttendeeInvitationType action has been performed; this action creates a new CalendarEventRsvpAttendeeInvitationType resource.
      * @method
-     * @param data A CalendarEventRsvpInvitationType object that needs to be inserted into the system.
-     * @returns A promise that is resolved once the create CalendarEventRsvpInvitationType action has been performed.
+     * @param data A CalendarEventRsvpAttendeeInvitationType object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create CalendarEventRsvpAttendeeInvitationType action has been performed.
      * @example calendarEventRsvpInvitationTypeClient.create({
-                    abrv : '<abrv>',
-                    json : '<json>',
+                    abrv: '<abrv>',
+                    json: '<json>',
                     name: '<name>'
                 }.then(function (data) {
                     // perform success action here
@@ -86,22 +86,22 @@ export class CalendarEventRsvpInvitationTypeClient {
                      // perform error handling here
                 });
      **/
-    create(data: ICalendarEventRSVPInvitationType): PromiseLike<IHttpResponse<ICalendarEventRSVPInvitationType>> {
-        return this.apiClient.post<ICalendarEventRSVPInvitationType>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    create(data: ICalendarEventRSVPAttendeeInvitationType): PromiseLike<IHttpResponse<ICalendarEventRSVPAttendeeInvitationType>> {
+        return this.apiClient.post<ICalendarEventRSVPAttendeeInvitationType>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**
-     * Returns a promise that is resolved once the update CalendarEventRsvpInvitationType action has been performed; this action updates a CalendarEventRsvpInvitationType resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRsvpInvitationTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the update CalendarEventRsvpAttendeeInvitationType action has been performed; this action updates a CalendarEventRsvpAttendeeInvitationType resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRsvpInvitationTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
-     * let params = modelMapper.removeParams(calendarEventRsvpInvitationType);
+     * let params = modelMapper.removeParams(calendarEventRsvpAttendeeInvitationType);
      * let uri = params['model'].links('put').href;
      * ```
      * @method
-     * @param data A CalendarEventRsvpInvitationType object used to update specified CalendarEventRsvpInvitationType resource.
-     * @returns A promise that is resolved once the update CalendarEventRsvpInvitationType action has been performed.
-     * @example calendarEventRsvpInvitationType is a resource previously fetched using get action.
-                    calendarEventRsvpInvitationType.name = '<name>';
-                    calendarEventRsvpInvitationTypeClient.update(calendarEventRsvpInvitationType)
+     * @param data A CalendarEventRsvpAttendeeInvitationType object used to update specified CalendarEventRsvpAttendeeInvitationType resource.
+     * @returns A promise that is resolved once the update CalendarEventRsvpAttendeeInvitationType action has been performed.
+     * @example calendarEventRsvpAttendeeInvitationType is a resource previously fetched using get action.
+                    calendarEventRsvpAttendeeInvitationType.name = '<name>';
+                    calendarEventRsvpInvitationTypeClient.update(calendarEventRsvpAttendeeInvitationType)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -109,21 +109,21 @@ export class CalendarEventRsvpInvitationTypeClient {
                             // perform error handling here
                         });
     **/
-    update(data: ICalendarEventRSVPInvitationType): PromiseLike<IHttpResponse<void>> {
+    update(data: ICalendarEventRSVPAttendeeInvitationType): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
     /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEventRsvpInvitationType resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRsvpInvitationTyleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEventRsvpAttendeeInvitationType resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRsvpAttendeeInvitationTyleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
-     * let params = modelMapper.removeParams(calendarEventRsvpInvitationType);
+     * let params = modelMapper.removeParams(calendarEventRsvpAttendeeInvitationType);
      * let uri = params['model'].links('delete').href;
      * ```
      * @method
-     * @param data An calendarEventRsvpInvitationType object used to delete specified CalendarEventRsvpInvitationType resource.
+     * @param data An calendarEventRsvpAttendeeInvitationType object used to delete specified CalendarEventRsvpAttendeeInvitationType resource.
      * @returns A promise that is resolved once the remove action has been performed.
-     * @example calendarEventRsvpInvitationType is a resource previously fetched using get action.
-                    calendarEventRsvpInvitationType.remove(calendarEventRsvpInvitationType)
+     * @example calendarEventRsvpAttendeeInvitationType is a resource previously fetched using get action.
+                    calendarEventRsvpInvitationType.remove(calendarEventRsvpAttendeeInvitationType)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -131,12 +131,12 @@ export class CalendarEventRsvpInvitationTypeClient {
                             // perform error handling here
                         });
      **/
-    remove(data: ICalendarEventRSVPInvitationType): PromiseLike<IHttpResponse<void>> {
+    remove(data: ICalendarEventRSVPAttendeeInvitationType): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
     /**
-     * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvpInvitationType resources from the system if succesfully completed.
+     * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvpAttendeeInvitationType resources from the system if succesfully completed.
      * @method
      * @returns A promise that is resolved once the purge action has been performed.
      * @example     calendarEventRsvpInvitationTypeClient.purge()

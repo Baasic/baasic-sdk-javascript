@@ -1,16 +1,16 @@
 /* globals module */
 /**
- * @module calendarEventRsvpAtendeeStatusBatchRoute
- * @description BaasicCalendarEventRsvpAtendeeStatusBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventRsvpAtendeeStatusBatch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ * @module calendarEventRsvpAttendeeStatusBatchRoute
+ * @description BaasicCalendarEventRsvpAttendeeStatusBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventRsvpAtendeeStatusBatch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 
 import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
-import { ICalendarEventRSVPAtendeeStatus } from './contracts';
+import { ICalendarEventRSVPAttendeeStatus } from './contracts';
 
-export class CalendarEventRsvpAtendeeStatusBatchRoute extends BaseRoute {
+export class CalendarEventRsvpAttendeeStatusBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'calendar-lookups/rsvp-attendee-statuses/batch';
     public readonly updateRoute: string = 'calendar-lookups/rsvp-attendee-statuses/batch';
@@ -20,27 +20,27 @@ export class CalendarEventRsvpAtendeeStatusBatchRoute extends BaseRoute {
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
-     * Parses create route; this URI template does not expose any additional options.
+     * Parses create route. This URI template does not expose any additional options.
      * @method
-     * @example calendarEventRsvpAtendeeStatusBatchRoute.create();
+     * @example calendarEventRsvpAttendeeStatusBatchRoute.create();
      **/
     create(): any {
         return super.baseCreate(this.createRoute, {});
     }
 
     /**
-     * Parses update route; this URI template does not expose any additional options.
+     * Parses update route. This URI template does not expose any additional options.
      * @method
-     * @example calendarEventRsvpAtendeeStatusBatchRoute.update();
+     * @example calendarEventRsvpAttendeeStatusBatchRoute.update();
      **/
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
     }
 
     /**
-     * Parses delte route; this URI template does not expose any additional options.
+     * Parses delte route. This URI template does not expose any additional options.
      * @method
-     * @example calendarEventRsvpAtendeeStatusBatchRoute.delete();
+     * @example calendarEventRsvpAttendeeStatusBatchRoute.delete();
      **/
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});

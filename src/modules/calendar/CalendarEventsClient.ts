@@ -1,7 +1,7 @@
 /* globals module */
 /**
- * @module calendarEventClient
- * @description  CalendarEvent Client provides an easy way to consume CalendarEvent REST API end-points. In order to obtain needed routes `calendarEventClient` uses `calendarEventRoute`. 
+ * @module calendarEventsClient
+ * @description  CalendarEvents Client provides an easy way to consume CalendarEvents REST API end-points. In order to obtain needed routes `calendarEventsClient` uses `calendarEventsRoute`. 
  */
 
 import { injectable, inject } from "inversify";
@@ -9,19 +9,19 @@ import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contract
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import {
     TYPES as calendarTypes,
-    CalendarEventRoute
+    CalendarEventsRoute
 } from './';
 import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from './contracts';
 
 @injectable()
-export class CalendarEventClient {
+export class CalendarEventsClient {
 
-    get routeDefinition(): CalendarEventRoute {
-        return this.calendarEventRoute;
+    get routeDefinition(): CalendarEventsRoute {
+        return this.calendarEventsRoute;
     }
 
     constructor(
-        @inject(calendarTypes.CalendarEventRoute) protected calendarEventRoute: CalendarEventRoute,
+        @inject(calendarTypes.CalendarEventsRoute) protected calendarEventsRoute: CalendarEventsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
     ) { }
 
@@ -30,8 +30,8 @@ export class CalendarEventClient {
      * @method
      * @param options Query resource GetCalendarEventOptions object.
      * @returns A promise that is resolved once the find action has been performed.
-     * @example calendarEventClient.find({
-					pageNumber: 1,
+     * @example calendarEventsClient.find({
+                    pageNumber: 1,
                     pageSize: 10,
                     orderBy: '<field>',
                     orderDirection: '<asc|desc>',
@@ -43,7 +43,7 @@ export class CalendarEventClient {
                     statusIds: <event-status-identifiers>,
                     typeIds: <event-type-identifiers>,
                     from: <start-date>,
-                    to: <end-date>
+                    to: <end-date>  
                 })
                 .then(function (collection) {
                     // perform success action here
@@ -62,7 +62,7 @@ export class CalendarEventClient {
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
      * @param options Query resource GetRequstOptions object.
      * @returns A promise that is resolved once the get action has been performed.
-     * @example calendarEventClient.get(id)
+     * @example calendarEventsClient.get(id)
                     .then(function (data) {
                         // perform success action here
                     },
@@ -79,7 +79,7 @@ export class CalendarEventClient {
      * @method
      * @param data A CalendarEvent object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEvent action has been performed.
-     * @example calendarEventClient.create({
+     * @example calendarEventsClient.create({
                     author: <user-info>,
                     authorId: '<author-id>',
                     calendar: <calendar>,
@@ -104,7 +104,7 @@ export class CalendarEventClient {
     }
 
     /**
-     * Returns a promise that is resolved once the update CalendarEvent action has been performed. This action updates a CalendarEvent resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the update CalendarEvent action has been performed. This action updates a CalendarEvent resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
      * let params = modelMapper.removeParams(calendarEvent);
      * let uri = params['model'].links('put').href;
@@ -114,7 +114,7 @@ export class CalendarEventClient {
      * @returns A promise that is resolved once the update CalendarEvent action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
                     calendarEvent.title = '<title>';
-                    calendarEventClient.update(calendarEvent)
+                    calendarEventsClient.update(calendarEvent)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -127,7 +127,7 @@ export class CalendarEventClient {
     }
 
     /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEvent resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEvent resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
      * let params = modelMapper.removeParams(calendarEvent);
      * let uri = params['model'].links('delete').href;
@@ -136,7 +136,7 @@ export class CalendarEventClient {
      * @param data An calendarEvent object used to delete specified CalendarEvent resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEventClient.remove(calendarEvent)
+                    calendarEventsClient.remove(calendarEvent)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -153,7 +153,7 @@ export class CalendarEventClient {
      * @method
      * @param calendar Calendar resource which will have its Events purged.
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventClient.purge()
+     * @example     calendarEventsClient.purge()
                         .then(function (data) {
                             // perform success action here
                         },

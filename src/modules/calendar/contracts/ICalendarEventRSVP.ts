@@ -1,10 +1,10 @@
 import { IModel } from '../../../common/contracts';
 
-import { IEventRSVPInvitationType } from './';
+import { ICalendarEventRSVPInvitationType } from './';
 
 export interface ICalendarEventRSVP extends IModel {
     InvitationOnly?: boolean;
-    InvitationType?: IEventRSVPInvitationType;
+    InvitationType?: ICalendarEventRSVPInvitationType;
     InvitationTypeId?: string;
     Json?: string;
     MaxSlots?: number;

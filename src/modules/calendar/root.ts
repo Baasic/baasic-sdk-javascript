@@ -1,9 +1,17 @@
-import {
+import {   
+    CalendarEventsClient,
+
+    CalendarBatchClient,
+    CalendarClient,
+
+    CalendarRsvpBatchClient,
+    CalendarRsvpClient,
+
     CalendarEventBatchClient,
     CalendarEventClient,
 
-    CalendarEventRsvpAtendeeStatusBatchClient,
-    CalendarEventRsvpAtendeeStatusClient,
+    CalendarEventRsvpAttendeeStatusBatchClient,
+    CalendarEventRsvpAttendeeStatusClient,
 
     CalendarEventRsvpBatchClient,
     CalendarEventRsvpClient,
@@ -26,11 +34,19 @@ import { injectable, inject } from "inversify";
 export class Root {
 
     constructor(
+        @inject(TYPES.CalendarEventsClient) public calendarEventsClient: CalendarEventsClient,
+
+        @inject(TYPES.CalendarBatchClient) public calendarBatchClient: CalendarBatchClient,
+        @inject(TYPES.CalendarClient) public calendarClient: CalendarClient,
+
+        @inject(TYPES.CalendarRsvpBatchClient) public calendarRsvpBatchClient: CalendarRsvpBatchClient,
+        @inject(TYPES.CalendarRsvpClient) public calendarRsvpClient: CalendarRsvpClient,   
+
         @inject(TYPES.CalendarEventBatchClient) public calendarEventBatchClient: CalendarEventBatchClient,
         @inject(TYPES.CalendarEventClient) public calendarEventClient: CalendarEventClient,        
         
-        @inject(TYPES.CalendarEventRsvpAtendeeStatusBatchClient) public calendarEventRsvpAtendeeStatusBatchClient: CalendarEventRsvpAtendeeStatusBatchClient,
-        @inject(TYPES.CalendarEventRsvpAtendeeStatusClient) public calendarEventRsvpAtendeeStatusClient: CalendarEventRsvpAtendeeStatusClient,
+        @inject(TYPES.CalendarEventRsvpAttendeeStatusBatchClient) public calendarEventRsvpAttendeeStatusBatchClient: CalendarEventRsvpAttendeeStatusBatchClient,
+        @inject(TYPES.CalendarEventRsvpAttendeeStatusClient) public calendarEventRsvpAttendeeStatusClient: CalendarEventRsvpAttendeeStatusClient,
 
         @inject(TYPES.CalendarEventRsvpBatchClient) public calendarEventRsvpBatchClient: CalendarEventRsvpBatchClient,
         @inject(TYPES.CalendarEventRsvpClient) public calendarEventRsvpClient: CalendarEventRsvpClient,

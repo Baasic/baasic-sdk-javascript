@@ -1,7 +1,7 @@
 /* globals module */
 /**
- * @module calendarEventTypeRoute
- * @description BaasicCalendarEventTypeRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventTypeRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ * @module calendarRoute
+ * @description BaasicCalendarRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 
 import { injectable, inject } from "inversify";
@@ -9,32 +9,31 @@ import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
-import { ICalendarEventType, IGetCalendarLookupOptions } from './contracts';
+import { ICalendar, IGetCalendarLookupOptions } from './contracts';
 
-export class CalendarEventTypeRoute extends BaseRoute {
+export class CalendarRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'calendar-lookups/types/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
-    public readonly getRoute: string = 'calendar-lookups/types/{id}/{?embed, fields}';
-    public readonly createRoute: string = 'calendar-lookups/types';
-    public readonly updateRoute: string = 'calendar-lookups/types/{id}';
-    public readonly deleteRoute: string = 'calendar-lookups/types/{id}';
-    public readonly purgeRoute: string = 'calendar-lookups/types/purge';
+    public readonly findRoute: string = 'calendars/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
+    public readonly getRoute: string = 'calendars/{id}/{?embed, fields}';
+    public readonly createRoute: string = 'calendars';
+    public readonly updateRoute: string = 'calendars/{id}';
+    public readonly deleteRoute: string = 'calendars/{id}';
+    public readonly purgeRoute: string = 'calendars/{id}/purge';
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
      * Parses find route which can be expanded with additional GetCalendarLookupOptions. Supported items are:
-     * - `searchQuery` - A string referencing CalendarEventType properties using the phrase or BQL (Baasic Query Language) search.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain CalendarEventType subset from the storage.
+     * - `searchQuery` - A string referencing Calendar properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain Calendar subset from the storage.
      * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the CalendarEventType property to sort the result collection by.
+     * - `sort` - A string used to set the Calendar property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date.
+     * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
-     * - `ids` - CalendarEventType ids which uniquely identify CalendarEventType resources that need to be retrieved.
      * @method
-     * @param options Query resource GetCalendarLookupOptions object.
-     * @example calendarEventTypeRoute.find({searchQuery: '<search-phrase>'});
+     * @param options Query resource GetCalendarOptions object.
+     * @example calendarRoute.find({searchQuery: '<search-phrase>'});
      **/
     find(options?: IGetCalendarLookupOptions): any {
         var opt;
@@ -49,12 +48,12 @@ export class CalendarEventTypeRoute extends BaseRoute {
     }
 
     /**
-     * Parses get route which must be expanded with the id of the previously created CalendarEventType resource in the system. The route can be expanded using additional GetRequestOptions. Supported items are
+     * Parses get route which must be expanded with the id of the previously created Calendar resource. This route can be expanded with additional eEtRequestOptions. Supported items are:
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method
-     * @param id CalendarEventType id which uniquely identifies CalendarEventType resource that needs to be retrieved.
-     * @param options Query resource GetRequestOptions object.
-     * @example calendarEventTypeRoute.get(id);
+     * @param id Calendar id which uniquely identifies Calendar resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example calendarRoute.get(id);
      **/
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
@@ -63,40 +62,40 @@ export class CalendarEventTypeRoute extends BaseRoute {
     /**
      * Parses create route. This URI template does not expose any additional options.
      * @method
-     * @param data A CalendarEventType object that needs to be inserted into the system.
-     * @example calendarEventTypeRoute.create(data);
+     * @param data A Calendar object that needs to be inserted into the system.
+     * @example calendarRoute.create(data);
      **/
-    create(data: ICalendarEventType): any {
+    create(data: ICalendar): any {
         return super.baseCreate(this.createRoute, data);
     }
 
     /**
      * Parses update route. This URI template does not expose any additional options.
      * @method
-     * @param data A CalendarEventType object used to update specified CalendarEventType resource.
-     * @example calendarEventTypeRoute.update(data);
+     * @param data A Calendar object used to update specified Calendar resource.
+     * @example calendarRoute.update(data);
      **/
-    update(data: ICalendarEventType): any {
+    update(data: ICalendar): any {
         return super.baseUpdate(this.updateRoute, data);
     }
 
     /**
      * Parses delte route. This URI template does not expose any additional options.
      * @method
-     * @param data A CalendarEventType object used to delete specified CalendarEventType resource.
-     * @example calendarEventTypeRoute.delete(data);
+     * @param data A Calendar object used to delete specified Calendar resource.
+     * @example calendarRoute.delete(data);
      **/
-    delete(data: ICalendarEventType): any {
+    delete(data: ICalendar): any {
         return super.baseDelete(this.deleteRoute, data);
     }
 
     /**
      * Parses purge route. This URI template does not expose any additional options.
      * @method
-     * @example calendarEventTypeRoute.purge();
+     * @example calendarRoute.purge();
      */
     purge(): any {
-        return super.parse(this.purgeRoute);
+        return super.baseDelete(this.purgeRoute, {});
     }
 
     protected getToDate(options: any) {

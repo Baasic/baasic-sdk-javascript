@@ -2,15 +2,28 @@ export * from './contracts';
 export * from './diModule';
 export * from './root';
 
+export * from './calendarEventsClient';
+export * from './calendarEventsRoute';
+
+export * from './CalendarBatchClient';
+export * from './CalendarBatchRoute';
+export * from './CalendarClient';
+export * from './CalendarRoute';
+
+export * from './CalendarRsvpBatchClient';
+export * from './CalendarRsvpBatchRoute';
+export * from './CalendarRsvpClient';
+export * from './CalendarRsvpRoute';
+
 export * from './CalendarEventBatchClient';
 export * from './CalendarEventBatchRoute';
 export * from './CalendarEventClient';
 export * from './CalendarEventRoute';
 
-export * from './CalendarEventRsvpAtendeeStatusBatchClient';
-export * from './CalendarEventRsvpAtendeeStatusBatchRoute';
-export * from './CalendarEventRsvpAtendeeStatusClient';
-export * from './CalendarEventRsvpAtendeeStatusRoute';
+export * from './CalendarEventRsvpAttendeeStatusBatchClient';
+export * from './CalendarEventRsvpAttendeeStatusBatchRoute';
+export * from './CalendarEventRsvpAttendeeStatusClient';
+export * from './CalendarEventRsvpAttendeeStatusRoute';
 
 export * from './CalendarEventRsvpBatchClient';
 export * from './CalendarEventRsvpBatchRoute';

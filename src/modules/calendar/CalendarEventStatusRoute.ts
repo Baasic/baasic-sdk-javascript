@@ -31,7 +31,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use events starting from this date
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use events ending to this date.
-     * - `ids` - TODO: what are ids?
+     * - `ids` - CalendarEventStatus ids which uniquely identify CalendarEventStatus resources that need to be retrieved
      * @method
      * @param options Query resource GetCalendarLookupOptions object.
      * @example calendarEventStatusRoute.find({searchQuery: '<search-phrase>'});
@@ -49,10 +49,11 @@ export class CalendarEventStatusRoute extends BaseRoute {
     }
 
     /**
-     * Parses get route; this route doesn't expose any properties.
+     * Parses get route which must be expanded with the id of the previously created CalendarEventStatus resource. The route can be expanded using additional options. Supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method
      * @param id CalendarEventStatus id which uniquely identifies CalendarEventStatus resource that needs to be retrieved.
-     * @param options Query resource options object.
+     * @param options Query resource GetRequestOptions object.
      * @example calendarEventStatusRoute.get(id);
      **/
     get(id: string, options?: IGetRequestOptions): any {
@@ -60,7 +61,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
     }
 
     /**
-     * Parses create route; this URI template does not expose any additional options.
+     * Parses create route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEventStatus object that needs to be inserted into the system.
      * @example calendarEventStatusRoute.create(data);
@@ -70,7 +71,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
     }
 
     /**
-     * Parses update route; this URI template does not expose any additional options.
+     * Parses update route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEventStatus object used to update specified CalendarEventStatus resource.
      * @example calendarEventStatusRoute.update(data);
@@ -80,7 +81,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
     }
 
     /**
-     * Parses delte route; this URI template does not expose any additional options.
+     * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEventStatus object used to delete specified CalendarEventStatus resource.
      * @example calendarEventStatusRoute.delete(data);
@@ -90,7 +91,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
     }
 
     /**
-     * Parses purge route; this URI template does not expose any additional options.
+     * Parses purge route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventStatusRoute.purge();
      */

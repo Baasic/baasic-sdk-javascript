@@ -31,14 +31,14 @@ export class CalendarEventTypeClient {
      * @param options Query resource GetCalendarLookupOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarEventTypeClient.find({
-                    pageNumber : 1,
-                    pageSize : 10,
-                    orderBy : '<field>',
-                    orderDirection : '<asc|desc>',
-                    search : '<search-phrase>',
-                    ids : <identifiers>,
-                    from : <start-date>,
-                    to : <end-date>
+                    pageNumber: 1,
+                    pageSize: 10,
+                    orderBy: '<field>',
+                    orderDirection: '<asc|desc>',
+                    search: '<search-phrase>',
+                    ids: <identifiers>,
+                    from: <start-date>,
+                    to: <end-date>
                 })
                 .then(function (collection) {
                     // perform success action here
@@ -55,9 +55,9 @@ export class CalendarEventTypeClient {
      * Returns a promise that is resolved once the get action has been performed. Success response returns the CalendarEventType resource.
      * @method
      * @param id CalendarEventType id which uniquely identifies CalendarEventType resource that needs to be retrieved.
-     * @param options Query resource options object.
+     * @param options Query resource GetRequestOptions object.
      * @returns A promise that is resolved once the get action has been performed.
-     * @example calendarEventTypeClient.get()
+     * @example calendarEventTypeClient.get(id)
                     .then(function (data) {
                         // perform success action here
                     },
@@ -70,7 +70,7 @@ export class CalendarEventTypeClient {
     }
 
     /**
-     * Returns a promise that is resolved once the create CalendarEventType action has been performed; this action creates a new CalendarEventType resource.
+     * Returns a promise that is resolved once the create CalendarEventType action has been performed. This action creates a new CalendarEventType resource.
      * @method
      * @param data A CalendarEventType object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEventType action has been performed.
@@ -90,7 +90,7 @@ export class CalendarEventTypeClient {
     }
 
     /**
-     * Returns a promise that is resolved once the update CalendarEventType action has been performed; this action updates a CalendarEventType resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the update CalendarEventType action has been performed. This action updates a CalendarEventType resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
      * let params = modelMapper.removeParams(calendarEventType);
      * let uri = params['model'].links('put').href;

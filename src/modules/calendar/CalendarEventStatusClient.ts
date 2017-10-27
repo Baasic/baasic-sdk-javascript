@@ -32,14 +32,14 @@ export class CalendarEventStatusClient {
      * @param options Query resource GetCalendarLookupOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarEventStatusClient.find({
-                    pageNumber : 1,
-                    pageSize : 10,
-                    orderBy : '<field>',
-                    orderDirection : '<asc|desc>',
-                    search : '<search-phrase>',
-                    ids : <identifiers>,
-                    from : <start-date>,
-                    to : <end-date>
+                    pageNumber: 1,
+                    pageSize: 10,
+                    orderBy: '<field>',
+                    orderDirection: '<asc|desc>',
+                    search: '<search-phrase>',
+                    ids: <identifiers>,
+                    from: <start-date>,
+                    to: <end-date>
                 })
                 .then(function (collection) {
                     // perform success action here
@@ -76,8 +76,8 @@ export class CalendarEventStatusClient {
      * @param data A CalendarEventStatus object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEventStatus action has been performed.
      * @example calendarEventStatusClient.create({
-                    abrv : '<abrv>',
-                    json : '<json>',
+                    abrv: '<abrv>',
+                    json: '<json>',
                     name: '<name>'
                 }.then(function (data) {
                     // perform success action here
@@ -91,7 +91,7 @@ export class CalendarEventStatusClient {
     }
 
     /**
-     * Returns a promise that is resolved once the update CalendarEventStatus action has been performed; this action updates a CalendarEventStatus resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the update CalendarEventStatus action has been performed. This action updates a CalendarEventStatus resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
      * let params = modelMapper.removeParams(calendarEventStatus);
      * let uri = params['model'].links('put').href;

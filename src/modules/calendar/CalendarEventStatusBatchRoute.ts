@@ -19,7 +19,7 @@ export class CalendarEventStatusBatchRoute extends BaseRoute {
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
-     * Parses create route; this URI template does not expose any additional options.
+     * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventStatusBatchRoute.create();
      **/
@@ -28,7 +28,7 @@ export class CalendarEventStatusBatchRoute extends BaseRoute {
     }
 
     /**
-     * Parses update route; this URI template does not expose any additional options.
+     * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventStatusBatchRoute.update();
      **/
@@ -37,7 +37,7 @@ export class CalendarEventStatusBatchRoute extends BaseRoute {
     }
 
     /**
-     * Parses delte route; this URI template does not expose any additional options.
+     * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventStatusBatchRoute.delete();
      **/

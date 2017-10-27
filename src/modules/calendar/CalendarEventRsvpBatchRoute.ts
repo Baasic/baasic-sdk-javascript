@@ -12,15 +12,15 @@ import { ICalendarEventRSVP } from './contracts';
 
 export class CalendarEventRsvpBatchRoute extends BaseRoute {
 
-    public readonly createRoute: string = 'calendar-rsvps/batch';
-    public readonly updateRoute: string = 'calendar-rsvps/batch';
-    public readonly deleteRoute: string = 'calendar-rsvps/batch';
+    public readonly createRoute: string = 'calendar-rsvp-details/batch';
+    public readonly updateRoute: string = 'calendar-rsvp-details/batch';
+    public readonly deleteRoute: string = 'calendar-rsvp-details/batch';
 
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
-     * Parses create route; this URI template does not expose any additional options.
+     * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpBatchRoute.create();
      **/
@@ -29,7 +29,7 @@ export class CalendarEventRsvpBatchRoute extends BaseRoute {
     }
 
     /**
-     * Parses update route; this URI template does not expose any additional options.
+     * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpBatchRoute.update();
      **/
@@ -38,7 +38,7 @@ export class CalendarEventRsvpBatchRoute extends BaseRoute {
     }
 
     /**
-     * Parses delte route; this URI template does not expose any additional options.
+     * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpBatchRoute.delete();
      **/
