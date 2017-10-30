@@ -13,7 +13,7 @@ import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from './contracts
 
 export class CalendarEventRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'calendar-events/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
+    public readonly findRoute: string = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
     public readonly getRoute: string = 'calendar-events/{id}/{?embed, fields}';
     public readonly createRoute: string = 'calendar-events';
     public readonly updateRoute: string = 'calendar-events/{id}';

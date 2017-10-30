@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarEventsRoute
 } from './';
-import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from './contracts';
+import { ICalendar, ICalendarEvent, IGetCalendarEventsOptions } from './contracts';
 
 @injectable()
 export class CalendarEventsClient {
@@ -38,8 +38,6 @@ export class CalendarEventsClient {
                     search: '<search-phrase>',
                     ids: <event-identifiers>,
                     ownerIds: <event-owner-identifiers>,
-                    calendarIds: <calendars-identifiers>,
-                    calendarNames: <calendar-names>,
                     statusIds: <event-status-identifiers>,
                     typeIds: <event-type-identifiers>,
                     from: <start-date>,
@@ -52,13 +50,14 @@ export class CalendarEventsClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IGetCalendarEventOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEvent>>> {
+    find(options?: IGetCalendarEventsOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEvent>>> {
         return this.apiClient.get<IQueryModel<ICalendarEvent>>(this.routeDefinition.find(options));
     }
 
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the CalendarEvent resource.
      * @method
+     * @param calendarId Calendar Id which uniquely identifies Calendar resource.
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
      * @param options Query resource GetRequstOptions object.
      * @returns A promise that is resolved once the get action has been performed.
@@ -70,8 +69,8 @@ export class CalendarEventsClient {
                          // perform error handling here
                     });
      **/
-    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
-        return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(id, options));
+    get(calendarId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
+        return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(calendarId, id, options));
     }
 
     /**
@@ -100,7 +99,8 @@ export class CalendarEventsClient {
                 });
      **/
     create(data: ICalendarEvent): PromiseLike<IHttpResponse<ICalendarEvent>> {
-        return this.apiClient.post<ICalendarEvent>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+        //return this.apiClient.post<ICalendarEvent>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+        return this.apiClient.post<ICalendarEvent>(this.routeDefinition.create(data), {});
     }
 
     /**
@@ -146,23 +146,6 @@ export class CalendarEventsClient {
      **/
     remove(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
-    }
-
-    /**
-     * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEvent resources from the system if succesfully completed.
-     * @method
-     * @param calendar Calendar resource which will have its Events purged.
-     * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventsClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
-    purge(calendar: ICalendar): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.purge(calendar));
     }
 }
 

@@ -1,6 +1,7 @@
 import { IOptions } from '../../../../common/contracts';
 
-export interface IGetCalendarEventRsvpOptions extends IOptions {
+export interface IGetCalendarRsvpOptions extends IOptions {
+    calendarId: string;
     ids?: string[];
 	calendarIds?: string[];
 	calendarNames?: string[];

@@ -5,15 +5,15 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendarEventRSVPAttendeeStatus, IGetCalendarLookupOptions } from './contracts';
+import { ICalendarEventRSVPAttendeeStatus, IGetCalendarLookupOptions } from '../contracts';
 
 export class CalendarEventRsvpAttendeeStatusRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
+    public readonly findRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
     public readonly getRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed, fields}';
     public readonly createRoute: string = 'calendar-lookups/rsvp-attendee-statuses';
     public readonly updateRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{id}';

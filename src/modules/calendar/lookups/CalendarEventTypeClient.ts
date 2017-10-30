@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
     TYPES as calendarTypes,
     CalendarEventTypeRoute
-} from './';
-import { ICalendarEventType, IGetCalendarLookupOptions } from './contracts';
+} from '../';
+import { ICalendarEventType, IGetCalendarLookupOptions } from '../contracts';
 
 @injectable()
 export class CalendarEventTypeClient {

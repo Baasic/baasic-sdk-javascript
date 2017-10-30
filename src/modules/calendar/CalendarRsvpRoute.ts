@@ -9,11 +9,11 @@ import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
-import { ICalendar, ICalendarEventRSVP, IGetCalendarOptions, ICalendarEvent } from './contracts';
+import { ICalendar, ICalendarEventRSVP, IGetCalendarRsvpOptions, ICalendarEvent } from './contracts';
 
 export class CalendarRsvpRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'calendars/{calendarId}/rsvp-details/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
+    public readonly findRoute: string = 'calendars/{calendarId}/rsvp-details/{?searchQuery,page,rpp,sort,embed,fields,ids,invitationTypeIds,invitationOnly,statusIds,typeIds,registrationCloseFrom,registrationCloseTo,from,to}';
     public readonly getRoute: string = 'calendars/{calendarId}/rsvp-details/{id}';
     public readonly createRoute: string = 'calendars/{calendarId}/rsvp-details';
     public readonly updateRoute: string = 'calendars/{calendarId}/rsvp-details/{id}';
@@ -30,6 +30,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the CalendarEventRsvp property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * - `calendarId` - Calendar id which uniquely indentifies Calendar resource.
      * - `ids` - CalendarRsvp ids which uniquely identify CalendarRsvp resources that need to be retrieved.
 	 * - `invitationTypeIds` - InvatationType ids which uniquely identify CalendarEventRsvpInvitationType resources used for filtering.
 	 * - `invitationOnly` - A value used to filter events which are invitation-only.
@@ -43,7 +44,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRsvpRoute.find({searchQuery: '<search-phrase>'});
      **/
-    find(options?: IGetCalendarOptions): any {
+    find(options?: IGetCalendarRsvpOptions): any {
         var opt;
         if(options){
             opt = options;
@@ -63,40 +64,52 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @method
      * @param id CalendarEventRsvp id which uniquely identifies CalendarEventRsvp resource that needs to be retrieved.
      * @param options Query resource options object.
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.get(id, options);
      **/
-    get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet(this.getRoute, {}, options);
+    get(calendarId: string, id: string, options?: IGetRequestOptions): any {
+        var opt: any = options;
+        opt.calendarId = calendarId;
+        return super.baseGet(this.getRoute, id, opt);
     }
 
     /**
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEventRsvp object that needs to be inserted into the system.
+     * @param calendarId Calendar Id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.create(data);
      **/
-    create(data: ICalendarEventRSVP): any {
-        return super.baseCreate(this.createRoute, data);
+    create(calendarId: string, data: ICalendarEventRSVP): any {
+        var entry: any = data;
+        entry.calendarId = calendarId;
+        return super.baseCreate(this.createRoute, calendarId);
     }
 
     /**
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEventRsvp object used to update specified CalendarEventRsvp resource.
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.update(data);
      **/
-    update( data: ICalendarEventRSVP): any {
-        return super.baseUpdate(this.updateRoute, data);
+    update(calendarId: string, data: ICalendarEventRSVP): any {
+        var entry: any = data;
+        entry.calendarId = calendarId;
+        return super.baseUpdate(this.updateRoute, entry);
     }
 
     /**
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEvent object used to delete specified CalendarEvent resource.
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.delete(data);
      **/
-    delete(data: ICalendarEventRSVP): any {
-        return super.baseDelete(this.deleteRoute, data);
+    delete(calendarId: string, data: ICalendarEventRSVP): any {
+        var entry: any = data;
+        entry.calendarId = calendarId;
+        return super.baseDelete(this.deleteRoute, entry);
     }
 
     /**

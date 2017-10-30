@@ -1,6 +1,16 @@
 import { ContainerModule } from "inversify";
 import * as Symbol from "es6-symbol";
 import {
+    CalendarEventRsvpAttendeeBatchClient,
+    CalendarEventRsvpAttendeeBatchRoute,
+    CalendarEventRsvpAttendeeClient,
+    CalendarEventRsvpAttendeeRoute,
+
+    CalendarRsvpAttendeeBatchClient,
+    CalendarRsvpAttendeeBatchRoute,
+    CalendarRsvpAttendeeClient,
+    CalendarRsvpAttendeeRoute,
+
     CalendarEventsClient,
     CalendarEventsRoute,
 
@@ -47,6 +57,16 @@ import {
 } from './';
 
 const TYPES = {
+    CalendarEventRsvpAttendeeBatchClient: Symbol("CalendarEventRsvpAttendeeBatchClient"),
+    CalendarEventRsvpAttendeeBatchRoute: Symbol("CalendarEventRsvpAttendeeBatchRoute"),
+    CalendarEventRsvpAttendeeClient: Symbol("CalendarEventRsvpAttendeeClient"),
+    CalendarEventRsvpAttendeeRoute: Symbol("CalendarEventRsvpAttendeeRoute"),
+
+    CalendarRsvpAttendeeBatchClient: Symbol("CalendarRsvpAttendeeBatchClient"),
+    CalendarRsvpAttendeeBatchRoute: Symbol("CalendarRsvpAttendeeBatchRoute"),
+    CalendarRsvpAttendeeClient: Symbol("CalendarRsvpAttendeeClient"),
+    CalendarRsvpAttendeeRoute: Symbol("CalendarRsvpAttendeeRoute"),
+
     CalendarEventsClient: Symbol("CalendarEventsClient"),
     CalendarEventsRoute: Symbol("CalendarEventsRoute"),
 
@@ -96,6 +116,16 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
+    bind<CalendarEventRsvpAttendeeBatchClient>(TYPES.CalendarEventRsvpAttendeeBatchClient).to(CalendarEventRsvpAttendeeBatchClient);
+    bind<CalendarEventRsvpAttendeeBatchRoute>(TYPES.CalendarEventRsvpAttendeeBatchRoute).to(CalendarEventRsvpAttendeeBatchRoute);
+    bind<CalendarEventRsvpAttendeeClient>(TYPES.CalendarEventRsvpAttendeeClient).to(CalendarEventRsvpAttendeeClient);
+    bind<CalendarEventRsvpAttendeeRoute>(TYPES.CalendarEventRsvpAttendeeRoute).to(CalendarEventRsvpAttendeeRoute);
+
+    bind<CalendarRsvpAttendeeBatchClient>(TYPES.CalendarRsvpAttendeeBatchClient).to(CalendarRsvpAttendeeBatchClient);
+    bind<CalendarRsvpAttendeeBatchRoute>(TYPES.CalendarRsvpAttendeeBatchRoute).to(CalendarRsvpAttendeeBatchRoute);
+    bind<CalendarRsvpAttendeeClient>(TYPES.CalendarRsvpAttendeeClient).to(CalendarRsvpAttendeeClient);
+    bind<CalendarRsvpAttendeeRoute>(TYPES.CalendarRsvpAttendeeRoute).to(CalendarRsvpAttendeeRoute);
+
     bind<CalendarEventsClient>(TYPES.CalendarEventsClient).to(CalendarEventsClient);
     bind<CalendarEventsRoute>(TYPES.CalendarEventsRoute).to(CalendarEventsRoute);
 

@@ -1,9 +1,21 @@
 export * from './contracts';
+export * from './lookups';
 export * from './diModule';
 export * from './root';
 
-export * from './calendarEventsClient';
-export * from './calendarEventsRoute';
+
+export * from './CalendarEventRsvpAttendeeBatchClient';
+export * from './CalendarEventRsvpAttendeeBatchRoute';
+export * from './CalendarEventRsvpAttendeeClient';
+export * from './CalendarEventRsvpAttendeeRoute';
+
+export * from './CalendarRsvpAttendeeBatchClient';
+export * from './CalendarRsvpAttendeeBatchRoute';
+export * from './CalendarRsvpAttendeeClient';
+export * from './CalendarRsvpAttendeeRoute';
+
+export * from './CalendarEventsClient';
+export * from './CalendarEventsRoute';
 
 export * from './CalendarBatchClient';
 export * from './CalendarBatchRoute';
@@ -20,27 +32,7 @@ export * from './CalendarEventBatchRoute';
 export * from './CalendarEventClient';
 export * from './CalendarEventRoute';
 
-export * from './CalendarEventRsvpAttendeeStatusBatchClient';
-export * from './CalendarEventRsvpAttendeeStatusBatchRoute';
-export * from './CalendarEventRsvpAttendeeStatusClient';
-export * from './CalendarEventRsvpAttendeeStatusRoute';
-
 export * from './CalendarEventRsvpBatchClient';
 export * from './CalendarEventRsvpBatchRoute';
 export * from './CalendarEventRsvpClient';
 export * from './CalendarEventRsvpRoute';
-
-export * from './CalendarEventRsvpInvitationTypeBatchClient';
-export * from './CalendarEventRsvpInvitationTypeBatchRoute';
-export * from './CalendarEventRsvpInvitationTypeClient';
-export * from './CalendarEventRsvpInvitationTypeRoute';
-
-export * from './CalendarEventStatusBatchClient';
-export * from './CalendarEventStatusBatchRoute';
-export * from './CalendarEventStatusClient';
-export * from './CalendarEventStatusRoute';
-
-export * from './CalendarEventTypeBatchClient';
-export * from './CalendarEventTypeBatchRoute';
-export * from './CalendarEventTypeClient';
-export * from './CalendarEventTypeRoute';

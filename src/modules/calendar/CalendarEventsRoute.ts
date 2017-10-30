@@ -9,11 +9,11 @@ import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
-import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from './contracts';
+import { ICalendar, ICalendarEvent, IGetCalendarEventsOptions } from './contracts';
 
 export class CalendarEventsRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'calendars/{calendarId}/events/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
+    public readonly findRoute: string = 'calendars/{calendarId}/events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,statusIds,typeIds,from,to}';
     public readonly getRoute: string = 'calendars/{calendarId}/events/{id}/{?embed, fields}';
     public readonly createRoute: string = 'calendars/{calendarId}/events/{id}';
     public readonly updateRoute: string = 'calendars/{calendarId}/events/{id}';
@@ -30,17 +30,15 @@ export class CalendarEventsRoute extends BaseRoute {
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `ids` - CalendarEvent ids which uniquely identify CalendarEvent resources that need to be retrieved.
 	 * - `ownerIds` - Owner ids which uniquely identify event owners used for filtering.
-	 * - `calendarIds` - Calendar ids which uniquely identify Calendar resources used for filtering.
-     * - `calendarNames` - Calendar names which identify Calendar resources used for filtering.
-	 * - `statusIds` - CalendarEventStatus ids which uniquely idendify CalendarEventStatuses used for filtering.
-	 * - `typeIds` - CalendarEventType ids which uniquely identify CalendarEventTypes used for filtering.
+     * - `statusIds` - CalendarEventStatus ids which uniquely idendify CalendarEventStatuses used for filtering.
+     * - `typeIds` - CalendarEventType ids which uniquely identify CalendarEventTypes used for filtering.
      * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
      * @method
      * @param options Query resource GetCalendarEventOptions object.
      * @example calendarEventsRoute.find({searchQuery: '<search-phrase>'});
      **/
-    find(options?: IGetCalendarEventOptions): any {
+    find(options?: IGetCalendarEventsOptions): any {
         var opt;
         if(options){
             opt = options;
@@ -56,12 +54,15 @@ export class CalendarEventsRoute extends BaseRoute {
      * Parses get route which must be expanded with the identifier of the previously created CalendarEvent resource. This route can be expanded using additional GetRequestOptions. Supported items are:
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarEventsRoute.get(id);
      **/
-    get(id: string, options?: IGetRequestOptions): any {
-        return super.baseGet(this.getRoute, id, options);
+    get(calendarId: string, id: string, options?: IGetRequestOptions): any {
+        var opt: any = options;
+        opt.calendarId = calendarId;
+        return super.baseGet(this.getRoute, id, opt);
     }
 
     /**

@@ -45,7 +45,7 @@ export class CalendarRsvpBatchClient {
                 });
      **/
     create(calendar: ICalendar, data: ICalendarEventRSVP[]): PromiseLike<IHttpResponse<ICalendarEventRSVP[]>> {
-        return this.apiClient.post<ICalendarEventRSVP[]>(this.routeDefinition.create(calendar), this.routeDefinition.createParams(data));
+        return this.apiClient.post<ICalendarEventRSVP[]>(this.routeDefinition.create(calendar.id), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -64,7 +64,7 @@ export class CalendarRsvpBatchClient {
                            });
     **/
     update(calendar: ICalendar, data: ICalendarEventRSVP[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(calendar), this.routeDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(calendar.id), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -83,7 +83,7 @@ export class CalendarRsvpBatchClient {
                         });
      **/
     remove(calendar: ICalendar, data: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.delete(calendar), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(calendar.id), this.routeDefinition.deleteParams(data));
     }
 }
 

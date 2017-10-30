@@ -5,15 +5,15 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendarEventRSVPAttendeeInvitationType, IGetCalendarLookupOptions } from './contracts';
+import { ICalendarEventRSVPAttendeeInvitationType, IGetCalendarLookupOptions } from '../contracts';
 
 export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'calendar-lookups/rsvp-invitation-types/{?searchQuery,ids,page,rpp,sort,embed,fields,from,to}';
+    public readonly findRoute: string = 'calendar-lookups/rsvp-invitation-types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
     public readonly getRoute: string = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed, fields}';
     public readonly createRoute: string = 'calendar-lookups/rsvp-invitation-types';
     public readonly updateRoute: string = 'calendar-lookups/rsvp-invitation-types/{id}';

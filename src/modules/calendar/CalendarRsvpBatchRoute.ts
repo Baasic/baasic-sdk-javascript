@@ -8,8 +8,6 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
-import { ICalendar } from './contracts';
-
 export class CalendarRsvpBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'calendars/{calendarId}/rsvp-details/batch';
@@ -22,28 +20,37 @@ export class CalendarRsvpBatchRoute extends BaseRoute {
     /**
      * Parses create route. This URI template does not expose any additional options.
      * @method
-     * @example calendarRsvpBatchRoute.create();
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
+     * @example calendarRsvpBatchRoute.create(calendarId);
      **/
-    create(data: ICalendar): any {
-        return super.baseCreate(this.createRoute, data);
+    create(calendarId: string): any {
+        var entry: any;
+        entry.calendarId = calendarId;
+        return super.baseCreate(this.createRoute, entry);
     }
 
     /**
      * Parses update route. This URI template does not expose any additional options.
      * @method
-     * @example calendarRsvpBatchRoute.update();
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
+     * @example calendarRsvpBatchRoute.update(calendarId);
      **/
-    update(data: ICalendar): any {
-        return super.baseUpdate(this.updateRoute, data);
+    update(calendarId: string): any {
+        var entry: any;
+        entry.calendarId = calendarId;
+        return super.baseUpdate(this.updateRoute, entry);
     }
 
     /**
      * Parses delte route. This URI template does not expose any additional options.
      * @method
-     * @example calendarRsvpBatchRoute.delete();
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
+     * @example calendarRsvpBatchRoute.delete(calendarId);
      **/
-    delete(data: ICalendar): any {
-        return super.baseDelete(this.deleteRoute, data);
+    delete(calendarId: string): any {
+        var entry: any;
+        entry.calendarId = calendarId;
+        return super.baseDelete(this.deleteRoute, entry);
     }
 }
 
