@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendar, ICalendarEventRSVP, IGetCalendarRsvpOptions, ICalendarEvent } from './contracts';
+import { ICalendar, ICalendarEventRSVP, IGetCalendarRsvpOptions, ICalendarEvent } from '../contracts';
 
 export class CalendarRsvpRoute extends BaseRoute {
 
@@ -30,7 +30,6 @@ export class CalendarRsvpRoute extends BaseRoute {
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the CalendarEventRsvp property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * - `calendarId` - Calendar id which uniquely indentifies Calendar resource.
      * - `ids` - CalendarRsvp ids which uniquely identify CalendarRsvp resources that need to be retrieved.
 	 * - `invitationTypeIds` - InvatationType ids which uniquely identify CalendarEventRsvpInvitationType resources used for filtering.
 	 * - `invitationOnly` - A value used to filter events which are invitation-only.
@@ -41,10 +40,11 @@ export class CalendarRsvpRoute extends BaseRoute {
 	 * - `registrationCloseFrom` - A value used to filter eventRsvps where registration is open from this date.
 	 * - `registrationCloseTo` - A value used to filter eventRsvps where registration is closed to this date,
      * @method
+     * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRsvpRoute.find({searchQuery: '<search-phrase>'});
      **/
-    find(options?: IGetCalendarRsvpOptions): any {
+    find(calendarId: string, options?: IGetCalendarRsvpOptions): any {
         var opt;
         if(options){
             opt = options;
@@ -55,7 +55,9 @@ export class CalendarRsvpRoute extends BaseRoute {
         } else {
             opt = {};
         }
-        return super.baseFind(this.findRoute, opt);
+        let params = this.modelMapper.findParams(opt);
+        params.calendarId = calendarId;
+        return super.baseFind(this.findRoute, params);
     }
 
     /**
@@ -68,9 +70,9 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @example calendarRsvpRoute.get(id, options);
      **/
     get(calendarId: string, id: string, options?: IGetRequestOptions): any {
-        var opt: any = options;
-        opt.calendarId = calendarId;
-        return super.baseGet(this.getRoute, id, opt);
+        let params = this.modelMapper.getParams(options);
+        params.calendarId = calendarId;
+        return super.baseGet(this.getRoute, id, params);
     }
 
     /**
@@ -81,9 +83,9 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @example calendarRsvpRoute.create(data);
      **/
     create(calendarId: string, data: ICalendarEventRSVP): any {
-        var entry: any = data;
-        entry.calendarId = calendarId;
-        return super.baseCreate(this.createRoute, calendarId);
+        let params = this.utility.extend({}, data);
+        params.calendarId = calendarId;
+        return super.baseCreate(this.createRoute, params);
     }
 
     /**
@@ -94,9 +96,9 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @example calendarRsvpRoute.update(data);
      **/
     update(calendarId: string, data: ICalendarEventRSVP): any {
-        var entry: any = data;
-        entry.calendarId = calendarId;
-        return super.baseUpdate(this.updateRoute, entry);
+        let params = this.utility.extend({}, data);
+        params.calendarId = calendarId;
+        return super.baseUpdate(this.updateRoute, params);
     }
 
     /**
@@ -107,9 +109,9 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @example calendarRsvpRoute.delete(data);
      **/
     delete(calendarId: string, data: ICalendarEventRSVP): any {
-        var entry: any = data;
-        entry.calendarId = calendarId;
-        return super.baseDelete(this.deleteRoute, entry);
+        let params = this.utility.extend({}, data);
+        params.calendarId = calendarId;
+        return super.baseDelete(this.deleteRoute, params);
     }
 
     /**

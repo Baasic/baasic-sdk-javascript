@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
     TYPES as calendarTypes,
     CalendarRsvpRoute
-} from './';
-import { ICalendar, ICalendarEventRSVP, IGetCalendarRsvpOptions, ICalendarEvent } from './contracts';
+} from '../';
+import { ICalendar, ICalendarEventRSVP, IGetCalendarRsvpOptions, ICalendarEvent } from '../contracts';
 
 @injectable()
 export class CalendarRsvpClient {
@@ -28,6 +28,7 @@ export class CalendarRsvpClient {
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEventRsvp resources matching the given criteria.
      * @method
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @param options Query resource GetCalendarOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarRsvpClient.find({
@@ -36,7 +37,6 @@ export class CalendarRsvpClient {
                     orderBy: '<field>',
                     orderDirection: '<asc|desc>',
                     search: '<search-phrase>',
-                    calendarId: '<calendar-id>',
                     ids: '<ids>',
                     InvitationTypeIds: '<invitation-type-ids>',
                     InvitationOnly: <true|false>,
@@ -53,8 +53,8 @@ export class CalendarRsvpClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IGetCalendarRsvpOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRSVP>>> {
-        return this.apiClient.get<IQueryModel<ICalendarEventRSVP>>(this.routeDefinition.find(options));
+    find(calendarId: string, options?: IGetCalendarRsvpOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRSVP>>> {
+        return this.apiClient.get<IQueryModel<ICalendarEventRSVP>>(this.routeDefinition.find(calendarId, options));
     }
 
     /**
@@ -83,9 +83,7 @@ export class CalendarRsvpClient {
      * @param data A CalendarEventRsvp object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEventRsvp action has been performed.
      * @example calendarRsvpClient.create({
-                    abrv: '<abrv>',
-                    json: '<json>',
-                    name: '<name>'
+                  //TODO example
                 }.then(function (data) {
                     // perform success action here
                 },

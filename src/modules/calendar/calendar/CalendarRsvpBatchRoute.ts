@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
 export class CalendarRsvpBatchRoute extends BaseRoute {
 
@@ -24,9 +24,9 @@ export class CalendarRsvpBatchRoute extends BaseRoute {
      * @example calendarRsvpBatchRoute.create(calendarId);
      **/
     create(calendarId: string): any {
-        var entry: any;
-        entry.calendarId = calendarId;
-        return super.baseCreate(this.createRoute, entry);
+        let params: any = {};
+        params.calendarId = calendarId;
+        return super.baseCreate(this.createRoute, params);
     }
 
     /**
@@ -36,9 +36,9 @@ export class CalendarRsvpBatchRoute extends BaseRoute {
      * @example calendarRsvpBatchRoute.update(calendarId);
      **/
     update(calendarId: string): any {
-        var entry: any;
-        entry.calendarId = calendarId;
-        return super.baseUpdate(this.updateRoute, entry);
+        let params: any = {};
+        params.calendarId = calendarId;
+        return super.baseUpdate(this.updateRoute, params);
     }
 
     /**
@@ -48,9 +48,9 @@ export class CalendarRsvpBatchRoute extends BaseRoute {
      * @example calendarRsvpBatchRoute.delete(calendarId);
      **/
     delete(calendarId: string): any {
-        var entry: any;
-        entry.calendarId = calendarId;
-        return super.baseDelete(this.deleteRoute, entry);
+        let params: any = {};
+        params.calendarId = calendarId;
+        return super.baseDelete(this.deleteRoute, params);
     }
 }
 

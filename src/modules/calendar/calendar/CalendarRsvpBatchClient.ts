@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
     TYPES as calendarTypes,
     CalendarRsvpBatchRoute
-} from './';
-import { ICalendarEventRSVP, ICalendar } from './contracts';
+} from '../';
+import { ICalendarEventRSVP, ICalendar } from '../contracts';
 
 @injectable()
 export class CalendarRsvpBatchClient {
@@ -34,9 +34,7 @@ export class CalendarRsvpBatchClient {
      * @example calendarRsvpBatchClient.create(
      *              calendar, 
      *              [{
-                        abrv: '<abrv>',
-                        json: '<json>',
-                        name: '<name>'
+                        //TODO example
                 }]).then(function (data) {
                     // perform success action here
                 },

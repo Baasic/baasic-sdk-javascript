@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendarEventRSVP } from './contracts';
+import { ICalendarEventRSVP } from '../contracts';
 
 export class CalendarEventRsvpBatchRoute extends BaseRoute {
 

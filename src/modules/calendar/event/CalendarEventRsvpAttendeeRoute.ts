@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendarEvent, ICalendarEventAttendee, IGetCalendarEventAttendeeOptions } from './contracts';
+import { ICalendarEvent, ICalendarEventAttendee, IGetCalendarEventAttendeeOptions } from '../contracts';
 
 export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
 
@@ -91,24 +91,31 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
     }
 
      /**
-     * Parses update Status route. This URI template does not expose any additional options.
+     * Parses update status email or name route. This URI template does not expose any additional options.
      * @method
-     * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
+     * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
+     * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
      * @example calendarEventRsvpAttendeeRoute.update(data);
      **/
-    updateStatus(data: ICalendarEventAttendee): any {
-        return super.baseUpdate(this.updateStatusRoute, data);
+    updateStatus(id: string, statusId: string): any {
+        let params: any = {};
+        params.id = id;
+        params.attendeeStatusId = statusId;
+        return super.baseUpdate(this.updateStatusRoute, params);
     }
 
+
+    //TODO: securitytoken
+    //todo - take only params without the object
      /**
      * Parses update status email or name route. This URI template does not expose any additional options.
      * @method
-     * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
+     * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
+     * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
      * @example calendarEventRsvpAttendeeRoute.update(data);
      **/
-    updateStatusEmailOrName(data: ICalendarEventAttendee): any {
-        //TODO:
-        //return super.baseUpdate(this.updateStatusEmailRoute, data);
+    updateStatusEmailOrName(id: string, statusId: string): any {
+        return super.baseUpdate(this.updateStatusEmailRoute, data);
     }
 
     /**

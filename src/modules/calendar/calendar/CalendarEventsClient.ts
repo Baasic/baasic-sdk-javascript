@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
     TYPES as calendarTypes,
     CalendarEventsRoute
-} from './';
-import { ICalendar, ICalendarEvent, IGetCalendarEventsOptions } from './contracts';
+} from '../';
+import { ICalendar, ICalendarEvent, IGetCalendarEventsOptions } from '../contracts';
 
 @injectable()
 export class CalendarEventsClient {
@@ -29,6 +29,7 @@ export class CalendarEventsClient {
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEvent resources matching the given criteria.
      * @method
      * @param options Query resource GetCalendarEventOptions object.
+     * @param calendarId Calendar Id which uniquely identifies Calendar resource.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarEventsClient.find({
                     pageNumber: 1,
@@ -50,8 +51,8 @@ export class CalendarEventsClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IGetCalendarEventsOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEvent>>> {
-        return this.apiClient.get<IQueryModel<ICalendarEvent>>(this.routeDefinition.find(options));
+    find(calendarId: string, options?: IGetCalendarEventsOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEvent>>> {
+        return this.apiClient.get<IQueryModel<ICalendarEvent>>(this.routeDefinition.find(calendarId, options));
     }
 
     /**
@@ -71,6 +72,25 @@ export class CalendarEventsClient {
      **/
     get(calendarId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(calendarId, id, options));
+    }
+
+    /**
+     * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
+     * @method
+     * @param calendarId calendarId which uniquely identifies Calendar resource.
+     * @param id CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param emailOrFullName TODO?
+     * @param options Query resource options object
+     * @example calendarEventsClient.get(calendarId, id, email@example.com)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    getByEmailOrFullName(calendarId: string, id: string, emailOrFullName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
+        return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(calendarId, id, emailOrFullName, options));
     }
 
     /**
@@ -98,9 +118,8 @@ export class CalendarEventsClient {
                      // perform error handling here
                 });
      **/
-    create(data: ICalendarEvent): PromiseLike<IHttpResponse<ICalendarEvent>> {
-        //return this.apiClient.post<ICalendarEvent>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
-        return this.apiClient.post<ICalendarEvent>(this.routeDefinition.create(data), {});
+    create(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<ICalendarEvent>> {
+        return this.apiClient.post<ICalendarEvent>(this.routeDefinition.create(calendarId, data), {});
     }
 
     /**
@@ -111,6 +130,7 @@ export class CalendarEventsClient {
      * ```
      * @method
      * @param data A Calendar Event  object used to update specified CalendarEvent resource.
+     * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @returns A promise that is resolved once the update CalendarEvent action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
                     calendarEvent.title = '<title>';
@@ -122,8 +142,8 @@ export class CalendarEventsClient {
                             // perform error handling here
                         });
     **/
-    update(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    update(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.put<void>(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     }
 
     /**
@@ -133,6 +153,7 @@ export class CalendarEventsClient {
      * let uri = params['model'].links('delete').href;
      * ```
      * @method
+     * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @param data An calendarEvent object used to delete specified CalendarEvent resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
@@ -144,8 +165,8 @@ export class CalendarEventsClient {
                             // perform error handling here
                         });
      **/
-    remove(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.delete(data));
+    remove(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.delete(calendarId, data));
     }
 }
 

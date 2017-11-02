@@ -5,16 +5,17 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from './contracts';
+import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from '../contracts';
 
 export class CalendarEventRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
     public readonly getRoute: string = 'calendar-events/{id}/{?embed, fields}';
+    public readonly getByEmailOrFullNameRoute: string = 'calendar-events/{id}/{emailOrFullName}'
     public readonly createRoute: string = 'calendar-events';
     public readonly updateRoute: string = 'calendar-events/{id}';
     public readonly deleteRoute: string = 'calendar-events/{id}';
@@ -66,6 +67,20 @@ export class CalendarEventRoute extends BaseRoute {
     }
 
     /**
+     * Parses getByEmailOrFullName route which must be expanded with the identifier of the previously created CalendarEvent resource
+     * The route must also be expanded with the identifier of the previously created CalendarResource and the email/FullName. 
+     * @param id CalendarEvent identifier which uniquely identifies previously created CalendarEvent resource.
+     * @param emailOrFullName TODO?
+     * @param options Query resource options object.
+     * @example calendarEventRoute.get(id, email@example.com, options);
+     */
+    getByEmailOrFullName(id: string, emailOrFullName: string, options?: IGetRequestOptions) {
+        let params = this.modelMapper.getParams(options);
+        params.emailOrFullName = emailOrFullName;
+        return super.baseGet(this.getByEmailOrFullNameRoute, id, params);
+    }
+
+    /**
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEvent object that needs to be inserted into the system.
@@ -88,7 +103,7 @@ export class CalendarEventRoute extends BaseRoute {
     /**
      * Parses delte route. This URI template does not expose any additional options.
      * @method
-     * @param data A CalendarEvent object used to delete specified CalendarEvent resource.
+     * @param data A CalendarEvent object that will be deleted from the system.
      * @example calendarEventRoute.delete(data);
      **/
     delete(data: ICalendarEvent): any {

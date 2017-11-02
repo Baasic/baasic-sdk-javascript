@@ -5,13 +5,13 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
     TYPES as calendarTypes,
     CalendarEventRoute
-} from './';
-import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from './contracts';
+} from '../';
+import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from '../contracts';
 
 @injectable()
 export class CalendarEventClient {
@@ -72,6 +72,24 @@ export class CalendarEventClient {
      **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(id, options));
+    }
+
+    /**
+     * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
+     * @method
+     * @param id CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param emailOrFullName TODO?
+     * @param options Query resource options object
+     * @example calendarEventClient.get(id, email@example.com)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    getByEmailOrFullName(id: string, emailOrFullName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
+        return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(id, emailOrFullName, options));
     }
 
     /**
@@ -148,6 +166,8 @@ export class CalendarEventClient {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
+
+    //TODO - check wether to pass calendar or only the calendar identifier
     /**
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEvent resources from the system if succesfully completed.
      * @method
