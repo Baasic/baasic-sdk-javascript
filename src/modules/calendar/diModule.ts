@@ -1,6 +1,9 @@
 import { ContainerModule } from "inversify";
 import * as Symbol from "es6-symbol";
 import {
+    CalendarACLClient,
+    CalendarACLRoute,
+
     CalendarEventRsvpAttendeeBatchClient,
     CalendarEventRsvpAttendeeBatchRoute,
     CalendarEventRsvpAttendeeClient,
@@ -57,6 +60,9 @@ import {
 } from './';
 
 const TYPES = {
+    CalendarACLClient: Symbol("CalendarACLClient"),
+    CalendarACLRoute: Symbol("CalendarACLRoute"),
+
     CalendarEventRsvpAttendeeBatchClient: Symbol("CalendarEventRsvpAttendeeBatchClient"),
     CalendarEventRsvpAttendeeBatchRoute: Symbol("CalendarEventRsvpAttendeeBatchRoute"),
     CalendarEventRsvpAttendeeClient: Symbol("CalendarEventRsvpAttendeeClient"),
@@ -116,6 +122,9 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
+    bind<CalendarACLClient>(TYPES.CalendarACLClient).to(CalendarACLClient);
+    bind<CalendarACLRoute>(TYPES.CalendarACLRoute).to(CalendarACLRoute);
+
     bind<CalendarEventRsvpAttendeeBatchClient>(TYPES.CalendarEventRsvpAttendeeBatchClient).to(CalendarEventRsvpAttendeeBatchClient);
     bind<CalendarEventRsvpAttendeeBatchRoute>(TYPES.CalendarEventRsvpAttendeeBatchRoute).to(CalendarEventRsvpAttendeeBatchRoute);
     bind<CalendarEventRsvpAttendeeClient>(TYPES.CalendarEventRsvpAttendeeClient).to(CalendarEventRsvpAttendeeClient);

@@ -118,10 +118,13 @@ export class CalendarRsvpRoute extends BaseRoute {
      * Parses purge route. This URI template does not expose any additional options.
      * @method
      * @param data A CalendarEvent object that will have its rsvp's purged
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.purge(data);
      */
-    purgeForEvent(data: ICalendarEvent): any {
-        return super.baseDelete(this.purgeRoute, data);
+    purgeForEvent(calendarId: string, data: ICalendarEvent): any {
+        let params = this.utility.extend({}, data);
+        params.calendarId = calendarId;
+        return super.baseDelete(this.purgeRoute, params);
     }
 
     protected getToDate(options: any) {

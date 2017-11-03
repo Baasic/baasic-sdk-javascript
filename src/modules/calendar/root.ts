@@ -1,4 +1,6 @@
 import {
+    CalendarACLClient,
+
     CalendarEventRsvpAttendeeBatchClient,
     CalendarEventRsvpAttendeeClient,
 
@@ -40,6 +42,8 @@ import { injectable, inject } from "inversify";
 export class Root {
 
     constructor(
+        @inject(TYPES.CalendarACLClient) public calendarACLClient: CalendarACLClient,
+
         @inject(TYPES.CalendarEventRsvpAttendeeBatchClient) public calendarEventRsvpAttendeeBatchClient: CalendarEventRsvpAttendeeBatchClient,
         @inject(TYPES.CalendarEventRsvpAttendeeClient) public calendarEventRsvpAttendeeClient: CalendarEventRsvpAttendeeClient,
 

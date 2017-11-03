@@ -26,10 +26,10 @@ export class CalendarRsvpAttendeeBatchRoute extends BaseRoute {
      * @example calendarRsvpAttendeeBatchRoute.create();
      **/
     create(calendarId: string, eventId: string): any {
-        var data: any;
-        data.calendarId = calendarId;
-        data.eventId = eventId;
-        return super.baseCreate(this.createRoute, data);
+        let params: any = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseCreate(this.createRoute, params);
     }
 
     /**
@@ -40,10 +40,10 @@ export class CalendarRsvpAttendeeBatchRoute extends BaseRoute {
      * @example calendarRsvpAttendeeBatchRoute.update();
      **/
     update(calendarId: string, eventId: string): any {
-        var data: any;
-        data.calendarId = calendarId;
-        data.eventId = eventId;
-        return super.baseUpdate(this.updateRoute, data);
+        let params: any = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseUpdate(this.updateRoute, params);
     }
 
     /**
@@ -54,10 +54,10 @@ export class CalendarRsvpAttendeeBatchRoute extends BaseRoute {
      * @example calendarRsvpAttendeeBatchRoute.delete();
      **/
     delete(calendarId: string, eventId: string): any {
-        var data: any;
-        data.calendarId = calendarId;
-        data.eventId = eventId;
-        return super.baseDelete(this.deleteRoute, data);
+        let params: any = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseDelete(this.deleteRoute, params);
     }
 }
 

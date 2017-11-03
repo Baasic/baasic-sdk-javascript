@@ -4,3 +4,4 @@ export * from './event';
 export * from './calendar';
 export * from './diModule';
 export * from './root';
+export * from './ACL';

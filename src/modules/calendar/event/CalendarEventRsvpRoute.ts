@@ -22,7 +22,6 @@ export class CalendarEventRsvpRoute extends BaseRoute {
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
-
     /**
      * Parses find route which can be expanded with additional options. Supported items are:
      * - `searchQuery` - A string referencing CalendarEventRsvp properties using the phrase or BQL (Baasic Query Language) search.

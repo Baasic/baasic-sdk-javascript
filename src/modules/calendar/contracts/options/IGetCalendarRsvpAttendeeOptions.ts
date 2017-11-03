@@ -8,6 +8,4 @@ export interface IGetCalendarRsvpAttendeeOptions extends IOptions {
     invitationTypeIds?: string[];
     from?: string;
     to?: string;
-    calendarId: string;
-    eventId: string;
 }

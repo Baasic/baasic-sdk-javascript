@@ -25,7 +25,6 @@ export class CalendarEventRsvpAttendeeClient {
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
     ) { }
 
-    
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEventAttendee resources matching the given criteria.
      * @method
@@ -84,9 +83,21 @@ export class CalendarEventRsvpAttendeeClient {
      * @param data A CalendarEventAttendee object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEventAttendee action has been performed.
      * @example calendarEventRsvpAttendeeClient.create({
-     * 
-                    TODO: example
-
+                    AttendeeStatus: <calendar-evetn-attendee-status>,
+                    AttendeeStatusId '<attendee-status-id>',
+                    DateCreated: '<date-created>',
+                    DateUpdated: '<date-updated>',
+                    Email: '<email>',
+                    EventID: '<calendar-event-id>',
+                    FullName: '<full-name>',
+                    Id: '<id>',
+                    InvitationType: <calendar-event-invitation-type>,
+                    InvitationTypeId: '<invitation-type-id>',
+                    Json: '<json>',
+                    Slots: <slots>,
+                    SlotsRequested: <slots-requested>,
+                    User: <user-profile>,
+                    UserID: '<user-id>'
                 }.then(function (data) {
                     // perform success action here
                 },
@@ -95,7 +106,6 @@ export class CalendarEventRsvpAttendeeClient {
                 });
      **/
     create(data: ICalendarEventAttendee): PromiseLike<IHttpResponse<ICalendarEventAttendee>> {
-        data
         return this.apiClient.post<ICalendarEventAttendee>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
@@ -122,8 +132,6 @@ export class CalendarEventRsvpAttendeeClient {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
-
-    //TODO check wether to pass the object or only status and id
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status action has been performed. This action updates a CalendarEventAttendee resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -131,11 +139,10 @@ export class CalendarEventRsvpAttendeeClient {
      * let uri = params['model'].links('put').href;
      * ```
      * @method
-     * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
+     * @param id CalendarEventAttendee id which uniquely identifies a CalendarEventAttendee resource.
+     * @param statusId CalendarEventAttendeeStatus id which uniquely identifies a CalendarEventAttendeeStatus resource.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
-     * @example calendarEventAttendee is a resource previously fetched using get action.
-                    calendarEventAttendee.attendeeStatusId = '<statusId>';
-                    calendarEventRsvpAttendeeClient.updateStatus(calendarEventAttendee)
+     * @example     calendarEventRsvpAttendeeClient.updateStatus(id, statusId)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -143,12 +150,10 @@ export class CalendarEventRsvpAttendeeClient {
                             // perform error handling here
                         });
     **/
-    updateStatus(data: ICalendarEventAttendee): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.updateStatus(data), this.routeDefinition.updateParams(data));
+    updateStatus(id: string, statusId: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.put<void>(this.routeDefinition.updateStatus(id, statusId), {});
     }
 
-
-    //TODO check wether to pass the object or only status, id and email/name
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status Email or FullName action has been performed. This action updates a CalendarEventAttendee resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -156,11 +161,11 @@ export class CalendarEventRsvpAttendeeClient {
      * let uri = params['model'].links('put').href;
      * ```
      * @method
-     * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
+     * @param id CalendarEventRsvpAttendee id which uniquely identifies a CalendarEventRsvpattendee resource.
+     * @param emailOrFullName Email or full name
+     * @param statusId CalendarEventAttendeeStatus id which uniquely identifies a CalendarEventRsvpAttendeeStatus resource.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
-     * @example calendarEventAttendee is a resource previously fetched using get action.
-                    calendarEventAttendee.email = '<e-mail>';
-                    calendarEventRsvpAttendeeClient.updateStatusEmail(calendarEventAttendee)
+     * @example     calendarEventRsvpAttendeeClient.updateStatusEmail(id, email, statusId)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -168,11 +173,10 @@ export class CalendarEventRsvpAttendeeClient {
                             // perform error handling here
                         });
     **/
-    updateStatusEmail(data: ICalendarEventAttendee): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.updateStatusEmailOrName(data), this.routeDefinition.updateParams(data));
+    updateStatusEmailorFullName(id: string, emailOrFullName: string, statusId: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.put<void>(this.routeDefinition.updateStatusEmailOrFullName(id, emailOrFullName, statusId), {});
     }
 
-    //TODO: check wehter to pass the whole object or the id only
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEventAttendee resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -195,7 +199,6 @@ export class CalendarEventRsvpAttendeeClient {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
-    //TODO: check wether to pass the id or the whole object
     /**
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventAttendee resources for the given event from the system if succesfully completed.
      * @method

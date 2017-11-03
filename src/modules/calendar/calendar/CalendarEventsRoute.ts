@@ -88,13 +88,14 @@ export class CalendarEventsRoute extends BaseRoute {
     /**
      * Parses create route. This URI template does not expose any additional options.
      * @method
-     * @param data A CalendarEvent object that needs to be inserted into the system.
-     * @param calendarId A calendar identifier which uniquely identifies a calendar resourse.
-     * @example calendarEventsRoute.create(data);
+     * @param eventId A CalendarEvent identifier which uniquely identifies a calendar resource.
+     * @param calendarId A calendar identifier which uniquely identifies a calendar resource.
+     * @example calendarEventsRoute.create(calendarid, eventid);
      **/
-    create(calendarId: string, data: ICalendarEvent): any {
-        let params = this.utility.extend({}, data);
+    create(calendarId: string, eventId: string): any {
+        let params: any = {}
         params.calendarId = calendarId;
+        params.eventId = eventId;
         return super.baseCreate(this.createRoute, params);
     }
 
@@ -103,7 +104,7 @@ export class CalendarEventsRoute extends BaseRoute {
      * @method
      * @param data A CalendarEvent object used to update specified CalendarEvent resource.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resourse.
-     * @example calendarEventsRoute.update(data);
+     * @example calendarEventsRoute.update(calendarid, data);
      **/
     update(calendarId: string, data: ICalendarEvent): any {
         let params = this.utility.extend({}, data);
@@ -114,12 +115,14 @@ export class CalendarEventsRoute extends BaseRoute {
     /**
      * Parses delte route. This URI template does not expose any additional options.
      * @method
-     * @param data A CalendarEvent object used to delete specified CalendarEvent resource.
-     * @example calendarEventsRoute.delete(data);
+     * @param eventId A CalendarEvent identifier which uniquely identifies a calendar resource.
+     * @param calendarId A calendar identifier which uniquely identifies a calendar resourse.
+     * @example calendarEventsRoute.delete(calendarid, eventid);
      **/
-    delete(calendarId: string, data: ICalendarEvent): any {
-        let params = this.utility.extend({}, data);
-        params.calendarID = calendarId;
+    delete(calendarId: string, eventId: string): any {
+        let params: any = {}
+        params.calendarId = calendarId;
+        params.eventId = eventId;
         return super.baseDelete(this.deleteRoute, params);
     }
 

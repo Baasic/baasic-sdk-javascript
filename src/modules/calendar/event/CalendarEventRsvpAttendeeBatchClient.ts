@@ -31,9 +31,21 @@ export class CalendarEventRsvpAttendeeBatchClient {
      * @param data CalendarEventAttendee objects that need to be inserted into the system.
      * @returns A promise that is resolved once the create CalendarEventAttendees action has been performed.
      * @example calendarEventRsvpAttendeeBatchClient.create([{
-     * 
-                    //TODO: add example here
-
+                    AttendeeStatus: <calendar-evetn-attendee-status>,
+                    AttendeeStatusId '<attendee-status-id>',
+                    DateCreated: '<date-created>',
+                    DateUpdated: '<date-updated>',
+                    Email: '<email>',
+                    EventID: '<calendar-event-id>',
+                    FullName: '<full-name>',
+                    Id: '<id>',
+                    InvitationType: <calendar-event-invitation-type>,
+                    InvitationTypeId: '<invitation-type-id>',
+                    Json: '<json>',
+                    Slots: <slots>,
+                    SlotsRequested: <slots-requested>,
+                    User: <user-profile>,
+                    UserID: '<user-id>'
                 }]).then(function (data) {
                     // perform success action here
                 },

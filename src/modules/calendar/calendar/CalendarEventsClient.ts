@@ -93,33 +93,23 @@ export class CalendarEventsClient {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(calendarId, id, emailOrFullName, options));
     }
 
+    //link
     /**
-     * Returns a promise that is resolved once the create CalendarEvent action has been performed. This action creates a new CalendarEvent resource.
+     * Returns a promise that is resolved once the create CalendarEvent action has been performed. This action links an existing calendarEvent resource with an existing Calendar resource.
      * @method
-     * @param data A CalendarEvent object that needs to be inserted into the system.
+     * @param calendarId calendar id which uniquely identifies the calendar resource to be linked.
+     * @param eventId CalendarEvent id which uniquely identifies the calendarEvent resource to be linked.
      * @returns A promise that is resolved once the create CalendarEvent action has been performed.
-     * @example calendarEventsClient.create({
-                    author: <user-info>,
-                    authorId: '<author-id>',
-                    calendar: <calendar>,
-                    calendarId: '<calendar-id>',
-                    description: '<description>',
-                    detail: <calendar-event-detail>,
-                    endTime: '<end-time>',
-                    isAllDay: <true|false>,
-                    isRecurring: <true|false>,
-                    json: '<json>',
-                    startTime: '<start-time>',
-                    title: '<title'>
-                }.then(function (data) {
+     * @example calendarEventsClient.create(calendarId, eventId)
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
      **/
-    create(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<ICalendarEvent>> {
-        return this.apiClient.post<ICalendarEvent>(this.routeDefinition.create(calendarId, data), {});
+    create(calendarId: string, eventId: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.post<void>(this.routeDefinition.create(calendarId, eventId), {});
     }
 
     /**
@@ -134,7 +124,7 @@ export class CalendarEventsClient {
      * @returns A promise that is resolved once the update CalendarEvent action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
                     calendarEvent.title = '<title>';
-                    calendarEventsClient.update(calendarEvent)
+                    calendarEventsClient.update(calendarid, calendarEvent)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -146,18 +136,18 @@ export class CalendarEventsClient {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     }
 
+    //unlink
     /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEvent resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the remove action has been performed. This action will unlink a CalendarEvent resource from the specified calendar if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
      * let params = modelMapper.removeParams(calendarEvent);
      * let uri = params['model'].links('delete').href;
      * ```
      * @method
      * @param calendarId calendarId which uniquely identifies Calendar resource.
-     * @param data An calendarEvent object used to delete specified CalendarEvent resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @returns A promise that is resolved once the remove action has been performed.
-     * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEventsClient.remove(calendarEvent)
+     * @example     calendarEventsClient.remove(calendarid, eventid)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -165,8 +155,8 @@ export class CalendarEventsClient {
                             // perform error handling here
                         });
      **/
-    remove(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.delete(calendarId, data));
+    remove(calendarId: string, eventId: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.delete(calendarId, eventId));
     }
 }
 

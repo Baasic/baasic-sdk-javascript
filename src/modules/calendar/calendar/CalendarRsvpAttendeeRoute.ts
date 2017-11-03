@@ -15,11 +15,11 @@ export class CalendarRsvpAttendeeRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/{?searchQuery,page,rpp,sort,embed,fields,ids,userIds,emails,fullNames,invitationTypeIds,from,to}';
     public readonly getRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/{id}';
-    public readonly getByEmailOrNameRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/user/{emailOrFullName}'
+    public readonly getByEmailOrFullNameRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/emails/{emailOrFullName}'
     public readonly createRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees';
     public readonly updateRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/{id}';
     public readonly updateStatusRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/{id}/status/{attendeeStatusId}';
-    public readonly updateStatusByEmailOrNameRoute: string = '{calendarId}/events/{eventId}/attendees/user/{emailOrFullName}/status/{attendeeStatusId}';
+    public readonly updateStatusByEmailOrFullNameRoute: string = '{calendarId}/events/{eventId}/attendees/emails/{emailOrFullName}/status/{attendeeStatusId}';
     public readonly deleteRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/{id}';
     public readonly purgeRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/purge';
 
@@ -41,9 +41,11 @@ export class CalendarRsvpAttendeeRoute extends BaseRoute {
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
      * @method
      * @param options Query resource GetCalendarLookupOptions object.
-     * @example calendarRsvpAttendeeRoute.find({searchQuery: '<search-phrase>'});
+     * @param calendarId Calendar identifier which uniquely identifies a calendar resource.
+     * @param eventId calendarEvent identifier which uniquely identifies a CalendarEvent resource.
+     * @example calendarRsvpAttendeeRoute.find(calendarid, eventid, {searchQuery: '<search-phrase>'});
      **/
-    find(options?: IGetCalendarRsvpAttendeeOptions): any {
+    find(calendarId: string, eventId: string, options?: IGetCalendarRsvpAttendeeOptions): any {
         var opt;
         if(options){
             opt = options;
@@ -52,7 +54,10 @@ export class CalendarRsvpAttendeeRoute extends BaseRoute {
         } else {
             opt = {};
         }
-        return super.baseFind(this.findRoute, opt);
+        let params = this.modelMapper.findParams(opt);
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseFind(this.findRoute, params);
     }
 
     /**
@@ -66,87 +71,121 @@ export class CalendarRsvpAttendeeRoute extends BaseRoute {
      * @example calendarRsvpAttendeeRoute.get(calendarId, eventId, id);
      **/
     get(calendarId: string, eventId: string, id: string, options?: IGetRequestOptions): any {
-        var opt: any = options;
-        opt.calendarId = calendarId;
-        opt.eventId = eventId;
-        return super.baseGet(this.getRoute, id, opt);
+        let params = this.modelMapper.getParams(options);
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseGet(this.getRoute, id, params);
     }
 
-    getByEmailOrFullName(): any {
-        //TODO:
+    /**
+     * @method
+     * @param calendarId Calendar Id which uniquely identifies a Calendar resource.
+     * @param eventId CalendarEvent Id which uniquely identifies a calendarEvent resource
+     * @param emailOrFullName Email or full name which identify a CalendarEventRsvpAttendee resource.
+     * @example calendarRsvpAttendeeRoute.getByEmailOrFullName(calendarId, eventId, fullname);
+     */
+    getByEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string): any {
+        let params: any = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        params.emailOrFullName = emailOrFullName;
+        return super.baseGet(this.getByEmailOrFullNameRoute, {}, params)
     }
 
      /**
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies a CalendarEvent resource
      * @param data A CalendarEventAttendee object that needs to be inserted into the system.
-     * @example calendarRsvpAttendeeRoute.create(calendarId, data);
+     * @example calendarRsvpAttendeeRoute.create(calendarId, eventId, data);
      **/
-    create(calendarId: string, data: ICalendarEventAttendee): any {
-        var entry: any = data;
-        entry.calendarId = calendarId;
-        return super.baseCreate(this.createRoute, calendarId);
+    create(calendarId: string, eventId: string, data: ICalendarEventAttendee): any {
+        let params = this.modelMapper.createParams(data);
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseCreate(this.createRoute, params);
     }
 
     /**
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
-     * @example calendarRsvpAttendeeRoute.update(calendarId, data);
+     * @example calendarRsvpAttendeeRoute.update(calendarId, eventId, data);
      **/
-    update(calendarId: string, data: ICalendarEventAttendee): any {
-        var entry: any = data;
-        entry.calendarId = calendarId;
-        return super.baseUpdate(this.updateRoute, entry);
+    update(calendarId: string, eventId: string, data: ICalendarEventAttendee): any {
+        let params = this.modelMapper.updateParams(data);
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseUpdate(this.updateRoute, params);
     }
 
     /**
      * Parses update Status route. This URI template does not expose any additional options.
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
-     * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
-     * @example calendarRsvpAttendeeRoute.update(calendarId, data);
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
+     * @param statusId CalendarEventAttendeeStatus id which uniquely identifies CalendarEventAttendeeStatus resource.
+     * @example calendarRsvpAttendeeRoute.updateStatus(calendarId, eventId, id, statusId);
      **/
-    updateStatus(calendarId: string, data: ICalendarEventAttendee): any {
-        var entry: any = data;
-        entry.calendarId = calendarId;
-        return super.baseUpdate(this.updateStatusRoute, entry);
+    updateStatus(calendarId: string, eventId: string, id: string, statusId: string): any {
+        let params: any = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        params.id = id;
+        params.attendeeStatusId = statusId;
+        return super.baseUpdate(this.updateStatusRoute, params);
     }
 
+    //TODO: security token
     /**
      * Parses update status email or name route. This URI template does not expose any additional options.
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
-     * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
-     * @example calendarRsvpAttendeeRoute.update(calendarId, data);
+     * @param eventId CalendarEvent id which uniqely identifies CalendarEvent resource.
+     * @param emailOrFullName Email or FullName
+     * @param statusId CalendarEventAttendeeStatus id which uniquely identifies CalendarEventAttendeeStatus resource.
+     * @example calendarRsvpAttendeeRoute.update(calendarId, eventId, email, statusId);
      **/
-    updateStatusEmailOrName(data: ICalendarEventAttendee): any {
-        //TODO:
-        //return super.baseUpdate(this.updateStatusEmailRoute, data);
+    updateStatusEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string, statusId: string): any {
+        let params: any = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        params.emailOrFullName = emailOrFullName;
+        params.statusId = statusId;
+        return super.baseUpdate(this.updateStatusByEmailOrFullNameRoute, params);
     }
 
     /**
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param data A CalendarEventAttendee object used to delete specified CalendarEventAttendee resource.
-     * @example calendarRsvpAttendeeRoute.delete(calendarId, data);
+     * @example calendarRsvpAttendeeRoute.delete(calendarId, eventId, data);
      **/
-    delete(calendarId: string, data: ICalendarEventAttendee): any {
-        var entry: any = data;
-        entry.calendarId = calendarId;
-        return super.baseDelete(this.deleteRoute, entry);
+    delete(calendarId: string, eventId: string, data: ICalendarEventAttendee): any {
+        let params = this.modelMapper.removeParams(data);
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseDelete(this.deleteRoute, params);
     }
 
     /**
      * Parses purge route. This URI template does not expose any additional options.
      * @method
-     * @example calendarRsvpAttendeeRoute.purge(event);
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @example calendarRsvpAttendeeRoute.purge(calendarId, eventId);
      */
-    purge(event: ICalendarEvent): any {
-        return super.baseDelete(this.purgeRoute, event);
+    purge(calendarId: string, eventId: string): any {
+        let params: any = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return super.baseDelete(this.purgeRoute, params);
     }
 
 

@@ -20,7 +20,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
     public readonly deleteRoute: string = 'calendar-event-attendees/{id}';
     public readonly purgeRoute: string = 'calendar-event-attendees/{id}/purge';
     public readonly updateStatusRoute: string = '{id}/status/{attendeeStatusId}';
-    public readonly updateStatusEmailRoute: string = '{id}/user/{emailOrFullName}/status/{attendeeStatusId}';
+    public readonly updateStatusEmailOrFullNameRoute: string = '{id}/user/{emailOrFullName}/status/{attendeeStatusId}';
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
     
@@ -95,7 +95,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      * @method
      * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
      * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
-     * @example calendarEventRsvpAttendeeRoute.update(data);
+     * @example calendarEventRsvpAttendeeRoute.update(id, statusId);
      **/
     updateStatus(id: string, statusId: string): any {
         let params: any = {};
@@ -104,18 +104,21 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
         return super.baseUpdate(this.updateStatusRoute, params);
     }
 
-
     //TODO: securitytoken
-    //todo - take only params without the object
      /**
      * Parses update status email or name route. This URI template does not expose any additional options.
      * @method
      * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
+     * @param emailOrFullName Email or full name
      * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
-     * @example calendarEventRsvpAttendeeRoute.update(data);
+     * @example calendarEventRsvpAttendeeRoute.update(id, email, statusId);
      **/
-    updateStatusEmailOrName(id: string, statusId: string): any {
-        return super.baseUpdate(this.updateStatusEmailRoute, data);
+    updateStatusEmailOrFullName(id: string, emailOrFullName: string, statusId: string): any {
+        let params: any = {};
+        params.id = id;
+        params.attendeeStatusId = statusId;
+        params.emailOrFullName = emailOrFullName;
+        return super.baseUpdate(this.updateStatusEmailOrFullNameRoute, params);
     }
 
     /**

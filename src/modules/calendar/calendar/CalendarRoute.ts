@@ -18,7 +18,7 @@ export class CalendarRoute extends BaseRoute {
     public readonly createRoute: string = 'calendars';
     public readonly updateRoute: string = 'calendars/{id}';
     public readonly deleteRoute: string = 'calendars/{id}';
-    public readonly purgeRoute: string = 'calendars/{id}/purge';
+    public readonly purgeRoute: string = 'calendars/purge';
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 

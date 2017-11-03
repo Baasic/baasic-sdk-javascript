@@ -25,9 +25,9 @@ export class CalendarRsvpAttendeeBatchClient {
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
     ) { }
 
-    
+    //link
     /**
-     * Returns a promise that is resolved once the create CalendarEvenAttendees action has been performed; this action creates new CalendarEventAttendee resources.
+     * Returns a promise that is resolved once the create CalendarEvenAttendees action has been performed; this action links new CalendarEventAttendee resources to the calendarEvent.
      * @method
      * @param data CalendarEventAttendee objects that need to be inserted into the system.
      * @param calendarId Calendar id which uniqely identifies Calendar resource.

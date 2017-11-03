@@ -78,7 +78,7 @@ export class CalendarEventClient {
      * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
      * @method
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource.
-     * @param emailOrFullName TODO?
+     * @param emailOrFullName email or full name
      * @param options Query resource options object
      * @example calendarEventClient.get(id, email@example.com)
                     .then(function (data) {

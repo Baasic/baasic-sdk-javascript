@@ -76,8 +76,9 @@ export class CalendarRsvpClient {
         return this.apiClient.get<ICalendarEventRSVP>(this.routeDefinition.get(calendarId, id, options));
     }
 
+    //link
     /**
-     * Returns a promise that is resolved once the create CalendarEventRsvp action has been performed; this action creates a new CalendarEventRsvp resource.
+     * Returns a promise that is resolved once the create CalendarEventRsvp action has been performed; this action adds the CalendarEventRsvp to the calendarEvent resource.
      * @method
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @param data A CalendarEventRsvp object that needs to be inserted into the system.
@@ -119,8 +120,9 @@ export class CalendarRsvpClient {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     }
 
+    //unlink
     /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEventRsvp resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarRsvpRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * Returns a promise that is resolved once the remove action has been performed. This action will unlink a CalendarEventRsvp from the CalendarEvent if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarRsvpRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
      * let params = modelMapper.removeParams(calendarEventRsvp);
      * let uri = params['model'].links('delete').href;
@@ -145,6 +147,7 @@ export class CalendarRsvpClient {
     /**
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvp resources from the system if succesfully completed.
      * @method
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @param data A CalendarEvent object that will have it's rsvp's purged
      * @returns A promise that is resolved once the purge action has been performed.
      * @example     calendarRsvpClient.purge()
@@ -155,8 +158,8 @@ export class CalendarRsvpClient {
                             // perform error handling here
                         });
      **/
-    purge(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.purgeForEvent(data));
+    purge(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.purgeForEvent(calendarId, data));
     }
 }
 
