@@ -1,88 +1,38 @@
 /* globals module */
 /**  
- * @module roleClient  
- * @description  Role Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `roleClient` uses `roleRoute`. 
+ * @module roleBatchClient  
+ * @description  Role Batch Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `roleBatchClient` uses `roleBatchRoute`. 
  */
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { RoleBatchClient, RoleRoute, TYPES as membershipTypes } from './';
+import { RoleBatchRoute, TYPES as membershipTypes } from './';
 import { IRole } from './contracts';
 
 @injectable()
-export class RoleClient {
+export class RoleBatchClient {
 
     /**                 
      * Provides direct access to `roleRoute`.                 
      * @method                        
-     * @example roleClient.routeDefinition.get().expand(expandObject);                 
+     * @example roleBatchClient.routeDefinition.get().expand(expandObject);                 
      **/
-    get routeDefinition(): RoleRoute {
-        return this.roleRoute;
-    }
-
-    /**                 
-     * Provides direct access to `roleBatchClient`.                 
-     * @method                        
-     **/
-    get batch(): RoleBatchClient {
-        return this.roleBatchClient;
+    get routeDefinition(): RoleBatchRoute {
+        return this.roleBatchRoute;
     }
 
     constructor(
-        @inject(membershipTypes.RoleBatchClient) protected roleBatchClient: RoleBatchClient,
-        @inject(membershipTypes.RoleRoute) protected roleRoute: RoleRoute,
+        @inject(membershipTypes.RoleBatchRoute) protected roleBatchRoute: RoleBatchRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
-
-    /**                  
-     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of role resources matching the given criteria.              
-     * @method
-     * @param options Query resource options object. 
-     * @returns A promise that is resolved once the find action has beend performed.                            
-     * @example roleClient.find({   
-                    pageNumber : 1,   
-                    pageSize : 10,   
-                    orderBy : '<field>',   
-                    orderDirection : '<asc|desc>',   
-                    search : '<search-phrase>' 
-                })
-                .then(function (collection) {   
-                    // perform success action here 
-                },
-                 function (response, status, headers, config) {   
-                    // perform error handling here 
-                });                     
-     **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IRole>>> {
-        return this.apiClient.get<IQueryModel<IRole>>(this.routeDefinition.find(options));
-    }
-
-    /**                  
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified role resource.    
-     * @param id Role unique indentifer.
-     * @param options Query resource options object.
-     * @returns A promise that is resolved once the get action has been performed.              
-     * @method                         
-     * @example roleClient.get('<role-id>')
-                    .then(function (data) {   
-                        // perform success action here 
-                    },
-                     function (response, status, headers, config) {   
-                        // perform error handling here 
-                    });                  
-     **/
-    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.get<IRole>(this.roleRoute.get(id, options));
-    }
 
     /**                  
      * Returns a promise that is resolved once the create action has been performed; this action creates a role.         
      * @method
      * @param data A role object that needs to be inserted into the system.
      * @returns A promise that is resolved once the create action has beend performed.                                  
-     * @example roleClient.create({ 
+     * @example roleBatchClient.create({ 
                     description : '<description>',   
                     name : '<name>' 
                 })
@@ -93,8 +43,8 @@ export class RoleClient {
                     // perform error handling here 
                 });                  
      **/
-    create(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.post<IRole>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    create(data: IRole[]): PromiseLike<IHttpResponse<IRole[]>> {
+        return this.apiClient.post<IRole[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**                  
@@ -108,7 +58,7 @@ export class RoleClient {
      * @returns A promise that is resolved once the update role action has been performed.                              
      * @example // role is a resource previously fetched using get action. 
                     role.name = '<new-name>'; 
-                    roleClient.update(role)
+                    roleBatchClient.update(role)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -116,8 +66,8 @@ export class RoleClient {
                             // perform error handling here 
                         }); 				
      **/
-    update(data: IRole): PromiseLike<IHttpResponse<IRole>> {
-        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    update(data: IRole[]): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 
     /**                  
@@ -129,7 +79,7 @@ export class RoleClient {
      * @returns A promise that is resolved once the remove action has been performed.                
      * @method                         
      * @example // Role is a resource previously fetched using get action.				 
-                    roleClient.remove(role)
+                    roleBatchClient.remove(role)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -137,8 +87,8 @@ export class RoleClient {
                             // perform error handling here 
                         });						
      **/
-    remove(data: IRole): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.delete(this.routeDefinition.delete(data));
+    remove(data: IRole[]): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, data);
     }
 }
 

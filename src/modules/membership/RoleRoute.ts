@@ -10,10 +10,10 @@ import { IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { IRole } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { RoleBatchRoute, TYPES as membershipTypes } from './'; 
 
 @injectable()
 export class RoleRoute extends BaseRoute {
-
 
     /**                  
     * Find route with route and query parameters.
@@ -36,8 +36,18 @@ export class RoleRoute extends BaseRoute {
     **/
     public removeRoute: string = 'lookups/roles/{id}';
 
+    /**
+     * Provides direct access to 'roleBatchRoute'
+     * @method
+    **/
+    get batch(): RoleBatchRoute {
+        return this.roleBatchRoute;
+    }
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor( 
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
+        @inject(membershipTypes.RoleBatchRoute) protected roleBatchRoute: RoleBatchRoute
+    ) { super(appOptions); }
 
     /**                 
      * Parses find role route which can be expanded with additional options. Supported items are:                 

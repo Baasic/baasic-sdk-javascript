@@ -8,6 +8,8 @@ export * from './passwordRecoveryRoute';
 export * from './passwordRecoveryClient';
 export * from './registerRoute';
 export * from './registerClient';
+export * from './roleBatchRoute';
+export * from './roleBatchClient';
 export * from './roleRoute';
 export * from './roleClient';
 export * from './userSocialLoginRoute';

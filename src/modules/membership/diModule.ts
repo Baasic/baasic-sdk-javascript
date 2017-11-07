@@ -9,6 +9,8 @@ import {
     PasswordRecoveryRoute,
     RegisterClient,
     RegisterRoute,
+    RoleBatchClient,
+    RoleBatchRoute,
     RoleClient,
     RoleRoute,
     UserSocialLoginClient,
@@ -31,6 +33,8 @@ const TYPES = {
     PasswordRecoveryRoute: Symbol("PasswordRecoveryRoute"),
     RegisterClient: Symbol("RegisterClient"),
     RegisterRoute: Symbol("RegisterRoute"),
+    RoleBatchClient: Symbol("RoleBatchClient"),
+    RoleBatchRoute: Symbol("RoleBatchRoute"),
     RoleClient: Symbol("RoleClient"),
     RoleRoute: Symbol("RoleRoute"),
     UserSocialLoginClient: Symbol("UserSocialLoginClient"),
@@ -55,6 +59,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<PasswordRecoveryClient>(TYPES.PasswordRecoveryClient).to(PasswordRecoveryClient);
     bind<RegisterRoute>(TYPES.RegisterRoute).to(RegisterRoute);
     bind<RegisterClient>(TYPES.RegisterClient).to(RegisterClient);
+    bind<RoleBatchRoute>(TYPES.RoleBatchRoute).to(RoleBatchRoute);
+    bind<RoleBatchClient>(TYPES.RoleBatchClient).to(RoleBatchClient);
     bind<RoleRoute>(TYPES.RoleRoute).to(RoleRoute);
     bind<RoleClient>(TYPES.RoleClient).to(RoleClient);
     bind<UserSocialLoginRoute>(TYPES.UserSocialLoginRoute).to(UserSocialLoginRoute);
