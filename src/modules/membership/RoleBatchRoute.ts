@@ -17,17 +17,17 @@ export class RoleBatchRoute extends BaseRoute {
     /**                  
     * Create route with route and query parameters.
     **/
-    public createRoute: string = 'lookups/roles';
+    public createRoute: string = 'lookups/roles/batch';
 
     /**                  
     * Update route with route and query parameters.
     **/
-    public updateRoute: string = 'lookups/roles';
+    public updateRoute: string = 'lookups/roles/batch';
 
     /**                  
     * Delete route with route and query parameters.
     **/
-    public removeRoute: string = 'lookups/roles';    
+    public removeRoute: string = 'lookups/roles/batch';    
     
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }

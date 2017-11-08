@@ -88,7 +88,7 @@ export class RoleBatchClient {
                         });						
      **/
     remove(data: IRole[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.delete(), undefined, data);
+        return this.apiClient.delete<void>(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteBatchParams(data));
     }
 }
 

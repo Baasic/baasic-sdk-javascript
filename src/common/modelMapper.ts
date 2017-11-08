@@ -120,4 +120,21 @@ export class ModelMapper {
     removeParams(data: any) {
         return this.ModelParams(data);
     }
+
+        /**
+     * Performs remove resource transforms on transforms an object so that it can be safely expanded with additional properties.
+     * @param data data object
+     * @method 
+     * @example modelMapper.batchRemoveParams({});
+     **/
+    batchRemoveParams(data: any[]) {
+        let items: string[] = [];
+        data.forEach((item) => { 
+            if (this.utility.isObject(item)) {
+                items.push(item[this.idPropertyName]);
+            }
+        });
+
+        return items;
+    }
 }
