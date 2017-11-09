@@ -9,7 +9,7 @@ import { BaseRoute, TYPES as commonTypes } from '../../../common';
 import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendar, IGetCalendarLookupOptions } from '../contracts';
+import { ICalendar, IGetCalendarOptions } from '../contracts';
 
 export class CalendarRoute extends BaseRoute {
 
@@ -23,7 +23,7 @@ export class CalendarRoute extends BaseRoute {
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
-     * Parses find route which can be expanded with additional GetCalendarLookupOptions. Supported items are:
+     * Parses find route which can be expanded with additional GetCalendarOptions. Supported items are:
      * - `searchQuery` - A string referencing Calendar properties using the phrase or BQL (Baasic Query Language) search.
      * - `page` - A value used to set the page number, i.e. to retrieve certain Calendar subset from the storage.
      * - `rpp` - A value used to limit the size of result set per page.
@@ -35,7 +35,7 @@ export class CalendarRoute extends BaseRoute {
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRoute.find({searchQuery: '<search-phrase>'});
      **/
-    find(options?: IGetCalendarLookupOptions): any {
+    find(options?: IGetCalendarOptions): any {
         var opt;
         if(options){
             opt = options;

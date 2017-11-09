@@ -166,12 +166,10 @@ export class CalendarEventClient {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
-
-    //TODO - check wether to pass calendar or only the calendar identifier
     /**
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEvent resources from the system if succesfully completed.
      * @method
-     * @param calendar Calendar resource which will have its Events purged.
+     * @param calendarId Calendar identifier which uniquely identifies a calendar resource which will have its Events purged.
      * @returns A promise that is resolved once the purge action has been performed.
      * @example     calendarEventClient.purge()
                         .then(function (data) {
@@ -181,8 +179,8 @@ export class CalendarEventClient {
                             // perform error handling here
                         });
      **/
-    purge(calendar: ICalendar): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.purge(calendar));
+    purge(calendarId: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.purge(calendarId));
     }
 }
 

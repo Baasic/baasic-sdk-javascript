@@ -70,7 +70,7 @@ export class CalendarEventRoute extends BaseRoute {
      * Parses getByEmailOrFullName route which must be expanded with the identifier of the previously created CalendarEvent resource
      * The route must also be expanded with the identifier of the previously created CalendarResource and the email/FullName. 
      * @param id CalendarEvent identifier which uniquely identifies previously created CalendarEvent resource.
-     * @param emailOrFullName TODO?
+     * @param emailOrFullName Email or full name.
      * @param options Query resource options object.
      * @example calendarEventRoute.get(id, email@example.com, options);
      */
@@ -113,11 +113,11 @@ export class CalendarEventRoute extends BaseRoute {
     /**
      * Parses purge route. This URI template does not expose any additional options.
      * @method
-     * @param data A Calendar object that will have all of it's events purged.
+     * @param calendarId CalendarId identifier that uniquely identifies a calendar resource that will have all of it's events purged.
      * @example calendarEventRoute.purge(calendar);
      */
-    purge(data: ICalendar): any {
-        return super.baseDelete(this.purgeRoute, data);
+    purge(calendarId: string): any {
+        return super.baseDelete(this.purgeRoute, calendarId);
     }
 
     protected getToDate(options: any) {

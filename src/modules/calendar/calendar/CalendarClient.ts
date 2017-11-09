@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarRoute
 } from '../';
-import { ICalendar, IGetCalendarLookupOptions } from '../contracts';
+import { ICalendar, IGetCalendarOptions } from '../contracts';
 
 @injectable()
 export class CalendarClient {
@@ -28,7 +28,7 @@ export class CalendarClient {
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of Calendar resources matching the given criteria.
      * @method
-     * @param options Query resource GetCalendarLookupOptions object.
+     * @param options Query resource GetCalendarOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarClient.find({
                     pageNumber : 1,
@@ -47,7 +47,7 @@ export class CalendarClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IGetCalendarLookupOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendar>>> {
+    find(options?: IGetCalendarOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendar>>> {
         return this.apiClient.get<IQueryModel<ICalendar>>(this.routeDefinition.find(options));
     }
 
