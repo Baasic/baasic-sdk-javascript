@@ -26,7 +26,7 @@ export class CalendarRsvpAttendeeClient {
     }
 
     constructor(
-        @inject(calendarTypes.CalendarRsvpAttendeeBatchClient) public calendarRsvpAttendeeBatchClient: CalendarRsvpAttendeeBatchClient,
+        @inject(calendarTypes.CalendarRsvpAttendeeBatchClient) protected calendarRsvpAttendeeBatchClient: CalendarRsvpAttendeeBatchClient,
         @inject(calendarTypes.CalendarRsvpAttendeeRoute) protected calendarRsvpAttendeeRoute: CalendarRsvpAttendeeRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }

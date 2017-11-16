@@ -16390,7 +16390,7 @@ CalendarLookups = tslib_1.__decorate([
     tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRsvpInvitationTypeClient)),
     tslib_1.__param(2, inversify_1.inject(_1.TYPES.CalendarEventStatusClient)),
     tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarEventTypeClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CalendarEventRsvpAttendeeStatusBatchClient !== "undefined" && _2.CalendarEventRsvpAttendeeStatusBatchClient) === "function" && _a || Object, typeof (_b = typeof _2.CalendarEventRsvpInvitationTypeBatchClient !== "undefined" && _2.CalendarEventRsvpInvitationTypeBatchClient) === "function" && _b || Object, typeof (_c = typeof _2.CalendarEventStatusClient !== "undefined" && _2.CalendarEventStatusClient) === "function" && _c || Object, typeof (_d = typeof _2.CalendarEventTypeClient !== "undefined" && _2.CalendarEventTypeClient) === "function" && _d || Object])
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CalendarEventRsvpAttendeeStatusClient !== "undefined" && _2.CalendarEventRsvpAttendeeStatusClient) === "function" && _a || Object, typeof (_b = typeof _2.CalendarEventRsvpInvitationTypeClient !== "undefined" && _2.CalendarEventRsvpInvitationTypeClient) === "function" && _b || Object, typeof (_c = typeof _2.CalendarEventStatusClient !== "undefined" && _2.CalendarEventStatusClient) === "function" && _c || Object, typeof (_d = typeof _2.CalendarEventTypeClient !== "undefined" && _2.CalendarEventTypeClient) === "function" && _d || Object])
 ], CalendarLookups);
 exports.CalendarLookups = CalendarLookups;
 var _a, _b, _c, _d;

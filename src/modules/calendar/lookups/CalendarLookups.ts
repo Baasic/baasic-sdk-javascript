@@ -2,8 +2,8 @@ import {
     TYPES
 } from '../';
 import {
-    CalendarEventRsvpAttendeeStatusBatchClient,
-    CalendarEventRsvpInvitationTypeBatchClient,
+    CalendarEventRsvpAttendeeStatusClient,
+    CalendarEventRsvpInvitationTypeClient,
     CalendarEventStatusClient,
     CalendarEventTypeClient
 } from './';
@@ -15,8 +15,8 @@ import { injectable, inject } from "inversify";
 export class CalendarLookups {
 
     constructor(
-        @inject(TYPES.CalendarEventRsvpAttendeeClient) public eventRsvpAttendeeStatus: CalendarEventRsvpAttendeeStatusBatchClient,
-        @inject(TYPES.CalendarEventRsvpInvitationTypeClient) public eventRsvpInvitationType: CalendarEventRsvpInvitationTypeBatchClient,
+        @inject(TYPES.CalendarEventRsvpAttendeeClient) public eventRsvpAttendeeStatus: CalendarEventRsvpAttendeeStatusClient,
+        @inject(TYPES.CalendarEventRsvpInvitationTypeClient) public eventRsvpInvitationType: CalendarEventRsvpInvitationTypeClient,
         @inject(TYPES.CalendarEventStatusClient) public eventStatus: CalendarEventStatusClient,
         @inject(TYPES.CalendarEventTypeClient) public eventType: CalendarEventTypeClient
     ) {
