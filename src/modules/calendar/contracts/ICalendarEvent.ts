@@ -1,10 +1,10 @@
 import { IModel } from '../../../common/contracts';
 
-import { ICalendar, ICalendarEventDetail, ICalendarEventRsvp, IUserInfo, ICalendarEventOptions } from './';
+import { ICalendar, ICalendarEventDetail, ICalendarEventRsvp, ICalendarUserInfo, ICalendarEventOptions } from './';
 
 export interface ICalendarEvent extends IModel {
 
-    Author?: IUserInfo;
+    Author?: ICalendarUserInfo;
     AuthorId?: string;
     Calendar?: ICalendar;
     CalendarId: string;

@@ -1,6 +1,6 @@
 import { IModel } from '../../../common/contracts';
 
-import { ICalendarEventRsvpAttendeeStatus, ICalendarEventRsvpAttendeeInvitationType, IUserInfo} from './';
+import { ICalendarEventRsvpAttendeeStatus, ICalendarEventRsvpAttendeeInvitationType, ICalendarUserInfo} from './';
 
 export interface ICalendarEventAttendee extends IModel {
     AttendeeStatus?: ICalendarEventRsvpAttendeeStatus;
@@ -13,6 +13,6 @@ export interface ICalendarEventAttendee extends IModel {
     Json?: string;
     Slots: number;
     SlotsRequested?: number;
-    User?: IUserInfo;
+    User?: ICalendarUserInfo;
     UserId?: string;
 }

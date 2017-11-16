@@ -1,4 +1,4 @@
-export interface IUserInfo {
+export interface ICalendarUserInfo {
     DateCreated?: string;
     DateUpdated?: string;
     DisplayName?: string;

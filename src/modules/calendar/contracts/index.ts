@@ -7,4 +7,4 @@ export * from './ICalendarEventRsvp';
 
 export * from './options';
 export * from './lookups';
-export * from './IUserInfo';
+export * from './ICalendarUserInfo';

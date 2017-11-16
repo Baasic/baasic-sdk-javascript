@@ -1,12 +1,12 @@
 import { IModel } from '../../../common/contracts';
 
-import { IUserInfo } from './';
+import { ICalendarUserInfo } from './';
 
 export interface ICalendar extends IModel {
     Abrv?: string;
     Description?: string;
     Json?: string;
     Name: string;
-    Owner: IUserInfo;
+    Owner: ICalendarUserInfo;
     OwnerId: string;
 }

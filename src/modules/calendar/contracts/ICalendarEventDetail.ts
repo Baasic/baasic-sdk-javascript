@@ -1,6 +1,6 @@
 import { IModel } from '../../../common/contracts';
 
-import { IUserInfo } from './';
+import { ICalendarUserInfo } from './';
 
 export interface ICalendarEventDetail extends IModel {
     ContactAddress?: string;
@@ -11,7 +11,7 @@ export interface ICalendarEventDetail extends IModel {
     ContactLastName?: string;
     ContactPhone?: string;
     ContactTimeZoneId?: string;
-    ContactUser?: IUserInfo;
+    ContactUser?: ICalendarUserInfo;
     ContactUserId?: string;
     ContactZipCode?: string;
     EventStatusId?: string;
