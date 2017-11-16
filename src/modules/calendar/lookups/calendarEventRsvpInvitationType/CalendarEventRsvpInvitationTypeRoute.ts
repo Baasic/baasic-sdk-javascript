@@ -9,7 +9,7 @@ import { BaseRoute, TYPES as commonTypes } from '../../../../common';
 import { IGetRequestOptions, IOptions } from '../../../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
-import { ICalendarEventRSVPAttendeeInvitationType, IGetCalendarOptions } from '../../contracts';
+import { ICalendarEventRsvpAttendeeInvitationType, IGetCalendarOptions } from '../../contracts';
 
 export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
 
@@ -66,7 +66,7 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
      * @param data A CalendarEventRsvpInvitationType object that needs to be inserted into the system.
      * @example calendarEventRsvpInvitationTypeRoute.create(data);
      **/
-    create(data: ICalendarEventRSVPAttendeeInvitationType): any {
+    create(data: ICalendarEventRsvpAttendeeInvitationType): any {
         return super.baseCreate(this.createRoute, data);
     }
 
@@ -76,7 +76,7 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
      * @param data A CalendarEventRsvpInvitationType object used to update specified CalendarEventRsvpInvitationType resource.
      * @example calendarEventRsvpInvitationTypeRoute.update(data);
      **/
-    update(data: ICalendarEventRSVPAttendeeInvitationType): any {
+    update(data: ICalendarEventRsvpAttendeeInvitationType): any {
         return super.baseUpdate(this.updateRoute, data);
     }
 
@@ -86,7 +86,7 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
      * @param data A CalendarEventRsvpInvitationType object used to delete specified CalendarEventRsvpInvitationType resource.
      * @example calendarEventRsvpInvitationTypeRoute.delete(data);
      **/
-    delete(data: ICalendarEventRSVPAttendeeInvitationType): any {
+    delete(data: ICalendarEventRsvpAttendeeInvitationType): any {
         return super.baseDelete(this.deleteRoute, data);
     }
 

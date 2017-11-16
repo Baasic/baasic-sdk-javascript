@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarEventRsvpInvitationTypeRoute
 } from '../../';
-import { ICalendarEventRSVPAttendeeInvitationType, IGetCalendarOptions } from '../../contracts';
+import { ICalendarEventRsvpAttendeeInvitationType, IGetCalendarOptions } from '../../contracts';
 
 @injectable()
 export class CalendarEventRsvpInvitationTypeClient {
@@ -48,8 +48,8 @@ export class CalendarEventRsvpInvitationTypeClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IGetCalendarOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRSVPAttendeeInvitationType>>> {
-        return this.apiClient.get<IQueryModel<ICalendarEventRSVPAttendeeInvitationType>>(this.routeDefinition.find(options));
+    find(options?: IGetCalendarOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRsvpAttendeeInvitationType>>> {
+        return this.apiClient.get<IQueryModel<ICalendarEventRsvpAttendeeInvitationType>>(this.routeDefinition.find(options));
     }
 
     /**
@@ -66,8 +66,8 @@ export class CalendarEventRsvpInvitationTypeClient {
                          // perform error handling here
                     });
      **/
-    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRSVPAttendeeInvitationType>> {
-        return this.apiClient.get<ICalendarEventRSVPAttendeeInvitationType>(this.routeDefinition.get(id, options));
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeInvitationType>> {
+        return this.apiClient.get<ICalendarEventRsvpAttendeeInvitationType>(this.routeDefinition.get(id, options));
     }
 
     /**
@@ -86,8 +86,8 @@ export class CalendarEventRsvpInvitationTypeClient {
                      // perform error handling here
                 });
      **/
-    create(data: ICalendarEventRSVPAttendeeInvitationType): PromiseLike<IHttpResponse<ICalendarEventRSVPAttendeeInvitationType>> {
-        return this.apiClient.post<ICalendarEventRSVPAttendeeInvitationType>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    create(data: ICalendarEventRsvpAttendeeInvitationType): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeInvitationType>> {
+        return this.apiClient.post<ICalendarEventRsvpAttendeeInvitationType>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -109,7 +109,7 @@ export class CalendarEventRsvpInvitationTypeClient {
                             // perform error handling here
                         });
     **/
-    update(data: ICalendarEventRSVPAttendeeInvitationType): PromiseLike<IHttpResponse<void>> {
+    update(data: ICalendarEventRsvpAttendeeInvitationType): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
@@ -131,7 +131,7 @@ export class CalendarEventRsvpInvitationTypeClient {
                             // perform error handling here
                         });
      **/
-    remove(data: ICalendarEventRSVPAttendeeInvitationType): PromiseLike<IHttpResponse<void>> {
+    remove(data: ICalendarEventRsvpAttendeeInvitationType): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 

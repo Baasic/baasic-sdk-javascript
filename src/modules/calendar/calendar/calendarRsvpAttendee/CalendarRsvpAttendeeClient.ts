@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarRsvpAttendeeRoute
 } from '../../';
-import { ICalendar, ICalendarEventRSVP, ICalendarEvent, IGetCalendarRsvpAttendeeOptions, ICalendarEventAttendee } from '../../contracts';
+import { ICalendar, ICalendarEventRsvp, ICalendarEvent, IGetCalendarRsvpAttendeeOptions, ICalendarEventAttendee } from '../../contracts';
 
 @injectable()
 export class CalendarRsvpAttendeeClient {
@@ -32,7 +32,7 @@ export class CalendarRsvpAttendeeClient {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param options Query resource GetCalendarLookupOptions object.
      * @returns A promise that is resolved once the find action has been performed.
-     * @example calendarRsvpAttendeeClient.find(calendarId, eventID, {
+     * @example calendarRsvpAttendeeClient.find(calendarId, eventId, {
                     pageNumber: 1,
                     pageSize: 10,
                     orderBy: '<field>',
@@ -64,7 +64,7 @@ export class CalendarRsvpAttendeeClient {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param options Query resource GetRequestOptions object.
      * @returns A promise that is resolved once the get action has been performed.
-     * @example calendarRsvpAttendeeClient.get()
+     * @example calendarRsvpAttendeeClient.get(calendarId,eventId, id)
                     .then(function (data) {
                         // perform success action here
                     },
@@ -82,10 +82,11 @@ export class CalendarRsvpAttendeeClient {
      * @param calendarId Calendar Id which uniquely identifies a Calendar resource.
      * @param eventId CalendarEvent Id which uniquely identifies a calendarEvent resource
      * @param emailOrFullName Email or full name which identify a CalendarEventRsvpAttendee resource.
+     * @param options Query resource options object.
      * @example calendarRsvpAttendeeRoute.getByEmailOrFullName(calendarId, eventId, fullname);
      */
-    getByEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string): PromiseLike<IHttpResponse<ICalendarEventAttendee>> {
-        return this.apiClient.get<ICalendarEventAttendee>(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName));
+    getByEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string, options: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventAttendee>> {
+        return this.apiClient.get<ICalendarEventAttendee>(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options));
     }
 
     //link
@@ -186,7 +187,6 @@ export class CalendarRsvpAttendeeClient {
         return this.apiClient.put<void>(this.routeDefinition.updateStatusEmailOrFullName(calendarId, eventId, emailOrFullName, statusId), {});
     }
 
-    //unlink
     /**
      * Returns a promise that is resolved once the unlink action has been performed. This action will unlink a CalendarEventAttendee resource from the CalendarEvent if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```

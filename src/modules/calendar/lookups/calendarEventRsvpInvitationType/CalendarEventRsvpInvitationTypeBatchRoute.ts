@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../../../common';
 import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
-import { ICalendarEventRSVPAttendeeInvitationType } from '../../contracts';
+import { ICalendarEventRsvpAttendeeInvitationType } from '../../contracts';
 
 export class CalendarEventRsvpInvitationTypeBatchRoute extends BaseRoute {
 

@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarRsvpBatchRoute
 } from '../../';
-import { ICalendarEventRSVP, ICalendar } from '../../contracts';
+import { ICalendarEventRsvp, ICalendar } from '../../contracts';
 
 @injectable()
 export class CalendarRsvpBatchClient {
@@ -49,8 +49,8 @@ export class CalendarRsvpBatchClient {
                      // perform error handling here
                 });
      **/
-    link(calendarId: string, data: ICalendarEventRSVP[]): PromiseLike<IHttpResponse<ICalendarEventRSVP[]>> {
-        return this.apiClient.post<ICalendarEventRSVP[]>(this.routeDefinition.link(calendarId), this.routeDefinition.createParams(data));
+    link(calendarId: string, data: ICalendarEventRsvp[]): PromiseLike<IHttpResponse<ICalendarEventRsvp[]>> {
+        return this.apiClient.post<ICalendarEventRsvp[]>(this.routeDefinition.link(calendarId), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -68,7 +68,7 @@ export class CalendarRsvpBatchClient {
                                 // perform error handling here
                            });
     **/
-    update(calendarId: string, data: ICalendarEventRSVP[]): PromiseLike<IHttpResponse<void>> {
+    update(calendarId: string, data: ICalendarEventRsvp[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId), this.routeDefinition.updateParams(data));
     }
 
@@ -76,7 +76,7 @@ export class CalendarRsvpBatchClient {
      * Returns a promise that is resolved once the unlink action has been performed. This action will unlink CalendarEventRsvp resources from the specified calendar if successfully completed.
      * @method
      * @param data CalendarEventRsvp Ids which uniquely identify CalendarEventRsvp resources to be deleted.
-     * @param calendarID Calendar identifier that uniquely identifies a calendar resource that will have it's calendarEventRsvp's deleted.
+     * @param calendarId Calendar identifier that uniquely identifies a calendar resource that will have it's calendarEventRsvp's deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpIds are identifiers which uniquely identify CalendarEventRsvp resources.
                     calendarRsvpBatchClient.unlink(calendar, calendarEventRsvpIds)

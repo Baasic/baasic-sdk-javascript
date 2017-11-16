@@ -9,7 +9,7 @@ import { BaseRoute, TYPES as commonTypes } from '../../../../common';
 import { IGetRequestOptions, IOptions } from '../../../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
-import { ICalendar, ICalendarEventRSVP, IGetCalendarRsvpOptions, ICalendarEvent } from '../../contracts';
+import { ICalendar, ICalendarEventRsvp, IGetCalendarRsvpOptions, ICalendarEvent } from '../../contracts';
 
 export class CalendarRsvpRoute extends BaseRoute {
 
@@ -81,7 +81,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param calendarId Calendar Id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.link(data);
      **/
-    link(calendarId: string, data: ICalendarEventRSVP): any {
+    link(calendarId: string, data: ICalendarEventRsvp): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
         return super.baseCreate(this.linkRoute, params);
@@ -94,7 +94,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.update(data);
      **/
-    update(calendarId: string, data: ICalendarEventRSVP): any {
+    update(calendarId: string, data: ICalendarEventRsvp): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
         return super.baseUpdate(this.updateRoute, params);
@@ -107,7 +107,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.unlink(data);
      **/
-    unlink(calendarId: string, data: ICalendarEventRSVP): any {
+    unlink(calendarId: string, data: ICalendarEventRsvp): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
         return super.baseDelete(this.unlinkRoute, params);

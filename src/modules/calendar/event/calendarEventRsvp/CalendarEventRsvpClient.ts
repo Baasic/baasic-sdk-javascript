@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarEventRsvpRoute
 } from '../../';
-import { ICalendarEvent, ICalendarEventRSVP, IGetCalendarEventRsvpOptions } from '../../contracts';
+import { ICalendarEvent, ICalendarEventRsvp, IGetCalendarEventRsvpOptions } from '../../contracts';
 
 @injectable()
 export class CalendarEventRsvpClient {
@@ -46,7 +46,7 @@ export class CalendarEventRsvpClient {
                     from: <start-date>,
                     to: <end-date>,
                     registrationCloseFrom: <registration-from-date>,
-                    registrationCloseTo: <registration-to.date>
+                    registrationCloseTo: <registration-to-date>
                 })
                 .then(function (collection) {
                     // perform success action here
@@ -55,8 +55,8 @@ export class CalendarEventRsvpClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IGetCalendarEventRsvpOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRSVP>>> {
-        return this.apiClient.get<IQueryModel<ICalendarEventRSVP>>(this.routeDefinition.find(options));
+    find(options?: IGetCalendarEventRsvpOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRsvp>>> {
+        return this.apiClient.get<IQueryModel<ICalendarEventRsvp>>(this.routeDefinition.find(options));
     }
 
     /**
@@ -73,8 +73,8 @@ export class CalendarEventRsvpClient {
                          // perform error handling here
                     });
      **/
-    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRSVP>> {
-        return this.apiClient.get<ICalendarEventRSVP>(this.routeDefinition.get(id, options));
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRsvp>> {
+        return this.apiClient.get<ICalendarEventRsvp>(this.routeDefinition.get(id, options));
     }
 
     /**
@@ -98,8 +98,8 @@ export class CalendarEventRsvpClient {
                      // perform error handling here
                 });
      **/
-    create(data: ICalendarEventRSVP): PromiseLike<IHttpResponse<ICalendarEventRSVP>> {
-        return this.apiClient.post<ICalendarEventRSVP>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    create(data: ICalendarEventRsvp): PromiseLike<IHttpResponse<ICalendarEventRsvp>> {
+        return this.apiClient.post<ICalendarEventRsvp>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -121,7 +121,7 @@ export class CalendarEventRsvpClient {
                             // perform error handling here
                         });
     **/
-    update(data: ICalendarEventRSVP): PromiseLike<IHttpResponse<void>> {
+    update(data: ICalendarEventRsvp): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
@@ -143,7 +143,7 @@ export class CalendarEventRsvpClient {
                             // perform error handling here
                         });
      **/
-    remove(data: ICalendarEventRSVP): PromiseLike<IHttpResponse<void>> {
+    remove(data: ICalendarEventRsvp): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 

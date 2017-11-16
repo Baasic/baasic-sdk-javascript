@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarEventRsvpAttendeeStatusBatchRoute
 } from '../../';
-import { ICalendarEventRSVPAttendeeStatus } from '../../contracts';
+import { ICalendarEventRsvpAttendeeStatus } from '../../contracts';
 
 @injectable()
 export class CalendarEventRsvpAttendeeStatusBatchClient {
@@ -41,8 +41,8 @@ export class CalendarEventRsvpAttendeeStatusBatchClient {
                      // perform error handling here
                 });
      **/
-    create(data: ICalendarEventRSVPAttendeeStatus[]): PromiseLike<IHttpResponse<ICalendarEventRSVPAttendeeStatus[]>> {
-        return this.apiClient.post<ICalendarEventRSVPAttendeeStatus[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    create(data: ICalendarEventRsvpAttendeeStatus[]): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeStatus[]>> {
+        return this.apiClient.post<ICalendarEventRsvpAttendeeStatus[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -59,7 +59,7 @@ export class CalendarEventRsvpAttendeeStatusBatchClient {
                                 // perform error handling here
                            });
     **/
-    update(data: ICalendarEventRSVPAttendeeStatus[]): PromiseLike<IHttpResponse<void>> {
+    update(data: ICalendarEventRsvpAttendeeStatus[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
 

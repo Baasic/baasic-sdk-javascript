@@ -82,10 +82,11 @@ export class CalendarRsvpAttendeeRoute extends BaseRoute {
      * @param calendarId Calendar Id which uniquely identifies a Calendar resource.
      * @param eventId CalendarEvent Id which uniquely identifies a calendarEvent resource
      * @param emailOrFullName Email or full name which identify a CalendarEventRsvpAttendee resource.
+     * @param options Query resource options ovject.
      * @example calendarRsvpAttendeeRoute.getByEmailOrFullName(calendarId, eventId, fullname);
      */
-    getByEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string): any {
-        let params: any = {};
+    getByEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string, options: IGetRequestOptions): any {
+        let params = this.modelMapper.getParams(options)
         params.calendarId = calendarId;
         params.eventId = eventId;
         params.emailOrFullName = emailOrFullName;

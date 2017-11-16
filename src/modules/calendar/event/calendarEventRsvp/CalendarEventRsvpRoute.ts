@@ -9,7 +9,7 @@ import { BaseRoute, TYPES as commonTypes } from '../../../../common';
 import { IGetRequestOptions, IOptions } from '../../../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
-import { ICalendarEvent, ICalendarEventRSVP, IGetCalendarEventRsvpOptions } from '../../contracts';
+import { ICalendarEvent, ICalendarEventRsvp, IGetCalendarEventRsvpOptions } from '../../contracts';
 
 export class CalendarEventRsvpRoute extends BaseRoute {
 
@@ -76,7 +76,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
      * @param data A CalendarEventRsvp object that needs to be inserted into the system.
      * @example calendarEventRsvpRoute.create(data);
      **/
-    create(data: ICalendarEventRSVP): any {
+    create(data: ICalendarEventRsvp): any {
         return super.baseCreate(this.createRoute, data);
     }
 
@@ -86,7 +86,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
      * @param data A CalendarEventRsvp object used to update specified CalendarEventRsvp resource.
      * @example calendarEventRsvpRoute.update(data);
      **/
-    update(data: ICalendarEventRSVP): any {
+    update(data: ICalendarEventRsvp): any {
         return super.baseUpdate(this.updateRoute, data);
     }
 
@@ -96,7 +96,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
      * @param data A CalendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @example calendarEventRsvpRoute.delete(data);
      **/
-    delete(data: ICalendarEventRSVP): any {
+    delete(data: ICalendarEventRsvp): any {
         return super.baseDelete(this.deleteRoute, data);
     }
 

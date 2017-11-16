@@ -1,6 +1,6 @@
 import { IModel } from '../../../common/contracts';
 
-import { ICalendar, ICalendarEventDetail, ICalendarEventRSVP, IUserInfo, ICalendarEventOptions } from './';
+import { ICalendar, ICalendarEventDetail, ICalendarEventRsvp, IUserInfo, ICalendarEventOptions } from './';
 
 export interface ICalendarEvent extends IModel {
 
@@ -11,7 +11,7 @@ export interface ICalendarEvent extends IModel {
     Description?: string;
     Detail?: ICalendarEventDetail;
     EndTime: string;
-    EventRSVp?: ICalendarEventRSVP;
+    EventRSVp?: ICalendarEventRsvp;
     IsAllDay?: boolean;
     IsRecurring?: Boolean;
     Json?: string;

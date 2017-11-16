@@ -1,14 +1,14 @@
 import { IModel } from '../../../common/contracts';
 
-import { ICalendarEventRSVPAttendeeStatus, ICalendarEventRSVPAttendeeInvitationType, IUserInfo} from './';
+import { ICalendarEventRsvpAttendeeStatus, ICalendarEventRsvpAttendeeInvitationType, IUserInfo} from './';
 
 export interface ICalendarEventAttendee extends IModel {
-    AttendeeStatus?: ICalendarEventRSVPAttendeeStatus;
+    AttendeeStatus?: ICalendarEventRsvpAttendeeStatus;
     AttendeeStatusId: string;
     Email?: string;
     EventId: string;
     FullName?: string;
-    InvitationType?: ICalendarEventRSVPAttendeeInvitationType;
+    InvitationType?: ICalendarEventRsvpAttendeeInvitationType;
     InvitationTypeId?: string;
     Json?: string;
     Slots: number;

@@ -89,14 +89,14 @@ export class CalendarEventsRoute extends BaseRoute {
     /**
      * Parses link route. This URI template does not expose any additional options.
      * @method
-     * @param eventId A CalendarEvent identifier which uniquely identifies a calendar resource.
+     * @param data A calendarEvent resource to be linked.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resource.
      * @example calendarEventsRoute.create(calendarid, eventid);
      **/
-    link(calendarId: string, eventId: string): any {
-        let params: any = {}
+    link(calendarId: string, data: ICalendarEvent): any {
+        let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
-        params.eventId = eventId;
+        params.eventId = data.id;
         return super.baseCreate(this.linkRoute, params);
     }
 
@@ -116,14 +116,14 @@ export class CalendarEventsRoute extends BaseRoute {
     /**
      * Parses unlink route. This URI template does not expose any additional options.
      * @method
-     * @param eventId A CalendarEvent identifier which uniquely identifies a calendar resource.
+     * @param data A calendarEvent resource to be unlinked.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resourse.
      * @example calendarEventsRoute.unlink(calendarid, eventid);
      **/
-    unlink(calendarId: string, eventId: string): any {
-        let params: any = {}
+    unlink(calendarId: string, data: ICalendarEvent): any {
+        let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
-        params.eventId = eventId;
+        params.eventId = data.id;
         return super.baseDelete(this.unlinkRoute, params);
     }
 

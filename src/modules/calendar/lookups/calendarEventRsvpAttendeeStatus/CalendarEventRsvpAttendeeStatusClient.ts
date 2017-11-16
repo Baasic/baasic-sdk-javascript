@@ -11,7 +11,7 @@ import {
     TYPES as calendarTypes,
     CalendarEventRsvpAttendeeStatusRoute
 } from '../../';
-import { ICalendarEventRSVPAttendeeStatus, IGetCalendarOptions } from '../../contracts';
+import { ICalendarEventRsvpAttendeeStatus, IGetCalendarOptions } from '../../contracts';
 
 @injectable()
 export class CalendarEventRsvpAttendeeStatusClient {
@@ -47,8 +47,8 @@ export class CalendarEventRsvpAttendeeStatusClient {
                      // perform error handling here
                 });
      **/
-    find(options?: IGetCalendarOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRSVPAttendeeStatus>>> {
-        return this.apiClient.get<IQueryModel<ICalendarEventRSVPAttendeeStatus>>(this.routeDefinition.find(options));
+    find(options?: IGetCalendarOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRsvpAttendeeStatus>>> {
+        return this.apiClient.get<IQueryModel<ICalendarEventRsvpAttendeeStatus>>(this.routeDefinition.find(options));
     }
 
     /**
@@ -65,8 +65,8 @@ export class CalendarEventRsvpAttendeeStatusClient {
                          // perform error handling here
                     });
      **/
-    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRSVPAttendeeStatus>> {
-        return this.apiClient.get<ICalendarEventRSVPAttendeeStatus>(this.routeDefinition.get(id, options));
+    get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeStatus>> {
+        return this.apiClient.get<ICalendarEventRsvpAttendeeStatus>(this.routeDefinition.get(id, options));
     }
 
     /**
@@ -85,8 +85,8 @@ export class CalendarEventRsvpAttendeeStatusClient {
                      // perform error handling here
                 });
      **/
-    create(data: ICalendarEventRSVPAttendeeStatus): PromiseLike<IHttpResponse<ICalendarEventRSVPAttendeeStatus>> {
-        return this.apiClient.post<ICalendarEventRSVPAttendeeStatus>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    create(data: ICalendarEventRsvpAttendeeStatus): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeStatus>> {
+        return this.apiClient.post<ICalendarEventRsvpAttendeeStatus>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**
@@ -108,7 +108,7 @@ export class CalendarEventRsvpAttendeeStatusClient {
                             // perform error handling here
                         });
     **/
-    update(data: ICalendarEventRSVPAttendeeStatus): PromiseLike<IHttpResponse<void>> {
+    update(data: ICalendarEventRsvpAttendeeStatus): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
 
@@ -130,7 +130,7 @@ export class CalendarEventRsvpAttendeeStatusClient {
                             // perform error handling here
                         });
      **/
-    remove(data: ICalendarEventRSVPAttendeeStatus): PromiseLike<IHttpResponse<void>> {
+    remove(data: ICalendarEventRsvpAttendeeStatus): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
 
