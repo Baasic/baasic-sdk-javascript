@@ -8,6 +8,9 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
+    CalendarEventRsvpClient,
+    CalendarEventRsvpAttendeeClient,
+    CalendarEventBatchClient,
     TYPES as calendarTypes,
     CalendarEventRoute
 } from '../';
@@ -20,7 +23,22 @@ export class CalendarEventClient {
         return this.calendarEventRoute;
     }
 
+    get batch(): CalendarEventBatchClient {
+        return this.calendarEventBatchClient;
+    }
+
+    get rsvp(): CalendarEventRsvpClient {
+        return this.calendarEventRsvpClient;
+    }
+
+    get rsvpAttendee(): CalendarEventRsvpAttendeeClient {
+        return this.calendarEventRsvpAttendeeClient;
+    }
+
     constructor(
+        @inject(calendarTypes.CalendarEventRsvpClient) protected calendarEventRsvpClient: CalendarEventRsvpClient,
+        @inject(calendarTypes.CalendarEventRsvpAttendeeClient) protected calendarEventRsvpAttendeeClient: CalendarEventRsvpAttendeeClient,
+        @inject(calendarTypes.CalendarEventBatchClient) protected calendarEventBatchClient: CalendarEventBatchClient,
         @inject(calendarTypes.CalendarEventRoute) protected calendarEventRoute: CalendarEventRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
     ) { }

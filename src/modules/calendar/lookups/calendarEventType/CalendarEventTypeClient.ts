@@ -8,6 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../../httpApi';
 import {
+    CalendarEventTypeBatchClient,
     TYPES as calendarTypes,
     CalendarEventTypeRoute
 } from '../../';
@@ -20,7 +21,12 @@ export class CalendarEventTypeClient {
         return this.calendarEventTypeRoute;
     }
 
+    get batch(): CalendarEventTypeBatchClient {
+        return this.calendarEventTypeBatchClient;
+    }
+
     constructor(
+        @inject(calendarTypes.CalendarEventTypeBatchClient) protected calendarEventTypeBatchClient: CalendarEventTypeBatchClient,
         @inject(calendarTypes.CalendarEventTypeRoute) protected calendarEventTypeRoute: CalendarEventTypeRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
     ) { }

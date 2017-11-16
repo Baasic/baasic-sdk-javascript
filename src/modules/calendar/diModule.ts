@@ -1,6 +1,8 @@
 import { ContainerModule } from "inversify";
 import * as Symbol from "es6-symbol";
 import {
+    CalendarLookups,
+
     CalendarACLClient,
     CalendarACLRoute,
 
@@ -60,6 +62,8 @@ import {
 } from './';
 
 const TYPES = {
+    CalendarLookups: Symbol("CalendarLookups"),
+
     CalendarACLClient: Symbol("CalendarACLClient"),
     CalendarACLRoute: Symbol("CalendarACLRoute"),
 
@@ -122,6 +126,8 @@ const TYPES = {
 export { TYPES };
 
 let diModule: ContainerModule = new ContainerModule((bind) => {
+    bind<CalendarLookups>(TYPES.CalendarLookups).to(CalendarLookups);
+    
     bind<CalendarACLClient>(TYPES.CalendarACLClient).to(CalendarACLClient);
     bind<CalendarACLRoute>(TYPES.CalendarACLRoute).to(CalendarACLRoute);
 

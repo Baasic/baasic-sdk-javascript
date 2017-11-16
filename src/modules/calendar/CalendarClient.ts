@@ -5,13 +5,19 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import {
+    CalendarEventClient,
+    CalendarLookups,
+    CalendarRsvpAttendeeClient,
+    CalendarRsvpClient,
+    CalendarEventsClient,
+    CalendarBatchClient,
     TYPES as calendarTypes,
     CalendarRoute
-} from '../';
-import { ICalendar, IGetCalendarOptions } from '../contracts';
+} from './';
+import { ICalendar, IGetCalendarOptions } from './contracts';
 
 @injectable()
 export class CalendarClient {
@@ -20,7 +26,37 @@ export class CalendarClient {
         return this.calendarRoute;
     }
 
+    get batch(): CalendarBatchClient {
+        return this.calendarBatchClient;
+    }
+
+    get events(): CalendarEventsClient {
+        return this.calendarEventsClient;
+    }
+
+    get rsvp(): CalendarRsvpClient {
+        return this.calendarRsvpClient;
+    }
+
+    get rsvpAttendee(): CalendarRsvpAttendeeClient {
+        return this.calendarRsvpAttendeeClient;
+    }
+
+    get lookups(): CalendarLookups {
+        return this.calendarLookups;
+    }
+
+    get event(): CalendarEventClient {
+        return this.calendarEventClient;
+    }
+
     constructor(
+        @inject(calendarTypes.CalendarEventClient) protected calendarEventClient: CalendarEventClient,
+        @inject(calendarTypes.CalendarLookups) protected calendarLookups: CalendarLookups,
+        @inject(calendarTypes.CalendarRsvpAttendeeClient) protected calendarRsvpAttendeeClient: CalendarRsvpAttendeeClient,
+        @inject(calendarTypes.CalendarRsvpClient) protected calendarRsvpClient: CalendarRsvpClient,
+        @inject(calendarTypes.CalendarEventsClient) protected calendarEventsClient: CalendarEventsClient,
+        @inject(calendarTypes.CalendarBatchClient) protected calendarBatchClient: CalendarBatchClient,
         @inject(calendarTypes.CalendarRoute) protected calendarRoute: CalendarRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
     ) { }
