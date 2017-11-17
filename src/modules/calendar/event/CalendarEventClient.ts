@@ -27,17 +27,7 @@ export class CalendarEventClient {
         return this.calendarEventBatchClient;
     }
 
-    get rsvp(): CalendarEventRsvpClient {
-        return this.calendarEventRsvpClient;
-    }
-
-    get rsvpAttendee(): CalendarEventRsvpAttendeeClient {
-        return this.calendarEventRsvpAttendeeClient;
-    }
-
     constructor(
-        @inject(calendarTypes.CalendarEventRsvpClient) protected calendarEventRsvpClient: CalendarEventRsvpClient,
-        @inject(calendarTypes.CalendarEventRsvpAttendeeClient) protected calendarEventRsvpAttendeeClient: CalendarEventRsvpAttendeeClient,
         @inject(calendarTypes.CalendarEventBatchClient) protected calendarEventBatchClient: CalendarEventBatchClient,
         @inject(calendarTypes.CalendarEventRoute) protected calendarEventRoute: CalendarEventRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,

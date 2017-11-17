@@ -157,7 +157,7 @@ export class CalendarEventRsvpClient {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvp resources for the specified CalendarEvent from the system if succesfully completed.
      * @method
      * @param data A CalendarEvent object that will have it's CalendarEventRsvps purged.
-     * @example     calendarEventRsvpClient.purgeForEvent(calendarEvent)
+     * @example     calendarEventRsvpClient.purge(calendarEvent)
      *                  .then(function (data) {
      *                      // perform success action here
      *                  },
@@ -165,8 +165,8 @@ export class CalendarEventRsvpClient {
      *                      // perform error handling here
      *                  })
      */
-    purgeForEvent(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.purgeForEvent(data));
+    purge(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.purge(data));
     }
 }
 

@@ -120,7 +120,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.purge(data);
      */
-    purgeForEvent(calendarId: string, data: ICalendarEvent): any {
+    purge(calendarId: string, data: ICalendarEvent): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
         return super.baseDelete(this.purgeRoute, params);

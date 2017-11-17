@@ -15,8 +15,8 @@ import { injectable, inject } from "inversify";
 export class CalendarLookups {
 
     constructor(
-        @inject(TYPES.CalendarEventRsvpAttendeeClient) public eventRsvpAttendeeStatus: CalendarEventRsvpAttendeeStatusClient,
-        @inject(TYPES.CalendarEventRsvpInvitationTypeClient) public eventRsvpInvitationType: CalendarEventRsvpInvitationTypeClient,
+        @inject(TYPES.CalendarEventRsvpAttendeeClient) public RsvpAttendeeStatus: CalendarEventRsvpAttendeeStatusClient,
+        @inject(TYPES.CalendarEventRsvpInvitationTypeClient) public RsvpInvitationType: CalendarEventRsvpInvitationTypeClient,
         @inject(TYPES.CalendarEventStatusClient) public eventStatus: CalendarEventStatusClient,
         @inject(TYPES.CalendarEventTypeClient) public eventType: CalendarEventTypeClient
     ) {

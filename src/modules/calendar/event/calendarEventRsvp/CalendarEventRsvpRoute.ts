@@ -18,7 +18,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
     public readonly createRoute: string = 'calendar-rsvp-details';
     public readonly updateRoute: string = 'calendar-rsvp-details/{id}';
     public readonly deleteRoute: string = 'calendar-rsvp-details/{id}';
-    public readonly purgeForEventRoute: string = 'calendar-rsvp-details/{id}/purge';
+    public readonly purgeRoute: string = 'calendar-rsvp-details/{id}/purge';
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
@@ -101,12 +101,12 @@ export class CalendarEventRsvpRoute extends BaseRoute {
     }
 
     /**
-     * Parses purgeForEvent Route which must be expanded with the previously created CalendarEvent resource. This route does not expose any additional options.
+     * Parses purge Route which must be expanded with the previously created CalendarEvent resource. This route does not expose any additional options.
      * @param data A CalendarEvent object that will have it's CalendarEventRsvps purged.
-     * @example calendarEventRsvpRoute.purgeForEvent(calendarEvent)
+     * @example calendarEventRsvpRoute.purge(calendarEvent)
      */
-    purgeForEvent(data: ICalendarEvent): any {
-        return super.parse(this.purgeForEventRoute)
+    purge(data: ICalendarEvent): any {
+        return super.parse(this.purgeRoute)
     }
 
     protected getToDate(options: any) {

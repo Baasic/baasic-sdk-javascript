@@ -145,7 +145,7 @@ export class CalendarRsvpClient {
      * @param data An calendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarRsvpClient.unlink(calendarEventRsvp)
+                    calendarRsvpClient.unlink(calendarId, calendarEventRsvp)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -172,7 +172,7 @@ export class CalendarRsvpClient {
                         });
      **/
     purge(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.purgeForEvent(calendarId, data));
+        return this.apiClient.delete<void>(this.routeDefinition.purge(calendarId, data));
     }
 }
 

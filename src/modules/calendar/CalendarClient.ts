@@ -34,25 +34,15 @@ export class CalendarClient {
         return this.calendarEventsClient;
     }
 
-    get rsvp(): CalendarRsvpClient {
+    get eventRsvp(): CalendarRsvpClient {
         return this.calendarRsvpClient;
     }
 
-    get rsvpAttendee(): CalendarRsvpAttendeeClient {
+    get eventAttendee(): CalendarRsvpAttendeeClient {
         return this.calendarRsvpAttendeeClient;
     }
 
-    get lookups(): CalendarLookups {
-        return this.calendarLookups;
-    }
-
-    get event(): CalendarEventClient {
-        return this.calendarEventClient;
-    }
-
     constructor(
-        @inject(calendarTypes.CalendarEventClient) protected calendarEventClient: CalendarEventClient,
-        @inject(calendarTypes.CalendarLookups) protected calendarLookups: CalendarLookups,
         @inject(calendarTypes.CalendarRsvpAttendeeClient) protected calendarRsvpAttendeeClient: CalendarRsvpAttendeeClient,
         @inject(calendarTypes.CalendarRsvpClient) protected calendarRsvpClient: CalendarRsvpClient,
         @inject(calendarTypes.CalendarEventsClient) protected calendarEventsClient: CalendarEventsClient,

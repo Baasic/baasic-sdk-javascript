@@ -12392,9 +12392,7 @@ var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(7);
 var CalendarClient = (function () {
-    function CalendarClient(calendarEventClient, calendarLookups, calendarRsvpAttendeeClient, calendarRsvpClient, calendarEventsClient, calendarBatchClient, calendarRoute, apiClient) {
-        this.calendarEventClient = calendarEventClient;
-        this.calendarLookups = calendarLookups;
+    function CalendarClient(calendarRsvpAttendeeClient, calendarRsvpClient, calendarEventsClient, calendarBatchClient, calendarRoute, apiClient) {
         this.calendarRsvpAttendeeClient = calendarRsvpAttendeeClient;
         this.calendarRsvpClient = calendarRsvpClient;
         this.calendarEventsClient = calendarEventsClient;
@@ -12423,30 +12421,16 @@ var CalendarClient = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(CalendarClient.prototype, "rsvp", {
+    Object.defineProperty(CalendarClient.prototype, "eventRsvp", {
         get: function () {
             return this.calendarRsvpClient;
         },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(CalendarClient.prototype, "rsvpAttendee", {
+    Object.defineProperty(CalendarClient.prototype, "eventAttendee", {
         get: function () {
             return this.calendarRsvpAttendeeClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(CalendarClient.prototype, "lookups", {
-        get: function () {
-            return this.calendarLookups;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(CalendarClient.prototype, "event", {
-        get: function () {
-            return this.calendarEventClient;
         },
         enumerable: true,
         configurable: true
@@ -12577,18 +12561,16 @@ var CalendarClient = (function () {
 }());
 CalendarClient = tslib_1.__decorate([
     inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventClient)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarLookups)),
-    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CalendarRsvpAttendeeClient)),
-    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarRsvpClient)),
-    tslib_1.__param(4, inversify_1.inject(_1.TYPES.CalendarEventsClient)),
-    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CalendarBatchClient)),
-    tslib_1.__param(6, inversify_1.inject(_1.TYPES.CalendarRoute)),
-    tslib_1.__param(7, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarEventClient !== "undefined" && _1.CalendarEventClient) === "function" && _a || Object, typeof (_b = typeof _1.CalendarLookups !== "undefined" && _1.CalendarLookups) === "function" && _b || Object, typeof (_c = typeof _1.CalendarRsvpAttendeeClient !== "undefined" && _1.CalendarRsvpAttendeeClient) === "function" && _c || Object, typeof (_d = typeof _1.CalendarRsvpClient !== "undefined" && _1.CalendarRsvpClient) === "function" && _d || Object, typeof (_e = typeof _1.CalendarEventsClient !== "undefined" && _1.CalendarEventsClient) === "function" && _e || Object, typeof (_f = typeof _1.CalendarBatchClient !== "undefined" && _1.CalendarBatchClient) === "function" && _f || Object, typeof (_g = typeof _1.CalendarRoute !== "undefined" && _1.CalendarRoute) === "function" && _g || Object, typeof (_h = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _h || Object])
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarRsvpAttendeeClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarRsvpClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CalendarEventsClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarBatchClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.CalendarRoute)),
+    tslib_1.__param(5, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarRsvpAttendeeClient !== "undefined" && _1.CalendarRsvpAttendeeClient) === "function" && _a || Object, typeof (_b = typeof _1.CalendarRsvpClient !== "undefined" && _1.CalendarRsvpClient) === "function" && _b || Object, typeof (_c = typeof _1.CalendarEventsClient !== "undefined" && _1.CalendarEventsClient) === "function" && _c || Object, typeof (_d = typeof _1.CalendarBatchClient !== "undefined" && _1.CalendarBatchClient) === "function" && _d || Object, typeof (_e = typeof _1.CalendarRoute !== "undefined" && _1.CalendarRoute) === "function" && _e || Object, typeof (_f = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _f || Object])
 ], CalendarClient);
 exports.CalendarClient = CalendarClient;
-var _a, _b, _c, _d, _e, _f, _g, _h;
+var _a, _b, _c, _d, _e, _f;
 /**
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
@@ -14096,7 +14078,7 @@ var CalendarRsvpClient = (function () {
      * @param data An calendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarRsvpClient.unlink(calendarEventRsvp)
+                    calendarRsvpClient.unlink(calendarId, calendarEventRsvp)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -14122,7 +14104,7 @@ var CalendarRsvpClient = (function () {
                         });
      **/
     CalendarRsvpClient.prototype.purge = function (calendarId, data) {
-        return this.apiClient.delete(this.routeDefinition.purgeForEvent(calendarId, data));
+        return this.apiClient.delete(this.routeDefinition.purge(calendarId, data));
     };
     return CalendarRsvpClient;
 }());
@@ -14269,7 +14251,7 @@ var CalendarRsvpRoute = (function (_super) {
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.purge(data);
      */
-    CalendarRsvpRoute.prototype.purgeForEvent = function (calendarId, data) {
+    CalendarRsvpRoute.prototype.purge = function (calendarId, data) {
         var params = this.utility.extend({}, data);
         params.calendarId = calendarId;
         return _super.prototype.baseDelete.call(this, this.purgeRoute, params);
@@ -14853,9 +14835,7 @@ var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(7);
 var CalendarEventClient = (function () {
-    function CalendarEventClient(calendarEventRsvpClient, calendarEventRsvpAttendeeClient, calendarEventBatchClient, calendarEventRoute, apiClient) {
-        this.calendarEventRsvpClient = calendarEventRsvpClient;
-        this.calendarEventRsvpAttendeeClient = calendarEventRsvpAttendeeClient;
+    function CalendarEventClient(calendarEventBatchClient, calendarEventRoute, apiClient) {
         this.calendarEventBatchClient = calendarEventBatchClient;
         this.calendarEventRoute = calendarEventRoute;
         this.apiClient = apiClient;
@@ -14870,20 +14850,6 @@ var CalendarEventClient = (function () {
     Object.defineProperty(CalendarEventClient.prototype, "batch", {
         get: function () {
             return this.calendarEventBatchClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(CalendarEventClient.prototype, "rsvp", {
-        get: function () {
-            return this.calendarEventRsvpClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(CalendarEventClient.prototype, "rsvpAttendee", {
-        get: function () {
-            return this.calendarEventRsvpAttendeeClient;
         },
         enumerable: true,
         configurable: true
@@ -15043,15 +15009,13 @@ var CalendarEventClient = (function () {
 }());
 CalendarEventClient = tslib_1.__decorate([
     inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventRsvpClient)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeClient)),
-    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CalendarEventBatchClient)),
-    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarEventRoute)),
-    tslib_1.__param(4, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarEventRsvpClient !== "undefined" && _1.CalendarEventRsvpClient) === "function" && _a || Object, typeof (_b = typeof _1.CalendarEventRsvpAttendeeClient !== "undefined" && _1.CalendarEventRsvpAttendeeClient) === "function" && _b || Object, typeof (_c = typeof _1.CalendarEventBatchClient !== "undefined" && _1.CalendarEventBatchClient) === "function" && _c || Object, typeof (_d = typeof _1.CalendarEventRoute !== "undefined" && _1.CalendarEventRoute) === "function" && _d || Object, typeof (_e = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _e || Object])
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarEventBatchClient !== "undefined" && _1.CalendarEventBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CalendarEventRoute !== "undefined" && _1.CalendarEventRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
 ], CalendarEventClient);
 exports.CalendarEventClient = CalendarEventClient;
-var _a, _b, _c, _d, _e;
+var _a, _b, _c;
 /**
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
@@ -16148,7 +16112,7 @@ var CalendarEventRsvpClient = (function () {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvp resources for the specified CalendarEvent from the system if succesfully completed.
      * @method
      * @param data A CalendarEvent object that will have it's CalendarEventRsvps purged.
-     * @example     calendarEventRsvpClient.purgeForEvent(calendarEvent)
+     * @example     calendarEventRsvpClient.purge(calendarEvent)
      *                  .then(function (data) {
      *                      // perform success action here
      *                  },
@@ -16156,8 +16120,8 @@ var CalendarEventRsvpClient = (function () {
      *                      // perform error handling here
      *                  })
      */
-    CalendarEventRsvpClient.prototype.purgeForEvent = function (data) {
-        return this.apiClient.delete(this.routeDefinition.purgeForEvent(data));
+    CalendarEventRsvpClient.prototype.purge = function (data) {
+        return this.apiClient.delete(this.routeDefinition.purge(data));
     };
     return CalendarEventRsvpClient;
 }());
@@ -16207,7 +16171,7 @@ var CalendarEventRsvpRoute = (function (_super) {
         _this.createRoute = 'calendar-rsvp-details';
         _this.updateRoute = 'calendar-rsvp-details/{id}';
         _this.deleteRoute = 'calendar-rsvp-details/{id}';
-        _this.purgeForEventRoute = 'calendar-rsvp-details/{id}/purge';
+        _this.purgeRoute = 'calendar-rsvp-details/{id}/purge';
         return _this;
     }
     /**
@@ -16285,12 +16249,12 @@ var CalendarEventRsvpRoute = (function (_super) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };
     /**
-     * Parses purgeForEvent Route which must be expanded with the previously created CalendarEvent resource. This route does not expose any additional options.
+     * Parses purge Route which must be expanded with the previously created CalendarEvent resource. This route does not expose any additional options.
      * @param data A CalendarEvent object that will have it's CalendarEventRsvps purged.
-     * @example calendarEventRsvpRoute.purgeForEvent(calendarEvent)
+     * @example calendarEventRsvpRoute.purge(calendarEvent)
      */
-    CalendarEventRsvpRoute.prototype.purgeForEvent = function (data) {
-        return _super.prototype.parse.call(this, this.purgeForEventRoute);
+    CalendarEventRsvpRoute.prototype.purge = function (data) {
+        return _super.prototype.parse.call(this, this.purgeRoute);
     };
     CalendarEventRsvpRoute.prototype.getToDate = function (options) {
         if (!this.utility.isUndefined(options.to) && options.to !== null) {
@@ -16376,9 +16340,9 @@ var _1 = __webpack_require__(7);
 var _2 = __webpack_require__(38);
 var inversify_1 = __webpack_require__(0);
 var CalendarLookups = (function () {
-    function CalendarLookups(eventRsvpAttendeeStatus, eventRsvpInvitationType, eventStatus, eventType) {
-        this.eventRsvpAttendeeStatus = eventRsvpAttendeeStatus;
-        this.eventRsvpInvitationType = eventRsvpInvitationType;
+    function CalendarLookups(RsvpAttendeeStatus, RsvpInvitationType, eventStatus, eventType) {
+        this.RsvpAttendeeStatus = RsvpAttendeeStatus;
+        this.RsvpInvitationType = RsvpInvitationType;
         this.eventStatus = eventStatus;
         this.eventType = eventType;
     }
@@ -18366,60 +18330,28 @@ var tslib_1 = __webpack_require__(1);
 var _1 = __webpack_require__(7);
 var inversify_1 = __webpack_require__(0);
 var Root = (function () {
-    function Root(calendarACLClient, calendarEventRsvpAttendeeBatchClient, calendarEventRsvpAttendeeClient, calendarRsvpAttendeeBatchClient, calendarRsvpAttendeeClient, calendarEventsClient, calendarBatchClient, calendarClient, calendarRsvpBatchClient, calendarRsvpClient, calendarEventBatchClient, calendarEventClient, calendarEventRsvpAttendeeStatusBatchClient, calendarEventRsvpAttendeeStatusClient, calendarEventRsvpBatchClient, calendarEventRsvpClient, calendarEventRsvpInvitationTypeBatchClient, calendarEventRsvpInvitationTypeClient, calendarEventStatusBatchClient, calendarEventStatusClient, calendarEventTypeClient, calendarEventTypeBatchClient) {
-        this.calendarACLClient = calendarACLClient;
-        this.calendarEventRsvpAttendeeBatchClient = calendarEventRsvpAttendeeBatchClient;
-        this.calendarEventRsvpAttendeeClient = calendarEventRsvpAttendeeClient;
-        this.calendarRsvpAttendeeBatchClient = calendarRsvpAttendeeBatchClient;
-        this.calendarRsvpAttendeeClient = calendarRsvpAttendeeClient;
-        this.calendarEventsClient = calendarEventsClient;
-        this.calendarBatchClient = calendarBatchClient;
-        this.calendarClient = calendarClient;
-        this.calendarRsvpBatchClient = calendarRsvpBatchClient;
-        this.calendarRsvpClient = calendarRsvpClient;
-        this.calendarEventBatchClient = calendarEventBatchClient;
-        this.calendarEventClient = calendarEventClient;
-        this.calendarEventRsvpAttendeeStatusBatchClient = calendarEventRsvpAttendeeStatusBatchClient;
-        this.calendarEventRsvpAttendeeStatusClient = calendarEventRsvpAttendeeStatusClient;
-        this.calendarEventRsvpBatchClient = calendarEventRsvpBatchClient;
-        this.calendarEventRsvpClient = calendarEventRsvpClient;
-        this.calendarEventRsvpInvitationTypeBatchClient = calendarEventRsvpInvitationTypeBatchClient;
-        this.calendarEventRsvpInvitationTypeClient = calendarEventRsvpInvitationTypeClient;
-        this.calendarEventStatusBatchClient = calendarEventStatusBatchClient;
-        this.calendarEventStatusClient = calendarEventStatusClient;
-        this.calendarEventTypeClient = calendarEventTypeClient;
-        this.calendarEventTypeBatchClient = calendarEventTypeBatchClient;
+    function Root(lookups, ACL, attendee, calendar, event, rsvp) {
+        this.lookups = lookups;
+        this.ACL = ACL;
+        this.attendee = attendee;
+        this.calendar = calendar;
+        this.event = event;
+        this.rsvp = rsvp;
     }
     return Root;
 }());
 Root = tslib_1.__decorate([
     inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarACLClient)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeBatchClient)),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarLookups)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarACLClient)),
     tslib_1.__param(2, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeClient)),
-    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarRsvpAttendeeBatchClient)),
-    tslib_1.__param(4, inversify_1.inject(_1.TYPES.CalendarRsvpAttendeeClient)),
-    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CalendarEventsClient)),
-    tslib_1.__param(6, inversify_1.inject(_1.TYPES.CalendarBatchClient)),
-    tslib_1.__param(7, inversify_1.inject(_1.TYPES.CalendarClient)),
-    tslib_1.__param(8, inversify_1.inject(_1.TYPES.CalendarRsvpBatchClient)),
-    tslib_1.__param(9, inversify_1.inject(_1.TYPES.CalendarRsvpClient)),
-    tslib_1.__param(10, inversify_1.inject(_1.TYPES.CalendarEventBatchClient)),
-    tslib_1.__param(11, inversify_1.inject(_1.TYPES.CalendarEventClient)),
-    tslib_1.__param(12, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeStatusBatchClient)),
-    tslib_1.__param(13, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeStatusClient)),
-    tslib_1.__param(14, inversify_1.inject(_1.TYPES.CalendarEventRsvpBatchClient)),
-    tslib_1.__param(15, inversify_1.inject(_1.TYPES.CalendarEventRsvpClient)),
-    tslib_1.__param(16, inversify_1.inject(_1.TYPES.CalendarEventRsvpInvitationTypeBatchClient)),
-    tslib_1.__param(17, inversify_1.inject(_1.TYPES.CalendarEventRsvpInvitationTypeClient)),
-    tslib_1.__param(18, inversify_1.inject(_1.TYPES.CalendarEventStatusBatchClient)),
-    tslib_1.__param(19, inversify_1.inject(_1.TYPES.CalendarEventStatusClient)),
-    tslib_1.__param(20, inversify_1.inject(_1.TYPES.CalendarEventTypeClient)),
-    tslib_1.__param(21, inversify_1.inject(_1.TYPES.CalendarEventTypeBatchClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarACLClient !== "undefined" && _1.CalendarACLClient) === "function" && _a || Object, typeof (_b = typeof _1.CalendarEventRsvpAttendeeBatchClient !== "undefined" && _1.CalendarEventRsvpAttendeeBatchClient) === "function" && _b || Object, typeof (_c = typeof _1.CalendarEventRsvpAttendeeClient !== "undefined" && _1.CalendarEventRsvpAttendeeClient) === "function" && _c || Object, typeof (_d = typeof _1.CalendarRsvpAttendeeBatchClient !== "undefined" && _1.CalendarRsvpAttendeeBatchClient) === "function" && _d || Object, typeof (_e = typeof _1.CalendarRsvpAttendeeClient !== "undefined" && _1.CalendarRsvpAttendeeClient) === "function" && _e || Object, typeof (_f = typeof _1.CalendarEventsClient !== "undefined" && _1.CalendarEventsClient) === "function" && _f || Object, typeof (_g = typeof _1.CalendarBatchClient !== "undefined" && _1.CalendarBatchClient) === "function" && _g || Object, typeof (_h = typeof _1.CalendarClient !== "undefined" && _1.CalendarClient) === "function" && _h || Object, typeof (_j = typeof _1.CalendarRsvpBatchClient !== "undefined" && _1.CalendarRsvpBatchClient) === "function" && _j || Object, typeof (_k = typeof _1.CalendarRsvpClient !== "undefined" && _1.CalendarRsvpClient) === "function" && _k || Object, typeof (_l = typeof _1.CalendarEventBatchClient !== "undefined" && _1.CalendarEventBatchClient) === "function" && _l || Object, typeof (_m = typeof _1.CalendarEventClient !== "undefined" && _1.CalendarEventClient) === "function" && _m || Object, typeof (_o = typeof _1.CalendarEventRsvpAttendeeStatusBatchClient !== "undefined" && _1.CalendarEventRsvpAttendeeStatusBatchClient) === "function" && _o || Object, typeof (_p = typeof _1.CalendarEventRsvpAttendeeStatusClient !== "undefined" && _1.CalendarEventRsvpAttendeeStatusClient) === "function" && _p || Object, typeof (_q = typeof _1.CalendarEventRsvpBatchClient !== "undefined" && _1.CalendarEventRsvpBatchClient) === "function" && _q || Object, typeof (_r = typeof _1.CalendarEventRsvpClient !== "undefined" && _1.CalendarEventRsvpClient) === "function" && _r || Object, typeof (_s = typeof _1.CalendarEventRsvpInvitationTypeBatchClient !== "undefined" && _1.CalendarEventRsvpInvitationTypeBatchClient) === "function" && _s || Object, typeof (_t = typeof _1.CalendarEventRsvpInvitationTypeClient !== "undefined" && _1.CalendarEventRsvpInvitationTypeClient) === "function" && _t || Object, typeof (_u = typeof _1.CalendarEventStatusBatchClient !== "undefined" && _1.CalendarEventStatusBatchClient) === "function" && _u || Object, typeof (_v = typeof _1.CalendarEventStatusClient !== "undefined" && _1.CalendarEventStatusClient) === "function" && _v || Object, typeof (_w = typeof _1.CalendarEventTypeClient !== "undefined" && _1.CalendarEventTypeClient) === "function" && _w || Object, typeof (_x = typeof _1.CalendarEventTypeBatchClient !== "undefined" && _1.CalendarEventTypeBatchClient) === "function" && _x || Object])
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.CalendarEventClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CalendarEventRsvpClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarLookups !== "undefined" && _1.CalendarLookups) === "function" && _a || Object, typeof (_b = typeof _1.CalendarACLClient !== "undefined" && _1.CalendarACLClient) === "function" && _b || Object, typeof (_c = typeof _1.CalendarEventRsvpAttendeeClient !== "undefined" && _1.CalendarEventRsvpAttendeeClient) === "function" && _c || Object, typeof (_d = typeof _1.CalendarClient !== "undefined" && _1.CalendarClient) === "function" && _d || Object, typeof (_e = typeof _1.CalendarEventClient !== "undefined" && _1.CalendarEventClient) === "function" && _e || Object, typeof (_f = typeof _1.CalendarEventRsvpClient !== "undefined" && _1.CalendarEventRsvpClient) === "function" && _f || Object])
 ], Root);
 exports.Root = Root;
-var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x;
+var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
