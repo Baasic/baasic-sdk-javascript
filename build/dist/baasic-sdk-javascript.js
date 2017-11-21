@@ -369,14 +369,14 @@ __export(__webpack_require__(127));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(296));
+__export(__webpack_require__(297));
+__export(__webpack_require__(291));
 __export(__webpack_require__(290));
-__export(__webpack_require__(289));
 __export(__webpack_require__(39));
-__export(__webpack_require__(295));
-__export(__webpack_require__(301));
-__export(__webpack_require__(345));
-__export(__webpack_require__(348));
+__export(__webpack_require__(296));
+__export(__webpack_require__(302));
+__export(__webpack_require__(346));
+__export(__webpack_require__(349));
 
 
 /***/ }),
@@ -435,12 +435,14 @@ __export(__webpack_require__(207));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(236));
+__export(__webpack_require__(238));
 __export(__webpack_require__(38));
-__export(__webpack_require__(266));
+__export(__webpack_require__(267));
 __export(__webpack_require__(228));
-__export(__webpack_require__(251));
-__export(__webpack_require__(288));
+__export(__webpack_require__(262));
+__export(__webpack_require__(257));
+__export(__webpack_require__(252));
+__export(__webpack_require__(289));
 __export(__webpack_require__(210));
 __export(__webpack_require__(211));
 __export(__webpack_require__(212));
@@ -457,36 +459,36 @@ __export(__webpack_require__(214));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(463));
-__export(__webpack_require__(466));
-__export(__webpack_require__(465));
-__export(__webpack_require__(468));
+__export(__webpack_require__(464));
 __export(__webpack_require__(467));
-__export(__webpack_require__(470));
+__export(__webpack_require__(466));
 __export(__webpack_require__(469));
-__export(__webpack_require__(472));
+__export(__webpack_require__(468));
 __export(__webpack_require__(471));
-__export(__webpack_require__(476));
-__export(__webpack_require__(475));
-__export(__webpack_require__(478));
-__export(__webpack_require__(477));
-__export(__webpack_require__(474));
+__export(__webpack_require__(470));
 __export(__webpack_require__(473));
-__export(__webpack_require__(489));
-__export(__webpack_require__(488));
-__export(__webpack_require__(483));
-__export(__webpack_require__(482));
-__export(__webpack_require__(485));
-__export(__webpack_require__(484));
-__export(__webpack_require__(491));
+__export(__webpack_require__(472));
+__export(__webpack_require__(477));
+__export(__webpack_require__(476));
+__export(__webpack_require__(479));
+__export(__webpack_require__(478));
+__export(__webpack_require__(475));
+__export(__webpack_require__(474));
 __export(__webpack_require__(490));
-__export(__webpack_require__(487));
+__export(__webpack_require__(489));
+__export(__webpack_require__(484));
+__export(__webpack_require__(483));
 __export(__webpack_require__(486));
+__export(__webpack_require__(485));
+__export(__webpack_require__(492));
+__export(__webpack_require__(491));
+__export(__webpack_require__(488));
+__export(__webpack_require__(487));
+__export(__webpack_require__(482));
 __export(__webpack_require__(481));
 __export(__webpack_require__(480));
-__export(__webpack_require__(479));
-__export(__webpack_require__(464));
-__export(__webpack_require__(462));
+__export(__webpack_require__(465));
+__export(__webpack_require__(463));
 
 
 /***/ }),
@@ -498,35 +500,35 @@ __export(__webpack_require__(462));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(516));
-__export(__webpack_require__(500));
-__export(__webpack_require__(499));
-__export(__webpack_require__(502));
-__export(__webpack_require__(501));
-__export(__webpack_require__(518));
 __export(__webpack_require__(517));
-__export(__webpack_require__(520));
+__export(__webpack_require__(501));
+__export(__webpack_require__(500));
+__export(__webpack_require__(503));
+__export(__webpack_require__(502));
 __export(__webpack_require__(519));
-__export(__webpack_require__(523));
-__export(__webpack_require__(522));
-__export(__webpack_require__(525));
+__export(__webpack_require__(518));
+__export(__webpack_require__(521));
+__export(__webpack_require__(520));
 __export(__webpack_require__(524));
-__export(__webpack_require__(527));
+__export(__webpack_require__(523));
 __export(__webpack_require__(526));
+__export(__webpack_require__(525));
+__export(__webpack_require__(528));
+__export(__webpack_require__(527));
+__export(__webpack_require__(534));
 __export(__webpack_require__(533));
 __export(__webpack_require__(532));
 __export(__webpack_require__(531));
 __export(__webpack_require__(530));
 __export(__webpack_require__(529));
-__export(__webpack_require__(528));
-__export(__webpack_require__(535));
-__export(__webpack_require__(534));
-__export(__webpack_require__(537));
 __export(__webpack_require__(536));
-__export(__webpack_require__(539));
+__export(__webpack_require__(535));
 __export(__webpack_require__(538));
-__export(__webpack_require__(521));
-__export(__webpack_require__(515));
+__export(__webpack_require__(537));
+__export(__webpack_require__(540));
+__export(__webpack_require__(539));
+__export(__webpack_require__(522));
+__export(__webpack_require__(516));
 
 
 /***/ }),
@@ -566,27 +568,27 @@ exports.DESIGN_PARAM_TYPES = "design:paramtypes";
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(417));
+__export(__webpack_require__(418));
+__export(__webpack_require__(422));
 __export(__webpack_require__(421));
 __export(__webpack_require__(420));
 __export(__webpack_require__(419));
-__export(__webpack_require__(418));
+__export(__webpack_require__(426));
 __export(__webpack_require__(425));
-__export(__webpack_require__(424));
-__export(__webpack_require__(429));
-__export(__webpack_require__(428));
-__export(__webpack_require__(431));
 __export(__webpack_require__(430));
+__export(__webpack_require__(429));
+__export(__webpack_require__(432));
+__export(__webpack_require__(431));
+__export(__webpack_require__(437));
+__export(__webpack_require__(435));
 __export(__webpack_require__(436));
 __export(__webpack_require__(434));
-__export(__webpack_require__(435));
-__export(__webpack_require__(433));
+__export(__webpack_require__(428));
 __export(__webpack_require__(427));
-__export(__webpack_require__(426));
+__export(__webpack_require__(424));
 __export(__webpack_require__(423));
-__export(__webpack_require__(422));
-__export(__webpack_require__(432));
-__export(__webpack_require__(416));
+__export(__webpack_require__(433));
+__export(__webpack_require__(417));
 
 
 /***/ }),
@@ -598,22 +600,22 @@ __export(__webpack_require__(416));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(441));
-__export(__webpack_require__(447));
-__export(__webpack_require__(446));
-__export(__webpack_require__(449));
-__export(__webpack_require__(448));
-__export(__webpack_require__(445));
-__export(__webpack_require__(444));
-__export(__webpack_require__(455));
-__export(__webpack_require__(454));
-__export(__webpack_require__(443));
 __export(__webpack_require__(442));
-__export(__webpack_require__(451));
+__export(__webpack_require__(448));
+__export(__webpack_require__(447));
 __export(__webpack_require__(450));
-__export(__webpack_require__(453));
+__export(__webpack_require__(449));
+__export(__webpack_require__(446));
+__export(__webpack_require__(445));
+__export(__webpack_require__(456));
+__export(__webpack_require__(455));
+__export(__webpack_require__(444));
+__export(__webpack_require__(443));
 __export(__webpack_require__(452));
-__export(__webpack_require__(440));
+__export(__webpack_require__(451));
+__export(__webpack_require__(454));
+__export(__webpack_require__(453));
+__export(__webpack_require__(441));
 
 
 /***/ }),
@@ -775,18 +777,18 @@ exports.TargetTypeEnum = TargetTypeEnum;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(395));
+__export(__webpack_require__(396));
+__export(__webpack_require__(390));
 __export(__webpack_require__(389));
-__export(__webpack_require__(388));
-__export(__webpack_require__(381));
-__export(__webpack_require__(380));
-__export(__webpack_require__(387));
-__export(__webpack_require__(386));
-__export(__webpack_require__(384));
-__export(__webpack_require__(383));
-__export(__webpack_require__(385));
 __export(__webpack_require__(382));
-__export(__webpack_require__(394));
+__export(__webpack_require__(381));
+__export(__webpack_require__(388));
+__export(__webpack_require__(387));
+__export(__webpack_require__(385));
+__export(__webpack_require__(384));
+__export(__webpack_require__(386));
+__export(__webpack_require__(383));
+__export(__webpack_require__(395));
 
 
 /***/ }),
@@ -816,16 +818,16 @@ exports.guid = guid;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(366));
+__export(__webpack_require__(367));
+__export(__webpack_require__(375));
 __export(__webpack_require__(374));
-__export(__webpack_require__(373));
+__export(__webpack_require__(371));
 __export(__webpack_require__(370));
 __export(__webpack_require__(369));
 __export(__webpack_require__(368));
-__export(__webpack_require__(367));
+__export(__webpack_require__(373));
 __export(__webpack_require__(372));
-__export(__webpack_require__(371));
-__export(__webpack_require__(365));
+__export(__webpack_require__(366));
 
 
 /***/ }),
@@ -837,14 +839,14 @@ __export(__webpack_require__(365));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(354));
-__export(__webpack_require__(360));
-__export(__webpack_require__(359));
-__export(__webpack_require__(356));
 __export(__webpack_require__(355));
-__export(__webpack_require__(358));
+__export(__webpack_require__(361));
+__export(__webpack_require__(360));
 __export(__webpack_require__(357));
-__export(__webpack_require__(353));
+__export(__webpack_require__(356));
+__export(__webpack_require__(359));
+__export(__webpack_require__(358));
+__export(__webpack_require__(354));
 
 
 /***/ }),
@@ -953,12 +955,12 @@ exports.getFunctionName = getFunctionName;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(494));
-__export(__webpack_require__(496));
 __export(__webpack_require__(495));
-__export(__webpack_require__(498));
 __export(__webpack_require__(497));
-__export(__webpack_require__(493));
+__export(__webpack_require__(496));
+__export(__webpack_require__(499));
+__export(__webpack_require__(498));
+__export(__webpack_require__(494));
 
 
 /***/ }),
@@ -970,12 +972,12 @@ __export(__webpack_require__(493));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(543));
-__export(__webpack_require__(546));
-__export(__webpack_require__(545));
-__export(__webpack_require__(547));
 __export(__webpack_require__(544));
-__export(__webpack_require__(542));
+__export(__webpack_require__(547));
+__export(__webpack_require__(546));
+__export(__webpack_require__(548));
+__export(__webpack_require__(545));
+__export(__webpack_require__(543));
 
 
 /***/ }),
@@ -1140,10 +1142,10 @@ __export(__webpack_require__(135));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(377));
-__export(__webpack_require__(379));
 __export(__webpack_require__(378));
-__export(__webpack_require__(376));
+__export(__webpack_require__(380));
+__export(__webpack_require__(379));
+__export(__webpack_require__(377));
 
 
 /***/ }),
@@ -1791,11 +1793,11 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(272));
-__export(__webpack_require__(277));
-__export(__webpack_require__(282));
-__export(__webpack_require__(287));
-__export(__webpack_require__(267));
+__export(__webpack_require__(273));
+__export(__webpack_require__(278));
+__export(__webpack_require__(283));
+__export(__webpack_require__(288));
+__export(__webpack_require__(268));
 
 
 /***/ }),
@@ -1807,15 +1809,15 @@ __export(__webpack_require__(267));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(306));
-__export(__webpack_require__(316));
-__export(__webpack_require__(311));
-__export(__webpack_require__(327));
-__export(__webpack_require__(332));
-__export(__webpack_require__(337));
-__export(__webpack_require__(342));
-__export(__webpack_require__(321));
+__export(__webpack_require__(307));
+__export(__webpack_require__(317));
+__export(__webpack_require__(312));
+__export(__webpack_require__(328));
+__export(__webpack_require__(333));
+__export(__webpack_require__(338));
+__export(__webpack_require__(343));
 __export(__webpack_require__(322));
+__export(__webpack_require__(323));
 
 
 /***/ }),
@@ -3720,7 +3722,7 @@ exports.BindingToSyntax = BindingToSyntax;
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var uritemplate = __webpack_require__(548);
+var uritemplate = __webpack_require__(549);
 var _1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var inversify_1 = __webpack_require__(0);
@@ -13382,10 +13384,11 @@ var CalendarRsvpAttendeeClient = (function () {
                     SlotsRequested: <slots-requested>,
                     User: <user-profile>,
                     UserID: '<user-id>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
+                function (response, status, headers, config) {
                      // perform error handling here
                 });
      **/
@@ -13439,6 +13442,7 @@ var CalendarRsvpAttendeeClient = (function () {
     CalendarRsvpAttendeeClient.prototype.updateStatus = function (calendarId, eventId, id, statusId) {
         return this.apiClient.put(this.routeDefinition.updateStatus(calendarId, eventId, id, statusId), {});
     };
+    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status action has been performed. This action updates a CalendarEventAttendee resource.
      * @method
@@ -13473,6 +13477,78 @@ var CalendarRsvpAttendeeClient = (function () {
      **/
     CalendarRsvpAttendeeClient.prototype.unlink = function (calendarId, eventId, data) {
         return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId, data));
+    };
+    /**
+     * Returns a promise that is resolved once the subscribe action has been performed. This action creates CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribe action has been performed.
+     * @example calendarRsvpattendeeClient.subscribe(calendarId, eventId, attendeeId)
+                .then( function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    CalendarRsvpAttendeeClient.prototype.subscribe = function (calendarId, eventId, id) {
+        return this.apiClient.post(this.routeDefinition.subscribe(eventId, calendarId, id), {});
+    };
+    /**
+     * Returns a promise that is resolved once the unsubscribe action has been performed. This action removes CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribe action has been performed.
+     * @example calendarRsvpattendeeClient.unsubscribe(calendarId, eventId, attendeeId)
+                .then( function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    CalendarRsvpAttendeeClient.prototype.unsubscribe = function (calendarId, eventId, id) {
+        return this.apiClient.delete(this.routeDefinition.unsubscribe(eventId, calendarId, id));
+    };
+    /**
+     * Returns a promise that is resolved once the subscribeEmail action has been performed. This action creates CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param email CalendarEventAttendee email which identifies CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribeEmail action has been performed.
+     * @example calendarRsvpattendeeClient.subscribeEmail(calendarId, eventId, attendeeEmail)
+                .then( function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    CalendarRsvpAttendeeClient.prototype.subscribeEmail = function (calendarId, eventId, email) {
+        return this.apiClient.post(this.routeDefinition.subscribeEmail(eventId, calendarId, email), {});
+    };
+    /**
+     * Returns a promise that is resolved once the unsubscribeEmail action has been performed. This action removes CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param email CalendarEventAttendee email which identifies CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribeEmail action has been performed.
+     * @example calendarRsvpattendeeClient.unsubscribeEmail(calendarId, eventId, attendeeEmail)
+                .then( function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    CalendarRsvpAttendeeClient.prototype.unsubscribeEmail = function (calendarId, eventId, id) {
+        return this.apiClient.delete(this.routeDefinition.unsubscribe(eventId, calendarId, id));
     };
     /**
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventAttendee resources for the given event from the system if succesfully completed.
@@ -13540,9 +13616,13 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
         _this.linkRoute = 'calendars/{calendarId}/events/{eventId}/attendees';
         _this.updateRoute = 'calendars/{calendarId}/events/{eventId}/attendees/{id}';
         _this.updateStatusRoute = 'calendars/{calendarId}/events/{eventId}/attendees/{id}/status/{attendeeStatusId}';
-        _this.updateStatusByEmailOrFullNameRoute = '{calendarId}/events/{eventId}/attendees/emails/{emailOrFullName}/status/{attendeeStatusId}';
+        _this.updateStatusByEmailOrFullNameRoute = 'calendars/{calendarId}/events/{eventId}/attendees/emails/{emailOrFullName}/status/{attendeeStatusId}';
         _this.unlinkRoute = 'calendars/{calendarId}/events/{eventId}/attendees/{id}';
         _this.purgeRoute = 'calendars/{calendarId}/events/{eventId}/attendees/purge';
+        _this.subscribeEmailRoute = 'calendars/{calendarId}/events/{eventId}/emails/{email}/subscribe';
+        _this.unsubscribeEmailRoute = 'calendars/{calendarId}/events/{eventId}/emails/{email}/unsubscribe';
+        _this.subscribeRoute = 'calendars/{calendarId}/events/{eventId}/emails/{email}/subscribe';
+        _this.unsubscribeRoute = 'calendars/{calendarId}/events/{eventId}/attendees/{id}/unsubscribe';
         return _this;
     }
     /**
@@ -13564,7 +13644,7 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
      * @param calendarId Calendar identifier which uniquely identifies a calendar resource.
      * @param eventId calendarEvent identifier which uniquely identifies a CalendarEvent resource.
      * @example calendarRsvpAttendeeRoute.find(calendarid, eventid, {searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarRsvpAttendeeRoute.prototype.find = function (calendarId, eventId, options) {
         var opt;
         if (options) {
@@ -13589,7 +13669,7 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param options Query resource GetRequestOptions object.
      * @example calendarRsvpAttendeeRoute.get(calendarId, eventId, id);
-     **/
+     */
     CalendarRsvpAttendeeRoute.prototype.get = function (calendarId, eventId, id, options) {
         var params = this.modelMapper.getParams(options);
         params.calendarId = calendarId;
@@ -13618,12 +13698,25 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
     * @param eventId CalendarEvent id which uniquely identifies a CalendarEvent resource
     * @param data A CalendarEventAttendee object that needs to be inserted into the system.
     * @example calendarRsvpAttendeeRoute.link(calendarId, eventId, data);
-    **/
+    */
     CalendarRsvpAttendeeRoute.prototype.link = function (calendarId, eventId, data) {
         var params = this.modelMapper.createParams(data);
         params.calendarId = calendarId;
         params.eventId = eventId;
         return _super.prototype.baseCreate.call(this, this.linkRoute, params);
+    };
+    /**
+     * Parses purge route. This URI template does not expose any additional options.
+     * @method
+     * @param calendarId Calendar id which uniquely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @example calendarRsvpAttendeeRoute.purge(calendarId, eventId);
+     */
+    CalendarRsvpAttendeeRoute.prototype.purge = function (calendarId, eventId) {
+        var params = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, params);
     };
     /**
      * Parses update route. This URI template does not expose any additional options.
@@ -13632,7 +13725,7 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
      * @example calendarRsvpAttendeeRoute.update(calendarId, eventId, data);
-     **/
+     */
     CalendarRsvpAttendeeRoute.prototype.update = function (calendarId, eventId, data) {
         var params = this.modelMapper.updateParams(data);
         params.calendarId = calendarId;
@@ -13647,7 +13740,7 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
      * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies CalendarEventAttendeeStatus resource.
      * @example calendarRsvpAttendeeRoute.updateStatus(calendarId, eventId, id, statusId);
-     **/
+     */
     CalendarRsvpAttendeeRoute.prototype.updateStatus = function (calendarId, eventId, id, statusId) {
         var params = {};
         params.calendarId = calendarId;
@@ -13656,7 +13749,7 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
         params.attendeeStatusId = statusId;
         return _super.prototype.baseUpdate.call(this, this.updateStatusRoute, params);
     };
-    //TODO: security token
+    //TODO: securityToken
     /**
      * Parses update status email or name route. This URI template does not expose any additional options.
      * @method
@@ -13665,7 +13758,7 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
      * @param emailOrFullName Email or FullName
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies CalendarEventAttendeeStatus resource.
      * @example calendarRsvpAttendeeRoute.update(calendarId, eventId, email, statusId);
-     **/
+     */
     CalendarRsvpAttendeeRoute.prototype.updateStatusEmailOrFullName = function (calendarId, eventId, emailOrFullName, statusId) {
         var params = {};
         params.calendarId = calendarId;
@@ -13681,7 +13774,7 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param data A CalendarEventAttendee object used to unlink specified CalendarEventAttendee resource.
      * @example calendarRsvpAttendeeRoute.delete(calendarId, eventId, data);
-     **/
+     */
     CalendarRsvpAttendeeRoute.prototype.unlink = function (calendarId, eventId, data) {
         var params = this.modelMapper.removeParams(data);
         params.calendarId = calendarId;
@@ -13689,17 +13782,64 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
         return _super.prototype.baseDelete.call(this, this.unlinkRoute, params);
     };
     /**
-     * Parses purge route. This URI template does not expose any additional options.
+     * Parses subscribe route. This URI template does not expose any additional options.
      * @method
-     * @param calendarId Calendar id which uniquely identifies Calendar resource.
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
-     * @example calendarRsvpAttendeeRoute.purge(calendarId, eventId);
+     * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
+     * @example calendarRsvpAttendeeRoute.subscribe(calendarId, eventId, attendeeId);
      */
-    CalendarRsvpAttendeeRoute.prototype.purge = function (calendarId, eventId) {
+    CalendarRsvpAttendeeRoute.prototype.subscribe = function (calendarId, eventId, id) {
         var params = {};
         params.calendarId = calendarId;
         params.eventId = eventId;
-        return _super.prototype.baseDelete.call(this, this.purgeRoute, params);
+        params.id = id;
+        return _super.prototype.baseCreate.call(this, this.subscribeRoute, params);
+    };
+    /**
+     * Parses unsubscribe route. This URI template does not expose any additional options.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
+     * @example calendarRsvpAttendeeRoute.unsubscribe(calendarId, eventId, attendeeId);
+     */
+    CalendarRsvpAttendeeRoute.prototype.unsubscribe = function (calendarId, eventId, id) {
+        var params = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        params.id = id;
+        return _super.prototype.baseCreate.call(this, this.unsubscribeRoute, params);
+    };
+    /**
+     * Parses subscribeEmail route. This URI template does not expose any additional options.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param email CalendarEventAttendee email which identifies CalendarEventAttendee resource.
+     * @example calendarRsvpAttendeeRoute.subscribe(calendarId, eventId, attendeeId);
+     */
+    CalendarRsvpAttendeeRoute.prototype.subscribeEmail = function (calendarId, eventId, email) {
+        var params = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        params.email = email;
+        return _super.prototype.baseCreate.call(this, this.subscribeEmailRoute, params);
+    };
+    /**
+     * Parses unsubscribeEmail route. This URI template does not expose any additional options.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param email CalendarEventAttendee email which identifies CalendarEventAttendee resource.
+     * @example calendarRsvpAttendeeRoute.unsubscribe(calendarId, eventId, attendeeId);
+     */
+    CalendarRsvpAttendeeRoute.prototype.unsubscribeEmail = function (calendarId, eventId, email) {
+        var params = {};
+        params.calendarId = calendarId;
+        params.eventId = eventId;
+        params.email = email;
+        return _super.prototype.baseCreate.call(this, this.unsubscribeEmailRoute, params);
     };
     CalendarRsvpAttendeeRoute.prototype.getToDate = function (options) {
         if (!this.utility.isUndefined(options.to) && options.to !== null) {
@@ -14388,18 +14528,6 @@ __export(__webpack_require__(217));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(229));
-__export(__webpack_require__(230));
-__export(__webpack_require__(231));
-__export(__webpack_require__(233));
-__export(__webpack_require__(232));
-__export(__webpack_require__(234));
-__export(__webpack_require__(250));
-__export(__webpack_require__(242));
-__export(__webpack_require__(235));
 
 
 /***/ }),
@@ -14416,6 +14544,20 @@ __export(__webpack_require__(235));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(229));
+__export(__webpack_require__(230));
+__export(__webpack_require__(231));
+__export(__webpack_require__(234));
+__export(__webpack_require__(233));
+__export(__webpack_require__(235));
+__export(__webpack_require__(236));
+__export(__webpack_require__(232));
+__export(__webpack_require__(251));
+__export(__webpack_require__(243));
+__export(__webpack_require__(237));
 
 
 /***/ }),
@@ -14448,14 +14590,6 @@ __export(__webpack_require__(235));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(237));
-__export(__webpack_require__(238));
-__export(__webpack_require__(239));
-__export(__webpack_require__(240));
-__export(__webpack_require__(241));
 
 
 /***/ }),
@@ -14464,6 +14598,13 @@ __export(__webpack_require__(241));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(239));
+__export(__webpack_require__(240));
+__export(__webpack_require__(241));
+__export(__webpack_require__(242));
 
 
 /***/ }),
@@ -14520,20 +14661,28 @@ __export(__webpack_require__(241));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(245));
-__export(__webpack_require__(244));
-__export(__webpack_require__(247));
-__export(__webpack_require__(246));
-__export(__webpack_require__(249));
-__export(__webpack_require__(243));
-__export(__webpack_require__(248));
 
 
 /***/ }),
 /* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(246));
+__export(__webpack_require__(245));
+__export(__webpack_require__(248));
+__export(__webpack_require__(247));
+__export(__webpack_require__(250));
+__export(__webpack_require__(244));
+__export(__webpack_require__(249));
+
+
+/***/ }),
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14642,543 +14791,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 252 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module calendarEventBatchClient
- * @description  CalendarEventBatchClient provides an easy way to consume CalendarEventBatch REST API end-points. In order to obtain needed routes `calendarEventBatchClient` uses `calendarEventBatchRoute`.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(7);
-var CalendarEventBatchClient = (function () {
-    function CalendarEventBatchClient(calendarEventBatchRoute, apiClient) {
-        this.calendarEventBatchRoute = calendarEventBatchRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(CalendarEventBatchClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.calendarEventBatchRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the create CalendarEvents action has been performed. This action creates new CalendarEvent resources.
-     * @method
-     * @param data CalendarEvent objects that need to be inserted into the system.
-     * @returns A promise that is resolved once the create CalendarEvents action has been performed.
-     * @example calendarEventBatchClient.create([{
-                    author: <user-info>,
-                    authorId: '<author-id>',
-                    calendar: <calendar>,
-                    calendarId: '<calendar-id>',
-                    description: '<description>',
-                    detail: <calendar-event-detail>,
-                    endTime: '<end-time>',
-                    isAllDay: <true|false>,
-                    isRecurring: <true|false>,
-                    json: '<json>',
-                    startTime: '<start-time>',
-                    title: '<title'>
-                }]).then(function (data) {
-                    // perform success action here
-                },
-                 function (response, status, headers, config) {
-                     // perform error handling here
-                });
-     **/
-    CalendarEventBatchClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the update CalendarEvents action has been performed; this action updates CalendarEvent resources.
-     * @method
-     * @param data CalendarEvent objects used to update specified CalendarEvent resources.
-     * @returns A promise that is resolved once the update CalendarEvents action has been performed.
-     * @example calendarEvents are resources previously fetched using get action.
-                       calendarEventBatchClient.update(calendarEvents)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
-    CalendarEventBatchClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove CalendarEvent resources from the system if successfully completed.
-     * @method
-     * @param data CalendarEvent Ids which uniquely identify CalendarEvent resources to be deleted.
-     * @returns A promise that is resolved once the remove action has been performed.
-     * @example calendarEventIds are identifiers which uniquely identify CalendarEvent resources.
-                    calendarEventBatchClient.remove(calendarEventIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
-    CalendarEventBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
-    };
-    return CalendarEventBatchClient;
-}());
-CalendarEventBatchClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventBatchRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarEventBatchRoute !== "undefined" && _1.CalendarEventBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
-], CalendarEventBatchClient);
-exports.CalendarEventBatchClient = CalendarEventBatchClient;
-var _a, _b;
-/**
- * @copyright (c) 2017 Mono Ltd
- * @license MIT
- * @author Mono Ltd
- * @overview
- ***Notes:**
- - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route definition.
- */ 
-
-
-/***/ }),
 /* 253 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module calendarEventBatchRoute
- * @description BaasicCalendarEventBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventBatch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
-var CalendarEventBatchRoute = (function (_super) {
-    tslib_1.__extends(CalendarEventBatchRoute, _super);
-    function CalendarEventBatchRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.createRoute = 'calendar-events/batch';
-        _this.updateRoute = 'calendar-events/batch';
-        _this.deleteRoute = 'calendar-events/batch';
-        return _this;
-    }
-    /**
-     * Parses create route. This URI template does not expose any additional options.
-     * @method
-     * @example calendarEventBatchRoute.create();
-     **/
-    CalendarEventBatchRoute.prototype.create = function () {
-        return _super.prototype.baseCreate.call(this, this.createRoute, {});
-    };
-    /**
-     * Parses update route. This URI template does not expose any additional options.
-     * @method
-     * @example calendarEventBatchRoute.update();
-     **/
-    CalendarEventBatchRoute.prototype.update = function () {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
-    };
-    /**
-     * Parses delte route. This URI template does not expose any additional options.
-     * @method
-     * @example calendarEventBatchRoute.delete();
-     **/
-    CalendarEventBatchRoute.prototype.delete = function () {
-        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
-    };
-    return CalendarEventBatchRoute;
-}(common_1.BaseRoute));
-CalendarEventBatchRoute = tslib_1.__decorate([
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], CalendarEventBatchRoute);
-exports.CalendarEventBatchRoute = CalendarEventBatchRoute;
-var _a;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 254 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module calendarEventClient
- * @description  CalendarEvent Client provides an easy way to consume CalendarEvent REST API end-points. In order to obtain needed routes `calendarEventClient` uses `calendarEventRoute`.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(7);
-var CalendarEventClient = (function () {
-    function CalendarEventClient(calendarEventBatchClient, calendarEventRoute, apiClient) {
-        this.calendarEventBatchClient = calendarEventBatchClient;
-        this.calendarEventRoute = calendarEventRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(CalendarEventClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.calendarEventRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(CalendarEventClient.prototype, "batch", {
-        get: function () {
-            return this.calendarEventBatchClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEvent resources matching the given criteria.
-     * @method
-     * @param options Query resource GetCalendarEventOptions object.
-     * @returns A promise that is resolved once the find action has been performed.
-     * @example calendarEventClient.find({
-                    pageNumber: 1,
-                    pageSize: 10,
-                    orderBy: '<field>',
-                    orderDirection: '<asc|desc>',
-                    search: '<search-phrase>',
-                    ids: <event-identifiers>,
-                    ownerIds: <event-owner-identifiers>,
-                    calendarIds: <calendars-identifiers>,
-                    calendarNames: <calendar-names>,
-                    statusIds: <event-status-identifiers>,
-                    typeIds: <event-type-identifiers>,
-                    from: <start-date>,
-                    to: <end-date>
-                })
-                .then(function (collection) {
-                    // perform success action here
-                },
-                 function (response, status, headers, config) {
-                     // perform error handling here
-                });
-     **/
-    CalendarEventClient.prototype.find = function (options) {
-        return this.apiClient.get(this.routeDefinition.find(options));
-    };
-    /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the CalendarEvent resource.
-     * @method
-     * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
-     * @param options Query resource GetRequstOptions object.
-     * @returns A promise that is resolved once the get action has been performed.
-     * @example calendarEventClient.get(id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
-    CalendarEventClient.prototype.get = function (id, options) {
-        return this.apiClient.get(this.routeDefinition.get(id, options));
-    };
-    /**
-     * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
-     * @method
-     * @param id CalendarEvent id which uniquely identifies CalendarEvent resource.
-     * @param emailOrFullName email or full name
-     * @param options Query resource options object
-     * @example calendarEventClient.get(id, email@example.com)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    CalendarEventClient.prototype.getByEmailOrFullName = function (id, emailOrFullName, options) {
-        return this.apiClient.get(this.routeDefinition.getByEmailOrFullName(id, emailOrFullName, options));
-    };
-    /**
-     * Returns a promise that is resolved once the create CalendarEvent action has been performed. This action creates a new CalendarEvent resource.
-     * @method
-     * @param data A CalendarEvent object that needs to be inserted into the system.
-     * @returns A promise that is resolved once the create CalendarEvent action has been performed.
-     * @example calendarEventClient.create({
-                    author: <user-info>,
-                    authorId: '<author-id>',
-                    calendar: <calendar>,
-                    calendarId: '<calendar-id>',
-                    description: '<description>',
-                    detail: <calendar-event-detail>,
-                    endTime: '<end-time>',
-                    isAllDay: <true|false>,
-                    isRecurring: <true|false>,
-                    json: '<json>',
-                    startTime: '<start-time>',
-                    title: '<title'>
-                }.then(function (data) {
-                    // perform success action here
-                },
-                 function (response, status, headers, config) {
-                     // perform error handling here
-                });
-     **/
-    CalendarEventClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the update CalendarEvent action has been performed. This action updates a CalendarEvent resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.removeParams(calendarEvent);
-     * let uri = params['model'].links('put').href;
-     * ```
-     * @method
-     * @param data A Calendar Event  object used to update specified CalendarEvent resource.
-     * @returns A promise that is resolved once the update CalendarEvent action has been performed.
-     * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEvent.title = '<title>';
-                    calendarEventClient.update(calendarEvent)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
-    CalendarEventClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEvent resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.removeParams(calendarEvent);
-     * let uri = params['model'].links('delete').href;
-     * ```
-     * @method
-     * @param data An calendarEvent object used to delete specified CalendarEvent resource.
-     * @returns A promise that is resolved once the remove action has been performed.
-     * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEventClient.remove(calendarEvent)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
-    CalendarEventClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(data));
-    };
-    /**
-     * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEvent resources from the system if succesfully completed.
-     * @method
-     * @param calendarId Calendar identifier which uniquely identifies a calendar resource which will have its Events purged.
-     * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
-    CalendarEventClient.prototype.purge = function (calendarId) {
-        return this.apiClient.delete(this.routeDefinition.purge(calendarId));
-    };
-    return CalendarEventClient;
-}());
-CalendarEventClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventBatchClient)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRoute)),
-    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarEventBatchClient !== "undefined" && _1.CalendarEventBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CalendarEventRoute !== "undefined" && _1.CalendarEventRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
-], CalendarEventClient);
-exports.CalendarEventClient = CalendarEventClient;
-var _a, _b, _c;
-/**
- * @copyright (c) 2017 Mono Ltd
- * @license MIT
- * @author Mono Ltd
- * @overview
- ***Notes:**
- - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route definition.
- */ 
-
-
-/***/ }),
-/* 255 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module calendarEventRoute
- * @description BaasicCalendarEventRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-;
-var contracts_1 = __webpack_require__(3);
-var CalendarEventRoute = (function (_super) {
-    tslib_1.__extends(CalendarEventRoute, _super);
-    function CalendarEventRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.findRoute = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
-        _this.getRoute = 'calendar-events/{id}/{?embed, fields}';
-        _this.getByEmailOrFullNameRoute = 'calendar-events/{id}/{emailOrFullName}';
-        _this.createRoute = 'calendar-events';
-        _this.updateRoute = 'calendar-events/{id}';
-        _this.deleteRoute = 'calendar-events/{id}';
-        _this.purgeRoute = 'calendar-events/{id}/purge';
-        return _this;
-    }
-    /**
-     * Parses find route which can be expanded with additional GetCalendarEventOptions. Supported items are:
-     * - `searchQuery` - A string referencing CalendarEvent properties using the phrase or BQL (Baasic Query Language) search.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain CalendarEvent subset from the storage.
-     * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the CalendarEvent property to sort the result collection by.
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * - `ids` - CalendarEvent ids which uniquely identify CalendarEvent resources that need to be retrieved.
-     * - `ownerIds` - Owner ids which uniquely identify event owners used for filtering.
-     * - `calendarIds` - Calendar ids which uniquely identify Calendar resources used for filtering.
-     * - `calendarNames` - Calendar names which identify Calendar resources used for filtering.
-     * - `statusIds` - CalendarEventStatus ids which uniquely idendify CalendarEventStatuses used for filtering.
-     * - `typeIds` - CalendarEventType ids which uniquely identify CalendarEventTypes used for filtering.
-     * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
-     * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
-     * @method
-     * @param options Query resource GetCalendarEventOptions object.
-     * @example calendarEventRoute.find({searchQuery: '<search-phrase>'});
-     **/
-    CalendarEventRoute.prototype.find = function (options) {
-        var opt;
-        if (options) {
-            opt = options;
-            opt.to = this.getToDate(opt);
-            opt.from = this.getFromDate(opt);
-        }
-        else {
-            opt = {};
-        }
-        return _super.prototype.baseFind.call(this, this.findRoute, opt);
-    };
-    /**
-     * Parses get route which must be expanded with the identifier of the previously created CalendarEvent resource. This route can be expanded using additional GetRequestOptions. Supported items are:
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @method
-     * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
-     * @param options Query resource options object.
-     * @example calendarEventRoute.get(id);
-     **/
-    CalendarEventRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
-    };
-    /**
-     * Parses getByEmailOrFullName route which must be expanded with the identifier of the previously created CalendarEvent resource
-     * The route must also be expanded with the identifier of the previously created CalendarResource and the email/FullName.
-     * @param id CalendarEvent identifier which uniquely identifies previously created CalendarEvent resource.
-     * @param emailOrFullName Email or full name.
-     * @param options Query resource options object.
-     * @example calendarEventRoute.get(id, email@example.com, options);
-     */
-    CalendarEventRoute.prototype.getByEmailOrFullName = function (id, emailOrFullName, options) {
-        var params = this.modelMapper.getParams(options);
-        params.emailOrFullName = emailOrFullName;
-        return _super.prototype.baseGet.call(this, this.getByEmailOrFullNameRoute, id, params);
-    };
-    /**
-     * Parses create route. This URI template does not expose any additional options.
-     * @method
-     * @param data A CalendarEvent object that needs to be inserted into the system.
-     * @example calendarEventRoute.create(data);
-     **/
-    CalendarEventRoute.prototype.create = function (data) {
-        return _super.prototype.baseCreate.call(this, this.createRoute, data);
-    };
-    /**
-     * Parses update route. This URI template does not expose any additional options.
-     * @method
-     * @param data A CalendarEvent object used to update specified CalendarEvent resource.
-     * @example calendarEventRoute.update(data);
-     **/
-    CalendarEventRoute.prototype.update = function (data) {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
-    };
-    /**
-     * Parses delte route. This URI template does not expose any additional options.
-     * @method
-     * @param data A CalendarEvent object that will be deleted from the system.
-     * @example calendarEventRoute.delete(data);
-     **/
-    CalendarEventRoute.prototype.delete = function (data) {
-        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
-    };
-    /**
-     * Parses purge route. This URI template does not expose any additional options.
-     * @method
-     * @param calendarId CalendarId identifier that uniquely identifies a calendar resource that will have all of it's events purged.
-     * @example calendarEventRoute.purge(calendar);
-     */
-    CalendarEventRoute.prototype.purge = function (calendarId) {
-        return _super.prototype.baseDelete.call(this, this.purgeRoute, calendarId);
-    };
-    CalendarEventRoute.prototype.getToDate = function (options) {
-        if (!this.utility.isUndefined(options.to) && options.to !== null) {
-            return options.to.toISOString();
-        }
-        return undefined;
-    };
-    CalendarEventRoute.prototype.getFromDate = function (options) {
-        if (!this.utility.isUndefined(options.from) && options.from !== null) {
-            return options.from.toISOString();
-        }
-        return undefined;
-    };
-    return CalendarEventRoute;
-}(common_1.BaseRoute));
-CalendarEventRoute = tslib_1.__decorate([
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], CalendarEventRoute);
-exports.CalendarEventRoute = CalendarEventRoute;
-var _a;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15292,7 +14905,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 257 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15358,7 +14971,7 @@ var _a;
 
 
 /***/ }),
-/* 258 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15419,8 +15032,8 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      **/
     CalendarEventRsvpAttendeeClient.prototype.find = function (options) {
@@ -15433,12 +15046,12 @@ var CalendarEventRsvpAttendeeClient = (function () {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventRsvpAttendeeClient.get()
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
      **/
     CalendarEventRsvpAttendeeClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
@@ -15467,8 +15080,8 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 }.then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      **/
     CalendarEventRsvpAttendeeClient.prototype.create = function (data) {
@@ -15484,14 +15097,14 @@ var CalendarEventRsvpAttendeeClient = (function () {
      * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
      * @example calendarEventAttendee is a resource previously fetched using get action.
-                    calendarEventAttendee.name = '<name>';
-                    calendarEventRsvpAttendeeClient.update(calendarEventAttendee)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
+                calendarEventAttendee.name = '<name>';
+                calendarEventRsvpAttendeeClient.update(calendarEventAttendee)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
     **/
     CalendarEventRsvpAttendeeClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
@@ -15506,17 +15119,18 @@ var CalendarEventRsvpAttendeeClient = (function () {
      * @param id CalendarEventAttendee id which uniquely identifies a CalendarEventAttendee resource.
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies a CalendarEventAttendeeStatus resource.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
-     * @example     calendarEventRsvpAttendeeClient.updateStatus(id, statusId)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
+     * @example calendarEventRsvpAttendeeClient.updateStatus(id, statusId)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
     **/
     CalendarEventRsvpAttendeeClient.prototype.updateStatus = function (id, statusId) {
         return this.apiClient.put(this.routeDefinition.updateStatus(id, statusId), {});
     };
+    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status Email or FullName action has been performed. This action updates a CalendarEventAttendee resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -15528,13 +15142,13 @@ var CalendarEventRsvpAttendeeClient = (function () {
      * @param emailOrFullName Email or full name
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies a CalendarEventRsvpAttendeeStatus resource.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
-     * @example     calendarEventRsvpAttendeeClient.updateStatusEmail(id, email, statusId)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
+     * @example calendarEventRsvpAttendeeClient.updateStatusEmail(id, email, statusId)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
     **/
     CalendarEventRsvpAttendeeClient.prototype.updateStatusEmailorFullName = function (id, emailOrFullName, statusId) {
         return this.apiClient.put(this.routeDefinition.updateStatusEmailOrFullName(id, emailOrFullName, statusId), {});
@@ -15549,13 +15163,13 @@ var CalendarEventRsvpAttendeeClient = (function () {
      * @param data An calendarEventAttendee object used to delete specified CalendarEventAttendee resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventAttendee is a resource previously fetched using get action.
-                    calendarEventRsvpAttendeeClient.remove(calendarEventType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
+                calendarEventRsvpAttendeeClient.remove(calendarEventType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
      **/
     CalendarEventRsvpAttendeeClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
@@ -15565,16 +15179,48 @@ var CalendarEventRsvpAttendeeClient = (function () {
      * @method
      * @param event CalendarEvent resource that will have it's attendees purged.
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventRsvpAttendeeClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
+     * @example calendarEventRsvpAttendeeClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
      **/
     CalendarEventRsvpAttendeeClient.prototype.purge = function (event) {
         return this.apiClient.delete(this.routeDefinition.purge(event));
+    };
+    /**
+     * Returns a promise that is resolved once the subscribe action has been performed. This action creates CalendarEventAttendee subscription to CalendarEvent changes.
+     * @method
+     * @param id CalendarEventAttendee identifier which uniquely identifies a CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribe action has been performed.
+     * @example calendarEventRsvpAttendeeClient.subscribe(attendeeId)
+                .then(function (data) {
+                    //perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    CalendarEventRsvpAttendeeClient.prototype.subscribe = function (id) {
+        return this.apiClient.post(this.routeDefinition.subscribe(id), {});
+    };
+    /**
+     * Returns a promise that is resolved once the unsubscribe action has been performed. This action removes CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param id CalendarEventAttendee identifier which uniquely identifies a CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the unsubscribe action has been performed.
+     * @example calendarEventRsvpAttendeeClient.unsubscribe(attendeeId)
+                .then(function (data) {
+                    //perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    CalendarEventRsvpAttendeeClient.prototype.unsubscribe = function (id) {
+        return this.apiClient.delete(this.routeDefinition.unsubscribe(id));
     };
     return CalendarEventRsvpAttendeeClient;
 }());
@@ -15599,7 +15245,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 259 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15625,8 +15271,10 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
         _this.updateRoute = 'calendar-event-attendees/{id}';
         _this.deleteRoute = 'calendar-event-attendees/{id}';
         _this.purgeRoute = 'calendar-event-attendees/{id}/purge';
-        _this.updateStatusRoute = '{id}/status/{attendeeStatusId}';
-        _this.updateStatusEmailOrFullNameRoute = '{id}/user/{emailOrFullName}/status/{attendeeStatusId}';
+        _this.updateStatusRoute = 'calendar-event-attendees/{id}/status/{attendeeStatusId}';
+        _this.updateStatusEmailOrFullNameRoute = 'calendar-event-attendees/{id}/user/{emailOrFullName}/status/{attendeeStatusId}';
+        _this.subscribeRoute = "calendar-event-attendees/{id}/subscribe";
+        _this.unsubscribeRoute = "calendar-event-attendees/{id}/unsubscribe";
         return _this;
     }
     /**
@@ -15705,7 +15353,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
         params.attendeeStatusId = statusId;
         return _super.prototype.baseUpdate.call(this, this.updateStatusRoute, params);
     };
-    //TODO: securitytoken
+    //TODO: securityToken
     /**
     * Parses update status email or name route. This URI template does not expose any additional options.
     * @method
@@ -15729,6 +15377,28 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
      **/
     CalendarEventRsvpAttendeeRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses subscribe route. This URI template does not expose any additional options.
+     * @method
+     * @param id CalendarEventAttendee id which uniquely identifies a CalendarEventAttendee resource.
+     * @example calendarEventRsvpAttendeeRoute.subscribe(attendeeId);
+     */
+    CalendarEventRsvpAttendeeRoute.prototype.subscribe = function (id) {
+        var params = {};
+        params.id = id;
+        return _super.prototype.baseCreate.call(this, this.subscribeRoute, params);
+    };
+    /**
+     * Parses unsubscribe route. This URI template does not expose any additional options.
+     * @method
+     * @param id CalendarEventAttendee id which uniquely identifies a CalendarEventAttendee resource.
+     * @example calendarEventRsvpAttendeeRoute.unsubscribe(attendeeId);
+     */
+    CalendarEventRsvpAttendeeRoute.prototype.unsubscribe = function (id) {
+        var params = {};
+        params.id = id;
+        return _super.prototype.baseDelete.call(this, this.unsubscribeRoute, params);
     };
     /**
      * Parses purge route. This URI template does not expose any additional options.
@@ -15768,7 +15438,7 @@ var _a;
 
 
 /***/ }),
-/* 260 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15776,14 +15446,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(253));
+__export(__webpack_require__(254));
+__export(__webpack_require__(255));
 __export(__webpack_require__(256));
-__export(__webpack_require__(257));
-__export(__webpack_require__(258));
-__export(__webpack_require__(259));
 
 
 /***/ }),
-/* 261 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15890,7 +15560,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 262 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15956,7 +15626,7 @@ var _a;
 
 
 /***/ }),
-/* 263 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16146,7 +15816,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 264 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16298,7 +15968,7 @@ var _a;
 
 
 /***/ }),
-/* 265 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16306,10 +15976,397 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(258));
+__export(__webpack_require__(259));
+__export(__webpack_require__(260));
 __export(__webpack_require__(261));
-__export(__webpack_require__(262));
-__export(__webpack_require__(263));
-__export(__webpack_require__(264));
+
+
+/***/ }),
+/* 263 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module calendarEventBatchClient
+ * @description  CalendarEventBatchClient provides an easy way to consume CalendarEventBatch REST API end-points. In order to obtain needed routes `calendarEventBatchClient` uses `calendarEventBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(7);
+var CalendarEventBatchClient = (function () {
+    function CalendarEventBatchClient(calendarEventBatchRoute, apiClient) {
+        this.calendarEventBatchRoute = calendarEventBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CalendarEventBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.calendarEventBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create CalendarEvents action has been performed. This action creates new CalendarEvent resources.
+     * @method
+     * @param data CalendarEvent objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create CalendarEvents action has been performed.
+     * @example calendarEventBatchClient.create([{
+                    author: <user-info>,
+                    authorId: '<author-id>',
+                    calendar: <calendar>,
+                    calendarId: '<calendar-id>',
+                    description: '<description>',
+                    detail: <calendar-event-detail>,
+                    endTime: '<end-time>',
+                    isAllDay: <true|false>,
+                    isRecurring: <true|false>,
+                    json: '<json>',
+                    startTime: '<start-time>',
+                    title: '<title'>
+                }]).then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CalendarEventBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update CalendarEvents action has been performed; this action updates CalendarEvent resources.
+     * @method
+     * @param data CalendarEvent objects used to update specified CalendarEvent resources.
+     * @returns A promise that is resolved once the update CalendarEvents action has been performed.
+     * @example calendarEvents are resources previously fetched using get action.
+                       calendarEventBatchClient.update(calendarEvents)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    CalendarEventBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove CalendarEvent resources from the system if successfully completed.
+     * @method
+     * @param data CalendarEvent Ids which uniquely identify CalendarEvent resources to be deleted.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example calendarEventIds are identifiers which uniquely identify CalendarEvent resources.
+                    calendarEventBatchClient.remove(calendarEventIds)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CalendarEventBatchClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+    };
+    return CalendarEventBatchClient;
+}());
+CalendarEventBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarEventBatchRoute !== "undefined" && _1.CalendarEventBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CalendarEventBatchClient);
+exports.CalendarEventBatchClient = CalendarEventBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 264 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module calendarEventBatchRoute
+ * @description BaasicCalendarEventBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventBatch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var CalendarEventBatchRoute = (function (_super) {
+    tslib_1.__extends(CalendarEventBatchRoute, _super);
+    function CalendarEventBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'calendar-events/batch';
+        _this.updateRoute = 'calendar-events/batch';
+        _this.deleteRoute = 'calendar-events/batch';
+        return _this;
+    }
+    /**
+     * Parses create route. This URI template does not expose any additional options.
+     * @method
+     * @example calendarEventBatchRoute.create();
+     **/
+    CalendarEventBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route. This URI template does not expose any additional options.
+     * @method
+     * @example calendarEventBatchRoute.update();
+     **/
+    CalendarEventBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses delte route. This URI template does not expose any additional options.
+     * @method
+     * @example calendarEventBatchRoute.delete();
+     **/
+    CalendarEventBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CalendarEventBatchRoute;
+}(common_1.BaseRoute));
+CalendarEventBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CalendarEventBatchRoute);
+exports.CalendarEventBatchRoute = CalendarEventBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 265 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module calendarEventClient
+ * @description  CalendarEvent Client provides an easy way to consume CalendarEvent REST API end-points. In order to obtain needed routes `calendarEventClient` uses `calendarEventRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(7);
+var CalendarEventClient = (function () {
+    function CalendarEventClient(calendarEventBatchClient, calendarEventRoute, apiClient) {
+        this.calendarEventBatchClient = calendarEventBatchClient;
+        this.calendarEventRoute = calendarEventRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CalendarEventClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.calendarEventRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CalendarEventClient.prototype, "batch", {
+        get: function () {
+            return this.calendarEventBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEvent resources matching the given criteria.
+     * @method
+     * @param options Query resource GetCalendarEventOptions object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example calendarEventClient.find({
+                    pageNumber: 1,
+                    pageSize: 10,
+                    orderBy: '<field>',
+                    orderDirection: '<asc|desc>',
+                    search: '<search-phrase>',
+                    ids: <event-identifiers>,
+                    ownerIds: <event-owner-identifiers>,
+                    calendarIds: <calendars-identifiers>,
+                    calendarNames: <calendar-names>,
+                    statusIds: <event-status-identifiers>,
+                    typeIds: <event-type-identifiers>,
+                    from: <start-date>,
+                    to: <end-date>
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CalendarEventClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the CalendarEvent resource.
+     * @method
+     * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
+     * @param options Query resource GetRequstOptions object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example calendarEventClient.get(id)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CalendarEventClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    //TODO: securityToken
+    /**
+     * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
+     * @method
+     * @param id CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param emailOrFullName email or full name
+     * @param options Query resource options object
+     * @example calendarEventClient.get(id, email@example.com)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    CalendarEventClient.prototype.getByEmailOrFullName = function (id, emailOrFullName, options) {
+        return this.apiClient.get(this.routeDefinition.getByEmailOrFullName(id, emailOrFullName, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create CalendarEvent action has been performed. This action creates a new CalendarEvent resource.
+     * @method
+     * @param data A CalendarEvent object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create CalendarEvent action has been performed.
+     * @example calendarEventClient.create({
+                    author: <user-info>,
+                    authorId: '<author-id>',
+                    calendar: <calendar>,
+                    calendarId: '<calendar-id>',
+                    description: '<description>',
+                    detail: <calendar-event-detail>,
+                    endTime: '<end-time>',
+                    isAllDay: <true|false>,
+                    isRecurring: <true|false>,
+                    json: '<json>',
+                    startTime: '<start-time>',
+                    title: '<title'>
+                }.then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CalendarEventClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update CalendarEvent action has been performed. This action updates a CalendarEvent resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(calendarEvent);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A Calendar Event  object used to update specified CalendarEvent resource.
+     * @returns A promise that is resolved once the update CalendarEvent action has been performed.
+     * @example calendarEvent is a resource previously fetched using get action.
+                    calendarEvent.title = '<title>';
+                    calendarEventClient.update(calendarEvent)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+    **/
+    CalendarEventClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEvent resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(calendarEvent);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An calendarEvent object used to delete specified CalendarEvent resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example calendarEvent is a resource previously fetched using get action.
+                    calendarEventClient.remove(calendarEvent)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    CalendarEventClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEvent resources from the system if succesfully completed.
+     * @method
+     * @param calendarId Calendar identifier which uniquely identifies a calendar resource which will have its Events purged.
+     * @returns A promise that is resolved once the purge action has been performed.
+     * @example     calendarEventClient.purge()
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    CalendarEventClient.prototype.purge = function (calendarId) {
+        return this.apiClient.delete(this.routeDefinition.purge(calendarId));
+    };
+    return CalendarEventClient;
+}());
+CalendarEventClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarEventBatchClient !== "undefined" && _1.CalendarEventBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CalendarEventRoute !== "undefined" && _1.CalendarEventRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CalendarEventClient);
+exports.CalendarEventClient = CalendarEventClient;
+var _a, _b, _c;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
 
 
 /***/ }),
@@ -16317,20 +16374,169 @@ __export(__webpack_require__(264));
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* globals module */
+/**
+ * @module calendarEventRoute
+ * @description BaasicCalendarEventRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(252));
-__export(__webpack_require__(253));
-__export(__webpack_require__(254));
-__export(__webpack_require__(255));
-__export(__webpack_require__(265));
-__export(__webpack_require__(260));
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CalendarEventRoute = (function (_super) {
+    tslib_1.__extends(CalendarEventRoute, _super);
+    function CalendarEventRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
+        _this.getRoute = 'calendar-events/{id}/{?embed, fields}';
+        _this.getByEmailOrFullNameRoute = 'calendar-events/{id}/{emailOrFullName}';
+        _this.createRoute = 'calendar-events';
+        _this.updateRoute = 'calendar-events/{id}';
+        _this.deleteRoute = 'calendar-events/{id}';
+        _this.purgeRoute = 'calendar-events/{id}/purge';
+        return _this;
+    }
+    /**
+     * Parses find route which can be expanded with additional GetCalendarEventOptions. Supported items are:
+     * - `searchQuery` - A string referencing CalendarEvent properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain CalendarEvent subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the CalendarEvent property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * - `ids` - CalendarEvent ids which uniquely identify CalendarEvent resources that need to be retrieved.
+     * - `ownerIds` - Owner ids which uniquely identify event owners used for filtering.
+     * - `calendarIds` - Calendar ids which uniquely identify Calendar resources used for filtering.
+     * - `calendarNames` - Calendar names which identify Calendar resources used for filtering.
+     * - `statusIds` - CalendarEventStatus ids which uniquely idendify CalendarEventStatuses used for filtering.
+     * - `typeIds` - CalendarEventType ids which uniquely identify CalendarEventTypes used for filtering.
+     * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
+     * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
+     * @method
+     * @param options Query resource GetCalendarEventOptions object.
+     * @example calendarEventRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CalendarEventRoute.prototype.find = function (options) {
+        var opt;
+        if (options) {
+            opt = options;
+            opt.to = this.getToDate(opt);
+            opt.from = this.getFromDate(opt);
+        }
+        else {
+            opt = {};
+        }
+        return _super.prototype.baseFind.call(this, this.findRoute, opt);
+    };
+    /**
+     * Parses get route which must be expanded with the identifier of the previously created CalendarEvent resource. This route can be expanded using additional GetRequestOptions. Supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example calendarEventRoute.get(id);
+     **/
+    CalendarEventRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    //TODO: securityToken
+    /**
+     * Parses getByEmailOrFullName route which must be expanded with the identifier of the previously created CalendarEvent resource
+     * The route must also be expanded with the identifier of the previously created CalendarResource and the email/FullName.
+     * @param id CalendarEvent identifier which uniquely identifies previously created CalendarEvent resource.
+     * @param emailOrFullName Email or full name.
+     * @param options Query resource options object.
+     * @example calendarEventRoute.get(id, email@example.com, options);
+     */
+    CalendarEventRoute.prototype.getByEmailOrFullName = function (id, emailOrFullName, options) {
+        var params = this.modelMapper.getParams(options);
+        params.emailOrFullName = emailOrFullName;
+        return _super.prototype.baseGet.call(this, this.getByEmailOrFullNameRoute, id, params);
+    };
+    /**
+     * Parses create route. This URI template does not expose any additional options.
+     * @method
+     * @param data A CalendarEvent object that needs to be inserted into the system.
+     * @example calendarEventRoute.create(data);
+     **/
+    CalendarEventRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses update route. This URI template does not expose any additional options.
+     * @method
+     * @param data A CalendarEvent object used to update specified CalendarEvent resource.
+     * @example calendarEventRoute.update(data);
+     **/
+    CalendarEventRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delte route. This URI template does not expose any additional options.
+     * @method
+     * @param data A CalendarEvent object that will be deleted from the system.
+     * @example calendarEventRoute.delete(data);
+     **/
+    CalendarEventRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses purge route. This URI template does not expose any additional options.
+     * @method
+     * @param calendarId CalendarId identifier that uniquely identifies a calendar resource that will have all of it's events purged.
+     * @example calendarEventRoute.purge(calendar);
+     */
+    CalendarEventRoute.prototype.purge = function (calendarId) {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, calendarId);
+    };
+    CalendarEventRoute.prototype.getToDate = function (options) {
+        if (!this.utility.isUndefined(options.to) && options.to !== null) {
+            return options.to.toISOString();
+        }
+        return undefined;
+    };
+    CalendarEventRoute.prototype.getFromDate = function (options) {
+        if (!this.utility.isUndefined(options.from) && options.from !== null) {
+            return options.from.toISOString();
+        }
+        return undefined;
+    };
+    return CalendarEventRoute;
+}(common_1.BaseRoute));
+CalendarEventRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CalendarEventRoute);
+exports.CalendarEventRoute = CalendarEventRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
 
 
 /***/ }),
 /* 267 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(263));
+__export(__webpack_require__(264));
+__export(__webpack_require__(265));
+__export(__webpack_require__(266));
+
+
+/***/ }),
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16361,7 +16567,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16463,7 +16669,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16529,7 +16735,7 @@ var _a;
 
 
 /***/ }),
-/* 270 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16706,7 +16912,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 271 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16836,7 +17042,7 @@ var _a;
 
 
 /***/ }),
-/* 272 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16844,14 +17050,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(268));
 __export(__webpack_require__(269));
 __export(__webpack_require__(270));
 __export(__webpack_require__(271));
+__export(__webpack_require__(272));
 
 
 /***/ }),
-/* 273 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16953,7 +17159,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 274 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17019,7 +17225,7 @@ var _a;
 
 
 /***/ }),
-/* 275 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17196,7 +17402,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17326,7 +17532,7 @@ var _a;
 
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17334,14 +17540,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(273));
 __export(__webpack_require__(274));
 __export(__webpack_require__(275));
 __export(__webpack_require__(276));
+__export(__webpack_require__(277));
 
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17443,7 +17649,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17509,7 +17715,7 @@ var _a;
 
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17686,7 +17892,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17816,7 +18022,7 @@ var _a;
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17824,14 +18030,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(278));
 __export(__webpack_require__(279));
 __export(__webpack_require__(280));
 __export(__webpack_require__(281));
+__export(__webpack_require__(282));
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17933,7 +18139,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17999,7 +18205,7 @@ var _a;
 
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18176,7 +18382,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18306,7 +18512,7 @@ var _a;
 
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18314,14 +18520,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(283));
 __export(__webpack_require__(284));
 __export(__webpack_require__(285));
 __export(__webpack_require__(286));
+__export(__webpack_require__(287));
 
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18355,7 +18561,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18556,7 +18762,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18666,7 +18872,7 @@ var _a;
 
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18797,7 +19003,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 292 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18939,7 +19145,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 293 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19033,7 +19239,7 @@ var _a;
 
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19118,7 +19324,7 @@ var _a;
 
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19126,14 +19332,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(294));
-__export(__webpack_require__(291));
-__export(__webpack_require__(293));
+__export(__webpack_require__(295));
 __export(__webpack_require__(292));
+__export(__webpack_require__(294));
+__export(__webpack_require__(293));
 
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19244,7 +19450,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19366,7 +19572,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19466,7 +19672,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19545,7 +19751,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19603,7 +19809,7 @@ var _a;
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19611,14 +19817,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(301));
 __export(__webpack_require__(300));
 __export(__webpack_require__(299));
 __export(__webpack_require__(298));
-__export(__webpack_require__(297));
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19713,7 +19919,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19784,7 +19990,7 @@ var _a;
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19933,7 +20139,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20037,7 +20243,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20045,14 +20251,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(303));
-__export(__webpack_require__(302));
-__export(__webpack_require__(305));
 __export(__webpack_require__(304));
+__export(__webpack_require__(303));
+__export(__webpack_require__(306));
+__export(__webpack_require__(305));
 
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20148,7 +20354,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20219,7 +20425,7 @@ var _a;
 
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20370,7 +20576,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20476,7 +20682,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20484,14 +20690,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(308));
-__export(__webpack_require__(307));
-__export(__webpack_require__(310));
 __export(__webpack_require__(309));
+__export(__webpack_require__(308));
+__export(__webpack_require__(311));
+__export(__webpack_require__(310));
 
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20586,7 +20792,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20657,7 +20863,7 @@ var _a;
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20806,7 +21012,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20910,7 +21116,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20918,14 +21124,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(313));
-__export(__webpack_require__(312));
-__export(__webpack_require__(315));
 __export(__webpack_require__(314));
+__export(__webpack_require__(313));
+__export(__webpack_require__(316));
+__export(__webpack_require__(315));
 
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21020,7 +21226,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21091,7 +21297,7 @@ var _a;
 
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21240,7 +21446,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21345,7 +21551,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21353,14 +21559,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(318));
-__export(__webpack_require__(317));
-__export(__webpack_require__(320));
 __export(__webpack_require__(319));
+__export(__webpack_require__(318));
+__export(__webpack_require__(321));
+__export(__webpack_require__(320));
 
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21399,7 +21605,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21495,7 +21701,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21566,7 +21772,7 @@ var _a;
 
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21715,7 +21921,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21820,7 +22026,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 327 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21828,14 +22034,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(324));
-__export(__webpack_require__(323));
-__export(__webpack_require__(326));
 __export(__webpack_require__(325));
+__export(__webpack_require__(324));
+__export(__webpack_require__(327));
+__export(__webpack_require__(326));
 
 
 /***/ }),
-/* 328 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21930,7 +22136,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 329 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22001,7 +22207,7 @@ var _a;
 
 
 /***/ }),
-/* 330 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22150,7 +22356,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 331 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22255,7 +22461,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 332 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22263,14 +22469,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(329));
-__export(__webpack_require__(328));
-__export(__webpack_require__(331));
 __export(__webpack_require__(330));
+__export(__webpack_require__(329));
+__export(__webpack_require__(332));
+__export(__webpack_require__(331));
 
 
 /***/ }),
-/* 333 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22366,7 +22572,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 334 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22437,7 +22643,7 @@ var _a;
 
 
 /***/ }),
-/* 335 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22587,7 +22793,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 336 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22692,7 +22898,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 337 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22700,14 +22906,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(334));
-__export(__webpack_require__(333));
-__export(__webpack_require__(336));
 __export(__webpack_require__(335));
+__export(__webpack_require__(334));
+__export(__webpack_require__(337));
+__export(__webpack_require__(336));
 
 
 /***/ }),
-/* 338 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22802,7 +23008,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 339 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22873,7 +23079,7 @@ var _a;
 
 
 /***/ }),
-/* 340 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23022,7 +23228,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 341 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23127,7 +23333,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 342 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23135,14 +23341,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(339));
-__export(__webpack_require__(338));
-__export(__webpack_require__(341));
 __export(__webpack_require__(340));
+__export(__webpack_require__(339));
+__export(__webpack_require__(342));
+__export(__webpack_require__(341));
 
 
 /***/ }),
-/* 343 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23278,7 +23484,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 344 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23379,7 +23585,7 @@ var _a;
 
 
 /***/ }),
-/* 345 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23387,12 +23593,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(345));
 __export(__webpack_require__(344));
-__export(__webpack_require__(343));
 
 
 /***/ }),
-/* 346 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23536,7 +23742,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 347 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23630,7 +23836,7 @@ var _a;
 
 
 /***/ }),
-/* 348 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23638,17 +23844,8 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(348));
 __export(__webpack_require__(347));
-__export(__webpack_require__(346));
-
-
-/***/ }),
-/* 349 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
 
 
 /***/ }),
@@ -23657,6 +23854,7 @@ __export(__webpack_require__(346));
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -23665,7 +23863,6 @@ __export(__webpack_require__(346));
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -23683,17 +23880,26 @@ __export(__webpack_require__(346));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(351));
-__export(__webpack_require__(352));
-__export(__webpack_require__(350));
-__export(__webpack_require__(349));
+;
 
 
 /***/ }),
 /* 354 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(352));
+__export(__webpack_require__(353));
+__export(__webpack_require__(351));
+__export(__webpack_require__(350));
+
+
+/***/ }),
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23722,7 +23928,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 355 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23843,7 +24049,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 356 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23947,7 +24153,7 @@ var _a;
 
 
 /***/ }),
-/* 357 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24137,7 +24343,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 358 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24245,7 +24451,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 359 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24424,7 +24630,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 360 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24525,15 +24731,6 @@ var _a;
 
 
 /***/ }),
-/* 361 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24548,6 +24745,7 @@ var _a;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -24556,7 +24754,6 @@ var _a;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -24565,17 +24762,26 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(361));
-__export(__webpack_require__(364));
-__export(__webpack_require__(363));
-__export(__webpack_require__(362));
+;
 
 
 /***/ }),
 /* 366 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(362));
+__export(__webpack_require__(365));
+__export(__webpack_require__(364));
+__export(__webpack_require__(363));
+
+
+/***/ }),
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24608,7 +24814,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 367 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24725,7 +24931,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 368 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24838,7 +25044,7 @@ var _a;
 
 
 /***/ }),
-/* 369 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24941,7 +25147,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 370 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25008,7 +25214,7 @@ var _a;
 
 
 /***/ }),
-/* 371 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25187,7 +25393,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 372 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25293,7 +25499,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 373 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25428,7 +25634,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 374 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25514,7 +25720,7 @@ var _a;
 
 
 /***/ }),
-/* 375 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25523,7 +25729,7 @@ var _a;
 
 
 /***/ }),
-/* 376 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25531,11 +25737,11 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(375));
+__export(__webpack_require__(376));
 
 
 /***/ }),
-/* 377 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25556,7 +25762,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25707,7 +25913,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25806,7 +26012,7 @@ var _a;
 
 
 /***/ }),
-/* 380 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25892,7 +26098,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 381 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25950,7 +26156,7 @@ var _a;
 
 
 /***/ }),
-/* 382 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26122,7 +26328,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 383 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26229,7 +26435,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 384 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26303,7 +26509,7 @@ var _a;
 
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26428,7 +26634,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26505,7 +26711,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26563,7 +26769,7 @@ var _a;
 
 
 /***/ }),
-/* 388 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26696,7 +26902,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26782,20 +26988,12 @@ var _a;
 
 
 /***/ }),
-/* 390 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -26804,7 +27002,6 @@ var _a;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -26822,17 +27019,26 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(391));
-__export(__webpack_require__(390));
-__export(__webpack_require__(392));
-__export(__webpack_require__(393));
+;
 
 
 /***/ }),
 /* 395 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(392));
+__export(__webpack_require__(391));
+__export(__webpack_require__(393));
+__export(__webpack_require__(394));
+
+
+/***/ }),
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26869,14 +27075,6 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 396 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26890,7 +27088,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -26908,6 +27105,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -26916,7 +27114,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -26925,6 +27122,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -26933,7 +27131,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -26969,6 +27166,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -26977,7 +27175,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -26995,6 +27192,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -27019,7 +27217,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -27046,33 +27243,42 @@ exports.diModule = diModule;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(406));
-__export(__webpack_require__(407));
-__export(__webpack_require__(405));
-__export(__webpack_require__(411));
-__export(__webpack_require__(412));
-__export(__webpack_require__(399));
-__export(__webpack_require__(404));
-__export(__webpack_require__(403));
-__export(__webpack_require__(415));
-__export(__webpack_require__(410));
-__export(__webpack_require__(413));
-__export(__webpack_require__(396));
-__export(__webpack_require__(397));
-__export(__webpack_require__(398));
-__export(__webpack_require__(408));
-__export(__webpack_require__(409));
-__export(__webpack_require__(401));
-__export(__webpack_require__(402));
-__export(__webpack_require__(414));
-__export(__webpack_require__(400));
+;
 
 
 /***/ }),
 /* 417 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(407));
+__export(__webpack_require__(408));
+__export(__webpack_require__(406));
+__export(__webpack_require__(412));
+__export(__webpack_require__(413));
+__export(__webpack_require__(400));
+__export(__webpack_require__(405));
+__export(__webpack_require__(404));
+__export(__webpack_require__(416));
+__export(__webpack_require__(411));
+__export(__webpack_require__(414));
+__export(__webpack_require__(397));
+__export(__webpack_require__(398));
+__export(__webpack_require__(399));
+__export(__webpack_require__(409));
+__export(__webpack_require__(410));
+__export(__webpack_require__(402));
+__export(__webpack_require__(403));
+__export(__webpack_require__(415));
+__export(__webpack_require__(401));
+
+
+/***/ }),
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27127,7 +27333,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 418 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27281,7 +27487,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 419 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27334,7 +27540,7 @@ var _a;
 
 
 /***/ }),
-/* 420 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27474,7 +27680,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 421 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27540,7 +27746,7 @@ var _a;
 
 
 /***/ }),
-/* 422 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27629,7 +27835,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 423 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27682,7 +27888,7 @@ var _a;
 
 
 /***/ }),
-/* 424 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27772,7 +27978,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 425 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27824,7 +28030,7 @@ var _a;
 
 
 /***/ }),
-/* 426 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28164,7 +28370,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 427 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28328,7 +28534,7 @@ var _a;
 
 
 /***/ }),
-/* 428 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28436,7 +28642,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 429 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28501,7 +28707,7 @@ var _a;
 
 
 /***/ }),
-/* 430 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28652,7 +28858,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 431 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28762,7 +28968,7 @@ var _a;
 
 
 /***/ }),
-/* 432 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28800,7 +29006,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
-/* 433 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29086,7 +29292,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 434 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29247,7 +29453,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 435 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29331,7 +29537,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 436 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29415,15 +29621,6 @@ var _a;
 
 
 /***/ }),
-/* 437 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29447,16 +29644,25 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(437));
-__export(__webpack_require__(438));
-__export(__webpack_require__(439));
+;
 
 
 /***/ }),
 /* 441 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(438));
+__export(__webpack_require__(439));
+__export(__webpack_require__(440));
+
+
+/***/ }),
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29501,7 +29707,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 442 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29632,7 +29838,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 443 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29756,7 +29962,7 @@ var _a;
 
 
 /***/ }),
-/* 444 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29858,7 +30064,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 445 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29929,7 +30135,7 @@ var _a;
 
 
 /***/ }),
-/* 446 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30032,7 +30238,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 447 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30102,7 +30308,7 @@ var _a;
 
 
 /***/ }),
-/* 448 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30264,7 +30470,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 449 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30372,7 +30578,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 450 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30583,7 +30789,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 451 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30728,7 +30934,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 452 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30813,7 +31019,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 453 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30876,7 +31082,7 @@ var _a;
 
 
 /***/ }),
-/* 454 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30955,7 +31161,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 455 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31023,15 +31229,6 @@ var _a;
 
 
 /***/ }),
-/* 456 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31082,19 +31279,28 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(458));
-__export(__webpack_require__(459));
-__export(__webpack_require__(461));
-__export(__webpack_require__(456));
-__export(__webpack_require__(457));
-__export(__webpack_require__(460));
+;
 
 
 /***/ }),
 /* 463 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(459));
+__export(__webpack_require__(460));
+__export(__webpack_require__(462));
+__export(__webpack_require__(457));
+__export(__webpack_require__(458));
+__export(__webpack_require__(461));
+
+
+/***/ }),
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31167,7 +31373,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 464 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31245,7 +31451,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 465 */
+/* 466 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31314,7 +31520,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 466 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31363,7 +31569,7 @@ var _a;
 
 
 /***/ }),
-/* 467 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31441,7 +31647,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 468 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31496,7 +31702,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 469 */
+/* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31594,7 +31800,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 470 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31660,7 +31866,7 @@ var _a;
 
 
 /***/ }),
-/* 471 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31819,7 +32025,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 472 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31929,7 +32135,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 473 */
+/* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31989,7 +32195,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 474 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32048,7 +32254,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 475 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32146,7 +32352,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 476 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32214,7 +32420,7 @@ var _a;
 
 
 /***/ }),
-/* 477 */
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32372,7 +32578,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 478 */
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32480,7 +32686,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 479 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32557,7 +32763,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 480 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32639,7 +32845,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 481 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32699,7 +32905,7 @@ var _a;
 
 
 /***/ }),
-/* 482 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32796,7 +33002,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 483 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32864,7 +33070,7 @@ var _a;
 
 
 /***/ }),
-/* 484 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33023,7 +33229,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 485 */
+/* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33134,7 +33340,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 486 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33194,7 +33400,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 487 */
+/* 488 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33253,7 +33459,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 488 */
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33350,7 +33556,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 489 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33418,7 +33624,7 @@ var _a;
 
 
 /***/ }),
-/* 490 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33576,7 +33782,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 491 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33679,7 +33885,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 492 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33688,7 +33894,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 493 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33696,11 +33902,11 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(492));
+__export(__webpack_require__(493));
 
 
 /***/ }),
-/* 494 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33725,7 +33931,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 495 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33819,7 +34025,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 496 */
+/* 497 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33886,7 +34092,7 @@ var _a;
 
 
 /***/ }),
-/* 497 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34038,7 +34244,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 498 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34144,7 +34350,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 499 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34241,7 +34447,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 500 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34307,7 +34513,7 @@ var _a;
 
 
 /***/ }),
-/* 501 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34464,7 +34670,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 502 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34554,15 +34760,6 @@ var _a, _b;
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
-
-
-/***/ }),
-/* 503 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
 
 
 /***/ }),
@@ -34670,25 +34867,34 @@ var _a, _b;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(503));
-__export(__webpack_require__(505));
-__export(__webpack_require__(508));
-__export(__webpack_require__(509));
-__export(__webpack_require__(507));
-__export(__webpack_require__(506));
-__export(__webpack_require__(504));
-__export(__webpack_require__(511));
-__export(__webpack_require__(512));
-__export(__webpack_require__(510));
-__export(__webpack_require__(513));
-__export(__webpack_require__(514));
+;
 
 
 /***/ }),
 /* 516 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(504));
+__export(__webpack_require__(506));
+__export(__webpack_require__(509));
+__export(__webpack_require__(510));
+__export(__webpack_require__(508));
+__export(__webpack_require__(507));
+__export(__webpack_require__(505));
+__export(__webpack_require__(512));
+__export(__webpack_require__(513));
+__export(__webpack_require__(511));
+__export(__webpack_require__(514));
+__export(__webpack_require__(515));
+
+
+/***/ }),
+/* 517 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34759,7 +34965,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 517 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34854,7 +35060,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 518 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34920,7 +35126,7 @@ var _a;
 
 
 /***/ }),
-/* 519 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35071,7 +35277,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 520 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35176,7 +35382,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 521 */
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35206,7 +35412,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 522 */
+/* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35303,7 +35509,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 523 */
+/* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35369,7 +35575,7 @@ var _a;
 
 
 /***/ }),
-/* 524 */
+/* 525 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35519,7 +35725,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 525 */
+/* 526 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35617,7 +35823,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 526 */
+/* 527 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35759,7 +35965,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 527 */
+/* 528 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35855,7 +36061,7 @@ var _a;
 
 
 /***/ }),
-/* 528 */
+/* 529 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35987,7 +36193,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 529 */
+/* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36106,7 +36312,7 @@ var _a;
 
 
 /***/ }),
-/* 530 */
+/* 531 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36239,7 +36445,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 531 */
+/* 532 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36342,7 +36548,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 532 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36483,7 +36689,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 533 */
+/* 534 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36571,7 +36777,7 @@ var _a;
 
 
 /***/ }),
-/* 534 */
+/* 535 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36766,7 +36972,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 535 */
+/* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36874,7 +37080,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 536 */
+/* 537 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37018,7 +37224,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 537 */
+/* 538 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37114,7 +37320,7 @@ var _a;
 
 
 /***/ }),
-/* 538 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37255,7 +37461,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 539 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37345,15 +37551,6 @@ var _a;
 
 
 /***/ }),
-/* 540 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37368,15 +37565,24 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(541));
-__export(__webpack_require__(540));
+;
 
 
 /***/ }),
 /* 543 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(542));
+__export(__webpack_require__(541));
+
+
+/***/ }),
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37401,7 +37607,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 544 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37564,7 +37770,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 545 */
+/* 546 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37714,7 +37920,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 546 */
+/* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37819,7 +38025,7 @@ var _a;
 
 
 /***/ }),
-/* 547 */
+/* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37926,7 +38132,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 548 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/

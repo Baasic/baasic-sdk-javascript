@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../../../common';
-import { IGetRequestOptions, IOptions } from '../../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendarEvent, ICalendarEventRsvp, IGetCalendarEventRsvpOptions } from '../../contracts';
+import { ICalendarEvent, ICalendarEventRsvp, IGetCalendarEventRsvpOptions } from '../contracts';
 
 export class CalendarEventRsvpRoute extends BaseRoute {
 

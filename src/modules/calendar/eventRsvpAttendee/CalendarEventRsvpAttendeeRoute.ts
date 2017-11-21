@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../../../common';
-import { IGetRequestOptions, IOptions } from '../../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
-import { ICalendarEvent, ICalendarEventAttendee, IGetCalendarEventAttendeeOptions } from '../../contracts';
+import { ICalendarEvent, ICalendarEventAttendee, IGetCalendarEventAttendeeOptions } from '../contracts';
 
 export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
 
@@ -19,8 +19,10 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
     public readonly updateRoute: string = 'calendar-event-attendees/{id}';
     public readonly deleteRoute: string = 'calendar-event-attendees/{id}';
     public readonly purgeRoute: string = 'calendar-event-attendees/{id}/purge';
-    public readonly updateStatusRoute: string = '{id}/status/{attendeeStatusId}';
-    public readonly updateStatusEmailOrFullNameRoute: string = '{id}/user/{emailOrFullName}/status/{attendeeStatusId}';
+    public readonly updateStatusRoute: string = 'calendar-event-attendees/{id}/status/{attendeeStatusId}';
+    public readonly updateStatusEmailOrFullNameRoute: string = 'calendar-event-attendees/{id}/user/{emailOrFullName}/status/{attendeeStatusId}';
+    public readonly subscribeRoute: string = "calendar-event-attendees/{id}/subscribe"
+    public readonly unsubscribeRoute: string = "calendar-event-attendees/{id}/unsubscribe"
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
     
@@ -104,7 +106,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
         return super.baseUpdate(this.updateStatusRoute, params);
     }
 
-    //TODO: securitytoken
+    //TODO: securityToken
      /**
      * Parses update status email or name route. This URI template does not expose any additional options.
      * @method
@@ -131,6 +133,29 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
         return super.baseDelete(this.deleteRoute, data);
     }
 
+    /**
+     * Parses subscribe route. This URI template does not expose any additional options.
+     * @method
+     * @param id CalendarEventAttendee id which uniquely identifies a CalendarEventAttendee resource.
+     * @example calendarEventRsvpAttendeeRoute.subscribe(attendeeId);
+     */
+    subscribe(id: string): any {
+        let params: any = {};
+        params.id = id;
+        return super.baseCreate(this.subscribeRoute, params);
+    }
+
+    /**
+     * Parses unsubscribe route. This URI template does not expose any additional options.
+     * @method
+     * @param id CalendarEventAttendee id which uniquely identifies a CalendarEventAttendee resource.
+     * @example calendarEventRsvpAttendeeRoute.unsubscribe(attendeeId);
+     */
+    unsubscribe(id: string): any {
+        let params: any = {};
+        params.id = id;
+        return super.baseDelete(this.unsubscribeRoute, params);
+    }
 
     /**
      * Parses purge route. This URI template does not expose any additional options.

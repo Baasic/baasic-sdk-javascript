@@ -119,10 +119,11 @@ export class CalendarRsvpAttendeeClient {
                     SlotsRequested: <slots-requested>,
                     User: <user-profile>,
                     UserID: '<user-id>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
+                function (response, status, headers, config) {
                      // perform error handling here
                 });
      **/
@@ -179,7 +180,7 @@ export class CalendarRsvpAttendeeClient {
         return this.apiClient.put<void>(this.routeDefinition.updateStatus(calendarId, eventId, id, statusId), {});
     }
 
-
+    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status action has been performed. This action updates a CalendarEventAttendee resource. 
      * @method
@@ -215,6 +216,82 @@ export class CalendarRsvpAttendeeClient {
      **/
     unlink(calendarId: string, eventId: string, data: ICalendarEventAttendee): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId, eventId, data));
+    }
+
+    /**
+     * Returns a promise that is resolved once the subscribe action has been performed. This action creates CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribe action has been performed.
+     * @example calendarRsvpattendeeClient.subscribe(calendarId, eventId, attendeeId)
+                .then( function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });                    
+     */
+    subscribe(calendarId: string, eventId: string, id: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.post<void>(this.routeDefinition.subscribe(eventId, calendarId, id), {});
+    }
+
+    /**
+     * Returns a promise that is resolved once the unsubscribe action has been performed. This action removes CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribe action has been performed.
+     * @example calendarRsvpattendeeClient.unsubscribe(calendarId, eventId, attendeeId)
+                .then( function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });                    
+     */
+    unsubscribe(calendarId: string, eventId: string, id: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.unsubscribe(eventId, calendarId, id));
+    }
+
+    /**
+     * Returns a promise that is resolved once the subscribeEmail action has been performed. This action creates CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param email CalendarEventAttendee email which identifies CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribeEmail action has been performed.
+     * @example calendarRsvpattendeeClient.subscribeEmail(calendarId, eventId, attendeeEmail)
+                .then( function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });                    
+     */
+    subscribeEmail(calendarId: string, eventId: string, email: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.post<void>(this.routeDefinition.subscribeEmail(eventId, calendarId, email), {});
+    }
+
+    /**
+     * Returns a promise that is resolved once the unsubscribeEmail action has been performed. This action removes CalendarEventAttendee subscriotion to CalendarEvent changes.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
+     * @param email CalendarEventAttendee email which identifies CalendarEventAttendee resource.
+     * @returns A promise that is resolved once the subscribeEmail action has been performed.
+     * @example calendarRsvpattendeeClient.unsubscribeEmail(calendarId, eventId, attendeeEmail)
+                .then( function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });                    
+     */
+    unsubscribeEmail(calendarId: string, eventId: string, id: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.unsubscribe(eventId, calendarId, id));
     }
 
     /**

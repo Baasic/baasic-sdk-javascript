@@ -82,6 +82,7 @@ export class CalendarEventClient {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(id, options));
     }
 
+    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
      * @method

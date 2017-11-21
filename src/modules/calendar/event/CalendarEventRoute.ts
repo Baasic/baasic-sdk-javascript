@@ -66,6 +66,7 @@ export class CalendarEventRoute extends BaseRoute {
         return super.baseGet(this.getRoute, id, options);
     }
 
+    //TODO: securityToken
     /**
      * Parses getByEmailOrFullName route which must be expanded with the identifier of the previously created CalendarEvent resource
      * The route must also be expanded with the identifier of the previously created CalendarResource and the email/FullName. 

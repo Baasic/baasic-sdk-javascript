@@ -5,6 +5,7 @@ export * from './ICalendarEventOptions';
 export * from './ICalendarEventDetail';
 export * from './ICalendarEventRsvp';
 export * from './ICalendarEventRsvpInvitationType';
+export * from './ICalendarEventAttendeeOptions';
 
 export * from './options';
 export * from './lookups';
