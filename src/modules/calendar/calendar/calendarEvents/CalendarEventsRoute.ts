@@ -39,7 +39,7 @@ export class CalendarEventsRoute extends BaseRoute {
      * @param calendarId Calendar identifier which uniquely identifies a calendar resource.
      * @param options Query resource GetCalendarEventsOptions object.
      * @example calendarEventsRoute.find(calendarId, {searchQuery: '<search-phrase>'});
-     **/
+     */
     find(calendarId: string, options?: IGetCalendarEventsOptions): any {
         var opt;
         if(options){
@@ -62,7 +62,7 @@ export class CalendarEventsRoute extends BaseRoute {
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarEventsRoute.get(id);
-     **/
+     */
     get(calendarId: string, id: string, options?: IGetRequestOptions): any {
         let params = this.modelMapper.getParams(options);
         params.calendarId = calendarId;
@@ -92,7 +92,7 @@ export class CalendarEventsRoute extends BaseRoute {
      * @param data A calendarEvent resource to be linked.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resource.
      * @example calendarEventsRoute.create(calendarid, eventid);
-     **/
+     */
     link(calendarId: string, data: ICalendarEvent): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -106,7 +106,7 @@ export class CalendarEventsRoute extends BaseRoute {
      * @param data A CalendarEvent object used to update specified CalendarEvent resource.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resourse.
      * @example calendarEventsRoute.update(calendarid, data);
-     **/
+     */
     update(calendarId: string, data: ICalendarEvent): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -119,7 +119,7 @@ export class CalendarEventsRoute extends BaseRoute {
      * @param data A calendarEvent resource to be unlinked.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resourse.
      * @example calendarEventsRoute.unlink(calendarid, eventid);
-     **/
+     */
     unlink(calendarId: string, data: ICalendarEvent): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;

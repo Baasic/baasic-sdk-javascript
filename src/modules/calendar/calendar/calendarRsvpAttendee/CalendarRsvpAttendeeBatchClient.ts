@@ -48,13 +48,14 @@ export class CalendarRsvpAttendeeBatchClient {
                     SlotsRequested: <slots-requested>,
                     User: <user-profile>,
                     UserID: '<user-id>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     link(calendarId: string, eventId: string, data: ICalendarEventAttendee[]): PromiseLike<IHttpResponse<ICalendarEventAttendee[]>> {
         return this.apiClient.post<ICalendarEventAttendee[]>(this.routeDefinition.link(calendarId, eventId), this.routeDefinition.createParams(data));
     }
@@ -67,14 +68,14 @@ export class CalendarRsvpAttendeeBatchClient {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @returns A promise that is resolved once the update CalendarEventAttendees action has been performed.
      * @example calendarEventAttendees are resources previously fetched using get action.
-                       calendarRsvpAttendeeBatchClient.update(calendarId, eventId, calendarEventAttendees)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarRsvpAttendeeBatchClient.update(calendarId, eventId, calendarEventAttendees)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     */
     update(calendarId: string, eventId: string, data: ICalendarEventAttendee[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId, eventId), this.routeDefinition.updateParams(data));
     }
@@ -87,14 +88,14 @@ export class CalendarRsvpAttendeeBatchClient {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example calendarEventAttendeeIds are identifiers which uniquely identify CalendarEventAttendee resources.
-                    calendarRsvpAttendeeBatchClient.unlink(calendarId, eventId, calendarEventAttendeeIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarRsvpAttendeeBatchClient.unlink(calendarId, eventId, calendarEventAttendeeIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     unlink(calendarId: string, eventId: string, data: string[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId, eventId), this.routeDefinition.deleteParams(data));
     }

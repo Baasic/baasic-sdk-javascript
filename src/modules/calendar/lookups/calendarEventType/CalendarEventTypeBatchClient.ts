@@ -34,13 +34,14 @@ export class CalendarEventTypeBatchClient {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendarEventType[]): PromiseLike<IHttpResponse<ICalendarEventType[]>> {
         return this.apiClient.post<ICalendarEventType[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
@@ -51,14 +52,14 @@ export class CalendarEventTypeBatchClient {
      * @param data CalendarEventType objects used to update specified CalendarEventType resources.
      * @returns A promise that is resolved once the update CalendarEventTypes action has been performed.
      * @example calendarEventTypes are resources previously fetched using get action.
-                       calendarEventTypeBatchClient.update(calendarEventTypes)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventTypeBatchClient.update(calendarEventTypes)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    */
     update(data: ICalendarEventType[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
@@ -69,14 +70,14 @@ export class CalendarEventTypeBatchClient {
      * @param data CalendarEventType Ids which uniquely identify CalendarEventType resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventTypeIds are identifiers which uniquely identify CalendarEventType resources.
-                    calendarEventTypeBatchClient.remove(calendarEventTypeIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventTypeBatchClient.remove(calendarEventTypeIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     remove(data: string[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     }

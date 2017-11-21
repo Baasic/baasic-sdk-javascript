@@ -47,7 +47,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      * @method
      * @param options Query resource GetCalendarLookupOptions object.
      * @example calendarEventRsvpAttendeeRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     find(options?: IGetCalendarEventAttendeeOptions): any {
         var opt;
         if(options){
@@ -67,7 +67,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource that needs to be retrieved.
      * @param options Query resource GetRequestOptions object.
      * @example calendarEventRsvpAttendeeRoute.get(id);
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
     }
@@ -77,7 +77,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventAttendee object that needs to be inserted into the system.
      * @example calendarEventRsvpAttendeeRoute.create(data);
-     **/
+     */
     create(data: ICalendarEventAttendee): any {
         return super.baseCreate(this.createRoute, data);
     }
@@ -87,7 +87,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
      * @example calendarEventRsvpAttendeeRoute.update(data);
-     **/
+     */
     update(data: ICalendarEventAttendee): any {
         return super.baseUpdate(this.updateRoute, data);
     }
@@ -98,7 +98,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
      * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
      * @example calendarEventRsvpAttendeeRoute.update(id, statusId);
-     **/
+     */
     updateStatus(id: string, statusId: string): any {
         let params: any = {};
         params.id = id;
@@ -114,7 +114,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      * @param emailOrFullName Email or full name
      * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
      * @example calendarEventRsvpAttendeeRoute.update(id, email, statusId);
-     **/
+     */
     updateStatusEmailOrFullName(id: string, emailOrFullName: string, statusId: string): any {
         let params: any = {};
         params.id = id;
@@ -128,7 +128,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventAttendee object used to delete specified CalendarEventAttendee resource.
      * @example calendarEventRsvpAttendeeRoute.delete(data);
-     **/
+     */
     delete(data: ICalendarEventAttendee): any {
         return super.baseDelete(this.deleteRoute, data);
     }

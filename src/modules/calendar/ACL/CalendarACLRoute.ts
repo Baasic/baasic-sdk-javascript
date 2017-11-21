@@ -24,7 +24,7 @@ export class CalendarACLRoute extends BaseRoute {
      * @method    					
      * @param options ACL options object.
      * @example calendarACLRoute.get({id: '<id>'}); 					
-     **/
+     */
     get(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
         return super.baseCreate(this.getRoute, params);
@@ -35,7 +35,7 @@ export class CalendarACLRoute extends BaseRoute {
      * @method 
      * @param options ACL options object.   					
      * @example calendarACLRoute.update({id: '<id>'}); 					
-     **/
+     */
     update(options: IACLOptions[]): any {
         let params = this.utility.extend({}, options);
         return super.baseCreate(this.updateRoute, params);
@@ -61,7 +61,7 @@ export class CalendarACLRoute extends BaseRoute {
                     accessAction: '<access-action>',    
                     user: '<username>' 
                 }); 					
-     **/
+     */
     deleteByUser(id: string, action: string, user: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);
         params.id = id;
@@ -86,7 +86,7 @@ export class CalendarACLRoute extends BaseRoute {
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
      * @param data ACL Policy object used to delete specified item in the system.    					
      * @example calendarACLRoute.deleteByRole({ id: '<id>', accessAction: '<access-action>', role: '<role-name>'}); 					
-     **/
+     */
     deleteByRole(id: string, action: string, role: string, data: IACLPolicy): any {
         let params = this.modelMapper.removeParams(data);
         params.id = id;

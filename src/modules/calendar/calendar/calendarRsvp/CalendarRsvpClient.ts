@@ -38,7 +38,7 @@ export class CalendarRsvpClient {
      * @param options Query resource GetCalendarOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarRsvpClient.find(calendarId, {
-     *              pageNumber: 1,
+                    pageNumber: 1,
                     pageSize: 10,
                     orderBy: '<field>',
                     orderDirection: '<asc|desc>',
@@ -55,10 +55,10 @@ export class CalendarRsvpClient {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     find(calendarId: string, options?: IGetCalendarRsvpOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRsvp>>> {
         return this.apiClient.get<IQueryModel<ICalendarEventRsvp>>(this.routeDefinition.find(calendarId, options));
     }
@@ -71,18 +71,17 @@ export class CalendarRsvpClient {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarRsvpClient.get()
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     get(calendarId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRsvp>> {
         return this.apiClient.get<ICalendarEventRsvp>(this.routeDefinition.get(calendarId, id, options));
     }
 
-    //link
     /**
      * Returns a promise that is resolved once the link CalendarEventRsvp action has been performed; this action links the CalendarEventRsvp to the calendarEvent resource.
      * @method
@@ -101,10 +100,10 @@ export class CalendarRsvpClient {
                 }).then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     link(calendarId: string, data: ICalendarEventRsvp): PromiseLike<IHttpResponse<ICalendarEventRsvp>> {
         return this.apiClient.post<ICalendarEventRsvp>(this.routeDefinition.link(calendarId, data), this.routeDefinition.createParams(data));
     }
@@ -120,20 +119,19 @@ export class CalendarRsvpClient {
      * @param data A CalendarEventrSVP object used to update specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the update CalendarEventRsvp action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarEventRsvp.name = '<name>';
-                    calendarRsvpClient.update(calendarEventRsvp)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventRsvp.name = '<name>';
+                calendarRsvpClient.update(calendarEventRsvp)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(calendarId: string, data: ICalendarEventRsvp): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     }
 
-    //unlink
     /**
      * Returns a promise that is resolved once the unlink action has been performed. This action will unlink a CalendarEventRsvp from the CalendarEvent if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarRsvpRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -145,14 +143,14 @@ export class CalendarRsvpClient {
      * @param data An calendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarRsvpClient.unlink(calendarId, calendarEventRsvp)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarRsvpClient.unlink(calendarId, calendarEventRsvp)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     unlink(calendarId: string, data: ICalendarEventRsvp): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId, data));
     }
@@ -163,14 +161,14 @@ export class CalendarRsvpClient {
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @param data A CalendarEvent object that will have it's rsvp's purged
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarRsvpClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarRsvpClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     purge(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.purge(calendarId, data));
     }

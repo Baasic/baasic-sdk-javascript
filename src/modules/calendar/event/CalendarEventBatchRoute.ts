@@ -23,7 +23,7 @@ export class CalendarEventBatchRoute extends BaseRoute {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventBatchRoute.create();
-     **/
+     */
     create(): any {
         return super.baseCreate(this.createRoute, {});
     }
@@ -32,7 +32,7 @@ export class CalendarEventBatchRoute extends BaseRoute {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventBatchRoute.update();
-     **/
+     */
     update(): any {
         return super.baseUpdate(this.updateRoute, {});
     }
@@ -41,7 +41,7 @@ export class CalendarEventBatchRoute extends BaseRoute {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventBatchRoute.delete();
-     **/
+     */
     delete(): any {
         return super.baseDelete(this.deleteRoute, {});
     }

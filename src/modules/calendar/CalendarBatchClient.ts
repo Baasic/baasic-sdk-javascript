@@ -44,7 +44,7 @@ export class CalendarBatchClient {
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendar[]): PromiseLike<IHttpResponse<ICalendar[]>> {
         return this.apiClient.post<ICalendar[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
@@ -62,7 +62,7 @@ export class CalendarBatchClient {
                             function (response, status, headers, config) {
                                 // perform error handling here
                            });
-    **/
+     */
     update(data: ICalendar[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
@@ -80,7 +80,7 @@ export class CalendarBatchClient {
                          function (response, status, headers, config) {
                              // perform error handling here
                         });
-     **/
+     */
     remove(data: string[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     }

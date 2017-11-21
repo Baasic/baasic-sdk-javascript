@@ -60,7 +60,7 @@ export class CalendarEventRsvpClient {
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     find(options?: IGetCalendarEventRsvpOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRsvp>>> {
         return this.apiClient.get<IQueryModel<ICalendarEventRsvp>>(this.routeDefinition.find(options));
     }
@@ -72,13 +72,13 @@ export class CalendarEventRsvpClient {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventRsvpClient.get(id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRsvp>> {
         return this.apiClient.get<ICalendarEventRsvp>(this.routeDefinition.get(id, options));
     }
@@ -100,10 +100,10 @@ export class CalendarEventRsvpClient {
                 }.then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendarEventRsvp): PromiseLike<IHttpResponse<ICalendarEventRsvp>> {
         return this.apiClient.post<ICalendarEventRsvp>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
@@ -118,15 +118,15 @@ export class CalendarEventRsvpClient {
      * @param data A CalendarEventRsvp object used to update specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the update CalendarEventRsvp action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarEventRsvp.MinSlots = '<min-slots>';
-                    calendarEventRsvpClient.update(calendarEventRsvp)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventRsvp.MinSlots = '<min-slots>';
+                calendarEventRsvpClient.update(calendarEventRsvp)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(data: ICalendarEventRsvp): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
@@ -141,14 +141,14 @@ export class CalendarEventRsvpClient {
      * @param data An calendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarEventRsvpClient.remove(calendarEventRsvp)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventRsvpClient.remove(calendarEventRsvp)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     remove(data: ICalendarEventRsvp): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
@@ -157,13 +157,13 @@ export class CalendarEventRsvpClient {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvp resources for the specified CalendarEvent from the system if succesfully completed.
      * @method
      * @param data A CalendarEvent object that will have it's CalendarEventRsvps purged.
-     * @example     calendarEventRsvpClient.purge(calendarEvent)
-     *                  .then(function (data) {
-     *                      // perform success action here
-     *                  },
-     *                  function (response, status, headers, config) {
-     *                      // perform error handling here
-     *                  })
+     * @example calendarEventRsvpClient.purge(calendarEvent)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                })
      */
     purge(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.purge(data));

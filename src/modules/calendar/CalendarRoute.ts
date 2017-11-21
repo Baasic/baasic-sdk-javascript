@@ -34,7 +34,7 @@ export class CalendarRoute extends BaseRoute {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     find(options?: IGetCalendarOptions): any {
         var opt;
         if(options){
@@ -54,7 +54,7 @@ export class CalendarRoute extends BaseRoute {
      * @param id Calendar id which uniquely identifies Calendar resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarRoute.get(id);
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
     }
@@ -64,7 +64,7 @@ export class CalendarRoute extends BaseRoute {
      * @method
      * @param data A Calendar object that needs to be inserted into the system.
      * @example calendarRoute.create(data);
-     **/
+     */
     create(data: ICalendar): any {
         return super.baseCreate(this.createRoute, data);
     }
@@ -74,7 +74,7 @@ export class CalendarRoute extends BaseRoute {
      * @method
      * @param data A Calendar object used to update specified Calendar resource.
      * @example calendarRoute.update(data);
-     **/
+     */
     update(data: ICalendar): any {
         return super.baseUpdate(this.updateRoute, data);
     }
@@ -84,7 +84,7 @@ export class CalendarRoute extends BaseRoute {
      * @method
      * @param data A Calendar object used to delete specified Calendar resource.
      * @example calendarRoute.delete(data);
-     **/
+     */
     delete(data: ICalendar): any {
         return super.baseDelete(this.deleteRoute, data);
     }

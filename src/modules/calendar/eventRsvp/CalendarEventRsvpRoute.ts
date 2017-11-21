@@ -43,7 +43,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
      * @method
      * @param options Query resource GetCalendarEventRsvpOptions object.
      * @example calendarEventRsvpRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     find(options?: IGetCalendarEventRsvpOptions): any {
         var opt;
         if(options){
@@ -65,7 +65,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
      * @param id CalendarEventRsvp id which uniquely identifies CalendarEventRsvp resource that needs to be retrieved.
      * @param options Query resource GetRequestOptions object.
      * @example calendarEventRsvpRoute.get(id);
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
     }
@@ -75,7 +75,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvp object that needs to be inserted into the system.
      * @example calendarEventRsvpRoute.create(data);
-     **/
+     */
     create(data: ICalendarEventRsvp): any {
         return super.baseCreate(this.createRoute, data);
     }
@@ -85,7 +85,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvp object used to update specified CalendarEventRsvp resource.
      * @example calendarEventRsvpRoute.update(data);
-     **/
+     */
     update(data: ICalendarEventRsvp): any {
         return super.baseUpdate(this.updateRoute, data);
     }
@@ -95,7 +95,7 @@ export class CalendarEventRsvpRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @example calendarEventRsvpRoute.delete(data);
-     **/
+     */
     delete(data: ICalendarEventRsvp): any {
         return super.baseDelete(this.deleteRoute, data);
     }

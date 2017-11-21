@@ -35,7 +35,7 @@ export class CalendarEventRsvpAttendeeStatusRoute extends BaseRoute {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarEventRsvpAttendeeStatusRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     find(options?: IGetCalendarOptions): any {
         var opt;
         if(options){
@@ -55,7 +55,7 @@ export class CalendarEventRsvpAttendeeStatusRoute extends BaseRoute {
      * @param id CalendarEventRsvpAttendeeStatus id which uniquely identifies CalendarEventRsvpAttendeeStatus resource that needs to be retrieved.
      * @param options Query resource GEtRequestOptions object.
      * @example calendarEventRsvpAttendeeStatusRoute.get(id);
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
     }
@@ -65,7 +65,7 @@ export class CalendarEventRsvpAttendeeStatusRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvpAttendeeStatus object that needs to be inserted into the system.
      * @example calendarEventRsvpAttendeeStatusRoute.create(data);
-     **/
+     */
     create(data: ICalendarEventRsvpAttendeeStatus): any {
         return super.baseCreate(this.createRoute, data);
     }
@@ -75,7 +75,7 @@ export class CalendarEventRsvpAttendeeStatusRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvpAttendeeStatus object used to update specified CalendarEventRsvpAttendeeStatus resource.
      * @example calendarEventRsvpAttendeeStatusRoute.update(data);
-     **/
+     */
     update(data: ICalendarEventRsvpAttendeeStatus): any {
         return super.baseUpdate(this.updateRoute, data);
     }
@@ -85,7 +85,7 @@ export class CalendarEventRsvpAttendeeStatusRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvpAttendeeStatus object used to delete specified CalendarEventRsvpAttendeeStatus resource.
      * @example calendarEventRsvpAttendeeStatusRoute.delete(data);
-     **/
+     */
     delete(data: ICalendarEventRsvpAttendeeStatus): any {
         return super.baseDelete(this.deleteRoute, data);
     }

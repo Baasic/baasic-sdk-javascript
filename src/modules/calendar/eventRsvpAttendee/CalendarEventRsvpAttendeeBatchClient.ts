@@ -46,13 +46,14 @@ export class CalendarEventRsvpAttendeeBatchClient {
                     SlotsRequested: <slots-requested>,
                     User: <user-profile>,
                     UserID: '<user-id>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendarEventAttendee[]): PromiseLike<IHttpResponse<ICalendarEventAttendee[]>> {
         return this.apiClient.post<ICalendarEventAttendee[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
@@ -63,14 +64,14 @@ export class CalendarEventRsvpAttendeeBatchClient {
      * @param data CalendarEventAttendee objects used to update specified CalendarEventAttendee resources.
      * @returns A promise that is resolved once the update CalendarEventAttendees action has been performed.
      * @example calendarEventAttendees are resources previously fetched using get action.
-                       calendarEventRsvpAttendeeBatchClient.update(calendarEventAttendees)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventRsvpAttendeeBatchClient.update(calendarEventAttendees)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(data: ICalendarEventAttendee[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
@@ -81,14 +82,14 @@ export class CalendarEventRsvpAttendeeBatchClient {
      * @param data CalendarEventAttendee Ids which uniquely identify CalendarEventAttendee resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventAttendeeIds are identifiers which uniquely identify CalendarEventAttendee resources.
-                    calendarEventRsvpAttendeeBatchClient.remove(calendarEventAttendeeIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventRsvpAttendeeBatchClient.remove(calendarEventAttendeeIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     remove(data: string[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     }

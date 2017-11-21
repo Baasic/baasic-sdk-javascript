@@ -50,10 +50,10 @@ export class CalendarEventRsvpInvitationTypeClient {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     find(options?: IGetCalendarOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRsvpAttendeeInvitationType>>> {
         return this.apiClient.get<IQueryModel<ICalendarEventRsvpAttendeeInvitationType>>(this.routeDefinition.find(options));
     }
@@ -71,7 +71,7 @@ export class CalendarEventRsvpInvitationTypeClient {
                      function (response, status, headers, config) {
                          // perform error handling here
                     });
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeInvitationType>> {
         return this.apiClient.get<ICalendarEventRsvpAttendeeInvitationType>(this.routeDefinition.get(id, options));
     }
@@ -85,13 +85,14 @@ export class CalendarEventRsvpInvitationTypeClient {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendarEventRsvpAttendeeInvitationType): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeInvitationType>> {
         return this.apiClient.post<ICalendarEventRsvpAttendeeInvitationType>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
@@ -106,15 +107,15 @@ export class CalendarEventRsvpInvitationTypeClient {
      * @param data A CalendarEventRsvpAttendeeInvitationType object used to update specified CalendarEventRsvpAttendeeInvitationType resource.
      * @returns A promise that is resolved once the update CalendarEventRsvpAttendeeInvitationType action has been performed.
      * @example calendarEventRsvpAttendeeInvitationType is a resource previously fetched using get action.
-                    calendarEventRsvpAttendeeInvitationType.name = '<name>';
-                    calendarEventRsvpInvitationTypeClient.update(calendarEventRsvpAttendeeInvitationType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventRsvpAttendeeInvitationType.name = '<name>';
+                calendarEventRsvpInvitationTypeClient.update(calendarEventRsvpAttendeeInvitationType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(data: ICalendarEventRsvpAttendeeInvitationType): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
@@ -129,14 +130,14 @@ export class CalendarEventRsvpInvitationTypeClient {
      * @param data An calendarEventRsvpAttendeeInvitationType object used to delete specified CalendarEventRsvpAttendeeInvitationType resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpAttendeeInvitationType is a resource previously fetched using get action.
-                    calendarEventRsvpInvitationType.remove(calendarEventRsvpAttendeeInvitationType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventRsvpInvitationType.remove(calendarEventRsvpAttendeeInvitationType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     remove(data: ICalendarEventRsvpAttendeeInvitationType): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
@@ -145,14 +146,14 @@ export class CalendarEventRsvpInvitationTypeClient {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvpAttendeeInvitationType resources from the system if succesfully completed.
      * @method
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventRsvpInvitationTypeClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventRsvpInvitationTypeClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     purge(): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.purge());
     }

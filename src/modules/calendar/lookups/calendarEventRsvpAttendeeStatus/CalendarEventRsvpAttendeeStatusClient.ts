@@ -52,7 +52,7 @@ export class CalendarEventRsvpAttendeeStatusClient {
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     find(options?: IGetCalendarOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRsvpAttendeeStatus>>> {
         return this.apiClient.get<IQueryModel<ICalendarEventRsvpAttendeeStatus>>(this.routeDefinition.find(options));
     }
@@ -64,13 +64,13 @@ export class CalendarEventRsvpAttendeeStatusClient {
      * @param options Query resource GetRequestOptions object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventRsvpAttendeeStatusClient.get()
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeStatus>> {
         return this.apiClient.get<ICalendarEventRsvpAttendeeStatus>(this.routeDefinition.get(id, options));
     }
@@ -84,13 +84,14 @@ export class CalendarEventRsvpAttendeeStatusClient {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendarEventRsvpAttendeeStatus): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeStatus>> {
         return this.apiClient.post<ICalendarEventRsvpAttendeeStatus>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
@@ -105,15 +106,15 @@ export class CalendarEventRsvpAttendeeStatusClient {
      * @param data A CalendarEventRsvpAttendeeStatus object used to update specified CalendarEventRsvpAttendeeStatus resource.
      * @returns A promise that is resolved once the update CalendarEventRsvpAttendeeStatus action has been performed.
      * @example calendarEventRsvpAttendeeStatus is a resource previously fetched using get action.
-                    calendarEventRsvpAttendeeStatus.name = '<name>';
-                    calendarEventRsvpAttendeeStatusClient.update(calendarEventRsvpAttendeeStatus)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventRsvpAttendeeStatus.name = '<name>';
+                calendarEventRsvpAttendeeStatusClient.update(calendarEventRsvpAttendeeStatus)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(data: ICalendarEventRsvpAttendeeStatus): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
@@ -128,14 +129,14 @@ export class CalendarEventRsvpAttendeeStatusClient {
      * @param data An calendarEventRsvpAttendeeStatus object used to delete specified CalendarEventRsvpAttendeeStatus resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpAttendeeStatus is a resource previously fetched using get action.
-                    calendarEventRsvpAttendeeStatusClient.remove(calendarEventRsvpAttendeeStatus)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventRsvpAttendeeStatusClient.remove(calendarEventRsvpAttendeeStatus)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     remove(data: ICalendarEventRsvpAttendeeStatus): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
@@ -144,14 +145,14 @@ export class CalendarEventRsvpAttendeeStatusClient {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvpAttendeeStatus resources from the system if succesfully completed.
      * @method
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventRsvpAttendeeStatusClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventRsvpAttendeeStatusClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     purge(): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.purge());
     }

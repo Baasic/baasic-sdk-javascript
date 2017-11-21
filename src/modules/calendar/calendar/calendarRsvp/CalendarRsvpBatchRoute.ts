@@ -22,7 +22,7 @@ export class CalendarRsvpBatchRoute extends BaseRoute {
      * @method
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpBatchRoute.link(calendarId);
-     **/
+     */
     link(calendarId: string): any {
         let params: any = {};
         params.calendarId = calendarId;
@@ -34,7 +34,7 @@ export class CalendarRsvpBatchRoute extends BaseRoute {
      * @method
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpBatchRoute.update(calendarId);
-     **/
+     */
     update(calendarId: string): any {
         let params: any = {};
         params.calendarId = calendarId;
@@ -46,7 +46,7 @@ export class CalendarRsvpBatchRoute extends BaseRoute {
      * @method
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpBatchRoute.unlink(calendarId);
-     **/
+     */
     unlink(calendarId: string): any {
         let params: any = {};
         params.calendarId = calendarId;

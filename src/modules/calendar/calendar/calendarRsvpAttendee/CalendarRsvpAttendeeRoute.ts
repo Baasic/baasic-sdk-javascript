@@ -98,7 +98,7 @@ export class CalendarRsvpAttendeeRoute extends BaseRoute {
         return super.baseGet(this.getByEmailOrFullNameRoute, {}, params)
     }
 
-     /**
+    /**
      * Parses link route. This URI template does not expose any additional options.
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.

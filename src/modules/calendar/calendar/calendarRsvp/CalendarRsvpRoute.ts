@@ -42,7 +42,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRsvpRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     find(calendarId: string, options?: IGetCalendarRsvpOptions): any {
         var opt;
         if(options){
@@ -67,7 +67,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param options Query resource options object.
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.get(id, options);
-     **/
+     */
     get(calendarId: string, id: string, options?: IGetRequestOptions): any {
         let params = this.modelMapper.getParams(options);
         params.calendarId = calendarId;
@@ -80,7 +80,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param data A CalendarEventRsvp object that needs to be inserted into the system.
      * @param calendarId Calendar Id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.link(data);
-     **/
+     */
     link(calendarId: string, data: ICalendarEventRsvp): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -93,7 +93,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param data A CalendarEventRsvp object used to update specified CalendarEventRsvp resource.
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.update(data);
-     **/
+     */
     update(calendarId: string, data: ICalendarEventRsvp): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -106,7 +106,7 @@ export class CalendarRsvpRoute extends BaseRoute {
      * @param data A CalendarEvent object used to unlink specified CalendarEvent resource.
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.unlink(data);
-     **/
+     */
     unlink(calendarId: string, data: ICalendarEventRsvp): any {
         let params = this.utility.extend({}, data);
         params.calendarId = calendarId;

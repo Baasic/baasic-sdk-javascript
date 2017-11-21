@@ -60,7 +60,7 @@ export class CalendarEventRsvpAttendeeClient {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-     **/
+     */
     find(options?: IGetCalendarEventAttendeeOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventAttendee>>> {
         return this.apiClient.get<IQueryModel<ICalendarEventAttendee>>(this.routeDefinition.find(options));
     }
@@ -78,7 +78,7 @@ export class CalendarEventRsvpAttendeeClient {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventAttendee>> {
         return this.apiClient.get<ICalendarEventAttendee>(this.routeDefinition.get(id, options));
     }
@@ -110,7 +110,7 @@ export class CalendarEventRsvpAttendeeClient {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendarEventAttendee): PromiseLike<IHttpResponse<ICalendarEventAttendee>> {
         return this.apiClient.post<ICalendarEventAttendee>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
@@ -133,7 +133,7 @@ export class CalendarEventRsvpAttendeeClient {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-    **/
+     */
     update(data: ICalendarEventAttendee): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
@@ -155,7 +155,7 @@ export class CalendarEventRsvpAttendeeClient {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-    **/
+     */
     updateStatus(id: string, statusId: string): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.updateStatus(id, statusId), {});
     }
@@ -179,7 +179,7 @@ export class CalendarEventRsvpAttendeeClient {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-    **/
+     */
     updateStatusEmailorFullName(id: string, emailOrFullName: string, statusId: string): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.updateStatusEmailOrFullName(id, emailOrFullName, statusId), {});
     }
@@ -218,7 +218,7 @@ export class CalendarEventRsvpAttendeeClient {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-     **/
+     */
     purge(event: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.purge(event));
     }

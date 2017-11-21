@@ -31,24 +31,23 @@ export class CalendarRsvpBatchClient {
      * @param data CalendarEventRsvp objects that need to be inserted into the system.
      * @param calendarId Calendar identifier which uniquely identifies calendar resource that will have its EventRsvp objects craeted
      * @returns A promise that is resolved once the link CalendarEventRsvps action has been performed.
-     * @example calendarRsvpBatchClient.link(
-     *              calendarId, 
-     *              [{
-                        InvitationOnly: <true|false>,
-                        InvitationType: <calendar-rsvp-invitation-type>,
-                        InvitationTypeId: '<invitation-type-id>',
-                        Json: '<json>',
-                        MaxSlots: <max-slots>,
-                        MinSlots: <min-slots>,
-                        RegistrationCloseDate: '<registration-close-date>',
-                        TotalSlots: <total-slots>
-                }]).then(function (data) {
+     * @example calendarRsvpBatchClient.link( calendarId, [{
+                    InvitationOnly: <true|false>,
+                    InvitationType: <calendar-rsvp-invitation-type>,
+                    InvitationTypeId: '<invitation-type-id>',
+                    Json: '<json>',
+                    MaxSlots: <max-slots>,
+                    MinSlots: <min-slots>,
+                    RegistrationCloseDate: '<registration-close-date>',
+                    TotalSlots: <total-slots>
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     link(calendarId: string, data: ICalendarEventRsvp[]): PromiseLike<IHttpResponse<ICalendarEventRsvp[]>> {
         return this.apiClient.post<ICalendarEventRsvp[]>(this.routeDefinition.link(calendarId), this.routeDefinition.createParams(data));
     }
@@ -60,14 +59,14 @@ export class CalendarRsvpBatchClient {
      * @param calendarId Calendar identifier that uniquely identifies calendar resource that will have it's CalendarEventRsvp's updated.
      * @returns A promise that is resolved once the update CalendarEventRsvps action has been performed.
      * @example calendarEventRsvps are resources previously fetched using get action.
-                       calendarRsvpBatchClient.update(calendar, calendarEventRsvps)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarRsvpBatchClient.update(calendar, calendarEventRsvps)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(calendarId: string, data: ICalendarEventRsvp[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId), this.routeDefinition.updateParams(data));
     }
@@ -79,14 +78,14 @@ export class CalendarRsvpBatchClient {
      * @param calendarId Calendar identifier that uniquely identifies a calendar resource that will have it's calendarEventRsvp's deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpIds are identifiers which uniquely identify CalendarEventRsvp resources.
-                    calendarRsvpBatchClient.unlink(calendar, calendarEventRsvpIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarRsvpBatchClient.unlink(calendar, calendarEventRsvpIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     unlink(calendarId: string, data: string[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId), this.routeDefinition.deleteParams(data));
     }

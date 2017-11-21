@@ -35,7 +35,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarEventStatusRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     find(options?: IGetCalendarOptions): any {
         var opt;
         if(options){
@@ -55,7 +55,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
      * @param id CalendarEventStatus id which uniquely identifies CalendarEventStatus resource that needs to be retrieved.
      * @param options Query resource GetRequestOptions object.
      * @example calendarEventStatusRoute.get(id);
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
     }
@@ -65,7 +65,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventStatus object that needs to be inserted into the system.
      * @example calendarEventStatusRoute.create(data);
-     **/
+     */
     create(data: ICalendarEventStatus): any {
         return super.baseCreate(this.createRoute, data);
     }
@@ -75,7 +75,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventStatus object used to update specified CalendarEventStatus resource.
      * @example calendarEventStatusRoute.update(data);
-     **/
+     */
     update(data: ICalendarEventStatus): any {
         return super.baseUpdate(this.updateRoute, data);
     }
@@ -85,7 +85,7 @@ export class CalendarEventStatusRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventStatus object used to delete specified CalendarEventStatus resource.
      * @example calendarEventStatusRoute.delete(data);
-     **/
+     */
     delete(data: ICalendarEventStatus): any {
         return super.baseDelete(this.deleteRoute, data);
     }

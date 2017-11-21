@@ -35,7 +35,7 @@ export class CalendarEventTypeRoute extends BaseRoute {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarEventTypeRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     find(options?: IGetCalendarOptions): any {
         var opt;
         if(options){
@@ -55,7 +55,7 @@ export class CalendarEventTypeRoute extends BaseRoute {
      * @param id CalendarEventType id which uniquely identifies CalendarEventType resource that needs to be retrieved.
      * @param options Query resource GetRequestOptions object.
      * @example calendarEventTypeRoute.get(id);
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
     }
@@ -65,7 +65,7 @@ export class CalendarEventTypeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventType object that needs to be inserted into the system.
      * @example calendarEventTypeRoute.create(data);
-     **/
+     */
     create(data: ICalendarEventType): any {
         return super.baseCreate(this.createRoute, data);
     }
@@ -75,7 +75,7 @@ export class CalendarEventTypeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventType object used to update specified CalendarEventType resource.
      * @example calendarEventTypeRoute.update(data);
-     **/
+     */
     update(data: ICalendarEventType): any {
         return super.baseUpdate(this.updateRoute, data);
     }
@@ -85,7 +85,7 @@ export class CalendarEventTypeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventType object used to delete specified CalendarEventType resource.
      * @example calendarEventTypeRoute.delete(data);
-     **/
+     */
     delete(data: ICalendarEventType): any {
         return super.baseDelete(this.deleteRoute, data);
     }

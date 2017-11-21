@@ -56,10 +56,10 @@ export class CalendarEventClient {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     find(options?: IGetCalendarEventOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEvent>>> {
         return this.apiClient.get<IQueryModel<ICalendarEvent>>(this.routeDefinition.find(options));
     }
@@ -71,13 +71,13 @@ export class CalendarEventClient {
      * @param options Query resource GetRequstOptions object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventClient.get(id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(id, options));
     }
@@ -90,13 +90,13 @@ export class CalendarEventClient {
      * @param emailOrFullName email or full name
      * @param options Query resource options object
      * @example calendarEventClient.get(id, email@example.com)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     getByEmailOrFullName(id: string, emailOrFullName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(id, emailOrFullName, options));
     }
@@ -119,13 +119,14 @@ export class CalendarEventClient {
                     json: '<json>',
                     startTime: '<start-time>',
                     title: '<title'>
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendarEvent): PromiseLike<IHttpResponse<ICalendarEvent>> {
         return this.apiClient.post<ICalendarEvent>(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
@@ -140,15 +141,15 @@ export class CalendarEventClient {
      * @param data A Calendar Event  object used to update specified CalendarEvent resource.
      * @returns A promise that is resolved once the update CalendarEvent action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEvent.title = '<title>';
-                    calendarEventClient.update(calendarEvent)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEvent.title = '<title>';
+                calendarEventClient.update(calendarEvent)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     }
@@ -163,14 +164,14 @@ export class CalendarEventClient {
      * @param data An calendarEvent object used to delete specified CalendarEvent resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEventClient.remove(calendarEvent)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventClient.remove(calendarEvent)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     remove(data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
@@ -180,14 +181,14 @@ export class CalendarEventClient {
      * @method
      * @param calendarId Calendar identifier which uniquely identifies a calendar resource which will have its Events purged.
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     purge(calendarId: string): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.purge(calendarId));
     }

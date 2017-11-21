@@ -34,13 +34,14 @@ export class CalendarEventRsvpInvitationTypeBatchClient {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     create(data: ICalendarEventRsvpAttendeeInvitationType[]): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeInvitationType[]>> {
         return this.apiClient.post<ICalendarEventRsvpAttendeeInvitationType[]>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }
@@ -51,14 +52,14 @@ export class CalendarEventRsvpInvitationTypeBatchClient {
      * @param data CalendarEventRsvpAttendeeInvitationType objects used to update specified CalendarEventRsvpAttendeeInvitationType resources.
      * @returns A promise that is resolved once the update CalendarEventRsvpAttendeeInvitationTypes action has been performed.
      * @example calendarEventRsvpAttendeeInvitationTypes are resources previously fetched using get action.
-                       calendarEventRsvpInvitationTypeBatchClient.update(calendarEventRsvpAttendeeInvitationTypes)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventRsvpInvitationTypeBatchClient.update(calendarEventRsvpAttendeeInvitationTypes)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(data: ICalendarEventRsvpAttendeeInvitationType[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     }
@@ -69,14 +70,14 @@ export class CalendarEventRsvpInvitationTypeBatchClient {
      * @param data CalendarEventRsvpAttendeeInvitationType Ids which uniquely identify CalendarEventRsvpAttendeeInvitationType resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpAttendeeInvitationTypeIds are identifiers which uniquely identify CalendarEventRsvpAttendeeInvitationType resources.
-                    calendarEventRsvpInvitationTypeBatchClient.remove(calendarEventRsvpAttendeeInvitationTypeIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventRsvpInvitationTypeBatchClient.remove(calendarEventRsvpAttendeeInvitationTypeIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     remove(data: string[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     }

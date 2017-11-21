@@ -47,10 +47,10 @@ export class CalendarEventsClient {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     find(calendarId: string, options?: IGetCalendarEventsOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEvent>>> {
         return this.apiClient.get<IQueryModel<ICalendarEvent>>(this.routeDefinition.find(calendarId, options));
     }
@@ -63,13 +63,13 @@ export class CalendarEventsClient {
      * @param options Query resource GetRequstOptions object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventsClient.get(calendarId, id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     get(calendarId: string, id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(calendarId, id, options));
     }
@@ -83,13 +83,13 @@ export class CalendarEventsClient {
      * @param emailOrFullName Email or full name.
      * @param options Query resource options object.
      * @example calendarEventsClient.get(calendarId, id, email@example.com)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     getByEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options));
     }
@@ -105,10 +105,10 @@ export class CalendarEventsClient {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     link(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.post<void>(this.routeDefinition.link(calendarId, data), {});
     }
@@ -124,15 +124,15 @@ export class CalendarEventsClient {
      * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @returns A promise that is resolved once the update CalendarEvent action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEvent.title = '<title>';
-                    calendarEventsClient.update(calendarid, calendarEvent)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEvent.title = '<title>';
+                calendarEventsClient.update(calendarid, calendarEvent)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     update(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     }
@@ -148,14 +148,14 @@ export class CalendarEventsClient {
      * @param data A calendarEvent resource to be unlinked.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @returns A promise that is resolved once the remove action has been performed.
-     * @example     calendarEventsClient.unlink(calendarid, data)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventsClient.unlink(calendarid, data)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     unlink(calendarId: string, data: ICalendarEvent): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId, data));
     }

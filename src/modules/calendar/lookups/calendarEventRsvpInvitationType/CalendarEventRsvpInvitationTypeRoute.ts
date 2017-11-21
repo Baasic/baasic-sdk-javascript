@@ -35,7 +35,7 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarEventRsvpInvitationTypeRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     find(options?: IGetCalendarOptions): any {
         var opt;
         if(options){
@@ -55,7 +55,7 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
      * @param id CalendarEventRsvpAttendeeInvitationType id which uniquely identifies CalendarEventRsvpInvitationType resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarEventRsvpInvitationTypeRoute.get(id);
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
     }
@@ -65,7 +65,7 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvpInvitationType object that needs to be inserted into the system.
      * @example calendarEventRsvpInvitationTypeRoute.create(data);
-     **/
+     */
     create(data: ICalendarEventRsvpAttendeeInvitationType): any {
         return super.baseCreate(this.createRoute, data);
     }
@@ -75,7 +75,7 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvpInvitationType object used to update specified CalendarEventRsvpInvitationType resource.
      * @example calendarEventRsvpInvitationTypeRoute.update(data);
-     **/
+     */
     update(data: ICalendarEventRsvpAttendeeInvitationType): any {
         return super.baseUpdate(this.updateRoute, data);
     }
@@ -85,7 +85,7 @@ export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
      * @method
      * @param data A CalendarEventRsvpInvitationType object used to delete specified CalendarEventRsvpInvitationType resource.
      * @example calendarEventRsvpInvitationTypeRoute.delete(data);
-     **/
+     */
     delete(data: ICalendarEventRsvpAttendeeInvitationType): any {
         return super.baseDelete(this.deleteRoute, data);
     }
