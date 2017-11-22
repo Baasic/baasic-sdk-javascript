@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { ApiClient, IHttpResponse, httpTYPES, IHttpHeaders } from '../../../httpApi';
 import {
     CalendarEventRsvpClient,
     CalendarEventRsvpAttendeeClient,
@@ -82,12 +82,12 @@ export class CalendarEventClient {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(id, options));
     }
 
-    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
      * @method
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource.
-     * @param emailOrFullName email or full name
+     * @param emailOrFullName Email or full name.
+     * @param securityToken Security Token.
      * @param options Query resource options object
      * @example calendarEventClient.get(id, email@example.com)
                 .then(function (data) {
@@ -97,8 +97,10 @@ export class CalendarEventClient {
                     // perform error handling here
                 });
      */
-    getByEmailOrFullName(id: string, emailOrFullName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
-        return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(id, emailOrFullName, options));
+    getByEmailOrFullName(id: string, emailOrFullName: string, securityToken: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
+        let headers: IHttpHeaders;
+        headers['securityToken'] = securityToken;
+        return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(id, emailOrFullName, options), headers);
     }
 
     /**

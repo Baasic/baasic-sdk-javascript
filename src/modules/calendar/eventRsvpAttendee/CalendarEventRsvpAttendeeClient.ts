@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { ApiClient, IHttpResponse, httpTYPES, IHttpHeaders } from '../../../httpApi';
 import {
     CalendarEventRsvpAttendeeBatchClient,
     TYPES as calendarTypes,
@@ -160,7 +160,6 @@ export class CalendarEventRsvpAttendeeClient {
         return this.apiClient.put<void>(this.routeDefinition.updateStatus(id, statusId), {});
     }
 
-    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status Email or FullName action has been performed. This action updates a CalendarEventAttendee resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -171,6 +170,7 @@ export class CalendarEventRsvpAttendeeClient {
      * @param id CalendarEventRsvpAttendee id which uniquely identifies a CalendarEventRsvpattendee resource.
      * @param emailOrFullName Email or full name
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies a CalendarEventRsvpAttendeeStatus resource.
+     * @param securityToken Security Token.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
      * @example calendarEventRsvpAttendeeClient.updateStatusEmail(id, email, statusId)
                 .then(function (data) {
@@ -180,8 +180,10 @@ export class CalendarEventRsvpAttendeeClient {
                     // perform error handling here
                 });
      */
-    updateStatusEmailorFullName(id: string, emailOrFullName: string, statusId: string): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.updateStatusEmailOrFullName(id, emailOrFullName, statusId), {});
+    updateStatusEmailorFullName(id: string, emailOrFullName: string, statusId: string, securityToken: string): PromiseLike<IHttpResponse<void>> {
+        let headers: IHttpHeaders;
+        headers['securityToken'] = securityToken;
+        return this.apiClient.put<void>(this.routeDefinition.updateStatusEmailOrFullName(id, emailOrFullName, statusId), {}, headers);
     }
 
     /**

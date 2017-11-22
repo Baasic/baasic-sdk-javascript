@@ -106,7 +106,6 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
         return super.baseUpdate(this.updateStatusRoute, params);
     }
 
-    //TODO: securityToken
      /**
      * Parses update status email or name route. This URI template does not expose any additional options.
      * @method

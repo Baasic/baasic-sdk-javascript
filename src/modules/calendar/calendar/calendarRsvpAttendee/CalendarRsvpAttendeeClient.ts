@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../../httpApi';
+import { ApiClient, IHttpResponse, httpTYPES, IHttpHeaders } from '../../../../httpApi';
 import {
     CalendarRsvpAttendeeBatchClient,
     TYPES as calendarTypes,
@@ -180,18 +180,20 @@ export class CalendarRsvpAttendeeClient {
         return this.apiClient.put<void>(this.routeDefinition.updateStatus(calendarId, eventId, id, statusId), {});
     }
 
-    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status action has been performed. This action updates a CalendarEventAttendee resource. 
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniqely identifies CalendarEvent resource.
-     * @param emailOrFullName Email or FullName
+     * @param emailOrFullName Email or FullName.
+     * @param securityToken Security token.
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies CalendarEventAttendeeStatus resource.
      * @example calendarRsvpAttendeeClient.update(calendarId, eventId, email, statusId);
      */
-    updateStatusEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string, statusId: string): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.updateStatusEmailOrFullName(calendarId, eventId, emailOrFullName, statusId), {});
+    updateStatusEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string, securityToken: string, statusId: string): PromiseLike<IHttpResponse<void>> {
+        let headers: IHttpHeaders;
+        headers['securityToken'] = securityToken;
+        return this.apiClient.put<void>(this.routeDefinition.updateStatusEmailOrFullName(calendarId, eventId, emailOrFullName, statusId), {}, headers);
     }
 
     /**

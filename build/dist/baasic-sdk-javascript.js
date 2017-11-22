@@ -11972,13 +11972,13 @@ var CalendarACLClient = (function () {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarClient.get({id: '<id>'})
-                   .then(function (data) {
-                       // perform success action here
-                   },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                   });
-    **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarACLClient.prototype.get = function (options) {
         return this.apiClient.get(this.routeDefinition.get(options));
     };
@@ -11990,13 +11990,13 @@ var CalendarACLClient = (function () {
                 let aclObj =  {  actionId: '<action-id'>,  roleId: '<roleId>',  userId: '<userId>' };
                 options[baasicConstants.modelPropertyName] = aclObj;
                 calendarACLClient.update(options)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                      function (response, status, headers, config) {
-                          // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarACLClient.prototype.update = function (options) {
         return this.apiClient.put(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
     };
@@ -12014,13 +12014,13 @@ var CalendarACLClient = (function () {
      * @param data ACL Policy object used to delete specified item in the system.
      * @returns A promise that is resolved once the removeByUser action has been performed.
      * @example calendarACLClient.removeByUser('<id>', '<access-action>', '<username>')
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarACLClient.prototype.removeByUser = function (id, action, user, data) {
         return this.apiClient.delete(this.calendarACLRoute.deleteByUser(id, action, user, data));
     };
@@ -12038,13 +12038,13 @@ var CalendarACLClient = (function () {
      * @param data ACL Policy object used to delete specified item in the system.
      * @returns A promise that is resolved once the removeByRole action has been performed.
      * @example calendarACLClient.removeByRole('<id>', '<access-action>', '<role-name>')
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarACLClient.prototype.removeByRole = function (id, action, role, data) {
         return this.apiClient.delete(this.calendarACLRoute.deleteByRole(id, action, role, data));
     };
@@ -12101,7 +12101,7 @@ var CalendarACLRoute = (function (_super) {
      * @method
      * @param options ACL options object.
      * @example calendarACLRoute.get({id: '<id>'});
-     **/
+     */
     CalendarACLRoute.prototype.get = function (options) {
         var params = this.utility.extend({}, options);
         return _super.prototype.baseCreate.call(this, this.getRoute, params);
@@ -12111,7 +12111,7 @@ var CalendarACLRoute = (function (_super) {
      * @method
      * @param options ACL options object.
      * @example calendarACLRoute.update({id: '<id>'});
-     **/
+     */
     CalendarACLRoute.prototype.update = function (options) {
         var params = this.utility.extend({}, options);
         return _super.prototype.baseCreate.call(this, this.updateRoute, params);
@@ -12136,7 +12136,7 @@ var CalendarACLRoute = (function (_super) {
                     accessAction: '<access-action>',
                     user: '<username>'
                 });
-     **/
+     */
     CalendarACLRoute.prototype.deleteByUser = function (id, action, user, data) {
         var params = this.modelMapper.removeParams(data);
         params.id = id;
@@ -12160,7 +12160,7 @@ var CalendarACLRoute = (function (_super) {
      * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
      * @param data ACL Policy object used to delete specified item in the system.
      * @example calendarACLRoute.deleteByRole({ id: '<id>', accessAction: '<access-action>', role: '<role-name>'});
-     **/
+     */
     CalendarACLRoute.prototype.deleteByRole = function (id, action, role, data) {
         var params = this.modelMapper.removeParams(data);
         params.id = id;
@@ -12252,7 +12252,7 @@ var CalendarBatchClient = (function () {
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -12269,7 +12269,7 @@ var CalendarBatchClient = (function () {
                             function (response, status, headers, config) {
                                 // perform error handling here
                            });
-    **/
+     */
     CalendarBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
@@ -12286,7 +12286,7 @@ var CalendarBatchClient = (function () {
                          function (response, status, headers, config) {
                              // perform error handling here
                         });
-     **/
+     */
     CalendarBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
@@ -12340,7 +12340,7 @@ var CalendarBatchRoute = (function (_super) {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarBatchRoute.create();
-     **/
+     */
     CalendarBatchRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
     };
@@ -12348,7 +12348,7 @@ var CalendarBatchRoute = (function (_super) {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarBatchRoute.update();
-     **/
+     */
     CalendarBatchRoute.prototype.update = function () {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
@@ -12356,7 +12356,7 @@ var CalendarBatchRoute = (function (_super) {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarBatchRoute.delete();
-     **/
+     */
     CalendarBatchRoute.prototype.delete = function () {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
     };
@@ -12458,7 +12458,7 @@ var CalendarClient = (function () {
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
@@ -12469,13 +12469,13 @@ var CalendarClient = (function () {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarClient.get()
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
     };
@@ -12491,13 +12491,14 @@ var CalendarClient = (function () {
                     name: '<name>',
                     owner: <user-info>,
                     ownerId: '<owner-id>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
@@ -12511,15 +12512,15 @@ var CalendarClient = (function () {
      * @param data A Calendar object used to update specified Calendar resource.
      * @returns A promise that is resolved once the update Calendar action has been performed.
      * @example calendar is a resource previously fetched using get action.
-                    calendar.name = '<name>';
-                    calendarClient.update(calendar)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendar.name = '<name>';
+                calendarClient.update(calendar)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
@@ -12533,14 +12534,14 @@ var CalendarClient = (function () {
      * @param data An calendart object used to delete specified Calendar resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendar is a resource previously fetched using get action.
-                    calendarClient.remove(calendar)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarClient.remove(calendar)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
@@ -12548,14 +12549,14 @@ var CalendarClient = (function () {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all Calendar resources from the system if succesfully completed.
      * @method
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarClient.prototype.purge = function () {
         return this.apiClient.delete(this.routeDefinition.purge());
     };
@@ -12625,7 +12626,7 @@ var CalendarRoute = (function (_super) {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarRoute.prototype.find = function (options) {
         var opt;
         if (options) {
@@ -12645,7 +12646,7 @@ var CalendarRoute = (function (_super) {
      * @param id Calendar id which uniquely identifies Calendar resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarRoute.get(id);
-     **/
+     */
     CalendarRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
@@ -12654,7 +12655,7 @@ var CalendarRoute = (function (_super) {
      * @method
      * @param data A Calendar object that needs to be inserted into the system.
      * @example calendarRoute.create(data);
-     **/
+     */
     CalendarRoute.prototype.create = function (data) {
         return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
@@ -12663,7 +12664,7 @@ var CalendarRoute = (function (_super) {
      * @method
      * @param data A Calendar object used to update specified Calendar resource.
      * @example calendarRoute.update(data);
-     **/
+     */
     CalendarRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
@@ -12672,7 +12673,7 @@ var CalendarRoute = (function (_super) {
      * @method
      * @param data A Calendar object used to delete specified Calendar resource.
      * @example calendarRoute.delete(data);
-     **/
+     */
     CalendarRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };
@@ -12763,10 +12764,10 @@ var CalendarEventsClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventsClient.prototype.find = function (calendarId, options) {
         return this.apiClient.get(this.routeDefinition.find(calendarId, options));
     };
@@ -12778,34 +12779,36 @@ var CalendarEventsClient = (function () {
      * @param options Query resource GetRequstOptions object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventsClient.get(calendarId, id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventsClient.prototype.get = function (calendarId, id, options) {
         return this.apiClient.get(this.routeDefinition.get(calendarId, id, options));
     };
-    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
      * @method
      * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param emailOrFullName Email or full name.
+     * @param securityToken Security token.
      * @param options Query resource options object.
      * @example calendarEventsClient.get(calendarId, id, email@example.com)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    CalendarEventsClient.prototype.getByEmailOrFullName = function (calendarId, eventId, emailOrFullName, options) {
-        return this.apiClient.get(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options));
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    CalendarEventsClient.prototype.getByEmailOrFullName = function (calendarId, eventId, emailOrFullName, securityToken, options) {
+        var headers;
+        headers['securityToken'] = securityToken;
+        return this.apiClient.get(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options), headers);
     };
     //link
     /**
@@ -12818,10 +12821,10 @@ var CalendarEventsClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventsClient.prototype.link = function (calendarId, data) {
         return this.apiClient.post(this.routeDefinition.link(calendarId, data), {});
     };
@@ -12836,15 +12839,15 @@ var CalendarEventsClient = (function () {
      * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @returns A promise that is resolved once the update CalendarEvent action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEvent.title = '<title>';
-                    calendarEventsClient.update(calendarid, calendarEvent)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEvent.title = '<title>';
+                calendarEventsClient.update(calendarid, calendarEvent)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventsClient.prototype.update = function (calendarId, data) {
         return this.apiClient.put(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     };
@@ -12859,14 +12862,14 @@ var CalendarEventsClient = (function () {
      * @param data A calendarEvent resource to be unlinked.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @returns A promise that is resolved once the remove action has been performed.
-     * @example     calendarEventsClient.unlink(calendarid, data)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventsClient.unlink(calendarid, data)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventsClient.prototype.unlink = function (calendarId, data) {
         return this.apiClient.delete(this.routeDefinition.unlink(calendarId, data));
     };
@@ -12937,7 +12940,7 @@ var CalendarEventsRoute = (function (_super) {
      * @param calendarId Calendar identifier which uniquely identifies a calendar resource.
      * @param options Query resource GetCalendarEventsOptions object.
      * @example calendarEventsRoute.find(calendarId, {searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarEventsRoute.prototype.find = function (calendarId, options) {
         var opt;
         if (options) {
@@ -12960,13 +12963,12 @@ var CalendarEventsRoute = (function (_super) {
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarEventsRoute.get(id);
-     **/
+     */
     CalendarEventsRoute.prototype.get = function (calendarId, id, options) {
         var params = this.modelMapper.getParams(options);
         params.calendarId = calendarId;
         return _super.prototype.baseGet.call(this, this.getRoute, id, params);
     };
-    //TODO: securityToken
     /**
      * Parses getByEmailOrFullName route which must be expanded with the identifier of the previously created CalendarEvent resource
      * The route must also be expanded with the identifier of the previously created CalendarResource and the email/FullName.
@@ -12988,7 +12990,7 @@ var CalendarEventsRoute = (function (_super) {
      * @param data A calendarEvent resource to be linked.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resource.
      * @example calendarEventsRoute.create(calendarid, eventid);
-     **/
+     */
     CalendarEventsRoute.prototype.link = function (calendarId, data) {
         var params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -13001,7 +13003,7 @@ var CalendarEventsRoute = (function (_super) {
      * @param data A CalendarEvent object used to update specified CalendarEvent resource.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resourse.
      * @example calendarEventsRoute.update(calendarid, data);
-     **/
+     */
     CalendarEventsRoute.prototype.update = function (calendarId, data) {
         var params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -13013,7 +13015,7 @@ var CalendarEventsRoute = (function (_super) {
      * @param data A calendarEvent resource to be unlinked.
      * @param calendarId A calendar identifier which uniquely identifies a calendar resourse.
      * @example calendarEventsRoute.unlink(calendarid, eventid);
-     **/
+     */
     CalendarEventsRoute.prototype.unlink = function (calendarId, data) {
         var params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -13113,13 +13115,14 @@ var CalendarRsvpAttendeeBatchClient = (function () {
                     SlotsRequested: <slots-requested>,
                     User: <user-profile>,
                     UserID: '<user-id>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarRsvpAttendeeBatchClient.prototype.link = function (calendarId, eventId, data) {
         return this.apiClient.post(this.routeDefinition.link(calendarId, eventId), this.routeDefinition.createParams(data));
     };
@@ -13131,14 +13134,14 @@ var CalendarRsvpAttendeeBatchClient = (function () {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @returns A promise that is resolved once the update CalendarEventAttendees action has been performed.
      * @example calendarEventAttendees are resources previously fetched using get action.
-                       calendarRsvpAttendeeBatchClient.update(calendarId, eventId, calendarEventAttendees)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarRsvpAttendeeBatchClient.update(calendarId, eventId, calendarEventAttendees)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     */
     CalendarRsvpAttendeeBatchClient.prototype.update = function (calendarId, eventId, data) {
         return this.apiClient.put(this.routeDefinition.update(calendarId, eventId), this.routeDefinition.updateParams(data));
     };
@@ -13150,14 +13153,14 @@ var CalendarRsvpAttendeeBatchClient = (function () {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example calendarEventAttendeeIds are identifiers which uniquely identify CalendarEventAttendee resources.
-                    calendarRsvpAttendeeBatchClient.unlink(calendarId, eventId, calendarEventAttendeeIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarRsvpAttendeeBatchClient.unlink(calendarId, eventId, calendarEventAttendeeIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpAttendeeBatchClient.prototype.unlink = function (calendarId, eventId, data) {
         return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId), this.routeDefinition.deleteParams(data));
     };
@@ -13213,7 +13216,7 @@ var CalendarRsvpAttendeeBatchRoute = (function (_super) {
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @example calendarRsvpAttendeeBatchRoute.link(calendarId, eventId);
-     **/
+     */
     CalendarRsvpAttendeeBatchRoute.prototype.link = function (calendarId, eventId) {
         var params = {};
         params.calendarId = calendarId;
@@ -13226,7 +13229,7 @@ var CalendarRsvpAttendeeBatchRoute = (function (_super) {
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @example calendarRsvpAttendeeBatchRoute.update();
-     **/
+     */
     CalendarRsvpAttendeeBatchRoute.prototype.update = function (calendarId, eventId) {
         var params = {};
         params.calendarId = calendarId;
@@ -13239,7 +13242,7 @@ var CalendarRsvpAttendeeBatchRoute = (function (_super) {
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @example calendarRsvpAttendeeBatchRoute.unlink(calendarId, eventId);
-     **/
+     */
     CalendarRsvpAttendeeBatchRoute.prototype.unlink = function (calendarId, eventId) {
         var params = {};
         params.calendarId = calendarId;
@@ -13319,32 +13322,33 @@ var CalendarRsvpAttendeeClient = (function () {
                     invitationTypeIds: '<invitation-type-ids>',
                     from: <from-date>,
                     to: <to-date>
-                }).then(function (collection) {
+                })
+                .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarRsvpAttendeeClient.prototype.find = function (calendarId, eventId, options) {
         return this.apiClient.get(this.routeDefinition.find(calendarId, eventId, options));
     };
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the CalendarEventAttendee resource.
      * @method
-      * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource that needs to be retrieved.
+     * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource that needs to be retrieved.
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param options Query resource GetRequestOptions object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarRsvpAttendeeClient.get(calendarId,eventId, id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpAttendeeClient.prototype.get = function (calendarId, eventId, id, options) {
         return this.apiClient.get(this.routeDefinition.get(calendarId, eventId, id, options));
     };
@@ -13360,7 +13364,6 @@ var CalendarRsvpAttendeeClient = (function () {
     CalendarRsvpAttendeeClient.prototype.getByEmailOrFullName = function (calendarId, eventId, emailOrFullName, options) {
         return this.apiClient.get(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options));
     };
-    //link
     /**
      * Returns a promise that is resolved once the link CalendarEventAttendee action has been performed; this action links a new CalendarEventAttendee resource to a specified calendarEvent.
      * @method
@@ -13391,7 +13394,7 @@ var CalendarRsvpAttendeeClient = (function () {
                 function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarRsvpAttendeeClient.prototype.link = function (calendarId, eventId, data) {
         return this.apiClient.post(this.routeDefinition.link(eventId, calendarId, data), this.routeDefinition.createParams(data));
     };
@@ -13407,15 +13410,15 @@ var CalendarRsvpAttendeeClient = (function () {
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
      * @example calendarEventAttendee is a resource previously fetched using get action.
-                    calendarEventAttendee.name = '<name>';
-                    calendarRsvpAttendeeClient.update(calendarEventAttendee)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventAttendee.name = '<name>';
+                calendarRsvpAttendeeClient.update(calendarEventAttendee)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpAttendeeClient.prototype.update = function (calendarId, eventId, data) {
         return this.apiClient.put(this.routeDefinition.update(calendarId, eventId, data), this.routeDefinition.updateParams(data));
     };
@@ -13431,29 +13434,31 @@ var CalendarRsvpAttendeeClient = (function () {
      * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource.
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies CalendarEventAttendeeStatus resource.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
-     * @example     calendarRsvpAttendeeClient.updateStatus(calendarid, eventid, id, statusid)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+     * @example calendarRsvpAttendeeClient.updateStatus(calendarid, eventid, id, statusid)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpAttendeeClient.prototype.updateStatus = function (calendarId, eventId, id, statusId) {
         return this.apiClient.put(this.routeDefinition.updateStatus(calendarId, eventId, id, statusId), {});
     };
-    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status action has been performed. This action updates a CalendarEventAttendee resource.
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniqely identifies CalendarEvent resource.
-     * @param emailOrFullName Email or FullName
+     * @param emailOrFullName Email or FullName.
+     * @param securityToken Security token.
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies CalendarEventAttendeeStatus resource.
      * @example calendarRsvpAttendeeClient.update(calendarId, eventId, email, statusId);
-     **/
-    CalendarRsvpAttendeeClient.prototype.updateStatusEmailOrFullName = function (calendarId, eventId, emailOrFullName, statusId) {
-        return this.apiClient.put(this.routeDefinition.updateStatusEmailOrFullName(calendarId, eventId, emailOrFullName, statusId), {});
+     */
+    CalendarRsvpAttendeeClient.prototype.updateStatusEmailOrFullName = function (calendarId, eventId, emailOrFullName, securityToken, statusId) {
+        var headers;
+        headers['securityToken'] = securityToken;
+        return this.apiClient.put(this.routeDefinition.updateStatusEmailOrFullName(calendarId, eventId, emailOrFullName, statusId), {}, headers);
     };
     /**
      * Returns a promise that is resolved once the unlink action has been performed. This action will unlink a CalendarEventAttendee resource from the CalendarEvent if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
@@ -13467,14 +13472,14 @@ var CalendarRsvpAttendeeClient = (function () {
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example calendarEventAttendee is a resource previously fetched using get action.
-                    calendarRsvpAttendeeClient.unlink(calendarEventType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarRsvpAttendeeClient.unlink(calendarEventType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpAttendeeClient.prototype.unlink = function (calendarId, eventId, data) {
         return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId, data));
     };
@@ -13556,14 +13561,14 @@ var CalendarRsvpAttendeeClient = (function () {
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource that will have it's attendees purged.
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarRsvpAttendeeClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarRsvpAttendeeClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpAttendeeClient.prototype.purge = function (calendarId, eventId) {
         return this.apiClient.delete(this.routeDefinition.purge(calendarId, eventId));
     };
@@ -13692,13 +13697,13 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
         return _super.prototype.baseGet.call(this, this.getByEmailOrFullNameRoute, {}, params);
     };
     /**
-    * Parses link route. This URI template does not expose any additional options.
-    * @method
-    * @param calendarId Calendar id which uniqely identifies Calendar resource.
-    * @param eventId CalendarEvent id which uniquely identifies a CalendarEvent resource
-    * @param data A CalendarEventAttendee object that needs to be inserted into the system.
-    * @example calendarRsvpAttendeeRoute.link(calendarId, eventId, data);
-    */
+     * Parses link route. This URI template does not expose any additional options.
+     * @method
+     * @param calendarId Calendar id which uniqely identifies Calendar resource.
+     * @param eventId CalendarEvent id which uniquely identifies a CalendarEvent resource
+     * @param data A CalendarEventAttendee object that needs to be inserted into the system.
+     * @example calendarRsvpAttendeeRoute.link(calendarId, eventId, data);
+     */
     CalendarRsvpAttendeeRoute.prototype.link = function (calendarId, eventId, data) {
         var params = this.modelMapper.createParams(data);
         params.calendarId = calendarId;
@@ -13749,7 +13754,6 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
         params.attendeeStatusId = statusId;
         return _super.prototype.baseUpdate.call(this, this.updateStatusRoute, params);
     };
-    //TODO: securityToken
     /**
      * Parses update status email or name route. This URI template does not expose any additional options.
      * @method
@@ -13919,24 +13923,23 @@ var CalendarRsvpBatchClient = (function () {
      * @param data CalendarEventRsvp objects that need to be inserted into the system.
      * @param calendarId Calendar identifier which uniquely identifies calendar resource that will have its EventRsvp objects craeted
      * @returns A promise that is resolved once the link CalendarEventRsvps action has been performed.
-     * @example calendarRsvpBatchClient.link(
-     *              calendarId,
-     *              [{
-                        InvitationOnly: <true|false>,
-                        InvitationType: <calendar-rsvp-invitation-type>,
-                        InvitationTypeId: '<invitation-type-id>',
-                        Json: '<json>',
-                        MaxSlots: <max-slots>,
-                        MinSlots: <min-slots>,
-                        RegistrationCloseDate: '<registration-close-date>',
-                        TotalSlots: <total-slots>
-                }]).then(function (data) {
+     * @example calendarRsvpBatchClient.link( calendarId, [{
+                    InvitationOnly: <true|false>,
+                    InvitationType: <calendar-rsvp-invitation-type>,
+                    InvitationTypeId: '<invitation-type-id>',
+                    Json: '<json>',
+                    MaxSlots: <max-slots>,
+                    MinSlots: <min-slots>,
+                    RegistrationCloseDate: '<registration-close-date>',
+                    TotalSlots: <total-slots>
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarRsvpBatchClient.prototype.link = function (calendarId, data) {
         return this.apiClient.post(this.routeDefinition.link(calendarId), this.routeDefinition.createParams(data));
     };
@@ -13947,14 +13950,14 @@ var CalendarRsvpBatchClient = (function () {
      * @param calendarId Calendar identifier that uniquely identifies calendar resource that will have it's CalendarEventRsvp's updated.
      * @returns A promise that is resolved once the update CalendarEventRsvps action has been performed.
      * @example calendarEventRsvps are resources previously fetched using get action.
-                       calendarRsvpBatchClient.update(calendar, calendarEventRsvps)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarRsvpBatchClient.update(calendar, calendarEventRsvps)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpBatchClient.prototype.update = function (calendarId, data) {
         return this.apiClient.put(this.routeDefinition.update(calendarId), this.routeDefinition.updateParams(data));
     };
@@ -13965,14 +13968,14 @@ var CalendarRsvpBatchClient = (function () {
      * @param calendarId Calendar identifier that uniquely identifies a calendar resource that will have it's calendarEventRsvp's deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpIds are identifiers which uniquely identify CalendarEventRsvp resources.
-                    calendarRsvpBatchClient.unlink(calendar, calendarEventRsvpIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarRsvpBatchClient.unlink(calendar, calendarEventRsvpIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarRsvpBatchClient.prototype.unlink = function (calendarId, data) {
         return this.apiClient.delete(this.routeDefinition.unlink(calendarId), this.routeDefinition.deleteParams(data));
     };
@@ -14027,7 +14030,7 @@ var CalendarRsvpBatchRoute = (function (_super) {
      * @method
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpBatchRoute.link(calendarId);
-     **/
+     */
     CalendarRsvpBatchRoute.prototype.link = function (calendarId) {
         var params = {};
         params.calendarId = calendarId;
@@ -14038,7 +14041,7 @@ var CalendarRsvpBatchRoute = (function (_super) {
      * @method
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpBatchRoute.update(calendarId);
-     **/
+     */
     CalendarRsvpBatchRoute.prototype.update = function (calendarId) {
         var params = {};
         params.calendarId = calendarId;
@@ -14049,7 +14052,7 @@ var CalendarRsvpBatchRoute = (function (_super) {
      * @method
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpBatchRoute.unlink(calendarId);
-     **/
+     */
     CalendarRsvpBatchRoute.prototype.unlink = function (calendarId) {
         var params = {};
         params.calendarId = calendarId;
@@ -14115,7 +14118,7 @@ var CalendarRsvpClient = (function () {
      * @param options Query resource GetCalendarOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarRsvpClient.find(calendarId, {
-     *              pageNumber: 1,
+                    pageNumber: 1,
                     pageSize: 10,
                     orderBy: '<field>',
                     orderDirection: '<asc|desc>',
@@ -14132,10 +14135,10 @@ var CalendarRsvpClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarRsvpClient.prototype.find = function (calendarId, options) {
         return this.apiClient.get(this.routeDefinition.find(calendarId, options));
     };
@@ -14147,17 +14150,16 @@ var CalendarRsvpClient = (function () {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarRsvpClient.get()
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpClient.prototype.get = function (calendarId, id, options) {
         return this.apiClient.get(this.routeDefinition.get(calendarId, id, options));
     };
-    //link
     /**
      * Returns a promise that is resolved once the link CalendarEventRsvp action has been performed; this action links the CalendarEventRsvp to the calendarEvent resource.
      * @method
@@ -14176,10 +14178,10 @@ var CalendarRsvpClient = (function () {
                 }).then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarRsvpClient.prototype.link = function (calendarId, data) {
         return this.apiClient.post(this.routeDefinition.link(calendarId, data), this.routeDefinition.createParams(data));
     };
@@ -14194,19 +14196,18 @@ var CalendarRsvpClient = (function () {
      * @param data A CalendarEventrSVP object used to update specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the update CalendarEventRsvp action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarEventRsvp.name = '<name>';
-                    calendarRsvpClient.update(calendarEventRsvp)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventRsvp.name = '<name>';
+                calendarRsvpClient.update(calendarEventRsvp)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpClient.prototype.update = function (calendarId, data) {
         return this.apiClient.put(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     };
-    //unlink
     /**
      * Returns a promise that is resolved once the unlink action has been performed. This action will unlink a CalendarEventRsvp from the CalendarEvent if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarRsvpRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -14218,14 +14219,14 @@ var CalendarRsvpClient = (function () {
      * @param data An calendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarRsvpClient.unlink(calendarId, calendarEventRsvp)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarRsvpClient.unlink(calendarId, calendarEventRsvp)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpClient.prototype.unlink = function (calendarId, data) {
         return this.apiClient.delete(this.routeDefinition.unlink(calendarId, data));
     };
@@ -14235,14 +14236,14 @@ var CalendarRsvpClient = (function () {
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @param data A CalendarEvent object that will have it's rsvp's purged
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarRsvpClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarRsvpClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarRsvpClient.prototype.purge = function (calendarId, data) {
         return this.apiClient.delete(this.routeDefinition.purge(calendarId, data));
     };
@@ -14317,7 +14318,7 @@ var CalendarRsvpRoute = (function (_super) {
      * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRsvpRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarRsvpRoute.prototype.find = function (calendarId, options) {
         var opt;
         if (options) {
@@ -14342,7 +14343,7 @@ var CalendarRsvpRoute = (function (_super) {
      * @param options Query resource options object.
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.get(id, options);
-     **/
+     */
     CalendarRsvpRoute.prototype.get = function (calendarId, id, options) {
         var params = this.modelMapper.getParams(options);
         params.calendarId = calendarId;
@@ -14354,7 +14355,7 @@ var CalendarRsvpRoute = (function (_super) {
      * @param data A CalendarEventRsvp object that needs to be inserted into the system.
      * @param calendarId Calendar Id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.link(data);
-     **/
+     */
     CalendarRsvpRoute.prototype.link = function (calendarId, data) {
         var params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -14366,7 +14367,7 @@ var CalendarRsvpRoute = (function (_super) {
      * @param data A CalendarEventRsvp object used to update specified CalendarEventRsvp resource.
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.update(data);
-     **/
+     */
     CalendarRsvpRoute.prototype.update = function (calendarId, data) {
         var params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -14378,7 +14379,7 @@ var CalendarRsvpRoute = (function (_super) {
      * @param data A CalendarEvent object used to unlink specified CalendarEvent resource.
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
      * @example calendarRsvpRoute.unlink(data);
-     **/
+     */
     CalendarRsvpRoute.prototype.unlink = function (calendarId, data) {
         var params = this.utility.extend({}, data);
         params.calendarId = calendarId;
@@ -14839,13 +14840,14 @@ var CalendarEventRsvpAttendeeBatchClient = (function () {
                     SlotsRequested: <slots-requested>,
                     User: <user-profile>,
                     UserID: '<user-id>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpAttendeeBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -14855,14 +14857,14 @@ var CalendarEventRsvpAttendeeBatchClient = (function () {
      * @param data CalendarEventAttendee objects used to update specified CalendarEventAttendee resources.
      * @returns A promise that is resolved once the update CalendarEventAttendees action has been performed.
      * @example calendarEventAttendees are resources previously fetched using get action.
-                       calendarEventRsvpAttendeeBatchClient.update(calendarEventAttendees)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventRsvpAttendeeBatchClient.update(calendarEventAttendees)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpAttendeeBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
@@ -14872,14 +14874,14 @@ var CalendarEventRsvpAttendeeBatchClient = (function () {
      * @param data CalendarEventAttendee Ids which uniquely identify CalendarEventAttendee resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventAttendeeIds are identifiers which uniquely identify CalendarEventAttendee resources.
-                    calendarEventRsvpAttendeeBatchClient.remove(calendarEventAttendeeIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventRsvpAttendeeBatchClient.remove(calendarEventAttendeeIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarEventRsvpAttendeeBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
@@ -14933,7 +14935,7 @@ var CalendarEventRsvpAttendeeBatchRoute = (function (_super) {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpAttendeeBatchRoute.create();
-     **/
+     */
     CalendarEventRsvpAttendeeBatchRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
     };
@@ -14941,7 +14943,7 @@ var CalendarEventRsvpAttendeeBatchRoute = (function (_super) {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpAttendeeBatchRoute.update();
-     **/
+     */
     CalendarEventRsvpAttendeeBatchRoute.prototype.update = function () {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
@@ -14949,7 +14951,7 @@ var CalendarEventRsvpAttendeeBatchRoute = (function (_super) {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpAttendeeBatchRoute.delete();
-     **/
+     */
     CalendarEventRsvpAttendeeBatchRoute.prototype.delete = function () {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
     };
@@ -15035,7 +15037,7 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpAttendeeClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
@@ -15052,7 +15054,7 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpAttendeeClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
     };
@@ -15083,7 +15085,7 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpAttendeeClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
@@ -15105,7 +15107,7 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-    **/
+     */
     CalendarEventRsvpAttendeeClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
@@ -15126,11 +15128,10 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-    **/
+     */
     CalendarEventRsvpAttendeeClient.prototype.updateStatus = function (id, statusId) {
         return this.apiClient.put(this.routeDefinition.updateStatus(id, statusId), {});
     };
-    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the update CalendarEventAttendee Status Email or FullName action has been performed. This action updates a CalendarEventAttendee resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -15141,6 +15142,7 @@ var CalendarEventRsvpAttendeeClient = (function () {
      * @param id CalendarEventRsvpAttendee id which uniquely identifies a CalendarEventRsvpattendee resource.
      * @param emailOrFullName Email or full name
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies a CalendarEventRsvpAttendeeStatus resource.
+     * @param securityToken Security Token.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
      * @example calendarEventRsvpAttendeeClient.updateStatusEmail(id, email, statusId)
                 .then(function (data) {
@@ -15149,9 +15151,11 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-    **/
-    CalendarEventRsvpAttendeeClient.prototype.updateStatusEmailorFullName = function (id, emailOrFullName, statusId) {
-        return this.apiClient.put(this.routeDefinition.updateStatusEmailOrFullName(id, emailOrFullName, statusId), {});
+     */
+    CalendarEventRsvpAttendeeClient.prototype.updateStatusEmailorFullName = function (id, emailOrFullName, statusId, securityToken) {
+        var headers;
+        headers['securityToken'] = securityToken;
+        return this.apiClient.put(this.routeDefinition.updateStatusEmailOrFullName(id, emailOrFullName, statusId), {}, headers);
     };
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will remove a CalendarEventAttendee resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
@@ -15186,7 +15190,7 @@ var CalendarEventRsvpAttendeeClient = (function () {
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpAttendeeClient.prototype.purge = function (event) {
         return this.apiClient.delete(this.routeDefinition.purge(event));
     };
@@ -15298,7 +15302,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
      * @method
      * @param options Query resource GetCalendarLookupOptions object.
      * @example calendarEventRsvpAttendeeRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarEventRsvpAttendeeRoute.prototype.find = function (options) {
         var opt;
         if (options) {
@@ -15318,7 +15322,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
      * @param id CalendarEventAttendee id which uniquely identifies CalendarEventAttendee resource that needs to be retrieved.
      * @param options Query resource GetRequestOptions object.
      * @example calendarEventRsvpAttendeeRoute.get(id);
-     **/
+     */
     CalendarEventRsvpAttendeeRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
@@ -15327,7 +15331,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventAttendee object that needs to be inserted into the system.
      * @example calendarEventRsvpAttendeeRoute.create(data);
-     **/
+     */
     CalendarEventRsvpAttendeeRoute.prototype.create = function (data) {
         return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
@@ -15336,7 +15340,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventAttendee object used to update specified CalendarEventAttendee resource.
      * @example calendarEventRsvpAttendeeRoute.update(data);
-     **/
+     */
     CalendarEventRsvpAttendeeRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
@@ -15346,14 +15350,13 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
     * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
     * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
     * @example calendarEventRsvpAttendeeRoute.update(id, statusId);
-    **/
+    */
     CalendarEventRsvpAttendeeRoute.prototype.updateStatus = function (id, statusId) {
         var params = {};
         params.id = id;
         params.attendeeStatusId = statusId;
         return _super.prototype.baseUpdate.call(this, this.updateStatusRoute, params);
     };
-    //TODO: securityToken
     /**
     * Parses update status email or name route. This URI template does not expose any additional options.
     * @method
@@ -15361,7 +15364,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
     * @param emailOrFullName Email or full name
     * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
     * @example calendarEventRsvpAttendeeRoute.update(id, email, statusId);
-    **/
+    */
     CalendarEventRsvpAttendeeRoute.prototype.updateStatusEmailOrFullName = function (id, emailOrFullName, statusId) {
         var params = {};
         params.id = id;
@@ -15374,7 +15377,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventAttendee object used to delete specified CalendarEventAttendee resource.
      * @example calendarEventRsvpAttendeeRoute.delete(data);
-     **/
+     */
     CalendarEventRsvpAttendeeRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };
@@ -15494,13 +15497,14 @@ var CalendarEventRsvpBatchClient = (function () {
                     MinSlots: 10,
                     RegistrationCloseDate?: '<close-date>',
                     TotalSlots: 65,
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -15510,14 +15514,14 @@ var CalendarEventRsvpBatchClient = (function () {
      * @param data CalendarEventRsvp objects used to update specified CalendarEventRsvp resources.
      * @returns A promise that is resolved once the update CalendarEventRsvps action has been performed.
      * @example calendarEventRsvps are resources previously fetched using get action.
-                       calendarEventRsvpBatchClient.update(calendarEventRsvps)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventRsvpBatchClient.update(calendarEventRsvps)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
@@ -15527,14 +15531,14 @@ var CalendarEventRsvpBatchClient = (function () {
      * @param data CalendarEventRsvp Ids which uniquely identify CalendarEventRsvp resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpIds are identifiers which uniquely identify CalendarEventRsvp resources.
-                    calendarEventRsvpBatchClient.remove(calendarEventRsvpIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventRsvpBatchClient.remove(calendarEventRsvpIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
@@ -15588,7 +15592,7 @@ var CalendarEventRsvpBatchRoute = (function (_super) {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpBatchRoute.create();
-     **/
+     */
     CalendarEventRsvpBatchRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
     };
@@ -15596,7 +15600,7 @@ var CalendarEventRsvpBatchRoute = (function (_super) {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpBatchRoute.update();
-     **/
+     */
     CalendarEventRsvpBatchRoute.prototype.update = function () {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
@@ -15604,7 +15608,7 @@ var CalendarEventRsvpBatchRoute = (function (_super) {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpBatchRoute.delete();
-     **/
+     */
     CalendarEventRsvpBatchRoute.prototype.delete = function () {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
     };
@@ -15690,7 +15694,7 @@ var CalendarEventRsvpClient = (function () {
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
@@ -15701,13 +15705,13 @@ var CalendarEventRsvpClient = (function () {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventRsvpClient.get(id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
     };
@@ -15728,10 +15732,10 @@ var CalendarEventRsvpClient = (function () {
                 }.then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
@@ -15745,15 +15749,15 @@ var CalendarEventRsvpClient = (function () {
      * @param data A CalendarEventRsvp object used to update specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the update CalendarEventRsvp action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarEventRsvp.MinSlots = '<min-slots>';
-                    calendarEventRsvpClient.update(calendarEventRsvp)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventRsvp.MinSlots = '<min-slots>';
+                calendarEventRsvpClient.update(calendarEventRsvp)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
@@ -15767,14 +15771,14 @@ var CalendarEventRsvpClient = (function () {
      * @param data An calendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvp is a resource previously fetched using get action.
-                    calendarEventRsvpClient.remove(calendarEventRsvp)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventRsvpClient.remove(calendarEventRsvp)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
@@ -15782,13 +15786,13 @@ var CalendarEventRsvpClient = (function () {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvp resources for the specified CalendarEvent from the system if succesfully completed.
      * @method
      * @param data A CalendarEvent object that will have it's CalendarEventRsvps purged.
-     * @example     calendarEventRsvpClient.purge(calendarEvent)
-     *                  .then(function (data) {
-     *                      // perform success action here
-     *                  },
-     *                  function (response, status, headers, config) {
-     *                      // perform error handling here
-     *                  })
+     * @example calendarEventRsvpClient.purge(calendarEvent)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                })
      */
     CalendarEventRsvpClient.prototype.purge = function (data) {
         return this.apiClient.delete(this.routeDefinition.purge(data));
@@ -15865,7 +15869,7 @@ var CalendarEventRsvpRoute = (function (_super) {
      * @method
      * @param options Query resource GetCalendarEventRsvpOptions object.
      * @example calendarEventRsvpRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarEventRsvpRoute.prototype.find = function (options) {
         var opt;
         if (options) {
@@ -15887,7 +15891,7 @@ var CalendarEventRsvpRoute = (function (_super) {
      * @param id CalendarEventRsvp id which uniquely identifies CalendarEventRsvp resource that needs to be retrieved.
      * @param options Query resource GetRequestOptions object.
      * @example calendarEventRsvpRoute.get(id);
-     **/
+     */
     CalendarEventRsvpRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
@@ -15896,7 +15900,7 @@ var CalendarEventRsvpRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvp object that needs to be inserted into the system.
      * @example calendarEventRsvpRoute.create(data);
-     **/
+     */
     CalendarEventRsvpRoute.prototype.create = function (data) {
         return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
@@ -15905,7 +15909,7 @@ var CalendarEventRsvpRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvp object used to update specified CalendarEventRsvp resource.
      * @example calendarEventRsvpRoute.update(data);
-     **/
+     */
     CalendarEventRsvpRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
@@ -15914,7 +15918,7 @@ var CalendarEventRsvpRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvp object used to delete specified CalendarEventRsvp resource.
      * @example calendarEventRsvpRoute.delete(data);
-     **/
+     */
     CalendarEventRsvpRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };
@@ -16028,13 +16032,14 @@ var CalendarEventBatchClient = (function () {
                     json: '<json>',
                     startTime: '<start-time>',
                     title: '<title'>
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarEventBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -16044,14 +16049,14 @@ var CalendarEventBatchClient = (function () {
      * @param data CalendarEvent objects used to update specified CalendarEvent resources.
      * @returns A promise that is resolved once the update CalendarEvents action has been performed.
      * @example calendarEvents are resources previously fetched using get action.
-                       calendarEventBatchClient.update(calendarEvents)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventBatchClient.update(calendarEvents)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
@@ -16061,14 +16066,14 @@ var CalendarEventBatchClient = (function () {
      * @param data CalendarEvent Ids which uniquely identify CalendarEvent resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventIds are identifiers which uniquely identify CalendarEvent resources.
-                    calendarEventBatchClient.remove(calendarEventIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventBatchClient.remove(calendarEventIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
@@ -16122,7 +16127,7 @@ var CalendarEventBatchRoute = (function (_super) {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventBatchRoute.create();
-     **/
+     */
     CalendarEventBatchRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
     };
@@ -16130,7 +16135,7 @@ var CalendarEventBatchRoute = (function (_super) {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventBatchRoute.update();
-     **/
+     */
     CalendarEventBatchRoute.prototype.update = function () {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
@@ -16138,7 +16143,7 @@ var CalendarEventBatchRoute = (function (_super) {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventBatchRoute.delete();
-     **/
+     */
     CalendarEventBatchRoute.prototype.delete = function () {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
     };
@@ -16218,10 +16223,10 @@ var CalendarEventClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
@@ -16232,33 +16237,35 @@ var CalendarEventClient = (function () {
      * @param options Query resource GetRequstOptions object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventClient.get(id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarEventClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
     };
-    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
      * @method
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource.
-     * @param emailOrFullName email or full name
+     * @param emailOrFullName Email or full name.
+     * @param securityToken Security Token.
      * @param options Query resource options object
      * @example calendarEventClient.get(id, email@example.com)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    CalendarEventClient.prototype.getByEmailOrFullName = function (id, emailOrFullName, options) {
-        return this.apiClient.get(this.routeDefinition.getByEmailOrFullName(id, emailOrFullName, options));
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    CalendarEventClient.prototype.getByEmailOrFullName = function (id, emailOrFullName, securityToken, options) {
+        var headers;
+        headers['securityToken'] = securityToken;
+        return this.apiClient.get(this.routeDefinition.getByEmailOrFullName(id, emailOrFullName, options), headers);
     };
     /**
      * Returns a promise that is resolved once the create CalendarEvent action has been performed. This action creates a new CalendarEvent resource.
@@ -16278,13 +16285,14 @@ var CalendarEventClient = (function () {
                     json: '<json>',
                     startTime: '<start-time>',
                     title: '<title'>
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarEventClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
@@ -16298,15 +16306,15 @@ var CalendarEventClient = (function () {
      * @param data A Calendar Event  object used to update specified CalendarEvent resource.
      * @returns A promise that is resolved once the update CalendarEvent action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEvent.title = '<title>';
-                    calendarEventClient.update(calendarEvent)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEvent.title = '<title>';
+                calendarEventClient.update(calendarEvent)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
@@ -16320,14 +16328,14 @@ var CalendarEventClient = (function () {
      * @param data An calendarEvent object used to delete specified CalendarEvent resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEvent is a resource previously fetched using get action.
-                    calendarEventClient.remove(calendarEvent)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventClient.remove(calendarEvent)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
@@ -16336,14 +16344,14 @@ var CalendarEventClient = (function () {
      * @method
      * @param calendarId Calendar identifier which uniquely identifies a calendar resource which will have its Events purged.
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventClient.prototype.purge = function (calendarId) {
         return this.apiClient.delete(this.routeDefinition.purge(calendarId));
     };
@@ -16417,7 +16425,7 @@ var CalendarEventRoute = (function (_super) {
      * @method
      * @param options Query resource GetCalendarEventOptions object.
      * @example calendarEventRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarEventRoute.prototype.find = function (options) {
         var opt;
         if (options) {
@@ -16441,7 +16449,6 @@ var CalendarEventRoute = (function (_super) {
     CalendarEventRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
-    //TODO: securityToken
     /**
      * Parses getByEmailOrFullName route which must be expanded with the identifier of the previously created CalendarEvent resource
      * The route must also be expanded with the identifier of the previously created CalendarResource and the email/FullName.
@@ -16460,7 +16467,7 @@ var CalendarEventRoute = (function (_super) {
      * @method
      * @param data A CalendarEvent object that needs to be inserted into the system.
      * @example calendarEventRoute.create(data);
-     **/
+     */
     CalendarEventRoute.prototype.create = function (data) {
         return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
@@ -16469,7 +16476,7 @@ var CalendarEventRoute = (function (_super) {
      * @method
      * @param data A CalendarEvent object used to update specified CalendarEvent resource.
      * @example calendarEventRoute.update(data);
-     **/
+     */
     CalendarEventRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
@@ -16478,7 +16485,7 @@ var CalendarEventRoute = (function (_super) {
      * @method
      * @param data A CalendarEvent object that will be deleted from the system.
      * @example calendarEventRoute.delete(data);
-     **/
+     */
     CalendarEventRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };
@@ -16603,13 +16610,14 @@ var CalendarEventRsvpAttendeeStatusBatchClient = (function () {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpAttendeeStatusBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -16619,14 +16627,14 @@ var CalendarEventRsvpAttendeeStatusBatchClient = (function () {
      * @param data CalendarEventRsvpAttendeeStatus objects used to update specified CalendarEventRsvpAttendeeStatus resources.
      * @returns A promise that is resolved once the update CalendarEventRsvpAttendeeStatuses action has been performed.
      * @example calendarEventRsvpAttendeeStatuses are resources previously fetched using get action.
-                       calendarEventRsvpAttendeeStatusBatchClient.update(calendarEventRsvpAttendeeStatuses)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventRsvpAttendeeStatusBatchClient.update(calendarEventRsvpAttendeeStatuses)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpAttendeeStatusBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
@@ -16636,14 +16644,14 @@ var CalendarEventRsvpAttendeeStatusBatchClient = (function () {
      * @param data CalendarEventRsvpAttendeeStatus Ids which uniquely identify CalendarEventRsvpAttendeeStatus resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpAttendeeStatusIds are identifiers which uniquely identify CalendarEventRsvpAttendeeStatus resources.
-                    calendarEventRsvpAttendeeStatusBatchClient.remove(calendarEventRsvpAttendeeStatusIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventRsvpAttendeeStatusBatchClient.remove(calendarEventRsvpAttendeeStatusIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpAttendeeStatusBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
@@ -16697,7 +16705,7 @@ var CalendarEventRsvpAttendeeStatusBatchRoute = (function (_super) {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpAttendeeStatusBatchRoute.create();
-     **/
+     */
     CalendarEventRsvpAttendeeStatusBatchRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
     };
@@ -16705,7 +16713,7 @@ var CalendarEventRsvpAttendeeStatusBatchRoute = (function (_super) {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpAttendeeStatusBatchRoute.update();
-     **/
+     */
     CalendarEventRsvpAttendeeStatusBatchRoute.prototype.update = function () {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
@@ -16713,7 +16721,7 @@ var CalendarEventRsvpAttendeeStatusBatchRoute = (function (_super) {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpAttendeeStatusBatchRoute.delete();
-     **/
+     */
     CalendarEventRsvpAttendeeStatusBatchRoute.prototype.delete = function () {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
     };
@@ -16791,7 +16799,7 @@ var CalendarEventRsvpAttendeeStatusClient = (function () {
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpAttendeeStatusClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
@@ -16802,13 +16810,13 @@ var CalendarEventRsvpAttendeeStatusClient = (function () {
      * @param options Query resource GetRequestOptions object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventRsvpAttendeeStatusClient.get()
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarEventRsvpAttendeeStatusClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
     };
@@ -16821,13 +16829,14 @@ var CalendarEventRsvpAttendeeStatusClient = (function () {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpAttendeeStatusClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
@@ -16841,15 +16850,15 @@ var CalendarEventRsvpAttendeeStatusClient = (function () {
      * @param data A CalendarEventRsvpAttendeeStatus object used to update specified CalendarEventRsvpAttendeeStatus resource.
      * @returns A promise that is resolved once the update CalendarEventRsvpAttendeeStatus action has been performed.
      * @example calendarEventRsvpAttendeeStatus is a resource previously fetched using get action.
-                    calendarEventRsvpAttendeeStatus.name = '<name>';
-                    calendarEventRsvpAttendeeStatusClient.update(calendarEventRsvpAttendeeStatus)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventRsvpAttendeeStatus.name = '<name>';
+                calendarEventRsvpAttendeeStatusClient.update(calendarEventRsvpAttendeeStatus)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpAttendeeStatusClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
@@ -16863,14 +16872,14 @@ var CalendarEventRsvpAttendeeStatusClient = (function () {
      * @param data An calendarEventRsvpAttendeeStatus object used to delete specified CalendarEventRsvpAttendeeStatus resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpAttendeeStatus is a resource previously fetched using get action.
-                    calendarEventRsvpAttendeeStatusClient.remove(calendarEventRsvpAttendeeStatus)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventRsvpAttendeeStatusClient.remove(calendarEventRsvpAttendeeStatus)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpAttendeeStatusClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
@@ -16878,14 +16887,14 @@ var CalendarEventRsvpAttendeeStatusClient = (function () {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvpAttendeeStatus resources from the system if succesfully completed.
      * @method
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventRsvpAttendeeStatusClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventRsvpAttendeeStatusClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpAttendeeStatusClient.prototype.purge = function () {
         return this.apiClient.delete(this.routeDefinition.purge());
     };
@@ -16953,7 +16962,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarEventRsvpAttendeeStatusRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarEventRsvpAttendeeStatusRoute.prototype.find = function (options) {
         var opt;
         if (options) {
@@ -16973,7 +16982,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
      * @param id CalendarEventRsvpAttendeeStatus id which uniquely identifies CalendarEventRsvpAttendeeStatus resource that needs to be retrieved.
      * @param options Query resource GEtRequestOptions object.
      * @example calendarEventRsvpAttendeeStatusRoute.get(id);
-     **/
+     */
     CalendarEventRsvpAttendeeStatusRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
@@ -16982,7 +16991,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvpAttendeeStatus object that needs to be inserted into the system.
      * @example calendarEventRsvpAttendeeStatusRoute.create(data);
-     **/
+     */
     CalendarEventRsvpAttendeeStatusRoute.prototype.create = function (data) {
         return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
@@ -16991,7 +17000,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvpAttendeeStatus object used to update specified CalendarEventRsvpAttendeeStatus resource.
      * @example calendarEventRsvpAttendeeStatusRoute.update(data);
-     **/
+     */
     CalendarEventRsvpAttendeeStatusRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
@@ -17000,7 +17009,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvpAttendeeStatus object used to delete specified CalendarEventRsvpAttendeeStatus resource.
      * @example calendarEventRsvpAttendeeStatusRoute.delete(data);
-     **/
+     */
     CalendarEventRsvpAttendeeStatusRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };
@@ -17093,13 +17102,14 @@ var CalendarEventRsvpInvitationTypeBatchClient = (function () {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpInvitationTypeBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -17109,14 +17119,14 @@ var CalendarEventRsvpInvitationTypeBatchClient = (function () {
      * @param data CalendarEventRsvpAttendeeInvitationType objects used to update specified CalendarEventRsvpAttendeeInvitationType resources.
      * @returns A promise that is resolved once the update CalendarEventRsvpAttendeeInvitationTypes action has been performed.
      * @example calendarEventRsvpAttendeeInvitationTypes are resources previously fetched using get action.
-                       calendarEventRsvpInvitationTypeBatchClient.update(calendarEventRsvpAttendeeInvitationTypes)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventRsvpInvitationTypeBatchClient.update(calendarEventRsvpAttendeeInvitationTypes)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpInvitationTypeBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
@@ -17126,14 +17136,14 @@ var CalendarEventRsvpInvitationTypeBatchClient = (function () {
      * @param data CalendarEventRsvpAttendeeInvitationType Ids which uniquely identify CalendarEventRsvpAttendeeInvitationType resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpAttendeeInvitationTypeIds are identifiers which uniquely identify CalendarEventRsvpAttendeeInvitationType resources.
-                    calendarEventRsvpInvitationTypeBatchClient.remove(calendarEventRsvpAttendeeInvitationTypeIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventRsvpInvitationTypeBatchClient.remove(calendarEventRsvpAttendeeInvitationTypeIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpInvitationTypeBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
@@ -17187,7 +17197,7 @@ var CalendarEventRsvpInvitationTypeBatchRoute = (function (_super) {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeBatchRoute.create();
-     **/
+     */
     CalendarEventRsvpInvitationTypeBatchRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
     };
@@ -17195,7 +17205,7 @@ var CalendarEventRsvpInvitationTypeBatchRoute = (function (_super) {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeBatchRoute.update();
-     **/
+     */
     CalendarEventRsvpInvitationTypeBatchRoute.prototype.update = function () {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
@@ -17203,7 +17213,7 @@ var CalendarEventRsvpInvitationTypeBatchRoute = (function (_super) {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeBatchRoute.delete();
-     **/
+     */
     CalendarEventRsvpInvitationTypeBatchRoute.prototype.delete = function () {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
     };
@@ -17278,10 +17288,10 @@ var CalendarEventRsvpInvitationTypeClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpInvitationTypeClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
@@ -17298,7 +17308,7 @@ var CalendarEventRsvpInvitationTypeClient = (function () {
                      function (response, status, headers, config) {
                          // perform error handling here
                     });
-     **/
+     */
     CalendarEventRsvpInvitationTypeClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
     };
@@ -17311,13 +17321,14 @@ var CalendarEventRsvpInvitationTypeClient = (function () {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventRsvpInvitationTypeClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
@@ -17331,15 +17342,15 @@ var CalendarEventRsvpInvitationTypeClient = (function () {
      * @param data A CalendarEventRsvpAttendeeInvitationType object used to update specified CalendarEventRsvpAttendeeInvitationType resource.
      * @returns A promise that is resolved once the update CalendarEventRsvpAttendeeInvitationType action has been performed.
      * @example calendarEventRsvpAttendeeInvitationType is a resource previously fetched using get action.
-                    calendarEventRsvpAttendeeInvitationType.name = '<name>';
-                    calendarEventRsvpInvitationTypeClient.update(calendarEventRsvpAttendeeInvitationType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventRsvpAttendeeInvitationType.name = '<name>';
+                calendarEventRsvpInvitationTypeClient.update(calendarEventRsvpAttendeeInvitationType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpInvitationTypeClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
@@ -17353,14 +17364,14 @@ var CalendarEventRsvpInvitationTypeClient = (function () {
      * @param data An calendarEventRsvpAttendeeInvitationType object used to delete specified CalendarEventRsvpAttendeeInvitationType resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventRsvpAttendeeInvitationType is a resource previously fetched using get action.
-                    calendarEventRsvpInvitationType.remove(calendarEventRsvpAttendeeInvitationType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventRsvpInvitationType.remove(calendarEventRsvpAttendeeInvitationType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpInvitationTypeClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
@@ -17368,14 +17379,14 @@ var CalendarEventRsvpInvitationTypeClient = (function () {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventRsvpAttendeeInvitationType resources from the system if succesfully completed.
      * @method
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventRsvpInvitationTypeClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventRsvpInvitationTypeClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventRsvpInvitationTypeClient.prototype.purge = function () {
         return this.apiClient.delete(this.routeDefinition.purge());
     };
@@ -17443,7 +17454,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarEventRsvpInvitationTypeRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarEventRsvpInvitationTypeRoute.prototype.find = function (options) {
         var opt;
         if (options) {
@@ -17463,7 +17474,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
      * @param id CalendarEventRsvpAttendeeInvitationType id which uniquely identifies CalendarEventRsvpInvitationType resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarEventRsvpInvitationTypeRoute.get(id);
-     **/
+     */
     CalendarEventRsvpInvitationTypeRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
@@ -17472,7 +17483,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvpInvitationType object that needs to be inserted into the system.
      * @example calendarEventRsvpInvitationTypeRoute.create(data);
-     **/
+     */
     CalendarEventRsvpInvitationTypeRoute.prototype.create = function (data) {
         return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
@@ -17481,7 +17492,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvpInvitationType object used to update specified CalendarEventRsvpInvitationType resource.
      * @example calendarEventRsvpInvitationTypeRoute.update(data);
-     **/
+     */
     CalendarEventRsvpInvitationTypeRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
@@ -17490,7 +17501,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventRsvpInvitationType object used to delete specified CalendarEventRsvpInvitationType resource.
      * @example calendarEventRsvpInvitationTypeRoute.delete(data);
-     **/
+     */
     CalendarEventRsvpInvitationTypeRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };
@@ -17583,13 +17594,14 @@ var CalendarEventStatusBatchClient = (function () {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarEventStatusBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -17599,14 +17611,14 @@ var CalendarEventStatusBatchClient = (function () {
      * @param data CalendarEventStatus objects used to update specified CalendarEventStatus resources.
      * @returns A promise that is resolved once the update CalendarEventStatuses action has been performed.
      * @example calendarEventStatuses are resources previously fetched using get action.
-                       calendarEventStatusBatchClient.update(calendarEventStatuses)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventStatusBatchClient.update(calendarEventStatuses)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventStatusBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
@@ -17616,14 +17628,14 @@ var CalendarEventStatusBatchClient = (function () {
      * @param data CalendarEventStatus Ids which uniquely identify CalendarEventStatus resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventStatusIds are identifiers which uniquely identify CalendarEventStatus resources.
-                    calendarEventStatusBatchClient.remove(calendarEventStatusIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventStatusBatchClient.remove(calendarEventStatusIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarEventStatusBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
@@ -17677,7 +17689,7 @@ var CalendarEventStatusBatchRoute = (function (_super) {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventStatusBatchRoute.create();
-     **/
+     */
     CalendarEventStatusBatchRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
     };
@@ -17685,7 +17697,7 @@ var CalendarEventStatusBatchRoute = (function (_super) {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventStatusBatchRoute.update();
-     **/
+     */
     CalendarEventStatusBatchRoute.prototype.update = function () {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
@@ -17693,7 +17705,7 @@ var CalendarEventStatusBatchRoute = (function (_super) {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventStatusBatchRoute.delete();
-     **/
+     */
     CalendarEventStatusBatchRoute.prototype.delete = function () {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
     };
@@ -17768,10 +17780,10 @@ var CalendarEventStatusClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventStatusClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
@@ -17782,13 +17794,13 @@ var CalendarEventStatusClient = (function () {
      * @param options Query resource options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventStatusClient.get()
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventStatusClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
     };
@@ -17801,13 +17813,14 @@ var CalendarEventStatusClient = (function () {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventStatusClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
@@ -17821,15 +17834,15 @@ var CalendarEventStatusClient = (function () {
      * @param data A CalendarEventStatus object used to update specified CalendarEventStatus resource.
      * @returns A promise that is resolved once the update CalendarEventStatus action has been performed.
      * @example calendarEventStatus is a resource previously fetched using get action.
-                    calendarEventStatus.name = '<name>';
-                    calendarEventStatusClient.update(calendarEventStatus)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventStatus.name = '<name>';
+                calendarEventStatusClient.update(calendarEventStatus)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventStatusClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
@@ -17843,14 +17856,14 @@ var CalendarEventStatusClient = (function () {
      * @param data An calendarEventStatus object used to delete specified CalendarEventStatus resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventStatus is a resource previously fetched using get action.
-                    calendarEventStatusClient.remove(calendarEventType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventStatusClient.remove(calendarEventType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventStatusClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
@@ -17858,14 +17871,14 @@ var CalendarEventStatusClient = (function () {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventStatus resources from the system if succesfully completed.
      * @method
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventStatusClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventStatusClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventStatusClient.prototype.purge = function () {
         return this.apiClient.delete(this.routeDefinition.purge());
     };
@@ -17933,7 +17946,7 @@ var CalendarEventStatusRoute = (function (_super) {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarEventStatusRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarEventStatusRoute.prototype.find = function (options) {
         var opt;
         if (options) {
@@ -17953,7 +17966,7 @@ var CalendarEventStatusRoute = (function (_super) {
      * @param id CalendarEventStatus id which uniquely identifies CalendarEventStatus resource that needs to be retrieved.
      * @param options Query resource GetRequestOptions object.
      * @example calendarEventStatusRoute.get(id);
-     **/
+     */
     CalendarEventStatusRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
@@ -17962,7 +17975,7 @@ var CalendarEventStatusRoute = (function (_super) {
      * @method
      * @param data A CalendarEventStatus object that needs to be inserted into the system.
      * @example calendarEventStatusRoute.create(data);
-     **/
+     */
     CalendarEventStatusRoute.prototype.create = function (data) {
         return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
@@ -17971,7 +17984,7 @@ var CalendarEventStatusRoute = (function (_super) {
      * @method
      * @param data A CalendarEventStatus object used to update specified CalendarEventStatus resource.
      * @example calendarEventStatusRoute.update(data);
-     **/
+     */
     CalendarEventStatusRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
@@ -17980,7 +17993,7 @@ var CalendarEventStatusRoute = (function (_super) {
      * @method
      * @param data A CalendarEventStatus object used to delete specified CalendarEventStatus resource.
      * @example calendarEventStatusRoute.delete(data);
-     **/
+     */
     CalendarEventStatusRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };
@@ -18073,13 +18086,14 @@ var CalendarEventTypeBatchClient = (function () {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventTypeBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -18089,14 +18103,14 @@ var CalendarEventTypeBatchClient = (function () {
      * @param data CalendarEventType objects used to update specified CalendarEventType resources.
      * @returns A promise that is resolved once the update CalendarEventTypes action has been performed.
      * @example calendarEventTypes are resources previously fetched using get action.
-                       calendarEventTypeBatchClient.update(calendarEventTypes)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
-    **/
+                calendarEventTypeBatchClient.update(calendarEventTypes)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    */
     CalendarEventTypeBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
@@ -18106,14 +18120,14 @@ var CalendarEventTypeBatchClient = (function () {
      * @param data CalendarEventType Ids which uniquely identify CalendarEventType resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventTypeIds are identifiers which uniquely identify CalendarEventType resources.
-                    calendarEventTypeBatchClient.remove(calendarEventTypeIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
+                calendarEventTypeBatchClient.remove(calendarEventTypeIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventTypeBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
@@ -18167,7 +18181,7 @@ var CalendarEventTypeBatchRoute = (function (_super) {
      * Parses create route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventTypeBatchRoute.create();
-     **/
+     */
     CalendarEventTypeBatchRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
     };
@@ -18175,7 +18189,7 @@ var CalendarEventTypeBatchRoute = (function (_super) {
      * Parses update route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventTypeBatchRoute.update();
-     **/
+     */
     CalendarEventTypeBatchRoute.prototype.update = function () {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
@@ -18183,7 +18197,7 @@ var CalendarEventTypeBatchRoute = (function (_super) {
      * Parses delte route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventTypeBatchRoute.delete();
-     **/
+     */
     CalendarEventTypeBatchRoute.prototype.delete = function () {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
     };
@@ -18261,7 +18275,7 @@ var CalendarEventTypeClient = (function () {
                  function (response, status, headers, config) {
                      // perform error handling here
                 });
-     **/
+     */
     CalendarEventTypeClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
@@ -18272,13 +18286,13 @@ var CalendarEventTypeClient = (function () {
      * @param options Query resource GetRequestOptions object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example calendarEventTypeClient.get(id)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
+     */
     CalendarEventTypeClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.routeDefinition.get(id, options));
     };
@@ -18291,13 +18305,14 @@ var CalendarEventTypeClient = (function () {
                     abrv: '<abrv>',
                     json: '<json>',
                     name: '<name>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
-     **/
+     */
     CalendarEventTypeClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
@@ -18311,15 +18326,15 @@ var CalendarEventTypeClient = (function () {
      * @param data A CalendarEventType object used to update specified CalendarEventType resource.
      * @returns A promise that is resolved once the update CalendarEventType action has been performed.
      * @example calendarEventType is a resource previously fetched using get action.
-                    calendarEventType.name = '<name>';
-                    calendarEventTypeClient.update(calendarEventType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-    **/
+                calendarEventType.name = '<name>';
+                calendarEventTypeClient.update(calendarEventType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventTypeClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
@@ -18333,14 +18348,14 @@ var CalendarEventTypeClient = (function () {
      * @param data An calendarEventType object used to delete specified CalendarEventType resource.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarEventType is a resource previously fetched using get action.
-                    calendarEventTypeClient.remove(calendarEventType)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+                calendarEventTypeClient.remove(calendarEventType)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventTypeClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
@@ -18348,14 +18363,14 @@ var CalendarEventTypeClient = (function () {
      * Returns a promise that is resolved once the purge action has been performed. This action will remove all CalendarEventType resources from the system if succesfully completed.
      * @method
      * @returns A promise that is resolved once the purge action has been performed.
-     * @example     calendarEventTypeClient.purge()
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
+     * @example calendarEventTypeClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
     CalendarEventTypeClient.prototype.purge = function () {
         return this.apiClient.delete(this.routeDefinition.purge());
     };
@@ -18423,7 +18438,7 @@ var CalendarEventTypeRoute = (function (_super) {
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarEventTypeRoute.find({searchQuery: '<search-phrase>'});
-     **/
+     */
     CalendarEventTypeRoute.prototype.find = function (options) {
         var opt;
         if (options) {
@@ -18443,7 +18458,7 @@ var CalendarEventTypeRoute = (function (_super) {
      * @param id CalendarEventType id which uniquely identifies CalendarEventType resource that needs to be retrieved.
      * @param options Query resource GetRequestOptions object.
      * @example calendarEventTypeRoute.get(id);
-     **/
+     */
     CalendarEventTypeRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
@@ -18452,7 +18467,7 @@ var CalendarEventTypeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventType object that needs to be inserted into the system.
      * @example calendarEventTypeRoute.create(data);
-     **/
+     */
     CalendarEventTypeRoute.prototype.create = function (data) {
         return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
@@ -18461,7 +18476,7 @@ var CalendarEventTypeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventType object used to update specified CalendarEventType resource.
      * @example calendarEventTypeRoute.update(data);
-     **/
+     */
     CalendarEventTypeRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
@@ -18470,7 +18485,7 @@ var CalendarEventTypeRoute = (function (_super) {
      * @method
      * @param data A CalendarEventType object used to delete specified CalendarEventType resource.
      * @example calendarEventTypeRoute.delete(data);
-     **/
+     */
     CalendarEventTypeRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
     };

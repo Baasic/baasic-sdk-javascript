@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../../httpApi';
+import { ApiClient, IHttpResponse, httpTYPES, IHttpHeaders } from '../../../../httpApi';
 import {
     TYPES as calendarTypes,
     CalendarEventsRoute
@@ -74,13 +74,13 @@ export class CalendarEventsClient {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.get(calendarId, id, options));
     }
 
-    //TODO: securityToken
     /**
      * Returns a promise that is resolved once the getByEmailOrFullName action has been performed. Success response returns the CalendarEvent resource
      * @method
      * @param calendarId calendarId which uniquely identifies Calendar resource.
      * @param eventId CalendarEvent id which uniquely identifies CalendarEvent resource.
      * @param emailOrFullName Email or full name.
+     * @param securityToken Security token.
      * @param options Query resource options object.
      * @example calendarEventsClient.get(calendarId, id, email@example.com)
                 .then(function (data) {
@@ -90,8 +90,10 @@ export class CalendarEventsClient {
                     // perform error handling here
                 });
      */
-    getByEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
-        return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options));
+    getByEmailOrFullName(calendarId: string, eventId: string, emailOrFullName: string, securityToken: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEvent>> {
+        let headers: IHttpHeaders;
+        headers['securityToken'] = securityToken;
+        return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options), headers);
     }
 
     //link
