@@ -10,12 +10,12 @@ import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
 import { ICalendarEventRsvpAttendeeStatus } from '../../contracts';
 
+@injectable()
 export class CalendarEventRsvpAttendeeStatusBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'calendar-lookups/rsvp-attendee-statuses/batch';
     public readonly updateRoute: string = 'calendar-lookups/rsvp-attendee-statuses/batch';
     public readonly deleteRoute: string = 'calendar-lookups/rsvp-attendee-statuses/batch';
-
 
     constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 

@@ -1,4 +1,4 @@
-export * from './CalendarEventBatchClient';
 export * from './CalendarEventBatchRoute';
-export * from './CalendarEventClient';
+export * from './CalendarEventBatchClient';
 export * from './CalendarEventRoute';
+export * from './CalendarEventClient';

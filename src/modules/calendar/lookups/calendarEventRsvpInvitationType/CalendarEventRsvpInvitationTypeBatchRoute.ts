@@ -10,6 +10,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
 import { ICalendarEventRsvpAttendeeInvitationType } from '../../contracts';
 
+@injectable()
 export class CalendarEventRsvpInvitationTypeBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'calendar-lookups/rsvp-invitation-types/batch';

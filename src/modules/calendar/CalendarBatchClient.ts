@@ -38,11 +38,12 @@ export class CalendarBatchClient {
                     name: '<name>',
                     owner: <user-info>,
                     ownerId: '<owner-id>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     create(data: ICalendar[]): PromiseLike<IHttpResponse<ICalendar[]>> {
@@ -55,13 +56,13 @@ export class CalendarBatchClient {
      * @param data Calendar objects used to update specified Calendar resources.
      * @returns A promise that is resolved once the update Calendars action has been performed.
      * @example calendars are resources previously fetched using get action.
-                       calendarBatchClient.update(calendars)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
+                calendarBatchClient.update(calendars)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
      */
     update(data: ICalendar[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
@@ -73,13 +74,13 @@ export class CalendarBatchClient {
      * @param data Calendar Ids which uniquely identify Calendar resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarIds are identifiers which uniquely identify Calendar resources.
-                    calendarBatchClient.remove(calendarIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
+                calendarBatchClient.remove(calendarIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
      */
     remove(data: string[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));

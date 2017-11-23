@@ -50,8 +50,8 @@ export class CalendarEventRsvpAttendeeBatchClient {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     create(data: ICalendarEventAttendee[]): PromiseLike<IHttpResponse<ICalendarEventAttendee[]>> {
@@ -86,8 +86,8 @@ export class CalendarEventRsvpAttendeeBatchClient {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     remove(data: string[]): PromiseLike<IHttpResponse<void>> {

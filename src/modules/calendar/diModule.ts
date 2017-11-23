@@ -95,11 +95,6 @@ const TYPES = {
     CalendarEventClient: Symbol("CalendarEventClient"),
     CalendarEventRoute: Symbol("CalendarEventRoute"),
 
-    CalendarEventRsvpAttendeeStatusBatchClient: Symbol("CalendarEventRsvpAttendeeStatusBatchClient"),
-    CalendarEventRsvpAttendeeStatusBatchRoute: Symbol("CalendarEventRsvpAttendeeStatusBatchRoute"),
-    CalendarEventRsvpAttendeeStatusClient: Symbol("CalendarEventRsvpAttendeeStatusClient"),
-    CalendarEventRsvpAttendeeStatusRoute: Symbol("CalendarEventRsvpAttendeeStatusRoute"),
-
     CalendarEventRsvpBatchClient: Symbol("CalendarEventRsvpBatchClient"),
     CalendarEventRsvpBatchRoute: Symbol("CalendarEventRsvpBatchRoute"),
     CalendarEventRsvpClient: Symbol("CalendarEventRsvpClient"),
@@ -108,7 +103,12 @@ const TYPES = {
     CalendarEventRsvpInvitationTypeBatchClient: Symbol("CalendarEventRsvpInvitationTypeBatchClient"),
     CalendarEventRsvpInvitationTypeBatchRoute: Symbol("CalendarEventRsvpInvitationTypeBatchRoute"),
     CalendarEventRsvpInvitationTypeClient: Symbol("CalendarEventRsvpInvitationTypeClient"),
-    CalendarEventRsvpInvitationTypeRoute: Symbol("CalendarEventRsvpInvitationTypeClient"),
+    CalendarEventRsvpInvitationTypeRoute: Symbol("CalendarEventRsvpInvitationTypeRoute"),
+
+    CalendarEventRsvpAttendeeStatusBatchClient: Symbol("CalendarEventRsvpAttendeeStatusBatchClient"),
+    CalendarEventRsvpAttendeeStatusBatchRoute: Symbol("CalendarEventRsvpAttendeeStatusBatchRoute"),
+    CalendarEventRsvpAttendeeStatusClient: Symbol("CalendarEventRsvpAttendeeStatusClient"),
+    CalendarEventRsvpAttendeeStatusRoute: Symbol("CalendarEventRsvpAttendeeStatusRoute"),
 
     CalendarEventStatusBatchClient: Symbol("CalendarEventStatusBatchClient"),
     CalendarEventStatusBatchRoute: Symbol("CalendarEventStatusBatchRoute"),
@@ -117,10 +117,10 @@ const TYPES = {
 
     CalendarEventTypeBatchClient: Symbol("CalendarEventTypeBatchClient"),
     CalendarEventTypeBatchRoute: Symbol("CalendarEventTypeBatchRoute"),
+    CalendarEventTypeClient: Symbol("CalendarEventTypeClient"),    
     CalendarEventTypeRoute: Symbol("CalendarEventTypeRoute"),
-    CalendarEventTypeClient: Symbol("CalendarEventTypeClient"),
 
-    Root: Symbol("Calendar-Root")
+    Root: Symbol("Root")
 };
 
 export { TYPES };
@@ -128,8 +128,8 @@ export { TYPES };
 let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CalendarLookups>(TYPES.CalendarLookups).to(CalendarLookups);
     
+    bind<CalendarACLRoute>(TYPES.CalendarACLRoute).to(CalendarACLRoute);    
     bind<CalendarACLClient>(TYPES.CalendarACLClient).to(CalendarACLClient);
-    bind<CalendarACLRoute>(TYPES.CalendarACLRoute).to(CalendarACLRoute);
 
     bind<CalendarEventRsvpAttendeeBatchClient>(TYPES.CalendarEventRsvpAttendeeBatchClient).to(CalendarEventRsvpAttendeeBatchClient);
     bind<CalendarEventRsvpAttendeeBatchRoute>(TYPES.CalendarEventRsvpAttendeeBatchRoute).to(CalendarEventRsvpAttendeeBatchRoute);
@@ -154,10 +154,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CalendarRsvpClient>(TYPES.CalendarRsvpClient).to(CalendarRsvpClient);
     bind<CalendarRsvpRoute>(TYPES.CalendarRsvpRoute).to(CalendarRsvpRoute);
 
-    bind<CalendarEventBatchClient>(TYPES.CalendarEventBatchClient).to(CalendarEventBatchClient);
     bind<CalendarEventBatchRoute>(TYPES.CalendarEventBatchRoute).to(CalendarEventBatchRoute);
+    bind<CalendarEventBatchClient>(TYPES.CalendarEventBatchClient).to(CalendarEventBatchClient);
+    bind<CalendarEventRoute>(TYPES.CalendarEventRoute).to(CalendarEventRoute);    
     bind<CalendarEventClient>(TYPES.CalendarEventClient).to(CalendarEventClient);
-    bind<CalendarEventRoute>(TYPES.CalendarEventRoute).to(CalendarEventRoute);
 
     bind<CalendarEventRsvpAttendeeStatusBatchClient>(TYPES.CalendarEventRsvpAttendeeStatusBatchClient).to(CalendarEventRsvpAttendeeStatusBatchClient);
     bind<CalendarEventRsvpAttendeeStatusBatchRoute>(TYPES.CalendarEventRsvpAttendeeStatusBatchRoute).to(CalendarEventRsvpAttendeeStatusBatchRoute);
@@ -172,7 +172,7 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CalendarEventRsvpInvitationTypeBatchClient>(TYPES.CalendarEventRsvpInvitationTypeBatchClient).to(CalendarEventRsvpInvitationTypeBatchClient);
     bind<CalendarEventRsvpInvitationTypeBatchRoute>(TYPES.CalendarEventRsvpInvitationTypeBatchRoute).to(CalendarEventRsvpInvitationTypeBatchRoute);
     bind<CalendarEventRsvpInvitationTypeClient>(TYPES.CalendarEventRsvpInvitationTypeClient).to(CalendarEventRsvpInvitationTypeClient);
-    bind<CalendarEventRsvpInvitationTypeRoute>(TYPES.CalendarEventRsvpInvitationTypeClient).to(CalendarEventRsvpInvitationTypeRoute);
+    bind<CalendarEventRsvpInvitationTypeRoute>(TYPES.CalendarEventRsvpInvitationTypeRoute).to(CalendarEventRsvpInvitationTypeRoute);
 
     bind<CalendarEventStatusBatchClient>(TYPES.CalendarEventStatusBatchClient).to(CalendarEventStatusBatchClient);
     bind<CalendarEventStatusBatchRoute>(TYPES.CalendarEventStatusBatchRoute).to(CalendarEventStatusBatchRoute);
@@ -181,8 +181,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
 
     bind<CalendarEventTypeBatchClient>(TYPES.CalendarEventTypeBatchClient).to(CalendarEventTypeBatchClient);
     bind<CalendarEventTypeBatchRoute>(TYPES.CalendarEventTypeBatchRoute).to(CalendarEventTypeBatchRoute);
+    bind<CalendarEventTypeClient>(TYPES.CalendarEventTypeClient).to(CalendarEventTypeClient);    
     bind<CalendarEventTypeRoute>(TYPES.CalendarEventTypeRoute).to(CalendarEventTypeRoute);
-    bind<CalendarEventTypeClient>(TYPES.CalendarEventTypeClient).to(CalendarEventTypeClient);
 
     bind<Root>(TYPES.Root).to(Root);
 });

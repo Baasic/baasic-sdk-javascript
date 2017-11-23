@@ -44,8 +44,8 @@ export class CalendarRsvpBatchClient {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     link(calendarId: string, data: ICalendarEventRsvp[]): PromiseLike<IHttpResponse<ICalendarEventRsvp[]>> {
@@ -82,8 +82,8 @@ export class CalendarRsvpBatchClient {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     unlink(calendarId: string, data: string[]): PromiseLike<IHttpResponse<void>> {

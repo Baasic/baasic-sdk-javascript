@@ -49,8 +49,8 @@ export class CalendarEventRsvpAttendeeStatusClient {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     find(options?: IGetCalendarOptions): PromiseLike<IHttpResponse<IQueryModel<ICalendarEventRsvpAttendeeStatus>>> {
@@ -67,8 +67,8 @@ export class CalendarEventRsvpAttendeeStatusClient {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<ICalendarEventRsvpAttendeeStatus>> {

@@ -11,6 +11,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
 import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from '../contracts';
 
+@injectable()
 export class CalendarEventRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
@@ -61,7 +62,7 @@ export class CalendarEventRoute extends BaseRoute {
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarEventRoute.get(id);
-     **/
+     */
     get(id: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.getRoute, id, options);
     }

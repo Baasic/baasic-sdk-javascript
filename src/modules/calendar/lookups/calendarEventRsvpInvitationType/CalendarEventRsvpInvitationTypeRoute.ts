@@ -11,6 +11,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
 import { ICalendarEventRsvpAttendeeInvitationType, IGetCalendarOptions } from '../../contracts';
 
+@injectable()
 export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-lookups/rsvp-invitation-types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';

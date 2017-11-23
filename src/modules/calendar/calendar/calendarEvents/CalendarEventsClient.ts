@@ -96,7 +96,6 @@ export class CalendarEventsClient {
         return this.apiClient.get<ICalendarEvent>(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options), headers);
     }
 
-    //link
     /**
      * Returns a promise that is resolved once the link CalendarEvent action has been performed. This action links an existing calendarEvent resource with an existing Calendar resource.
      * @method
@@ -139,7 +138,6 @@ export class CalendarEventsClient {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     }
 
-    //unlink
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will unlink a CalendarEvent resource from the specified calendar if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```

@@ -435,19 +435,19 @@ __export(__webpack_require__(207));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(252));
 __export(__webpack_require__(238));
-__export(__webpack_require__(38));
+__export(__webpack_require__(210));
 __export(__webpack_require__(267));
 __export(__webpack_require__(228));
 __export(__webpack_require__(262));
 __export(__webpack_require__(257));
-__export(__webpack_require__(252));
-__export(__webpack_require__(289));
-__export(__webpack_require__(210));
+__export(__webpack_require__(38));
 __export(__webpack_require__(211));
 __export(__webpack_require__(212));
 __export(__webpack_require__(213));
 __export(__webpack_require__(214));
+__export(__webpack_require__(289));
 
 
 /***/ }),
@@ -1793,8 +1793,8 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(273));
 __export(__webpack_require__(278));
+__export(__webpack_require__(273));
 __export(__webpack_require__(283));
 __export(__webpack_require__(288));
 __export(__webpack_require__(268));
@@ -12246,11 +12246,12 @@ var CalendarBatchClient = (function () {
                     name: '<name>',
                     owner: <user-info>,
                     ownerId: '<owner-id>'
-                }]).then(function (data) {
+                }])
+                .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarBatchClient.prototype.create = function (data) {
@@ -12262,13 +12263,13 @@ var CalendarBatchClient = (function () {
      * @param data Calendar objects used to update specified Calendar resources.
      * @returns A promise that is resolved once the update Calendars action has been performed.
      * @example calendars are resources previously fetched using get action.
-                       calendarBatchClient.update(calendars)
-                           .then(function (data) {
-                               // perform success action here
-                           },
-                            function (response, status, headers, config) {
-                                // perform error handling here
-                           });
+                calendarBatchClient.update(calendars)
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
      */
     CalendarBatchClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
@@ -12279,13 +12280,13 @@ var CalendarBatchClient = (function () {
      * @param data Calendar Ids which uniquely identify Calendar resources to be deleted.
      * @returns A promise that is resolved once the remove action has been performed.
      * @example calendarIds are identifiers which uniquely identify Calendar resources.
-                    calendarBatchClient.remove(calendarIds)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
+                calendarBatchClient.remove(calendarIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                });
      */
     CalendarBatchClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
@@ -12363,6 +12364,7 @@ var CalendarBatchRoute = (function (_super) {
     return CalendarBatchRoute;
 }(common_1.BaseRoute));
 CalendarBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarBatchRoute);
@@ -12455,8 +12457,8 @@ var CalendarClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarClient.prototype.find = function (options) {
@@ -12472,8 +12474,8 @@ var CalendarClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarClient.prototype.get = function (id, options) {
@@ -12495,8 +12497,8 @@ var CalendarClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarClient.prototype.create = function (data) {
@@ -12700,6 +12702,7 @@ var CalendarRoute = (function (_super) {
     return CalendarRoute;
 }(common_1.BaseRoute));
 CalendarRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarRoute);
@@ -12810,7 +12813,6 @@ var CalendarEventsClient = (function () {
         headers['securityToken'] = securityToken;
         return this.apiClient.get(this.routeDefinition.getByEmailOrFullName(calendarId, eventId, emailOrFullName, options), headers);
     };
-    //link
     /**
      * Returns a promise that is resolved once the link CalendarEvent action has been performed. This action links an existing calendarEvent resource with an existing Calendar resource.
      * @method
@@ -12851,7 +12853,6 @@ var CalendarEventsClient = (function () {
     CalendarEventsClient.prototype.update = function (calendarId, data) {
         return this.apiClient.put(this.routeDefinition.update(calendarId, data), this.routeDefinition.updateParams(data));
     };
-    //unlink
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will unlink a CalendarEvent resource from the specified calendar if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `calendarEventsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -13037,6 +13038,7 @@ var CalendarEventsRoute = (function (_super) {
     return CalendarEventsRoute;
 }(common_1.BaseRoute));
 CalendarEventsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventsRoute);
@@ -13135,12 +13137,12 @@ var CalendarRsvpAttendeeBatchClient = (function () {
      * @returns A promise that is resolved once the update CalendarEventAttendees action has been performed.
      * @example calendarEventAttendees are resources previously fetched using get action.
                 calendarRsvpAttendeeBatchClient.update(calendarId, eventId, calendarEventAttendees)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                    });
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
      */
     CalendarRsvpAttendeeBatchClient.prototype.update = function (calendarId, eventId, data) {
         return this.apiClient.put(this.routeDefinition.update(calendarId, eventId), this.routeDefinition.updateParams(data));
@@ -13252,6 +13254,7 @@ var CalendarRsvpAttendeeBatchRoute = (function (_super) {
     return CalendarRsvpAttendeeBatchRoute;
 }(common_1.BaseRoute));
 CalendarRsvpAttendeeBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarRsvpAttendeeBatchRoute);
@@ -13860,6 +13863,7 @@ var CalendarRsvpAttendeeRoute = (function (_super) {
     return CalendarRsvpAttendeeRoute;
 }(common_1.BaseRoute));
 CalendarRsvpAttendeeRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarRsvpAttendeeRoute);
@@ -13936,8 +13940,8 @@ var CalendarRsvpBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarRsvpBatchClient.prototype.link = function (calendarId, data) {
@@ -13972,8 +13976,8 @@ var CalendarRsvpBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarRsvpBatchClient.prototype.unlink = function (calendarId, data) {
@@ -14061,6 +14065,7 @@ var CalendarRsvpBatchRoute = (function (_super) {
     return CalendarRsvpBatchRoute;
 }(common_1.BaseRoute));
 CalendarRsvpBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarRsvpBatchRoute);
@@ -14175,7 +14180,8 @@ var CalendarRsvpClient = (function () {
                     MinSlots: <min-slots>,
                     RegistrationCloseDate: '<registration-close-date>',
                     TotalSlots: <total-slots>
-                }).then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
                 function (response, status, headers, config) {
@@ -14424,6 +14430,7 @@ var CalendarRsvpRoute = (function (_super) {
     return CalendarRsvpRoute;
 }(common_1.BaseRoute));
 CalendarRsvpRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarRsvpRoute);
@@ -14717,10 +14724,6 @@ var TYPES = {
     CalendarEventBatchRoute: Symbol("CalendarEventBatchRoute"),
     CalendarEventClient: Symbol("CalendarEventClient"),
     CalendarEventRoute: Symbol("CalendarEventRoute"),
-    CalendarEventRsvpAttendeeStatusBatchClient: Symbol("CalendarEventRsvpAttendeeStatusBatchClient"),
-    CalendarEventRsvpAttendeeStatusBatchRoute: Symbol("CalendarEventRsvpAttendeeStatusBatchRoute"),
-    CalendarEventRsvpAttendeeStatusClient: Symbol("CalendarEventRsvpAttendeeStatusClient"),
-    CalendarEventRsvpAttendeeStatusRoute: Symbol("CalendarEventRsvpAttendeeStatusRoute"),
     CalendarEventRsvpBatchClient: Symbol("CalendarEventRsvpBatchClient"),
     CalendarEventRsvpBatchRoute: Symbol("CalendarEventRsvpBatchRoute"),
     CalendarEventRsvpClient: Symbol("CalendarEventRsvpClient"),
@@ -14728,22 +14731,26 @@ var TYPES = {
     CalendarEventRsvpInvitationTypeBatchClient: Symbol("CalendarEventRsvpInvitationTypeBatchClient"),
     CalendarEventRsvpInvitationTypeBatchRoute: Symbol("CalendarEventRsvpInvitationTypeBatchRoute"),
     CalendarEventRsvpInvitationTypeClient: Symbol("CalendarEventRsvpInvitationTypeClient"),
-    CalendarEventRsvpInvitationTypeRoute: Symbol("CalendarEventRsvpInvitationTypeClient"),
+    CalendarEventRsvpInvitationTypeRoute: Symbol("CalendarEventRsvpInvitationTypeRoute"),
+    CalendarEventRsvpAttendeeStatusBatchClient: Symbol("CalendarEventRsvpAttendeeStatusBatchClient"),
+    CalendarEventRsvpAttendeeStatusBatchRoute: Symbol("CalendarEventRsvpAttendeeStatusBatchRoute"),
+    CalendarEventRsvpAttendeeStatusClient: Symbol("CalendarEventRsvpAttendeeStatusClient"),
+    CalendarEventRsvpAttendeeStatusRoute: Symbol("CalendarEventRsvpAttendeeStatusRoute"),
     CalendarEventStatusBatchClient: Symbol("CalendarEventStatusBatchClient"),
     CalendarEventStatusBatchRoute: Symbol("CalendarEventStatusBatchRoute"),
     CalendarEventStatusClient: Symbol("CalendarEventStatusClient"),
     CalendarEventStatusRoute: Symbol("CalendarEventStatusRoute"),
     CalendarEventTypeBatchClient: Symbol("CalendarEventTypeBatchClient"),
     CalendarEventTypeBatchRoute: Symbol("CalendarEventTypeBatchRoute"),
-    CalendarEventTypeRoute: Symbol("CalendarEventTypeRoute"),
     CalendarEventTypeClient: Symbol("CalendarEventTypeClient"),
-    Root: Symbol("Calendar-Root")
+    CalendarEventTypeRoute: Symbol("CalendarEventTypeRoute"),
+    Root: Symbol("Root")
 };
 exports.TYPES = TYPES;
 var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.CalendarLookups).to(_1.CalendarLookups);
-    bind(TYPES.CalendarACLClient).to(_1.CalendarACLClient);
     bind(TYPES.CalendarACLRoute).to(_1.CalendarACLRoute);
+    bind(TYPES.CalendarACLClient).to(_1.CalendarACLClient);
     bind(TYPES.CalendarEventRsvpAttendeeBatchClient).to(_1.CalendarEventRsvpAttendeeBatchClient);
     bind(TYPES.CalendarEventRsvpAttendeeBatchRoute).to(_1.CalendarEventRsvpAttendeeBatchRoute);
     bind(TYPES.CalendarEventRsvpAttendeeClient).to(_1.CalendarEventRsvpAttendeeClient);
@@ -14762,10 +14769,10 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.CalendarRsvpBatchRoute).to(_1.CalendarRsvpBatchRoute);
     bind(TYPES.CalendarRsvpClient).to(_1.CalendarRsvpClient);
     bind(TYPES.CalendarRsvpRoute).to(_1.CalendarRsvpRoute);
-    bind(TYPES.CalendarEventBatchClient).to(_1.CalendarEventBatchClient);
     bind(TYPES.CalendarEventBatchRoute).to(_1.CalendarEventBatchRoute);
-    bind(TYPES.CalendarEventClient).to(_1.CalendarEventClient);
+    bind(TYPES.CalendarEventBatchClient).to(_1.CalendarEventBatchClient);
     bind(TYPES.CalendarEventRoute).to(_1.CalendarEventRoute);
+    bind(TYPES.CalendarEventClient).to(_1.CalendarEventClient);
     bind(TYPES.CalendarEventRsvpAttendeeStatusBatchClient).to(_1.CalendarEventRsvpAttendeeStatusBatchClient);
     bind(TYPES.CalendarEventRsvpAttendeeStatusBatchRoute).to(_1.CalendarEventRsvpAttendeeStatusBatchRoute);
     bind(TYPES.CalendarEventRsvpAttendeeStatusClient).to(_1.CalendarEventRsvpAttendeeStatusClient);
@@ -14777,15 +14784,15 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.CalendarEventRsvpInvitationTypeBatchClient).to(_1.CalendarEventRsvpInvitationTypeBatchClient);
     bind(TYPES.CalendarEventRsvpInvitationTypeBatchRoute).to(_1.CalendarEventRsvpInvitationTypeBatchRoute);
     bind(TYPES.CalendarEventRsvpInvitationTypeClient).to(_1.CalendarEventRsvpInvitationTypeClient);
-    bind(TYPES.CalendarEventRsvpInvitationTypeClient).to(_1.CalendarEventRsvpInvitationTypeRoute);
+    bind(TYPES.CalendarEventRsvpInvitationTypeRoute).to(_1.CalendarEventRsvpInvitationTypeRoute);
     bind(TYPES.CalendarEventStatusBatchClient).to(_1.CalendarEventStatusBatchClient);
     bind(TYPES.CalendarEventStatusBatchRoute).to(_1.CalendarEventStatusBatchRoute);
     bind(TYPES.CalendarEventStatusClient).to(_1.CalendarEventStatusClient);
     bind(TYPES.CalendarEventStatusRoute).to(_1.CalendarEventStatusRoute);
     bind(TYPES.CalendarEventTypeBatchClient).to(_1.CalendarEventTypeBatchClient);
     bind(TYPES.CalendarEventTypeBatchRoute).to(_1.CalendarEventTypeBatchRoute);
-    bind(TYPES.CalendarEventTypeRoute).to(_1.CalendarEventTypeRoute);
     bind(TYPES.CalendarEventTypeClient).to(_1.CalendarEventTypeClient);
+    bind(TYPES.CalendarEventTypeRoute).to(_1.CalendarEventTypeRoute);
     bind(TYPES.Root).to(_1.Root);
 });
 exports.diModule = diModule;
@@ -14844,8 +14851,8 @@ var CalendarEventRsvpAttendeeBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventRsvpAttendeeBatchClient.prototype.create = function (data) {
@@ -14878,8 +14885,8 @@ var CalendarEventRsvpAttendeeBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventRsvpAttendeeBatchClient.prototype.remove = function (data) {
@@ -14958,6 +14965,7 @@ var CalendarEventRsvpAttendeeBatchRoute = (function (_super) {
     return CalendarEventRsvpAttendeeBatchRoute;
 }(common_1.BaseRoute));
 CalendarEventRsvpAttendeeBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRsvpAttendeeBatchRoute);
@@ -15079,7 +15087,8 @@ var CalendarEventRsvpAttendeeClient = (function () {
                     SlotsRequested: <slots-requested>,
                     User: <user-profile>,
                     UserID: '<user-id>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
                 function (response, status, headers, config) {
@@ -15144,7 +15153,7 @@ var CalendarEventRsvpAttendeeClient = (function () {
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies a CalendarEventRsvpAttendeeStatus resource.
      * @param securityToken Security Token.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
-     * @example calendarEventRsvpAttendeeClient.updateStatusEmail(id, email, statusId)
+     * @example calendarEventRsvpAttendeeClient.updateStatusEmailOrFullName(id, email, statusId)
                 .then(function (data) {
                     // perform success action here
                 },
@@ -15426,6 +15435,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
     return CalendarEventRsvpAttendeeRoute;
 }(common_1.BaseRoute));
 CalendarEventRsvpAttendeeRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRsvpAttendeeRoute);
@@ -15615,6 +15625,7 @@ var CalendarEventRsvpBatchRoute = (function (_super) {
     return CalendarEventRsvpBatchRoute;
 }(common_1.BaseRoute));
 CalendarEventRsvpBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRsvpBatchRoute);
@@ -15729,7 +15740,8 @@ var CalendarEventRsvpClient = (function () {
                     MinSlots: <min-slots>,
                     RegistrationCloseDate: '<registration-close-date>',
                     TotalSlots: <total-slots>
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
                 function (response, status, headers, config) {
@@ -15957,6 +15969,7 @@ var CalendarEventRsvpRoute = (function (_super) {
     return CalendarEventRsvpRoute;
 }(common_1.BaseRoute));
 CalendarEventRsvpRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRsvpRoute);
@@ -16036,8 +16049,8 @@ var CalendarEventBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventBatchClient.prototype.create = function (data) {
@@ -16150,6 +16163,7 @@ var CalendarEventBatchRoute = (function (_super) {
     return CalendarEventBatchRoute;
 }(common_1.BaseRoute));
 CalendarEventBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventBatchRoute);
@@ -16240,8 +16254,8 @@ var CalendarEventClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventClient.prototype.get = function (id, options) {
@@ -16289,8 +16303,8 @@ var CalendarEventClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventClient.prototype.create = function (data) {
@@ -16445,7 +16459,7 @@ var CalendarEventRoute = (function (_super) {
      * @param id CalendarEvent id which uniquely identifies CalendarEvent resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example calendarEventRoute.get(id);
-     **/
+     */
     CalendarEventRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
@@ -16513,6 +16527,7 @@ var CalendarEventRoute = (function (_super) {
     return CalendarEventRoute;
 }(common_1.BaseRoute));
 CalendarEventRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRoute);
@@ -16536,10 +16551,10 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(263));
 __export(__webpack_require__(264));
-__export(__webpack_require__(265));
+__export(__webpack_require__(263));
 __export(__webpack_require__(266));
+__export(__webpack_require__(265));
 
 
 /***/ }),
@@ -16553,9 +16568,9 @@ var _1 = __webpack_require__(7);
 var _2 = __webpack_require__(38);
 var inversify_1 = __webpack_require__(0);
 var CalendarLookups = (function () {
-    function CalendarLookups(RsvpAttendeeStatus, RsvpInvitationType, eventStatus, eventType) {
-        this.RsvpAttendeeStatus = RsvpAttendeeStatus;
+    function CalendarLookups(RsvpInvitationType, RsvpAttendeeStatus, eventStatus, eventType) {
         this.RsvpInvitationType = RsvpInvitationType;
+        this.RsvpAttendeeStatus = RsvpAttendeeStatus;
         this.eventStatus = eventStatus;
         this.eventType = eventType;
     }
@@ -16563,11 +16578,11 @@ var CalendarLookups = (function () {
 }());
 CalendarLookups = tslib_1.__decorate([
     inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeClient)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRsvpInvitationTypeClient)),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventRsvpInvitationTypeClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeStatusClient)),
     tslib_1.__param(2, inversify_1.inject(_1.TYPES.CalendarEventStatusClient)),
     tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarEventTypeClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CalendarEventRsvpAttendeeStatusClient !== "undefined" && _2.CalendarEventRsvpAttendeeStatusClient) === "function" && _a || Object, typeof (_b = typeof _2.CalendarEventRsvpInvitationTypeClient !== "undefined" && _2.CalendarEventRsvpInvitationTypeClient) === "function" && _b || Object, typeof (_c = typeof _2.CalendarEventStatusClient !== "undefined" && _2.CalendarEventStatusClient) === "function" && _c || Object, typeof (_d = typeof _2.CalendarEventTypeClient !== "undefined" && _2.CalendarEventTypeClient) === "function" && _d || Object])
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CalendarEventRsvpInvitationTypeClient !== "undefined" && _2.CalendarEventRsvpInvitationTypeClient) === "function" && _a || Object, typeof (_b = typeof _2.CalendarEventRsvpAttendeeStatusClient !== "undefined" && _2.CalendarEventRsvpAttendeeStatusClient) === "function" && _b || Object, typeof (_c = typeof _2.CalendarEventStatusClient !== "undefined" && _2.CalendarEventStatusClient) === "function" && _c || Object, typeof (_d = typeof _2.CalendarEventTypeClient !== "undefined" && _2.CalendarEventTypeClient) === "function" && _d || Object])
 ], CalendarLookups);
 exports.CalendarLookups = CalendarLookups;
 var _a, _b, _c, _d;
@@ -16728,6 +16743,7 @@ var CalendarEventRsvpAttendeeStatusBatchRoute = (function (_super) {
     return CalendarEventRsvpAttendeeStatusBatchRoute;
 }(common_1.BaseRoute));
 CalendarEventRsvpAttendeeStatusBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRsvpAttendeeStatusBatchRoute);
@@ -16796,8 +16812,8 @@ var CalendarEventRsvpAttendeeStatusClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventRsvpAttendeeStatusClient.prototype.find = function (options) {
@@ -16813,8 +16829,8 @@ var CalendarEventRsvpAttendeeStatusClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventRsvpAttendeeStatusClient.prototype.get = function (id, options) {
@@ -17036,6 +17052,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
     return CalendarEventRsvpAttendeeStatusRoute;
 }(common_1.BaseRoute));
 CalendarEventRsvpAttendeeStatusRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRsvpAttendeeStatusRoute);
@@ -17220,6 +17237,7 @@ var CalendarEventRsvpInvitationTypeBatchRoute = (function (_super) {
     return CalendarEventRsvpInvitationTypeBatchRoute;
 }(common_1.BaseRoute));
 CalendarEventRsvpInvitationTypeBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRsvpInvitationTypeBatchRoute);
@@ -17305,8 +17323,8 @@ var CalendarEventRsvpInvitationTypeClient = (function () {
                     .then(function (data) {
                         // perform success action here
                     },
-                     function (response, status, headers, config) {
-                         // perform error handling here
+                    function (response, status, headers, config) {
+                        // perform error handling here
                     });
      */
     CalendarEventRsvpInvitationTypeClient.prototype.get = function (id, options) {
@@ -17528,6 +17546,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
     return CalendarEventRsvpInvitationTypeRoute;
 }(common_1.BaseRoute));
 CalendarEventRsvpInvitationTypeRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventRsvpInvitationTypeRoute);
@@ -17598,8 +17617,8 @@ var CalendarEventStatusBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventStatusBatchClient.prototype.create = function (data) {
@@ -17632,8 +17651,8 @@ var CalendarEventStatusBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventStatusBatchClient.prototype.remove = function (data) {
@@ -17712,6 +17731,7 @@ var CalendarEventStatusBatchRoute = (function (_super) {
     return CalendarEventStatusBatchRoute;
 }(common_1.BaseRoute));
 CalendarEventStatusBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventStatusBatchRoute);
@@ -18020,6 +18040,7 @@ var CalendarEventStatusRoute = (function (_super) {
     return CalendarEventStatusRoute;
 }(common_1.BaseRoute));
 CalendarEventStatusRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarEventStatusRoute);
@@ -18272,8 +18293,8 @@ var CalendarEventTypeClient = (function () {
                 .then(function (collection) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventTypeClient.prototype.find = function (options) {
@@ -18289,8 +18310,8 @@ var CalendarEventTypeClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarEventTypeClient.prototype.get = function (id, options) {

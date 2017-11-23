@@ -69,12 +69,12 @@ export class CalendarRsvpAttendeeBatchClient {
      * @returns A promise that is resolved once the update CalendarEventAttendees action has been performed.
      * @example calendarEventAttendees are resources previously fetched using get action.
                 calendarRsvpAttendeeBatchClient.update(calendarId, eventId, calendarEventAttendees)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                    });
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
      */
     update(calendarId: string, eventId: string, data: ICalendarEventAttendee[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.put<void>(this.routeDefinition.update(calendarId, eventId), this.routeDefinition.updateParams(data));

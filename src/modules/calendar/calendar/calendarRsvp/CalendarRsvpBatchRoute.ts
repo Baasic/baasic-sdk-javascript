@@ -8,6 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../../../common';
 import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
+@injectable()
 export class CalendarRsvpBatchRoute extends BaseRoute {
 
     public readonly linkRoute: string = 'calendars/{calendarId}/rsvp-details/batch';

@@ -10,6 +10,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
 import { ICalendarEventAttendee } from '../contracts';
 
+@injectable()
 export class CalendarEventRsvpAttendeeBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'calendar-event-attendees/batch';

@@ -10,6 +10,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 import { ICalendar } from './contracts';
 
+@injectable()
 export class CalendarBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'calendars/batch';

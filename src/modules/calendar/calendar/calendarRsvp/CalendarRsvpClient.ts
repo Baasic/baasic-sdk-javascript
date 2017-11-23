@@ -97,7 +97,8 @@ export class CalendarRsvpClient {
                     MinSlots: <min-slots>,
                     RegistrationCloseDate: '<registration-close-date>',
                     TotalSlots: <total-slots>
-                }).then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
                 function (response, status, headers, config) {

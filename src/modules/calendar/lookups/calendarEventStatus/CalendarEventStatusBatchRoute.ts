@@ -10,6 +10,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
 import { ICalendarEventStatus } from '../../contracts';
 
+@injectable()
 export class CalendarEventStatusBatchRoute extends BaseRoute {
 
     public readonly createRoute: string = 'calendar-lookups/statuses/batch';

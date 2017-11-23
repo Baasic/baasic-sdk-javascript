@@ -104,7 +104,8 @@ export class CalendarEventRsvpAttendeeClient {
                     SlotsRequested: <slots-requested>,
                     User: <user-profile>,
                     UserID: '<user-id>'
-                }.then(function (data) {
+                })
+                .then(function (data) {
                     // perform success action here
                 },
                 function (response, status, headers, config) {
@@ -172,7 +173,7 @@ export class CalendarEventRsvpAttendeeClient {
      * @param statusId CalendarEventAttendeeStatus id which uniquely identifies a CalendarEventRsvpAttendeeStatus resource.
      * @param securityToken Security Token.
      * @returns A promise that is resolved once the update CalendarEventAttendee action has been performed.
-     * @example calendarEventRsvpAttendeeClient.updateStatusEmail(id, email, statusId)
+     * @example calendarEventRsvpAttendeeClient.updateStatusEmailOrFullName(id, email, statusId)
                 .then(function (data) {
                     // perform success action here
                 },

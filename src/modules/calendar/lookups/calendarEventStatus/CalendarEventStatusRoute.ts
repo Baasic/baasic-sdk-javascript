@@ -11,6 +11,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
 import { ICalendarEventStatus, IGetCalendarOptions } from '../../contracts';
 
+@injectable()
 export class CalendarEventStatusRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-lookups/statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';

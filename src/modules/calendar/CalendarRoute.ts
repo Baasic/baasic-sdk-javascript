@@ -11,6 +11,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 import { ICalendar, IGetCalendarOptions } from './contracts';
 
+@injectable()
 export class CalendarRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';

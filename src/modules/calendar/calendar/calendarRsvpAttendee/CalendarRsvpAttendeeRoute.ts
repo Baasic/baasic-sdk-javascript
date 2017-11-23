@@ -11,6 +11,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
 
 import { ICalendarEvent, ICalendarEventAttendee, IGetCalendarRsvpAttendeeOptions } from '../../contracts';
 
+@injectable()
 export class CalendarRsvpAttendeeRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/{?searchQuery,page,rpp,sort,embed,fields,ids,userIds,emails,fullNames,invitationTypeIds,from,to}';

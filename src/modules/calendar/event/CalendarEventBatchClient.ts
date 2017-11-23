@@ -8,8 +8,8 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
-    TYPES as calendarTypes,
-    CalendarEventBatchRoute
+    CalendarEventBatchRoute,    
+    TYPES as calendarTypes
 } from '../';
 import { ICalendarEvent } from '../contracts';
 
@@ -47,8 +47,8 @@ export class CalendarEventBatchClient {
                 .then(function (data) {
                     // perform success action here
                 },
-                 function (response, status, headers, config) {
-                     // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     create(data: ICalendarEvent[]): PromiseLike<IHttpResponse<ICalendarEvent[]>> {
