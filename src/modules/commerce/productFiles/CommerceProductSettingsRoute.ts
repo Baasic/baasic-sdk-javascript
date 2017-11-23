@@ -5,17 +5,17 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
-import { IProductSettings } from './contracts';
+import { BaseRoute } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { IProductSettings } from '.././contracts';
 
 @injectable()
 export class CommerceProductSettingsRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'product-settings/{?embed,fields}';
+    public readonly getRoute: string = 'commerce/product-settings/{?embed,fields}';
 
-    public readonly updateRoute: string = 'product-settings/{id}';
+    public readonly updateRoute: string = 'commerce/product-settings/{id}';
     
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions

@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { CommerceProductSettingsRoute, TYPES as productTypes } from './';
-import { IProductSettings } from './contracts';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { CommerceProductSettingsRoute, TYPES as productTypes } from '.././';
+import { IProductSettings } from '.././contracts';
 
 @injectable()
 export class CommerceProductSettingsClient {
@@ -66,7 +66,7 @@ export class CommerceProductSettingsClient {
                         }); 				
      **/
     update(data: IProductSettings): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.update(data));
     }
 }
 

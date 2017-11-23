@@ -5,28 +5,28 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from '../../../common';
+import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 import {
     CommerceProductFilesBatchRoute,
     CommerceProductFilesStreamsRoute,
     TYPES as productTypes
-} from './';
-import { IProductFile } from './contracts';
+} from '.././';
+import { IProductFile } from '.././contracts';
 
 @injectable()
 export class CommerceProductFilesRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'product-files/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'commerce/product-files/{?searchQuery,page,rpp,sort,embed,fields}';
 
-    public readonly getRoute: string = 'product-files/{id}/{?embed,fields}';
+    public readonly getRoute: string = 'commerce/product-files/{id}/{?embed,fields}';
 
-    public readonly linkRoute: string = 'product-files/link';
+    public readonly linkRoute: string = 'commerce/product-files/link';
 
-    public readonly unlinkRoute: string = 'product-files/unlink/{id}';
+    public readonly unlinkRoute: string = 'commerce/product-files/unlink/{id}';
 
-    public readonly updateRoute: string = 'product-files/{id}';
+    public readonly updateRoute: string = 'commerce/product-files/{id}';
     
     get streams(): CommerceProductFilesStreamsRoute {
         return this.productFilesStreamsRoute;

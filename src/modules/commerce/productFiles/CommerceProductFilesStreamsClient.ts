@@ -5,20 +5,20 @@
 */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { ProductFilesStreamsRoute, TYPES as productTypes } from './';
-import { IProductFile } from './contracts';
+import { IQueryModel, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { CommerceProductFilesStreamsRoute, TYPES as productTypes } from '.././';
+import { IProductFile } from '.././contracts';
 
 @injectable()
 export class CommerceProductFilesStreamsClient {
 
-    get routeDefinition(): ProductFilesStreamsRoute {
+    get routeDefinition(): CommerceProductFilesStreamsRoute {
         return this.productFilesStreamsRoute;
     }
 
     constructor(
-        @inject(productTypes.ProductFilesStreamsRoute) protected productFilesStreamsRoute: ProductFilesStreamsRoute,
+        @inject(productTypes.CommerceProductFilesStreamsRoute) protected productFilesStreamsRoute: CommerceProductFilesStreamsRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 

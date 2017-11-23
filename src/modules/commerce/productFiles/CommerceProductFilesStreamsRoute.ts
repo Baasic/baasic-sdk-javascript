@@ -6,19 +6,19 @@
 
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
-import { IProductFile } from './contracts';
+import { BaseRoute } from '../../../common';
+import { IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { IProductFile } from '.././contracts';
 
 @injectable()
 export class CommerceProductFilesStreamsRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'product-file-streams/{id}/{?width,height}';
+    public readonly getRoute: string = 'commerce/product-file-streams/{id}/{?width,height}';
 
-    public readonly createRoute: string = 'product-file-streams/{filename}/{?productId}';
+    public readonly createRoute: string = 'commerce/product-file-streams/{filename}/{?productId}';
 
-    public readonly updateRoute: string = 'product-file-streams/{id}/{?width,height}';
+    public readonly updateRoute: string = 'commerce/product-file-streams/{id}/{?width,height}';
 
 
     constructor(

@@ -5,13 +5,13 @@
 */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
     CommerceProductFilesBatchRoute,
     TYPES as productTypes
-} from './';
-import { IProductFile } from './contracts';
+} from '.././';
+import { IProductFile } from '.././contracts';
 
 @injectable()
 export class CommerceProductFilesBatchClient {

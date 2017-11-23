@@ -13,6 +13,13 @@ import {
     CommercePaymentTransactionRoute,
     CommerceProductClient,
     CommerceProductFilesStreamsClient,
+    CommerceProductFilesStreamsRoute,
+    CommerceProductFilesBatchClient,
+    CommerceProductFilesBatchRoute,
+    CommerceProductFilesClient,
+    CommerceProductFilesRoute,
+    CommerceProductSettingsClient,
+    CommerceProductSettingsRoute,
     CommerceProductRoute,
     CommerceClient,
     CommerceRoute,
@@ -65,6 +72,12 @@ const TYPES = {
     CommerceProductClient: Symbol("CommerceProductClient"),
     CommerceProductRoute: Symbol("CommerceProductRoute"),
     CommerceProductFilesStreamsClient: Symbol("CommerceProductFilesStreamsClient"),
+    CommerceProductFilesBatchRoute: Symbol("CommerceProductFilesBatchRoute"),
+    CommerceProductFilesBatchClient: Symbol("CommerceProductFilesBatchClient"),
+    CommerceProductFilesRoute: Symbol("CommerceProductFilesRoute"),
+    CommerceProductFilesClient: Symbol("CommerceProductFilesClient"),
+    CommerceProductSettingsRoute: Symbol("CommerceProductSettingsRoute"),
+    CommerceProductSettingsClient: Symbol("CommerceProductSettingsClient"),
     CommerceProductFilesStreamsRoute: Symbol("CommerceProductFilesStreamsRoute"),
     CommerceClient: Symbol("CommerceClient"),
     CommerceRoute: Symbol("CommerceRoute"),
@@ -119,8 +132,14 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CommercePaymentTransactionClient>(TYPES.CommercePaymentTransactionClient).to(CommercePaymentTransactionClient);
     bind<CommerceProductRoute>(TYPES.CommerceProductRoute).to(CommerceProductRoute);
     bind<CommerceProductClient>(TYPES.CommerceProductClient).to(CommerceProductClient);
-    bind<CommerceProductRoute>(TYPES.CommerceProductFileStreamsRoute).to(CommerceProductFileStreamsRoute);
-    bind<CommerceProductClient>(TYPES.CommerceProductClient).to(CommerceProductClient);
+    bind<CommerceProductFilesStreamsRoute>(TYPES.CommerceProductFilesStreamsRoute).to(CommerceProductFilesStreamsRoute);
+    bind<CommerceProductFilesStreamsClient>(TYPES.CommerceProductFilesStreamsClient).to(CommerceProductFilesStreamsClient);
+    bind<CommerceProductFilesBatchRoute>(TYPES.CommerceProductFilesBatchRoute).to(CommerceProductFilesBatchRoute);
+    bind<CommerceProductFilesBatchClient>(TYPES.CommerceProductFilesBatchClient).to(CommerceProductFilesBatchClient);
+    bind<CommerceProductFilesClient>(TYPES.CommerceProductFilesClient).to(CommerceProductFilesClient);
+    bind<CommerceProductFilesRoute>(TYPES.CommerceProductFilesRoute).to(CommerceProductFilesRoute);
+    bind<CommerceProductSettingsClient>(TYPES.CommerceProductSettingsClient).to(CommerceProductSettingsClient);
+    bind<CommerceProductSettingsRoute>(TYPES.CommerceProductSettingsRoute).to(CommerceProductSettingsRoute);
     bind<CommerceRoute>(TYPES.CommerceRoute).to(CommerceRoute);
     bind<CommerceClient>(TYPES.CommerceClient).to(CommerceClient);
     bind<CommerceLookupsAddressTypeBatchRoute>(TYPES.CommerceLookupsAddressTypeBatchRoute).to(CommerceLookupsAddressTypeBatchRoute);

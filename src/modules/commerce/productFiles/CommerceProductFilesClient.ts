@@ -5,18 +5,18 @@
 */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import {
     CommerceProductFilesBatchClient,
     CommerceProductFilesRoute,
     CommerceProductFilesStreamsClient,
     TYPES as productTypes
-} from './';
-import { IProductFile } from './contracts';
+} from '.././';
+import { IProductFile } from '.././contracts';
 
 @injectable()
-export class ProductFilesClient {
+export class CommerceProductFilesClient {
 
     get routeDefinition(): CommerceProductFilesRoute {
         return this.productFilesRoute;
@@ -31,9 +31,9 @@ export class ProductFilesClient {
     }
 
     constructor(
-        @inject(ProductTypes.ProductFilesRoute) protected productFilesRoute: CommerceProductFilesRoute,
-        @inject(ProductTypes.ProductFilesStreamsClient) protected productFilesStreamsClient: CommerceProductFilesStreamsClient,
-        @inject(ProductTypes.ProductFilesBatchClient) protected productFilesBatchClient: CommerceProductFilesBatchClient,
+        @inject(productTypes.CommerceProductFilesRoute) protected productFilesRoute: CommerceProductFilesRoute,
+        @inject(productTypes.CommerceProductFilesStreamsClient) protected productFilesStreamsClient: CommerceProductFilesStreamsClient,
+        @inject(productTypes.CommerceProductFilesBatchClient) protected productFilesBatchClient: CommerceProductFilesBatchClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -124,7 +124,7 @@ export class ProductFilesClient {
                        }); 				
     **/
     update(data: IProductFile): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+        return this.apiClient.put<void>(this.routeDefinition.update(data), this.routeDefinition.update(data));
     }
 
     /** 

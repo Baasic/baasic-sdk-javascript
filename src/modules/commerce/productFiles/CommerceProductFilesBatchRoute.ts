@@ -5,18 +5,18 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from '../../../common';
+import { IOptions } from '../../../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
 @injectable()
 export class CommerceProductFilesBatchRoute extends BaseRoute {
 
-    public readonly unlinkRoute: string = 'product-files/batch/unlink';
+    public readonly unlinkRoute: string = 'commerce/product-files/batch/unlink';
 
-    public readonly updateRoute: string = 'product-files/batch';
+    public readonly updateRoute: string = 'commerce/product-files/batch';
 
-    public readonly linkRoute: string = 'product-files/batch/link';
+    public readonly linkRoute: string = 'commerce/product-files/batch/link';
     
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
