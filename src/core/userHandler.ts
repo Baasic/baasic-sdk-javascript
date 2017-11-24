@@ -27,7 +27,13 @@ export class UserHandler implements IUserHandler {
     }
 
     getUser(): IUser {
-        var userInfo = JSON.parse(this.storageHandler.get(this.userInfoKey));
+        var userInfo;
+        var json = this.storageHandler.get(this.userInfoKey);
+        if (typeof json === 'string') {
+            userInfo = JSON.parse(json);
+        } else {
+            userInfo = json;
+        }
         if (userInfo) {
             this.user.user = userInfo;
         } else {
@@ -40,7 +46,7 @@ export class UserHandler implements IUserHandler {
         if (userInfo === undefined || userInfo === null) {
             this.storageHandler.remove(this.userInfoKey);
         } else {
-            this.storageHandler.set(this.userInfoKey, JSON.stringify(userInfo));
+            this.storageHandler.set(this.userInfoKey, userInfo);
         }
 
         this.eventHandler.pushMessage({

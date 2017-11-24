@@ -48,7 +48,7 @@ export class TokenHandler implements ITokenHandler {
         if (token === undefined || token === null) {
             this.storageHandler.remove(this.tokenKey);
         } else {
-            this.storageHandler.set(this.tokenKey, JSON.stringify(token));
+            this.storageHandler.set(this.tokenKey, token);
         }
 
         if (token === undefined || token === null) {
@@ -60,7 +60,11 @@ export class TokenHandler implements ITokenHandler {
     }
 
     get(type?: TokenType): IToken {
-        return JSON.parse(this.storageHandler.get(this.tokenKey));
+        const token = this.storageHandler.get(this.tokenKey);
+        if (typeof token === 'string') {
+            return JSON.parse(token);
+        }
+        return token;
     }
 
     triggerTokenExpired(app: IBaasicApp) {
@@ -112,7 +116,7 @@ export class TokenHandler implements ITokenHandler {
 
 
     initEventing(): void {
-        this.eventHandler.addEvent('tokenExpired',  e => {
+        this.eventHandler.addEvent('tokenExpired', e => {
             e = e || event;
             if (e.originalEvent) {
                 e = e.originalEvent;
