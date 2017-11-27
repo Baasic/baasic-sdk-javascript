@@ -24,3 +24,5 @@ import * as Notifications from './notifications';
 export { Notifications };
 import * as Commerce from './commerce';
 export { Commerce };
+import * as Calendar from './calendar';
+export { Calendar };

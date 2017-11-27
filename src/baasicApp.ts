@@ -36,6 +36,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly notificationModule: modules.Notifications.NotificationsClient;
     public readonly articleModule: modules.Article.Root;
     public readonly commerceModule: modules.Commerce.CommerceClient;
+    public readonly calendarModule: modules.Calendar.Root;
 
 
     constructor(private apiKey: string, private options?: Partial<IBaasicOptions>) {
@@ -72,6 +73,7 @@ export class BaasicApp implements IBaasicApp {
         this.notificationModule = this.diModule.kernel.get<modules.Notifications.NotificationsClient>(modules.Notifications.TYPES.NotificationsClient);
         this.articleModule = this.diModule.kernel.get<modules.Article.Root>(modules.Article.TYPES.Root);
         this.commerceModule = this.diModule.kernel.get<modules.Commerce.CommerceClient>(modules.Commerce.TYPES.CommerceClient);
+        this.calendarModule = this.diModule.kernel.get<modules.Calendar.Root>(modules.Calendar.TYPES.Root);
     }
 
     getAccessToken(): IToken {
