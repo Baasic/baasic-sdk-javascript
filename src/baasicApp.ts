@@ -31,6 +31,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly templatingModule: modules.Templating.TemplatingClient;
     public readonly meteringModule: modules.Metering.MeteringClient;
     public readonly mediaVaultModule: modules.MediaVault.MediaVaultClient;
+    public readonly mediaGalleryModule: modules.MediaGallery.Root;
     public readonly fileModule: modules.Files.FilesClient;
     public readonly dynamicResourceModule: modules.DynamicResource.DynamicResourceClient;
     public readonly notificationModule: modules.Notifications.NotificationsClient;
@@ -68,6 +69,7 @@ export class BaasicApp implements IBaasicApp {
         this.templatingModule = this.diModule.kernel.get<modules.Templating.TemplatingClient>(modules.Templating.TYPES.TemplatingClient);
         this.meteringModule = this.diModule.kernel.get<modules.Metering.MeteringClient>(modules.Metering.TYPES.MeteringClient);
         this.mediaVaultModule = this.diModule.kernel.get<modules.MediaVault.MediaVaultClient>(modules.MediaVault.TYPES.MediaVaultClient);
+        this.mediaGalleryModule = this.diModule.kernel.get<modules.MediaGallery.Root>(modules.MediaGallery.TYPES.Root);
         this.fileModule = this.diModule.kernel.get<modules.Files.FilesClient>(modules.Files.TYPES.FilesClient);
         this.dynamicResourceModule = this.diModule.kernel.get<modules.DynamicResource.DynamicResourceClient>(modules.DynamicResource.TYPES.DynamicResourceClient);
         this.notificationModule = this.diModule.kernel.get<modules.Notifications.NotificationsClient>(modules.Notifications.TYPES.NotificationsClient);
