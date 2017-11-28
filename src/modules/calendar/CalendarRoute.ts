@@ -15,7 +15,7 @@ import { ICalendar, IGetCalendarOptions } from './contracts';
 export class CalendarRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-    public readonly getRoute: string = 'calendars/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendars/{id}/{?embed,fields}';
     public readonly createRoute: string = 'calendars';
     public readonly updateRoute: string = 'calendars/{id}';
     public readonly deleteRoute: string = 'calendars/{id}';
