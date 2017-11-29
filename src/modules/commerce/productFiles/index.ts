@@ -6,3 +6,4 @@ export * from './commerceProductFilesRoute';
 export * from './commerceProductFilesClient';
 export * from './commerceProductSettingsRoute';
 export * from './commerceProductSettingsClient';
+export * from './files';

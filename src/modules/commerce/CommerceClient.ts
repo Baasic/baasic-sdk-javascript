@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import {
     CommerceRoute,
@@ -14,6 +14,7 @@ import {
     CommerceProductClient,
     CommercePaymentTransactionClient,
     Lookups,
+    CommerceProductFilesClient,
     TYPES as commerceTypes
 } from './';
 
@@ -32,6 +33,14 @@ export class CommerceClient {
         return this.commerceProductClient;
     }
 
+    get files(): CommerceProductFilesClient{
+        return this.commerceProductFilesClient;
+    }
+    
+    get settings(): CommerceProductSettingsClient{
+        return this.commerceProductSettingsClient;
+    }
+
     get paymentTransactions(): CommercePaymentTransactionClient {
         return this.commercePaymentTransactionClient;
     }
@@ -48,6 +57,8 @@ export class CommerceClient {
         @inject(commerceTypes.CommerceCustomerClient) protected commerceCustomerClient: CommerceCustomerClient,
         @inject(commerceTypes.CommerceInvoiceClient) protected commerceInvoiceClient: CommerceInvoiceClient,
         @inject(commerceTypes.CommerceProductClient) protected commerceProductClient: CommerceProductClient,
+        @inject(commerceTypes.CommerceProductFilesClient) protected commerceProductFilesClient: CommerceProductFilesClient,
+        @inject(commerceTypes.CommerceProductSettingsClient) protected commerceProductSettingsClient: CommerceProductSettingsClient,
         @inject(commerceTypes.CommercePaymentTransactionClient) protected commercePaymentTransactionClient: CommercePaymentTransactionClient,
         @inject(commerceTypes.Lookups) protected lookup: Lookups,
         @inject(commerceTypes.CommerceRoute) protected commerceRoute: CommerceRoute,
