@@ -15,6 +15,7 @@ import {
     CommercePaymentTransactionClient,
     Lookups,
     CommerceProductFilesClient,
+    CommerceProductSettingsClient,
     TYPES as commerceTypes
 } from './';
 
