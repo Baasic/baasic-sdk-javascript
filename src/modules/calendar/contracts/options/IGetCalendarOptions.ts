@@ -4,4 +4,5 @@ export interface IGetCalendarOptions extends IOptions {
     from?: string;
     to?: string;
     ids?: string[];
+    ownerIds?: string[];
 }

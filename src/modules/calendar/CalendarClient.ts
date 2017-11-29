@@ -63,6 +63,7 @@ export class CalendarClient {
                     orderDirection : '<asc|desc>',
                     search : '<search-phrase>',
                     ids : <identifiers>,
+                    ownerIds: <identifiers>,
                     from : <start-date>,
                     to : <end-date>
                 })
