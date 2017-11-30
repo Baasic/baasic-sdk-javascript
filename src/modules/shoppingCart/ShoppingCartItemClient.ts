@@ -101,7 +101,9 @@ export class ShoppingCartItemClient {
                         // perform error handling here 
                     });
      **/
-    createByUserIdAndProductId(data: IShoppingCartItem): PromiseLike<IHttpResponse<IShoppingCartItem>> {
+    createByUserIdAndProductId(userId: string, productId, string, data: IShoppingCartItem): PromiseLike<IHttpResponse<IShoppingCartItem>> {
+        data.userId = userId;
+        data.productId = productId;
         return this.apiClient.post<IShoppingCartItem>(this.routeDefinition.createByUserIdAndProductId(data), this.routeDefinition.createParams(data));
     }
 
