@@ -28,3 +28,5 @@ import * as Commerce from './commerce';
 export { Commerce };
 import * as Calendar from './calendar';
 export { Calendar };
+import * as ShoppingCart from './shoppingCart';
+export { ShoppingCart }
