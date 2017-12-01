@@ -12451,6 +12451,7 @@ var CalendarClient = (function () {
                     orderDirection : '<asc|desc>',
                     search : '<search-phrase>',
                     ids : <identifiers>,
+                    ownerIds: <identifiers>,
                     from : <start-date>,
                     to : <end-date>
                 })
@@ -12608,7 +12609,7 @@ var CalendarRoute = (function (_super) {
     function CalendarRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
-        _this.findRoute = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
+        _this.findRoute = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids,ownerIds}';
         _this.getRoute = 'calendars/{id}/{?embed,fields}';
         _this.createRoute = 'calendars';
         _this.updateRoute = 'calendars/{id}';
@@ -12625,6 +12626,7 @@ var CalendarRoute = (function (_super) {
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
+     * - `ownerIds` - Used to limit the dataset to only use resources beloging to specified owners.
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRoute.find({searchQuery: '<search-phrase>'});
@@ -12917,7 +12919,7 @@ var CalendarEventsRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendars/{calendarId}/events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,statusIds,typeIds,from,to}';
-        _this.getRoute = 'calendars/{calendarId}/events/{id}/{?embed, fields}';
+        _this.getRoute = 'calendars/{calendarId}/events/{id}/{?embed,fields}';
         _this.getByEmailOrFullNameRoute = 'calendars/{calendarId}/events/{id}/emails/{emailOrFullName}';
         _this.linkRoute = 'calendars/{calendarId}/events/{id}';
         _this.updateRoute = 'calendars/{calendarId}/events/{id}';
@@ -15279,7 +15281,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-event-attendees/{?searchQuery,page,rpp,sort,embed,fields,calendarIds,calendarNames,eventIds,invitationTypeIds,attendeeStatusIds,userIds,slotDifference,emails,from,to,ids}';
-        _this.getRoute = 'calendar-event-attendees/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-event-attendees/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-event-attendees';
         _this.updateRoute = 'calendar-event-attendees/{id}';
         _this.deleteRoute = 'calendar-event-attendees/{id}';
@@ -15853,7 +15855,7 @@ var CalendarEventRsvpRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-rsvp-details/{?searchQuery,page,rpp,sort,embed,fields,ids,calendarIds,calendarNames,invitationTypeIds,invitationOnly,statusIds,typeIds,from,to,registrationCloseFrom,registrationCloseTo}';
-        _this.getRoute = 'calendar-rsvp-details/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-rsvp-details/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-rsvp-details';
         _this.updateRoute = 'calendar-rsvp-details/{id}';
         _this.deleteRoute = 'calendar-rsvp-details/{id}';
@@ -16413,7 +16415,7 @@ var CalendarEventRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
-        _this.getRoute = 'calendar-events/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-events/{id}/{?embed,fields}';
         _this.getByEmailOrFullNameRoute = 'calendar-events/{id}/{emailOrFullName}';
         _this.createRoute = 'calendar-events';
         _this.updateRoute = 'calendar-events/{id}';
@@ -16958,7 +16960,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/rsvp-attendee-statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-lookups/rsvp-attendee-statuses';
         _this.updateRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}';
         _this.deleteRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}';
@@ -17452,7 +17454,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/rsvp-invitation-types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-lookups/rsvp-invitation-types';
         _this.updateRoute = 'calendar-lookups/rsvp-invitation-types/{id}';
         _this.deleteRoute = 'calendar-lookups/rsvp-invitation-types/{id}';
@@ -17946,7 +17948,7 @@ var CalendarEventStatusRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/statuses/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-lookups/statuses/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-lookups/statuses';
         _this.updateRoute = 'calendar-lookups/statuses/{id}';
         _this.deleteRoute = 'calendar-lookups/statuses/{id}';
@@ -18439,7 +18441,7 @@ var CalendarEventTypeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/types/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-lookups/types/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-lookups/types';
         _this.updateRoute = 'calendar-lookups/types/{id}';
         _this.deleteRoute = 'calendar-lookups/types/{id}';
