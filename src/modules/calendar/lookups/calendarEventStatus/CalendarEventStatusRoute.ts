@@ -15,7 +15,7 @@ import { ICalendarEventStatus, IGetCalendarOptions } from '../../contracts';
 export class CalendarEventStatusRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-lookups/statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-    public readonly getRoute: string = 'calendar-lookups/statuses/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendar-lookups/statuses/{id}/{?embed,fields}';
     public readonly createRoute: string = 'calendar-lookups/statuses';
     public readonly updateRoute: string = 'calendar-lookups/statuses/{id}';
     public readonly deleteRoute: string = 'calendar-lookups/statuses/{id}';

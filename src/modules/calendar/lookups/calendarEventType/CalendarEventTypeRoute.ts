@@ -14,7 +14,7 @@ import { ICalendarEventType, IGetCalendarOptions } from '../../contracts';
 export class CalendarEventTypeRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-lookups/types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-    public readonly getRoute: string = 'calendar-lookups/types/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendar-lookups/types/{id}/{?embed,fields}';
     public readonly createRoute: string = 'calendar-lookups/types';
     public readonly updateRoute: string = 'calendar-lookups/types/{id}';
     public readonly deleteRoute: string = 'calendar-lookups/types/{id}';
