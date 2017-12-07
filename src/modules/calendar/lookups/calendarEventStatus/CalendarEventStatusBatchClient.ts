@@ -79,7 +79,7 @@ export class CalendarEventStatusBatchClient {
                 });
      */
     remove(data: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     }
 
 }
