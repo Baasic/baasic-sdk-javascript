@@ -87,7 +87,7 @@ export class CalendarRsvpBatchClient {
                 });
      */
     unlink(calendarId: string, data: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId), undefined, this.routeDefinition.deleteParams(data));
     }
 }
 
