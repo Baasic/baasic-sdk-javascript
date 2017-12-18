@@ -16,6 +16,7 @@ import {
     Lookups,
     CommerceProductFilesClient,
     CommerceProductSettingsClient,
+    CommerceCouponClient,
     TYPES as commerceTypes
 } from './';
 
@@ -46,6 +47,10 @@ export class CommerceClient {
         return this.commercePaymentTransactionClient;
     }
 
+    get coupons(): CommerceCouponClient {
+        return this.commerceCouponClient;
+    }
+
     get lookups(): Lookups {
         return this.lookup;
     }
@@ -61,6 +66,7 @@ export class CommerceClient {
         @inject(commerceTypes.CommerceProductFilesClient) protected commerceProductFilesClient: CommerceProductFilesClient,
         @inject(commerceTypes.CommerceProductSettingsClient) protected commerceProductSettingsClient: CommerceProductSettingsClient,
         @inject(commerceTypes.CommercePaymentTransactionClient) protected commercePaymentTransactionClient: CommercePaymentTransactionClient,
+        @inject(commerceTypes.CommerceCouponClient) protected commerceCouponClient: CommerceCouponClient,
         @inject(commerceTypes.Lookups) protected lookup: Lookups,
         @inject(commerceTypes.CommerceRoute) protected commerceRoute: CommerceRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
