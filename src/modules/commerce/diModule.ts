@@ -13,6 +13,18 @@ import {
     CommercePaymentTransactionRoute,
     CommerceProductClient,
     CommerceProductRoute,
+    CommerceProductFilesStreamsClient,
+    CommerceProductFilesStreamsRoute,
+    CommerceProductFilesBatchClient,
+    CommerceProductFilesBatchRoute,
+    CommerceProductFilesClient,
+    CommerceProductFilesRoute,
+    CommerceProductSettingsClient,
+    CommerceProductSettingsRoute,
+    CommerceProductInstanceFilesBatchClient,
+    CommerceProductInstanceFilesBatchRoute,
+    CommerceProductInstanceFilesClient,
+    CommerceProductInstanceFilesRoute,
     CommerceClient,
     CommerceRoute,
     CommerceLookupsAddressTypesBatchClient,
@@ -63,6 +75,18 @@ const TYPES = {
     CommercePaymentTransactionRoute: Symbol("CommercePaymentTransactionRoute"),
     CommerceProductClient: Symbol("CommerceProductClient"),
     CommerceProductRoute: Symbol("CommerceProductRoute"),
+    CommerceProductFilesStreamsClient: Symbol("CommerceProductFilesStreamsClient"),
+    CommerceProductFilesStreamsRoute: Symbol("CommerceProductFilesStreamsRoute"),
+    CommerceProductFilesBatchClient: Symbol("CommerceProductFilesBatchClient"),
+    CommerceProductFilesBatchRoute: Symbol("CommerceProductFilesBatchRoute"),
+    CommerceProductFilesClient: Symbol("CommerceProductFilesClient"),
+    CommerceProductFilesRoute: Symbol("CommerceProductFilesRoute"),
+    CommerceProductSettingsClient: Symbol("CommerceProductSettingsClient"),
+    CommerceProductSettingsRoute: Symbol("CommerceProductSettingsRoute"),
+    CommerceProductInstanceFilesClient: Symbol("CommerceProductInstanceFilesClient"),
+    CommerceProductInstanceFilesRoute: Symbol("CommerceProductInstanceFilesRoute"),
+    CommerceProductInstanceFilesBatchClient: Symbol("CommerceProductInstanceFilesBatchClient"),
+    CommerceProductInstanceFilesBatchRoute: Symbol("CommerceProductInstanceFilesBatchRoute"),
     CommerceClient: Symbol("CommerceClient"),
     CommerceRoute: Symbol("CommerceRoute"),
     CommerceLookupsAddressTypesBatchClient: Symbol("CommerceLookupsAddressTypesBatchClient"),
@@ -116,6 +140,14 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CommercePaymentTransactionClient>(TYPES.CommercePaymentTransactionClient).to(CommercePaymentTransactionClient);
     bind<CommerceProductRoute>(TYPES.CommerceProductRoute).to(CommerceProductRoute);
     bind<CommerceProductClient>(TYPES.CommerceProductClient).to(CommerceProductClient);
+    bind<CommerceProductFilesStreamsRoute>(TYPES.CommerceProductFilesStreamsRoute).to(CommerceProductFilesStreamsRoute);
+    bind<CommerceProductFilesStreamsClient>(TYPES.CommerceProductFilesStreamsClient).to(CommerceProductFilesStreamsClient);
+    bind<CommerceProductFilesBatchRoute>(TYPES.CommerceProductFilesBatchRoute).to(CommerceProductFilesBatchRoute);
+    bind<CommerceProductFilesBatchClient>(TYPES.CommerceProductFilesBatchClient).to(CommerceProductFilesBatchClient);
+    bind<CommerceProductFilesClient>(TYPES.CommerceProductFilesClient).to(CommerceProductFilesClient);
+    bind<CommerceProductFilesRoute>(TYPES.CommerceProductFilesRoute).to(CommerceProductFilesRoute);
+    bind<CommerceProductSettingsClient>(TYPES.CommerceProductSettingsClient).to(CommerceProductSettingsClient);
+    bind<CommerceProductSettingsRoute>(TYPES.CommerceProductSettingsRoute).to(CommerceProductSettingsRoute);
     bind<CommerceRoute>(TYPES.CommerceRoute).to(CommerceRoute);
     bind<CommerceClient>(TYPES.CommerceClient).to(CommerceClient);
     bind<CommerceLookupsAddressTypeBatchRoute>(TYPES.CommerceLookupsAddressTypeBatchRoute).to(CommerceLookupsAddressTypeBatchRoute);

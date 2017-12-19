@@ -6,7 +6,7 @@ Baasic JavaScript library provides integration access to [Baasic REST API](http:
 
 Baasic JavaScript library has the following dependencies:
 
-* [jQuery](https://jquery.com/) 
+* [jQuery](https://jquery.com/)
 * [HAL Parser](https://github.com/Baasic/angular-hal)
 * [URI Template](https://github.com/Baasic/uritemplate-js)
 
@@ -16,7 +16,7 @@ This section will describe how to add the Baasic JavaScript library to your proj
 
 ### Adding the library to your project
 
-Please add the following lines of code after the jQuery include:
+Please add the following lines of code after the jQuery include (if you are installing this as a dependency of Baasic Angular SDK, or any other framework, you can safely ignore jQuery dependency):
 
 ```html
 <script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
@@ -26,15 +26,15 @@ Please add the following lines of code after the jQuery include:
 <script src='/js/baasic-sdk-javascript-2.0.0.min.js'></script>
 ```
 
-*Note:* Baasic JavaScript SDK depends on [reflect-metadata](https://github.com/rbuckton/reflect-metadata) package, in order to use the sdk directly and not as a part of another JavaScript framework reflect-metadata should be manually imported into the project. Other Baasic SDKs or frameworks may handle this dependency automatically.
+*Note:* Baasic JavaScript SDK depends on [reflect-metadata](https://github.com/rbuckton/reflect-metadata) package, in order to use the sdk directly and not as a part of another JavaScript framework reflect-metadata should be manually imported into the project. Other Baasic SDKs or frameworks may handle this dependency automatically. jQuery dependency should be used only if sdk is used separately from other JavaScript frameworks, if sdk is used as a part of some framework (e.g. Angular) then sdk for that specific framework should be used and jQuery is not needed as a dependency.
 
 ### Application Configuration
 
 To create the _BaasicApp_ you will need to use the _baasicSdkJavaScript_ object on the global scope.
 
 ```javascript
-//Note: this is configuration example only, these are the defaults  
-var options = {    
+//Note: this is configuration example only, these are the defaults
+var options = {
     apiRootUrl: 'api.baasic.com',
     apiVersion: '<version>',
     enableHALJSON: false
@@ -70,7 +70,7 @@ Baasic back-end contains various built-in modules that can be easily consumed th
 
 Baasic JavaScript library has the following developer dependencies:
 
-* [Inversify](http://inversify.io/) 
+* [Inversify](http://inversify.io/)
 
 ## Contributing
 

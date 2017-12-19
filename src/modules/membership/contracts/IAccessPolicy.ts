@@ -1,7 +1,7 @@
 import { IAccessAction } from './';
 
 export interface IAccessPolicy {
-    id: string,
+    id?: string,
     actions: IAccessAction[],
     section: string,
     name: string,

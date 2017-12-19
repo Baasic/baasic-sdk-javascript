@@ -71,7 +71,7 @@ export class NotificationsSubscriptionsAnonymousClient {
                 });                            
      */
     find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IAnonymousSubscription>>> {
-        return this.apiClient.get<IQueryModel<IAnonymousSubscription>>(this.notificationsSubscriptionsAnonymousRoute.find())
+        return this.apiClient.get<IQueryModel<IAnonymousSubscription>>(this.notificationsSubscriptionsAnonymousRoute.find(options))
     }
 
     /**                          

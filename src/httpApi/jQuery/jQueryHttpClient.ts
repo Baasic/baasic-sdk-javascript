@@ -21,6 +21,10 @@ export class JQueryHttpClient implements IHttpClient {
             jqueryParams.data = request.data;
         }
 
+        if (request.responseType) {
+            jqueryParams.dataType = request.responseType;
+        }
+
         return $.ajax(request.url.toString(), jqueryParams)
             .then((data, textStatus, jqXHR) => {
                 return <IHttpResponse<ResponseType>>{

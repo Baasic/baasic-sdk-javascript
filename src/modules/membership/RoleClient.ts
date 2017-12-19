@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { RoleRoute, TYPES as membershipTypes } from './';
+import { RoleBatchClient, RoleRoute, TYPES as membershipTypes } from './';
 import { IRole } from './contracts';
 
 @injectable()
@@ -22,7 +22,16 @@ export class RoleClient {
         return this.roleRoute;
     }
 
+    /**                 
+     * Provides direct access to `roleBatchClient`.                 
+     * @method                        
+     **/
+    get batch(): RoleBatchClient {
+        return this.roleBatchClient;
+    }
+
     constructor(
+        @inject(membershipTypes.RoleBatchClient) protected roleBatchClient: RoleBatchClient,
         @inject(membershipTypes.RoleRoute) protected roleRoute: RoleRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }

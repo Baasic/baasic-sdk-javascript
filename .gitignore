@@ -54,3 +54,4 @@ jspm_packages
 0
 
 build/dist/docs/
+.vs/

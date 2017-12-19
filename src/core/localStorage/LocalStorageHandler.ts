@@ -5,7 +5,7 @@ import { injectable, inject, optional } from "inversify";
 export class LocalStorageHandler implements IStorageHandler {
 
     constructor(
-        @inject(TYPES.IDefaultStorageConfig) @optional() config: IDefaultStorageConfig 
+        @inject(TYPES.IDefaultStorageConfig) @optional() config: IDefaultStorageConfig
     ) {
         config = config || {};
         if (!localStorage) {
@@ -16,7 +16,7 @@ export class LocalStorageHandler implements IStorageHandler {
         if (parseKey) {
             getHandler = function (fn) { return function () { arguments[0] = parseKey(arguments[0]); return fn.apply(this, arguments); }; }
         } else {
-            getHandler = (fn) => fn;            
+            getHandler = (fn) => fn;
         }
         this.clear = localStorage.clear;
         this.remove = getHandler(this.removeItem);
@@ -36,11 +36,11 @@ export class LocalStorageHandler implements IStorageHandler {
         localStorage.removeItem(key);
     }
 
-    private getItem(key:string) : any {
+    private getItem(key: string): any {
         return JSON.parse(localStorage.getItem(key));
     }
 
-    private setItem(key:string, data:any) {
+    private setItem(key: string, data: any) {
         localStorage.setItem(key, JSON.stringify(data));
     }
 };

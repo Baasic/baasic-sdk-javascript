@@ -59,10 +59,10 @@ export class BrowserEventHandler implements IEventHandler {
 	pushMessage(message: any, args: any) {
 		this.storageHandler.remove(this.messageBusKey);
 
-		this.storageHandler.set(this.messageBusKey, JSON.stringify({
+		this.storageHandler.set(this.messageBusKey, {
 			message: message,
 			args: args
-		}));
+		});
 	}
 
 	triggerEvent: (eventName: string, data: any) => void;
@@ -70,17 +70,21 @@ export class BrowserEventHandler implements IEventHandler {
 	addEvent: (eventName: string, func: any) => void;
 
 	private initEventing(): void {
+		const self = this;
 		this.addEvent('storage', function (e) {
 			e = e || event;
 			if (e.originalEvent) {
 				e = e.originalEvent;
 			}
 
-			if (e.key === this.messageBusKey) {
+			if (e.key === self.messageBusKey) {
 				var value = e.newValue;
 				if (value && value !== '') {
 					var data = JSON.parse(value);
-					this.eventHandler.triggerEvent(data.message.type, this.utility.extend(data.args, { app: this.application }));
+					if (typeof data === 'string') {
+						data = JSON.parse(data);
+					}
+					self.triggerEvent(data.message.type, utility.extend(data.args, { app: self.application }));
 				}
 			}
 
