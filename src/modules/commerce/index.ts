@@ -6,3 +6,5 @@ export * from './customer';
 export * from './invoice';
 export * from './paymentTransaction';
 export * from './product';
+export * from './productFiles';
+export * from './contracts';

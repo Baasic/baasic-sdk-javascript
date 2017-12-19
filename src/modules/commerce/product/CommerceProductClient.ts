@@ -8,6 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import { CommerceProductRoute, TYPES as commerceTypes } from '../';
+import {IProductOptions } from '../contracts';
 
 @injectable()
 export class CommerceProductClient {
@@ -29,7 +30,9 @@ export class CommerceProductClient {
                    pageSize : 10,   
                    orderBy : '<field>',   
                    orderDirection : '<asc|desc>',   
-                   search : '<search-phrase>' 
+                   search : '<search-phrase>',
+                   productCategoryId : '',
+                   categoryAbrv: ''    
                }) 
                .then(function (collection) {   
                    // perform success action here 
@@ -38,7 +41,7 @@ export class CommerceProductClient {
                     // perform error handling here 
                });                     
     **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
+    find(options?: IProductOptions): PromiseLike<IHttpResponse<IQueryModel<any>>> {
         return this.apiClient.get(this.routeDefinition.find(options));
     }
 
