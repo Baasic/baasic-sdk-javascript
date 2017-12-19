@@ -15,7 +15,7 @@ import { ICalendarEventRsvpAttendeeStatus, IGetCalendarOptions } from '../../con
 export class CalendarEventRsvpAttendeeStatusRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-    public readonly getRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed,fields}';
     public readonly createRoute: string = 'calendar-lookups/rsvp-attendee-statuses';
     public readonly updateRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{id}';
     public readonly deleteRoute: string = 'calendar-lookups/rsvp-attendee-statuses/{id}';

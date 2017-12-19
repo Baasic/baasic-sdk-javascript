@@ -12360,12 +12360,12 @@ var CalendarBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarBatchClient;
 }());
@@ -12527,6 +12527,7 @@ var CalendarClient = (function () {
                     orderDirection : '<asc|desc>',
                     search : '<search-phrase>',
                     ids : <identifiers>,
+                    ownerIds: <identifiers>,
                     from : <start-date>,
                     to : <end-date>
                 })
@@ -12684,8 +12685,8 @@ var CalendarRoute = (function (_super) {
     function CalendarRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
-        _this.findRoute = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendars/{id}/{?embed, fields}';
+        _this.findRoute = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids,ownerIds}';
+        _this.getRoute = 'calendars/{id}/{?embed,fields}';
         _this.createRoute = 'calendars';
         _this.updateRoute = 'calendars/{id}';
         _this.deleteRoute = 'calendars/{id}';
@@ -12701,6 +12702,7 @@ var CalendarRoute = (function (_super) {
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
+     * - `ownerIds` - Used to limit the dataset to only use resources beloging to specified owners.
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRoute.find({searchQuery: '<search-phrase>'});
@@ -12993,7 +12995,7 @@ var CalendarEventsRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendars/{calendarId}/events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,statusIds,typeIds,from,to}';
-        _this.getRoute = 'calendars/{calendarId}/events/{id}/{?embed, fields}';
+        _this.getRoute = 'calendars/{calendarId}/events/{id}/{?embed,fields}';
         _this.getByEmailOrFullNameRoute = 'calendars/{calendarId}/events/{id}/emails/{emailOrFullName}';
         _this.linkRoute = 'calendars/{calendarId}/events/{id}';
         _this.updateRoute = 'calendars/{calendarId}/events/{id}';
@@ -13240,7 +13242,7 @@ var CalendarRsvpAttendeeBatchClient = (function () {
                 });
      */
     CalendarRsvpAttendeeBatchClient.prototype.unlink = function (calendarId, eventId, data) {
-        return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarRsvpAttendeeBatchClient;
 }());
@@ -14057,7 +14059,7 @@ var CalendarRsvpBatchClient = (function () {
                 });
      */
     CalendarRsvpBatchClient.prototype.unlink = function (calendarId, data) {
-        return this.apiClient.delete(this.routeDefinition.unlink(calendarId), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.unlink(calendarId), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarRsvpBatchClient;
 }());
@@ -14966,7 +14968,7 @@ var CalendarEventRsvpAttendeeBatchClient = (function () {
                 });
      */
     CalendarEventRsvpAttendeeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpAttendeeBatchClient;
 }());
@@ -15355,7 +15357,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-event-attendees/{?searchQuery,page,rpp,sort,embed,fields,calendarIds,calendarNames,eventIds,invitationTypeIds,attendeeStatusIds,userIds,slotDifference,emails,from,to,ids}';
-        _this.getRoute = 'calendar-event-attendees/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-event-attendees/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-event-attendees';
         _this.updateRoute = 'calendar-event-attendees/{id}';
         _this.deleteRoute = 'calendar-event-attendees/{id}';
@@ -15626,7 +15628,7 @@ var CalendarEventRsvpBatchClient = (function () {
                 });
      */
     CalendarEventRsvpBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpBatchClient;
 }());
@@ -15929,7 +15931,7 @@ var CalendarEventRsvpRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-rsvp-details/{?searchQuery,page,rpp,sort,embed,fields,ids,calendarIds,calendarNames,invitationTypeIds,invitationOnly,statusIds,typeIds,from,to,registrationCloseFrom,registrationCloseTo}';
-        _this.getRoute = 'calendar-rsvp-details/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-rsvp-details/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-rsvp-details';
         _this.updateRoute = 'calendar-rsvp-details/{id}';
         _this.deleteRoute = 'calendar-rsvp-details/{id}';
@@ -16164,7 +16166,7 @@ var CalendarEventBatchClient = (function () {
                 });
      */
     CalendarEventBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventBatchClient;
 }());
@@ -16489,7 +16491,7 @@ var CalendarEventRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
-        _this.getRoute = 'calendar-events/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-events/{id}/{?embed,fields}';
         _this.getByEmailOrFullNameRoute = 'calendar-events/{id}/{emailOrFullName}';
         _this.createRoute = 'calendar-events';
         _this.updateRoute = 'calendar-events/{id}';
@@ -16644,9 +16646,9 @@ var _1 = __webpack_require__(7);
 var _2 = __webpack_require__(39);
 var inversify_1 = __webpack_require__(0);
 var CalendarLookups = (function () {
-    function CalendarLookups(RsvpInvitationType, RsvpAttendeeStatus, eventStatus, eventType) {
-        this.RsvpInvitationType = RsvpInvitationType;
-        this.RsvpAttendeeStatus = RsvpAttendeeStatus;
+    function CalendarLookups(rsvpInvitationType, rsvpAttendeeStatus, eventStatus, eventType) {
+        this.rsvpInvitationType = rsvpInvitationType;
+        this.rsvpAttendeeStatus = rsvpAttendeeStatus;
         this.eventStatus = eventStatus;
         this.eventType = eventType;
     }
@@ -16744,7 +16746,7 @@ var CalendarEventRsvpAttendeeStatusBatchClient = (function () {
                 });
      */
     CalendarEventRsvpAttendeeStatusBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpAttendeeStatusBatchClient;
 }());
@@ -17034,7 +17036,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/rsvp-attendee-statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-lookups/rsvp-attendee-statuses';
         _this.updateRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}';
         _this.deleteRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}';
@@ -17238,7 +17240,7 @@ var CalendarEventRsvpInvitationTypeBatchClient = (function () {
                 });
      */
     CalendarEventRsvpInvitationTypeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpInvitationTypeBatchClient;
 }());
@@ -17528,7 +17530,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/rsvp-invitation-types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-lookups/rsvp-invitation-types';
         _this.updateRoute = 'calendar-lookups/rsvp-invitation-types/{id}';
         _this.deleteRoute = 'calendar-lookups/rsvp-invitation-types/{id}';
@@ -17732,7 +17734,7 @@ var CalendarEventStatusBatchClient = (function () {
                 });
      */
     CalendarEventStatusBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventStatusBatchClient;
 }());
@@ -18022,7 +18024,7 @@ var CalendarEventStatusRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/statuses/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-lookups/statuses/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-lookups/statuses';
         _this.updateRoute = 'calendar-lookups/statuses/{id}';
         _this.deleteRoute = 'calendar-lookups/statuses/{id}';
@@ -18226,7 +18228,7 @@ var CalendarEventTypeBatchClient = (function () {
                 });
      */
     CalendarEventTypeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventTypeBatchClient;
 }());
@@ -18515,7 +18517,7 @@ var CalendarEventTypeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/types/{id}/{?embed, fields}';
+        _this.getRoute = 'calendar-lookups/types/{id}/{?embed,fields}';
         _this.createRoute = 'calendar-lookups/types';
         _this.updateRoute = 'calendar-lookups/types/{id}';
         _this.deleteRoute = 'calendar-lookups/types/{id}';
@@ -25212,7 +25214,7 @@ var CommerceProductClient = (function () {
                    orderDirection : '<asc|desc>',
                    search : '<search-phrase>',
                    productCategoryId : '',
-                   categoryAbrv: ''
+                   productCategoryAbrv: ''
                })
                .then(function (collection) {
                    // perform success action here
@@ -25341,7 +25343,7 @@ var CommerceProductRoute = (function (_super) {
     function CommerceProductRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
-        _this.findRoute = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields,productCategoryId,categoryAbrv}';
+        _this.findRoute = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields,productCategoryId,productCategoryAbrv}';
         _this.getRoute = 'commerce/products/{id}/{?embed,fields}';
         _this.createRoute = 'commerce/products';
         _this.updateRoute = 'commerce/products/{id}';
@@ -25356,7 +25358,7 @@ var CommerceProductRoute = (function (_super) {
      * - `sort` - A string used to set the commerce property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `productCategoryId` - A product category id.
-     * - `categoryAbrv` - A product category abbreviation.
+     * - `productCategoryAbrv` - A product category abbreviation.
      * @method
      * @example commerceProductRoute.find({searchQuery: '<search-phrase>'});
      **/
@@ -33933,7 +33935,7 @@ var MeteringCategoryBatchClient = (function () {
                     });
      **/
     MeteringCategoryBatchClient.prototype.delete = function (ids) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(ids));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(ids));
     };
     return MeteringCategoryBatchClient;
 }());

@@ -15,7 +15,7 @@ import { ICalendarEvent, ICalendarEventRsvp, IGetCalendarEventRsvpOptions } from
 export class CalendarEventRsvpRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-rsvp-details/{?searchQuery,page,rpp,sort,embed,fields,ids,calendarIds,calendarNames,invitationTypeIds,invitationOnly,statusIds,typeIds,from,to,registrationCloseFrom,registrationCloseTo}';
-    public readonly getRoute: string = 'calendar-rsvp-details/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendar-rsvp-details/{id}/{?embed,fields}';
     public readonly createRoute: string = 'calendar-rsvp-details';
     public readonly updateRoute: string = 'calendar-rsvp-details/{id}';
     public readonly deleteRoute: string = 'calendar-rsvp-details/{id}';

@@ -76,7 +76,7 @@ export class MeteringCategoryBatchClient {
                     });		                  
      **/
     delete(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(ids));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(ids));
     }
 }
 

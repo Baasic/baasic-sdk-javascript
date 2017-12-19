@@ -15,7 +15,7 @@ import { ICalendar, ICalendarEvent, IGetCalendarEventsOptions } from '../../cont
 export class CalendarEventsRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendars/{calendarId}/events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,statusIds,typeIds,from,to}';
-    public readonly getRoute: string = 'calendars/{calendarId}/events/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendars/{calendarId}/events/{id}/{?embed,fields}';
     public readonly getByEmailOrFullNameRoute: string = 'calendars/{calendarId}/events/{id}/emails/{emailOrFullName}';
     public readonly linkRoute: string = 'calendars/{calendarId}/events/{id}';
     public readonly updateRoute: string = 'calendars/{calendarId}/events/{id}';
