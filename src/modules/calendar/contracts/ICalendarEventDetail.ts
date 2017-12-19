@@ -27,4 +27,10 @@ export interface ICalendarEventDetail extends IModel {
     HostZipCode?: string;
     Json?: string;
     VenueAddress?: string;
+    VenueCity?: string;
+    VenueCountry?: string;
+    VenueEmail?: string;
+    VenuePhone?: string;
+    VenueTimeZoneId?: string;
+    VenueZipCode?: string;
 }
