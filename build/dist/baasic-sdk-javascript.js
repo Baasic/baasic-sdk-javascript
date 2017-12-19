@@ -12289,12 +12289,12 @@ var CalendarBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                    function (response, status, headers, config) {
-                        // perform error handling here
+                function (response, status, headers, config) {
+                    // perform error handling here
                 });
      */
     CalendarBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarBatchClient;
 }());
@@ -13171,7 +13171,7 @@ var CalendarRsvpAttendeeBatchClient = (function () {
                 });
      */
     CalendarRsvpAttendeeBatchClient.prototype.unlink = function (calendarId, eventId, data) {
-        return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarRsvpAttendeeBatchClient;
 }());
@@ -13988,7 +13988,7 @@ var CalendarRsvpBatchClient = (function () {
                 });
      */
     CalendarRsvpBatchClient.prototype.unlink = function (calendarId, data) {
-        return this.apiClient.delete(this.routeDefinition.unlink(calendarId), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.unlink(calendarId), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarRsvpBatchClient;
 }());
@@ -14897,7 +14897,7 @@ var CalendarEventRsvpAttendeeBatchClient = (function () {
                 });
      */
     CalendarEventRsvpAttendeeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpAttendeeBatchClient;
 }());
@@ -15557,7 +15557,7 @@ var CalendarEventRsvpBatchClient = (function () {
                 });
      */
     CalendarEventRsvpBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpBatchClient;
 }());
@@ -16095,7 +16095,7 @@ var CalendarEventBatchClient = (function () {
                 });
      */
     CalendarEventBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventBatchClient;
 }());
@@ -16575,9 +16575,9 @@ var _1 = __webpack_require__(7);
 var _2 = __webpack_require__(38);
 var inversify_1 = __webpack_require__(0);
 var CalendarLookups = (function () {
-    function CalendarLookups(RsvpInvitationType, RsvpAttendeeStatus, eventStatus, eventType) {
-        this.RsvpInvitationType = RsvpInvitationType;
-        this.RsvpAttendeeStatus = RsvpAttendeeStatus;
+    function CalendarLookups(rsvpInvitationType, rsvpAttendeeStatus, eventStatus, eventType) {
+        this.rsvpInvitationType = rsvpInvitationType;
+        this.rsvpAttendeeStatus = rsvpAttendeeStatus;
         this.eventStatus = eventStatus;
         this.eventType = eventType;
     }
@@ -16675,7 +16675,7 @@ var CalendarEventRsvpAttendeeStatusBatchClient = (function () {
                 });
      */
     CalendarEventRsvpAttendeeStatusBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpAttendeeStatusBatchClient;
 }());
@@ -17169,7 +17169,7 @@ var CalendarEventRsvpInvitationTypeBatchClient = (function () {
                 });
      */
     CalendarEventRsvpInvitationTypeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpInvitationTypeBatchClient;
 }());
@@ -17663,7 +17663,7 @@ var CalendarEventStatusBatchClient = (function () {
                 });
      */
     CalendarEventStatusBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventStatusBatchClient;
 }());
@@ -18157,7 +18157,7 @@ var CalendarEventTypeBatchClient = (function () {
                 });
      */
     CalendarEventTypeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
     };
     return CalendarEventTypeBatchClient;
 }());
@@ -30257,7 +30257,7 @@ var MeteringCategoryBatchClient = (function () {
                     });
      **/
     MeteringCategoryBatchClient.prototype.delete = function (ids) {
-        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(ids));
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(ids));
     };
     return MeteringCategoryBatchClient;
 }());
