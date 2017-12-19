@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 42);
+/******/ 	return __webpack_require__(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -82,36 +82,36 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 
-var container_1 = __webpack_require__(71);
+var container_1 = __webpack_require__(72);
 exports.Container = container_1.Container;
-var container_module_1 = __webpack_require__(72);
+var container_module_1 = __webpack_require__(73);
 exports.ContainerModule = container_module_1.ContainerModule;
-var injectable_1 = __webpack_require__(62);
+var injectable_1 = __webpack_require__(63);
 exports.injectable = injectable_1.injectable;
-var tagged_1 = __webpack_require__(66);
+var tagged_1 = __webpack_require__(67);
 exports.tagged = tagged_1.tagged;
-var named_1 = __webpack_require__(64);
+var named_1 = __webpack_require__(65);
 exports.named = named_1.named;
-var inject_1 = __webpack_require__(61);
+var inject_1 = __webpack_require__(62);
 exports.inject = inject_1.inject;
-var optional_1 = __webpack_require__(65);
+var optional_1 = __webpack_require__(66);
 exports.optional = optional_1.optional;
-var unmanaged_1 = __webpack_require__(68);
+var unmanaged_1 = __webpack_require__(69);
 exports.unmanaged = unmanaged_1.unmanaged;
-var multi_inject_1 = __webpack_require__(63);
+var multi_inject_1 = __webpack_require__(64);
 exports.multiInject = multi_inject_1.multiInject;
-var target_name_1 = __webpack_require__(67);
+var target_name_1 = __webpack_require__(68);
 exports.targetName = target_name_1.targetName;
-var guid_1 = __webpack_require__(19);
+var guid_1 = __webpack_require__(20);
 exports.guid = guid_1.guid;
-var decorator_utils_1 = __webpack_require__(16);
+var decorator_utils_1 = __webpack_require__(17);
 exports.decorate = decorator_utils_1.decorate;
-var constraint_helpers_1 = __webpack_require__(33);
+var constraint_helpers_1 = __webpack_require__(34);
 exports.traverseAncerstors = constraint_helpers_1.traverseAncerstors;
 exports.taggedConstraint = constraint_helpers_1.taggedConstraint;
 exports.namedConstraint = constraint_helpers_1.namedConstraint;
 exports.typeConstraint = constraint_helpers_1.typeConstraint;
-var serialization_1 = __webpack_require__(22);
+var serialization_1 = __webpack_require__(23);
 exports.getServiceIdentifierAsString = serialization_1.getServiceIdentifierAsString;
 
 
@@ -305,16 +305,16 @@ function __asyncValues(o) {
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(86));
-var diModule_1 = __webpack_require__(34);
-exports.commonDIModule = diModule_1.diModule;
-var diModule_2 = __webpack_require__(34);
-exports.TYPES = diModule_2.TYPES;
-__export(__webpack_require__(103));
-__export(__webpack_require__(102));
 __export(__webpack_require__(87));
+var diModule_1 = __webpack_require__(35);
+exports.commonDIModule = diModule_1.diModule;
+var diModule_2 = __webpack_require__(35);
+exports.TYPES = diModule_2.TYPES;
+__export(__webpack_require__(104));
+__export(__webpack_require__(103));
+__export(__webpack_require__(88));
+__export(__webpack_require__(102));
 __export(__webpack_require__(101));
-__export(__webpack_require__(100));
 
 
 /***/ }),
@@ -326,18 +326,18 @@ __export(__webpack_require__(100));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(112));
-__export(__webpack_require__(111));
 __export(__webpack_require__(113));
+__export(__webpack_require__(112));
 __export(__webpack_require__(114));
 __export(__webpack_require__(115));
 __export(__webpack_require__(116));
+__export(__webpack_require__(117));
+__export(__webpack_require__(111));
 __export(__webpack_require__(110));
 __export(__webpack_require__(109));
-__export(__webpack_require__(108));
-__export(__webpack_require__(106));
 __export(__webpack_require__(107));
-__export(__webpack_require__(117));
+__export(__webpack_require__(108));
+__export(__webpack_require__(118));
 
 
 /***/ }),
@@ -349,15 +349,15 @@ __export(__webpack_require__(117));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-var diModule_1 = __webpack_require__(36);
+var diModule_1 = __webpack_require__(37);
 exports.httpDIModule = diModule_1.diModule;
-var diModule_2 = __webpack_require__(36);
+var diModule_2 = __webpack_require__(37);
 exports.httpTYPES = diModule_2.TYPES;
-__export(__webpack_require__(124));
 __export(__webpack_require__(125));
 __export(__webpack_require__(126));
-__export(__webpack_require__(123));
 __export(__webpack_require__(127));
+__export(__webpack_require__(124));
+__export(__webpack_require__(128));
 
 
 /***/ }),
@@ -369,14 +369,16 @@ __export(__webpack_require__(127));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(297));
+__export(__webpack_require__(303));
+__export(__webpack_require__(292));
 __export(__webpack_require__(291));
-__export(__webpack_require__(290));
-__export(__webpack_require__(39));
-__export(__webpack_require__(296));
+__export(__webpack_require__(40));
 __export(__webpack_require__(302));
-__export(__webpack_require__(346));
-__export(__webpack_require__(349));
+__export(__webpack_require__(308));
+__export(__webpack_require__(352));
+__export(__webpack_require__(369));
+__export(__webpack_require__(366));
+__export(__webpack_require__(297));
 
 
 /***/ }),
@@ -388,42 +390,42 @@ __export(__webpack_require__(349));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(206));
-__export(__webpack_require__(137));
-__export(__webpack_require__(189));
-__export(__webpack_require__(205));
-__export(__webpack_require__(188));
-__export(__webpack_require__(37));
-__export(__webpack_require__(180));
-__export(__webpack_require__(166));
-__export(__webpack_require__(187));
-__export(__webpack_require__(148));
-__export(__webpack_require__(161));
-__export(__webpack_require__(139));
+__export(__webpack_require__(207));
 __export(__webpack_require__(138));
-__export(__webpack_require__(141));
-__export(__webpack_require__(140));
-__export(__webpack_require__(143));
-__export(__webpack_require__(142));
-__export(__webpack_require__(150));
+__export(__webpack_require__(190));
+__export(__webpack_require__(206));
+__export(__webpack_require__(189));
+__export(__webpack_require__(38));
+__export(__webpack_require__(181));
+__export(__webpack_require__(167));
+__export(__webpack_require__(188));
 __export(__webpack_require__(149));
+__export(__webpack_require__(162));
+__export(__webpack_require__(140));
+__export(__webpack_require__(139));
+__export(__webpack_require__(142));
+__export(__webpack_require__(141));
+__export(__webpack_require__(144));
+__export(__webpack_require__(143));
+__export(__webpack_require__(151));
+__export(__webpack_require__(150));
+__export(__webpack_require__(155));
 __export(__webpack_require__(154));
 __export(__webpack_require__(153));
 __export(__webpack_require__(152));
-__export(__webpack_require__(151));
+__export(__webpack_require__(164));
 __export(__webpack_require__(163));
-__export(__webpack_require__(162));
+__export(__webpack_require__(170));
 __export(__webpack_require__(169));
-__export(__webpack_require__(168));
+__export(__webpack_require__(185));
 __export(__webpack_require__(184));
 __export(__webpack_require__(183));
 __export(__webpack_require__(182));
-__export(__webpack_require__(181));
+__export(__webpack_require__(172));
 __export(__webpack_require__(171));
-__export(__webpack_require__(170));
-__export(__webpack_require__(167));
-__export(__webpack_require__(37));
-__export(__webpack_require__(207));
+__export(__webpack_require__(168));
+__export(__webpack_require__(38));
+__export(__webpack_require__(208));
 
 
 /***/ }),
@@ -435,19 +437,19 @@ __export(__webpack_require__(207));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(252));
-__export(__webpack_require__(238));
-__export(__webpack_require__(210));
-__export(__webpack_require__(267));
-__export(__webpack_require__(228));
-__export(__webpack_require__(262));
-__export(__webpack_require__(257));
-__export(__webpack_require__(38));
+__export(__webpack_require__(253));
+__export(__webpack_require__(239));
 __export(__webpack_require__(211));
+__export(__webpack_require__(268));
+__export(__webpack_require__(229));
+__export(__webpack_require__(263));
+__export(__webpack_require__(258));
+__export(__webpack_require__(39));
 __export(__webpack_require__(212));
 __export(__webpack_require__(213));
 __export(__webpack_require__(214));
-__export(__webpack_require__(289));
+__export(__webpack_require__(215));
+__export(__webpack_require__(290));
 
 
 /***/ }),
@@ -459,36 +461,36 @@ __export(__webpack_require__(289));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(464));
-__export(__webpack_require__(467));
-__export(__webpack_require__(466));
-__export(__webpack_require__(469));
-__export(__webpack_require__(468));
-__export(__webpack_require__(471));
-__export(__webpack_require__(470));
-__export(__webpack_require__(473));
-__export(__webpack_require__(472));
-__export(__webpack_require__(477));
-__export(__webpack_require__(476));
-__export(__webpack_require__(479));
-__export(__webpack_require__(478));
-__export(__webpack_require__(475));
-__export(__webpack_require__(474));
-__export(__webpack_require__(490));
-__export(__webpack_require__(489));
-__export(__webpack_require__(484));
-__export(__webpack_require__(483));
-__export(__webpack_require__(486));
-__export(__webpack_require__(485));
-__export(__webpack_require__(492));
-__export(__webpack_require__(491));
-__export(__webpack_require__(488));
-__export(__webpack_require__(487));
-__export(__webpack_require__(482));
-__export(__webpack_require__(481));
-__export(__webpack_require__(480));
-__export(__webpack_require__(465));
-__export(__webpack_require__(463));
+__export(__webpack_require__(513));
+__export(__webpack_require__(516));
+__export(__webpack_require__(515));
+__export(__webpack_require__(518));
+__export(__webpack_require__(517));
+__export(__webpack_require__(520));
+__export(__webpack_require__(519));
+__export(__webpack_require__(522));
+__export(__webpack_require__(521));
+__export(__webpack_require__(526));
+__export(__webpack_require__(525));
+__export(__webpack_require__(528));
+__export(__webpack_require__(527));
+__export(__webpack_require__(524));
+__export(__webpack_require__(523));
+__export(__webpack_require__(539));
+__export(__webpack_require__(538));
+__export(__webpack_require__(533));
+__export(__webpack_require__(532));
+__export(__webpack_require__(535));
+__export(__webpack_require__(534));
+__export(__webpack_require__(541));
+__export(__webpack_require__(540));
+__export(__webpack_require__(537));
+__export(__webpack_require__(536));
+__export(__webpack_require__(531));
+__export(__webpack_require__(530));
+__export(__webpack_require__(529));
+__export(__webpack_require__(514));
+__export(__webpack_require__(512));
 
 
 /***/ }),
@@ -500,35 +502,35 @@ __export(__webpack_require__(463));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(517));
-__export(__webpack_require__(501));
-__export(__webpack_require__(500));
-__export(__webpack_require__(503));
-__export(__webpack_require__(502));
-__export(__webpack_require__(519));
-__export(__webpack_require__(518));
-__export(__webpack_require__(521));
-__export(__webpack_require__(520));
-__export(__webpack_require__(524));
-__export(__webpack_require__(523));
-__export(__webpack_require__(526));
-__export(__webpack_require__(525));
-__export(__webpack_require__(528));
-__export(__webpack_require__(527));
-__export(__webpack_require__(534));
-__export(__webpack_require__(533));
-__export(__webpack_require__(532));
-__export(__webpack_require__(531));
-__export(__webpack_require__(530));
-__export(__webpack_require__(529));
-__export(__webpack_require__(536));
-__export(__webpack_require__(535));
-__export(__webpack_require__(538));
-__export(__webpack_require__(537));
-__export(__webpack_require__(540));
-__export(__webpack_require__(539));
-__export(__webpack_require__(522));
-__export(__webpack_require__(516));
+__export(__webpack_require__(566));
+__export(__webpack_require__(550));
+__export(__webpack_require__(549));
+__export(__webpack_require__(552));
+__export(__webpack_require__(551));
+__export(__webpack_require__(568));
+__export(__webpack_require__(567));
+__export(__webpack_require__(570));
+__export(__webpack_require__(569));
+__export(__webpack_require__(573));
+__export(__webpack_require__(572));
+__export(__webpack_require__(575));
+__export(__webpack_require__(574));
+__export(__webpack_require__(577));
+__export(__webpack_require__(576));
+__export(__webpack_require__(583));
+__export(__webpack_require__(582));
+__export(__webpack_require__(581));
+__export(__webpack_require__(580));
+__export(__webpack_require__(579));
+__export(__webpack_require__(578));
+__export(__webpack_require__(585));
+__export(__webpack_require__(584));
+__export(__webpack_require__(587));
+__export(__webpack_require__(586));
+__export(__webpack_require__(589));
+__export(__webpack_require__(588));
+__export(__webpack_require__(571));
+__export(__webpack_require__(565));
 
 
 /***/ }),
@@ -538,11 +540,45 @@ __export(__webpack_require__(516));
 "use strict";
 
 
-module.exports = __webpack_require__(57)() ? Symbol : __webpack_require__(59);
+module.exports = __webpack_require__(58)() ? Symbol : __webpack_require__(60);
 
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(465));
+__export(__webpack_require__(469));
+__export(__webpack_require__(468));
+__export(__webpack_require__(467));
+__export(__webpack_require__(466));
+__export(__webpack_require__(473));
+__export(__webpack_require__(472));
+__export(__webpack_require__(477));
+__export(__webpack_require__(476));
+__export(__webpack_require__(479));
+__export(__webpack_require__(478));
+__export(__webpack_require__(481));
+__export(__webpack_require__(480));
+__export(__webpack_require__(486));
+__export(__webpack_require__(484));
+__export(__webpack_require__(485));
+__export(__webpack_require__(483));
+__export(__webpack_require__(475));
+__export(__webpack_require__(474));
+__export(__webpack_require__(471));
+__export(__webpack_require__(470));
+__export(__webpack_require__(482));
+__export(__webpack_require__(464));
+
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -560,38 +596,6 @@ exports.DESIGN_PARAM_TYPES = "design:paramtypes";
 
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(418));
-__export(__webpack_require__(422));
-__export(__webpack_require__(421));
-__export(__webpack_require__(420));
-__export(__webpack_require__(419));
-__export(__webpack_require__(426));
-__export(__webpack_require__(425));
-__export(__webpack_require__(430));
-__export(__webpack_require__(429));
-__export(__webpack_require__(432));
-__export(__webpack_require__(431));
-__export(__webpack_require__(437));
-__export(__webpack_require__(435));
-__export(__webpack_require__(436));
-__export(__webpack_require__(434));
-__export(__webpack_require__(428));
-__export(__webpack_require__(427));
-__export(__webpack_require__(424));
-__export(__webpack_require__(423));
-__export(__webpack_require__(433));
-__export(__webpack_require__(417));
-
-
-/***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -600,22 +604,22 @@ __export(__webpack_require__(417));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(442));
-__export(__webpack_require__(448));
-__export(__webpack_require__(447));
-__export(__webpack_require__(450));
-__export(__webpack_require__(449));
-__export(__webpack_require__(446));
-__export(__webpack_require__(445));
-__export(__webpack_require__(456));
-__export(__webpack_require__(455));
-__export(__webpack_require__(444));
-__export(__webpack_require__(443));
-__export(__webpack_require__(452));
-__export(__webpack_require__(451));
-__export(__webpack_require__(454));
-__export(__webpack_require__(453));
-__export(__webpack_require__(441));
+__export(__webpack_require__(421));
+__export(__webpack_require__(402));
+__export(__webpack_require__(401));
+__export(__webpack_require__(412));
+__export(__webpack_require__(411));
+__export(__webpack_require__(410));
+__export(__webpack_require__(403));
+__export(__webpack_require__(407));
+__export(__webpack_require__(406));
+__export(__webpack_require__(405));
+__export(__webpack_require__(404));
+__export(__webpack_require__(409));
+__export(__webpack_require__(408));
+__export(__webpack_require__(420));
+__export(__webpack_require__(426));
+__export(__webpack_require__(427));
 
 
 /***/ }),
@@ -624,7 +628,34 @@ __export(__webpack_require__(441));
 
 "use strict";
 
-var METADATA_KEY = __webpack_require__(11);
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(491));
+__export(__webpack_require__(497));
+__export(__webpack_require__(496));
+__export(__webpack_require__(499));
+__export(__webpack_require__(498));
+__export(__webpack_require__(495));
+__export(__webpack_require__(494));
+__export(__webpack_require__(505));
+__export(__webpack_require__(504));
+__export(__webpack_require__(493));
+__export(__webpack_require__(492));
+__export(__webpack_require__(501));
+__export(__webpack_require__(500));
+__export(__webpack_require__(503));
+__export(__webpack_require__(502));
+__export(__webpack_require__(490));
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var METADATA_KEY = __webpack_require__(12);
 var Metadata = (function () {
     function Metadata(key, value) {
         this.key = key;
@@ -644,7 +675,7 @@ exports.Metadata = Metadata;
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -678,13 +709,13 @@ exports.INVALID_BINDING_PROPERTY = "TODO";
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var METADATA_KEY = __webpack_require__(11);
-var ERROR_MSGS = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(12);
+var ERROR_MSGS = __webpack_require__(16);
 function tagParameter(annotationTarget, propertyName, parameterIndex, metadata) {
     var metadataKey = METADATA_KEY.TAGGED;
     _tagParameterOrProperty(metadataKey, annotationTarget, propertyName, metadata, parameterIndex);
@@ -739,7 +770,7 @@ exports.decorate = decorate;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -769,7 +800,7 @@ exports.TargetTypeEnum = TargetTypeEnum;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -777,22 +808,22 @@ exports.TargetTypeEnum = TargetTypeEnum;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(396));
-__export(__webpack_require__(390));
-__export(__webpack_require__(389));
-__export(__webpack_require__(382));
-__export(__webpack_require__(381));
-__export(__webpack_require__(388));
-__export(__webpack_require__(387));
-__export(__webpack_require__(385));
-__export(__webpack_require__(384));
-__export(__webpack_require__(386));
-__export(__webpack_require__(383));
-__export(__webpack_require__(395));
+__export(__webpack_require__(443));
+__export(__webpack_require__(437));
+__export(__webpack_require__(436));
+__export(__webpack_require__(429));
+__export(__webpack_require__(428));
+__export(__webpack_require__(435));
+__export(__webpack_require__(434));
+__export(__webpack_require__(432));
+__export(__webpack_require__(431));
+__export(__webpack_require__(433));
+__export(__webpack_require__(430));
+__export(__webpack_require__(442));
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -810,27 +841,6 @@ exports.guid = guid;
 
 
 /***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(367));
-__export(__webpack_require__(375));
-__export(__webpack_require__(374));
-__export(__webpack_require__(371));
-__export(__webpack_require__(370));
-__export(__webpack_require__(369));
-__export(__webpack_require__(368));
-__export(__webpack_require__(373));
-__export(__webpack_require__(372));
-__export(__webpack_require__(366));
-
-
-/***/ }),
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -839,14 +849,16 @@ __export(__webpack_require__(366));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(355));
-__export(__webpack_require__(361));
-__export(__webpack_require__(360));
-__export(__webpack_require__(357));
-__export(__webpack_require__(356));
-__export(__webpack_require__(359));
-__export(__webpack_require__(358));
-__export(__webpack_require__(354));
+__export(__webpack_require__(387));
+__export(__webpack_require__(395));
+__export(__webpack_require__(394));
+__export(__webpack_require__(391));
+__export(__webpack_require__(390));
+__export(__webpack_require__(389));
+__export(__webpack_require__(388));
+__export(__webpack_require__(393));
+__export(__webpack_require__(392));
+__export(__webpack_require__(386));
 
 
 /***/ }),
@@ -855,7 +867,26 @@ __export(__webpack_require__(354));
 
 "use strict";
 
-var ERROR_MSGS = __webpack_require__(15);
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(375));
+__export(__webpack_require__(381));
+__export(__webpack_require__(380));
+__export(__webpack_require__(377));
+__export(__webpack_require__(376));
+__export(__webpack_require__(379));
+__export(__webpack_require__(378));
+__export(__webpack_require__(374));
+
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ERROR_MSGS = __webpack_require__(16);
 function getServiceIdentifierAsString(serviceIdentifier) {
     if (typeof serviceIdentifier === "function") {
         var _serviceIdentifier = serviceIdentifier;
@@ -947,23 +978,6 @@ exports.getFunctionName = getFunctionName;
 
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(495));
-__export(__webpack_require__(497));
-__export(__webpack_require__(496));
-__export(__webpack_require__(499));
-__export(__webpack_require__(498));
-__export(__webpack_require__(494));
-
-
-/***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -973,10 +987,10 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 __export(__webpack_require__(544));
-__export(__webpack_require__(547));
 __export(__webpack_require__(546));
-__export(__webpack_require__(548));
 __export(__webpack_require__(545));
+__export(__webpack_require__(548));
+__export(__webpack_require__(547));
 __export(__webpack_require__(543));
 
 
@@ -986,12 +1000,15 @@ __export(__webpack_require__(543));
 
 "use strict";
 
-
-var _undefined = __webpack_require__(44)(); // Support ES3 engines
-
-module.exports = function (val) {
- return (val !== _undefined) && (val !== null);
-};
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(593));
+__export(__webpack_require__(596));
+__export(__webpack_require__(595));
+__export(__webpack_require__(597));
+__export(__webpack_require__(594));
+__export(__webpack_require__(592));
 
 
 /***/ }),
@@ -1000,7 +1017,21 @@ module.exports = function (val) {
 
 "use strict";
 
-var binding_when_syntax_1 = __webpack_require__(27);
+
+var _undefined = __webpack_require__(45)(); // Support ES3 engines
+
+module.exports = function (val) {
+ return (val !== _undefined) && (val !== null);
+};
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var binding_when_syntax_1 = __webpack_require__(28);
 var BindingOnSyntax = (function () {
     function BindingOnSyntax(binding) {
         this._binding = binding;
@@ -1015,13 +1046,13 @@ exports.BindingOnSyntax = BindingOnSyntax;
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_on_syntax_1 = __webpack_require__(26);
-var constraint_helpers_1 = __webpack_require__(33);
+var binding_on_syntax_1 = __webpack_require__(27);
+var constraint_helpers_1 = __webpack_require__(34);
 var BindingWhenSyntax = (function () {
     function BindingWhenSyntax(binding) {
         this._binding = binding;
@@ -1119,21 +1150,6 @@ exports.BindingWhenSyntax = BindingWhenSyntax;
 
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(136));
-__export(__webpack_require__(131));
-__export(__webpack_require__(130));
-__export(__webpack_require__(135));
-
-
-/***/ }),
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1142,10 +1158,10 @@ __export(__webpack_require__(135));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(378));
-__export(__webpack_require__(380));
-__export(__webpack_require__(379));
-__export(__webpack_require__(377));
+__export(__webpack_require__(137));
+__export(__webpack_require__(132));
+__export(__webpack_require__(131));
+__export(__webpack_require__(136));
 
 
 /***/ }),
@@ -1154,27 +1170,44 @@ __export(__webpack_require__(377));
 
 "use strict";
 
-var ApplicationSettings = __webpack_require__(28);
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(398));
+__export(__webpack_require__(400));
+__export(__webpack_require__(399));
+__export(__webpack_require__(397));
+
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ApplicationSettings = __webpack_require__(29);
 exports.ApplicationSettings = ApplicationSettings;
-var Membership = __webpack_require__(12);
+var Membership = __webpack_require__(11);
 exports.Membership = Membership;
 var UserProfile = __webpack_require__(9);
 exports.UserProfile = UserProfile;
-var KeyValue = __webpack_require__(29);
+var KeyValue = __webpack_require__(30);
 exports.KeyValue = KeyValue;
-var ValueSet = __webpack_require__(24);
+var ValueSet = __webpack_require__(25);
 exports.ValueSet = ValueSet;
 var Article = __webpack_require__(6);
 exports.Article = Article;
-var DynamicResource = __webpack_require__(21);
+var DynamicResource = __webpack_require__(22);
 exports.DynamicResource = DynamicResource;
-var MediaVault = __webpack_require__(18);
+var MediaVault = __webpack_require__(19);
 exports.MediaVault = MediaVault;
-var Files = __webpack_require__(20);
+var MediaGallery = __webpack_require__(13);
+exports.MediaGallery = MediaGallery;
+var Files = __webpack_require__(21);
 exports.Files = Files;
-var Templating = __webpack_require__(23);
+var Templating = __webpack_require__(24);
 exports.Templating = Templating;
-var Metering = __webpack_require__(13);
+var Metering = __webpack_require__(14);
 exports.Metering = Metering;
 var Notifications = __webpack_require__(8);
 exports.Notifications = Notifications;
@@ -1185,15 +1218,15 @@ exports.Calendar = Calendar;
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var queryable_string_1 = __webpack_require__(78);
-var guid_1 = __webpack_require__(19);
-var METADATA_KEY = __webpack_require__(11);
+var metadata_1 = __webpack_require__(15);
+var queryable_string_1 = __webpack_require__(79);
+var guid_1 = __webpack_require__(20);
+var METADATA_KEY = __webpack_require__(12);
 var Target = (function () {
     function Target(type, name, serviceIdentifier, namedOrTagged) {
         this.guid = guid_1.guid();
@@ -1281,13 +1314,13 @@ exports.Target = Target;
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_when_syntax_1 = __webpack_require__(27);
-var binding_on_syntax_1 = __webpack_require__(26);
+var binding_when_syntax_1 = __webpack_require__(28);
+var binding_on_syntax_1 = __webpack_require__(27);
 var BindingWhenOnSyntax = (function () {
     function BindingWhenOnSyntax(binding) {
         this._binding = binding;
@@ -1348,13 +1381,13 @@ exports.BindingWhenOnSyntax = BindingWhenOnSyntax;
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var METADATA_KEY = __webpack_require__(11);
+var metadata_1 = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(12);
 var traverseAncerstors = function (request, constraint) {
     var parent = request.parentRequest;
     if (parent !== null) {
@@ -1394,7 +1427,7 @@ exports.typeConstraint = typeConstraint;
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1418,7 +1451,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1426,14 +1459,14 @@ exports.diModule = diModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(121));
 __export(__webpack_require__(122));
-var diModule_1 = __webpack_require__(118);
+__export(__webpack_require__(123));
+var diModule_1 = __webpack_require__(119);
 exports.coreDIModule = diModule_1.diModule;
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1453,7 +1486,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1785,22 +1818,6 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(278));
-__export(__webpack_require__(273));
-__export(__webpack_require__(283));
-__export(__webpack_require__(288));
-__export(__webpack_require__(268));
-
-
-/***/ }),
 /* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1809,15 +1826,11 @@ __export(__webpack_require__(268));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(307));
-__export(__webpack_require__(317));
-__export(__webpack_require__(312));
-__export(__webpack_require__(328));
-__export(__webpack_require__(333));
-__export(__webpack_require__(338));
-__export(__webpack_require__(343));
-__export(__webpack_require__(322));
-__export(__webpack_require__(323));
+__export(__webpack_require__(279));
+__export(__webpack_require__(274));
+__export(__webpack_require__(284));
+__export(__webpack_require__(289));
+__export(__webpack_require__(269));
 
 
 /***/ }),
@@ -1826,12 +1839,32 @@ __export(__webpack_require__(323));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(313));
+__export(__webpack_require__(323));
+__export(__webpack_require__(318));
+__export(__webpack_require__(334));
+__export(__webpack_require__(339));
+__export(__webpack_require__(344));
+__export(__webpack_require__(349));
+__export(__webpack_require__(328));
+__export(__webpack_require__(329));
+
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
-var core_1 = __webpack_require__(35);
-var _1 = __webpack_require__(42);
+var core_1 = __webpack_require__(36);
+var _1 = __webpack_require__(43);
 var httpApi_1 = __webpack_require__(4);
-var modules = __webpack_require__(30);
+var modules = __webpack_require__(31);
 var BaasicApp = (function () {
     function BaasicApp(apiKey, options) {
         this.apiKey = apiKey;
@@ -1860,6 +1893,7 @@ var BaasicApp = (function () {
         this.templatingModule = this.diModule.kernel.get(modules.Templating.TYPES.TemplatingClient);
         this.meteringModule = this.diModule.kernel.get(modules.Metering.TYPES.MeteringClient);
         this.mediaVaultModule = this.diModule.kernel.get(modules.MediaVault.TYPES.MediaVaultClient);
+        this.mediaGalleryModule = this.diModule.kernel.get(modules.MediaGallery.TYPES.Root);
         this.fileModule = this.diModule.kernel.get(modules.Files.TYPES.FilesClient);
         this.dynamicResourceModule = this.diModule.kernel.get(modules.DynamicResource.TYPES.DynamicResourceClient);
         this.notificationModule = this.diModule.kernel.get(modules.Notifications.TYPES.NotificationsClient);
@@ -1897,7 +1931,7 @@ exports.BaasicApp = BaasicApp;
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1905,9 +1939,9 @@ exports.BaasicApp = BaasicApp;
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var contracts_1 = __webpack_require__(3);
-var jQuery_1 = __webpack_require__(128);
-var localStorage_1 = __webpack_require__(120);
-var browserEvents_1 = __webpack_require__(105);
+var jQuery_1 = __webpack_require__(129);
+var localStorage_1 = __webpack_require__(121);
+var browserEvents_1 = __webpack_require__(106);
 var DIModule = (function () {
     function DIModule() {
         this.diModules = [];
@@ -1983,7 +2017,7 @@ exports.DIModule = DIModule;
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1991,8 +2025,8 @@ exports.DIModule = DIModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(42));
 __export(__webpack_require__(41));
-__export(__webpack_require__(40));
 var httpApi_1 = __webpack_require__(4);
 exports.IHttpClient = httpApi_1.IHttpClient;
 exports.IHttpHeaders = httpApi_1.IHttpHeaders;
@@ -2010,20 +2044,20 @@ exports.IUser = contracts_1.IUser;
 exports.IUserHandler = contracts_1.IUserHandler;
 exports.IDefaultStorageConfig = contracts_1.IDefaultStorageConfig;
 __export(__webpack_require__(2));
-__export(__webpack_require__(30));
+__export(__webpack_require__(31));
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var assign        = __webpack_require__(45)
-  , normalizeOpts = __webpack_require__(52)
-  , isCallable    = __webpack_require__(48)
-  , contains      = __webpack_require__(54)
+var assign        = __webpack_require__(46)
+  , normalizeOpts = __webpack_require__(53)
+  , isCallable    = __webpack_require__(49)
+  , contains      = __webpack_require__(55)
 
   , d;
 
@@ -2084,7 +2118,7 @@ d.gs = function (dscr, get, set/*, options*/) {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2095,19 +2129,19 @@ module.exports = function () {};
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(46)()
+module.exports = __webpack_require__(47)()
 	? Object.assign
-	: __webpack_require__(47);
+	: __webpack_require__(48);
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2123,14 +2157,14 @@ module.exports = function () {
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var keys  = __webpack_require__(49)
-  , value = __webpack_require__(53)
+var keys  = __webpack_require__(50)
+  , value = __webpack_require__(54)
   , max   = Math.max;
 
 module.exports = function (dest, src /*, …srcn*/) {
@@ -2153,7 +2187,7 @@ module.exports = function (dest, src /*, …srcn*/) {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2167,19 +2201,19 @@ module.exports = function (obj) {
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(50)()
+module.exports = __webpack_require__(51)()
 	? Object.keys
-	: __webpack_require__(51);
+	: __webpack_require__(52);
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2196,13 +2230,13 @@ module.exports = function () {
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isValue = __webpack_require__(25);
+var isValue = __webpack_require__(26);
 
 var keys = Object.keys;
 
@@ -2212,13 +2246,13 @@ module.exports = function (object) {
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isValue = __webpack_require__(25);
+var isValue = __webpack_require__(26);
 
 var forEach = Array.prototype.forEach, create = Object.create;
 
@@ -2239,13 +2273,13 @@ module.exports = function (opts1 /*, …options*/) {
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isValue = __webpack_require__(25);
+var isValue = __webpack_require__(26);
 
 module.exports = function (value) {
 	if (!isValue(value)) throw new TypeError("Cannot use null or undefined");
@@ -2254,19 +2288,19 @@ module.exports = function (value) {
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(55)()
+module.exports = __webpack_require__(56)()
 	? String.prototype.contains
-	: __webpack_require__(56);
+	: __webpack_require__(57);
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2281,7 +2315,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2295,7 +2329,7 @@ module.exports = function (searchString/*, position*/) {
 
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2319,7 +2353,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2335,7 +2369,7 @@ module.exports = function (x) {
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2343,8 +2377,8 @@ module.exports = function (x) {
 
 
 
-var d              = __webpack_require__(43)
-  , validateSymbol = __webpack_require__(60)
+var d              = __webpack_require__(44)
+  , validateSymbol = __webpack_require__(61)
 
   , create = Object.create, defineProperties = Object.defineProperties
   , defineProperty = Object.defineProperty, objPrototype = Object.prototype
@@ -2460,13 +2494,13 @@ defineProperty(HiddenSymbol.prototype, SymbolPolyfill.toPrimitive,
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isSymbol = __webpack_require__(58);
+var isSymbol = __webpack_require__(59);
 
 module.exports = function (value) {
 	if (!isSymbol(value)) throw new TypeError(value + " is not a symbol");
@@ -2475,14 +2509,14 @@ module.exports = function (value) {
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var decorator_utils_1 = __webpack_require__(16);
-var METADATA_KEY = __webpack_require__(11);
+var metadata_1 = __webpack_require__(15);
+var decorator_utils_1 = __webpack_require__(17);
+var METADATA_KEY = __webpack_require__(12);
 function inject(serviceIdentifier) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.INJECT_TAG, serviceIdentifier);
@@ -2498,13 +2532,13 @@ exports.inject = inject;
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var METADATA_KEY = __webpack_require__(11);
-var ERRORS_MSGS = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(12);
+var ERRORS_MSGS = __webpack_require__(16);
 function injectable() {
     return function (target) {
         if (Reflect.hasOwnMetadata(METADATA_KEY.PARAM_TYPES, target) === true) {
@@ -2519,14 +2553,14 @@ exports.injectable = injectable;
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var decorator_utils_1 = __webpack_require__(16);
-var METADATA_KEY = __webpack_require__(11);
+var metadata_1 = __webpack_require__(15);
+var decorator_utils_1 = __webpack_require__(17);
+var METADATA_KEY = __webpack_require__(12);
 function multiInject(serviceIdentifier) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.MULTI_INJECT_TAG, serviceIdentifier);
@@ -2542,14 +2576,14 @@ exports.multiInject = multiInject;
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var decorator_utils_1 = __webpack_require__(16);
-var METADATA_KEY = __webpack_require__(11);
+var metadata_1 = __webpack_require__(15);
+var decorator_utils_1 = __webpack_require__(17);
+var METADATA_KEY = __webpack_require__(12);
 function named(name) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.NAMED_TAG, name);
@@ -2565,14 +2599,14 @@ exports.named = named;
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var decorator_utils_1 = __webpack_require__(16);
-var METADATA_KEY = __webpack_require__(11);
+var metadata_1 = __webpack_require__(15);
+var decorator_utils_1 = __webpack_require__(17);
+var METADATA_KEY = __webpack_require__(12);
 function optional() {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.OPTIONAL_TAG, true);
@@ -2588,13 +2622,13 @@ exports.optional = optional;
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var decorator_utils_1 = __webpack_require__(16);
+var metadata_1 = __webpack_require__(15);
+var decorator_utils_1 = __webpack_require__(17);
 function tagged(metadataKey, metadataValue) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(metadataKey, metadataValue);
@@ -2610,14 +2644,14 @@ exports.tagged = tagged;
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var decorator_utils_1 = __webpack_require__(16);
-var METADATA_KEY = __webpack_require__(11);
+var metadata_1 = __webpack_require__(15);
+var decorator_utils_1 = __webpack_require__(17);
+var METADATA_KEY = __webpack_require__(12);
 function targetName(name) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.NAME_TAG, name);
@@ -2628,14 +2662,14 @@ exports.targetName = targetName;
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(14);
-var decorator_utils_1 = __webpack_require__(16);
-var METADATA_KEY = __webpack_require__(11);
+var metadata_1 = __webpack_require__(15);
+var decorator_utils_1 = __webpack_require__(17);
+var METADATA_KEY = __webpack_require__(12);
 function unmanaged() {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.UNMANAGED_TAG, true);
@@ -2646,13 +2680,13 @@ exports.unmanaged = unmanaged;
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var guid_1 = __webpack_require__(19);
-var literal_types_1 = __webpack_require__(17);
+var guid_1 = __webpack_require__(20);
+var literal_types_1 = __webpack_require__(18);
 var Binding = (function () {
     function Binding(serviceIdentifier, defaultScope) {
         this.guid = guid_1.guid();
@@ -2688,7 +2722,7 @@ exports.Binding = Binding;
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2702,22 +2736,22 @@ exports.BindingCount = BindingCount;
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_1 = __webpack_require__(69);
-var lookup_1 = __webpack_require__(74);
-var planner_1 = __webpack_require__(77);
-var resolver_1 = __webpack_require__(82);
-var binding_to_syntax_1 = __webpack_require__(85);
-var serialization_1 = __webpack_require__(22);
-var container_snapshot_1 = __webpack_require__(73);
-var guid_1 = __webpack_require__(19);
-var ERROR_MSGS = __webpack_require__(15);
-var METADATA_KEY = __webpack_require__(11);
-var literal_types_1 = __webpack_require__(17);
+var binding_1 = __webpack_require__(70);
+var lookup_1 = __webpack_require__(75);
+var planner_1 = __webpack_require__(78);
+var resolver_1 = __webpack_require__(83);
+var binding_to_syntax_1 = __webpack_require__(86);
+var serialization_1 = __webpack_require__(23);
+var container_snapshot_1 = __webpack_require__(74);
+var guid_1 = __webpack_require__(20);
+var ERROR_MSGS = __webpack_require__(16);
+var METADATA_KEY = __webpack_require__(12);
+var literal_types_1 = __webpack_require__(18);
 var Container = (function () {
     function Container(containerOptions) {
         if (containerOptions !== undefined) {
@@ -2935,12 +2969,12 @@ exports.Container = Container;
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var guid_1 = __webpack_require__(19);
+var guid_1 = __webpack_require__(20);
 var ContainerModule = (function () {
     function ContainerModule(registry) {
         this.guid = guid_1.guid();
@@ -2952,7 +2986,7 @@ exports.ContainerModule = ContainerModule;
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2972,12 +3006,12 @@ exports.ContainerSnapshot = ContainerSnapshot;
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ERROR_MSGS = __webpack_require__(15);
+var ERROR_MSGS = __webpack_require__(16);
 var Lookup = (function () {
     function Lookup() {
         this._map = new Map();
@@ -3060,12 +3094,12 @@ exports.Lookup = Lookup;
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var guid_1 = __webpack_require__(19);
+var guid_1 = __webpack_require__(20);
 var Context = (function () {
     function Context(container) {
         this.guid = guid_1.guid();
@@ -3080,7 +3114,7 @@ exports.Context = Context;
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3096,22 +3130,22 @@ exports.Plan = Plan;
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var plan_1 = __webpack_require__(76);
-var context_1 = __webpack_require__(75);
-var request_1 = __webpack_require__(80);
-var target_1 = __webpack_require__(31);
-var binding_count_1 = __webpack_require__(70);
-var reflection_utils_1 = __webpack_require__(79);
-var metadata_1 = __webpack_require__(14);
-var ERROR_MSGS = __webpack_require__(15);
-var METADATA_KEY = __webpack_require__(11);
-var literal_types_1 = __webpack_require__(17);
-var serialization_1 = __webpack_require__(22);
+var plan_1 = __webpack_require__(77);
+var context_1 = __webpack_require__(76);
+var request_1 = __webpack_require__(81);
+var target_1 = __webpack_require__(32);
+var binding_count_1 = __webpack_require__(71);
+var reflection_utils_1 = __webpack_require__(80);
+var metadata_1 = __webpack_require__(15);
+var ERROR_MSGS = __webpack_require__(16);
+var METADATA_KEY = __webpack_require__(12);
+var literal_types_1 = __webpack_require__(18);
+var serialization_1 = __webpack_require__(23);
 function getBindingDictionary(cntnr) {
     return cntnr._bindingDictionary;
 }
@@ -3238,7 +3272,7 @@ exports.createMockRequest = createMockRequest;
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3271,16 +3305,16 @@ exports.QueryableString = QueryableString;
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var serialization_1 = __webpack_require__(22);
-var target_1 = __webpack_require__(31);
-var ERROR_MSGS = __webpack_require__(15);
-var METADATA_KEY = __webpack_require__(11);
-var literal_types_1 = __webpack_require__(17);
+var serialization_1 = __webpack_require__(23);
+var target_1 = __webpack_require__(32);
+var ERROR_MSGS = __webpack_require__(16);
+var METADATA_KEY = __webpack_require__(12);
+var literal_types_1 = __webpack_require__(18);
 function getDependencies(func) {
     var constructorName = serialization_1.getFunctionName(func);
     var targets = getTargets(func, false);
@@ -3384,12 +3418,12 @@ function formatTargetMetadata(targetMetadata) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var guid_1 = __webpack_require__(19);
+var guid_1 = __webpack_require__(20);
 var Request = (function () {
     function Request(serviceIdentifier, parentContext, parentRequest, bindings, target) {
         this.guid = guid_1.guid();
@@ -3411,12 +3445,12 @@ exports.Request = Request;
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var literal_types_1 = __webpack_require__(17);
+var literal_types_1 = __webpack_require__(18);
 function _injectProperties(instance, childRequests, resolveRequest) {
     var propertyInjectionsRequests = childRequests.filter(function (childRequest) {
         return (childRequest.target !== null && childRequest.target.type === literal_types_1.TargetTypeEnum.ClassProperty);
@@ -3456,15 +3490,15 @@ exports.resolveInstance = resolveInstance;
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var literal_types_1 = __webpack_require__(17);
-var serialization_1 = __webpack_require__(22);
-var instantiation_1 = __webpack_require__(81);
-var ERROR_MSGS = __webpack_require__(15);
+var literal_types_1 = __webpack_require__(18);
+var serialization_1 = __webpack_require__(23);
+var instantiation_1 = __webpack_require__(82);
+var ERROR_MSGS = __webpack_require__(16);
 function _resolveRequest(request) {
     var bindings = request.bindings;
     var childRequests = request.childRequests;
@@ -3530,13 +3564,13 @@ exports.resolve = resolve;
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var literal_types_1 = __webpack_require__(17);
-var binding_when_on_syntax_1 = __webpack_require__(32);
+var literal_types_1 = __webpack_require__(18);
+var binding_when_on_syntax_1 = __webpack_require__(33);
 var BindingInSyntax = (function () {
     function BindingInSyntax(binding) {
         this._binding = binding;
@@ -3555,14 +3589,14 @@ exports.BindingInSyntax = BindingInSyntax;
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_in_syntax_1 = __webpack_require__(83);
-var binding_when_syntax_1 = __webpack_require__(27);
-var binding_on_syntax_1 = __webpack_require__(26);
+var binding_in_syntax_1 = __webpack_require__(84);
+var binding_when_syntax_1 = __webpack_require__(28);
+var binding_on_syntax_1 = __webpack_require__(27);
 var BindingInWhenOnSyntax = (function () {
     function BindingInWhenOnSyntax(binding) {
         this._binding = binding;
@@ -3630,15 +3664,15 @@ exports.BindingInWhenOnSyntax = BindingInWhenOnSyntax;
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_in_when_on_syntax_1 = __webpack_require__(84);
-var binding_when_on_syntax_1 = __webpack_require__(32);
-var literal_types_1 = __webpack_require__(17);
-var ERROR_MSGS = __webpack_require__(15);
+var binding_in_when_on_syntax_1 = __webpack_require__(85);
+var binding_when_on_syntax_1 = __webpack_require__(33);
+var literal_types_1 = __webpack_require__(18);
+var ERROR_MSGS = __webpack_require__(16);
 var BindingToSyntax = (function () {
     function BindingToSyntax(binding) {
         this._binding = binding;
@@ -3708,7 +3742,7 @@ exports.BindingToSyntax = BindingToSyntax;
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3716,13 +3750,13 @@ exports.BindingToSyntax = BindingToSyntax;
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var uritemplate = __webpack_require__(549);
+var uritemplate = __webpack_require__(598);
 var _1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var inversify_1 = __webpack_require__(0);
@@ -3832,6 +3866,9 @@ var BaseRoute = (function () {
     BaseRoute.prototype.deleteParams = function (data) {
         return this.modelMapper.removeParams(data)[this.modelMapper.modelPropertyName];
     };
+    BaseRoute.prototype.deleteBatchParams = function (data) {
+        return this.modelMapper.batchRemoveParams(data);
+    };
     /**
      * Parses and expands URI templates based on [RFC6570](http://tools.ietf.org/html/rfc6570) specifications. For more information please visit the project [GitHub](https://github.com/Baasic/uritemplate-js) page.
      * @method
@@ -3858,14 +3895,6 @@ var _a;
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
-
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 
 
 /***/ }),
@@ -3962,25 +3991,33 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(95));
-__export(__webpack_require__(97));
-__export(__webpack_require__(96));
-__export(__webpack_require__(88));
-__export(__webpack_require__(89));
-__export(__webpack_require__(92));
-__export(__webpack_require__(93));
-__export(__webpack_require__(90));
-__export(__webpack_require__(91));
-__export(__webpack_require__(99));
-__export(__webpack_require__(94));
-__export(__webpack_require__(98));
 
 
 /***/ }),
 /* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(96));
+__export(__webpack_require__(98));
+__export(__webpack_require__(97));
+__export(__webpack_require__(89));
+__export(__webpack_require__(90));
+__export(__webpack_require__(93));
+__export(__webpack_require__(94));
+__export(__webpack_require__(91));
+__export(__webpack_require__(92));
+__export(__webpack_require__(100));
+__export(__webpack_require__(95));
+__export(__webpack_require__(99));
+
+
+/***/ }),
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4097,7 +4134,7 @@ exports.HALParser = HALParser = new Parser('JavaScriptSDK');
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4210,13 +4247,29 @@ var ModelMapper = (function () {
     ModelMapper.prototype.removeParams = function (data) {
         return this.ModelParams(data);
     };
+    /**
+ * Performs remove resource transforms on transforms an object so that it can be safely expanded with additional properties.
+ * @param data data object
+ * @method
+ * @example modelMapper.batchRemoveParams({});
+ **/
+    ModelMapper.prototype.batchRemoveParams = function (data) {
+        var _this = this;
+        var items = [];
+        data.forEach(function (item) {
+            if (_this.utility.isObject(item)) {
+                items.push(item[_this.idPropertyName]);
+            }
+        });
+        return items;
+    };
     return ModelMapper;
 }());
 exports.ModelMapper = ModelMapper;
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4299,7 +4352,7 @@ exports.Utility = Utility;
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4358,22 +4411,26 @@ var BrowserEventHandler = (function () {
     }
     BrowserEventHandler.prototype.pushMessage = function (message, args) {
         this.storageHandler.remove(this.messageBusKey);
-        this.storageHandler.set(this.messageBusKey, JSON.stringify({
+        this.storageHandler.set(this.messageBusKey, {
             message: message,
             args: args
-        }));
+        });
     };
     BrowserEventHandler.prototype.initEventing = function () {
+        var self = this;
         this.addEvent('storage', function (e) {
             e = e || event;
             if (e.originalEvent) {
                 e = e.originalEvent;
             }
-            if (e.key === this.messageBusKey) {
+            if (e.key === self.messageBusKey) {
                 var value = e.newValue;
                 if (value && value !== '') {
                     var data = JSON.parse(value);
-                    this.eventHandler.triggerEvent(data.message.type, this.utility.extend(data.args, { app: this.application }));
+                    if (typeof data === 'string') {
+                        data = JSON.parse(data);
+                    }
+                    self.triggerEvent(data.message.type, utility.extend(data.args, { app: self.application }));
                 }
             }
         });
@@ -4392,7 +4449,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4400,15 +4457,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(104));
-
-
-/***/ }),
-/* 106 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
+__export(__webpack_require__(105));
 
 
 /***/ }),
@@ -4465,10 +4514,6 @@ __export(__webpack_require__(104));
 
 "use strict";
 
-exports.TokenTypes = {
-    Access: 'access',
-    Refresh: 'refresh'
-};
 
 
 /***/ }),
@@ -4477,6 +4522,10 @@ exports.TokenTypes = {
 
 "use strict";
 
+exports.TokenTypes = {
+    Access: 'access',
+    Refresh: 'refresh'
+};
 
 
 /***/ }),
@@ -4501,6 +4550,14 @@ exports.TokenTypes = {
 
 "use strict";
 
+
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var Symbol = __webpack_require__(10);
 var TYPES = {
     IBaasicAppOptions: Symbol("IBaasicAppOptions"),
@@ -4516,14 +4573,14 @@ exports.TYPES = TYPES;
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var contracts_1 = __webpack_require__(3);
-var _1 = __webpack_require__(35);
+var _1 = __webpack_require__(36);
 var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(contracts_1.TYPES.ITokenHandler).to(_1.TokenHandler).inSingletonScope();
     bind(contracts_1.TYPES.IUserHandler).to(_1.UserHandler).inSingletonScope();
@@ -4532,7 +4589,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4581,7 +4638,7 @@ var _a;
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4589,11 +4646,11 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(119));
+__export(__webpack_require__(120));
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4637,7 +4694,7 @@ var TokenHandler = (function () {
             this.storageHandler.remove(this.tokenKey);
         }
         else {
-            this.storageHandler.set(this.tokenKey, JSON.stringify(token));
+            this.storageHandler.set(this.tokenKey, token);
         }
         if (token === undefined || token === null) {
             this.triggerTokenExpired(this.application);
@@ -4647,7 +4704,11 @@ var TokenHandler = (function () {
         }
     };
     TokenHandler.prototype.get = function (type) {
-        return JSON.parse(this.storageHandler.get(this.tokenKey));
+        var token = this.storageHandler.get(this.tokenKey);
+        if (typeof token === 'string') {
+            return JSON.parse(token);
+        }
+        return token;
     };
     TokenHandler.prototype.triggerTokenExpired = function (app) {
         var data = { app: app };
@@ -4716,7 +4777,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4742,7 +4803,14 @@ var UserHandler = (function () {
         };
     }
     UserHandler.prototype.getUser = function () {
-        var userInfo = JSON.parse(this.storageHandler.get(this.userInfoKey));
+        var userInfo;
+        var json = this.storageHandler.get(this.userInfoKey);
+        if (typeof json === 'string') {
+            userInfo = JSON.parse(json);
+        }
+        else {
+            userInfo = json;
+        }
         if (userInfo) {
             this.user.user = userInfo;
         }
@@ -4756,7 +4824,7 @@ var UserHandler = (function () {
             this.storageHandler.remove(this.userInfoKey);
         }
         else {
-            this.storageHandler.set(this.userInfoKey, JSON.stringify(userInfo));
+            this.storageHandler.set(this.userInfoKey, userInfo);
         }
         this.eventHandler.pushMessage({
             type: this.messageTypes.userChanged
@@ -4775,14 +4843,6 @@ UserHandler = tslib_1.__decorate([
 ], UserHandler);
 exports.UserHandler = UserHandler;
 var _a, _b, _c;
-
-
-/***/ }),
-/* 123 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 
 
 /***/ }),
@@ -4811,6 +4871,14 @@ var _a, _b, _c;
 
 /***/ }),
 /* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4983,7 +5051,7 @@ var ApiClient_1, _a, _b, _c, _d;
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4991,11 +5059,11 @@ var ApiClient_1, _a, _b, _c, _d;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(129));
+__export(__webpack_require__(130));
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5017,6 +5085,9 @@ var JQueryHttpClient = (function () {
         }
         if (request.data) {
             jqueryParams.data = request.data;
+        }
+        if (request.responseType) {
+            jqueryParams.dataType = request.responseType;
         }
         return $.ajax(request.url.toString(), jqueryParams)
             .then(function (data, textStatus, jqXHR) {
@@ -5068,7 +5139,7 @@ function parseHeaders(headers) {
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5082,7 +5153,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(28);
+var _1 = __webpack_require__(29);
 var ApplicationSettingsClient = (function () {
     function ApplicationSettingsClient(applicationSettingsRoute, apiClient) {
         this.applicationSettingsRoute = applicationSettingsRoute;
@@ -5158,7 +5229,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5221,20 +5292,12 @@ var _a;
 
 
 /***/ }),
-/* 132 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -5251,12 +5314,6 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(133));
-__export(__webpack_require__(134));
-__export(__webpack_require__(132));
 
 
 /***/ }),
@@ -5265,9 +5322,23 @@ __export(__webpack_require__(132));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(134));
+__export(__webpack_require__(135));
+__export(__webpack_require__(133));
+
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(28);
+var _1 = __webpack_require__(29);
 var TYPES = {
     ApplicationSettingsClient: Symbol("ApplicationSettingsClient"),
     ApplicationSettingsRoute: Symbol("ApplicationSettingsRoute")
@@ -5281,7 +5352,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5335,7 +5406,7 @@ exports.ALPHABET = ALPHABET;
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5469,7 +5540,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5594,7 +5665,7 @@ var _a;
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5920,7 +5991,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6100,7 +6171,7 @@ var _a;
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6398,7 +6469,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6550,7 +6621,7 @@ var _a;
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6904,7 +6975,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7255,7 +7326,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7386,7 +7457,7 @@ var _a;
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7593,7 +7664,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7601,14 +7672,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(146));
-__export(__webpack_require__(145));
 __export(__webpack_require__(147));
-__export(__webpack_require__(144));
+__export(__webpack_require__(146));
+__export(__webpack_require__(148));
+__export(__webpack_require__(145));
 
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7711,7 +7782,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7779,7 +7850,7 @@ var _a;
 
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7945,7 +8016,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8063,7 +8134,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8129,7 +8200,7 @@ var ArticleFilesStreamsClient = (function () {
                          function (response, status, headers, config) {
                             // perform error handling here
                         });
-                        
+
                 // Request derived blob
                         articleFilesStreamsClient.getBlob({
                             id: '<file-id>',
@@ -8144,7 +8215,12 @@ var ArticleFilesStreamsClient = (function () {
                         });
      **/
     ArticleFilesStreamsClient.prototype.getBlob = function (data) {
-        return this.apiClient.get(this.articleFilesStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.request({
+            url: this.articleFilesStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
     };
     /**
      * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
@@ -8163,8 +8239,8 @@ var ArticleFilesStreamsClient = (function () {
                 // Update derived file stream
                     articleFilesStreamsClient.update({id: '<file-id>', width: <width>, height: <height>}, <file-stream>)
                         .then(function (data) {
-                            // perform success action here
-                        },
+                            //  perform success action here
+                       },
                          function (response, status, headers, config) {
                             // perform error handling here
                         });
@@ -8182,7 +8258,7 @@ var ArticleFilesStreamsClient = (function () {
      * @returns A promise that is resolved once the create file stream action has been performed.
      * @example articleFilesStreamsClient.create('<file-id>', <blob>)
                    .then(function (data) {
-                        // perform success action here
+                        // perform success action her
                    },
                     function (response, status, headers, config) {
                        // perform error handling here
@@ -8212,7 +8288,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8292,7 +8368,7 @@ var _a;
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8397,7 +8473,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8470,7 +8546,7 @@ var _a;
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8661,7 +8737,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8813,7 +8889,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8966,7 +9042,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9055,7 +9131,7 @@ var _a;
 
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9063,16 +9139,16 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(161));
 __export(__webpack_require__(160));
-__export(__webpack_require__(159));
-__export(__webpack_require__(156));
-__export(__webpack_require__(155));
-__export(__webpack_require__(158));
 __export(__webpack_require__(157));
+__export(__webpack_require__(156));
+__export(__webpack_require__(159));
+__export(__webpack_require__(158));
 
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9250,7 +9326,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9369,7 +9445,7 @@ var _a;
 
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9567,7 +9643,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9704,7 +9780,7 @@ var _a;
 
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9712,12 +9788,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(166));
 __export(__webpack_require__(165));
-__export(__webpack_require__(164));
 
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9949,7 +10025,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10041,7 +10117,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10105,7 +10181,7 @@ var _a;
 
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10192,7 +10268,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10256,7 +10332,7 @@ var _a;
 
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10320,7 +10396,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10382,7 +10458,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10473,7 +10549,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10546,7 +10622,7 @@ var _a;
 
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10634,7 +10710,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10698,7 +10774,7 @@ var _a;
 
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10786,7 +10862,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10850,7 +10926,7 @@ var _a;
 
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10858,18 +10934,18 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(176));
+__export(__webpack_require__(178));
+__export(__webpack_require__(180));
+__export(__webpack_require__(174));
 __export(__webpack_require__(175));
 __export(__webpack_require__(177));
 __export(__webpack_require__(179));
 __export(__webpack_require__(173));
-__export(__webpack_require__(174));
-__export(__webpack_require__(176));
-__export(__webpack_require__(178));
-__export(__webpack_require__(172));
 
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11009,7 +11085,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11111,7 +11187,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11210,7 +11286,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11292,7 +11368,7 @@ var _a;
 
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11447,7 +11523,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11556,7 +11632,7 @@ var _a;
 
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11564,12 +11640,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(187));
 __export(__webpack_require__(186));
-__export(__webpack_require__(185));
 
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11613,7 +11689,7 @@ exports.BaasicArticleUtility = BaasicArticleUtility;
 
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11636,15 +11712,6 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
-/* 190 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11659,6 +11726,7 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -11667,7 +11735,6 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -11712,6 +11779,7 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -11728,7 +11796,6 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -11746,6 +11813,7 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -11762,7 +11830,6 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -11771,28 +11838,37 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(198));
-__export(__webpack_require__(202));
-__export(__webpack_require__(201));
-__export(__webpack_require__(192));
-__export(__webpack_require__(191));
-__export(__webpack_require__(193));
-__export(__webpack_require__(203));
-__export(__webpack_require__(195));
-__export(__webpack_require__(194));
-__export(__webpack_require__(204));
-__export(__webpack_require__(197));
-__export(__webpack_require__(200));
-__export(__webpack_require__(199));
-__export(__webpack_require__(190));
-__export(__webpack_require__(196));
+;
 
 
 /***/ }),
 /* 206 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(199));
+__export(__webpack_require__(203));
+__export(__webpack_require__(202));
+__export(__webpack_require__(193));
+__export(__webpack_require__(192));
+__export(__webpack_require__(194));
+__export(__webpack_require__(204));
+__export(__webpack_require__(196));
+__export(__webpack_require__(195));
+__export(__webpack_require__(205));
+__export(__webpack_require__(198));
+__export(__webpack_require__(201));
+__export(__webpack_require__(200));
+__export(__webpack_require__(191));
+__export(__webpack_require__(197));
+
+
+/***/ }),
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11903,7 +11979,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11939,7 +12015,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12070,7 +12146,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12194,7 +12270,7 @@ var _a;
 
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12202,12 +12278,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(208));
 __export(__webpack_require__(209));
+__export(__webpack_require__(210));
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12313,7 +12389,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12380,7 +12456,7 @@ var _a;
 
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12589,7 +12665,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12720,7 +12796,7 @@ var _a;
 
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12898,7 +12974,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13056,7 +13132,7 @@ var _a;
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13064,12 +13140,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(215));
 __export(__webpack_require__(216));
+__export(__webpack_require__(217));
 
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13190,7 +13266,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13272,7 +13348,7 @@ var _a;
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13600,7 +13676,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13881,7 +13957,7 @@ var _a;
 
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13889,14 +13965,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(218));
 __export(__webpack_require__(219));
 __export(__webpack_require__(220));
 __export(__webpack_require__(221));
+__export(__webpack_require__(222));
 
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14007,7 +14083,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14083,7 +14159,7 @@ var _a;
 
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14278,7 +14354,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14448,21 +14524,6 @@ var _a;
 
 
 /***/ }),
-/* 227 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(223));
-__export(__webpack_require__(224));
-__export(__webpack_require__(225));
-__export(__webpack_require__(226));
-
-
-/***/ }),
 /* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14471,9 +14532,10 @@ __export(__webpack_require__(226));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(222));
+__export(__webpack_require__(224));
+__export(__webpack_require__(225));
+__export(__webpack_require__(226));
 __export(__webpack_require__(227));
-__export(__webpack_require__(217));
 
 
 /***/ }),
@@ -14482,6 +14544,12 @@ __export(__webpack_require__(217));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(223));
+__export(__webpack_require__(228));
+__export(__webpack_require__(218));
 
 
 /***/ }),
@@ -14554,20 +14622,6 @@ __export(__webpack_require__(217));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(229));
-__export(__webpack_require__(230));
-__export(__webpack_require__(231));
-__export(__webpack_require__(234));
-__export(__webpack_require__(233));
-__export(__webpack_require__(235));
-__export(__webpack_require__(236));
-__export(__webpack_require__(232));
-__export(__webpack_require__(251));
-__export(__webpack_require__(243));
-__export(__webpack_require__(237));
 
 
 /***/ }),
@@ -14576,6 +14630,20 @@ __export(__webpack_require__(237));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(230));
+__export(__webpack_require__(231));
+__export(__webpack_require__(232));
+__export(__webpack_require__(235));
+__export(__webpack_require__(234));
+__export(__webpack_require__(236));
+__export(__webpack_require__(237));
+__export(__webpack_require__(233));
+__export(__webpack_require__(252));
+__export(__webpack_require__(244));
+__export(__webpack_require__(238));
 
 
 /***/ }),
@@ -14608,13 +14676,6 @@ __export(__webpack_require__(237));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(239));
-__export(__webpack_require__(240));
-__export(__webpack_require__(241));
-__export(__webpack_require__(242));
 
 
 /***/ }),
@@ -14623,6 +14684,13 @@ __export(__webpack_require__(242));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(240));
+__export(__webpack_require__(241));
+__export(__webpack_require__(242));
+__export(__webpack_require__(243));
 
 
 /***/ }),
@@ -14679,20 +14747,28 @@ __export(__webpack_require__(242));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(246));
-__export(__webpack_require__(245));
-__export(__webpack_require__(248));
-__export(__webpack_require__(247));
-__export(__webpack_require__(250));
-__export(__webpack_require__(244));
-__export(__webpack_require__(249));
 
 
 /***/ }),
 /* 252 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(247));
+__export(__webpack_require__(246));
+__export(__webpack_require__(249));
+__export(__webpack_require__(248));
+__export(__webpack_require__(251));
+__export(__webpack_require__(245));
+__export(__webpack_require__(250));
+
+
+/***/ }),
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14801,7 +14877,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14916,7 +14992,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14983,7 +15059,7 @@ var _a;
 
 
 /***/ }),
-/* 255 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15260,7 +15336,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 256 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15453,7 +15529,7 @@ var _a;
 
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15461,14 +15537,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(253));
 __export(__webpack_require__(254));
 __export(__webpack_require__(255));
 __export(__webpack_require__(256));
+__export(__webpack_require__(257));
 
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15576,7 +15652,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15643,7 +15719,7 @@ var _a;
 
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15834,7 +15910,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15987,7 +16063,7 @@ var _a;
 
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15995,14 +16071,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(258));
 __export(__webpack_require__(259));
 __export(__webpack_require__(260));
 __export(__webpack_require__(261));
+__export(__webpack_require__(262));
 
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16114,7 +16190,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16181,7 +16257,7 @@ var _a;
 
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16394,7 +16470,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16545,7 +16621,7 @@ var _a;
 
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16553,21 +16629,21 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(264));
-__export(__webpack_require__(263));
-__export(__webpack_require__(266));
 __export(__webpack_require__(265));
+__export(__webpack_require__(264));
+__export(__webpack_require__(267));
+__export(__webpack_require__(266));
 
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
 var _1 = __webpack_require__(7);
-var _2 = __webpack_require__(38);
+var _2 = __webpack_require__(39);
 var inversify_1 = __webpack_require__(0);
 var CalendarLookups = (function () {
     function CalendarLookups(rsvpInvitationType, rsvpAttendeeStatus, eventStatus, eventType) {
@@ -16591,7 +16667,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16694,7 +16770,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 270 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16761,7 +16837,7 @@ var _a;
 
 
 /***/ }),
-/* 271 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16939,7 +17015,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 272 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17070,7 +17146,7 @@ var _a;
 
 
 /***/ }),
-/* 273 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17078,14 +17154,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(269));
 __export(__webpack_require__(270));
 __export(__webpack_require__(271));
 __export(__webpack_require__(272));
+__export(__webpack_require__(273));
 
 
 /***/ }),
-/* 274 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17188,7 +17264,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 275 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17255,7 +17331,7 @@ var _a;
 
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17433,7 +17509,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17564,7 +17640,7 @@ var _a;
 
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17572,14 +17648,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(274));
 __export(__webpack_require__(275));
 __export(__webpack_require__(276));
 __export(__webpack_require__(277));
+__export(__webpack_require__(278));
 
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17682,7 +17758,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17749,7 +17825,7 @@ var _a;
 
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17927,7 +18003,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18058,7 +18134,7 @@ var _a;
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18066,14 +18142,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(279));
 __export(__webpack_require__(280));
 __export(__webpack_require__(281));
 __export(__webpack_require__(282));
+__export(__webpack_require__(283));
 
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18176,7 +18252,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18242,7 +18318,7 @@ var _a;
 
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18420,7 +18496,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18550,7 +18626,7 @@ var _a;
 
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18558,14 +18634,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(284));
 __export(__webpack_require__(285));
 __export(__webpack_require__(286));
 __export(__webpack_require__(287));
+__export(__webpack_require__(288));
 
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18599,7 +18675,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18611,14 +18687,15 @@ var _a, _b, _c, _d, _e, _f;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-;
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(5);
 var CommerceClient = (function () {
-    function CommerceClient(commerceCustomerClient, commerceInvoiceClient, commerceProductClient, commercePaymentTransactionClient, lookup, commerceRoute, apiClient) {
+    function CommerceClient(commerceCustomerClient, commerceInvoiceClient, commerceProductClient, commerceProductFilesClient, commerceProductSettingsClient, commercePaymentTransactionClient, lookup, commerceRoute, apiClient) {
         this.commerceCustomerClient = commerceCustomerClient;
         this.commerceInvoiceClient = commerceInvoiceClient;
         this.commerceProductClient = commerceProductClient;
+        this.commerceProductFilesClient = commerceProductFilesClient;
+        this.commerceProductSettingsClient = commerceProductSettingsClient;
         this.commercePaymentTransactionClient = commercePaymentTransactionClient;
         this.lookup = lookup;
         this.commerceRoute = commerceRoute;
@@ -18641,6 +18718,20 @@ var CommerceClient = (function () {
     Object.defineProperty(CommerceClient.prototype, "products", {
         get: function () {
             return this.commerceProductClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "files", {
+        get: function () {
+            return this.commerceProductFilesClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "settings", {
+        get: function () {
+            return this.commerceProductSettingsClient;
         },
         enumerable: true,
         configurable: true
@@ -18780,14 +18871,16 @@ CommerceClient = tslib_1.__decorate([
     tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCustomerClient)),
     tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceInvoiceClient)),
     tslib_1.__param(2, inversify_1.inject(_1.TYPES.CommerceProductClient)),
-    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CommercePaymentTransactionClient)),
-    tslib_1.__param(4, inversify_1.inject(_1.TYPES.Lookups)),
-    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CommerceRoute)),
-    tslib_1.__param(6, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCustomerClient !== "undefined" && _1.CommerceCustomerClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceInvoiceClient !== "undefined" && _1.CommerceInvoiceClient) === "function" && _b || Object, typeof (_c = typeof _1.CommerceProductClient !== "undefined" && _1.CommerceProductClient) === "function" && _c || Object, typeof (_d = typeof _1.CommercePaymentTransactionClient !== "undefined" && _1.CommercePaymentTransactionClient) === "function" && _d || Object, typeof (_e = typeof _1.Lookups !== "undefined" && _1.Lookups) === "function" && _e || Object, typeof (_f = typeof _1.CommerceRoute !== "undefined" && _1.CommerceRoute) === "function" && _f || Object, typeof (_g = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _g || Object])
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CommerceProductFilesClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.CommerceProductSettingsClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CommercePaymentTransactionClient)),
+    tslib_1.__param(6, inversify_1.inject(_1.TYPES.Lookups)),
+    tslib_1.__param(7, inversify_1.inject(_1.TYPES.CommerceRoute)),
+    tslib_1.__param(8, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCustomerClient !== "undefined" && _1.CommerceCustomerClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceInvoiceClient !== "undefined" && _1.CommerceInvoiceClient) === "function" && _b || Object, typeof (_c = typeof _1.CommerceProductClient !== "undefined" && _1.CommerceProductClient) === "function" && _c || Object, typeof (_d = typeof _1.CommerceProductFilesClient !== "undefined" && _1.CommerceProductFilesClient) === "function" && _d || Object, typeof (_e = typeof _1.CommerceProductSettingsClient !== "undefined" && _1.CommerceProductSettingsClient) === "function" && _e || Object, typeof (_f = typeof _1.CommercePaymentTransactionClient !== "undefined" && _1.CommercePaymentTransactionClient) === "function" && _f || Object, typeof (_g = typeof _1.Lookups !== "undefined" && _1.Lookups) === "function" && _g || Object, typeof (_h = typeof _1.CommerceRoute !== "undefined" && _1.CommerceRoute) === "function" && _h || Object, typeof (_j = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _j || Object])
 ], CommerceClient);
 exports.CommerceClient = CommerceClient;
-var _a, _b, _c, _d, _e, _f, _g;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 /**
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
@@ -18800,7 +18893,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18910,7 +19003,57 @@ var _a;
 
 
 /***/ }),
-/* 292 */
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 294 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 295 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 296 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 297 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(294));
+__export(__webpack_require__(293));
+__export(__webpack_require__(296));
+__export(__webpack_require__(295));
+
+
+/***/ }),
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19041,7 +19184,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 293 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19183,7 +19326,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 294 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19277,7 +19420,7 @@ var _a;
 
 
 /***/ }),
-/* 295 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19362,7 +19505,7 @@ var _a;
 
 
 /***/ }),
-/* 296 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19370,14 +19513,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(295));
-__export(__webpack_require__(292));
-__export(__webpack_require__(294));
-__export(__webpack_require__(293));
+__export(__webpack_require__(301));
+__export(__webpack_require__(298));
+__export(__webpack_require__(300));
+__export(__webpack_require__(299));
 
 
 /***/ }),
-/* 297 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19398,6 +19541,18 @@ var TYPES = {
     CommercePaymentTransactionRoute: Symbol("CommercePaymentTransactionRoute"),
     CommerceProductClient: Symbol("CommerceProductClient"),
     CommerceProductRoute: Symbol("CommerceProductRoute"),
+    CommerceProductFilesStreamsClient: Symbol("CommerceProductFilesStreamsClient"),
+    CommerceProductFilesStreamsRoute: Symbol("CommerceProductFilesStreamsRoute"),
+    CommerceProductFilesBatchClient: Symbol("CommerceProductFilesBatchClient"),
+    CommerceProductFilesBatchRoute: Symbol("CommerceProductFilesBatchRoute"),
+    CommerceProductFilesClient: Symbol("CommerceProductFilesClient"),
+    CommerceProductFilesRoute: Symbol("CommerceProductFilesRoute"),
+    CommerceProductSettingsClient: Symbol("CommerceProductSettingsClient"),
+    CommerceProductSettingsRoute: Symbol("CommerceProductSettingsRoute"),
+    CommerceProductInstanceFilesClient: Symbol("CommerceProductInstanceFilesClient"),
+    CommerceProductInstanceFilesRoute: Symbol("CommerceProductInstanceFilesRoute"),
+    CommerceProductInstanceFilesBatchClient: Symbol("CommerceProductInstanceFilesBatchClient"),
+    CommerceProductInstanceFilesBatchRoute: Symbol("CommerceProductInstanceFilesBatchRoute"),
     CommerceClient: Symbol("CommerceClient"),
     CommerceRoute: Symbol("CommerceRoute"),
     CommerceLookupsAddressTypesBatchClient: Symbol("CommerceLookupsAddressTypesBatchClient"),
@@ -19448,6 +19603,14 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.CommercePaymentTransactionClient).to(_1.CommercePaymentTransactionClient);
     bind(TYPES.CommerceProductRoute).to(_1.CommerceProductRoute);
     bind(TYPES.CommerceProductClient).to(_1.CommerceProductClient);
+    bind(TYPES.CommerceProductFilesStreamsRoute).to(_1.CommerceProductFilesStreamsRoute);
+    bind(TYPES.CommerceProductFilesStreamsClient).to(_1.CommerceProductFilesStreamsClient);
+    bind(TYPES.CommerceProductFilesBatchRoute).to(_1.CommerceProductFilesBatchRoute);
+    bind(TYPES.CommerceProductFilesBatchClient).to(_1.CommerceProductFilesBatchClient);
+    bind(TYPES.CommerceProductFilesClient).to(_1.CommerceProductFilesClient);
+    bind(TYPES.CommerceProductFilesRoute).to(_1.CommerceProductFilesRoute);
+    bind(TYPES.CommerceProductSettingsClient).to(_1.CommerceProductSettingsClient);
+    bind(TYPES.CommerceProductSettingsRoute).to(_1.CommerceProductSettingsRoute);
     bind(TYPES.CommerceRoute).to(_1.CommerceRoute);
     bind(TYPES.CommerceClient).to(_1.CommerceClient);
     bind(TYPES.CommerceLookupsAddressTypeBatchRoute).to(_1.CommerceLookupsAddressTypeBatchRoute);
@@ -19488,7 +19651,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 298 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19610,7 +19773,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 299 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19710,7 +19873,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 300 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19765,7 +19928,12 @@ var CommerceInvoiceStreamsClient = (function () {
                             });
      **/
     CommerceInvoiceStreamsClient.prototype.getBlob = function (data) {
-        return this.apiClient.get(this.commerceInvoiceStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.request({
+            url: this.commerceInvoiceStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
     };
     return CommerceInvoiceStreamsClient;
 }());
@@ -19789,7 +19957,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 301 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19847,7 +20015,7 @@ var _a;
 
 
 /***/ }),
-/* 302 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19855,14 +20023,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(301));
-__export(__webpack_require__(300));
-__export(__webpack_require__(299));
-__export(__webpack_require__(298));
+__export(__webpack_require__(307));
+__export(__webpack_require__(306));
+__export(__webpack_require__(305));
+__export(__webpack_require__(304));
 
 
 /***/ }),
-/* 303 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19957,7 +20125,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 304 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20028,7 +20196,7 @@ var _a;
 
 
 /***/ }),
-/* 305 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20177,7 +20345,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 306 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20281,7 +20449,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 307 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20289,14 +20457,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(304));
-__export(__webpack_require__(303));
-__export(__webpack_require__(306));
-__export(__webpack_require__(305));
+__export(__webpack_require__(310));
+__export(__webpack_require__(309));
+__export(__webpack_require__(312));
+__export(__webpack_require__(311));
 
 
 /***/ }),
-/* 308 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20392,7 +20560,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 309 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20463,7 +20631,7 @@ var _a;
 
 
 /***/ }),
-/* 310 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20614,7 +20782,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 311 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20720,7 +20888,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 312 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20728,14 +20896,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(309));
-__export(__webpack_require__(308));
-__export(__webpack_require__(311));
-__export(__webpack_require__(310));
+__export(__webpack_require__(315));
+__export(__webpack_require__(314));
+__export(__webpack_require__(317));
+__export(__webpack_require__(316));
 
 
 /***/ }),
-/* 313 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20830,7 +20998,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 314 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20901,7 +21069,7 @@ var _a;
 
 
 /***/ }),
-/* 315 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21050,7 +21218,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 316 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21154,7 +21322,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 317 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21162,14 +21330,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(314));
-__export(__webpack_require__(313));
-__export(__webpack_require__(316));
-__export(__webpack_require__(315));
+__export(__webpack_require__(320));
+__export(__webpack_require__(319));
+__export(__webpack_require__(322));
+__export(__webpack_require__(321));
 
 
 /***/ }),
-/* 318 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21264,7 +21432,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 319 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21335,7 +21503,7 @@ var _a;
 
 
 /***/ }),
-/* 320 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21484,7 +21652,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 321 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21589,7 +21757,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 322 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21597,21 +21765,21 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(319));
-__export(__webpack_require__(318));
-__export(__webpack_require__(321));
-__export(__webpack_require__(320));
+__export(__webpack_require__(325));
+__export(__webpack_require__(324));
+__export(__webpack_require__(327));
+__export(__webpack_require__(326));
 
 
 /***/ }),
-/* 323 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
 var _1 = __webpack_require__(5);
-var _2 = __webpack_require__(39);
+var _2 = __webpack_require__(40);
 var inversify_1 = __webpack_require__(0);
 var Lookups = (function () {
     function Lookups(addressTypes, countries, countryStates, paymentMethods, paymentTransactionStatuses, recurringCyclePeriodTypes, subscriptionStatuses, invoiceStatuses) {
@@ -21643,7 +21811,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
-/* 324 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21739,7 +21907,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 325 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21810,7 +21978,7 @@ var _a;
 
 
 /***/ }),
-/* 326 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21959,7 +22127,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 327 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22064,7 +22232,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 328 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22072,14 +22240,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(325));
-__export(__webpack_require__(324));
-__export(__webpack_require__(327));
-__export(__webpack_require__(326));
+__export(__webpack_require__(331));
+__export(__webpack_require__(330));
+__export(__webpack_require__(333));
+__export(__webpack_require__(332));
 
 
 /***/ }),
-/* 329 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22174,7 +22342,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 330 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22245,7 +22413,7 @@ var _a;
 
 
 /***/ }),
-/* 331 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22394,7 +22562,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 332 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22499,7 +22667,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 333 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22507,14 +22675,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(330));
-__export(__webpack_require__(329));
-__export(__webpack_require__(332));
-__export(__webpack_require__(331));
+__export(__webpack_require__(336));
+__export(__webpack_require__(335));
+__export(__webpack_require__(338));
+__export(__webpack_require__(337));
 
 
 /***/ }),
-/* 334 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22610,7 +22778,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 335 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22681,7 +22849,7 @@ var _a;
 
 
 /***/ }),
-/* 336 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22831,7 +22999,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 337 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22936,7 +23104,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 338 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22944,14 +23112,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(335));
-__export(__webpack_require__(334));
-__export(__webpack_require__(337));
-__export(__webpack_require__(336));
+__export(__webpack_require__(341));
+__export(__webpack_require__(340));
+__export(__webpack_require__(343));
+__export(__webpack_require__(342));
 
 
 /***/ }),
-/* 339 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23046,7 +23214,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 340 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23117,7 +23285,7 @@ var _a;
 
 
 /***/ }),
-/* 341 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23266,7 +23434,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 342 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23371,7 +23539,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 343 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23379,14 +23547,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(340));
-__export(__webpack_require__(339));
-__export(__webpack_require__(342));
-__export(__webpack_require__(341));
+__export(__webpack_require__(346));
+__export(__webpack_require__(345));
+__export(__webpack_require__(348));
+__export(__webpack_require__(347));
 
 
 /***/ }),
-/* 344 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23522,7 +23690,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 345 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23623,7 +23791,7 @@ var _a;
 
 
 /***/ }),
-/* 346 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23631,12 +23799,1385 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(345));
-__export(__webpack_require__(344));
+__export(__webpack_require__(351));
+__export(__webpack_require__(350));
 
 
 /***/ }),
-/* 347 */
+/* 353 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductFilesBatchClient
+ * @description  Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceProductFilesBatchClient = (function () {
+    function CommerceProductFilesBatchClient(productFilesBatchRoute, apiClient) {
+        this.productFilesBatchRoute = productFilesBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceProductFilesBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.productFilesBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system.
+     * @method
+     * @param data Collection of product files that needs to be deleted.
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // Remove original file resources
+                   productFilesBatchClient.unlink([{ id: '<file-id>' }])
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+               // Remove derived file resources
+                   productFilesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+    **/
+    CommerceProductFilesBatchClient.prototype.unlink = function (data) {
+        return this.apiClient.delete(this.productFilesBatchRoute.unlink(), undefined, data);
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.
+     * @method
+     * @param data A collection of product files objects used to update specified product files.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example productFilesClient.batch.update(files)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    CommerceProductFilesBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).
+     * @method
+     * @param data A collection of product file objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example productFilesClient.batch.link(files)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    CommerceProductFilesBatchClient.prototype.link = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
+    };
+    return CommerceProductFilesBatchClient;
+}());
+CommerceProductFilesBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductFilesBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductFilesBatchRoute !== "undefined" && _1.CommerceProductFilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceProductFilesBatchClient);
+exports.CommerceProductFilesBatchClient = CommerceProductFilesBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 354 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductFilesBatchRoute
+ * @description Baasic Product Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic product Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceProductFilesBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceProductFilesBatchRoute, _super);
+    function CommerceProductFilesBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.unlinkRoute = 'commerce/product-files/batch/unlink';
+        _this.updateRoute = 'commerce/product-files/batch';
+        _this.linkRoute = 'commerce/product-files/batch/link';
+        return _this;
+    }
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @example CommerceProductFilesBatchRoute.unlink();
+     **/
+    CommerceProductFilesBatchRoute.prototype.unlink = function () {
+        return _super.prototype.baseCreate.call(this, this.unlinkRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example CommerceProductFilesStreamsRoute.update();
+     **/
+    CommerceProductFilesBatchRoute.prototype.update = function () {
+        return _super.prototype.baseCreate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example CommerceProductFilesStreamsRoute.link();
+     **/
+    CommerceProductFilesBatchRoute.prototype.link = function () {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
+    };
+    return CommerceProductFilesBatchRoute;
+}(common_1.BaseRoute));
+CommerceProductFilesBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceProductFilesBatchRoute);
+exports.CommerceProductFilesBatchRoute = CommerceProductFilesBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 355 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductFilesClient
+ * @description  Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceProductFilesClient = (function () {
+    function CommerceProductFilesClient(productFilesRoute, productFilesStreamsClient, productFilesBatchClient, apiClient) {
+        this.productFilesRoute = productFilesRoute;
+        this.productFilesStreamsClient = productFilesStreamsClient;
+        this.productFilesBatchClient = productFilesBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceProductFilesClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.productFilesRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceProductFilesClient.prototype, "streams", {
+        get: function () {
+            return this.productFilesStreamsClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceProductFilesClient.prototype, "batch", {
+        get: function () {
+            return this.productFilesBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example productFilesClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    CommerceProductFilesClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.
+     * @method
+     * @param id Product file id which uniquely identifies product resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example productFilesClient.get('<file-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    CommerceProductFilesClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.productFilesRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicProductFilesRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink').href;
+     * ```
+     * @method
+     * @param data Product file object.
+     * @param options options object.
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.
+                    productFilesRoute.remove(fileEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    CommerceProductFilesClient.prototype.unlink = function (data, options) {
+        if (!options) {
+            options = {};
+        }
+        return this.apiClient.delete(this.productFilesRoute.unlink(data, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicProductFilesRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     ```
+     let params = modelMapper.updateParams(fileEntry);
+     let uri = params['model'].links('put').href;
+     ```
+     * @method
+     * @param data Product file object that need to be updated in the system.
+     * @returns A promise that is resolved once the update file action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                   fileEntry.description = '<description>';
+                   productFilesClient.update(fileEntry)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+    **/
+    CommerceProductFilesClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.update(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the Product Files module (For example: file resources from the Media Vault module can be linked directly into the Product Files module).
+     * @method
+     * @param data Product file object.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example productFilesClient.link(fileObject)
+                    .then(function (response, status, headers, config) {
+                        // perform success handling here
+                    },
+                        function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    CommerceProductFilesClient.prototype.link = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
+    };
+    return CommerceProductFilesClient;
+}());
+CommerceProductFilesClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductFilesRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceProductFilesStreamsClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CommerceProductFilesBatchClient)),
+    tslib_1.__param(3, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductFilesRoute !== "undefined" && _1.CommerceProductFilesRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceProductFilesStreamsClient !== "undefined" && _1.CommerceProductFilesStreamsClient) === "function" && _b || Object, typeof (_c = typeof _1.CommerceProductFilesBatchClient !== "undefined" && _1.CommerceProductFilesBatchClient) === "function" && _c || Object, typeof (_d = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _d || Object])
+], CommerceProductFilesClient);
+exports.CommerceProductFilesClient = CommerceProductFilesClient;
+var _a, _b, _c, _d;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 356 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductFilesRoute
+ * @description Baasic Product Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Product Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(5);
+var CommerceProductFilesRoute = (function (_super) {
+    tslib_1.__extends(CommerceProductFilesRoute, _super);
+    function CommerceProductFilesRoute(productFilesStreamsRoute, productFilesBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.productFilesStreamsRoute = productFilesStreamsRoute;
+        _this.productFilesBatchRoute = productFilesBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/product-files/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/product-files/{id}/{?embed,fields}';
+        _this.linkRoute = 'commerce/product-files/link';
+        _this.unlinkRoute = 'commerce/product-files/unlink/{id}';
+        _this.updateRoute = 'commerce/product-files/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceProductFilesRoute.prototype, "streams", {
+        get: function () {
+            return this.productFilesStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceProductFilesRoute.prototype, "batch", {
+        get: function () {
+            return this.productFilesBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing file properties using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the file property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example ommerceProductFilesRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceProductFilesRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param id Product file id which uniquely identifies product resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @example ommerceProductFilesRoute.get({id: '<file-id>'});
+     **/
+    CommerceProductFilesRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses link route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceProductFilesRoute.link();
+     **/
+    CommerceProductFilesRoute.prototype.link = function () {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
+    };
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @example CommerceProductFilesRoute.unlink(data);
+     **/
+    CommerceProductFilesRoute.prototype.unlink = function (data, options) {
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, data, options, 'unlink');
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example ommerceProductFilesRoute.update(data);
+     **/
+    CommerceProductFilesRoute.prototype.update = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return CommerceProductFilesRoute;
+}(common_1.BaseRoute));
+CommerceProductFilesRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductFilesStreamsRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceProductFilesBatchRoute)),
+    tslib_1.__param(2, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductFilesStreamsRoute !== "undefined" && _1.CommerceProductFilesStreamsRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceProductFilesBatchRoute !== "undefined" && _1.CommerceProductFilesBatchRoute) === "function" && _b || Object, typeof (_c = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _c || Object])
+], CommerceProductFilesRoute);
+exports.CommerceProductFilesRoute = CommerceProductFilesRoute;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 357 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductFilesStreamsClient
+ * @description  Product Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceProductFilesStreamsClient = (function () {
+    function CommerceProductFilesStreamsClient(productFilesStreamsRoute, apiClient) {
+        this.productFilesStreamsRoute = productFilesStreamsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceProductFilesStreamsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.productFilesStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
+     * @method
+     * @param data Product file id of the original product file used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original file stream
+                    productFilesStreamsClient.get({id: '<file-id>'})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+
+                // Request derived file stream
+                        productFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceProductFilesStreamsClient.prototype.get = function (data) {
+        return this.apiClient.get(this.routeDefinition.get(data));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @param data Product file id of the original product file used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original blob
+                    productFilesStreamsClient.getBlob('<file-id>')
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+
+                // Request derived blob
+                        productFilesStreamsClient.getBlob({
+                            id: '<file-id>',
+                            width: <width>,
+                            height: <height>
+                        })
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    CommerceProductFilesStreamsClient.prototype.getBlob = function (data) {
+        return this.apiClient.request({
+            url: this.productFilesStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
+    };
+    /**
+     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
+     * @method
+     * @param data Product file used to identify stream that needs to be updated.
+     * @param stream
+     * @returns A promise that is resolved once the update file stream action has been performed.
+     * @example // Update original file stream
+                    productFilesStreamsClient.update('<file-id>', <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+                // Update derived file stream
+                    productFilesStreamsClient.update({id: '<file-id>', width: <width>, height: <height>}, <file-stream>)
+                        .then(function (data) {
+                            //  perform success action here
+                       },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    CommerceProductFilesStreamsClient.prototype.update = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.put(this.productFilesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
+    };
+    /**
+     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @param data Product file that needs to be saved into the system.
+     * @param stream
+     * @returns A promise that is resolved once the create file stream action has been performed.
+     * @example productFilesStreamsClient.create('<file-id>', <blob>)
+                   .then(function (data) {
+                        // perform success action her
+                   },
+                    function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    CommerceProductFilesStreamsClient.prototype.create = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.post(this.productFilesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
+    };
+    return CommerceProductFilesStreamsClient;
+}());
+CommerceProductFilesStreamsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductFilesStreamsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductFilesStreamsRoute !== "undefined" && _1.CommerceProductFilesStreamsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceProductFilesStreamsClient);
+exports.CommerceProductFilesStreamsClient = CommerceProductFilesStreamsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 358 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductFilesStreamsRoute
+ * @description Baasic Product Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic product Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceProductFilesStreamsRoute = (function (_super) {
+    tslib_1.__extends(CommerceProductFilesStreamsRoute, _super);
+    function CommerceProductFilesStreamsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'commerce/product-file-streams/{id}/{?width,height}';
+        _this.createRoute = 'commerce/product-file-streams/{filename}/{?productId}';
+        _this.updateRoute = 'commerce/product-file-streams/{id}/{?width,height}';
+        return _this;
+    }
+    /**
+     * Parses get route; this route should be expanded with id of desired file stream. Additional supported items are:
+     * - `width` - width of desired derived image.
+     * - `height` - height of desired derived image.
+     * @method
+     * @param data Product file id of the original product file used to identify stream that needs to be retrieved from the system.
+     * @example productFilesRoute.get({id: '<filename>'});
+     **/
+    CommerceProductFilesStreamsRoute.prototype.get = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.getRoute, data);
+    };
+    /**
+     * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.
+     * @method
+     * @param data Product file that needs to be saved into the system.
+     * @example productFilesRoute.create({filename: '<filename>'});
+     **/
+    CommerceProductFilesStreamsRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses update route; this route should be expanded with the id of the previously saved resource. Additional supported items are:
+     * - `width` - width of derived image to update.
+     * - `height` - height of derived image to update.
+     * @method
+     * @param data Product file used to identify stream that needs to be updated.
+     * @example productFilesRoute.update({id: '<filename>'});
+     **/
+    CommerceProductFilesStreamsRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return CommerceProductFilesStreamsRoute;
+}(common_1.BaseRoute));
+CommerceProductFilesStreamsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceProductFilesStreamsRoute);
+exports.CommerceProductFilesStreamsRoute = CommerceProductFilesStreamsRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 359 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductSettingsClient
+ * @description  Product Settings Client provides an easy way to consume  Product Settings REST API end-points. In order to obtain needed routes `productSettingsClient` uses `productSettingsRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceProductSettingsClient = (function () {
+    function CommerceProductSettingsClient(productSettingsRoute, apiClient) {
+        this.productSettingsRoute = productSettingsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceProductSettingsClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `baasicProductSettingsRouteService`.
+         * @method
+         * @example productSettingsClient.routeDefinition.get().expand(expandObject);
+         **/
+        get: function () {
+            return this.productSettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the product settings.
+     * @method
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example productSettingsClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    CommerceProductSettingsClient.prototype.get = function (options) {
+        return this.apiClient.get(this.routeDefinition.get(options));
+    };
+    /**
+     * Returns a promise that is resolved once the update product settings action has been performed; this action updates product settings. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `productSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(productSettings);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the update product settings action has been performed.
+     * @example // productSettings is a resource previously fetched using get action.
+                    productSettings.allowArchive = true;
+                    productSettingsClient.update(productSettings)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    CommerceProductSettingsClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.update(data));
+    };
+    return CommerceProductSettingsClient;
+}());
+CommerceProductSettingsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductSettingsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductSettingsRoute !== "undefined" && _1.CommerceProductSettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceProductSettingsClient);
+exports.CommerceProductSettingsClient = CommerceProductSettingsClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 360 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+* @module commerceProductSettingsRoute
+* @description Baasic Product Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic product Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceProductSettingsRoute = (function (_super) {
+    tslib_1.__extends(CommerceProductSettingsRoute, _super);
+    function CommerceProductSettingsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'commerce/product-settings/{?embed,fields}';
+        _this.updateRoute = 'commerce/product-settings/{id}';
+        return _this;
+    }
+    /**
+     * Parses get product settings route; this URI template doesn't expose any additional properties.
+     * @method
+     * @param options Options object that contains embed data.
+     * @example productSettingsRoute.get(options);
+     **/
+    CommerceProductSettingsRoute.prototype.get = function (options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, undefined, options);
+    };
+    /**
+     * Parses update product settings route; this URI template doesn't expose any additional properties.
+     * @method
+     * @param options Options object that contains embed data.
+     * @example productSettingsRoute.update(data);
+     **/
+    CommerceProductSettingsRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return CommerceProductSettingsRoute;
+}(common_1.BaseRoute));
+CommerceProductSettingsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceProductSettingsRoute);
+exports.CommerceProductSettingsRoute = CommerceProductSettingsRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 361 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductInstanceFilesBatchClient
+ * @description  Product Instance Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceProductInstanceFilesBatchClient = (function () {
+    function CommerceProductInstanceFilesBatchClient(productInstanceFilesBatchRoute, apiClient) {
+        this.productInstanceFilesBatchRoute = productInstanceFilesBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceProductInstanceFilesBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.productInstanceFilesBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system.
+     * @method
+     * @param productId Product file id of the original product file used to identify product files on which delete action should be performed.
+     * @param data Collection of product delete requests which uniquely identifies product files that need to be deleted.
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // Remove original file resources
+                   productInstanceFilesBatchClient.unlink([{ id: '<file-id>' }])
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+    **/
+    CommerceProductInstanceFilesBatchClient.prototype.unlink = function (productId, data) {
+        return this.apiClient.delete(this.productInstanceFilesBatchRoute.unlink(productId), undefined, data);
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.
+     * @method
+     * @param productId Product id which uniquely identifies product whose product file need to be updated.
+     * @param data Product file object that need to be updated in the system.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example productInstanceFilesBatchClient.update('<product-id>', files)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    CommerceProductInstanceFilesBatchClient.prototype.update = function (productId, data) {
+        return this.apiClient.put(this.routeDefinition.update(productId), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).
+     * @method
+     * @param productId Product slug or id which uniquely identifies product whose product files need to be linked.
+     * @param data A collection of product file objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example productInstanceFilesBatchClient.link(files)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    CommerceProductInstanceFilesBatchClient.prototype.link = function (productId, data) {
+        return this.apiClient.post(this.routeDefinition.link(productId), this.routeDefinition.createParams(data));
+    };
+    return CommerceProductInstanceFilesBatchClient;
+}());
+CommerceProductInstanceFilesBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductInstanceFilesBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductInstanceFilesBatchRoute !== "undefined" && _1.CommerceProductInstanceFilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceProductInstanceFilesBatchClient);
+exports.CommerceProductInstanceFilesBatchClient = CommerceProductInstanceFilesBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 362 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductInstanceFilesBatchRoute
+ * @description Baasic Product Instance Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Product Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var CommerceProductInstanceFilesBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceProductInstanceFilesBatchRoute, _super);
+    function CommerceProductInstanceFilesBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.unlinkRoute = 'products/{productId}/files/batch/unlink';
+        _this.updateRoute = 'products/{productId}/files/batch';
+        _this.linkRoute = 'products/{productId}/files/batch/link';
+        return _this;
+    }
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @param productId Product file id of the original product file used to identify product files on which delete action should be performed.
+     * @example productInstanceFilesBatchRoute.unlink(productId);
+     **/
+    CommerceProductInstanceFilesBatchRoute.prototype.unlink = function (productId) {
+        var params = { productId: productId };
+        return _super.prototype.baseCreate.call(this, this.unlinkRoute, params);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param productId Product id which uniquely identifies product whose product file need to be updated.
+     * @example productInstanceFilesStreamsRoute.update(productId);
+     **/
+    CommerceProductInstanceFilesBatchRoute.prototype.update = function (productId) {
+        var params = { productId: productId };
+        return _super.prototype.baseCreate.call(this, this.updateRoute, params);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param productId Product slug or id which uniquely identifies product whose product files need to be linked.
+     * @example productInstanceFilesStreamsRoute.link(productId);
+     **/
+    CommerceProductInstanceFilesBatchRoute.prototype.link = function (productId) {
+        var params = { productId: productId };
+        return _super.prototype.baseCreate.call(this, this.linkRoute, params);
+    };
+    return CommerceProductInstanceFilesBatchRoute;
+}(common_1.BaseRoute));
+CommerceProductInstanceFilesBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceProductInstanceFilesBatchRoute);
+exports.CommerceProductInstanceFilesBatchRoute = CommerceProductInstanceFilesBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 363 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductInstanceFilesClient
+ * @description  Product Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceProductInstanceFilesClient = (function () {
+    function CommerceProductInstanceFilesClient(ProductInstanceFilesRoute, ProductInstanceFilesBatchClient, apiClient) {
+        this.ProductInstanceFilesRoute = ProductInstanceFilesRoute;
+        this.ProductInstanceFilesBatchClient = ProductInstanceFilesBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceProductInstanceFilesClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.ProductInstanceFilesRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceProductInstanceFilesClient.prototype, "batch", {
+        get: function () {
+            return this.ProductInstanceFilesBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.
+     * @method
+     * @param productId Productslug or id which uniquely identifies product whose product files need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example productInstanceFilesClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    ids: '1,2,3',
+                    from: '',
+                    to: '',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    CommerceProductInstanceFilesClient.prototype.find = function (productId, options) {
+        return this.apiClient.get(this.ProductInstanceFilesRoute.find(productId, options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.
+     * @method
+     * @param productId Product slug or id which uniquely identifies product whose product files need to be retrieved.
+     * @param id Productfile id which uniquely identifies product file that needs to be retrieved.
+     * @param options options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example productInstanceFilesClient.get('<file-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    CommerceProductInstanceFilesClient.prototype.get = function (productId, id, options) {
+        return this.apiClient.get(this.ProductInstanceFilesRoute.get(productId, id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicProductFilesRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink').href;
+     * ```
+     * @method
+     * @param productId Product slug or id which uniquely identifies product whose product files need to be deleted.
+     * @param data
+     * @param options
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action. The following action will unlink the original file resource and all accompanying derived file resources.
+                    productInstanceFilesClient.unlink(fileEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    CommerceProductInstanceFilesClient.prototype.unlink = function (productId, data, options) {
+        return this.apiClient.delete(this.ProductInstanceFilesRoute.unlink(productId, data, options));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink by product action has been performed. This action will remove all file resources from the system related to the requested Product if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicProductService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink-by-product').href;
+     * ```
+     * @method
+     * @param productId Productslug or id which uniquely identifies product whose product files need to be deleted.
+     * @param data
+     * @param options
+     * @returns A promise that is resolved once the unlink by product action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                    productInstanceFilesClient.unlinkByProduct(fileEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceProductInstanceFilesClient.prototype.unlinkByProduct = function (productId, options) {
+        return this.apiClient.delete(this.ProductInstanceFilesRoute.unlinkByProduct(productId, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicProductFilesRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     ```
+     let params = modelMapper.updateParams(fileEntry);
+     let uri = params['model'].links('put').href;
+     ```
+     * @method
+     * @param productId An Product object used to update specified product resource.
+     * @param data ProductFile object used to update specific product file data in the system.
+     * @returns A promise that is resolved once the update file action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                   fileEntry.description = '<description>';
+                   ProductInstanceFilesClient.update(fileEntry)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+    **/
+    CommerceProductInstanceFilesClient.prototype.update = function (productId, data) {
+        return this.apiClient.put(this.routeDefinition.update(productId, data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the ProductFiles module (For example: file resources from the Media Vault module can be linked directly into the ProductFiles module).
+     * @method
+     * @param productId Product id which uniquely identifies product whose product files need to be linked.
+     * @param data A Product file object that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example ProductInstanceFilesClient.link(fileObject)
+                    .then(function (response, status, headers, config) {
+                        // perform success handling here
+                    },
+                        function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    CommerceProductInstanceFilesClient.prototype.link = function (productId, data) {
+        return this.apiClient.post(this.routeDefinition.link(productId, data), this.routeDefinition.createParams(data));
+    };
+    return CommerceProductInstanceFilesClient;
+}());
+CommerceProductInstanceFilesClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductInstanceFilesRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceProductInstanceFilesBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductInstanceFilesRoute !== "undefined" && _1.CommerceProductInstanceFilesRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceProductInstanceFilesBatchClient !== "undefined" && _1.CommerceProductInstanceFilesBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceProductInstanceFilesClient);
+exports.CommerceProductInstanceFilesClient = CommerceProductInstanceFilesClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 364 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductInstanceFilesRoute
+ * @description Baasic Product Instance Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Product Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(5);
+var CommerceProductInstanceFilesRoute = (function (_super) {
+    tslib_1.__extends(CommerceProductInstanceFilesRoute, _super);
+    function CommerceProductInstanceFilesRoute(productInstanceFilesBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.productInstanceFilesBatchRoute = productInstanceFilesBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'products/{productId}/files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'products/{productId}/files/{id}/{?embed,fields}';
+        _this.linkRoute = 'products/{productId}/files/link';
+        _this.unlinkRoute = 'products/{productId}/files/unlink/{id}';
+        _this.unlinkByProductRoute = 'products/{productId}/files/unlink';
+        _this.updateRoute = 'products/{productId}/files/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceProductInstanceFilesRoute.prototype, "batch", {
+        get: function () {
+            return this.productInstanceFilesBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing file properties using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the file property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param productId Product slug or id which uniquely identifies product whose product files need to be retrieved.
+     * @param options Query resource options object.
+     * @example productInstanceFilesRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceProductInstanceFilesRoute.prototype.find = function (productId, options) {
+        var params = this.modelMapper.findParams(options);
+        params.productId = productId;
+        return _super.prototype.baseGet.call(this, this.findRoute, params);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param productId Product id which uniquely identifies product whose product files need to be retrieved.
+     * @param id Product file id which uniquely identifies product file that needs to be retrieved.
+     * @param options options object that contains embed data.
+     * @example productInstanceFilesRoute.get({id: '<file-id>'});
+     **/
+    CommerceProductInstanceFilesRoute.prototype.get = function (productId, id, options) {
+        var params = this.utility.extend({}, options);
+        params.productId = productId;
+        params.id = id;
+        return _super.prototype.baseGet.call(this, this.getRoute, params);
+    };
+    /**
+     * Parses link route; this URI template does not expose any additional options.
+     * @method
+     * @param productId Product id which uniquely identifies product whose product files need to be deleted.
+     * @param data
+     * @param options
+     * @example productInstanceFilesRoute.link();
+     **/
+    CommerceProductInstanceFilesRoute.prototype.link = function (productId, data) {
+        var params = this.utility.extend({}, data);
+        params.productId = productId;
+        return _super.prototype.baseCreate.call(this, this.linkRoute, params);
+    };
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @param productId Product id which uniquely identifies gallery whose gallery files need to be deleted.
+     * @param data
+     * @param options
+     * @example productFilesRoute.unlink(data);
+     **/
+    CommerceProductInstanceFilesRoute.prototype.unlink = function (productId, data, options) {
+        if (!options) {
+            options = {};
+        }
+        var params = this.modelMapper.removeParams(data);
+        params.productId = productId;
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, params, options, 'unlink');
+    };
+    /**
+     * Parses unlink by Product route; this URI template does not expose any additional options.
+     * @method
+     * @param productId Product id which uniquely identifies product whose product files need to be deleted.
+     * @param data
+     * @param options
+     * @example productFilesRoute.unlinkByProduct(data);
+     **/
+    CommerceProductInstanceFilesRoute.prototype.unlinkByProduct = function (productId, options) {
+        return _super.prototype.baseDelete.call(this, this.unlinkByProductRoute, productId, options, 'unlink-by-product');
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example productInstanceFilesRoute.update(data);
+     **/
+    CommerceProductInstanceFilesRoute.prototype.update = function (productId, data) {
+        var params = this.modelMapper.updateParams(data);
+        params.productId = productId;
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, params);
+    };
+    return CommerceProductInstanceFilesRoute;
+}(common_1.BaseRoute));
+CommerceProductInstanceFilesRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductInstanceFilesBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductInstanceFilesBatchRoute !== "undefined" && _1.CommerceProductInstanceFilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceProductInstanceFilesRoute);
+exports.CommerceProductInstanceFilesRoute = CommerceProductInstanceFilesRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 365 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(362));
+__export(__webpack_require__(361));
+__export(__webpack_require__(364));
+__export(__webpack_require__(363));
+
+
+/***/ }),
+/* 366 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(358));
+__export(__webpack_require__(357));
+__export(__webpack_require__(354));
+__export(__webpack_require__(353));
+__export(__webpack_require__(356));
+__export(__webpack_require__(355));
+__export(__webpack_require__(360));
+__export(__webpack_require__(359));
+__export(__webpack_require__(365));
+
+
+/***/ }),
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23671,7 +25212,9 @@ var CommerceProductClient = (function () {
                    pageSize : 10,
                    orderBy : '<field>',
                    orderDirection : '<asc|desc>',
-                   search : '<search-phrase>'
+                   search : '<search-phrase>',
+                   productCategoryId : '',
+                   productCategoryAbrv: ''
                })
                .then(function (collection) {
                    // perform success action here
@@ -23780,7 +25323,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 348 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23800,7 +25343,7 @@ var CommerceProductRoute = (function (_super) {
     function CommerceProductRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
-        _this.findRoute = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.findRoute = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields,productCategoryId,productCategoryAbrv}';
         _this.getRoute = 'commerce/products/{id}/{?embed,fields}';
         _this.createRoute = 'commerce/products';
         _this.updateRoute = 'commerce/products/{id}';
@@ -23814,6 +25357,8 @@ var CommerceProductRoute = (function (_super) {
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the commerce property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * - `productCategoryId` - A product category id.
+     * - `productCategoryAbrv` - A product category abbreviation.
      * @method
      * @example commerceProductRoute.find({searchQuery: '<search-phrase>'});
      **/
@@ -23874,7 +25419,7 @@ var _a;
 
 
 /***/ }),
-/* 349 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23882,12 +25427,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(348));
-__export(__webpack_require__(347));
+__export(__webpack_require__(368));
+__export(__webpack_require__(367));
 
 
 /***/ }),
-/* 350 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23896,7 +25441,7 @@ __export(__webpack_require__(347));
 
 
 /***/ }),
-/* 351 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23904,16 +25449,7 @@ __export(__webpack_require__(347));
 
 
 /***/ }),
-/* 352 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 353 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23922,7 +25458,16 @@ __export(__webpack_require__(347));
 
 
 /***/ }),
-/* 354 */
+/* 373 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23930,21 +25475,21 @@ __export(__webpack_require__(347));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(352));
-__export(__webpack_require__(353));
-__export(__webpack_require__(351));
-__export(__webpack_require__(350));
+__export(__webpack_require__(372));
+__export(__webpack_require__(373));
+__export(__webpack_require__(371));
+__export(__webpack_require__(370));
 
 
 /***/ }),
-/* 355 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(21);
+var _1 = __webpack_require__(22);
 var TYPES = {
     DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
     DynamicResourceACLRoute: Symbol("DynamicResourceACLRoute"),
@@ -23966,7 +25511,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 356 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23979,7 +25524,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(21);
+var _1 = __webpack_require__(22);
 var DynamicResourceACLClient = (function () {
     function DynamicResourceACLClient(dynamicResourceACLRoute, apiClient) {
         this.dynamicResourceACLRoute = dynamicResourceACLRoute;
@@ -24087,7 +25632,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 357 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24191,7 +25736,7 @@ var _a;
 
 
 /***/ }),
-/* 358 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24204,7 +25749,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(21);
+var _1 = __webpack_require__(22);
 var DynamicResourceClient = (function () {
     function DynamicResourceClient(dynamicResourceRoute, dynamicResourceACLClient, dynamicSchemaClient, apiClient) {
         this.dynamicResourceRoute = dynamicResourceRoute;
@@ -24381,7 +25926,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 359 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24394,7 +25939,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(21);
+var _1 = __webpack_require__(22);
 var contracts_1 = __webpack_require__(3);
 var DynamicResourceRoute = (function (_super) {
     tslib_1.__extends(DynamicResourceRoute, _super);
@@ -24489,7 +26034,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 360 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24502,7 +26047,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(21);
+var _1 = __webpack_require__(22);
 var DynamicSchemaClient = (function () {
     function DynamicSchemaClient(dynamicSchemaRoute, apiClient) {
         this.dynamicSchemaRoute = dynamicSchemaRoute;
@@ -24668,7 +26213,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 361 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24769,7 +26314,7 @@ var _a;
 
 
 /***/ }),
-/* 362 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24778,7 +26323,7 @@ var _a;
 
 
 /***/ }),
-/* 363 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24787,7 +26332,7 @@ var _a;
 
 
 /***/ }),
-/* 364 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24795,7 +26340,7 @@ var _a;
 
 
 /***/ }),
-/* 365 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24804,7 +26349,7 @@ var _a;
 
 
 /***/ }),
-/* 366 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24812,21 +26357,21 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(362));
-__export(__webpack_require__(365));
-__export(__webpack_require__(364));
-__export(__webpack_require__(363));
+__export(__webpack_require__(382));
+__export(__webpack_require__(385));
+__export(__webpack_require__(384));
+__export(__webpack_require__(383));
 
 
 /***/ }),
-/* 367 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(20);
+var _1 = __webpack_require__(21);
 var TYPES = {
     FilesACLClient: Symbol("FilesACLClient"),
     FilesACLRoute: Symbol("FilesACLRoute"),
@@ -24852,7 +26397,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 368 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24866,7 +26411,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(20);
+var _1 = __webpack_require__(21);
 var FilesACLClient = (function () {
     function FilesACLClient(filesACLRoute, apiClient) {
         this.filesACLRoute = filesACLRoute;
@@ -24969,7 +26514,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 369 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25082,7 +26627,7 @@ var _a;
 
 
 /***/ }),
-/* 370 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25096,7 +26641,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(20);
+var _1 = __webpack_require__(21);
 var FilesBatchClient = (function () {
     function FilesBatchClient(filesBatchRoute, apiClient) {
         this.filesBatchRoute = filesBatchRoute;
@@ -25185,7 +26730,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 371 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25252,7 +26797,7 @@ var _a;
 
 
 /***/ }),
-/* 372 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25266,7 +26811,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(20);
+var _1 = __webpack_require__(21);
 var FilesClient = (function () {
     function FilesClient(filesRoute, apiClient, filesStreamsClient, filesBatchClient, filesACLClient) {
         this.filesRoute = filesRoute;
@@ -25431,7 +26976,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 373 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25445,7 +26990,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(20);
+var _1 = __webpack_require__(21);
 var contracts_1 = __webpack_require__(3);
 var FilesRoute = (function (_super) {
     tslib_1.__extends(FilesRoute, _super);
@@ -25537,7 +27082,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 374 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25551,7 +27096,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(20);
+var _1 = __webpack_require__(21);
 var FilesStreamsClient = (function () {
     function FilesStreamsClient(filesStreamsRoute, apiClient) {
         this.filesStreamsRoute = filesStreamsRoute;
@@ -25610,7 +27155,12 @@ var FilesStreamsClient = (function () {
                         });
      **/
     FilesStreamsClient.prototype.getBlob = function (data) {
-        return this.apiClient.get(this.filesStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.request({
+            url: this.filesStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
     };
     /**
      * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
@@ -25672,7 +27222,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 375 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25758,7 +27308,7 @@ var _a;
 
 
 /***/ }),
-/* 376 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25767,7 +27317,7 @@ var _a;
 
 
 /***/ }),
-/* 377 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25775,18 +27325,18 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(376));
+__export(__webpack_require__(396));
 
 
 /***/ }),
-/* 378 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(29);
+var _1 = __webpack_require__(30);
 var TYPES = {
     KeyValueClient: Symbol("KeyValueClient"),
     KeyValueRoute: Symbol("KeyValueRoute")
@@ -25800,7 +27350,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 379 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25813,7 +27363,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(29);
+var _1 = __webpack_require__(30);
 var KeyValueClient = (function () {
     function KeyValueClient(keyValueRoute, apiClient) {
         this.keyValueRoute = keyValueRoute;
@@ -25951,7 +27501,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 380 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26050,7 +27600,1913 @@ var _a;
 
 
 /***/ }),
-/* 381 */
+/* 401 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryBatchClient
+ * @description  Media Gallery Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(13);
+var MediaGalleryBatchClient = (function () {
+    function MediaGalleryBatchClient(mediaGalleryBatchRoute, apiClient) {
+        this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGalleryBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified media gallery resources.
+     * @method
+     * @param data A collection of media gallery objects used to update specified media gallery resources.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example mediaGalleryStreamsClient.update(files)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    MediaGalleryBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove media gallery resources from the system if successfully completed. Specified media galleries and all accompanying derived resources will be removed from the system.
+     * @method
+     * @param ids Collection of media gallery Id which uniquely identifies media gallery resources that need to be deleted.
+     * @example // Remove original media gallery resources
+                        mediaGalleryBatchClient.remove([<media-gallery-id>])
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    MediaGalleryBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.mediaGalleryBatchRoute.delete(), undefined, ids);
+    };
+    /**
+    * Returns a promise that is resolved once the create action has been performed; this action creates specified media gallery resources.
+    * @method
+    * @param data A collection of media gallery objects used to create specified media gallery resources.
+    * @returns A promise that is resolved once the create action has been performed.
+    * @example mediaGalleryStreamsClient.create(files)
+                  .then(function (data) {
+                      // perform success action here
+                  },
+                   function (response, status, headers, config) {
+                       // perform error handling here
+                  });
+   **/
+    MediaGalleryBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    return MediaGalleryBatchClient;
+}());
+MediaGalleryBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryBatchRoute !== "undefined" && _1.MediaGalleryBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaGalleryBatchClient);
+exports.MediaGalleryBatchClient = MediaGalleryBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 402 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryBatchRoute
+ * @description Baasic Media Gallery Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryBatchRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryBatchRoute, _super);
+    function MediaGalleryBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.updateRoute = 'media-galleries/batch';
+        _this.deleteRoute = 'media-galleries/batch';
+        _this.createRoute = 'media-galleries/batch';
+        return _this;
+    }
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryBatchRoute.update();
+     **/
+    MediaGalleryBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryBatchRoute.create();
+     **/
+    MediaGalleryBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryBatchRoute.delete();
+     **/
+    MediaGalleryBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return MediaGalleryBatchRoute;
+}(common_1.BaseRoute));
+MediaGalleryBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGalleryBatchRoute);
+exports.MediaGalleryBatchRoute = MediaGalleryBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 403 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryClient
+ * @description  Media Gallery Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(13);
+var MediaGalleryClient = (function () {
+    function MediaGalleryClient(mediaGalleryRoute, apiClient, mediaGalleryBatchClient, mediaGalleryFileStreamClient, mediaGalleryInstanceFilesClient, mediaGallerySettingsClient) {
+        this.mediaGalleryRoute = mediaGalleryRoute;
+        this.apiClient = apiClient;
+        this.mediaGalleryBatchClient = mediaGalleryBatchClient;
+        this.mediaGalleryFileStreamClient = mediaGalleryFileStreamClient;
+        this.mediaGalleryInstanceFilesClient = mediaGalleryInstanceFilesClient;
+        this.mediaGallerySettingsClient = mediaGallerySettingsClient;
+    }
+    Object.defineProperty(MediaGalleryClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaGalleryClient.prototype, "streams", {
+        get: function () {
+            return this.mediaGalleryFileStreamClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaGalleryClient.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaGalleryClient.prototype, "files", {
+        get: function () {
+            return this.mediaGalleryInstanceFilesClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of media gallery resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example mediaGalleryClient.find({
+                  pageNumber : 1,
+                  pageSize : 10,
+                  orderBy : '<field>',
+                  orderDirection : '<asc|desc>',
+                  search : '<search-phrase>',
+                  ids: '1,2,5',
+                  from: '',
+                  to: ''
+               })
+               .then(function (collection) {
+                   // perform success action here
+              },
+               function (response, status, headers, config) {
+                   // perform error handling here
+              });
+   **/
+    MediaGalleryClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested media gallery resource.
+     * @method
+     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example mediaGalleryClient.get('<media-gallery-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    MediaGalleryClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update media gallery action has been performed; this action will update a media gallery resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaGalleryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(mediaGalleryEntry);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A media gallery object used to update specified media gallery resource.
+     * @returns A promise that is resolved once the update media gallery action has been performed.
+     * @example // mediaGalleryEntry is a media gallery resource previously fetched using get action.
+                    mediaGalleryEntry.description = '<description>';
+                    mediaGalleryClient.update(mediaGalleryEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    MediaGalleryClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove one media gallery resources from the system if successfully completed. Specified media gallery and all accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(mediaGalleryEntry);
+     * let uri = params['id'].links('delete').href;
+     * ```
+     * @method
+     * @param id Media gallery id used to delete specific Media gallery resource from the system.
+     * @example // id is a media gallery resource id previously fetched using get action. The following action will remove the original media gallery resource and all accompanying derived media gallery resources.
+                   mediaGalleryClient.remove(id)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    MediaGalleryClient.prototype.remove = function (id) {
+        return this.apiClient.delete(this.routeDefinition.delete(id));
+    };
+    /**
+     * Returns a promise that is resolved once the create media gallery action has been performed; this action creates a new media gallery.
+     * @method
+     * @param data Media Gallery object.
+     * @returns A promise that is resolved once the create media gallery action has been performed.
+     * @example mediaGalleryClient.create(mediaGallery)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    MediaGalleryClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the purge action has been performed. This action will remove all media gallery resources from the system if successfully completed.
+     * @method
+     * @example // Remove original media gallery resources
+                        mediaGalleryClient.purge()
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    MediaGalleryClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    return MediaGalleryClient;
+}());
+MediaGalleryClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGalleryBatchClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.MediaGalleryFileStreamClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.MediaGalleryInstanceFilesClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.MediaGallerySettingsClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryRoute !== "undefined" && _1.MediaGalleryRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.MediaGalleryBatchClient !== "undefined" && _1.MediaGalleryBatchClient) === "function" && _c || Object, typeof (_d = typeof _1.MediaGalleryFileStreamClient !== "undefined" && _1.MediaGalleryFileStreamClient) === "function" && _d || Object, typeof (_e = typeof _1.MediaGalleryInstanceFilesClient !== "undefined" && _1.MediaGalleryInstanceFilesClient) === "function" && _e || Object, typeof (_f = typeof _1.MediaGallerySettingsClient !== "undefined" && _1.MediaGallerySettingsClient) === "function" && _f || Object])
+], MediaGalleryClient);
+exports.MediaGalleryClient = MediaGalleryClient;
+var _a, _b, _c, _d, _e, _f;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 404 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryFileBatchClient
+ * @description  Media Gallery Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(13);
+var MediaGalleryFileBatchClient = (function () {
+    function MediaGalleryFileBatchClient(mediaGalleryBatchRoute, apiClient) {
+        this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGalleryFileBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified media gallery file resources.
+     * @method
+     * @param data A collection of media gallery file objects used to update specified media gallery file resources.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example mediaGalleryFileBatchClient.update(files)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    MediaGalleryFileBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove media gallery file resources from the system if successfully completed. Specified media galleries and all accompanying derived resources will be removed from the system.
+     * @method
+     * @param ids Collection of media gallery Id which uniquely identifies media gallery file resources that need to be deleted.
+     * @example // Remove original media gallery file resources
+                        mediaGalleryFileBatchClient.unlink([<media-gallery-id>])
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    MediaGalleryFileBatchClient.prototype.unlink = function (ids) {
+        return this.apiClient.delete(this.mediaGalleryBatchRoute.unlink(), undefined, ids);
+    };
+    /**
+    * Returns a promise that is resolved once the create action has been performed; this action creates specified media gallery file resources.
+    * @method
+    * @param data A collection of media gallery file objects used to create specified media gallery file resources.
+    * @returns A promise that is resolved once the create action has been performed.
+    * @example mediaGalleryFileBatchClient.link(files)
+                  .then(function (data) {
+                      // perform success action here
+                  },
+                   function (response, status, headers, config) {
+                       // perform error handling here
+                  });
+   **/
+    MediaGalleryFileBatchClient.prototype.link = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
+    };
+    return MediaGalleryFileBatchClient;
+}());
+MediaGalleryFileBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileBatchRoute !== "undefined" && _1.MediaGalleryFileBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaGalleryFileBatchClient);
+exports.MediaGalleryFileBatchClient = MediaGalleryFileBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 405 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryFileBatchRoute
+ * @description Baasic Media Gallery Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryFileBatchRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryFileBatchRoute, _super);
+    function MediaGalleryFileBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.updateRoute = 'media-gallery-files/batch';
+        _this.unlinkRoute = 'media-gallery-files/batch/unlink';
+        _this.linkRoute = 'media-gallery-files/batch/link';
+        return _this;
+    }
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryFileBatchRoute.update();
+     **/
+    MediaGalleryFileBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses link route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryFileBatchRoute.link();
+     **/
+    MediaGalleryFileBatchRoute.prototype.link = function () {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
+    };
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryFileBatchRoute.unlink();
+     **/
+    MediaGalleryFileBatchRoute.prototype.unlink = function () {
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, {});
+    };
+    return MediaGalleryFileBatchRoute;
+}(common_1.BaseRoute));
+MediaGalleryFileBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGalleryFileBatchRoute);
+exports.MediaGalleryFileBatchRoute = MediaGalleryFileBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 406 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryFileClient
+ * @description  Media Gallery File Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery File Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(13);
+var MediaGalleryFileClient = (function () {
+    function MediaGalleryFileClient(mediaGalleryFileRoute, apiClient, mediaGalleryFileBatchClient) {
+        this.mediaGalleryFileRoute = mediaGalleryFileRoute;
+        this.apiClient = apiClient;
+        this.mediaGalleryFileBatchClient = mediaGalleryFileBatchClient;
+    }
+    Object.defineProperty(MediaGalleryFileClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryFileRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaGalleryFileClient.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryFileBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of media gallery resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example mediaGalleryClient.find({
+                  pageNumber : 1,
+                  pageSize : 10,
+                  orderBy : '<field>',
+                  orderDirection : '<asc|desc>',
+                  search : '<search-phrase>',
+                  ids: '1,2,5',
+                  from: '',
+                  to: ''
+               })
+               .then(function (collection) {
+                   // perform success action here
+              },
+               function (response, status, headers, config) {
+                   // perform error handling here
+              });
+   **/
+    MediaGalleryFileClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested media gallery resource.
+     * @method
+     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example mediaGalleryClient.get('<media-gallery-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    MediaGalleryFileClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update media gallery action has been performed; this action will update a media gallery resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaGalleryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(mediaGalleryEntry);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A media gallery object used to update specified media gallery resource.
+     * @returns A promise that is resolved once the update media gallery action has been performed.
+     * @example // mediaGalleryEntry is a media gallery resource previously fetched using get action.
+                    mediaGalleryEntry.description = '<description>';
+                    mediaGalleryClient.update(mediaGalleryEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    MediaGalleryFileClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove one media gallery file resources from the system if successfully completed. Specified media gallery file and all accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryFileRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(mediaGalleryFileEntry);
+     * let uri = params['id'].links('delete').href;
+     * ```
+     * @method
+     * @param id Media gallery file id used to delete specific Media gallery resource from the system.
+     * @example // id is a media gallery file resource id previously fetched using get action. The following action will remove the original media gallery file resource and all accompanying derived media gallery file resources.
+                   mediaGalleryFileClient.remove(id)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    MediaGalleryFileClient.prototype.remove = function (id) {
+        return this.apiClient.delete(this.routeDefinition.unlink(id));
+    };
+    /**
+     * Returns a promise that is resolved once the create media gallery action has been performed; this action creates a new media gallery.
+     * @method
+     * @param data Media Gallery object.
+     * @returns A promise that is resolved once the create media gallery action has been performed.
+     * @example mediaGalleryClient.create(mediaGallery)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    MediaGalleryFileClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(data), this.routeDefinition.createParams(data));
+    };
+    return MediaGalleryFileClient;
+}());
+MediaGalleryFileClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryFileRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGalleryFileBatchClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileRoute !== "undefined" && _1.MediaGalleryFileRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.MediaGalleryFileBatchClient !== "undefined" && _1.MediaGalleryFileBatchClient) === "function" && _c || Object])
+], MediaGalleryFileClient);
+exports.MediaGalleryFileClient = MediaGalleryFileClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 407 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module MediaGalleryFileRoute
+ * @description Baasic Media Gallery File Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery File Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(13);
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryFileRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryFileRoute, _super);
+    function MediaGalleryFileRoute(appOptions, mediaGalleryBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
+        _this.findRoute = 'media-gallery-files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'media-gallery-files/{id}/{?embed,fields}';
+        _this.updateRoute = 'media-gallery-files/{id}';
+        _this.unlinkRoute = 'media-gallery-files/unlink({id}';
+        _this.linkRoute = 'media-gallery-files/';
+        return _this;
+    }
+    Object.defineProperty(MediaGalleryFileRoute.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing media gallery properties using the phrase search.
+     * - `ids` - Comma separated list of media gallery ids to be retrieved.       *
+     * - `from` - The from date.
+     * - `to` - The to date.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain media gallery subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the media gallery property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example mediaGalleryFileRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    MediaGalleryFileRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param id Media gallery file id which uniquely identifies media gallery resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example mediaGalleryFileRoute.get({id: '<media-gallery-id>'});
+     **/
+    MediaGalleryFileRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param data Media gallery file object used to update specific Media gallery file resource in the system.
+     * @example mediaGalleryFileRoute.update(data);
+     **/
+    MediaGalleryFileRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this route should be expanded with the Id of media gallery file resource.
+     * @method
+     * @param id Media gallery file object id used to delete specific Media gallery file file resource in the system.
+     * @example mediaGalleryFileRoute.delete({id: '<media-gallery-file--id>'});
+     **/
+    MediaGalleryFileRoute.prototype.unlink = function (id) {
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, id);
+    };
+    /**
+    * Parses create route; this URI template doesnt support any additional options.
+    * @method
+    * @param data An media gallery file object that needs to be inserted into the system.
+    * @example mediaGalleryFileRoute.create(data);
+    **/
+    MediaGalleryFileRoute.prototype.link = function (data) {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, data);
+    };
+    return MediaGalleryFileRoute;
+}(common_1.BaseRoute));
+MediaGalleryFileRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaGalleryFileBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MediaGalleryFileBatchRoute !== "undefined" && _1.MediaGalleryFileBatchRoute) === "function" && _b || Object])
+], MediaGalleryFileRoute);
+exports.MediaGalleryFileRoute = MediaGalleryFileRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 408 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryFilesStreamsClient
+ * @description  Media Gallery Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(13);
+var MediaGalleryFileStreamClient = (function () {
+    function MediaGalleryFileStreamClient(mediaGalleryFilesStreamsRoute, apiClient) {
+        this.mediaGalleryFilesStreamsRoute = mediaGalleryFilesStreamsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGalleryFileStreamClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryFilesStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
+     * @method
+     * @param id Media Gallery Entry id which uniquely identifies media gallery file that needs to be retrieved.
+     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original file stream
+                    mediaGalleryFilesStreamsClient.get({id: '<file-id>'}, {mediaGalleryid: '<media-gallery-id>'})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    MediaGalleryFileStreamClient.prototype.get = function (id, data) {
+        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(id, data));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @param id Media Gallery Entry id which uniquely identifies media gallery file that needs to be retrieved.
+     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original blob
+                    mediaGalleryFilesStreamsClient.getBlob('<file-id>', {mediaGalleryId:'<media-gallery-id>'})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    MediaGalleryFileStreamClient.prototype.getBlob = function (id, data) {
+        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(id, data), { 'Accept': 'application/octet-stream' });
+    };
+    /**
+     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
+     * @method
+     * @param data Media GalleryFile object used to identify stream that needs to be updated.
+     * @param stream
+     * @returns A promise that is resolved once the update file stream action has been performed.
+     * @example // Update original file stream
+                    mediaGalleryFilesStreamsClient.update({id:'<file-id>'}, <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    MediaGalleryFileStreamClient.prototype.update = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.put(this.mediaGalleryFilesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
+    };
+    /**
+     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @param data Media GalleryFile object that need to be inserted into the system.
+     * @param stream
+     * @returns A promise that is resolved once the create file stream action has been performed.
+     * @example mediaGalleryFilesStreamsClient.create({mediaGalleryId:'<media-gallery-id>'}, <blob>)
+                   .then(function (data) {
+                        // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    MediaGalleryFileStreamClient.prototype.create = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.post(this.mediaGalleryFilesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
+    };
+    return MediaGalleryFileStreamClient;
+}());
+MediaGalleryFileStreamClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryFileStreamRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileStreamRoute !== "undefined" && _1.MediaGalleryFileStreamRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaGalleryFileStreamClient);
+exports.MediaGalleryFileStreamClient = MediaGalleryFileStreamClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 409 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module MediaGalleryFilesStreamsRoute
+ * @description Baasic Media Gallery  Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryFileStreamRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryFileStreamRoute, _super);
+    function MediaGalleryFileStreamRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'media-gallery-file-streams/{id}/{?mediaGalleryId}';
+        _this.createRoute = 'media-gallery-file-streams/{filename}/{?mediaGalleryId}';
+        _this.updateRoute = 'media-gallery-file-streams/{id}';
+        return _this;
+    }
+    /**
+     * Parses get route; this route should be expanded with id of desired file stream.
+     * @method
+     * @param id Media Gallery File id which uniquely identifies media gallery whose media gallery file need to be retrieved.
+     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
+     * @example mediaGalleryFileStreamRoute.get(id);
+     **/
+    MediaGalleryFileStreamRoute.prototype.get = function (id, data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                mediaGalleryId: data
+            };
+        }
+        var params = this.utility.extend({}, data);
+        params.id = id;
+        return _super.prototype.baseGet.call(this, this.getRoute, params);
+    };
+    /**
+     * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.
+     * @method
+     * @param data Media Gallery File object that need to be inserted into the system.
+     * @example mediaGalleryFileStreamRoute.create({filename: '<filename>'});
+     **/
+    MediaGalleryFileStreamRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses update route; this route should be expanded with the id of the previously saved resource. Additional supported items are:
+     * - `width` - width of derived image to update.
+     * - `height` - height of derived image to update.
+     * @method
+     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery file need to be updated.
+     * @param data Media Gallery File object used to identify stream that needs to be updated.
+     * @example mediaGalleryFileStreamRoute.update({id: '<filename>'});
+     **/
+    MediaGalleryFileStreamRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return MediaGalleryFileStreamRoute;
+}(common_1.BaseRoute));
+MediaGalleryFileStreamRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGalleryFileStreamRoute);
+exports.MediaGalleryFileStreamRoute = MediaGalleryFileStreamRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 410 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module MediaGalleryRoute
+ * @description Baasic Media Gallery Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(13);
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryRoute, _super);
+    function MediaGalleryRoute(appOptions, mediaGalleryBatchRoute, mediaGallerySettingsRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
+        _this.mediaGallerySettingsRoute = mediaGallerySettingsRoute;
+        _this.findRoute = 'media-galleries/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'media-galleries/{id}/{?embed,fields}';
+        _this.updateRoute = 'media-galleries/{id}';
+        _this.deleteRoute = 'media-galleries/{id}';
+        _this.createRoute = 'media-galleries/';
+        _this.purgeRoute = 'media-galleries/purge';
+        return _this;
+    }
+    Object.defineProperty(MediaGalleryRoute.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaGalleryRoute.prototype, "settings", {
+        get: function () {
+            return this.mediaGallerySettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing media gallery properties using the phrase search.
+     * - `ids` - Comma separated list of media gallery ids to be retrieved.       *
+     * - `from` - The from date.
+     * - `to` - The to date.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain media gallery subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the media gallery property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example mediaGalleryRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    MediaGalleryRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example mediaGalleryRoute.get({id: '<media-gallery-id>'});
+     **/
+    MediaGalleryRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param data Media gallery object used to update specific Media gallery resource in the system.
+     * @example mediaGalleryRoute.update(data);
+     **/
+    MediaGalleryRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param data Media gallery object of specific Media gallery resource in the system.
+     * @example mediaGalleryRoute.delete(<media-gallery>);
+     **/
+    MediaGalleryRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+    * Parses create route; this URI template doesnt support any additional options.
+    * @method
+    * @param data An media gallery  object that needs to be inserted into the system.
+    * @example mediaGalleryRoute.create(data);
+    **/
+    MediaGalleryRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses purge route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryPurgeRoute.purge();
+     **/
+    MediaGalleryRoute.prototype.purge = function () {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
+    };
+    return MediaGalleryRoute;
+}(common_1.BaseRoute));
+MediaGalleryRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGallerySettingsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MediaGalleryBatchRoute !== "undefined" && _1.MediaGalleryBatchRoute) === "function" && _b || Object, typeof (_c = typeof _1.MediaGallerySettingsRoute !== "undefined" && _1.MediaGallerySettingsRoute) === "function" && _c || Object])
+], MediaGalleryRoute);
+exports.MediaGalleryRoute = MediaGalleryRoute;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 411 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGallerySettingsClient
+ * @description  Media Gallery Settings Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(13);
+var MediaGallerySettingsClient = (function () {
+    function MediaGallerySettingsClient(mediaGallerySettingsRoute, apiClient) {
+        this.mediaGallerySettingsRoute = mediaGallerySettingsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGallerySettingsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGallerySettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns media gallery settings resource.
+     * @method
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example mediaGallerySettingsClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    MediaGallerySettingsClient.prototype.get = function () {
+        return this.apiClient.get(this.routeDefinition.get());
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates the media gallery settings resource.
+     * @method
+     * @param data A media gallery settings object used to update media gallery settings in the system.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example mediaGallerySettingsClient.update(mediaGallerySettings)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    MediaGallerySettingsClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    return MediaGallerySettingsClient;
+}());
+MediaGallerySettingsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGallerySettingsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGallerySettingsRoute !== "undefined" && _1.MediaGallerySettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaGallerySettingsClient);
+exports.MediaGallerySettingsClient = MediaGallerySettingsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 412 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module MediaGallerySettingsRoute
+ * @description Baasic Media Gallery Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var MediaGallerySettingsRoute = (function (_super) {
+    tslib_1.__extends(MediaGallerySettingsRoute, _super);
+    function MediaGallerySettingsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'media-gallery-settings';
+        _this.updateRoute = 'media-gallery-settings';
+        return _this;
+    }
+    /**
+     * Parses get route; this route doesn not expose any additional options.
+     * @method
+     * @example mediaGallerySettingsRoute.get();
+     **/
+    MediaGallerySettingsRoute.prototype.get = function () {
+        return _super.prototype.baseCreate.call(this, this.getRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGallerySettingsRoute.update();
+     **/
+    MediaGallerySettingsRoute.prototype.update = function () {
+        return _super.prototype.baseCreate.call(this, this.updateRoute, {});
+    };
+    return MediaGallerySettingsRoute;
+}(common_1.BaseRoute));
+MediaGallerySettingsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGallerySettingsRoute);
+exports.MediaGallerySettingsRoute = MediaGallerySettingsRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 413 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 414 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 415 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 416 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 417 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 418 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 419 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 420 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(416));
+__export(__webpack_require__(419));
+__export(__webpack_require__(418));
+__export(__webpack_require__(417));
+__export(__webpack_require__(414));
+__export(__webpack_require__(415));
+__export(__webpack_require__(413));
+
+
+/***/ }),
+/* 421 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(13);
+var TYPES = {
+    MediaGalleryClient: Symbol("MediaGalleryClient"),
+    MediaGalleryRoute: Symbol("MediaGalleryRoute"),
+    MediaGalleryBatchClient: Symbol("MediaGalleryBatchClient"),
+    MediaGalleryBatchRoute: Symbol("MediaGalleryBatchRoute"),
+    MediaGallerySettingsClient: Symbol("MediaGallerySettingsClient"),
+    MediaGallerySettingsRoute: Symbol("MediaGallerySettingsRoute"),
+    MediaGalleryInstanceFilesBatchClient: Symbol("MediaGalleryInstanceFilesBatchClient"),
+    MediaGalleryInstanceFilesBatchRoute: Symbol("MediaGalleryInstanceFilesBatchRoute"),
+    MediaGalleryInstanceFilesClient: Symbol("MediaGalleryInstanceFilesClient"),
+    MediaGalleryInstanceFilesRoute: Symbol("MediaGalleryInstanceFilesRoute"),
+    MediaGalleryFileStreamClient: Symbol("MediaGalleryFileStreamClient"),
+    MediaGalleryFileStreamRoute: Symbol("MediaGalleryFileStreamRoute"),
+    MediaGalleryFileBatchClient: Symbol("MediaGalleryFileBatchClient"),
+    MediaGalleryFileBatchRoute: Symbol("MediaGalleryFileBatchRoute"),
+    MediaGalleryFileClient: Symbol("MediaGalleryFileClient"),
+    MediaGalleryFileRoute: Symbol("MediaGalleryFileRoute"),
+    MediaGalleryFileStreamsClient: Symbol("MediaGalleryFileStreamsClient"),
+    MediaGalleryFileStreamsRoute: Symbol("MediaGalleryFileStreamsRoute"),
+    Root: Symbol("Root")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.MediaGalleryClient).to(_1.MediaGalleryClient);
+    bind(TYPES.MediaGalleryRoute).to(_1.MediaGalleryRoute);
+    bind(TYPES.MediaGalleryBatchClient).to(_1.MediaGalleryBatchClient);
+    bind(TYPES.MediaGalleryBatchRoute).to(_1.MediaGalleryBatchRoute);
+    bind(TYPES.MediaGallerySettingsClient).to(_1.MediaGallerySettingsClient);
+    bind(TYPES.MediaGallerySettingsRoute).to(_1.MediaGallerySettingsRoute);
+    bind(TYPES.MediaGalleryInstanceFilesBatchClient).to(_1.MediaGalleryInstanceFilesBatchClient);
+    bind(TYPES.MediaGalleryInstanceFilesBatchRoute).to(_1.MediaGalleryInstanceFilesBatchRoute);
+    bind(TYPES.MediaGalleryInstanceFilesClient).to(_1.MediaGalleryInstanceFilesClient);
+    bind(TYPES.MediaGalleryInstanceFilesRoute).to(_1.MediaGalleryInstanceFilesRoute);
+    bind(TYPES.MediaGalleryFileBatchClient).to(_1.MediaGalleryFileBatchClient);
+    bind(TYPES.MediaGalleryFileBatchRoute).to(_1.MediaGalleryFileBatchRoute);
+    bind(TYPES.MediaGalleryFileClient).to(_1.MediaGalleryFileClient);
+    bind(TYPES.MediaGalleryFileRoute).to(_1.MediaGalleryFileRoute);
+    bind(TYPES.MediaGalleryFileStreamClient).to(_1.MediaGalleryFileStreamClient);
+    bind(TYPES.MediaGalleryFileStreamRoute).to(_1.MediaGalleryFileStreamRoute);
+    bind(TYPES.Root).to(_1.Root);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 422 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryInstanceFilesBatchClient
+ * @description  Media Gallery Instance Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(13);
+var MediaGalleryInstanceFilesBatchClient = (function () {
+    function MediaGalleryInstanceFilesBatchClient(mediaGalleryInstanceFilesBatchRoute, apiClient) {
+        this.mediaGalleryInstanceFilesBatchRoute = mediaGalleryInstanceFilesBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGalleryInstanceFilesBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryInstanceFilesBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system.
+     * @method
+     * @param mediaGalleryId Media Gallery file id of the original media gallery file used to identify media gallery files on which delete action should be performed.
+     * @param data Collection of media gallery delete requests which uniquely identifies media gallery files that need to be deleted.
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // Remove original file resources
+                   mediaGalleryInstanceFilesBatchClient.unlink([{ id: '<file-id>' }])
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+    **/
+    MediaGalleryInstanceFilesBatchClient.prototype.unlink = function (mediaGalleryId, data) {
+        return this.apiClient.delete(this.mediaGalleryInstanceFilesBatchRoute.unlink(mediaGalleryId), undefined, data);
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.
+     * @method
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery file need to be updated.
+     * @param data Media Gallery file object that need to be updated in the system.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example mediaGalleryInstanceFilesBatchClient.update('<media-gallery-id>', files)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    MediaGalleryInstanceFilesBatchClient.prototype.update = function (mediaGalleryId, data) {
+        return this.apiClient.put(this.routeDefinition.update(mediaGalleryId), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).
+     * @method
+     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery files need to be linked.
+     * @param data A collection of media gallery file objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example mediaGalleryInstanceFilesBatchClient.link(files)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    MediaGalleryInstanceFilesBatchClient.prototype.link = function (mediaGalleryId, data) {
+        return this.apiClient.post(this.routeDefinition.link(mediaGalleryId), this.routeDefinition.createParams(data));
+    };
+    return MediaGalleryInstanceFilesBatchClient;
+}());
+MediaGalleryInstanceFilesBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryInstanceFilesBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryInstanceFilesBatchRoute !== "undefined" && _1.MediaGalleryInstanceFilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaGalleryInstanceFilesBatchClient);
+exports.MediaGalleryInstanceFilesBatchClient = MediaGalleryInstanceFilesBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 423 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryInstanceFilesBatchRoute
+ * @description Baasic Media Gallery Instance Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryInstanceFilesBatchRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryInstanceFilesBatchRoute, _super);
+    function MediaGalleryInstanceFilesBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.unlinkRoute = 'media-galleries/{mediaGalleryId}/files/batch/unlink';
+        _this.updateRoute = 'media-galleries/{mediaGalleryId}/files/batch';
+        _this.linkRoute = 'media-galleries/{mediaGalleryId}/files/batch/link';
+        return _this;
+    }
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery file id of the original media gallery file used to identify media gallery files on which delete action should be performed.
+     * @example mediaGalleryInstanceFilesBatchRoute.unlink(mediaGalleryId);
+     **/
+    MediaGalleryInstanceFilesBatchRoute.prototype.unlink = function (mediaGalleryId) {
+        var params = { mediaGalleryId: mediaGalleryId };
+        return _super.prototype.baseCreate.call(this, this.unlinkRoute, params);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery file need to be updated.
+     * @example mediaGalleryInstanceFilesStreamsRoute.update(mediaGalleryId);
+     **/
+    MediaGalleryInstanceFilesBatchRoute.prototype.update = function (mediaGalleryId) {
+        var params = { mediaGalleryId: mediaGalleryId };
+        return _super.prototype.baseCreate.call(this, this.updateRoute, params);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery files need to be linked.
+     * @example mediaGalleryInstanceFilesStreamsRoute.link(mediaGalleryId);
+     **/
+    MediaGalleryInstanceFilesBatchRoute.prototype.link = function (mediaGalleryId) {
+        var params = { mediaGalleryId: mediaGalleryId };
+        return _super.prototype.baseCreate.call(this, this.linkRoute, params);
+    };
+    return MediaGalleryInstanceFilesBatchRoute;
+}(common_1.BaseRoute));
+MediaGalleryInstanceFilesBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGalleryInstanceFilesBatchRoute);
+exports.MediaGalleryInstanceFilesBatchRoute = MediaGalleryInstanceFilesBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 424 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryInstanceFilesClient
+ * @description  Media Gallery Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(13);
+var MediaGalleryInstanceFilesClient = (function () {
+    function MediaGalleryInstanceFilesClient(mediaGalleryInstanceFilesRoute, MediaGalleryInstanceFilesBatchClient, apiClient) {
+        this.mediaGalleryInstanceFilesRoute = mediaGalleryInstanceFilesRoute;
+        this.MediaGalleryInstanceFilesBatchClient = MediaGalleryInstanceFilesBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGalleryInstanceFilesClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryInstanceFilesRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaGalleryInstanceFilesClient.prototype, "batch", {
+        get: function () {
+            return this.MediaGalleryInstanceFilesBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.
+     * @method
+     * @param mediaGalleryId Media Galleryslug or id which uniquely identifies media gallery whose media gallery files need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example mediaGalleryInstanceFilesClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    ids: '1,2,3',
+                    from: '',
+                    to: '',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    MediaGalleryInstanceFilesClient.prototype.find = function (mediaGalleryId, options) {
+        return this.apiClient.get(this.mediaGalleryInstanceFilesRoute.find(mediaGalleryId, options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.
+     * @method
+     * @param mediaGalleryId Media Galleryslug or id which uniquely identifies media gallery whose media gallery files need to be retrieved.
+     * @param id Media Galleryfile id which uniquely identifies media gallery file that needs to be retrieved.
+     * @param options options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example mediaGalleryInstanceFilesClient.get('<file-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    MediaGalleryInstanceFilesClient.prototype.get = function (mediaGalleryId, id, options) {
+        return this.apiClient.get(this.mediaGalleryInstanceFilesRoute.get(mediaGalleryId, id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryFilesRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink').href;
+     * ```
+     * @method
+     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery files need to be deleted.
+     * @param data
+     * @param options
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action. The following action will unlink the original file resource and all accompanying derived file resources.
+                    mediaGalleryInstanceFilesRoute.unlink(fileEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    MediaGalleryInstanceFilesClient.prototype.unlink = function (mediaGalleryId, data, options) {
+        return this.apiClient.delete(this.mediaGalleryInstanceFilesRoute.unlink(mediaGalleryId, data, options));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink by media gallery action has been performed. This action will remove all file resources from the system related to the requested media gallery if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink-by-media-gallery').href;
+     * ```
+     * @method
+     * @param mediaGalleryId Media Galleryslug or id which uniquely identifies media gallery whose media gallery files need to be deleted.
+     * @param data
+     * @param options
+     * @returns A promise that is resolved once the unlink by media gallery action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                    mediaGalleryInstanceFilesClient.unlinkByMediaGallery(fileEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    MediaGalleryInstanceFilesClient.prototype.unlinkByMediaGallery = function (mediaGalleryId, options) {
+        return this.apiClient.delete(this.mediaGalleryInstanceFilesRoute.unlinkByMediaGallery(mediaGalleryId, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicMediaGalleryFilesRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     ```
+     let params = modelMapper.updateParams(fileEntry);
+     let uri = params['model'].links('put').href;
+     ```
+     * @method
+     * @param mediaGalleryId An media gallery object used to update specified media gallery resource.
+     * @param data Media GalleryFile object used to update specific media gallery file data in the system.
+     * @returns A promise that is resolved once the update file action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                   fileEntry.description = '<description>';
+                   mediaGalleryInstanceFilesClient.update(fileEntry)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+    **/
+    MediaGalleryInstanceFilesClient.prototype.update = function (mediaGalleryId, data) {
+        return this.apiClient.put(this.routeDefinition.update(mediaGalleryId, data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the Media GalleryFiles module (For example: file resources from the Media Vault module can be linked directly into the Media GalleryFiles module).
+     * @method
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery files need to be linked.
+     * @param data A media gallery file object that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example mediaGalleryInstanceFilesClient.link(fileObject)
+                    .then(function (response, status, headers, config) {
+                        // perform success handling here
+                    },
+                        function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    MediaGalleryInstanceFilesClient.prototype.link = function (mediaGalleryId, data) {
+        return this.apiClient.post(this.routeDefinition.link(mediaGalleryId, data), this.routeDefinition.createParams(data));
+    };
+    return MediaGalleryInstanceFilesClient;
+}());
+MediaGalleryInstanceFilesClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryInstanceFilesRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaGalleryInstanceFilesBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryInstanceFilesRoute !== "undefined" && _1.MediaGalleryInstanceFilesRoute) === "function" && _a || Object, typeof (_b = typeof _1.MediaGalleryInstanceFilesBatchClient !== "undefined" && _1.MediaGalleryInstanceFilesBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], MediaGalleryInstanceFilesClient);
+exports.MediaGalleryInstanceFilesClient = MediaGalleryInstanceFilesClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 425 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryInstanceFilesRoute
+ * @description Baasic Media Gallery Instance Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(13);
+var MediaGalleryInstanceFilesRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryInstanceFilesRoute, _super);
+    function MediaGalleryInstanceFilesRoute(mediaGalleryInstanceFilesBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.mediaGalleryInstanceFilesBatchRoute = mediaGalleryInstanceFilesBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'media-galleries/{mediaGalleryId}/files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'media-galleries/{mediaGalleryId}/files/{id}/{?embed,fields}';
+        _this.linkRoute = 'media-galleries/{mediaGalleryId}/files/link';
+        _this.unlinkRoute = 'media-galleries/{mediaGalleryId}/files/unlink/{id}';
+        _this.unlinkByMediaGalleryRoute = 'media-galleries/{mediaGalleryId}/files/unlink';
+        _this.updateRoute = 'media-galleries/{mediaGalleryId}/files/{id}';
+        return _this;
+    }
+    Object.defineProperty(MediaGalleryInstanceFilesRoute.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryInstanceFilesBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing file properties using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the file property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery files need to be retrieved.
+     * @param options Query resource options object.
+     * @example mediaGalleryInstanceFilesRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    MediaGalleryInstanceFilesRoute.prototype.find = function (mediaGalleryId, options) {
+        var params = this.modelMapper.findParams(options);
+        params.mediaGalleryId = mediaGalleryId;
+        return _super.prototype.baseGet.call(this, this.findRoute, params);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery files need to be retrieved.
+     * @param id Media Gallery file id which uniquely identifies media gallery file that needs to be retrieved.
+     * @param options options object that contains embed data.
+     * @example mediaGalleryInstanceFilesRoute.get({id: '<file-id>'});
+     **/
+    MediaGalleryInstanceFilesRoute.prototype.get = function (mediaGalleryId, id, options) {
+        var params = this.utility.extend({}, options);
+        params.mediaGalleryId = mediaGalleryId;
+        params.id = id;
+        return _super.prototype.baseGet.call(this, this.getRoute, params);
+    };
+    /**
+     * Parses link route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery files need to be deleted.
+     * @param data
+     * @param options
+     * @example mediaGalleryInstanceFilesRoute.link();
+     **/
+    MediaGalleryInstanceFilesRoute.prototype.link = function (mediaGalleryId, data) {
+        var params = this.utility.extend({}, data);
+        params.mediaGalleryId = mediaGalleryId;
+        return _super.prototype.baseCreate.call(this, this.linkRoute, params);
+    };
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery id which uniquely identifies gallery whose gallery files need to be deleted.
+     * @param data
+     * @param options
+     * @example mediaGalleryFilesRoute.unlink(data);
+     **/
+    MediaGalleryInstanceFilesRoute.prototype.unlink = function (mediaGalleryId, data, options) {
+        if (!options) {
+            options = {};
+        }
+        var params = this.modelMapper.removeParams(data);
+        params.mediaGalleryId = mediaGalleryId;
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, params, options, 'unlink');
+    };
+    /**
+     * Parses unlink by media gallery route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery files need to be deleted.
+     * @param data
+     * @param options
+     * @example mediaGalleryFilesRoute.unlinkByMediaGallery(data);
+     **/
+    MediaGalleryInstanceFilesRoute.prototype.unlinkByMediaGallery = function (mediaGalleryId, options) {
+        return _super.prototype.baseDelete.call(this, this.unlinkByMediaGalleryRoute, mediaGalleryId, options, 'unlink-by-media-gallery');
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryInstanceFilesRoute.update(data);
+     **/
+    MediaGalleryInstanceFilesRoute.prototype.update = function (mediaGalleryId, data) {
+        var params = this.modelMapper.updateParams(data);
+        params.mediaGalleryId = mediaGalleryId;
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, params);
+    };
+    return MediaGalleryInstanceFilesRoute;
+}(common_1.BaseRoute));
+MediaGalleryInstanceFilesRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryInstanceFilesBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryInstanceFilesBatchRoute !== "undefined" && _1.MediaGalleryInstanceFilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], MediaGalleryInstanceFilesRoute);
+exports.MediaGalleryInstanceFilesRoute = MediaGalleryInstanceFilesRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 426 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(423));
+__export(__webpack_require__(422));
+__export(__webpack_require__(425));
+__export(__webpack_require__(424));
+
+
+/***/ }),
+/* 427 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(13);
+var inversify_1 = __webpack_require__(0);
+var Root = (function () {
+    function Root(galleries, files, settings) {
+        this.galleries = galleries;
+        this.files = files;
+        this.settings = settings;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaGalleryFileClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGallerySettingsClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryClient !== "undefined" && _1.MediaGalleryClient) === "function" && _a || Object, typeof (_b = typeof _1.MediaGalleryFileClient !== "undefined" && _1.MediaGalleryFileClient) === "function" && _b || Object, typeof (_c = typeof _1.MediaGallerySettingsClient !== "undefined" && _1.MediaGallerySettingsClient) === "function" && _c || Object])
+], Root);
+exports.Root = Root;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26064,7 +29520,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(18);
+var _1 = __webpack_require__(19);
 var MediaVaultBatchClient = (function () {
     function MediaVaultBatchClient(mediaVaultBatchRoute, apiClient) {
         this.mediaVaultBatchRoute = mediaVaultBatchRoute;
@@ -26136,7 +29592,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 382 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26194,7 +29650,7 @@ var _a;
 
 
 /***/ }),
-/* 383 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26208,7 +29664,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(18);
+var _1 = __webpack_require__(19);
 var MediaVaultClient = (function () {
     function MediaVaultClient(mediaVaultRoute, apiClient, mediaVaultStreamsClient, mediaVaultBatchClient, mediaVaultSettingsClient, mediaVaultProcessingProviderSettingsClient) {
         this.mediaVaultRoute = mediaVaultRoute;
@@ -26366,7 +29822,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 384 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26380,7 +29836,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(18);
+var _1 = __webpack_require__(19);
 var MediaVaultProcessingProviderSettingsClient = (function () {
     function MediaVaultProcessingProviderSettingsClient(mediaVaultProcessingProviderSettingsRoute, apiClient) {
         this.mediaVaultProcessingProviderSettingsRoute = mediaVaultProcessingProviderSettingsRoute;
@@ -26473,7 +29929,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 385 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26547,7 +30003,7 @@ var _a;
 
 
 /***/ }),
-/* 386 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26561,7 +30017,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(18);
+var _1 = __webpack_require__(19);
 var contracts_1 = __webpack_require__(3);
 var MediaVaultRoute = (function (_super) {
     tslib_1.__extends(MediaVaultRoute, _super);
@@ -26672,7 +30128,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 387 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26686,7 +30142,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(18);
+var _1 = __webpack_require__(19);
 var MediaVaultSettingsClient = (function () {
     function MediaVaultSettingsClient(mediaVaultSettingsRoute, apiClient) {
         this.mediaVaultSettingsRoute = mediaVaultSettingsRoute;
@@ -26749,7 +30205,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 388 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26807,7 +30263,7 @@ var _a;
 
 
 /***/ }),
-/* 389 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26821,7 +30277,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(18);
+var _1 = __webpack_require__(19);
 var MediaVaultStreamsClient = (function () {
     function MediaVaultStreamsClient(mediaVaultStreamsRoute, apiClient) {
         this.mediaVaultStreamsRoute = mediaVaultStreamsRoute;
@@ -26878,7 +30334,12 @@ var MediaVaultStreamsClient = (function () {
                             });
      **/
     MediaVaultStreamsClient.prototype.getBlob = function (data) {
-        return this.apiClient.get(this.mediaVaultStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.request({
+            url: this.mediaVaultStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
     };
     /**
      * Returns a promise that is resolved once the create media vault stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
@@ -26940,7 +30401,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 390 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26972,7 +30433,7 @@ var MediaVaultStreamsRoute = (function (_super) {
      * @example mediaVaultRoute.get({id: '<path>'});
      **/
     MediaVaultStreamsRoute.prototype.get = function (data) {
-        if (this.utility.isObject(data)) {
+        if (!this.utility.isObject(data)) {
             data = {
                 id: data
             };
@@ -26985,7 +30446,7 @@ var MediaVaultStreamsRoute = (function (_super) {
      * @example mediaVaultStreamsRoute.create({path: '<path>'});
      **/
     MediaVaultStreamsRoute.prototype.create = function (data) {
-        if (this.utility.isObject(data)) {
+        if (!this.utility.isObject(data)) {
             data = {
                 path: data
             };
@@ -27000,7 +30461,7 @@ var MediaVaultStreamsRoute = (function (_super) {
      * @example mediaVaultStreamsRoute.update({id: '<path>'});
      **/
     MediaVaultStreamsRoute.prototype.update = function (data) {
-        if (this.utility.isObject(data)) {
+        if (!this.utility.isObject(data)) {
             data = {
                 id: data
             };
@@ -27026,7 +30487,7 @@ var _a;
 
 
 /***/ }),
-/* 391 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27035,7 +30496,7 @@ var _a;
 
 
 /***/ }),
-/* 392 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27043,16 +30504,7 @@ var _a;
 
 
 /***/ }),
-/* 393 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 394 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27061,7 +30513,16 @@ var _a;
 
 
 /***/ }),
-/* 395 */
+/* 441 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27069,21 +30530,21 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(392));
-__export(__webpack_require__(391));
-__export(__webpack_require__(393));
-__export(__webpack_require__(394));
+__export(__webpack_require__(439));
+__export(__webpack_require__(438));
+__export(__webpack_require__(440));
+__export(__webpack_require__(441));
 
 
 /***/ }),
-/* 396 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(18);
+var _1 = __webpack_require__(19);
 var TYPES = {
     MediaVaultBatchRoute: Symbol("MediaVaultBatchRoute"),
     MediaVaultBatchClient: Symbol("MediaVaultBatchClient"),
@@ -27113,7 +30574,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 397 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27121,7 +30582,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 398 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27129,16 +30590,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 399 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 400 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27147,15 +30599,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 401 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 402 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27164,7 +30608,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 403 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27172,16 +30616,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 404 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 405 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27190,7 +30625,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 406 */
+/* 450 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27199,7 +30642,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 407 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27208,15 +30651,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 408 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 409 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27225,7 +30660,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 410 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27234,7 +30669,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 411 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27242,23 +30677,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 412 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 413 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 414 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27267,7 +30686,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 415 */
+/* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27276,7 +30695,31 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 416 */
+/* 458 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 459 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 460 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27285,7 +30728,25 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 417 */
+/* 462 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 463 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27293,37 +30754,37 @@ exports.diModule = diModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(407));
-__export(__webpack_require__(408));
-__export(__webpack_require__(406));
-__export(__webpack_require__(412));
-__export(__webpack_require__(413));
-__export(__webpack_require__(400));
-__export(__webpack_require__(405));
-__export(__webpack_require__(404));
-__export(__webpack_require__(416));
-__export(__webpack_require__(411));
-__export(__webpack_require__(414));
-__export(__webpack_require__(397));
-__export(__webpack_require__(398));
-__export(__webpack_require__(399));
-__export(__webpack_require__(409));
-__export(__webpack_require__(410));
-__export(__webpack_require__(402));
-__export(__webpack_require__(403));
-__export(__webpack_require__(415));
-__export(__webpack_require__(401));
+__export(__webpack_require__(454));
+__export(__webpack_require__(455));
+__export(__webpack_require__(453));
+__export(__webpack_require__(459));
+__export(__webpack_require__(460));
+__export(__webpack_require__(447));
+__export(__webpack_require__(452));
+__export(__webpack_require__(451));
+__export(__webpack_require__(463));
+__export(__webpack_require__(458));
+__export(__webpack_require__(461));
+__export(__webpack_require__(444));
+__export(__webpack_require__(445));
+__export(__webpack_require__(446));
+__export(__webpack_require__(456));
+__export(__webpack_require__(457));
+__export(__webpack_require__(449));
+__export(__webpack_require__(450));
+__export(__webpack_require__(462));
+__export(__webpack_require__(448));
 
 
 /***/ }),
-/* 418 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var TYPES = {
     LoginRoute: Symbol("LoginRoute"),
     LoginClient: Symbol("LoginClient"),
@@ -27333,6 +30794,8 @@ var TYPES = {
     PasswordRecoveryRoute: Symbol("PasswordRecoveryRoute"),
     RegisterClient: Symbol("RegisterClient"),
     RegisterRoute: Symbol("RegisterRoute"),
+    RoleBatchClient: Symbol("RoleBatchClient"),
+    RoleBatchRoute: Symbol("RoleBatchRoute"),
     RoleClient: Symbol("RoleClient"),
     RoleRoute: Symbol("RoleRoute"),
     UserSocialLoginClient: Symbol("UserSocialLoginClient"),
@@ -27355,6 +30818,8 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.PasswordRecoveryClient).to(_1.PasswordRecoveryClient);
     bind(TYPES.RegisterRoute).to(_1.RegisterRoute);
     bind(TYPES.RegisterClient).to(_1.RegisterClient);
+    bind(TYPES.RoleBatchRoute).to(_1.RoleBatchRoute);
+    bind(TYPES.RoleBatchClient).to(_1.RoleBatchClient);
     bind(TYPES.RoleRoute).to(_1.RoleRoute);
     bind(TYPES.RoleClient).to(_1.RoleClient);
     bind(TYPES.UserSocialLoginRoute).to(_1.UserSocialLoginRoute);
@@ -27371,7 +30836,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 419 */
+/* 466 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27386,7 +30851,7 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var LoginClient = (function () {
     function LoginClient(loginRoute, tokenHandler, apiClient) {
         this.loginRoute = loginRoute;
@@ -27525,7 +30990,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 420 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27578,7 +31043,7 @@ var _a;
 
 
 /***/ }),
-/* 421 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27592,7 +31057,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var contracts_1 = __webpack_require__(3);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var LoginSocialClient = (function () {
     function LoginSocialClient(loginSocialRoute, tokenHandler, apiClient) {
         this.loginSocialRoute = loginSocialRoute;
@@ -27718,7 +31183,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 422 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27784,7 +31249,7 @@ var _a;
 
 
 /***/ }),
-/* 423 */
+/* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27798,7 +31263,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var common_1 = __webpack_require__(2);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var httpApi_1 = __webpack_require__(4);
 var LookupClient = (function () {
     function LookupClient(lookupRoute, apiClient) {
@@ -27873,7 +31338,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 424 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27926,7 +31391,7 @@ var _a;
 
 
 /***/ }),
-/* 425 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27939,7 +31404,7 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var PasswordRecoveryClient = (function () {
     function PasswordRecoveryClient(passwordRecoveryRoute, apiClient) {
         this.passwordRecoveryRoute = passwordRecoveryRoute;
@@ -28016,7 +31481,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 426 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28068,7 +31533,7 @@ var _a;
 
 
 /***/ }),
-/* 427 */
+/* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28083,7 +31548,7 @@ var inversify_1 = __webpack_require__(0);
 ;
 var common_1 = __webpack_require__(2);
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var contracts_1 = __webpack_require__(3);
 var PermissionClient = (function () {
     function PermissionClient(permissionRoute, apiClient, application) {
@@ -28408,7 +31873,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 428 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28572,7 +32037,7 @@ var _a;
 
 
 /***/ }),
-/* 429 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28586,7 +32051,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var contracts_1 = __webpack_require__(3);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var RegisterClient = (function () {
     function RegisterClient(registerRoute, apiClient, tokenHandler) {
         this.registerRoute = registerRoute;
@@ -28680,7 +32145,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 430 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28745,7 +32210,198 @@ var _a;
 
 
 /***/ }),
-/* 431 */
+/* 478 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module roleBatchClient
+ * @description  Role Batch Client provides an easy way to consume  Role REST API end-points. In order to obtain needed routes `roleBatchClient` uses `roleBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(11);
+var RoleBatchClient = (function () {
+    function RoleBatchClient(roleBatchRoute, apiClient) {
+        this.roleBatchRoute = roleBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(RoleBatchClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `roleRoute`.
+         * @method
+         * @example roleBatchClient.routeDefinition.get().expand(expandObject);
+         **/
+        get: function () {
+            return this.roleBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create action has been performed; this action creates a role.
+     * @method
+     * @param data A role object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create action has beend performed.
+     * @example roleBatchClient.create({
+                    description : '<description>',
+                    name : '<name>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    RoleBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update role action has been performed; this action updates a role. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `roleClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(role);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A role object used to update specified role resource.
+     * @returns A promise that is resolved once the update role action has been performed.
+     * @example // role is a resource previously fetched using get action.
+                    role.name = '<new-name>';
+                    roleBatchClient.update(role)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    RoleBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove role action has been performed. This action will remove a role from the system, if completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `roleClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(role);
+     * let uri = params['model'].links('delete').href; ```
+     * @param data A role object used to delete specified role resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @method
+     * @example // Role is a resource previously fetched using get action.
+                    roleBatchClient.remove(role)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    RoleBatchClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteBatchParams(data));
+    };
+    return RoleBatchClient;
+}());
+RoleBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.RoleBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.RoleBatchRoute !== "undefined" && _1.RoleBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], RoleBatchClient);
+exports.RoleBatchClient = RoleBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+*/ 
+
+
+/***/ }),
+/* 479 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module roleRoute
+ * @description Baasic Role Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Role Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var RoleBatchRoute = (function (_super) {
+    tslib_1.__extends(RoleBatchRoute, _super);
+    function RoleBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+        * Create route with route and query parameters.
+        **/
+        _this.createRoute = 'lookups/roles/batch';
+        /**
+        * Update route with route and query parameters.
+        **/
+        _this.updateRoute = 'lookups/roles/batch';
+        /**
+        * Delete route with route and query parameters.
+        **/
+        _this.removeRoute = 'lookups/roles/batch';
+        return _this;
+    }
+    /**
+     * Parses create batch roles route; this URI template does not expose any additional options.
+     * @method
+     * @example roleBatchRoute.create();
+     **/
+    RoleBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update batch roles route.
+     * @method
+     * @param data A role object used to update specified role resource.
+     * @example roleBatchRoute.update(data);
+     */
+    RoleBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses delete batch roles route.
+     * @method
+     * @param data A role object used to delete specified role resource.
+     * @example roleBatchRoute.delete(data);
+     */
+    RoleBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.removeRoute, {});
+    };
+    return RoleBatchRoute;
+}(common_1.BaseRoute));
+RoleBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], RoleBatchRoute);
+exports.RoleBatchRoute = RoleBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+*/ 
+
+
+/***/ }),
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28759,9 +32415,10 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var RoleClient = (function () {
-    function RoleClient(roleRoute, apiClient) {
+    function RoleClient(roleBatchClient, roleRoute, apiClient) {
+        this.roleBatchClient = roleBatchClient;
         this.roleRoute = roleRoute;
         this.apiClient = apiClient;
     }
@@ -28773,6 +32430,17 @@ var RoleClient = (function () {
          **/
         get: function () {
             return this.roleRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RoleClient.prototype, "batch", {
+        /**
+         * Provides direct access to `roleBatchClient`.
+         * @method
+         **/
+        get: function () {
+            return this.roleBatchClient;
         },
         enumerable: true,
         configurable: true
@@ -28881,12 +32549,13 @@ var RoleClient = (function () {
 }());
 RoleClient = tslib_1.__decorate([
     inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.RoleRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.RoleRoute !== "undefined" && _1.RoleRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.RoleBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.RoleRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.RoleBatchClient !== "undefined" && _1.RoleBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.RoleRoute !== "undefined" && _1.RoleRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
 ], RoleClient);
 exports.RoleClient = RoleClient;
-var _a, _b;
+var _a, _b, _c;
 /**
  * @overview
  ***Notes:**
@@ -28896,7 +32565,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 432 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28911,11 +32580,13 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(11);
 var RoleRoute = (function (_super) {
     tslib_1.__extends(RoleRoute, _super);
-    function RoleRoute(appOptions) {
+    function RoleRoute(appOptions, roleBatchRoute) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+        _this.roleBatchRoute = roleBatchRoute;
         /**
         * Find route with route and query parameters.
         **/
@@ -28938,6 +32609,17 @@ var RoleRoute = (function (_super) {
         _this.removeRoute = 'lookups/roles/{id}';
         return _this;
     }
+    Object.defineProperty(RoleRoute.prototype, "batch", {
+        /**
+         * Provides direct access to 'roleBatchRoute'
+         * @method
+        **/
+        get: function () {
+            return this.roleBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
     /**
      * Parses find role route which can be expanded with additional options. Supported items are:
      * - `searchQuery` - A string value used to identify role resources using the phrase search.
@@ -28992,10 +32674,11 @@ var RoleRoute = (function (_super) {
 RoleRoute = tslib_1.__decorate([
     inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.RoleBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.RoleBatchRoute !== "undefined" && _1.RoleBatchRoute) === "function" && _b || Object])
 ], RoleRoute);
 exports.RoleRoute = RoleRoute;
-var _a;
+var _a, _b;
 /**
  * @overview
  ***Notes:**
@@ -29006,13 +32689,13 @@ var _a;
 
 
 /***/ }),
-/* 433 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var inversify_1 = __webpack_require__(0);
 var Root = (function () {
     function Root(login, loginSocial, passwordRecovery, register, role, user, permissions, lookups) {
@@ -29044,7 +32727,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
-/* 434 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29058,7 +32741,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var UserClient = (function () {
     function UserClient(userRoute, userSocialLoginClient, apiClient) {
         this.userRoute = userRoute;
@@ -29330,7 +33013,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 435 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29344,7 +33027,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var contracts_1 = __webpack_require__(3);
 var UserRoute = (function (_super) {
     tslib_1.__extends(UserRoute, _super);
@@ -29491,7 +33174,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 436 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29505,7 +33188,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(12);
+var _1 = __webpack_require__(11);
 var UserSocialLoginClient = (function () {
     function UserSocialLoginClient(userSocialLoginRoute, apiClient) {
         this.userSocialLoginRoute = userSocialLoginRoute;
@@ -29575,7 +33258,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 437 */
+/* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29659,7 +33342,7 @@ var _a;
 
 
 /***/ }),
-/* 438 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29668,7 +33351,7 @@ var _a;
 
 
 /***/ }),
-/* 439 */
+/* 488 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29677,7 +33360,7 @@ var _a;
 
 
 /***/ }),
-/* 440 */
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29686,7 +33369,7 @@ var _a;
 
 
 /***/ }),
-/* 441 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29694,20 +33377,20 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(438));
-__export(__webpack_require__(439));
-__export(__webpack_require__(440));
+__export(__webpack_require__(487));
+__export(__webpack_require__(488));
+__export(__webpack_require__(489));
 
 
 /***/ }),
-/* 442 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var TYPES = {
     MeteringACLClient: Symbol("MeteringACLClient"),
     MeteringACLRoute: Symbol("MeteringACLRoute"),
@@ -29745,7 +33428,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 443 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29759,7 +33442,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var MeteringACLClient = (function () {
     function MeteringACLClient(meteringACLRoute, apiClient) {
         this.meteringACLRoute = meteringACLRoute;
@@ -29876,7 +33559,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 444 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30000,7 +33683,7 @@ var _a;
 
 
 /***/ }),
-/* 445 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30014,7 +33697,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var MeteringBatchClient = (function () {
     function MeteringBatchClient(meteringBatchRoute, apiClient) {
         this.meteringBatchRoute = meteringBatchRoute;
@@ -30102,7 +33785,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 446 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30173,7 +33856,7 @@ var _a;
 
 
 /***/ }),
-/* 447 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30186,7 +33869,7 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var MeteringCategoryBatchClient = (function () {
     function MeteringCategoryBatchClient(meteringCategoryBatchRoute, apiClient) {
         this.meteringCategoryBatchRoute = meteringCategoryBatchRoute;
@@ -30276,7 +33959,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 448 */
+/* 497 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30346,7 +34029,7 @@ var _a;
 
 
 /***/ }),
-/* 449 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30360,7 +34043,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var MeteringCategoryClient = (function () {
     function MeteringCategoryClient(meteringCategoryRoute, apiClient, meteringCategoryBatchClient) {
         this.meteringCategoryRoute = meteringCategoryRoute;
@@ -30508,7 +34191,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 450 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30521,7 +34204,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var contracts_1 = __webpack_require__(3);
 var MeteringCategoryRoute = (function (_super) {
     tslib_1.__extends(MeteringCategoryRoute, _super);
@@ -30616,7 +34299,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 451 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30630,7 +34313,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var MeteringClient = (function () {
     function MeteringClient(meteringRoute, apiClient, meteringBatchClient, meteringStatisticsClient, meteringACLClient, meteringCategoryClient, meteringSettingsClient) {
         this.meteringRoute = meteringRoute;
@@ -30827,7 +34510,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 452 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30841,7 +34524,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var contracts_1 = __webpack_require__(3);
 var MeteringRoute = (function (_super) {
     tslib_1.__extends(MeteringRoute, _super);
@@ -30972,7 +34655,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 453 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30986,7 +34669,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var MeteringSettingsClient = (function () {
     function MeteringSettingsClient(meteringSettingsRoute, apiClient) {
         this.meteringSettingsRoute = meteringSettingsRoute;
@@ -31057,7 +34740,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 454 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31120,7 +34803,7 @@ var _a;
 
 
 /***/ }),
-/* 455 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31134,7 +34817,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
+var _1 = __webpack_require__(14);
 var MeteringStatisticsClient = (function () {
     function MeteringStatisticsClient(meteringStatisticsRoute, apiClient) {
         this.meteringStatisticsRoute = meteringStatisticsRoute;
@@ -31199,7 +34882,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 456 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31267,7 +34950,7 @@ var _a;
 
 
 /***/ }),
-/* 457 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31276,7 +34959,7 @@ var _a;
 
 
 /***/ }),
-/* 458 */
+/* 507 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31285,7 +34968,7 @@ var _a;
 
 
 /***/ }),
-/* 459 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31294,7 +34977,7 @@ var _a;
 
 
 /***/ }),
-/* 460 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31303,7 +34986,7 @@ var _a;
 
 
 /***/ }),
-/* 461 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31312,7 +34995,7 @@ var _a;
 
 
 /***/ }),
-/* 462 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31321,7 +35004,7 @@ var _a;
 
 
 /***/ }),
-/* 463 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31329,16 +35012,16 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(459));
-__export(__webpack_require__(460));
-__export(__webpack_require__(462));
-__export(__webpack_require__(457));
-__export(__webpack_require__(458));
-__export(__webpack_require__(461));
+__export(__webpack_require__(508));
+__export(__webpack_require__(509));
+__export(__webpack_require__(511));
+__export(__webpack_require__(506));
+__export(__webpack_require__(507));
+__export(__webpack_require__(510));
 
 
 /***/ }),
-/* 464 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31411,7 +35094,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 465 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31489,7 +35172,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 466 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31558,7 +35241,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 467 */
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31607,7 +35290,7 @@ var _a;
 
 
 /***/ }),
-/* 468 */
+/* 517 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31685,7 +35368,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 469 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31740,7 +35423,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 470 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31838,7 +35521,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 471 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31904,7 +35587,7 @@ var _a;
 
 
 /***/ }),
-/* 472 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32063,7 +35746,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 473 */
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32173,7 +35856,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 474 */
+/* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32233,7 +35916,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 475 */
+/* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32292,7 +35975,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 476 */
+/* 525 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32390,7 +36073,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 477 */
+/* 526 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32410,9 +36093,9 @@ var NotificationsRegistrationsUsersBatchRoute = (function (_super) {
     function NotificationsRegistrationsUsersBatchRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
-        _this.createRoute = 'notifications/registrations/batch';
-        _this.deleteRoute = 'notifications/registrations/batch';
-        _this.updateRoute = 'notifications/registrations/batch';
+        _this.createRoute = 'notifications/registrations/user/batch';
+        _this.deleteRoute = 'notifications/registrations/user/batch';
+        _this.updateRoute = 'notifications/registrations/user/batch';
         return _this;
     }
     /**
@@ -32458,7 +36141,7 @@ var _a;
 
 
 /***/ }),
-/* 478 */
+/* 527 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32616,7 +36299,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 479 */
+/* 528 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32638,11 +36321,11 @@ var NotificationsRegistrationsUsersRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.notificationsRegistrationsUsersBatchRoute = notificationsRegistrationsUsersBatchRoute;
-        _this.createRoute = 'notifications/registrations';
-        _this.findRoute = 'notifications/registrations/{?searchQuery,userIds,providers,page,rpp,sort,embed,fields}';
-        _this.getRoute = 'notifications/registrations/{id}/{?embed}';
-        _this.deleteRoute = 'notifications/registrations/{id}';
-        _this.updateRoute = 'notifications/registrations/{id}';
+        _this.createRoute = 'notifications/registrations/user';
+        _this.findRoute = 'notifications/registrations/user/{?searchQuery,userIds,providers,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'notifications/registrations/user/{id}/{?embed}';
+        _this.deleteRoute = 'notifications/registrations/user/{id}';
+        _this.updateRoute = 'notifications/registrations/user/{id}';
         return _this;
     }
     Object.defineProperty(NotificationsRegistrationsUsersRoute.prototype, "batch", {
@@ -32724,7 +36407,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 480 */
+/* 529 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32801,7 +36484,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 481 */
+/* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32883,7 +36566,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 482 */
+/* 531 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32943,7 +36626,7 @@ var _a;
 
 
 /***/ }),
-/* 483 */
+/* 532 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33040,7 +36723,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 484 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33108,7 +36791,7 @@ var _a;
 
 
 /***/ }),
-/* 485 */
+/* 534 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33185,7 +36868,7 @@ var NotificationsSubscriptionsAnonymousClient = (function () {
                 });
      */
     NotificationsSubscriptionsAnonymousClient.prototype.find = function (options) {
-        return this.apiClient.get(this.notificationsSubscriptionsAnonymousRoute.find());
+        return this.apiClient.get(this.notificationsSubscriptionsAnonymousRoute.find(options));
     };
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified anonymous subscription resource.
@@ -33267,7 +36950,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 486 */
+/* 535 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33289,7 +36972,7 @@ var NotificationsSubscriptionsAnonymousRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.notificationsSubscriptionsAnonymousBatchRoute = notificationsSubscriptionsAnonymousBatchRoute;
         _this.appOptions = appOptions;
-        _this.createRoute = 'notifications/subscriptions/batch';
+        _this.createRoute = 'notifications/subscriptions/anonymous';
         _this.findRoute = 'notifications/subscriptions/anonymous/{?searchQuery,registrationIds,channels,page,rpp,sort,embed,fields}';
         _this.getRoute = 'notifications/subscriptions/anonymous/{id}/{?embed,fields}';
         _this.deleteRoute = 'notifications/subscriptions/anonymous/{id}';
@@ -33378,7 +37061,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 487 */
+/* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33438,7 +37121,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 488 */
+/* 537 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33497,7 +37180,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 489 */
+/* 538 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33594,7 +37277,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 490 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33614,9 +37297,9 @@ var NotificationsSubscriptionsUsersBatchRoute = (function (_super) {
     function NotificationsSubscriptionsUsersBatchRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
-        _this.createRoute = 'notifications/subscriptions/batch';
-        _this.deleteRoute = 'notifications/subscriptions/batch';
-        _this.updateRoute = 'notifications/subscriptions/batch';
+        _this.createRoute = 'notifications/subscriptions/user/batch';
+        _this.deleteRoute = 'notifications/subscriptions/user/batch';
+        _this.updateRoute = 'notifications/subscriptions/user/batch';
         return _this;
     }
     /**
@@ -33662,7 +37345,7 @@ var _a;
 
 
 /***/ }),
-/* 491 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33820,7 +37503,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 492 */
+/* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33842,11 +37525,11 @@ var NotificationsSubscriptionsUsersRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.notificationsSubscriptionsUsersBatchRoute = notificationsSubscriptionsUsersBatchRoute;
-        _this.createRoute = 'notifications/subscriptions';
-        _this.findRoute = 'notifications/subscriptions/{?searchQuery,userIds,channels,page,rpp,sort,embed,fields}';
-        _this.getRoute = 'notifications/subscriptions/{id}/{?embed,fields}';
-        _this.deleteRoute = 'notifications/subscriptions/{id}';
-        _this.updateRoute = 'notifications/subscriptions/{id}';
+        _this.createRoute = 'notifications/subscriptions/user';
+        _this.findRoute = 'notifications/subscriptions/user/{?searchQuery,userIds,channels,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'notifications/subscriptions/user/{id}/{?embed,fields}';
+        _this.deleteRoute = 'notifications/subscriptions/user/{id}';
+        _this.updateRoute = 'notifications/subscriptions/user/{id}';
         return _this;
     }
     NotificationsSubscriptionsUsersRoute.prototype.batch = function () {
@@ -33923,7 +37606,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 493 */
+/* 542 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33932,7 +37615,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 494 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33940,18 +37623,18 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(493));
+__export(__webpack_require__(542));
 
 
 /***/ }),
-/* 495 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var TYPES = {
     TemplatingBatchClient: Symbol("TemplatingBatchClient"),
     TemplatingBatchRoute: Symbol("TemplatingBatchRoute"),
@@ -33969,7 +37652,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 496 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33983,7 +37666,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var TemplatingBatchClient = (function () {
     function TemplatingBatchClient(templatingBatchRoute, apiClient) {
         this.templatingBatchRoute = templatingBatchRoute;
@@ -34063,7 +37746,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 497 */
+/* 546 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34130,7 +37813,7 @@ var _a;
 
 
 /***/ }),
-/* 498 */
+/* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34144,7 +37827,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var TemplatingClient = (function () {
     function TemplatingClient(templatingRoute, templatingBatchClient, apiClient) {
         this.templatingRoute = templatingRoute;
@@ -34282,7 +37965,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 499 */
+/* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34296,7 +37979,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var contracts_1 = __webpack_require__(3);
 var TemplatingRoute = (function (_super) {
     tslib_1.__extends(TemplatingRoute, _super);
@@ -34388,7 +38071,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 500 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34485,7 +38168,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 501 */
+/* 550 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34551,7 +38234,7 @@ var _a;
 
 
 /***/ }),
-/* 502 */
+/* 551 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34708,7 +38391,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 503 */
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34801,7 +38484,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 504 */
+/* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34810,7 +38493,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 505 */
+/* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34819,7 +38502,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 506 */
+/* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34828,7 +38511,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 507 */
+/* 556 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34837,7 +38520,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 508 */
+/* 557 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34846,7 +38529,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 509 */
+/* 558 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34855,7 +38538,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 510 */
+/* 559 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34864,7 +38547,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 511 */
+/* 560 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34873,7 +38556,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 512 */
+/* 561 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34882,7 +38565,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 513 */
+/* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34891,7 +38574,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 514 */
+/* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34900,7 +38583,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 515 */
+/* 564 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34909,7 +38592,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 516 */
+/* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34917,22 +38600,22 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(504));
-__export(__webpack_require__(506));
-__export(__webpack_require__(509));
-__export(__webpack_require__(510));
-__export(__webpack_require__(508));
-__export(__webpack_require__(507));
-__export(__webpack_require__(505));
-__export(__webpack_require__(512));
-__export(__webpack_require__(513));
-__export(__webpack_require__(511));
-__export(__webpack_require__(514));
-__export(__webpack_require__(515));
+__export(__webpack_require__(553));
+__export(__webpack_require__(555));
+__export(__webpack_require__(558));
+__export(__webpack_require__(559));
+__export(__webpack_require__(557));
+__export(__webpack_require__(556));
+__export(__webpack_require__(554));
+__export(__webpack_require__(561));
+__export(__webpack_require__(562));
+__export(__webpack_require__(560));
+__export(__webpack_require__(563));
+__export(__webpack_require__(564));
 
 
 /***/ }),
-/* 517 */
+/* 566 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35003,7 +38686,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 518 */
+/* 567 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35098,7 +38781,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 519 */
+/* 568 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35164,7 +38847,7 @@ var _a;
 
 
 /***/ }),
-/* 520 */
+/* 569 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35315,7 +38998,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 521 */
+/* 570 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35420,7 +39103,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 522 */
+/* 571 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35450,7 +39133,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 523 */
+/* 572 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35547,7 +39230,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 524 */
+/* 573 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35613,7 +39296,7 @@ var _a;
 
 
 /***/ }),
-/* 525 */
+/* 574 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35763,7 +39446,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 526 */
+/* 575 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35861,7 +39544,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 527 */
+/* 576 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36003,7 +39686,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 528 */
+/* 577 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36099,7 +39782,7 @@ var _a;
 
 
 /***/ }),
-/* 529 */
+/* 578 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36231,7 +39914,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 530 */
+/* 579 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36350,7 +40033,7 @@ var _a;
 
 
 /***/ }),
-/* 531 */
+/* 580 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36483,7 +40166,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 532 */
+/* 581 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36506,9 +40189,9 @@ var UserProfileAvatarRoute = (function (_super) {
         _this.appOptions = appOptions;
         _this.userProfileAvatarStreamsRoute = userProfileAvatarStreamsRoute;
         _this.getRoute = 'profiles/{id}/avatars/{?embed,fields}';
-        _this.updateRoute = 'profiles/{userId}/avatars';
+        _this.updateRoute = 'profiles/{id}/avatars';
         _this.linkRoute = 'profiles/{id}/avatars/link';
-        _this.unlinkRoute = 'profiles/{userId}/avatars/unlink';
+        _this.unlinkRoute = 'profiles/{id}/avatars/unlink';
         return _this;
     }
     Object.defineProperty(UserProfileAvatarRoute.prototype, "streams", {
@@ -36586,7 +40269,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 533 */
+/* 582 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36658,7 +40341,12 @@ var UserProfileAvatarStreamsClient = (function () {
                             });
      **/
     UserProfileAvatarStreamsClient.prototype.getBlob = function (data) {
-        return this.apiClient.get(this.userProfileAvatarStreamsRoute.get(data), { 'Accept': 'application/octet-stream' });
+        return this.apiClient.request({
+            url: this.userProfileAvatarStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
     };
     /**
      * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
@@ -36727,7 +40415,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 534 */
+/* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36815,7 +40503,7 @@ var _a;
 
 
 /***/ }),
-/* 535 */
+/* 584 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37010,7 +40698,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 536 */
+/* 585 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37118,7 +40806,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 537 */
+/* 586 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37262,7 +40950,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 538 */
+/* 587 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37358,7 +41046,7 @@ var _a;
 
 
 /***/ }),
-/* 539 */
+/* 588 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37499,7 +41187,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 540 */
+/* 589 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37589,7 +41277,7 @@ var _a;
 
 
 /***/ }),
-/* 541 */
+/* 590 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37598,7 +41286,7 @@ var _a;
 
 
 /***/ }),
-/* 542 */
+/* 591 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37607,7 +41295,7 @@ var _a;
 
 
 /***/ }),
-/* 543 */
+/* 592 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37615,19 +41303,19 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(542));
-__export(__webpack_require__(541));
+__export(__webpack_require__(591));
+__export(__webpack_require__(590));
 
 
 /***/ }),
-/* 544 */
+/* 593 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(25);
 var TYPES = {
     ValueSetClient: Symbol("ValueSetClient"),
     ValueSetItemClient: Symbol("ValueSetItemClient"),
@@ -37645,7 +41333,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 545 */
+/* 594 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37658,7 +41346,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(25);
 var ValueSetClient = (function () {
     function ValueSetClient(valueSetRoute, valueSetItemClient, apiClient) {
         this.valueSetRoute = valueSetRoute;
@@ -37808,7 +41496,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 546 */
+/* 595 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37821,7 +41509,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(25);
 var ValueSetItemClient = (function () {
     function ValueSetItemClient(valueSetItemRoute, apiClient) {
         this.valueSetItemRoute = valueSetItemRoute;
@@ -37958,7 +41646,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 547 */
+/* 596 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38063,7 +41751,7 @@ var _a;
 
 
 /***/ }),
-/* 548 */
+/* 597 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38076,7 +41764,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(25);
 var contracts_1 = __webpack_require__(3);
 var ValueSetRoute = (function (_super) {
     tslib_1.__extends(ValueSetRoute, _super);
@@ -38170,7 +41858,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 549 */
+/* 598 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/
