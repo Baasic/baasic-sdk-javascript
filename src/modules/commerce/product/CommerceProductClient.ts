@@ -32,7 +32,7 @@ export class CommerceProductClient {
                    orderDirection : '<asc|desc>',   
                    search : '<search-phrase>',
                    productCategoryId : '',
-                   categoryAbrv: ''    
+                   productCategoryAbrv: ''    
                }) 
                .then(function (collection) {   
                    // perform success action here 
