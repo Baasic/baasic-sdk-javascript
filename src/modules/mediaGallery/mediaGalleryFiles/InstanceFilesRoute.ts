@@ -90,16 +90,11 @@ export class MediaGalleryInstanceFilesRoute extends BaseRoute {
      * @method
      * @param mediaGalleryId Media Gallery id which uniquely identifies gallery whose gallery files need to be deleted.
      * @param data
-     * @param options  
-     * @example mediaGalleryFilesRoute.unlink(data);
+     * @example mediaGalleryFilesRoute.unlink(mediaGalleryId,data);
      **/
-    unlink(mediaGalleryId: string, data: IMediaGalleryFile, options: Object): any {
-        if (!options) {
-            options = {};
-        }
-        let params = this.modelMapper.removeParams(data);
-        params.mediaGalleryId = mediaGalleryId;
-        return super.baseDelete(this.unlinkRoute, params, options, 'unlink');
+    unlink(mediaGalleryId: string, data: IMediaGalleryFile): any {
+        data.mediaGalleryId = mediaGalleryId;
+        return super.baseDelete(this.unlinkRoute, data);
     }
 
     /**
