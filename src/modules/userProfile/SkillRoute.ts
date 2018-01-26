@@ -15,7 +15,7 @@ export class SkillRoute extends BaseRoute {
 
     public readonly findRoute: string = 'profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}';
 
-    public readonly getRoute: string = 'profile/lookups/skills';
+    public readonly getRoute: string = 'profile/lookups/skills/{id}/{?embed,fields}';
 
     public readonly createRoute: string = 'profile/lookups/skills';
 
