@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 44);
+/******/ 	return __webpack_require__(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -82,36 +82,36 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 
-var container_1 = __webpack_require__(73);
+var container_1 = __webpack_require__(72);
 exports.Container = container_1.Container;
-var container_module_1 = __webpack_require__(74);
+var container_module_1 = __webpack_require__(73);
 exports.ContainerModule = container_module_1.ContainerModule;
-var injectable_1 = __webpack_require__(64);
+var injectable_1 = __webpack_require__(63);
 exports.injectable = injectable_1.injectable;
-var tagged_1 = __webpack_require__(68);
+var tagged_1 = __webpack_require__(67);
 exports.tagged = tagged_1.tagged;
-var named_1 = __webpack_require__(66);
+var named_1 = __webpack_require__(65);
 exports.named = named_1.named;
-var inject_1 = __webpack_require__(63);
+var inject_1 = __webpack_require__(62);
 exports.inject = inject_1.inject;
-var optional_1 = __webpack_require__(67);
+var optional_1 = __webpack_require__(66);
 exports.optional = optional_1.optional;
-var unmanaged_1 = __webpack_require__(70);
+var unmanaged_1 = __webpack_require__(69);
 exports.unmanaged = unmanaged_1.unmanaged;
-var multi_inject_1 = __webpack_require__(65);
+var multi_inject_1 = __webpack_require__(64);
 exports.multiInject = multi_inject_1.multiInject;
-var target_name_1 = __webpack_require__(69);
+var target_name_1 = __webpack_require__(68);
 exports.targetName = target_name_1.targetName;
 var guid_1 = __webpack_require__(20);
 exports.guid = guid_1.guid;
 var decorator_utils_1 = __webpack_require__(17);
 exports.decorate = decorator_utils_1.decorate;
-var constraint_helpers_1 = __webpack_require__(35);
+var constraint_helpers_1 = __webpack_require__(34);
 exports.traverseAncerstors = constraint_helpers_1.traverseAncerstors;
 exports.taggedConstraint = constraint_helpers_1.taggedConstraint;
 exports.namedConstraint = constraint_helpers_1.namedConstraint;
 exports.typeConstraint = constraint_helpers_1.typeConstraint;
-var serialization_1 = __webpack_require__(24);
+var serialization_1 = __webpack_require__(23);
 exports.getServiceIdentifierAsString = serialization_1.getServiceIdentifierAsString;
 
 
@@ -305,16 +305,16 @@ function __asyncValues(o) {
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(88));
-var diModule_1 = __webpack_require__(36);
+__export(__webpack_require__(87));
+var diModule_1 = __webpack_require__(35);
 exports.commonDIModule = diModule_1.diModule;
-var diModule_2 = __webpack_require__(36);
+var diModule_2 = __webpack_require__(35);
 exports.TYPES = diModule_2.TYPES;
-__export(__webpack_require__(105));
 __export(__webpack_require__(104));
-__export(__webpack_require__(89));
 __export(__webpack_require__(103));
+__export(__webpack_require__(88));
 __export(__webpack_require__(102));
+__export(__webpack_require__(101));
 
 
 /***/ }),
@@ -326,18 +326,18 @@ __export(__webpack_require__(102));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(114));
 __export(__webpack_require__(113));
+__export(__webpack_require__(112));
+__export(__webpack_require__(114));
 __export(__webpack_require__(115));
 __export(__webpack_require__(116));
 __export(__webpack_require__(117));
-__export(__webpack_require__(118));
-__export(__webpack_require__(112));
 __export(__webpack_require__(111));
 __export(__webpack_require__(110));
-__export(__webpack_require__(108));
 __export(__webpack_require__(109));
-__export(__webpack_require__(119));
+__export(__webpack_require__(107));
+__export(__webpack_require__(108));
+__export(__webpack_require__(118));
 
 
 /***/ }),
@@ -349,15 +349,15 @@ __export(__webpack_require__(119));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-var diModule_1 = __webpack_require__(38);
+var diModule_1 = __webpack_require__(37);
 exports.httpDIModule = diModule_1.diModule;
-var diModule_2 = __webpack_require__(38);
+var diModule_2 = __webpack_require__(37);
 exports.httpTYPES = diModule_2.TYPES;
+__export(__webpack_require__(125));
 __export(__webpack_require__(126));
 __export(__webpack_require__(127));
+__export(__webpack_require__(124));
 __export(__webpack_require__(128));
-__export(__webpack_require__(125));
-__export(__webpack_require__(129));
 
 
 /***/ }),
@@ -369,16 +369,18 @@ __export(__webpack_require__(129));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(304));
-__export(__webpack_require__(293));
+__export(__webpack_require__(311));
 __export(__webpack_require__(292));
-__export(__webpack_require__(41));
-__export(__webpack_require__(303));
-__export(__webpack_require__(309));
-__export(__webpack_require__(353));
-__export(__webpack_require__(370));
-__export(__webpack_require__(367));
-__export(__webpack_require__(298));
+__export(__webpack_require__(291));
+__export(__webpack_require__(40));
+__export(__webpack_require__(310));
+__export(__webpack_require__(316));
+__export(__webpack_require__(365));
+__export(__webpack_require__(382));
+__export(__webpack_require__(379));
+__export(__webpack_require__(305));
+__export(__webpack_require__(302));
+__export(__webpack_require__(299));
 
 
 /***/ }),
@@ -390,42 +392,42 @@ __export(__webpack_require__(298));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(208));
-__export(__webpack_require__(139));
-__export(__webpack_require__(191));
 __export(__webpack_require__(207));
+__export(__webpack_require__(138));
 __export(__webpack_require__(190));
-__export(__webpack_require__(39));
-__export(__webpack_require__(182));
-__export(__webpack_require__(168));
+__export(__webpack_require__(206));
 __export(__webpack_require__(189));
-__export(__webpack_require__(150));
-__export(__webpack_require__(163));
-__export(__webpack_require__(141));
+__export(__webpack_require__(38));
+__export(__webpack_require__(181));
+__export(__webpack_require__(167));
+__export(__webpack_require__(188));
+__export(__webpack_require__(149));
+__export(__webpack_require__(162));
 __export(__webpack_require__(140));
-__export(__webpack_require__(143));
+__export(__webpack_require__(139));
 __export(__webpack_require__(142));
-__export(__webpack_require__(145));
+__export(__webpack_require__(141));
 __export(__webpack_require__(144));
-__export(__webpack_require__(152));
+__export(__webpack_require__(143));
 __export(__webpack_require__(151));
-__export(__webpack_require__(156));
+__export(__webpack_require__(150));
 __export(__webpack_require__(155));
 __export(__webpack_require__(154));
 __export(__webpack_require__(153));
-__export(__webpack_require__(165));
+__export(__webpack_require__(152));
 __export(__webpack_require__(164));
-__export(__webpack_require__(171));
+__export(__webpack_require__(163));
 __export(__webpack_require__(170));
-__export(__webpack_require__(186));
+__export(__webpack_require__(169));
 __export(__webpack_require__(185));
 __export(__webpack_require__(184));
 __export(__webpack_require__(183));
-__export(__webpack_require__(173));
+__export(__webpack_require__(182));
 __export(__webpack_require__(172));
-__export(__webpack_require__(169));
-__export(__webpack_require__(39));
-__export(__webpack_require__(209));
+__export(__webpack_require__(171));
+__export(__webpack_require__(168));
+__export(__webpack_require__(38));
+__export(__webpack_require__(208));
 
 
 /***/ }),
@@ -437,19 +439,19 @@ __export(__webpack_require__(209));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(254));
-__export(__webpack_require__(240));
+__export(__webpack_require__(253));
+__export(__webpack_require__(239));
+__export(__webpack_require__(211));
+__export(__webpack_require__(268));
+__export(__webpack_require__(229));
+__export(__webpack_require__(263));
+__export(__webpack_require__(258));
+__export(__webpack_require__(39));
 __export(__webpack_require__(212));
-__export(__webpack_require__(269));
-__export(__webpack_require__(230));
-__export(__webpack_require__(264));
-__export(__webpack_require__(259));
-__export(__webpack_require__(40));
 __export(__webpack_require__(213));
 __export(__webpack_require__(214));
 __export(__webpack_require__(215));
-__export(__webpack_require__(216));
-__export(__webpack_require__(291));
+__export(__webpack_require__(290));
 
 
 /***/ }),
@@ -461,36 +463,36 @@ __export(__webpack_require__(291));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(514));
-__export(__webpack_require__(517));
-__export(__webpack_require__(516));
-__export(__webpack_require__(519));
-__export(__webpack_require__(518));
-__export(__webpack_require__(521));
-__export(__webpack_require__(520));
-__export(__webpack_require__(523));
-__export(__webpack_require__(522));
-__export(__webpack_require__(527));
 __export(__webpack_require__(526));
 __export(__webpack_require__(529));
 __export(__webpack_require__(528));
-__export(__webpack_require__(525));
-__export(__webpack_require__(524));
-__export(__webpack_require__(540));
-__export(__webpack_require__(539));
-__export(__webpack_require__(534));
-__export(__webpack_require__(533));
-__export(__webpack_require__(536));
-__export(__webpack_require__(535));
-__export(__webpack_require__(542));
-__export(__webpack_require__(541));
-__export(__webpack_require__(538));
-__export(__webpack_require__(537));
-__export(__webpack_require__(532));
 __export(__webpack_require__(531));
 __export(__webpack_require__(530));
-__export(__webpack_require__(515));
-__export(__webpack_require__(513));
+__export(__webpack_require__(533));
+__export(__webpack_require__(532));
+__export(__webpack_require__(535));
+__export(__webpack_require__(534));
+__export(__webpack_require__(539));
+__export(__webpack_require__(538));
+__export(__webpack_require__(541));
+__export(__webpack_require__(540));
+__export(__webpack_require__(537));
+__export(__webpack_require__(536));
+__export(__webpack_require__(552));
+__export(__webpack_require__(551));
+__export(__webpack_require__(546));
+__export(__webpack_require__(545));
+__export(__webpack_require__(548));
+__export(__webpack_require__(547));
+__export(__webpack_require__(554));
+__export(__webpack_require__(553));
+__export(__webpack_require__(550));
+__export(__webpack_require__(549));
+__export(__webpack_require__(544));
+__export(__webpack_require__(543));
+__export(__webpack_require__(542));
+__export(__webpack_require__(527));
+__export(__webpack_require__(525));
 
 
 /***/ }),
@@ -502,35 +504,35 @@ __export(__webpack_require__(513));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(584));
-__export(__webpack_require__(568));
-__export(__webpack_require__(567));
-__export(__webpack_require__(570));
-__export(__webpack_require__(569));
+__export(__webpack_require__(579));
+__export(__webpack_require__(563));
+__export(__webpack_require__(562));
+__export(__webpack_require__(565));
+__export(__webpack_require__(564));
+__export(__webpack_require__(581));
+__export(__webpack_require__(580));
+__export(__webpack_require__(583));
+__export(__webpack_require__(582));
 __export(__webpack_require__(586));
 __export(__webpack_require__(585));
 __export(__webpack_require__(588));
 __export(__webpack_require__(587));
-__export(__webpack_require__(591));
 __export(__webpack_require__(590));
-__export(__webpack_require__(593));
-__export(__webpack_require__(592));
+__export(__webpack_require__(589));
+__export(__webpack_require__(596));
 __export(__webpack_require__(595));
 __export(__webpack_require__(594));
-__export(__webpack_require__(601));
-__export(__webpack_require__(600));
-__export(__webpack_require__(599));
+__export(__webpack_require__(593));
+__export(__webpack_require__(592));
+__export(__webpack_require__(591));
 __export(__webpack_require__(598));
 __export(__webpack_require__(597));
-__export(__webpack_require__(596));
-__export(__webpack_require__(603));
+__export(__webpack_require__(600));
+__export(__webpack_require__(599));
 __export(__webpack_require__(602));
-__export(__webpack_require__(605));
-__export(__webpack_require__(604));
-__export(__webpack_require__(607));
-__export(__webpack_require__(606));
-__export(__webpack_require__(589));
-__export(__webpack_require__(583));
+__export(__webpack_require__(601));
+__export(__webpack_require__(584));
+__export(__webpack_require__(578));
 
 
 /***/ }),
@@ -540,7 +542,7 @@ __export(__webpack_require__(583));
 "use strict";
 
 
-module.exports = __webpack_require__(59)() ? Symbol : __webpack_require__(61);
+module.exports = __webpack_require__(58)() ? Symbol : __webpack_require__(60);
 
 
 /***/ }),
@@ -552,29 +554,29 @@ module.exports = __webpack_require__(59)() ? Symbol : __webpack_require__(61);
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(466));
-__export(__webpack_require__(470));
-__export(__webpack_require__(469));
-__export(__webpack_require__(468));
-__export(__webpack_require__(467));
-__export(__webpack_require__(474));
-__export(__webpack_require__(473));
 __export(__webpack_require__(478));
-__export(__webpack_require__(477));
-__export(__webpack_require__(480));
-__export(__webpack_require__(479));
 __export(__webpack_require__(482));
 __export(__webpack_require__(481));
-__export(__webpack_require__(487));
-__export(__webpack_require__(485));
+__export(__webpack_require__(480));
+__export(__webpack_require__(479));
 __export(__webpack_require__(486));
+__export(__webpack_require__(485));
+__export(__webpack_require__(490));
+__export(__webpack_require__(489));
+__export(__webpack_require__(492));
+__export(__webpack_require__(491));
+__export(__webpack_require__(494));
+__export(__webpack_require__(493));
+__export(__webpack_require__(499));
+__export(__webpack_require__(497));
+__export(__webpack_require__(498));
+__export(__webpack_require__(496));
+__export(__webpack_require__(488));
+__export(__webpack_require__(487));
 __export(__webpack_require__(484));
-__export(__webpack_require__(476));
-__export(__webpack_require__(475));
-__export(__webpack_require__(472));
-__export(__webpack_require__(471));
 __export(__webpack_require__(483));
-__export(__webpack_require__(465));
+__export(__webpack_require__(495));
+__export(__webpack_require__(477));
 
 
 /***/ }),
@@ -604,22 +606,22 @@ exports.DESIGN_PARAM_TYPES = "design:paramtypes";
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(434));
+__export(__webpack_require__(415));
+__export(__webpack_require__(414));
+__export(__webpack_require__(425));
+__export(__webpack_require__(424));
+__export(__webpack_require__(423));
+__export(__webpack_require__(416));
+__export(__webpack_require__(420));
+__export(__webpack_require__(419));
+__export(__webpack_require__(418));
+__export(__webpack_require__(417));
 __export(__webpack_require__(422));
-__export(__webpack_require__(403));
-__export(__webpack_require__(402));
-__export(__webpack_require__(413));
-__export(__webpack_require__(412));
-__export(__webpack_require__(411));
-__export(__webpack_require__(404));
-__export(__webpack_require__(408));
-__export(__webpack_require__(407));
-__export(__webpack_require__(406));
-__export(__webpack_require__(405));
-__export(__webpack_require__(410));
-__export(__webpack_require__(409));
 __export(__webpack_require__(421));
-__export(__webpack_require__(427));
-__export(__webpack_require__(428));
+__export(__webpack_require__(433));
+__export(__webpack_require__(439));
+__export(__webpack_require__(440));
 
 
 /***/ }),
@@ -631,22 +633,22 @@ __export(__webpack_require__(428));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(492));
-__export(__webpack_require__(498));
-__export(__webpack_require__(497));
-__export(__webpack_require__(500));
-__export(__webpack_require__(499));
-__export(__webpack_require__(496));
-__export(__webpack_require__(495));
+__export(__webpack_require__(504));
+__export(__webpack_require__(510));
+__export(__webpack_require__(509));
+__export(__webpack_require__(512));
+__export(__webpack_require__(511));
+__export(__webpack_require__(508));
+__export(__webpack_require__(507));
+__export(__webpack_require__(518));
+__export(__webpack_require__(517));
 __export(__webpack_require__(506));
 __export(__webpack_require__(505));
-__export(__webpack_require__(494));
-__export(__webpack_require__(493));
-__export(__webpack_require__(502));
-__export(__webpack_require__(501));
-__export(__webpack_require__(504));
+__export(__webpack_require__(514));
+__export(__webpack_require__(513));
+__export(__webpack_require__(516));
+__export(__webpack_require__(515));
 __export(__webpack_require__(503));
-__export(__webpack_require__(491));
 
 
 /***/ }),
@@ -808,18 +810,18 @@ exports.TargetTypeEnum = TargetTypeEnum;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(456));
+__export(__webpack_require__(450));
+__export(__webpack_require__(449));
+__export(__webpack_require__(442));
+__export(__webpack_require__(441));
+__export(__webpack_require__(448));
+__export(__webpack_require__(447));
+__export(__webpack_require__(445));
 __export(__webpack_require__(444));
-__export(__webpack_require__(438));
-__export(__webpack_require__(437));
-__export(__webpack_require__(430));
-__export(__webpack_require__(429));
-__export(__webpack_require__(436));
-__export(__webpack_require__(435));
-__export(__webpack_require__(433));
-__export(__webpack_require__(432));
-__export(__webpack_require__(434));
-__export(__webpack_require__(431));
+__export(__webpack_require__(446));
 __export(__webpack_require__(443));
+__export(__webpack_require__(455));
 
 
 /***/ }),
@@ -849,16 +851,16 @@ exports.guid = guid;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(388));
-__export(__webpack_require__(396));
-__export(__webpack_require__(395));
-__export(__webpack_require__(392));
-__export(__webpack_require__(391));
-__export(__webpack_require__(390));
-__export(__webpack_require__(389));
-__export(__webpack_require__(394));
-__export(__webpack_require__(393));
-__export(__webpack_require__(387));
+__export(__webpack_require__(400));
+__export(__webpack_require__(408));
+__export(__webpack_require__(407));
+__export(__webpack_require__(404));
+__export(__webpack_require__(403));
+__export(__webpack_require__(402));
+__export(__webpack_require__(401));
+__export(__webpack_require__(406));
+__export(__webpack_require__(405));
+__export(__webpack_require__(399));
 
 
 /***/ }),
@@ -870,38 +872,18 @@ __export(__webpack_require__(387));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(558));
-__export(__webpack_require__(546));
-__export(__webpack_require__(548));
-__export(__webpack_require__(544));
-__export(__webpack_require__(545));
-__export(__webpack_require__(547));
-__export(__webpack_require__(543));
-__export(__webpack_require__(557));
-__export(__webpack_require__(559));
+__export(__webpack_require__(388));
+__export(__webpack_require__(394));
+__export(__webpack_require__(393));
+__export(__webpack_require__(390));
+__export(__webpack_require__(389));
+__export(__webpack_require__(392));
+__export(__webpack_require__(391));
+__export(__webpack_require__(387));
 
 
 /***/ }),
 /* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(376));
-__export(__webpack_require__(382));
-__export(__webpack_require__(381));
-__export(__webpack_require__(378));
-__export(__webpack_require__(377));
-__export(__webpack_require__(380));
-__export(__webpack_require__(379));
-__export(__webpack_require__(375));
-
-
-/***/ }),
-/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -998,6 +980,23 @@ exports.getFunctionName = getFunctionName;
 
 
 /***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(557));
+__export(__webpack_require__(559));
+__export(__webpack_require__(558));
+__export(__webpack_require__(561));
+__export(__webpack_require__(560));
+__export(__webpack_require__(556));
+
+
+/***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1006,12 +1005,12 @@ exports.getFunctionName = getFunctionName;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(562));
-__export(__webpack_require__(564));
-__export(__webpack_require__(563));
-__export(__webpack_require__(566));
-__export(__webpack_require__(565));
-__export(__webpack_require__(561));
+__export(__webpack_require__(606));
+__export(__webpack_require__(609));
+__export(__webpack_require__(608));
+__export(__webpack_require__(610));
+__export(__webpack_require__(607));
+__export(__webpack_require__(605));
 
 
 /***/ }),
@@ -1020,15 +1019,12 @@ __export(__webpack_require__(561));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(611));
-__export(__webpack_require__(614));
-__export(__webpack_require__(613));
-__export(__webpack_require__(615));
-__export(__webpack_require__(612));
-__export(__webpack_require__(610));
+
+var _undefined = __webpack_require__(45)(); // Support ES3 engines
+
+module.exports = function (val) {
+ return (val !== _undefined) && (val !== null);
+};
 
 
 /***/ }),
@@ -1037,21 +1033,7 @@ __export(__webpack_require__(610));
 
 "use strict";
 
-
-var _undefined = __webpack_require__(46)(); // Support ES3 engines
-
-module.exports = function (val) {
- return (val !== _undefined) && (val !== null);
-};
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var binding_when_syntax_1 = __webpack_require__(29);
+var binding_when_syntax_1 = __webpack_require__(28);
 var BindingOnSyntax = (function () {
     function BindingOnSyntax(binding) {
         this._binding = binding;
@@ -1066,13 +1048,13 @@ exports.BindingOnSyntax = BindingOnSyntax;
 
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_on_syntax_1 = __webpack_require__(28);
-var constraint_helpers_1 = __webpack_require__(35);
+var binding_on_syntax_1 = __webpack_require__(27);
+var constraint_helpers_1 = __webpack_require__(34);
 var BindingWhenSyntax = (function () {
     function BindingWhenSyntax(binding) {
         this._binding = binding;
@@ -1170,6 +1152,21 @@ exports.BindingWhenSyntax = BindingWhenSyntax;
 
 
 /***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(137));
+__export(__webpack_require__(132));
+__export(__webpack_require__(131));
+__export(__webpack_require__(136));
+
+
+/***/ }),
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1178,10 +1175,10 @@ exports.BindingWhenSyntax = BindingWhenSyntax;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(138));
-__export(__webpack_require__(133));
-__export(__webpack_require__(132));
-__export(__webpack_require__(137));
+__export(__webpack_require__(411));
+__export(__webpack_require__(413));
+__export(__webpack_require__(412));
+__export(__webpack_require__(410));
 
 
 /***/ }),
@@ -1190,34 +1187,19 @@ __export(__webpack_require__(137));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(399));
-__export(__webpack_require__(401));
-__export(__webpack_require__(400));
-__export(__webpack_require__(398));
-
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var ApplicationSettings = __webpack_require__(30);
+var ApplicationSettings = __webpack_require__(29);
 exports.ApplicationSettings = ApplicationSettings;
 var Membership = __webpack_require__(11);
 exports.Membership = Membership;
 var UserProfile = __webpack_require__(9);
 exports.UserProfile = UserProfile;
-var KeyValue = __webpack_require__(31);
+var KeyValue = __webpack_require__(30);
 exports.KeyValue = KeyValue;
-var ValueSet = __webpack_require__(26);
+var ValueSet = __webpack_require__(25);
 exports.ValueSet = ValueSet;
 var Article = __webpack_require__(6);
 exports.Article = Article;
-var DynamicResource = __webpack_require__(23);
+var DynamicResource = __webpack_require__(22);
 exports.DynamicResource = DynamicResource;
 var MediaVault = __webpack_require__(19);
 exports.MediaVault = MediaVault;
@@ -1225,7 +1207,7 @@ var MediaGallery = __webpack_require__(13);
 exports.MediaGallery = MediaGallery;
 var Files = __webpack_require__(21);
 exports.Files = Files;
-var Templating = __webpack_require__(25);
+var Templating = __webpack_require__(24);
 exports.Templating = Templating;
 var Metering = __webpack_require__(14);
 exports.Metering = Metering;
@@ -1235,18 +1217,16 @@ var Commerce = __webpack_require__(5);
 exports.Commerce = Commerce;
 var Calendar = __webpack_require__(7);
 exports.Calendar = Calendar;
-var ShoppingCart = __webpack_require__(22);
-exports.ShoppingCart = ShoppingCart;
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var metadata_1 = __webpack_require__(15);
-var queryable_string_1 = __webpack_require__(80);
+var queryable_string_1 = __webpack_require__(79);
 var guid_1 = __webpack_require__(20);
 var METADATA_KEY = __webpack_require__(12);
 var Target = (function () {
@@ -1336,13 +1316,13 @@ exports.Target = Target;
 
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_when_syntax_1 = __webpack_require__(29);
-var binding_on_syntax_1 = __webpack_require__(28);
+var binding_when_syntax_1 = __webpack_require__(28);
+var binding_on_syntax_1 = __webpack_require__(27);
 var BindingWhenOnSyntax = (function () {
     function BindingWhenOnSyntax(binding) {
         this._binding = binding;
@@ -1403,7 +1383,7 @@ exports.BindingWhenOnSyntax = BindingWhenOnSyntax;
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1449,7 +1429,7 @@ exports.typeConstraint = typeConstraint;
 
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1473,7 +1453,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1481,14 +1461,14 @@ exports.diModule = diModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(122));
 __export(__webpack_require__(123));
-__export(__webpack_require__(124));
-var diModule_1 = __webpack_require__(120);
+var diModule_1 = __webpack_require__(119);
 exports.coreDIModule = diModule_1.diModule;
 
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1508,7 +1488,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1840,6 +1820,22 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(279));
+__export(__webpack_require__(274));
+__export(__webpack_require__(284));
+__export(__webpack_require__(289));
+__export(__webpack_require__(269));
+
+
+/***/ }),
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1848,11 +1844,16 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(280));
-__export(__webpack_require__(275));
-__export(__webpack_require__(285));
-__export(__webpack_require__(290));
-__export(__webpack_require__(270));
+__export(__webpack_require__(321));
+__export(__webpack_require__(336));
+__export(__webpack_require__(331));
+__export(__webpack_require__(326));
+__export(__webpack_require__(347));
+__export(__webpack_require__(352));
+__export(__webpack_require__(357));
+__export(__webpack_require__(362));
+__export(__webpack_require__(341));
+__export(__webpack_require__(342));
 
 
 /***/ }),
@@ -1861,32 +1862,12 @@ __export(__webpack_require__(270));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(314));
-__export(__webpack_require__(324));
-__export(__webpack_require__(319));
-__export(__webpack_require__(335));
-__export(__webpack_require__(340));
-__export(__webpack_require__(345));
-__export(__webpack_require__(350));
-__export(__webpack_require__(329));
-__export(__webpack_require__(330));
-
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
-var core_1 = __webpack_require__(37);
-var _1 = __webpack_require__(44);
+var core_1 = __webpack_require__(36);
+var _1 = __webpack_require__(43);
 var httpApi_1 = __webpack_require__(4);
-var modules = __webpack_require__(32);
+var modules = __webpack_require__(31);
 var BaasicApp = (function () {
     function BaasicApp(apiKey, options) {
         this.apiKey = apiKey;
@@ -1922,7 +1903,6 @@ var BaasicApp = (function () {
         this.articleModule = this.diModule.kernel.get(modules.Article.TYPES.Root);
         this.commerceModule = this.diModule.kernel.get(modules.Commerce.TYPES.CommerceClient);
         this.calendarModule = this.diModule.kernel.get(modules.Calendar.TYPES.Root);
-        this.shoppingCartModule = this.diModule.kernel.get(modules.ShoppingCart.TYPES.Root);
     }
     BaasicApp.prototype.getAccessToken = function () {
         return this.tokenHandler.get(contracts_1.TokenTypes.Access);
@@ -1954,7 +1934,7 @@ exports.BaasicApp = BaasicApp;
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1962,9 +1942,9 @@ exports.BaasicApp = BaasicApp;
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var contracts_1 = __webpack_require__(3);
-var jQuery_1 = __webpack_require__(130);
-var localStorage_1 = __webpack_require__(122);
-var browserEvents_1 = __webpack_require__(107);
+var jQuery_1 = __webpack_require__(129);
+var localStorage_1 = __webpack_require__(121);
+var browserEvents_1 = __webpack_require__(106);
 var DIModule = (function () {
     function DIModule() {
         this.diModules = [];
@@ -2040,7 +2020,7 @@ exports.DIModule = DIModule;
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2048,8 +2028,8 @@ exports.DIModule = DIModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(43));
 __export(__webpack_require__(42));
+__export(__webpack_require__(41));
 var httpApi_1 = __webpack_require__(4);
 exports.IHttpClient = httpApi_1.IHttpClient;
 exports.IHttpHeaders = httpApi_1.IHttpHeaders;
@@ -2067,20 +2047,20 @@ exports.IUser = contracts_1.IUser;
 exports.IUserHandler = contracts_1.IUserHandler;
 exports.IDefaultStorageConfig = contracts_1.IDefaultStorageConfig;
 __export(__webpack_require__(2));
-__export(__webpack_require__(32));
+__export(__webpack_require__(31));
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var assign        = __webpack_require__(47)
-  , normalizeOpts = __webpack_require__(54)
-  , isCallable    = __webpack_require__(50)
-  , contains      = __webpack_require__(56)
+var assign        = __webpack_require__(46)
+  , normalizeOpts = __webpack_require__(53)
+  , isCallable    = __webpack_require__(49)
+  , contains      = __webpack_require__(55)
 
   , d;
 
@@ -2141,7 +2121,7 @@ d.gs = function (dscr, get, set/*, options*/) {
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2152,19 +2132,19 @@ module.exports = function () {};
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(48)()
+module.exports = __webpack_require__(47)()
 	? Object.assign
-	: __webpack_require__(49);
+	: __webpack_require__(48);
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2180,14 +2160,14 @@ module.exports = function () {
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var keys  = __webpack_require__(51)
-  , value = __webpack_require__(55)
+var keys  = __webpack_require__(50)
+  , value = __webpack_require__(54)
   , max   = Math.max;
 
 module.exports = function (dest, src /*, …srcn*/) {
@@ -2210,7 +2190,7 @@ module.exports = function (dest, src /*, …srcn*/) {
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2224,19 +2204,19 @@ module.exports = function (obj) {
 
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(52)()
+module.exports = __webpack_require__(51)()
 	? Object.keys
-	: __webpack_require__(53);
+	: __webpack_require__(52);
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2253,13 +2233,13 @@ module.exports = function () {
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isValue = __webpack_require__(27);
+var isValue = __webpack_require__(26);
 
 var keys = Object.keys;
 
@@ -2269,13 +2249,13 @@ module.exports = function (object) {
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isValue = __webpack_require__(27);
+var isValue = __webpack_require__(26);
 
 var forEach = Array.prototype.forEach, create = Object.create;
 
@@ -2296,13 +2276,13 @@ module.exports = function (opts1 /*, …options*/) {
 
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isValue = __webpack_require__(27);
+var isValue = __webpack_require__(26);
 
 module.exports = function (value) {
 	if (!isValue(value)) throw new TypeError("Cannot use null or undefined");
@@ -2311,19 +2291,19 @@ module.exports = function (value) {
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(57)()
+module.exports = __webpack_require__(56)()
 	? String.prototype.contains
-	: __webpack_require__(58);
+	: __webpack_require__(57);
 
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2338,7 +2318,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2352,7 +2332,7 @@ module.exports = function (searchString/*, position*/) {
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2376,7 +2356,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2392,7 +2372,7 @@ module.exports = function (x) {
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2400,8 +2380,8 @@ module.exports = function (x) {
 
 
 
-var d              = __webpack_require__(45)
-  , validateSymbol = __webpack_require__(62)
+var d              = __webpack_require__(44)
+  , validateSymbol = __webpack_require__(61)
 
   , create = Object.create, defineProperties = Object.defineProperties
   , defineProperty = Object.defineProperty, objPrototype = Object.prototype
@@ -2517,13 +2497,13 @@ defineProperty(HiddenSymbol.prototype, SymbolPolyfill.toPrimitive,
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isSymbol = __webpack_require__(60);
+var isSymbol = __webpack_require__(59);
 
 module.exports = function (value) {
 	if (!isSymbol(value)) throw new TypeError(value + " is not a symbol");
@@ -2532,7 +2512,7 @@ module.exports = function (value) {
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2555,7 +2535,7 @@ exports.inject = inject;
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2576,7 +2556,7 @@ exports.injectable = injectable;
 
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2599,7 +2579,7 @@ exports.multiInject = multiInject;
 
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2622,7 +2602,7 @@ exports.named = named;
 
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2645,7 +2625,7 @@ exports.optional = optional;
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2667,7 +2647,7 @@ exports.tagged = tagged;
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2685,7 +2665,7 @@ exports.targetName = targetName;
 
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2703,7 +2683,7 @@ exports.unmanaged = unmanaged;
 
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2745,7 +2725,7 @@ exports.Binding = Binding;
 
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2759,18 +2739,18 @@ exports.BindingCount = BindingCount;
 
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_1 = __webpack_require__(71);
-var lookup_1 = __webpack_require__(76);
-var planner_1 = __webpack_require__(79);
-var resolver_1 = __webpack_require__(84);
-var binding_to_syntax_1 = __webpack_require__(87);
-var serialization_1 = __webpack_require__(24);
-var container_snapshot_1 = __webpack_require__(75);
+var binding_1 = __webpack_require__(70);
+var lookup_1 = __webpack_require__(75);
+var planner_1 = __webpack_require__(78);
+var resolver_1 = __webpack_require__(83);
+var binding_to_syntax_1 = __webpack_require__(86);
+var serialization_1 = __webpack_require__(23);
+var container_snapshot_1 = __webpack_require__(74);
 var guid_1 = __webpack_require__(20);
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
@@ -2992,7 +2972,7 @@ exports.Container = Container;
 
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3009,7 +2989,7 @@ exports.ContainerModule = ContainerModule;
 
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3029,7 +3009,7 @@ exports.ContainerSnapshot = ContainerSnapshot;
 
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3117,7 +3097,7 @@ exports.Lookup = Lookup;
 
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3137,7 +3117,7 @@ exports.Context = Context;
 
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3153,22 +3133,22 @@ exports.Plan = Plan;
 
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var plan_1 = __webpack_require__(78);
-var context_1 = __webpack_require__(77);
-var request_1 = __webpack_require__(82);
-var target_1 = __webpack_require__(33);
-var binding_count_1 = __webpack_require__(72);
-var reflection_utils_1 = __webpack_require__(81);
+var plan_1 = __webpack_require__(77);
+var context_1 = __webpack_require__(76);
+var request_1 = __webpack_require__(81);
+var target_1 = __webpack_require__(32);
+var binding_count_1 = __webpack_require__(71);
+var reflection_utils_1 = __webpack_require__(80);
 var metadata_1 = __webpack_require__(15);
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
-var serialization_1 = __webpack_require__(24);
+var serialization_1 = __webpack_require__(23);
 function getBindingDictionary(cntnr) {
     return cntnr._bindingDictionary;
 }
@@ -3295,7 +3275,7 @@ exports.createMockRequest = createMockRequest;
 
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3328,13 +3308,13 @@ exports.QueryableString = QueryableString;
 
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var serialization_1 = __webpack_require__(24);
-var target_1 = __webpack_require__(33);
+var serialization_1 = __webpack_require__(23);
+var target_1 = __webpack_require__(32);
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
@@ -3441,7 +3421,7 @@ function formatTargetMetadata(targetMetadata) {
 
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3468,7 +3448,7 @@ exports.Request = Request;
 
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3513,14 +3493,14 @@ exports.resolveInstance = resolveInstance;
 
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var literal_types_1 = __webpack_require__(18);
-var serialization_1 = __webpack_require__(24);
-var instantiation_1 = __webpack_require__(83);
+var serialization_1 = __webpack_require__(23);
+var instantiation_1 = __webpack_require__(82);
 var ERROR_MSGS = __webpack_require__(16);
 function _resolveRequest(request) {
     var bindings = request.bindings;
@@ -3587,13 +3567,13 @@ exports.resolve = resolve;
 
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var literal_types_1 = __webpack_require__(18);
-var binding_when_on_syntax_1 = __webpack_require__(34);
+var binding_when_on_syntax_1 = __webpack_require__(33);
 var BindingInSyntax = (function () {
     function BindingInSyntax(binding) {
         this._binding = binding;
@@ -3612,14 +3592,14 @@ exports.BindingInSyntax = BindingInSyntax;
 
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_in_syntax_1 = __webpack_require__(85);
-var binding_when_syntax_1 = __webpack_require__(29);
-var binding_on_syntax_1 = __webpack_require__(28);
+var binding_in_syntax_1 = __webpack_require__(84);
+var binding_when_syntax_1 = __webpack_require__(28);
+var binding_on_syntax_1 = __webpack_require__(27);
 var BindingInWhenOnSyntax = (function () {
     function BindingInWhenOnSyntax(binding) {
         this._binding = binding;
@@ -3687,13 +3667,13 @@ exports.BindingInWhenOnSyntax = BindingInWhenOnSyntax;
 
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var binding_in_when_on_syntax_1 = __webpack_require__(86);
-var binding_when_on_syntax_1 = __webpack_require__(34);
+var binding_in_when_on_syntax_1 = __webpack_require__(85);
+var binding_when_on_syntax_1 = __webpack_require__(33);
 var literal_types_1 = __webpack_require__(18);
 var ERROR_MSGS = __webpack_require__(16);
 var BindingToSyntax = (function () {
@@ -3765,7 +3745,7 @@ exports.BindingToSyntax = BindingToSyntax;
 
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3773,13 +3753,13 @@ exports.BindingToSyntax = BindingToSyntax;
 
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var uritemplate = __webpack_require__(616);
+var uritemplate = __webpack_require__(611);
 var _1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var inversify_1 = __webpack_require__(0);
@@ -3921,6 +3901,14 @@ var _a;
 
 
 /***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4014,33 +4002,25 @@ var _a;
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(96));
+__export(__webpack_require__(98));
+__export(__webpack_require__(97));
+__export(__webpack_require__(89));
+__export(__webpack_require__(90));
+__export(__webpack_require__(93));
+__export(__webpack_require__(94));
+__export(__webpack_require__(91));
+__export(__webpack_require__(92));
+__export(__webpack_require__(100));
+__export(__webpack_require__(95));
+__export(__webpack_require__(99));
 
 
 /***/ }),
 /* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(97));
-__export(__webpack_require__(99));
-__export(__webpack_require__(98));
-__export(__webpack_require__(90));
-__export(__webpack_require__(91));
-__export(__webpack_require__(94));
-__export(__webpack_require__(95));
-__export(__webpack_require__(92));
-__export(__webpack_require__(93));
-__export(__webpack_require__(101));
-__export(__webpack_require__(96));
-__export(__webpack_require__(100));
-
-
-/***/ }),
-/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4157,7 +4137,7 @@ exports.HALParser = HALParser = new Parser('JavaScriptSDK');
 
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4292,7 +4272,7 @@ exports.ModelMapper = ModelMapper;
 
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4375,7 +4355,7 @@ exports.Utility = Utility;
 
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4472,7 +4452,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4480,7 +4460,15 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(106));
+__export(__webpack_require__(105));
+
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 
 /***/ }),
@@ -4537,6 +4525,10 @@ __export(__webpack_require__(106));
 
 "use strict";
 
+exports.TokenTypes = {
+    Access: 'access',
+    Refresh: 'refresh'
+};
 
 
 /***/ }),
@@ -4545,10 +4537,6 @@ __export(__webpack_require__(106));
 
 "use strict";
 
-exports.TokenTypes = {
-    Access: 'access',
-    Refresh: 'refresh'
-};
 
 
 /***/ }),
@@ -4573,14 +4561,6 @@ exports.TokenTypes = {
 
 "use strict";
 
-
-
-/***/ }),
-/* 119 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 var Symbol = __webpack_require__(10);
 var TYPES = {
     IBaasicAppOptions: Symbol("IBaasicAppOptions"),
@@ -4596,14 +4576,14 @@ exports.TYPES = TYPES;
 
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var contracts_1 = __webpack_require__(3);
-var _1 = __webpack_require__(37);
+var _1 = __webpack_require__(36);
 var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(contracts_1.TYPES.ITokenHandler).to(_1.TokenHandler).inSingletonScope();
     bind(contracts_1.TYPES.IUserHandler).to(_1.UserHandler).inSingletonScope();
@@ -4612,7 +4592,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4661,7 +4641,7 @@ var _a;
 
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4669,11 +4649,11 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(121));
+__export(__webpack_require__(120));
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4800,7 +4780,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4869,6 +4849,14 @@ var _a, _b, _c;
 
 
 /***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
 /* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4894,14 +4882,6 @@ var _a, _b, _c;
 
 /***/ }),
 /* 128 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5074,7 +5054,7 @@ var ApiClient_1, _a, _b, _c, _d;
 
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5082,11 +5062,11 @@ var ApiClient_1, _a, _b, _c, _d;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(131));
+__export(__webpack_require__(130));
 
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5162,7 +5142,7 @@ function parseHeaders(headers) {
 
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5176,7 +5156,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(30);
+var _1 = __webpack_require__(29);
 var ApplicationSettingsClient = (function () {
     function ApplicationSettingsClient(applicationSettingsRoute, apiClient) {
         this.applicationSettingsRoute = applicationSettingsRoute;
@@ -5252,7 +5232,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5315,12 +5295,20 @@ var _a;
 
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 ;
+
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 
 /***/ }),
@@ -5337,6 +5325,12 @@ var _a;
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(134));
+__export(__webpack_require__(135));
+__export(__webpack_require__(133));
 
 
 /***/ }),
@@ -5345,23 +5339,9 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(135));
-__export(__webpack_require__(136));
-__export(__webpack_require__(134));
-
-
-/***/ }),
-/* 138 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(30);
+var _1 = __webpack_require__(29);
 var TYPES = {
     ApplicationSettingsClient: Symbol("ApplicationSettingsClient"),
     ApplicationSettingsRoute: Symbol("ApplicationSettingsRoute")
@@ -5375,7 +5355,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5429,7 +5409,7 @@ exports.ALPHABET = ALPHABET;
 
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5563,7 +5543,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5688,7 +5668,7 @@ var _a;
 
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6014,7 +5994,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6194,7 +6174,7 @@ var _a;
 
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6492,7 +6472,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6644,7 +6624,7 @@ var _a;
 
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6998,7 +6978,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7349,7 +7329,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7480,7 +7460,7 @@ var _a;
 
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7687,7 +7667,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7695,14 +7675,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(148));
 __export(__webpack_require__(147));
-__export(__webpack_require__(149));
 __export(__webpack_require__(146));
+__export(__webpack_require__(148));
+__export(__webpack_require__(145));
 
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7805,7 +7785,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7873,7 +7853,7 @@ var _a;
 
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8039,7 +8019,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8157,7 +8137,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8311,7 +8291,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8391,7 +8371,7 @@ var _a;
 
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8496,7 +8476,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8569,7 +8549,7 @@ var _a;
 
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8760,7 +8740,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8912,7 +8892,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9065,7 +9045,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9154,7 +9134,7 @@ var _a;
 
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9162,16 +9142,16 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(162));
 __export(__webpack_require__(161));
-__export(__webpack_require__(158));
-__export(__webpack_require__(157));
 __export(__webpack_require__(160));
+__export(__webpack_require__(157));
+__export(__webpack_require__(156));
 __export(__webpack_require__(159));
+__export(__webpack_require__(158));
 
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9349,7 +9329,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9468,7 +9448,7 @@ var _a;
 
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9666,7 +9646,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9803,7 +9783,7 @@ var _a;
 
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9811,12 +9791,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(167));
 __export(__webpack_require__(166));
+__export(__webpack_require__(165));
 
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10048,7 +10028,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10140,7 +10120,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10204,7 +10184,7 @@ var _a;
 
 
 /***/ }),
-/* 172 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10291,7 +10271,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 173 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10355,7 +10335,7 @@ var _a;
 
 
 /***/ }),
-/* 174 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10419,7 +10399,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 175 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10481,7 +10461,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 176 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10572,7 +10552,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 177 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10645,7 +10625,7 @@ var _a;
 
 
 /***/ }),
-/* 178 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10733,7 +10713,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 179 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10797,7 +10777,7 @@ var _a;
 
 
 /***/ }),
-/* 180 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10885,7 +10865,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 181 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10949,7 +10929,7 @@ var _a;
 
 
 /***/ }),
-/* 182 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10957,18 +10937,18 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(177));
-__export(__webpack_require__(179));
-__export(__webpack_require__(181));
-__export(__webpack_require__(175));
 __export(__webpack_require__(176));
 __export(__webpack_require__(178));
 __export(__webpack_require__(180));
 __export(__webpack_require__(174));
+__export(__webpack_require__(175));
+__export(__webpack_require__(177));
+__export(__webpack_require__(179));
+__export(__webpack_require__(173));
 
 
 /***/ }),
-/* 183 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11108,7 +11088,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 184 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11210,7 +11190,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 185 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11309,7 +11289,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 186 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11391,7 +11371,7 @@ var _a;
 
 
 /***/ }),
-/* 187 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11546,7 +11526,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 188 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11655,7 +11635,7 @@ var _a;
 
 
 /***/ }),
-/* 189 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11663,12 +11643,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(188));
 __export(__webpack_require__(187));
+__export(__webpack_require__(186));
 
 
 /***/ }),
-/* 190 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11712,7 +11692,7 @@ exports.BaasicArticleUtility = BaasicArticleUtility;
 
 
 /***/ }),
-/* 191 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11735,6 +11715,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
 /* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11749,7 +11738,6 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -11758,6 +11746,7 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -11802,7 +11791,6 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -11819,6 +11807,7 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -11836,7 +11825,6 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -11853,6 +11841,7 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -11861,37 +11850,28 @@ exports.CommentStatus = CommentStatus;
 
 "use strict";
 
-;
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(199));
+__export(__webpack_require__(203));
+__export(__webpack_require__(202));
+__export(__webpack_require__(193));
+__export(__webpack_require__(192));
+__export(__webpack_require__(194));
+__export(__webpack_require__(204));
+__export(__webpack_require__(196));
+__export(__webpack_require__(195));
+__export(__webpack_require__(205));
+__export(__webpack_require__(198));
+__export(__webpack_require__(201));
+__export(__webpack_require__(200));
+__export(__webpack_require__(191));
+__export(__webpack_require__(197));
 
 
 /***/ }),
 /* 207 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(200));
-__export(__webpack_require__(204));
-__export(__webpack_require__(203));
-__export(__webpack_require__(194));
-__export(__webpack_require__(193));
-__export(__webpack_require__(195));
-__export(__webpack_require__(205));
-__export(__webpack_require__(197));
-__export(__webpack_require__(196));
-__export(__webpack_require__(206));
-__export(__webpack_require__(199));
-__export(__webpack_require__(202));
-__export(__webpack_require__(201));
-__export(__webpack_require__(192));
-__export(__webpack_require__(198));
-
-
-/***/ }),
-/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12002,7 +11982,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 209 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12038,7 +12018,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 210 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12169,7 +12149,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 211 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12293,7 +12273,7 @@ var _a;
 
 
 /***/ }),
-/* 212 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12301,12 +12281,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(209));
 __export(__webpack_require__(210));
-__export(__webpack_require__(211));
 
 
 /***/ }),
-/* 213 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12383,12 +12363,12 @@ var CalendarBatchClient = (function () {
                 .then(function (data) {
                     // perform success action here
                 },
-                function (response, status, headers, config) {
-                    // perform error handling here
+                    function (response, status, headers, config) {
+                        // perform error handling here
                 });
      */
     CalendarBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
     return CalendarBatchClient;
 }());
@@ -12412,7 +12392,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 214 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12479,7 +12459,7 @@ var _a;
 
 
 /***/ }),
-/* 215 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12550,7 +12530,6 @@ var CalendarClient = (function () {
                     orderDirection : '<asc|desc>',
                     search : '<search-phrase>',
                     ids : <identifiers>,
-                    ownerIds: <identifiers>,
                     from : <start-date>,
                     to : <end-date>
                 })
@@ -12688,7 +12667,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 216 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12708,8 +12687,8 @@ var CalendarRoute = (function (_super) {
     function CalendarRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
-        _this.findRoute = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids,ownerIds}';
-        _this.getRoute = 'calendars/{id}/{?embed,fields}';
+        _this.findRoute = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
+        _this.getRoute = 'calendars/{id}/{?embed, fields}';
         _this.createRoute = 'calendars';
         _this.updateRoute = 'calendars/{id}';
         _this.deleteRoute = 'calendars/{id}';
@@ -12725,7 +12704,6 @@ var CalendarRoute = (function (_super) {
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
-     * - `ownerIds` - Used to limit the dataset to only use resources beloging to specified owners.
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRoute.find({searchQuery: '<search-phrase>'});
@@ -12819,7 +12797,7 @@ var _a;
 
 
 /***/ }),
-/* 217 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12997,7 +12975,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 218 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13018,7 +12996,7 @@ var CalendarEventsRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendars/{calendarId}/events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,statusIds,typeIds,from,to}';
-        _this.getRoute = 'calendars/{calendarId}/events/{id}/{?embed,fields}';
+        _this.getRoute = 'calendars/{calendarId}/events/{id}/{?embed, fields}';
         _this.getByEmailOrFullNameRoute = 'calendars/{calendarId}/events/{id}/emails/{emailOrFullName}';
         _this.linkRoute = 'calendars/{calendarId}/events/{id}';
         _this.updateRoute = 'calendars/{calendarId}/events/{id}';
@@ -13155,7 +13133,7 @@ var _a;
 
 
 /***/ }),
-/* 219 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13163,12 +13141,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(216));
 __export(__webpack_require__(217));
-__export(__webpack_require__(218));
 
 
 /***/ }),
-/* 220 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13265,7 +13243,7 @@ var CalendarRsvpAttendeeBatchClient = (function () {
                 });
      */
     CalendarRsvpAttendeeBatchClient.prototype.unlink = function (calendarId, eventId, data) {
-        return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.unlink(calendarId, eventId), this.routeDefinition.deleteParams(data));
     };
     return CalendarRsvpAttendeeBatchClient;
 }());
@@ -13289,7 +13267,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 221 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13371,7 +13349,7 @@ var _a;
 
 
 /***/ }),
-/* 222 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13699,7 +13677,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 223 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13980,7 +13958,7 @@ var _a;
 
 
 /***/ }),
-/* 224 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13988,14 +13966,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(219));
 __export(__webpack_require__(220));
 __export(__webpack_require__(221));
 __export(__webpack_require__(222));
-__export(__webpack_require__(223));
 
 
 /***/ }),
-/* 225 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14082,7 +14060,7 @@ var CalendarRsvpBatchClient = (function () {
                 });
      */
     CalendarRsvpBatchClient.prototype.unlink = function (calendarId, data) {
-        return this.apiClient.delete(this.routeDefinition.unlink(calendarId), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.unlink(calendarId), this.routeDefinition.deleteParams(data));
     };
     return CalendarRsvpBatchClient;
 }());
@@ -14106,7 +14084,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 226 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14182,7 +14160,7 @@ var _a;
 
 
 /***/ }),
-/* 227 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14377,7 +14355,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 228 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14547,22 +14525,7 @@ var _a;
 
 
 /***/ }),
-/* 229 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(225));
-__export(__webpack_require__(226));
-__export(__webpack_require__(227));
-__export(__webpack_require__(228));
-
-
-/***/ }),
-/* 230 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14571,8 +14534,31 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 __export(__webpack_require__(224));
-__export(__webpack_require__(229));
-__export(__webpack_require__(219));
+__export(__webpack_require__(225));
+__export(__webpack_require__(226));
+__export(__webpack_require__(227));
+
+
+/***/ }),
+/* 229 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(223));
+__export(__webpack_require__(228));
+__export(__webpack_require__(218));
+
+
+/***/ }),
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 
 /***/ }),
@@ -14645,6 +14631,20 @@ __export(__webpack_require__(219));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(230));
+__export(__webpack_require__(231));
+__export(__webpack_require__(232));
+__export(__webpack_require__(235));
+__export(__webpack_require__(234));
+__export(__webpack_require__(236));
+__export(__webpack_require__(237));
+__export(__webpack_require__(233));
+__export(__webpack_require__(252));
+__export(__webpack_require__(244));
+__export(__webpack_require__(238));
 
 
 /***/ }),
@@ -14653,20 +14653,6 @@ __export(__webpack_require__(219));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(231));
-__export(__webpack_require__(232));
-__export(__webpack_require__(233));
-__export(__webpack_require__(236));
-__export(__webpack_require__(235));
-__export(__webpack_require__(237));
-__export(__webpack_require__(238));
-__export(__webpack_require__(234));
-__export(__webpack_require__(253));
-__export(__webpack_require__(245));
-__export(__webpack_require__(239));
 
 
 /***/ }),
@@ -14699,6 +14685,13 @@ __export(__webpack_require__(239));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(240));
+__export(__webpack_require__(241));
+__export(__webpack_require__(242));
+__export(__webpack_require__(243));
 
 
 /***/ }),
@@ -14707,13 +14700,6 @@ __export(__webpack_require__(239));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(241));
-__export(__webpack_require__(242));
-__export(__webpack_require__(243));
-__export(__webpack_require__(244));
 
 
 /***/ }),
@@ -14770,28 +14756,20 @@ __export(__webpack_require__(244));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(247));
+__export(__webpack_require__(246));
+__export(__webpack_require__(249));
+__export(__webpack_require__(248));
+__export(__webpack_require__(251));
+__export(__webpack_require__(245));
+__export(__webpack_require__(250));
 
 
 /***/ }),
 /* 253 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(248));
-__export(__webpack_require__(247));
-__export(__webpack_require__(250));
-__export(__webpack_require__(249));
-__export(__webpack_require__(252));
-__export(__webpack_require__(246));
-__export(__webpack_require__(251));
-
-
-/***/ }),
-/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14900,7 +14878,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 255 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14991,7 +14969,7 @@ var CalendarEventRsvpAttendeeBatchClient = (function () {
                 });
      */
     CalendarEventRsvpAttendeeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpAttendeeBatchClient;
 }());
@@ -15015,7 +14993,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 256 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15082,7 +15060,7 @@ var _a;
 
 
 /***/ }),
-/* 257 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15359,7 +15337,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 258 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15380,7 +15358,7 @@ var CalendarEventRsvpAttendeeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-event-attendees/{?searchQuery,page,rpp,sort,embed,fields,calendarIds,calendarNames,eventIds,invitationTypeIds,attendeeStatusIds,userIds,slotDifference,emails,from,to,ids}';
-        _this.getRoute = 'calendar-event-attendees/{id}/{?embed,fields}';
+        _this.getRoute = 'calendar-event-attendees/{id}/{?embed, fields}';
         _this.createRoute = 'calendar-event-attendees';
         _this.updateRoute = 'calendar-event-attendees/{id}';
         _this.deleteRoute = 'calendar-event-attendees/{id}';
@@ -15552,7 +15530,7 @@ var _a;
 
 
 /***/ }),
-/* 259 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15560,14 +15538,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(254));
 __export(__webpack_require__(255));
 __export(__webpack_require__(256));
 __export(__webpack_require__(257));
-__export(__webpack_require__(258));
 
 
 /***/ }),
-/* 260 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15651,7 +15629,7 @@ var CalendarEventRsvpBatchClient = (function () {
                 });
      */
     CalendarEventRsvpBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpBatchClient;
 }());
@@ -15675,7 +15653,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 261 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15742,7 +15720,7 @@ var _a;
 
 
 /***/ }),
-/* 262 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15933,7 +15911,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 263 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15954,7 +15932,7 @@ var CalendarEventRsvpRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-rsvp-details/{?searchQuery,page,rpp,sort,embed,fields,ids,calendarIds,calendarNames,invitationTypeIds,invitationOnly,statusIds,typeIds,from,to,registrationCloseFrom,registrationCloseTo}';
-        _this.getRoute = 'calendar-rsvp-details/{id}/{?embed,fields}';
+        _this.getRoute = 'calendar-rsvp-details/{id}/{?embed, fields}';
         _this.createRoute = 'calendar-rsvp-details';
         _this.updateRoute = 'calendar-rsvp-details/{id}';
         _this.deleteRoute = 'calendar-rsvp-details/{id}';
@@ -16086,7 +16064,7 @@ var _a;
 
 
 /***/ }),
-/* 264 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16094,14 +16072,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(259));
 __export(__webpack_require__(260));
 __export(__webpack_require__(261));
 __export(__webpack_require__(262));
-__export(__webpack_require__(263));
 
 
 /***/ }),
-/* 265 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16189,7 +16167,7 @@ var CalendarEventBatchClient = (function () {
                 });
      */
     CalendarEventBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
     return CalendarEventBatchClient;
 }());
@@ -16213,7 +16191,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 266 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16280,7 +16258,7 @@ var _a;
 
 
 /***/ }),
-/* 267 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16493,7 +16471,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 268 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16514,7 +16492,7 @@ var CalendarEventRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
-        _this.getRoute = 'calendar-events/{id}/{?embed,fields}';
+        _this.getRoute = 'calendar-events/{id}/{?embed, fields}';
         _this.getByEmailOrFullNameRoute = 'calendar-events/{id}/{emailOrFullName}';
         _this.createRoute = 'calendar-events';
         _this.updateRoute = 'calendar-events/{id}';
@@ -16644,7 +16622,7 @@ var _a;
 
 
 /***/ }),
-/* 269 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16652,26 +16630,26 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(266));
 __export(__webpack_require__(265));
-__export(__webpack_require__(268));
+__export(__webpack_require__(264));
 __export(__webpack_require__(267));
+__export(__webpack_require__(266));
 
 
 /***/ }),
-/* 270 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
 var _1 = __webpack_require__(7);
-var _2 = __webpack_require__(40);
+var _2 = __webpack_require__(39);
 var inversify_1 = __webpack_require__(0);
 var CalendarLookups = (function () {
-    function CalendarLookups(rsvpInvitationType, rsvpAttendeeStatus, eventStatus, eventType) {
-        this.rsvpInvitationType = rsvpInvitationType;
-        this.rsvpAttendeeStatus = rsvpAttendeeStatus;
+    function CalendarLookups(RsvpInvitationType, RsvpAttendeeStatus, eventStatus, eventType) {
+        this.RsvpInvitationType = RsvpInvitationType;
+        this.RsvpAttendeeStatus = RsvpAttendeeStatus;
         this.eventStatus = eventStatus;
         this.eventType = eventType;
     }
@@ -16690,7 +16668,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 271 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16769,7 +16747,7 @@ var CalendarEventRsvpAttendeeStatusBatchClient = (function () {
                 });
      */
     CalendarEventRsvpAttendeeStatusBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpAttendeeStatusBatchClient;
 }());
@@ -16793,7 +16771,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 272 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16860,7 +16838,7 @@ var _a;
 
 
 /***/ }),
-/* 273 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17038,7 +17016,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 274 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17059,7 +17037,7 @@ var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/rsvp-attendee-statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed,fields}';
+        _this.getRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed, fields}';
         _this.createRoute = 'calendar-lookups/rsvp-attendee-statuses';
         _this.updateRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}';
         _this.deleteRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}';
@@ -17169,7 +17147,7 @@ var _a;
 
 
 /***/ }),
-/* 275 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17177,14 +17155,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(270));
 __export(__webpack_require__(271));
 __export(__webpack_require__(272));
 __export(__webpack_require__(273));
-__export(__webpack_require__(274));
 
 
 /***/ }),
-/* 276 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17263,7 +17241,7 @@ var CalendarEventRsvpInvitationTypeBatchClient = (function () {
                 });
      */
     CalendarEventRsvpInvitationTypeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
     return CalendarEventRsvpInvitationTypeBatchClient;
 }());
@@ -17287,7 +17265,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 277 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17354,7 +17332,7 @@ var _a;
 
 
 /***/ }),
-/* 278 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17532,7 +17510,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 279 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17553,7 +17531,7 @@ var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/rsvp-invitation-types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed,fields}';
+        _this.getRoute = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed, fields}';
         _this.createRoute = 'calendar-lookups/rsvp-invitation-types';
         _this.updateRoute = 'calendar-lookups/rsvp-invitation-types/{id}';
         _this.deleteRoute = 'calendar-lookups/rsvp-invitation-types/{id}';
@@ -17663,7 +17641,7 @@ var _a;
 
 
 /***/ }),
-/* 280 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17671,14 +17649,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(275));
 __export(__webpack_require__(276));
 __export(__webpack_require__(277));
 __export(__webpack_require__(278));
-__export(__webpack_require__(279));
 
 
 /***/ }),
-/* 281 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17757,7 +17735,7 @@ var CalendarEventStatusBatchClient = (function () {
                 });
      */
     CalendarEventStatusBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
     return CalendarEventStatusBatchClient;
 }());
@@ -17781,7 +17759,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 282 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17848,7 +17826,7 @@ var _a;
 
 
 /***/ }),
-/* 283 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18026,7 +18004,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 284 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18047,7 +18025,7 @@ var CalendarEventStatusRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/statuses/{id}/{?embed,fields}';
+        _this.getRoute = 'calendar-lookups/statuses/{id}/{?embed, fields}';
         _this.createRoute = 'calendar-lookups/statuses';
         _this.updateRoute = 'calendar-lookups/statuses/{id}';
         _this.deleteRoute = 'calendar-lookups/statuses/{id}';
@@ -18157,7 +18135,7 @@ var _a;
 
 
 /***/ }),
-/* 285 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18165,14 +18143,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(280));
 __export(__webpack_require__(281));
 __export(__webpack_require__(282));
 __export(__webpack_require__(283));
-__export(__webpack_require__(284));
 
 
 /***/ }),
-/* 286 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18251,7 +18229,7 @@ var CalendarEventTypeBatchClient = (function () {
                 });
      */
     CalendarEventTypeBatchClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
     };
     return CalendarEventTypeBatchClient;
 }());
@@ -18275,7 +18253,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 287 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18341,7 +18319,7 @@ var _a;
 
 
 /***/ }),
-/* 288 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18519,7 +18497,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 289 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18540,7 +18518,7 @@ var CalendarEventTypeRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.findRoute = 'calendar-lookups/types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-        _this.getRoute = 'calendar-lookups/types/{id}/{?embed,fields}';
+        _this.getRoute = 'calendar-lookups/types/{id}/{?embed, fields}';
         _this.createRoute = 'calendar-lookups/types';
         _this.updateRoute = 'calendar-lookups/types/{id}';
         _this.deleteRoute = 'calendar-lookups/types/{id}';
@@ -18649,7 +18627,7 @@ var _a;
 
 
 /***/ }),
-/* 290 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18657,14 +18635,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(__webpack_require__(285));
 __export(__webpack_require__(286));
 __export(__webpack_require__(287));
 __export(__webpack_require__(288));
-__export(__webpack_require__(289));
 
 
 /***/ }),
-/* 291 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18698,7 +18676,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 292 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18713,13 +18691,15 @@ var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(5);
 var CommerceClient = (function () {
-    function CommerceClient(commerceCustomerClient, commerceInvoiceClient, commerceProductClient, commerceProductFilesClient, commerceProductSettingsClient, commercePaymentTransactionClient, lookup, commerceRoute, apiClient) {
+    function CommerceClient(commerceCustomerClient, commerceInvoiceClient, commerceProductClient, commerceProductFilesClient, commerceProductSettingsClient, commercePaymentTransactionClient, commerceCouponClient, commerceCouponUseClient, lookup, commerceRoute, apiClient) {
         this.commerceCustomerClient = commerceCustomerClient;
         this.commerceInvoiceClient = commerceInvoiceClient;
         this.commerceProductClient = commerceProductClient;
         this.commerceProductFilesClient = commerceProductFilesClient;
         this.commerceProductSettingsClient = commerceProductSettingsClient;
         this.commercePaymentTransactionClient = commercePaymentTransactionClient;
+        this.commerceCouponClient = commerceCouponClient;
+        this.commerceCouponUseClient = commerceCouponUseClient;
         this.lookup = lookup;
         this.commerceRoute = commerceRoute;
         this.apiClient = apiClient;
@@ -18762,6 +18742,20 @@ var CommerceClient = (function () {
     Object.defineProperty(CommerceClient.prototype, "paymentTransactions", {
         get: function () {
             return this.commercePaymentTransactionClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "coupons", {
+        get: function () {
+            return this.commerceCouponClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "couponUses", {
+        get: function () {
+            return this.commerceCouponUseClient;
         },
         enumerable: true,
         configurable: true
@@ -18897,13 +18891,15 @@ CommerceClient = tslib_1.__decorate([
     tslib_1.__param(3, inversify_1.inject(_1.TYPES.CommerceProductFilesClient)),
     tslib_1.__param(4, inversify_1.inject(_1.TYPES.CommerceProductSettingsClient)),
     tslib_1.__param(5, inversify_1.inject(_1.TYPES.CommercePaymentTransactionClient)),
-    tslib_1.__param(6, inversify_1.inject(_1.TYPES.Lookups)),
-    tslib_1.__param(7, inversify_1.inject(_1.TYPES.CommerceRoute)),
-    tslib_1.__param(8, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCustomerClient !== "undefined" && _1.CommerceCustomerClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceInvoiceClient !== "undefined" && _1.CommerceInvoiceClient) === "function" && _b || Object, typeof (_c = typeof _1.CommerceProductClient !== "undefined" && _1.CommerceProductClient) === "function" && _c || Object, typeof (_d = typeof _1.CommerceProductFilesClient !== "undefined" && _1.CommerceProductFilesClient) === "function" && _d || Object, typeof (_e = typeof _1.CommerceProductSettingsClient !== "undefined" && _1.CommerceProductSettingsClient) === "function" && _e || Object, typeof (_f = typeof _1.CommercePaymentTransactionClient !== "undefined" && _1.CommercePaymentTransactionClient) === "function" && _f || Object, typeof (_g = typeof _1.Lookups !== "undefined" && _1.Lookups) === "function" && _g || Object, typeof (_h = typeof _1.CommerceRoute !== "undefined" && _1.CommerceRoute) === "function" && _h || Object, typeof (_j = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _j || Object])
+    tslib_1.__param(6, inversify_1.inject(_1.TYPES.CommerceCouponClient)),
+    tslib_1.__param(7, inversify_1.inject(_1.TYPES.CommerceCouponUseClient)),
+    tslib_1.__param(8, inversify_1.inject(_1.TYPES.Lookups)),
+    tslib_1.__param(9, inversify_1.inject(_1.TYPES.CommerceRoute)),
+    tslib_1.__param(10, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCustomerClient !== "undefined" && _1.CommerceCustomerClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceInvoiceClient !== "undefined" && _1.CommerceInvoiceClient) === "function" && _b || Object, typeof (_c = typeof _1.CommerceProductClient !== "undefined" && _1.CommerceProductClient) === "function" && _c || Object, typeof (_d = typeof _1.CommerceProductFilesClient !== "undefined" && _1.CommerceProductFilesClient) === "function" && _d || Object, typeof (_e = typeof _1.CommerceProductSettingsClient !== "undefined" && _1.CommerceProductSettingsClient) === "function" && _e || Object, typeof (_f = typeof _1.CommercePaymentTransactionClient !== "undefined" && _1.CommercePaymentTransactionClient) === "function" && _f || Object, typeof (_g = typeof _1.CommerceCouponClient !== "undefined" && _1.CommerceCouponClient) === "function" && _g || Object, typeof (_h = typeof _1.CommerceCouponUseClient !== "undefined" && _1.CommerceCouponUseClient) === "function" && _h || Object, typeof (_j = typeof _1.Lookups !== "undefined" && _1.Lookups) === "function" && _j || Object, typeof (_k = typeof _1.CommerceRoute !== "undefined" && _1.CommerceRoute) === "function" && _k || Object, typeof (_l = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _l || Object])
 ], CommerceClient);
 exports.CommerceClient = CommerceClient;
-var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 /**
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
@@ -18916,7 +18912,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 
 
 /***/ }),
-/* 293 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19026,12 +19022,19 @@ var _a;
 
 
 /***/ }),
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
 /* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -19049,6 +19052,7 @@ var _a;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -19057,7 +19061,6 @@ var _a;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -19066,17 +19069,537 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(295));
-__export(__webpack_require__(294));
-__export(__webpack_require__(297));
-__export(__webpack_require__(296));
+;
 
 
 /***/ }),
 /* 299 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(296));
+__export(__webpack_require__(295));
+__export(__webpack_require__(298));
+__export(__webpack_require__(297));
+__export(__webpack_require__(293));
+__export(__webpack_require__(294));
+
+
+/***/ }),
+/* 300 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceCouponUseClient
+ * @description  Commerce Coupon Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCouponUseClient` uses `commerceCouponRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceCouponUseClient = (function () {
+    function CommerceCouponUseClient(commerceCouponRoute, apiClient) {
+        this.commerceCouponRoute = commerceCouponRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceCouponUseClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceCouponRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceCouponUseClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>',
+                   couponCategoryId : '',
+                   categoryAbrv: ''
+               })
+               .then(function (collection) {
+                   // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+    **/
+    CommerceCouponUseClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceCouponUseClient.get()
+                      .then(function (data) {
+                          // perform success action here
+                      },
+                       function (response, status, headers, config) {
+                           // perform error handling here
+                      });
+   **/
+    CommerceCouponUseClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceCouponRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceCouponUseClient.create({
+                    name : '<coupon-name>',
+                    slug : '<slug>',
+                    shortDescription : '<short-description>',
+                    recurringCyclePeriodTypeId: '<recurring-cycle-period-type-id>'
+                    planId : '<plan-id>',
+                    price: 100,
+                    published: true
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceCouponUseClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCouponRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCoupon);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCoupon is a resource previously fetched using get action.
+                        commerceCoupon.shortDescription : '<short-description>';
+                        commerceCouponUseClient.update(commerceCoupon)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceCouponUseClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCouponRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCoupon);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCoupon is a resource previously fetched using get action.
+                    commerceCouponUseClient.remove(commerceCoupon)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceCouponUseClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceCouponUseClient;
+}());
+CommerceCouponUseClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCouponRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCouponUseRoute !== "undefined" && _1.CommerceCouponUseRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceCouponUseClient);
+exports.CommerceCouponUseClient = CommerceCouponUseClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 301 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceCouponUseRoute
+ * @description Baasic Commerce Coupon Use Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Coupon Use Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceCouponUseRoute = (function (_super) {
+    tslib_1.__extends(CommerceCouponUseRoute, _super);
+    function CommerceCouponUseRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/coupon-uses/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/coupon-uses/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/coupon-uses';
+        _this.updateRoute = 'commerce/coupon-uses/{id}';
+        _this.deleteRoute = 'commerce/coupon-uses/{id}';
+        return _this;
+    }
+    /**
+     * Parses find commerce coupon route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceCouponUseRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceCouponUseRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceCouponUseRoute.get(id, options);
+     **/
+    CommerceCouponUseRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create commerce coupon route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceCouponUseRoute.create();
+     **/
+    CommerceCouponUseRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce coupon route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceCouponUseRoute.update(data);
+     **/
+    CommerceCouponUseRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+    * Parses delete commerce coupon route; this URI template does not expose any additional options.
+    * @method
+    * @example commerceCouponUseRoute.delete(data);
+    **/
+    CommerceCouponUseRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceCouponUseRoute;
+}(common_1.BaseRoute));
+CommerceCouponUseRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceCouponUseRoute);
+exports.CommerceCouponUseRoute = CommerceCouponUseRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 302 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(301));
+__export(__webpack_require__(300));
+
+
+/***/ }),
+/* 303 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceCouponClient
+ * @description  Commerce Coupon Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCouponClient` uses `commerceCouponRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceCouponClient = (function () {
+    function CommerceCouponClient(commerceCouponRoute, apiClient) {
+        this.commerceCouponRoute = commerceCouponRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceCouponClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceCouponRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceCouponClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>',
+                   couponCategoryId : '',
+                   categoryAbrv: ''
+               })
+               .then(function (collection) {
+                   // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+    **/
+    CommerceCouponClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceCouponClient.get()
+                      .then(function (data) {
+                          // perform success action here
+                      },
+                       function (response, status, headers, config) {
+                           // perform error handling here
+                      });
+   **/
+    CommerceCouponClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceCouponRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceCouponClient.create({
+                    name : '<coupon-name>',
+                    slug : '<slug>',
+                    shortDescription : '<short-description>',
+                    recurringCyclePeriodTypeId: '<recurring-cycle-period-type-id>'
+                    planId : '<plan-id>',
+                    price: 100,
+                    published: true
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceCouponClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCouponRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCoupon);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCoupon is a resource previously fetched using get action.
+                        commerceCoupon.shortDescription : '<short-description>';
+                        commerceCouponClient.update(commerceCoupon)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceCouponClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCouponRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCoupon);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCoupon is a resource previously fetched using get action.
+                    commerceCouponClient.remove(commerceCoupon)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceCouponClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceCouponClient;
+}());
+CommerceCouponClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCouponRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCouponRoute !== "undefined" && _1.CommerceCouponRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceCouponClient);
+exports.CommerceCouponClient = CommerceCouponClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 304 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceCouponRoute
+ * @description Baasic Commerce Coupon Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Coupon Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceCouponRoute = (function (_super) {
+    tslib_1.__extends(CommerceCouponRoute, _super);
+    function CommerceCouponRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/coupons/{?searchQuery,page,rpp,sort,embed,fields,productId,productCategoryId,active}';
+        _this.getRoute = 'commerce/coupons/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/coupons';
+        _this.updateRoute = 'commerce/coupons/{id}';
+        _this.deleteRoute = 'commerce/coupons/{id}';
+        return _this;
+    }
+    /**
+     * Parses find commerce coupon route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * - `productId` - A product id.
+     * - `productCategoryId` - A product category id.
+     * - `active` - flag is coupon active or not
+     * @method
+     * @example commerceCouponRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceCouponRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceCouponRoute.get(id, options);
+     **/
+    CommerceCouponRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create commerce coupon route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceCouponRoute.create();
+     **/
+    CommerceCouponRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce coupon route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceCouponRoute.update(data);
+     **/
+    CommerceCouponRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+    * Parses delete commerce coupon route; this URI template does not expose any additional options.
+    * @method
+    * @example commerceCouponRoute.delete(data);
+    **/
+    CommerceCouponRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceCouponRoute;
+}(common_1.BaseRoute));
+CommerceCouponRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceCouponRoute);
+exports.CommerceCouponRoute = CommerceCouponRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 305 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(304));
+__export(__webpack_require__(303));
+
+
+/***/ }),
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19207,7 +19730,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 300 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19349,7 +19872,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 301 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19443,7 +19966,7 @@ var _a;
 
 
 /***/ }),
-/* 302 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19528,7 +20051,7 @@ var _a;
 
 
 /***/ }),
-/* 303 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19536,14 +20059,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(302));
-__export(__webpack_require__(299));
-__export(__webpack_require__(301));
-__export(__webpack_require__(300));
+__export(__webpack_require__(309));
+__export(__webpack_require__(306));
+__export(__webpack_require__(308));
+__export(__webpack_require__(307));
 
 
 /***/ }),
-/* 304 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19576,6 +20099,10 @@ var TYPES = {
     CommerceProductInstanceFilesRoute: Symbol("CommerceProductInstanceFilesRoute"),
     CommerceProductInstanceFilesBatchClient: Symbol("CommerceProductInstanceFilesBatchClient"),
     CommerceProductInstanceFilesBatchRoute: Symbol("CommerceProductInstanceFilesBatchRoute"),
+    CommerceCouponClient: Symbol("CommerceCouponClient"),
+    CommerceCouponRoute: Symbol("CommerceCouponRoute"),
+    CommerceCouponUseClient: Symbol("CommerceCouponUseClient"),
+    CommerceCouponUseRoute: Symbol("CommerceCouponUseRoute"),
     CommerceClient: Symbol("CommerceClient"),
     CommerceRoute: Symbol("CommerceRoute"),
     CommerceLookupsAddressTypesBatchClient: Symbol("CommerceLookupsAddressTypesBatchClient"),
@@ -19610,6 +20137,10 @@ var TYPES = {
     CommerceLookupsInvoiceStatusRoute: Symbol("CommerceLookupsInvoiceStatusRoute"),
     CommerceLookupsInvoiceStatusBatchClient: Symbol("CommerceLookupsInvoiceStatusBatchClient"),
     CommerceLookupsInvoiceStatusClient: Symbol("CommerceLookupsInvoiceStatusClient"),
+    CommerceLookupsCouponTypeBatchRoute: Symbol("CommerceLookupsCouponTypeBatchRoute"),
+    CommerceLookupsCouponTypeRoute: Symbol("CommerceLookupsCouponTypeRoute"),
+    CommerceLookupsCouponTypesBatchClient: Symbol("CommerceLookupsCouponTypesBatchClient"),
+    CommerceLookupsCouponTypesClient: Symbol("CommerceLookupsCouponTypesClient"),
     Lookups: Symbol("Lookups")
 };
 exports.TYPES = TYPES;
@@ -19634,6 +20165,10 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.CommerceProductFilesRoute).to(_1.CommerceProductFilesRoute);
     bind(TYPES.CommerceProductSettingsClient).to(_1.CommerceProductSettingsClient);
     bind(TYPES.CommerceProductSettingsRoute).to(_1.CommerceProductSettingsRoute);
+    bind(TYPES.CommerceCouponClient).to(_1.CommerceCouponClient);
+    bind(TYPES.CommerceCouponRoute).to(_1.CommerceCouponRoute);
+    bind(TYPES.CommerceCouponUseClient).to(_1.CommerceCouponUseClient);
+    bind(TYPES.CommerceCouponUseRoute).to(_1.CommerceCouponUseRoute);
     bind(TYPES.CommerceRoute).to(_1.CommerceRoute);
     bind(TYPES.CommerceClient).to(_1.CommerceClient);
     bind(TYPES.CommerceLookupsAddressTypeBatchRoute).to(_1.CommerceLookupsAddressTypeBatchRoute);
@@ -19668,13 +20203,17 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.CommerceLookupsInvoiceStatusRoute).to(_1.CommerceLookupsInvoiceStatusRoute);
     bind(TYPES.CommerceLookupsInvoiceStatusBatchClient).to(_1.CommerceLookupsInvoiceStatusBatchClient);
     bind(TYPES.CommerceLookupsInvoiceStatusClient).to(_1.CommerceLookupsInvoiceStatusClient);
+    bind(TYPES.CommerceLookupsCouponTypeBatchRoute).to(_1.CommerceLookupsCouponTypeBatchRoute);
+    bind(TYPES.CommerceLookupsCouponTypeRoute).to(_1.CommerceLookupsCouponTypeRoute);
+    bind(TYPES.CommerceLookupsCouponTypesBatchClient).to(_1.CommerceLookupsCouponTypesBatchClient);
+    bind(TYPES.CommerceLookupsCouponTypesClient).to(_1.CommerceLookupsCouponTypesClient);
     bind(TYPES.Lookups).to(_1.Lookups);
 });
 exports.diModule = diModule;
 
 
 /***/ }),
-/* 305 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19796,7 +20335,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 306 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19896,7 +20435,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 307 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19980,7 +20519,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 308 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20038,7 +20577,7 @@ var _a;
 
 
 /***/ }),
-/* 309 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20046,14 +20585,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(308));
-__export(__webpack_require__(307));
-__export(__webpack_require__(306));
-__export(__webpack_require__(305));
+__export(__webpack_require__(315));
+__export(__webpack_require__(314));
+__export(__webpack_require__(313));
+__export(__webpack_require__(312));
 
 
 /***/ }),
-/* 310 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20148,7 +20687,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 311 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20219,7 +20758,7 @@ var _a;
 
 
 /***/ }),
-/* 312 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20368,7 +20907,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 313 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20472,7 +21011,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 314 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20480,14 +21019,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(311));
-__export(__webpack_require__(310));
-__export(__webpack_require__(313));
-__export(__webpack_require__(312));
+__export(__webpack_require__(318));
+__export(__webpack_require__(317));
+__export(__webpack_require__(320));
+__export(__webpack_require__(319));
 
 
 /***/ }),
-/* 315 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20583,7 +21122,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 316 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20654,7 +21193,7 @@ var _a;
 
 
 /***/ }),
-/* 317 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20805,7 +21344,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 318 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20911,7 +21450,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 319 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20919,14 +21458,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(316));
-__export(__webpack_require__(315));
-__export(__webpack_require__(318));
-__export(__webpack_require__(317));
+__export(__webpack_require__(323));
+__export(__webpack_require__(322));
+__export(__webpack_require__(325));
+__export(__webpack_require__(324));
 
 
 /***/ }),
-/* 320 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21021,7 +21560,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 321 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21092,7 +21631,7 @@ var _a;
 
 
 /***/ }),
-/* 322 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21241,7 +21780,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 323 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21345,7 +21884,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 324 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21353,14 +21892,448 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(321));
-__export(__webpack_require__(320));
-__export(__webpack_require__(323));
-__export(__webpack_require__(322));
+__export(__webpack_require__(328));
+__export(__webpack_require__(327));
+__export(__webpack_require__(330));
+__export(__webpack_require__(329));
 
 
 /***/ }),
-/* 325 */
+/* 332 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsCouponTypeBatchClient
+ * @description  Commerce Lookups Address Type Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsCouponTypesBatchClient` uses `commerceLookupsCouponTypeBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceLookupsCouponTypesBatchClient = (function () {
+    function CommerceLookupsCouponTypesBatchClient(commerceLookupsCouponTypeBatchRoute, apiClient) {
+        this.commerceLookupsCouponTypeBatchRoute = commerceLookupsCouponTypeBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsCouponTypesBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsCouponTypeBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsCouponTypeBatchClient.create([{
+                     name : '<name>',
+                     abrv: '<abbreviation>',
+                     description: '<description>'
+                    }])
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsCouponTypesBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example   commerceLookupsCouponTypeBatchClient.update(commerceCouponTypes)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    CommerceLookupsCouponTypesBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsCouponTypeClient.remove(commerceCouponTypeIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsCouponTypesBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsCouponTypeBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsCouponTypesBatchClient;
+}());
+CommerceLookupsCouponTypesBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCouponTypeBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCouponTypeBatchRoute !== "undefined" && _1.CommerceLookupsCouponTypeBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsCouponTypesBatchClient);
+exports.CommerceLookupsCouponTypesBatchClient = CommerceLookupsCouponTypesBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 333 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsCouponTypeBatchRoute
+ * @description Baasic Commerce Lookups CouponType Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups CouponType Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsCouponTypeBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsCouponTypeBatchRoute, _super);
+    function CommerceLookupsCouponTypeBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/address-types/batch';
+        _this.updateRoute = 'commerce/lookups/address-types/batch';
+        _this.deleteRoute = 'commerce/lookups/address-types/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCouponTypeRoute.create();
+     */
+    CommerceLookupsCouponTypeBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCouponTypeRoute.update();
+     */
+    CommerceLookupsCouponTypeBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCouponTypeRoute.remove();
+     */
+    CommerceLookupsCouponTypeBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsCouponTypeBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsCouponTypeBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsCouponTypeBatchRoute);
+exports.CommerceLookupsCouponTypeBatchRoute = CommerceLookupsCouponTypeBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 334 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsCouponTypeClient
+ * @description  Commerce Lookups Coupon Type Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsCouponTypesClient` uses `commerceLookupsCouponTypeRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceLookupsCouponTypesClient = (function () {
+    function CommerceLookupsCouponTypesClient(commerceLookupsCouponTypeRoute, commerceLookupsCouponTypesBatchClient, apiClient) {
+        this.commerceLookupsCouponTypeRoute = commerceLookupsCouponTypeRoute;
+        this.commerceLookupsCouponTypesBatchClient = commerceLookupsCouponTypesBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsCouponTypesClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsCouponTypeRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceLookupsCouponTypesClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsCouponTypesBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsCouponTypeClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsCouponTypesClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceLookupsCouponTypeClient.get()
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    CommerceLookupsCouponTypesClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsCouponTypeRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceLookupsCouponTypeClient.create({
+                       name : '<name>',
+                       abrv: '<abbreviation>',
+                       description: '<description>'
+                   })
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    CommerceLookupsCouponTypesClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCouponTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCouponType);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCouponType is a resource previously fetched using get action.
+                    commerceCouponType.description = '<description>';
+                    commerceLookupsCouponTypeClient.update(commerceCouponType)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsCouponTypesClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCouponTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCouponType);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCouponType is a resource previously fetched using get action.
+                    commerceLookupsCouponTypeClient.remove(commerceCouponType)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsCouponTypesClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsCouponTypesClient;
+}());
+CommerceLookupsCouponTypesClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCouponTypeRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsCouponTypesBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCouponTypeRoute !== "undefined" && _1.CommerceLookupsCouponTypeRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsCouponTypesBatchClient !== "undefined" && _1.CommerceLookupsCouponTypesBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsCouponTypesClient);
+exports.CommerceLookupsCouponTypesClient = CommerceLookupsCouponTypesClient;
+var _a, _b, _c;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 335 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsCouponTypeRoute
+ * @description Baasic Commerce Lookups CouponType Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups CouponType Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(5);
+var CommerceLookupsCouponTypeRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsCouponTypeRoute, _super);
+    function CommerceLookupsCouponTypeRoute(commerceLookupsCouponTypeBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.commerceLookupsCouponTypeBatchRoute = commerceLookupsCouponTypeBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/coupon-types/{?searchQuery,page,rpp,sort,embed}';
+        _this.getRoute = 'commerce/lookups/coupon-types/{id}/{?embed}';
+        _this.createRoute = 'commerce/lookups/coupon-types';
+        _this.updateRoute = 'commerce/lookups/coupon-types/{id}';
+        _this.deleteRoute = 'commerce/lookups/coupon-types/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsCouponTypeRoute.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsCouponTypeBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce coupon type route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceLookupsCouponTypeRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsCouponTypeRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceLookupsCouponTypeRoute.get(id, options);
+     **/
+    CommerceLookupsCouponTypeRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create commerce coupon type route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsCouponTypeRoute.create();
+     **/
+    CommerceLookupsCouponTypeRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce coupon type route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsCouponTypeRoute.update(data);
+     **/
+    CommerceLookupsCouponTypeRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete commerce coupon type route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsCouponTypeRoute.delete(data);
+     **/
+    CommerceLookupsCouponTypeRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsCouponTypeRoute;
+}(common_1.BaseRoute));
+CommerceLookupsCouponTypeRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCouponTypeBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCouponTypeBatchRoute !== "undefined" && _1.CommerceLookupsCouponTypeBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsCouponTypeRoute);
+exports.CommerceLookupsCouponTypeRoute = CommerceLookupsCouponTypeRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 336 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(333));
+__export(__webpack_require__(332));
+__export(__webpack_require__(335));
+__export(__webpack_require__(334));
+
+
+/***/ }),
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21455,7 +22428,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 326 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21526,7 +22499,7 @@ var _a;
 
 
 /***/ }),
-/* 327 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21675,7 +22648,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 328 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21780,7 +22753,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 329 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21788,24 +22761,24 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(326));
-__export(__webpack_require__(325));
-__export(__webpack_require__(328));
-__export(__webpack_require__(327));
+__export(__webpack_require__(338));
+__export(__webpack_require__(337));
+__export(__webpack_require__(340));
+__export(__webpack_require__(339));
 
 
 /***/ }),
-/* 330 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
 var _1 = __webpack_require__(5);
-var _2 = __webpack_require__(41);
+var _2 = __webpack_require__(40);
 var inversify_1 = __webpack_require__(0);
 var Lookups = (function () {
-    function Lookups(addressTypes, countries, countryStates, paymentMethods, paymentTransactionStatuses, recurringCyclePeriodTypes, subscriptionStatuses, invoiceStatuses) {
+    function Lookups(addressTypes, countries, countryStates, paymentMethods, paymentTransactionStatuses, recurringCyclePeriodTypes, subscriptionStatuses, invoiceStatuses, couponTypes) {
         this.addressTypes = addressTypes;
         this.countries = countries;
         this.countryStates = countryStates;
@@ -21814,6 +22787,7 @@ var Lookups = (function () {
         this.recurringCyclePeriodTypes = recurringCyclePeriodTypes;
         this.subscriptionStatuses = subscriptionStatuses;
         this.invoiceStatuses = invoiceStatuses;
+        this.couponTypes = couponTypes;
     }
     return Lookups;
 }());
@@ -21827,14 +22801,15 @@ Lookups = tslib_1.__decorate([
     tslib_1.__param(5, inversify_1.inject(_1.TYPES.CommerceLookupsRecurringCyclePeriodTypeClient)),
     tslib_1.__param(6, inversify_1.inject(_1.TYPES.CommerceLookupsSubscriptionStatusClient)),
     tslib_1.__param(7, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CommerceLookupsAddressTypesClient !== "undefined" && _2.CommerceLookupsAddressTypesClient) === "function" && _a || Object, typeof (_b = typeof _2.CommerceLookupsCountryClient !== "undefined" && _2.CommerceLookupsCountryClient) === "function" && _b || Object, typeof (_c = typeof _2.CommerceLookupsCountryStateClient !== "undefined" && _2.CommerceLookupsCountryStateClient) === "function" && _c || Object, typeof (_d = typeof _2.CommerceLookupsPaymentMethodClient !== "undefined" && _2.CommerceLookupsPaymentMethodClient) === "function" && _d || Object, typeof (_e = typeof _2.CommerceLookupsPaymentTransactionStatusClient !== "undefined" && _2.CommerceLookupsPaymentTransactionStatusClient) === "function" && _e || Object, typeof (_f = typeof _2.CommerceLookupsRecurringCyclePeriodTypeClient !== "undefined" && _2.CommerceLookupsRecurringCyclePeriodTypeClient) === "function" && _f || Object, typeof (_g = typeof _2.CommerceLookupsSubscriptionStatusClient !== "undefined" && _2.CommerceLookupsSubscriptionStatusClient) === "function" && _g || Object, typeof (_h = typeof _2.CommerceLookupsInvoiceStatusClient !== "undefined" && _2.CommerceLookupsInvoiceStatusClient) === "function" && _h || Object])
+    tslib_1.__param(8, inversify_1.inject(_1.TYPES.CommerceLookupsCouponTypesClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CommerceLookupsAddressTypesClient !== "undefined" && _2.CommerceLookupsAddressTypesClient) === "function" && _a || Object, typeof (_b = typeof _2.CommerceLookupsCountryClient !== "undefined" && _2.CommerceLookupsCountryClient) === "function" && _b || Object, typeof (_c = typeof _2.CommerceLookupsCountryStateClient !== "undefined" && _2.CommerceLookupsCountryStateClient) === "function" && _c || Object, typeof (_d = typeof _2.CommerceLookupsPaymentMethodClient !== "undefined" && _2.CommerceLookupsPaymentMethodClient) === "function" && _d || Object, typeof (_e = typeof _2.CommerceLookupsPaymentTransactionStatusClient !== "undefined" && _2.CommerceLookupsPaymentTransactionStatusClient) === "function" && _e || Object, typeof (_f = typeof _2.CommerceLookupsRecurringCyclePeriodTypeClient !== "undefined" && _2.CommerceLookupsRecurringCyclePeriodTypeClient) === "function" && _f || Object, typeof (_g = typeof _2.CommerceLookupsSubscriptionStatusClient !== "undefined" && _2.CommerceLookupsSubscriptionStatusClient) === "function" && _g || Object, typeof (_h = typeof _2.CommerceLookupsInvoiceStatusClient !== "undefined" && _2.CommerceLookupsInvoiceStatusClient) === "function" && _h || Object, typeof (_j = typeof _2.CommerceLookupsCouponTypesClient !== "undefined" && _2.CommerceLookupsCouponTypesClient) === "function" && _j || Object])
 ], Lookups);
 exports.Lookups = Lookups;
-var _a, _b, _c, _d, _e, _f, _g, _h;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 
 
 /***/ }),
-/* 331 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21930,7 +22905,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 332 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22001,7 +22976,7 @@ var _a;
 
 
 /***/ }),
-/* 333 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22150,7 +23125,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 334 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22255,7 +23230,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 335 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22263,14 +23238,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(332));
-__export(__webpack_require__(331));
-__export(__webpack_require__(334));
-__export(__webpack_require__(333));
+__export(__webpack_require__(344));
+__export(__webpack_require__(343));
+__export(__webpack_require__(346));
+__export(__webpack_require__(345));
 
 
 /***/ }),
-/* 336 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22365,7 +23340,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 337 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22436,7 +23411,7 @@ var _a;
 
 
 /***/ }),
-/* 338 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22585,7 +23560,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 339 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22690,7 +23665,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 340 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22698,14 +23673,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(337));
-__export(__webpack_require__(336));
-__export(__webpack_require__(339));
-__export(__webpack_require__(338));
+__export(__webpack_require__(349));
+__export(__webpack_require__(348));
+__export(__webpack_require__(351));
+__export(__webpack_require__(350));
 
 
 /***/ }),
-/* 341 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22801,7 +23776,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 342 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22872,7 +23847,7 @@ var _a;
 
 
 /***/ }),
-/* 343 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23022,7 +23997,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 344 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23127,7 +24102,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 345 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23135,14 +24110,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(342));
-__export(__webpack_require__(341));
-__export(__webpack_require__(344));
-__export(__webpack_require__(343));
+__export(__webpack_require__(354));
+__export(__webpack_require__(353));
+__export(__webpack_require__(356));
+__export(__webpack_require__(355));
 
 
 /***/ }),
-/* 346 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23237,7 +24212,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 347 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23308,7 +24283,7 @@ var _a;
 
 
 /***/ }),
-/* 348 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23457,7 +24432,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 349 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23562,7 +24537,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 350 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23570,14 +24545,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(347));
-__export(__webpack_require__(346));
-__export(__webpack_require__(349));
-__export(__webpack_require__(348));
+__export(__webpack_require__(359));
+__export(__webpack_require__(358));
+__export(__webpack_require__(361));
+__export(__webpack_require__(360));
 
 
 /***/ }),
-/* 351 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23713,7 +24688,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 352 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23814,7 +24789,7 @@ var _a;
 
 
 /***/ }),
-/* 353 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23822,12 +24797,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(352));
-__export(__webpack_require__(351));
+__export(__webpack_require__(364));
+__export(__webpack_require__(363));
 
 
 /***/ }),
-/* 354 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23930,7 +24905,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 355 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23998,7 +24973,7 @@ var _a;
 
 
 /***/ }),
-/* 356 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24164,7 +25139,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 357 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24282,7 +25257,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 358 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24436,7 +25411,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 359 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24516,7 +25491,7 @@ var _a;
 
 
 /***/ }),
-/* 360 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24608,7 +25583,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 361 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24672,7 +25647,7 @@ var _a;
 
 
 /***/ }),
-/* 362 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24769,7 +25744,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 363 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24842,7 +25817,7 @@ var _a;
 
 
 /***/ }),
-/* 364 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25027,7 +26002,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 365 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25165,7 +26140,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 366 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25173,14 +26148,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(363));
-__export(__webpack_require__(362));
-__export(__webpack_require__(365));
-__export(__webpack_require__(364));
+__export(__webpack_require__(375));
+__export(__webpack_require__(374));
+__export(__webpack_require__(377));
+__export(__webpack_require__(376));
 
 
 /***/ }),
-/* 367 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25188,19 +26163,19 @@ __export(__webpack_require__(364));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(359));
-__export(__webpack_require__(358));
-__export(__webpack_require__(355));
-__export(__webpack_require__(354));
-__export(__webpack_require__(357));
-__export(__webpack_require__(356));
-__export(__webpack_require__(361));
-__export(__webpack_require__(360));
+__export(__webpack_require__(371));
+__export(__webpack_require__(370));
+__export(__webpack_require__(367));
 __export(__webpack_require__(366));
+__export(__webpack_require__(369));
+__export(__webpack_require__(368));
+__export(__webpack_require__(373));
+__export(__webpack_require__(372));
+__export(__webpack_require__(378));
 
 
 /***/ }),
-/* 368 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25346,7 +26321,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 369 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25442,7 +26417,7 @@ var _a;
 
 
 /***/ }),
-/* 370 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25450,12 +26425,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(369));
-__export(__webpack_require__(368));
+__export(__webpack_require__(381));
+__export(__webpack_require__(380));
 
 
 /***/ }),
-/* 371 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25464,7 +26439,7 @@ __export(__webpack_require__(368));
 
 
 /***/ }),
-/* 372 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25472,16 +26447,7 @@ __export(__webpack_require__(368));
 
 
 /***/ }),
-/* 373 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 374 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25490,7 +26456,16 @@ __export(__webpack_require__(368));
 
 
 /***/ }),
-/* 375 */
+/* 386 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25498,21 +26473,21 @@ __export(__webpack_require__(368));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(373));
-__export(__webpack_require__(374));
-__export(__webpack_require__(372));
-__export(__webpack_require__(371));
+__export(__webpack_require__(385));
+__export(__webpack_require__(386));
+__export(__webpack_require__(384));
+__export(__webpack_require__(383));
 
 
 /***/ }),
-/* 376 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(22);
 var TYPES = {
     DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
     DynamicResourceACLRoute: Symbol("DynamicResourceACLRoute"),
@@ -25534,7 +26509,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 377 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25547,7 +26522,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(22);
 var DynamicResourceACLClient = (function () {
     function DynamicResourceACLClient(dynamicResourceACLRoute, apiClient) {
         this.dynamicResourceACLRoute = dynamicResourceACLRoute;
@@ -25655,7 +26630,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 378 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25759,7 +26734,7 @@ var _a;
 
 
 /***/ }),
-/* 379 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25772,7 +26747,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(22);
 var DynamicResourceClient = (function () {
     function DynamicResourceClient(dynamicResourceRoute, dynamicResourceACLClient, dynamicSchemaClient, apiClient) {
         this.dynamicResourceRoute = dynamicResourceRoute;
@@ -25949,7 +26924,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 380 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25962,7 +26937,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(22);
 var contracts_1 = __webpack_require__(3);
 var DynamicResourceRoute = (function (_super) {
     tslib_1.__extends(DynamicResourceRoute, _super);
@@ -26057,7 +27032,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 381 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26070,7 +27045,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(22);
 var DynamicSchemaClient = (function () {
     function DynamicSchemaClient(dynamicSchemaRoute, apiClient) {
         this.dynamicSchemaRoute = dynamicSchemaRoute;
@@ -26236,7 +27211,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 382 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26337,7 +27312,7 @@ var _a;
 
 
 /***/ }),
-/* 383 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26346,7 +27321,7 @@ var _a;
 
 
 /***/ }),
-/* 384 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26355,7 +27330,7 @@ var _a;
 
 
 /***/ }),
-/* 385 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26363,7 +27338,7 @@ var _a;
 
 
 /***/ }),
-/* 386 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26372,7 +27347,7 @@ var _a;
 
 
 /***/ }),
-/* 387 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26380,14 +27355,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(383));
-__export(__webpack_require__(386));
-__export(__webpack_require__(385));
-__export(__webpack_require__(384));
+__export(__webpack_require__(395));
+__export(__webpack_require__(398));
+__export(__webpack_require__(397));
+__export(__webpack_require__(396));
 
 
 /***/ }),
-/* 388 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26420,7 +27395,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 389 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26537,7 +27512,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 390 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26650,7 +27625,7 @@ var _a;
 
 
 /***/ }),
-/* 391 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26753,7 +27728,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 392 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26820,7 +27795,7 @@ var _a;
 
 
 /***/ }),
-/* 393 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26999,7 +27974,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 394 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27105,7 +28080,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 395 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27245,7 +28220,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 396 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27331,7 +28306,7 @@ var _a;
 
 
 /***/ }),
-/* 397 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27340,7 +28315,7 @@ var _a;
 
 
 /***/ }),
-/* 398 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27348,18 +28323,18 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(397));
+__export(__webpack_require__(409));
 
 
 /***/ }),
-/* 399 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(31);
+var _1 = __webpack_require__(30);
 var TYPES = {
     KeyValueClient: Symbol("KeyValueClient"),
     KeyValueRoute: Symbol("KeyValueRoute")
@@ -27373,7 +28348,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 400 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27386,7 +28361,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(31);
+var _1 = __webpack_require__(30);
 var KeyValueClient = (function () {
     function KeyValueClient(keyValueRoute, apiClient) {
         this.keyValueRoute = keyValueRoute;
@@ -27524,7 +28499,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 401 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27623,7 +28598,7 @@ var _a;
 
 
 /***/ }),
-/* 402 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27717,7 +28692,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 403 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27784,7 +28759,7 @@ var _a;
 
 
 /***/ }),
-/* 404 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27974,7 +28949,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 405 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28068,7 +29043,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 406 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28135,7 +29110,7 @@ var _a;
 
 
 /***/ }),
-/* 407 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28290,7 +29265,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 408 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28400,7 +29375,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 409 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28521,7 +29496,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 410 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28603,7 +29578,7 @@ var _a;
 
 
 /***/ }),
-/* 411 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28731,7 +29706,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 412 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28808,7 +29783,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 413 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28866,7 +29841,7 @@ var _a;
 
 
 /***/ }),
-/* 414 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28874,7 +29849,7 @@ var _a;
 
 
 /***/ }),
-/* 415 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28882,7 +29857,7 @@ var _a;
 
 
 /***/ }),
-/* 416 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28890,7 +29865,7 @@ var _a;
 
 
 /***/ }),
-/* 417 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28898,7 +29873,7 @@ var _a;
 
 
 /***/ }),
-/* 418 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28906,7 +29881,7 @@ var _a;
 
 
 /***/ }),
-/* 419 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28914,7 +29889,7 @@ var _a;
 
 
 /***/ }),
-/* 420 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28922,7 +29897,7 @@ var _a;
 
 
 /***/ }),
-/* 421 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28930,17 +29905,17 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(417));
-__export(__webpack_require__(420));
-__export(__webpack_require__(419));
-__export(__webpack_require__(418));
-__export(__webpack_require__(415));
-__export(__webpack_require__(416));
-__export(__webpack_require__(414));
+__export(__webpack_require__(429));
+__export(__webpack_require__(432));
+__export(__webpack_require__(431));
+__export(__webpack_require__(430));
+__export(__webpack_require__(427));
+__export(__webpack_require__(428));
+__export(__webpack_require__(426));
 
 
 /***/ }),
-/* 422 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28993,7 +29968,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 423 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29090,7 +30065,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 424 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29163,7 +30138,7 @@ var _a;
 
 
 /***/ }),
-/* 425 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29254,7 +30229,7 @@ var MediaGalleryInstanceFilesClient = (function () {
      * @param options
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example // fileEntry is a file resource previously fetched using get action. The following action will unlink the original file resource and all accompanying derived file resources.
-                    mediaGalleryInstanceFilesRoute.unlink(fileEntry)
+                    mediaGalleryInstanceFilesRoute.unlink(galleryId, fileEntry)
                         .then(function (data) {
                             // perform success action here
                         },
@@ -29262,8 +30237,8 @@ var MediaGalleryInstanceFilesClient = (function () {
                             // perform error handling here
                         });
      **/
-    MediaGalleryInstanceFilesClient.prototype.unlink = function (mediaGalleryId, data, options) {
-        return this.apiClient.delete(this.mediaGalleryInstanceFilesRoute.unlink(mediaGalleryId, data, options));
+    MediaGalleryInstanceFilesClient.prototype.unlink = function (mediaGalleryId, data) {
+        return this.apiClient.delete(this.mediaGalleryInstanceFilesRoute.unlink(mediaGalleryId, data));
     };
     /**
      * Returns a promise that is resolved once the unlink by media gallery action has been performed. This action will remove all file resources from the system related to the requested media gallery if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryService route template. Here is an example of how a route can be obtained from HAL enabled objects:
@@ -29348,7 +30323,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 426 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29434,16 +30409,11 @@ var MediaGalleryInstanceFilesRoute = (function (_super) {
      * @method
      * @param mediaGalleryId Media Gallery id which uniquely identifies gallery whose gallery files need to be deleted.
      * @param data
-     * @param options
-     * @example mediaGalleryFilesRoute.unlink(data);
+     * @example mediaGalleryFilesRoute.unlink(mediaGalleryId,data);
      **/
-    MediaGalleryInstanceFilesRoute.prototype.unlink = function (mediaGalleryId, data, options) {
-        if (!options) {
-            options = {};
-        }
-        var params = this.modelMapper.removeParams(data);
-        params.mediaGalleryId = mediaGalleryId;
-        return _super.prototype.baseDelete.call(this, this.unlinkRoute, params, options, 'unlink');
+    MediaGalleryInstanceFilesRoute.prototype.unlink = function (mediaGalleryId, data) {
+        data.mediaGalleryId = mediaGalleryId;
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, data);
     };
     /**
      * Parses unlink by media gallery route; this URI template does not expose any additional options.
@@ -29486,7 +30456,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 427 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29494,14 +30464,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(424));
-__export(__webpack_require__(423));
-__export(__webpack_require__(426));
-__export(__webpack_require__(425));
+__export(__webpack_require__(436));
+__export(__webpack_require__(435));
+__export(__webpack_require__(438));
+__export(__webpack_require__(437));
 
 
 /***/ }),
-/* 428 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29529,7 +30499,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 429 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29615,7 +30585,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 430 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29673,7 +30643,7 @@ var _a;
 
 
 /***/ }),
-/* 431 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29845,7 +30815,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 432 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29952,7 +30922,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 433 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30026,7 +30996,7 @@ var _a;
 
 
 /***/ }),
-/* 434 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30151,7 +31121,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 435 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30228,7 +31198,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 436 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30286,7 +31256,7 @@ var _a;
 
 
 /***/ }),
-/* 437 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30424,7 +31394,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 438 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30510,7 +31480,7 @@ var _a;
 
 
 /***/ }),
-/* 439 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30519,7 +31489,7 @@ var _a;
 
 
 /***/ }),
-/* 440 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30527,16 +31497,7 @@ var _a;
 
 
 /***/ }),
-/* 441 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 442 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30545,7 +31506,16 @@ var _a;
 
 
 /***/ }),
-/* 443 */
+/* 454 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30553,14 +31523,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(440));
-__export(__webpack_require__(439));
-__export(__webpack_require__(441));
-__export(__webpack_require__(442));
+__export(__webpack_require__(452));
+__export(__webpack_require__(451));
+__export(__webpack_require__(453));
+__export(__webpack_require__(454));
 
 
 /***/ }),
-/* 444 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30597,115 +31567,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 445 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 446 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 447 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 448 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 449 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 450 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 451 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 452 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 453 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 454 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 455 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 456 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -30714,7 +31580,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -30723,6 +31588,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -30731,6 +31597,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -30756,7 +31623,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -30774,33 +31640,137 @@ exports.diModule = diModule;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(455));
-__export(__webpack_require__(456));
-__export(__webpack_require__(454));
-__export(__webpack_require__(460));
-__export(__webpack_require__(461));
-__export(__webpack_require__(448));
-__export(__webpack_require__(453));
-__export(__webpack_require__(452));
-__export(__webpack_require__(464));
-__export(__webpack_require__(459));
-__export(__webpack_require__(462));
-__export(__webpack_require__(445));
-__export(__webpack_require__(446));
-__export(__webpack_require__(447));
-__export(__webpack_require__(457));
-__export(__webpack_require__(458));
-__export(__webpack_require__(450));
-__export(__webpack_require__(451));
-__export(__webpack_require__(463));
-__export(__webpack_require__(449));
+;
 
 
 /***/ }),
 /* 466 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 467 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 468 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 469 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 470 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 471 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 472 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 473 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 474 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 475 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 476 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 477 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(467));
+__export(__webpack_require__(468));
+__export(__webpack_require__(466));
+__export(__webpack_require__(472));
+__export(__webpack_require__(473));
+__export(__webpack_require__(460));
+__export(__webpack_require__(465));
+__export(__webpack_require__(464));
+__export(__webpack_require__(476));
+__export(__webpack_require__(471));
+__export(__webpack_require__(474));
+__export(__webpack_require__(457));
+__export(__webpack_require__(458));
+__export(__webpack_require__(459));
+__export(__webpack_require__(469));
+__export(__webpack_require__(470));
+__export(__webpack_require__(462));
+__export(__webpack_require__(463));
+__export(__webpack_require__(475));
+__export(__webpack_require__(461));
+
+
+/***/ }),
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30859,7 +31829,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 467 */
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31013,7 +31983,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 468 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31066,7 +32036,7 @@ var _a;
 
 
 /***/ }),
-/* 469 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31206,7 +32176,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 470 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31272,7 +32242,7 @@ var _a;
 
 
 /***/ }),
-/* 471 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31361,7 +32331,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 472 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31414,7 +32384,7 @@ var _a;
 
 
 /***/ }),
-/* 473 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31504,7 +32474,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 474 */
+/* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31556,7 +32526,7 @@ var _a;
 
 
 /***/ }),
-/* 475 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31896,7 +32866,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 476 */
+/* 488 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32060,7 +33030,7 @@ var _a;
 
 
 /***/ }),
-/* 477 */
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32168,7 +33138,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 478 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32233,7 +33203,7 @@ var _a;
 
 
 /***/ }),
-/* 479 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32345,7 +33315,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 480 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32424,7 +33394,7 @@ var _a;
 
 
 /***/ }),
-/* 481 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32588,7 +33558,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 482 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32712,7 +33682,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 483 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32750,7 +33720,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
-/* 484 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33036,7 +34006,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 485 */
+/* 497 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33197,7 +34167,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 486 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33281,7 +34251,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 487 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33365,7 +34335,7 @@ var _a;
 
 
 /***/ }),
-/* 488 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33374,7 +34344,7 @@ var _a;
 
 
 /***/ }),
-/* 489 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33383,7 +34353,7 @@ var _a;
 
 
 /***/ }),
-/* 490 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33392,7 +34362,7 @@ var _a;
 
 
 /***/ }),
-/* 491 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33400,13 +34370,13 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(488));
-__export(__webpack_require__(489));
-__export(__webpack_require__(490));
+__export(__webpack_require__(500));
+__export(__webpack_require__(501));
+__export(__webpack_require__(502));
 
 
 /***/ }),
-/* 492 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33451,7 +34421,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 493 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33582,7 +34552,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 494 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33706,7 +34676,7 @@ var _a;
 
 
 /***/ }),
-/* 495 */
+/* 507 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33808,7 +34778,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 496 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33879,7 +34849,7 @@ var _a;
 
 
 /***/ }),
-/* 497 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33958,7 +34928,7 @@ var MeteringCategoryBatchClient = (function () {
                     });
      **/
     MeteringCategoryBatchClient.prototype.delete = function (ids) {
-        return this.apiClient.delete(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(ids));
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(ids));
     };
     return MeteringCategoryBatchClient;
 }());
@@ -33982,7 +34952,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 498 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34052,7 +35022,7 @@ var _a;
 
 
 /***/ }),
-/* 499 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34214,7 +35184,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 500 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34322,7 +35292,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 501 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34533,7 +35503,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 502 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34678,7 +35648,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 503 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34763,7 +35733,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 504 */
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34826,7 +35796,7 @@ var _a;
 
 
 /***/ }),
-/* 505 */
+/* 517 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34905,7 +35875,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 506 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34973,7 +35943,7 @@ var _a;
 
 
 /***/ }),
-/* 507 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34982,7 +35952,7 @@ var _a;
 
 
 /***/ }),
-/* 508 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34991,7 +35961,7 @@ var _a;
 
 
 /***/ }),
-/* 509 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35000,7 +35970,7 @@ var _a;
 
 
 /***/ }),
-/* 510 */
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35009,7 +35979,7 @@ var _a;
 
 
 /***/ }),
-/* 511 */
+/* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35018,7 +35988,7 @@ var _a;
 
 
 /***/ }),
-/* 512 */
+/* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35027,7 +35997,7 @@ var _a;
 
 
 /***/ }),
-/* 513 */
+/* 525 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35035,16 +36005,16 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(509));
-__export(__webpack_require__(510));
-__export(__webpack_require__(512));
-__export(__webpack_require__(507));
-__export(__webpack_require__(508));
-__export(__webpack_require__(511));
+__export(__webpack_require__(521));
+__export(__webpack_require__(522));
+__export(__webpack_require__(524));
+__export(__webpack_require__(519));
+__export(__webpack_require__(520));
+__export(__webpack_require__(523));
 
 
 /***/ }),
-/* 514 */
+/* 526 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35117,7 +36087,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 515 */
+/* 527 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35195,7 +36165,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 516 */
+/* 528 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35264,7 +36234,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 517 */
+/* 529 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35313,7 +36283,7 @@ var _a;
 
 
 /***/ }),
-/* 518 */
+/* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35391,7 +36361,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 519 */
+/* 531 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35446,7 +36416,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 520 */
+/* 532 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35544,7 +36514,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 521 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35610,7 +36580,7 @@ var _a;
 
 
 /***/ }),
-/* 522 */
+/* 534 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35769,7 +36739,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 523 */
+/* 535 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35879,7 +36849,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 524 */
+/* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35939,7 +36909,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 525 */
+/* 537 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35998,7 +36968,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 526 */
+/* 538 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36096,7 +37066,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 527 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36164,7 +37134,7 @@ var _a;
 
 
 /***/ }),
-/* 528 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36322,7 +37292,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 529 */
+/* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36430,7 +37400,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 530 */
+/* 542 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36507,7 +37477,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 531 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36589,7 +37559,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 532 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36649,7 +37619,7 @@ var _a;
 
 
 /***/ }),
-/* 533 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36746,7 +37716,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 534 */
+/* 546 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36814,7 +37784,7 @@ var _a;
 
 
 /***/ }),
-/* 535 */
+/* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36973,7 +37943,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 536 */
+/* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37084,7 +38054,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 537 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37144,7 +38114,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 538 */
+/* 550 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37203,7 +38173,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 539 */
+/* 551 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37300,7 +38270,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 540 */
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37368,7 +38338,7 @@ var _a;
 
 
 /***/ }),
-/* 541 */
+/* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37526,7 +38496,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 542 */
+/* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37629,608 +38599,12 @@ var _a, _b;
 
 
 /***/ }),
-/* 543 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module shoppingCartItemsBatchClient
- * @description  Shopping Cart Item Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Shopping Cart Item Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
-var ShoppingCartItemBatchClient = (function () {
-    function ShoppingCartItemBatchClient(shoppingCartItemBatchRoute, apiClient) {
-        this.shoppingCartItemBatchRoute = shoppingCartItemBatchRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(ShoppingCartItemBatchClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.shoppingCartItemBatchRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the update action has been performed; this action updates specified shopping cart item resources.
-     * @method
-     * @param data A collection of shopping cart item objects used to update specified shopping cart item resources.
-     * @returns A promise that is resolved once the update action has been performed.
-     * @example shoppingCartItemsBatchClient.update(files)
-                   .then(function (data) {
-                       // perform success action here
-                   },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                   });
-    **/
-    ShoppingCartItemBatchClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove shopping cart item resources from the system if successfully completed. Specified shopping cart items and all accompanying derived resources will be removed from the system.
-     * @method
-     * @param ids Collection of shopping cart item Id which uniquely identifies shopping cart item resources that need to be deleted.
-     * @example // Remove original shopping cart item resources
-                        shoppingCartItemsBatchClient.remove([<shopping-cart-item-id>])
-                            .then(function (data) {
-                                // perform success action here
-                            },
-                             function (response, status, headers, config) {
-                                 // perform error handling here
-                            });
-     **/
-    ShoppingCartItemBatchClient.prototype.remove = function (ids) {
-        return this.apiClient.delete(this.shoppingCartItemBatchRoute.delete(), undefined, ids);
-    };
-    /**
-    * Returns a promise that is resolved once the create action has been performed; this action creates specified shopping cart item resources.
-    * @method
-    * @param data A collection of shopping cart item objects used to create specified shopping cart item resources.
-    * @returns A promise that is resolved once the create action has been performed.
-    * @example shoppingCartItemsBatchClient.create(files)
-                  .then(function (data) {
-                      // perform success action here
-                  },
-                   function (response, status, headers, config) {
-                       // perform error handling here
-                  });
-   **/
-    ShoppingCartItemBatchClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
-    };
-    return ShoppingCartItemBatchClient;
-}());
-ShoppingCartItemBatchClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ShoppingCartItemBatchRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ShoppingCartItemBatchRoute !== "undefined" && _1.ShoppingCartItemBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
-], ShoppingCartItemBatchClient);
-exports.ShoppingCartItemBatchClient = ShoppingCartItemBatchClient;
-var _a, _b;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 544 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module shoppingCartItemBatchRoute
- * @description Baasic Shopping Cart Item Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Shopping Cart Item Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
-var ShoppingCartItemBatchRoute = (function (_super) {
-    tslib_1.__extends(ShoppingCartItemBatchRoute, _super);
-    function ShoppingCartItemBatchRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.updateRoute = 'commerce/carts/items/batch';
-        _this.deleteRoute = 'commerce/carts/items/batch';
-        _this.createRoute = 'commerce/carts/items/batch';
-        return _this;
-    }
-    /**
-     * Parses update route; this URI template does not expose any additional options.
-     * @method
-     * @example shoppingCartItemBatchRoute.update();
-     **/
-    ShoppingCartItemBatchRoute.prototype.update = function () {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
-    };
-    /**
-     * Parses create route; this URI template does not expose any additional options.
-     * @method
-     * @example shoppingCartItemBatchRoute.create();
-     **/
-    ShoppingCartItemBatchRoute.prototype.create = function () {
-        return _super.prototype.baseCreate.call(this, this.createRoute, {});
-    };
-    /**
-     * Parses remove route; this URI template does not expose any additional options.
-     * @method
-     * @example shoppingCartItemBatchRoute.delete();
-     **/
-    ShoppingCartItemBatchRoute.prototype.delete = function () {
-        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
-    };
-    return ShoppingCartItemBatchRoute;
-}(common_1.BaseRoute));
-ShoppingCartItemBatchRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], ShoppingCartItemBatchRoute);
-exports.ShoppingCartItemBatchRoute = ShoppingCartItemBatchRoute;
-var _a;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 545 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module shoppingCartClient
- * @description Shopping Cart Item Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicShopping Cart Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
-var ShoppingCartItemClient = (function () {
-    function ShoppingCartItemClient(shoppingCartItemRoute, apiClient, shoppingCartItemBatchClient) {
-        this.shoppingCartItemRoute = shoppingCartItemRoute;
-        this.apiClient = apiClient;
-        this.shoppingCartItemBatchClient = shoppingCartItemBatchClient;
-    }
-    Object.defineProperty(ShoppingCartItemClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.shoppingCartItemRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ShoppingCartItemClient.prototype, "batch", {
-        get: function () {
-            return this.shoppingCartItemBatchClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove one shopping cart item resources from the system if successfully completed. Specified shopping cart item and all accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicShoppingCartItemRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.removeParams(shoppingCartItem);
-     * let uri = params['id'].links('delete').href;
-     * ```
-     * @method
-     * @param id Shopping Cart Item id used to delete specific Shopping Cart Item resource from the system.
-     * @example // id is a shopping cart item resource id previously fetched using get action. The following action will remove the original shopping cart item resource and all accompanying derived shopping cart item resources.
-                   shoppingCartClient.remove(id)
-                       .then(function (data) {
-                           // perform success action here
-                       },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                       });
-    **/
-    ShoppingCartItemClient.prototype.remove = function (id) {
-        return this.apiClient.delete(this.routeDefinition.delete(id));
-    };
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove one shopping cart item resources from the system if successfully completed. Specified shopping cart item and all accompanying derived resources will be removed from the system.
-     *
-     * @method
-     * @param userId User Id from the User that the Shopping Cart Item resource from the system belongs to.
-     * @param productId Product id from the Product that the Shopping Cart Item contains.
-     * @example // The following action will remove the original shopping cart item resource and all accompanying derived shopping cart item resources.
-                   shoppingCartClient.removeByUserIdAndProductId(userId, productId)
-                       .then(function (data) {
-                           // perform success action here
-                       },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                       });
-    **/
-    ShoppingCartItemClient.prototype.removeByUserIdAndProductId = function (userId, productId) {
-        return this.apiClient.delete(this.routeDefinition.deleteByUserIdAndProductId(userId, productId));
-    };
-    /**
-     * Returns a promise that is resolved once the create shopping cart item action has been performed; this action creates a new shopping cart item.
-     * @method
-     * @param data Shopping Cart Item object.
-     * @returns A promise that is resolved once the create shopping cart item action has been performed.
-     * @example shoppingCartClient.create(shoppingCartItem)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    ShoppingCartItemClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the create shopping cart item action has been performed; this action creates a new shopping cart item.
-     * @method
-     * @param data Shopping Cart Item object.
-     * @returns A promise that is resolved once the create shopping cart item action has been performed.
-     * @example shoppingCartClient.createByUserIdAndProductId(shoppingCartItem)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    ShoppingCartItemClient.prototype.createByUserIdAndProductId = function (userId, productId, string, data) {
-        data.userId = userId;
-        data.productId = productId;
-        return this.apiClient.post(this.routeDefinition.createByUserIdAndProductId(data), this.routeDefinition.createParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the purge action has been performed. This action will remove all shopping cart item resources from the system if successfully completed.
-     * @method
-     * @example // Remove original shopping cart item resources
-                        shoppingCartClient.purge()
-                            .then(function (data) {
-                                // perform success action here
-                            },
-                             function (response, status, headers, config) {
-                                 // perform error handling here
-                            });
-     **/
-    ShoppingCartItemClient.prototype.purge = function () {
-        return this.apiClient.delete(this.routeDefinition.purge());
-    };
-    return ShoppingCartItemClient;
-}());
-ShoppingCartItemClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ShoppingCartItemRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__param(2, inversify_1.inject(_1.TYPES.ShoppingCartItemBatchClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ShoppingCartItemRoute !== "undefined" && _1.ShoppingCartItemRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.ShoppingCartItemBatchClient !== "undefined" && _1.ShoppingCartItemBatchClient) === "function" && _c || Object])
-], ShoppingCartItemClient);
-exports.ShoppingCartItemClient = ShoppingCartItemClient;
-var _a, _b, _c;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 546 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module ShoppingCartItemRoute
- * @description Baasic Shopping Cart Item Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicShopping Cart Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-;
-var _1 = __webpack_require__(22);
-var contracts_1 = __webpack_require__(3);
-var ShoppingCartItemRoute = (function (_super) {
-    tslib_1.__extends(ShoppingCartItemRoute, _super);
-    function ShoppingCartItemRoute(appOptions, shoppingCartItemBatchRoute) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.shoppingCartItemBatchRoute = shoppingCartItemBatchRoute;
-        _this.findRoute = 'commerce/carts/items/{?searchQuery,userId,ids,from,to,page,rpp,sort,embed,fields}';
-        _this.findByUserIdRoute = 'commerce/carts/users/{userId}/products/{?page,rpp,sort,embed,fields}';
-        _this.getRoute = 'commerce/carts/items/{id}/{?embed,fields}';
-        _this.getbyUserIdAndProductIdRoute = 'commerce/carts/users/{userId}/products/{productId}/{?embed,fields}';
-        _this.updateRoute = 'commerce/carts/items/{id}';
-        _this.updateByUserIdAndProductIdRoute = 'commerce/carts/users/{userId}/products/{productId}';
-        _this.deleteRoute = 'commerce/carts/items/{id}';
-        _this.deleteByUserIdAndProductIdRoute = 'commerce/carts/users/{userId}/products/{productId}';
-        _this.createRoute = 'commerce/carts/items';
-        _this.createByUserIdAndProductIdRoute = 'commerce/carts/users/{userId}/products/{productId}';
-        _this.purgeRoute = 'commerce/carts/purge';
-        return _this;
-    }
-    Object.defineProperty(ShoppingCartItemRoute.prototype, "batch", {
-        get: function () {
-            return this.shoppingCartItemBatchRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Parses delete route; this route should be expanded with the Id of shopping cart item resource.
-     * @method
-     * @param id Shopping Cart Id of specific Shopping Cart item resource in the system.
-     * @example shoppingCartItemRoute.delete(<id>);
-     **/
-    ShoppingCartItemRoute.prototype.delete = function (id) {
-        return _super.prototype.baseDelete.call(this, this.deleteRoute, id);
-    };
-    /**
-     * Parses delete route; this route should be expanded with the Id of shopping cart item resource.
-     * @method
-     * @param userId User Id of the User resource that the Shopping Cart resource in the system bellongs to.
-     * @param productId Product Id of the Product resource that the Shopping Cart resource in the system is linked to.
-     * @example shoppingCartItemRoute.delete(<user-id>, <product-id>);
-     **/
-    ShoppingCartItemRoute.prototype.deleteByUserIdAndProductId = function (userId, productId) {
-        var data = {
-            userId: userId,
-            productId: productId
-        };
-        return _super.prototype.baseDelete.call(this, this.deleteByUserIdAndProductIdRoute, data);
-    };
-    /**
-    * Parses create route; this URI template doesnt support any additional options.
-    * @method
-    * @example shoppingCartItemRoute.create();
-    **/
-    ShoppingCartItemRoute.prototype.create = function () {
-        return _super.prototype.baseCreate.call(this, this.createRoute, {});
-    };
-    /**
-    * Parses create route; this URI template doesnt support any additional options.
-    * @method
-    * @param data An shopping cart item  object that needs to be inserted into the system.
-    * @example shoppingCartItemRoute.create(data);
-    **/
-    ShoppingCartItemRoute.prototype.createByUserIdAndProductId = function (data) {
-        return _super.prototype.baseCreate.call(this, this.createByUserIdAndProductIdRoute, data);
-    };
-    /**
-     * Parses purge route; this URI template does not expose any additional options.
-     * @method
-     * @example shoppingCartItemRoute.purge();
-     **/
-    ShoppingCartItemRoute.prototype.purge = function () {
-        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
-    };
-    return ShoppingCartItemRoute;
-}(common_1.BaseRoute));
-ShoppingCartItemRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ShoppingCartItemBatchRoute)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.ShoppingCartItemBatchRoute !== "undefined" && _1.ShoppingCartItemBatchRoute) === "function" && _b || Object])
-], ShoppingCartItemRoute);
-exports.ShoppingCartItemRoute = ShoppingCartItemRoute;
-var _a, _b;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 547 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module shoppingCartPaymentClient
- * @description  Shopping Cart Payment Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Shopping Cart Payment Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
-var ShoppingCartPaymentClient = (function () {
-    function ShoppingCartPaymentClient(shoppingCartPaymentRoute, apiClient) {
-        this.shoppingCartPaymentRoute = shoppingCartPaymentRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(ShoppingCartPaymentClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.shoppingCartPaymentRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the calculateSummary action has been performed; this action calculateSummarys specified shopping cart item resources.
-     * @method
-     * @param data A collection of shopping cart item objects used to calculateSummary specified shopping cart item resources.
-     * @returns A promise that is resolved once the calculateSummary action has been performed.
-     * @example shoppingCartPaymentClient.calculateSummary(file)
-                   .then(function (data) {
-                       // perform success action here
-                   },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                   });
-    **/
-    ShoppingCartPaymentClient.prototype.calculateSummary = function (data) {
-        return this.apiClient.post(this.routeDefinition.calculateSummary(data), this.routeDefinition.createParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the processCart action has been performed. This action will processCart shopping cart item resources from the system if successfully completed. Specified shopping cart items and all accompanying derived resources will be processCartd from the system.
-     * @method
-     * @param ids Collection of shopping cart item Id which uniquely identifies shopping cart item resources that need to be deleted.
-     * @example // Remove original shopping cart item resources
-                        shoppingCartPaymentClient.processCart(cartPaymentRequest)
-                            .then(function (data) {
-                                // perform success action here
-                            },
-                             function (response, status, headers, config) {
-                                 // perform error handling here
-                            });
-     **/
-    ShoppingCartPaymentClient.prototype.processCart = function (data) {
-        return this.apiClient.post(this.routeDefinition.processCart(data), this.routeDefinition.createParams(data));
-    };
-    return ShoppingCartPaymentClient;
-}());
-ShoppingCartPaymentClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ShoppingCartPaymentRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ShoppingCartPaymentRoute !== "undefined" && _1.ShoppingCartPaymentRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
-], ShoppingCartPaymentClient);
-exports.ShoppingCartPaymentClient = ShoppingCartPaymentClient;
-var _a, _b;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 548 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module shoppingCartPaymentRoute
- * @description Baasic Shopping Cart Payment Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Shopping Cart Payment Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
-var ShoppingCartPaymentRoute = (function (_super) {
-    tslib_1.__extends(ShoppingCartPaymentRoute, _super);
-    function ShoppingCartPaymentRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.calculateSummaryRoute = 'commerce/carts/users/{customerId}/summary';
-        _this.processCartRoute = 'commerce/carts/users/{customerId}/payment';
-        return _this;
-    }
-    /**
-     * Parses claculate summary route; this URI template does not expose any additional options.
-     * @method
-     * @example shoppingCartPaymentRoute.calculateSummaryRoute();
-     **/
-    ShoppingCartPaymentRoute.prototype.calculateSummary = function (data) {
-        return _super.prototype.baseCreate.call(this, this.calculateSummaryRoute, data);
-    };
-    /**
-     * Parses process Route; this URI template does not expose any additional options.
-     * @method
-     * @example shoppingCartPaymentRoute.processCart();
-     **/
-    ShoppingCartPaymentRoute.prototype.processCart = function (data) {
-        return _super.prototype.baseCreate.call(this, this.processCartRoute, data);
-    };
-    return ShoppingCartPaymentRoute;
-}(common_1.BaseRoute));
-ShoppingCartPaymentRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], ShoppingCartPaymentRoute);
-exports.ShoppingCartPaymentRoute = ShoppingCartPaymentRoute;
-var _a;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 549 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 550 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 551 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 552 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 553 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 554 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -38239,6 +38613,10 @@ var _a;
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(555));
 
 
 /***/ }),
@@ -38247,106 +38625,9 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(549));
-__export(__webpack_require__(552));
-__export(__webpack_require__(550));
-__export(__webpack_require__(551));
-__export(__webpack_require__(556));
-__export(__webpack_require__(553));
-__export(__webpack_require__(555));
-__export(__webpack_require__(554));
-
-
-/***/ }),
-/* 558 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(22);
-var TYPES = {
-    ShoppingCartItemClient: Symbol("ShoppingCartItemClient"),
-    ShoppingCartPaymentClient: Symbol("ShoppingCartPaymentClient"),
-    ShoppingCartItemBatchClient: Symbol("ShoppingCartItemBatchClient"),
-    ShoppingCartItemRoute: Symbol("ShoppingCartItemRoute"),
-    ShoppingCartPaymentRoute: Symbol("ShoppingCartPaymentRoute"),
-    ShoppingCartItemBatchRoute: Symbol("ShoppingCartItemBatchRoute"),
-    Root: Symbol("Root")
-};
-exports.TYPES = TYPES;
-var diModule = new inversify_1.ContainerModule(function (bind) {
-    bind(TYPES.ShoppingCartItemClient).to(_1.ShoppingCartItemClient);
-    bind(TYPES.ShoppingCartPaymentClient).to(_1.ShoppingCartPaymentClient);
-    bind(TYPES.ShoppingCartItemBatchClient).to(_1.ShoppingCartItemBatchClient);
-    bind(TYPES.ShoppingCartItemRoute).to(_1.ShoppingCartItemRoute);
-    bind(TYPES.ShoppingCartPaymentRoute).to(_1.ShoppingCartPaymentRoute);
-    bind(TYPES.ShoppingCartItemBatchRoute).to(_1.ShoppingCartItemBatchRoute);
-    bind(TYPES.Root).to(_1.Root);
-});
-exports.diModule = diModule;
-
-
-/***/ }),
-/* 559 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var tslib_1 = __webpack_require__(1);
-var _1 = __webpack_require__(22);
-var inversify_1 = __webpack_require__(0);
-var Root = (function () {
-    function Root(items, payment) {
-        this.items = items;
-        this.payment = payment;
-    }
-    return Root;
-}());
-Root = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ShoppingCartItemClient)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ShoppingCartPaymentClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ShoppingCartItemClient !== "undefined" && _1.ShoppingCartItemClient) === "function" && _a || Object, typeof (_b = typeof _1.ShoppingCartPaymentClient !== "undefined" && _1.ShoppingCartPaymentClient) === "function" && _b || Object])
-], Root);
-exports.Root = Root;
-var _a, _b;
-
-
-/***/ }),
-/* 560 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 561 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(560));
-
-
-/***/ }),
-/* 562 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(25);
+var _1 = __webpack_require__(24);
 var TYPES = {
     TemplatingBatchClient: Symbol("TemplatingBatchClient"),
     TemplatingBatchRoute: Symbol("TemplatingBatchRoute"),
@@ -38364,7 +38645,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 563 */
+/* 558 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38378,7 +38659,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(25);
+var _1 = __webpack_require__(24);
 var TemplatingBatchClient = (function () {
     function TemplatingBatchClient(templatingBatchRoute, apiClient) {
         this.templatingBatchRoute = templatingBatchRoute;
@@ -38458,7 +38739,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 564 */
+/* 559 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38525,7 +38806,7 @@ var _a;
 
 
 /***/ }),
-/* 565 */
+/* 560 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38539,7 +38820,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(25);
+var _1 = __webpack_require__(24);
 var TemplatingClient = (function () {
     function TemplatingClient(templatingRoute, templatingBatchClient, apiClient) {
         this.templatingRoute = templatingRoute;
@@ -38677,7 +38958,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 566 */
+/* 561 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38691,7 +38972,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(25);
+var _1 = __webpack_require__(24);
 var contracts_1 = __webpack_require__(3);
 var TemplatingRoute = (function (_super) {
     tslib_1.__extends(TemplatingRoute, _super);
@@ -38783,7 +39064,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 567 */
+/* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38880,7 +39161,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 568 */
+/* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38946,7 +39227,7 @@ var _a;
 
 
 /***/ }),
-/* 569 */
+/* 564 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39103,7 +39384,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 570 */
+/* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39196,6 +39477,51 @@ var _a, _b;
 
 
 /***/ }),
+/* 566 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 567 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 568 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 569 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 570 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
 /* 571 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39264,70 +39590,25 @@ var _a, _b;
 
 "use strict";
 
-;
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(566));
+__export(__webpack_require__(568));
+__export(__webpack_require__(571));
+__export(__webpack_require__(572));
+__export(__webpack_require__(570));
+__export(__webpack_require__(569));
+__export(__webpack_require__(567));
+__export(__webpack_require__(574));
+__export(__webpack_require__(575));
+__export(__webpack_require__(573));
+__export(__webpack_require__(576));
+__export(__webpack_require__(577));
 
 
 /***/ }),
 /* 579 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 580 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 581 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 582 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 583 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(571));
-__export(__webpack_require__(573));
-__export(__webpack_require__(576));
-__export(__webpack_require__(577));
-__export(__webpack_require__(575));
-__export(__webpack_require__(574));
-__export(__webpack_require__(572));
-__export(__webpack_require__(579));
-__export(__webpack_require__(580));
-__export(__webpack_require__(578));
-__export(__webpack_require__(581));
-__export(__webpack_require__(582));
-
-
-/***/ }),
-/* 584 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39398,7 +39679,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 585 */
+/* 580 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39493,7 +39774,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 586 */
+/* 581 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39559,7 +39840,7 @@ var _a;
 
 
 /***/ }),
-/* 587 */
+/* 582 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39710,7 +39991,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 588 */
+/* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39815,7 +40096,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 589 */
+/* 584 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39845,7 +40126,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 590 */
+/* 585 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39942,7 +40223,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 591 */
+/* 586 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40008,7 +40289,7 @@ var _a;
 
 
 /***/ }),
-/* 592 */
+/* 587 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40158,7 +40439,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 593 */
+/* 588 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40181,7 +40462,7 @@ var SkillRoute = (function (_super) {
         _this.appOptions = appOptions;
         _this.skillBatchRoute = skillBatchRoute;
         _this.findRoute = 'profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}';
-        _this.getRoute = 'profile/lookups/skills';
+        _this.getRoute = 'profile/lookups/skills/{id}/{?embed,fields}';
         _this.createRoute = 'profile/lookups/skills';
         _this.updateRoute = 'profile/lookups/skills/{id}';
         _this.deleteRoute = 'lookups/skills/{id}';
@@ -40256,7 +40537,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 594 */
+/* 589 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40398,7 +40679,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 595 */
+/* 590 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40494,7 +40775,7 @@ var _a;
 
 
 /***/ }),
-/* 596 */
+/* 591 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40626,7 +40907,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 597 */
+/* 592 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40745,7 +41026,7 @@ var _a;
 
 
 /***/ }),
-/* 598 */
+/* 593 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40878,7 +41159,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 599 */
+/* 594 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40981,7 +41262,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 600 */
+/* 595 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41078,7 +41359,7 @@ var UserProfileAvatarStreamsClient = (function () {
     UserProfileAvatarStreamsClient.prototype.create = function (id, data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), data, { 'Content-Type': undefined });
+        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), formData, { 'Content-Type': undefined });
     };
     /**
      * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
@@ -41106,7 +41387,7 @@ var UserProfileAvatarStreamsClient = (function () {
     UserProfileAvatarStreamsClient.prototype.update = function (data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), formData, { 'Content-Type': undefined });
     };
     return UserProfileAvatarStreamsClient;
 }());
@@ -41127,7 +41408,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 601 */
+/* 596 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41215,7 +41496,7 @@ var _a;
 
 
 /***/ }),
-/* 602 */
+/* 597 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41410,7 +41691,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 603 */
+/* 598 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41518,7 +41799,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 604 */
+/* 599 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41662,7 +41943,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 605 */
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41758,7 +42039,7 @@ var _a;
 
 
 /***/ }),
-/* 606 */
+/* 601 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41899,7 +42180,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 607 */
+/* 602 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41989,7 +42270,7 @@ var _a;
 
 
 /***/ }),
-/* 608 */
+/* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41998,7 +42279,7 @@ var _a;
 
 
 /***/ }),
-/* 609 */
+/* 604 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42007,7 +42288,7 @@ var _a;
 
 
 /***/ }),
-/* 610 */
+/* 605 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42015,19 +42296,19 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(609));
-__export(__webpack_require__(608));
+__export(__webpack_require__(604));
+__export(__webpack_require__(603));
 
 
 /***/ }),
-/* 611 */
+/* 606 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(26);
+var _1 = __webpack_require__(25);
 var TYPES = {
     ValueSetClient: Symbol("ValueSetClient"),
     ValueSetItemClient: Symbol("ValueSetItemClient"),
@@ -42045,7 +42326,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 612 */
+/* 607 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42058,7 +42339,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(26);
+var _1 = __webpack_require__(25);
 var ValueSetClient = (function () {
     function ValueSetClient(valueSetRoute, valueSetItemClient, apiClient) {
         this.valueSetRoute = valueSetRoute;
@@ -42208,7 +42489,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 613 */
+/* 608 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42221,7 +42502,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(26);
+var _1 = __webpack_require__(25);
 var ValueSetItemClient = (function () {
     function ValueSetItemClient(valueSetItemRoute, apiClient) {
         this.valueSetItemRoute = valueSetItemRoute;
@@ -42358,7 +42639,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 614 */
+/* 609 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42463,7 +42744,7 @@ var _a;
 
 
 /***/ }),
-/* 615 */
+/* 610 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42476,7 +42757,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(26);
+var _1 = __webpack_require__(25);
 var contracts_1 = __webpack_require__(3);
 var ValueSetRoute = (function (_super) {
     tslib_1.__extends(ValueSetRoute, _super);
@@ -42570,7 +42851,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 616 */
+/* 611 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/

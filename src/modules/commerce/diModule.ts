@@ -25,6 +25,10 @@ import {
     CommerceProductInstanceFilesBatchRoute,
     CommerceProductInstanceFilesClient,
     CommerceProductInstanceFilesRoute,
+    CommerceCouponClient,
+    CommerceCouponRoute,
+    CommerceCouponUseClient,
+    CommerceCouponUseRoute,
     CommerceClient,
     CommerceRoute,
     CommerceLookupsAddressTypesBatchClient,
@@ -59,6 +63,10 @@ import {
     CommerceLookupsInvoiceStatusRoute,
     CommerceLookupsInvoiceStatusBatchClient,
     CommerceLookupsInvoiceStatusClient,
+    CommerceLookupsCouponTypeBatchRoute,
+    CommerceLookupsCouponTypeRoute,
+    CommerceLookupsCouponTypesBatchClient,
+    CommerceLookupsCouponTypesClient,
     Lookups
 } from './';
 
@@ -87,6 +95,10 @@ const TYPES = {
     CommerceProductInstanceFilesRoute: Symbol("CommerceProductInstanceFilesRoute"),
     CommerceProductInstanceFilesBatchClient: Symbol("CommerceProductInstanceFilesBatchClient"),
     CommerceProductInstanceFilesBatchRoute: Symbol("CommerceProductInstanceFilesBatchRoute"),
+    CommerceCouponClient: Symbol("CommerceCouponClient"),
+    CommerceCouponRoute: Symbol("CommerceCouponRoute"),
+    CommerceCouponUseClient: Symbol("CommerceCouponUseClient"),
+    CommerceCouponUseRoute: Symbol("CommerceCouponUseRoute"),    
     CommerceClient: Symbol("CommerceClient"),
     CommerceRoute: Symbol("CommerceRoute"),
     CommerceLookupsAddressTypesBatchClient: Symbol("CommerceLookupsAddressTypesBatchClient"),
@@ -121,6 +133,10 @@ const TYPES = {
     CommerceLookupsInvoiceStatusRoute: Symbol("CommerceLookupsInvoiceStatusRoute"),
     CommerceLookupsInvoiceStatusBatchClient: Symbol("CommerceLookupsInvoiceStatusBatchClient"),
     CommerceLookupsInvoiceStatusClient: Symbol("CommerceLookupsInvoiceStatusClient"),
+    CommerceLookupsCouponTypeBatchRoute: Symbol("CommerceLookupsCouponTypeBatchRoute"),
+    CommerceLookupsCouponTypeRoute: Symbol("CommerceLookupsCouponTypeRoute"),
+    CommerceLookupsCouponTypesBatchClient: Symbol("CommerceLookupsCouponTypesBatchClient"),
+    CommerceLookupsCouponTypesClient: Symbol("CommerceLookupsCouponTypesClient"),
     Lookups: Symbol("Lookups")
 
 };
@@ -148,6 +164,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CommerceProductFilesRoute>(TYPES.CommerceProductFilesRoute).to(CommerceProductFilesRoute);
     bind<CommerceProductSettingsClient>(TYPES.CommerceProductSettingsClient).to(CommerceProductSettingsClient);
     bind<CommerceProductSettingsRoute>(TYPES.CommerceProductSettingsRoute).to(CommerceProductSettingsRoute);
+    bind<CommerceCouponClient>(TYPES.CommerceCouponClient).to(CommerceCouponClient);
+    bind<CommerceCouponRoute>(TYPES.CommerceCouponRoute).to(CommerceCouponRoute);
+    bind<CommerceCouponUseClient>(TYPES.CommerceCouponUseClient).to(CommerceCouponUseClient);
+    bind<CommerceCouponUseRoute>(TYPES.CommerceCouponUseRoute).to(CommerceCouponUseRoute);    
     bind<CommerceRoute>(TYPES.CommerceRoute).to(CommerceRoute);
     bind<CommerceClient>(TYPES.CommerceClient).to(CommerceClient);
     bind<CommerceLookupsAddressTypeBatchRoute>(TYPES.CommerceLookupsAddressTypeBatchRoute).to(CommerceLookupsAddressTypeBatchRoute);
@@ -182,6 +202,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CommerceLookupsInvoiceStatusRoute>(TYPES.CommerceLookupsInvoiceStatusRoute).to(CommerceLookupsInvoiceStatusRoute);
     bind<CommerceLookupsInvoiceStatusBatchClient>(TYPES.CommerceLookupsInvoiceStatusBatchClient).to(CommerceLookupsInvoiceStatusBatchClient);
     bind<CommerceLookupsInvoiceStatusClient>(TYPES.CommerceLookupsInvoiceStatusClient).to(CommerceLookupsInvoiceStatusClient);
+    bind<CommerceLookupsCouponTypeBatchRoute>(TYPES.CommerceLookupsCouponTypeBatchRoute).to(CommerceLookupsCouponTypeBatchRoute);
+    bind<CommerceLookupsCouponTypeRoute>(TYPES.CommerceLookupsCouponTypeRoute).to(CommerceLookupsCouponTypeRoute);
+    bind<CommerceLookupsCouponTypesBatchClient>(TYPES.CommerceLookupsCouponTypesBatchClient).to(CommerceLookupsCouponTypesBatchClient);
+    bind<CommerceLookupsCouponTypesClient>(TYPES.CommerceLookupsCouponTypesClient).to(CommerceLookupsCouponTypesClient);     
     bind<Lookups>(TYPES.Lookups).to(Lookups);
 });
 

@@ -9,7 +9,8 @@ import {
     CommerceLookupsPaymentTransactionStatusClient,
     CommerceLookupsRecurringCyclePeriodTypeClient,
     CommerceLookupsSubscriptionStatusClient,
-    CommerceLookupsInvoiceStatusClient
+    CommerceLookupsInvoiceStatusClient,
+    CommerceLookupsCouponTypesClient
 } from './';
 
 
@@ -26,7 +27,8 @@ export class Lookups {
         @inject(TYPES.CommerceLookupsPaymentTransactionStatusClient) public paymentTransactionStatuses: CommerceLookupsPaymentTransactionStatusClient,
         @inject(TYPES.CommerceLookupsRecurringCyclePeriodTypeClient) public recurringCyclePeriodTypes: CommerceLookupsRecurringCyclePeriodTypeClient,
         @inject(TYPES.CommerceLookupsSubscriptionStatusClient) public subscriptionStatuses: CommerceLookupsSubscriptionStatusClient,
-        @inject(TYPES.CommerceLookupsInvoiceStatusClient) public invoiceStatuses: CommerceLookupsInvoiceStatusClient
+        @inject(TYPES.CommerceLookupsInvoiceStatusClient) public invoiceStatuses: CommerceLookupsInvoiceStatusClient,
+        @inject(TYPES.CommerceLookupsCouponTypesClient) public couponTypes: CommerceLookupsCouponTypesClient
     ) {
     }
 

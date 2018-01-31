@@ -93,7 +93,7 @@ export class UserProfileAvatarStreamsClient {
     create(id: string, data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), data, { 'Content-Type': undefined });
+        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), formData, { 'Content-Type': undefined });
     }
 
     /**
@@ -122,7 +122,7 @@ export class UserProfileAvatarStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), formData, { 'Content-Type': undefined });
     }
 }
 

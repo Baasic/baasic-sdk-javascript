@@ -89,7 +89,7 @@ export class MediaGalleryInstanceFilesClient {
      * @param options
      * @returns A promise that is resolved once the unlink action has been performed.                         
      * @example // fileEntry is a file resource previously fetched using get action. The following action will unlink the original file resource and all accompanying derived file resources.			 
-                    mediaGalleryInstanceFilesRoute.unlink(fileEntry)
+                    mediaGalleryInstanceFilesRoute.unlink(galleryId, fileEntry)
                         .then(function (data) {   
                             // perform success action here 
                         },
@@ -97,8 +97,8 @@ export class MediaGalleryInstanceFilesClient {
                             // perform error handling here 
                         }); 				
      **/
-    unlink(mediaGalleryId: string, data: IMediaGalleryFile, options: Object): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.mediaGalleryInstanceFilesRoute.unlink(mediaGalleryId, data, options));
+    unlink(mediaGalleryId: string, data: IMediaGalleryFile): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.mediaGalleryInstanceFilesRoute.unlink(mediaGalleryId, data));
     }
 
     /**                      
