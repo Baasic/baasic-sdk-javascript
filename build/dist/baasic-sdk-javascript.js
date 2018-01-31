@@ -41359,7 +41359,7 @@ var UserProfileAvatarStreamsClient = (function () {
     UserProfileAvatarStreamsClient.prototype.create = function (id, data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), data, { 'Content-Type': undefined });
+        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), formData, { 'Content-Type': undefined });
     };
     /**
      * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
