@@ -41387,7 +41387,7 @@ var UserProfileAvatarStreamsClient = (function () {
     UserProfileAvatarStreamsClient.prototype.update = function (data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), data, { 'Content-Type': undefined });
+        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), formData, { 'Content-Type': undefined });
     };
     return UserProfileAvatarStreamsClient;
 }());
