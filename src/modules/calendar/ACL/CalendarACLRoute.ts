@@ -36,7 +36,7 @@ export class CalendarACLRoute extends BaseRoute {
      * @param options ACL options object.   					
      * @example calendarACLRoute.update({id: '<id>'}); 					
      */
-    update(options: IACLOptions[]): any {
+    update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
         return super.baseCreate(this.updateRoute, params);
     }

@@ -37,7 +37,7 @@ export class FilesACLRoute extends BaseRoute {
      * @method    				
      * @example filesACLRoute.update({id: '<file-id>'}); 					
      **/
-    update(options: IACLOptions[]): any {
+    update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
         return super.baseCreate(this.updateRoute, params);
     }
