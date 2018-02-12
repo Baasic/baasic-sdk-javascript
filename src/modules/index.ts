@@ -32,3 +32,5 @@ import * as ShoppingCart from './shoppingCart';
 export { ShoppingCart }
 import * as Blog from './blog';
 export { Blog };
+import * as MessageCenter from './messageCenter';
+export { MessageCenter };
