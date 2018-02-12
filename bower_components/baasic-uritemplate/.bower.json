@@ -1,0 +1,45 @@
+{
+  "name": "UriTemplate",
+  "version": "0.3.7",
+  "main": "bin/UriTemplate.js",
+  "description": "An UriTemplate implementation of rfc 6570",
+  "homepage": "https://www.github.com/fxa/uritemplate-js",
+  "keywords": [
+    "util",
+    "uri",
+    "template",
+    "rfc6570"
+  ],
+  "author": "Franz X Antesberger",
+  "ignore": [
+    "**/.*",
+    "**/*.html",
+    "node_modules",
+    "bower_components",
+    "nuget",
+    "test",
+    "tests",
+    "build",
+    "uritemplate-test",
+    "src",
+    "spec",
+    "bower.json",
+    "gulpfile.js",
+    "Jakefile.js",
+    "require.js",
+    "own-testcases.json",
+    "package.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "_release": "0.3.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.7",
+    "commit": "5771a8d419291ddf529ab21a40bef5647fd2cd5c"
+  },
+  "_source": "https://github.com/Baasic/uritemplate-js.git",
+  "_target": "*",
+  "_originalSource": "Baasic/uritemplate-js"
+}

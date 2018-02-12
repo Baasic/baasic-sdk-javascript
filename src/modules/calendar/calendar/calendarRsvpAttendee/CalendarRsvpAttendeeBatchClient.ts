@@ -97,7 +97,7 @@ export class CalendarRsvpAttendeeBatchClient {
                 });
      */
     unlink(calendarId: string, eventId: string, data: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId, eventId), this.routeDefinition.deleteParams(data));
+        return this.apiClient.delete<void>(this.routeDefinition.unlink(calendarId, eventId), undefined, this.routeDefinition.deleteParams(data));
     }
 }
 

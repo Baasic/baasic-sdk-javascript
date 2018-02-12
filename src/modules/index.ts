@@ -30,3 +30,6 @@ import * as Calendar from './calendar';
 export { Calendar };
 import * as MessageCenter from './messageCenter';
 export { MessageCenter };
+import * as ShoppingCart from './shoppingCart';
+export { ShoppingCart }
+
