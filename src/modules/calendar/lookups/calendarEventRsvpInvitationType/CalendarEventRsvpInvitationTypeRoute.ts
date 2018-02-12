@@ -15,7 +15,7 @@ import { ICalendarEventRsvpAttendeeInvitationType, IGetCalendarOptions } from '.
 export class CalendarEventRsvpInvitationTypeRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-lookups/rsvp-invitation-types/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-    public readonly getRoute: string = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendar-lookups/rsvp-invitation-types/{id}/{?embed,fields}';
     public readonly createRoute: string = 'calendar-lookups/rsvp-invitation-types';
     public readonly updateRoute: string = 'calendar-lookups/rsvp-invitation-types/{id}';
     public readonly deleteRoute: string = 'calendar-lookups/rsvp-invitation-types/{id}';

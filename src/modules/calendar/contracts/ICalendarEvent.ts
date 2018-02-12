@@ -11,7 +11,7 @@ export interface ICalendarEvent extends IModel {
     Description?: string;
     Detail?: ICalendarEventDetail;
     EndTime: string;
-    EventRSVp?: ICalendarEventRsvp;
+    EventRsvp?: ICalendarEventRsvp;
     IsAllDay?: boolean;
     IsRecurring?: Boolean;
     Json?: string;
