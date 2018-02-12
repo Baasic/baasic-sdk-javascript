@@ -107,9 +107,9 @@ var multi_inject_1 = __webpack_require__(65);
 exports.multiInject = multi_inject_1.multiInject;
 var target_name_1 = __webpack_require__(69);
 exports.targetName = target_name_1.targetName;
-var guid_1 = __webpack_require__(20);
+var guid_1 = __webpack_require__(21);
 exports.guid = guid_1.guid;
-var decorator_utils_1 = __webpack_require__(17);
+var decorator_utils_1 = __webpack_require__(18);
 exports.decorate = decorator_utils_1.decorate;
 var constraint_helpers_1 = __webpack_require__(35);
 exports.traverseAncerstors = constraint_helpers_1.traverseAncerstors;
@@ -336,7 +336,10 @@ __export(__webpack_require__(104));
 __export(__webpack_require__(89));
 __export(__webpack_require__(103));
 __export(__webpack_require__(102));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -378,7 +381,10 @@ __export(__webpack_require__(110));
 __export(__webpack_require__(108));
 __export(__webpack_require__(109));
 __export(__webpack_require__(119));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -414,7 +420,10 @@ __export(__webpack_require__(127));
 __export(__webpack_require__(128));
 __export(__webpack_require__(125));
 __export(__webpack_require__(129));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -454,7 +463,10 @@ __export(__webpack_require__(380));
 __export(__webpack_require__(306));
 __export(__webpack_require__(303));
 __export(__webpack_require__(300));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -544,7 +556,10 @@ __export(__webpack_require__(172));
 __export(__webpack_require__(169));
 __export(__webpack_require__(39));
 __export(__webpack_require__(209));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -588,7 +603,10 @@ __export(__webpack_require__(214));
 __export(__webpack_require__(215));
 __export(__webpack_require__(216));
 __export(__webpack_require__(291));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -636,6 +654,7 @@ __export(__webpack_require__(513));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(527));
 __export(__webpack_require__(530));
 __export(__webpack_require__(529));
@@ -667,6 +686,38 @@ __export(__webpack_require__(543));
 __export(__webpack_require__(528));
 __export(__webpack_require__(526));
 >>>>>>> Merged develop to shopping cart.
+=======
+__export(__webpack_require__(545));
+__export(__webpack_require__(548));
+__export(__webpack_require__(547));
+__export(__webpack_require__(550));
+__export(__webpack_require__(549));
+__export(__webpack_require__(552));
+__export(__webpack_require__(551));
+__export(__webpack_require__(554));
+__export(__webpack_require__(553));
+__export(__webpack_require__(558));
+__export(__webpack_require__(557));
+__export(__webpack_require__(560));
+__export(__webpack_require__(559));
+__export(__webpack_require__(556));
+__export(__webpack_require__(555));
+__export(__webpack_require__(571));
+__export(__webpack_require__(570));
+__export(__webpack_require__(565));
+__export(__webpack_require__(564));
+__export(__webpack_require__(567));
+__export(__webpack_require__(566));
+__export(__webpack_require__(573));
+__export(__webpack_require__(572));
+__export(__webpack_require__(569));
+__export(__webpack_require__(568));
+__export(__webpack_require__(563));
+__export(__webpack_require__(562));
+__export(__webpack_require__(561));
+__export(__webpack_require__(546));
+__export(__webpack_require__(544));
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -713,14 +764,22 @@ __export(__webpack_require__(583));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(597));
+=======
+__export(__webpack_require__(598));
+__export(__webpack_require__(582));
+>>>>>>> minor code changes
 __export(__webpack_require__(581));
-__export(__webpack_require__(580));
+__export(__webpack_require__(584));
 __export(__webpack_require__(583));
+<<<<<<< HEAD
 __export(__webpack_require__(582));
 __export(__webpack_require__(599));
 __export(__webpack_require__(598));
 __export(__webpack_require__(601));
+=======
+>>>>>>> minor code changes
 __export(__webpack_require__(600));
 __export(__webpack_require__(604));
 __export(__webpack_require__(603));
@@ -741,8 +800,32 @@ __export(__webpack_require__(617));
 __export(__webpack_require__(620));
 __export(__webpack_require__(619));
 __export(__webpack_require__(602));
+<<<<<<< HEAD
 __export(__webpack_require__(596));
 >>>>>>> Merged develop to shopping cart.
+=======
+__export(__webpack_require__(601));
+__export(__webpack_require__(605));
+__export(__webpack_require__(604));
+__export(__webpack_require__(607));
+__export(__webpack_require__(606));
+__export(__webpack_require__(609));
+__export(__webpack_require__(608));
+__export(__webpack_require__(615));
+__export(__webpack_require__(614));
+__export(__webpack_require__(613));
+__export(__webpack_require__(612));
+__export(__webpack_require__(611));
+__export(__webpack_require__(610));
+__export(__webpack_require__(617));
+__export(__webpack_require__(616));
+__export(__webpack_require__(619));
+__export(__webpack_require__(618));
+__export(__webpack_require__(621));
+__export(__webpack_require__(620));
+__export(__webpack_require__(603));
+__export(__webpack_require__(597));
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -816,7 +899,10 @@ __export(__webpack_require__(485));
 __export(__webpack_require__(484));
 __export(__webpack_require__(496));
 __export(__webpack_require__(478));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -884,7 +970,10 @@ __export(__webpack_require__(422));
 __export(__webpack_require__(434));
 __export(__webpack_require__(440));
 __export(__webpack_require__(441));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -918,11 +1007,24 @@ __export(__webpack_require__(491));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(505));
 __export(__webpack_require__(511));
+=======
+__export(__webpack_require__(517));
+__export(__webpack_require__(502));
+__export(__webpack_require__(501));
+__export(__webpack_require__(504));
+__export(__webpack_require__(503));
+__export(__webpack_require__(506));
+__export(__webpack_require__(505));
+__export(__webpack_require__(508));
+__export(__webpack_require__(507));
+>>>>>>> minor code changes
 __export(__webpack_require__(510));
 __export(__webpack_require__(513));
 __export(__webpack_require__(512));
+<<<<<<< HEAD
 __export(__webpack_require__(509));
 __export(__webpack_require__(508));
 __export(__webpack_require__(519));
@@ -935,10 +1037,42 @@ __export(__webpack_require__(517));
 __export(__webpack_require__(516));
 __export(__webpack_require__(504));
 >>>>>>> Merged develop to shopping cart.
+=======
+__export(__webpack_require__(511));
+__export(__webpack_require__(518));
+__export(__webpack_require__(516));
+>>>>>>> minor code changes
 
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(523));
+__export(__webpack_require__(529));
+__export(__webpack_require__(528));
+__export(__webpack_require__(531));
+__export(__webpack_require__(530));
+__export(__webpack_require__(527));
+__export(__webpack_require__(526));
+__export(__webpack_require__(537));
+__export(__webpack_require__(536));
+__export(__webpack_require__(525));
+__export(__webpack_require__(524));
+__export(__webpack_require__(533));
+__export(__webpack_require__(532));
+__export(__webpack_require__(535));
+__export(__webpack_require__(534));
+__export(__webpack_require__(522));
+
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -963,7 +1097,7 @@ exports.Metadata = Metadata;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -997,13 +1131,13 @@ exports.INVALID_BINDING_PROPERTY = "TODO";
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var METADATA_KEY = __webpack_require__(12);
-var ERROR_MSGS = __webpack_require__(16);
+var ERROR_MSGS = __webpack_require__(17);
 function tagParameter(annotationTarget, propertyName, parameterIndex, metadata) {
     var metadataKey = METADATA_KEY.TAGGED;
     _tagParameterOrProperty(metadataKey, annotationTarget, propertyName, metadata, parameterIndex);
@@ -1058,7 +1192,7 @@ exports.decorate = decorate;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1088,7 +1222,7 @@ exports.TargetTypeEnum = TargetTypeEnum;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1126,11 +1260,14 @@ __export(__webpack_require__(445));
 __export(__webpack_require__(447));
 __export(__webpack_require__(444));
 __export(__webpack_require__(456));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1148,7 +1285,7 @@ exports.guid = guid;
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1182,11 +1319,14 @@ __export(__webpack_require__(402));
 __export(__webpack_require__(407));
 __export(__webpack_require__(406));
 __export(__webpack_require__(400));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1209,6 +1349,7 @@ __export(__webpack_require__(559));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(571));
 __export(__webpack_require__(559));
 __export(__webpack_require__(561));
@@ -1229,6 +1370,8 @@ __export(__webpack_require__(572));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+=======
+>>>>>>> minor code changes
 __export(__webpack_require__(389));
 __export(__webpack_require__(395));
 __export(__webpack_require__(394));
@@ -1237,11 +1380,15 @@ __export(__webpack_require__(390));
 __export(__webpack_require__(393));
 __export(__webpack_require__(392));
 __export(__webpack_require__(388));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
 /* 24 */
+<<<<<<< HEAD
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1261,11 +1408,13 @@ __export(__webpack_require__(375));
 
 /***/ }),
 /* 24 */
+=======
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ERROR_MSGS = __webpack_require__(16);
+var ERROR_MSGS = __webpack_require__(17);
 function getServiceIdentifierAsString(serviceIdentifier) {
     if (typeof serviceIdentifier === "function") {
         var _serviceIdentifier = serviceIdentifier;
@@ -1377,6 +1526,7 @@ __export(__webpack_require__(561));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(575));
 __export(__webpack_require__(577));
 __export(__webpack_require__(576));
@@ -1384,6 +1534,14 @@ __export(__webpack_require__(579));
 __export(__webpack_require__(578));
 __export(__webpack_require__(574));
 >>>>>>> Merged develop to shopping cart.
+=======
+__export(__webpack_require__(576));
+__export(__webpack_require__(578));
+__export(__webpack_require__(577));
+__export(__webpack_require__(580));
+__export(__webpack_require__(579));
+__export(__webpack_require__(575));
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -1407,6 +1565,7 @@ __export(__webpack_require__(610));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(624));
 __export(__webpack_require__(627));
 __export(__webpack_require__(626));
@@ -1414,6 +1573,14 @@ __export(__webpack_require__(628));
 __export(__webpack_require__(625));
 __export(__webpack_require__(623));
 >>>>>>> Merged develop to shopping cart.
+=======
+__export(__webpack_require__(625));
+__export(__webpack_require__(628));
+__export(__webpack_require__(627));
+__export(__webpack_require__(629));
+__export(__webpack_require__(626));
+__export(__webpack_require__(624));
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -1577,7 +1744,10 @@ __export(__webpack_require__(138));
 __export(__webpack_require__(133));
 __export(__webpack_require__(132));
 __export(__webpack_require__(137));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -1603,7 +1773,10 @@ __export(__webpack_require__(412));
 __export(__webpack_require__(414));
 __export(__webpack_require__(413));
 __export(__webpack_require__(411));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -1611,6 +1784,7 @@ __export(__webpack_require__(411));
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 var ApplicationSettings = __webpack_require__(30);
@@ -1646,6 +1820,8 @@ exports.Calendar = Calendar;
 var ShoppingCart = __webpack_require__(22);
 exports.ShoppingCart = ShoppingCart;
 =======
+=======
+>>>>>>> minor code changes
 
 var ApplicationSettings = __webpack_require__(30);
 exports.ApplicationSettings = ApplicationSettings;
@@ -1661,15 +1837,15 @@ var Article = __webpack_require__(6);
 exports.Article = Article;
 var DynamicResource = __webpack_require__(23);
 exports.DynamicResource = DynamicResource;
-var MediaVault = __webpack_require__(19);
+var MediaVault = __webpack_require__(20);
 exports.MediaVault = MediaVault;
 var MediaGallery = __webpack_require__(13);
 exports.MediaGallery = MediaGallery;
-var Files = __webpack_require__(21);
+var Files = __webpack_require__(22);
 exports.Files = Files;
 var Templating = __webpack_require__(25);
 exports.Templating = Templating;
-var Metering = __webpack_require__(14);
+var Metering = __webpack_require__(15);
 exports.Metering = Metering;
 var Notifications = __webpack_require__(8);
 exports.Notifications = Notifications;
@@ -1677,9 +1853,14 @@ var Commerce = __webpack_require__(5);
 exports.Commerce = Commerce;
 var Calendar = __webpack_require__(7);
 exports.Calendar = Calendar;
+<<<<<<< HEAD
 var ShoppingCart = __webpack_require__(22);
 exports.ShoppingCart = ShoppingCart;
 >>>>>>> Merged develop to shopping cart.
+=======
+var MessageCenter = __webpack_require__(14);
+exports.MessageCenter = MessageCenter;
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -1688,9 +1869,15 @@ exports.ShoppingCart = ShoppingCart;
 
 "use strict";
 
+<<<<<<< HEAD
 var metadata_1 = __webpack_require__(15);
 var queryable_string_1 = __webpack_require__(80);
 var guid_1 = __webpack_require__(20);
+=======
+var metadata_1 = __webpack_require__(16);
+var queryable_string_1 = __webpack_require__(80);
+var guid_1 = __webpack_require__(21);
+>>>>>>> minor code changes
 var METADATA_KEY = __webpack_require__(12);
 var Target = (function () {
     function Target(type, name, serviceIdentifier, namedOrTagged) {
@@ -1851,7 +2038,7 @@ exports.BindingWhenOnSyntax = BindingWhenOnSyntax;
 
 "use strict";
 
-var metadata_1 = __webpack_require__(15);
+var metadata_1 = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var traverseAncerstors = function (request, constraint) {
     var parent = request.parentRequest;
@@ -1894,6 +2081,7 @@ exports.typeConstraint = typeConstraint;
 /***/ }),
 /* 36 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1915,6 +2103,8 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
 });
 exports.diModule = diModule;
 =======
+=======
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1970,6 +2160,341 @@ exports.coreDIModule = diModule_1.diModule;
 
 /***/ }),
 /* 39 */
+<<<<<<< HEAD
+=======
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module articleClient
+ * @description  Articles Client provides an easy way to consume  Articles REST API end-points. In order to obtain needed routes `articleClient` uses `articleRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var common_1 = __webpack_require__(2);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(6);
+var ArticleClient = (function () {
+    function ArticleClient(articleInstanceCommentsClient, articleInstanceFilesClient, articleInstanceRatingsClient, articleInstanceTagsClient, articleInstanceSubscriptionsClient, articleRoute, articleACLClient, apiClient) {
+        this.articleInstanceCommentsClient = articleInstanceCommentsClient;
+        this.articleInstanceFilesClient = articleInstanceFilesClient;
+        this.articleInstanceRatingsClient = articleInstanceRatingsClient;
+        this.articleInstanceTagsClient = articleInstanceTagsClient;
+        this.articleInstanceSubscriptionsClient = articleInstanceSubscriptionsClient;
+        this.articleRoute = articleRoute;
+        this.articleACLClient = articleACLClient;
+        this.apiClient = apiClient;
+        this.utility = new common_1.Utility();
+        this.articleUtility = new _1.BaasicArticleUtility();
+        this.statuses = _1.ArticleStatus;
+        this.commentStatuses = _1.CommentStatus;
+    }
+    Object.defineProperty(ArticleClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `articleRoute`.
+         * @method
+         * @example articleClient.routeDefinition.get();
+         **/
+        get: function () {
+            return this.articleRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleClient.prototype, "comments", {
+        get: function () {
+            return this.articleInstanceCommentsClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleClient.prototype, "files", {
+        get: function () {
+            return this.articleInstanceFilesClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleClient.prototype, "tags", {
+        get: function () {
+            return this.articleInstanceTagsClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleClient.prototype, "ratings", {
+        get: function () {
+            return this.articleInstanceRatingsClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleClient.prototype, "subscriptions", {
+        get: function () {
+            return this.articleInstanceSubscriptionsClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleClient.prototype, "acl", {
+        get: function () {
+            return this.articleACLClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article resources matching the given criteria.
+     * @method
+     * @param options A promise that is resolved once the find action has been performed.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example articleClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    ArticleClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns a single article resource.
+     * @method
+     * @param id Article slug or id which uniquely identifies article resource that needs to be retrieved.
+     * @param options Options object that contains embed items.
+     * @returns a promise that is resolved once the get action has been performed.
+     * @example articleClient.get('<article-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    ArticleClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.articleRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create article action has been performed, this action creates a new article resource.
+     * @method
+     * @param data An article object that needs to be inserted into the system.
+     * @returns a promise that is resolved once the create article action has been performed.
+     * @example articleClient.create({
+                    publishDate : new Date(),
+                    title : '<title>',
+                    content : '<content>',
+                    slug : '',
+                    status : baasicArticleService.statuses.draft,
+                    $tags : ['<tag1>', '<tag2>']
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    ArticleClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update article action has been performed; this action updates an article resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(article);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An article object that needs to be updated into the system.
+     * @returns A promise that is resolved once the update article action has been performed.
+     * @example // article is a resource previously fetched using get action.
+                    article.title = '<title>';
+                    articleClient.update(article)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    ArticleClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the saveDraft article action has been performed. This action saves an article with "draft" status. If an article does not exist it will create a new article resource otherwise it will update an existing article resource.
+     * @method
+     * @param data An article object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the saveDraft article action has been performed.
+     * @example // article is a resource previously fetched using get action.
+                        articleClient.saveDraft(article)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    ArticleClient.prototype.saveDraft = function (data) {
+        if (this.utility.isUndefined(data.id)) {
+            // Create new draft
+            return this.create(data);
+        }
+        // Update draft
+        return this.update(data);
+    };
+    /**
+     * Returns a promise that is resolved once the remove article action has been performed. If the action is successfully completed, the article resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(article);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An article object that needs to be removed from the system.
+     * @returns A promise that is resolved once the remove article action has been performed.
+     * @example // article is a resource previously fetched using get action.
+                    articleClient.remove(article)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    ArticleClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the archive article action has been performed. This action sets the status of an article from "published" to "archive". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(article);
+     * let uri = params['model'].links('archive').href;
+     * ```
+     * @method
+     * @param data An article object.
+     * @param options Notification options.
+     * @returns A promise that is resolved once the archive article action has been performed.
+     * @example // article is a resource previously fetched using get action.
+                    articleClient.archive(article, articleOptions)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    ArticleClient.prototype.archive = function (data, options) {
+        return this.apiClient.put(this.routeDefinition.archive(data), this.routeDefinition.updateParams(options));
+    };
+    /**
+     * Returns a promise that is resolved once the restore article action has been performed. This action sets the status of an article from "archive" to "published". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(article);
+     * let uri = params['model'].links('restore').href;
+     * ```
+     * @method
+     * @param data Article object.
+     * @returns A promise that is resolved once the restore article action has been performed.
+     * @example // article is a resource previously fetched using get action.
+                        articleClient.restore(article)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    ArticleClient.prototype.restore = function (data) {
+        return this.apiClient.put(this.routeDefinition.restore(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the unpublish article action has been performed. This action sets the status of an article from "published" to "draft". This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(article);
+     * let uri = params['model'].links('unpublish').href;
+     * ```
+     * @method
+     * @param data An article object.
+     * @returns A promise that is resolved once the unpublish article action has been performed.
+     * @example 	// article is a resource previously fetched using get action.
+                        articleClient.unpublish(article)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    ArticleClient.prototype.unpublish = function (data) {
+        return this.apiClient.put(this.routeDefinition.unpublish(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the publish article action has been performed. This action sets the status of an article from "draft" to "published".
+     * @method
+     * @param data An article object.
+     * @param articleOptions Notification options.
+     * @returns A promise that is resolved once the unpublish article action has been performed.
+     * @example articleClient.publish(article, articleOptions)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    ArticleClient.prototype.publish = function (data, articleOptions) {
+        return this.apiClient.put(this.routeDefinition.publish(data), this.routeDefinition.updateParams(articleOptions));
+    };
+    /**
+     * Returns a promise that is resolved once the purge articles action has been performed. Please note that all article resources will be deleted from the system once the action is successfully completed and therefore it can only be executed by user assigned to account owner role.
+     * @method
+     * @example articleClient.purge({})
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    ArticleClient.prototype.purge = function (options) {
+        return this.apiClient.delete(this.routeDefinition.purge(options));
+    };
+    return ArticleClient;
+}());
+ArticleClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ArticleInstanceCommentsClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ArticleInstanceFilesClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.ArticleInstanceRatingsClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.ArticleInstanceTagsClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.ArticleInstanceSubscriptionsClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.ArticleRoute)),
+    tslib_1.__param(6, inversify_1.inject(_1.TYPES.ArticleACLClient)),
+    tslib_1.__param(7, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ArticleInstanceCommentsClient !== "undefined" && _1.ArticleInstanceCommentsClient) === "function" && _a || Object, typeof (_b = typeof _1.ArticleInstanceFilesClient !== "undefined" && _1.ArticleInstanceFilesClient) === "function" && _b || Object, typeof (_c = typeof _1.ArticleInstanceRatingsClient !== "undefined" && _1.ArticleInstanceRatingsClient) === "function" && _c || Object, typeof (_d = typeof _1.ArticleInstanceTagsClient !== "undefined" && _1.ArticleInstanceTagsClient) === "function" && _d || Object, typeof (_e = typeof _1.ArticleInstanceSubscriptionsClient !== "undefined" && _1.ArticleInstanceSubscriptionsClient) === "function" && _e || Object, typeof (_f = typeof _1.ArticleRoute !== "undefined" && _1.ArticleRoute) === "function" && _f || Object, typeof (_g = typeof _1.ArticleACLClient !== "undefined" && _1.ArticleACLClient) === "function" && _g || Object, typeof (_h = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _h || Object])
+], ArticleClient);
+exports.ArticleClient = ArticleClient;
+var _a, _b, _c, _d, _e, _f, _g, _h;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 40 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2329,7 +2854,10 @@ __export(__webpack_require__(275));
 __export(__webpack_require__(285));
 __export(__webpack_require__(290));
 __export(__webpack_require__(270));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -2362,7 +2890,10 @@ __export(__webpack_require__(358));
 __export(__webpack_require__(363));
 __export(__webpack_require__(342));
 __export(__webpack_require__(343));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -2427,7 +2958,11 @@ var BaasicApp = (function () {
         this.articleModule = this.diModule.kernel.get(modules.Article.TYPES.Root);
         this.commerceModule = this.diModule.kernel.get(modules.Commerce.TYPES.CommerceClient);
         this.calendarModule = this.diModule.kernel.get(modules.Calendar.TYPES.Root);
+<<<<<<< HEAD
         this.shoppingCartModule = this.diModule.kernel.get(modules.ShoppingCart.TYPES.Root);
+=======
+        this.messageCenterModule = this.diModule.kernel.get(modules.MessageCenter.TYPES.Root);
+>>>>>>> minor code changes
     }
     BaasicApp.prototype.getAccessToken = function () {
         return this.tokenHandler.get(contracts_1.TokenTypes.Access);
@@ -2625,6 +3160,7 @@ exports.DIModule = DIModule;
 
 "use strict";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
@@ -2705,6 +3241,8 @@ var DIModule = (function () {
 exports.DIModule = DIModule;
 ;
 =======
+=======
+>>>>>>> minor code changes
 
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
@@ -2729,11 +3267,15 @@ exports.IUserHandler = contracts_1.IUserHandler;
 exports.IDefaultStorageConfig = contracts_1.IDefaultStorageConfig;
 __export(__webpack_require__(2));
 __export(__webpack_require__(32));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
 /* 45 */
+<<<<<<< HEAD
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2765,6 +3307,8 @@ __export(__webpack_require__(32));
 
 /***/ }),
 /* 45 */
+=======
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3230,8 +3774,8 @@ module.exports = function (value) {
 
 "use strict";
 
-var metadata_1 = __webpack_require__(15);
-var decorator_utils_1 = __webpack_require__(17);
+var metadata_1 = __webpack_require__(16);
+var decorator_utils_1 = __webpack_require__(18);
 var METADATA_KEY = __webpack_require__(12);
 function inject(serviceIdentifier) {
     return function (target, targetKey, index) {
@@ -3254,7 +3798,7 @@ exports.inject = inject;
 "use strict";
 
 var METADATA_KEY = __webpack_require__(12);
-var ERRORS_MSGS = __webpack_require__(16);
+var ERRORS_MSGS = __webpack_require__(17);
 function injectable() {
     return function (target) {
         if (Reflect.hasOwnMetadata(METADATA_KEY.PARAM_TYPES, target) === true) {
@@ -3274,8 +3818,8 @@ exports.injectable = injectable;
 
 "use strict";
 
-var metadata_1 = __webpack_require__(15);
-var decorator_utils_1 = __webpack_require__(17);
+var metadata_1 = __webpack_require__(16);
+var decorator_utils_1 = __webpack_require__(18);
 var METADATA_KEY = __webpack_require__(12);
 function multiInject(serviceIdentifier) {
     return function (target, targetKey, index) {
@@ -3297,8 +3841,8 @@ exports.multiInject = multiInject;
 
 "use strict";
 
-var metadata_1 = __webpack_require__(15);
-var decorator_utils_1 = __webpack_require__(17);
+var metadata_1 = __webpack_require__(16);
+var decorator_utils_1 = __webpack_require__(18);
 var METADATA_KEY = __webpack_require__(12);
 function named(name) {
     return function (target, targetKey, index) {
@@ -3320,8 +3864,8 @@ exports.named = named;
 
 "use strict";
 
-var metadata_1 = __webpack_require__(15);
-var decorator_utils_1 = __webpack_require__(17);
+var metadata_1 = __webpack_require__(16);
+var decorator_utils_1 = __webpack_require__(18);
 var METADATA_KEY = __webpack_require__(12);
 function optional() {
     return function (target, targetKey, index) {
@@ -3343,8 +3887,8 @@ exports.optional = optional;
 
 "use strict";
 
-var metadata_1 = __webpack_require__(15);
-var decorator_utils_1 = __webpack_require__(17);
+var metadata_1 = __webpack_require__(16);
+var decorator_utils_1 = __webpack_require__(18);
 function tagged(metadataKey, metadataValue) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(metadataKey, metadataValue);
@@ -3365,8 +3909,8 @@ exports.tagged = tagged;
 
 "use strict";
 
-var metadata_1 = __webpack_require__(15);
-var decorator_utils_1 = __webpack_require__(17);
+var metadata_1 = __webpack_require__(16);
+var decorator_utils_1 = __webpack_require__(18);
 var METADATA_KEY = __webpack_require__(12);
 function targetName(name) {
     return function (target, targetKey, index) {
@@ -3383,8 +3927,8 @@ exports.targetName = targetName;
 
 "use strict";
 
-var metadata_1 = __webpack_require__(15);
-var decorator_utils_1 = __webpack_require__(17);
+var metadata_1 = __webpack_require__(16);
+var decorator_utils_1 = __webpack_require__(18);
 var METADATA_KEY = __webpack_require__(12);
 function unmanaged() {
     return function (target, targetKey, index) {
@@ -3401,8 +3945,8 @@ exports.unmanaged = unmanaged;
 
 "use strict";
 
-var guid_1 = __webpack_require__(20);
-var literal_types_1 = __webpack_require__(18);
+var guid_1 = __webpack_require__(21);
+var literal_types_1 = __webpack_require__(19);
 var Binding = (function () {
     function Binding(serviceIdentifier, defaultScope) {
         this.guid = guid_1.guid();
@@ -3464,10 +4008,15 @@ var resolver_1 = __webpack_require__(84);
 var binding_to_syntax_1 = __webpack_require__(87);
 var serialization_1 = __webpack_require__(24);
 var container_snapshot_1 = __webpack_require__(75);
+<<<<<<< HEAD
 var guid_1 = __webpack_require__(20);
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var guid_1 = __webpack_require__(21);
+var ERROR_MSGS = __webpack_require__(17);
+>>>>>>> minor code changes
 var METADATA_KEY = __webpack_require__(12);
-var literal_types_1 = __webpack_require__(18);
+var literal_types_1 = __webpack_require__(19);
 var Container = (function () {
     function Container(containerOptions) {
         if (containerOptions !== undefined) {
@@ -3690,7 +4239,7 @@ exports.Container = Container;
 
 "use strict";
 
-var guid_1 = __webpack_require__(20);
+var guid_1 = __webpack_require__(21);
 var ContainerModule = (function () {
     function ContainerModule(registry) {
         this.guid = guid_1.guid();
@@ -3727,7 +4276,7 @@ exports.ContainerSnapshot = ContainerSnapshot;
 
 "use strict";
 
-var ERROR_MSGS = __webpack_require__(16);
+var ERROR_MSGS = __webpack_require__(17);
 var Lookup = (function () {
     function Lookup() {
         this._map = new Map();
@@ -3815,7 +4364,7 @@ exports.Lookup = Lookup;
 
 "use strict";
 
-var guid_1 = __webpack_require__(20);
+var guid_1 = __webpack_require__(21);
 var Context = (function () {
     function Context(container) {
         this.guid = guid_1.guid();
@@ -3857,10 +4406,17 @@ var request_1 = __webpack_require__(82);
 var target_1 = __webpack_require__(33);
 var binding_count_1 = __webpack_require__(72);
 var reflection_utils_1 = __webpack_require__(81);
+<<<<<<< HEAD
 var metadata_1 = __webpack_require__(15);
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
+=======
+var metadata_1 = __webpack_require__(16);
+var ERROR_MSGS = __webpack_require__(17);
+var METADATA_KEY = __webpack_require__(12);
+var literal_types_1 = __webpack_require__(19);
+>>>>>>> minor code changes
 var serialization_1 = __webpack_require__(24);
 function getBindingDictionary(cntnr) {
     return cntnr._bindingDictionary;
@@ -4028,9 +4584,13 @@ exports.QueryableString = QueryableString;
 
 var serialization_1 = __webpack_require__(24);
 var target_1 = __webpack_require__(33);
+<<<<<<< HEAD
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var ERROR_MSGS = __webpack_require__(17);
+>>>>>>> minor code changes
 var METADATA_KEY = __webpack_require__(12);
-var literal_types_1 = __webpack_require__(18);
+var literal_types_1 = __webpack_require__(19);
 function getDependencies(func) {
     var constructorName = serialization_1.getFunctionName(func);
     var targets = getTargets(func, false);
@@ -4139,7 +4699,7 @@ function formatTargetMetadata(targetMetadata) {
 
 "use strict";
 
-var guid_1 = __webpack_require__(20);
+var guid_1 = __webpack_require__(21);
 var Request = (function () {
     function Request(serviceIdentifier, parentContext, parentRequest, bindings, target) {
         this.guid = guid_1.guid();
@@ -4166,7 +4726,7 @@ exports.Request = Request;
 
 "use strict";
 
-var literal_types_1 = __webpack_require__(18);
+var literal_types_1 = __webpack_require__(19);
 function _injectProperties(instance, childRequests, resolveRequest) {
     var propertyInjectionsRequests = childRequests.filter(function (childRequest) {
         return (childRequest.target !== null && childRequest.target.type === literal_types_1.TargetTypeEnum.ClassProperty);
@@ -4211,10 +4771,17 @@ exports.resolveInstance = resolveInstance;
 
 "use strict";
 
+<<<<<<< HEAD
 var literal_types_1 = __webpack_require__(18);
 var serialization_1 = __webpack_require__(24);
 var instantiation_1 = __webpack_require__(83);
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var literal_types_1 = __webpack_require__(19);
+var serialization_1 = __webpack_require__(24);
+var instantiation_1 = __webpack_require__(83);
+var ERROR_MSGS = __webpack_require__(17);
+>>>>>>> minor code changes
 function _resolveRequest(request) {
     var bindings = request.bindings;
     var childRequests = request.childRequests;
@@ -4285,7 +4852,11 @@ exports.resolve = resolve;
 
 "use strict";
 
+<<<<<<< HEAD
 var literal_types_1 = __webpack_require__(18);
+=======
+var literal_types_1 = __webpack_require__(19);
+>>>>>>> minor code changes
 var binding_when_on_syntax_1 = __webpack_require__(34);
 var BindingInSyntax = (function () {
     function BindingInSyntax(binding) {
@@ -4387,8 +4958,13 @@ exports.BindingInWhenOnSyntax = BindingInWhenOnSyntax;
 
 var binding_in_when_on_syntax_1 = __webpack_require__(86);
 var binding_when_on_syntax_1 = __webpack_require__(34);
+<<<<<<< HEAD
 var literal_types_1 = __webpack_require__(18);
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var literal_types_1 = __webpack_require__(19);
+var ERROR_MSGS = __webpack_require__(17);
+>>>>>>> minor code changes
 var BindingToSyntax = (function () {
     function BindingToSyntax(binding) {
         this._binding = binding;
@@ -4459,6 +5035,7 @@ exports.BindingToSyntax = BindingToSyntax;
 
 /***/ }),
 /* 88 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4616,6 +5193,8 @@ var _a;
 
 /***/ }),
 =======
+=======
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4629,7 +5208,11 @@ var _a;
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
+<<<<<<< HEAD
 var uritemplate = __webpack_require__(629);
+=======
+var uritemplate = __webpack_require__(630);
+>>>>>>> minor code changes
 var _1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var inversify_1 = __webpack_require__(0);
@@ -4771,7 +5354,10 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4876,6 +5462,14 @@ var _a;
 
 "use strict";
 
+
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
@@ -4891,7 +5485,10 @@ __export(__webpack_require__(93));
 __export(__webpack_require__(101));
 __export(__webpack_require__(96));
 __export(__webpack_require__(100));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -5258,6 +5855,7 @@ exports.Utility = Utility;
 
 "use strict";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 var tslib_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(2);
@@ -5361,12 +5959,17 @@ function __export(m) {
 }
 __export(__webpack_require__(106));
 =======
+=======
+>>>>>>> minor code changes
 
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 __export(__webpack_require__(106));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -5426,7 +6029,10 @@ __export(__webpack_require__(106));
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -5446,7 +6052,10 @@ exports.TokenTypes = {
     Access: 'access',
     Refresh: 'refresh'
 };
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -5473,6 +6082,14 @@ exports.TokenTypes = {
 <<<<<<< HEAD
 
 =======
+
+
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
 
@@ -5599,7 +6216,10 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 __export(__webpack_require__(121));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -5743,12 +6363,24 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 124 */
 =======
 
 /***/ }),
 /* 125 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 126 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5817,14 +6449,6 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5842,6 +6466,14 @@ var _a, _b, _c;
 
 /***/ }),
 /* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6026,7 +6658,10 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 __export(__webpack_require__(131));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -6388,7 +7023,10 @@ function __export(m) {
 __export(__webpack_require__(135));
 __export(__webpack_require__(136));
 __export(__webpack_require__(134));
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
+=======
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -6445,6 +7083,7 @@ exports.diModule = diModule;
 
 /***/ }),
 /* 140 */
+<<<<<<< HEAD
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7264,6 +7903,8 @@ var _a;
 
 /***/ }),
 /* 145 */
+=======
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7347,6 +7988,57 @@ var ArticleCommentsRoute = (function (_super) {
     ArticleCommentsRoute.prototype.update = function (data) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
+<<<<<<< HEAD
+=======
+    return ArticleACLClient;
+}());
+ArticleACLClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ArticleACLRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ArticleACLRoute !== "undefined" && _1.ArticleACLRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ArticleACLClient);
+exports.ArticleACLClient = ArticleACLClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module baasicArticleACLRouteService
+ * @description Baasic Article ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var ArticleACLRoute = (function (_super) {
+    tslib_1.__extends(ArticleACLRoute, _super);
+    function ArticleACLRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'articles/{id}/acl/{?fields}';
+        _this.updateRoute = 'articles/{id}/acl/{?fields}';
+        _this.deleteByUserRoute = 'articles/{id}/acl/actions/{accessAction}/users/{user}/';
+        _this.deleteByRoleRoute = 'articles/{id}/acl/actions/{accessAction}/roles/{role}/';
+        return _this;
+    }
+>>>>>>> minor code changes
     /**
      * Parses delete route; this URI template doesnt support any additional options.
      * @method An article comment object used to delete specified article comment resource.
@@ -7422,6 +8114,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -7715,6 +8408,9 @@ var _a, _b, _c;
 
 /***/ }),
 /* 145 */
+=======
+/* 142 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7866,7 +8562,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 147 */
+=======
+/* 143 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8220,7 +8920,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 148 */
+=======
+/* 144 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8571,7 +9275,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 149 */
+=======
+/* 145 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8702,7 +9410,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 150 */
+=======
+/* 146 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8920,7 +9632,11 @@ __export(__webpack_require__(146));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 151 */
+=======
+/* 147 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8935,7 +9651,11 @@ __export(__webpack_require__(146));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 152 */
+=======
+/* 148 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9038,7 +9758,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 153 */
+=======
+/* 149 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9106,6 +9830,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9273,6 +9998,127 @@ var _a, _b, _c, _d;
 
 /***/ }),
 /* 155 */
+=======
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(148));
+__export(__webpack_require__(147));
+__export(__webpack_require__(149));
+__export(__webpack_require__(146));
+
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module articleFilesBatchClient
+ * @description  Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(6);
+var ArticleFilesBatchClient = (function () {
+    function ArticleFilesBatchClient(articleFilesBatchRoute, apiClient) {
+        this.articleFilesBatchRoute = articleFilesBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ArticleFilesBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.articleFilesBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system.
+     * @method
+     * @param data Collection of article files that needs to be deleted.
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // Remove original file resources
+                   articleFilesBatchClient.unlink([{ id: '<file-id>' }])
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+               // Remove derived file resources
+                   articleFilesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+    **/
+    ArticleFilesBatchClient.prototype.unlink = function (data) {
+        return this.apiClient.delete(this.articleFilesBatchRoute.unlink(), undefined, data);
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.
+     * @method
+     * @param data A collection of article files objects used to update specified article files.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example articleFilesClient.batch.update(files)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    ArticleFilesBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).
+     * @method
+     * @param data A collection of article file objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example articleFilesClient.batch.link(files)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    ArticleFilesBatchClient.prototype.link = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
+    };
+    return ArticleFilesBatchClient;
+}());
+ArticleFilesBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ArticleFilesBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ArticleFilesBatchRoute !== "undefined" && _1.ArticleFilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ArticleFilesBatchClient);
+exports.ArticleFilesBatchClient = ArticleFilesBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 152 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9391,11 +10237,15 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 155 */
 =======
 /***/ }),
 /* 156 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 153 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9549,7 +10399,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 157 */
+=======
+/* 154 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9629,7 +10483,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 158 */
+=======
+/* 155 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9734,7 +10592,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 159 */
+=======
+/* 156 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9807,7 +10669,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 160 */
+=======
+/* 157 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9998,7 +10864,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 161 */
+=======
+/* 158 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10150,6 +11020,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10304,6 +11175,200 @@ var _a, _b;
 
 /***/ }),
 /* 163 */
+=======
+/* 159 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module articleInstanceFilesClient
+ * @description  Article Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(6);
+var ArticleInstanceFilesClient = (function () {
+    function ArticleInstanceFilesClient(articleInstanceFilesRoute, articleInstanceFilesStreamsClient, ArticleInstanceFilesBatchClient, apiClient) {
+        this.articleInstanceFilesRoute = articleInstanceFilesRoute;
+        this.articleInstanceFilesStreamsClient = articleInstanceFilesStreamsClient;
+        this.ArticleInstanceFilesBatchClient = ArticleInstanceFilesBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ArticleInstanceFilesClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.articleInstanceFilesRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleInstanceFilesClient.prototype, "streams", {
+        get: function () {
+            return this.articleInstanceFilesStreamsClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleInstanceFilesClient.prototype, "batch", {
+        get: function () {
+            return this.ArticleInstanceFilesBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example articleInstanceFilesClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ArticleInstanceFilesClient.prototype.find = function (articleId, options) {
+        return this.apiClient.get(this.articleInstanceFilesRoute.find(articleId, options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be retrieved.
+     * @param id Article file id which uniquely identifies article file that needs to be retrieved.
+     * @param options options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example articleInstanceFilesClient.get('<file-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    ArticleInstanceFilesClient.prototype.get = function (articleId, id, options) {
+        return this.apiClient.get(this.articleInstanceFilesRoute.get(articleId, id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicArticleFilesRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink').href;
+     * ```
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be deleted.
+     * @param data
+     * @param options
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.
+                    articleInstanceFilesRoute.remove(fileEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ArticleInstanceFilesClient.prototype.unlink = function (articleId, data, options) {
+        return this.apiClient.delete(this.articleInstanceFilesRoute.unlink(articleId, data, options));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink by article action has been performed. This action will remove all file resources from the system related to the requested article if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicArticleService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink-by-article').href;
+     * ```
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be deleted.
+     * @param data
+     * @param options
+     * @returns A promise that is resolved once the unlink by article action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                    articleInstanceFilesClient.unlinkByArticle(fileEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    ArticleInstanceFilesClient.prototype.unlinkByArticle = function (articleId, data, options) {
+        return this.apiClient.delete(this.articleInstanceFilesRoute.unlink(articleId, data, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleFilesRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     ```
+     let params = modelMapper.updateParams(fileEntry);
+     let uri = params['model'].links('put').href;
+     ```
+     * @method
+     * @param articleId An article object used to update specified article resource.
+     * @param data Article File object used to update specific article file data in the system.
+     * @returns A promise that is resolved once the update file action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                   fileEntry.description = '<description>';
+                   articleInstanceFilesClient.update(fileEntry)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                           // perform error handling here
+                       });
+    **/
+    ArticleInstanceFilesClient.prototype.update = function (articleId, data) {
+        return this.apiClient.put(this.routeDefinition.update(articleId, data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the Article Files module (For example: file resources from the Media Vault module can be linked directly into the Article Files module).
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose article files need to be linked.
+     * @param data A article file object that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example articleInstanceFilesClient.link(fileObject)
+                    .then(function (response, status, headers, config) {
+                        // perform success handling here
+                    },
+                        function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    ArticleInstanceFilesClient.prototype.link = function (articleId, data) {
+        return this.apiClient.post(this.routeDefinition.link(articleId, data), this.routeDefinition.createParams(data));
+    };
+    return ArticleInstanceFilesClient;
+}());
+ArticleInstanceFilesClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ArticleInstanceFilesRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ArticleInstanceFilesStreamsClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.ArticleInstanceFilesBatchClient)),
+    tslib_1.__param(3, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ArticleInstanceFilesRoute !== "undefined" && _1.ArticleInstanceFilesRoute) === "function" && _a || Object, typeof (_b = typeof _1.ArticleInstanceFilesStreamsClient !== "undefined" && _1.ArticleInstanceFilesStreamsClient) === "function" && _b || Object, typeof (_c = typeof _1.ArticleInstanceFilesBatchClient !== "undefined" && _1.ArticleInstanceFilesBatchClient) === "function" && _c || Object, typeof (_d = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _d || Object])
+], ArticleInstanceFilesClient);
+exports.ArticleInstanceFilesClient = ArticleInstanceFilesClient;
+var _a, _b, _c, _d;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 160 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10405,7 +11470,11 @@ __export(__webpack_require__(159));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 164 */
+=======
+/* 161 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10422,7 +11491,11 @@ __export(__webpack_require__(159));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 165 */
+=======
+/* 162 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10600,6 +11673,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10720,6 +11794,26 @@ var _a;
 
 /***/ }),
 /* 167 */
+=======
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(162));
+__export(__webpack_require__(161));
+__export(__webpack_require__(158));
+__export(__webpack_require__(157));
+__export(__webpack_require__(160));
+__export(__webpack_require__(159));
+
+
+/***/ }),
+/* 164 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10917,6 +12011,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11055,6 +12150,128 @@ var _a;
 
 /***/ }),
 /* 168 */
+=======
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module articleRatingsRoute
+ * @description Baasic Article Ratings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Ratings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var ArticleRatingsRoute = (function (_super) {
+    tslib_1.__extends(ArticleRatingsRoute, _super);
+    function ArticleRatingsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'article-ratings';
+        _this.findRoute = 'article-ratings/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.findByUserRoute = 'article-ratings/{?username,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'article-ratings/{id}/{?embed,fields}';
+        _this.updateRoute = 'article-ratings/{id}';
+        _this.deleteRoute = 'article-ratings/{id}';
+        return _this;
+    }
+    /**
+     * Parses create article rating route; this URI does not support any additional embed items.
+     * @method
+     * @param data An article rating object that needs to be inserted into the system.
+     * @example articleRatingsRoute.create(data);
+     **/
+    ArticleRatingsRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses find article rating route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing article rating properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain article rating subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the article rating property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example articleRatingsRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    ArticleRatingsRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses findByUser article rating route which can be expanded with additional options. Supported items are:
+     * - `username` - A value that uniquely identifies a user which has created an article rating.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain article rating subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the article rating property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param username Username which uniquely identifies a user which has created an article rating.
+     * @param options Query resource options object.
+     * @example articleRatingsRoute.find({username: '<username>'});
+     **/
+    ArticleRatingsRoute.prototype.findByUser = function (username, options) {
+        var params = this.utility.extend({}, options);
+        params.username = username;
+        return _super.prototype.baseFind.call(this, this.findByUserRoute, params);
+    };
+    /**
+     * Parses get article rating route which must be expanded with the Id of the previously created article rating resource in the system. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param id Id which uniquely identifies article rating resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @example articleRatingsRoute.get({id: '<articleRating-id>'});
+     **/
+    ArticleRatingsRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update article rating route; this URI does not support any additional embed items.
+     * @method
+     * @param data An article object used to update specified article rating resource.
+     * @example articleRatingsRoute.update(data);
+     **/
+    ArticleRatingsRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+    * Parses delete article rating route; this URI does not support any additional embed items.
+    * @method
+    * @param data An article object used to delete specified article rating resource.
+    * @example articleRatingsRoute.delete(data);
+    **/
+    ArticleRatingsRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return ArticleRatingsRoute;
+}(common_1.BaseRoute));
+ArticleRatingsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], ArticleRatingsRoute);
+exports.ArticleRatingsRoute = ArticleRatingsRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 166 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11067,7 +12284,11 @@ __export(__webpack_require__(166));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 169 */
+=======
+/* 167 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11299,6 +12520,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11392,6 +12614,22 @@ var _a, _b;
 
 /***/ }),
 /* 171 */
+=======
+/* 168 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(167));
+__export(__webpack_require__(166));
+
+
+/***/ }),
+/* 169 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11455,7 +12693,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 172 */
+=======
+/* 170 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11542,7 +12784,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 173 */
+=======
+/* 171 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11606,7 +12852,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 174 */
+=======
+/* 172 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11670,7 +12920,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 175 */
+=======
+/* 173 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11732,7 +12986,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 176 */
+=======
+/* 174 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11823,7 +13081,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 177 */
+=======
+/* 175 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11896,7 +13158,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 178 */
+=======
+/* 176 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11984,7 +13250,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 179 */
+=======
+/* 177 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12048,7 +13318,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 180 */
+=======
+/* 178 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12136,7 +13410,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 181 */
+=======
+/* 179 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12200,7 +13478,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 182 */
+=======
+/* 180 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12219,7 +13501,11 @@ __export(__webpack_require__(174));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 183 */
+=======
+/* 181 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12359,6 +13645,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12462,6 +13749,28 @@ var _a, _b;
 
 /***/ }),
 /* 185 */
+=======
+/* 182 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(177));
+__export(__webpack_require__(179));
+__export(__webpack_require__(181));
+__export(__webpack_require__(175));
+__export(__webpack_require__(176));
+__export(__webpack_require__(178));
+__export(__webpack_require__(180));
+__export(__webpack_require__(174));
+
+
+/***/ }),
+/* 183 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12560,7 +13869,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 186 */
+=======
+/* 184 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12642,6 +13955,290 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
+/* 187 */
+=======
+/* 185 */
+>>>>>>> minor code changes
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module baasicArticleInstanceTagsDefinition
+ * @description  Article Instance Tags Definition provides an easy way to consume  Article Tags REST API end-points. `articleInstanceTagsRouteClient` functions enable performing standard CRUD operations directly on article tag resources, whereas the `articleClient` functions allow management between article and article tag. In order to obtain needed routes `articleInstanceTagsClient` uses `articleInstanceTagsRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(6);
+var ArticleInstanceTagsClient = (function () {
+    function ArticleInstanceTagsClient(articleInstanceTagsRoute, apiClient) {
+        this.articleInstanceTagsRoute = articleInstanceTagsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ArticleInstanceTagsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.articleInstanceTagsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of article tag resources matching the given criteria.
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose tag resources need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example articleInstanceTagsClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ArticleInstanceTagsClient.prototype.find = function (articleId, options) {
+        return this.apiClient.get(this.articleInstanceTagsRoute.find(articleId, options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified article tag resource.
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose tag resource needs to be retrieved.
+     * @param id A slug or id which uniquely identifies article tag resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example articleInstanceTagsClient.get('<articleTag-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    ArticleInstanceTagsClient.prototype.get = function (articleId, id, options) {
+        return this.apiClient.get(this.articleInstanceTagsRoute.get(articleId, id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create article tag action has been performed; this action creates a new tag for an article.
+     * @method
+     * @param data An article tag value that needs to be inserted as new article tag resource into the system.
+     * @returns A promise that is resolved once the create article tag action has been performed.
+     * @example articleInstanceTagsClient.create({
+                    articleId : '<article-id>',
+                    tag : {
+                        slug : '<slug>',
+                        sortOrder : 1,
+                        tag : '<tag>'
+                    }
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    ArticleInstanceTagsClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove article tag action has been performed. If the action is successfully completed, the article tag resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `articleTagsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(articleTag);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data Article Tag object that needs to be removed from the system.
+     * @returns A promise that is resolved once the remove article tag action has been performed.
+     * @example // articleTag is a resource previously fetched using get action.
+                    articleInstanceTagsClient.remove(articleTag)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ArticleInstanceTagsClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the removeAll article tag action has been performed. This action will remove all tags from an article if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicArticleRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(article);
+     * let uri = params['model'].links('delete-tags-by-article').href;
+     * ```
+     * @method
+     * @param data Article object whoose tags needs to be removed from the system.
+     * @returns A promise that is resolved once the removeAll article tag action has been performed.
+     * @example // article is a resource previously fetched using get action.
+                    articleInstanceTagsClient.removeAll(article)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    ArticleInstanceTagsClient.prototype.removeAll = function (data) {
+        return this.apiClient.delete(this.routeDefinition.deleteAll(data));
+    };
+    return ArticleInstanceTagsClient;
+}());
+ArticleInstanceTagsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ArticleInstanceTagsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ArticleInstanceTagsRoute !== "undefined" && _1.ArticleInstanceTagsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ArticleInstanceTagsClient);
+exports.ArticleInstanceTagsClient = ArticleInstanceTagsClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+<<<<<<< HEAD
+/* 188 */
+=======
+/* 186 */
+>>>>>>> minor code changes
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module articleInstanceTagsRoute
+ * @description Baasic Article Instance Tags Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Article Instance Tags Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var ArticleInstanceTagsRoute = (function (_super) {
+    tslib_1.__extends(ArticleInstanceTagsRoute, _super);
+    function ArticleInstanceTagsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'articles/{articleId}/tags/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'articles/{articleId}/tags/{tag}/{?embed,fields}';
+        _this.createRoute = 'articles/{articleId}/tags/{tag}/';
+        _this.deleteRoute = 'articles/{articleId}/tags/{id}';
+        _this.deleteAllRoute = 'articles/{articleId}/tags';
+        return _this;
+    }
+    /**
+     * Parses find article tags route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify article tags using the phrase search; multiple tag keywords must be comma separated.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain article tag subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the article tag property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose tag resources need to be retrieved.
+     * @param options Query resource options object.
+     * @example articleInstanceTagsRoute.find().expand({searchQuery: '<search-phrase>'});
+     **/
+    ArticleInstanceTagsRoute.prototype.find = function (articleId, options) {
+        var params = this.utility.extend({}, options);
+        params.articleId = articleId;
+        return _super.prototype.baseFind.call(this, this.findRoute, params);
+    };
+    /**
+     * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param articleId Article slug or id which uniquely identifies article whose tag resource needs to be retrieved.
+     * @param id A slug or id which uniquely identifies article tag resource that needs to be retrieved.
+     * @param options Options object that contains embed data.
+     * @example articleInstanceTagsRoute.get({id: '<articleTag-id>'});
+     **/
+    ArticleInstanceTagsRoute.prototype.get = function (articleId, id, options) {
+        var params = this.utility.extend({}, options);
+        params.articleId = articleId;
+        return _super.prototype.baseGet.call(this, this.getRoute, id, params);
+    };
+    /**
+     * Parses create article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param data An article tag value that needs to be inserted as new article tag resource into the system.
+     * @example articleInstanceTagsRoute.create({id: '<articleTag-id>'});
+     **/
+    ArticleInstanceTagsRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param data Article Tag object that needs to be removed from the system.
+     * @example articleInstanceTagsRoute.delete({id: '<articleTag-id>'});
+     **/
+    ArticleInstanceTagsRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses get article tag route which must be expanded with the Id of the previously created article tag resource in the system. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param data Article object whoose tags needs to be removed from the system.
+     * @example articleInstanceTagsRoute.deleteAll({id: '<articleTag-id>'});
+     **/
+    ArticleInstanceTagsRoute.prototype.deleteAll = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteAllRoute, data, undefined, 'delete-tags-by-article');
+    };
+    return ArticleInstanceTagsRoute;
+}(common_1.BaseRoute));
+ArticleInstanceTagsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], ArticleInstanceTagsRoute);
+exports.ArticleInstanceTagsRoute = ArticleInstanceTagsRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+- All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+<<<<<<< HEAD
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(188));
+__export(__webpack_require__(187));
+=======
 /* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12960,9 +14557,55 @@ var BaasicArticleUtility = (function () {
     return BaasicArticleUtility;
 }());
 exports.BaasicArticleUtility = BaasicArticleUtility;
+>>>>>>> minor code changes
 
 
 /***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var common_1 = __webpack_require__(2);
+var _1 = __webpack_require__(6);
+var BaasicArticleUtility = (function () {
+    function BaasicArticleUtility() {
+        this.utility = new common_1.Utility();
+    }
+    BaasicArticleUtility.prototype.replaceDiacritics = function (str) {
+        for (var letter in _1.ALPHABET) {
+            str = str.replace(_1.ALPHABET[letter], letter);
+        }
+        return str;
+    };
+    BaasicArticleUtility.prototype.toSlug = function (str) {
+        if (this.utility.isUndefined(str) || str === null || str === '') {
+            return str;
+        }
+        str = this.replaceDiacritics(str);
+        str = str.toLowerCase();
+        str = str.replace(/[^a-z0-9]+/g, '-');
+        str = str.replace(/^-|-$/g, '');
+        return str;
+    };
+    BaasicArticleUtility.prototype.updateSlug = function (resource) {
+        var newSlug = this.toSlug(resource.slug);
+        if (this.utility.isUndefined(newSlug) || newSlug === null || newSlug === '') {
+            newSlug = this.toSlug(resource.title);
+        }
+        if (!this.utility.isUndefined(newSlug) || newSlug !== null || newSlug !== '') {
+            if (resource.slug !== newSlug) {
+                resource.slug = newSlug;
+            }
+        }
+    };
+    return BaasicArticleUtility;
+}());
+exports.BaasicArticleUtility = BaasicArticleUtility;
+
+
+/***/ }),
+<<<<<<< HEAD
 /* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12986,6 +14629,8 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+=======
+>>>>>>> minor code changes
 /* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12999,8 +14644,13 @@ exports.CommentStatus = CommentStatus;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 
 ;
+=======
+
+;
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -13008,7 +14658,11 @@ exports.CommentStatus = CommentStatus;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -13052,8 +14706,13 @@ exports.CommentStatus = CommentStatus;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 
 ;
+=======
+
+;
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -13069,7 +14728,11 @@ exports.CommentStatus = CommentStatus;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -13086,8 +14749,13 @@ exports.CommentStatus = CommentStatus;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 
 ;
+=======
+
+;
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -13103,7 +14771,11 @@ exports.CommentStatus = CommentStatus;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -13111,6 +14783,10 @@ exports.CommentStatus = CommentStatus;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
+
+;
+=======
 
 ;
 
@@ -13139,10 +14815,37 @@ __export(__webpack_require__(202));
 __export(__webpack_require__(201));
 __export(__webpack_require__(192));
 __export(__webpack_require__(198));
+>>>>>>> minor code changes
 
 
 /***/ }),
 /* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(200));
+__export(__webpack_require__(204));
+__export(__webpack_require__(203));
+__export(__webpack_require__(194));
+__export(__webpack_require__(193));
+__export(__webpack_require__(195));
+__export(__webpack_require__(205));
+__export(__webpack_require__(197));
+__export(__webpack_require__(196));
+__export(__webpack_require__(206));
+__export(__webpack_require__(199));
+__export(__webpack_require__(202));
+__export(__webpack_require__(201));
+__export(__webpack_require__(192));
+__export(__webpack_require__(198));
+
+
+/***/ }),
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13253,7 +14956,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13289,7 +14992,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13420,10 +15123,11 @@ var _a, _b;
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 /* globals module */
 /**
  * @module calendarACLRoute
@@ -13541,10 +15245,18 @@ var _a;
   - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
   - All end-point objects are transformed by the associated route service.
  */ 
+=======
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(210));
+__export(__webpack_require__(211));
+>>>>>>> minor code changes
 
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13557,7 +15269,7 @@ __export(__webpack_require__(211));
 
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13663,7 +15375,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13730,7 +15442,7 @@ var _a;
 
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13939,7 +15651,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14070,7 +15782,7 @@ var _a;
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14248,10 +15960,11 @@ var _a, _b;
 
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 /* globals module */
 /**
  * @module calendarEventsRoute
@@ -14403,10 +16116,18 @@ var _a;
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
+=======
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(217));
+__export(__webpack_require__(218));
+>>>>>>> minor code changes
 
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14419,7 +16140,7 @@ __export(__webpack_require__(218));
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14540,7 +16261,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15929,6 +17650,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -15949,6 +17671,9 @@ __export(__webpack_require__(219));
 "use strict";
 =======
 /* 172 */
+=======
+/* 223 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16035,10 +17760,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 173 */
+=======
+/* 224 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
 
+<<<<<<< HEAD
 
 
 /***/ }),
@@ -16049,6 +17779,21 @@ var _a, _b;
 "use strict";
 =======
 /* 174 */
+=======
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(220));
+__export(__webpack_require__(221));
+__export(__webpack_require__(222));
+__export(__webpack_require__(223));
+
+
+/***/ }),
+/* 225 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16112,6 +17857,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -16126,6 +17872,9 @@ var _a, _b, _c, _d;
 "use strict";
 =======
 /* 176 */
+=======
+/* 226 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16216,6 +17965,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -16230,6 +17980,9 @@ var _a, _b;
 "use strict";
 =======
 /* 178 */
+=======
+/* 227 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16317,6 +18070,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -16331,6 +18085,9 @@ var _a, _b;
 "use strict";
 =======
 /* 180 */
+=======
+/* 228 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16418,10 +18175,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 181 */
+=======
+/* 229 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
 
+<<<<<<< HEAD
 
 
 /***/ }),
@@ -16432,6 +18194,21 @@ var _a, _b;
 "use strict";
 =======
 /* 182 */
+=======
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(225));
+__export(__webpack_require__(226));
+__export(__webpack_require__(227));
+__export(__webpack_require__(228));
+
+
+/***/ }),
+/* 230 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16439,6 +18216,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(177));
 __export(__webpack_require__(179));
 __export(__webpack_require__(181));
@@ -16454,6 +18232,11 @@ __export(__webpack_require__(174));
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
 
+=======
+__export(__webpack_require__(224));
+__export(__webpack_require__(229));
+__export(__webpack_require__(219));
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -16572,12 +18355,42 @@ __export(__webpack_require__(187));
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 
 
 
 /***/ }),
 <<<<<<< HEAD
 /* 245 */
+=======
+
+
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(231));
+__export(__webpack_require__(232));
+__export(__webpack_require__(233));
+__export(__webpack_require__(236));
+__export(__webpack_require__(235));
+__export(__webpack_require__(237));
+__export(__webpack_require__(238));
+__export(__webpack_require__(234));
+__export(__webpack_require__(253));
+__export(__webpack_require__(245));
+__export(__webpack_require__(239));
+
+
+/***/ }),
+/* 241 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16592,10 +18405,14 @@ __export(__webpack_require__(244));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 246 */
 =======
 /* 192 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 242 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16603,7 +18420,11 @@ __export(__webpack_require__(244));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 247 */
+=======
+/* 243 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16616,7 +18437,11 @@ __export(__webpack_require__(244));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 248 */
+=======
+/* 244 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16628,6 +18453,7 @@ __export(__webpack_require__(244));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16641,6 +18467,20 @@ __export(__webpack_require__(244));
 
 "use strict";
 
+=======
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(241));
+__export(__webpack_require__(242));
+__export(__webpack_require__(243));
+__export(__webpack_require__(244));
+>>>>>>> minor code changes
 
 
 /***/ }),
@@ -16983,6 +18823,7 @@ var _a;
 
 "use strict";
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* globals module */
 /**
  * @module calendarEventRsvpAttendeeClient
@@ -17261,6 +19102,31 @@ var _a, _b, _c;
 
 /***/ }),
 /* 258 */
+=======
+
+
+
+/***/ }),
+/* 253 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(248));
+__export(__webpack_require__(247));
+__export(__webpack_require__(250));
+__export(__webpack_require__(249));
+__export(__webpack_require__(252));
+__export(__webpack_require__(246));
+__export(__webpack_require__(251));
+
+
+/***/ }),
+/* 254 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17629,6 +19495,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -17743,6 +19610,9 @@ var _a, _b;
  */
 =======
 /* 210 */
+=======
+/* 255 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18415,7 +20285,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 214 */
+=======
+/* 256 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18482,7 +20356,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 215 */
+=======
+/* 257 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18691,7 +20569,11 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 216 */
+=======
+/* 258 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18822,6 +20704,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 217 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -19004,6 +20887,24 @@ var _a;
 
 /***/ }),
 /* 267 */
+=======
+/* 259 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(255));
+__export(__webpack_require__(256));
+__export(__webpack_require__(257));
+__export(__webpack_require__(258));
+
+
+/***/ }),
+/* 260 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19216,6 +21117,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19373,6 +21275,9 @@ var _a;
 "use strict";
 =======
 /* 218 */
+=======
+/* 261 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19530,6 +21435,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19544,6 +21450,9 @@ __export(__webpack_require__(218));
 
 /***/ }),
 /* 220 */
+=======
+/* 262 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19664,7 +21573,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 221 */
+=======
+/* 263 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19746,6 +21659,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -19969,6 +21883,9 @@ var _a;
 /* 273 */
 =======
 /* 224 */
+=======
+/* 264 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19976,6 +21893,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(220));
 __export(__webpack_require__(221));
 __export(__webpack_require__(222));
@@ -19984,6 +21902,16 @@ __export(__webpack_require__(223));
 
 /***/ }),
 /* 225 */
+=======
+__export(__webpack_require__(260));
+__export(__webpack_require__(261));
+__export(__webpack_require__(262));
+__export(__webpack_require__(263));
+
+
+/***/ }),
+/* 265 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20094,6 +22022,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 226 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -20775,6 +22704,9 @@ var _a, _b, _c;
  */ 
 =======
 /* 229 */
+=======
+/* 266 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20789,7 +22721,11 @@ __export(__webpack_require__(228));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 230 */
+=======
+/* 267 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20804,7 +22740,11 @@ __export(__webpack_require__(219));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 279 */
+=======
+/* 268 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20935,6 +22875,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21054,6 +22995,55 @@ var _a, _b;
 
 /***/ }),
 /* 282 */
+=======
+/* 269 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(266));
+__export(__webpack_require__(265));
+__export(__webpack_require__(268));
+__export(__webpack_require__(267));
+
+
+/***/ }),
+/* 270 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(7);
+var _2 = __webpack_require__(40);
+var inversify_1 = __webpack_require__(0);
+var CalendarLookups = (function () {
+    function CalendarLookups(RsvpInvitationType, RsvpAttendeeStatus, eventStatus, eventType) {
+        this.RsvpInvitationType = RsvpInvitationType;
+        this.RsvpAttendeeStatus = RsvpAttendeeStatus;
+        this.eventStatus = eventStatus;
+        this.eventType = eventType;
+    }
+    return CalendarLookups;
+}());
+CalendarLookups = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarEventRsvpInvitationTypeClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeStatusClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CalendarEventStatusClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarEventTypeClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CalendarEventRsvpInvitationTypeClient !== "undefined" && _2.CalendarEventRsvpInvitationTypeClient) === "function" && _a || Object, typeof (_b = typeof _2.CalendarEventRsvpAttendeeStatusClient !== "undefined" && _2.CalendarEventRsvpAttendeeStatusClient) === "function" && _b || Object, typeof (_c = typeof _2.CalendarEventStatusClient !== "undefined" && _2.CalendarEventStatusClient) === "function" && _c || Object, typeof (_d = typeof _2.CalendarEventTypeClient !== "undefined" && _2.CalendarEventTypeClient) === "function" && _d || Object])
+], CalendarLookups);
+exports.CalendarLookups = CalendarLookups;
+var _a, _b, _c, _d;
+
+
+/***/ }),
+/* 271 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21120,7 +23110,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 283 */
+=======
+/* 272 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21437,7 +23431,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 240 */
+=======
+/* 273 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21459,6 +23457,7 @@ __export(__webpack_require__(239));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 241 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -21480,6 +23479,155 @@ __export(__webpack_require__(284));
 =======
 /* 242 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 274 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module calendarEventRsvpAttendeeStatusRoute
+ * @description BaasicCalendarEventRsvpAttendeeStatusRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventRsvpAttendeeStatusRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
+    tslib_1.__extends(CalendarEventRsvpAttendeeStatusRoute, _super);
+    function CalendarEventRsvpAttendeeStatusRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'calendar-lookups/rsvp-attendee-statuses/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
+        _this.getRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}/{?embed, fields}';
+        _this.createRoute = 'calendar-lookups/rsvp-attendee-statuses';
+        _this.updateRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}';
+        _this.deleteRoute = 'calendar-lookups/rsvp-attendee-statuses/{id}';
+        _this.purgeRoute = 'calendar-lookups/rsvp-attendee-statuses/purge';
+        return _this;
+    }
+    /**
+     * Parses find route which can be expanded with additional GetCalendarOptions. Supported items are:
+     * - `searchQuery` - A string referencing CalendarEventRsvpAttendeeStatus properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain CalendarEventRsvpAttendeeStatus subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the CalendarEventRsvpAttendeeStatus property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
+     * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
+     * - `ids` - CalendarEventRsvpAttendeeStatus ids which uniquely identify CalendarEventRsvpAttendeeStatus resources that need to be retrieved.
+     * @method
+     * @param options Query resource GetCalendarOptions object.
+     * @example calendarEventRsvpAttendeeStatusRoute.find({searchQuery: '<search-phrase>'});
+     */
+    CalendarEventRsvpAttendeeStatusRoute.prototype.find = function (options) {
+        var opt;
+        if (options) {
+            opt = options;
+            opt.to = this.getToDate(opt);
+            opt.from = this.getFromDate(opt);
+        }
+        else {
+            opt = {};
+        }
+        return _super.prototype.baseFind.call(this, this.findRoute, opt);
+    };
+    /**
+     * Parses get route which must be expanded with the id of the previously created CalendarEventRsvpAttendeeStatus resource. This route can be expanded using additional GetRequestOptions. Supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param id CalendarEventRsvpAttendeeStatus id which uniquely identifies CalendarEventRsvpAttendeeStatus resource that needs to be retrieved.
+     * @param options Query resource GEtRequestOptions object.
+     * @example calendarEventRsvpAttendeeStatusRoute.get(id);
+     */
+    CalendarEventRsvpAttendeeStatusRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create route. This URI template does not expose any additional options.
+     * @method
+     * @param data A CalendarEventRsvpAttendeeStatus object that needs to be inserted into the system.
+     * @example calendarEventRsvpAttendeeStatusRoute.create(data);
+     */
+    CalendarEventRsvpAttendeeStatusRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses update route. This URI template does not expose any additional options.
+     * @method
+     * @param data A CalendarEventRsvpAttendeeStatus object used to update specified CalendarEventRsvpAttendeeStatus resource.
+     * @example calendarEventRsvpAttendeeStatusRoute.update(data);
+     */
+    CalendarEventRsvpAttendeeStatusRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delte route. This URI template does not expose any additional options.
+     * @method
+     * @param data A CalendarEventRsvpAttendeeStatus object used to delete specified CalendarEventRsvpAttendeeStatus resource.
+     * @example calendarEventRsvpAttendeeStatusRoute.delete(data);
+     */
+    CalendarEventRsvpAttendeeStatusRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses purge route. This URI template does not expose any additional options.
+     * @method
+     * @example calendarEventRsvpAttendeeStatusRoute.purge();
+     */
+    CalendarEventRsvpAttendeeStatusRoute.prototype.purge = function () {
+        return _super.prototype.parse.call(this, this.purgeRoute);
+    };
+    CalendarEventRsvpAttendeeStatusRoute.prototype.getToDate = function (options) {
+        if (!this.utility.isUndefined(options.to) && options.to !== null) {
+            return options.to.toISOString();
+        }
+        return undefined;
+    };
+    CalendarEventRsvpAttendeeStatusRoute.prototype.getFromDate = function (options) {
+        if (!this.utility.isUndefined(options.from) && options.from !== null) {
+            return options.from.toISOString();
+        }
+        return undefined;
+    };
+    return CalendarEventRsvpAttendeeStatusRoute;
+}(common_1.BaseRoute));
+CalendarEventRsvpAttendeeStatusRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CalendarEventRsvpAttendeeStatusRoute);
+exports.CalendarEventRsvpAttendeeStatusRoute = CalendarEventRsvpAttendeeStatusRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 275 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(271));
+__export(__webpack_require__(272));
+__export(__webpack_require__(273));
+__export(__webpack_require__(274));
+
+
+/***/ }),
+/* 276 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22527,6 +24675,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 256 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -22927,6 +25076,9 @@ var _a;
 /* 302 */
 =======
 /* 258 */
+=======
+/* 277 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23119,6 +25271,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23135,6 +25288,9 @@ __export(__webpack_require__(258));
 
 /***/ }),
 /* 260 */
+=======
+/* 278 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23242,6 +25398,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 261 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -23704,6 +25861,9 @@ var _a, _b;
 /* 307 */
 =======
 /* 263 */
+=======
+/* 279 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23856,7 +26016,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 264 */
+=======
+/* 280 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23864,6 +26028,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(260));
 __export(__webpack_require__(261));
 __export(__webpack_require__(262));
@@ -23872,6 +26037,16 @@ __export(__webpack_require__(263));
 
 /***/ }),
 /* 265 */
+=======
+__export(__webpack_require__(276));
+__export(__webpack_require__(277));
+__export(__webpack_require__(278));
+__export(__webpack_require__(279));
+
+
+/***/ }),
+/* 281 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23983,6 +26158,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 266 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -24472,6 +26648,9 @@ var _a, _b, _c;
  */
 =======
 /* 268 */
+=======
+/* 282 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24622,6 +26801,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24669,6 +26849,9 @@ var _a, _b, _c, _d;
 
 /***/ }),
 /* 271 */
+=======
+/* 283 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24771,7 +26954,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 272 */
+=======
+/* 284 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25093,7 +27280,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 275 */
+=======
+/* 285 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25101,6 +27292,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(271));
 __export(__webpack_require__(272));
 __export(__webpack_require__(273));
@@ -25109,6 +27301,16 @@ __export(__webpack_require__(274));
 
 /***/ }),
 /* 276 */
+=======
+__export(__webpack_require__(281));
+__export(__webpack_require__(282));
+__export(__webpack_require__(283));
+__export(__webpack_require__(284));
+
+
+/***/ }),
+/* 286 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25211,6 +27413,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -25303,6 +27506,9 @@ var _a, _b;
 /***/ }),
 <<<<<<< HEAD
 /* 316 */
+=======
+/* 287 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25373,6 +27579,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25633,6 +27840,9 @@ var _a, _b;
 /* 319 */
 =======
 /* 278 */
+=======
+/* 288 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25810,7 +28020,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 279 */
+=======
+/* 289 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25941,7 +28155,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 280 */
+=======
+/* 290 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25949,6 +28167,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(276));
 __export(__webpack_require__(277));
 __export(__webpack_require__(278));
@@ -25957,6 +28176,50 @@ __export(__webpack_require__(279));
 
 /***/ }),
 /* 281 */
+=======
+__export(__webpack_require__(286));
+__export(__webpack_require__(287));
+__export(__webpack_require__(288));
+__export(__webpack_require__(289));
+
+
+/***/ }),
+/* 291 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(7);
+var inversify_1 = __webpack_require__(0);
+var Root = (function () {
+    function Root(lookups, ACL, attendee, calendar, event, rsvp) {
+        this.lookups = lookups;
+        this.ACL = ACL;
+        this.attendee = attendee;
+        this.calendar = calendar;
+        this.event = event;
+        this.rsvp = rsvp;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CalendarLookups)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CalendarACLClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CalendarEventRsvpAttendeeClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CalendarClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.CalendarEventClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CalendarEventRsvpClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarLookups !== "undefined" && _1.CalendarLookups) === "function" && _a || Object, typeof (_b = typeof _1.CalendarACLClient !== "undefined" && _1.CalendarACLClient) === "function" && _b || Object, typeof (_c = typeof _1.CalendarEventRsvpAttendeeClient !== "undefined" && _1.CalendarEventRsvpAttendeeClient) === "function" && _c || Object, typeof (_d = typeof _1.CalendarClient !== "undefined" && _1.CalendarClient) === "function" && _d || Object, typeof (_e = typeof _1.CalendarEventClient !== "undefined" && _1.CalendarEventClient) === "function" && _e || Object, typeof (_f = typeof _1.CalendarEventRsvpClient !== "undefined" && _1.CalendarEventRsvpClient) === "function" && _f || Object])
+], Root);
+exports.Root = Root;
+var _a, _b, _c, _d, _e, _f;
+
+
+/***/ }),
+/* 292 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26059,6 +28322,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 282 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -26502,6 +28766,9 @@ var _a, _b;
 /* 324 */
 =======
 /* 284 */
+=======
+/* 293 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26632,7 +28899,62 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 285 */
+=======
+/* 294 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 295 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 296 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 297 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 298 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 299 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 300 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26640,6 +28962,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(281));
 __export(__webpack_require__(282));
 __export(__webpack_require__(283));
@@ -26648,6 +28971,18 @@ __export(__webpack_require__(284));
 
 /***/ }),
 /* 286 */
+=======
+__export(__webpack_require__(297));
+__export(__webpack_require__(296));
+__export(__webpack_require__(299));
+__export(__webpack_require__(298));
+__export(__webpack_require__(294));
+__export(__webpack_require__(295));
+
+
+/***/ }),
+/* 301 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26750,6 +29085,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 287 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -27097,6 +29433,9 @@ var _a, _b, _c;
  */
 =======
 /* 289 */
+=======
+/* 302 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27226,7 +29565,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 290 */
+=======
+/* 303 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27234,6 +29577,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(286));
 __export(__webpack_require__(287));
 __export(__webpack_require__(288));
@@ -27381,6 +29725,14 @@ var _a, _b;
 "use strict";
 =======
 /* 293 */
+=======
+__export(__webpack_require__(302));
+__export(__webpack_require__(301));
+
+
+/***/ }),
+/* 304 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27409,9 +29761,159 @@ var CommerceRoute = (function (_super) {
         return _this;
     }
     /**
+<<<<<<< HEAD
      * Parses find commerce route which can be expanded with additional options. Supported items are:
      * - `customerId` - The customer identifier.
      * - `systemName` - The commerce payment gateway system name.
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceCouponClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>',
+                   couponCategoryId : '',
+                   categoryAbrv: ''
+               })
+               .then(function (collection) {
+                   // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+    **/
+    CommerceCouponClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceCouponClient.get()
+                      .then(function (data) {
+                          // perform success action here
+                      },
+                       function (response, status, headers, config) {
+                           // perform error handling here
+                      });
+   **/
+    CommerceCouponClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceCouponRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceCouponClient.create({
+                    name : '<coupon-name>',
+                    slug : '<slug>',
+                    shortDescription : '<short-description>',
+                    recurringCyclePeriodTypeId: '<recurring-cycle-period-type-id>'
+                    planId : '<plan-id>',
+                    price: 100,
+                    published: true
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceCouponClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCouponRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCoupon);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCoupon is a resource previously fetched using get action.
+                        commerceCoupon.shortDescription : '<short-description>';
+                        commerceCouponClient.update(commerceCoupon)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceCouponClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCouponRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCoupon);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCoupon is a resource previously fetched using get action.
+                    commerceCouponClient.remove(commerceCoupon)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceCouponClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceCouponClient;
+}());
+CommerceCouponClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCouponRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCouponRoute !== "undefined" && _1.CommerceCouponRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceCouponClient);
+exports.CommerceCouponClient = CommerceCouponClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 305 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceCouponRoute
+ * @description Baasic Commerce Coupon Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Coupon Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceCouponRoute = (function (_super) {
+    tslib_1.__extends(CommerceCouponRoute, _super);
+    function CommerceCouponRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/coupons/{?searchQuery,page,rpp,sort,embed,fields,productId,productCategoryId,active}';
+        _this.getRoute = 'commerce/coupons/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/coupons';
+        _this.updateRoute = 'commerce/coupons/{id}';
+        _this.deleteRoute = 'commerce/coupons/{id}';
+        return _this;
+    }
+    /**
+     * Parses find commerce coupon route which can be expanded with additional options. Supported items are:
+>>>>>>> minor code changes
      * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
      * - `plan` - Product name.
      * - `statuses` - Subscription status unique identifier or abbreviation in CSV format.
@@ -27490,10 +29992,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 294 */
+=======
+/* 306 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
 
+<<<<<<< HEAD
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
@@ -27511,6 +30018,19 @@ __export(__webpack_require__(327));
 "use strict";
 =======
 /* 295 */
+=======
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(305));
+__export(__webpack_require__(304));
+
+
+/***/ }),
+/* 307 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27518,6 +30038,7 @@ __export(__webpack_require__(327));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -27561,6 +30082,9 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 =======
 /* 297 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 308 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27990,9 +30514,13 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 335 */
 =======
 /* 300 */
+=======
+/* 309 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28009,6 +30537,7 @@ __export(__webpack_require__(295));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 301 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -28199,6 +30728,9 @@ var _a;
 /* 338 */
 =======
 /* 303 */
+=======
+/* 310 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29200,6 +31732,7 @@ __export(__webpack_require__(343));
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29210,6 +31743,8 @@ __export(__webpack_require__(343));
  * @description  Commerce Subscription Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceSubscriptionStatusBatchClient` uses `commerceSubscriptionStatusBatchRoute`.
  */
 =======
+=======
+>>>>>>> minor code changes
 /* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29311,6 +31846,7 @@ var _a, _b;
 
 /***/ }),
 /* 315 */
+<<<<<<< HEAD
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
 
@@ -29476,6 +32012,8 @@ var _a;
 /***/ }),
 <<<<<<< HEAD
 /* 348 */
+=======
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29624,9 +32162,13 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 349 */
 =======
 /* 317 */
+=======
+/* 316 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29641,6 +32183,7 @@ __export(__webpack_require__(313));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 318 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -30028,6 +32571,9 @@ __export(__webpack_require__(351));
 /* 354 */
 =======
 /* 322 */
+=======
+/* 317 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30035,6 +32581,7 @@ __export(__webpack_require__(351));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(319));
 __export(__webpack_require__(318));
 __export(__webpack_require__(321));
@@ -30691,6 +33238,16 @@ __export(__webpack_require__(325));
 
 /***/ }),
 /* 328 */
+=======
+__export(__webpack_require__(316));
+__export(__webpack_require__(315));
+__export(__webpack_require__(314));
+__export(__webpack_require__(313));
+
+
+/***/ }),
+/* 318 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30785,6 +33342,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -30864,6 +33422,9 @@ var _a;
 =======
 /* 330 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 319 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30873,6 +33434,7 @@ var _a;
  * @description  Product Settings Client provides an easy way to consume  Product Settings REST API end-points. In order to obtain needed routes `productSettingsClient` uses `productSettingsRoute`.
  */
 
+<<<<<<< HEAD
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
@@ -31025,6 +33587,10 @@ var _a;
 /***/ }),
 <<<<<<< HEAD
 /* 362 */
+=======
+/***/ }),
+/* 320 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31121,9 +33687,13 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 363 */
 =======
 /* 332 */
+=======
+/* 321 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31138,6 +33708,7 @@ __export(__webpack_require__(330));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 333 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -31586,6 +34157,9 @@ __export(__webpack_require__(366));
 /* 368 */
 =======
 /* 337 */
+=======
+/* 322 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31593,6 +34167,7 @@ __export(__webpack_require__(366));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(334));
 __export(__webpack_require__(333));
 __export(__webpack_require__(336));
@@ -31602,6 +34177,16 @@ __export(__webpack_require__(335));
 /***/ }),
 /* 338 */
 >>>>>>> Merged develop to shopping cart.
+=======
+__export(__webpack_require__(319));
+__export(__webpack_require__(318));
+__export(__webpack_require__(321));
+__export(__webpack_require__(320));
+
+
+/***/ }),
+/* 323 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31865,10 +34450,14 @@ __export(__webpack_require__(368));
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 371 */
 =======
 /* 341 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 324 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31878,7 +34467,11 @@ __export(__webpack_require__(368));
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 372 */
+=======
+/* 325 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31886,7 +34479,11 @@ __export(__webpack_require__(368));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 373 */
+=======
+/* 326 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31895,9 +34492,13 @@ __export(__webpack_require__(368));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 374 */
 =======
 /* 342 */
+=======
+/* 327 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31905,6 +34506,7 @@ __export(__webpack_require__(368));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(339));
 __export(__webpack_require__(338));
 __export(__webpack_require__(341));
@@ -31913,6 +34515,16 @@ __export(__webpack_require__(340));
 
 /***/ }),
 /* 343 */
+=======
+__export(__webpack_require__(324));
+__export(__webpack_require__(323));
+__export(__webpack_require__(326));
+__export(__webpack_require__(325));
+
+
+/***/ }),
+/* 328 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31953,6 +34565,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 344 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -32464,6 +35077,9 @@ var _a, _b, _c, _d;
  */
 =======
 /* 350 */
+=======
+/* 329 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32534,6 +35150,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -32827,6 +35444,9 @@ var _a, _b;
  */
 =======
 /* 352 */
+=======
+/* 330 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32887,7 +35507,132 @@ var CommerceLookupsPaymentTransactionStatusRoute = (function (_super) {
     /**
      * Parses create commerce payment method route; this URI template does not expose any additional options.
      * @method
+<<<<<<< HEAD
      * @example commerceLookupsPaymentTransactionStatusRoute.create();
+=======
+     * @example commerceLookupsCountryClient.create({
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsCountryClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCountryRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCountry);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCountry is a resource previously fetched using get action.
+                        commerceCountry.phoneCode = '<phone-code>';
+                        commerceLookupsCountryClient.update(commerceCountry)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceLookupsCountryClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCountryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCountry);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCountry is a resource previously fetched using get action.
+                    commerceLookupsCountryClient.remove(commerceCountry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsCountryClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsCountryClient;
+}());
+CommerceLookupsCountryClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCountryRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsCountryBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCountryRoute !== "undefined" && _1.CommerceLookupsCountryRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsCountryBatchClient !== "undefined" && _1.CommerceLookupsCountryBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsCountryClient);
+exports.CommerceLookupsCountryClient = CommerceLookupsCountryClient;
+var _a, _b, _c;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 331 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsCountryRoute
+ * @description Baasic Commerce Lookups Country Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(5);
+var CommerceLookupsCountryRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsCountryRoute, _super);
+    function CommerceLookupsCountryRoute(commerceCountryBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.commerceCountryBatchRoute = commerceCountryBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/countries/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/lookups/countries/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/lookups/countries';
+        _this.updateRoute = 'commerce/lookups/countries/{id}';
+        _this.deleteRoute = 'commerce/lookups/countries/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsCountryRoute.prototype, "batch", {
+        get: function () {
+            return this.commerceCountryBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce country route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceLookupsCountryRoute.find({searchQuery: '<search-phrase>'});
+>>>>>>> minor code changes
      **/
     CommerceLookupsPaymentTransactionStatusRoute.prototype.create = function () {
         return _super.prototype.baseCreate.call(this, this.createRoute, {});
@@ -32931,7 +35676,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 353 */
+=======
+/* 332 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32939,6 +35688,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(350));
 __export(__webpack_require__(349));
 __export(__webpack_require__(352));
@@ -32947,6 +35697,16 @@ __export(__webpack_require__(351));
 
 /***/ }),
 /* 354 */
+=======
+__export(__webpack_require__(329));
+__export(__webpack_require__(328));
+__export(__webpack_require__(331));
+__export(__webpack_require__(330));
+
+
+/***/ }),
+/* 333 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33042,6 +35802,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -33145,6 +35906,80 @@ var _a;
 "use strict";
 =======
 /* 356 */
+=======
+/* 334 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsCouponTypeBatchRoute
+ * @description Baasic Commerce Lookups CouponType Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups CouponType Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsCouponTypeBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsCouponTypeBatchRoute, _super);
+    function CommerceLookupsCouponTypeBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/address-types/batch';
+        _this.updateRoute = 'commerce/lookups/address-types/batch';
+        _this.deleteRoute = 'commerce/lookups/address-types/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCouponTypeRoute.create();
+     */
+    CommerceLookupsCouponTypeBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCouponTypeRoute.update();
+     */
+    CommerceLookupsCouponTypeBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCouponTypeRoute.remove();
+     */
+    CommerceLookupsCouponTypeBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsCouponTypeBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsCouponTypeBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsCouponTypeBatchRoute);
+exports.CommerceLookupsCouponTypeBatchRoute = CommerceLookupsCouponTypeBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 335 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33294,6 +36129,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -33304,6 +36140,9 @@ var _a, _b, _c;
 /***/ }),
 <<<<<<< HEAD
 /* 384 */
+=======
+/* 336 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33312,9 +36151,13 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 385 */
 =======
 /* 358 */
+=======
+/* 337 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33322,6 +36165,7 @@ var _a, _b, _c;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(355));
 __export(__webpack_require__(354));
 __export(__webpack_require__(357));
@@ -33331,6 +36175,16 @@ __export(__webpack_require__(356));
 /***/ }),
 /* 359 */
 >>>>>>> Merged develop to shopping cart.
+=======
+__export(__webpack_require__(334));
+__export(__webpack_require__(333));
+__export(__webpack_require__(336));
+__export(__webpack_require__(335));
+
+
+/***/ }),
+/* 338 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33339,10 +36193,14 @@ __export(__webpack_require__(356));
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 386 */
 =======
 /* 360 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 339 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33351,6 +36209,7 @@ __export(__webpack_require__(356));
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 387 */
 =======
@@ -34377,6 +37236,9 @@ var _a;
 "use strict";
 =======
 /* 371 */
+=======
+/* 340 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34442,6 +37304,45 @@ var CommerceProductFilesStreamsClient = (function () {
                          function (response, status, headers, config) {
                             // perform error handling here
                         });
+<<<<<<< HEAD
+=======
+     **/
+    CommerceLookupsInvoiceStatusClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsInvoiceStatusClient;
+}());
+CommerceLookupsInvoiceStatusClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsInvoiceStatusBatchClient !== "undefined" && _1.CommerceLookupsInvoiceStatusBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsInvoiceStatusRoute !== "undefined" && _1.CommerceLookupsInvoiceStatusRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsInvoiceStatusClient);
+exports.CommerceLookupsInvoiceStatusClient = CommerceLookupsInvoiceStatusClient;
+var _a, _b, _c;
+/**
+ * @copyright(c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 341 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsInvoiceStatusRoute
+ * @description Baasic Commerce Lookups InvoiceStatus Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups InvoiceStatus Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+>>>>>>> minor code changes
 
                 // Request derived blob
                         productFilesStreamsClient.getBlob({
@@ -34530,6 +37431,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -34584,6 +37486,65 @@ exports.diModule = diModule;
 =======
 /* 375 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 342 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(339));
+__export(__webpack_require__(338));
+__export(__webpack_require__(341));
+__export(__webpack_require__(340));
+
+
+/***/ }),
+/* 343 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(5);
+var _2 = __webpack_require__(41);
+var inversify_1 = __webpack_require__(0);
+var Lookups = (function () {
+    function Lookups(addressTypes, countries, countryStates, paymentMethods, paymentTransactionStatuses, recurringCyclePeriodTypes, subscriptionStatuses, invoiceStatuses, couponTypes) {
+        this.addressTypes = addressTypes;
+        this.countries = countries;
+        this.countryStates = countryStates;
+        this.paymentMethods = paymentMethods;
+        this.paymentTransactionStatuses = paymentTransactionStatuses;
+        this.recurringCyclePeriodTypes = recurringCyclePeriodTypes;
+        this.subscriptionStatuses = subscriptionStatuses;
+        this.invoiceStatuses = invoiceStatuses;
+        this.couponTypes = couponTypes;
+    }
+    return Lookups;
+}());
+Lookups = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsAddressTypesClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsCountryClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CommerceLookupsCountryStateClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentMethodClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentTransactionStatusClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CommerceLookupsRecurringCyclePeriodTypeClient)),
+    tslib_1.__param(6, inversify_1.inject(_1.TYPES.CommerceLookupsSubscriptionStatusClient)),
+    tslib_1.__param(7, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusClient)),
+    tslib_1.__param(8, inversify_1.inject(_1.TYPES.CommerceLookupsCouponTypesClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CommerceLookupsAddressTypesClient !== "undefined" && _2.CommerceLookupsAddressTypesClient) === "function" && _a || Object, typeof (_b = typeof _2.CommerceLookupsCountryClient !== "undefined" && _2.CommerceLookupsCountryClient) === "function" && _b || Object, typeof (_c = typeof _2.CommerceLookupsCountryStateClient !== "undefined" && _2.CommerceLookupsCountryStateClient) === "function" && _c || Object, typeof (_d = typeof _2.CommerceLookupsPaymentMethodClient !== "undefined" && _2.CommerceLookupsPaymentMethodClient) === "function" && _d || Object, typeof (_e = typeof _2.CommerceLookupsPaymentTransactionStatusClient !== "undefined" && _2.CommerceLookupsPaymentTransactionStatusClient) === "function" && _e || Object, typeof (_f = typeof _2.CommerceLookupsRecurringCyclePeriodTypeClient !== "undefined" && _2.CommerceLookupsRecurringCyclePeriodTypeClient) === "function" && _f || Object, typeof (_g = typeof _2.CommerceLookupsSubscriptionStatusClient !== "undefined" && _2.CommerceLookupsSubscriptionStatusClient) === "function" && _g || Object, typeof (_h = typeof _2.CommerceLookupsInvoiceStatusClient !== "undefined" && _2.CommerceLookupsInvoiceStatusClient) === "function" && _h || Object, typeof (_j = typeof _2.CommerceLookupsCouponTypesClient !== "undefined" && _2.CommerceLookupsCouponTypesClient) === "function" && _j || Object])
+], Lookups);
+exports.Lookups = Lookups;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+
+
+/***/ }),
+/* 344 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35197,7 +38158,11 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 405 */
+=======
+/* 345 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35291,9 +38256,13 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 406 */
 =======
 /* 379 */
+=======
+/* 346 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35308,7 +38277,11 @@ __export(__webpack_require__(377));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 380 */
+=======
+/* 347 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35328,6 +38301,7 @@ __export(__webpack_require__(379));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 381 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -35669,6 +38643,9 @@ var _a, _b;
 /* 409 */
 =======
 /* 383 */
+=======
+/* 348 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35676,6 +38653,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(382));
 __export(__webpack_require__(381));
 
@@ -36211,6 +39189,16 @@ exports.diModule = diModule;
 
 /***/ }),
 /* 390 */
+=======
+__export(__webpack_require__(345));
+__export(__webpack_require__(344));
+__export(__webpack_require__(347));
+__export(__webpack_require__(346));
+
+
+/***/ }),
+/* 349 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36263,8 +39251,68 @@ var DynamicResourceACLClient = (function () {
                         // perform error handling here
                     });
      **/
+<<<<<<< HEAD
     DynamicResourceACLClient.prototype.update = function (options) {
         return this.apiClient.put(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
+=======
+    CommerceLookupsPaymentTransactionStatusBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsPaymentTransactionStatusBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsPaymentTransactionStatusBatchClient;
+}());
+CommerceLookupsPaymentTransactionStatusBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentTransactionStatusBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsPaymentTransactionStatusBatchRoute !== "undefined" && _1.CommerceLookupsPaymentTransactionStatusBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsPaymentTransactionStatusBatchClient);
+exports.CommerceLookupsPaymentTransactionStatusBatchClient = CommerceLookupsPaymentTransactionStatusBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 350 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsPaymentTransactionStatusBatchRoute
+ * @description Baasic Commerce Lookups Payment Method Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsPaymentTransactionStatusBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsPaymentTransactionStatusBatchRoute, _super);
+    function CommerceLookupsPaymentTransactionStatusBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/payment-transaction-statuses/batch';
+        _this.updateRoute = 'commerce/lookups/payment-transaction-statuses/batch';
+        _this.deleteRoute = 'commerce/lookups/payment-transaction-statuses/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusBatchRoute.create();
+     */
+    CommerceLookupsPaymentTransactionStatusBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+>>>>>>> minor code changes
     };
     /**
      * Returns a promise that is resolved once the removeByUser action has been performed. This action deletes ACL policy assigned to the specified user and dynamic resource.
@@ -36331,6 +39379,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -36366,6 +39415,9 @@ var _a, _b;
 /* 418 */
 =======
 /* 392 */
+=======
+/* 351 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36555,7 +39607,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 393 */
+=======
+/* 352 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36663,7 +39719,26 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 394 */
+=======
+/* 353 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(350));
+__export(__webpack_require__(349));
+__export(__webpack_require__(352));
+__export(__webpack_require__(351));
+
+
+/***/ }),
+/* 354 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36750,9 +39825,156 @@ var DynamicSchemaClient = (function () {
                             }
                         }
                     },
+<<<<<<< HEAD
                     name : '<schema-name>',
                     description : '<description>',
                     enforceSchemaValidation : true
+=======
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsRecurringCyclePeriodTypeBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsRecurringCyclePeriodTypeBatchClient;
+}());
+CommerceLookupsRecurringCyclePeriodTypeBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsRecurringCyclePeriodTypeBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsRecurringCyclePeriodTypeBatchRoute !== "undefined" && _1.CommerceLookupsRecurringCyclePeriodTypeBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsRecurringCyclePeriodTypeBatchClient);
+exports.CommerceLookupsRecurringCyclePeriodTypeBatchClient = CommerceLookupsRecurringCyclePeriodTypeBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 355 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsRecurringCyclePeriodTypeBatchRoute
+ * @description Baasic Commerce Lookups Recurring Cycle Period Type Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsRecurringCyclePeriodTypeBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsRecurringCyclePeriodTypeBatchRoute, _super);
+    function CommerceLookupsRecurringCyclePeriodTypeBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/recurring-cycle-period-types/batch';
+        _this.updateRoute = 'commerce/lookups/recurring-cycle-period-types/batch';
+        _this.deleteRoute = 'commerce/lookups/recurring-cycle-period-types/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.create();
+     */
+    CommerceLookupsRecurringCyclePeriodTypeBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.update();
+     */
+    CommerceLookupsRecurringCyclePeriodTypeBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.remove();
+     */
+    CommerceLookupsRecurringCyclePeriodTypeBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsRecurringCyclePeriodTypeBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsRecurringCyclePeriodTypeBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsRecurringCyclePeriodTypeBatchRoute);
+exports.CommerceLookupsRecurringCyclePeriodTypeBatchRoute = CommerceLookupsRecurringCyclePeriodTypeBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 356 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsRecurringCyclePeriodTypeClient
+ * @description  Commerce Lookups RecurringCyclePeriodType Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsRecurringCyclePeriodTypeClient` uses `commerceLookupsRecurringCyclePeriodTypeRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceLookupsRecurringCyclePeriodTypeClient = (function () {
+    function CommerceLookupsRecurringCyclePeriodTypeClient(commerceLookupsRecurringCyclePeriodTypeBatchClient, commerceLookupsRecurringCyclePeriodTypeRoute, apiClient) {
+        this.commerceLookupsRecurringCyclePeriodTypeBatchClient = commerceLookupsRecurringCyclePeriodTypeBatchClient;
+        this.commerceLookupsRecurringCyclePeriodTypeRoute = commerceLookupsRecurringCyclePeriodTypeRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsRecurringCyclePeriodTypeClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsRecurringCyclePeriodTypeRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceLookupsRecurringCyclePeriodTypeClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsRecurringCyclePeriodTypeBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+>>>>>>> minor code changes
                 })
                 .then(function (data) {
                     // perform success action here
@@ -36842,8 +40064,12 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 395 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 357 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36851,6 +40077,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 419 */
 =======
@@ -36868,6 +40095,24 @@ var _a, _b;
 =======
 /* 397 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 358 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(355));
+__export(__webpack_require__(354));
+__export(__webpack_require__(357));
+__export(__webpack_require__(356));
+
+
+/***/ }),
+/* 359 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36876,10 +40121,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 421 */
 =======
 /* 398 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 360 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36897,6 +40146,7 @@ __export(__webpack_require__(414));
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 422 */
 =======
@@ -36956,6 +40206,9 @@ exports.diModule = diModule;
 /***/ }),
 <<<<<<< HEAD
 /* 423 */
+=======
+/* 361 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37052,9 +40305,13 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 424 */
 =======
 /* 400 */
+=======
+/* 362 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37069,6 +40326,7 @@ __export(__webpack_require__(397));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 401 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -37498,6 +40756,24 @@ __export(__webpack_require__(425));
 =======
 /* 405 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 363 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(360));
+__export(__webpack_require__(359));
+__export(__webpack_require__(362));
+__export(__webpack_require__(361));
+
+
+/***/ }),
+/* 364 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38489,8 +41765,12 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 414 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 365 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38732,6 +42012,7 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 440 */
 =======
 /* 417 */
@@ -38748,6 +42029,22 @@ var _a;
 =======
 /* 418 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 366 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(365));
+__export(__webpack_require__(364));
+
+
+/***/ }),
+/* 367 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38756,11 +42053,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 442 */
 =======
 /* 419 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 368 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38770,10 +42071,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 443 */
 =======
 /* 420 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 369 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38789,10 +42094,14 @@ __export(__webpack_require__(442));
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 444 */
 =======
 /* 421 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 370 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38830,10 +42139,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 445 */
 =======
 /* 422 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 371 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38972,7 +42285,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 434 */
+=======
+/* 372 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38990,8 +42307,12 @@ __export(__webpack_require__(427));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 435 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 373 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39000,6 +42321,7 @@ __export(__webpack_require__(427));
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 459 */
 =======
@@ -39869,6 +43191,9 @@ var _a, _b;
 */
 =======
 /* 451 */
+=======
+/* 374 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39954,6 +43279,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -40012,6 +43338,9 @@ var _a;
  */
 =======
 /* 453 */
+=======
+/* 375 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40019,6 +43348,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -40633,6 +43963,9 @@ var _a, _b, _c;
 /* 478 */
 =======
 /* 456 */
+=======
+/* 376 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40647,6 +43980,7 @@ __export(__webpack_require__(455));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 457 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -40715,6 +44049,9 @@ var _a;
 /***/ }),
 <<<<<<< HEAD
 /* 479 */
+=======
+/* 377 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41243,7 +44580,11 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 484 */
+=======
+/* 378 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41698,11 +45039,16 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 464 */
+=======
+/* 379 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< HEAD
 >>>>>>> Merged develop to shopping cart.
 
 
@@ -41792,6 +45138,39 @@ var _a, _b;
 
 /***/ }),
 /* 487 */
+=======
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(376));
+__export(__webpack_require__(375));
+__export(__webpack_require__(378));
+__export(__webpack_require__(377));
+
+
+/***/ }),
+/* 380 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(372));
+__export(__webpack_require__(371));
+__export(__webpack_require__(368));
+__export(__webpack_require__(367));
+__export(__webpack_require__(370));
+__export(__webpack_require__(369));
+__export(__webpack_require__(374));
+__export(__webpack_require__(373));
+__export(__webpack_require__(379));
+
+
+/***/ }),
+/* 381 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41889,7 +45268,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 489 */
+=======
+/* 382 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41902,6 +45285,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41912,6 +45296,22 @@ var _a;
 
 /***/ }),
 /* 491 */
+=======
+/* 383 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(382));
+__export(__webpack_require__(381));
+
+
+/***/ }),
+/* 384 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41930,7 +45330,11 @@ __export(__webpack_require__(490));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 492 */
+=======
+/* 385 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41975,7 +45379,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 493 */
+=======
+/* 386 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42106,7 +45514,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 494 */
+=======
+/* 387 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42234,6 +45646,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42408,6 +45821,53 @@ var _a;
 
 /***/ }),
 /* 497 */
+=======
+/* 388 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(386));
+__export(__webpack_require__(387));
+__export(__webpack_require__(385));
+__export(__webpack_require__(384));
+
+
+/***/ }),
+/* 389 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(23);
+var TYPES = {
+    DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
+    DynamicResourceACLRoute: Symbol("DynamicResourceACLRoute"),
+    DynamicResourceClient: Symbol("DynamicResourceClient"),
+    DynamicResourceRoute: Symbol("DynamicResourceRoute"),
+    DynamicSchemaClient: Symbol("DynamicSchemaClient"),
+    DynamicSchemaRoute: Symbol("DynamicSchemaRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.DynamicResourceACLRoute).to(_1.DynamicResourceACLRoute);
+    bind(TYPES.DynamicResourceACLClient).to(_1.DynamicResourceACLClient);
+    bind(TYPES.DynamicResourceRoute).to(_1.DynamicResourceRoute);
+    bind(TYPES.DynamicResourceClient).to(_1.DynamicResourceClient);
+    bind(TYPES.DynamicSchemaRoute).to(_1.DynamicSchemaRoute);
+    bind(TYPES.DynamicSchemaClient).to(_1.DynamicSchemaClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 390 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42515,6 +45975,7 @@ var _a, _b;
 =======
 
 ;
+<<<<<<< HEAD
 
 
 /***/ }),
@@ -43120,6 +46581,118 @@ var _a, _b, _c, _d, _e, _f, _g;
 "use strict";
 =======
 /* 483 */
+=======
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(23);
+var DynamicResourceACLClient = (function () {
+    function DynamicResourceACLClient(dynamicResourceACLRoute, apiClient) {
+        this.dynamicResourceACLRoute = dynamicResourceACLRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(DynamicResourceACLClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.dynamicResourceACLRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified dynamic resource.
+     * @method
+     * @param options Options object.
+     * @example dynamicResourceACLClient.get({id: '<dynamic-resource-id>', schemaName: '<schema-name>'})
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    DynamicResourceACLClient.prototype.get = function (options) {
+        return this.apiClient.get(this.routeDefinition.get(options));
+    };
+    /**
+     * Returns a promise that is resolved once the update acl action has been performed; this action creates new ACL policy for the specified dynamic resource.
+     * @method
+     * @param options Options object.
+     * @example dynamicResourceACLClient.update({id: '<dynamic-resource-id>', schemaName: '<schema-name>'})
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    DynamicResourceACLClient.prototype.update = function (options) {
+        return this.apiClient.put(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
+    };
+    /**
+     * Returns a promise that is resolved once the removeByUser action has been performed. This action deletes ACL policy assigned to the specified user and dynamic resource.
+     * @method
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and dynamic resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user Username which uniquely identifies user for which ACL policy needs to be removed.
+     * @param data ACL Policy whose security privileges need to be retrieved and updated.
+     * @example // dynamicResource is a resource previously fetched using get action.
+                    dynamicResourceACLClient.removeByUser('<access-action>', '<username>', dynamicResource)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    DynamicResourceACLClient.prototype.removeByUser = function (action, user, data) {
+        return this.apiClient.delete(this.dynamicResourceACLRoute.deleteByUser(action, user, data));
+    };
+    /**
+     * Returns a promise that is resolved once the removeByRole action has been performed. This action deletes ACL policy assigned to the specified role and dynamic resource.
+     * @method
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified role and dynamic resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param role Role's name which uniquely identifies role for which ACL policy needs to be removed.
+     * @param data ACL Policy whose security privileges need to be retrieved and updated.
+     * @example // dynamicResource is a resource previously fetched using get action.
+                    dynamicResourceACLClient.removeByRole('<access-action>', '<role-name>', dynamicResource)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    DynamicResourceACLClient.prototype.removeByRole = function (action, role, data) {
+        return this.apiClient.delete(this.dynamicResourceACLRoute.deleteByRole(action, role, data));
+    };
+    return DynamicResourceACLClient;
+}());
+DynamicResourceACLClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.DynamicResourceACLRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicResourceACLRoute !== "undefined" && _1.DynamicResourceACLRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], DynamicResourceACLClient);
+exports.DynamicResourceACLClient = DynamicResourceACLClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 391 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43185,6 +46758,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -43341,6 +46915,9 @@ var _a, _b, _c, _d;
  */
 =======
 /* 485 */
+=======
+/* 392 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43352,6 +46929,7 @@ var _a, _b, _c, _d;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< HEAD
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var LookupRoute = (function (_super) {
@@ -43359,6 +46937,19 @@ var LookupRoute = (function (_super) {
     function LookupRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+=======
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(23);
+var DynamicResourceClient = (function () {
+    function DynamicResourceClient(dynamicResourceRoute, dynamicResourceACLClient, dynamicSchemaClient, apiClient) {
+        this.dynamicResourceRoute = dynamicResourceRoute;
+        this.dynamicResourceACLClient = dynamicResourceACLClient;
+        this.dynamicSchemaClient = dynamicSchemaClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(DynamicResourceClient.prototype, "routeDefinition", {
+>>>>>>> minor code changes
         /**
         * Get route with route and query parameters.
         **/
@@ -43393,6 +46984,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -43484,6 +47076,9 @@ var _a, _b;
  */
 =======
 /* 487 */
+=======
+/* 393 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43496,6 +47091,11 @@ var _a, _b;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< HEAD
+=======
+;
+var _1 = __webpack_require__(23);
+>>>>>>> minor code changes
 var contracts_1 = __webpack_require__(3);
 var PasswordRecoveryRoute = (function (_super) {
     tslib_1.__extends(PasswordRecoveryRoute, _super);
@@ -43767,6 +47367,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -43852,14 +47453,202 @@ var _a, _b;
  */
 =======
 /* 491 */
+=======
+/* 394 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< HEAD
  * @module registerRoute
  * @description Baasic Register Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Register Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
+=======
+ * @module dynamicSchemaClient
+ * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `dynamicSchemaClient` uses `dynamicSchemaRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(23);
+var DynamicSchemaClient = (function () {
+    function DynamicSchemaClient(dynamicSchemaRoute, apiClient) {
+        this.dynamicSchemaRoute = dynamicSchemaRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(DynamicSchemaClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `dynamicSchemaRoute`.
+         * @method
+         * @example dynamicSchemaClient.routeDefinition.get();
+         **/
+        get: function () {
+            return this.dynamicSchemaRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resource schemas matching the given criteria.
+     * @method
+     * @param options Options object.
+     * @example dynamicSchemaClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    DynamicSchemaClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified dynamic resource schema.
+     * @method
+     * @param name Name of dynamic resource schema which need to be retrieved.
+     * @param options Options object.
+     * @example dynamicSchemaClient.get('<schema-name>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    DynamicSchemaClient.prototype.get = function (name, options) {
+        return this.apiClient.get(this.dynamicSchemaRoute.get(name, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create action has been performed; this action creates a new dynamic resource schema item.
+     * @method
+     * @param data A dynamic resource schema object that needs to be inserted into the system.
+     * @example dynamicSchemaClient.create({
+                    schema : {
+                        type : 'object',
+                        properties : {
+                            id : {
+                                title : '<unique-identifier-field>',
+                                readonly : true,
+                                hidden : true,
+                                type : 'string'
+                            },
+                            description : {
+                                type: string
+                            }
+                        }
+                    },
+                    name : '<schema-name>',
+                    description : '<description>',
+                    enforceSchemaValidation : true
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    DynamicSchemaClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update dynamic resource schema action has been performed; this action updates a dynamic resource schema item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(dynamicResourceSchema);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A dynamic schema object used to update specified dynamic resource schema.
+     * @example // dynamicResourceSchema is a resource previously fetched using get action.
+                    dynamicResourceSchema.description = '<description>';
+                    dynamicSchemaClient.update(dynamicResourceSchema)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    DynamicSchemaClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource schema item from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(dynamicResourceSchema);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data A dynamic schema object used to delete specified dynamic resource schema.
+     * @example // dynamicResourceSchema is a resource previously fetched using get action.
+                    dynamicSchemaClient.remove(dynamicResourceSchema)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    DynamicSchemaClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the generate schema action has been performed. Success response returns a schema generated based on the json input.
+     * @method
+     * @param data Unordered collection of key value pairs used to specify dynamic schema definition.
+     * @example baasicDynamicSchemaService.generate({
+                    id : '<schema-Id>',
+                    description : '<description>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    DynamicSchemaClient.prototype.generate = function (data) {
+        return this.apiClient.post(this.routeDefinition.generate(), this.routeDefinition.createParams(data));
+    };
+    return DynamicSchemaClient;
+}());
+DynamicSchemaClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.DynamicSchemaRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicSchemaRoute !== "undefined" && _1.DynamicSchemaRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], DynamicSchemaClient);
+exports.DynamicSchemaClient = DynamicSchemaClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 395 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module dynamicSchemaRoute
+ * @description Baasic Dynamic Schema Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Schema Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+>>>>>>> minor code changes
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
@@ -43916,6 +47705,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -43983,6 +47773,9 @@ var _a;
 =======
 /* 493 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 396 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43991,11 +47784,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 508 */
 =======
 /* 494 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 397 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44004,11 +47801,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 509 */
 =======
 /* 495 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 398 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44018,10 +47819,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 510 */
 =======
 /* 496 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 399 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44030,6 +47835,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 511 */
 =======
@@ -44444,6 +48250,9 @@ var _a, _b, _c;
 /* 519 */
 =======
 /* 504 */
+=======
+/* 400 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44451,6 +48260,7 @@ var _a, _b, _c;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(501));
 __export(__webpack_require__(502));
 __export(__webpack_require__(503));
@@ -44970,6 +48780,49 @@ var _a, _b;
  */
 =======
 /* 509 */
+=======
+__export(__webpack_require__(396));
+__export(__webpack_require__(399));
+__export(__webpack_require__(398));
+__export(__webpack_require__(397));
+
+
+/***/ }),
+/* 401 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(22);
+var TYPES = {
+    FilesACLClient: Symbol("FilesACLClient"),
+    FilesACLRoute: Symbol("FilesACLRoute"),
+    FilesBatchRoute: Symbol("FilesBatchRoute"),
+    FilesBatchClient: Symbol("FilesBatchClient"),
+    FilesRoute: Symbol("FilesRoute"),
+    FilesClient: Symbol("FilesClient"),
+    FilesStreamsRoute: Symbol("FilesStreamsRoute"),
+    FilesStreamsClient: Symbol("FilesStreamsClient")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.FilesBatchRoute).to(_1.FilesBatchRoute);
+    bind(TYPES.FilesBatchClient).to(_1.FilesBatchClient);
+    bind(TYPES.FilesStreamsRoute).to(_1.FilesStreamsRoute);
+    bind(TYPES.FilesStreamsClient).to(_1.FilesStreamsClient);
+    bind(TYPES.FilesACLRoute).to(_1.FilesACLRoute);
+    bind(TYPES.FilesACLClient).to(_1.FilesACLClient);
+    bind(TYPES.FilesRoute).to(_1.FilesRoute);
+    bind(TYPES.FilesClient).to(_1.FilesClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 402 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44983,6 +48836,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< HEAD
 var contracts_1 = __webpack_require__(3);
 var MeteringBatchRoute = (function (_super) {
     tslib_1.__extends(MeteringBatchRoute, _super);
@@ -44993,6 +48847,14 @@ var MeteringBatchRoute = (function (_super) {
         _this.updateRoute = 'metering/data/batch';
         _this.deleteRoute = 'metering/data/batch';
         return _this;
+=======
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(22);
+var FilesACLClient = (function () {
+    function FilesACLClient(filesACLRoute, apiClient) {
+        this.filesACLRoute = filesACLRoute;
+        this.apiClient = apiClient;
+>>>>>>> minor code changes
     }
     /**
      * Parses create route; this URI template does not expose any additional options.
@@ -45040,7 +48902,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 510 */
+=======
+/* 403 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45052,11 +48918,133 @@ var _a;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< HEAD
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(14);
 var MeteringCategoryBatchClient = (function () {
     function MeteringCategoryBatchClient(meteringCategoryBatchRoute, apiClient) {
         this.meteringCategoryBatchRoute = meteringCategoryBatchRoute;
+=======
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var FilesACLRoute = (function (_super) {
+    tslib_1.__extends(FilesACLRoute, _super);
+    function FilesACLRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'files/{id}/acl/{?fields}';
+        _this.updateRoute = 'files/{id}/acl/{?fields}';
+        _this.deleteByUserRoute = 'files/{id}/acl/actions/{accessAction}/users/{user}/';
+        _this.deleteByRoleRoute = 'files/{id}/acl/actions/{accessAction}/roles/{role}/';
+        return _this;
+    }
+    /**
+     * Parses get acl route; this URI template should be expanded with the Id of the file resource.
+     * @method
+     * @example filesACLRoute.get({id: '<file-id>'});
+     **/
+    FilesACLRoute.prototype.get = function (options) {
+        var params = this.utility.extend({}, options);
+        return _super.prototype.baseCreate.call(this, this.getRoute, params);
+    };
+    /**
+     * Parses update acl route; this URI template should be expanded with the Id of the file resource.
+     * @method
+     * @example filesACLRoute.update({id: '<file-id>'});
+     **/
+    FilesACLRoute.prototype.update = function (options) {
+        var params = this.utility.extend({}, options);
+        return _super.prototype.baseCreate.call(this, this.updateRoute, params);
+    };
+    /**
+     * Parses deleteByUser acl route which can be expanded with additional options. Supported items are:
+     * - `id` - File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and file resource.
+     * - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.
+     * @method
+     * @param id File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and file resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
+     * @example filesACLRoute.deleteByUser({ id: '<file-id>', accessAction: '<access-action>', user: '<username>' });
+     **/
+    FilesACLRoute.prototype.deleteByUser = function (id, action, user, data) {
+        var params = this.modelMapper.removeParams(data);
+        params.id = id;
+        params.user = user;
+        params.accessAction = action;
+        return _super.prototype.baseCreate.call(this, this.deleteByUserRoute, params);
+    };
+    /**
+     * Parses deleteByUser acl route which can be expanded with additional options. Supported items are:
+     * - `id` - File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified role and file resource.
+     * - `role` - A value which uniquely identifies role for which ACL policy needs to be removed.
+     * @method
+     * @param id File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and file resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
+     * @example filesACLRoute.deleteByRole({ id: '<file-id>', accessAction: '<access-action>', role: '<role-name>' });
+     **/
+    FilesACLRoute.prototype.deleteByRole = function (id, action, role, data) {
+        var params = this.modelMapper.removeParams(data);
+        params.id = id;
+        params.role = role;
+        params.accessAction = action;
+        return _super.prototype.baseCreate.call(this, this.deleteByRoleRoute, params);
+    };
+    FilesACLRoute.prototype.updateParams = function (data) {
+        var params = this.utility.extend({}, data);
+        return params[this.modelMapper.modelPropertyName];
+    };
+    return FilesACLRoute;
+}(common_1.BaseRoute));
+FilesACLRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], FilesACLRoute);
+exports.FilesACLRoute = FilesACLRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 404 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module filesBatchClient
+ * @description  Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(22);
+var FilesBatchClient = (function () {
+    function FilesBatchClient(filesBatchRoute, apiClient) {
+        this.filesBatchRoute = filesBatchRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(MeteringCategoryBatchClient.prototype, "routeDefinition", {
@@ -45143,7 +49131,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 511 */
+=======
+/* 405 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45213,6 +49205,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -45279,6 +49272,9 @@ var _a, _b, _c;
  */
 =======
 /* 513 */
+=======
+/* 406 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45291,6 +49287,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< HEAD
 var _1 = __webpack_require__(14);
 var contracts_1 = __webpack_require__(3);
 var MeteringCategoryRoute = (function (_super) {
@@ -45305,6 +49302,17 @@ var MeteringCategoryRoute = (function (_super) {
         _this.updateRoute = 'metering/categories/{id}';
         _this.deleteRoute = 'metering/categories/{id}';
         return _this;
+=======
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(22);
+var FilesClient = (function () {
+    function FilesClient(filesRoute, apiClient, filesStreamsClient, filesBatchClient, filesACLClient) {
+        this.filesRoute = filesRoute;
+        this.apiClient = apiClient;
+        this.filesStreamsClient = filesStreamsClient;
+        this.filesBatchClient = filesBatchClient;
+        this.filesACLClient = filesACLClient;
+>>>>>>> minor code changes
     }
     Object.defineProperty(MeteringCategoryRoute.prototype, "batch", {
         get: function () {
@@ -45386,6 +49394,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -46577,6 +50586,339 @@ var _a, _b;
  */
 =======
 /* 525 */
+=======
+/* 407 */
+>>>>>>> minor code changes
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+<<<<<<< HEAD
+
+
+/***/ }),
+/* 526 */
+=======
+var _1 = __webpack_require__(22);
+var contracts_1 = __webpack_require__(3);
+var FilesRoute = (function (_super) {
+    tslib_1.__extends(FilesRoute, _super);
+    function FilesRoute(appOptions, filesStreamsRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.filesStreamsRoute = filesStreamsRoute;
+        _this.findRoute = 'files/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'files/{id}/{?embed,fields}';
+        _this.updateRoute = 'files/{id}';
+        _this.unlinkRoute = 'files/unlink/{id}/{?height,width}';
+        _this.linkRoute = 'files/link';
+        return _this;
+    }
+    Object.defineProperty(FilesRoute.prototype, "streams", {
+        get: function () {
+            return this.filesStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing file properties using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the file property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example filesRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    FilesRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param id File id which uniquely identifies file resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example filesRoute.get({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param data A file entry object used to update specific file entry resource in the system.
+     * @example filesRoute.get({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses unlink route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param data A file entry object used to update specific file entry resource in the system.
+     * @example filesRoute.unlink({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.unlink = function (data, options) {
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, data, options, 'unlink');
+    };
+    /**
+     * Parses link route; this URI template does not expose any additional options.
+     * @method
+     * @example filesRoute.link();
+     **/
+    FilesRoute.prototype.link = function () {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
+    };
+    return FilesRoute;
+}(common_1.BaseRoute));
+FilesRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.FilesStreamsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.FilesStreamsRoute !== "undefined" && _1.FilesStreamsRoute) === "function" && _b || Object])
+], FilesRoute);
+exports.FilesRoute = FilesRoute;
+var _a, _b;
+/**
+ * @overview
+***Notes:**
+- Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+- [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+- All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 408 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module filesStreamsClient
+ * @description  Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(22);
+var FilesStreamsClient = (function () {
+    function FilesStreamsClient(filesStreamsRoute, apiClient) {
+        this.filesStreamsRoute = filesStreamsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(FilesStreamsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.filesStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
+     * @method
+     * @param id File id of the original file resource used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original file stream
+                        filesStreamsClient.get({id: '<path>'})
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+                // Request derived file stream
+                    filesStreamsClient.get({id: '<path>', width: <width>, height: <height>})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.get = function (data) {
+        return this.apiClient.get(this.routeDefinition.get(data));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @example // Request the original blob
+                    filesStreamsClient.getBlob('<path>')
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+                // Request derived blob
+                    filesStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.getBlob = function (data) {
+        return this.apiClient.request({
+            url: this.filesStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
+    };
+    /**
+     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
+     * @method
+     * @example // Update original file stream
+                    filesStreamsClient.update('<path>', <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+                // Update derived file stream
+                    filesStreamsClient.update({id: '<path>', width: <width>, height: <height>}, <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.update = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.put(this.filesStreamsRoute.update(data), data, {});
+    };
+    /**
+     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @example filesStreamsClient.create('<path>', <blob>)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    FilesStreamsClient.prototype.create = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, {});
+    };
+    return FilesStreamsClient;
+}());
+FilesStreamsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.FilesStreamsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.FilesStreamsRoute !== "undefined" && _1.FilesStreamsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], FilesStreamsClient);
+exports.FilesStreamsClient = FilesStreamsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */
+
+
+/***/ }),
+/* 409 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module filesStreamsRoute
+ * @description Baasic Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var FilesStreamsRoute = (function (_super) {
+    tslib_1.__extends(FilesStreamsRoute, _super);
+    function FilesStreamsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'file-streams/{id}/{?width,height}';
+        _this.updateRoute = 'file-streams/{id}/{?width,height}';
+        _this.createRoute = 'file-streams/{path}';
+        return _this;
+    }
+    /**
+     * Parses get route; this route should be expanded with id or path of desired file stream. Additional supported items are:
+     * - `width` - width of desired derived image.
+     * - `height` - height of desired derived image.
+     * @method
+     * @example filesStreamsRoute.get({id: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.get = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.getRoute, data);
+    };
+    /**
+     * Parses update route; this route should be expanded with the id or path of the previously saved resource. Additional supported items are:
+     * - `width` - width of derived image to update.
+     * - `height` - height of derived image to update.
+     * @method
+     * @example filesStreamsRoute.update({id: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.update = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses create route; this route should be expanded with the path which indicates where the stream will be saved.
+     * @method
+     * @example filesStreamsRoute.create({path: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.create = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                path: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    return FilesStreamsRoute;
+}(common_1.BaseRoute));
+FilesStreamsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], FilesStreamsRoute);
+exports.FilesStreamsRoute = FilesStreamsRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46585,7 +50927,8 @@ var _a, _b;
 
 
 /***/ }),
-/* 526 */
+/* 411 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46593,6 +50936,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(522));
 __export(__webpack_require__(523));
 __export(__webpack_require__(525));
@@ -46603,13 +50947,24 @@ __export(__webpack_require__(524));
 
 /***/ }),
 /* 527 */
+=======
+__export(__webpack_require__(410));
+
+
+/***/ }),
+/* 412 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
+<<<<<<< HEAD
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(31);
+>>>>>>> minor code changes
 var TYPES = {
     NotificationsClient: Symbol("NotificationsClient"),
     NotificationsPublishBatchClient: Symbol("NotificationsPublishBatchClient"),
@@ -46675,7 +51030,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 528 */
+=======
+/* 413 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
 
@@ -46753,10 +51112,17 @@ var _a, _b, _c;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(8);
 var NotificationsPublishBatchClient = (function () {
     function NotificationsPublishBatchClient(notificationsPublishBatchRoute, apiClient) {
         this.notificationsPublishBatchRoute = notificationsPublishBatchRoute;
+=======
+var _1 = __webpack_require__(31);
+var KeyValueClient = (function () {
+    function KeyValueClient(keyValueRoute, apiClient) {
+        this.keyValueRoute = keyValueRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(NotificationsPublishBatchClient.prototype, "routeDefinition", {
@@ -46809,6 +51175,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -47882,6 +52249,108 @@ var _a;
 =======
 /* 541 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 414 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module keyValueRoute
+ * @description Baasic Key Value Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Key Value Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var KeyValueRoute = (function (_super) {
+    tslib_1.__extends(KeyValueRoute, _super);
+    function KeyValueRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'key-values/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'key-values/{id}/{?embed,fields}';
+        _this.createRoute = 'key-values';
+        _this.updateRoute = 'key-values/{id}';
+        _this.deleteRoute = 'key-values/{id}';
+        return _this;
+    }
+    /**
+     * Parses find key value route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify key value resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain key value subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the key value property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example keyValueRoute.find(options);
+     **/
+    KeyValueRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get key value route which must be expanded with the Id of the previously created key value resource in the system.
+     * @method
+     * @param id Key value resource unique identifier.
+     * @param options Query resource options object.
+     * @example keyValueRoute.get();
+     **/
+    KeyValueRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create key value route; this URI template does not expose any additional options.
+     * @method
+     * @example keyValueRoute.create();
+     **/
+    KeyValueRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update key value route.
+     * @method
+     * @param data Key Value object used to create update route.
+     * @example keyValueRoute.update(data);
+     */
+    KeyValueRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete key value route.
+     * @method
+     * @param data Key Value object used to create delete route.
+     * @example keyValueRoute.delete(data);
+     */
+    KeyValueRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return KeyValueRoute;
+}(common_1.BaseRoute));
+KeyValueRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], KeyValueRoute);
+exports.KeyValueRoute = KeyValueRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 415 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47889,11 +52358,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 550 */
 =======
 /* 542 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 416 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47902,10 +52375,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 551 */
 =======
 /* 543 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 417 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47913,6 +52390,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 552 */
 =======
@@ -48643,6 +53121,9 @@ var _a, _b;
 /* 568 */
 =======
 /* 556 */
+=======
+/* 418 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48736,7 +53217,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 557 */
+=======
+/* 419 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48803,7 +53288,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 558 */
+=======
+/* 420 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48945,7 +53434,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 559 */
+=======
+/* 421 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49055,7 +53548,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 560 */
+=======
+/* 422 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49133,7 +53630,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 561 */
+=======
+/* 423 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49191,7 +53692,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 562 */
+=======
+/* 424 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49199,7 +53704,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 563 */
+=======
+/* 425 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49207,7 +53716,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 564 */
+=======
+/* 426 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49215,6 +53728,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49224,6 +53738,9 @@ var _a;
 
 /***/ }),
 /* 566 */
+=======
+/* 427 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49345,14 +53862,36 @@ var _a, _b;
 
 "use strict";
 
+
+
+/***/ }),
+/* 434 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(573));
 
 
 /***/ }),
 /* 575 */
+=======
+__export(__webpack_require__(430));
+__export(__webpack_require__(433));
+__export(__webpack_require__(432));
+__export(__webpack_require__(431));
+__export(__webpack_require__(428));
+__export(__webpack_require__(429));
+__export(__webpack_require__(427));
+
+
+/***/ }),
+/* 435 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49377,7 +53916,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 576 */
+=======
+/* 436 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49471,6 +54014,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 577 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -49792,14 +54336,96 @@ var _a, _b;
 /* 571 */
 =======
 /* 578 */
+=======
+/* 437 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< HEAD
  * @module templatingClient
  * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingClient` uses `templatingRoute`.
  */
+=======
+ * @module mediaGalleryInstanceFilesBatchRoute
+ * @description Baasic Media Gallery Instance Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryInstanceFilesBatchRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryInstanceFilesBatchRoute, _super);
+    function MediaGalleryInstanceFilesBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.unlinkRoute = 'media-galleries/{mediaGalleryId}/files/batch/unlink';
+        _this.updateRoute = 'media-galleries/{mediaGalleryId}/files/batch';
+        _this.linkRoute = 'media-galleries/{mediaGalleryId}/files/batch/link';
+        return _this;
+    }
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery file id of the original media gallery file used to identify media gallery files on which delete action should be performed.
+     * @example mediaGalleryInstanceFilesBatchRoute.unlink(mediaGalleryId);
+     **/
+    MediaGalleryInstanceFilesBatchRoute.prototype.unlink = function (mediaGalleryId) {
+        var params = { mediaGalleryId: mediaGalleryId };
+        return _super.prototype.baseCreate.call(this, this.unlinkRoute, params);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery id which uniquely identifies media gallery whose media gallery file need to be updated.
+     * @example mediaGalleryInstanceFilesStreamsRoute.update(mediaGalleryId);
+     **/
+    MediaGalleryInstanceFilesBatchRoute.prototype.update = function (mediaGalleryId) {
+        var params = { mediaGalleryId: mediaGalleryId };
+        return _super.prototype.baseCreate.call(this, this.updateRoute, params);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery files need to be linked.
+     * @example mediaGalleryInstanceFilesStreamsRoute.link(mediaGalleryId);
+     **/
+    MediaGalleryInstanceFilesBatchRoute.prototype.link = function (mediaGalleryId) {
+        var params = { mediaGalleryId: mediaGalleryId };
+        return _super.prototype.baseCreate.call(this, this.linkRoute, params);
+    };
+    return MediaGalleryInstanceFilesBatchRoute;
+}(common_1.BaseRoute));
+MediaGalleryInstanceFilesBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGalleryInstanceFilesBatchRoute);
+exports.MediaGalleryInstanceFilesBatchRoute = MediaGalleryInstanceFilesBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 438 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryInstanceFilesClient
+ * @description  Media Gallery Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+>>>>>>> minor code changes
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
@@ -49943,7 +54569,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 579 */
+=======
+/* 439 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50049,6 +54679,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 580 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
@@ -50064,6 +54695,24 @@ var _a, _b;
 =======
 /* 581 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 440 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(437));
+__export(__webpack_require__(436));
+__export(__webpack_require__(439));
+__export(__webpack_require__(438));
+
+
+/***/ }),
+/* 441 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50073,10 +54722,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 573 */
 =======
 /* 582 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 442 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50676,10 +55329,17 @@ var _a, _b, _c;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(9);
 var OrganizationBatchClient = (function () {
     function OrganizationBatchClient(organizationBatchRoute, apiClient) {
         this.organizationBatchRoute = organizationBatchRoute;
+=======
+var _1 = __webpack_require__(20);
+var MediaVaultBatchClient = (function () {
+    function MediaVaultBatchClient(mediaVaultBatchRoute, apiClient) {
+        this.mediaVaultBatchRoute = mediaVaultBatchRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(OrganizationBatchClient.prototype, "routeDefinition", {
@@ -50758,6 +55418,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 599 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -50862,6 +55523,9 @@ var _a, _b;
 =======
 /* 600 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 443 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52331,6 +56995,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 613 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -52425,6 +57090,9 @@ var _a;
  */
 =======
 /* 614 */
+=======
+/* 444 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52436,6 +57104,7 @@ var _a;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< HEAD
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var UserProfileAvatarStreamsRoute = (function (_super) {
@@ -52447,6 +57116,19 @@ var UserProfileAvatarStreamsRoute = (function (_super) {
         _this.createRoute = 'profiles/{id}/avatar-streams/{filename}';
         _this.updateRoute = 'profiles/{id}/avatar-streams/{?width,height}';
         return _this;
+=======
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(20);
+var MediaVaultClient = (function () {
+    function MediaVaultClient(mediaVaultRoute, apiClient, mediaVaultStreamsClient, mediaVaultBatchClient, mediaVaultSettingsClient, mediaVaultProcessingProviderSettingsClient) {
+        this.mediaVaultRoute = mediaVaultRoute;
+        this.apiClient = apiClient;
+        this.mediaVaultStreamsClient = mediaVaultStreamsClient;
+        this.mediaVaultBatchClient = mediaVaultBatchClient;
+        this.mediaVaultSettingsClient = mediaVaultSettingsClient;
+        this.mediaVaultProcessingProviderSettingsClient = mediaVaultProcessingProviderSettingsClient;
+>>>>>>> minor code changes
     }
     /**
      * Parses get route; this route should be expanded with id of profile. Additional supported items are:
@@ -52512,6 +57194,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 615 */
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> Merged develop to shopping cart.
@@ -53318,6 +58001,116 @@ var _a;
 =======
 /* 622 */
 >>>>>>> Merged develop to shopping cart.
+=======
+/* 445 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaVaultProcessingProviderSettingsClient
+ * @description  Media Vault Processing Provider Settings Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Processing Provider Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(20);
+var MediaVaultProcessingProviderSettingsClient = (function () {
+    function MediaVaultProcessingProviderSettingsClient(mediaVaultProcessingProviderSettingsRoute, apiClient) {
+        this.mediaVaultProcessingProviderSettingsRoute = mediaVaultProcessingProviderSettingsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaVaultProcessingProviderSettingsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaVaultProcessingProviderSettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of media vault processing providers matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example mediaVaultProcessingProviderSettingsClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    MediaVaultProcessingProviderSettingsClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the media vault processing provider resource.
+     * @method
+     * @param id Preprocessing provider id which uniquely identifies preprocessing provider whose settings need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example mediaVaultProcessingProviderSettingsClient.get('<id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    MediaVaultProcessingProviderSettingsClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.mediaVaultProcessingProviderSettingsRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates a media vault processing provider setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaVaultProcessingProviderSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(processingProviderSetting);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A media vault preprocessing provider settings object used to update specified media vault preprocessing provider settings in the system.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example // processingProviderSettings is a resource previously fetched using get action.
+                    processingProviderSettings.settings.faceDetection = true;
+                    mediaVaultProcessingProviderSettingsClient.update(processingProviderSetting)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    MediaVaultProcessingProviderSettingsClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    return MediaVaultProcessingProviderSettingsClient;
+}());
+MediaVaultProcessingProviderSettingsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaVaultProcessingProviderSettingsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaVaultProcessingProviderSettingsRoute !== "undefined" && _1.MediaVaultProcessingProviderSettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaVaultProcessingProviderSettingsClient);
+exports.MediaVaultProcessingProviderSettingsClient = MediaVaultProcessingProviderSettingsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 446 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53326,6 +58119,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 610 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -53681,10 +58475,139 @@ var _a, _b;
 /* 614 */
 =======
 /* 623 */
+=======
+/* 447 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaVaultRoute
+ * @description Baasic Media Vault Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Vault Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(20);
+var contracts_1 = __webpack_require__(3);
+var MediaVaultRoute = (function (_super) {
+    tslib_1.__extends(MediaVaultRoute, _super);
+    function MediaVaultRoute(appOptions, mediaVaultStreamsRoute, mediaVaultBatchRoute, mediaVaultSettingsRoute, mediaVaultProcessingProviderSettingsRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.mediaVaultStreamsRoute = mediaVaultStreamsRoute;
+        _this.mediaVaultBatchRoute = mediaVaultBatchRoute;
+        _this.mediaVaultSettingsRoute = mediaVaultSettingsRoute;
+        _this.mediaVaultProcessingProviderSettingsRoute = mediaVaultProcessingProviderSettingsRoute;
+        _this.findRoute = 'media-vaults/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'media-vaults/{id}/{?embed,fields}';
+        _this.updateRoute = 'media-vaults/{id}';
+        _this.deleteRoute = 'media-vaults/{id}/{?height,width}';
+        return _this;
+    }
+    Object.defineProperty(MediaVaultRoute.prototype, "streams", {
+        get: function () {
+            return this.mediaVaultStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaVaultRoute.prototype, "batch", {
+        get: function () {
+            return this.mediaVaultBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaVaultRoute.prototype, "settings", {
+        get: function () {
+            return this.mediaVaultSettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaVaultRoute.prototype, "processingProviderSettings", {
+        get: function () {
+            return this.mediaVaultProcessingProviderSettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing media vault properties using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain media vault subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the media vault property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example mediaVaultRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    MediaVaultRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of media vault resource.
+     * @method
+     * @param id Media vault id which uniquely identifies media vault resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example mediaVaultRoute.get({id: '<media-vault-id>'});
+     **/
+    MediaVaultRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route should be expanded with the Id of media vault resource.
+     * @method
+     * @param data Media vault object used to update specific Media vault resource in the system.
+     * @example mediaVaultRoute.get({id: '<media-vault-id>'});
+     **/
+    MediaVaultRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this route should be expanded with the Id of media vault resource.
+     * @method
+     * @param data Media vault object used to update specific Media vault resource in the system.
+     * @param options Options object.
+     * @example mediaVaultRoute.delete({id: '<media-vault-id>'});
+     **/
+    MediaVaultRoute.prototype.delete = function (data, options) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data, options);
+    };
+    return MediaVaultRoute;
+}(common_1.BaseRoute));
+MediaVaultRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaVaultStreamsRoute)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaVaultBatchRoute)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.MediaVaultSettingsRoute)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.MediaVaultProcessingProviderSettingsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MediaVaultStreamsRoute !== "undefined" && _1.MediaVaultStreamsRoute) === "function" && _b || Object, typeof (_c = typeof _1.MediaVaultBatchRoute !== "undefined" && _1.MediaVaultBatchRoute) === "function" && _c || Object, typeof (_d = typeof _1.MediaVaultSettingsRoute !== "undefined" && _1.MediaVaultSettingsRoute) === "function" && _d || Object, typeof (_e = typeof _1.MediaVaultProcessingProviderSettingsRoute !== "undefined" && _1.MediaVaultProcessingProviderSettingsRoute) === "function" && _e || Object])
+], MediaVaultRoute);
+exports.MediaVaultRoute = MediaVaultRoute;
+var _a, _b, _c, _d, _e;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 448 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< HEAD
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
@@ -53694,6 +58617,76 @@ __export(__webpack_require__(621));
 
 /***/ }),
 /* 624 */
+=======
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(20);
+var MediaVaultSettingsClient = (function () {
+    function MediaVaultSettingsClient(mediaVaultSettingsRoute, apiClient) {
+        this.mediaVaultSettingsRoute = mediaVaultSettingsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaVaultSettingsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaVaultSettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns media vault settings resource.
+     * @method
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example mediaVaultSettingsClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    MediaVaultSettingsClient.prototype.get = function () {
+        return this.apiClient.get(this.routeDefinition.get());
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates the media vault settings resource.
+     * @method
+     * @param data A media vault settings object used to update media vault settings in the system.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example mediaVaultSettingsClient.update(mediaVaultSettings)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    MediaVaultSettingsClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    return MediaVaultSettingsClient;
+}());
+MediaVaultSettingsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaVaultSettingsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaVaultSettingsRoute !== "undefined" && _1.MediaVaultSettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaVaultSettingsClient);
+exports.MediaVaultSettingsClient = MediaVaultSettingsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 449 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53718,7 +58711,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 625 */
+=======
+/* 450 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53731,11 +58728,18 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(26);
 var ValueSetClient = (function () {
     function ValueSetClient(valueSetRoute, valueSetItemClient, apiClient) {
         this.valueSetRoute = valueSetRoute;
         this.valueSetItemClient = valueSetItemClient;
+=======
+var _1 = __webpack_require__(20);
+var MediaVaultStreamsClient = (function () {
+    function MediaVaultStreamsClient(mediaVaultStreamsRoute, apiClient) {
+        this.mediaVaultStreamsRoute = mediaVaultStreamsRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(ValueSetClient.prototype, "items", {
@@ -53881,7 +58885,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 626 */
+=======
+/* 451 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54027,6 +59035,7 @@ var _a, _b;
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
  - All end-point objects are transformed by the associated route service.
+<<<<<<< HEAD
 */ 
 
 
@@ -54036,6 +59045,31 @@ var _a, _b;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+=======
+ */ 
+
+
+/***/ }),
+/* 452 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 453 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 454 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
 var tslib_1 = __webpack_require__(1);
 /**
@@ -54245,9 +59279,13 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 616 */
 =======
 /* 628 */
+=======
+/* 455 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54354,26 +59392,80 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 629 */
 >>>>>>> Merged develop to shopping cart.
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/
+=======
+/* 456 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(453));
+__export(__webpack_require__(452));
+__export(__webpack_require__(454));
+__export(__webpack_require__(455));
+>>>>>>> minor code changes
 
 /*
  UriTemplate Copyright (c) 2012-2013 Franz Antesberger. All Rights Reserved.
  Available via the MIT license.
 */
 
+<<<<<<< HEAD
 (function (exportCallback) {
     "use strict";
 
 var UriTemplateError = (function () {
+=======
+/***/ }),
+/* 457 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(20);
+var TYPES = {
+    MediaVaultBatchRoute: Symbol("MediaVaultBatchRoute"),
+    MediaVaultBatchClient: Symbol("MediaVaultBatchClient"),
+    MediaVaultRoute: Symbol("MediaVaultRoute"),
+    MediaVaultProcessingProviderSettingsClient: Symbol("MediaVaultProcessingProviderSettingsClient"),
+    MediaVaultProcessingProviderSettingsRoute: Symbol("MediaVaultProcessingProviderSettingsRoute"),
+    MediaVaultClient: Symbol("MediaVaultClient"),
+    MediaVaultSettingsRoute: Symbol("MediaVaultSettingsRoute"),
+    MediaVaultSettingsClient: Symbol("MediaVaultSettingsClient"),
+    MediaVaultStreamsRoute: Symbol("MediaVaultStreamsRoute"),
+    MediaVaultStreamsClient: Symbol("MediaVaultStreamsClient")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.MediaVaultStreamsRoute).to(_1.MediaVaultStreamsRoute);
+    bind(TYPES.MediaVaultStreamsClient).to(_1.MediaVaultStreamsClient);
+    bind(TYPES.MediaVaultBatchRoute).to(_1.MediaVaultBatchRoute);
+    bind(TYPES.MediaVaultBatchClient).to(_1.MediaVaultBatchClient);
+    bind(TYPES.MediaVaultSettingsRoute).to(_1.MediaVaultSettingsRoute);
+    bind(TYPES.MediaVaultSettingsClient).to(_1.MediaVaultSettingsClient);
+    bind(TYPES.MediaVaultProcessingProviderSettingsRoute).to(_1.MediaVaultProcessingProviderSettingsRoute);
+    bind(TYPES.MediaVaultProcessingProviderSettingsClient).to(_1.MediaVaultProcessingProviderSettingsClient);
+    bind(TYPES.MediaVaultRoute).to(_1.MediaVaultRoute);
+    bind(TYPES.MediaVaultClient).to(_1.MediaVaultClient);
+});
+exports.diModule = diModule;
+>>>>>>> minor code changes
 
     function UriTemplateError (options) {
         this.options = options;
     }
 
+<<<<<<< HEAD
     UriTemplateError.prototype.toString = function () {
         if (JSON && JSON.stringify) {
             return JSON.stringify(this.options);
@@ -54419,6 +59511,11 @@ var objectHelper = (function () {
         }
         return result;
     }
+=======
+/***/ }),
+/* 458 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     function map (arr, mapper) {
         var
@@ -54460,12 +59557,17 @@ var objectHelper = (function () {
         return object;
     }
 
+<<<<<<< HEAD
     function deepFreeze (object) {
         if (typeof Object.freeze === 'function') {
             return deepFreezeUsingObjectFreeze(object);
         }
         return object;
     }
+=======
+"use strict";
+
+>>>>>>> minor code changes
 
 
     return {
@@ -54490,9 +59592,15 @@ var charHelper = (function () {
         return chr >= '0' && chr <= '9';
     }
 
+<<<<<<< HEAD
     function isHexDigit (chr) {
         return isDigit(chr) || (chr >= 'a' && chr <= 'f') || (chr >= 'A' && chr <= 'F');
     }
+=======
+"use strict";
+
+;
+>>>>>>> minor code changes
 
     return {
         isAlpha: isAlpha,
@@ -54528,6 +59636,7 @@ var pctEncoder = (function () {
         }
     };
 
+<<<<<<< HEAD
     /**
      * encodes a character, if needed or not.
      * @param chr
@@ -54545,6 +59654,10 @@ var pctEncoder = (function () {
         }
         return result;
     }
+=======
+"use strict";
+
+>>>>>>> minor code changes
 
     /**
      * Returns, whether the given text at start is in the form 'percent hex-digit hex-digit', like '%3F'
@@ -54566,6 +59679,7 @@ var pctEncoder = (function () {
         return parseInt(text.substr(start, 2), 16);
     }
 
+<<<<<<< HEAD
     /**
      * Returns whether or not the given char sequence is a correctly pct-encoded sequence.
      * @param chr
@@ -54587,6 +59701,11 @@ var pctEncoder = (function () {
         }
         return true;
     }
+=======
+"use strict";
+
+;
+>>>>>>> minor code changes
 
     /**
      * Reads as much as needed from the text, e.g. '%20' or '%C3%B6'. It does not decode!
@@ -54619,7 +59738,12 @@ var pctEncoder = (function () {
     };
 }());
 
+<<<<<<< HEAD
 var rfcCharHelper = (function () {
+=======
+"use strict";
+
+>>>>>>> minor code changes
 
     /**
      * Returns if an character is an varchar character according 2.3 of rfc 6570
@@ -54718,6 +59842,12 @@ var encodingHelper = (function () {
 
 }());
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+;
+>>>>>>> minor code changes
 
 // the operators defined by rfc 6570
 var operators = (function () {
@@ -54725,6 +59855,7 @@ var operators = (function () {
     var
         bySymbol = {};
 
+<<<<<<< HEAD
     function create (symbol) {
         bySymbol[symbol] = {
             symbol: symbol,
@@ -54738,6 +59869,10 @@ var operators = (function () {
             }
         };
     }
+=======
+"use strict";
+
+>>>>>>> minor code changes
 
     create('');
     create('+');
@@ -54803,7 +59938,13 @@ var LiteralExpression = (function () {
         return this.literal;
     };
 
+<<<<<<< HEAD
     LiteralExpression.prototype.toString = LiteralExpression.prototype.expand;
+=======
+"use strict";
+
+;
+>>>>>>> minor code changes
 
     return LiteralExpression;
 }());
@@ -54986,6 +60127,7 @@ var VariableExpression = (function () {
         return (JSON && JSON.stringify) ? JSON.stringify(value) : value;
     }
 
+<<<<<<< HEAD
     function isEmpty (value) {
         if (!isDefined(value)) {
             return true;
@@ -55006,6 +60148,10 @@ var VariableExpression = (function () {
         }
         return true;
     }
+=======
+"use strict";
+
+>>>>>>> minor code changes
 
     function propertyArray (object) {
         var
@@ -55138,6 +60284,43 @@ var VariableExpression = (function () {
         return result;
     }
 
+<<<<<<< HEAD
+=======
+"use strict";
+
+;
+
+
+/***/ }),
+/* 478 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(468));
+__export(__webpack_require__(469));
+__export(__webpack_require__(467));
+__export(__webpack_require__(473));
+__export(__webpack_require__(474));
+__export(__webpack_require__(461));
+__export(__webpack_require__(466));
+__export(__webpack_require__(465));
+__export(__webpack_require__(477));
+__export(__webpack_require__(472));
+__export(__webpack_require__(475));
+__export(__webpack_require__(458));
+__export(__webpack_require__(459));
+__export(__webpack_require__(460));
+__export(__webpack_require__(470));
+__export(__webpack_require__(471));
+__export(__webpack_require__(463));
+__export(__webpack_require__(464));
+__export(__webpack_require__(476));
+__export(__webpack_require__(462));
+>>>>>>> minor code changes
 
     VariableExpression.prototype.expand = function (variables) {
         var
@@ -55227,7 +60410,11 @@ var UriTemplate = (function () {
 <<<<<<< HEAD
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 530 */
+=======
+/* 479 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55276,7 +60463,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 531 */
+=======
+/* 480 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55354,7 +60545,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 532 */
+=======
+/* 481 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55409,7 +60604,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 533 */
+=======
+/* 482 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55507,7 +60706,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 534 */
+=======
+/* 483 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55573,7 +60776,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 535 */
+=======
+/* 484 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55669,6 +60876,7 @@ var NotificationsRegistrationsAnonymousClient = (function () {
     NotificationsRegistrationsAnonymousClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.notificationsRegistrationsAnonymousRoute.get(id, options));
     };
+<<<<<<< HEAD
     /**
      * Returns a promise that is resolved once the remove anonymous registration action has been performed. This action will remove a anonymous registration resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsAnonymousRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -55727,12 +60935,32 @@ var _a, _b, _c;
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+=======
+    return LookupClient;
+}());
+LookupClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.LookupRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.LookupRoute !== "undefined" && _1.LookupRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], LookupClient);
+exports.LookupClient = LookupClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> minor code changes
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 536 */
+=======
+/* 485 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55842,7 +61070,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 537 */
+=======
+/* 486 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55902,7 +61134,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 538 */
+=======
+/* 487 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55961,7 +61197,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 539 */
+=======
+/* 488 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56059,7 +61299,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 540 */
+=======
+/* 489 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56127,7 +61371,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 541 */
+=======
+/* 490 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56285,7 +61533,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 542 */
+=======
+/* 491 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56393,7 +61645,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 543 */
+=======
+/* 492 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56552,7 +61808,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 545 */
+=======
+/* 493 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56612,7 +61872,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 546 */
+=======
+/* 494 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56709,7 +61973,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 547 */
+=======
+/* 495 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56777,7 +62045,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 548 */
+=======
+/* 496 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56798,7 +62070,56 @@ var NotificationsSubscriptionsAnonymousClient = (function () {
         this.notificationsSubscriptionsAnonymousBatchClient = notificationsSubscriptionsAnonymousBatchClient;
         this.apiClient = apiClient;
     }
+<<<<<<< HEAD
     Object.defineProperty(NotificationsSubscriptionsAnonymousClient.prototype, "routeDefinition", {
+=======
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.LoginClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.LoginSocialClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.PasswordRecoveryClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.RegisterClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.RoleClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.UserClient)),
+    tslib_1.__param(6, inversify_1.inject(_1.TYPES.PermissionClient)),
+    tslib_1.__param(7, inversify_1.inject(_1.TYPES.LookupClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.LoginClient !== "undefined" && _1.LoginClient) === "function" && _a || Object, typeof (_b = typeof _1.LoginSocialClient !== "undefined" && _1.LoginSocialClient) === "function" && _b || Object, typeof (_c = typeof _1.PasswordRecoveryClient !== "undefined" && _1.PasswordRecoveryClient) === "function" && _c || Object, typeof (_d = typeof _1.RegisterClient !== "undefined" && _1.RegisterClient) === "function" && _d || Object, typeof (_e = typeof _1.RoleClient !== "undefined" && _1.RoleClient) === "function" && _e || Object, typeof (_f = typeof _1.UserClient !== "undefined" && _1.UserClient) === "function" && _f || Object, typeof (_g = typeof _1.PermissionClient !== "undefined" && _1.PermissionClient) === "function" && _g || Object, typeof (_h = typeof _1.LookupClient !== "undefined" && _1.LookupClient) === "function" && _h || Object])
+], Root);
+exports.Root = Root;
+var _a, _b, _c, _d, _e, _f, _g, _h;
+
+
+/***/ }),
+/* 497 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userClient
+ * @description  User Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userClient` uses `userRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(11);
+var UserClient = (function () {
+    function UserClient(userRoute, userSocialLoginClient, apiClient) {
+        this.userRoute = userRoute;
+        this.userSocialLoginClient = userSocialLoginClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `userRoute`.
+         * @method
+         * @example userClient.routeDefinition.get();
+         **/
+>>>>>>> minor code changes
         get: function () {
             return this.notificationsSubscriptionsAnonymousRoute;
         },
@@ -56936,7 +62257,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 549 */
+=======
+/* 498 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57047,12 +62372,1378 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 550 */
+=======
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+ * @module userSocialLoginClient
+ * @description  User Social Login Client provides an easy way to consume  User REST API end-points. In order to obtain needed routes `userSocialLoginClient` uses `userSocialLoginRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(11);
+var UserSocialLoginClient = (function () {
+    function UserSocialLoginClient(userSocialLoginRoute, apiClient) {
+        this.userSocialLoginRoute = userSocialLoginRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserSocialLoginClient.prototype, "routeDefinition", {
+        /**
+          * Provides direct access to `userSocialLoginRoute`.
+          * @method
+          * @example userSocialLoginClient.routeDefinition.get().expand(expandObject);
+          **/
+        get: function () {
+            return this.userSocialLoginRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns a list user resource connected social login providers.
+     * @param username A username or id which uniquely identifies user resource whose social login connections need to be retrieved.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @method
+     * @example userSocialLoginClient.get('<username>')
+                    .then(function (collection) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    UserSocialLoginClient.prototype.get = function (username) {
+        return this.apiClient.get(this.routeDefinition.get(username));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action removes the user resource social login connection from the specified provider.
+     * @param username A username or id which uniquely identifies user resource whose social login connection needs to be removed.
+     * @param provider A value which uniquely identifies provider from which the user resource needs to be disconnected.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @method
+     * @example userSocialLoginClient.remove('<username>', '<provider>')
+                    .then(function (collection) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    UserSocialLoginClient.prototype.remove = function (username, provider) {
+        return this.apiClient.delete(this.userSocialLoginRoute.remove(username, provider));
+    };
+    return UserSocialLoginClient;
+}());
+UserSocialLoginClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserSocialLoginRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserSocialLoginRoute !== "undefined" && _1.UserSocialLoginRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], UserSocialLoginClient);
+exports.UserSocialLoginClient = UserSocialLoginClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 500 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userSocialLoginRoute
+ * @description Baasic User Social Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var UserSocialLoginRoute = (function (_super) {
+    tslib_1.__extends(UserSocialLoginRoute, _super);
+    function UserSocialLoginRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+        * Get route with route and query parameters.
+        **/
+        _this.getRoute = 'users/{username}/social-login';
+        /**
+        * Remove route with route and query parameters.
+        **/
+        _this.removeRoute = 'users/{username}/social-login/{provider}';
+        return _this;
+    }
+    /**
+     * Parses get social login route, URI template should be expanded with the username of the user resource whose social login connections should be retrieved.
+     * @method
+     * @param username A username or id which uniquely identifies user resource whose social login connections need to be retrieved.
+     * @example userSocialLoginRoute.get('<username>');
+     **/
+    UserSocialLoginRoute.prototype.get = function (username) {
+        return _super.prototype.baseGet.call(this, this.getRoute, username, { username: username });
+    };
+    /**
+     * Parses remove social login route which can be expanded with additional items. Supported items are:
+     * - `username` - A username which uniquely identifies an application user whose social login connection needs to be removed.
+     * - `provider` - Provider from which to disconnect the login resource from.
+     * @method
+     * @param username A username which uniquely identifies an application user whose social login connection needs to be removed.
+     * @param provider Provider from which to disconnect the login resource from.
+     * @example userSocialLoginRoute.remove('<username>', '<provider>');
+     **/
+    UserSocialLoginRoute.prototype.remove = function (username, provider) {
+        var params;
+        if (provider.hasOwnProperty('abrv')) {
+            params = {
+                provider: provider.abrv
+            };
+        }
+        else if (provider.hasOwnProperty('id')) {
+            params = {
+                provider: provider.id
+            };
+        }
+        else {
+            params = this.utility.extend({}, provider);
+        }
+        params.username = username;
+        return _super.prototype.baseFind.call(this, this.removeRoute, params);
+    };
+    return UserSocialLoginRoute;
+}(common_1.BaseRoute));
+UserSocialLoginRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], UserSocialLoginRoute);
+exports.UserSocialLoginRoute = UserSocialLoginRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 501 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module channelBatchClient
+ * @description  Message Center Channel Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Channel Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(14);
+var ChannelBatchClient = (function () {
+    function ChannelBatchClient(channelBatchRoute, apiClient) {
+        this.channelBatchRoute = channelBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ChannelBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.channelBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+    * Returns a promise that is resolved once the create channel action has been performed; this action creates new channel resources.
+    * @method
+    * @param data A collection of channel objects that need to be inserted into the system.
+    * @returns A promise that is resolved once the create channel action has been performed.
+    * @example  channelBatchClient.create([{
+                   name?: '<name>',
+                   memberIds?: '<memberIds>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                 },
+                  function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    **/
+    ChannelBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the update channel action has been performed; this action updates specified channel resources.
+    * @method
+    * @param data A collection of channel objects used to update specified channel resources.
+    * @returns A promise that is resolved once the update channel action has been performed.
+    * @example   channelBatchClient.update(channels)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+    **/
+    ChannelBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the remove action has been performed. This action will remove channel resources from the system if successfully completed.
+    * @method
+    * @param ids Collection of channel ids which uniquely identifies channel resources that need to be deleted.
+    * @returns A promise that is resolved once the remove action has been performed.
+    * @example channelBatchClient.remove(channelIds)
+                   .then(function (data) {
+                       // perform success action here
+                    },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+    **/
+    ChannelBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, ids);
+    };
+    return ChannelBatchClient;
+}());
+ChannelBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ChannelBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ChannelBatchRoute !== "undefined" && _1.ChannelBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ChannelBatchClient);
+exports.ChannelBatchClient = ChannelBatchClient;
+var _a, _b;
+
+
+/***/ }),
+/* 502 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module channelBatchRoute
+ * @description Baasic Message Center Channel Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Channel Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var ChannelBatchRoute = (function (_super) {
+    tslib_1.__extends(ChannelBatchRoute, _super);
+    function ChannelBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'message-center/channels/batch';
+        _this.updateRoute = 'message-center/channels/batch';
+        _this.deleteRoute = 'message-center/channels/batch';
+        return _this;
+    }
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example channelBatchRoute.create();
+     **/
+    ChannelBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example channelBatchRoute.update();
+     **/
+    ChannelBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example channelBatchRoute.remove();
+     **/
+    ChannelBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return ChannelBatchRoute;
+}(common_1.BaseRoute));
+ChannelBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], ChannelBatchRoute);
+exports.ChannelBatchRoute = ChannelBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 503 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+* @module channelClient
+* @description  Message Center Channel Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Channel Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(14);
+var ChannelClient = (function () {
+    function ChannelClient(channelRoute, channelBatchClient, apiClient) {
+        this.channelRoute = channelRoute;
+        this.channelBatchClient = channelBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ChannelClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.channelRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ChannelClient.prototype, "batch", {
+        get: function () {
+            return this.channelBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of channel resources matching the given criteria.
+    * @method
+    * @param options Query resource options object.
+    * @returns A promise that is resolved once the find action has been performed.
+    * @example channelClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>'
+                })
+               .then(function (collection) {
+                   // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    **/
+    ChannelClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+    * Returns a promise that is resolved once the get action has been performed. Success response returns the channel resource.
+    * @method
+    * @param id Channel id which uniquely identifies resource that needs to be retrieved.
+    * @param options Query resource options object.
+    * @returns A promise that is resolved once the get action has been performed.
+    * @example channelClient.get(id, options)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+    **/
+    ChannelClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+    * Returns a promise that is resolved once the create channel action has been performed; this action creates a new channel resource.
+    * @method
+    * @param data An channel object that needs to be inserted into the system.
+    * @returns A promise that is resolved once the create channel action has been performed.
+    * @example channelClient.create({
+                    name?: '<name>',
+                    memberIds?: '<memberIds>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+    **/
+    ChannelClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the update channel action has been performed; this action updates an channel resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `channelRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(channel);
+    * let uri = params['model'].links('put').href;
+    * ```
+    * @method
+    * @param data An channel object used to update specified channel resource.
+    * @returns A promise that is resolved once the update channel action has been performed.
+    * @example // channel is a resource previously fetched using get action.
+                    channel.name = '<name>';
+                    channelClient.update(channel)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+    **/
+    ChannelClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the remove action has been performed. This action will remove an channel resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `channelRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(channel);
+    * let uri = params['model'].links('delete').href;
+    * ```
+    * @method
+    * @param data An channel object used to delete specified channel resource.
+    * @returns A promise that is resolved once the remove action has been performed.
+    * @example // channel is a resource previously fetched using get action.
+                       channelClient.remove(channel)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    ChannelClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+    * Returns a promise that is resolved once the purge action has been performed. This action will remove all Channel resources from the system if succesfully completed.
+    * @method
+    * @returns A promise that is resolved once the purge action has been performed.
+    * @example channelClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    */
+    ChannelClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    return ChannelClient;
+}());
+ChannelClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ChannelRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ChannelBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ChannelRoute !== "undefined" && _1.ChannelRoute) === "function" && _a || Object, typeof (_b = typeof _1.ChannelBatchClient !== "undefined" && _1.ChannelBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], ChannelClient);
+exports.ChannelClient = ChannelClient;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 504 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+* @module channelRoute
+* @description Baasic Message Center Channel Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Channel Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+*/
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var _1 = __webpack_require__(14);
+var contracts_1 = __webpack_require__(3);
+var ChannelRoute = (function (_super) {
+    tslib_1.__extends(ChannelRoute, _super);
+    function ChannelRoute(appOptions, channelBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.channelBatchRoute = channelBatchRoute;
+        _this.findRoute = 'message-center/channels/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.createRoute = 'message-center/channels';
+        _this.getRoute = 'message-center/channels/{id}/{?embed,fields}';
+        _this.updateRoute = 'message-center/channels/{id}';
+        _this.deleteRoute = 'message-center/channels/{id}';
+        _this.purgeRoute = 'message-center/channels/purge';
+        return _this;
+    }
+    Object.defineProperty(ChannelRoute.prototype, "batch", {
+        get: function () {
+            return this.channelBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing channel properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain channel subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the channel property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example channelRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    ChannelRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     *  @param data A Channel object that needs to be inserted into the system.
+     * @example channelRoute.create();
+     **/
+    ChannelRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id Channel id which uniquely identifies resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example channelRoute.get();
+     **/
+    ChannelRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Channel object used to update specified Channel resource.
+     * @example channelRoute.update(data);
+     */
+    ChannelRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Channel object used to delete specified Channel resource.
+     * @example channelRoute.delete(data);
+     */
+    ChannelRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses purge route. This URI template does not expose any additional options.
+     * @method
+     * @example channelRoute.purge();
+     */
+    ChannelRoute.prototype.purge = function () {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
+    };
+    return ChannelRoute;
+}(common_1.BaseRoute));
+ChannelRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ChannelBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.ChannelBatchRoute !== "undefined" && _1.ChannelBatchRoute) === "function" && _b || Object])
+], ChannelRoute);
+exports.ChannelRoute = ChannelRoute;
+var _a, _b;
+/**
+* @overview
+***Notes:**
+- Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+- [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+- All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+/* 505 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module memberBatchClient
+ * @description  Message Center Member Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Member Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(14);
+var MemberBatchClient = (function () {
+    function MemberBatchClient(memberBatchRoute, apiClient) {
+        this.memberBatchRoute = memberBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MemberBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.memberBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+ * Returns a promise that is resolved once the create member action has been performed; this action creates new member resources.
+ * @method
+ * @param data A collection of member objects that need to be inserted into the system.
+ * @returns A promise that is resolved once the create member action has been performed.
+ * @example   memberBatchClient.create([{
+                channelId: '<channelId>',
+                hasHistoryAccess?: '<hasHistoryAccess>'
+              }])
+              .then(function (data) {
+                  // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+ **/
+    MemberBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+ * Returns a promise that is resolved once the update member action has been performed; this action updates specified member resources.
+ * @method
+ * @param data A collection of member objects used to update specified member resources.
+ * @returns A promise that is resolved once the update member action has been performed.
+ * @example   memberBatchClient.update(members)
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+ **/
+    MemberBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+ * Returns a promise that is resolved once the remove action has been performed. This action will remove member resources from the system if successfully completed.
+ * @method
+ * @example memberBatchClient.remove(memberIds)
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+ **/
+    MemberBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, ids);
+    };
+    return MemberBatchClient;
+}());
+MemberBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MemberBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MemberBatchRoute !== "undefined" && _1.MemberBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MemberBatchClient);
+exports.MemberBatchClient = MemberBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */
+
+
+/***/ }),
+/* 506 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module memberBatchRoute
+ * @description Baasic Message Center Member Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Member Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var MemberBatchRoute = (function (_super) {
+    tslib_1.__extends(MemberBatchRoute, _super);
+    function MemberBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'message-center/members/batch';
+        _this.updateRoute = 'message-center/members/batch';
+        _this.deleteRoute = 'message-center/members/batch';
+        return _this;
+    }
+    /**
+ * Parses create route; this URI template does not expose any additional options.
+ * @method
+ * @example memberBatchRoute.create();
+ **/
+    MemberBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example memberBatchRoute.update();
+     **/
+    MemberBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example memberBatchRoute.delete();
+     **/
+    MemberBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return MemberBatchRoute;
+}(common_1.BaseRoute));
+MemberBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MemberBatchRoute);
+exports.MemberBatchRoute = MemberBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 507 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+* @module memberClient
+* @description  Message Center Member Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Member Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(14);
+var MemberClient = (function () {
+    function MemberClient(memberRoute, memberBatchClient, apiClient) {
+        this.memberRoute = memberRoute;
+        this.memberBatchClient = memberBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MemberClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.memberRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MemberClient.prototype, "batch", {
+        get: function () {
+            return this.memberBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of member resources matching the given criteria.
+    * @method
+    * @param options Query resource options object.
+    * @returns A promise that is resolved once the find action has been performed.
+    * @example memberClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>'
+                })
+               .then(function (collection) {
+                   // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    **/
+    MemberClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+    * Returns a promise that is resolved once the get action has been performed. Success response returns the member resource.
+    * @method
+    * @param id Member id which uniquely identifies resource that needs to be retrieved.
+    * @param options Query resource options object.
+    * @returns A promise that is resolved once the get action has been performed.
+    * @example memberClient.get(id, options)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+    **/
+    MemberClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create member action has been performed; this action creates a new member resource.
+     * @method
+     * @param data An member object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create member action has been performed.
+     * @example memberClient.create({
+                    channelId: '<channelId>',
+                    hasHistoryAccess?: '<hasHistoryAccess>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    MemberClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the update member action has been performed; this action updates an member resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `channelRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(member);
+    * let uri = params['model'].links('put').href;
+    * ```
+    * @method
+    * @param data An member object used to update specified member resource.
+    * @returns A promise that is resolved once the update member action has been performed.
+    * @example // member is a resource previously fetched using get action.
+                    member.hasHistoryAccess = '<hashistoryAccess>';
+                    memberClient.update(member)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+    **/
+    MemberClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the remove action has been performed. This action will remove an member resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `channelRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(member);
+    * let uri = params['model'].links('delete').href;
+    * ```
+    * @method
+    * @param data An member object used to delete specified member resource.
+    * @returns A promise that is resolved once the remove action has been performed.
+    * @example // member is a resource previously fetched using get action.
+                       memberClient.remove(member)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    MemberClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+    * Returns a promise that is resolved once the purge action has been performed. This action will remove all Channel resources from the system if succesfully completed.
+    * @method
+    * @returns A promise that is resolved once the purge action has been performed.
+    * @example memberClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    **/
+    MemberClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    return MemberClient;
+}());
+MemberClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MemberRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MemberBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MemberRoute !== "undefined" && _1.MemberRoute) === "function" && _a || Object, typeof (_b = typeof _1.MemberBatchClient !== "undefined" && _1.MemberBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], MemberClient);
+exports.MemberClient = MemberClient;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 508 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module memberRoute
+ * @description Baasic Message Center Member Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Member Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(14);
+var contracts_1 = __webpack_require__(3);
+var MemberRoute = (function (_super) {
+    tslib_1.__extends(MemberRoute, _super);
+    function MemberRoute(appOptions, memberBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.memberBatchRoute = memberBatchRoute;
+        _this.findRoute = 'message-center/members/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.createRoute = 'message-center/members';
+        _this.getRoute = 'message-center/members/{id}/{?embed,fields}';
+        _this.updateRoute = 'message-center/members/{id}';
+        _this.deleteRoute = 'message-center/members/{id}';
+        _this.purgeRoute = 'message-center/members/purge';
+        return _this;
+    }
+    Object.defineProperty(MemberRoute.prototype, "batch", {
+        get: function () {
+            return this.memberBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing member properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain member subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the member property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example memberRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    MemberRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses create route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Member object that needs to be inserted into the system.
+     * @example memberRoute.create(data);
+     */
+    MemberRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id Member id which uniquely identifies resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example memberRoute.get();
+     **/
+    MemberRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Member object used to update specified Member resource.
+     * @example memberRoute.update(data);
+     */
+    MemberRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses update route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Member object used to update specified Member resource.
+     * @example memberRoute.delete(data);
+     */
+    MemberRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses purge route. This URI template does not expose any additional options.
+     * @method
+     * @example channelRoute.purge();
+     */
+    MemberRoute.prototype.purge = function () {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
+    };
+    return MemberRoute;
+}(common_1.BaseRoute));
+MemberRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MemberBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MemberBatchRoute !== "undefined" && _1.MemberBatchRoute) === "function" && _b || Object])
+], MemberRoute);
+exports.MemberRoute = MemberRoute;
+var _a, _b;
+/**
+* @overview
+***Notes:**
+- Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+- [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+- All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 509 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+* @module messageBatchClient
+* @description  Message Center Message Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Message Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(14);
+var MessageBatchClient = (function () {
+    function MessageBatchClient(messageBatchRoute, apiClient) {
+        this.messageBatchRoute = messageBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MessageBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.messageBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+    * Returns a promise that is resolved once the create message action has been performed; this action creates new message resources.
+    * @method
+    * @param data A collection of message objects that need to be inserted into the system.
+    * @returns A promise that is resolved once the create message action has been performed.
+    * @example  messageBatchClient.create([{
+                   channelId: '<channelId>',
+                   message?: '<message>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                  function (response, status, headers, config) {
+                      // perform error handling here
+                });
+    **/
+    MessageBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the update message action has been performed; this action updates specified message resources.
+    * @method
+    * @param data A collection of message objects used to update specified message resources.
+    * @returns A promise that is resolved once the update message action has been performed.
+    * @example   messageBatchClient.update(messages)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+    **/
+    MessageBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the remove action has been performed. This action will remove message resources from the system if successfully completed.
+    * @method
+    * @param ids Collection of message ids which uniquely identifies message resources that need to be deleted.
+    * @returns A promise that is resolved once the remove action has been performed.
+    * @example messageBatchClient.remove(memberIds)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    MessageBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.routeDefinition.delete(), undefined, ids);
+    };
+    return MessageBatchClient;
+}());
+MessageBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MessageBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MessageBatchRoute !== "undefined" && _1.MessageBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MessageBatchClient);
+exports.MessageBatchClient = MessageBatchClient;
+var _a, _b;
+
+
+/***/ }),
+/* 510 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+* @module messageBatchRoute
+* @description Baasic Message Center Message Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Message Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var MessageBatchRoute = (function (_super) {
+    tslib_1.__extends(MessageBatchRoute, _super);
+    function MessageBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'message-center/messages/batch';
+        _this.updateRoute = 'message-center/messages/batch';
+        _this.deleteRoute = 'message-center/messages/batch';
+        return _this;
+    }
+    /**
+ * Parses create route; this URI template does not expose any additional options.
+ * @method
+ * @example messageBatchRoute.create();
+ **/
+    MessageBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example messageBatchRoute.update();
+     **/
+    MessageBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example messageBatchRoute.remove();
+     **/
+    MessageBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return MessageBatchRoute;
+}(common_1.BaseRoute));
+MessageBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MessageBatchRoute);
+exports.MessageBatchRoute = MessageBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 511 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+* @module messageClient
+* @description  Message Center Message Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Message Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(14);
+var MessageClient = (function () {
+    function MessageClient(messageRoute, messageBatchClient, apiClient) {
+        this.messageRoute = messageRoute;
+        this.messageBatchClient = messageBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MessageClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.messageRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MessageClient.prototype, "batch", {
+        get: function () {
+            return this.messageBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of message resources matching the given criteria.
+    * @method
+    * @param options Query resource options object.
+    * @returns A promise that is resolved once the find action has been performed.
+    * @example messageClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>'
+                })
+               .then(function (collection) {
+                   // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    **/
+    MessageClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+    * Returns a promise that is resolved once the get action has been performed. Success response returns the message resource.
+    * @method
+    * @param id Message id which uniquely identifies resource that needs to be retrieved.
+    * @param options Query resource options object.
+    * @returns A promise that is resolved once the get action has been performed.
+    * @example messageClient.get(id, options)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+    **/
+    MessageClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+    * Returns a promise that is resolved once the create message action has been performed; this action creates a new message resource.
+    * @method
+    * @param data An message object that needs to be inserted into the system.
+    * @returns A promise that is resolved once the create message action has been performed.
+    * @example messageClient.create({
+                    channelId: '<channelId>',
+                    message?: '<message>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                    });
+    **/
+    MessageClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the update message action has been performed; this action updates an message resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `messageRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(message);
+    * let uri = params['model'].links('put').href;
+    * ```
+    * @method
+    * @param data An message object used to update specified message resource.
+    * @returns A promise that is resolved once the update message action has been performed.
+    * @example // message is a resource previously fetched using get action.
+                    message.message = '<message>';
+                    messageClient.update(message)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+    **/
+    MessageClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the remove action has been performed. This action will remove an message resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `messageRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(message);
+    * let uri = params['model'].links('delete').href;
+    * ```
+    * @method
+    * @param data An message object used to delete specified message resource.
+    * @returns A promise that is resolved once the remove action has been performed.
+    * @example // message is a resource previously fetched using get action.
+                       messageClient.remove(message)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    MessageClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+    * Returns a promise that is resolved once the purge action has been performed. This action will remove all Message resources from the system if succesfully completed.
+    * @method
+    * @returns A promise that is resolved once the purge action has been performed.
+    * @example messageClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    */
+    MessageClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    return MessageClient;
+}());
+MessageClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MessageRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MessageBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MessageRoute !== "undefined" && _1.MessageRoute) === "function" && _a || Object, typeof (_b = typeof _1.MessageBatchClient !== "undefined" && _1.MessageBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], MessageClient);
+exports.MessageClient = MessageClient;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 512 */
+>>>>>>> minor code changes
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< HEAD
  * @module notificationsSubscriptionsClient
  * @description  Notifications Subscriptions Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsClient` uses `notificationsSubscriptionsRoute`.
  */
@@ -57069,10 +63760,39 @@ var NotificationsSubscriptionsClient = (function () {
     Object.defineProperty(NotificationsSubscriptionsClient.prototype, "routeDefinition", {
         get: function () {
             return this.notificationsSubscriptionsRoute;
+=======
+* @module messageRoute
+* @description Baasic Message Center Message Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Message Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var _1 = __webpack_require__(14);
+var contracts_1 = __webpack_require__(3);
+var MessageRoute = (function (_super) {
+    tslib_1.__extends(MessageRoute, _super);
+    function MessageRoute(appOptions, messageBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.messageBatchRoute = messageBatchRoute;
+        _this.findRoute = 'message-center/messages/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.createRoute = 'message-center/messages';
+        _this.getRoute = 'message-center/messages/{id}/{?embed,fields}';
+        _this.updateRoute = 'message-center/messages/{id}';
+        _this.deleteRoute = 'message-center/messages/{id}';
+        _this.purgeRoute = 'message-center/messages/purge';
+        return _this;
+    }
+    Object.defineProperty(MessageRoute.prototype, "batch", {
+        get: function () {
+            return this.messageBatchRoute;
+>>>>>>> minor code changes
         },
         enumerable: true,
         configurable: true
     });
+<<<<<<< HEAD
     Object.defineProperty(NotificationsSubscriptionsClient.prototype, "anonymous", {
         get: function () {
             return this.notificationsSubscriptionsAnonymousClient;
@@ -57116,9 +63836,176 @@ var _a, _b, _c;
  * @module notificationsSubscriptionsRoute
  * @description Baasic Notifications Subscriptions Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
+=======
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing message properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain message subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the message property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example messageRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    MessageRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     *  @param data A Message object that needs to be inserted into the system.
+     * @example messageRoute.create();
+     **/
+    MessageRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id Message id which uniquely identifies resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example messageRoute.get();
+     **/
+    MessageRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Message object used to update specified Message resource.
+     * @example messageRoute.update(data);
+     */
+    MessageRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Message object used to delete specified Message resource.
+     * @example messageRoute.delete(data);
+     */
+    MessageRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses purge route. This URI template does not expose any additional options.
+     * @method
+     * @example messageRoute.purge();
+     */
+    MessageRoute.prototype.purge = function () {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
+    };
+    return MessageRoute;
+}(common_1.BaseRoute));
+MessageRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MessageBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MessageBatchRoute !== "undefined" && _1.MessageBatchRoute) === "function" && _b || Object])
+], MessageRoute);
+exports.MessageRoute = MessageRoute;
+var _a, _b;
+/**
+* @overview
+***Notes:**
+- Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+- [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+- All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 513 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 514 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 515 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 516 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(514));
+__export(__webpack_require__(515));
+__export(__webpack_require__(513));
+
+
+/***/ }),
+/* 517 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(14);
+var TYPES = {
+    ChannelBatchClient: Symbol("ChannelBatchClient"),
+    ChannelBatchRoute: Symbol("ChannelBatchRoute"),
+    ChannelClient: Symbol("ChannelClient"),
+    ChannelRoute: Symbol("ChannelRoute"),
+    MemberBatchRoute: Symbol("MemberBatchRoute"),
+    MemberBatchClient: Symbol("MemberBatchClient"),
+    MemberRoute: Symbol("MemberRoute"),
+    MemberClient: Symbol("MemberClient"),
+    MessageBatchRoute: Symbol("MessageBatchRoute"),
+    MessageBatchClient: Symbol("MessageBatchClient"),
+    MessageRoute: Symbol("MessageRoute"),
+    MessageClient: Symbol("MessageClient"),
+    Root: Symbol("Root")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.ChannelBatchRoute).to(_1.ChannelBatchRoute);
+    bind(TYPES.ChannelBatchClient).to(_1.ChannelBatchClient);
+    bind(TYPES.ChannelRoute).to(_1.ChannelRoute);
+    bind(TYPES.ChannelClient).to(_1.ChannelClient);
+    bind(TYPES.MemberBatchRoute).to(_1.MemberBatchRoute);
+    bind(TYPES.MemberBatchClient).to(_1.MemberBatchClient);
+    bind(TYPES.MemberRoute).to(_1.MemberRoute);
+    bind(TYPES.MemberClient).to(_1.MemberClient);
+    bind(TYPES.MessageBatchRoute).to(_1.MessageBatchRoute);
+    bind(TYPES.MemberBatchClient).to(_1.MessageBatchClient);
+    bind(TYPES.MessageRoute).to(_1.MessageRoute);
+    bind(TYPES.MessageClient).to(_1.MessageClient);
+    bind(TYPES.Root).to(_1.Root);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 518 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+>>>>>>> minor code changes
 
 var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(14);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< HEAD
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var _1 = __webpack_require__(8);
@@ -57167,6 +64054,115 @@ var _a, _b, _c;
 
 /***/ }),
 /* 552 */
+=======
+var Root = (function () {
+    function Root(channel, member, message) {
+        this.channel = channel;
+        this.member = member;
+        this.message = message;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ChannelClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MemberClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MessageClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ChannelClient !== "undefined" && _1.ChannelClient) === "function" && _a || Object, typeof (_b = typeof _1.MemberClient !== "undefined" && _1.MemberClient) === "function" && _b || Object, typeof (_c = typeof _1.MessageClient !== "undefined" && _1.MessageClient) === "function" && _c || Object])
+], Root);
+exports.Root = Root;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 519 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 520 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 521 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 522 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(519));
+__export(__webpack_require__(520));
+__export(__webpack_require__(521));
+
+
+/***/ }),
+/* 523 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(15);
+var TYPES = {
+    MeteringACLClient: Symbol("MeteringACLClient"),
+    MeteringACLRoute: Symbol("MeteringACLRoute"),
+    MeteringBatchClient: Symbol("MeteringBatchClient"),
+    MeteringBatchRoute: Symbol("MeteringBatchRoute"),
+    MeteringCategoryBatchClient: Symbol("MeteringCategoryBatchClient"),
+    MeteringCategoryBatchRoute: Symbol("MeteringCategoryBatchRoute"),
+    MeteringCategoryRoute: Symbol("MeteringCategoryRoute"),
+    MeteringCategoryClient: Symbol("MeteringCategoryClient"),
+    MeteringRoute: Symbol("MeteringRoute"),
+    MeteringClient: Symbol("MeteringClient"),
+    MeteringSettingsRoute: Symbol("MeteringSettingsRoute"),
+    MeteringSettingsClient: Symbol("MeteringSettingsClient"),
+    MeteringStatisticsClient: Symbol("MeteringStatisticsClient"),
+    MeteringStatisticsRoute: Symbol("MeteringStatisticsRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.MeteringCategoryBatchRoute).to(_1.MeteringCategoryBatchRoute);
+    bind(TYPES.MeteringCategoryBatchClient).to(_1.MeteringCategoryBatchClient);
+    bind(TYPES.MeteringCategoryRoute).to(_1.MeteringCategoryRoute);
+    bind(TYPES.MeteringCategoryClient).to(_1.MeteringCategoryClient);
+    bind(TYPES.MeteringBatchRoute).to(_1.MeteringBatchRoute);
+    bind(TYPES.MeteringBatchClient).to(_1.MeteringBatchClient);
+    bind(TYPES.MeteringStatisticsRoute).to(_1.MeteringStatisticsRoute);
+    bind(TYPES.MeteringStatisticsClient).to(_1.MeteringStatisticsClient);
+    bind(TYPES.MeteringACLRoute).to(_1.MeteringACLRoute);
+    bind(TYPES.MeteringACLClient).to(_1.MeteringACLClient);
+    bind(TYPES.MeteringRoute).to(_1.MeteringRoute);
+    bind(TYPES.MeteringClient).to(_1.MeteringClient);
+    bind(TYPES.MeteringSettingsRoute).to(_1.MeteringSettingsRoute);
+    bind(TYPES.MeteringSettingsClient).to(_1.MeteringSettingsClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 524 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57180,10 +64176,17 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(8);
 var NotificationsSubscriptionsUsersBatchClient = (function () {
     function NotificationsSubscriptionsUsersBatchClient(notificationsSubscriptionsUsersBatchRoute, apiClient) {
         this.notificationsSubscriptionsUsersBatchRoute = notificationsSubscriptionsUsersBatchRoute;
+=======
+var _1 = __webpack_require__(15);
+var MeteringACLClient = (function () {
+    function MeteringACLClient(meteringACLRoute, apiClient) {
+        this.meteringACLRoute = meteringACLRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(NotificationsSubscriptionsUsersBatchClient.prototype, "routeDefinition", {
@@ -57263,7 +64266,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 553 */
+=======
+/* 525 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57331,7 +64338,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 554 */
+=======
+/* 526 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57345,11 +64356,18 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(8);
 var NotificationsSubscriptionsUsersClient = (function () {
     function NotificationsSubscriptionsUsersClient(notificationsSubscriptionsUsersRoute, NotificationsSubscriptionsUsersBatchClient, apiClient) {
         this.notificationsSubscriptionsUsersRoute = notificationsSubscriptionsUsersRoute;
         this.NotificationsSubscriptionsUsersBatchClient = NotificationsSubscriptionsUsersBatchClient;
+=======
+var _1 = __webpack_require__(15);
+var MeteringBatchClient = (function () {
+    function MeteringBatchClient(meteringBatchRoute, apiClient) {
+        this.meteringBatchRoute = meteringBatchRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(NotificationsSubscriptionsUsersClient.prototype, "routeDefinition", {
@@ -57489,7 +64507,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 555 */
+=======
+/* 527 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57592,7 +64614,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 556 */
+=======
+/* 528 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57606,10 +64632,17 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(22);
 var ShoppingCartItemBatchClient = (function () {
     function ShoppingCartItemBatchClient(shoppingCartItemBatchRoute, apiClient) {
         this.shoppingCartItemBatchRoute = shoppingCartItemBatchRoute;
+=======
+var _1 = __webpack_require__(15);
+var MeteringCategoryBatchClient = (function () {
+    function MeteringCategoryBatchClient(meteringCategoryBatchRoute, apiClient) {
+        this.meteringCategoryBatchRoute = meteringCategoryBatchRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(ShoppingCartItemBatchClient.prototype, "routeDefinition", {
@@ -57686,7 +64719,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 557 */
+=======
+/* 529 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57753,7 +64790,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 558 */
+=======
+/* 530 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57767,10 +64808,17 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(22);
 var ShoppingCartItemClient = (function () {
     function ShoppingCartItemClient(shoppingCartItemRoute, apiClient, shoppingCartItemBatchClient) {
         this.shoppingCartItemRoute = shoppingCartItemRoute;
+=======
+var _1 = __webpack_require__(15);
+var MeteringCategoryClient = (function () {
+    function MeteringCategoryClient(meteringCategoryRoute, apiClient, meteringCategoryBatchClient) {
+        this.meteringCategoryRoute = meteringCategoryRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
         this.shoppingCartItemBatchClient = shoppingCartItemBatchClient;
     }
@@ -57895,7 +64943,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 559 */
+=======
+/* 531 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57909,7 +64961,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< HEAD
 var _1 = __webpack_require__(22);
+=======
+var _1 = __webpack_require__(15);
+>>>>>>> minor code changes
 var contracts_1 = __webpack_require__(3);
 var ShoppingCartItemRoute = (function (_super) {
     tslib_1.__extends(ShoppingCartItemRoute, _super);
@@ -58005,7 +65061,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 560 */
+=======
+/* 532 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58019,10 +65079,17 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(22);
 var ShoppingCartPaymentClient = (function () {
     function ShoppingCartPaymentClient(shoppingCartPaymentRoute, apiClient) {
         this.shoppingCartPaymentRoute = shoppingCartPaymentRoute;
+=======
+var _1 = __webpack_require__(15);
+var MeteringClient = (function () {
+    function MeteringClient(meteringRoute, apiClient, meteringBatchClient, meteringStatisticsClient, meteringACLClient, meteringCategoryClient, meteringSettingsClient) {
+        this.meteringRoute = meteringRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(ShoppingCartPaymentClient.prototype, "routeDefinition", {
@@ -58083,7 +65150,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 561 */
+=======
+/* 533 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58096,6 +65167,11 @@ var _a, _b;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< HEAD
+=======
+;
+var _1 = __webpack_require__(15);
+>>>>>>> minor code changes
 var contracts_1 = __webpack_require__(3);
 var ShoppingCartPaymentRoute = (function (_super) {
     tslib_1.__extends(ShoppingCartPaymentRoute, _super);
@@ -58141,15 +65217,98 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 562 */
+=======
+/* 534 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< HEAD
 
 
 /***/ }),
 /* 563 */
+=======
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(15);
+var MeteringSettingsClient = (function () {
+    function MeteringSettingsClient(meteringSettingsRoute, apiClient) {
+        this.meteringSettingsRoute = meteringSettingsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MeteringSettingsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.meteringSettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the metering resource.
+     * @method
+     * @example meteringSettingsClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                      function (response, status, headers, config) {
+                          // perform error handling here
+                    });
+     **/
+    MeteringSettingsClient.prototype.get = function (options) {
+        return this.apiClient.get(this.routeDefinition.get(options));
+    };
+    /**
+     * Returns a promise that is resolved once the update metering action has been performed; this action updates a metering resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `meteringSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(meteringSettings);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An meteringSetting object used to update specified MeteringSetting resource.
+     * @returns A promise that is resolved once the update metering action has been performed.
+     * @example // meteringSettings is a resource previously fetched using get action.
+                    meteringSettings.dataRetentionPeriod = 60;
+                    meteringSettingsClient.update(meteringSettings)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    MeteringSettingsClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    return MeteringSettingsClient;
+}());
+MeteringSettingsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MeteringSettingsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MeteringSettingsRoute !== "undefined" && _1.MeteringSettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MeteringSettingsClient);
+exports.MeteringSettingsClient = MeteringSettingsClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 535 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58157,15 +65316,92 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 564 */
+=======
+/* 536 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< HEAD
 
 
 /***/ }),
 /* 565 */
+=======
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(15);
+var MeteringStatisticsClient = (function () {
+    function MeteringStatisticsClient(meteringStatisticsRoute, apiClient) {
+        this.meteringStatisticsRoute = meteringStatisticsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MeteringStatisticsClient.prototype, "routeDefinition", {
+        /**
+          * Provides direct access to `meteringStatisticsRoute`.
+          * @method
+          * @example meteringStatisticsClient.routeDefinition.get(expandObject);
+          **/
+        get: function () {
+            return this.meteringStatisticsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of metering resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example meteringClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    category: 'Requests',
+                    rateBy : '<minute,hour,day,week,month,year>',
+                    from: '2 days ago',
+                    to: 'now'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    MeteringStatisticsClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    return MeteringStatisticsClient;
+}());
+MeteringStatisticsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MeteringStatisticsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MeteringStatisticsRoute !== "undefined" && _1.MeteringStatisticsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MeteringStatisticsClient);
+exports.MeteringStatisticsClient = MeteringStatisticsClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 537 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58173,7 +65409,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 566 */
+=======
+/* 538 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58181,7 +65421,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 567 */
+=======
+/* 539 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58189,7 +65433,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 568 */
+=======
+/* 540 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58197,7 +65445,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 569 */
+=======
+/* 541 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58205,7 +65457,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 570 */
+=======
+/* 542 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58224,6 +65480,7 @@ __export(__webpack_require__(567));
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 571 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58282,6 +65539,9 @@ var _a, _b;
 
 /***/ }),
 /* 573 */
+=======
+/* 543 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58290,7 +65550,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 574 */
+=======
+/* 544 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58298,11 +65562,24 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(573));
 
 
 /***/ }),
 /* 575 */
+=======
+__export(__webpack_require__(540));
+__export(__webpack_require__(541));
+__export(__webpack_require__(543));
+__export(__webpack_require__(538));
+__export(__webpack_require__(539));
+__export(__webpack_require__(542));
+
+
+/***/ }),
+/* 545 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58327,7 +65604,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 576 */
+=======
+/* 546 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58416,12 +65697,89 @@ var _a, _b;
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+<<<<<<< HEAD
  - All end-point objects are transformed by the associated route definition.
+=======
+ - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+/* 547 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsPublishBatchClient
+ * @description  Notifications Publish Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsPublishBatchClient` uses `notificationsPublishBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsPublishBatchClient = (function () {
+    function NotificationsPublishBatchClient(notificationsPublishBatchRoute, apiClient) {
+        this.notificationsPublishBatchRoute = notificationsPublishBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsPublishBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsPublishBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create notification action has been performed; this action creates new notification resources.
+     * @method
+     * @param data The notification collection.
+     * @returns A promise that is resolved once the create notification action has been performed.
+     * @example notificationsPublishBatchClient.create([{
+                    channels: ['<channel-name', '<channel-name>'],
+                    moduleName: '<module-name>',
+                    templateName: '<template-name>',
+                    templateContext: {
+                        prop1: '<prop1-value>',
+                        prop2: '<prop2-value>'
+                    }
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsPublishBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    return NotificationsPublishBatchClient;
+}());
+NotificationsPublishBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsPublishBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsPublishBatchRoute !== "undefined" && _1.NotificationsPublishBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], NotificationsPublishBatchClient);
+exports.NotificationsPublishBatchClient = NotificationsPublishBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> minor code changes
+ */ 
+
+
+/***/ }),
+<<<<<<< HEAD
 /* 577 */
+=======
+/* 548 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58488,7 +65846,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 578 */
+=======
+/* 549 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58545,6 +65907,7 @@ var TemplatingClient = (function () {
     TemplatingClient.prototype.find = function (options) {
         return this.apiClient.get(this.routeDefinition.find(options));
     };
+<<<<<<< HEAD
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the specified template resource.
      * @method
@@ -58560,6 +65923,54 @@ var TemplatingClient = (function () {
     **/
     TemplatingClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.templatingRoute.get(id, options));
+=======
+    return NotificationsPublishClient;
+}());
+NotificationsPublishClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsPublishRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsPublishBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsPublishRoute !== "undefined" && _1.NotificationsPublishRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsPublishBatchClient !== "undefined" && _1.NotificationsPublishBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], NotificationsPublishClient);
+exports.NotificationsPublishClient = NotificationsPublishClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsPublishRoute
+ * @description Baasic Notifications Publish Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsPublishRoute = (function (_super) {
+    tslib_1.__extends(NotificationsPublishRoute, _super);
+    function NotificationsPublishRoute(appOptions, notificationsPublishBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.notificationsPublishBatchRoute = notificationsPublishBatchRoute;
+        _this.createRoute = 'notifications/publish';
+        return _this;
+    }
+    NotificationsPublishRoute.prototype.batch = function () {
+        return this.notificationsPublishBatchRoute;
+>>>>>>> minor code changes
     };
     /**
      * Returns a promise that is resolved once the create template action has been performed; this action creates a new template resource.
@@ -58577,6 +65988,56 @@ var TemplatingClient = (function () {
     TemplatingClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
+<<<<<<< HEAD
+=======
+    return NotificationsPublishRoute;
+}(common_1.BaseRoute));
+NotificationsPublishRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsPublishBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsPublishBatchRoute !== "undefined" && _1.NotificationsPublishBatchRoute) === "function" && _b || Object])
+], NotificationsPublishRoute);
+exports.NotificationsPublishRoute = NotificationsPublishRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 551 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsAnonymousBatchClient
+ * @description  Notifications Registrations Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousBatchClient` uses `notificationsRegistrationsAnonymousBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+;
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsAnonymousBatchClient = (function () {
+    function NotificationsRegistrationsAnonymousBatchClient(notificationsRegistrationsAnonymousBatchRoute, apiClient) {
+        this.notificationsRegistrationsAnonymousBatchRoute = notificationsRegistrationsAnonymousBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsRegistrationsAnonymousBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsRegistrationsAnonymousBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+>>>>>>> minor code changes
     /**
      * Returns a promise that is resolved once the update template action has been performed; this action updates a template resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicTemplatingRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -58640,7 +66101,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 579 */
+=======
+/* 552 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58746,7 +66211,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 580 */
+=======
+/* 553 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58843,7 +66312,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 581 */
+=======
+/* 554 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58909,7 +66382,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 582 */
+=======
+/* 555 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59066,7 +66543,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 583 */
+=======
+/* 556 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59159,7 +66640,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 584 */
+=======
+/* 557 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59168,7 +66653,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 585 */
+=======
+/* 558 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59177,7 +66666,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 586 */
+=======
+/* 559 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59186,7 +66679,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 587 */
+=======
+/* 560 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59195,7 +66692,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 588 */
+=======
+/* 561 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59204,7 +66705,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 589 */
+=======
+/* 562 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59213,7 +66718,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 590 */
+=======
+/* 563 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59222,7 +66731,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 591 */
+=======
+/* 564 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59231,7 +66744,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 592 */
+=======
+/* 565 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59240,7 +66757,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 593 */
+=======
+/* 566 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59456,7 +66977,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 599 */
+=======
+/* 567 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59522,7 +67047,71 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 600 */
+=======
+/* 568 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsClient
+ * @description  Notifications Subscriptions Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsClient` uses `notificationsSubscriptionsRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsClient = (function () {
+    function NotificationsSubscriptionsClient(notificationsSubscriptionsRoute, notificationsSubscriptionsAnonymousClient, notificationsSubscriptionsUsersClient) {
+        this.notificationsSubscriptionsRoute = notificationsSubscriptionsRoute;
+        this.notificationsSubscriptionsAnonymousClient = notificationsSubscriptionsAnonymousClient;
+        this.notificationsSubscriptionsUsersClient = notificationsSubscriptionsUsersClient;
+    }
+    Object.defineProperty(NotificationsSubscriptionsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsSubscriptionsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsSubscriptionsClient.prototype, "anonymous", {
+        get: function () {
+            return this.notificationsSubscriptionsAnonymousClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsSubscriptionsClient.prototype, "users", {
+        get: function () {
+            return this.notificationsSubscriptionsUsersClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return NotificationsSubscriptionsClient;
+}());
+NotificationsSubscriptionsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsUsersClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsRoute !== "undefined" && _1.NotificationsSubscriptionsRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsSubscriptionsAnonymousClient !== "undefined" && _1.NotificationsSubscriptionsAnonymousClient) === "function" && _b || Object, typeof (_c = typeof _1.NotificationsSubscriptionsUsersClient !== "undefined" && _1.NotificationsSubscriptionsUsersClient) === "function" && _c || Object])
+], NotificationsSubscriptionsClient);
+exports.NotificationsSubscriptionsClient = NotificationsSubscriptionsClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 569 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59552,7 +67141,59 @@ var OrganizationClient = (function () {
     });
     Object.defineProperty(OrganizationClient.prototype, "batch", {
         get: function () {
+<<<<<<< HEAD
             return this.organizationBatchClient;
+=======
+            return this.notificationsSubscriptionsAnonymousRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return NotificationsSubscriptionsRoute;
+}(common_1.BaseRoute));
+NotificationsSubscriptionsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsUsersRoute)),
+    tslib_1.__param(2, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsAnonymousRoute !== "undefined" && _1.NotificationsSubscriptionsAnonymousRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsSubscriptionsUsersRoute !== "undefined" && _1.NotificationsSubscriptionsUsersRoute) === "function" && _b || Object, typeof (_c = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _c || Object])
+], NotificationsSubscriptionsRoute);
+exports.NotificationsSubscriptionsRoute = NotificationsSubscriptionsRoute;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 570 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsUsersBatchClient
+ * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersBatchUsersClient` uses `notificationsSubscriptionsUsersBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsUsersBatchClient = (function () {
+    function NotificationsSubscriptionsUsersBatchClient(notificationsSubscriptionsUsersBatchRoute, apiClient) {
+        this.notificationsSubscriptionsUsersBatchRoute = notificationsSubscriptionsUsersBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsSubscriptionsUsersBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsSubscriptionsUsersBatchRoute;
+>>>>>>> minor code changes
         },
         enumerable: true,
         configurable: true
@@ -59673,7 +67314,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 601 */
+=======
+/* 571 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59778,7 +67423,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 602 */
+=======
+/* 572 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59905,7 +67554,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 604 */
+=======
+/* 573 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59971,7 +67624,57 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 605 */
+=======
+/* 574 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 575 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(574));
+
+
+/***/ }),
+/* 576 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(25);
+var TYPES = {
+    TemplatingBatchClient: Symbol("TemplatingBatchClient"),
+    TemplatingBatchRoute: Symbol("TemplatingBatchRoute"),
+    TemplatingClient: Symbol("TemplatingClient"),
+    TemplatingRoute: Symbol("TemplatingRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.TemplatingBatchRoute).to(_1.TemplatingBatchRoute);
+    bind(TYPES.TemplatingBatchClient).to(_1.TemplatingBatchClient);
+    bind(TYPES.TemplatingRoute).to(_1.TemplatingRoute);
+    bind(TYPES.TemplatingClient).to(_1.TemplatingClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 577 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59985,11 +67688,18 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(9);
 var SkillClient = (function () {
     function SkillClient(skillRoute, skillBatchClient, apiClient) {
         this.skillRoute = skillRoute;
         this.skillBatchClient = skillBatchClient;
+=======
+var _1 = __webpack_require__(25);
+var TemplatingBatchClient = (function () {
+    function TemplatingBatchClient(templatingBatchRoute, apiClient) {
+        this.templatingBatchRoute = templatingBatchRoute;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(SkillClient.prototype, "routeDefinition", {
@@ -60064,6 +67774,52 @@ var SkillClient = (function () {
     SkillClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
+<<<<<<< HEAD
+=======
+    return TemplatingBatchClient;
+}());
+TemplatingBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.TemplatingBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.TemplatingBatchRoute !== "undefined" && _1.TemplatingBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], TemplatingBatchClient);
+exports.TemplatingBatchClient = TemplatingBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 578 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*global module */
+/**
+ * @module templatingBatchRoute
+ * @description Baasic Templating Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Templating Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var TemplatingBatchRoute = (function (_super) {
+    tslib_1.__extends(TemplatingBatchRoute, _super);
+    function TemplatingBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'templates/batch';
+        _this.updateRoute = 'templates/batch';
+        _this.deleteRoute = 'templates/batch';
+        return _this;
+    }
+>>>>>>> minor code changes
     /**
      * Returns a promise that is resolved once the update skill action has been performed; this action updates a skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `skillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
@@ -60219,7 +67975,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 607 */
+=======
+/* 579 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60232,10 +67992,18 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< HEAD
 var _1 = __webpack_require__(9);
 var UserEducationClient = (function () {
     function UserEducationClient(userEducationRoute, apiClient) {
         this.userEducationRoute = userEducationRoute;
+=======
+var _1 = __webpack_require__(25);
+var TemplatingClient = (function () {
+    function TemplatingClient(templatingRoute, templatingBatchClient, apiClient) {
+        this.templatingRoute = templatingRoute;
+        this.templatingBatchClient = templatingBatchClient;
+>>>>>>> minor code changes
         this.apiClient = apiClient;
     }
     Object.defineProperty(UserEducationClient.prototype, "routeDefinition", {
@@ -60361,7 +68129,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 608 */
+=======
+/* 580 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60375,6 +68147,10 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< HEAD
+=======
+var _1 = __webpack_require__(25);
+>>>>>>> minor code changes
 var contracts_1 = __webpack_require__(3);
 var UserEducationRoute = (function (_super) {
     tslib_1.__extends(UserEducationRoute, _super);
@@ -60457,7 +68233,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 609 */
+=======
+/* 581 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60589,7 +68369,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 610 */
+=======
+/* 582 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60708,7 +68492,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 611 */
+=======
+/* 583 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60841,7 +68629,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 612 */
+=======
+/* 584 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60944,7 +68736,29 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 613 */
+=======
+/* 585 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 586 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 587 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61090,7 +68904,115 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 614 */
+=======
+/* 588 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 589 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 590 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 591 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 592 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 593 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 594 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 595 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 596 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 597 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(585));
+__export(__webpack_require__(587));
+__export(__webpack_require__(590));
+__export(__webpack_require__(591));
+__export(__webpack_require__(589));
+__export(__webpack_require__(588));
+__export(__webpack_require__(586));
+__export(__webpack_require__(593));
+__export(__webpack_require__(594));
+__export(__webpack_require__(592));
+__export(__webpack_require__(595));
+__export(__webpack_require__(596));
+
+
+/***/ }),
+/* 598 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61178,7 +69100,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 615 */
+=======
+/* 599 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61210,7 +69136,167 @@ var UserProfileClient = (function () {
         enumerable: true,
         configurable: true
     });
+<<<<<<< HEAD
     Object.defineProperty(UserProfileClient.prototype, "routeDefinition", {
+=======
+    /**
+     * Returns a promise that is resolved once the create organization action has been performed; this action creates new organization resources.
+     * @method
+     * @param data A collection of organization objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create organization action has been performed.
+     * @example   organizationBatchClient.create([{
+                    description : '<description>',
+                    name : '<name>',
+                    slug: '<slug>'
+                  }])
+                  .then(function (data) {
+                      // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+     **/
+    OrganizationBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update organization action has been performed; this action updates specified organization resources.
+     * @method
+     * @param data A collection of organization objects used to update specified organization resources.
+     * @returns A promise that is resolved once the update organization action has been performed.
+     * @example   organizationBatchClient.update(organizations)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    OrganizationBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove organization resources from the system if successfully completed.
+     * @method
+     * @example organizationBatchClient.remove(organizationIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    OrganizationBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.organizationBatchRoute.delete(), undefined, ids);
+    };
+    return OrganizationBatchClient;
+}());
+OrganizationBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.OrganizationBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.OrganizationBatchRoute !== "undefined" && _1.OrganizationBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], OrganizationBatchClient);
+exports.OrganizationBatchClient = OrganizationBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 600 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module organizationBatchRoute
+ * @description Baasic Organization Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var OrganizationBatchRoute = (function (_super) {
+    tslib_1.__extends(OrganizationBatchRoute, _super);
+    function OrganizationBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'lookups/organizations/batch';
+        _this.updateRoute = 'lookups/organizations/batch';
+        _this.deleteRoute = 'lookups/organizations/batch';
+        return _this;
+    }
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example organizationBatchRoute.create();
+     **/
+    OrganizationBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example organizationBatchRoute.update();
+     **/
+    OrganizationBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example organizationBatchRoute.delete();
+     **/
+    OrganizationBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return OrganizationBatchRoute;
+}(common_1.BaseRoute));
+OrganizationBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], OrganizationBatchRoute);
+exports.OrganizationBatchRoute = OrganizationBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 601 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module organizationClient
+ * @description  Organization Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var OrganizationClient = (function () {
+    function OrganizationClient(organizationRoute, organizationBatchClient, apiClient) {
+        this.organizationRoute = organizationRoute;
+        this.organizationBatchClient = organizationBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(OrganizationClient.prototype, "routeDefinition", {
+>>>>>>> minor code changes
         get: function () {
             return this.userProfileRoute;
         },
@@ -61373,7 +69459,11 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 616 */
+=======
+/* 602 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61481,7 +69571,41 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 617 */
+=======
+/* 603 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(9);
+var inversify_1 = __webpack_require__(0);
+var Root = (function () {
+    function Root(profile, company, organization, skill) {
+        this.profile = profile;
+        this.company = company;
+        this.organization = organization;
+        this.skill = skill;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserProfileClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CompanyClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.OrganizationClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.SkillClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserProfileClient !== "undefined" && _1.UserProfileClient) === "function" && _a || Object, typeof (_b = typeof _1.CompanyClient !== "undefined" && _1.CompanyClient) === "function" && _b || Object, typeof (_c = typeof _1.OrganizationClient !== "undefined" && _1.OrganizationClient) === "function" && _c || Object, typeof (_d = typeof _1.SkillClient !== "undefined" && _1.SkillClient) === "function" && _d || Object])
+], Root);
+exports.Root = Root;
+var _a, _b, _c, _d;
+
+
+/***/ }),
+/* 604 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61625,7 +69749,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 618 */
+=======
+/* 605 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61721,7 +69849,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 619 */
+=======
+/* 606 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61847,6 +69979,7 @@ var UserWorkClient = (function () {
 }());
 UserWorkClient = tslib_1.__decorate([
     inversify_1.injectable(),
+<<<<<<< HEAD
     tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserWorkRoute)),
     tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserWorkRoute !== "undefined" && _1.UserWorkRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
@@ -61863,6 +69996,19 @@ var _a, _b;
 
 /***/ }),
 /* 620 */
+=======
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.SkillRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.SkillBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.SkillRoute !== "undefined" && _1.SkillRoute) === "function" && _a || Object, typeof (_b = typeof _1.SkillBatchClient !== "undefined" && _1.SkillBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], SkillClient);
+exports.SkillClient = SkillClient;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 607 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61952,6 +70098,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 621 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -62009,6 +70156,9 @@ exports.diModule = diModule;
 
 /***/ }),
 /* 625 */
+=======
+/* 608 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62171,7 +70321,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 626 */
+=======
+/* 609 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62321,7 +70475,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 627 */
+=======
+/* 610 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62426,7 +70584,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 628 */
+=======
+/* 611 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62533,7 +70695,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 629 */
+=======
+/* 612 */
+>>>>>>> minor code changes
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/
@@ -62543,8 +70709,14 @@ var _a, _b;
  Available via the MIT license.
 */
 
+<<<<<<< HEAD
 (function (exportCallback) {
     "use strict";
+=======
+/***/ }),
+/* 613 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
 var UriTemplateError = (function () {
 
@@ -62552,6 +70724,7 @@ var UriTemplateError = (function () {
         this.options = options;
     }
 
+<<<<<<< HEAD
     UriTemplateError.prototype.toString = function () {
         if (JSON && JSON.stringify) {
             return JSON.stringify(this.options);
@@ -62560,6 +70733,11 @@ var UriTemplateError = (function () {
             return this.options;
         }
     };
+=======
+/***/ }),
+/* 614 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     return UriTemplateError;
 }());
@@ -62569,6 +70747,7 @@ var objectHelper = (function () {
         return Object.prototype.toString.apply(value) === '[object Array]';
     }
 
+<<<<<<< HEAD
     function isString (value) {
         return Object.prototype.toString.apply(value) === '[object String]';
     }
@@ -62597,6 +70776,11 @@ var objectHelper = (function () {
         }
         return result;
     }
+=======
+/***/ }),
+/* 615 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     function map (arr, mapper) {
         var
@@ -62620,6 +70804,7 @@ var objectHelper = (function () {
         return result;
     }
 
+<<<<<<< HEAD
     function deepFreezeUsingObjectFreeze (object) {
         if (typeof object !== "object" || object === null) {
             return object;
@@ -62637,6 +70822,11 @@ var objectHelper = (function () {
         }
         return object;
     }
+=======
+/***/ }),
+/* 616 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     function deepFreeze (object) {
         if (typeof Object.freeze === 'function') {
@@ -62646,6 +70836,7 @@ var objectHelper = (function () {
     }
 
 
+<<<<<<< HEAD
     return {
         isArray: isArray,
         isString: isString,
@@ -62657,6 +70848,11 @@ var objectHelper = (function () {
         deepFreeze: deepFreeze
     };
 }());
+=======
+/***/ }),
+/* 617 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
 var charHelper = (function () {
 
@@ -62664,9 +70860,15 @@ var charHelper = (function () {
         return (chr >= 'a' && chr <= 'z') || ((chr >= 'A' && chr <= 'Z'));
     }
 
+<<<<<<< HEAD
     function isDigit (chr) {
         return chr >= '0' && chr <= '9';
     }
+=======
+/***/ }),
+/* 618 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     function isHexDigit (chr) {
         return isDigit(chr) || (chr >= 'a' && chr <= 'f') || (chr >= 'A' && chr <= 'F');
@@ -62679,6 +70881,7 @@ var charHelper = (function () {
     };
 }());
 
+<<<<<<< HEAD
 var pctEncoder = (function () {
     var utf8 = {
         encode: function (chr) {
@@ -62705,6 +70908,11 @@ var pctEncoder = (function () {
             return 0x80 <= charCode && charCode <= 0xBF;
         }
     };
+=======
+/***/ }),
+/* 619 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     /**
      * encodes a character, if needed or not.
@@ -62734,6 +70942,7 @@ var pctEncoder = (function () {
         return text.charAt(start) === '%' && charHelper.isHexDigit(text.charAt(start + 1)) && charHelper.isHexDigit(text.charAt(start + 2));
     }
 
+<<<<<<< HEAD
     /**
      * Parses a hex number from start with length 2.
      * @param text a string
@@ -62743,6 +70952,11 @@ var pctEncoder = (function () {
     function parseHex2 (text, start) {
         return parseInt(text.substr(start, 2), 16);
     }
+=======
+/***/ }),
+/* 620 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     /**
      * Returns whether or not the given char sequence is a correctly pct-encoded sequence.
@@ -62790,12 +71004,18 @@ var pctEncoder = (function () {
         return text.substr(startIndex, 3 * numBytes);
     }
 
+<<<<<<< HEAD
     return {
         encodeCharacter: encodeCharacter,
         isPctEncoded: isPctEncoded,
         pctCharAt: pctCharAt
     };
 }());
+=======
+/***/ }),
+/* 621 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
 var rfcCharHelper = (function () {
 
@@ -62808,6 +71028,7 @@ var rfcCharHelper = (function () {
         return charHelper.isAlpha(chr) || charHelper.isDigit(chr) || chr === '_' || pctEncoder.isPctEncoded(chr);
     }
 
+<<<<<<< HEAD
     /**
      * Returns if chr is an unreserved character according 1.5 of rfc 6570
      * @param chr
@@ -62816,6 +71037,11 @@ var rfcCharHelper = (function () {
     function isUnreserved (chr) {
         return charHelper.isAlpha(chr) || charHelper.isDigit(chr) || chr === '-' || chr === '.' || chr === '_' || chr === '~';
     }
+=======
+/***/ }),
+/* 622 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     /**
      * Returns if chr is an reserved character according 1.5 of rfc 6570
@@ -62834,7 +71060,13 @@ var rfcCharHelper = (function () {
         isReserved: isReserved
     };
 
+<<<<<<< HEAD
 }());
+=======
+/***/ }),
+/* 623 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
 /**
  * encoding of rfc 6570
@@ -62860,6 +71092,7 @@ var encodingHelper = (function () {
         return encode(text, true);
     }
 
+<<<<<<< HEAD
     function encodeLiteralCharacter (literal, index) {
         var chr = pctEncoder.pctCharAt(literal, index);
         if (chr.length > 1) {
@@ -62886,6 +71119,19 @@ var encodingHelper = (function () {
         }
         return result;
     }
+=======
+/***/ }),
+/* 624 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(623));
+__export(__webpack_require__(622));
+>>>>>>> minor code changes
 
     return {
         encode: encode,
@@ -62894,12 +71140,39 @@ var encodingHelper = (function () {
         encodeLiteralCharacter: encodeLiteralCharacter
     };
 
+<<<<<<< HEAD
 }());
 
+=======
+/***/ }),
+/* 625 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(26);
+var TYPES = {
+    ValueSetClient: Symbol("ValueSetClient"),
+    ValueSetItemClient: Symbol("ValueSetItemClient"),
+    ValueSetItemRoute: Symbol("ValueSetItemRoute"),
+    ValueSetRoute: Symbol("ValueSetRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.ValueSetItemRoute).to(_1.ValueSetItemRoute);
+    bind(TYPES.ValueSetItemClient).to(_1.ValueSetItemClient);
+    bind(TYPES.ValueSetRoute).to(_1.ValueSetRoute);
+    bind(TYPES.ValueSetClient).to(_1.ValueSetClient);
+});
+exports.diModule = diModule;
+>>>>>>> minor code changes
 
 // the operators defined by rfc 6570
 var operators = (function () {
 
+<<<<<<< HEAD
     var
         bySymbol = {};
 
@@ -62916,6 +71189,169 @@ var operators = (function () {
             }
         };
     }
+=======
+/***/ }),
+/* 626 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module valueSetClient
+ * @description  Value Set Client provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(26);
+var ValueSetClient = (function () {
+    function ValueSetClient(valueSetRoute, valueSetItemClient, apiClient) {
+        this.valueSetRoute = valueSetRoute;
+        this.valueSetItemClient = valueSetItemClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ValueSetClient.prototype, "items", {
+        get: function () {
+            return this.valueSetItemClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ValueSetClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `valueSetRoute`.
+         * @method
+         * @example valueSetClient.routeDefinition.get().expand(expandObject);
+        **/
+        get: function () {
+            return this.valueSetRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
+     * @param options query resource options object
+     * @returns A promise that is resolved once the find action has beend performed.
+     * @method
+     * @example valueSetClient.find({
+                    pageNumber: 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set resource.
+     * @param setName value set name
+     * @param options query resource options object
+     * @returns A promise that is resolved once the get action has been performed.
+     * @method
+     * @example valueSetClient.get('<value-set-name>')
+                   .success(function (data) {
+                       // perform success action here
+                   })
+                   .error(function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    ValueSetClient.prototype.get = function (setName, options) {
+        return this.apiClient.get(this.valueSetRoute.get(setName, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create value set action has been performed; this action creates a new value set resource.
+     * @param data A key value object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create value set action has beend performed.
+     * @method
+     * @example valueSetClient.create({
+                    name: '<value-set-name>',
+                    description: '<description>',
+                    values: [{value: '<value>'}]
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update value set action has been performed; this action updates a value set resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicValueSetService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(valueSet);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @param data Value set object used to update specified value set resource.
+     * @returns A promise that is resolved once the update value set action has been performed.
+     * @method
+     * @example // valueSet is a resource previously fetched using get action.
+                    valueSet.name = '<new-name>';
+                    valueSetClient.update(valueSet)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ValueSetClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will delete a value set resource if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(valueSet);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @param data A value set object used to delete specified value set resource.
+     * @method
+     * @example // valueSet is a resource previously fetched using get action.
+                    valueSetClient.remove(valueSet)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ValueSetClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return ValueSetClient;
+}());
+ValueSetClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ValueSetRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ValueSetItemClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ValueSetRoute !== "undefined" && _1.ValueSetRoute) === "function" && _a || Object, typeof (_b = typeof _1.ValueSetItemClient !== "undefined" && _1.ValueSetItemClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], ValueSetClient);
+exports.ValueSetClient = ValueSetClient;
+var _a, _b, _c;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+>>>>>>> minor code changes
 
     create('');
     create('+');
@@ -62938,6 +71374,7 @@ var operators = (function () {
     };
 }());
 
+<<<<<<< HEAD
 
 /**
  * Detects, whether a given element is defined in the sense of rfc 6570
@@ -62971,21 +71408,178 @@ function isDefined (object) {
     }
     return false;
 }
+=======
+/***/ }),
+/* 627 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/**
+ * @module valueSetItemClient
+ * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `valueSetItemClient` uses `valueSetItemRoute`.
+ */
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(26);
+var ValueSetItemClient = (function () {
+    function ValueSetItemClient(valueSetItemRoute, apiClient) {
+        this.valueSetItemRoute = valueSetItemRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ValueSetItemClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.valueSetItemRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @method items.find
+     * @example valueSetItemClient.find({
+                    setName: '<value-set-name>',
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>' })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetItemClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set item resource.
+     * @param setName value set name
+     * @param id unique identifier of value set resource
+     * @param options query resource options object
+     * @returns A promise that is resolved once the get action has been performed.
+     * @method items.get
+     * @example valueSetItemClient.get('<value-set-name>', '<set-item-id>')
+                   .then(function (data) {
+                        // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetItemClient.prototype.get = function (setName, id, options) {
+        return this.apiClient.get(this.valueSetItemRoute.get(setName, id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create value set item action has been performed; this action creates a new value set item resource.
+     * @method
+     * @param data A value set item object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create value set item action has been performed.
+     * @example valueSetItemClient.create({
+                    setId: '<value-set-id>',
+                    value: '<value>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetItemClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update value set item action has been performed; this action updates a value set item resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(valueSetItem);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A value set item object used to update specified value set resource.
+     * @returns A promise that is resolved once the update value set item action has been performed.
+     * @example // valueSetItem is a resource previously fetched using get action.
+                valueSetItem.value = '<new-value>';
+                valueSetItemClient.update(valueSetItem)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    ValueSetItemClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will delete a value set item if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(valueSetItem);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @param data A value set item object used to delete specified value set resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @method
+     * @example // valueSetItem is a resource previously fetched using get action.
+                valueSetItemClient.remove(valueSetItem)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    ValueSetItemClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return ValueSetItemClient;
+}());
+ValueSetItemClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ValueSetItemRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ValueSetItemRoute !== "undefined" && _1.ValueSetItemRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ValueSetItemClient);
+exports.ValueSetItemClient = ValueSetItemClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+>>>>>>> minor code changes
 
 var LiteralExpression = (function () {
     function LiteralExpression (literal) {
         this.literal = encodingHelper.encodeLiteral(literal);
     }
 
+<<<<<<< HEAD
     LiteralExpression.prototype.expand = function () {
         return this.literal;
     };
+=======
+/***/ }),
+/* 628 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
     LiteralExpression.prototype.toString = LiteralExpression.prototype.expand;
 
     return LiteralExpression;
 }());
 
+<<<<<<< HEAD
 var parse = (function () {
 
     function parseExpression (expressionText) {
@@ -63014,6 +71608,113 @@ var parse = (function () {
             varspec.maxLength = parseInt(expressionText.substring(maxLengthStart, index), 10);
             maxLengthStart = null;
         }
+=======
+/***/ }),
+/* 629 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module valueSetRoute
+ * @description Baasic Value Set Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(26);
+var contracts_1 = __webpack_require__(3);
+var ValueSetRoute = (function (_super) {
+    tslib_1.__extends(ValueSetRoute, _super);
+    function ValueSetRoute(appOptions, valueSetItemRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.valueSetItemRoute = valueSetItemRoute;
+        _this.findRoute = 'value-sets/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'value-sets/{setName}/{?embed,fields}';
+        _this.createRoute = 'value-sets';
+        _this.updateRoute = 'value-sets/{id}';
+        _this.deleteRoute = 'value-sets/{id}';
+        return _this;
+    }
+    Object.defineProperty(ValueSetRoute.prototype, "items", {
+        get: function () {
+            return this.valueSetItemRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find value set route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify value set resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain value set subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the value set property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example valueSetRoute.find(options);
+     **/
+    ValueSetRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get value set route which must be expanded with the name of the previously created value set resource in the system.
+     * @method
+     * @param setName Value Set name.
+     * @param options Query resource options object.
+     * @example valueSetRoute.get(setName, options);
+     **/
+    ValueSetRoute.prototype.get = function (setName, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, setName, options, 'setName');
+    };
+    /**
+     * Parses create value set route; this URI template does not expose any additional options.
+     * @method
+     * @example valueSetRoute.create();
+     **/
+    ValueSetRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update value set route.
+     * @method
+     * @param data Value set object used to update specified value set resource.
+     * @example valueSetRoute.update(data);
+     */
+    ValueSetRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete value set route.
+     * @method
+     * @param data A value set object used to delete specified value set resource.
+     * @example valueSetRoute.delete(data);
+     */
+    ValueSetRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return ValueSetRoute;
+}(common_1.BaseRoute));
+ValueSetRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ValueSetItemRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.ValueSetItemRoute !== "undefined" && _1.ValueSetItemRoute) === "function" && _b || Object])
+], ValueSetRoute);
+exports.ValueSetRoute = ValueSetRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+>>>>>>> minor code changes
 
         operator = (function (operatorText) {
             var op = operators.valueOf(operatorText);
@@ -63097,6 +71798,7 @@ var parse = (function () {
         return new VariableExpression(expressionText, operator, varspecs);
     }
 
+<<<<<<< HEAD
     function parse (uriTemplateText) {
         // assert filled string
         var
@@ -63120,6 +71822,11 @@ var parse = (function () {
                 }
                 continue;
             }
+=======
+/***/ }),
+/* 630 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> minor code changes
 
             if (braceOpenIndex !== null) {
                 // here just { is forbidden

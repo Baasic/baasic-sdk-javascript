@@ -40,6 +40,7 @@ export class BaasicApp implements IBaasicApp {
     public readonly calendarModule: modules.Calendar.Root;
     public readonly shoppingCartModule: modules.ShoppingCart.Root;
     public readonly blogModule: modules.Blog.Root;
+    public readonly messageCenterModule: modules.MessageCenter.Root;
 
 
     constructor(private apiKey: string, private options?: Partial<IBaasicOptions>) {
@@ -80,6 +81,7 @@ export class BaasicApp implements IBaasicApp {
         this.calendarModule = this.diModule.kernel.get<modules.Calendar.Root>(modules.Calendar.TYPES.Root);
         this.shoppingCartModule = this.diModule.kernel.get<modules.ShoppingCart.Root>(modules.ShoppingCart.TYPES.Root);
         this.blogModule = this.diModule.kernel.get<modules.Blog.Root>(modules.Blog.TYPES.Root);
+        this.messageCenterModule = this.diModule.kernel.get<modules.MessageCenter.Root>(modules.MessageCenter.TYPES.Root);
     }
 
     getAccessToken(): IToken {

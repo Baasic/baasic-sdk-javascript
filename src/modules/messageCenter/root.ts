@@ -1,7 +1,7 @@
 import {
     ChannelClient,
     MemberClient,
-    MessageClient
+    MessageClient,
     TYPES
 } from './';
 
