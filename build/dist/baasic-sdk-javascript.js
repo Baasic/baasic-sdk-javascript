@@ -55224,6 +55224,8185 @@ var UriTemplate = (function () {
 
     exportCallback(UriTemplate);
 
+<<<<<<< HEAD
+=======
+/***/ }),
+/* 530 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsPublishBatchRoute
+ * @description Baasic Notifications Publish Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Publish Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var NotificationsPublishBatchRoute = (function (_super) {
+    tslib_1.__extends(NotificationsPublishBatchRoute, _super);
+    function NotificationsPublishBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'notifications/publish/batch';
+        return _this;
+    }
+    /**
+     * Parses create publish batch route; this route does not expose any additional options.
+     * @method
+     * @example notificationsPublishBatchRoute.create();
+     */
+    NotificationsPublishBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    return NotificationsPublishBatchRoute;
+}(common_1.BaseRoute));
+NotificationsPublishBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], NotificationsPublishBatchRoute);
+exports.NotificationsPublishBatchRoute = NotificationsPublishBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 531 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsPublishClient
+ * @description  Notifications Publish Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsPublishClient` uses `notificationsPublishRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsPublishClient = (function () {
+    function NotificationsPublishClient(notificationsPublishRoute, notificationsPublishBatchClient, apiClient) {
+        this.notificationsPublishRoute = notificationsPublishRoute;
+        this.notificationsPublishBatchClient = notificationsPublishBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsPublishClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsPublishRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsPublishClient.prototype, "batch", {
+        get: function () {
+            return this.notificationsPublishBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create notification action has been performed; this action creates a new notification resource.
+     * @method
+     * @param data The notification.
+     * @returns A promise that is resolved once the create notification action has been performed.
+     * @example notificationsPublishClient.create({
+                    channels: ['<channel-name', '<channel-name>'],
+                    moduleName: '<module-name>',
+                    templateName: '<template-name>',
+                    templateContext: {
+                        prop1: '<prop1-value>',
+                        prop2: '<prop2-value>'
+                    }
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsPublishClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    return NotificationsPublishClient;
+}());
+NotificationsPublishClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsPublishRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsPublishBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsPublishRoute !== "undefined" && _1.NotificationsPublishRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsPublishBatchClient !== "undefined" && _1.NotificationsPublishBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], NotificationsPublishClient);
+exports.NotificationsPublishClient = NotificationsPublishClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 532 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsPublishRoute
+ * @description Baasic Notifications Publish Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsPublishRoute = (function (_super) {
+    tslib_1.__extends(NotificationsPublishRoute, _super);
+    function NotificationsPublishRoute(appOptions, notificationsPublishBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.notificationsPublishBatchRoute = notificationsPublishBatchRoute;
+        _this.createRoute = 'notifications/publish';
+        return _this;
+    }
+    NotificationsPublishRoute.prototype.batch = function () {
+        return this.notificationsPublishBatchRoute;
+    };
+    /**
+     * Parses create publish route; this route does not expose any additional options.
+     * @method
+     * @example notificationsPublishRoute.create();
+     */
+    NotificationsPublishRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    return NotificationsPublishRoute;
+}(common_1.BaseRoute));
+NotificationsPublishRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsPublishBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsPublishBatchRoute !== "undefined" && _1.NotificationsPublishBatchRoute) === "function" && _b || Object])
+], NotificationsPublishRoute);
+exports.NotificationsPublishRoute = NotificationsPublishRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 533 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsAnonymousBatchClient
+ * @description  Notifications Registrations Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousBatchClient` uses `notificationsRegistrationsAnonymousBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+;
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsAnonymousBatchClient = (function () {
+    function NotificationsRegistrationsAnonymousBatchClient(notificationsRegistrationsAnonymousBatchRoute, apiClient) {
+        this.notificationsRegistrationsAnonymousBatchRoute = notificationsRegistrationsAnonymousBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsRegistrationsAnonymousBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsRegistrationsAnonymousBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create anonymous registration action has been performed; this action creates new anonymous registration resources.
+     * @method
+     * @param data AnonymousRegistration objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create anonymous registration action has been performed.
+     * @example notificationsRegistrationsAnonymousBatchClient.create([{
+                    provider: '<provider-name>',
+                    providerData: <provider-data>,
+                    expirationDate: <expiration-date>
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsRegistrationsAnonymousBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove anonymous registration resources from the system if successfully completed.
+     * @method
+     * @param ids The registration ids which uniquely identify AnonymousRegistration resources that need to be deleted.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example notificationsRegistrationsAnonymousBatchClient.remove(subscriptionIds)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    */
+    NotificationsRegistrationsAnonymousBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.notificationsRegistrationsAnonymousBatchRoute.delete(), undefined, ids);
+    };
+    /**
+     * Returns a promise that is resolved once the update anonymous registration action has been performed; this action updates specified anonymous registration  resources.
+     * @method
+     * @param data AnonymousRegistration objects used to update specified AnonymousRegistration resources.
+     * @returns A promise that is resolved once the update anonymous registration action has been performed.
+     * @example notificationsRegistrationsAnonymousBatchClient.update(registrations)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsRegistrationsAnonymousBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsRegistrationsAnonymousBatchClient;
+}());
+NotificationsRegistrationsAnonymousBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsRegistrationsAnonymousBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsRegistrationsAnonymousBatchRoute !== "undefined" && _1.NotificationsRegistrationsAnonymousBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], NotificationsRegistrationsAnonymousBatchClient);
+exports.NotificationsRegistrationsAnonymousBatchClient = NotificationsRegistrationsAnonymousBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 534 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsAnonymousBatchRoute
+ * @description Baasic Notifications Registrations Anonymous Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Anonymous Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var NotificationsRegistrationsAnonymousBatchRoute = (function (_super) {
+    tslib_1.__extends(NotificationsRegistrationsAnonymousBatchRoute, _super);
+    function NotificationsRegistrationsAnonymousBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'notifications/registrations/anonymous/batch';
+        _this.deleteRoute = 'notifications/registrations/anonymous/batch';
+        return _this;
+    }
+    /**
+     * Parses create anonymous registrations batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsRegistrationsAnonymousBatchRoute.create();
+     */
+    NotificationsRegistrationsAnonymousBatchRoute.prototype.create = function () {
+        return this.baseCreate(this.createRoute, {});
+    };
+    /**
+     * Parses delete anonymous registrations batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsRegistrationsAnonymousBatchRoute.delete();
+     */
+    NotificationsRegistrationsAnonymousBatchRoute.prototype.delete = function () {
+        return this.baseDelete(this.deleteRoute, {});
+    };
+    /**
+     * Parses update anonymous registrations batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsRegistrationsAnonymousBatchRoute.update();
+     */
+    NotificationsRegistrationsAnonymousBatchRoute.prototype.update = function () {
+        return this.baseUpdate('notifications/registrations/anonymous/batch', {});
+    };
+    return NotificationsRegistrationsAnonymousBatchRoute;
+}(common_1.BaseRoute));
+NotificationsRegistrationsAnonymousBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], NotificationsRegistrationsAnonymousBatchRoute);
+exports.NotificationsRegistrationsAnonymousBatchRoute = NotificationsRegistrationsAnonymousBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 535 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsAnonymousClient
+ * @description  Notifications Registrations Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsAnonymousClient` uses `notificationsRegistrationsAnonymousRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+;
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsAnonymousClient = (function () {
+    function NotificationsRegistrationsAnonymousClient(notificationsRegistrationsAnonymousRoute, notificationsRegistrationsAnonymousBatchClient, apiClient) {
+        this.notificationsRegistrationsAnonymousRoute = notificationsRegistrationsAnonymousRoute;
+        this.notificationsRegistrationsAnonymousBatchClient = notificationsRegistrationsAnonymousBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsRegistrationsAnonymousClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsRegistrationsAnonymousRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsRegistrationsAnonymousClient.prototype, "batch", {
+        get: function () {
+            return this.notificationsRegistrationsAnonymousBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create anonymous registration action has been performed; this action creates a new anonymous registration resource.
+     * @method
+     * @param data An AnonymousRegistration object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create anonymous registration action has been performed.
+     * @example notificationsRegistrationsAnonymousClient.create({
+                    provider: '<provider-name>',
+                    providerdata: <provider-data>,
+                    expirationData: '<expiration-date>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsRegistrationsAnonymousClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of anonymous registration resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example notificationsRegistrationsAnonymousClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>',
+                   providers: '<provider-name1>,<provider-name2>',
+                   embed: '<embed>'
+               })
+               .then(function (collection) {
+                   // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+    */
+    NotificationsRegistrationsAnonymousClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified anonymous registration resource.
+     * @method
+     * @param id The registration identifier which uniquely identifies AnonymousRegistration resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example notificationsRegistrationsAnonymousClient.get('<registration-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsRegistrationsAnonymousClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.notificationsRegistrationsAnonymousRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the remove anonymous registration action has been performed. This action will remove a anonymous registration resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsAnonymousRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(registration);
+     * var uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An object used to delete specified AnonymousRegistration resource.
+     * @returns A promise that is resolved once the remove anonymous registration action has been performed.
+     * @example // registration is a resource previously fetched using get action.
+                    notificationsRegistrationsAnonymousClient.remove(registration)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     */
+    NotificationsRegistrationsAnonymousClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update anonymous registration action has been performed; this action updates a anonymous registration resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsAnonymousRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(registration);
+     * var uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An object used to update specified AnonymousRegistration resource.
+     * @returns A promise that is resolved once the update anonymous registration action has been performed
+     * @example // registration is a resource previously fetched using get action.
+                        subscription.provider = '<provider-name>';
+                        notificationsRegistrationsAnonymousClient.update(registration)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     */
+    NotificationsRegistrationsAnonymousClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsRegistrationsAnonymousClient;
+}());
+NotificationsRegistrationsAnonymousClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsRegistrationsAnonymousRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsRegistrationsAnonymousBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsRegistrationsAnonymousRoute !== "undefined" && _1.NotificationsRegistrationsAnonymousRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsRegistrationsAnonymousBatchClient !== "undefined" && _1.NotificationsRegistrationsAnonymousBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], NotificationsRegistrationsAnonymousClient);
+exports.NotificationsRegistrationsAnonymousClient = NotificationsRegistrationsAnonymousClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 536 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsAnonymousRoute
+ * @description Baasic Notifications Registrations Anonymous Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Anonymous Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsAnonymousRoute = (function (_super) {
+    tslib_1.__extends(NotificationsRegistrationsAnonymousRoute, _super);
+    function NotificationsRegistrationsAnonymousRoute(appOptions, notificationsRegistrationsAnonymousBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.notificationsRegistrationsAnonymousBatchRoute = notificationsRegistrationsAnonymousBatchRoute;
+        _this.createRoute = 'notifications/registrations/anonymous';
+        _this.findRoute = 'notifications/registrations/anonymous/{?searchQuery,providers,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'notifications/registrations/anonymous/{id}/{?embed}';
+        _this.updateRoute = 'notifications/registrations/anonymous/{id}';
+        _this.deleteRoute = 'notifications/registrations/anonymous/{id}';
+        return _this;
+    }
+    Object.defineProperty(NotificationsRegistrationsAnonymousRoute.prototype, "batch", {
+        get: function () {
+            return this.notificationsRegistrationsAnonymousBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses create anonymous registrations route; this route does not expose any additional options
+     * @method
+     * @example notificationsRegistrationsAnonymousRoute.create();
+     */
+    NotificationsRegistrationsAnonymousRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses find anonymous registrations route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing user subscription properties using the phrase search.
+     * - `providers` - Comma separated list of notification providers.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user subscription subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user subscription property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example notificationsRegistrationsAnonymousRoute.find({
+                   searchQuery: '<search-phrase>',
+                   providers: '<provider-name>,<provider-name>'
+               });
+    */
+    NotificationsRegistrationsAnonymousRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get anonymous registrations route; this route should be expanded with the Id of anonymous registrations resource.
+     * @method
+     * @param id The registration identifier which uniquely identifies AnonymousRegistration resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example notificationsRegistrationsAnonymousRoute.get({ id: '<registration-id>' });
+     */
+    NotificationsRegistrationsAnonymousRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update anonymous registrations route; this route should be expanded with the Id of anonymous registrations resource.
+     * @method
+     * @param data An object used to update specified AnonymousRegistration resource.
+     * @example notificationsRegistrationsAnonymousRoute.update(data);
+     */
+    NotificationsRegistrationsAnonymousRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete anonymous registrations route; this route should be expanded with the Id of anonymous registrations resource.
+     * @method
+     * @param data An object used to delete specified AnonymousRegistration resource.
+     * @example notificationsRegistrationsAnonymousRoute.delete(data);
+     */
+    NotificationsRegistrationsAnonymousRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return NotificationsRegistrationsAnonymousRoute;
+}(common_1.BaseRoute));
+NotificationsRegistrationsAnonymousRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsRegistrationsAnonymousBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsRegistrationsAnonymousBatchRoute !== "undefined" && _1.NotificationsRegistrationsAnonymousBatchRoute) === "function" && _b || Object])
+], NotificationsRegistrationsAnonymousRoute);
+exports.NotificationsRegistrationsAnonymousRoute = NotificationsRegistrationsAnonymousRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 537 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsClient
+ * @description  Notifications Registrations Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsClient` uses `notificationsRegistrationsRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsClient = (function () {
+    function NotificationsRegistrationsClient(notificationsRegistrationsRoute, notificationsRegistrationsAnonymousClient, notificationsRegistrationsUsersClient) {
+        this.notificationsRegistrationsRoute = notificationsRegistrationsRoute;
+        this.notificationsRegistrationsAnonymousClient = notificationsRegistrationsAnonymousClient;
+        this.notificationsRegistrationsUsersClient = notificationsRegistrationsUsersClient;
+    }
+    Object.defineProperty(NotificationsRegistrationsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsRegistrationsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsRegistrationsClient.prototype, "anonymous", {
+        get: function () {
+            return this.notificationsRegistrationsAnonymousClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsRegistrationsClient.prototype, "users", {
+        get: function () {
+            return this.notificationsRegistrationsUsersClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return NotificationsRegistrationsClient;
+}());
+NotificationsRegistrationsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsRegistrationsRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsRegistrationsAnonymousClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.NotificationsRegistrationsUsersClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsRegistrationsRoute !== "undefined" && _1.NotificationsRegistrationsRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsRegistrationsAnonymousClient !== "undefined" && _1.NotificationsRegistrationsAnonymousClient) === "function" && _b || Object, typeof (_c = typeof _1.NotificationsRegistrationsUsersClient !== "undefined" && _1.NotificationsRegistrationsUsersClient) === "function" && _c || Object])
+], NotificationsRegistrationsClient);
+exports.NotificationsRegistrationsClient = NotificationsRegistrationsClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 538 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsRoute
+ * @description Baasic Notifications Registrations Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsRoute = (function (_super) {
+    tslib_1.__extends(NotificationsRegistrationsRoute, _super);
+    function NotificationsRegistrationsRoute(appOptions, notificationsRegistrationsUsersRoute, notificationsRegistrationsAnonymousRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.notificationsRegistrationsUsersRoute = notificationsRegistrationsUsersRoute;
+        _this.notificationsRegistrationsAnonymousRoute = notificationsRegistrationsAnonymousRoute;
+        return _this;
+    }
+    Object.defineProperty(NotificationsRegistrationsRoute.prototype, "users", {
+        get: function () {
+            return this.notificationsRegistrationsUsersRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsRegistrationsRoute.prototype, "anonymous", {
+        get: function () {
+            return this.notificationsRegistrationsAnonymousRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return NotificationsRegistrationsRoute;
+}(common_1.BaseRoute));
+NotificationsRegistrationsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsRegistrationsUsersRoute)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.NotificationsRegistrationsAnonymousRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsRegistrationsUsersRoute !== "undefined" && _1.NotificationsRegistrationsUsersRoute) === "function" && _b || Object, typeof (_c = typeof _1.NotificationsRegistrationsAnonymousRoute !== "undefined" && _1.NotificationsRegistrationsAnonymousRoute) === "function" && _c || Object])
+], NotificationsRegistrationsRoute);
+exports.NotificationsRegistrationsRoute = NotificationsRegistrationsRoute;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 539 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsUsersBatchClient
+ * @description  Notifications Registrations Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersBatchClient` uses `notificationsRegistrationsUsersBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+;
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsUsersBatchClient = (function () {
+    function NotificationsRegistrationsUsersBatchClient(notificationsRegistrationsUsersBatchRoute, apiClient) {
+        this.notificationsRegistrationsUsersBatchRoute = notificationsRegistrationsUsersBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsRegistrationsUsersBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsRegistrationsUsersBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create user registration action has been performed; this action creates new user registration resources.
+     * @method
+     * @param data UserRegistration collection that need to be inserted into the system.
+     * @returns A promise that is resolved once the create user registration action has been performed.
+     * @example notificationsRegistrationsUsersBatchClient.create([{
+                    provider: '<provider-name>',
+                    providerData: <provider-data>,
+                    userId: '<user-id>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsRegistrationsUsersBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove user registration resources from the system if successfully completed.
+     * @method
+     * @param ids The subscription ids which uniquely identify UserRegistration resources that need to be deleted.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example notificationsRegistrationsUsersBatchClient.remove(subscriptionIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsRegistrationsUsersBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.notificationsRegistrationsUsersBatchRoute.delete(), undefined, ids);
+    };
+    /**
+     * Returns a promise that is resolved once the update user registration action has been performed; this action updates specified user registration resources.
+     * @method
+     * @param data UserRegistration objects used to update specified UserRegistration resources.
+     * @returns A promise that is resolved once the update user registration action has been performed.
+     * @example notificationsRegistrationsUsersBatchClient.update(registrations)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsRegistrationsUsersBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsRegistrationsUsersBatchClient;
+}());
+NotificationsRegistrationsUsersBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsRegistrationsUsersBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsRegistrationsUsersBatchRoute !== "undefined" && _1.NotificationsRegistrationsUsersBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], NotificationsRegistrationsUsersBatchClient);
+exports.NotificationsRegistrationsUsersBatchClient = NotificationsRegistrationsUsersBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 540 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsUsersBatchRoute
+ * @description Baasic Notifications Registrations Users Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Users Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var NotificationsRegistrationsUsersBatchRoute = (function (_super) {
+    tslib_1.__extends(NotificationsRegistrationsUsersBatchRoute, _super);
+    function NotificationsRegistrationsUsersBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'notifications/registrations/user/batch';
+        _this.deleteRoute = 'notifications/registrations/user/batch';
+        _this.updateRoute = 'notifications/registrations/user/batch';
+        return _this;
+    }
+    /**
+     * Parses create users registrations batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsRegistrationsUsersBatchRoute.create();
+     */
+    NotificationsRegistrationsUsersBatchRoute.prototype.create = function () {
+        return this.baseCreate(this.createRoute, {});
+    };
+    /**
+     * Parses remove users registrations batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsRegistrationsUsersBatchRoute.delete();
+     */
+    NotificationsRegistrationsUsersBatchRoute.prototype.delete = function () {
+        return this.baseDelete(this.deleteRoute, {});
+    };
+    /**
+     * Parses update users registrations batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsRegistrationsUsersBatchRoute.update();
+     */
+    NotificationsRegistrationsUsersBatchRoute.prototype.update = function () {
+        return this.baseUpdate(this.updateRoute, {});
+    };
+    return NotificationsRegistrationsUsersBatchRoute;
+}(common_1.BaseRoute));
+NotificationsRegistrationsUsersBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], NotificationsRegistrationsUsersBatchRoute);
+exports.NotificationsRegistrationsUsersBatchRoute = NotificationsRegistrationsUsersBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 541 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsUsersClient
+ * @description  Notifications Registrations Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsRegistrationsUsersClient` uses `notificationsRegistrationsUsersRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+;
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsUsersClient = (function () {
+    function NotificationsRegistrationsUsersClient(notificationsRegistrationsUsersRoute, notificationsRegistrationsUsersBatchClient, apiClient) {
+        this.notificationsRegistrationsUsersRoute = notificationsRegistrationsUsersRoute;
+        this.notificationsRegistrationsUsersBatchClient = notificationsRegistrationsUsersBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsRegistrationsUsersClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsRegistrationsUsersRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsRegistrationsUsersClient.prototype, "batch", {
+        get: function () {
+            return this.notificationsRegistrationsUsersBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create user registration action has been performed; this action creates a new user registration resource.
+     * @method
+     * @param data An UserRegistration object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create user registration action has been performed.
+     * @example notificationsRegistrationsUsersClient.create({
+                    provider: '<provider-name>',
+                    providerData: <provider-data>,
+                    userId: '<user-id>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsRegistrationsUsersClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user registrations resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example notificationsRegistrationsUsersClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>',
+                   providers: '<provider-name1>,<provider-name2>',
+                   userIds: '<user-id1>,<user-id2>',
+                   embed: '<embed>'
+               })
+               .then(function (collection) {
+                   // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+    */
+    NotificationsRegistrationsUsersClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified user registrations resource.
+     * @method
+     * @param id The registration identifier which uniquely identifies UserRegistration resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example notificationsRegistrationsUsersClient.get('<registration-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    */
+    NotificationsRegistrationsUsersClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.notificationsRegistrationsUsersRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the remove user registrations action has been performed. This action will remove a user registrations resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsUsersRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(registration);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An object used to delete specified UserRegistration resource.
+     * @example // registration is a resource previously fetched using get action.
+                    notificationsRegistrationsUsersClient.remove(registration)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     */
+    NotificationsRegistrationsUsersClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update user registration action has been performed; this action updates a user registration resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsRegistrationsUsersRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(subsregistrationcription);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An object used to update specified UserRegistration resource.
+     * @returns A promise that is resolved once the update user registration action has been performed.
+     * @example // registration is a resource previously fetched using get action.
+                    registration.provider = '<provider-name>';
+                    notificationsRegistrationsUsersClient.update(registration)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     */
+    NotificationsRegistrationsUsersClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsRegistrationsUsersClient;
+}());
+NotificationsRegistrationsUsersClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsRegistrationsUsersRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsRegistrationsUsersBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsRegistrationsUsersRoute !== "undefined" && _1.NotificationsRegistrationsUsersRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsRegistrationsUsersBatchClient !== "undefined" && _1.NotificationsRegistrationsUsersBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], NotificationsRegistrationsUsersClient);
+exports.NotificationsRegistrationsUsersClient = NotificationsRegistrationsUsersClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 542 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRegistrationsUsersRoute
+ * @description Baasic Notifications Registrations Users Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Registrations Users Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsRegistrationsUsersRoute = (function (_super) {
+    tslib_1.__extends(NotificationsRegistrationsUsersRoute, _super);
+    function NotificationsRegistrationsUsersRoute(appOptions, notificationsRegistrationsUsersBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.notificationsRegistrationsUsersBatchRoute = notificationsRegistrationsUsersBatchRoute;
+        _this.createRoute = 'notifications/registrations/user';
+        _this.findRoute = 'notifications/registrations/user/{?searchQuery,userIds,providers,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'notifications/registrations/user/{id}/{?embed}';
+        _this.deleteRoute = 'notifications/registrations/user/{id}';
+        _this.updateRoute = 'notifications/registrations/user/{id}';
+        return _this;
+    }
+    Object.defineProperty(NotificationsRegistrationsUsersRoute.prototype, "batch", {
+        get: function () {
+            return this.notificationsRegistrationsUsersBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses create users registrations route; this route does not expose any additional options
+     * @method
+     * @example notificationsRegistrationsUsersRoute.create();
+     */
+    NotificationsRegistrationsUsersRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses find users registrations route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing user subscription properties using the phrase search.
+     * - `userIds` - Comma separated list of user identifiers.
+     * - `providers` - Comma separated list of notification providers.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user subscription subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user subscription property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example notificationsRegistrationsUsersRoute.find({ searchQuery: '<search-phrase>', providers: '<provider-name>,<provider-name>' });
+     */
+    NotificationsRegistrationsUsersRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get users registrations route; this route should be expanded with the Id of users registrations resource.
+     * @method
+     * @param id The registration identifier which uniquely identifies UserRegistration resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example notificationsRegistrationsUsersRoute.get({ id: '<registration-id>' });
+     */
+    NotificationsRegistrationsUsersRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses delete users registrations route; this route should be expanded with the Id of users registrations resource.
+     * @method
+     * @param data An object used to delete specified UserRegistration resource.
+     * @example notificationsRegistrationsUsersRoute.delete(data);
+     */
+    NotificationsRegistrationsUsersRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses update users registrations route; this route should be expanded with the Id of users registrations resource.
+     * @method
+     * @param data An object used to update specified UserRegistration resource.
+     * @example notificationsRegistrationsUsersRoute.update(data);
+     */
+    NotificationsRegistrationsUsersRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return NotificationsRegistrationsUsersRoute;
+}(common_1.BaseRoute));
+NotificationsRegistrationsUsersRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsRegistrationsUsersBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsRegistrationsUsersBatchRoute !== "undefined" && _1.NotificationsRegistrationsUsersBatchRoute) === "function" && _b || Object])
+], NotificationsRegistrationsUsersRoute);
+exports.NotificationsRegistrationsUsersRoute = NotificationsRegistrationsUsersRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 543 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsRoute
+ * @description Baasic Notifications Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsRoute = (function (_super) {
+    tslib_1.__extends(NotificationsRoute, _super);
+    function NotificationsRoute(appOptions, notificationsPublishRoute, basicNotificationsSubscriptionsRoute, notificationsRegistrationsRoute, notificationsSettingsRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.notificationsPublishRoute = notificationsPublishRoute;
+        _this.basicNotificationsSubscriptionsRoute = basicNotificationsSubscriptionsRoute;
+        _this.notificationsRegistrationsRoute = notificationsRegistrationsRoute;
+        _this.notificationsSettingsRoute = notificationsSettingsRoute;
+        return _this;
+    }
+    Object.defineProperty(NotificationsRoute.prototype, "publish", {
+        get: function () {
+            return this.notificationsPublishRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsRoute.prototype, "subscriptions", {
+        get: function () {
+            return this.basicNotificationsSubscriptionsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsRoute.prototype, "registrations", {
+        get: function () {
+            return this.notificationsRegistrationsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsRoute.prototype, "settings", {
+        get: function () {
+            return this.notificationsSettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return NotificationsRoute;
+}(common_1.BaseRoute));
+NotificationsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsPublishRoute)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsRoute)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.NotificationsRegistrationsRoute)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.NotificationsSettingsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsPublishRoute !== "undefined" && _1.NotificationsPublishRoute) === "function" && _b || Object, typeof (_c = typeof _1.NotificationsSubscriptionsRoute !== "undefined" && _1.NotificationsSubscriptionsRoute) === "function" && _c || Object, typeof (_d = typeof _1.NotificationsRegistrationsRoute !== "undefined" && _1.NotificationsRegistrationsRoute) === "function" && _d || Object, typeof (_e = typeof _1.NotificationsSettingsRoute !== "undefined" && _1.NotificationsSettingsRoute) === "function" && _e || Object])
+], NotificationsRoute);
+exports.NotificationsRoute = NotificationsRoute;
+var _a, _b, _c, _d, _e;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 544 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSettingsClient
+ * @description  Notifications Settings Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSettingsClient` uses `notificationsSettingsRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsSettingsClient = (function () {
+    function NotificationsSettingsClient(notificationsSettingsRoute, apiClient) {
+        this.notificationsSettingsRoute = notificationsSettingsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsSettingsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsSettingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified setting resource.
+     * @method
+     * @param provider The notification provider name.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example notificationsSettingsClient.get('<provider-name>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsSettingsClient.prototype.get = function (provider) {
+        return this.apiClient.get(this.routeDefinition.get(provider));
+    };
+    /**
+     * Returns a promise that is resolved once the update settings action has been performed; this action updates a settings resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(settings);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data The notification settings.
+     * @returns A promise that is resolved once the update settings action has been performed.
+     * @example // settings is a resource previously fetched using get action.
+                    notificationsSettingsClient.update(settings)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     */
+    NotificationsSettingsClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsSettingsClient;
+}());
+NotificationsSettingsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSettingsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSettingsRoute !== "undefined" && _1.NotificationsSettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], NotificationsSettingsClient);
+exports.NotificationsSettingsClient = NotificationsSettingsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 545 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSettingsRoute
+ * @description Baasic Notifications Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Settings Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var NotificationsSettingsRoute = (function (_super) {
+    tslib_1.__extends(NotificationsSettingsRoute, _super);
+    function NotificationsSettingsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'notifications/settings/{id}';
+        _this.updateRoute = 'notifications/settings/{id}';
+        return _this;
+    }
+    /**
+     * Parses get notification settings route; this route should be expanded with the notification provider name.
+     * @method
+     * @param provider The notification provider name.
+     * @example notificationsSettingsRoute.get({ id: '<provider-name>' });
+     */
+    NotificationsSettingsRoute.prototype.get = function (provider) {
+        return _super.prototype.baseGet.call(this, this.getRoute, provider);
+    };
+    /**
+     * Parses update notification settings route; this route should be expanded with the notification provider name.
+     * @method
+     * @param data The notification settings.
+     * @example notificationsSettingsRoute.update({ id: '<provider-name>' });
+     */
+    NotificationsSettingsRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return NotificationsSettingsRoute;
+}(common_1.BaseRoute));
+NotificationsSettingsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], NotificationsSettingsRoute);
+exports.NotificationsSettingsRoute = NotificationsSettingsRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 546 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsAnonymousBatchClient
+ * @description  Notifications Subscriptions Anonymous Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousBatchClient` uses `notificationsSubscriptionsAnonymousBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsAnonymousBatchClient = (function () {
+    function NotificationsSubscriptionsAnonymousBatchClient(notificationsSubscriptionsAnonymousBatchRoute, apiClient) {
+        this.notificationsSubscriptionsAnonymousBatchRoute = notificationsSubscriptionsAnonymousBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsSubscriptionsAnonymousBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsSubscriptionsAnonymousBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create anonymous subscription action has been performed; this action creates new anonymous subscription resources.
+     * @method
+     * @param data AnonymousSubscription objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create anonymous subscription action has been performed.
+     * @example notificationsSubscriptionsAnonymousBatchClient.create([{
+                    channel: '<channel-name>',
+                    registrationId: '<registration-id>' ž
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsSubscriptionsAnonymousBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove anonymous subscription resources from the system if successfully completed.
+     * @method
+     * @param ids The subscription ids which uniquely identify AnonymousSubscription resources that need to be deleted.
+     * @returns a promise that is resolved once the remove action has been performed.
+     * @example notificationsSubscriptionsAnonymousBatchClient.remove(subscriptionIds)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    */
+    NotificationsSubscriptionsAnonymousBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.notificationsSubscriptionsAnonymousBatchRoute.delete(), undefined, ids);
+    };
+    /**
+     * Returns a promise that is resolved once the update anonymous subscriptions action has been performed; this action updates specified anonymous subscription resources.
+     * @method
+     * @param data AnonymousSubscription objects used to update specified AnonymousSubscription resources.
+     * @returns A promise that is resolved once the update anonymous subscriptions action has been performed.
+     * @example notificationsSubscriptionsAnonymousBatchClient.update(subscriptions)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsSubscriptionsAnonymousBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsSubscriptionsAnonymousBatchClient;
+}());
+NotificationsSubscriptionsAnonymousBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsAnonymousBatchRoute !== "undefined" && _1.NotificationsSubscriptionsAnonymousBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], NotificationsSubscriptionsAnonymousBatchClient);
+exports.NotificationsSubscriptionsAnonymousBatchClient = NotificationsSubscriptionsAnonymousBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 547 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsAnonymousBatchRoute
+ * @description Baasic Notifications Subscriptions Anonymous Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Subscriptions Anonymous Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var NotificationsSubscriptionsAnonymousBatchRoute = (function (_super) {
+    tslib_1.__extends(NotificationsSubscriptionsAnonymousBatchRoute, _super);
+    function NotificationsSubscriptionsAnonymousBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'notifications/subscriptions/anonymous/batch';
+        _this.deleteRoute = 'notifications/subscriptions/anonymous/batch';
+        _this.updateRoute = 'notifications/subscriptions/anonymous/batch';
+        return _this;
+    }
+    /**
+     * Parses create anonymous subscription batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsSubscriptionsAnonymousBatchRoute.create();
+     */
+    NotificationsSubscriptionsAnonymousBatchRoute.prototype.create = function () {
+        return this.baseCreate(this.createRoute, {});
+    };
+    /**
+     * Parses remove anonymous subscription batch route; this route does not expose any additional options
+     * @method
+     * @example baasicNotificationsSubscriptionsAnonymousBatchRouteDefinitio.delete();
+     */
+    NotificationsSubscriptionsAnonymousBatchRoute.prototype.delete = function () {
+        return this.baseDelete(this.deleteRoute, {});
+    };
+    /**
+     * Parses update anonymous subscription batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsSubscriptionsAnonymousBatchRoute.update();
+     */
+    NotificationsSubscriptionsAnonymousBatchRoute.prototype.update = function () {
+        return this.baseUpdate(this.updateRoute, {});
+    };
+    return NotificationsSubscriptionsAnonymousBatchRoute;
+}(common_1.BaseRoute));
+NotificationsSubscriptionsAnonymousBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], NotificationsSubscriptionsAnonymousBatchRoute);
+exports.NotificationsSubscriptionsAnonymousBatchRoute = NotificationsSubscriptionsAnonymousBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 548 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsAnonymousClient
+ * @description  Notifications Subscriptions Anonymous Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsAnonymousClient` uses `notificationsSubscriptionsAnonymousRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsAnonymousClient = (function () {
+    function NotificationsSubscriptionsAnonymousClient(notificationsSubscriptionsAnonymousRoute, notificationsSubscriptionsAnonymousBatchClient, apiClient) {
+        this.notificationsSubscriptionsAnonymousRoute = notificationsSubscriptionsAnonymousRoute;
+        this.notificationsSubscriptionsAnonymousBatchClient = notificationsSubscriptionsAnonymousBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsSubscriptionsAnonymousClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsSubscriptionsAnonymousRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsSubscriptionsAnonymousClient.prototype, "batch", {
+        get: function () {
+            return this.notificationsSubscriptionsAnonymousBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create anonymous subscription action has been performed; this action creates a new anonymous subscription resource.
+     * @method
+     * @param data An AnonymousSubscription object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create anonymous subscription action has been performed.
+     * @example notificationsSubscriptionsAnonymousClient.create({
+                    channel: '<channel-name>',
+                    registrationId: '<registration-id>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsSubscriptionsAnonymousClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of anonymous subscription resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example notificationsSubscriptionsAnonymousClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>',
+                    channels: '<channel-name1>,<channel-name2>',
+                    registrationIds: '<registration-id1>,<registration-id2>',
+                    embed: '<embed>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsSubscriptionsAnonymousClient.prototype.find = function (options) {
+        return this.apiClient.get(this.notificationsSubscriptionsAnonymousRoute.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified anonymous subscription resource.
+     * @method
+     * @param id The subscription identifier which uniquely identifies AnonymousSubscription resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example notificationsSubscriptionsAnonymousClient.get('<subscription-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsSubscriptionsAnonymousClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.notificationsSubscriptionsAnonymousRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the remove anonymous subscription action has been performed. This action will remove a anonymous subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsAnonymousRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(subscription);
+     * var uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data The subscription identifier used to delete specific subscription resource in the system.
+     * @returns A promise that is resolved once the remove anonymous subscription action has been performed.
+     * @example // subscription is a resource previously fetched using get action.
+                        notificationsSubscriptionsAnonymousClient.remove(subscription)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     */
+    NotificationsSubscriptionsAnonymousClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update anonymous subscription action has been performed; this action updates a anonymous subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsAnonymousRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(subscription);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An object used to update specified AnonymousSubscription resource.
+     * @returns A promise that is resolved once the update anonymous subscription action has been performed.
+     * @example // subscription is a resource previously fetched using get action.
+                    subscription.channel = '<channel-name>';
+                    notificationsSubscriptionsAnonymousClient.update(subscription)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     */
+    NotificationsSubscriptionsAnonymousClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsSubscriptionsAnonymousClient;
+}());
+NotificationsSubscriptionsAnonymousClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsAnonymousRoute !== "undefined" && _1.NotificationsSubscriptionsAnonymousRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsSubscriptionsAnonymousBatchClient !== "undefined" && _1.NotificationsSubscriptionsAnonymousBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], NotificationsSubscriptionsAnonymousClient);
+exports.NotificationsSubscriptionsAnonymousClient = NotificationsSubscriptionsAnonymousClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 549 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsAnonymousRoute
+ * @description Baasic Notifications Subscriptions Anonymous Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Subscriptions Anonymous Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsAnonymousRoute = (function (_super) {
+    tslib_1.__extends(NotificationsSubscriptionsAnonymousRoute, _super);
+    function NotificationsSubscriptionsAnonymousRoute(notificationsSubscriptionsAnonymousBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.notificationsSubscriptionsAnonymousBatchRoute = notificationsSubscriptionsAnonymousBatchRoute;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'notifications/subscriptions/anonymous';
+        _this.findRoute = 'notifications/subscriptions/anonymous/{?searchQuery,registrationIds,channels,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'notifications/subscriptions/anonymous/{id}/{?embed,fields}';
+        _this.deleteRoute = 'notifications/subscriptions/anonymous/{id}';
+        _this.updateRoute = 'notifications/subscriptions/anonymous/{id}';
+        return _this;
+    }
+    Object.defineProperty(NotificationsSubscriptionsAnonymousRoute.prototype, "batch", {
+        get: function () {
+            return this.notificationsSubscriptionsAnonymousBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses create anonymous subscription route; this route does not expose any additional options
+     * @method
+     * @example notificationsSubscriptionsAnonymousRoute.create();
+     */
+    NotificationsSubscriptionsAnonymousRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses find anonymous subscriptions route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing user subscription properties using the phrase search.
+     * - `registrationIds` - Comma separated list of anonymous registration identifiers.
+     * - `channels` - Comma separated list of channels.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user subscription subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user subscription property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example notificationsSubscriptionsAnonymousRoute.find({
+                   searchQuery: '<search-phrase>',
+                   channels: '<channel-name>,<channel-name>'
+               });
+    */
+    NotificationsSubscriptionsAnonymousRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get anonymous subscription route; this route should be expanded with the Id of anonymous subscription resource.
+     * @method
+     * @param id The subscription identifier which uniquely identifies AnonymousSubscription resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example notificationsSubscriptionsAnonymousRoute.get({id: '<subscription-id>'});
+     */
+    NotificationsSubscriptionsAnonymousRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses delete anonymous subscription route; this route should be expanded with the Id of anonymous subscription resource.
+     * @method
+     * @param data The subscription identifier used to delete specific subscription resource in the system.
+     * @example notificationsSubscriptionsAnonymousRoute.delete(data);
+     */
+    NotificationsSubscriptionsAnonymousRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses update anonymous subscription route; this route should be expanded with the Id of anonymous subscription resource.
+     * @method
+     * @param data The subscription identifier used to update specific subscription resource in the system.
+     * @example notificationsSubscriptionsAnonymousRoute.update(data);
+     */
+    NotificationsSubscriptionsAnonymousRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return NotificationsSubscriptionsAnonymousRoute;
+}(common_1.BaseRoute));
+NotificationsSubscriptionsAnonymousRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsAnonymousBatchRoute !== "undefined" && _1.NotificationsSubscriptionsAnonymousBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], NotificationsSubscriptionsAnonymousRoute);
+exports.NotificationsSubscriptionsAnonymousRoute = NotificationsSubscriptionsAnonymousRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsClient
+ * @description  Notifications Subscriptions Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsClient` uses `notificationsSubscriptionsRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsClient = (function () {
+    function NotificationsSubscriptionsClient(notificationsSubscriptionsRoute, notificationsSubscriptionsAnonymousClient, notificationsSubscriptionsUsersClient) {
+        this.notificationsSubscriptionsRoute = notificationsSubscriptionsRoute;
+        this.notificationsSubscriptionsAnonymousClient = notificationsSubscriptionsAnonymousClient;
+        this.notificationsSubscriptionsUsersClient = notificationsSubscriptionsUsersClient;
+    }
+    Object.defineProperty(NotificationsSubscriptionsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsSubscriptionsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsSubscriptionsClient.prototype, "anonymous", {
+        get: function () {
+            return this.notificationsSubscriptionsAnonymousClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsSubscriptionsClient.prototype, "users", {
+        get: function () {
+            return this.notificationsSubscriptionsUsersClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return NotificationsSubscriptionsClient;
+}());
+NotificationsSubscriptionsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsUsersClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsRoute !== "undefined" && _1.NotificationsSubscriptionsRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsSubscriptionsAnonymousClient !== "undefined" && _1.NotificationsSubscriptionsAnonymousClient) === "function" && _b || Object, typeof (_c = typeof _1.NotificationsSubscriptionsUsersClient !== "undefined" && _1.NotificationsSubscriptionsUsersClient) === "function" && _c || Object])
+], NotificationsSubscriptionsClient);
+exports.NotificationsSubscriptionsClient = NotificationsSubscriptionsClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 551 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsRoute
+ * @description Baasic Notifications Subscriptions Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsRoute = (function (_super) {
+    tslib_1.__extends(NotificationsSubscriptionsRoute, _super);
+    function NotificationsSubscriptionsRoute(notificationsSubscriptionsAnonymousRoute, notificationsSubscriptionsUsersRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.notificationsSubscriptionsAnonymousRoute = notificationsSubscriptionsAnonymousRoute;
+        _this.notificationsSubscriptionsUsersRoute = notificationsSubscriptionsUsersRoute;
+        _this.appOptions = appOptions;
+        return _this;
+    }
+    Object.defineProperty(NotificationsSubscriptionsRoute.prototype, "users", {
+        get: function () {
+            return this.notificationsSubscriptionsUsersRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsSubscriptionsRoute.prototype, "anonymous", {
+        get: function () {
+            return this.notificationsSubscriptionsAnonymousRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return NotificationsSubscriptionsRoute;
+}(common_1.BaseRoute));
+NotificationsSubscriptionsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsUsersRoute)),
+    tslib_1.__param(2, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsAnonymousRoute !== "undefined" && _1.NotificationsSubscriptionsAnonymousRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsSubscriptionsUsersRoute !== "undefined" && _1.NotificationsSubscriptionsUsersRoute) === "function" && _b || Object, typeof (_c = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _c || Object])
+], NotificationsSubscriptionsRoute);
+exports.NotificationsSubscriptionsRoute = NotificationsSubscriptionsRoute;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 552 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsUsersBatchClient
+ * @description  Notifications Subscriptions Users Batch Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersBatchUsersClient` uses `notificationsSubscriptionsUsersBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsUsersBatchClient = (function () {
+    function NotificationsSubscriptionsUsersBatchClient(notificationsSubscriptionsUsersBatchRoute, apiClient) {
+        this.notificationsSubscriptionsUsersBatchRoute = notificationsSubscriptionsUsersBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsSubscriptionsUsersBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsSubscriptionsUsersBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create user subscription action has been performed; this action creates new user subscription resources.
+     * @method
+     * @param data UserSubscription collection that need to be inserted into the system.
+     * @returns A promise that is resolved once the create user subscription action has been performed.
+     * @example notificationsSubscriptionsUsersBatchClient.create([{
+                    channel: '<channel-name>',
+                    userId: '<user-id>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsSubscriptionsUsersBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove user subscription resources from the system if successfully completed.
+     * @method
+     * @param ids The subscription ids which uniquely identify UserSubscription resources that need to be deleted.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example notificationsSubscriptionsUsersBatchClient.remove(subscriptionIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsSubscriptionsUsersBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.notificationsSubscriptionsUsersBatchRoute.delete(), undefined, ids);
+    };
+    /**
+     * Returns a promise that is resolved once the update user subscriptions action has been performed; this action updates specified user subscription resources.
+     * @method
+     * @param data UserSubscription objects used to update specified UserSubscription resources.
+     * @returns A promise that is resolved once the update user subscriptions action has been performed.
+     * @example notificationsSubscriptionsUsersBatchClient.update(subscriptions)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     */
+    NotificationsSubscriptionsUsersBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsSubscriptionsUsersBatchClient;
+}());
+NotificationsSubscriptionsUsersBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsUsersBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsUsersBatchRoute !== "undefined" && _1.NotificationsSubscriptionsUsersBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], NotificationsSubscriptionsUsersBatchClient);
+exports.NotificationsSubscriptionsUsersBatchClient = NotificationsSubscriptionsUsersBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 553 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsUsersBatchRoute
+ * @description Baasic Notifications Subscriptions Users Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Subscriptions Users Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var NotificationsSubscriptionsUsersBatchRoute = (function (_super) {
+    tslib_1.__extends(NotificationsSubscriptionsUsersBatchRoute, _super);
+    function NotificationsSubscriptionsUsersBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'notifications/subscriptions/user/batch';
+        _this.deleteRoute = 'notifications/subscriptions/user/batch';
+        _this.updateRoute = 'notifications/subscriptions/user/batch';
+        return _this;
+    }
+    /**
+     * Parses create user subscriptions batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsSubscriptionsUsersBatchRoute.create();
+     */
+    NotificationsSubscriptionsUsersBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove user subscriptions batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsSubscriptionsUsersBatchRoute.delete(ids);
+     */
+    NotificationsSubscriptionsUsersBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    /**
+     * Parses update user subscriptions batch route; this route does not expose any additional options
+     * @method
+     * @example notificationsSubscriptionsUsersBatchRoute.update();
+     */
+    NotificationsSubscriptionsUsersBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    return NotificationsSubscriptionsUsersBatchRoute;
+}(common_1.BaseRoute));
+NotificationsSubscriptionsUsersBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], NotificationsSubscriptionsUsersBatchRoute);
+exports.NotificationsSubscriptionsUsersBatchRoute = NotificationsSubscriptionsUsersBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 554 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsUsersClient
+ * @description  Notifications Subscriptions Users Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSubscriptionsUsersClient` uses `notificationsSubscriptionsUsersRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsUsersClient = (function () {
+    function NotificationsSubscriptionsUsersClient(notificationsSubscriptionsUsersRoute, NotificationsSubscriptionsUsersBatchClient, apiClient) {
+        this.notificationsSubscriptionsUsersRoute = notificationsSubscriptionsUsersRoute;
+        this.NotificationsSubscriptionsUsersBatchClient = NotificationsSubscriptionsUsersBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsSubscriptionsUsersClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.notificationsSubscriptionsUsersRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(NotificationsSubscriptionsUsersClient.prototype, "batch", {
+        get: function () {
+            return this.NotificationsSubscriptionsUsersBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create user subscription action has been performed; this action creates a new user subscription resource.
+     * @method
+     * @param data An UserSubscription object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create user subscription action has been performed.
+     * @example notificationsSubscriptionsUsersClient.create({
+                    channel: '<channel-name>',
+                    userId: '<user-id>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsSubscriptionsUsersClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user subscription resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example notificationsSubscriptionsUsersClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>',
+                    channels: '<channel-name1>,<channel-name2>',
+                    userIds: '<user-id1>,<user-id2>',
+                    embed: '<embed>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     */
+    NotificationsSubscriptionsUsersClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified user subscription resource.
+     * @method
+     * @param id The subscription identifier which uniquely identifies UserSubscription resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example notificationsSubscriptionsUsersClient.get('<subscription-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    */
+    NotificationsSubscriptionsUsersClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.notificationsSubscriptionsUsersRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the remove user subscription action has been performed. This action will remove a user subscription resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsUsersRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(subscription);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An object used to delete specified UserSubscription resource.
+     * @returns A promise that is resolved once the remove user subscription action has been performed.
+     * @example // subscription is a resource previously fetched using get action.
+                    notificationsSubscriptionsUsersClient.remove(subscription)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     */
+    NotificationsSubscriptionsUsersClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update user subscription action has been performed; this action updates a user subscription resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `notificationsSubscriptionsUsersRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(subscription);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An object used to update specified UserSubscription resource.
+     * @example // subscription is a resource previously fetched using get action.
+                       subscription.channel = '<channel-name>';
+                       notificationsSubscriptionsUsersClient.update(subscription)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    */
+    NotificationsSubscriptionsUsersClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    return NotificationsSubscriptionsUsersClient;
+}());
+NotificationsSubscriptionsUsersClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsUsersRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsUsersBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsUsersRoute !== "undefined" && _1.NotificationsSubscriptionsUsersRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsSubscriptionsUsersBatchClient !== "undefined" && _1.NotificationsSubscriptionsUsersBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], NotificationsSubscriptionsUsersClient);
+exports.NotificationsSubscriptionsUsersClient = NotificationsSubscriptionsUsersClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 555 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsUsersRoute
+ * @description Baasic Notifications Subscriptions Users Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsUsersRoute = (function (_super) {
+    tslib_1.__extends(NotificationsSubscriptionsUsersRoute, _super);
+    function NotificationsSubscriptionsUsersRoute(appOptions, notificationsSubscriptionsUsersBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.notificationsSubscriptionsUsersBatchRoute = notificationsSubscriptionsUsersBatchRoute;
+        _this.createRoute = 'notifications/subscriptions/user';
+        _this.findRoute = 'notifications/subscriptions/user/{?searchQuery,userIds,channels,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'notifications/subscriptions/user/{id}/{?embed,fields}';
+        _this.deleteRoute = 'notifications/subscriptions/user/{id}';
+        _this.updateRoute = 'notifications/subscriptions/user/{id}';
+        return _this;
+    }
+    NotificationsSubscriptionsUsersRoute.prototype.batch = function () {
+        return this.notificationsSubscriptionsUsersBatchRoute;
+    };
+    /**
+     * Parses create user subscription route; this route does not expose any additional options
+     * @method
+     * @example notificationsSubscriptionsUsersRoute.create();
+     */
+    NotificationsSubscriptionsUsersRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses find user subscriptions route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing user subscription properties using the phrase search.
+     * - `userIds` - Comma separated list of user identifiers.
+     * - `channels` - Comma separated list of channels.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user subscriptions subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user subscription property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example notificationsSubscriptionsUsersRoute.find({ searchQuery: '<search-phrase>', channels: '<channel-name>,<channel-name>' });
+     */
+    NotificationsSubscriptionsUsersRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get user subscription route; this route should be expanded with the Id of user subscription resource.
+     * @method
+     * @param id The subscription identifier which uniquely identifies UserSubscription resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example notificationsSubscriptionsUsersRoute.get({ id: '<subscription-id>' });
+     */
+    NotificationsSubscriptionsUsersRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses delete user subscription route; this route should be expanded with the Id of user subscription resource.
+     * @method
+     * @param data An object used to delete specified UserSubscription resource.
+     * @example notificationsSubscriptionsUsersRoute.delete(data);
+     */
+    NotificationsSubscriptionsUsersRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses update user subscription route; this route should be expanded with the Id of user subscription resource.
+     * @method
+     * @param data An object used to update specified UserSubscription resource.
+     * @example notificationsSubscriptionsUsersRoute.update(data);
+     */
+    NotificationsSubscriptionsUsersRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return NotificationsSubscriptionsUsersRoute;
+}(common_1.BaseRoute));
+NotificationsSubscriptionsUsersRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsUsersBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsSubscriptionsUsersBatchRoute !== "undefined" && _1.NotificationsSubscriptionsUsersBatchRoute) === "function" && _b || Object])
+], NotificationsSubscriptionsUsersRoute);
+exports.NotificationsSubscriptionsUsersRoute = NotificationsSubscriptionsUsersRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 556 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module shoppingCartItemsBatchClient
+ * @description  Shopping Cart Item Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Shopping Cart Item Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(22);
+var ShoppingCartItemBatchClient = (function () {
+    function ShoppingCartItemBatchClient(shoppingCartItemBatchRoute, apiClient) {
+        this.shoppingCartItemBatchRoute = shoppingCartItemBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ShoppingCartItemBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.shoppingCartItemBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified shopping cart item resources.
+     * @method
+     * @param data A collection of shopping cart item objects used to update specified shopping cart item resources.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example shoppingCartItemsBatchClient.update(files)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    ShoppingCartItemBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove shopping cart item resources from the system if successfully completed. Specified shopping cart items and all accompanying derived resources will be removed from the system.
+     * @method
+     * @param ids Collection of shopping cart item Id which uniquely identifies shopping cart item resources that need to be deleted.
+     * @example // Remove original shopping cart item resources
+                        shoppingCartItemsBatchClient.remove([<shopping-cart-item-id>])
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    ShoppingCartItemBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.shoppingCartItemBatchRoute.delete(), undefined, ids);
+    };
+    /**
+    * Returns a promise that is resolved once the create action has been performed; this action creates specified shopping cart item resources.
+    * @method
+    * @param data A collection of shopping cart item objects used to create specified shopping cart item resources.
+    * @returns A promise that is resolved once the create action has been performed.
+    * @example shoppingCartItemsBatchClient.create(files)
+                  .then(function (data) {
+                      // perform success action here
+                  },
+                   function (response, status, headers, config) {
+                       // perform error handling here
+                  });
+   **/
+    ShoppingCartItemBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    return ShoppingCartItemBatchClient;
+}());
+ShoppingCartItemBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ShoppingCartItemBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ShoppingCartItemBatchRoute !== "undefined" && _1.ShoppingCartItemBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ShoppingCartItemBatchClient);
+exports.ShoppingCartItemBatchClient = ShoppingCartItemBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 557 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module shoppingCartItemBatchRoute
+ * @description Baasic Shopping Cart Item Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Shopping Cart Item Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var ShoppingCartItemBatchRoute = (function (_super) {
+    tslib_1.__extends(ShoppingCartItemBatchRoute, _super);
+    function ShoppingCartItemBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.updateRoute = 'commerce/carts/items/batch';
+        _this.deleteRoute = 'commerce/carts/items/batch';
+        _this.createRoute = 'commerce/carts/items/batch';
+        return _this;
+    }
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example shoppingCartItemBatchRoute.update();
+     **/
+    ShoppingCartItemBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example shoppingCartItemBatchRoute.create();
+     **/
+    ShoppingCartItemBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example shoppingCartItemBatchRoute.delete();
+     **/
+    ShoppingCartItemBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return ShoppingCartItemBatchRoute;
+}(common_1.BaseRoute));
+ShoppingCartItemBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], ShoppingCartItemBatchRoute);
+exports.ShoppingCartItemBatchRoute = ShoppingCartItemBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 558 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module shoppingCartClient
+ * @description Shopping Cart Item Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicShopping Cart Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(22);
+var ShoppingCartItemClient = (function () {
+    function ShoppingCartItemClient(shoppingCartItemRoute, apiClient, shoppingCartItemBatchClient) {
+        this.shoppingCartItemRoute = shoppingCartItemRoute;
+        this.apiClient = apiClient;
+        this.shoppingCartItemBatchClient = shoppingCartItemBatchClient;
+    }
+    Object.defineProperty(ShoppingCartItemClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.shoppingCartItemRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ShoppingCartItemClient.prototype, "batch", {
+        get: function () {
+            return this.shoppingCartItemBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove one shopping cart item resources from the system if successfully completed. Specified shopping cart item and all accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicShoppingCartItemRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(shoppingCartItem);
+     * let uri = params['id'].links('delete').href;
+     * ```
+     * @method
+     * @param id Shopping Cart Item id used to delete specific Shopping Cart Item resource from the system.
+     * @example // id is a shopping cart item resource id previously fetched using get action. The following action will remove the original shopping cart item resource and all accompanying derived shopping cart item resources.
+                   shoppingCartClient.remove(id)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    ShoppingCartItemClient.prototype.remove = function (id) {
+        return this.apiClient.delete(this.routeDefinition.delete(id));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove one shopping cart item resources from the system if successfully completed. Specified shopping cart item and all accompanying derived resources will be removed from the system.
+     *
+     * @method
+     * @param userId User Id from the User that the Shopping Cart Item resource from the system belongs to.
+     * @param productId Product id from the Product that the Shopping Cart Item contains.
+     * @example // The following action will remove the original shopping cart item resource and all accompanying derived shopping cart item resources.
+                   shoppingCartClient.removeByUserIdAndProductId(userId, productId)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    ShoppingCartItemClient.prototype.removeByUserIdAndProductId = function (userId, productId) {
+        return this.apiClient.delete(this.routeDefinition.deleteByUserIdAndProductId(userId, productId));
+    };
+    /**
+     * Returns a promise that is resolved once the create shopping cart item action has been performed; this action creates a new shopping cart item.
+     * @method
+     * @param data Shopping Cart Item object.
+     * @returns A promise that is resolved once the create shopping cart item action has been performed.
+     * @example shoppingCartClient.create(shoppingCartItem)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    ShoppingCartItemClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the create shopping cart item action has been performed; this action creates a new shopping cart item.
+     * @method
+     * @param data Shopping Cart Item object.
+     * @returns A promise that is resolved once the create shopping cart item action has been performed.
+     * @example shoppingCartClient.createByUserIdAndProductId(shoppingCartItem)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    ShoppingCartItemClient.prototype.createByUserIdAndProductId = function (userId, productId, string, data) {
+        data.userId = userId;
+        data.productId = productId;
+        return this.apiClient.post(this.routeDefinition.createByUserIdAndProductId(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the purge action has been performed. This action will remove all shopping cart item resources from the system if successfully completed.
+     * @method
+     * @example // Remove original shopping cart item resources
+                        shoppingCartClient.purge()
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    ShoppingCartItemClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    return ShoppingCartItemClient;
+}());
+ShoppingCartItemClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ShoppingCartItemRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.ShoppingCartItemBatchClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ShoppingCartItemRoute !== "undefined" && _1.ShoppingCartItemRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.ShoppingCartItemBatchClient !== "undefined" && _1.ShoppingCartItemBatchClient) === "function" && _c || Object])
+], ShoppingCartItemClient);
+exports.ShoppingCartItemClient = ShoppingCartItemClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 559 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module ShoppingCartItemRoute
+ * @description Baasic Shopping Cart Item Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicShopping Cart Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(22);
+var contracts_1 = __webpack_require__(3);
+var ShoppingCartItemRoute = (function (_super) {
+    tslib_1.__extends(ShoppingCartItemRoute, _super);
+    function ShoppingCartItemRoute(appOptions, shoppingCartItemBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.shoppingCartItemBatchRoute = shoppingCartItemBatchRoute;
+        _this.findRoute = 'commerce/carts/items/{?searchQuery,userId,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.findByUserIdRoute = 'commerce/carts/users/{userId}/products/{?page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/carts/items/{id}/{?embed,fields}';
+        _this.getbyUserIdAndProductIdRoute = 'commerce/carts/users/{userId}/products/{productId}/{?embed,fields}';
+        _this.updateRoute = 'commerce/carts/items/{id}';
+        _this.updateByUserIdAndProductIdRoute = 'commerce/carts/users/{userId}/products/{productId}';
+        _this.deleteRoute = 'commerce/carts/items/{id}';
+        _this.deleteByUserIdAndProductIdRoute = 'commerce/carts/users/{userId}/products/{productId}';
+        _this.createRoute = 'commerce/carts/items';
+        _this.createByUserIdAndProductIdRoute = 'commerce/carts/users/{userId}/products/{productId}';
+        _this.purgeRoute = 'commerce/carts/purge';
+        return _this;
+    }
+    Object.defineProperty(ShoppingCartItemRoute.prototype, "batch", {
+        get: function () {
+            return this.shoppingCartItemBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses delete route; this route should be expanded with the Id of shopping cart item resource.
+     * @method
+     * @param id Shopping Cart Id of specific Shopping Cart item resource in the system.
+     * @example shoppingCartItemRoute.delete(<id>);
+     **/
+    ShoppingCartItemRoute.prototype.delete = function (id) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, id);
+    };
+    /**
+     * Parses delete route; this route should be expanded with the Id of shopping cart item resource.
+     * @method
+     * @param userId User Id of the User resource that the Shopping Cart resource in the system bellongs to.
+     * @param productId Product Id of the Product resource that the Shopping Cart resource in the system is linked to.
+     * @example shoppingCartItemRoute.delete(<user-id>, <product-id>);
+     **/
+    ShoppingCartItemRoute.prototype.deleteByUserIdAndProductId = function (userId, productId) {
+        var data = {
+            userId: userId,
+            productId: productId
+        };
+        return _super.prototype.baseDelete.call(this, this.deleteByUserIdAndProductIdRoute, data);
+    };
+    /**
+    * Parses create route; this URI template doesnt support any additional options.
+    * @method
+    * @example shoppingCartItemRoute.create();
+    **/
+    ShoppingCartItemRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+    * Parses create route; this URI template doesnt support any additional options.
+    * @method
+    * @param data An shopping cart item  object that needs to be inserted into the system.
+    * @example shoppingCartItemRoute.create(data);
+    **/
+    ShoppingCartItemRoute.prototype.createByUserIdAndProductId = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createByUserIdAndProductIdRoute, data);
+    };
+    /**
+     * Parses purge route; this URI template does not expose any additional options.
+     * @method
+     * @example shoppingCartItemRoute.purge();
+     **/
+    ShoppingCartItemRoute.prototype.purge = function () {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
+    };
+    return ShoppingCartItemRoute;
+}(common_1.BaseRoute));
+ShoppingCartItemRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ShoppingCartItemBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.ShoppingCartItemBatchRoute !== "undefined" && _1.ShoppingCartItemBatchRoute) === "function" && _b || Object])
+], ShoppingCartItemRoute);
+exports.ShoppingCartItemRoute = ShoppingCartItemRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 560 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module shoppingCartPaymentClient
+ * @description  Shopping Cart Payment Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Shopping Cart Payment Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(22);
+var ShoppingCartPaymentClient = (function () {
+    function ShoppingCartPaymentClient(shoppingCartPaymentRoute, apiClient) {
+        this.shoppingCartPaymentRoute = shoppingCartPaymentRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ShoppingCartPaymentClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.shoppingCartPaymentRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the calculateSummary action has been performed; this action calculateSummarys specified shopping cart item resources.
+     * @method
+     * @param data A collection of shopping cart item objects used to calculateSummary specified shopping cart item resources.
+     * @returns A promise that is resolved once the calculateSummary action has been performed.
+     * @example shoppingCartPaymentClient.calculateSummary(file)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    ShoppingCartPaymentClient.prototype.calculateSummary = function (data) {
+        return this.apiClient.post(this.routeDefinition.calculateSummary(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the processCart action has been performed. This action will processCart shopping cart item resources from the system if successfully completed. Specified shopping cart items and all accompanying derived resources will be processCartd from the system.
+     * @method
+     * @param ids Collection of shopping cart item Id which uniquely identifies shopping cart item resources that need to be deleted.
+     * @example // Remove original shopping cart item resources
+                        shoppingCartPaymentClient.processCart(cartPaymentRequest)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    ShoppingCartPaymentClient.prototype.processCart = function (data) {
+        return this.apiClient.post(this.routeDefinition.processCart(data), this.routeDefinition.createParams(data));
+    };
+    return ShoppingCartPaymentClient;
+}());
+ShoppingCartPaymentClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ShoppingCartPaymentRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ShoppingCartPaymentRoute !== "undefined" && _1.ShoppingCartPaymentRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ShoppingCartPaymentClient);
+exports.ShoppingCartPaymentClient = ShoppingCartPaymentClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 561 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module shoppingCartPaymentRoute
+ * @description Baasic Shopping Cart Payment Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Shopping Cart Payment Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var ShoppingCartPaymentRoute = (function (_super) {
+    tslib_1.__extends(ShoppingCartPaymentRoute, _super);
+    function ShoppingCartPaymentRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.calculateSummaryRoute = 'commerce/carts/users/{customerId}/summary';
+        _this.processCartRoute = 'commerce/carts/users/{customerId}/payment';
+        return _this;
+    }
+    /**
+     * Parses claculate summary route; this URI template does not expose any additional options.
+     * @method
+     * @example shoppingCartPaymentRoute.calculateSummaryRoute();
+     **/
+    ShoppingCartPaymentRoute.prototype.calculateSummary = function (data) {
+        return _super.prototype.baseCreate.call(this, this.calculateSummaryRoute, data);
+    };
+    /**
+     * Parses process Route; this URI template does not expose any additional options.
+     * @method
+     * @example shoppingCartPaymentRoute.processCart();
+     **/
+    ShoppingCartPaymentRoute.prototype.processCart = function (data) {
+        return _super.prototype.baseCreate.call(this, this.processCartRoute, data);
+    };
+    return ShoppingCartPaymentRoute;
+}(common_1.BaseRoute));
+ShoppingCartPaymentRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], ShoppingCartPaymentRoute);
+exports.ShoppingCartPaymentRoute = ShoppingCartPaymentRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 562 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 563 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 564 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 565 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 566 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 567 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 568 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 569 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 570 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(562));
+__export(__webpack_require__(565));
+__export(__webpack_require__(563));
+__export(__webpack_require__(564));
+__export(__webpack_require__(569));
+__export(__webpack_require__(566));
+__export(__webpack_require__(568));
+__export(__webpack_require__(567));
+
+
+/***/ }),
+/* 571 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(22);
+var TYPES = {
+    ShoppingCartItemClient: Symbol("ShoppingCartItemClient"),
+    ShoppingCartPaymentClient: Symbol("ShoppingCartPaymentClient"),
+    ShoppingCartItemBatchClient: Symbol("ShoppingCartItemBatchClient"),
+    ShoppingCartItemRoute: Symbol("ShoppingCartItemRoute"),
+    ShoppingCartPaymentRoute: Symbol("ShoppingCartPaymentRoute"),
+    ShoppingCartItemBatchRoute: Symbol("ShoppingCartItemBatchRoute"),
+    Root: Symbol("Root")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.ShoppingCartItemClient).to(_1.ShoppingCartItemClient);
+    bind(TYPES.ShoppingCartPaymentClient).to(_1.ShoppingCartPaymentClient);
+    bind(TYPES.ShoppingCartItemBatchClient).to(_1.ShoppingCartItemBatchClient);
+    bind(TYPES.ShoppingCartItemRoute).to(_1.ShoppingCartItemRoute);
+    bind(TYPES.ShoppingCartPaymentRoute).to(_1.ShoppingCartPaymentRoute);
+    bind(TYPES.ShoppingCartItemBatchRoute).to(_1.ShoppingCartItemBatchRoute);
+    bind(TYPES.Root).to(_1.Root);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 572 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(22);
+var inversify_1 = __webpack_require__(0);
+var Root = (function () {
+    function Root(items, payment) {
+        this.items = items;
+        this.payment = payment;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ShoppingCartItemClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ShoppingCartPaymentClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ShoppingCartItemClient !== "undefined" && _1.ShoppingCartItemClient) === "function" && _a || Object, typeof (_b = typeof _1.ShoppingCartPaymentClient !== "undefined" && _1.ShoppingCartPaymentClient) === "function" && _b || Object])
+], Root);
+exports.Root = Root;
+var _a, _b;
+
+
+/***/ }),
+/* 573 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 574 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(573));
+
+
+/***/ }),
+/* 575 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(25);
+var TYPES = {
+    TemplatingBatchClient: Symbol("TemplatingBatchClient"),
+    TemplatingBatchRoute: Symbol("TemplatingBatchRoute"),
+    TemplatingClient: Symbol("TemplatingClient"),
+    TemplatingRoute: Symbol("TemplatingRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.TemplatingBatchRoute).to(_1.TemplatingBatchRoute);
+    bind(TYPES.TemplatingBatchClient).to(_1.TemplatingBatchClient);
+    bind(TYPES.TemplatingRoute).to(_1.TemplatingRoute);
+    bind(TYPES.TemplatingClient).to(_1.TemplatingClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 576 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module templatingBatchClient
+ * @description  Templating Batch Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingBatchClient` uses `templatingBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(25);
+var TemplatingBatchClient = (function () {
+    function TemplatingBatchClient(templatingBatchRoute, apiClient) {
+        this.templatingBatchRoute = templatingBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(TemplatingBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.templatingBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create action has been performed; this action creates new template resources.
+     * @method
+     * @param data An Template objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create action has been performed.
+     * @example templatingBatchClient.create([{ content : '<content>', templateId : '<template-id>' }])
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+    **/
+    TemplatingBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified template resources.
+     * @method
+     * @param data An Template objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example templatingBatchClient.update(templates)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    TemplatingBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove template resources from the system if successfully completed.
+     * @method
+     * @param ids Template ids which uniquely identify Template resources that need to be deleted.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example templatingBatchClient.remove(companyIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    TemplatingBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.templatingBatchRoute.delete(), undefined, ids);
+    };
+    return TemplatingBatchClient;
+}());
+TemplatingBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.TemplatingBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.TemplatingBatchRoute !== "undefined" && _1.TemplatingBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], TemplatingBatchClient);
+exports.TemplatingBatchClient = TemplatingBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 577 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*global module */
+/**
+ * @module templatingBatchRoute
+ * @description Baasic Templating Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Templating Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var TemplatingBatchRoute = (function (_super) {
+    tslib_1.__extends(TemplatingBatchRoute, _super);
+    function TemplatingBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'templates/batch';
+        _this.updateRoute = 'templates/batch';
+        _this.deleteRoute = 'templates/batch';
+        return _this;
+    }
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example templatingBatchRoute.create();
+     **/
+    TemplatingBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example templatingBatchRoute.update();
+     **/
+    TemplatingBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example templatingBatchRoute.delete();
+     **/
+    TemplatingBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return TemplatingBatchRoute;
+}(common_1.BaseRoute));
+TemplatingBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], TemplatingBatchRoute);
+exports.TemplatingBatchRoute = TemplatingBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 578 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module templatingClient
+ * @description  Templating Client provides an easy way to consume  Templating REST API end-points. In order to obtain a needed routes `templatingClient` uses `templatingRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(25);
+var TemplatingClient = (function () {
+    function TemplatingClient(templatingRoute, templatingBatchClient, apiClient) {
+        this.templatingRoute = templatingRoute;
+        this.templatingBatchClient = templatingBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(TemplatingClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.templatingRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(TemplatingClient.prototype, "batch", {
+        get: function () {
+            return this.templatingBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of template resources matching the given criteria.
+     * @method
+     * @param options Query resource options.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example templatingClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    TemplatingClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified template resource.
+     * @method
+     * @param id Template id which uniquely identifies Template resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example templatingClient.get('<template-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    TemplatingClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.templatingRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create template action has been performed; this action creates a new template resource.
+     * @method
+     * @param data An Template object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create template action has been performed.
+     * @example templatingClient.create({  content : '<content>',  templateId : '<template-id>' })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    TemplatingClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update template action has been performed; this action updates a template resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicTemplatingRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(template);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An template object used to update specified Template resource.
+     * @returns A promise that is resolved once the update template action has been performed.
+     * @example // template is a resource previously fetched using get action.
+                    template.content = '<new-content>';
+                    templatingClient.update(template)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    TemplatingClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a template resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicTemplatingRouteDefiniton` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(template);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An template object used to delete specified Template resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example // template is a resource previously fetched using get action.
+                    templatingClient.remove(template)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    TemplatingClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return TemplatingClient;
+}());
+TemplatingClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.TemplatingRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.TemplatingBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.TemplatingRoute !== "undefined" && _1.TemplatingRoute) === "function" && _a || Object, typeof (_b = typeof _1.TemplatingBatchClient !== "undefined" && _1.TemplatingBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], TemplatingClient);
+exports.TemplatingClient = TemplatingClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 579 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*global module */
+/**
+ * @module templatingRoute
+ * @description Baasic Templating Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Templating Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(25);
+var contracts_1 = __webpack_require__(3);
+var TemplatingRoute = (function (_super) {
+    tslib_1.__extends(TemplatingRoute, _super);
+    function TemplatingRoute(appOptions, templatingBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.templatingBatchRoute = templatingBatchRoute;
+        _this.findRoute = 'templates/{?searchQuery,page,rpp,sort,embed,fields,moduleNames}';
+        _this.getRoute = 'templates/{id}/{?embed,fields}';
+        _this.createRoute = 'templates';
+        _this.updateRoute = 'templates/{id}';
+        _this.deleteRoute = 'templates/{id}';
+        return _this;
+    }
+    Object.defineProperty(TemplatingRoute.prototype, "batch", {
+        get: function () {
+            return this.templatingBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify template resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain template subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the template property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options.
+     * @example templatingRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    TemplatingRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route which must be expanded with the Id of the previously created template resource in the system.
+     * @method
+     * @param id Template id which uniquely identifies Template resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example templatingRoute.get({id: '<template-id>'});
+     **/
+    TemplatingRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example templatingRoute.create();
+     **/
+    TemplatingRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param data An template object used to update specified Template resource.
+     * @example templatingRoute.update(data);
+     **/
+    TemplatingRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this URI template does not expose any additional options.
+     * @method
+     * @param data An template object used to delete specified Template resource.
+     * @example templatingRoute.update(data);
+     **/
+    TemplatingRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return TemplatingRoute;
+}(common_1.BaseRoute));
+TemplatingRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.TemplatingBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.TemplatingBatchRoute !== "undefined" && _1.TemplatingBatchRoute) === "function" && _b || Object])
+], TemplatingRoute);
+exports.TemplatingRoute = TemplatingRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 580 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module companyBatchClient
+ * @description  Company Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var CompanyBatchClient = (function () {
+    function CompanyBatchClient(companyBatchRoute, apiClient) {
+        this.companyBatchRoute = companyBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CompanyBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.companyBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create company action has been performed; this action creates new company resources.
+     * @method
+     * @param data A collection of company objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create company action has been performed.
+     * @example  companyBatchClient.create([{
+                    description : '<description>',
+                    name : '<name>',
+                    slug: '<slug>'
+                 }])
+                 .then(function (data) {
+                     // perform success action here
+                  },
+                   function (response, status, headers, config) {
+                       // perform error handling here
+                 });
+     **/
+    CompanyBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update company action has been performed; this action updates specified company resources.
+     * @method
+     * @param data A collection of company objects used to update specified company resources.
+     * @returns A promise that is resolved once the update company action has been performed.
+     * @example   companyBatchClient.update(companies)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CompanyBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove company resources from the system if successfully completed.
+     * @method
+     * @param ids Collection of company ids which uniquely identifies company resources that need to be deleted.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example companyBatchClient.remove(companyIds)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    CompanyBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.companyBatchRoute.delete(), undefined, ids);
+    };
+    return CompanyBatchClient;
+}());
+CompanyBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CompanyBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CompanyBatchRoute !== "undefined" && _1.CompanyBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CompanyBatchClient);
+exports.CompanyBatchClient = CompanyBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 581 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module companyBatchRoute
+ * @description Baasic Company Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var CompanyBatchRoute = (function (_super) {
+    tslib_1.__extends(CompanyBatchRoute, _super);
+    function CompanyBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'lookups/companies/batch';
+        _this.updateRoute = 'lookups/companies/batch';
+        _this.deleteRoute = 'lookups/companies/batch';
+        return _this;
+    }
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example companyRoute.create();
+     **/
+    CompanyBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example companyRoute.update();
+     **/
+    CompanyBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example companyRoute.remove();
+     **/
+    CompanyBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CompanyBatchRoute;
+}(common_1.BaseRoute));
+CompanyBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CompanyBatchRoute);
+exports.CompanyBatchRoute = CompanyBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 582 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module companyClient
+ * @description  Company Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var CompanyClient = (function () {
+    function CompanyClient(companyBatchClient, companyRoute, apiClient) {
+        this.companyBatchClient = companyBatchClient;
+        this.companyRoute = companyRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CompanyClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.companyRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CompanyClient.prototype, "batch", {
+        get: function () {
+            return this.companyBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of company resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example companyClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CompanyClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the company resource.
+     * @method
+     * @param id Company id which uniquely identifies resource that needs to be retrieved.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @param options Query resource options object.
+     * @example companyClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CompanyClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.companyRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create company action has been performed; this action creates a new company resource.
+     * @method
+     * @param data A company object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create company action has been performed.
+     * @example companyClient.create({
+                    description : '<description>',
+                    name : '<name>',
+                    slug: '<slug>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CompanyClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update company action has been performed; this action updates a company resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `companyRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(company);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A company object used to update specified company resource.
+     * @returns A promise that is resolved once the update company action has been performed.
+     * @example // company is a resource previously fetched using get action.
+                    company.description = '<description>';
+                    baasicCompanyService.update(company)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CompanyClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a company resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `companyRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(company);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data A company object used to delete specified company resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example // company is a resource previously fetched using get action.
+                    companyClient.remove(company)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                    });
+     **/
+    CompanyClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CompanyClient;
+}());
+CompanyClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CompanyBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CompanyRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CompanyBatchClient !== "undefined" && _1.CompanyBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CompanyRoute !== "undefined" && _1.CompanyRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CompanyClient);
+exports.CompanyClient = CompanyClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 583 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module companyRoute
+ * @description Baasic Company Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Company Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(9);
+var contracts_1 = __webpack_require__(3);
+var CompanyRoute = (function (_super) {
+    tslib_1.__extends(CompanyRoute, _super);
+    function CompanyRoute(appOptions, companyBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.companyBatchRoute = companyBatchRoute;
+        _this.findRoute = 'lookups/companies/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.createRoute = 'lookups/companies';
+        _this.getRoute = 'lookups/companies/{id}/{?embed,fields}';
+        _this.updateRoute = 'lookups/companies/{id}';
+        _this.deleteRoute = 'lookups/companies/{id}';
+        return _this;
+    }
+    Object.defineProperty(CompanyRoute.prototype, "batch", {
+        get: function () {
+            return this.companyBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing company properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain company subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the company property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example companyRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CompanyRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example companyRoute.create();
+     **/
+    CompanyRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id Company id which uniquely identifies resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example companyRoute.get();
+     **/
+    CompanyRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    CompanyRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    CompanyRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CompanyRoute;
+}(common_1.BaseRoute));
+CompanyRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CompanyBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.CompanyBatchRoute !== "undefined" && _1.CompanyBatchRoute) === "function" && _b || Object])
+], CompanyRoute);
+exports.CompanyRoute = CompanyRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 584 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 585 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 586 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 587 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 588 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 589 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 590 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 591 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 592 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 593 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 594 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 595 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 596 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(584));
+__export(__webpack_require__(586));
+__export(__webpack_require__(589));
+__export(__webpack_require__(590));
+__export(__webpack_require__(588));
+__export(__webpack_require__(587));
+__export(__webpack_require__(585));
+__export(__webpack_require__(592));
+__export(__webpack_require__(593));
+__export(__webpack_require__(591));
+__export(__webpack_require__(594));
+__export(__webpack_require__(595));
+
+
+/***/ }),
+/* 597 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(9);
+var TYPES = {
+    CompanyBatchClient: Symbol("CompanyBatchClient"),
+    CompanyBatchRoute: Symbol("CompanyBatchRoute"),
+    CompanyClient: Symbol("CompanyClient"),
+    CompanyRoute: Symbol("CompanyRoute"),
+    OrganizationBatchClient: Symbol("OrganizationBatchClient"),
+    OrganizationBatchRoute: Symbol("OrganizationBatchRoute"),
+    OrganizationClient: Symbol("OrganizationClient"),
+    OrganizationRoute: Symbol("OrganizationRoute"),
+    SkillBatchClient: Symbol("SkillBatchClient"),
+    SkillBatchRoute: Symbol("SkillBatchRoute"),
+    SkillClient: Symbol("SkillClient"),
+    SkillRoute: Symbol("SkillRoute"),
+    UserEducationClient: Symbol("UserEducationClient"),
+    UserEducationRoute: Symbol("UserEducationRoute"),
+    UserProfileACLClient: Symbol("UserProfileACLClient"),
+    UserProfileACLRoute: Symbol("UserProfileACLRoute"),
+    UserProfileAvatarClient: Symbol("UserProfileAvatarClient"),
+    UserProfileAvatarRoute: Symbol("UserProfileAvatarRoute"),
+    UserProfileAvatarStreamsClient: Symbol("UserProfileAvatarStreamsClient"),
+    UserProfileAvatarStreamsRoute: Symbol("UserProfileAvatarStreamsClient"),
+    UserProfileClient: Symbol("UserProfileClient"),
+    UserProfileRoute: Symbol("UserProfileRoute"),
+    UserSkillClient: Symbol("UserSkillClient"),
+    UserSkillRoute: Symbol("UserSkillRoute"),
+    UserWorkClient: Symbol("UserWorkClient"),
+    UserWorkRoute: Symbol("UserWorkRoute"),
+    Root: Symbol("UserProfile-Root")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.CompanyBatchRoute).to(_1.CompanyBatchRoute);
+    bind(TYPES.CompanyBatchClient).to(_1.CompanyBatchClient);
+    bind(TYPES.CompanyRoute).to(_1.CompanyRoute);
+    bind(TYPES.CompanyClient).to(_1.CompanyClient);
+    bind(TYPES.OrganizationBatchRoute).to(_1.OrganizationBatchRoute);
+    bind(TYPES.OrganizationBatchClient).to(_1.OrganizationBatchClient);
+    bind(TYPES.OrganizationRoute).to(_1.OrganizationRoute);
+    bind(TYPES.OrganizationClient).to(_1.OrganizationClient);
+    bind(TYPES.SkillBatchRoute).to(_1.SkillBatchRoute);
+    bind(TYPES.SkillBatchClient).to(_1.SkillBatchClient);
+    bind(TYPES.SkillRoute).to(_1.SkillRoute);
+    bind(TYPES.SkillClient).to(_1.SkillClient);
+    bind(TYPES.UserEducationRoute).to(_1.UserEducationRoute);
+    bind(TYPES.UserEducationClient).to(_1.UserEducationClient);
+    bind(TYPES.UserProfileACLRoute).to(_1.UserProfileACLRoute);
+    bind(TYPES.UserProfileACLClient).to(_1.UserProfileACLClient);
+    bind(TYPES.UserProfileAvatarStreamsRoute).to(_1.UserProfileAvatarStreamsRoute);
+    bind(TYPES.UserProfileAvatarStreamsClient).to(_1.UserProfileAvatarStreamsClient);
+    bind(TYPES.UserProfileAvatarRoute).to(_1.UserProfileAvatarRoute);
+    bind(TYPES.UserProfileAvatarClient).to(_1.UserProfileAvatarClient);
+    bind(TYPES.UserProfileRoute).to(_1.UserProfileRoute);
+    bind(TYPES.UserProfileClient).to(_1.UserProfileClient);
+    bind(TYPES.UserSkillRoute).to(_1.UserSkillRoute);
+    bind(TYPES.UserSkillClient).to(_1.UserSkillClient);
+    bind(TYPES.UserWorkRoute).to(_1.UserWorkRoute);
+    bind(TYPES.UserWorkClient).to(_1.UserWorkClient);
+    bind(TYPES.Root).to(_1.Root);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 598 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module organizationBatchClient
+ * @description  Organization Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var OrganizationBatchClient = (function () {
+    function OrganizationBatchClient(organizationBatchRoute, apiClient) {
+        this.organizationBatchRoute = organizationBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(OrganizationBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.organizationBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create organization action has been performed; this action creates new organization resources.
+     * @method
+     * @param data A collection of organization objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create organization action has been performed.
+     * @example   organizationBatchClient.create([{
+                    description : '<description>',
+                    name : '<name>',
+                    slug: '<slug>'
+                  }])
+                  .then(function (data) {
+                      // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+     **/
+    OrganizationBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update organization action has been performed; this action updates specified organization resources.
+     * @method
+     * @param data A collection of organization objects used to update specified organization resources.
+     * @returns A promise that is resolved once the update organization action has been performed.
+     * @example   organizationBatchClient.update(organizations)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    OrganizationBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove organization resources from the system if successfully completed.
+     * @method
+     * @example organizationBatchClient.remove(organizationIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    OrganizationBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.organizationBatchRoute.delete(), undefined, ids);
+    };
+    return OrganizationBatchClient;
+}());
+OrganizationBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.OrganizationBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.OrganizationBatchRoute !== "undefined" && _1.OrganizationBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], OrganizationBatchClient);
+exports.OrganizationBatchClient = OrganizationBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 599 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module organizationBatchRoute
+ * @description Baasic Organization Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var OrganizationBatchRoute = (function (_super) {
+    tslib_1.__extends(OrganizationBatchRoute, _super);
+    function OrganizationBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'lookups/organizations/batch';
+        _this.updateRoute = 'lookups/organizations/batch';
+        _this.deleteRoute = 'lookups/organizations/batch';
+        return _this;
+    }
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example organizationBatchRoute.create();
+     **/
+    OrganizationBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example organizationBatchRoute.update();
+     **/
+    OrganizationBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example organizationBatchRoute.delete();
+     **/
+    OrganizationBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return OrganizationBatchRoute;
+}(common_1.BaseRoute));
+OrganizationBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], OrganizationBatchRoute);
+exports.OrganizationBatchRoute = OrganizationBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 600 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module organizationClient
+ * @description  Organization Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var OrganizationClient = (function () {
+    function OrganizationClient(organizationRoute, organizationBatchClient, apiClient) {
+        this.organizationRoute = organizationRoute;
+        this.organizationBatchClient = organizationBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(OrganizationClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.organizationRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(OrganizationClient.prototype, "batch", {
+        get: function () {
+            return this.organizationBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of organization resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example organizationClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    OrganizationClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the organization resource.
+     * @method
+     * @param id Organization id which uniquely identifies resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example organizationClient.get(id, options)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    OrganizationClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.organizationRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create organization action has been performed; this action creates a new organization resource.
+     * @method
+     * @param data An organization object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create organization action has been performed.
+     * @example organizationClient.create({
+                    description : '<description>',
+                    name : '<name>',
+                    slug: '<slug>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    OrganizationClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update organization action has been performed; this action updates an organization resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `organizationRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(organization);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An organization object used to update specified organization resource.
+     * @returns A promise that is resolved once the update organization action has been performed.
+     * @example // organization is a resource previously fetched using get action.
+                    organization.description = '<description>';
+                    organizationClient.update(organization)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    OrganizationClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove an organization resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `organizationRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(organization);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An organization object used to delete specified organization resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example // organization is a resource previously fetched using get action.
+                       organizationClient.remove(organization)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    OrganizationClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return OrganizationClient;
+}());
+OrganizationClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.OrganizationRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.OrganizationBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.OrganizationRoute !== "undefined" && _1.OrganizationRoute) === "function" && _a || Object, typeof (_b = typeof _1.OrganizationBatchClient !== "undefined" && _1.OrganizationBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], OrganizationClient);
+exports.OrganizationClient = OrganizationClient;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 601 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module organizationRoute
+ * @description Baasic Organization Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Organization Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(9);
+var contracts_1 = __webpack_require__(3);
+var OrganizationRoute = (function (_super) {
+    tslib_1.__extends(OrganizationRoute, _super);
+    function OrganizationRoute(appOptions, organizationBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.organizationBatchRoute = organizationBatchRoute;
+        _this.findRoute = 'lookups/organizations/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'lookups/organizations/{id}/{?embed,fields}';
+        _this.createRoute = 'lookups/organizations';
+        _this.updateRoute = 'lookups/organizations/{id}';
+        _this.deleteRoute = 'lookups/organizations/{id}';
+        return _this;
+    }
+    Object.defineProperty(OrganizationRoute.prototype, "batch", {
+        get: function () {
+            return this.organizationBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing organization properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain organization subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the organization property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example organizationRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    OrganizationRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id Organization id which uniquely identifies resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example organizationRoute.get(id, options);
+     **/
+    OrganizationRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example organizationRoute.create();
+     **/
+    OrganizationRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param data An organization object used to update specified organization resource.
+     * @example organizationRoute.updata(data);
+     **/
+    OrganizationRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this URI template does not expose any additional options.
+     * @method
+     * @param data An organization object used to delete specified organization resource.
+     * @example organizationRoute.delete(data);
+     **/
+    OrganizationRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return OrganizationRoute;
+}(common_1.BaseRoute));
+OrganizationRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.OrganizationBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.OrganizationBatchRoute !== "undefined" && _1.OrganizationBatchRoute) === "function" && _b || Object])
+], OrganizationRoute);
+exports.OrganizationRoute = OrganizationRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 602 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(9);
+var inversify_1 = __webpack_require__(0);
+var Root = (function () {
+    function Root(profile, company, organization, skill) {
+        this.profile = profile;
+        this.company = company;
+        this.organization = organization;
+        this.skill = skill;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserProfileClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CompanyClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.OrganizationClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.SkillClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserProfileClient !== "undefined" && _1.UserProfileClient) === "function" && _a || Object, typeof (_b = typeof _1.CompanyClient !== "undefined" && _1.CompanyClient) === "function" && _b || Object, typeof (_c = typeof _1.OrganizationClient !== "undefined" && _1.OrganizationClient) === "function" && _c || Object, typeof (_d = typeof _1.SkillClient !== "undefined" && _1.SkillClient) === "function" && _d || Object])
+], Root);
+exports.Root = Root;
+var _a, _b, _c, _d;
+
+
+/***/ }),
+/* 603 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module skillBatchClient
+ * @description Baasic Skill Batch Service provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var SkillBatchClient = (function () {
+    function SkillBatchClient(skillBatchRoute, apiClient) {
+        this.skillBatchRoute = skillBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(SkillBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.skillBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create skill action has been performed; this action creates new skill resources.
+     * @method
+     * @param data A collection of skill objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create skill action has been performed.
+     * @example   skillClient.create([{
+                    description : '<description>',
+                    name : '<name>',
+                    slug: '<slug>'
+                  }])
+                  .then(function (data) {
+                      // perform success action here
+                  },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                  });
+     **/
+    SkillBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update skill action has been performed; this action updates specified skill resources.
+     * @method
+     * @param data A collection of skill objects used to update specified skill resources.
+     * @returns A promise that is resolved once the update skill action has been performed.
+     * @example   skillBatchClient.update(companies)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    SkillBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove skill resources from the system if successfully completed.
+     * @method
+     * @param ids Collection of skill ids which uniquely identifies skill resources that need to be deleted.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example skillBatchClient.remove(skillIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    SkillBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.skillBatchRoute.delete(), undefined, ids);
+    };
+    return SkillBatchClient;
+}());
+SkillBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.SkillBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.SkillBatchRoute !== "undefined" && _1.SkillBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], SkillBatchClient);
+exports.SkillBatchClient = SkillBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 604 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module skillBatchRoute
+ * @description Baasic Skill Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var SkillBatchRoute = (function (_super) {
+    tslib_1.__extends(SkillBatchRoute, _super);
+    function SkillBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'profile/lookups/skills/batch';
+        _this.updateRoute = 'profile/lookups/skills/batch';
+        _this.deleteRoute = 'profile/lookups/skills/batch';
+        return _this;
+    }
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example skillBatchRoute.create();
+     **/
+    SkillBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+      * Parses update route; this URI template does not expose any additional options.
+      * @method
+      * @example skillBatchRoute.update();
+      **/
+    SkillBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+      * Parses delete route; this URI template does not expose any additional options.
+      * @method
+      * @example skillBatchRoute.delete();
+      **/
+    SkillBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return SkillBatchRoute;
+}(common_1.BaseRoute));
+SkillBatchRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], SkillBatchRoute);
+exports.SkillBatchRoute = SkillBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 605 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module skillClient
+ * @description  Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var SkillClient = (function () {
+    function SkillClient(skillRoute, skillBatchClient, apiClient) {
+        this.skillRoute = skillRoute;
+        this.skillBatchClient = skillBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(SkillClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.skillRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SkillClient.prototype, "batch", {
+        get: function () {
+            return this.skillBatchClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of skill resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example skillClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    SkillClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the skill resource.
+     * @method
+     * @param id Skill id which uniquely identifies skill resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example skillClient.get(id, options)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    SkillClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.skillRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create skill action has been performed; this action creates a new skill resource.
+     * @method
+     * @param data A skill object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create skill action has been performed.
+     * @example skillClient.create({
+                    description : '<description>',
+                    name : '<name>',
+                    slug: '<slug>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    SkillClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update skill action has been performed; this action updates a skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `skillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(skill);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A skill object used to update specified skill resource.
+     * @returns A promise that is resolved once the update skill action has been performed.
+     * @example // skill is a resource previously fetched using get action.
+                    skill.description = '<description>';
+                    skillClient.update(skill)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    SkillClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `skillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(skill);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param A skill object used to delete specified skill resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example // skill is a resource previously fetched using get action.
+                       skillClient.remove(skill)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    SkillClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return SkillClient;
+}());
+SkillClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.SkillRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.SkillBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.SkillRoute !== "undefined" && _1.SkillRoute) === "function" && _a || Object, typeof (_b = typeof _1.SkillBatchClient !== "undefined" && _1.SkillBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], SkillClient);
+exports.SkillClient = SkillClient;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 606 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module skillRoute
+ * @description Baasic Skill Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Skill Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(9);
+var contracts_1 = __webpack_require__(3);
+var SkillRoute = (function (_super) {
+    tslib_1.__extends(SkillRoute, _super);
+    function SkillRoute(appOptions, skillBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.skillBatchRoute = skillBatchRoute;
+        _this.findRoute = 'profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'profile/lookups/skills/{id}/{?embed,fields}';
+        _this.createRoute = 'profile/lookups/skills';
+        _this.updateRoute = 'profile/lookups/skills/{id}';
+        _this.deleteRoute = 'lookups/skills/{id}';
+        return _this;
+    }
+    Object.defineProperty(SkillRoute.prototype, "batch", {
+        get: function () {
+            return this.skillBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing skill properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain skill subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the skill property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example skillRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    SkillRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id Skill id which uniquely identifies skill resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example skillRoute.get(id, options);
+     **/
+    SkillRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example skillRoute.create();
+     **/
+    SkillRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param data A skill object used to update specified skill resource.
+     * @example skillRoute.update(data);
+     **/
+    SkillRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this URI template does not expose any additional options.
+     * @method
+     * @param data A skill object used to delete specified skill resource.
+     * @example skillRoute.delete(data);
+     **/
+    SkillRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return SkillRoute;
+}(common_1.BaseRoute));
+SkillRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.SkillBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.SkillBatchRoute !== "undefined" && _1.SkillBatchRoute) === "function" && _b || Object])
+], SkillRoute);
+exports.SkillRoute = SkillRoute;
+var _a, _b;
+
+
+/***/ }),
+/* 607 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userEducationClient  * @description  User Education Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var UserEducationClient = (function () {
+    function UserEducationClient(userEducationRoute, apiClient) {
+        this.userEducationRoute = userEducationRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserEducationClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.userEducationRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user education resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example userEducationClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    UserEducationClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the user education resource.
+     * @method
+     * @example userEducationClient.get(id)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserEducationClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.userEducationRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create user education action has been performed; this action creates a new user education resource.
+     * @method
+     * @param data An user education object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create user education action has been performed.
+     * @example userEducationClient.create({
+                    organizationName : '<organization-name>',
+                    summary: '<summary>',
+                    userId: '<user-id>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    UserEducationClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update user education action has been performed; this action updates a user education resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userEducationRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(education);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An user education object used to update specified user education resource.
+     * @returns A promise that is resolved once the update user education action has been performed.
+     * @example // education is a resource previously fetched using get action.
+                    education.degree = '<degree>';
+                    userEducationClient.update(education)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    UserEducationClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user education resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicUserEducationRoutDefinition` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(education);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // education is a resource previously fetched using get action.
+                    userEducationClient.remove(education)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    UserEducationClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return UserEducationClient;
+}());
+UserEducationClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserEducationRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserEducationRoute !== "undefined" && _1.UserEducationRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], UserEducationClient);
+exports.UserEducationClient = UserEducationClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 608 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userEducationRoute
+ * @description Baasic User Education Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Education Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var UserEducationRoute = (function (_super) {
+    tslib_1.__extends(UserEducationRoute, _super);
+    function UserEducationRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'profiles/{userId}/educations/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'profiles/{userId}/educations/{id}/{?embed,fields}';
+        _this.createRoute = 'profiles/{userId}/educations';
+        _this.updateRoute = 'profiles/{userId}/educations/{id}';
+        _this.deleteRoute = 'profiles/{userId}/educations/{id}';
+        return _this;
+    }
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing user education properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user education subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user education property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example userEducationRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    UserEducationRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id User education id which uniquely identifies user education resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example userEducationRoute.get(id);
+     **/
+    UserEducationRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user education object that needs to be inserted into the system.
+     * @example userEducationRoute.create(data);
+     **/
+    UserEducationRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user education object used to update specified skill resource.
+     * @example userEducationRoute.update(data);
+     **/
+    UserEducationRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delte route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user education object used to delete specified skill resource.
+     * @example userEducationRoute.delete(data);
+     **/
+    UserEducationRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return UserEducationRoute;
+}(common_1.BaseRoute));
+UserEducationRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], UserEducationRoute);
+exports.UserEducationRoute = UserEducationRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 609 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userProfileACLClient
+ * @description  User Profile ACL Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `userProfileACLClient` uses `userProfileACLRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var UserProfileACLClient = (function () {
+    function UserProfileACLClient(userProfileACLRoute, apiClient) {
+        this.userProfileACLRoute = userProfileACLRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserProfileACLClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.userProfileACLRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified user profile resource.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example userProfileACLClient.get({id: '<profile-id>'})
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserProfileACLClient.prototype.get = function (options) {
+        return this.apiClient.get(this.routeDefinition.get(options));
+    };
+    /**
+     * Returns a promise that is resolved once the update acl action has been performed, this action creates new ACL policy for the specified user profile resource.
+     * @method
+     * @param options ACL options object.
+     * @returns A promise that is resolved once the update acl action has been performed.
+     * @example let options = {id : '<profile-id>'};
+                let aclObj =  {  actionId: '<action-id'>,  roleId: '<roleId>',  userId: '<userId>' };
+                options[baasicConstants.modelPropertyName] = aclObj;
+                userProfileACLClient.update(options)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserProfileACLClient.prototype.update = function (options) {
+        return this.apiClient.put(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
+    };
+    /**
+     * Returns a promise that is resolved once the removeByUser action has been performed. This action deletes ACL policy assigned to the specified user and user profile resource.
+     * @method
+     * @param profileId User profile id which uniquely identifies user profile resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
+     * @param data ACL policy object used to delete specified ACL policy resource.
+     * @returns A promise that is resolved once the removeByUser action has been performed.
+     * @example userProfileACLClient.removeByUser('<profile-id>', '<access-action>', '<username>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserProfileACLClient.prototype.removeByUser = function (profileId, action, user, data) {
+        return this.apiClient.delete(this.userProfileACLRoute.deleteByUser(profileId, action, user, data));
+    };
+    /**
+     * Returns a promise that is resolved once the removeByRole action has been performed. This action deletes ACL policy assigned to the specified role and user profile resource.
+     * @method
+     * @param profileId User profile id which uniquely identifies user profile resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
+     * @param data  ACL policy object used to delete specified ACL policy resource.
+     * @returns A promise that is resolved once the removeByRole action has been performed.
+     * @example userProfileACLClient.removeByRole('<profile-id>', '<access-action>', '<role-name>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserProfileACLClient.prototype.removeByRole = function (profileId, action, role, data) {
+        return this.apiClient.delete(this.userProfileACLRoute.deleteByRole(profileId, action, role, data));
+    };
+    return UserProfileACLClient;
+}());
+UserProfileACLClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserProfileACLRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserProfileACLRoute !== "undefined" && _1.UserProfileACLRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], UserProfileACLClient);
+exports.UserProfileACLClient = UserProfileACLClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 610 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userProfileACLRoute
+ * @description Baasic User ACL Profile Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile ACL Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var UserProfileACLRoute = (function (_super) {
+    tslib_1.__extends(UserProfileACLRoute, _super);
+    function UserProfileACLRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'profiles/{id}/acl/{?fields}';
+        _this.updateRoute = 'profiles/{id}/acl/{?fields}';
+        _this.deleteByUserRoute = 'profiles/{id}/acl/actions/{accessAction}/users/{user}/';
+        _this.deleteByRoleRoute = 'profiles/{id}/acl/actions/{accessAction}/roles/{role}/';
+        return _this;
+    }
+    /**
+     * Parses get user profile acl route; this URI template should be expanded with the Id of the user profile resource.
+     * @method
+     * @param options Query resource options object.
+     * @example userProfileACLRoute.get({id: '<profile-id>'});
+     **/
+    UserProfileACLRoute.prototype.get = function (options) {
+        var params = this.utility.extend({}, options);
+        return _super.prototype.baseCreate.call(this, this.getRoute, params);
+    };
+    /**
+     * Parses update user profile acl route; this URI template should be expanded with the Id of the user profile.
+     * @method
+     * @param options ACL options object.
+     * @example userProfileACLRoute.update({id: '<profile-id>'});
+     **/
+    UserProfileACLRoute.prototype.update = function (options) {
+        var params = this.utility.extend({}, options);
+        return _super.prototype.baseCreate.call(this, this.updateRoute, params);
+    };
+    UserProfileACLRoute.prototype.updateParams = function (options) {
+        var params = this.utility.extend({}, options);
+        return params[this.modelMapper.modelPropertyName];
+    };
+    /**
+     * Parses deleteByUser user profile acl route which can be expanded with additional options. Supported items are:
+     * - `id` - Id of the user profile resource.
+     * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
+     * - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.
+     * @method
+     * @param profileId User profile id which uniquely identifies user profile resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
+     * @param data ACL policy object used to delete specified ACL policy resource.
+     * @example userProfileACLRoute.deleteByUser({ id: '<profile-id>', accessAction: '<access-action>', user: '<username>' });
+     **/
+    UserProfileACLRoute.prototype.deleteByUser = function (profileId, action, user, data) {
+        var params = this.modelMapper.removeParams(data);
+        params.profileId = profileId;
+        params.user = user;
+        params.accessAction = action;
+        return _super.prototype.baseCreate.call(this, this.deleteByUserRoute, params);
+    };
+    /**
+     * Parses deleteByUser user profile acl route which can be expanded with additional options. Supported items are:
+     * - `id` - Id of the user profile.
+     * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified role and user profile resource.
+     * - `role` - A value which uniquely identifies role for which ACL policy needs to be removed.
+     * @method
+     * @param profileId User profile id which uniquely identifies user profile resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and user profile resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
+     * @param data  ACL policy object used to delete specified ACL policy resource.
+     * @example userProfileACLRoute.deleteByRole.expand({ id: '<profile-id>', accessAction: '<access-action>', role: '<role-name>' });
+     **/
+    UserProfileACLRoute.prototype.deleteByRole = function (profileId, action, role, data) {
+        var params = this.modelMapper.removeParams(data);
+        params.profileId = profileId;
+        params.role = role;
+        params.accessAction = action;
+        return _super.prototype.baseCreate.call(this, this.deleteByRoleRoute, params);
+    };
+    return UserProfileACLRoute;
+}(common_1.BaseRoute));
+UserProfileACLRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], UserProfileACLRoute);
+exports.UserProfileACLRoute = UserProfileACLRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 611 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userProfileAvatarClient
+ * @description  User Profile Avatar Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var UserProfileAvatarClient = (function () {
+    function UserProfileAvatarClient(userProfileAvatarRoute, userProfileAvatarStreamsClient, apiClient) {
+        this.userProfileAvatarRoute = userProfileAvatarRoute;
+        this.userProfileAvatarStreamsClient = userProfileAvatarStreamsClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserProfileAvatarClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.userProfileAvatarRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserProfileAvatarClient.prototype, "streams", {
+        get: function () {
+            return this.userProfileAvatarStreamsClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.
+     * @method
+     * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example userProfileAvatarClient.get('<file-id>')
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    UserProfileAvatarClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.userProfileAvatarRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileAvatarRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(fileEntry);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data Avatar file object that need to be updated in the system.
+     * @returns A promise that is resolved once the update file action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                       fileEntry.description = '<description>';
+                       userProfileAvatarClient.update(fileEntry)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                           });
+                                // perform error handling here
+    **/
+    UserProfileAvatarClient.prototype.update = function (data) {
+        return this.apiClient.put(this.userProfileAvatarRoute.update(data), data);
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the Profile Files module (For example: file resources from the Media Vault module can be linked directly into the Profile Files module).
+     * @method
+     * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
+     * @param data A profile avatar file object that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example userProfileAvatarClient.link(fileObject)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserProfileAvatarClient.prototype.link = function (id, data) {
+        return this.apiClient.post(this.routeDefinition.link(id, data), this.routeDefinition.createParams(data, id));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply userProfileAvatarRoute route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink').href;
+     * ```
+     * @method
+     * @param data A profile avatar file object used to remove specific profile avatar from the system.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.
+                    userProfileAvatarRoute.remove(fileEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    UserProfileAvatarClient.prototype.unlink = function (data, options) {
+        return this.apiClient.delete(this.userProfileAvatarRoute.unlink(data, options));
+    };
+    return UserProfileAvatarClient;
+}());
+UserProfileAvatarClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserProfileAvatarRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.UserProfileAvatarStreamsClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserProfileAvatarRoute !== "undefined" && _1.UserProfileAvatarRoute) === "function" && _a || Object, typeof (_b = typeof _1.UserProfileAvatarStreamsClient !== "undefined" && _1.UserProfileAvatarStreamsClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], UserProfileAvatarClient);
+exports.UserProfileAvatarClient = UserProfileAvatarClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 612 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userProfileAvatarRoute
+ * @description Baasic User Profile Avatar Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(9);
+var contracts_1 = __webpack_require__(3);
+var UserProfileAvatarRoute = (function (_super) {
+    tslib_1.__extends(UserProfileAvatarRoute, _super);
+    function UserProfileAvatarRoute(appOptions, userProfileAvatarStreamsRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.userProfileAvatarStreamsRoute = userProfileAvatarStreamsRoute;
+        _this.getRoute = 'profiles/{id}/avatars/{?embed,fields}';
+        _this.updateRoute = 'profiles/{id}/avatars';
+        _this.linkRoute = 'profiles/{id}/avatars/link';
+        _this.unlinkRoute = 'profiles/{id}/avatars/unlink';
+        return _this;
+    }
+    Object.defineProperty(UserProfileAvatarRoute.prototype, "streams", {
+        get: function () {
+            return this.userProfileAvatarStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses get route; this route should be expanded with the Id of the profile.
+     * @method
+     * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example userProfileAvatarRoute.get({id: '<file-id>'});
+     **/
+    UserProfileAvatarRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param data A Profile Avatar object used to update specified Profile Avatar resource.
+     * @example userProfileAvatarRoute.update(data);
+     **/
+    UserProfileAvatarRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses link route; this route should be expanded with the Id of the profile.
+     * @method
+     * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
+     * @param data A Profile Avatar object used to link specified Profile Avatar resource.
+     * @example userProfileAvatarRoute.link({id: '<file-id>'});
+     **/
+    UserProfileAvatarRoute.prototype.link = function (id, data) {
+        var params = this.utility.extend({}, data);
+        params.id = id;
+        return _super.prototype.baseCreate.call(this, this.linkRoute, params);
+    };
+    /**
+     * Parses link route; this route should be expanded with the Id of the profile.
+     * @method
+     * @param data A Profile Avatar object used to unlink specified Profile Avatar resource.
+     * @param options Query resource options object.
+     * @example userProfileAvatarRoute.unlink(data);
+     **/
+    UserProfileAvatarRoute.prototype.unlink = function (data, options) {
+        if (!options) {
+            options = {};
+        }
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, data, options);
+    };
+    UserProfileAvatarRoute.prototype.createParams = function (data, id) {
+        var params = this.utility.extend(data);
+        params.id = id;
+        return _super.prototype.createParams.call(this, params);
+    };
+    return UserProfileAvatarRoute;
+}(common_1.BaseRoute));
+UserProfileAvatarRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.UserProfileAvatarStreamsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.UserProfileAvatarStreamsRoute !== "undefined" && _1.UserProfileAvatarStreamsRoute) === "function" && _b || Object])
+], UserProfileAvatarRoute);
+exports.UserProfileAvatarRoute = UserProfileAvatarRoute;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 613 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userProfileAvatarStreamsClient
+ * @description  User Profile Avatar Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var UserProfileAvatarStreamsClient = (function () {
+    function UserProfileAvatarStreamsClient(userProfileAvatarStreamsRoute, apiClient) {
+        this.userProfileAvatarStreamsRoute = userProfileAvatarStreamsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserProfileAvatarStreamsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.userProfileAvatarStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
+     * @method
+     * @param data User unique identifier.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original file stream
+                    userProfileAvatarStreamsClient.get({id: '<file-id>'})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+                    // Request derived file stream
+                    userProfileAvatarStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    UserProfileAvatarStreamsClient.prototype.get = function (data) {
+        return this.apiClient.get(this.routeDefinition.get(data));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @example // Request the original blob
+                    userProfileAvatarStreamsClient.getBlob('<file-id>')
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+                        // Request derived blob
+                        userProfileAvatarStreamsClient.getBlob({id: '<file-id>', width: <width>, height: <height>})
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    UserProfileAvatarStreamsClient.prototype.getBlob = function (data) {
+        return this.apiClient.request({
+            url: this.userProfileAvatarStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
+    };
+    /**
+     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @param id
+     * @param data
+     * @param stream
+     * @returns A promise that is resolved once the create file stream action has been performed.
+     * @example userProfileAvatarStreamsClient.create('<file-id>', '<filename'>, <blob>)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserProfileAvatarStreamsClient.prototype.create = function (id, data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), formData, { 'Content-Type': undefined });
+    };
+    /**
+     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
+     * @method
+     * @param data
+     * @param stream
+     * @returns A promise that is resolved once the update file stream action has been performed.
+     * @example // Update original file stream
+                    userProfileAvatarStreamsClient.update('<file-id>', <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+                        // Update derived file stream
+                        userProfileAvatarStreamsClient.update({id: '<file-id>', width: <width>, height: <height>}, <file-stream>)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    UserProfileAvatarStreamsClient.prototype.update = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), formData, { 'Content-Type': undefined });
+    };
+    return UserProfileAvatarStreamsClient;
+}());
+UserProfileAvatarStreamsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserProfileAvatarStreamsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserProfileAvatarStreamsRoute !== "undefined" && _1.UserProfileAvatarStreamsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], UserProfileAvatarStreamsClient);
+exports.UserProfileAvatarStreamsClient = UserProfileAvatarStreamsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 614 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userProfileAvatarStreamsRoute
+ * @description Baasic User Profile Avatar Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Avatar Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var UserProfileAvatarStreamsRoute = (function (_super) {
+    tslib_1.__extends(UserProfileAvatarStreamsRoute, _super);
+    function UserProfileAvatarStreamsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'profiles/{id}/avatar-streams/{?width,height}';
+        _this.createRoute = 'profiles/{id}/avatar-streams/{filename}';
+        _this.updateRoute = 'profiles/{id}/avatar-streams/{?width,height}';
+        return _this;
+    }
+    /**
+     * Parses get route; this route should be expanded with id of profile. Additional supported items are:
+     * - `width` - width of desired derived image.
+     * - `height` - height of desired derived image.
+     * @method
+     * @example userProfileAvatarStreamsRoute.get({id: '<file-id>'});
+     **/
+    UserProfileAvatarStreamsRoute.prototype.get = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.getRoute, data);
+    };
+    /**
+     * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved as well with id of the profile.
+     * @method
+     * @example userProfileAvatarStreamRoute.create({ filename: '<filename>', id: '<file-id>' });
+     **/
+    UserProfileAvatarStreamsRoute.prototype.create = function (id, data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                filename: data
+            };
+        }
+        var params = this.utility.extend({}, data);
+        params.id = id;
+        return _super.prototype.baseCreate.call(this, this.createRoute, params);
+    };
+    /**
+     * Parses update route; this route should be expanded with the id of the profile. Additional supported items are:
+     * - `width` - width of derived image to update.
+     * - `height` - height of derived image to update.
+     * @method
+     * @param data
+     * @example userProfileAvatarStreamsRoute.update({id: '<file-id>'});
+     **/
+    UserProfileAvatarStreamsRoute.prototype.update = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.updateRoute, data);
+    };
+    return UserProfileAvatarStreamsRoute;
+}(common_1.BaseRoute));
+UserProfileAvatarStreamsRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], UserProfileAvatarStreamsRoute);
+exports.UserProfileAvatarStreamsRoute = UserProfileAvatarStreamsRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 615 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userProfileClient
+ * @description  User Profile Client provides an easy way to consume  User Profile REST API end-points. In order to obtain needed routes `userProfileClient` uses `userProfileRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var UserProfileClient = (function () {
+    function UserProfileClient(userProfileACLClient, userProfileRoute, apiClient, userEducationClient, userProfileAvatarClient, userSkillClient, userWorkClient) {
+        this.userProfileACLClient = userProfileACLClient;
+        this.userProfileRoute = userProfileRoute;
+        this.apiClient = apiClient;
+        this.userEducationClient = userEducationClient;
+        this.userProfileAvatarClient = userProfileAvatarClient;
+        this.userSkillClient = userSkillClient;
+        this.userWorkClient = userWorkClient;
+    }
+    Object.defineProperty(UserProfileClient.prototype, "acl", {
+        get: function () {
+            return this.userProfileACLClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserProfileClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.userProfileRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserProfileClient.prototype, "education", {
+        get: function () {
+            return this.userEducationClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserProfileClient.prototype, "avatar", {
+        get: function () {
+            return this.userProfileAvatarClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserProfileClient.prototype, "skill", {
+        get: function () {
+            return this.userSkillClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserProfileClient.prototype, "work", {
+        get: function () {
+            return this.userWorkClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user profile resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example userProfileClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    UserProfileClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the user profile resource.
+     * @method
+     * @param id User profile id which uniquely identifies user profile resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example userProfileClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserProfileClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.userProfileRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create user profile action has been performed; this action creates a new user profile resource.
+     * @method
+     * @param data An user profile object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create user profile action has been performed.
+     * @example userProfileClient.create({
+                    firstName : '<first-name>',
+                    lastName : '<last-name>',
+                    displayName: '<nick-name>'
+                }.then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    UserProfileClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update user profile action has been performed; this action updates a user profile resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(userProfile);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An user profile object used to update specified user profile resource.
+     * @returns A promise that is resolved once the update user profile action has been performed.
+     * @example // userProfile is a resource previously fetched using get action.
+                       userProfile.displayName = '<nick-name>';
+                       userProfileClient.update(userProfile)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    UserProfileClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user profile resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userProfileRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(userProfile);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An user profile object used to delete specified user profile resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example // userProfile is a resource previously fetched using get action.
+                    userProfileClient.remove(userProfile)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    UserProfileClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return UserProfileClient;
+}());
+UserProfileClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserProfileACLClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.UserProfileRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.UserEducationClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.UserProfileAvatarClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.UserSkillClient)),
+    tslib_1.__param(6, inversify_1.inject(_1.TYPES.UserWorkClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserProfileACLClient !== "undefined" && _1.UserProfileACLClient) === "function" && _a || Object, typeof (_b = typeof _1.UserProfileRoute !== "undefined" && _1.UserProfileRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object, typeof (_d = typeof _1.UserEducationClient !== "undefined" && _1.UserEducationClient) === "function" && _d || Object, typeof (_e = typeof _1.UserProfileAvatarClient !== "undefined" && _1.UserProfileAvatarClient) === "function" && _e || Object, typeof (_f = typeof _1.UserSkillClient !== "undefined" && _1.UserSkillClient) === "function" && _f || Object, typeof (_g = typeof _1.UserWorkClient !== "undefined" && _1.UserWorkClient) === "function" && _g || Object])
+], UserProfileClient);
+exports.UserProfileClient = UserProfileClient;
+var _a, _b, _c, _d, _e, _f, _g;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 616 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userProfileRoute
+ * @description Baasic User Profile Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Profile Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(9);
+var contracts_1 = __webpack_require__(3);
+var UserProfileRoute = (function (_super) {
+    tslib_1.__extends(UserProfileRoute, _super);
+    function UserProfileRoute(appOptions, userProfileACLRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.userProfileACLRoute = userProfileACLRoute;
+        _this.findRoute = 'profiles/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'profiles/{id}/{?embed,fields}';
+        _this.createRoute = 'profiles';
+        _this.updateRoute = 'profiles/{id}';
+        _this.deleteRoute = 'profiles/{id}';
+        return _this;
+    }
+    Object.defineProperty(UserProfileRoute.prototype, "acl", {
+        get: function () {
+            return this.userProfileACLRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find user profile route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify user profile resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user profile subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user profile property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example userProfileRoute.find.({searchQuery: '<search-phrase>'});
+     **/
+    UserProfileRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id User profile id which uniquely identifies user profile resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example userProfileRoute.get(id, options);
+     **/
+    UserProfileRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create user profile route; this URI template does not expose any additional options.
+     * @method
+     * @example baasicUserProfileRouteService.create();
+     **/
+    UserProfileRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update user profile route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user profile object used to update specified user profile resource.
+     * @example baasicUserProfileRouteService.update(data);
+     **/
+    UserProfileRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses update user profile route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user profile object used to delete specified user profile resource.
+     * @example baasicUserProfileRouteService.delete(data);
+     **/
+    UserProfileRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return UserProfileRoute;
+}(common_1.BaseRoute));
+UserProfileRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.UserProfileACLRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.UserProfileACLRoute !== "undefined" && _1.UserProfileACLRoute) === "function" && _b || Object])
+], UserProfileRoute);
+exports.UserProfileRoute = UserProfileRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 617 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userSkillClient
+ * @description  User Skill Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var UserSkillClient = (function () {
+    function UserSkillClient(userSkillRoute, apiClient) {
+        this.userSkillRoute = userSkillRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserSkillClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.userSkillRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user skill resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example userSkillClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    UserSkillClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the user skill resource.
+     * @method
+     * @param id User profile id or display name which uniquely identifies user profile whose skill resources need to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example userSkillClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserSkillClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.userSkillRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create user skill action has been performed; this action creates a new user skill resource.
+     * @method
+     * @param data An user skill object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create user skill action has been performed.
+     * @example userSkillClient.create({ skillName : '<skill-name>', userId: '<user-id>' })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserSkillClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update user skill action has been performed; this action updates a user skill resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userSkillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(skill);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An user skill object used to update specified user skill resource.
+     * @returns A promise that is resolved once the update user skill action has been performed.
+     * @example // skill is a resource previously fetched using get action.
+                       skill.description = '<description>';
+                       userSkillClient.update(skill)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    UserSkillClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user skill resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userSkillRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(skill);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An user skill object used to delete specific user skill resource in the system.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example // skill is a resource previously fetched using get action.
+                    userSkillClient.remove(skill)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    UserSkillClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return UserSkillClient;
+}());
+UserSkillClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserSkillRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserSkillRoute !== "undefined" && _1.UserSkillRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], UserSkillClient);
+exports.UserSkillClient = UserSkillClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 618 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userSkillRoute
+ * @description Baasic User Skill Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Skill Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var UserSkillRoute = (function (_super) {
+    tslib_1.__extends(UserSkillRoute, _super);
+    function UserSkillRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'profiles/{userId}/skills/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'profiles/{userId}/skills/{id}/{?embed,fields}';
+        _this.createRoute = 'profiles/{userId}/skills';
+        _this.updateRoute = 'profiles/{userId}/skills/{id}';
+        _this.deleteRoute = 'profiles/{userId}/skills/{id}';
+        return _this;
+    }
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing user skill properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user skill subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user skill property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example userSkillRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    UserSkillRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id User profile id or display name which uniquely identifies user profile whose skill resources need to be retrieved.
+     * @param options Query resource options object.
+     * @example userSkillRoute.get(id, options);
+     **/
+    UserSkillRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user skill object that needs to be inserted into the system.
+     * @example userSkillRoute.create(data);
+     **/
+    UserSkillRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user skill object used to update specific user skill resource in the system.
+     * @example userSkillRoute.update(data);
+     **/
+    UserSkillRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user skill object used to delete specific user skill resource in the system.
+     * @example userSkillRoute.delete(data);
+     **/
+    UserSkillRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return UserSkillRoute;
+}(common_1.BaseRoute));
+UserSkillRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], UserSkillRoute);
+exports.UserSkillRoute = UserSkillRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 619 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userWorkClient
+ * @description  User Work Client provides  route templates which can be expanded to  REST URIs. Various services can use  User Work Route Client to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(9);
+var UserWorkClient = (function () {
+    function UserWorkClient(userWorkRoute, apiClient) {
+        this.userWorkRoute = userWorkRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserWorkClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.userWorkRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user work resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example userWorkClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    UserWorkClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the user work resource.
+     * @method
+     * @param id User work id which uniquely identifies resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example userWorkClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserWorkClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create user work action has been performed; this action creates a new user work resource.
+     * @method
+     * @param data An user work object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create user work action has been performed.
+     * @example userWorkClient.create({ companyName : '<company-name>', userId: '<user-id>' })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    UserWorkClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update user work action has been performed; this action updates a user work resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userWorkRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(work);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An user work object used to update specified user work resource.
+     * @returns A promise that is resolved once the update user work action has been performed.
+     * @example // work is a resource previously fetched using get action.
+                    work.companyName = '<company-name>';
+                    userWorkClient.update(work)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    UserWorkClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a user work resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userWorkRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(work);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // work is a resource previously fetched using get action.
+                       userWorkClient.remove(work)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    UserWorkClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return UserWorkClient;
+}());
+UserWorkClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserWorkRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserWorkRoute !== "undefined" && _1.UserWorkRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], UserWorkClient);
+exports.UserWorkClient = UserWorkClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 620 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userWorkRoute
+ * @description Baasic User Work Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Work Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var UserWorkRoute = (function (_super) {
+    tslib_1.__extends(UserWorkRoute, _super);
+    function UserWorkRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'profiles/{userId}/work/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'profiles/{userId}/work/{id}/{?embed,fields}';
+        _this.createRoute = 'profiles/{userId}/work';
+        _this.updateRoute = 'profiles/{userId}/work/{id}';
+        _this.deleteRoute = 'profiles/{userId}/work/{id}';
+        return _this;
+    }
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing user work properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user work subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user work property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example userWorkRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    UserWorkRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @param id User work id which uniquely identifies resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example userWorkRoute.get(id, options);
+     **/
+    UserWorkRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @param data An user work object that needs to be inserted into the system.
+     * @example userWorkRoute.create(data);
+     **/
+    UserWorkRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+      * Parses update route; this URI template does not expose any additional options.
+      * @method
+      * @param data An user work object used to update specified user work resource.
+      * @example userWorkRoute.create(data);
+      **/
+    UserWorkRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    UserWorkRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return UserWorkRoute;
+}(common_1.BaseRoute));
+UserWorkRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], UserWorkRoute);
+exports.UserWorkRoute = UserWorkRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 621 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 622 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 623 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(622));
+__export(__webpack_require__(621));
+
+
+/***/ }),
+/* 624 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(26);
+var TYPES = {
+    ValueSetClient: Symbol("ValueSetClient"),
+    ValueSetItemClient: Symbol("ValueSetItemClient"),
+    ValueSetItemRoute: Symbol("ValueSetItemRoute"),
+    ValueSetRoute: Symbol("ValueSetRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.ValueSetItemRoute).to(_1.ValueSetItemRoute);
+    bind(TYPES.ValueSetItemClient).to(_1.ValueSetItemClient);
+    bind(TYPES.ValueSetRoute).to(_1.ValueSetRoute);
+    bind(TYPES.ValueSetClient).to(_1.ValueSetClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 625 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module valueSetClient
+ * @description  Value Set Client provides an easy way to consume Baasic Value Set REST end-points. In order to obtain needed routes `baasicValueSetService` uses `baasicValueSetRouteService`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(26);
+var ValueSetClient = (function () {
+    function ValueSetClient(valueSetRoute, valueSetItemClient, apiClient) {
+        this.valueSetRoute = valueSetRoute;
+        this.valueSetItemClient = valueSetItemClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ValueSetClient.prototype, "items", {
+        get: function () {
+            return this.valueSetItemClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ValueSetClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `valueSetRoute`.
+         * @method
+         * @example valueSetClient.routeDefinition.get().expand(expandObject);
+        **/
+        get: function () {
+            return this.valueSetRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
+     * @param options query resource options object
+     * @returns A promise that is resolved once the find action has beend performed.
+     * @method
+     * @example valueSetClient.find({
+                    pageNumber: 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set resource.
+     * @param setName value set name
+     * @param options query resource options object
+     * @returns A promise that is resolved once the get action has been performed.
+     * @method
+     * @example valueSetClient.get('<value-set-name>')
+                   .success(function (data) {
+                       // perform success action here
+                   })
+                   .error(function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    ValueSetClient.prototype.get = function (setName, options) {
+        return this.apiClient.get(this.valueSetRoute.get(setName, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create value set action has been performed; this action creates a new value set resource.
+     * @param data A key value object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create value set action has beend performed.
+     * @method
+     * @example valueSetClient.create({
+                    name: '<value-set-name>',
+                    description: '<description>',
+                    values: [{value: '<value>'}]
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update value set action has been performed; this action updates a value set resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicValueSetService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(valueSet);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @param data Value set object used to update specified value set resource.
+     * @returns A promise that is resolved once the update value set action has been performed.
+     * @method
+     * @example // valueSet is a resource previously fetched using get action.
+                    valueSet.name = '<new-name>';
+                    valueSetClient.update(valueSet)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ValueSetClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will delete a value set resource if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(valueSet);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @param data A value set object used to delete specified value set resource.
+     * @method
+     * @example // valueSet is a resource previously fetched using get action.
+                    valueSetClient.remove(valueSet)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ValueSetClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return ValueSetClient;
+}());
+ValueSetClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ValueSetRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ValueSetItemClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ValueSetRoute !== "undefined" && _1.ValueSetRoute) === "function" && _a || Object, typeof (_b = typeof _1.ValueSetItemClient !== "undefined" && _1.ValueSetItemClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], ValueSetClient);
+exports.ValueSetClient = ValueSetClient;
+var _a, _b, _c;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 626 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/**
+ * @module valueSetItemClient
+ * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `valueSetItemClient` uses `valueSetItemRoute`.
+ */
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(26);
+var ValueSetItemClient = (function () {
+    function ValueSetItemClient(valueSetItemRoute, apiClient) {
+        this.valueSetItemRoute = valueSetItemRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ValueSetItemClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.valueSetItemRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @method items.find
+     * @example valueSetItemClient.find({
+                    setName: '<value-set-name>',
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>' })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetItemClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified value set item resource.
+     * @param setName value set name
+     * @param id unique identifier of value set resource
+     * @param options query resource options object
+     * @returns A promise that is resolved once the get action has been performed.
+     * @method items.get
+     * @example valueSetItemClient.get('<value-set-name>', '<set-item-id>')
+                   .then(function (data) {
+                        // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetItemClient.prototype.get = function (setName, id, options) {
+        return this.apiClient.get(this.valueSetItemRoute.get(setName, id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create value set item action has been performed; this action creates a new value set item resource.
+     * @method
+     * @param data A value set item object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create value set item action has been performed.
+     * @example valueSetItemClient.create({
+                    setId: '<value-set-id>',
+                    value: '<value>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ValueSetItemClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update value set item action has been performed; this action updates a value set item resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(valueSetItem);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A value set item object used to update specified value set resource.
+     * @returns A promise that is resolved once the update value set item action has been performed.
+     * @example // valueSetItem is a resource previously fetched using get action.
+                valueSetItem.value = '<new-value>';
+                valueSetItemClient.update(valueSetItem)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    ValueSetItemClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will delete a value set item if the action is completed successfully. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(valueSetItem);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @param data A value set item object used to delete specified value set resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @method
+     * @example // valueSetItem is a resource previously fetched using get action.
+                valueSetItemClient.remove(valueSetItem)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    ValueSetItemClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return ValueSetItemClient;
+}());
+ValueSetItemClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ValueSetItemRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ValueSetItemRoute !== "undefined" && _1.ValueSetItemRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ValueSetItemClient);
+exports.ValueSetItemClient = ValueSetItemClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 627 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/**
+ * @module valueSetItemRoute
+ * @description Baasic Value Set Item Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var ValueSetItemRoute = (function (_super) {
+    tslib_1.__extends(ValueSetItemRoute, _super);
+    function ValueSetItemRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'value-sets/{setName}/items/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'value-sets/{setName}/items/{id}/{?embed,fields}';
+        _this.createRoute = 'value-sets/{setName}/items/';
+        _this.updateRoute = 'value-sets/{setId}/items/{id}';
+        _this.deleteRoute = 'value-sets/{setId}/items/{id}';
+        return _this;
+    }
+    /**
+     * Parses find value set items route which can be expanded with additional options. Supported items are:
+     * - `setName` - Value set name.
+     * - `searchQuery` - A string value used to identify value set items using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain value set item subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the value set item property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method items.find
+     * @param options Options object.
+     * @example valueSetItemRoute.find(options);
+     **/
+    ValueSetItemRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route which must be expanded with the following items:
+     * - `setName` - Value set name.
+     * - `id` - Value set item id.
+     * @method
+     * @param setName Value set name.
+     * @param id Value set id.
+     * @param options Query resource options object.
+     * @example valueSetItemRoute.get(setName, id, options);
+     **/
+    ValueSetItemRoute.prototype.get = function (setName, id, options) {
+        var params = this.utility.extend({}, options);
+        params.setName = setName;
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create value set item route; the URI template should be expanded with the value set name.
+     * @method
+     * @param data A value set item object that needs to be inserted into the system.
+     * @example valueSetItemRoute.create(data);
+     **/
+    ValueSetItemRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses update value set item route.
+     * @method
+     * @param data A value set item object used to update specified value set resource.
+     * @example valueSetItemRoute.update(data);
+     */
+    ValueSetItemRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete value set item route.
+     * @method
+     * @param data A value set item object used to delete specified value set resource.
+     * @example valueSetItemRoute.delete(data);
+     */
+    ValueSetItemRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return ValueSetItemRoute;
+}(common_1.BaseRoute));
+ValueSetItemRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], ValueSetItemRoute);
+exports.ValueSetItemRoute = ValueSetItemRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 628 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module valueSetRoute
+ * @description Baasic Value Set Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(26);
+var contracts_1 = __webpack_require__(3);
+var ValueSetRoute = (function (_super) {
+    tslib_1.__extends(ValueSetRoute, _super);
+    function ValueSetRoute(appOptions, valueSetItemRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.valueSetItemRoute = valueSetItemRoute;
+        _this.findRoute = 'value-sets/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'value-sets/{setName}/{?embed,fields}';
+        _this.createRoute = 'value-sets';
+        _this.updateRoute = 'value-sets/{id}';
+        _this.deleteRoute = 'value-sets/{id}';
+        return _this;
+    }
+    Object.defineProperty(ValueSetRoute.prototype, "items", {
+        get: function () {
+            return this.valueSetItemRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find value set route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify value set resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain value set subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the value set property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example valueSetRoute.find(options);
+     **/
+    ValueSetRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get value set route which must be expanded with the name of the previously created value set resource in the system.
+     * @method
+     * @param setName Value Set name.
+     * @param options Query resource options object.
+     * @example valueSetRoute.get(setName, options);
+     **/
+    ValueSetRoute.prototype.get = function (setName, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, setName, options, 'setName');
+    };
+    /**
+     * Parses create value set route; this URI template does not expose any additional options.
+     * @method
+     * @example valueSetRoute.create();
+     **/
+    ValueSetRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update value set route.
+     * @method
+     * @param data Value set object used to update specified value set resource.
+     * @example valueSetRoute.update(data);
+     */
+    ValueSetRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete value set route.
+     * @method
+     * @param data A value set object used to delete specified value set resource.
+     * @example valueSetRoute.delete(data);
+     */
+    ValueSetRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return ValueSetRoute;
+}(common_1.BaseRoute));
+ValueSetRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.ValueSetItemRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.ValueSetItemRoute !== "undefined" && _1.ValueSetItemRoute) === "function" && _b || Object])
+], ValueSetRoute);
+exports.ValueSetRoute = ValueSetRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 629 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*global unescape, module, define, window, global*/
+
+/*
+ UriTemplate Copyright (c) 2012-2013 Franz Antesberger. All Rights Reserved.
+ Available via the MIT license.
+*/
+
+(function (exportCallback) {
+    "use strict";
+
+var UriTemplateError = (function () {
+
+    function UriTemplateError (options) {
+        this.options = options;
+    }
+
+    UriTemplateError.prototype.toString = function () {
+        if (JSON && JSON.stringify) {
+            return JSON.stringify(this.options);
+        }
+        else {
+            return this.options;
+        }
+    };
+
+    return UriTemplateError;
+}());
+
+var objectHelper = (function () {
+    function isArray (value) {
+        return Object.prototype.toString.apply(value) === '[object Array]';
+    }
+
+    function isString (value) {
+        return Object.prototype.toString.apply(value) === '[object String]';
+    }
+    
+    function isNumber (value) {
+        return Object.prototype.toString.apply(value) === '[object Number]';
+    }
+    
+    function isBoolean (value) {
+        return Object.prototype.toString.apply(value) === '[object Boolean]';
+    }
+    
+    function join (arr, separator) {
+        var
+            result = '',
+            first = true,
+            index;
+        for (index = 0; index < arr.length; index += 1) {
+            if (first) {
+                first = false;
+            }
+            else {
+                result += separator;
+            }
+            result += arr[index];
+        }
+        return result;
+    }
+
+    function map (arr, mapper) {
+        var
+            result = [],
+            index = 0;
+        for (; index < arr.length; index += 1) {
+            result.push(mapper(arr[index]));
+        }
+        return result;
+    }
+
+    function filter (arr, predicate) {
+        var
+            result = [],
+            index = 0;
+        for (; index < arr.length; index += 1) {
+            if (predicate(arr[index])) {
+                result.push(arr[index]);
+            }
+        }
+        return result;
+    }
+
+    function deepFreezeUsingObjectFreeze (object) {
+        if (typeof object !== "object" || object === null) {
+            return object;
+        }
+        Object.freeze(object);
+        var property, propertyName;
+        for (propertyName in object) {
+            if (object.hasOwnProperty(propertyName)) {
+                property = object[propertyName];
+                // be aware, arrays are 'object', too
+                if (typeof property === "object") {
+                    deepFreeze(property);
+                }
+            }
+        }
+        return object;
+    }
+
+    function deepFreeze (object) {
+        if (typeof Object.freeze === 'function') {
+            return deepFreezeUsingObjectFreeze(object);
+        }
+        return object;
+    }
+
+
+    return {
+        isArray: isArray,
+        isString: isString,
+        isNumber: isNumber,
+        isBoolean: isBoolean,
+        join: join,
+        map: map,
+        filter: filter,
+        deepFreeze: deepFreeze
+    };
+}());
+
+var charHelper = (function () {
+
+    function isAlpha (chr) {
+        return (chr >= 'a' && chr <= 'z') || ((chr >= 'A' && chr <= 'Z'));
+    }
+
+    function isDigit (chr) {
+        return chr >= '0' && chr <= '9';
+    }
+
+    function isHexDigit (chr) {
+        return isDigit(chr) || (chr >= 'a' && chr <= 'f') || (chr >= 'A' && chr <= 'F');
+    }
+
+    return {
+        isAlpha: isAlpha,
+        isDigit: isDigit,
+        isHexDigit: isHexDigit
+    };
+}());
+
+var pctEncoder = (function () {
+    var utf8 = {
+        encode: function (chr) {
+            // see http://ecmanaut.blogspot.de/2006/07/encoding-decoding-utf8-in-javascript.html
+            return unescape(encodeURIComponent(chr));
+        },
+        numBytes: function (firstCharCode) {
+            if (firstCharCode <= 0x7F) {
+                return 1;
+            }
+            else if (0xC2 <= firstCharCode && firstCharCode <= 0xDF) {
+                return 2;
+            }
+            else if (0xE0 <= firstCharCode && firstCharCode <= 0xEF) {
+                return 3;
+            }
+            else if (0xF0 <= firstCharCode && firstCharCode <= 0xF4) {
+                return 4;
+            }
+            // no valid first octet
+            return 0;
+        },
+        isValidFollowingCharCode: function (charCode) {
+            return 0x80 <= charCode && charCode <= 0xBF;
+        }
+    };
+
+    /**
+     * encodes a character, if needed or not.
+     * @param chr
+     * @return pct-encoded character
+     */
+    function encodeCharacter (chr) {
+        var
+            result = '',
+            octets = utf8.encode(chr),
+            octet,
+            index;
+        for (index = 0; index < octets.length; index += 1) {
+            octet = octets.charCodeAt(index);
+            result += '%' + (octet < 0x10 ? '0' : '') + octet.toString(16).toUpperCase();
+        }
+        return result;
+    }
+
+    /**
+     * Returns, whether the given text at start is in the form 'percent hex-digit hex-digit', like '%3F'
+     * @param text
+     * @param start
+     * @return {boolean|*|*}
+     */
+    function isPercentDigitDigit (text, start) {
+        return text.charAt(start) === '%' && charHelper.isHexDigit(text.charAt(start + 1)) && charHelper.isHexDigit(text.charAt(start + 2));
+    }
+
+    /**
+     * Parses a hex number from start with length 2.
+     * @param text a string
+     * @param start the start index of the 2-digit hex number
+     * @return {Number}
+     */
+    function parseHex2 (text, start) {
+        return parseInt(text.substr(start, 2), 16);
+    }
+
+    /**
+     * Returns whether or not the given char sequence is a correctly pct-encoded sequence.
+     * @param chr
+     * @return {boolean}
+     */
+    function isPctEncoded (chr) {
+        if (!isPercentDigitDigit(chr, 0)) {
+            return false;
+        }
+        var firstCharCode = parseHex2(chr, 1);
+        var numBytes = utf8.numBytes(firstCharCode);
+        if (numBytes === 0) {
+            return false;
+        }
+        for (var byteNumber = 1; byteNumber < numBytes; byteNumber += 1) {
+            if (!isPercentDigitDigit(chr, 3*byteNumber) || !utf8.isValidFollowingCharCode(parseHex2(chr, 3*byteNumber + 1))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Reads as much as needed from the text, e.g. '%20' or '%C3%B6'. It does not decode!
+     * @param text
+     * @param startIndex
+     * @return the character or pct-string of the text at startIndex
+     */
+    function pctCharAt(text, startIndex) {
+        var chr = text.charAt(startIndex);
+        if (!isPercentDigitDigit(text, startIndex)) {
+            return chr;
+        }
+        var utf8CharCode = parseHex2(text, startIndex + 1);
+        var numBytes = utf8.numBytes(utf8CharCode);
+        if (numBytes === 0) {
+            return chr;
+        }
+        for (var byteNumber = 1; byteNumber < numBytes; byteNumber += 1) {
+            if (!isPercentDigitDigit(text, startIndex + 3 * byteNumber) || !utf8.isValidFollowingCharCode(parseHex2(text, startIndex + 3 * byteNumber + 1))) {
+                return chr;
+            }
+        }
+        return text.substr(startIndex, 3 * numBytes);
+    }
+
+    return {
+        encodeCharacter: encodeCharacter,
+        isPctEncoded: isPctEncoded,
+        pctCharAt: pctCharAt
+    };
+}());
+
+var rfcCharHelper = (function () {
+
+    /**
+     * Returns if an character is an varchar character according 2.3 of rfc 6570
+     * @param chr
+     * @return (Boolean)
+     */
+    function isVarchar (chr) {
+        return charHelper.isAlpha(chr) || charHelper.isDigit(chr) || chr === '_' || pctEncoder.isPctEncoded(chr);
+    }
+
+    /**
+     * Returns if chr is an unreserved character according 1.5 of rfc 6570
+     * @param chr
+     * @return {Boolean}
+     */
+    function isUnreserved (chr) {
+        return charHelper.isAlpha(chr) || charHelper.isDigit(chr) || chr === '-' || chr === '.' || chr === '_' || chr === '~';
+    }
+
+    /**
+     * Returns if chr is an reserved character according 1.5 of rfc 6570
+     * or the percent character mentioned in 3.2.1.
+     * @param chr
+     * @return {Boolean}
+     */
+    function isReserved (chr) {
+        return chr === ':' || chr === '/' || chr === '?' || chr === '#' || chr === '[' || chr === ']' || chr === '@' || chr === '!' || chr === '$' || chr === '&' || chr === '(' ||
+            chr === ')' || chr === '*' || chr === '+' || chr === ',' || chr === ';' || chr === '=' || chr === "'";
+    }
+
+    return {
+        isVarchar: isVarchar,
+        isUnreserved: isUnreserved,
+        isReserved: isReserved
+    };
+
+}());
+
+/**
+ * encoding of rfc 6570
+ */
+var encodingHelper = (function () {
+
+    function encode (text, passReserved) {
+        var
+            result = '',
+            index,
+            chr = '';
+        if (typeof text === "number" || typeof text === "boolean") {
+            text = text.toString();
+        }
+        for (index = 0; index < text.length; index += chr.length) {
+            chr = text.charAt(index);
+            result += rfcCharHelper.isUnreserved(chr) || (passReserved && rfcCharHelper.isReserved(chr)) ? chr : pctEncoder.encodeCharacter(chr);
+        }
+        return result;
+    }
+
+    function encodePassReserved (text) {
+        return encode(text, true);
+    }
+
+    function encodeLiteralCharacter (literal, index) {
+        var chr = pctEncoder.pctCharAt(literal, index);
+        if (chr.length > 1) {
+            return chr;
+        }
+        else {
+            return rfcCharHelper.isReserved(chr) || rfcCharHelper.isUnreserved(chr) ? chr : pctEncoder.encodeCharacter(chr);
+        }
+    }
+
+    function encodeLiteral (literal) {
+        var
+            result = '',
+            index,
+            chr = '';
+        for (index = 0; index < literal.length; index += chr.length) {
+            chr = pctEncoder.pctCharAt(literal, index);
+            if (chr.length > 1) {
+                result += chr;
+            }
+            else {
+                result += rfcCharHelper.isReserved(chr) || rfcCharHelper.isUnreserved(chr) ? chr : pctEncoder.encodeCharacter(chr);
+            }
+        }
+        return result;
+    }
+
+    return {
+        encode: encode,
+        encodePassReserved: encodePassReserved,
+        encodeLiteral: encodeLiteral,
+        encodeLiteralCharacter: encodeLiteralCharacter
+    };
+
+}());
+
+
+// the operators defined by rfc 6570
+var operators = (function () {
+
+    var
+        bySymbol = {};
+
+    function create (symbol) {
+        bySymbol[symbol] = {
+            symbol: symbol,
+            separator: (symbol === '?') ? '&' : (symbol === '' || symbol === '+' || symbol === '#') ? ',' : symbol,
+            named: symbol === ';' || symbol === '&' || symbol === '?',
+            ifEmpty: (symbol === '&' || symbol === '?') ? '=' : '',
+            first: (symbol === '+' ) ? '' : symbol,
+            encode: (symbol === '+' || symbol === '#') ? encodingHelper.encodePassReserved : encodingHelper.encode,
+            toString: function () {
+                return this.symbol;
+            }
+        };
+    }
+
+    create('');
+    create('+');
+    create('#');
+    create('.');
+    create('/');
+    create(';');
+    create('?');
+    create('&');
+    return {
+        valueOf: function (chr) {
+            if (bySymbol[chr]) {
+                return bySymbol[chr];
+            }
+            if ("=,!@|".indexOf(chr) >= 0) {
+                return null;
+            }
+            return bySymbol[''];
+        }
+    };
+}());
+
+
+/**
+ * Detects, whether a given element is defined in the sense of rfc 6570
+ * Section 2.3 of the RFC makes clear defintions:
+ * * undefined and null are not defined.
+ * * the empty string is defined
+ * * an array ("list") is defined, if it is not empty (even if all elements are not defined)
+ * * an object ("map") is defined, if it contains at least one property with defined value
+ * @param object
+ * @return {Boolean}
+ */
+function isDefined (object) {
+    var
+        propertyName;
+    if (object === null || object === undefined) {
+        return false;
+    }
+    if (objectHelper.isArray(object)) {
+        // Section 2.3: A variable defined as a list value is considered undefined if the list contains zero members
+        return object.length > 0;
+    }
+    if (typeof object === "string" || typeof object === "number" || typeof object === "boolean") {
+        // falsy values like empty strings, false or 0 are "defined"
+        return true;
+    }
+    // else Object
+    for (propertyName in object) {
+        if (object.hasOwnProperty(propertyName) && isDefined(object[propertyName])) {
+            return true;
+        }
+    }
+    return false;
+}
+
+var LiteralExpression = (function () {
+    function LiteralExpression (literal) {
+        this.literal = encodingHelper.encodeLiteral(literal);
+    }
+
+    LiteralExpression.prototype.expand = function () {
+        return this.literal;
+    };
+
+    LiteralExpression.prototype.toString = LiteralExpression.prototype.expand;
+
+    return LiteralExpression;
+}());
+
+var parse = (function () {
+
+    function parseExpression (expressionText) {
+        var
+            operator,
+            varspecs = [],
+            varspec = null,
+            varnameStart = null,
+            maxLengthStart = null,
+            index,
+            chr = '';
+
+        function closeVarname () {
+            var varname = expressionText.substring(varnameStart, index);
+            if (varname.length === 0) {
+                throw new UriTemplateError({expressionText: expressionText, message: "a varname must be specified", position: index});
+            }
+            varspec = {varname: varname, exploded: false, maxLength: null};
+            varnameStart = null;
+        }
+
+        function closeMaxLength () {
+            if (maxLengthStart === index) {
+                throw new UriTemplateError({expressionText: expressionText, message: "after a ':' you have to specify the length", position: index});
+            }
+            varspec.maxLength = parseInt(expressionText.substring(maxLengthStart, index), 10);
+            maxLengthStart = null;
+        }
+
+        operator = (function (operatorText) {
+            var op = operators.valueOf(operatorText);
+            if (op === null) {
+                throw new UriTemplateError({expressionText: expressionText, message: "illegal use of reserved operator", position: index, operator: operatorText});
+            }
+            return op;
+        }(expressionText.charAt(0)));
+        index = operator.symbol.length;
+
+        varnameStart = index;
+
+        for (; index < expressionText.length; index += chr.length) {
+            chr = pctEncoder.pctCharAt(expressionText, index);
+
+            if (varnameStart !== null) {
+                // the spec says: varname =  varchar *( ["."] varchar )
+                // so a dot is allowed except for the first char
+                if (chr === '.') {
+                    if (varnameStart === index) {
+                        throw new UriTemplateError({expressionText: expressionText, message: "a varname MUST NOT start with a dot", position: index});
+                    }
+                    continue;
+                }
+                if (rfcCharHelper.isVarchar(chr)) {
+                    continue;
+                }
+                closeVarname();
+            }
+            if (maxLengthStart !== null) {
+                if (index === maxLengthStart && chr === '0') {
+                    throw new UriTemplateError({expressionText: expressionText, message: "A :prefix must not start with digit 0", position: index});
+                }
+                if (charHelper.isDigit(chr)) {
+                    if (index - maxLengthStart >= 4) {
+                        throw new UriTemplateError({expressionText: expressionText, message: "A :prefix must have max 4 digits", position: index});
+                    }
+                    continue;
+                }
+                closeMaxLength();
+            }
+            if (chr === ':') {
+                if (varspec.maxLength !== null) {
+                    throw new UriTemplateError({expressionText: expressionText, message: "only one :maxLength is allowed per varspec", position: index});
+                }
+                if (varspec.exploded) {
+                    throw new UriTemplateError({expressionText: expressionText, message: "an exploeded varspec MUST NOT be varspeced", position: index});
+                }
+                maxLengthStart = index + 1;
+                continue;
+            }
+            if (chr === '*') {
+                if (varspec === null) {
+                    throw new UriTemplateError({expressionText: expressionText, message: "exploded without varspec", position: index});
+                }
+                if (varspec.exploded) {
+                    throw new UriTemplateError({expressionText: expressionText, message: "exploded twice", position: index});
+                }
+                if (varspec.maxLength) {
+                    throw new UriTemplateError({expressionText: expressionText, message: "an explode (*) MUST NOT follow to a prefix", position: index});
+                }
+                varspec.exploded = true;
+                continue;
+            }
+            // the only legal character now is the comma
+            if (chr === ',') {
+                varspecs.push(varspec);
+                varspec = null;
+                varnameStart = index + 1;
+                continue;
+            }
+            throw new UriTemplateError({expressionText: expressionText, message: "illegal character", character: chr, position: index});
+        } // for chr
+        if (varnameStart !== null) {
+            closeVarname();
+        }
+        if (maxLengthStart !== null) {
+            closeMaxLength();
+        }
+        varspecs.push(varspec);
+        return new VariableExpression(expressionText, operator, varspecs);
+    }
+
+    function parse (uriTemplateText) {
+        // assert filled string
+        var
+            index,
+            chr,
+            expressions = [],
+            braceOpenIndex = null,
+            literalStart = 0;
+        for (index = 0; index < uriTemplateText.length; index += 1) {
+            chr = uriTemplateText.charAt(index);
+            if (literalStart !== null) {
+                if (chr === '}') {
+                    throw new UriTemplateError({templateText: uriTemplateText, message: "unopened brace closed", position: index});
+                }
+                if (chr === '{') {
+                    if (literalStart < index) {
+                        expressions.push(new LiteralExpression(uriTemplateText.substring(literalStart, index)));
+                    }
+                    literalStart = null;
+                    braceOpenIndex = index;
+                }
+                continue;
+            }
+
+            if (braceOpenIndex !== null) {
+                // here just { is forbidden
+                if (chr === '{') {
+                    throw new UriTemplateError({templateText: uriTemplateText, message: "brace already opened", position: index});
+                }
+                if (chr === '}') {
+                    if (braceOpenIndex + 1 === index) {
+                        throw new UriTemplateError({templateText: uriTemplateText, message: "empty braces", position: braceOpenIndex});
+                    }
+                    try {
+                        expressions.push(parseExpression(uriTemplateText.substring(braceOpenIndex + 1, index)));
+                    }
+                    catch (error) {
+                        if (error.prototype === UriTemplateError.prototype) {
+                            throw new UriTemplateError({templateText: uriTemplateText, message: error.options.message, position: braceOpenIndex + error.options.position, details: error.options});
+                        }
+                        throw error;
+                    }
+                    braceOpenIndex = null;
+                    literalStart = index + 1;
+                }
+                continue;
+            }
+            throw new Error('reached unreachable code');
+        }
+        if (braceOpenIndex !== null) {
+            throw new UriTemplateError({templateText: uriTemplateText, message: "unclosed brace", position: braceOpenIndex});
+        }
+        if (literalStart < uriTemplateText.length) {
+            expressions.push(new LiteralExpression(uriTemplateText.substr(literalStart)));
+        }
+        return new UriTemplate(uriTemplateText, expressions);
+    }
+
+    return parse;
+}());
+
+var VariableExpression = (function () {
+    // helper function if JSON is not available
+    function prettyPrint (value) {
+        return (JSON && JSON.stringify) ? JSON.stringify(value) : value;
+    }
+
+    function isEmpty (value) {
+        if (!isDefined(value)) {
+            return true;
+        }
+        if (objectHelper.isString(value)) {
+            return value === '';
+        }
+        if (objectHelper.isNumber(value) || objectHelper.isBoolean(value)) {
+            return false;
+        }
+        if (objectHelper.isArray(value)) {
+            return value.length === 0;
+        }
+        for (var propertyName in value) {
+            if (value.hasOwnProperty(propertyName)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function propertyArray (object) {
+        var
+            result = [],
+            propertyName;
+        for (propertyName in object) {
+            if (object.hasOwnProperty(propertyName)) {
+                result.push({name: propertyName, value: object[propertyName]});
+            }
+        }
+        return result;
+    }
+
+    function VariableExpression (templateText, operator, varspecs) {
+        this.templateText = templateText;
+        this.operator = operator;
+        this.varspecs = varspecs;
+    }
+
+    VariableExpression.prototype.toString = function () {
+        return this.templateText;
+    };
+
+    function expandSimpleValue(varspec, operator, value) {
+        var result = '';
+        value = value.toString();
+        if (operator.named) {
+            result += encodingHelper.encodeLiteral(varspec.varname);
+            if (value === '') {
+                result += operator.ifEmpty;
+                return result;
+            }
+            result += '=';
+        }
+        if (varspec.maxLength !== null) {
+            value = value.substr(0, varspec.maxLength);
+        }
+        result += operator.encode(value);
+        return result;
+    }
+
+    function valueDefined (nameValue) {
+        return isDefined(nameValue.value);
+    }
+
+    function expandNotExploded(varspec, operator, value) {
+        var
+            arr = [],
+            result = '';
+        if (operator.named) {
+            result += encodingHelper.encodeLiteral(varspec.varname);
+            if (isEmpty(value)) {
+                result += operator.ifEmpty;
+                return result;
+            }
+            result += '=';
+        }
+        if (objectHelper.isArray(value)) {
+            arr = value;
+            arr = objectHelper.filter(arr, isDefined);
+            arr = objectHelper.map(arr, operator.encode);
+            result += objectHelper.join(arr, ',');
+        }
+        else {
+            arr = propertyArray(value);
+            arr = objectHelper.filter(arr, valueDefined);
+            arr = objectHelper.map(arr, function (nameValue) {
+                return operator.encode(nameValue.name) + ',' + operator.encode(nameValue.value);
+            });
+            result += objectHelper.join(arr, ',');
+        }
+        return result;
+    }
+
+    function expandExplodedNamed (varspec, operator, value) {
+        var
+            isArray = objectHelper.isArray(value),
+            arr = [];
+        if (isArray) {
+            arr = value;
+            arr = objectHelper.filter(arr, isDefined);
+            arr = objectHelper.map(arr, function (listElement) {
+                var tmp = encodingHelper.encodeLiteral(varspec.varname);
+                if (isEmpty(listElement)) {
+                    tmp += operator.ifEmpty;
+                }
+                else {
+                    tmp += '=' + operator.encode(listElement);
+                }
+                return tmp;
+            });
+        }
+        else {
+            arr = propertyArray(value);
+            arr = objectHelper.filter(arr, valueDefined);
+            arr = objectHelper.map(arr, function (nameValue) {
+                var tmp = encodingHelper.encodeLiteral(nameValue.name);
+                if (isEmpty(nameValue.value)) {
+                    tmp += operator.ifEmpty;
+                }
+                else {
+                    tmp += '=' + operator.encode(nameValue.value);
+                }
+                return tmp;
+            });
+        }
+        return objectHelper.join(arr, operator.separator);
+    }
+
+    function expandExplodedUnnamed (operator, value) {
+        var
+            arr = [],
+            result = '';
+        if (objectHelper.isArray(value)) {
+            arr = value;
+            arr = objectHelper.filter(arr, isDefined);
+            arr = objectHelper.map(arr, operator.encode);
+            result += objectHelper.join(arr, operator.separator);
+        }
+        else {
+            arr = propertyArray(value);
+            arr = objectHelper.filter(arr, function (nameValue) {
+                return isDefined(nameValue.value);
+            });
+            arr = objectHelper.map(arr, function (nameValue) {
+                return operator.encode(nameValue.name) + '=' + operator.encode(nameValue.value);
+            });
+            result += objectHelper.join(arr, operator.separator);
+        }
+        return result;
+    }
+
+
+    VariableExpression.prototype.expand = function (variables) {
+        var
+            expanded = [],
+            index,
+            varspec,
+            value,
+            valueIsArr,
+            oneExploded = false,
+            operator = this.operator;
+
+        // expand each varspec and join with operator's separator
+        for (index = 0; index < this.varspecs.length; index += 1) {
+            varspec = this.varspecs[index];
+            value = variables[varspec.varname];
+            // if (!isDefined(value)) {
+            // if (variables.hasOwnProperty(varspec.name)) {
+            if (value === null || value === undefined) {
+                continue;
+            }
+            if (varspec.exploded) {
+                oneExploded = true;
+            }
+            valueIsArr = objectHelper.isArray(value);
+            if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+                expanded.push(expandSimpleValue(varspec, operator, value));
+            }
+            else if (varspec.maxLength && isDefined(value)) {
+                // 2.4.1 of the spec says: "Prefix modifiers are not applicable to variables that have composite values."
+                throw new Error('Prefix modifiers are not applicable to variables that have composite values. You tried to expand ' + this + " with " + prettyPrint(value));
+            }
+            else if (!varspec.exploded) {
+                if (operator.named || !isEmpty(value)) {
+                    expanded.push(expandNotExploded(varspec, operator, value));
+                }
+            }
+            else if (isDefined(value)) {
+                if (operator.named) {
+                    expanded.push(expandExplodedNamed(varspec, operator, value));
+                }
+                else {
+                    expanded.push(expandExplodedUnnamed(operator, value));
+                }
+            }
+        }
+
+        if (expanded.length === 0) {
+            return "";
+        }
+        else {
+            return operator.first + objectHelper.join(expanded, operator.separator);
+        }
+    };
+
+    return VariableExpression;
+}());
+
+var UriTemplate = (function () {
+    function UriTemplate (templateText, expressions) {
+        this.templateText = templateText;
+        this.expressions = expressions;
+        objectHelper.deepFreeze(this);
+    }
+
+    UriTemplate.prototype.toString = function () {
+        return this.templateText;
+    };
+
+    UriTemplate.prototype.expand = function (variables) {
+        // this.expressions.map(function (expression) {return expression.expand(variables);}).join('');
+        var
+            index,
+            result = '';
+        for (index = 0; index < this.expressions.length; index += 1) {
+            result += this.expressions[index].expand(variables);
+        }
+        return result;
+    };
+
+    UriTemplate.parse = parse;
+    UriTemplate.UriTemplateError = UriTemplateError;
+    return UriTemplate;
+}());
+
+    exportCallback(UriTemplate);
+
+>>>>>>> Built new sdk js.
 }(function (UriTemplate) {
         "use strict";
         // export UriTemplate, when module is present, or pass it to window or global
