@@ -57064,11 +57064,21 @@ var UserProfileAvatarRoute = (function (_super) {
     function UserProfileAvatarRoute(appOptions, userProfileAvatarStreamsRoute) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+<<<<<<< HEAD
         _this.userProfileAvatarStreamsRoute = userProfileAvatarStreamsRoute;
         _this.getRoute = 'profiles/{id}/avatars/{?embed,fields}';
         _this.updateRoute = 'profiles/{id}/avatars';
         _this.linkRoute = 'profiles/{id}/avatars/link';
         _this.unlinkRoute = 'profiles/{id}/avatars/unlink';
+=======
+        _this.channelBatchRoute = channelBatchRoute;
+        _this.findRoute = 'message-center/channels/{?searchQuery,page,rpp,sort,embed,fields,ids,memberIds}';
+        _this.createRoute = 'message-center/channels';
+        _this.getRoute = 'message-center/channels/{id}/{?embed,fields}';
+        _this.updateRoute = 'message-center/channels/{id}';
+        _this.deleteRoute = 'message-center/channels/{id}';
+        _this.purgeRoute = 'message-center/channels/purge';
+>>>>>>> change in find routes
         return _this;
     }
     Object.defineProperty(UserProfileAvatarRoute.prototype, "streams", {
@@ -58808,7 +58818,7 @@ var MediaVaultRoute = (function (_super) {
         _this.deleteRoute = 'media-vaults/{id}/{?height,width}';
 =======
         _this.memberBatchRoute = memberBatchRoute;
-        _this.findRoute = 'message-center/members/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.findRoute = 'message-center/members/{?searchQuery,page,rpp,sort,embed,fields,ids,channelIds,userIds}';
         _this.createRoute = 'message-center/members';
         _this.getRoute = 'message-center/members/{id}/{?embed,fields}';
         _this.updateRoute = 'message-center/members/{id}';
@@ -59729,12 +59739,22 @@ var ValueSetRoute = (function (_super) {
     function ValueSetRoute(appOptions, valueSetItemRoute) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+<<<<<<< HEAD
         _this.valueSetItemRoute = valueSetItemRoute;
         _this.findRoute = 'value-sets/{?searchQuery,page,rpp,sort,embed,fields}';
         _this.getRoute = 'value-sets/{setName}/{?embed,fields}';
         _this.createRoute = 'value-sets';
         _this.updateRoute = 'value-sets/{id}';
         _this.deleteRoute = 'value-sets/{id}';
+=======
+        _this.messageBatchRoute = messageBatchRoute;
+        _this.findRoute = 'message-center/messages/{?searchQuery,page,rpp,sort,embed,fields,ids,channelIds}';
+        _this.createRoute = 'message-center/messages';
+        _this.getRoute = 'message-center/messages/{id}/{?embed,fields}';
+        _this.updateRoute = 'message-center/messages/{id}';
+        _this.deleteRoute = 'message-center/messages/{id}';
+        _this.purgeRoute = 'message-center/messages/purge';
+>>>>>>> change in find routes
         return _this;
     }
     Object.defineProperty(ValueSetRoute.prototype, "items", {
