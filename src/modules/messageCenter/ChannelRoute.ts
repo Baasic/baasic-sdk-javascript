@@ -7,7 +7,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common'; 
 import { IGetRequestOptions, IOptions } from '../../common/contracts';
 import { ChannelBatchRoute, TYPES as channelTypes } from './';
-import { IChannel } from './contracts'; 
+import { IChannel, IChannelOptions } from './contracts'; 
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts'; 
 
 export class ChannelRoute extends BaseRoute {
@@ -35,17 +35,17 @@ export class ChannelRoute extends BaseRoute {
 
 
     /**                 
-     * Parses find route which can be expanded with additional options. Supported items are:                 
+     * Parses find route which can be expanded with additional ChannelOptions. Supported items are:                 
      * - `searchQuery` - A string referencing channel properties using the phrase or BQL (Baasic Query Language) search.                 
      * - `page` - A value used to set the page number, i.e. to retrieve certain channel subset from the storage.                 
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the channel property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
-     * @param options Query resource options object.       
+     * @param options Query resource ChannelOptions object.       
      * @example channelRoute.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(options?: IOptions): any {
+    find(options?: IChannelOptions): any {
         return super.baseFind(this.findRoute, options);
     }
 

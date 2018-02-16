@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { MessageBatchClient, MessageRoute, TYPES as channelTypes } from './';
-import { IMessage } from './contracts'; 
+import { IMessage, IMessageOptions } from './contracts'; 
 
 @injectable()
 export class MessageClient {
@@ -30,14 +30,16 @@ export class MessageClient {
     /**                  
     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of message resources matching the given criteria.                  
     * @method
-    * @param options Query resource options object. 
+    * @param options Query resource MessageOptions object. 
     * @returns A promise that is resolved once the find action has been performed.                      
     * @example messageClient.find({   
                    pageNumber : 1,   
                    pageSize : 10,   
                    orderBy : '<field>',   
                    orderDirection : '<asc|desc>',   
-                   search : '<search-phrase>' 
+                   search : '<search-phrase>', 
+                   ids : '<identifiers>', 
+                   channelIds: '<channel_identifiers>' 
                 })
                .then(function (collection) {   
                    // perform success action here 
@@ -46,7 +48,7 @@ export class MessageClient {
                     // perform error handling here 
                 });                    
     **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMessage>>> {
+    find(options?: IMessageOptions): PromiseLike<IHttpResponse<IQueryModel<IMessage>>> {
         return this.apiClient.get<IQueryModel<IMessage>>(this.routeDefinition.find(options));
     }
 
@@ -75,7 +77,7 @@ export class MessageClient {
     * @returns A promise that is resolved once the create message action has been performed.                          
     * @example messageClient.create({   
                     channelId: '<channelId>', 
-                    message?: '<message>'
+                    messageContent?: '<message>'
                 })
                 .then(function (data) {   
                     // perform success action here 
@@ -98,7 +100,7 @@ export class MessageClient {
     * @param data An message object used to update specified message resource.
     * @returns A promise that is resolved once the update message action has been performed.                         
     * @example // message is a resource previously fetched using get action. 
-                    message.message = '<message>'; 
+                    message.messageContent = '<message>'; 
                     messageClient.update(message)
                         .then(function (data) {   
                             // perform success action here 
