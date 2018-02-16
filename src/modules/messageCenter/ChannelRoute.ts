@@ -12,7 +12,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 export class ChannelRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'message-center/channels/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'message-center/channels/{?searchQuery,page,rpp,sort,embed,fields,ids,memberIds}';
 
     public readonly createRoute: string ='message-center/channels'; 
 
