@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common'; 
 import { IGetRequestOptions, IOptions } from '../../common/contracts';
 import { MessageBatchRoute, TYPES as channelTypes } from './';
-import { IMessage } from './contracts'; 
+import { IMessage, IMessageOptions } from './contracts'; 
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts'; 
 
 export class MessageRoute extends BaseRoute {
@@ -35,17 +35,17 @@ export class MessageRoute extends BaseRoute {
     ) { super(appOptions); }
 
     /**                 
-     * Parses find route which can be expanded with additional options. Supported items are:                 
+     * Parses find route which can be expanded with additional MessageOptions. Supported items are:                 
      * - `searchQuery` - A string referencing message properties using the phrase or BQL (Baasic Query Language) search.                 
      * - `page` - A value used to set the page number, i.e. to retrieve certain message subset from the storage.                 
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the message property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
-     * @param options Query resource options object.       
+     * @param options Query resource MessageOptions object.       
      * @example messageRoute.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(options?: IOptions): any {
+    find(options?: IMessageOptions): any {
         return super.baseFind(this.findRoute, options);
     }
 

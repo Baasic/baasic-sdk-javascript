@@ -45,7 +45,7 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<MemberRoute>(TYPES.MemberRoute).to(MemberRoute);
     bind<MemberClient>(TYPES.MemberClient).to(MemberClient);
     bind<MessageBatchRoute>(TYPES.MessageBatchRoute).to(MessageBatchRoute);
-    bind<MessageBatchClient>(TYPES.MemberBatchClient).to(MessageBatchClient);
+    bind<MessageBatchClient>(TYPES.MessageBatchClient).to(MessageBatchClient);
     bind<MessageRoute>(TYPES.MessageRoute).to(MessageRoute);
     bind<MessageClient>(TYPES.MessageClient).to(MessageClient);
     bind<Root>(TYPES.Root).to(Root);
