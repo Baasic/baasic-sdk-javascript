@@ -13,7 +13,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 export class MemberRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'message-center/members/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'message-center/members/{?searchQuery,page,rpp,sort,embed,fields,ids,channelIds,userIds}';
 
     public readonly createRoute: string = 'message-center/members';
 
