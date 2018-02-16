@@ -655,6 +655,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 __export(__webpack_require__(527));
 __export(__webpack_require__(530));
 __export(__webpack_require__(529));
@@ -679,6 +680,8 @@ __export(__webpack_require__(548));
 __export(__webpack_require__(555));
 __export(__webpack_require__(554));
 __export(__webpack_require__(551));
+=======
+>>>>>>> add find options for channel, message and member
 __export(__webpack_require__(550));
 __export(__webpack_require__(545));
 __export(__webpack_require__(544));
@@ -695,6 +698,7 @@ __export(__webpack_require__(549));
 __export(__webpack_require__(552));
 __export(__webpack_require__(551));
 __export(__webpack_require__(554));
+<<<<<<< HEAD
 __export(__webpack_require__(553));
 __export(__webpack_require__(558));
 __export(__webpack_require__(557));
@@ -718,6 +722,33 @@ __export(__webpack_require__(561));
 __export(__webpack_require__(546));
 __export(__webpack_require__(544));
 >>>>>>> minor code changes
+=======
+__export(__webpack_require__(557));
+__export(__webpack_require__(556));
+__export(__webpack_require__(559));
+__export(__webpack_require__(558));
+__export(__webpack_require__(563));
+__export(__webpack_require__(562));
+__export(__webpack_require__(565));
+__export(__webpack_require__(564));
+__export(__webpack_require__(561));
+__export(__webpack_require__(560));
+__export(__webpack_require__(576));
+__export(__webpack_require__(575));
+__export(__webpack_require__(570));
+__export(__webpack_require__(569));
+__export(__webpack_require__(572));
+__export(__webpack_require__(571));
+__export(__webpack_require__(578));
+__export(__webpack_require__(577));
+__export(__webpack_require__(574));
+__export(__webpack_require__(573));
+__export(__webpack_require__(568));
+__export(__webpack_require__(567));
+__export(__webpack_require__(566));
+__export(__webpack_require__(551));
+__export(__webpack_require__(549));
+>>>>>>> add find options for channel, message and member
 
 
 /***/ }),
@@ -764,6 +795,7 @@ __export(__webpack_require__(583));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 __export(__webpack_require__(597));
 =======
@@ -826,6 +858,37 @@ __export(__webpack_require__(620));
 __export(__webpack_require__(603));
 __export(__webpack_require__(597));
 >>>>>>> minor code changes
+=======
+__export(__webpack_require__(620));
+__export(__webpack_require__(604));
+__export(__webpack_require__(603));
+__export(__webpack_require__(606));
+__export(__webpack_require__(605));
+__export(__webpack_require__(622));
+__export(__webpack_require__(621));
+__export(__webpack_require__(624));
+__export(__webpack_require__(623));
+__export(__webpack_require__(627));
+__export(__webpack_require__(626));
+__export(__webpack_require__(629));
+__export(__webpack_require__(628));
+__export(__webpack_require__(631));
+__export(__webpack_require__(630));
+__export(__webpack_require__(637));
+__export(__webpack_require__(636));
+__export(__webpack_require__(635));
+__export(__webpack_require__(634));
+__export(__webpack_require__(633));
+__export(__webpack_require__(632));
+__export(__webpack_require__(639));
+__export(__webpack_require__(638));
+__export(__webpack_require__(641));
+__export(__webpack_require__(640));
+__export(__webpack_require__(643));
+__export(__webpack_require__(642));
+__export(__webpack_require__(625));
+__export(__webpack_require__(619));
+>>>>>>> add find options for channel, message and member
 
 
 /***/ }),
@@ -1008,6 +1071,12 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+__export(__webpack_require__(522));
+__export(__webpack_require__(503));
+__export(__webpack_require__(502));
+>>>>>>> add find options for channel, message and member
 __export(__webpack_require__(505));
 __export(__webpack_require__(511));
 =======
@@ -1025,6 +1094,7 @@ __export(__webpack_require__(510));
 __export(__webpack_require__(513));
 __export(__webpack_require__(512));
 <<<<<<< HEAD
+<<<<<<< HEAD
 __export(__webpack_require__(509));
 __export(__webpack_require__(508));
 __export(__webpack_require__(519));
@@ -1033,6 +1103,9 @@ __export(__webpack_require__(507));
 __export(__webpack_require__(506));
 __export(__webpack_require__(515));
 __export(__webpack_require__(514));
+=======
+__export(__webpack_require__(523));
+>>>>>>> add find options for channel, message and member
 __export(__webpack_require__(517));
 __export(__webpack_require__(516));
 __export(__webpack_require__(504));
@@ -1053,6 +1126,7 @@ __export(__webpack_require__(516));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(523));
 __export(__webpack_require__(529));
 __export(__webpack_require__(528));
@@ -1064,11 +1138,29 @@ __export(__webpack_require__(537));
 __export(__webpack_require__(536));
 __export(__webpack_require__(525));
 __export(__webpack_require__(524));
+=======
+__export(__webpack_require__(528));
+__export(__webpack_require__(534));
+>>>>>>> add find options for channel, message and member
 __export(__webpack_require__(533));
 __export(__webpack_require__(532));
 __export(__webpack_require__(535));
+<<<<<<< HEAD
 __export(__webpack_require__(534));
 __export(__webpack_require__(522));
+=======
+__export(__webpack_require__(532));
+__export(__webpack_require__(531));
+__export(__webpack_require__(542));
+__export(__webpack_require__(541));
+__export(__webpack_require__(530));
+__export(__webpack_require__(529));
+__export(__webpack_require__(538));
+__export(__webpack_require__(537));
+__export(__webpack_require__(540));
+__export(__webpack_require__(539));
+__export(__webpack_require__(527));
+>>>>>>> add find options for channel, message and member
 
 
 /***/ }),
@@ -1350,6 +1442,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 __export(__webpack_require__(571));
 __export(__webpack_require__(559));
 __export(__webpack_require__(561));
@@ -1359,6 +1452,17 @@ __export(__webpack_require__(560));
 __export(__webpack_require__(556));
 __export(__webpack_require__(570));
 __export(__webpack_require__(572));
+=======
+__export(__webpack_require__(594));
+__export(__webpack_require__(582));
+__export(__webpack_require__(584));
+__export(__webpack_require__(580));
+__export(__webpack_require__(581));
+__export(__webpack_require__(583));
+__export(__webpack_require__(579));
+__export(__webpack_require__(593));
+__export(__webpack_require__(595));
+>>>>>>> add find options for channel, message and member
 
 
 /***/ }),
@@ -1527,6 +1631,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 __export(__webpack_require__(575));
 __export(__webpack_require__(577));
 __export(__webpack_require__(576));
@@ -1542,6 +1647,14 @@ __export(__webpack_require__(580));
 __export(__webpack_require__(579));
 __export(__webpack_require__(575));
 >>>>>>> minor code changes
+=======
+__export(__webpack_require__(598));
+__export(__webpack_require__(600));
+__export(__webpack_require__(599));
+__export(__webpack_require__(602));
+__export(__webpack_require__(601));
+__export(__webpack_require__(597));
+>>>>>>> add find options for channel, message and member
 
 
 /***/ }),
@@ -1566,6 +1679,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 __export(__webpack_require__(624));
 __export(__webpack_require__(627));
 __export(__webpack_require__(626));
@@ -1581,6 +1695,14 @@ __export(__webpack_require__(629));
 __export(__webpack_require__(626));
 __export(__webpack_require__(624));
 >>>>>>> minor code changes
+=======
+__export(__webpack_require__(647));
+__export(__webpack_require__(650));
+__export(__webpack_require__(649));
+__export(__webpack_require__(651));
+__export(__webpack_require__(648));
+__export(__webpack_require__(646));
+>>>>>>> add find options for channel, message and member
 
 
 /***/ }),
@@ -5209,10 +5331,14 @@ var _a;
 
 var tslib_1 = __webpack_require__(1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 var uritemplate = __webpack_require__(629);
 =======
 var uritemplate = __webpack_require__(630);
 >>>>>>> minor code changes
+=======
+var uritemplate = __webpack_require__(652);
+>>>>>>> add find options for channel, message and member
 var _1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var inversify_1 = __webpack_require__(0);
@@ -55350,6 +55476,7 @@ var MediaVaultBatchClient = (function () {
         configurable: true
     });
     /**
+<<<<<<< HEAD
      * Returns a promise that is resolved once the create organization action has been performed; this action creates new organization resources.
      * @method
      * @param data A collection of organization objects that need to be inserted into the system.
@@ -55368,6 +55495,30 @@ var MediaVaultBatchClient = (function () {
      **/
     OrganizationBatchClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+=======
+    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of channel resources matching the given criteria.
+    * @method
+    * @param options Query resource ChannelOptions object.
+    * @returns A promise that is resolved once the find action has been performed.
+    * @example channelClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>',
+                   ids : '<identifiers>',
+                   memberIds : '<member_identifiers>'
+                })
+               .then(function (collection) {
+                   // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    **/
+    ChannelClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+>>>>>>> add find options for channel, message and member
     };
     /**
      * Returns a promise that is resolved once the update organization action has been performed; this action updates specified organization resources.
@@ -56928,11 +57079,23 @@ var UserProfileAvatarRoute = (function (_super) {
         configurable: true
     });
     /**
+<<<<<<< HEAD
      * Parses get route; this route should be expanded with the Id of the profile.
      * @method
      * @param id User Profile id which uniquely identifies user avatar resource that needs to be retrieved.
      * @param options Query resource options object.
      * @example userProfileAvatarRoute.get({id: '<file-id>'});
+=======
+     * Parses find route which can be expanded with additional ChannelOptions. Supported items are:
+     * - `searchQuery` - A string referencing channel properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain channel subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the channel property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource ChannelOptions object.
+     * @example channelRoute.find({searchQuery: '<search-phrase>'});
+>>>>>>> add find options for channel, message and member
      **/
     UserProfileAvatarRoute.prototype.get = function (id, options) {
         return _super.prototype.baseGet.call(this, this.getRoute, id, options);
@@ -58030,6 +58193,7 @@ var MediaVaultProcessingProviderSettingsClient = (function () {
         configurable: true
     });
     /**
+<<<<<<< HEAD
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of media vault processing providers matching the given criteria.
      * @method
      * @param options Query resource options object.
@@ -58040,6 +58204,21 @@ var MediaVaultProcessingProviderSettingsClient = (function () {
                     orderBy : '<field>',
                     orderDirection : '<asc|desc>',
                     search : '<search-phrase>'
+=======
+    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of member resources matching the given criteria.
+    * @method
+    * @param options Query resource MemberOptions object.
+    * @returns A promise that is resolved once the find action has been performed.
+    * @example memberClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>',
+                   ids : '<identifiers>',
+                   channelIds : '<channel_identifiers>',
+                   userIds: '<user_identifiers>'
+>>>>>>> add find options for channel, message and member
                 })
                 .then(function (collection) {
                     // perform success action here
@@ -58064,11 +58243,35 @@ var MediaVaultProcessingProviderSettingsClient = (function () {
                      function (response, status, headers, config) {
                          // perform error handling here
                     });
+<<<<<<< HEAD
+=======
+    **/
+    MemberClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create member action has been performed; this action creates a new member resource.
+     * @method
+     * @param data An member object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create member action has been performed.
+     * @example memberClient.create({
+                    channelId: '<channelId>',
+                    hasHistoryAccess?: '<hasHistoryAccess>',
+                    userId: '<userId>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+>>>>>>> add find options for channel, message and member
      **/
     MediaVaultProcessingProviderSettingsClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.mediaVaultProcessingProviderSettingsRoute.get(id, options));
     };
     /**
+<<<<<<< HEAD
      * Returns a promise that is resolved once the update action has been performed; this action updates a media vault processing provider setting resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaVaultProcessingProviderSettingsRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
      * let params = modelMapper.updateParams(processingProviderSetting);
@@ -58080,6 +58283,19 @@ var MediaVaultProcessingProviderSettingsClient = (function () {
      * @example // processingProviderSettings is a resource previously fetched using get action.
                     processingProviderSettings.settings.faceDetection = true;
                     mediaVaultProcessingProviderSettingsClient.update(processingProviderSetting)
+=======
+    * Returns a promise that is resolved once the update member action has been performed; this action updates an member resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `memberRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(member);
+    * let uri = params['model'].links('put').href;
+    * ```
+    * @method
+    * @param data An member object used to update specified member resource.
+    * @returns A promise that is resolved once the update member action has been performed.
+    * @example // member is a resource previously fetched using get action.
+                    member.hasHistoryAccess = '<hashistoryAccess>';
+                    memberClient.update(member)
+>>>>>>> add find options for channel, message and member
                         .then(function (data) {
                             // perform success action here
                         },
@@ -58090,7 +58306,91 @@ var MediaVaultProcessingProviderSettingsClient = (function () {
     MediaVaultProcessingProviderSettingsClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
+<<<<<<< HEAD
     return MediaVaultProcessingProviderSettingsClient;
+=======
+    /**
+    * Returns a promise that is resolved once the join member action has been performed; this action join an member resource to specified channel. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `memberRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(member);
+    * let uri = params['model'].links('put').href;
+    * ```
+    * @method
+    * @param data An member object used to join specified member resource to channel.
+    * @returns A promise that is resolved once the join member action has been performed.
+    * @example // member is a resource previously fetched using get action or new member object
+                    member.UserId = '<userId>';
+                    member.ChannelId = '<channelId>';
+                    memberClient.join(member)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+    **/
+    MemberClient.prototype.join = function (data) {
+        return this.apiClient.put(this.routeDefinition.join(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+* Returns a promise that is resolved once the leave member action has been performed; this action removes an member resource from specified channel. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `memberRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+* ```
+* let params = modelMapper.removeParams(member);
+* let uri = params['model'].links('put').href;
+* ```
+* @method
+* @param data An member object used to leave specified member resource to channel.
+* @returns A promise that is resolved once the leave member action has been performed.
+* @example // member is a resource previously fetched using get action.
+                memberClient.leave(member)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+**/
+    MemberClient.prototype.leave = function (data) {
+        return this.apiClient.put(this.routeDefinition.leave(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+    * Returns a promise that is resolved once the remove action has been performed. This action will remove an member resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `memberRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(member);
+    * let uri = params['model'].links('delete').href;
+    * ```
+    * @method
+    * @param data An member object used to delete specified member resource.
+    * @returns A promise that is resolved once the remove action has been performed.
+    * @example // member is a resource previously fetched using get action.
+                       memberClient.remove(member)
+                           .then(function (data) {
+                               // perform success action here
+                           },
+                            function (response, status, headers, config) {
+                                // perform error handling here
+                           });
+    **/
+    MemberClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+    * Returns a promise that is resolved once the purge action has been performed. This action will remove all Channel resources from the system if succesfully completed.
+    * @method
+    * @returns A promise that is resolved once the purge action has been performed.
+    * @example memberClient.purge()
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+    **/
+    MemberClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    return MemberClient;
+>>>>>>> add find options for channel, message and member
 }());
 MediaVaultProcessingProviderSettingsClient = tslib_1.__decorate([
     inversify_1.injectable(),
@@ -58497,6 +58797,7 @@ var MediaVaultRoute = (function (_super) {
     function MediaVaultRoute(appOptions, mediaVaultStreamsRoute, mediaVaultBatchRoute, mediaVaultSettingsRoute, mediaVaultProcessingProviderSettingsRoute) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+<<<<<<< HEAD
         _this.mediaVaultStreamsRoute = mediaVaultStreamsRoute;
         _this.mediaVaultBatchRoute = mediaVaultBatchRoute;
         _this.mediaVaultSettingsRoute = mediaVaultSettingsRoute;
@@ -58505,6 +58806,17 @@ var MediaVaultRoute = (function (_super) {
         _this.getRoute = 'media-vaults/{id}/{?embed,fields}';
         _this.updateRoute = 'media-vaults/{id}';
         _this.deleteRoute = 'media-vaults/{id}/{?height,width}';
+=======
+        _this.memberBatchRoute = memberBatchRoute;
+        _this.findRoute = 'message-center/members/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.createRoute = 'message-center/members';
+        _this.getRoute = 'message-center/members/{id}/{?embed,fields}';
+        _this.updateRoute = 'message-center/members/{id}';
+        _this.deleteRoute = 'message-center/members/{id}';
+        _this.purgeRoute = 'message-center/members/purge';
+        _this.joinRoute = 'message-center/join/{channelId}';
+        _this.leaveRoute = 'message-center/leave/{channelId}';
+>>>>>>> add find options for channel, message and member
         return _this;
     }
     Object.defineProperty(MediaVaultRoute.prototype, "streams", {
@@ -58536,15 +58848,26 @@ var MediaVaultRoute = (function (_super) {
         configurable: true
     });
     /**
+<<<<<<< HEAD
      * Parses find route which can be expanded with additional options. Supported items are:
      * - `searchQuery` - A string referencing media vault properties using the phrase search.
      * - `page` - A value used to set the page number, i.e. to retrieve certain media vault subset from the storage.
+=======
+     * Parses find route which can be expanded with additional MemberOptions. Supported items are:
+     * - `searchQuery` - A string referencing member properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain member subset from the storage.
+>>>>>>> add find options for channel, message and member
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the media vault property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method
+<<<<<<< HEAD
      * @param options Query resource options object.
      * @example mediaVaultRoute.find({searchQuery: '<search-phrase>'});
+=======
+     * @param options Query resource MemberOptions object.
+     * @example memberRoute.find({searchQuery: '<search-phrase>'});
+>>>>>>> add find options for channel, message and member
      **/
     MediaVaultRoute.prototype.find = function (options) {
         return _super.prototype.baseFind.call(this, this.findRoute, options);
@@ -58569,6 +58892,7 @@ var MediaVaultRoute = (function (_super) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
     };
     /**
+<<<<<<< HEAD
      * Parses delete route; this route should be expanded with the Id of media vault resource.
      * @method
      * @param data Media vault object used to update specific Media vault resource in the system.
@@ -58649,6 +58973,15 @@ var MediaVaultSettingsClient = (function () {
      **/
     MediaVaultSettingsClient.prototype.get = function () {
         return this.apiClient.get(this.routeDefinition.get());
+=======
+     * Parses delete route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Member object used to delete specified Member resource.
+     * @example memberRoute.delete(data);
+     */
+    MemberRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+>>>>>>> add find options for channel, message and member
     };
     /**
      * Returns a promise that is resolved once the update action has been performed; this action updates the media vault settings resource.
@@ -58666,6 +58999,7 @@ var MediaVaultSettingsClient = (function () {
     MediaVaultSettingsClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
     };
+<<<<<<< HEAD
     return MediaVaultSettingsClient;
 }());
 MediaVaultSettingsClient = tslib_1.__decorate([
@@ -58675,6 +59009,34 @@ MediaVaultSettingsClient = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaVaultSettingsRoute !== "undefined" && _1.MediaVaultSettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
 ], MediaVaultSettingsClient);
 exports.MediaVaultSettingsClient = MediaVaultSettingsClient;
+=======
+    /**
+     * Parses join route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Member object used to join specified Member resource to Channel.
+     * @example memberRoute.join(data);
+     */
+    MemberRoute.prototype.join = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.joinRoute, data);
+    };
+    /**
+     * Parses leave route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Member object used to remove specified Member resource from Channel.
+     * @example memberRoute.leave(data);
+     */
+    MemberRoute.prototype.leave = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.leaveRoute, data);
+    };
+    return MemberRoute;
+}(common_1.BaseRoute));
+MemberRoute = tslib_1.__decorate([
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MemberBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MemberBatchRoute !== "undefined" && _1.MemberBatchRoute) === "function" && _b || Object])
+], MemberRoute);
+exports.MemberRoute = MemberRoute;
+>>>>>>> add find options for channel, message and member
 var _a, _b;
 /**
  * @overview
@@ -58762,6 +59124,7 @@ var MediaVaultStreamsClient = (function () {
         configurable: true
     });
     /**
+<<<<<<< HEAD
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set resources matching given criteria.
      * @param options query resource options object
      * @returns A promise that is resolved once the find action has beend performed.
@@ -58774,6 +59137,17 @@ var MediaVaultStreamsClient = (function () {
                     search : '<search-phrase>'
                 })
                 .then(function (collection) {
+=======
+    * Returns a promise that is resolved once the create message action has been performed; this action creates new message resources.
+    * @method
+    * @param data A collection of message objects that need to be inserted into the system.
+    * @returns A promise that is resolved once the create message action has been performed.
+    * @example  messageBatchClient.create([{
+                   channelId: '<channelId>',
+                   messageContent?: '<message>'
+                }])
+                .then(function (data) {
+>>>>>>> add find options for channel, message and member
                     // perform success action here
                 },
                  function (response, status, headers, config) {
@@ -58916,6 +59290,7 @@ var ValueSetItemClient = (function () {
         configurable: true
     });
     /**
+<<<<<<< HEAD
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of value set item resources matching given criteria.
      * @param options Query resource options object.
      * @returns A promise that is resolved once the find action has been performed.
@@ -58929,6 +59304,23 @@ var ValueSetItemClient = (function () {
                     search : '<search-phrase>' })
                 .then(function (collection) {
                     // perform success action here
+=======
+    * Returns a promise that is resolved once the find action has been performed. Success response returns a list of message resources matching the given criteria.
+    * @method
+    * @param options Query resource MessageOptions object.
+    * @returns A promise that is resolved once the find action has been performed.
+    * @example messageClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>',
+                   ids : '<identifiers>',
+                   channelIds: '<channel_identifiers>'
+                })
+               .then(function (collection) {
+                   // perform success action here
+>>>>>>> add find options for channel, message and member
                 },
                  function (response, status, headers, config) {
                     // perform error handling here
@@ -58956,6 +59348,7 @@ var ValueSetItemClient = (function () {
         return this.apiClient.get(this.valueSetItemRoute.get(setName, id, options));
     };
     /**
+<<<<<<< HEAD
      * Returns a promise that is resolved once the create value set item action has been performed; this action creates a new value set item resource.
      * @method
      * @param data A value set item object that needs to be inserted into the system.
@@ -58963,6 +59356,15 @@ var ValueSetItemClient = (function () {
      * @example valueSetItemClient.create({
                     setId: '<value-set-id>',
                     value: '<value>'
+=======
+    * Returns a promise that is resolved once the create message action has been performed; this action creates a new message resource.
+    * @method
+    * @param data An message object that needs to be inserted into the system.
+    * @returns A promise that is resolved once the create message action has been performed.
+    * @example messageClient.create({
+                    channelId: '<channelId>',
+                    messageContent?: '<message>'
+>>>>>>> add find options for channel, message and member
                 })
                 .then(function (data) {
                     // perform success action here
@@ -58975,6 +59377,7 @@ var ValueSetItemClient = (function () {
         return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
     /**
+<<<<<<< HEAD
      * Returns a promise that is resolved once the update value set item action has been performed; this action updates a value set item resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `valueSetClient` route template. Here is an example of how a route can be obtained from HAL enabled objects:
      * ```
      * let params = modelMapper.removeParams(valueSetItem);
@@ -58994,6 +59397,27 @@ var ValueSetItemClient = (function () {
                     });
      **/
     ValueSetItemClient.prototype.update = function (data) {
+=======
+    * Returns a promise that is resolved once the update message action has been performed; this action updates an message resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `messageRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+    * ```
+    * let params = modelMapper.removeParams(message);
+    * let uri = params['model'].links('put').href;
+    * ```
+    * @method
+    * @param data An message object used to update specified message resource.
+    * @returns A promise that is resolved once the update message action has been performed.
+    * @example // message is a resource previously fetched using get action.
+                    message.messageContent = '<message>';
+                    messageClient.update(message)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+    **/
+    MessageClient.prototype.update = function (data) {
+>>>>>>> add find options for channel, message and member
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
     /**
@@ -59321,15 +59745,26 @@ var ValueSetRoute = (function (_super) {
         configurable: true
     });
     /**
+<<<<<<< HEAD
      * Parses find value set route which can be expanded with additional options. Supported items are:
      * - `searchQuery` - A string value used to identify value set resources using the phrase search.
      * - `page` - A value used to set the page number, i.e. to retrieve certain value set subset from the storage.
+=======
+     * Parses find route which can be expanded with additional MessageOptions. Supported items are:
+     * - `searchQuery` - A string referencing message properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain message subset from the storage.
+>>>>>>> add find options for channel, message and member
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the value set property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * @method
+<<<<<<< HEAD
      * @param options Query resource options object.
      * @example valueSetRoute.find(options);
+=======
+     * @param options Query resource MessageOptions object.
+     * @example messageRoute.find({searchQuery: '<search-phrase>'});
+>>>>>>> add find options for channel, message and member
      **/
     ValueSetRoute.prototype.find = function (options) {
         return _super.prototype.baseFind.call(this, this.findRoute, options);
@@ -59407,11 +59842,18 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(453));
 __export(__webpack_require__(452));
 __export(__webpack_require__(454));
 __export(__webpack_require__(455));
 >>>>>>> minor code changes
+=======
+__export(__webpack_require__(515));
+__export(__webpack_require__(516));
+__export(__webpack_require__(514));
+__export(__webpack_require__(521));
+>>>>>>> add find options for channel, message and member
 
 /*
  UriTemplate Copyright (c) 2012-2013 Franz Antesberger. All Rights Reserved.
@@ -59426,6 +59868,44 @@ var UriTemplateError = (function () {
 =======
 /***/ }),
 /* 457 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 519 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 520 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 521 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(518));
+__export(__webpack_require__(519));
+__export(__webpack_require__(520));
+
+
+/***/ }),
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59447,6 +59927,7 @@ var TYPES = {
 };
 exports.TYPES = TYPES;
 var diModule = new inversify_1.ContainerModule(function (bind) {
+<<<<<<< HEAD
     bind(TYPES.MediaVaultStreamsRoute).to(_1.MediaVaultStreamsRoute);
     bind(TYPES.MediaVaultStreamsClient).to(_1.MediaVaultStreamsClient);
     bind(TYPES.MediaVaultBatchRoute).to(_1.MediaVaultBatchRoute);
@@ -59457,6 +59938,21 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.MediaVaultProcessingProviderSettingsClient).to(_1.MediaVaultProcessingProviderSettingsClient);
     bind(TYPES.MediaVaultRoute).to(_1.MediaVaultRoute);
     bind(TYPES.MediaVaultClient).to(_1.MediaVaultClient);
+=======
+    bind(TYPES.ChannelBatchRoute).to(_1.ChannelBatchRoute);
+    bind(TYPES.ChannelBatchClient).to(_1.ChannelBatchClient);
+    bind(TYPES.ChannelRoute).to(_1.ChannelRoute);
+    bind(TYPES.ChannelClient).to(_1.ChannelClient);
+    bind(TYPES.MemberBatchRoute).to(_1.MemberBatchRoute);
+    bind(TYPES.MemberBatchClient).to(_1.MemberBatchClient);
+    bind(TYPES.MemberRoute).to(_1.MemberRoute);
+    bind(TYPES.MemberClient).to(_1.MemberClient);
+    bind(TYPES.MessageBatchRoute).to(_1.MessageBatchRoute);
+    bind(TYPES.MessageBatchClient).to(_1.MessageBatchClient);
+    bind(TYPES.MessageRoute).to(_1.MessageRoute);
+    bind(TYPES.MessageClient).to(_1.MessageClient);
+    bind(TYPES.Root).to(_1.Root);
+>>>>>>> add find options for channel, message and member
 });
 exports.diModule = diModule;
 >>>>>>> minor code changes
@@ -59513,7 +60009,11 @@ var objectHelper = (function () {
     }
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 458 */
+=======
+/* 523 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> minor code changes
 
@@ -59570,6 +60070,7 @@ var objectHelper = (function () {
 >>>>>>> minor code changes
 
 
+<<<<<<< HEAD
     return {
         isArray: isArray,
         isString: isString,
@@ -59587,6 +60088,11 @@ var charHelper = (function () {
     function isAlpha (chr) {
         return (chr >= 'a' && chr <= 'z') || ((chr >= 'A' && chr <= 'Z'));
     }
+=======
+/***/ }),
+/* 524 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> add find options for channel, message and member
 
     function isDigit (chr) {
         return chr >= '0' && chr <= '9';
@@ -59609,6 +60115,7 @@ var charHelper = (function () {
     };
 }());
 
+<<<<<<< HEAD
 var pctEncoder = (function () {
     var utf8 = {
         encode: function (chr) {
@@ -59678,6 +60185,11 @@ var pctEncoder = (function () {
     function parseHex2 (text, start) {
         return parseInt(text.substr(start, 2), 16);
     }
+=======
+/***/ }),
+/* 525 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> add find options for channel, message and member
 
 <<<<<<< HEAD
     /**
@@ -59745,6 +60257,7 @@ var rfcCharHelper = (function () {
 
 >>>>>>> minor code changes
 
+<<<<<<< HEAD
     /**
      * Returns if an character is an varchar character according 2.3 of rfc 6570
      * @param chr
@@ -59781,6 +60294,11 @@ var rfcCharHelper = (function () {
     };
 
 }());
+=======
+/***/ }),
+/* 526 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> add find options for channel, message and member
 
 /**
  * encoding of rfc 6570
@@ -59896,6 +60414,7 @@ var operators = (function () {
 }());
 
 
+<<<<<<< HEAD
 /**
  * Detects, whether a given element is defined in the sense of rfc 6570
  * Section 2.3 of the RFC makes clear defintions:
@@ -59937,18 +60456,33 @@ var LiteralExpression = (function () {
     LiteralExpression.prototype.expand = function () {
         return this.literal;
     };
+=======
+/***/ }),
+/* 527 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> add find options for channel, message and member
 
 <<<<<<< HEAD
     LiteralExpression.prototype.toString = LiteralExpression.prototype.expand;
 =======
 "use strict";
 
+<<<<<<< HEAD
 ;
 >>>>>>> minor code changes
+=======
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(524));
+__export(__webpack_require__(525));
+__export(__webpack_require__(526));
+>>>>>>> add find options for channel, message and member
 
     return LiteralExpression;
 }());
 
+<<<<<<< HEAD
 var parse = (function () {
 
     function parseExpression (expressionText) {
@@ -59969,6 +60503,11 @@ var parse = (function () {
             varspec = {varname: varname, exploded: false, maxLength: null};
             varnameStart = null;
         }
+=======
+/***/ }),
+/* 528 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> add find options for channel, message and member
 
         function closeMaxLength () {
             if (maxLengthStart === index) {
@@ -60165,6 +60704,7 @@ var VariableExpression = (function () {
         return result;
     }
 
+<<<<<<< HEAD
     function VariableExpression (templateText, operator, varspecs) {
         this.templateText = templateText;
         this.operator = operator;
@@ -60283,6 +60823,11 @@ var VariableExpression = (function () {
         }
         return result;
     }
+=======
+/***/ }),
+/* 529 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> add find options for channel, message and member
 
 <<<<<<< HEAD
 =======
@@ -60292,7 +60837,11 @@ var VariableExpression = (function () {
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 478 */
+=======
+/* 530 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60375,8 +60924,14 @@ __export(__webpack_require__(462));
         }
     };
 
+<<<<<<< HEAD
     return VariableExpression;
 }());
+=======
+/***/ }),
+/* 531 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> add find options for channel, message and member
 
 var UriTemplate = (function () {
     function UriTemplate (templateText, expressions) {
@@ -60411,10 +60966,14 @@ var UriTemplate = (function () {
 =======
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 530 */
 =======
 /* 479 */
 >>>>>>> minor code changes
+=======
+/* 532 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60464,10 +61023,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 531 */
 =======
 /* 480 */
 >>>>>>> minor code changes
+=======
+/* 533 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60546,10 +61109,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 532 */
 =======
 /* 481 */
 >>>>>>> minor code changes
+=======
+/* 534 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60605,10 +61172,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 533 */
 =======
 /* 482 */
 >>>>>>> minor code changes
+=======
+/* 535 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60707,10 +61278,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 534 */
 =======
 /* 483 */
 >>>>>>> minor code changes
+=======
+/* 536 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60777,10 +61352,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 535 */
 =======
 /* 484 */
 >>>>>>> minor code changes
+=======
+/* 537 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60957,10 +61536,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 536 */
 =======
 /* 485 */
 >>>>>>> minor code changes
+=======
+/* 538 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61071,10 +61654,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 537 */
 =======
 /* 486 */
 >>>>>>> minor code changes
+=======
+/* 539 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61135,10 +61722,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 538 */
 =======
 /* 487 */
 >>>>>>> minor code changes
+=======
+/* 540 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61198,10 +61789,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 539 */
 =======
 /* 488 */
 >>>>>>> minor code changes
+=======
+/* 541 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61300,10 +61895,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 540 */
 =======
 /* 489 */
 >>>>>>> minor code changes
+=======
+/* 542 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61372,10 +61971,158 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 541 */
 =======
 /* 490 */
 >>>>>>> minor code changes
+=======
+/* 543 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 544 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 545 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 546 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 547 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 548 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 549 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(545));
+__export(__webpack_require__(546));
+__export(__webpack_require__(548));
+__export(__webpack_require__(543));
+__export(__webpack_require__(544));
+__export(__webpack_require__(547));
+
+
+/***/ }),
+/* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(8);
+var TYPES = {
+    NotificationsClient: Symbol("NotificationsClient"),
+    NotificationsPublishBatchClient: Symbol("NotificationsPublishBatchClient"),
+    NotificationsPublishBatchRoute: Symbol("NotificationsPublishBatchRoute"),
+    NotificationsPublishRoute: Symbol("NotificationsPublishRoute"),
+    NotificationsPublishClient: Symbol("NotificationsPublishClient"),
+    NotificationsRegistrationsAnonymousBatchClient: Symbol("NotificationsRegistrationsAnonymousBatchClient"),
+    NotificationsRegistrationsAnonymousBatchRoute: Symbol("NotificationsRegistrationsAnonymousBatchRoute"),
+    NotificationsRegistrationsAnonymousClient: Symbol("BasicNotificationsRegistrationsAnonymousClient"),
+    NotificationsRegistrationsAnonymousRoute: Symbol("NotificationsRegistrationsAnonymousRoute"),
+    NotificationsRegistrationsRoute: Symbol("NotificationsRegistrationsRoute"),
+    NotificationsRegistrationsUsersBatchRoute: Symbol("NotificationsRegistrationsUsersBatchRoute"),
+    NotificationsRegistrationsUsersBatchClient: Symbol("NotificationsRegistrationsUsersBatchClient"),
+    NotificationsRegistrationsUsersClient: Symbol("NotificationsRegistrationsUsersClient"),
+    NotificationsRegistrationsUsersRoute: Symbol("NotificationsRegistrationsUsersRoute"),
+    NotificationsRoute: Symbol("NotificationsRoute"),
+    NotificationsRegistrationsClient: Symbol("NotificationsRegistrationsClient"),
+    NotificationsSubscriptionsClient: Symbol("NotificationsSubscriptionsClient"),
+    NotificationsSubscriptionsRoute: Symbol("NotificationsSubscriptionsRoute"),
+    NotificationsSubscriptionsAnonymousBatchClient: Symbol("NotificationsSubscriptionsAnonymousBatchClient"),
+    NotificationsSubscriptionsAnonymousBatchRoute: Symbol("NotificationsSubscriptionsAnonymousBatchRoute"),
+    NotificationsSubscriptionsAnonymousRoute: Symbol("NotificationsSubscriptionsAnonymousRoute"),
+    NotificationsSubscriptionsAnonymousClient: Symbol("NotificationsSubscriptionsAnonymousClient"),
+    NotificationsSubscriptionsUsersRoute: Symbol("BasicNotificationsSubscriptionsRoute"),
+    NotificationsSubscriptionsUsersBatchClient: Symbol("NotificationsSubscriptionsUsersBatchClient"),
+    NotificationsSubscriptionsUsersBatchRoute: Symbol("NotificationsSubscriptionsUsersBatchRoute"),
+    NotificationsSubscriptionsUsersClient: Symbol("NotificationsSubscriptionsUsersClient"),
+    NotificationsSettingsRoute: Symbol("NotificationsSettingsRoute"),
+    NotificationsSettingsClient: Symbol("NotificationsSettingsClient")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.NotificationsPublishBatchRoute).to(_1.NotificationsPublishBatchRoute);
+    bind(TYPES.NotificationsPublishBatchClient).to(_1.NotificationsPublishBatchClient);
+    bind(TYPES.NotificationsPublishRoute).to(_1.NotificationsPublishRoute);
+    bind(TYPES.NotificationsPublishClient).to(_1.NotificationsPublishClient);
+    bind(TYPES.NotificationsSubscriptionsUsersBatchRoute).to(_1.NotificationsSubscriptionsUsersBatchRoute);
+    bind(TYPES.NotificationsSubscriptionsUsersBatchClient).to(_1.NotificationsSubscriptionsUsersBatchClient);
+    bind(TYPES.NotificationsSubscriptionsUsersRoute).to(_1.NotificationsSubscriptionsUsersRoute);
+    bind(TYPES.NotificationsSubscriptionsUsersClient).to(_1.NotificationsSubscriptionsUsersClient);
+    bind(TYPES.NotificationsSubscriptionsAnonymousRoute).to(_1.NotificationsSubscriptionsAnonymousRoute);
+    bind(TYPES.NotificationsSubscriptionsAnonymousBatchRoute).to(_1.NotificationsSubscriptionsAnonymousBatchRoute);
+    bind(TYPES.NotificationsSubscriptionsAnonymousBatchClient).to(_1.NotificationsSubscriptionsAnonymousBatchClient);
+    bind(TYPES.NotificationsSubscriptionsAnonymousClient).to(_1.NotificationsSubscriptionsAnonymousClient);
+    bind(TYPES.NotificationsSubscriptionsRoute).to(_1.NotificationsSubscriptionsRoute);
+    bind(TYPES.NotificationsSubscriptionsClient).to(_1.NotificationsSubscriptionsClient);
+    bind(TYPES.NotificationsRegistrationsUsersBatchRoute).to(_1.NotificationsRegistrationsUsersBatchRoute);
+    bind(TYPES.NotificationsRegistrationsUsersBatchClient).to(_1.NotificationsRegistrationsUsersBatchClient);
+    bind(TYPES.NotificationsRegistrationsUsersRoute).to(_1.NotificationsRegistrationsUsersRoute);
+    bind(TYPES.NotificationsRegistrationsUsersClient).to(_1.NotificationsRegistrationsUsersClient);
+    bind(TYPES.NotificationsRegistrationsAnonymousBatchRoute).to(_1.NotificationsRegistrationsAnonymousBatchRoute);
+    bind(TYPES.NotificationsRegistrationsAnonymousBatchClient).to(_1.NotificationsRegistrationsAnonymousBatchClient);
+    bind(TYPES.NotificationsRegistrationsAnonymousRoute).to(_1.NotificationsRegistrationsAnonymousRoute);
+    bind(TYPES.NotificationsRegistrationsAnonymousClient).to(_1.NotificationsRegistrationsAnonymousClient);
+    bind(TYPES.NotificationsRegistrationsRoute).to(_1.NotificationsRegistrationsRoute);
+    bind(TYPES.NotificationsRegistrationsClient).to(_1.NotificationsRegistrationsClient);
+    bind(TYPES.NotificationsSettingsRoute).to(_1.NotificationsSettingsRoute);
+    bind(TYPES.NotificationsSettingsClient).to(_1.NotificationsSettingsClient);
+    bind(TYPES.NotificationsRoute).to(_1.NotificationsRoute);
+    bind(TYPES.NotificationsClient).to(_1.NotificationsClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 551 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61534,10 +62281,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 542 */
 =======
 /* 491 */
 >>>>>>> minor code changes
+=======
+/* 552 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61646,10 +62397,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 543 */
 =======
 /* 492 */
 >>>>>>> minor code changes
+=======
+/* 553 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61726,7 +62481,11 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 544 */
+=======
+/* 554 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61809,10 +62568,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 545 */
 =======
 /* 493 */
 >>>>>>> minor code changes
+=======
+/* 555 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61873,10 +62636,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 546 */
 =======
 /* 494 */
 >>>>>>> minor code changes
+=======
+/* 556 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61974,10 +62741,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 547 */
 =======
 /* 495 */
 >>>>>>> minor code changes
+=======
+/* 557 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62046,10 +62817,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 548 */
 =======
 /* 496 */
 >>>>>>> minor code changes
+=======
+/* 558 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62258,10 +63033,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 549 */
 =======
 /* 498 */
 >>>>>>> minor code changes
+=======
+/* 559 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62373,9 +63152,13 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 550 */
 =======
 /* 499 */
+=======
+/* 560 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62459,7 +63242,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 500 */
+=======
+/* 561 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62543,7 +63330,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 501 */
+=======
+/* 562 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62633,7 +63424,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 502 */
+=======
+/* 563 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62699,7 +63494,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 503 */
+=======
+/* 564 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63071,7 +63870,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 506 */
+=======
+/* 565 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63137,7 +63940,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 507 */
+=======
+/* 566 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63164,7 +63971,53 @@ var MemberClient = (function () {
         enumerable: true,
         configurable: true
     });
+<<<<<<< HEAD
     Object.defineProperty(MemberClient.prototype, "batch", {
+=======
+    return NotificationsRoute;
+}(common_1.BaseRoute));
+NotificationsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsPublishRoute)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsRoute)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.NotificationsRegistrationsRoute)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.NotificationsSettingsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsPublishRoute !== "undefined" && _1.NotificationsPublishRoute) === "function" && _b || Object, typeof (_c = typeof _1.NotificationsSubscriptionsRoute !== "undefined" && _1.NotificationsSubscriptionsRoute) === "function" && _c || Object, typeof (_d = typeof _1.NotificationsRegistrationsRoute !== "undefined" && _1.NotificationsRegistrationsRoute) === "function" && _d || Object, typeof (_e = typeof _1.NotificationsSettingsRoute !== "undefined" && _1.NotificationsSettingsRoute) === "function" && _e || Object])
+], NotificationsRoute);
+exports.NotificationsRoute = NotificationsRoute;
+var _a, _b, _c, _d, _e;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 567 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSettingsClient
+ * @description  Notifications Settings Client provides an easy way to consume  Notifications REST API end-points. In order to obtain needed routes `notificationsSettingsClient` uses `notificationsSettingsRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(8);
+var NotificationsSettingsClient = (function () {
+    function NotificationsSettingsClient(notificationsSettingsRoute, apiClient) {
+        this.notificationsSettingsRoute = notificationsSettingsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(NotificationsSettingsClient.prototype, "routeDefinition", {
+>>>>>>> add find options for channel, message and member
         get: function () {
             return this.memberBatchClient;
         },
@@ -63301,7 +64154,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 508 */
+=======
+/* 568 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63416,7 +64273,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 509 */
+=======
+/* 569 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63506,7 +64367,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 510 */
+=======
+/* 570 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63572,7 +64437,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 511 */
+=======
+/* 571 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63686,6 +64555,65 @@ var MessageClient = (function () {
     MessageClient.prototype.update = function (data) {
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
+<<<<<<< HEAD
+=======
+    return NotificationsSubscriptionsAnonymousClient;
+}());
+NotificationsSubscriptionsAnonymousClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.NotificationsSubscriptionsAnonymousBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.NotificationsSubscriptionsAnonymousRoute !== "undefined" && _1.NotificationsSubscriptionsAnonymousRoute) === "function" && _a || Object, typeof (_b = typeof _1.NotificationsSubscriptionsAnonymousBatchClient !== "undefined" && _1.NotificationsSubscriptionsAnonymousBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], NotificationsSubscriptionsAnonymousClient);
+exports.NotificationsSubscriptionsAnonymousClient = NotificationsSubscriptionsAnonymousClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 572 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module notificationsSubscriptionsAnonymousRoute
+ * @description Baasic Notifications Subscriptions Anonymous Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Notifications Subscriptions Anonymous Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(8);
+var NotificationsSubscriptionsAnonymousRoute = (function (_super) {
+    tslib_1.__extends(NotificationsSubscriptionsAnonymousRoute, _super);
+    function NotificationsSubscriptionsAnonymousRoute(notificationsSubscriptionsAnonymousBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.notificationsSubscriptionsAnonymousBatchRoute = notificationsSubscriptionsAnonymousBatchRoute;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'notifications/subscriptions/anonymous';
+        _this.findRoute = 'notifications/subscriptions/anonymous/{?searchQuery,registrationIds,channels,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'notifications/subscriptions/anonymous/{id}/{?embed,fields}';
+        _this.deleteRoute = 'notifications/subscriptions/anonymous/{id}';
+        _this.updateRoute = 'notifications/subscriptions/anonymous/{id}';
+        return _this;
+    }
+    Object.defineProperty(NotificationsSubscriptionsAnonymousRoute.prototype, "batch", {
+        get: function () {
+            return this.notificationsSubscriptionsAnonymousBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+>>>>>>> add find options for channel, message and member
     /**
     * Returns a promise that is resolved once the remove action has been performed. This action will remove an message resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `messageRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
     * ```
@@ -63736,8 +64664,12 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 512 */
 >>>>>>> minor code changes
+=======
+/* 573 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63827,7 +64759,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 551 */
+=======
+/* 574 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64053,6 +64989,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 552 */
 =======
 var Root = (function () {
@@ -64163,6 +65100,9 @@ exports.diModule = diModule;
 /***/ }),
 /* 524 */
 >>>>>>> minor code changes
+=======
+/* 575 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64267,10 +65207,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 553 */
 =======
 /* 525 */
 >>>>>>> minor code changes
+=======
+/* 576 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64339,10 +65283,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 554 */
 =======
 /* 526 */
 >>>>>>> minor code changes
+=======
+/* 577 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64508,10 +65456,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 555 */
 =======
 /* 527 */
 >>>>>>> minor code changes
+=======
+/* 578 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64615,10 +65567,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 556 */
 =======
 /* 528 */
 >>>>>>> minor code changes
+=======
+/* 579 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64720,10 +65676,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 557 */
 =======
 /* 529 */
 >>>>>>> minor code changes
+=======
+/* 580 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64791,10 +65751,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 558 */
 =======
 /* 530 */
 >>>>>>> minor code changes
+=======
+/* 581 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64944,10 +65908,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 559 */
 =======
 /* 531 */
 >>>>>>> minor code changes
+=======
+/* 582 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65062,10 +66030,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 560 */
 =======
 /* 532 */
 >>>>>>> minor code changes
+=======
+/* 583 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65151,10 +66123,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 561 */
 =======
 /* 533 */
 >>>>>>> minor code changes
+=======
+/* 584 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65218,10 +66194,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 562 */
 =======
 /* 534 */
 >>>>>>> minor code changes
+=======
+/* 585 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65230,6 +66210,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 563 */
 =======
 var tslib_1 = __webpack_require__(1);
@@ -65309,6 +66290,9 @@ var _a, _b;
 /***/ }),
 /* 535 */
 >>>>>>> minor code changes
+=======
+/* 586 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65316,11 +66300,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 564 */
 =======
 /* 536 */
 >>>>>>> minor code changes
+=======
+/* 587 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65329,6 +66317,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 565 */
 =======
 var tslib_1 = __webpack_require__(1);
@@ -65402,6 +66391,9 @@ var _a, _b;
 /***/ }),
 /* 537 */
 >>>>>>> minor code changes
+=======
+/* 588 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65409,11 +66401,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 566 */
 =======
 /* 538 */
 >>>>>>> minor code changes
+=======
+/* 589 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65421,11 +66417,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 567 */
 =======
 /* 539 */
 >>>>>>> minor code changes
+=======
+/* 590 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65433,11 +66433,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 568 */
 =======
 /* 540 */
 >>>>>>> minor code changes
+=======
+/* 591 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65445,11 +66449,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 569 */
 =======
 /* 541 */
 >>>>>>> minor code changes
+=======
+/* 592 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65458,10 +66466,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 570 */
 =======
 /* 542 */
 >>>>>>> minor code changes
+=======
+/* 593 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65469,6 +66481,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(562));
 __export(__webpack_require__(565));
 __export(__webpack_require__(563));
@@ -65482,6 +66495,20 @@ __export(__webpack_require__(567));
 /***/ }),
 <<<<<<< HEAD
 /* 571 */
+=======
+__export(__webpack_require__(585));
+__export(__webpack_require__(588));
+__export(__webpack_require__(586));
+__export(__webpack_require__(587));
+__export(__webpack_require__(592));
+__export(__webpack_require__(589));
+__export(__webpack_require__(591));
+__export(__webpack_require__(590));
+
+
+/***/ }),
+/* 594 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65512,7 +66539,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 572 */
+=======
+/* 595 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65538,10 +66569,14 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 573 */
 =======
 /* 543 */
 >>>>>>> minor code changes
+=======
+/* 596 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65551,10 +66586,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 574 */
 =======
 /* 544 */
 >>>>>>> minor code changes
+=======
+/* 597 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65562,6 +66601,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 __export(__webpack_require__(573));
 
@@ -65580,6 +66620,13 @@ __export(__webpack_require__(542));
 /***/ }),
 /* 545 */
 >>>>>>> minor code changes
+=======
+__export(__webpack_require__(596));
+
+
+/***/ }),
+/* 598 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65605,10 +66652,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 576 */
 =======
 /* 546 */
 >>>>>>> minor code changes
+=======
+/* 599 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65705,6 +66756,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -65780,6 +66832,9 @@ var _a, _b;
 =======
 /* 548 */
 >>>>>>> minor code changes
+=======
+/* 600 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65847,10 +66902,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 578 */
 =======
 /* 549 */
 >>>>>>> minor code changes
+=======
+/* 601 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66102,10 +67161,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 579 */
 =======
 /* 552 */
 >>>>>>> minor code changes
+=======
+/* 602 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66212,10 +67275,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 580 */
 =======
 /* 553 */
 >>>>>>> minor code changes
+=======
+/* 603 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66313,10 +67380,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 581 */
 =======
 /* 554 */
 >>>>>>> minor code changes
+=======
+/* 604 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66383,10 +67454,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 582 */
 =======
 /* 555 */
 >>>>>>> minor code changes
+=======
+/* 605 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66544,10 +67619,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 583 */
 =======
 /* 556 */
 >>>>>>> minor code changes
+=======
+/* 606 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66641,10 +67720,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 584 */
 =======
 /* 557 */
 >>>>>>> minor code changes
+=======
+/* 607 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66653,11 +67736,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 585 */
 =======
 /* 558 */
 >>>>>>> minor code changes
+=======
+/* 608 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66666,11 +67753,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 586 */
 =======
 /* 559 */
 >>>>>>> minor code changes
+=======
+/* 609 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66679,11 +67770,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 587 */
 =======
 /* 560 */
 >>>>>>> minor code changes
+=======
+/* 610 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66692,11 +67787,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 588 */
 =======
 /* 561 */
 >>>>>>> minor code changes
+=======
+/* 611 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66705,11 +67804,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 589 */
 =======
 /* 562 */
 >>>>>>> minor code changes
+=======
+/* 612 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66718,11 +67821,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 590 */
 =======
 /* 563 */
 >>>>>>> minor code changes
+=======
+/* 613 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66731,11 +67838,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 591 */
 =======
 /* 564 */
 >>>>>>> minor code changes
+=======
+/* 614 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66744,11 +67855,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* 592 */
 =======
 /* 565 */
 >>>>>>> minor code changes
+=======
+/* 615 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66758,10 +67873,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 593 */
 =======
 /* 566 */
 >>>>>>> minor code changes
+=======
+/* 616 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66770,7 +67889,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 594 */
+=======
+/* 617 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66779,7 +67902,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 595 */
+=======
+/* 618 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66788,7 +67915,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 596 */
+=======
+/* 619 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66796,6 +67927,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(584));
 __export(__webpack_require__(586));
 __export(__webpack_require__(589));
@@ -66812,6 +67944,24 @@ __export(__webpack_require__(595));
 
 /***/ }),
 /* 597 */
+=======
+__export(__webpack_require__(607));
+__export(__webpack_require__(609));
+__export(__webpack_require__(612));
+__export(__webpack_require__(613));
+__export(__webpack_require__(611));
+__export(__webpack_require__(610));
+__export(__webpack_require__(608));
+__export(__webpack_require__(615));
+__export(__webpack_require__(616));
+__export(__webpack_require__(614));
+__export(__webpack_require__(617));
+__export(__webpack_require__(618));
+
+
+/***/ }),
+/* 620 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66882,7 +68032,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 598 */
+=======
+/* 621 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66978,10 +68132,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 599 */
 =======
 /* 567 */
 >>>>>>> minor code changes
+=======
+/* 622 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67048,6 +68206,7 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 600 */
 =======
 /* 568 */
@@ -67112,6 +68271,9 @@ var _a, _b, _c;
 /***/ }),
 /* 569 */
 >>>>>>> minor code changes
+=======
+/* 623 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67315,10 +68477,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 601 */
 =======
 /* 571 */
 >>>>>>> minor code changes
+=======
+/* 624 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67424,10 +68590,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 602 */
 =======
 /* 572 */
 >>>>>>> minor code changes
+=======
+/* 625 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67457,7 +68627,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 603 */
+=======
+/* 626 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67555,10 +68729,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 604 */
 =======
 /* 573 */
 >>>>>>> minor code changes
+=======
+/* 627 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67625,6 +68803,7 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 605 */
 =======
 /* 574 */
@@ -67675,6 +68854,9 @@ exports.diModule = diModule;
 /***/ }),
 /* 577 */
 >>>>>>> minor code changes
+=======
+/* 628 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67877,7 +69059,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 606 */
+=======
+/* 629 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67976,10 +69162,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 607 */
 =======
 /* 579 */
 >>>>>>> minor code changes
+=======
+/* 630 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68130,10 +69320,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 608 */
 =======
 /* 580 */
 >>>>>>> minor code changes
+=======
+/* 631 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68234,10 +69428,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 609 */
 =======
 /* 581 */
 >>>>>>> minor code changes
+=======
+/* 632 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68370,10 +69568,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 610 */
 =======
 /* 582 */
 >>>>>>> minor code changes
+=======
+/* 633 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68493,10 +69695,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 611 */
 =======
 /* 583 */
 >>>>>>> minor code changes
+=======
+/* 634 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68630,10 +69836,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 612 */
 =======
 /* 584 */
 >>>>>>> minor code changes
+=======
+/* 635 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68737,6 +69947,7 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 613 */
 =======
 /* 585 */
@@ -68759,6 +69970,9 @@ var _a, _b;
 /***/ }),
 /* 587 */
 >>>>>>> minor code changes
+=======
+/* 636 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68905,6 +70119,7 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 614 */
 =======
 /* 588 */
@@ -69013,6 +70228,9 @@ __export(__webpack_require__(596));
 /***/ }),
 /* 598 */
 >>>>>>> minor code changes
+=======
+/* 637 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69101,10 +70319,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 615 */
 =======
 /* 599 */
 >>>>>>> minor code changes
+=======
+/* 638 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69460,10 +70682,14 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 616 */
 =======
 /* 602 */
 >>>>>>> minor code changes
+=======
+/* 639 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69572,6 +70798,7 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 617 */
 =======
 /* 603 */
@@ -69606,6 +70833,9 @@ var _a, _b, _c, _d;
 /***/ }),
 /* 604 */
 >>>>>>> minor code changes
+=======
+/* 640 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69750,10 +70980,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 618 */
 =======
 /* 605 */
 >>>>>>> minor code changes
+=======
+/* 641 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69850,10 +71084,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 619 */
 =======
 /* 606 */
 >>>>>>> minor code changes
+=======
+/* 642 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70476,10 +71714,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 627 */
 =======
 /* 610 */
 >>>>>>> minor code changes
+=======
+/* 643 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70585,10 +71827,14 @@ var _a;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 628 */
 =======
 /* 611 */
 >>>>>>> minor code changes
+=======
+/* 644 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70696,10 +71942,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 629 */
 =======
 /* 612 */
 >>>>>>> minor code changes
+=======
+/* 645 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/
@@ -71121,7 +72371,11 @@ var encodingHelper = (function () {
     }
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 624 */
+=======
+/* 646 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -71129,6 +72383,7 @@ var encodingHelper = (function () {
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< HEAD
 __export(__webpack_require__(623));
 __export(__webpack_require__(622));
 >>>>>>> minor code changes
@@ -71139,13 +72394,21 @@ __export(__webpack_require__(622));
         encodeLiteral: encodeLiteral,
         encodeLiteralCharacter: encodeLiteralCharacter
     };
+=======
+__export(__webpack_require__(645));
+__export(__webpack_require__(644));
+>>>>>>> add find options for channel, message and member
 
 <<<<<<< HEAD
 }());
 
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 625 */
+=======
+/* 647 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -71191,7 +72454,11 @@ var operators = (function () {
     }
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 626 */
+=======
+/* 648 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -71410,7 +72677,11 @@ function isDefined (object) {
 }
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 627 */
+=======
+/* 649 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -71570,7 +72841,11 @@ var LiteralExpression = (function () {
     };
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 628 */
+=======
+/* 650 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> minor code changes
 
@@ -71610,7 +72885,11 @@ var parse = (function () {
         }
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 629 */
+=======
+/* 651 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -71824,7 +73103,11 @@ var _a, _b;
             }
 =======
 /***/ }),
+<<<<<<< HEAD
 /* 630 */
+=======
+/* 652 */
+>>>>>>> add find options for channel, message and member
 /***/ (function(module, exports, __webpack_require__) {
 >>>>>>> minor code changes
 

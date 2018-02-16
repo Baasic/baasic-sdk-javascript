@@ -28,7 +28,7 @@ export class MessageBatchClient {
     * @returns A promise that is resolved once the create message action has been performed.                          
     * @example  messageBatchClient.create([{     
                    channelId: '<channelId>', 
-                   message?: '<message>'
+                   messageContent?: '<message>'
                 }])
                 .then(function (data) {     
                     // perform success action here   

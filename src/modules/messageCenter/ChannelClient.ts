@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { ChannelBatchClient, ChannelRoute, TYPES as channelTypes } from './';
-import { IChannel } from './contracts'; 
+import { IChannel, IChannelOptions } from './contracts'; 
 
 @injectable()
 export class ChannelClient {
@@ -30,14 +30,16 @@ export class ChannelClient {
     /**                  
     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of channel resources matching the given criteria.                  
     * @method
-    * @param options Query resource options object. 
+    * @param options Query resource ChannelOptions object. 
     * @returns A promise that is resolved once the find action has been performed.                      
     * @example channelClient.find({   
                    pageNumber : 1,   
                    pageSize : 10,   
                    orderBy : '<field>',   
                    orderDirection : '<asc|desc>',   
-                   search : '<search-phrase>' 
+                   search : '<search-phrase>', 
+                   ids : '<identifiers>', 
+                   memberIds : '<member_identifiers>'
                 })
                .then(function (collection) {   
                    // perform success action here 
@@ -46,7 +48,7 @@ export class ChannelClient {
                     // perform error handling here 
                 });                    
     **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IChannel>>> {
+    find(options?: IChannelOptions): PromiseLike<IHttpResponse<IQueryModel<IChannel>>> {
         return this.apiClient.get<IQueryModel<IChannel>>(this.routeDefinition.find(options));
     }
 

@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { MemberBatchClient, MemberRoute, TYPES as channelTypes } from './';
-import { IMember } from './contracts'; 
+import { IMember, IMemberOptions } from './contracts'; 
 
 @injectable()
 export class MemberClient {
@@ -30,14 +30,17 @@ export class MemberClient {
     /**                  
     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of member resources matching the given criteria.                  
     * @method
-    * @param options Query resource options object. 
+    * @param options Query resource MemberOptions object. 
     * @returns A promise that is resolved once the find action has been performed.                      
     * @example memberClient.find({   
                    pageNumber : 1,   
                    pageSize : 10,   
                    orderBy : '<field>',   
                    orderDirection : '<asc|desc>',   
-                   search : '<search-phrase>' 
+                   search : '<search-phrase>', 
+                   ids : '<identifiers>',
+                   channelIds : '<channel_identifiers>', 
+                   userIds: '<user_identifiers>'
                 })
                .then(function (collection) {   
                    // perform success action here 
@@ -46,7 +49,7 @@ export class MemberClient {
                     // perform error handling here 
                 });                    
     **/
-    find(options?: IOptions): PromiseLike<IHttpResponse<IQueryModel<IMember>>> {
+    find(options?: IMemberOptions): PromiseLike<IHttpResponse<IQueryModel<IMember>>> {
         return this.apiClient.get<IQueryModel<IMember>>(this.routeDefinition.find(options));
     }
 
@@ -75,7 +78,8 @@ export class MemberClient {
      * @returns A promise that is resolved once the create member action has been performed.                          
      * @example memberClient.create({   
                     channelId: '<channelId>',
-                    hasHistoryAccess?: '<hasHistoryAccess>'
+                    hasHistoryAccess?: '<hasHistoryAccess>',
+                    userId: '<userId>'
                 })
                 .then(function (data) {   
                     // perform success action here 
@@ -89,7 +93,7 @@ export class MemberClient {
     }
 
     /**                  
-    * Returns a promise that is resolved once the update member action has been performed; this action updates an member resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `channelRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+    * Returns a promise that is resolved once the update member action has been performed; this action updates an member resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `memberRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
     * ``` 
     * let params = modelMapper.removeParams(member); 
     * let uri = params['model'].links('put').href; 
@@ -112,7 +116,53 @@ export class MemberClient {
     }
 
     /**                  
-    * Returns a promise that is resolved once the remove action has been performed. This action will remove an member resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `channelRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+    * Returns a promise that is resolved once the join member action has been performed; this action join an member resource to specified channel. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `memberRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+    * ``` 
+    * let params = modelMapper.removeParams(member); 
+    * let uri = params['model'].links('put').href; 
+    * ```                  
+    * @method
+    * @param data An member object used to join specified member resource to channel.
+    * @returns A promise that is resolved once the join member action has been performed.                         
+    * @example // member is a resource previously fetched using get action or new member object 
+                    member.UserId = '<userId>';
+                    member.ChannelId = '<channelId>'; 
+                    memberClient.join(member)
+                        .then(function (data) {   
+                            // perform success action here 
+                        }, 
+                         function (response, status, headers, config) {   
+                             // perform error handling here 
+                        }); 				        
+    **/
+    join (data: IMember): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.put<void>(this.routeDefinition.join(data), this.routeDefinition.updateParams(data));
+    }
+
+        /**                  
+    * Returns a promise that is resolved once the leave member action has been performed; this action removes an member resource from specified channel. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `memberRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+    * ``` 
+    * let params = modelMapper.removeParams(member); 
+    * let uri = params['model'].links('put').href; 
+    * ```                  
+    * @method
+    * @param data An member object used to leave specified member resource to channel.
+    * @returns A promise that is resolved once the leave member action has been performed.                         
+    * @example // member is a resource previously fetched using get action. 
+                    memberClient.leave(member)
+                        .then(function (data) {   
+                            // perform success action here 
+                        }, 
+                         function (response, status, headers, config) {   
+                             // perform error handling here 
+                        }); 				        
+    **/
+    leave (data: IMember): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.put<void>(this.routeDefinition.leave(data), this.routeDefinition.updateParams(data));
+    }
+
+    /**                  
+    * Returns a promise that is resolved once the remove action has been performed. This action will remove an member resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `memberRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
     * ``` 
     * let params = modelMapper.removeParams(member); 
     * let uri = params['model'].links('delete').href; 

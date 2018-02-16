@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { MemberBatchRoute, TYPES as memberTypes } from './';
-import { IMember } from './contracts';
+import { IMember, IMemberOptions } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 export class MemberRoute extends BaseRoute {
@@ -25,6 +25,10 @@ export class MemberRoute extends BaseRoute {
 
     public readonly purgeRoute: string = 'message-center/members/purge';
 
+    public readonly joinRoute: string = 'message-center/join/{channelId}';
+
+    public readonly leaveRoute: string = 'message-center/leave/{channelId}';
+
     get batch(): MemberBatchRoute {
         return this.memberBatchRoute;
     }
@@ -35,17 +39,17 @@ export class MemberRoute extends BaseRoute {
     ) { super(appOptions); }
 
     /**                 
-     * Parses find route which can be expanded with additional options. Supported items are:                 
+     * Parses find route which can be expanded with additional MemberOptions. Supported items are:                 
      * - `searchQuery` - A string referencing member properties using the phrase or BQL (Baasic Query Language) search.                 
      * - `page` - A value used to set the page number, i.e. to retrieve certain member subset from the storage.                 
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the member property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.                 
      * @method
-     * @param options Query resource options object.       
+     * @param options Query resource MemberOptions object.       
      * @example memberRoute.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(options?: IOptions): any {
+    find(options?: IMemberOptions): any {
         return super.baseFind(this.findRoute, options);
     }
 
@@ -81,9 +85,9 @@ export class MemberRoute extends BaseRoute {
     }
 
     /**
-     * Parses update route. This URI template does not expose any additional options.
+     * Parses delete route. This URI template does not expose any additional options.
      * @method
-     * @param data A Member object used to update specified Member resource.
+     * @param data A Member object used to delete specified Member resource.
      * @example memberRoute.delete(data);
      */
     delete(data: IMember): any {
@@ -97,6 +101,26 @@ export class MemberRoute extends BaseRoute {
      */
     purge(): any {
         return super.baseDelete(this.purgeRoute, {});
+    }
+
+    /**
+     * Parses join route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Member object used to join specified Member resource to Channel.
+     * @example memberRoute.join(data);
+     */
+    join(data: IMember): any {
+        return super.baseUpdate(this.joinRoute, data);
+    }
+
+    /**
+     * Parses leave route. This URI template does not expose any additional options.
+     * @method
+     * @param data A Member object used to remove specified Member resource from Channel.
+     * @example memberRoute.leave(data);
+     */
+    leave(data: IMember): any {
+        return super.baseUpdate(this.leaveRoute, data);
     }
 }
 
