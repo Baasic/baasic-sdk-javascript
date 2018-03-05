@@ -123,6 +123,23 @@ export class CommerceCouponClient {
     remove(data: any): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.delete(data));
     }
+
+
+    /* Coupon Uses per Coupon */    
+        /**                 
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the coupon uses per coupon resource.                 
+     * @method                        
+     * @example commerceCouponClient.findCouponUses()
+                      .then(function (data) {   
+                          // perform success action here 
+                      },
+                       function (response, status, headers, config) {   
+                           // perform error handling here 
+                      });                 
+   **/
+    findCouponUses(couponId: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
+        return this.apiClient.get(this.routeDefinition.findCouponUses(couponId, options));
+    }
 }
 
 /**  

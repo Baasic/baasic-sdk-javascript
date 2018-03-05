@@ -22,6 +22,9 @@ export class CommerceCouponRoute extends BaseRoute {
     public readonly updateRoute: string = 'commerce/coupons/{id}';
 
     public readonly deleteRoute: string = 'commerce/coupons/{id}';
+    
+    public readonly findCouponUseRoute: string = 'commerce/coupons/{id}/uses/{?embed,fields}';
+    
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
@@ -79,6 +82,15 @@ export class CommerceCouponRoute extends BaseRoute {
     delete(data: any): any {
         return super.baseDelete(this.deleteRoute, data);
     }
+
+    /**                 
+     * Parses find route; this route doesn't expose any properties.                 
+     * @method                        
+     * @example commerceCouponRoute.findCouponUses(couponId, options);                               
+     **/
+    findCouponUses(couponId: string, options?: IGetRequestOptions): any {
+        return super.baseGet(this.findCouponUseRoute, couponId, options);
+    }    
 }
 
 /**  
