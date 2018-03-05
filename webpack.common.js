@@ -1,5 +1,6 @@
 var path = require('path');
 var rootDir = path.resolve(__dirname);
+var AutoInjectVersion = require('webpack-auto-inject-version');
 
 function getRootPath() {
     var args = Array.prototype.slice.call(arguments, 0);
@@ -52,5 +53,16 @@ module.exports = {
         library: 'baasicSdkJavaScript',
         libraryTarget: 'umd'
     },
-    plugins: []
+    plugins: [
+        new AutoInjectVersion({
+            NAME: 'Baasic JavaScript SDK',
+            SHORT: 'Baasic JavaScript SDK (c) 2016 Mono Software Ltd.',
+            SILENT: false,
+            PACKAGE_JSON_PATH: './package.json',
+            InjectAsComment: true,
+            components: {
+                AutoIncreaseVersion: false
+            }
+        })
+    ]
 };

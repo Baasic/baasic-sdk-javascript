@@ -1,4 +1,6 @@
 export * from './diModule';
+export * from './dynamicResourceBatchRoute';
+export * from './dynamicResourceBatchClient';
 export * from './dynamicSchemaRoute';
 export * from './dynamicSchemaClient';
 export * from './dynamicResourceACLRoute';
