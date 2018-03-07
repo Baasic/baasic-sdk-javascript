@@ -1,4 +1,5 @@
-(function webpackUniversalModuleDefinition(root, factory) {
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-beta05 - Wednesday, March 7th, 2018, 8:02:01 AM  
+ (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
@@ -463,8 +464,6 @@ __export(__webpack_require__(292));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(550));
-__export(__webpack_require__(553));
 __export(__webpack_require__(552));
 __export(__webpack_require__(555));
 __export(__webpack_require__(554));
@@ -472,27 +471,29 @@ __export(__webpack_require__(557));
 __export(__webpack_require__(556));
 __export(__webpack_require__(559));
 __export(__webpack_require__(558));
-__export(__webpack_require__(563));
-__export(__webpack_require__(562));
-__export(__webpack_require__(565));
-__export(__webpack_require__(564));
 __export(__webpack_require__(561));
 __export(__webpack_require__(560));
+__export(__webpack_require__(565));
+__export(__webpack_require__(564));
+__export(__webpack_require__(567));
+__export(__webpack_require__(566));
+__export(__webpack_require__(563));
+__export(__webpack_require__(562));
+__export(__webpack_require__(578));
+__export(__webpack_require__(577));
+__export(__webpack_require__(572));
+__export(__webpack_require__(571));
+__export(__webpack_require__(574));
+__export(__webpack_require__(573));
+__export(__webpack_require__(580));
+__export(__webpack_require__(579));
 __export(__webpack_require__(576));
 __export(__webpack_require__(575));
 __export(__webpack_require__(570));
 __export(__webpack_require__(569));
-__export(__webpack_require__(572));
-__export(__webpack_require__(571));
-__export(__webpack_require__(578));
-__export(__webpack_require__(577));
-__export(__webpack_require__(574));
-__export(__webpack_require__(573));
 __export(__webpack_require__(568));
-__export(__webpack_require__(567));
-__export(__webpack_require__(566));
+__export(__webpack_require__(553));
 __export(__webpack_require__(551));
-__export(__webpack_require__(549));
 
 
 /***/ }),
@@ -504,35 +505,35 @@ __export(__webpack_require__(549));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(620));
-__export(__webpack_require__(604));
-__export(__webpack_require__(603));
+__export(__webpack_require__(622));
 __export(__webpack_require__(606));
 __export(__webpack_require__(605));
-__export(__webpack_require__(622));
-__export(__webpack_require__(621));
+__export(__webpack_require__(608));
+__export(__webpack_require__(607));
 __export(__webpack_require__(624));
 __export(__webpack_require__(623));
-__export(__webpack_require__(627));
 __export(__webpack_require__(626));
+__export(__webpack_require__(625));
 __export(__webpack_require__(629));
 __export(__webpack_require__(628));
 __export(__webpack_require__(631));
 __export(__webpack_require__(630));
-__export(__webpack_require__(637));
-__export(__webpack_require__(636));
-__export(__webpack_require__(635));
-__export(__webpack_require__(634));
 __export(__webpack_require__(633));
 __export(__webpack_require__(632));
 __export(__webpack_require__(639));
 __export(__webpack_require__(638));
+__export(__webpack_require__(637));
+__export(__webpack_require__(636));
+__export(__webpack_require__(635));
+__export(__webpack_require__(634));
 __export(__webpack_require__(641));
 __export(__webpack_require__(640));
 __export(__webpack_require__(643));
 __export(__webpack_require__(642));
-__export(__webpack_require__(625));
-__export(__webpack_require__(619));
+__export(__webpack_require__(645));
+__export(__webpack_require__(644));
+__export(__webpack_require__(627));
+__export(__webpack_require__(621));
 
 
 /***/ }),
@@ -554,29 +555,29 @@ module.exports = __webpack_require__(60)() ? Symbol : __webpack_require__(62);
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(480));
+__export(__webpack_require__(482));
+__export(__webpack_require__(486));
+__export(__webpack_require__(485));
 __export(__webpack_require__(484));
 __export(__webpack_require__(483));
-__export(__webpack_require__(482));
-__export(__webpack_require__(481));
-__export(__webpack_require__(488));
-__export(__webpack_require__(487));
-__export(__webpack_require__(492));
-__export(__webpack_require__(491));
+__export(__webpack_require__(490));
+__export(__webpack_require__(489));
 __export(__webpack_require__(494));
 __export(__webpack_require__(493));
 __export(__webpack_require__(496));
 __export(__webpack_require__(495));
-__export(__webpack_require__(501));
-__export(__webpack_require__(499));
-__export(__webpack_require__(500));
 __export(__webpack_require__(498));
-__export(__webpack_require__(490));
-__export(__webpack_require__(489));
-__export(__webpack_require__(486));
-__export(__webpack_require__(485));
 __export(__webpack_require__(497));
-__export(__webpack_require__(479));
+__export(__webpack_require__(503));
+__export(__webpack_require__(501));
+__export(__webpack_require__(502));
+__export(__webpack_require__(500));
+__export(__webpack_require__(492));
+__export(__webpack_require__(491));
+__export(__webpack_require__(488));
+__export(__webpack_require__(487));
+__export(__webpack_require__(499));
+__export(__webpack_require__(481));
 
 
 /***/ }),
@@ -606,22 +607,22 @@ exports.DESIGN_PARAM_TYPES = "design:paramtypes";
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(436));
-__export(__webpack_require__(417));
-__export(__webpack_require__(416));
-__export(__webpack_require__(427));
-__export(__webpack_require__(426));
-__export(__webpack_require__(425));
-__export(__webpack_require__(418));
-__export(__webpack_require__(422));
-__export(__webpack_require__(421));
-__export(__webpack_require__(420));
+__export(__webpack_require__(438));
 __export(__webpack_require__(419));
+__export(__webpack_require__(418));
+__export(__webpack_require__(429));
+__export(__webpack_require__(428));
+__export(__webpack_require__(427));
+__export(__webpack_require__(420));
 __export(__webpack_require__(424));
 __export(__webpack_require__(423));
-__export(__webpack_require__(435));
-__export(__webpack_require__(441));
-__export(__webpack_require__(442));
+__export(__webpack_require__(422));
+__export(__webpack_require__(421));
+__export(__webpack_require__(426));
+__export(__webpack_require__(425));
+__export(__webpack_require__(437));
+__export(__webpack_require__(443));
+__export(__webpack_require__(444));
 
 
 /***/ }),
@@ -633,9 +634,7 @@ __export(__webpack_require__(442));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(522));
-__export(__webpack_require__(503));
-__export(__webpack_require__(502));
+__export(__webpack_require__(524));
 __export(__webpack_require__(505));
 __export(__webpack_require__(504));
 __export(__webpack_require__(507));
@@ -646,8 +645,10 @@ __export(__webpack_require__(511));
 __export(__webpack_require__(510));
 __export(__webpack_require__(513));
 __export(__webpack_require__(512));
-__export(__webpack_require__(523));
-__export(__webpack_require__(517));
+__export(__webpack_require__(515));
+__export(__webpack_require__(514));
+__export(__webpack_require__(525));
+__export(__webpack_require__(519));
 
 
 /***/ }),
@@ -659,22 +660,22 @@ __export(__webpack_require__(517));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(528));
-__export(__webpack_require__(534));
-__export(__webpack_require__(533));
+__export(__webpack_require__(530));
 __export(__webpack_require__(536));
 __export(__webpack_require__(535));
-__export(__webpack_require__(532));
-__export(__webpack_require__(531));
-__export(__webpack_require__(542));
-__export(__webpack_require__(541));
-__export(__webpack_require__(530));
-__export(__webpack_require__(529));
 __export(__webpack_require__(538));
 __export(__webpack_require__(537));
+__export(__webpack_require__(534));
+__export(__webpack_require__(533));
+__export(__webpack_require__(544));
+__export(__webpack_require__(543));
+__export(__webpack_require__(532));
+__export(__webpack_require__(531));
 __export(__webpack_require__(540));
 __export(__webpack_require__(539));
-__export(__webpack_require__(527));
+__export(__webpack_require__(542));
+__export(__webpack_require__(541));
+__export(__webpack_require__(529));
 
 
 /***/ }),
@@ -836,18 +837,18 @@ exports.TargetTypeEnum = TargetTypeEnum;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(458));
+__export(__webpack_require__(460));
+__export(__webpack_require__(454));
+__export(__webpack_require__(453));
+__export(__webpack_require__(446));
+__export(__webpack_require__(445));
 __export(__webpack_require__(452));
 __export(__webpack_require__(451));
-__export(__webpack_require__(444));
-__export(__webpack_require__(443));
-__export(__webpack_require__(450));
 __export(__webpack_require__(449));
-__export(__webpack_require__(447));
-__export(__webpack_require__(446));
 __export(__webpack_require__(448));
-__export(__webpack_require__(445));
-__export(__webpack_require__(457));
+__export(__webpack_require__(450));
+__export(__webpack_require__(447));
+__export(__webpack_require__(459));
 
 
 /***/ }),
@@ -877,16 +878,16 @@ exports.guid = guid;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(402));
-__export(__webpack_require__(410));
-__export(__webpack_require__(409));
-__export(__webpack_require__(406));
-__export(__webpack_require__(405));
-__export(__webpack_require__(404));
-__export(__webpack_require__(403));
-__export(__webpack_require__(408));
-__export(__webpack_require__(407));
-__export(__webpack_require__(401));
+__export(__webpack_require__(390));
+__export(__webpack_require__(394));
+__export(__webpack_require__(393));
+__export(__webpack_require__(398));
+__export(__webpack_require__(397));
+__export(__webpack_require__(392));
+__export(__webpack_require__(391));
+__export(__webpack_require__(396));
+__export(__webpack_require__(395));
+__export(__webpack_require__(389));
 
 
 /***/ }),
@@ -898,15 +899,16 @@ __export(__webpack_require__(401));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(594));
-__export(__webpack_require__(582));
-__export(__webpack_require__(584));
-__export(__webpack_require__(580));
-__export(__webpack_require__(581));
-__export(__webpack_require__(583));
-__export(__webpack_require__(579));
-__export(__webpack_require__(593));
-__export(__webpack_require__(595));
+__export(__webpack_require__(404));
+__export(__webpack_require__(412));
+__export(__webpack_require__(411));
+__export(__webpack_require__(408));
+__export(__webpack_require__(407));
+__export(__webpack_require__(406));
+__export(__webpack_require__(405));
+__export(__webpack_require__(410));
+__export(__webpack_require__(409));
+__export(__webpack_require__(403));
 
 
 /***/ }),
@@ -918,14 +920,15 @@ __export(__webpack_require__(595));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(390));
-__export(__webpack_require__(396));
-__export(__webpack_require__(395));
-__export(__webpack_require__(392));
-__export(__webpack_require__(391));
-__export(__webpack_require__(394));
-__export(__webpack_require__(393));
-__export(__webpack_require__(389));
+__export(__webpack_require__(596));
+__export(__webpack_require__(584));
+__export(__webpack_require__(586));
+__export(__webpack_require__(582));
+__export(__webpack_require__(583));
+__export(__webpack_require__(585));
+__export(__webpack_require__(581));
+__export(__webpack_require__(595));
+__export(__webpack_require__(597));
 
 
 /***/ }),
@@ -1034,12 +1037,12 @@ exports.getFunctionName = getFunctionName;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(598));
 __export(__webpack_require__(600));
-__export(__webpack_require__(599));
 __export(__webpack_require__(602));
 __export(__webpack_require__(601));
-__export(__webpack_require__(597));
+__export(__webpack_require__(604));
+__export(__webpack_require__(603));
+__export(__webpack_require__(599));
 
 
 /***/ }),
@@ -1051,12 +1054,12 @@ __export(__webpack_require__(597));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(647));
-__export(__webpack_require__(650));
 __export(__webpack_require__(649));
+__export(__webpack_require__(652));
 __export(__webpack_require__(651));
+__export(__webpack_require__(653));
+__export(__webpack_require__(650));
 __export(__webpack_require__(648));
-__export(__webpack_require__(646));
 
 
 /***/ }),
@@ -1221,10 +1224,10 @@ __export(__webpack_require__(138));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(413));
 __export(__webpack_require__(415));
+__export(__webpack_require__(417));
+__export(__webpack_require__(416));
 __export(__webpack_require__(414));
-__export(__webpack_require__(412));
 
 
 /***/ }),
@@ -1245,13 +1248,13 @@ var ValueSet = __webpack_require__(27);
 exports.ValueSet = ValueSet;
 var Article = __webpack_require__(6);
 exports.Article = Article;
-var DynamicResource = __webpack_require__(24);
+var DynamicResource = __webpack_require__(22);
 exports.DynamicResource = DynamicResource;
 var MediaVault = __webpack_require__(20);
 exports.MediaVault = MediaVault;
 var MediaGallery = __webpack_require__(13);
 exports.MediaGallery = MediaGallery;
-var Files = __webpack_require__(22);
+var Files = __webpack_require__(23);
 exports.Files = Files;
 var Templating = __webpack_require__(26);
 exports.Templating = Templating;
@@ -1265,7 +1268,7 @@ var Calendar = __webpack_require__(7);
 exports.Calendar = Calendar;
 var MessageCenter = __webpack_require__(14);
 exports.MessageCenter = MessageCenter;
-var ShoppingCart = __webpack_require__(23);
+var ShoppingCart = __webpack_require__(24);
 exports.ShoppingCart = ShoppingCart;
 
 
@@ -3811,7 +3814,7 @@ exports.BindingToSyntax = BindingToSyntax;
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var uritemplate = __webpack_require__(652);
+var uritemplate = __webpack_require__(654);
 var _1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var inversify_1 = __webpack_require__(0);
@@ -17360,7 +17363,7 @@ var CalendarEventRsvpInvitationTypeBatchRoute = (function (_super) {
         return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
     };
     /**
-     * Parses delte route. This URI template does not expose any additional options.
+     * Parses delete route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeBatchRoute.delete();
      */
@@ -19160,13 +19163,13 @@ var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(5);
 var CommerceCouponUseClient = (function () {
-    function CommerceCouponUseClient(commerceCouponRoute, apiClient) {
-        this.commerceCouponRoute = commerceCouponRoute;
+    function CommerceCouponUseClient(commerceCouponUseRoute, apiClient) {
+        this.commerceCouponUseRoute = commerceCouponUseRoute;
         this.apiClient = apiClient;
     }
     Object.defineProperty(CommerceCouponUseClient.prototype, "routeDefinition", {
         get: function () {
-            return this.commerceCouponRoute;
+            return this.commerceCouponUseRoute;
         },
         enumerable: true,
         configurable: true
@@ -19205,7 +19208,7 @@ var CommerceCouponUseClient = (function () {
                       });
    **/
     CommerceCouponUseClient.prototype.get = function (id, options) {
-        return this.apiClient.get(this.commerceCouponRoute.get(id, options));
+        return this.apiClient.get(this.routeDefinition.get(id, options));
     };
     /**
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
@@ -19272,7 +19275,7 @@ var CommerceCouponUseClient = (function () {
 }());
 CommerceCouponUseClient = tslib_1.__decorate([
     inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCouponRoute)),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCouponUseRoute)),
     tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCouponUseRoute !== "undefined" && _1.CommerceCouponUseRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
 ], CommerceCouponUseClient);
@@ -19521,6 +19524,21 @@ var CommerceCouponClient = (function () {
     CommerceCouponClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
+    /* Coupon Uses per Coupon */
+    /**
+ * Returns a promise that is resolved once the get action has been performed. Success response returns the coupon uses per coupon resource.
+ * @method
+ * @example commerceCouponClient.findCouponUses()
+                  .then(function (data) {
+                      // perform success action here
+                  },
+                   function (response, status, headers, config) {
+                       // perform error handling here
+                  });
+**/
+    CommerceCouponClient.prototype.findCouponUses = function (couponId, options) {
+        return this.apiClient.get(this.routeDefinition.findCouponUses(couponId, options));
+    };
     return CommerceCouponClient;
 }());
 CommerceCouponClient = tslib_1.__decorate([
@@ -19568,6 +19586,7 @@ var CommerceCouponRoute = (function (_super) {
         _this.createRoute = 'commerce/coupons';
         _this.updateRoute = 'commerce/coupons/{id}';
         _this.deleteRoute = 'commerce/coupons/{id}';
+        _this.findCouponUseRoute = 'commerce/coupons/{id}/uses/{?embed,fields}';
         return _this;
     }
     /**
@@ -19617,6 +19636,14 @@ var CommerceCouponRoute = (function (_super) {
     **/
     CommerceCouponRoute.prototype.delete = function (data) {
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses find route; this route doesn't expose any properties.
+     * @method
+     * @example commerceCouponRoute.findCouponUses(couponId, options);
+     **/
+    CommerceCouponRoute.prototype.findCouponUses = function (couponId, options) {
+        return _super.prototype.baseGet.call(this, this.findCouponUseRoute, couponId, options);
     };
     return CommerceCouponRoute;
 }(common_1.BaseRoute));
@@ -26541,8 +26568,10 @@ __export(__webpack_require__(385));
 
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(22);
 var TYPES = {
+    DynamicResourceBatchRoute: Symbol("DynamicResourceBatchRoute"),
+    DynamicResourceBatchClient: Symbol("DynamicResourceBatchClient"),
     DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
     DynamicResourceACLRoute: Symbol("DynamicResourceACLRoute"),
     DynamicResourceClient: Symbol("DynamicResourceClient"),
@@ -26556,6 +26585,8 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.DynamicResourceACLClient).to(_1.DynamicResourceACLClient);
     bind(TYPES.DynamicResourceRoute).to(_1.DynamicResourceRoute);
     bind(TYPES.DynamicResourceClient).to(_1.DynamicResourceClient);
+    bind(TYPES.DynamicResourceBatchRoute).to(_1.DynamicResourceBatchRoute);
+    bind(TYPES.DynamicResourceBatchClient).to(_1.DynamicResourceBatchClient);
     bind(TYPES.DynamicSchemaRoute).to(_1.DynamicSchemaRoute);
     bind(TYPES.DynamicSchemaClient).to(_1.DynamicSchemaClient);
 });
@@ -26576,7 +26607,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(22);
 var DynamicResourceACLClient = (function () {
     function DynamicResourceACLClient(dynamicResourceACLRoute, apiClient) {
         this.dynamicResourceACLRoute = dynamicResourceACLRoute;
@@ -26792,6 +26823,206 @@ var _a;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* globals module */
+/**
+ * @module dynamicResourceBatchClient
+ * @description  DynamicResourceBatchClient provides an easy way to consume DynamicResourceBatchBatch REST API end-points. In order to obtain needed routes `dynamicResourceBatchClient` uses `dynamicResourceBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(22);
+var DynamicResourceBatchClient = (function () {
+    function DynamicResourceBatchClient(dynamicResourceBatchRoute, apiClient) {
+        this.dynamicResourceBatchRoute = dynamicResourceBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(DynamicResourceBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.dynamicResourceBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create JSON object action has been performed; this action creates new JSON object resources.
+     * @method
+     * @param data JSON object objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the create JSON object action has been performed.
+     * @example dynamicResourceBatchClient.create([{
+                    name: '<name>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    DynamicResourceBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update JSON object action has been performed; this action updates JSON object resources.
+     * @method
+     * @param data JSON object objects used to update specified JSON object resources.
+     * @returns A promise that is resolved once the update JSON object action has been performed.
+     * @example JSON object are resources previously fetched using get action.
+                dynamicResourceBatchClient.update([{
+                    id: '<id>',
+                    name: '<name>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    DynamicResourceBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the patch JSON object action has been performed; this action patches JSON object resources.
+     * @method
+     * @param data JSON object objects used to patch specified JSON object resources.
+     * @returns A promise that is resolved once the patch JSON object action has been performed.
+     * @example JSON object are resources previously fetched using get action.
+                dynamicResourceBatchClient.patch([{
+                    id: '<id>',
+                    name: '<name>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    DynamicResourceBatchClient.prototype.patch = function (data) {
+        return this.apiClient.put(this.routeDefinition.patch(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove JSON object resources from the system if successfully completed.
+     * @method
+     * @param data JSON object Ids which uniquely identify JSON object resources to be deleted.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @example JSON object Ids are identifiers which uniquely identify JSON object resources.
+                dynamicResourceBatchClient.remove(['<id1>', '<id2>']])
+                .then(function (data) {
+                    // perform success action here
+                },
+                function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     */
+    DynamicResourceBatchClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(), this.routeDefinition.deleteParams(data));
+    };
+    return DynamicResourceBatchClient;
+}());
+DynamicResourceBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.DynamicResourceBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicResourceBatchRoute !== "undefined" && _1.DynamicResourceBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], DynamicResourceBatchClient);
+exports.DynamicResourceBatchClient = DynamicResourceBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 394 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module dynamicResourceBatchRoute
+ * @description DynamicResourceBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use DynamicResourceBatchRoute Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(3);
+var DynamicResourceBatchRoute = (function (_super) {
+    tslib_1.__extends(DynamicResourceBatchRoute, _super);
+    function DynamicResourceBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'resources/{schemaName}/batch';
+        _this.updateRoute = 'resources/{schemaName}/batch';
+        _this.patchRoute = 'resources/{schemaName}/batch';
+        _this.deleteRoute = 'resources/{schemaName}/batch';
+        return _this;
+    }
+    /**
+    * Parses create route. This URI template does not expose any additional options.
+    * @method
+    * @example dynamicResourceBatchRoute.create();
+    */
+    DynamicResourceBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route. This URI template does not expose any additional options.
+     * @method
+     * @example dynamicResourceBatchRoute.update();
+     */
+    DynamicResourceBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses patch route. This URI template does not expose any additional options.
+     * @method
+     * @example dynamicResourceBatchRoute.patch();
+     */
+    DynamicResourceBatchRoute.prototype.patch = function () {
+        return _super.prototype.baseUpdate.call(this, this.patchRoute, {});
+    };
+    /**
+     * Parses delete route. This URI template does not expose any additional options.
+     * @method
+     * @example dynamicResourceBatchRoute.delete();
+     */
+    DynamicResourceBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return DynamicResourceBatchRoute;
+}(common_1.BaseRoute));
+DynamicResourceBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], DynamicResourceBatchRoute);
+exports.DynamicResourceBatchRoute = DynamicResourceBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 395 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /**
  * @module dynamicResourceClient
  * @description  Dynamic Resource Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceClient` uses `dynamicResourceRoute`.
@@ -26801,10 +27032,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(22);
 var DynamicResourceClient = (function () {
-    function DynamicResourceClient(dynamicResourceRoute, dynamicResourceACLClient, dynamicSchemaClient, apiClient) {
+    function DynamicResourceClient(dynamicResourceRoute, dynamicResourceBatchClient, dynamicResourceACLClient, dynamicSchemaClient, apiClient) {
         this.dynamicResourceRoute = dynamicResourceRoute;
+        this.dynamicResourceBatchClient = dynamicResourceBatchClient;
         this.dynamicResourceACLClient = dynamicResourceACLClient;
         this.dynamicSchemaClient = dynamicSchemaClient;
         this.apiClient = apiClient;
@@ -26831,6 +27063,13 @@ var DynamicResourceClient = (function () {
     Object.defineProperty(DynamicResourceClient.prototype, "schema", {
         get: function () {
             return this.dynamicSchemaClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DynamicResourceClient.prototype, "batch", {
+        get: function () {
+            return this.dynamicResourceBatchClient;
         },
         enumerable: true,
         configurable: true
@@ -26963,22 +27202,43 @@ var DynamicResourceClient = (function () {
     DynamicResourceClient.prototype.remove = function (schemaName, data, options) {
         return this.apiClient.delete(this.dynamicResourceRoute.delete(schemaName, data, options));
     };
+    /**
+     * Returns a promise that is resolved once the purge action has been performed. This action will remove all dynamic resources from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(dynamicResource);
+     * let uri = params['model'].links('purge').href;
+     * ```
+     * @method
+     * @param data JSON object used to purge dynamic resources.
+     * @example // dynamicResource is a resource previously fetched using get action.
+                    dynamicResourceClient.purge('<schema-name>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    DynamicResourceClient.prototype.purge = function (schemaName) {
+        return this.apiClient.delete(this.dynamicResourceRoute.purge(schemaName));
+    };
     return DynamicResourceClient;
 }());
 DynamicResourceClient = tslib_1.__decorate([
     inversify_1.injectable(),
     tslib_1.__param(0, inversify_1.inject(_1.TYPES.DynamicResourceRoute)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.DynamicResourceACLClient)),
-    tslib_1.__param(2, inversify_1.inject(_1.TYPES.DynamicSchemaClient)),
-    tslib_1.__param(3, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicResourceRoute !== "undefined" && _1.DynamicResourceRoute) === "function" && _a || Object, typeof (_b = typeof _1.DynamicResourceACLClient !== "undefined" && _1.DynamicResourceACLClient) === "function" && _b || Object, typeof (_c = typeof _1.DynamicSchemaClient !== "undefined" && _1.DynamicSchemaClient) === "function" && _c || Object, typeof (_d = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _d || Object])
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.DynamicResourceBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.DynamicResourceACLClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.DynamicSchemaClient)),
+    tslib_1.__param(4, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicResourceRoute !== "undefined" && _1.DynamicResourceRoute) === "function" && _a || Object, typeof (_b = typeof _1.DynamicResourceBatchClient !== "undefined" && _1.DynamicResourceBatchClient) === "function" && _b || Object, typeof (_c = typeof _1.DynamicResourceACLClient !== "undefined" && _1.DynamicResourceACLClient) === "function" && _c || Object, typeof (_d = typeof _1.DynamicSchemaClient !== "undefined" && _1.DynamicSchemaClient) === "function" && _d || Object, typeof (_e = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _e || Object])
 ], DynamicResourceClient);
 exports.DynamicResourceClient = DynamicResourceClient;
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 394 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26991,7 +27251,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(22);
 var contracts_1 = __webpack_require__(3);
 var DynamicResourceRoute = (function (_super) {
     tslib_1.__extends(DynamicResourceRoute, _super);
@@ -27006,6 +27266,7 @@ var DynamicResourceRoute = (function (_super) {
         _this.updateRoute = 'resources/{schemaName}/{id}/{?embed,fields,query}';
         _this.patchRoute = 'resources/{schemaName}/{id}/{?embed,fields,query}';
         _this.deleteRoute = 'resources/{schemaName}/{id}/{?query}';
+        _this.purgeRoute = 'resources/{schemaName}/purge';
         return _this;
     }
     Object.defineProperty(DynamicResourceRoute.prototype, "acl", {
@@ -27065,6 +27326,9 @@ var DynamicResourceRoute = (function (_super) {
         var opt = options || {};
         return _super.prototype.baseDelete.call(this, this.deleteRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
     };
+    DynamicResourceRoute.prototype.purge = function (schemaName) {
+        return _super.prototype.baseCreate.call(this, this.purgeRoute, { schemaName: schemaName });
+    };
     return DynamicResourceRoute;
 }(common_1.BaseRoute));
 DynamicResourceRoute = tslib_1.__decorate([
@@ -27086,7 +27350,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 395 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27099,7 +27363,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(24);
+var _1 = __webpack_require__(22);
 var DynamicSchemaClient = (function () {
     function DynamicSchemaClient(dynamicSchemaRoute, apiClient) {
         this.dynamicSchemaRoute = dynamicSchemaRoute;
@@ -27265,7 +27529,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 396 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27366,29 +27630,12 @@ var _a;
 
 
 /***/ }),
-/* 397 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 398 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -27406,13 +27653,6 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(397));
-__export(__webpack_require__(400));
-__export(__webpack_require__(399));
-__export(__webpack_require__(398));
 
 
 /***/ }),
@@ -27421,9 +27661,33 @@ __export(__webpack_require__(398));
 
 "use strict";
 
+;
+
+
+/***/ }),
+/* 403 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(399));
+__export(__webpack_require__(402));
+__export(__webpack_require__(401));
+__export(__webpack_require__(400));
+
+
+/***/ }),
+/* 404 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(22);
+var _1 = __webpack_require__(23);
 var TYPES = {
     FilesACLClient: Symbol("FilesACLClient"),
     FilesACLRoute: Symbol("FilesACLRoute"),
@@ -27449,7 +27713,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 403 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27463,7 +27727,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
+var _1 = __webpack_require__(23);
 var FilesACLClient = (function () {
     function FilesACLClient(filesACLRoute, apiClient) {
         this.filesACLRoute = filesACLRoute;
@@ -27566,7 +27830,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 404 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27679,7 +27943,7 @@ var _a;
 
 
 /***/ }),
-/* 405 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27693,7 +27957,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
+var _1 = __webpack_require__(23);
 var FilesBatchClient = (function () {
     function FilesBatchClient(filesBatchRoute, apiClient) {
         this.filesBatchRoute = filesBatchRoute;
@@ -27782,7 +28046,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 406 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27849,7 +28113,7 @@ var _a;
 
 
 /***/ }),
-/* 407 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27863,7 +28127,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
+var _1 = __webpack_require__(23);
 var FilesClient = (function () {
     function FilesClient(filesRoute, apiClient, filesStreamsClient, filesBatchClient, filesACLClient) {
         this.filesRoute = filesRoute;
@@ -28028,7 +28292,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 408 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28042,7 +28306,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(22);
+var _1 = __webpack_require__(23);
 var contracts_1 = __webpack_require__(3);
 var FilesRoute = (function (_super) {
     tslib_1.__extends(FilesRoute, _super);
@@ -28134,7 +28398,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 409 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28148,7 +28412,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
+var _1 = __webpack_require__(23);
 var FilesStreamsClient = (function () {
     function FilesStreamsClient(filesStreamsRoute, apiClient) {
         this.filesStreamsRoute = filesStreamsRoute;
@@ -28274,7 +28538,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 410 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28360,7 +28624,7 @@ var _a;
 
 
 /***/ }),
-/* 411 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28369,7 +28633,7 @@ var _a;
 
 
 /***/ }),
-/* 412 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28377,11 +28641,11 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(411));
+__export(__webpack_require__(413));
 
 
 /***/ }),
-/* 413 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28402,7 +28666,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 414 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28553,7 +28817,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 415 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28652,7 +28916,7 @@ var _a;
 
 
 /***/ }),
-/* 416 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28746,7 +29010,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 417 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28813,7 +29077,7 @@ var _a;
 
 
 /***/ }),
-/* 418 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29003,7 +29267,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 419 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29097,7 +29361,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 420 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29164,7 +29428,7 @@ var _a;
 
 
 /***/ }),
-/* 421 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29319,7 +29583,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 422 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29429,7 +29693,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 423 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29550,7 +29814,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 424 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29632,7 +29896,7 @@ var _a;
 
 
 /***/ }),
-/* 425 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29760,7 +30024,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 426 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29837,7 +30101,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 427 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29895,22 +30159,6 @@ var _a;
 
 
 /***/ }),
-/* 428 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 429 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29956,20 +30204,36 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(431));
-__export(__webpack_require__(434));
-__export(__webpack_require__(433));
-__export(__webpack_require__(432));
-__export(__webpack_require__(429));
-__export(__webpack_require__(430));
-__export(__webpack_require__(428));
 
 
 /***/ }),
 /* 436 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 437 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(433));
+__export(__webpack_require__(436));
+__export(__webpack_require__(435));
+__export(__webpack_require__(434));
+__export(__webpack_require__(431));
+__export(__webpack_require__(432));
+__export(__webpack_require__(430));
+
+
+/***/ }),
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30022,7 +30286,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 437 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30119,7 +30383,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 438 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30192,7 +30456,7 @@ var _a;
 
 
 /***/ }),
-/* 439 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30377,7 +30641,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 440 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30510,7 +30774,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 441 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30518,14 +30782,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(438));
-__export(__webpack_require__(437));
 __export(__webpack_require__(440));
 __export(__webpack_require__(439));
+__export(__webpack_require__(442));
+__export(__webpack_require__(441));
 
 
 /***/ }),
-/* 442 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30553,7 +30817,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 443 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30639,7 +30903,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 444 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30697,7 +30961,7 @@ var _a;
 
 
 /***/ }),
-/* 445 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30869,7 +31133,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 446 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30976,7 +31240,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 447 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31050,7 +31314,7 @@ var _a;
 
 
 /***/ }),
-/* 448 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31175,7 +31439,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 449 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31252,7 +31516,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 450 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31310,7 +31574,7 @@ var _a;
 
 
 /***/ }),
-/* 451 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31448,7 +31712,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 452 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31534,23 +31798,6 @@ var _a;
 
 
 /***/ }),
-/* 453 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 454 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31565,7 +31812,6 @@ var _a;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -31574,17 +31820,35 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(454));
-__export(__webpack_require__(453));
-__export(__webpack_require__(455));
-__export(__webpack_require__(456));
+;
 
 
 /***/ }),
 /* 458 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 459 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(456));
+__export(__webpack_require__(455));
+__export(__webpack_require__(457));
+__export(__webpack_require__(458));
+
+
+/***/ }),
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31621,28 +31885,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 459 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 460 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -31651,7 +31898,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -31660,6 +31906,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -31694,7 +31941,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -31721,6 +31967,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -31738,7 +31985,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -31747,6 +31993,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -31755,6 +32002,7 @@ exports.diModule = diModule;
 
 "use strict";
 
+;
 
 
 /***/ }),
@@ -31771,7 +32019,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -31780,7 +32027,6 @@ exports.diModule = diModule;
 
 "use strict";
 
-;
 
 
 /***/ }),
@@ -31798,33 +32044,51 @@ exports.diModule = diModule;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(469));
-__export(__webpack_require__(470));
-__export(__webpack_require__(468));
-__export(__webpack_require__(474));
-__export(__webpack_require__(475));
-__export(__webpack_require__(462));
-__export(__webpack_require__(467));
-__export(__webpack_require__(466));
-__export(__webpack_require__(478));
-__export(__webpack_require__(473));
-__export(__webpack_require__(476));
-__export(__webpack_require__(459));
-__export(__webpack_require__(460));
-__export(__webpack_require__(461));
-__export(__webpack_require__(471));
-__export(__webpack_require__(472));
-__export(__webpack_require__(464));
-__export(__webpack_require__(465));
-__export(__webpack_require__(477));
-__export(__webpack_require__(463));
+;
 
 
 /***/ }),
 /* 480 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 481 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(471));
+__export(__webpack_require__(472));
+__export(__webpack_require__(470));
+__export(__webpack_require__(476));
+__export(__webpack_require__(477));
+__export(__webpack_require__(464));
+__export(__webpack_require__(469));
+__export(__webpack_require__(468));
+__export(__webpack_require__(480));
+__export(__webpack_require__(475));
+__export(__webpack_require__(478));
+__export(__webpack_require__(461));
+__export(__webpack_require__(462));
+__export(__webpack_require__(463));
+__export(__webpack_require__(473));
+__export(__webpack_require__(474));
+__export(__webpack_require__(466));
+__export(__webpack_require__(467));
+__export(__webpack_require__(479));
+__export(__webpack_require__(465));
+
+
+/***/ }),
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31883,7 +32147,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 481 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32037,7 +32301,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 482 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32090,7 +32354,7 @@ var _a;
 
 
 /***/ }),
-/* 483 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32230,7 +32494,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 484 */
+/* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32296,7 +32560,7 @@ var _a;
 
 
 /***/ }),
-/* 485 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32385,7 +32649,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 486 */
+/* 488 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32438,7 +32702,7 @@ var _a;
 
 
 /***/ }),
-/* 487 */
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32528,7 +32792,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 488 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32580,7 +32844,7 @@ var _a;
 
 
 /***/ }),
-/* 489 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32920,7 +33184,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 490 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33084,7 +33348,7 @@ var _a;
 
 
 /***/ }),
-/* 491 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33192,7 +33456,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 492 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33257,7 +33521,7 @@ var _a;
 
 
 /***/ }),
-/* 493 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33369,7 +33633,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 494 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33448,7 +33712,7 @@ var _a;
 
 
 /***/ }),
-/* 495 */
+/* 497 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33612,7 +33876,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 496 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33736,7 +34000,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 497 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33774,7 +34038,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
-/* 498 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34060,7 +34324,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 499 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34221,7 +34485,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 500 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34305,7 +34569,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 501 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34389,7 +34653,7 @@ var _a;
 
 
 /***/ }),
-/* 502 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34479,7 +34743,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 503 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34545,7 +34809,7 @@ var _a;
 
 
 /***/ }),
-/* 504 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34711,7 +34975,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 505 */
+/* 507 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34825,7 +35089,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 506 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34919,7 +35183,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 507 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34985,7 +35249,7 @@ var _a;
 
 
 /***/ }),
-/* 508 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35197,7 +35461,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 509 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35332,7 +35596,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 510 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35422,7 +35686,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 511 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35488,7 +35752,7 @@ var _a;
 
 
 /***/ }),
-/* 512 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35654,7 +35918,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 513 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35768,22 +36032,6 @@ var _a, _b;
 
 
 /***/ }),
-/* 514 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 515 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35797,13 +36045,6 @@ var _a, _b;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(515));
-__export(__webpack_require__(516));
-__export(__webpack_require__(514));
-__export(__webpack_require__(521));
 
 
 /***/ }),
@@ -35820,6 +36061,13 @@ __export(__webpack_require__(521));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(517));
+__export(__webpack_require__(518));
+__export(__webpack_require__(516));
+__export(__webpack_require__(523));
 
 
 /***/ }),
@@ -35836,16 +36084,32 @@ __export(__webpack_require__(521));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(518));
-__export(__webpack_require__(519));
-__export(__webpack_require__(520));
 
 
 /***/ }),
 /* 522 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 523 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(520));
+__export(__webpack_require__(521));
+__export(__webpack_require__(522));
+
+
+/***/ }),
+/* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35888,7 +36152,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 523 */
+/* 525 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35916,24 +36180,6 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 524 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 525 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 526 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35948,16 +36194,34 @@ var _a, _b, _c;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(524));
-__export(__webpack_require__(525));
-__export(__webpack_require__(526));
+;
 
 
 /***/ }),
 /* 528 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 529 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(526));
+__export(__webpack_require__(527));
+__export(__webpack_require__(528));
+
+
+/***/ }),
+/* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36002,7 +36266,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 529 */
+/* 531 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36133,7 +36397,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 530 */
+/* 532 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36257,7 +36521,7 @@ var _a;
 
 
 /***/ }),
-/* 531 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36359,7 +36623,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 532 */
+/* 534 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36430,7 +36694,7 @@ var _a;
 
 
 /***/ }),
-/* 533 */
+/* 535 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36533,7 +36797,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 534 */
+/* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36603,7 +36867,7 @@ var _a;
 
 
 /***/ }),
-/* 535 */
+/* 537 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36765,7 +37029,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 536 */
+/* 538 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36873,7 +37137,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 537 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37084,7 +37348,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 538 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37229,7 +37493,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 539 */
+/* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37314,7 +37578,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 540 */
+/* 542 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37377,7 +37641,7 @@ var _a;
 
 
 /***/ }),
-/* 541 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37456,7 +37720,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 542 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37524,24 +37788,6 @@ var _a;
 
 
 /***/ }),
-/* 543 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 544 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37583,19 +37829,37 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(545));
-__export(__webpack_require__(546));
-__export(__webpack_require__(548));
-__export(__webpack_require__(543));
-__export(__webpack_require__(544));
-__export(__webpack_require__(547));
+;
 
 
 /***/ }),
 /* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 551 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(547));
+__export(__webpack_require__(548));
+__export(__webpack_require__(550));
+__export(__webpack_require__(545));
+__export(__webpack_require__(546));
+__export(__webpack_require__(549));
+
+
+/***/ }),
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37668,7 +37932,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 551 */
+/* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37746,7 +38010,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 552 */
+/* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37815,7 +38079,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 553 */
+/* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37864,7 +38128,7 @@ var _a;
 
 
 /***/ }),
-/* 554 */
+/* 556 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37942,7 +38206,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 555 */
+/* 557 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37997,7 +38261,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 556 */
+/* 558 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38095,7 +38359,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 557 */
+/* 559 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38161,7 +38425,7 @@ var _a;
 
 
 /***/ }),
-/* 558 */
+/* 560 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38320,7 +38584,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 559 */
+/* 561 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38430,7 +38694,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 560 */
+/* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38490,7 +38754,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 561 */
+/* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38549,7 +38813,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 562 */
+/* 564 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38647,7 +38911,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 563 */
+/* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38715,7 +38979,7 @@ var _a;
 
 
 /***/ }),
-/* 564 */
+/* 566 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38873,7 +39137,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 565 */
+/* 567 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38981,7 +39245,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 566 */
+/* 568 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39058,7 +39322,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
-/* 567 */
+/* 569 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39140,7 +39404,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 568 */
+/* 570 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39200,7 +39464,7 @@ var _a;
 
 
 /***/ }),
-/* 569 */
+/* 571 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39297,7 +39561,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 570 */
+/* 572 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39365,7 +39629,7 @@ var _a;
 
 
 /***/ }),
-/* 571 */
+/* 573 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39524,7 +39788,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 572 */
+/* 574 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39635,7 +39899,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 573 */
+/* 575 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39695,7 +39959,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 574 */
+/* 576 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39754,7 +40018,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 575 */
+/* 577 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39851,7 +40115,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 576 */
+/* 578 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39919,7 +40183,7 @@ var _a;
 
 
 /***/ }),
-/* 577 */
+/* 579 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40077,7 +40341,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 578 */
+/* 580 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40180,7 +40444,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 579 */
+/* 581 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40194,7 +40458,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var ShoppingCartItemBatchClient = (function () {
     function ShoppingCartItemBatchClient(shoppingCartItemBatchRoute, apiClient) {
         this.shoppingCartItemBatchRoute = shoppingCartItemBatchRoute;
@@ -40274,7 +40538,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 580 */
+/* 582 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40341,7 +40605,7 @@ var _a;
 
 
 /***/ }),
-/* 581 */
+/* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40355,7 +40619,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var ShoppingCartItemClient = (function () {
     function ShoppingCartItemClient(shoppingCartItemRoute, apiClient, shoppingCartItemBatchClient) {
         this.shoppingCartItemRoute = shoppingCartItemRoute;
@@ -40483,7 +40747,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 582 */
+/* 584 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40497,7 +40761,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var contracts_1 = __webpack_require__(3);
 var ShoppingCartItemRoute = (function (_super) {
     tslib_1.__extends(ShoppingCartItemRoute, _super);
@@ -40593,7 +40857,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 583 */
+/* 585 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40607,7 +40871,7 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var ShoppingCartPaymentClient = (function () {
     function ShoppingCartPaymentClient(shoppingCartPaymentRoute, apiClient) {
         this.shoppingCartPaymentRoute = shoppingCartPaymentRoute;
@@ -40671,7 +40935,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 584 */
+/* 586 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40729,22 +40993,6 @@ var _a;
 
 
 /***/ }),
-/* 585 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 586 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 587 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40798,17 +41046,6 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(585));
-__export(__webpack_require__(588));
-__export(__webpack_require__(586));
-__export(__webpack_require__(587));
-__export(__webpack_require__(592));
-__export(__webpack_require__(589));
-__export(__webpack_require__(591));
-__export(__webpack_require__(590));
 
 
 /***/ }),
@@ -40817,9 +41054,36 @@ __export(__webpack_require__(590));
 
 "use strict";
 
+
+
+/***/ }),
+/* 595 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(587));
+__export(__webpack_require__(590));
+__export(__webpack_require__(588));
+__export(__webpack_require__(589));
+__export(__webpack_require__(594));
+__export(__webpack_require__(591));
+__export(__webpack_require__(593));
+__export(__webpack_require__(592));
+
+
+/***/ }),
+/* 596 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var TYPES = {
     ShoppingCartItemClient: Symbol("ShoppingCartItemClient"),
     ShoppingCartPaymentClient: Symbol("ShoppingCartPaymentClient"),
@@ -40843,13 +41107,13 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 595 */
+/* 597 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var _1 = __webpack_require__(23);
+var _1 = __webpack_require__(24);
 var inversify_1 = __webpack_require__(0);
 var Root = (function () {
     function Root(items, payment) {
@@ -40869,7 +41133,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 596 */
+/* 598 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40878,7 +41142,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 597 */
+/* 599 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40886,11 +41150,11 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(596));
+__export(__webpack_require__(598));
 
 
 /***/ }),
-/* 598 */
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40915,7 +41179,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 599 */
+/* 601 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41009,7 +41273,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 600 */
+/* 602 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41076,7 +41340,7 @@ var _a;
 
 
 /***/ }),
-/* 601 */
+/* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41228,7 +41492,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 602 */
+/* 604 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41334,7 +41598,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 603 */
+/* 605 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41431,7 +41695,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 604 */
+/* 606 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41497,7 +41761,7 @@ var _a;
 
 
 /***/ }),
-/* 605 */
+/* 607 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41654,7 +41918,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 606 */
+/* 608 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41744,24 +42008,6 @@ var _a, _b;
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
-
-
-/***/ }),
-/* 607 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 608 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
 
 
 /***/ }),
@@ -41860,25 +42106,43 @@ var _a, _b;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(607));
-__export(__webpack_require__(609));
-__export(__webpack_require__(612));
-__export(__webpack_require__(613));
-__export(__webpack_require__(611));
-__export(__webpack_require__(610));
-__export(__webpack_require__(608));
-__export(__webpack_require__(615));
-__export(__webpack_require__(616));
-__export(__webpack_require__(614));
-__export(__webpack_require__(617));
-__export(__webpack_require__(618));
+;
 
 
 /***/ }),
 /* 620 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 621 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(609));
+__export(__webpack_require__(611));
+__export(__webpack_require__(614));
+__export(__webpack_require__(615));
+__export(__webpack_require__(613));
+__export(__webpack_require__(612));
+__export(__webpack_require__(610));
+__export(__webpack_require__(617));
+__export(__webpack_require__(618));
+__export(__webpack_require__(616));
+__export(__webpack_require__(619));
+__export(__webpack_require__(620));
+
+
+/***/ }),
+/* 622 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41949,7 +42213,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 621 */
+/* 623 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42044,7 +42308,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 622 */
+/* 624 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42110,7 +42374,7 @@ var _a;
 
 
 /***/ }),
-/* 623 */
+/* 625 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42261,7 +42525,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 624 */
+/* 626 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42366,7 +42630,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 625 */
+/* 627 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42396,7 +42660,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 626 */
+/* 628 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42493,7 +42757,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 627 */
+/* 629 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42559,7 +42823,7 @@ var _a;
 
 
 /***/ }),
-/* 628 */
+/* 630 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42709,7 +42973,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 629 */
+/* 631 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42807,7 +43071,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 630 */
+/* 632 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42949,7 +43213,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 631 */
+/* 633 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43045,7 +43309,7 @@ var _a;
 
 
 /***/ }),
-/* 632 */
+/* 634 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43177,7 +43441,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 633 */
+/* 635 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43296,7 +43560,7 @@ var _a;
 
 
 /***/ }),
-/* 634 */
+/* 636 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43429,7 +43693,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 635 */
+/* 637 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43532,7 +43796,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 636 */
+/* 638 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43678,7 +43942,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 637 */
+/* 639 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43766,7 +44030,7 @@ var _a;
 
 
 /***/ }),
-/* 638 */
+/* 640 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43961,7 +44225,7 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
-/* 639 */
+/* 641 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44069,7 +44333,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 640 */
+/* 642 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44213,7 +44477,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 641 */
+/* 643 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44309,7 +44573,7 @@ var _a;
 
 
 /***/ }),
-/* 642 */
+/* 644 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44450,7 +44714,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 643 */
+/* 645 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44540,25 +44804,25 @@ var _a;
 
 
 /***/ }),
-/* 644 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 645 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 646 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 647 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 648 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44566,12 +44830,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(645));
-__export(__webpack_require__(644));
+__export(__webpack_require__(647));
+__export(__webpack_require__(646));
 
 
 /***/ }),
-/* 647 */
+/* 649 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44596,7 +44860,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 648 */
+/* 650 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44759,7 +45023,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 649 */
+/* 651 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44909,7 +45173,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 650 */
+/* 652 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45014,7 +45278,7 @@ var _a;
 
 
 /***/ }),
-/* 651 */
+/* 653 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45121,7 +45385,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 652 */
+/* 654 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/
@@ -46014,4 +46278,4 @@ var UriTemplate = (function () {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=baasic-sdk-javascript.js.map
+//# sourceMappingURL=baasic-sdk-javascript.js.map 

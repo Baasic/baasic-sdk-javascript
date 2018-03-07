@@ -13,16 +13,12 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 export class DynamicResourceRoute extends BaseRoute {
 
     public readonly findRoute: string = 'resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}';
-
     public readonly getRoute: string = 'resources/{schemaName}/{id}/{?embed,fields}';
-
     public readonly createRoute: string = 'resources/{schemaName}';
-
     public readonly updateRoute: string = 'resources/{schemaName}/{id}/{?embed,fields,query}';
-
     public readonly patchRoute: string = 'resources/{schemaName}/{id}/{?embed,fields,query}';
-
     public readonly deleteRoute: string = 'resources/{schemaName}/{id}/{?query}';
+    public readonly purgeRoute: string = 'resources/{schemaName}/purge';
 
     get acl(): DynamicResourceACLRoute {
         return this.dynamicResourceACLRoute;
@@ -85,6 +81,10 @@ export class DynamicResourceRoute extends BaseRoute {
     delete(schemaName: string, data: any, options?: any): any {
         let opt = options || {};
         return super.baseDelete(this.deleteRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
+    }
+
+    purge(schemaName: string): any {
+        return super.baseCreate(this.purgeRoute, { schemaName: schemaName });
     }
 }
 

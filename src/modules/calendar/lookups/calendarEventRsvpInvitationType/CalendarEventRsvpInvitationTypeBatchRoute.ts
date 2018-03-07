@@ -38,7 +38,7 @@ export class CalendarEventRsvpInvitationTypeBatchRoute extends BaseRoute {
     }
 
     /**
-     * Parses delte route. This URI template does not expose any additional options.
+     * Parses delete route. This URI template does not expose any additional options.
      * @method
      * @example calendarEventRsvpInvitationTypeBatchRoute.delete();
      */

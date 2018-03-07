@@ -2,6 +2,8 @@ import { ContainerModule } from "inversify";
 import * as Symbol from "es6-symbol";
 
 import {
+    DynamicResourceBatchRoute,
+    DynamicResourceBatchClient,
     DynamicResourceACLClient,
     DynamicResourceACLRoute,
     DynamicResourceClient,
@@ -11,6 +13,8 @@ import {
 } from './';
 
 const TYPES = {
+    DynamicResourceBatchRoute: Symbol("DynamicResourceBatchRoute"),
+    DynamicResourceBatchClient: Symbol("DynamicResourceBatchClient"),
     DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
     DynamicResourceACLRoute: Symbol("DynamicResourceACLRoute"),
     DynamicResourceClient: Symbol("DynamicResourceClient"),
@@ -26,6 +30,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<DynamicResourceACLClient>(TYPES.DynamicResourceACLClient).to(DynamicResourceACLClient);
     bind<DynamicResourceRoute>(TYPES.DynamicResourceRoute).to(DynamicResourceRoute);
     bind<DynamicResourceClient>(TYPES.DynamicResourceClient).to(DynamicResourceClient);
+    bind<DynamicResourceBatchRoute>(TYPES.DynamicResourceBatchRoute).to(DynamicResourceBatchRoute);
+    bind<DynamicResourceBatchClient>(TYPES.DynamicResourceBatchClient).to(DynamicResourceBatchClient);
     bind<DynamicSchemaRoute>(TYPES.DynamicSchemaRoute).to(DynamicSchemaRoute);
     bind<DynamicSchemaClient>(TYPES.DynamicSchemaClient).to(DynamicSchemaClient);
 });

@@ -14,11 +14,11 @@ import { ICouponUseOptions } from '../contracts';
 export class CommerceCouponUseClient {
 
     get routeDefinition(): CommerceCouponUseRoute {
-        return this.commerceCouponRoute;
+        return this.commerceCouponUseRoute;
     }
 
     constructor(
-        @inject(commerceTypes.CommerceCouponRoute) protected commerceCouponRoute: CommerceCouponUseRoute,
+        @inject(commerceTypes.CommerceCouponUseRoute) protected commerceCouponUseRoute: CommerceCouponUseRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
@@ -57,7 +57,7 @@ export class CommerceCouponUseClient {
                       });                 
    **/
     get(id: string, options?: IGetRequestOptions): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.get(this.commerceCouponRoute.get(id, options));
+        return this.apiClient.get(this.routeDefinition.get(id, options));
     }
 
     /**                  
