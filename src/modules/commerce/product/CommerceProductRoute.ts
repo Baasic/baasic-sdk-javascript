@@ -13,7 +13,7 @@ import {IProductOptions} from '../contracts';
 @injectable()
 export class CommerceProductRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields,productCategoryId,productCategoryAbrv}';
+    public readonly findRoute: string = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields,productCategoryIds,productCategoryAbrvs}';
 
     public readonly getRoute: string = 'commerce/products/{id}/{?embed,fields}';
 
@@ -34,8 +34,8 @@ export class CommerceProductRoute extends BaseRoute {
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
      * - `embed` - Comma separated list of resources to be contained within the current representation.        
-     * - `productCategoryId` - A product category id.            
-     * - `productCategoryAbrv` - A product category abbreviation.         
+     * - `productCategoryIds` - A list of product category ids.            
+     * - `productCategoryAbrvs` - A list of product category abbreviations.         
      * @method                        
      * @example commerceProductRoute.find({searchQuery: '<search-phrase>'});                               
      **/

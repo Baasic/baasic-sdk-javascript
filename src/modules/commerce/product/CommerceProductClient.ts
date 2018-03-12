@@ -31,8 +31,8 @@ export class CommerceProductClient {
                    orderBy : '<field>',   
                    orderDirection : '<asc|desc>',   
                    search : '<search-phrase>',
-                   productCategoryId : '',
-                   productCategoryAbrv: ''    
+                   productCategoryIds : [''],
+                   productCategoryAbrvs: ['']   
                }) 
                .then(function (collection) {   
                    // perform success action here 
