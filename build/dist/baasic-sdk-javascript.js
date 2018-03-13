@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-inter05 - Wednesday, March 7th, 2018, 8:04:39 AM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-inter06 - Tuesday, March 13th, 2018, 11:25:08 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -26292,8 +26292,8 @@ var CommerceProductClient = (function () {
                    orderBy : '<field>',
                    orderDirection : '<asc|desc>',
                    search : '<search-phrase>',
-                   productCategoryId : '',
-                   productCategoryAbrv: ''
+                   productCategoryIds : [''],
+                   productCategoryAbrvs: ['']
                })
                .then(function (collection) {
                    // perform success action here
@@ -26422,7 +26422,7 @@ var CommerceProductRoute = (function (_super) {
     function CommerceProductRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
-        _this.findRoute = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields,productCategoryId,productCategoryAbrv}';
+        _this.findRoute = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields,productCategoryIds,productCategoryAbrvs}';
         _this.getRoute = 'commerce/products/{id}/{?embed,fields}';
         _this.createRoute = 'commerce/products';
         _this.updateRoute = 'commerce/products/{id}';
@@ -26436,8 +26436,8 @@ var CommerceProductRoute = (function (_super) {
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the commerce property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * - `productCategoryId` - A product category id.
-     * - `productCategoryAbrv` - A product category abbreviation.
+     * - `productCategoryIds` - A list of product category ids.
+     * - `productCategoryAbrvs` - A list of product category abbreviations.
      * @method
      * @example commerceProductRoute.find({searchQuery: '<search-phrase>'});
      **/
