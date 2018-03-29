@@ -53,7 +53,7 @@ export class CommerceLookupsSubscriptionStatusRoute extends BaseRoute {
      * @example commerceLookupsSubscriptionStatusRoute.get();                               
      **/
     get(id: string, options: IGetRequestOptions): any {
-        return super.baseGet(this.getRoute, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
