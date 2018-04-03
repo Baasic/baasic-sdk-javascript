@@ -71,6 +71,24 @@ export class ShoppingCartItemClient {
         return this.apiClient.delete<void>(this.routeDefinition.deleteByUserIdAndProductId(userId, productId));
     }
 
+/**                  
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove all shopping cart item resources for a given userId from the system if successfully completed.
+     *                
+     * @method 
+     * @param userId User Id from the User that the Shopping Cart Item resource from the system belongs to.
+     * @example // The following action will remove the original shopping cart item resource and all accompanying derived shopping cart item resources.		
+                   shoppingCartClient.removeByUserIdAndProductId(userId)
+                       .then(function (data) {   
+                           // perform success action here 
+                       },
+                        function (response, status, headers, config) {   
+                            // perform error handling here 
+                       });                						
+    **/
+    removeByUserId(userId: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.routeDefinition.deleteByUserId(userId));
+    }
+
     /**
      * Returns a promise that is resolved once the create shopping cart item action has been performed; this action creates a new shopping cart item.
      * @method

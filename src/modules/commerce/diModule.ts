@@ -13,6 +13,8 @@ import {
     CommercePaymentTransactionRoute,
     CommerceProductClient,
     CommerceProductRoute,
+    CommerceAddOnClient,
+    CommerceAddOnRoute,
     CommerceProductFilesStreamsClient,
     CommerceProductFilesStreamsRoute,
     CommerceProductFilesBatchClient,
@@ -81,6 +83,8 @@ const TYPES = {
     CommerceInvoiceStreamsRoute: Symbol("CommerceInvoiceStreamsRoute"),
     CommercePaymentTransactionClient: Symbol("CommercePaymentTransactionClient"),
     CommercePaymentTransactionRoute: Symbol("CommercePaymentTransactionRoute"),
+    CommerceAddOnClient: Symbol("CommerceAddOnClient"),
+    CommerceAddOnRoute: Symbol("CommerceAddOnRoute"),
     CommerceProductClient: Symbol("CommerceProductClient"),
     CommerceProductRoute: Symbol("CommerceProductRoute"),
     CommerceProductFilesStreamsClient: Symbol("CommerceProductFilesStreamsClient"),
@@ -154,6 +158,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CommerceInvoiceRoute>(TYPES.CommerceInvoiceRoute).to(CommerceInvoiceRoute);
     bind<CommercePaymentTransactionRoute>(TYPES.CommercePaymentTransactionRoute).to(CommercePaymentTransactionRoute);
     bind<CommercePaymentTransactionClient>(TYPES.CommercePaymentTransactionClient).to(CommercePaymentTransactionClient);
+    bind<CommerceAddOnRoute>(TYPES.CommerceAddOnRoute).to(CommerceAddOnRoute);
+    bind<CommerceAddOnClient>(TYPES.CommerceAddOnClient).to(CommerceAddOnClient);
     bind<CommerceProductRoute>(TYPES.CommerceProductRoute).to(CommerceProductRoute);
     bind<CommerceProductClient>(TYPES.CommerceProductClient).to(CommerceProductClient);
     bind<CommerceProductFilesStreamsRoute>(TYPES.CommerceProductFilesStreamsRoute).to(CommerceProductFilesStreamsRoute);

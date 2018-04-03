@@ -33,6 +33,8 @@ export class ShoppingCartItemRoute extends BaseRoute {
 
     public readonly deleteByUserIdAndProductIdRoute: string = 'commerce/carts/users/{userId}/products/{productId}';
 
+    public readonly deleteByUserIdRoute: string = 'commerce/carts/users/{userId}/empty';
+
     public readonly createRoute: string = 'commerce/carts/items';
 
     public readonly createByUserIdAndProductIdRoute: string = 'commerce/carts/users/{userId}/products/{productId}';
@@ -72,6 +74,19 @@ export class ShoppingCartItemRoute extends BaseRoute {
             productId: productId
         }
         return super.baseDelete(this.deleteByUserIdAndProductIdRoute, data);
+    }
+
+     /**                 
+     * Parses delete route; this route should be expanded with the userId.                 
+     * @method 
+     * @param userId User Id of the User resource that the Shopping Cart resource in the system bellongs to. 
+          * @example shoppingCartItemRoute.deleteByUserId(<user-id>);                               
+     **/
+    deleteByUserId(userId: string): any {
+        var data = {
+            userId: userId
+        }
+        return super.baseDelete(this.deleteByUserIdRoute, data);
     }
 
      /**
