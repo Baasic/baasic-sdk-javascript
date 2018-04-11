@@ -54,8 +54,8 @@ export class CommerceCustomerPaymentMethodRoute extends BaseRoute {
      * @method                        
      * @example commerceCustomerPaymentMethodRoute.create();                              
      **/
-    create(): any {
-        return super.baseCreate(this.createRoute, {});
+    create(data: any): any {
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 
