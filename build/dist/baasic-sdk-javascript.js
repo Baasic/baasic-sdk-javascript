@@ -1,5 +1,9 @@
+<<<<<<< develop
 // [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-beta09 - Friday, August 17th, 2018, 8:55:52 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
+=======
+(function webpackUniversalModuleDefinition(root, factory) {
+>>>>>>> Fix jQuery http client reject promise issue
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
@@ -74,7 +78,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< develop
 /******/ 	return __webpack_require__(__webpack_require__.s = 43);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 40);
+>>>>>>> Fix jQuery http client reject promise issue
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -83,6 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 
+<<<<<<< develop
 var container_1 = __webpack_require__(72);
 exports.Container = container_1.Container;
 var container_module_1 = __webpack_require__(73);
@@ -108,11 +117,42 @@ exports.guid = guid_1.guid;
 var decorator_utils_1 = __webpack_require__(17);
 exports.decorate = decorator_utils_1.decorate;
 var constraint_helpers_1 = __webpack_require__(34);
+=======
+var container_1 = __webpack_require__(69);
+exports.Container = container_1.Container;
+var container_module_1 = __webpack_require__(70);
+exports.ContainerModule = container_module_1.ContainerModule;
+var injectable_1 = __webpack_require__(60);
+exports.injectable = injectable_1.injectable;
+var tagged_1 = __webpack_require__(64);
+exports.tagged = tagged_1.tagged;
+var named_1 = __webpack_require__(62);
+exports.named = named_1.named;
+var inject_1 = __webpack_require__(59);
+exports.inject = inject_1.inject;
+var optional_1 = __webpack_require__(63);
+exports.optional = optional_1.optional;
+var unmanaged_1 = __webpack_require__(66);
+exports.unmanaged = unmanaged_1.unmanaged;
+var multi_inject_1 = __webpack_require__(61);
+exports.multiInject = multi_inject_1.multiInject;
+var target_name_1 = __webpack_require__(65);
+exports.targetName = target_name_1.targetName;
+var guid_1 = __webpack_require__(18);
+exports.guid = guid_1.guid;
+var decorator_utils_1 = __webpack_require__(15);
+exports.decorate = decorator_utils_1.decorate;
+var constraint_helpers_1 = __webpack_require__(32);
+>>>>>>> Fix jQuery http client reject promise issue
 exports.traverseAncerstors = constraint_helpers_1.traverseAncerstors;
 exports.taggedConstraint = constraint_helpers_1.taggedConstraint;
 exports.namedConstraint = constraint_helpers_1.namedConstraint;
 exports.typeConstraint = constraint_helpers_1.typeConstraint;
+<<<<<<< develop
 var serialization_1 = __webpack_require__(23);
+=======
+var serialization_1 = __webpack_require__(21);
+>>>>>>> Fix jQuery http client reject promise issue
 exports.getServiceIdentifierAsString = serialization_1.getServiceIdentifierAsString;
 
 
@@ -306,6 +346,7 @@ function __asyncValues(o) {
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(87));
 var diModule_1 = __webpack_require__(35);
 exports.commonDIModule = diModule_1.diModule;
@@ -317,6 +358,18 @@ __export(__webpack_require__(88));
 __export(__webpack_require__(103));
 __export(__webpack_require__(101));
 __export(__webpack_require__(102));
+=======
+__export(__webpack_require__(84));
+var diModule_1 = __webpack_require__(33);
+exports.commonDIModule = diModule_1.diModule;
+var diModule_2 = __webpack_require__(33);
+exports.TYPES = diModule_2.TYPES;
+__export(__webpack_require__(101));
+__export(__webpack_require__(100));
+__export(__webpack_require__(85));
+__export(__webpack_require__(99));
+__export(__webpack_require__(98));
+>>>>>>> Fix jQuery http client reject promise issue
 
 
 /***/ }),
@@ -328,6 +381,7 @@ __export(__webpack_require__(102));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(114));
 __export(__webpack_require__(113));
 __export(__webpack_require__(115));
@@ -340,6 +394,20 @@ __export(__webpack_require__(110));
 __export(__webpack_require__(108));
 __export(__webpack_require__(109));
 __export(__webpack_require__(119));
+=======
+__export(__webpack_require__(110));
+__export(__webpack_require__(109));
+__export(__webpack_require__(111));
+__export(__webpack_require__(112));
+__export(__webpack_require__(113));
+__export(__webpack_require__(114));
+__export(__webpack_require__(108));
+__export(__webpack_require__(107));
+__export(__webpack_require__(106));
+__export(__webpack_require__(104));
+__export(__webpack_require__(105));
+__export(__webpack_require__(115));
+>>>>>>> Fix jQuery http client reject promise issue
 
 
 /***/ }),
@@ -351,6 +419,7 @@ __export(__webpack_require__(119));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 var diModule_1 = __webpack_require__(37);
 exports.httpDIModule = diModule_1.diModule;
 var diModule_2 = __webpack_require__(37);
@@ -361,6 +430,17 @@ __export(__webpack_require__(128));
 __export(__webpack_require__(129));
 __export(__webpack_require__(126));
 __export(__webpack_require__(130));
+=======
+var diModule_1 = __webpack_require__(35);
+exports.httpDIModule = diModule_1.diModule;
+var diModule_2 = __webpack_require__(35);
+exports.httpTYPES = diModule_2.TYPES;
+__export(__webpack_require__(122));
+__export(__webpack_require__(123));
+__export(__webpack_require__(124));
+__export(__webpack_require__(121));
+__export(__webpack_require__(125));
+>>>>>>> Fix jQuery http client reject promise issue
 
 
 /***/ }),
@@ -372,6 +452,7 @@ __export(__webpack_require__(130));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(313));
 __export(__webpack_require__(294));
 __export(__webpack_require__(293));
@@ -384,6 +465,16 @@ __export(__webpack_require__(381));
 __export(__webpack_require__(307));
 __export(__webpack_require__(304));
 __export(__webpack_require__(301));
+=======
+__export(__webpack_require__(213));
+__export(__webpack_require__(207));
+__export(__webpack_require__(206));
+__export(__webpack_require__(37));
+__export(__webpack_require__(212));
+__export(__webpack_require__(218));
+__export(__webpack_require__(262));
+__export(__webpack_require__(265));
+>>>>>>> Fix jQuery http client reject promise issue
 
 
 /***/ }),
@@ -395,6 +486,7 @@ __export(__webpack_require__(301));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(209));
 __export(__webpack_require__(140));
 __export(__webpack_require__(192));
@@ -431,6 +523,44 @@ __export(__webpack_require__(173));
 __export(__webpack_require__(170));
 __export(__webpack_require__(38));
 __export(__webpack_require__(210));
+=======
+__export(__webpack_require__(204));
+__export(__webpack_require__(135));
+__export(__webpack_require__(187));
+__export(__webpack_require__(203));
+__export(__webpack_require__(186));
+__export(__webpack_require__(36));
+__export(__webpack_require__(178));
+__export(__webpack_require__(164));
+__export(__webpack_require__(185));
+__export(__webpack_require__(146));
+__export(__webpack_require__(159));
+__export(__webpack_require__(137));
+__export(__webpack_require__(136));
+__export(__webpack_require__(139));
+__export(__webpack_require__(138));
+__export(__webpack_require__(141));
+__export(__webpack_require__(140));
+__export(__webpack_require__(148));
+__export(__webpack_require__(147));
+__export(__webpack_require__(152));
+__export(__webpack_require__(151));
+__export(__webpack_require__(150));
+__export(__webpack_require__(149));
+__export(__webpack_require__(161));
+__export(__webpack_require__(160));
+__export(__webpack_require__(167));
+__export(__webpack_require__(166));
+__export(__webpack_require__(182));
+__export(__webpack_require__(181));
+__export(__webpack_require__(180));
+__export(__webpack_require__(179));
+__export(__webpack_require__(169));
+__export(__webpack_require__(168));
+__export(__webpack_require__(165));
+__export(__webpack_require__(36));
+__export(__webpack_require__(205));
+>>>>>>> Fix jQuery http client reject promise issue
 
 
 /***/ }),
@@ -442,6 +572,7 @@ __export(__webpack_require__(210));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(255));
 __export(__webpack_require__(241));
 __export(__webpack_require__(213));
@@ -455,6 +586,38 @@ __export(__webpack_require__(215));
 __export(__webpack_require__(216));
 __export(__webpack_require__(217));
 __export(__webpack_require__(292));
+=======
+__export(__webpack_require__(382));
+__export(__webpack_require__(385));
+__export(__webpack_require__(384));
+__export(__webpack_require__(387));
+__export(__webpack_require__(386));
+__export(__webpack_require__(389));
+__export(__webpack_require__(388));
+__export(__webpack_require__(391));
+__export(__webpack_require__(390));
+__export(__webpack_require__(395));
+__export(__webpack_require__(394));
+__export(__webpack_require__(397));
+__export(__webpack_require__(396));
+__export(__webpack_require__(393));
+__export(__webpack_require__(392));
+__export(__webpack_require__(408));
+__export(__webpack_require__(407));
+__export(__webpack_require__(402));
+__export(__webpack_require__(401));
+__export(__webpack_require__(404));
+__export(__webpack_require__(403));
+__export(__webpack_require__(410));
+__export(__webpack_require__(409));
+__export(__webpack_require__(406));
+__export(__webpack_require__(405));
+__export(__webpack_require__(400));
+__export(__webpack_require__(399));
+__export(__webpack_require__(398));
+__export(__webpack_require__(383));
+__export(__webpack_require__(381));
+>>>>>>> Fix jQuery http client reject promise issue
 
 
 /***/ }),
@@ -466,6 +629,7 @@ __export(__webpack_require__(292));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(530));
 __export(__webpack_require__(533));
 __export(__webpack_require__(532));
@@ -496,6 +660,37 @@ __export(__webpack_require__(547));
 __export(__webpack_require__(546));
 __export(__webpack_require__(531));
 __export(__webpack_require__(529));
+=======
+__export(__webpack_require__(435));
+__export(__webpack_require__(419));
+__export(__webpack_require__(418));
+__export(__webpack_require__(421));
+__export(__webpack_require__(420));
+__export(__webpack_require__(437));
+__export(__webpack_require__(436));
+__export(__webpack_require__(439));
+__export(__webpack_require__(438));
+__export(__webpack_require__(442));
+__export(__webpack_require__(441));
+__export(__webpack_require__(444));
+__export(__webpack_require__(443));
+__export(__webpack_require__(446));
+__export(__webpack_require__(445));
+__export(__webpack_require__(452));
+__export(__webpack_require__(451));
+__export(__webpack_require__(450));
+__export(__webpack_require__(449));
+__export(__webpack_require__(448));
+__export(__webpack_require__(447));
+__export(__webpack_require__(454));
+__export(__webpack_require__(453));
+__export(__webpack_require__(456));
+__export(__webpack_require__(455));
+__export(__webpack_require__(458));
+__export(__webpack_require__(457));
+__export(__webpack_require__(440));
+__export(__webpack_require__(434));
+>>>>>>> Fix jQuery http client reject promise issue
 
 
 /***/ }),
@@ -504,6 +699,7 @@ __export(__webpack_require__(529));
 
 "use strict";
 
+<<<<<<< develop
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
@@ -550,6 +746,14 @@ module.exports = __webpack_require__(58)() ? Symbol : __webpack_require__(60);
 
 /***/ }),
 /* 11 */
+=======
+
+module.exports = __webpack_require__(55)() ? Symbol : __webpack_require__(57);
+
+
+/***/ }),
+/* 10 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -557,6 +761,7 @@ module.exports = __webpack_require__(58)() ? Symbol : __webpack_require__(60);
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(482));
 __export(__webpack_require__(486));
 __export(__webpack_require__(485));
@@ -584,6 +789,35 @@ __export(__webpack_require__(481));
 
 /***/ }),
 /* 12 */
+=======
+__export(__webpack_require__(334));
+__export(__webpack_require__(338));
+__export(__webpack_require__(337));
+__export(__webpack_require__(336));
+__export(__webpack_require__(335));
+__export(__webpack_require__(342));
+__export(__webpack_require__(341));
+__export(__webpack_require__(346));
+__export(__webpack_require__(345));
+__export(__webpack_require__(348));
+__export(__webpack_require__(347));
+__export(__webpack_require__(350));
+__export(__webpack_require__(349));
+__export(__webpack_require__(355));
+__export(__webpack_require__(353));
+__export(__webpack_require__(354));
+__export(__webpack_require__(352));
+__export(__webpack_require__(344));
+__export(__webpack_require__(343));
+__export(__webpack_require__(340));
+__export(__webpack_require__(339));
+__export(__webpack_require__(351));
+__export(__webpack_require__(333));
+
+
+/***/ }),
+/* 11 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -601,6 +835,7 @@ exports.DESIGN_PARAM_TYPES = "design:paramtypes";
 
 
 /***/ }),
+<<<<<<< develop
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -629,6 +864,9 @@ __export(__webpack_require__(444));
 
 /***/ }),
 /* 14 */
+=======
+/* 12 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -636,6 +874,7 @@ __export(__webpack_require__(444));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(508));
 __export(__webpack_require__(514));
 __export(__webpack_require__(513));
@@ -656,11 +895,37 @@ __export(__webpack_require__(507));
 
 /***/ }),
 /* 15 */
+=======
+__export(__webpack_require__(360));
+__export(__webpack_require__(366));
+__export(__webpack_require__(365));
+__export(__webpack_require__(368));
+__export(__webpack_require__(367));
+__export(__webpack_require__(364));
+__export(__webpack_require__(363));
+__export(__webpack_require__(374));
+__export(__webpack_require__(373));
+__export(__webpack_require__(362));
+__export(__webpack_require__(361));
+__export(__webpack_require__(370));
+__export(__webpack_require__(369));
+__export(__webpack_require__(372));
+__export(__webpack_require__(371));
+__export(__webpack_require__(359));
+
+
+/***/ }),
+/* 13 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var METADATA_KEY = __webpack_require__(12);
+=======
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 var Metadata = (function () {
     function Metadata(key, value) {
         this.key = key;
@@ -680,7 +945,11 @@ exports.Metadata = Metadata;
 
 
 /***/ }),
+<<<<<<< develop
 /* 16 */
+=======
+/* 14 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -714,13 +983,22 @@ exports.INVALID_BINDING_PROPERTY = "TODO";
 
 
 /***/ }),
+<<<<<<< develop
 /* 17 */
+=======
+/* 15 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var METADATA_KEY = __webpack_require__(12);
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var METADATA_KEY = __webpack_require__(11);
+var ERROR_MSGS = __webpack_require__(14);
+>>>>>>> Fix jQuery http client reject promise issue
 function tagParameter(annotationTarget, propertyName, parameterIndex, metadata) {
     var metadataKey = METADATA_KEY.TAGGED;
     _tagParameterOrProperty(metadataKey, annotationTarget, propertyName, metadata, parameterIndex);
@@ -775,7 +1053,11 @@ exports.decorate = decorate;
 
 
 /***/ }),
+<<<<<<< develop
 /* 18 */
+=======
+/* 16 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -805,7 +1087,11 @@ exports.TargetTypeEnum = TargetTypeEnum;
 
 
 /***/ }),
+<<<<<<< develop
 /* 19 */
+=======
+/* 17 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -813,6 +1099,7 @@ exports.TargetTypeEnum = TargetTypeEnum;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(460));
 __export(__webpack_require__(454));
 __export(__webpack_require__(453));
@@ -829,6 +1116,24 @@ __export(__webpack_require__(459));
 
 /***/ }),
 /* 20 */
+=======
+__export(__webpack_require__(312));
+__export(__webpack_require__(306));
+__export(__webpack_require__(305));
+__export(__webpack_require__(298));
+__export(__webpack_require__(297));
+__export(__webpack_require__(304));
+__export(__webpack_require__(303));
+__export(__webpack_require__(301));
+__export(__webpack_require__(300));
+__export(__webpack_require__(302));
+__export(__webpack_require__(299));
+__export(__webpack_require__(311));
+
+
+/***/ }),
+/* 18 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -846,7 +1151,11 @@ exports.guid = guid;
 
 
 /***/ }),
+<<<<<<< develop
 /* 21 */
+=======
+/* 19 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -854,6 +1163,7 @@ exports.guid = guid;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(390));
 __export(__webpack_require__(394));
 __export(__webpack_require__(393));
@@ -868,6 +1178,22 @@ __export(__webpack_require__(389));
 
 /***/ }),
 /* 22 */
+=======
+__export(__webpack_require__(283));
+__export(__webpack_require__(291));
+__export(__webpack_require__(290));
+__export(__webpack_require__(287));
+__export(__webpack_require__(286));
+__export(__webpack_require__(285));
+__export(__webpack_require__(284));
+__export(__webpack_require__(289));
+__export(__webpack_require__(288));
+__export(__webpack_require__(282));
+
+
+/***/ }),
+/* 20 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -875,6 +1201,7 @@ __export(__webpack_require__(389));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(404));
 __export(__webpack_require__(412));
 __export(__webpack_require__(411));
@@ -889,11 +1216,29 @@ __export(__webpack_require__(403));
 
 /***/ }),
 /* 23 */
+=======
+__export(__webpack_require__(271));
+__export(__webpack_require__(277));
+__export(__webpack_require__(276));
+__export(__webpack_require__(273));
+__export(__webpack_require__(272));
+__export(__webpack_require__(275));
+__export(__webpack_require__(274));
+__export(__webpack_require__(270));
+
+
+/***/ }),
+/* 21 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var ERROR_MSGS = __webpack_require__(14);
+>>>>>>> Fix jQuery http client reject promise issue
 function getServiceIdentifierAsString(serviceIdentifier) {
     if (typeof serviceIdentifier === "function") {
         var _serviceIdentifier = serviceIdentifier;
@@ -985,7 +1330,11 @@ exports.getFunctionName = getFunctionName;
 
 
 /***/ }),
+<<<<<<< develop
 /* 24 */
+=======
+/* 22 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -993,6 +1342,7 @@ exports.getFunctionName = getFunctionName;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(561));
 __export(__webpack_require__(563));
 __export(__webpack_require__(562));
@@ -1003,6 +1353,18 @@ __export(__webpack_require__(560));
 
 /***/ }),
 /* 25 */
+=======
+__export(__webpack_require__(413));
+__export(__webpack_require__(415));
+__export(__webpack_require__(414));
+__export(__webpack_require__(417));
+__export(__webpack_require__(416));
+__export(__webpack_require__(412));
+
+
+/***/ }),
+/* 23 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1010,6 +1372,7 @@ __export(__webpack_require__(560));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(610));
 __export(__webpack_require__(613));
 __export(__webpack_require__(612));
@@ -1020,12 +1383,28 @@ __export(__webpack_require__(609));
 
 /***/ }),
 /* 26 */
+=======
+__export(__webpack_require__(462));
+__export(__webpack_require__(465));
+__export(__webpack_require__(464));
+__export(__webpack_require__(466));
+__export(__webpack_require__(463));
+__export(__webpack_require__(461));
+
+
+/***/ }),
+/* 24 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 var _undefined = __webpack_require__(45)(); // Support ES3 engines
+=======
+var _undefined = __webpack_require__(42)(); // Support ES3 engines
+>>>>>>> Fix jQuery http client reject promise issue
 
 module.exports = function (val) {
  return (val !== _undefined) && (val !== null);
@@ -1033,12 +1412,20 @@ module.exports = function (val) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 27 */
+=======
+/* 25 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var binding_when_syntax_1 = __webpack_require__(28);
+=======
+var binding_when_syntax_1 = __webpack_require__(26);
+>>>>>>> Fix jQuery http client reject promise issue
 var BindingOnSyntax = (function () {
     function BindingOnSyntax(binding) {
         this._binding = binding;
@@ -1053,13 +1440,22 @@ exports.BindingOnSyntax = BindingOnSyntax;
 
 
 /***/ }),
+<<<<<<< develop
 /* 28 */
+=======
+/* 26 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var binding_on_syntax_1 = __webpack_require__(27);
 var constraint_helpers_1 = __webpack_require__(34);
+=======
+var binding_on_syntax_1 = __webpack_require__(25);
+var constraint_helpers_1 = __webpack_require__(32);
+>>>>>>> Fix jQuery http client reject promise issue
 var BindingWhenSyntax = (function () {
     function BindingWhenSyntax(binding) {
         this._binding = binding;
@@ -1157,7 +1553,11 @@ exports.BindingWhenSyntax = BindingWhenSyntax;
 
 
 /***/ }),
+<<<<<<< develop
 /* 29 */
+=======
+/* 27 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1165,6 +1565,7 @@ exports.BindingWhenSyntax = BindingWhenSyntax;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(139));
 __export(__webpack_require__(134));
 __export(__webpack_require__(133));
@@ -1173,6 +1574,16 @@ __export(__webpack_require__(138));
 
 /***/ }),
 /* 30 */
+=======
+__export(__webpack_require__(134));
+__export(__webpack_require__(129));
+__export(__webpack_require__(128));
+__export(__webpack_require__(133));
+
+
+/***/ }),
+/* 28 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1180,6 +1591,7 @@ __export(__webpack_require__(138));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(415));
 __export(__webpack_require__(417));
 __export(__webpack_require__(416));
@@ -1188,10 +1600,21 @@ __export(__webpack_require__(414));
 
 /***/ }),
 /* 31 */
+=======
+__export(__webpack_require__(294));
+__export(__webpack_require__(296));
+__export(__webpack_require__(295));
+__export(__webpack_require__(293));
+
+
+/***/ }),
+/* 29 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var ApplicationSettings = __webpack_require__(29);
 exports.ApplicationSettings = ApplicationSettings;
 var Membership = __webpack_require__(11);
@@ -1226,14 +1649,53 @@ exports.Calendar = Calendar;
 
 /***/ }),
 /* 32 */
+=======
+var ApplicationSettings = __webpack_require__(27);
+exports.ApplicationSettings = ApplicationSettings;
+var Membership = __webpack_require__(10);
+exports.Membership = Membership;
+var UserProfile = __webpack_require__(8);
+exports.UserProfile = UserProfile;
+var KeyValue = __webpack_require__(28);
+exports.KeyValue = KeyValue;
+var ValueSet = __webpack_require__(23);
+exports.ValueSet = ValueSet;
+var Article = __webpack_require__(6);
+exports.Article = Article;
+var DynamicResource = __webpack_require__(20);
+exports.DynamicResource = DynamicResource;
+var MediaVault = __webpack_require__(17);
+exports.MediaVault = MediaVault;
+var Files = __webpack_require__(19);
+exports.Files = Files;
+var Templating = __webpack_require__(22);
+exports.Templating = Templating;
+var Metering = __webpack_require__(12);
+exports.Metering = Metering;
+var Notifications = __webpack_require__(7);
+exports.Notifications = Notifications;
+var Commerce = __webpack_require__(5);
+exports.Commerce = Commerce;
+
+
+/***/ }),
+/* 30 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var queryable_string_1 = __webpack_require__(79);
 var guid_1 = __webpack_require__(20);
 var METADATA_KEY = __webpack_require__(12);
+=======
+var metadata_1 = __webpack_require__(13);
+var queryable_string_1 = __webpack_require__(76);
+var guid_1 = __webpack_require__(18);
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 var Target = (function () {
     function Target(type, name, serviceIdentifier, namedOrTagged) {
         this.guid = guid_1.guid();
@@ -1321,13 +1783,22 @@ exports.Target = Target;
 
 
 /***/ }),
+<<<<<<< develop
 /* 33 */
+=======
+/* 31 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var binding_when_syntax_1 = __webpack_require__(28);
 var binding_on_syntax_1 = __webpack_require__(27);
+=======
+var binding_when_syntax_1 = __webpack_require__(26);
+var binding_on_syntax_1 = __webpack_require__(25);
+>>>>>>> Fix jQuery http client reject promise issue
 var BindingWhenOnSyntax = (function () {
     function BindingWhenOnSyntax(binding) {
         this._binding = binding;
@@ -1388,13 +1859,22 @@ exports.BindingWhenOnSyntax = BindingWhenOnSyntax;
 
 
 /***/ }),
+<<<<<<< develop
 /* 34 */
+=======
+/* 32 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var METADATA_KEY = __webpack_require__(12);
+=======
+var metadata_1 = __webpack_require__(13);
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 var traverseAncerstors = function (request, constraint) {
     var parent = request.parentRequest;
     if (parent !== null) {
@@ -1434,17 +1914,28 @@ exports.typeConstraint = typeConstraint;
 
 
 /***/ }),
+<<<<<<< develop
 /* 35 */
+=======
+/* 33 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(2);
 var TYPES = {
     Utility: Symbol("Utility"),
     DateFormatter: Symbol("DateFormatter"),
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(2);
+var TYPES = {
+    Utility: Symbol("Utility"),
+>>>>>>> Fix jQuery http client reject promise issue
     ModelMapper: Symbol("ModelMapper"),
     IHALParser: Symbol("IHALParser"),
     IURLFactory: Symbol("IURLFactory")
@@ -1452,7 +1943,10 @@ var TYPES = {
 exports.TYPES = TYPES;
 var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.Utility).to(_1.Utility);
+<<<<<<< develop
     bind(TYPES.DateFormatter).to(_1.DateFormatter);
+=======
+>>>>>>> Fix jQuery http client reject promise issue
     bind(TYPES.ModelMapper).to(_1.ModelMapper);
     bind(TYPES.IHALParser).toConstantValue(_1.HALParser);
 });
@@ -1460,7 +1954,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 36 */
+=======
+/* 34 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1468,25 +1966,43 @@ exports.diModule = diModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(123));
 __export(__webpack_require__(124));
 var diModule_1 = __webpack_require__(120);
+=======
+__export(__webpack_require__(119));
+__export(__webpack_require__(120));
+var diModule_1 = __webpack_require__(116);
+>>>>>>> Fix jQuery http client reject promise issue
 exports.coreDIModule = diModule_1.diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 37 */
+=======
+/* 35 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(4);
 var TYPES = {
     ApiClient: Symbol("ApiClient"),
     IHttpClient: Symbol("IHttpClient"),
     IAbortSignal: Symbol("IAbortSignal")
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(4);
+var TYPES = {
+    ApiClient: Symbol("ApiClient"),
+    IHttpClient: Symbol("IHttpClient")
+>>>>>>> Fix jQuery http client reject promise issue
 };
 exports.TYPES = TYPES;
 var diModule = new inversify_1.ContainerModule(function (bind) {
@@ -1496,7 +2012,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 38 */
+=======
+/* 36 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1828,6 +2348,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
+<<<<<<< develop
 /* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1845,6 +2366,9 @@ __export(__webpack_require__(271));
 
 /***/ }),
 /* 40 */
+=======
+/* 37 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1852,6 +2376,7 @@ __export(__webpack_require__(271));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(323));
 __export(__webpack_require__(338));
 __export(__webpack_require__(333));
@@ -1866,16 +2391,38 @@ __export(__webpack_require__(344));
 
 /***/ }),
 /* 41 */
+=======
+__export(__webpack_require__(223));
+__export(__webpack_require__(233));
+__export(__webpack_require__(228));
+__export(__webpack_require__(244));
+__export(__webpack_require__(249));
+__export(__webpack_require__(254));
+__export(__webpack_require__(259));
+__export(__webpack_require__(238));
+__export(__webpack_require__(239));
+
+
+/***/ }),
+/* 38 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var core_1 = __webpack_require__(36);
 var _1 = __webpack_require__(43);
 var httpApi_1 = __webpack_require__(4);
 var modules = __webpack_require__(31);
+=======
+var core_1 = __webpack_require__(34);
+var _1 = __webpack_require__(40);
+var httpApi_1 = __webpack_require__(4);
+var modules = __webpack_require__(29);
+>>>>>>> Fix jQuery http client reject promise issue
 var BaasicApp = (function () {
     function BaasicApp(apiKey, options) {
         this.apiKey = apiKey;
@@ -1904,13 +2451,19 @@ var BaasicApp = (function () {
         this.templatingModule = this.diModule.kernel.get(modules.Templating.TYPES.TemplatingClient);
         this.meteringModule = this.diModule.kernel.get(modules.Metering.TYPES.MeteringClient);
         this.mediaVaultModule = this.diModule.kernel.get(modules.MediaVault.TYPES.MediaVaultClient);
+<<<<<<< develop
         this.mediaGalleryModule = this.diModule.kernel.get(modules.MediaGallery.TYPES.Root);
+=======
+>>>>>>> Fix jQuery http client reject promise issue
         this.fileModule = this.diModule.kernel.get(modules.Files.TYPES.FilesClient);
         this.dynamicResourceModule = this.diModule.kernel.get(modules.DynamicResource.TYPES.DynamicResourceClient);
         this.notificationModule = this.diModule.kernel.get(modules.Notifications.TYPES.NotificationsClient);
         this.articleModule = this.diModule.kernel.get(modules.Article.TYPES.Root);
         this.commerceModule = this.diModule.kernel.get(modules.Commerce.TYPES.CommerceClient);
+<<<<<<< develop
         this.calendarModule = this.diModule.kernel.get(modules.Calendar.TYPES.Root);
+=======
+>>>>>>> Fix jQuery http client reject promise issue
     }
     BaasicApp.prototype.getAccessToken = function () {
         return this.tokenHandler.get(contracts_1.TokenTypes.Access);
@@ -1942,7 +2495,11 @@ exports.BaasicApp = BaasicApp;
 
 
 /***/ }),
+<<<<<<< develop
 /* 42 */
+=======
+/* 39 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1950,9 +2507,15 @@ exports.BaasicApp = BaasicApp;
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var jQuery_1 = __webpack_require__(131);
 var localStorage_1 = __webpack_require__(122);
 var browserEvents_1 = __webpack_require__(107);
+=======
+var jQuery_1 = __webpack_require__(126);
+var localStorage_1 = __webpack_require__(118);
+var browserEvents_1 = __webpack_require__(103);
+>>>>>>> Fix jQuery http client reject promise issue
 var DIModule = (function () {
     function DIModule() {
         this.diModules = [];
@@ -1981,9 +2544,12 @@ var DIModule = (function () {
             _this.bindHandler(httpApi_1.httpTYPES.IHttpClient, app.settings.httpClient, jQuery_1.JQueryHttpClient);
             _this.bindHandlerWithOptions(contracts_1.TYPES.IStorageHandler, contracts_1.TYPES.IDefaultStorageConfig, app.settings.storageHandler, localStorage_1.LocalStorageHandler);
             _this.bindHandler(contracts_1.TYPES.IEventHandler, app.settings.eventHandler, browserEvents_1.BrowserEventHandler);
+<<<<<<< develop
             if (app.settings.abortSignal) {
                 _this.kernel.bind(httpApi_1.httpTYPES.IAbortSignal).toConstantValue(app.settings.abortSignal());
             }
+=======
+>>>>>>> Fix jQuery http client reject promise issue
             _this.kernel.bind(contracts_1.TYPES.IBaasicApp).toConstantValue(app);
         });
         this.diModules.push(diModule);
@@ -2031,7 +2597,11 @@ exports.DIModule = DIModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 43 */
+=======
+/* 40 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2039,8 +2609,13 @@ exports.DIModule = DIModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(42));
 __export(__webpack_require__(41));
+=======
+__export(__webpack_require__(39));
+__export(__webpack_require__(38));
+>>>>>>> Fix jQuery http client reject promise issue
 var httpApi_1 = __webpack_require__(4);
 exports.IHttpClient = httpApi_1.IHttpClient;
 exports.IHttpHeaders = httpApi_1.IHttpHeaders;
@@ -2058,20 +2633,35 @@ exports.IUser = contracts_1.IUser;
 exports.IUserHandler = contracts_1.IUserHandler;
 exports.IDefaultStorageConfig = contracts_1.IDefaultStorageConfig;
 __export(__webpack_require__(2));
+<<<<<<< develop
 __export(__webpack_require__(31));
 
 
 /***/ }),
 /* 44 */
+=======
+__export(__webpack_require__(29));
+
+
+/***/ }),
+/* 41 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 var assign        = __webpack_require__(46)
   , normalizeOpts = __webpack_require__(53)
   , isCallable    = __webpack_require__(49)
   , contains      = __webpack_require__(55)
+=======
+var assign        = __webpack_require__(43)
+  , normalizeOpts = __webpack_require__(50)
+  , isCallable    = __webpack_require__(46)
+  , contains      = __webpack_require__(52)
+>>>>>>> Fix jQuery http client reject promise issue
 
   , d;
 
@@ -2132,7 +2722,11 @@ d.gs = function (dscr, get, set/*, options*/) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 45 */
+=======
+/* 42 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2143,12 +2737,17 @@ module.exports = function () {};
 
 
 /***/ }),
+<<<<<<< develop
 /* 46 */
+=======
+/* 43 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 module.exports = __webpack_require__(47)()
 	? Object.assign
 	: __webpack_require__(48);
@@ -2156,6 +2755,15 @@ module.exports = __webpack_require__(47)()
 
 /***/ }),
 /* 47 */
+=======
+module.exports = __webpack_require__(44)()
+	? Object.assign
+	: __webpack_require__(45);
+
+
+/***/ }),
+/* 44 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2171,14 +2779,23 @@ module.exports = function () {
 
 
 /***/ }),
+<<<<<<< develop
 /* 48 */
+=======
+/* 45 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 var keys  = __webpack_require__(50)
   , value = __webpack_require__(54)
+=======
+var keys  = __webpack_require__(47)
+  , value = __webpack_require__(51)
+>>>>>>> Fix jQuery http client reject promise issue
   , max   = Math.max;
 
 module.exports = function (dest, src /*, …srcn*/) {
@@ -2201,7 +2818,11 @@ module.exports = function (dest, src /*, …srcn*/) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 49 */
+=======
+/* 46 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2215,12 +2836,17 @@ module.exports = function (obj) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 50 */
+=======
+/* 47 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 module.exports = __webpack_require__(51)()
 	? Object.keys
 	: __webpack_require__(52);
@@ -2228,6 +2854,15 @@ module.exports = __webpack_require__(51)()
 
 /***/ }),
 /* 51 */
+=======
+module.exports = __webpack_require__(48)()
+	? Object.keys
+	: __webpack_require__(49);
+
+
+/***/ }),
+/* 48 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2244,13 +2879,21 @@ module.exports = function () {
 
 
 /***/ }),
+<<<<<<< develop
 /* 52 */
+=======
+/* 49 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 var isValue = __webpack_require__(26);
+=======
+var isValue = __webpack_require__(24);
+>>>>>>> Fix jQuery http client reject promise issue
 
 var keys = Object.keys;
 
@@ -2260,13 +2903,21 @@ module.exports = function (object) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 53 */
+=======
+/* 50 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 var isValue = __webpack_require__(26);
+=======
+var isValue = __webpack_require__(24);
+>>>>>>> Fix jQuery http client reject promise issue
 
 var forEach = Array.prototype.forEach, create = Object.create;
 
@@ -2287,13 +2938,21 @@ module.exports = function (opts1 /*, …options*/) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 54 */
+=======
+/* 51 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 var isValue = __webpack_require__(26);
+=======
+var isValue = __webpack_require__(24);
+>>>>>>> Fix jQuery http client reject promise issue
 
 module.exports = function (value) {
 	if (!isValue(value)) throw new TypeError("Cannot use null or undefined");
@@ -2302,12 +2961,17 @@ module.exports = function (value) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 55 */
+=======
+/* 52 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 module.exports = __webpack_require__(56)()
 	? String.prototype.contains
 	: __webpack_require__(57);
@@ -2315,6 +2979,15 @@ module.exports = __webpack_require__(56)()
 
 /***/ }),
 /* 56 */
+=======
+module.exports = __webpack_require__(53)()
+	? String.prototype.contains
+	: __webpack_require__(54);
+
+
+/***/ }),
+/* 53 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2329,7 +3002,11 @@ module.exports = function () {
 
 
 /***/ }),
+<<<<<<< develop
 /* 57 */
+=======
+/* 54 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2343,7 +3020,11 @@ module.exports = function (searchString/*, position*/) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 58 */
+=======
+/* 55 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2367,7 +3048,11 @@ module.exports = function () {
 
 
 /***/ }),
+<<<<<<< develop
 /* 59 */
+=======
+/* 56 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2383,7 +3068,11 @@ module.exports = function (x) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 60 */
+=======
+/* 57 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2391,8 +3080,13 @@ module.exports = function (x) {
 
 
 
+<<<<<<< develop
 var d              = __webpack_require__(44)
   , validateSymbol = __webpack_require__(61)
+=======
+var d              = __webpack_require__(41)
+  , validateSymbol = __webpack_require__(58)
+>>>>>>> Fix jQuery http client reject promise issue
 
   , create = Object.create, defineProperties = Object.defineProperties
   , defineProperty = Object.defineProperty, objPrototype = Object.prototype
@@ -2508,13 +3202,21 @@ defineProperty(HiddenSymbol.prototype, SymbolPolyfill.toPrimitive,
 
 
 /***/ }),
+<<<<<<< develop
 /* 61 */
+=======
+/* 58 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 var isSymbol = __webpack_require__(59);
+=======
+var isSymbol = __webpack_require__(56);
+>>>>>>> Fix jQuery http client reject promise issue
 
 module.exports = function (value) {
 	if (!isSymbol(value)) throw new TypeError(value + " is not a symbol");
@@ -2523,14 +3225,24 @@ module.exports = function (value) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 62 */
+=======
+/* 59 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var decorator_utils_1 = __webpack_require__(17);
 var METADATA_KEY = __webpack_require__(12);
+=======
+var metadata_1 = __webpack_require__(13);
+var decorator_utils_1 = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 function inject(serviceIdentifier) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.INJECT_TAG, serviceIdentifier);
@@ -2546,13 +3258,22 @@ exports.inject = inject;
 
 
 /***/ }),
+<<<<<<< develop
 /* 63 */
+=======
+/* 60 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var METADATA_KEY = __webpack_require__(12);
 var ERRORS_MSGS = __webpack_require__(16);
+=======
+var METADATA_KEY = __webpack_require__(11);
+var ERRORS_MSGS = __webpack_require__(14);
+>>>>>>> Fix jQuery http client reject promise issue
 function injectable() {
     return function (target) {
         if (Reflect.hasOwnMetadata(METADATA_KEY.PARAM_TYPES, target) === true) {
@@ -2567,14 +3288,24 @@ exports.injectable = injectable;
 
 
 /***/ }),
+<<<<<<< develop
 /* 64 */
+=======
+/* 61 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var decorator_utils_1 = __webpack_require__(17);
 var METADATA_KEY = __webpack_require__(12);
+=======
+var metadata_1 = __webpack_require__(13);
+var decorator_utils_1 = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 function multiInject(serviceIdentifier) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.MULTI_INJECT_TAG, serviceIdentifier);
@@ -2590,14 +3321,24 @@ exports.multiInject = multiInject;
 
 
 /***/ }),
+<<<<<<< develop
 /* 65 */
+=======
+/* 62 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var decorator_utils_1 = __webpack_require__(17);
 var METADATA_KEY = __webpack_require__(12);
+=======
+var metadata_1 = __webpack_require__(13);
+var decorator_utils_1 = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 function named(name) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.NAMED_TAG, name);
@@ -2613,14 +3354,24 @@ exports.named = named;
 
 
 /***/ }),
+<<<<<<< develop
 /* 66 */
+=======
+/* 63 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var decorator_utils_1 = __webpack_require__(17);
 var METADATA_KEY = __webpack_require__(12);
+=======
+var metadata_1 = __webpack_require__(13);
+var decorator_utils_1 = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 function optional() {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.OPTIONAL_TAG, true);
@@ -2636,13 +3387,22 @@ exports.optional = optional;
 
 
 /***/ }),
+<<<<<<< develop
 /* 67 */
+=======
+/* 64 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var decorator_utils_1 = __webpack_require__(17);
+=======
+var metadata_1 = __webpack_require__(13);
+var decorator_utils_1 = __webpack_require__(15);
+>>>>>>> Fix jQuery http client reject promise issue
 function tagged(metadataKey, metadataValue) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(metadataKey, metadataValue);
@@ -2658,14 +3418,24 @@ exports.tagged = tagged;
 
 
 /***/ }),
+<<<<<<< develop
 /* 68 */
+=======
+/* 65 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var decorator_utils_1 = __webpack_require__(17);
 var METADATA_KEY = __webpack_require__(12);
+=======
+var metadata_1 = __webpack_require__(13);
+var decorator_utils_1 = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 function targetName(name) {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.NAME_TAG, name);
@@ -2676,14 +3446,24 @@ exports.targetName = targetName;
 
 
 /***/ }),
+<<<<<<< develop
 /* 69 */
+=======
+/* 66 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var metadata_1 = __webpack_require__(15);
 var decorator_utils_1 = __webpack_require__(17);
 var METADATA_KEY = __webpack_require__(12);
+=======
+var metadata_1 = __webpack_require__(13);
+var decorator_utils_1 = __webpack_require__(15);
+var METADATA_KEY = __webpack_require__(11);
+>>>>>>> Fix jQuery http client reject promise issue
 function unmanaged() {
     return function (target, targetKey, index) {
         var metadata = new metadata_1.Metadata(METADATA_KEY.UNMANAGED_TAG, true);
@@ -2694,13 +3474,22 @@ exports.unmanaged = unmanaged;
 
 
 /***/ }),
+<<<<<<< develop
 /* 70 */
+=======
+/* 67 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var guid_1 = __webpack_require__(20);
 var literal_types_1 = __webpack_require__(18);
+=======
+var guid_1 = __webpack_require__(18);
+var literal_types_1 = __webpack_require__(16);
+>>>>>>> Fix jQuery http client reject promise issue
 var Binding = (function () {
     function Binding(serviceIdentifier, defaultScope) {
         this.guid = guid_1.guid();
@@ -2736,7 +3525,11 @@ exports.Binding = Binding;
 
 
 /***/ }),
+<<<<<<< develop
 /* 71 */
+=======
+/* 68 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2750,11 +3543,16 @@ exports.BindingCount = BindingCount;
 
 
 /***/ }),
+<<<<<<< develop
 /* 72 */
+=======
+/* 69 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var binding_1 = __webpack_require__(70);
 var lookup_1 = __webpack_require__(75);
 var planner_1 = __webpack_require__(78);
@@ -2766,6 +3564,19 @@ var guid_1 = __webpack_require__(20);
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
+=======
+var binding_1 = __webpack_require__(67);
+var lookup_1 = __webpack_require__(72);
+var planner_1 = __webpack_require__(75);
+var resolver_1 = __webpack_require__(80);
+var binding_to_syntax_1 = __webpack_require__(83);
+var serialization_1 = __webpack_require__(21);
+var container_snapshot_1 = __webpack_require__(71);
+var guid_1 = __webpack_require__(18);
+var ERROR_MSGS = __webpack_require__(14);
+var METADATA_KEY = __webpack_require__(11);
+var literal_types_1 = __webpack_require__(16);
+>>>>>>> Fix jQuery http client reject promise issue
 var Container = (function () {
     function Container(containerOptions) {
         if (containerOptions !== undefined) {
@@ -2983,12 +3794,20 @@ exports.Container = Container;
 
 
 /***/ }),
+<<<<<<< develop
 /* 73 */
+=======
+/* 70 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var guid_1 = __webpack_require__(20);
+=======
+var guid_1 = __webpack_require__(18);
+>>>>>>> Fix jQuery http client reject promise issue
 var ContainerModule = (function () {
     function ContainerModule(registry) {
         this.guid = guid_1.guid();
@@ -3000,7 +3819,11 @@ exports.ContainerModule = ContainerModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 74 */
+=======
+/* 71 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3020,12 +3843,20 @@ exports.ContainerSnapshot = ContainerSnapshot;
 
 
 /***/ }),
+<<<<<<< develop
 /* 75 */
+=======
+/* 72 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var ERROR_MSGS = __webpack_require__(14);
+>>>>>>> Fix jQuery http client reject promise issue
 var Lookup = (function () {
     function Lookup() {
         this._map = new Map();
@@ -3108,12 +3939,20 @@ exports.Lookup = Lookup;
 
 
 /***/ }),
+<<<<<<< develop
 /* 76 */
+=======
+/* 73 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var guid_1 = __webpack_require__(20);
+=======
+var guid_1 = __webpack_require__(18);
+>>>>>>> Fix jQuery http client reject promise issue
 var Context = (function () {
     function Context(container) {
         this.guid = guid_1.guid();
@@ -3128,7 +3967,11 @@ exports.Context = Context;
 
 
 /***/ }),
+<<<<<<< develop
 /* 77 */
+=======
+/* 74 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3144,11 +3987,16 @@ exports.Plan = Plan;
 
 
 /***/ }),
+<<<<<<< develop
 /* 78 */
+=======
+/* 75 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var plan_1 = __webpack_require__(77);
 var context_1 = __webpack_require__(76);
 var request_1 = __webpack_require__(81);
@@ -3160,6 +4008,19 @@ var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
 var serialization_1 = __webpack_require__(23);
+=======
+var plan_1 = __webpack_require__(74);
+var context_1 = __webpack_require__(73);
+var request_1 = __webpack_require__(78);
+var target_1 = __webpack_require__(30);
+var binding_count_1 = __webpack_require__(68);
+var reflection_utils_1 = __webpack_require__(77);
+var metadata_1 = __webpack_require__(13);
+var ERROR_MSGS = __webpack_require__(14);
+var METADATA_KEY = __webpack_require__(11);
+var literal_types_1 = __webpack_require__(16);
+var serialization_1 = __webpack_require__(21);
+>>>>>>> Fix jQuery http client reject promise issue
 function getBindingDictionary(cntnr) {
     return cntnr._bindingDictionary;
 }
@@ -3286,7 +4147,11 @@ exports.createMockRequest = createMockRequest;
 
 
 /***/ }),
+<<<<<<< develop
 /* 79 */
+=======
+/* 76 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3319,16 +4184,28 @@ exports.QueryableString = QueryableString;
 
 
 /***/ }),
+<<<<<<< develop
 /* 80 */
+=======
+/* 77 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var serialization_1 = __webpack_require__(23);
 var target_1 = __webpack_require__(32);
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
+=======
+var serialization_1 = __webpack_require__(21);
+var target_1 = __webpack_require__(30);
+var ERROR_MSGS = __webpack_require__(14);
+var METADATA_KEY = __webpack_require__(11);
+var literal_types_1 = __webpack_require__(16);
+>>>>>>> Fix jQuery http client reject promise issue
 function getDependencies(func) {
     var constructorName = serialization_1.getFunctionName(func);
     var targets = getTargets(func, false);
@@ -3432,12 +4309,20 @@ function formatTargetMetadata(targetMetadata) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 81 */
+=======
+/* 78 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var guid_1 = __webpack_require__(20);
+=======
+var guid_1 = __webpack_require__(18);
+>>>>>>> Fix jQuery http client reject promise issue
 var Request = (function () {
     function Request(serviceIdentifier, parentContext, parentRequest, bindings, target) {
         this.guid = guid_1.guid();
@@ -3459,12 +4344,20 @@ exports.Request = Request;
 
 
 /***/ }),
+<<<<<<< develop
 /* 82 */
+=======
+/* 79 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var literal_types_1 = __webpack_require__(18);
+=======
+var literal_types_1 = __webpack_require__(16);
+>>>>>>> Fix jQuery http client reject promise issue
 function _injectProperties(instance, childRequests, resolveRequest) {
     var propertyInjectionsRequests = childRequests.filter(function (childRequest) {
         return (childRequest.target !== null && childRequest.target.type === literal_types_1.TargetTypeEnum.ClassProperty);
@@ -3504,15 +4397,26 @@ exports.resolveInstance = resolveInstance;
 
 
 /***/ }),
+<<<<<<< develop
 /* 83 */
+=======
+/* 80 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var literal_types_1 = __webpack_require__(18);
 var serialization_1 = __webpack_require__(23);
 var instantiation_1 = __webpack_require__(82);
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var literal_types_1 = __webpack_require__(16);
+var serialization_1 = __webpack_require__(21);
+var instantiation_1 = __webpack_require__(79);
+var ERROR_MSGS = __webpack_require__(14);
+>>>>>>> Fix jQuery http client reject promise issue
 function _resolveRequest(request) {
     var bindings = request.bindings;
     var childRequests = request.childRequests;
@@ -3578,13 +4482,22 @@ exports.resolve = resolve;
 
 
 /***/ }),
+<<<<<<< develop
 /* 84 */
+=======
+/* 81 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var literal_types_1 = __webpack_require__(18);
 var binding_when_on_syntax_1 = __webpack_require__(33);
+=======
+var literal_types_1 = __webpack_require__(16);
+var binding_when_on_syntax_1 = __webpack_require__(31);
+>>>>>>> Fix jQuery http client reject promise issue
 var BindingInSyntax = (function () {
     function BindingInSyntax(binding) {
         this._binding = binding;
@@ -3603,14 +4516,24 @@ exports.BindingInSyntax = BindingInSyntax;
 
 
 /***/ }),
+<<<<<<< develop
 /* 85 */
+=======
+/* 82 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var binding_in_syntax_1 = __webpack_require__(84);
 var binding_when_syntax_1 = __webpack_require__(28);
 var binding_on_syntax_1 = __webpack_require__(27);
+=======
+var binding_in_syntax_1 = __webpack_require__(81);
+var binding_when_syntax_1 = __webpack_require__(26);
+var binding_on_syntax_1 = __webpack_require__(25);
+>>>>>>> Fix jQuery http client reject promise issue
 var BindingInWhenOnSyntax = (function () {
     function BindingInWhenOnSyntax(binding) {
         this._binding = binding;
@@ -3678,15 +4601,26 @@ exports.BindingInWhenOnSyntax = BindingInWhenOnSyntax;
 
 
 /***/ }),
+<<<<<<< develop
 /* 86 */
+=======
+/* 83 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var binding_in_when_on_syntax_1 = __webpack_require__(85);
 var binding_when_on_syntax_1 = __webpack_require__(33);
 var literal_types_1 = __webpack_require__(18);
 var ERROR_MSGS = __webpack_require__(16);
+=======
+var binding_in_when_on_syntax_1 = __webpack_require__(82);
+var binding_when_on_syntax_1 = __webpack_require__(31);
+var literal_types_1 = __webpack_require__(16);
+var ERROR_MSGS = __webpack_require__(14);
+>>>>>>> Fix jQuery http client reject promise issue
 var BindingToSyntax = (function () {
     function BindingToSyntax(binding) {
         this._binding = binding;
@@ -3756,7 +4690,11 @@ exports.BindingToSyntax = BindingToSyntax;
 
 
 /***/ }),
+<<<<<<< develop
 /* 87 */
+=======
+/* 84 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3764,13 +4702,21 @@ exports.BindingToSyntax = BindingToSyntax;
 
 
 /***/ }),
+<<<<<<< develop
 /* 88 */
+=======
+/* 85 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
+<<<<<<< develop
 var uritemplate = __webpack_require__(615);
+=======
+var uritemplate = __webpack_require__(467);
+>>>>>>> Fix jQuery http client reject promise issue
 var _1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var inversify_1 = __webpack_require__(0);
@@ -3779,7 +4725,10 @@ var BaseRoute = (function () {
         this.appOptions = appOptions;
         this.utility = new _1.Utility();
         this.modelMapper = new _1.ModelMapper();
+<<<<<<< develop
         this.dateFormatter = new _1.DateFormatter();
+=======
+>>>>>>> Fix jQuery http client reject promise issue
     }
     /**
      * Parses resources route which can be expanded with additional options. Supported items are:
@@ -3803,9 +4752,12 @@ var BaseRoute = (function () {
       * @example baseRoute.get(route, id);
       **/
     BaseRoute.prototype.baseGet = function (route, id, options, propName) {
+<<<<<<< develop
         if (options !== null && !this.utility.isUndefined(options) && !this.utility.isUndefined(options.dateUpdated)) {
             options.t = this.dateFormatter.FormatToString(new Date(options.dateUpdated), null);
         }
+=======
+>>>>>>> Fix jQuery http client reject promise issue
         return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     };
     /**
@@ -3815,9 +4767,12 @@ var BaseRoute = (function () {
       * @example baseRoute.create();
       **/
     BaseRoute.prototype.baseCreate = function (route, data) {
+<<<<<<< develop
         if (data !== null && !this.utility.isUndefined(data) && !this.utility.isUndefined(data.dateUpdated)) {
             data.t = this.dateFormatter.FormatToString(new Date(data.dateUpdated), null);
         }
+=======
+>>>>>>> Fix jQuery http client reject promise issue
         return uritemplate.parse(route).expand(data);
     };
     /**
@@ -3919,7 +4874,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 89 */
+=======
+/* 86 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3927,7 +4886,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 90 */
+=======
+/* 87 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3935,7 +4898,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 91 */
+=======
+/* 88 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3943,7 +4910,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 92 */
+=======
+/* 89 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3951,7 +4922,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 93 */
+=======
+/* 90 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3959,7 +4934,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 94 */
+=======
+/* 91 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3967,7 +4946,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 95 */
+=======
+/* 92 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3975,7 +4958,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 96 */
+=======
+/* 93 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3983,7 +4970,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 97 */
+=======
+/* 94 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3991,7 +4982,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 98 */
+=======
+/* 95 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3999,7 +4994,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 99 */
+=======
+/* 96 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4007,7 +5006,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 100 */
+=======
+/* 97 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4015,7 +5018,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 101 */
+=======
+/* 98 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4023,6 +5030,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(96));
 __export(__webpack_require__(98));
 __export(__webpack_require__(97));
@@ -4113,6 +5121,24 @@ exports.DateFormatter = DateFormatter;
 
 /***/ }),
 /* 103 */
+=======
+__export(__webpack_require__(93));
+__export(__webpack_require__(95));
+__export(__webpack_require__(94));
+__export(__webpack_require__(86));
+__export(__webpack_require__(87));
+__export(__webpack_require__(90));
+__export(__webpack_require__(91));
+__export(__webpack_require__(88));
+__export(__webpack_require__(89));
+__export(__webpack_require__(97));
+__export(__webpack_require__(92));
+__export(__webpack_require__(96));
+
+
+/***/ }),
+/* 99 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4229,7 +5255,11 @@ exports.HALParser = HALParser = new Parser('JavaScriptSDK');
 
 
 /***/ }),
+<<<<<<< develop
 /* 104 */
+=======
+/* 100 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4364,7 +5394,11 @@ exports.ModelMapper = ModelMapper;
 
 
 /***/ }),
+<<<<<<< develop
 /* 105 */
+=======
+/* 101 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4447,7 +5481,11 @@ exports.Utility = Utility;
 
 
 /***/ }),
+<<<<<<< develop
 /* 106 */
+=======
+/* 102 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4471,7 +5509,11 @@ var BrowserEventHandler = (function () {
         }
         else if (CustomEvent && typeof CustomEvent === 'function') {
             this.triggerEvent = function (eventName, data) {
+<<<<<<< develop
                 var event = utility.extend(new CustomEvent(eventName, { bubbles: true }), data);
+=======
+                var event = utility.extend(new CustomEvent(eventName), data);
+>>>>>>> Fix jQuery http client reject promise issue
                 document.dispatchEvent(event);
             };
         }
@@ -4544,7 +5586,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 107 */
+=======
+/* 103 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4552,11 +5598,19 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(106));
 
 
 /***/ }),
 /* 108 */
+=======
+__export(__webpack_require__(102));
+
+
+/***/ }),
+/* 104 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4564,7 +5618,11 @@ __export(__webpack_require__(106));
 
 
 /***/ }),
+<<<<<<< develop
 /* 109 */
+=======
+/* 105 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4572,7 +5630,11 @@ __export(__webpack_require__(106));
 
 
 /***/ }),
+<<<<<<< develop
 /* 110 */
+=======
+/* 106 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4580,7 +5642,11 @@ __export(__webpack_require__(106));
 
 
 /***/ }),
+<<<<<<< develop
 /* 111 */
+=======
+/* 107 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4588,7 +5654,11 @@ __export(__webpack_require__(106));
 
 
 /***/ }),
+<<<<<<< develop
 /* 112 */
+=======
+/* 108 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4596,7 +5666,11 @@ __export(__webpack_require__(106));
 
 
 /***/ }),
+<<<<<<< develop
 /* 113 */
+=======
+/* 109 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4604,7 +5678,11 @@ __export(__webpack_require__(106));
 
 
 /***/ }),
+<<<<<<< develop
 /* 114 */
+=======
+/* 110 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4612,7 +5690,11 @@ __export(__webpack_require__(106));
 
 
 /***/ }),
+<<<<<<< develop
 /* 115 */
+=======
+/* 111 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4624,7 +5706,11 @@ exports.TokenTypes = {
 
 
 /***/ }),
+<<<<<<< develop
 /* 116 */
+=======
+/* 112 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4632,7 +5718,11 @@ exports.TokenTypes = {
 
 
 /***/ }),
+<<<<<<< develop
 /* 117 */
+=======
+/* 113 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4640,7 +5730,11 @@ exports.TokenTypes = {
 
 
 /***/ }),
+<<<<<<< develop
 /* 118 */
+=======
+/* 114 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4648,12 +5742,20 @@ exports.TokenTypes = {
 
 
 /***/ }),
+<<<<<<< develop
 /* 119 */
+=======
+/* 115 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     IBaasicAppOptions: Symbol("IBaasicAppOptions"),
     IAppOptions: Symbol("IAppOptions"),
@@ -4668,14 +5770,22 @@ exports.TYPES = TYPES;
 
 
 /***/ }),
+<<<<<<< develop
 /* 120 */
+=======
+/* 116 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(36);
+=======
+var _1 = __webpack_require__(34);
+>>>>>>> Fix jQuery http client reject promise issue
 var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(contracts_1.TYPES.ITokenHandler).to(_1.TokenHandler).inSingletonScope();
     bind(contracts_1.TYPES.IUserHandler).to(_1.UserHandler).inSingletonScope();
@@ -4684,7 +5794,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 121 */
+=======
+/* 117 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4733,7 +5847,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 122 */
+=======
+/* 118 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4741,11 +5859,19 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(121));
 
 
 /***/ }),
 /* 123 */
+=======
+__export(__webpack_require__(117));
+
+
+/***/ }),
+/* 119 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4872,7 +5998,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 124 */
+=======
+/* 120 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4941,6 +6071,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4950,6 +6081,9 @@ var _a, _b, _c;
 
 /***/ }),
 /* 126 */
+=======
+/* 121 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4957,7 +6091,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 127 */
+=======
+/* 122 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4965,7 +6103,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 128 */
+=======
+/* 123 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4973,7 +6115,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 129 */
+=======
+/* 124 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4981,7 +6127,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 130 */
+=======
+/* 125 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5084,7 +6234,11 @@ var ApiClient = ApiClient_1 = (function () {
         }
         return url;
     };
+<<<<<<< develop
     ApiClient.prototype.internalRequest = function (url, method, data, headers, abortSignal) {
+=======
+    ApiClient.prototype.internalRequest = function (url, method, data, headers) {
+>>>>>>> Fix jQuery http client reject promise issue
         url = this.compileUrl(url);
         var request = {
             url: url,
@@ -5096,9 +6250,12 @@ var ApiClient = ApiClient_1 = (function () {
         if (headers) {
             request.headers = headers;
         }
+<<<<<<< develop
         if (abortSignal) {
             request.abortSignal = abortSignal;
         }
+=======
+>>>>>>> Fix jQuery http client reject promise issue
         return this.request(request);
     };
     ApiClient.prototype.unquote = function (quotedString) {
@@ -5157,7 +6314,11 @@ var ApiClient_1, _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< develop
 /* 131 */
+=======
+/* 126 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5165,11 +6326,19 @@ var ApiClient_1, _a, _b, _c, _d;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(132));
 
 
 /***/ }),
 /* 132 */
+=======
+__export(__webpack_require__(127));
+
+
+/***/ }),
+/* 127 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5205,12 +6374,20 @@ var JQueryHttpClient = (function () {
                 data: data
             };
         }, function (jqXHR, textStatus, errorThrown) {
+<<<<<<< develop
             return {
+=======
+            throw {
+>>>>>>> Fix jQuery http client reject promise issue
                 request: request,
                 statusText: textStatus,
                 statusCode: jqXHR.status,
                 headers: parseHeaders(jqXHR.getAllResponseHeaders()),
+<<<<<<< develop
                 data: jqXHR.responseText || jqXHR.responseXML
+=======
+                data: tryConvertToJson(jqXHR.responseText) || jqXHR.responseXML
+>>>>>>> Fix jQuery http client reject promise issue
             };
         });
     };
@@ -5242,10 +6419,25 @@ function parseHeaders(headers) {
     }
     return result;
 }
+<<<<<<< develop
 
 
 /***/ }),
 /* 133 */
+=======
+function tryConvertToJson(obj) {
+    try {
+        return JSON.parse(obj);
+    }
+    catch (err) {
+        return obj;
+    }
+}
+
+
+/***/ }),
+/* 128 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5259,7 +6451,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(29);
+=======
+var _1 = __webpack_require__(27);
+>>>>>>> Fix jQuery http client reject promise issue
 var ApplicationSettingsClient = (function () {
     function ApplicationSettingsClient(applicationSettingsRoute, apiClient) {
         this.applicationSettingsRoute = applicationSettingsRoute;
@@ -5335,7 +6531,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 134 */
+=======
+/* 129 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5398,7 +6598,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 135 */
+=======
+/* 130 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5407,7 +6611,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 136 */
+=======
+/* 131 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5415,7 +6623,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 137 */
+=======
+/* 132 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5423,7 +6635,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 138 */
+=======
+/* 133 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5431,6 +6647,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(136));
 __export(__webpack_require__(137));
 __export(__webpack_require__(135));
@@ -5438,13 +6655,27 @@ __export(__webpack_require__(135));
 
 /***/ }),
 /* 139 */
+=======
+__export(__webpack_require__(131));
+__export(__webpack_require__(132));
+__export(__webpack_require__(130));
+
+
+/***/ }),
+/* 134 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(29);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(27);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     ApplicationSettingsClient: Symbol("ApplicationSettingsClient"),
     ApplicationSettingsRoute: Symbol("ApplicationSettingsRoute")
@@ -5458,7 +6689,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 140 */
+=======
+/* 135 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5512,7 +6747,11 @@ exports.ALPHABET = ALPHABET;
 
 
 /***/ }),
+<<<<<<< develop
 /* 141 */
+=======
+/* 136 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5646,7 +6885,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 142 */
+=======
+/* 137 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5771,7 +7014,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 143 */
+=======
+/* 138 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6097,7 +7344,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 144 */
+=======
+/* 139 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6277,7 +7528,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 145 */
+=======
+/* 140 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6575,7 +7830,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 146 */
+=======
+/* 141 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6727,7 +7986,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 147 */
+=======
+/* 142 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7081,7 +8344,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 148 */
+=======
+/* 143 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7432,7 +8699,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 149 */
+=======
+/* 144 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7563,7 +8834,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 150 */
+=======
+/* 145 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7770,7 +9045,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 151 */
+=======
+/* 146 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7778,6 +9057,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(149));
 __export(__webpack_require__(148));
 __export(__webpack_require__(150));
@@ -7786,6 +9066,16 @@ __export(__webpack_require__(147));
 
 /***/ }),
 /* 152 */
+=======
+__export(__webpack_require__(144));
+__export(__webpack_require__(143));
+__export(__webpack_require__(145));
+__export(__webpack_require__(142));
+
+
+/***/ }),
+/* 147 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7888,7 +9178,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 153 */
+=======
+/* 148 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7956,7 +9250,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 154 */
+=======
+/* 149 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8122,7 +9420,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< develop
 /* 155 */
+=======
+/* 150 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8145,7 +9447,11 @@ var ArticleFilesRoute = (function (_super) {
         _this.articleFilesStreamsRoute = articleFilesStreamsRoute;
         _this.articleFilesBatchRoute = articleFilesBatchRoute;
         _this.appOptions = appOptions;
+<<<<<<< develop
         _this.findRoute = 'article-files/{?searchQuery,fileName,minFileSize,maxFileSize,ids,from,to,age,rpp,sort,embed,fields}';
+=======
+        _this.findRoute = 'article-files/{?searchQuery,page,rpp,sort,embed,fields}';
+>>>>>>> Fix jQuery http client reject promise issue
         _this.getRoute = 'article-files/{id}/{?embed,fields}';
         _this.linkRoute = 'article-files/link';
         _this.unlinkRoute = 'article-files/unlink/{id}';
@@ -8240,7 +9546,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 156 */
+=======
+/* 151 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8282,7 +9592,11 @@ var ArticleFilesStreamsClient = (function () {
                         });
 
                 // Request derived file stream
+<<<<<<< develop
                         articleFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
+=======
+                        articleFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+>>>>>>> Fix jQuery http client reject promise issue
                             .then(function (data) {
                                 // perform success action here
                             },
@@ -8311,8 +9625,12 @@ var ArticleFilesStreamsClient = (function () {
                         articleFilesStreamsClient.getBlob({
                             id: '<file-id>',
                             width: <width>,
+<<<<<<< develop
                             height: <height>,
                             t: <timestamp>
+=======
+                            height: <height>
+>>>>>>> Fix jQuery http client reject promise issue
                         })
                         .then(function (data) {
                             // perform success action here
@@ -8395,7 +9713,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 157 */
+=======
+/* 152 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8415,7 +9737,11 @@ var ArticleFilesStreamsRoute = (function (_super) {
     function ArticleFilesStreamsRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+<<<<<<< develop
         _this.getRoute = 'article-file-streams/{id}/{?width,height,t}';
+=======
+        _this.getRoute = 'article-file-streams/{id}/{?width,height}';
+>>>>>>> Fix jQuery http client reject promise issue
         _this.createRoute = 'article-file-streams/{filename}/{?articleId}';
         _this.updateRoute = 'article-file-streams/{id}/{?width,height}';
         return _this;
@@ -8424,7 +9750,10 @@ var ArticleFilesStreamsRoute = (function (_super) {
      * Parses get route; this route should be expanded with id of desired file stream. Additional supported items are:
      * - `width` - width of desired derived image.
      * - `height` - height of desired derived image.
+<<<<<<< develop
      * - `t` - cache invalidation param.
+=======
+>>>>>>> Fix jQuery http client reject promise issue
      * @method
      * @param data Article file id of the original article file used to identify stream that needs to be retrieved from the system.
      * @example articleFilesRoute.get({id: '<filename>'});
@@ -8476,7 +9805,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 158 */
+=======
+/* 153 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8581,7 +9914,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 159 */
+=======
+/* 154 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8654,7 +9991,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 160 */
+=======
+/* 155 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8845,7 +10186,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< develop
 /* 161 */
+=======
+/* 156 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8868,7 +10213,11 @@ var ArticleInstanceFilesRoute = (function (_super) {
         _this.articleInstanceFilesStreamsRoute = articleInstanceFilesStreamsRoute;
         _this.articleInstanceFilesBatchRoute = articleInstanceFilesBatchRoute;
         _this.appOptions = appOptions;
+<<<<<<< develop
         _this.findRoute = 'articles/{articleId}/files/{?searchQuery,fileName,minFileSize,maxFileSize,ids,from,to,page,rpp,sort,embed,fields}';
+=======
+        _this.findRoute = 'articles/{articleId}/files/{?searchQuery,page,rpp,sort,embed,fields}';
+>>>>>>> Fix jQuery http client reject promise issue
         _this.getRoute = 'articles/{articleId}/files/{id}/{?embed,fields}';
         _this.linkRoute = 'articles/{articleId}/files/link';
         _this.unlinkRoute = 'articles/{articleId}/files/unlink/{id}';
@@ -8997,7 +10346,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 162 */
+=======
+/* 157 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9040,7 +10393,11 @@ var ArticleInstanceFilesStreamsClient = (function () {
                         });
 
                 // Request derived file stream
+<<<<<<< develop
                         articleInstanceFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
+=======
+                        articleInstanceFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+>>>>>>> Fix jQuery http client reject promise issue
                             .then(function (data) {
                                 // perform success action here
                             },
@@ -9070,8 +10427,12 @@ var ArticleInstanceFilesStreamsClient = (function () {
                         articleInstanceFilesStreamsClient.getBlob({
                             id: '<file-id>',
                             width: <width>,
+<<<<<<< develop
                             height: <height>,
                             t: <timestamp>
+=======
+                            height: <height>
+>>>>>>> Fix jQuery http client reject promise issue
                         })
                         .then(function (data) {
                             // perform success action here
@@ -9151,7 +10512,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 163 */
+=======
+/* 158 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9164,13 +10529,21 @@ var _a, _b;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< develop
+=======
+;
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var ArticleInstanceFilesStreamsRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceFilesStreamsRoute, _super);
     function ArticleInstanceFilesStreamsRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+<<<<<<< develop
         _this.getRoute = 'articles/{articleId}/file-streams/{id}/{?width,height,t}';
+=======
+        _this.getRoute = 'articles/{articleId}/file-streams/{id}/{?width,height}';
+>>>>>>> Fix jQuery http client reject promise issue
         _this.createRoute = 'articles/{articleId}/file-streams/{filename}';
         _this.updateRoute = 'articles/{articleId}/file-streams/{id}';
         return _this;
@@ -9179,7 +10552,10 @@ var ArticleInstanceFilesStreamsRoute = (function (_super) {
      * Parses get route; this route should be expanded with id of desired file stream. Additional supported items are:
      * - `width` - width of desired derived image.
      * - `height` - height of desired derived image.
+<<<<<<< develop
      * - `t` - cache invalidation param.
+=======
+>>>>>>> Fix jQuery http client reject promise issue
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article file need to be retrieved.
      * @param data Article File object used to identify stream that needs to be retrieved from the system.
@@ -9240,7 +10616,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 164 */
+=======
+/* 159 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9248,6 +10628,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(163));
 __export(__webpack_require__(162));
 __export(__webpack_require__(159));
@@ -9258,6 +10639,18 @@ __export(__webpack_require__(160));
 
 /***/ }),
 /* 165 */
+=======
+__export(__webpack_require__(158));
+__export(__webpack_require__(157));
+__export(__webpack_require__(154));
+__export(__webpack_require__(153));
+__export(__webpack_require__(156));
+__export(__webpack_require__(155));
+
+
+/***/ }),
+/* 160 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9435,7 +10828,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 166 */
+=======
+/* 161 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9554,7 +10951,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 167 */
+=======
+/* 162 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9752,7 +11153,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 168 */
+=======
+/* 163 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9889,7 +11294,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 169 */
+=======
+/* 164 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9897,12 +11306,21 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(168));
 __export(__webpack_require__(167));
 
 
 /***/ }),
 /* 170 */
+=======
+__export(__webpack_require__(163));
+__export(__webpack_require__(162));
+
+
+/***/ }),
+/* 165 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10134,7 +11552,11 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
+<<<<<<< develop
 /* 171 */
+=======
+/* 166 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10226,7 +11648,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 172 */
+=======
+/* 167 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10290,7 +11716,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 173 */
+=======
+/* 168 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10377,7 +11807,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 174 */
+=======
+/* 169 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10441,7 +11875,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 175 */
+=======
+/* 170 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10505,7 +11943,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< develop
 /* 176 */
+=======
+/* 171 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10567,7 +12009,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< develop
 /* 177 */
+=======
+/* 172 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10658,7 +12104,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 178 */
+=======
+/* 173 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10731,7 +12181,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 179 */
+=======
+/* 174 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10819,7 +12273,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 180 */
+=======
+/* 175 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10883,7 +12341,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 181 */
+=======
+/* 176 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10971,7 +12433,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 182 */
+=======
+/* 177 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11035,7 +12501,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 183 */
+=======
+/* 178 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11043,6 +12513,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(178));
 __export(__webpack_require__(180));
 __export(__webpack_require__(182));
@@ -11055,6 +12526,20 @@ __export(__webpack_require__(175));
 
 /***/ }),
 /* 184 */
+=======
+__export(__webpack_require__(173));
+__export(__webpack_require__(175));
+__export(__webpack_require__(177));
+__export(__webpack_require__(171));
+__export(__webpack_require__(172));
+__export(__webpack_require__(174));
+__export(__webpack_require__(176));
+__export(__webpack_require__(170));
+
+
+/***/ }),
+/* 179 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11194,7 +12679,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 185 */
+=======
+/* 180 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11296,7 +12785,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 186 */
+=======
+/* 181 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11395,7 +12888,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 187 */
+=======
+/* 182 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11477,7 +12974,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 188 */
+=======
+/* 183 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11632,7 +13133,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 189 */
+=======
+/* 184 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11741,7 +13246,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 190 */
+=======
+/* 185 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11749,12 +13258,21 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(189));
 __export(__webpack_require__(188));
 
 
 /***/ }),
 /* 191 */
+=======
+__export(__webpack_require__(184));
+__export(__webpack_require__(183));
+
+
+/***/ }),
+/* 186 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11798,7 +13316,11 @@ exports.BaasicArticleUtility = BaasicArticleUtility;
 
 
 /***/ }),
+<<<<<<< develop
 /* 192 */
+=======
+/* 187 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11821,7 +13343,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 193 */
+=======
+/* 188 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11830,7 +13356,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 194 */
+=======
+/* 189 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11839,7 +13369,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 195 */
+=======
+/* 190 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11847,7 +13381,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 196 */
+=======
+/* 191 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11856,7 +13394,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 197 */
+=======
+/* 192 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11865,7 +13407,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 198 */
+=======
+/* 193 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11874,7 +13420,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 199 */
+=======
+/* 194 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11883,7 +13433,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 200 */
+=======
+/* 195 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11892,7 +13446,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 201 */
+=======
+/* 196 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11900,7 +13458,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 202 */
+=======
+/* 197 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11908,7 +13470,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 203 */
+=======
+/* 198 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11917,7 +13483,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 204 */
+=======
+/* 199 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11926,7 +13496,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 205 */
+=======
+/* 200 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11934,7 +13508,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 206 */
+=======
+/* 201 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11942,7 +13520,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 207 */
+=======
+/* 202 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11951,7 +13533,11 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 /* 208 */
+=======
+/* 203 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11959,6 +13545,7 @@ exports.CommentStatus = CommentStatus;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(201));
 __export(__webpack_require__(205));
 __export(__webpack_require__(204));
@@ -11978,12 +13565,37 @@ __export(__webpack_require__(199));
 
 /***/ }),
 /* 209 */
+=======
+__export(__webpack_require__(196));
+__export(__webpack_require__(200));
+__export(__webpack_require__(199));
+__export(__webpack_require__(190));
+__export(__webpack_require__(189));
+__export(__webpack_require__(191));
+__export(__webpack_require__(201));
+__export(__webpack_require__(193));
+__export(__webpack_require__(192));
+__export(__webpack_require__(202));
+__export(__webpack_require__(195));
+__export(__webpack_require__(198));
+__export(__webpack_require__(197));
+__export(__webpack_require__(188));
+__export(__webpack_require__(194));
+
+
+/***/ }),
+/* 204 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> Fix jQuery http client reject promise issue
 var _1 = __webpack_require__(6);
 var TYPES = {
     ArticleCommentRepliesClient: Symbol("ArticleCommentRepliesClient"),
@@ -12088,7 +13700,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 210 */
+=======
+/* 205 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12124,20 +13740,30 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
+<<<<<<< develop
 /* 211 */
+=======
+/* 206 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarACLClient
  * @description  Calendar ACL Client provides an easy way to consume Calendar REST API end-points. In order to obtain a needed routes `calendarACLClient` uses `calendarACLRoute`.
+=======
+ * @module commerceClient
+ * @description  Commerce Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceClient` uses `commerceRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(7);
 var CalendarACLClient = (function () {
     function CalendarACLClient(calendarACLRoute, apiClient) {
@@ -12147,11 +13773,63 @@ var CalendarACLClient = (function () {
     Object.defineProperty(CalendarACLClient.prototype, "routeDefinition", {
         get: function () {
             return this.calendarACLRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceClient = (function () {
+    function CommerceClient(commerceCustomerClient, commerceInvoiceClient, commerceProductClient, commercePaymentTransactionClient, lookup, commerceRoute, apiClient) {
+        this.commerceCustomerClient = commerceCustomerClient;
+        this.commerceInvoiceClient = commerceInvoiceClient;
+        this.commerceProductClient = commerceProductClient;
+        this.commercePaymentTransactionClient = commercePaymentTransactionClient;
+        this.lookup = lookup;
+        this.commerceRoute = commerceRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceClient.prototype, "customers", {
+        get: function () {
+            return this.commerceCustomerClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "invoices", {
+        get: function () {
+            return this.commerceInvoiceClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "products", {
+        get: function () {
+            return this.commerceProductClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "paymentTransactions", {
+        get: function () {
+            return this.commercePaymentTransactionClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "lookups", {
+        get: function () {
+            return this.lookup;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified calendar resource.
      * @method
      * @param options Query resource options object.
@@ -12243,6 +13921,129 @@ CalendarACLClient = tslib_1.__decorate([
 ], CalendarACLClient);
 exports.CalendarACLClient = CalendarACLClient;
 var _a, _b;
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    customerId: '<customer-id>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceClient.get('<id>', {})
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceClient.validateVAT({ countryCode: 'DE', vatId: 'DE999999999' })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceClient.prototype.validateVAT = function (countryCode, vatId) {
+        return this.apiClient.get(this.commerceRoute.validateVAT(countryCode, vatId));
+    };
+    /**
+     * Returns a promise that is resolved once the subscribe pre-process commerce action has been performed; this action performes pre-subscribe operations such as getting client tokens etc.
+     * @method
+     * @example commerceClient.preprocess({
+                    systemName : '<system-name>',
+                    productId : '<product-id>',
+                    customerId: '<id>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceClient.prototype.preprocess = function (data) {
+        return this.apiClient.post(this.routeDefinition.preprocess(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the subscribe commerce action has been performed; this action creates a new commerce subscription resource.
+     * @method
+     * @example commerceClient.subscribe({
+                    systemName : '<system-name>',
+                    productId : '<product-id>',
+                    customer: {
+                        id: '<id>',
+                        firstName: '<first-name>',
+                        lastName: '<last-name>'
+                    }
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceClient.prototype.subscribe = function (data) {
+        return this.apiClient.post(this.routeDefinition.subscribe(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the cancel subscription action has been performed. This action will remove a commerce subscription resource from the system if successfully completed. This route obtain routes from `commerceRoute` route template. Here is an example of how execute this action:
+     * @method
+     * @example	commerceClient.cancel({
+                    systemName: '<system-name>',
+                    id: '<subscription-id>',
+                    requestRefund: <true/false>,
+                    refundAmount: <refund-amount>
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceClient.prototype.cancel = function (data) {
+        return this.apiClient.delete(this.routeDefinition.cancel(data));
+    };
+    return CommerceClient;
+}());
+CommerceClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCustomerClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceInvoiceClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CommerceProductClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CommercePaymentTransactionClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.Lookups)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CommerceRoute)),
+    tslib_1.__param(6, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCustomerClient !== "undefined" && _1.CommerceCustomerClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceInvoiceClient !== "undefined" && _1.CommerceInvoiceClient) === "function" && _b || Object, typeof (_c = typeof _1.CommerceProductClient !== "undefined" && _1.CommerceProductClient) === "function" && _c || Object, typeof (_d = typeof _1.CommercePaymentTransactionClient !== "undefined" && _1.CommercePaymentTransactionClient) === "function" && _d || Object, typeof (_e = typeof _1.Lookups !== "undefined" && _1.Lookups) === "function" && _e || Object, typeof (_f = typeof _1.CommerceRoute !== "undefined" && _1.CommerceRoute) === "function" && _f || Object, typeof (_g = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _g || Object])
+], CommerceClient);
+exports.CommerceClient = CommerceClient;
+var _a, _b, _c, _d, _e, _f, _g;
+>>>>>>> Fix jQuery http client reject promise issue
 /**
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
@@ -12255,14 +14056,23 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 212 */
+=======
+/* 207 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarACLRoute
  * @description Baasic Calendar ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Calendar ACL Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+=======
+ * @module commerceRoute
+ * @description Baasic Commerce Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Product Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
@@ -12270,6 +14080,7 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var CalendarACLRoute = (function (_super) {
     tslib_1.__extends(CalendarACLRoute, _super);
     function CalendarACLRoute(appOptions) {
@@ -12365,6 +14176,89 @@ CalendarACLRoute = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], CalendarACLRoute);
 exports.CalendarACLRoute = CalendarACLRoute;
+=======
+var CommerceRoute = (function (_super) {
+    tslib_1.__extends(CommerceRoute, _super);
+    function CommerceRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/subscriptions/{?customerId,systemName,searchQuery,plan,statuses,productId,firstName,lastName,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/subscriptions/{id}/{?embed,fields}';
+        _this.validateVATRoute = 'commerce/vat-validations/{?countryCode,vatId}';
+        _this.preprocessRoute = 'commerce/subscriptions/preprocess';
+        _this.subscribeRoute = 'commerce/subscriptions';
+        _this.cancelRoute = 'commerce/subscriptions/{systemName}/{id}/{?requestRefund,refundAmount}';
+        return _this;
+    }
+    /**
+     * Parses find commerce route which can be expanded with additional options. Supported items are:
+     * - `customerId` - The customer identifier.
+     * - `systemName` - The commerce payment gateway system name.
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `plan` - Product name.
+     * - `statuses` - Subscription status unique identifier or abbreviation in CSV format.
+     * - `productId` - Product unique identifier.
+     * - `firstName` - Customer first name.
+     * - `lastName` - Customer last name.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceRoute.get(id, options);
+     **/
+    CommerceRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses validate VAT route; this route doesn't expose any properties.
+     * @method
+     * @example commerceRoute.validateVAT({ countryCode: 'DE', vatId: 'DE999999999' });
+     **/
+    CommerceRoute.prototype.validateVAT = function (countryCode, vatId) {
+        return _super.prototype.baseCreate.call(this, this.validateVATRoute, { countryCode: countryCode, vatId: vatId });
+    };
+    /**
+     * Parses subscription pre-process commerce route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceRoute.preprocess();
+     **/
+    CommerceRoute.prototype.preprocess = function () {
+        return _super.prototype.baseCreate.call(this, this.preprocessRoute, {});
+    };
+    /**
+     * Parses subscription commerce route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceRoute.subscribe();
+     **/
+    CommerceRoute.prototype.subscribe = function () {
+        return _super.prototype.baseCreate.call(this, this.subscribeRoute, {});
+    };
+    /**
+     * Parses cancel subscription commerce route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceRoute.cancel({ systemName: '<system-name>' });
+     **/
+    CommerceRoute.prototype.cancel = function (data) {
+        return _super.prototype.baseCreate.call(this, this.cancelRoute, data);
+    };
+    return CommerceRoute;
+}(common_1.BaseRoute));
+CommerceRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceRoute);
+exports.CommerceRoute = CommerceRoute;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a;
 /**
  * @copyright (c) 2017 Mono Ltd
@@ -12372,13 +14266,20 @@ var _a;
  * @author Mono Ltd
  * @overview
  ***Notes:**
+<<<<<<< develop
   - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
   - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
   - All end-point objects are transformed by the associated route service.
+=======
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12393,19 +14294,28 @@ __export(__webpack_require__(212));
 
 /***/ }),
 /* 214 */
+=======
+/* 208 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarBatchClient
  * @description  CalendarBatchClient provides an easy way to consume CalendarBatch REST API end-points. In order to obtain needed routes `calendarBatchClient` uses `calendarBatchRoute`.
+=======
+ * @module commerceCustomerClient
+ * @description  Commerce Customer Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCustomerClient` uses `commerceCustomerRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(7);
 var CalendarBatchClient = (function () {
     function CalendarBatchClient(calendarBatchRoute, apiClient) {
@@ -12415,11 +14325,31 @@ var CalendarBatchClient = (function () {
     Object.defineProperty(CalendarBatchClient.prototype, "routeDefinition", {
         get: function () {
             return this.calendarBatchRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceCustomerClient = (function () {
+    function CommerceCustomerClient(commerceCustomerPaymentMethodClient, commerceCustomerRoute, apiClient) {
+        this.commerceCustomerPaymentMethodClient = commerceCustomerPaymentMethodClient;
+        this.commerceCustomerRoute = commerceCustomerRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceCustomerClient.prototype, "paymentMethods", {
+        get: function () {
+            return this.commerceCustomerPaymentMethodClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceCustomerClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceCustomerRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the create Calendars action has been performed; this action creates new Calendar resources.
      * @method
      * @param data Calendar objects that need to be inserted into the system.
@@ -12486,6 +14416,91 @@ CalendarBatchClient = tslib_1.__decorate([
 ], CalendarBatchClient);
 exports.CalendarBatchClient = CalendarBatchClient;
 var _a, _b;
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceCustomerClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceCustomerClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceCustomerClient.get(id)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceCustomerClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceCustomerRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCustomerRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = apiClient.removeParams(commerceCustomer);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCustomer is a resource previously fetched using get action.
+                    commerceCustomer.isDefault : true;
+                    commerceCustomerClient.update(commerceCustomer)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceCustomerClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCustomerRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = apiClient.removeParams(commerceCustomer);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCustomer is a resource previously fetched using get action.
+                    commerceCustomerClient.remove(commerceCustomer)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceCustomerClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceCustomerClient;
+}());
+CommerceCustomerClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCustomerPaymentMethodClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceCustomerRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCustomerPaymentMethodClient !== "undefined" && _1.CommerceCustomerPaymentMethodClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceCustomerRoute !== "undefined" && _1.CommerceCustomerRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceCustomerClient);
+exports.CommerceCustomerClient = CommerceCustomerClient;
+var _a, _b, _c;
+>>>>>>> Fix jQuery http client reject promise issue
 /**
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
@@ -12493,6 +14508,7 @@ var _a, _b;
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
  */ 
 
@@ -12560,25 +14576,37 @@ var _a;
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+=======
+>>>>>>> Fix jQuery http client reject promise issue
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 216 */
+=======
+/* 209 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarClient
  * @description  Calendar Client provides an easy way to consume Calendar REST API end-points. In order to obtain needed routes `calendarClient` uses `calendarRoute`.
+=======
+ * @module commerceCustomerPaymentMethodClient
+ * @description  Commerce CustomerPaymentMethod Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCustomerPaymentMethodClient` uses `commerceCustomerPaymentMethodRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(7);
 var CalendarClient = (function () {
     function CalendarClient(calendarRsvpAttendeeClient, calendarRsvpClient, calendarEventsClient, calendarBatchClient, calendarRoute, apiClient) {
@@ -12620,28 +14648,52 @@ var CalendarClient = (function () {
     Object.defineProperty(CalendarClient.prototype, "eventAttendee", {
         get: function () {
             return this.calendarRsvpAttendeeClient;
+=======
+var _1 = __webpack_require__(5);
+var CommerceCustomerPaymentMethodClient = (function () {
+    function CommerceCustomerPaymentMethodClient(commerceCustomerPaymentMethodRoute, apiClient) {
+        this.commerceCustomerPaymentMethodRoute = commerceCustomerPaymentMethodRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceCustomerPaymentMethodClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceCustomerPaymentMethodRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of Calendar resources matching the given criteria.
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @returns A promise that is resolved once the find action has been performed.
      * @example calendarClient.find({
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example commerceCustomerPaymentMethodClient.find({
+>>>>>>> Fix jQuery http client reject promise issue
                     pageNumber : 1,
                     pageSize : 10,
                     orderBy : '<field>',
                     orderDirection : '<asc|desc>',
+<<<<<<< develop
                     search : '<search-phrase>',
                     ids : <identifiers>,
                     from : <start-date>,
                     to : <end-date>
+=======
+                    search : '<search-phrase>'
+>>>>>>> Fix jQuery http client reject promise issue
                 })
                 .then(function (collection) {
                     // perform success action here
                 },
+<<<<<<< develop
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
@@ -12763,24 +14815,129 @@ exports.CalendarClient = CalendarClient;
 var _a, _b, _c, _d, _e, _f;
 /**
  * @copyright (c) 2017 Mono Ltd
+=======
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceCustomerPaymentMethodClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceCustomerPaymentMethodClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceCustomerPaymentMethodClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceCustomerPaymentMethodRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceCustomerPaymentMethodRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCustomerPaymentMethod);
+     * var uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCustomerPaymentMethod is a resource previously fetched using get action.
+                        commerceCustomerPaymentMethod.isDefault : true;
+                        commerceCustomerPaymentMethodClient.update(commerceCustomerPaymentMethod)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceCustomerPaymentMethodClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceCustomerPaymentMethodClient.create({
+                    paymentMethodNonce : '<payment-method-nonce>',
+                    customerId : '<customer-id>',
+                    typeName : '<type-name>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceCustomerPaymentMethodClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCustomerPaymentMethodRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCustomerPaymentMethod);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCustomerPaymentMethod is a resource previously fetched using get action.
+                    commerceCustomerPaymentMethodClient.remove(commerceCustomerPaymentMethod)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceCustomerPaymentMethodClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceCustomerPaymentMethodClient;
+}());
+CommerceCustomerPaymentMethodClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceCustomerPaymentMethodRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceCustomerPaymentMethodRoute !== "undefined" && _1.CommerceCustomerPaymentMethodRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceCustomerPaymentMethodClient);
+exports.CommerceCustomerPaymentMethodClient = CommerceCustomerPaymentMethodClient;
+var _a, _b;
+/**
+ * @copyright(c) 2017 Mono Ltd
+>>>>>>> Fix jQuery http client reject promise issue
  * @license MIT
  * @author Mono Ltd
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
+=======
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 217 */
+=======
+/* 210 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRoute
  * @description BaasicCalendarRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceCustomerPaymentMethodRoute
+ * @description Baasic Commerce CustomerPaymentMethod Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce CustomerPaymentMethod Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
@@ -12788,6 +14945,7 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var CalendarRoute = (function (_super) {
     tslib_1.__extends(CalendarRoute, _super);
     function CalendarRoute(appOptions) {
@@ -13070,25 +15228,108 @@ CalendarEventsClient = tslib_1.__decorate([
 exports.CalendarEventsClient = CalendarEventsClient;
 var _a, _b;
 /**
+=======
+var CommerceCustomerPaymentMethodRoute = (function (_super) {
+    tslib_1.__extends(CommerceCustomerPaymentMethodRoute, _super);
+    function CommerceCustomerPaymentMethodRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/customer-payment-methods/{systemName}/{?customerId,searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/customer-payment-methods/{systemName}/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/customer-payment-methods/{systemName}/';
+        _this.updateRoute = 'commerce/customer-payment-methods/{systemName}/{id}';
+        _this.deleteRoute = 'commerce/customer-payment-methods/{systemName}/{id}';
+        return _this;
+    }
+    /**
+     * Parses find commerce customer-payment-methods route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options.
+     * @example commerceCustomerPaymentMethodRoute.find({searchQuery: '<search-phrase>'});                               **/
+    CommerceCustomerPaymentMethodRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceCustomerPaymentMethodRoute.get(id, options);
+     **/
+    CommerceCustomerPaymentMethodRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, options);
+    };
+    /**
+     * Parses create commerce customer-payment-method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceCustomerPaymentMethodRoute.create();
+     **/
+    CommerceCustomerPaymentMethodRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce customer-payment-method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceCustomerPaymentMethodRoute.update(data);
+     **/
+    CommerceCustomerPaymentMethodRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+    * Parses delete commerce customer-payment-method route; this URI template does not expose any additional options.
+    * @method
+    * @example commerceCustomerPaymentMethodRoute.delete(data);
+    **/
+    CommerceCustomerPaymentMethodRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceCustomerPaymentMethodRoute;
+}(common_1.BaseRoute));
+CommerceCustomerPaymentMethodRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceCustomerPaymentMethodRoute);
+exports.CommerceCustomerPaymentMethodRoute = CommerceCustomerPaymentMethodRoute;
+var _a;
+/**
+>>>>>>> Fix jQuery http client reject promise issue
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
  * @author Mono Ltd
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
+=======
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 219 */
+=======
+/* 211 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarEventsRoute
  * @description BaasicCalendarEventsRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarEventsRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceCustomerRoute
+ * @description Baasic Commerce Customer Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Customer Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
@@ -13096,6 +15337,7 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var CalendarEventsRoute = (function (_super) {
     tslib_1.__extends(CalendarEventsRoute, _super);
     function CalendarEventsRoute(appOptions) {
@@ -13233,13 +15475,83 @@ var _a;
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+=======
+var CommerceCustomerRoute = (function (_super) {
+    tslib_1.__extends(CommerceCustomerRoute, _super);
+    function CommerceCustomerRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/customers/{systemName}/{?customerId,searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/customers/{systemName}/{id}/{?embed,fields}';
+        _this.updateRoute = 'commerce/customers/{systemName}/{id}';
+        _this.deleteRoute = 'commerce/customers/{systemName}/{id}';
+        return _this;
+    }
+    /**
+     * Parses find commerce customers route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceCustomerRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceCustomerRoute.prototype.find = function (options) {
+        return this.baseFind(this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceCustomerRoute.get(id, options);
+     **/
+    CommerceCustomerRoute.prototype.get = function (id, options) {
+        return this.baseGet(this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route doesn't expose any properties.
+     * @method
+     * @example commerceCustomerRoute.update(data);
+     **/
+    CommerceCustomerRoute.prototype.update = function (data) {
+        return this.baseUpdate(this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this route doesn't expose any properties.
+     * @method
+     * @example commerceCustomerRoute.delete(data);
+     **/
+    CommerceCustomerRoute.prototype.delete = function (data) {
+        return this.baseDelete(this.deleteRoute, data);
+    };
+    return CommerceCustomerRoute;
+}(common_1.BaseRoute));
+CommerceCustomerRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceCustomerRoute);
+exports.CommerceCustomerRoute = CommerceCustomerRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 220 */
+=======
+/* 212 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13247,25 +15559,153 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(218));
 __export(__webpack_require__(219));
 
 
 /***/ }),
 /* 221 */
+=======
+__export(__webpack_require__(211));
+__export(__webpack_require__(208));
+__export(__webpack_require__(210));
+__export(__webpack_require__(209));
+
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(5);
+var TYPES = {
+    CommerceCustomerPaymentMethodClient: Symbol("CommerceCustomerPaymentMethodClient"),
+    CommerceCustomerPaymentMethodRoute: Symbol("CommerceCustomerPaymentMethodRoute"),
+    CommerceCustomerClient: Symbol("CommerceCustomerClient"),
+    CommerceCustomerRoute: Symbol("CommerceCustomerRoute"),
+    CommerceInvoiceClient: Symbol("CommerceInvoiceClient"),
+    CommerceInvoiceRoute: Symbol("CommerceInvoiceRoute"),
+    CommerceInvoiceStreamsClient: Symbol("CommerceInvoiceStreamsClient"),
+    CommerceInvoiceStreamsRoute: Symbol("CommerceInvoiceStreamsRoute"),
+    CommercePaymentTransactionClient: Symbol("CommercePaymentTransactionClient"),
+    CommercePaymentTransactionRoute: Symbol("CommercePaymentTransactionRoute"),
+    CommerceProductClient: Symbol("CommerceProductClient"),
+    CommerceProductRoute: Symbol("CommerceProductRoute"),
+    CommerceClient: Symbol("CommerceClient"),
+    CommerceRoute: Symbol("CommerceRoute"),
+    CommerceLookupsAddressTypesBatchClient: Symbol("CommerceLookupsAddressTypesBatchClient"),
+    CommerceLookupsAddressTypeBatchRoute: Symbol("CommerceLookupsAddressTypeBatchRoute"),
+    CommerceLookupsAddressTypesClient: Symbol("CommerceLookupsAddressTypesClient"),
+    CommerceLookupsAddressTypeRoute: Symbol("CommerceLookupsAddressTypeRoute"),
+    CommerceLookupsCountryBatchClient: Symbol("CommerceLookupsCountryBatchClient"),
+    CommerceLookupsCountryBatchRoute: Symbol("CommerceLookupsCountryBatchRoute"),
+    CommerceLookupsCountryClient: Symbol("CommerceLookupsCountryClient"),
+    CommerceLookupsCountryRoute: Symbol("CommerceLookupsCountryRoute"),
+    CommerceLookupsCountryStateBatchClient: Symbol("CommerceLookupsCountryStateBatchClient"),
+    CommerceLookupsCountryStateBatchRoute: Symbol("CommerceLookupsCountryStateBatchRoute"),
+    CommerceLookupsCountryStateClient: Symbol("CommerceLookupsCountryStateClient"),
+    CommerceLookupsCountryStateRoute: Symbol("CommerceLookupsCountryStateRoute"),
+    CommerceLookupsPaymentMethodBatchClient: Symbol("CommerceLookupsPaymentMethodBatchClient"),
+    CommerceLookupsPaymentMethodBatchRoute: Symbol("CommerceLookupsPaymentMethodBatchRoute"),
+    CommerceLookupsPaymentMethodClient: Symbol("CommerceLookupsPaymentMethodClient"),
+    CommerceLookupsPaymentMethodRoute: Symbol("CommerceLookupsPaymentMethodRoute"),
+    CommerceLookupsPaymentTransactionStatusBatchClient: Symbol("CommerceLookupsPaymentTransactionStatusBatchClient"),
+    CommerceLookupsPaymentTransactionStatusBatchRoute: Symbol("CommerceLookupsPaymentTransactionStatusBatchRoute"),
+    CommerceLookupsPaymentTransactionStatusClient: Symbol("CommerceLookupsPaymentTransactionStatusClient"),
+    CommerceLookupsPaymentTransactionStatusRoute: Symbol("CommerceLookupsPaymentTransactionStatusRoute"),
+    CommerceLookupsRecurringCyclePeriodTypeBatchClient: Symbol("CommerceLookupsRecurringCyclePeriodTypeBatchClient"),
+    CommerceLookupsRecurringCyclePeriodTypeBatchRoute: Symbol("CommerceLookupsRecurringCyclePeriodTypeBatchRoute"),
+    CommerceLookupsRecurringCyclePeriodTypeClient: Symbol("CommerceLookupsRecurringCyclePeriodTypeClient"),
+    CommerceLookupsRecurringCyclePeriodTypeRoute: Symbol("CommerceLookupsRecurringCyclePeriodTypeRoute"),
+    CommerceLookupsSubscriptionStatusBatchClient: Symbol("CommerceLookupsSubscriptionStatusBatchClient"),
+    CommerceLookupsSubscriptionStatusBatchRoute: Symbol("CommerceLookupsSubscriptionStatusBatchRoute"),
+    CommerceLookupsSubscriptionStatusClient: Symbol("CommerceLookupsSubscriptionStatusClient"),
+    CommerceLookupsSubscriptionStatusRoute: Symbol("CommerceLookupsSubscriptionStatusRoute"),
+    CommerceLookupsInvoiceStatusBatchRoute: Symbol("CommerceLookupsInvoiceStatusBatchRoute"),
+    CommerceLookupsInvoiceStatusRoute: Symbol("CommerceLookupsInvoiceStatusRoute"),
+    CommerceLookupsInvoiceStatusBatchClient: Symbol("CommerceLookupsInvoiceStatusBatchClient"),
+    CommerceLookupsInvoiceStatusClient: Symbol("CommerceLookupsInvoiceStatusClient"),
+    Lookups: Symbol("Lookups")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.CommerceCustomerPaymentMethodRoute).to(_1.CommerceCustomerPaymentMethodRoute);
+    bind(TYPES.CommerceCustomerPaymentMethodClient).to(_1.CommerceCustomerPaymentMethodClient);
+    bind(TYPES.CommerceCustomerRoute).to(_1.CommerceCustomerRoute);
+    bind(TYPES.CommerceCustomerClient).to(_1.CommerceCustomerClient);
+    bind(TYPES.CommerceInvoiceStreamsRoute).to(_1.CommerceInvoiceStreamsRoute);
+    bind(TYPES.CommerceInvoiceStreamsClient).to(_1.CommerceInvoiceStreamsClient);
+    bind(TYPES.CommerceInvoiceClient).to(_1.CommerceInvoiceClient);
+    bind(TYPES.CommerceInvoiceRoute).to(_1.CommerceInvoiceRoute);
+    bind(TYPES.CommercePaymentTransactionRoute).to(_1.CommercePaymentTransactionRoute);
+    bind(TYPES.CommercePaymentTransactionClient).to(_1.CommercePaymentTransactionClient);
+    bind(TYPES.CommerceProductRoute).to(_1.CommerceProductRoute);
+    bind(TYPES.CommerceProductClient).to(_1.CommerceProductClient);
+    bind(TYPES.CommerceRoute).to(_1.CommerceRoute);
+    bind(TYPES.CommerceClient).to(_1.CommerceClient);
+    bind(TYPES.CommerceLookupsAddressTypeBatchRoute).to(_1.CommerceLookupsAddressTypeBatchRoute);
+    bind(TYPES.CommerceLookupsAddressTypesBatchClient).to(_1.CommerceLookupsAddressTypesBatchClient);
+    bind(TYPES.CommerceLookupsAddressTypeRoute).to(_1.CommerceLookupsAddressTypeRoute);
+    bind(TYPES.CommerceLookupsAddressTypesClient).to(_1.CommerceLookupsAddressTypesClient);
+    bind(TYPES.CommerceLookupsCountryBatchRoute).to(_1.CommerceLookupsCountryBatchRoute);
+    bind(TYPES.CommerceLookupsCountryBatchClient).to(_1.CommerceLookupsCountryBatchClient);
+    bind(TYPES.CommerceLookupsCountryRoute).to(_1.CommerceLookupsCountryRoute);
+    bind(TYPES.CommerceLookupsCountryClient).to(_1.CommerceLookupsCountryClient);
+    bind(TYPES.CommerceLookupsCountryStateBatchRoute).to(_1.CommerceLookupsCountryStateBatchRoute);
+    bind(TYPES.CommerceLookupsCountryStateBatchClient).to(_1.CommerceLookupsCountryStateBatchClient);
+    bind(TYPES.CommerceLookupsCountryStateRoute).to(_1.CommerceLookupsCountryStateRoute);
+    bind(TYPES.CommerceLookupsCountryStateClient).to(_1.CommerceLookupsCountryStateClient);
+    bind(TYPES.CommerceLookupsPaymentMethodBatchRoute).to(_1.CommerceLookupsPaymentMethodBatchRoute);
+    bind(TYPES.CommerceLookupsPaymentMethodBatchClient).to(_1.CommerceLookupsPaymentMethodBatchClient);
+    bind(TYPES.CommerceLookupsPaymentMethodRoute).to(_1.CommerceLookupsPaymentMethodRoute);
+    bind(TYPES.CommerceLookupsPaymentMethodClient).to(_1.CommerceLookupsPaymentMethodClient);
+    bind(TYPES.CommerceLookupsPaymentTransactionStatusBatchRoute).to(_1.CommerceLookupsPaymentTransactionStatusBatchRoute);
+    bind(TYPES.CommerceLookupsPaymentTransactionStatusBatchClient).to(_1.CommerceLookupsPaymentTransactionStatusBatchClient);
+    bind(TYPES.CommerceLookupsPaymentTransactionStatusRoute).to(_1.CommerceLookupsPaymentTransactionStatusRoute);
+    bind(TYPES.CommerceLookupsPaymentTransactionStatusClient).to(_1.CommerceLookupsPaymentTransactionStatusClient);
+    bind(TYPES.CommerceLookupsRecurringCyclePeriodTypeBatchRoute).to(_1.CommerceLookupsRecurringCyclePeriodTypeBatchRoute);
+    bind(TYPES.CommerceLookupsRecurringCyclePeriodTypeBatchClient).to(_1.CommerceLookupsRecurringCyclePeriodTypeBatchClient);
+    bind(TYPES.CommerceLookupsRecurringCyclePeriodTypeRoute).to(_1.CommerceLookupsRecurringCyclePeriodTypeRoute);
+    bind(TYPES.CommerceLookupsRecurringCyclePeriodTypeClient).to(_1.CommerceLookupsRecurringCyclePeriodTypeClient);
+    bind(TYPES.CommerceLookupsSubscriptionStatusBatchRoute).to(_1.CommerceLookupsSubscriptionStatusBatchRoute);
+    bind(TYPES.CommerceLookupsSubscriptionStatusBatchClient).to(_1.CommerceLookupsSubscriptionStatusBatchClient);
+    bind(TYPES.CommerceLookupsSubscriptionStatusRoute).to(_1.CommerceLookupsSubscriptionStatusRoute);
+    bind(TYPES.CommerceLookupsSubscriptionStatusClient).to(_1.CommerceLookupsSubscriptionStatusClient);
+    bind(TYPES.CommerceLookupsInvoiceStatusBatchRoute).to(_1.CommerceLookupsInvoiceStatusBatchRoute);
+    bind(TYPES.CommerceLookupsInvoiceStatusRoute).to(_1.CommerceLookupsInvoiceStatusRoute);
+    bind(TYPES.CommerceLookupsInvoiceStatusBatchClient).to(_1.CommerceLookupsInvoiceStatusBatchClient);
+    bind(TYPES.CommerceLookupsInvoiceStatusClient).to(_1.CommerceLookupsInvoiceStatusClient);
+    bind(TYPES.Lookups).to(_1.Lookups);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 214 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRsvpAttendeeBatchClient
  * @description  CalendarRsvpAttendeeBatchClient provides an easy way to consume CalendarRsvpAttendeeBatch REST API end-points. In order to obtain needed routes `calendarRsvpAttendeeBatchClient` uses `calendarRsvpAttendeeBatchRoute`.
+=======
+ * @module commerceInvoiceClient
+ * @description  Commerce Invoice Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceClient` uses `commerceInvoiceRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(7);
 var CalendarRsvpAttendeeBatchClient = (function () {
     function CalendarRsvpAttendeeBatchClient(calendarRsvpAttendeeBatchRoute, apiClient) {
@@ -13275,11 +15715,31 @@ var CalendarRsvpAttendeeBatchClient = (function () {
     Object.defineProperty(CalendarRsvpAttendeeBatchClient.prototype, "routeDefinition", {
         get: function () {
             return this.calendarRsvpAttendeeBatchRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceInvoiceClient = (function () {
+    function CommerceInvoiceClient(commerceInvoiceRoute, commerceInvoiceStreamsClient, apiClient) {
+        this.commerceInvoiceRoute = commerceInvoiceRoute;
+        this.commerceInvoiceStreamsClient = commerceInvoiceStreamsClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceInvoiceClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceInvoiceRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceInvoiceClient.prototype, "streams", {
+        get: function () {
+            return this.commerceInvoiceStreamsClient;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the link CalendarEvenAttendees action has been performed; this action links new CalendarEventAttendee resources to the calendarEvent.
      * @method
      * @param data CalendarEventAttendee objects that need to be inserted into the system.
@@ -13374,18 +15834,113 @@ var _a, _b;
 
 /***/ }),
 /* 222 */
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceInvoiceClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceInvoiceClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceInvoiceClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceInvoiceClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceInvoiceRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceInvoiceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceInvoice);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceInvoice is a resource previously fetched using get action.
+                    commerceInvoice.invoiceStatusId : '<new-invoice-status-id>';
+                    commerceInvoiceClient.update(commerceInvoice)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceInvoiceClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceInvoiceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceInvoice);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceInvoice is a resource previously fetched using get action.
+                        commerceInvoiceClient.remove(commerceInvoice)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceInvoiceClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceInvoiceClient;
+}());
+CommerceInvoiceClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceInvoiceRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceInvoiceStreamsClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceInvoiceRoute !== "undefined" && _1.CommerceInvoiceRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceInvoiceStreamsClient !== "undefined" && _1.CommerceInvoiceStreamsClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceInvoiceClient);
+exports.CommerceInvoiceClient = CommerceInvoiceClient;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 215 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRsvpAttendeeBatchRoute
  * @description BaasicCalendarRsvpAttendeeBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarRsvpAttendeeBatch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceInvoiceRoute
+ * @description Baasic Commerce Invoice Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Invoice Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 var CalendarRsvpAttendeeBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarRsvpAttendeeBatchRoute, _super);
@@ -13449,26 +16004,119 @@ var _a;
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+=======
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(5);
+var CommerceInvoiceRoute = (function (_super) {
+    tslib_1.__extends(CommerceInvoiceRoute, _super);
+    function CommerceInvoiceRoute(commerceInvoiceStreamsRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.commerceInvoiceStreamsRoute = commerceInvoiceStreamsRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/invoices/{?customerId,invoiceStatusId,subscriptionId,dateCreatedMin,dateCreatedMax,searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/invoices/{id}/{?embed,fields}';
+        _this.updateRoute = 'commerce/invoices/{id}';
+        _this.deleteRoute = 'commerce/invoices/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceInvoiceRoute.prototype, "streams", {
+        get: function () {
+            return this.commerceInvoiceStreamsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce invoice route which can be expanded with additional options. Supported items are:
+     * - `customerId` - The customer identifier.
+     * - `invoiceStatusId` - A invoice status unique identifier.
+     * - `subscriptionId` - A subscription unique identifier.
+     * - `dateCreatedMin` - A date created minimum date filter.
+     * - `dateCreatedMax` - A date created maximum date filter.
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceInvoiceRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceInvoiceRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceInvoiceRoute.get(id, options);
+     **/
+    CommerceInvoiceRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route doesn't expose any properties.
+     * @method
+     * @example commerceInvoiceRoute.update(data);
+     **/
+    CommerceInvoiceRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this route doesn't expose any properties.
+     * @method
+     * @example commerceInvoiceRoute.delete(data);
+     **/
+    CommerceInvoiceRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceInvoiceRoute;
+}(common_1.BaseRoute));
+CommerceInvoiceRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceInvoiceStreamsRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceInvoiceStreamsRoute !== "undefined" && _1.CommerceInvoiceStreamsRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceInvoiceRoute);
+exports.CommerceInvoiceRoute = CommerceInvoiceRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 223 */
+=======
+/* 216 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRsvpAttendeeClient
  * @description  CalendarRsvpAttendeeClient provides an easy way to consume CalendarRsvpAttendee REST API end-points. In order to obtain needed routes `calendarRsvpAttendeeClient` uses `calendarRsvpAttendeeRoute`.
+=======
+ * @module commerceInvoiceStreamsClient
+ * @description  Commerce Invoice Streams Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceStreamsClient` uses `commerceInvoiceStreamsRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(7);
 var CalendarRsvpAttendeeClient = (function () {
     function CalendarRsvpAttendeeClient(calendarRsvpAttendeeBatchClient, calendarRsvpAttendeeRoute, apiClient) {
@@ -13486,11 +16134,23 @@ var CalendarRsvpAttendeeClient = (function () {
     Object.defineProperty(CalendarRsvpAttendeeClient.prototype, "batch", {
         get: function () {
             return this.calendarRsvpAttendeeBatchClient;
+=======
+var _1 = __webpack_require__(5);
+var CommerceInvoiceStreamsClient = (function () {
+    function CommerceInvoiceStreamsClient(commerceInvoiceStreamsRoute, apiClient) {
+        this.commerceInvoiceStreamsRoute = commerceInvoiceStreamsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceInvoiceStreamsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceInvoiceStreamsRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEventAttendee resources matching the given criteria.
      * @method
      * @param calendarId Calendar id which uniqely identifies Calendar resource.
@@ -13771,6 +16431,52 @@ CalendarRsvpAttendeeClient = tslib_1.__decorate([
 ], CalendarRsvpAttendeeClient);
 exports.CalendarRsvpAttendeeClient = CalendarRsvpAttendeeClient;
 var _a, _b, _c;
+=======
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the invoice stream if successfully completed.
+     * @method
+     * @example // commerceInvoice is a resource previously fetched using get action.
+                    commerceInvoiceStreamsClient.get({id: commerceInvoice.id})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceInvoiceStreamsClient.prototype.get = function (data) {
+        return this.apiClient.get(this.routeDefinition.get(data));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the invoice stream as a blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @example // Request the original blob
+                        commerceInvoiceClient.getBlobl({id: commerceInvoice.id})
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceInvoiceStreamsClient.prototype.getBlob = function (data) {
+        return this.apiClient.request({
+            url: this.commerceInvoiceStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
+    };
+    return CommerceInvoiceStreamsClient;
+}());
+CommerceInvoiceStreamsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceInvoiceStreamsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceInvoiceStreamsRoute !== "undefined" && _1.CommerceInvoiceStreamsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceInvoiceStreamsClient);
+exports.CommerceInvoiceStreamsClient = CommerceInvoiceStreamsClient;
+var _a, _b;
+>>>>>>> Fix jQuery http client reject promise issue
 /**
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
@@ -13778,19 +16484,32 @@ var _a, _b, _c;
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
+=======
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 224 */
+=======
+/* 217 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRsvpAttendeeRoute
  * @description BaasicCalendarRsvpAttendeeRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarRsvpAttendeeRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceInvoiceStreamsRoute
+ * @description Baasic Commerce Invoice Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Invoice Streams Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
@@ -13798,6 +16517,7 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var CalendarRsvpAttendeeRoute = (function (_super) {
     tslib_1.__extends(CalendarRsvpAttendeeRoute, _super);
     function CalendarRsvpAttendeeRoute(appOptions) {
@@ -14058,13 +16778,56 @@ var _a;
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+=======
+var CommerceInvoiceStreamsRoute = (function (_super) {
+    tslib_1.__extends(CommerceInvoiceStreamsRoute, _super);
+    function CommerceInvoiceStreamsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'commerce/invoice-streams/{id}';
+        return _this;
+    }
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceInvoiceStremsRoute.get(data);
+     **/
+    CommerceInvoiceStreamsRoute.prototype.get = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.getRoute, data);
+    };
+    return CommerceInvoiceStreamsRoute;
+}(common_1.BaseRoute));
+CommerceInvoiceStreamsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceInvoiceStreamsRoute);
+exports.CommerceInvoiceStreamsRoute = CommerceInvoiceStreamsRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 225 */
+=======
+/* 218 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14072,6 +16835,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(221));
 __export(__webpack_require__(222));
 __export(__webpack_require__(223));
@@ -14080,19 +16844,35 @@ __export(__webpack_require__(224));
 
 /***/ }),
 /* 226 */
+=======
+__export(__webpack_require__(217));
+__export(__webpack_require__(216));
+__export(__webpack_require__(215));
+__export(__webpack_require__(214));
+
+
+/***/ }),
+/* 219 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRsvpBatchClient
  * @description  CalendarRsvpBatchClient provides an easy way to consume CalendarRsvpBatch REST API end-points. In order to obtain needed routes `calendarRsvpBatchClient` uses `calendarRsvpBatchRoute`.
+=======
+ * @module commerceLookupsAddressTypeBatchClient
+ * @description  Commerce Lookups Address Type Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsAddressTypesBatchClient` uses `commerceLookupsAddressTypeBatchRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(7);
 var CalendarRsvpBatchClient = (function () {
     function CalendarRsvpBatchClient(calendarRsvpBatchRoute, apiClient) {
@@ -14102,11 +16882,23 @@ var CalendarRsvpBatchClient = (function () {
     Object.defineProperty(CalendarRsvpBatchClient.prototype, "routeDefinition", {
         get: function () {
             return this.calendarRsvpBatchRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsAddressTypesBatchClient = (function () {
+    function CommerceLookupsAddressTypesBatchClient(commerceLookupsAddressTypeBatchRoute, apiClient) {
+        this.commerceLookupsAddressTypeBatchRoute = commerceLookupsAddressTypeBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsAddressTypesBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsAddressTypeBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the link CalendarEventRsvps action has been performed; this action links CalendarEventRsvp resources to the specified calendar.
      * @method
      * @param data CalendarEventRsvp objects that need to be inserted into the system.
@@ -14177,6 +16969,62 @@ CalendarRsvpBatchClient = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarRsvpBatchRoute !== "undefined" && _1.CalendarRsvpBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
 ], CalendarRsvpBatchClient);
 exports.CalendarRsvpBatchClient = CalendarRsvpBatchClient;
+=======
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsAddressTypeBatchClient.create([{
+                     name : '<name>',
+                     abrv: '<abbreviation>',
+                     description: '<description>'
+                    }])
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsAddressTypesBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example   commerceLookupsAddressTypeBatchClient.update(commerceAddressTypes)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    CommerceLookupsAddressTypesBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsAddressTypeClient.remove(commerceAddressTypeIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsAddressTypesBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsAddressTypeBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsAddressTypesBatchClient;
+}());
+CommerceLookupsAddressTypesBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsAddressTypeBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsAddressTypeBatchRoute !== "undefined" && _1.CommerceLookupsAddressTypeBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsAddressTypesBatchClient);
+exports.CommerceLookupsAddressTypesBatchClient = CommerceLookupsAddressTypesBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a, _b;
 /**
  * @copyright (c) 2017 Mono Ltd
@@ -14185,24 +17033,38 @@ var _a, _b;
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
+=======
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 227 */
+=======
+/* 220 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRsvpBatchRoute
  * @description BaasicCalendarRsvpBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarRsvpBatch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsAddressTypeBatchRoute
+ * @description Baasic Commerce Lookups AddressType Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups AddressType Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 var CalendarRsvpBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarRsvpBatchRoute, _super);
@@ -14260,26 +17122,90 @@ var _a;
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+=======
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsAddressTypeBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsAddressTypeBatchRoute, _super);
+    function CommerceLookupsAddressTypeBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/address-types/batch';
+        _this.updateRoute = 'commerce/lookups/address-types/batch';
+        _this.deleteRoute = 'commerce/lookups/address-types/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsAddressTypeRoute.create();
+     */
+    CommerceLookupsAddressTypeBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsAddressTypeRoute.update();
+     */
+    CommerceLookupsAddressTypeBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce address type batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsAddressTypeRoute.remove();
+     */
+    CommerceLookupsAddressTypeBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsAddressTypeBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsAddressTypeBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsAddressTypeBatchRoute);
+exports.CommerceLookupsAddressTypeBatchRoute = CommerceLookupsAddressTypeBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 228 */
+=======
+/* 221 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRsvpClient
  * @description  CalendarRsvpClient provides an easy way to consume CalendarRsvp REST API end-points. In order to obtain needed routes `calendarRsvpClient` uses `calendarRsvpRoute`.
+=======
+ * @module commerceLookupsAddressTypeClient
+ * @description  Commerce Lookups Address Type Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsAddressTypesClient` uses `commerceLookupsAddressTypeRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(7);
 var CalendarRsvpClient = (function () {
     function CalendarRsvpClient(calendarRsvpBatchClient, calendarRsvpRoute, apiClient) {
@@ -14290,18 +17216,37 @@ var CalendarRsvpClient = (function () {
     Object.defineProperty(CalendarRsvpClient.prototype, "routeDefinition", {
         get: function () {
             return this.calendarRsvpRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsAddressTypesClient = (function () {
+    function CommerceLookupsAddressTypesClient(commerceLookupsAddressTypeRoute, commerceLookupsAddressTypesBatchClient, apiClient) {
+        this.commerceLookupsAddressTypeRoute = commerceLookupsAddressTypeRoute;
+        this.commerceLookupsAddressTypesBatchClient = commerceLookupsAddressTypesBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsAddressTypesClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsAddressTypeRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
+<<<<<<< develop
     Object.defineProperty(CalendarRsvpClient.prototype, "batch", {
         get: function () {
             return this.calendarRsvpBatchClient;
+=======
+    Object.defineProperty(CommerceLookupsAddressTypesClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsAddressTypesBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of CalendarEventRsvp resources matching the given criteria.
      * @method
      * @param calendarId Calendar id which uniquely identifies Calendar resource.
@@ -14321,10 +17266,21 @@ var CalendarRsvpClient = (function () {
                     to: '<to-date>',
                     registrationCloseFrom: '<registration-start-date>',
                     registrationCloseTo: '<registration-end-date>'
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsAddressTypeClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+>>>>>>> Fix jQuery http client reject promise issue
                 })
                 .then(function (collection) {
                     // perform success action here
                 },
+<<<<<<< develop
                 function (response, status, headers, config) {
                     // perform error handling here
                 });
@@ -14448,6 +17404,96 @@ CalendarRsvpClient = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarRsvpBatchClient !== "undefined" && _1.CalendarRsvpBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CalendarRsvpRoute !== "undefined" && _1.CalendarRsvpRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
 ], CalendarRsvpClient);
 exports.CalendarRsvpClient = CalendarRsvpClient;
+=======
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsAddressTypesClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceLookupsAddressTypeClient.get()
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    CommerceLookupsAddressTypesClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsAddressTypeRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceLookupsAddressTypeClient.create({
+                       name : '<name>',
+                       abrv: '<abbreviation>',
+                       description: '<description>'
+                   })
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    CommerceLookupsAddressTypesClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsAddressTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceAddressType);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceAddressType is a resource previously fetched using get action.
+                    commerceAddressType.description = '<description>';
+                    commerceLookupsAddressTypeClient.update(commerceAddressType)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsAddressTypesClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsAddressTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceAddressType);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceAddressType is a resource previously fetched using get action.
+                    commerceLookupsAddressTypeClient.remove(commerceAddressType)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsAddressTypesClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsAddressTypesClient;
+}());
+CommerceLookupsAddressTypesClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsAddressTypeRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsAddressTypesBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsAddressTypeRoute !== "undefined" && _1.CommerceLookupsAddressTypeRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsAddressTypesBatchClient !== "undefined" && _1.CommerceLookupsAddressTypesBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsAddressTypesClient);
+exports.CommerceLookupsAddressTypesClient = CommerceLookupsAddressTypesClient;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a, _b, _c;
 /**
  * @copyright (c) 2017 Mono Ltd
@@ -14456,19 +17502,32 @@ var _a, _b, _c;
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
+=======
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 229 */
+=======
+/* 222 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module calendarRsvpRoute
  * @description BaasicCalendarRsvpRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarRsvpRoute Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsAddressTypeRoute
+ * @description Baasic Commerce Lookups AddressType Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups AddressType Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
@@ -14476,6 +17535,7 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var CalendarRsvpRoute = (function (_super) {
     tslib_1.__extends(CalendarRsvpRoute, _super);
     function CalendarRsvpRoute(appOptions) {
@@ -14625,12 +17685,98 @@ var _a;
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsAddressTypeRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsAddressTypeRoute, _super);
+    function CommerceLookupsAddressTypeRoute(commerceLookupsAddressTypeBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.commerceLookupsAddressTypeBatchRoute = commerceLookupsAddressTypeBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/address-types/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/lookups/address-types/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/lookups/address-types';
+        _this.updateRoute = 'commerce/lookups/address-types/{id}';
+        _this.deleteRoute = 'commerce/lookups/address-types/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsAddressTypeRoute.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsAddressTypeBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce address type route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceLookupsAddressTypeRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsAddressTypeRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceLookupsAddressTypeRoute.get(id, options);
+     **/
+    CommerceLookupsAddressTypeRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create commerce address type route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsAddressTypeRoute.create();
+     **/
+    CommerceLookupsAddressTypeRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce address type route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsAddressTypeRoute.update(data);
+     **/
+    CommerceLookupsAddressTypeRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete commerce address type route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsAddressTypeRoute.delete(data);
+     **/
+    CommerceLookupsAddressTypeRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsAddressTypeRoute;
+}(common_1.BaseRoute));
+CommerceLookupsAddressTypeRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsAddressTypeBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsAddressTypeBatchRoute !== "undefined" && _1.CommerceLookupsAddressTypeBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsAddressTypeRoute);
+exports.CommerceLookupsAddressTypeRoute = CommerceLookupsAddressTypeRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14647,6 +17793,9 @@ __export(__webpack_require__(229));
 
 /***/ }),
 /* 231 */
+=======
+/* 223 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14654,6 +17803,7 @@ __export(__webpack_require__(229));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(225));
 __export(__webpack_require__(230));
 __export(__webpack_require__(220));
@@ -25302,18 +28452,225 @@ var CommerceProductFilesRoute = (function (_super) {
     Object.defineProperty(CommerceProductFilesRoute.prototype, "streams", {
         get: function () {
             return this.productFilesStreamsRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(CommerceProductFilesRoute.prototype, "batch", {
+=======
+__export(__webpack_require__(220));
+__export(__webpack_require__(219));
+__export(__webpack_require__(222));
+__export(__webpack_require__(221));
+
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceCountryStateBatchClient
+ * @description  Commerce Country State Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryStateBatchClient` uses `commerceCountryStateBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceLookupsCountryStateBatchClient = (function () {
+    function CommerceLookupsCountryStateBatchClient(commerceLookupsCountryStateBatchRoute, apiClient) {
+        this.commerceLookupsCountryStateBatchRoute = commerceLookupsCountryStateBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsCountryStateBatchClient.prototype, "routeDefinition", {
         get: function () {
-            return this.productFilesBatchRoute;
+            return this.commerceLookupsCountryStateBatchRoute;
         },
         enumerable: true,
         configurable: true
     });
     /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsCountryStateBatchClient.create([{
+                    countryId: '<country-id>',
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsCountryStateBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example commerceLookupsCountryStateBatchClient.update(commerceCountryStates)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsCountryStateBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsCountryStateBatchClient.remove(commerceCountryStateIds)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    CommerceLookupsCountryStateBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsCountryStateBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsCountryStateBatchClient;
+}());
+CommerceLookupsCountryStateBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCountryStateBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCountryStateBatchRoute !== "undefined" && _1.CommerceLookupsCountryStateBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsCountryStateBatchClient);
+exports.CommerceLookupsCountryStateBatchClient = CommerceLookupsCountryStateBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsCountryStateBatchRoute
+ * @description Baasic Commerce Lookups Country State Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsCountryStateBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsCountryStateBatchRoute, _super);
+    function CommerceLookupsCountryStateBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/states/batch';
+        _this.updateRoute = 'commerce/lookups/states/batch';
+        _this.deleteRoute = 'commerce/lookups/states/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCountryStateBatchRoute.create();
+     */
+    CommerceLookupsCountryStateBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCountryStateBatchRoute.update();
+     */
+    CommerceLookupsCountryStateBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCountryStateBatchRoute.remove();
+     */
+    CommerceLookupsCountryStateBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsCountryStateBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsCountryStateBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsCountryStateBatchRoute);
+exports.CommerceLookupsCountryStateBatchRoute = CommerceLookupsCountryStateBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceCountryStateClient
+ * @description  Commerce Country State Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryStateClient` uses `commerceCountryStateRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceLookupsCountryStateClient = (function () {
+    function CommerceLookupsCountryStateClient(commerceLookupsCountryStateRoute, commerceLookupsCountryStateBatchClient, apiClient) {
+        this.commerceLookupsCountryStateRoute = commerceLookupsCountryStateRoute;
+        this.commerceLookupsCountryStateBatchClient = commerceLookupsCountryStateBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsCountryStateClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsCountryStateRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+<<<<<<< develop
+    Object.defineProperty(CommerceProductFilesRoute.prototype, "batch", {
+        get: function () {
+            return this.productFilesBatchRoute;
+=======
+    Object.defineProperty(CommerceLookupsCountryStateClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsCountryStateBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
      * Parses find route which can be expanded with additional options. Supported items are:
      * - `searchQuery` - A string referencing file properties using the phrase search.
      * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
@@ -25460,10 +28817,76 @@ var CommerceProductFilesStreamsClient = (function () {
                             width: <width>,
                             height: <height>
                         })
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsCountryStateClient.find({
+                    countryId: '<country-id>'
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsCountryStateClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceLookupsCountryStateClient.get('<state-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsCountryStateClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsCountryStateRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceLookupsCountryStateClient.create({
+                      countryId : '<country-id>',
+                      name: '<name>',
+                      abrv: '<abrv>',
+                      description: '<description>'
+                  })
+                  .then(function (data) {
+                      // perform success action here
+                  },
+                   function (response, status, headers, config) {
+                       // perform error handling here
+                  });
+   **/
+    CommerceLookupsCountryStateClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCountryStateRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCountryState);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCountryState is a resource previously fetched using get action.
+                    commerceCountryState.description = '<description>';
+                    commerceLookupsCountryStateClient.update(commerceCountryState)
+>>>>>>> Fix jQuery http client reject promise issue
                         .then(function (data) {
                             // perform success action here
                         },
                          function (response, status, headers, config) {
+<<<<<<< develop
                             // perform error handling here
                         });
      **/
@@ -25542,20 +28965,78 @@ var _a, _b;
 
 /***/ }),
 /* 373 */
+=======
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsCountryStateClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCountryStateRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCountryState);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCountryState is a resource previously fetched using get action.
+                   commerceLookupsCountryStateClient.remove(commerceCountryState)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    CommerceLookupsCountryStateClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsCountryStateClient;
+}());
+CommerceLookupsCountryStateClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCountryStateRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsCountryStateBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCountryStateRoute !== "undefined" && _1.CommerceLookupsCountryStateRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsCountryStateBatchClient !== "undefined" && _1.CommerceLookupsCountryStateBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsCountryStateClient);
+exports.CommerceLookupsCountryStateClient = CommerceLookupsCountryStateClient;
+var _a, _b, _c;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 227 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module commerceProductFilesStreamsRoute
  * @description Baasic Product Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic product Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
+=======
+ * @module commerceLookupsCountryRoute
+ * @description Baasic Commerce Lookups Country Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var CommerceProductFilesStreamsRoute = (function (_super) {
     tslib_1.__extends(CommerceProductFilesStreamsRoute, _super);
     function CommerceProductFilesStreamsRoute(appOptions) {
@@ -25700,6 +29181,85 @@ CommerceProductSettingsClient = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductSettingsRoute !== "undefined" && _1.CommerceProductSettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
 ], CommerceProductSettingsClient);
 exports.CommerceProductSettingsClient = CommerceProductSettingsClient;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsCountryStateRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsCountryStateRoute, _super);
+    function CommerceLookupsCountryStateRoute(commerceCountryStateBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.commerceCountryStateBatchRoute = commerceCountryStateBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/states/{?countryId,searchQuery,page,rpp,sort,embed}';
+        _this.getRoute = 'commerce/lookups/states/{id}/{?embed}';
+        _this.createRoute = 'commerce/lookups/states';
+        _this.updateRoute = 'commerce/lookups/states/{id}';
+        _this.deleteRoute = 'commerce/lookups/states/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsCountryStateRoute.prototype, "batch", {
+        get: function () {
+            return this.commerceCountryStateBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce country state route which can be expanded with additional options. Supported items are:
+     * - `countryId` - An identifier used to identify commerce country resource.
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceLookupsCountryStateRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsCountryStateRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get commerce country state route which can be expanded with additional options. Supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceLookupsCountryStateRoute.get(id, options);
+     **/
+    CommerceLookupsCountryStateRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create commerce country state route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsCountryStateRoute.create();
+     **/
+    CommerceLookupsCountryStateRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce country state route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsCountryStateRoute.update(data);
+     **/
+    CommerceLookupsCountryStateRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete commerce country state route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsCountryStateRoute.delete(data);
+     **/
+    CommerceLookupsCountryStateRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsCountryStateRoute;
+}(common_1.BaseRoute));
+CommerceLookupsCountryStateRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCountryStateBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCountryStateBatchRoute !== "undefined" && _1.CommerceLookupsCountryStateBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsCountryStateRoute);
+exports.CommerceLookupsCountryStateRoute = CommerceLookupsCountryStateRoute;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a, _b;
 /**
  * @copyright (c) 2017 Mono Ltd
@@ -25708,6 +29268,7 @@ var _a, _b;
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route service.
 */ 
 
@@ -25778,11 +29339,36 @@ var _a;
 
 /***/ }),
 /* 376 */
+=======
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 228 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(225));
+__export(__webpack_require__(224));
+__export(__webpack_require__(227));
+__export(__webpack_require__(226));
+
+
+/***/ }),
+/* 229 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module commerceProductInstanceFilesBatchClient
  * @description  Product Instance Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
@@ -25799,11 +29385,31 @@ var CommerceProductInstanceFilesBatchClient = (function () {
     Object.defineProperty(CommerceProductInstanceFilesBatchClient.prototype, "routeDefinition", {
         get: function () {
             return this.productInstanceFilesBatchRoute;
+=======
+ * @module commerceCountryBatchClient
+ * @description  Commerce Country Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryBatchClient` uses `commerceCountryBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceLookupsCountryBatchClient = (function () {
+    function CommerceLookupsCountryBatchClient(commerceLookupsCountryBatchRoute, apiClient) {
+        this.commerceLookupsCountryBatchRoute = commerceLookupsCountryBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsCountryBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsCountryBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system.
      * @method
      * @param productId Product file id of the original product file used to identify product files on which delete action should be performed.
@@ -25875,18 +29481,95 @@ var _a, _b;
 
 /***/ }),
 /* 377 */
+=======
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsCountryClient.create([{
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsCountryBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example   commerceLookupsCountryClient.update(commerceCountries)
+                      .then(function (data) {
+                          // perform success action here
+                      },
+                       function (response, status, headers, config) {
+                           // perform error handling here
+                      });
+   **/
+    CommerceLookupsCountryBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsCountryClient.remove(commerceCountryIds)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    CommerceLookupsCountryBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsCountryBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsCountryBatchClient;
+}());
+CommerceLookupsCountryBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCountryBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCountryBatchRoute !== "undefined" && _1.CommerceLookupsCountryBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsCountryBatchClient);
+exports.CommerceLookupsCountryBatchClient = CommerceLookupsCountryBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 230 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module commerceProductInstanceFilesBatchRoute
  * @description Baasic Product Instance Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Product Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
+=======
+ * @module commerceLookupsCountryBatchRoute
+ * @description Baasic Commerce Lookups Country Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 var CommerceProductInstanceFilesBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceProductInstanceFilesBatchRoute, _super);
@@ -25948,20 +29631,88 @@ var _a;
 
 /***/ }),
 /* 378 */
+=======
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsCountryBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsCountryBatchRoute, _super);
+    function CommerceLookupsCountryBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/countries/batch';
+        _this.updateRoute = 'commerce/lookups/countries/batch';
+        _this.deleteRoute = 'commerce/lookups/countries/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCountryRoute.create();
+     */
+    CommerceLookupsCountryBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce country batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCountryRoute.update();
+     */
+    CommerceLookupsCountryBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce country batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsCountryRoute.remove();
+     */
+    CommerceLookupsCountryBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsCountryBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsCountryBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsCountryBatchRoute);
+exports.CommerceLookupsCountryBatchRoute = CommerceLookupsCountryBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 231 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module commerceProductInstanceFilesClient
  * @description  Product Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
+=======
+ * @module commerceCountryClient
+ * @description  Commerce Country Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryClient` uses `commerceCountryRoute`.
+ */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(5);
+<<<<<<< develop
 var CommerceProductInstanceFilesClient = (function () {
     function CommerceProductInstanceFilesClient(ProductInstanceFilesRoute, ProductInstanceFilesBatchClient, apiClient) {
         this.ProductInstanceFilesRoute = ProductInstanceFilesRoute;
@@ -25971,18 +29722,36 @@ var CommerceProductInstanceFilesClient = (function () {
     Object.defineProperty(CommerceProductInstanceFilesClient.prototype, "routeDefinition", {
         get: function () {
             return this.ProductInstanceFilesRoute;
+=======
+var CommerceLookupsCountryClient = (function () {
+    function CommerceLookupsCountryClient(commerceLookupsCountryRoute, commerceLookupsCountryBatchClient, apiClient) {
+        this.commerceLookupsCountryRoute = commerceLookupsCountryRoute;
+        this.commerceLookupsCountryBatchClient = commerceLookupsCountryBatchClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsCountryClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsCountryRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
+<<<<<<< develop
     Object.defineProperty(CommerceProductInstanceFilesClient.prototype, "batch", {
         get: function () {
             return this.ProductInstanceFilesBatchClient;
+=======
+    Object.defineProperty(CommerceLookupsCountryClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsCountryBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.
      * @method
      * @param productId Productslug or id which uniquely identifies product whose product files need to be retrieved.
@@ -26016,10 +29785,36 @@ var CommerceProductInstanceFilesClient = (function () {
      * @param options options object that contains embed data.
      * @returns A promise that is resolved once the get action has been performed.
      * @example productInstanceFilesClient.get('<file-id>')
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsCountryClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>'
+               })
+               .then(function (collection) {
+                   // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+    **/
+    CommerceLookupsCountryClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceLookupsCountryClient.get('<country-id>')
+>>>>>>> Fix jQuery http client reject promise issue
                    .then(function (data) {
                        // perform success action here
                    },
                     function (response, status, headers, config) {
+<<<<<<< develop
                        // perform error handling here
                    });
     **/
@@ -26062,6 +29857,61 @@ var CommerceProductInstanceFilesClient = (function () {
      * @returns A promise that is resolved once the unlink by product action has been performed.
      * @example // fileEntry is a file resource previously fetched using get action.
                     productInstanceFilesClient.unlinkByProduct(fileEntry)
+=======
+                        // perform error handling here
+                   });
+    **/
+    CommerceLookupsCountryClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsCountryRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceLookupsCountryClient.create({
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsCountryClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCountryRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCountry);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceCountry is a resource previously fetched using get action.
+                        commerceCountry.phoneCode = '<phone-code>';
+                        commerceLookupsCountryClient.update(commerceCountry)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceLookupsCountryClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsCountryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceCountry);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceCountry is a resource previously fetched using get action.
+                    commerceLookupsCountryClient.remove(commerceCountry)
+>>>>>>> Fix jQuery http client reject promise issue
                         .then(function (data) {
                             // perform success action here
                         },
@@ -26069,6 +29919,7 @@ var CommerceProductInstanceFilesClient = (function () {
                              // perform error handling here
                         });
      **/
+<<<<<<< develop
     CommerceProductInstanceFilesClient.prototype.unlinkByProduct = function (productId, options) {
         return this.apiClient.delete(this.ProductInstanceFilesRoute.unlinkByProduct(productId, options));
     };
@@ -26133,14 +29984,49 @@ var _a, _b, _c;
 
 /***/ }),
 /* 379 */
+=======
+    CommerceLookupsCountryClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsCountryClient;
+}());
+CommerceLookupsCountryClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCountryRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsCountryBatchClient)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCountryRoute !== "undefined" && _1.CommerceLookupsCountryRoute) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsCountryBatchClient !== "undefined" && _1.CommerceLookupsCountryBatchClient) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsCountryClient);
+exports.CommerceLookupsCountryClient = CommerceLookupsCountryClient;
+var _a, _b, _c;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 232 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module commerceProductInstanceFilesRoute
  * @description Baasic Product Instance Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Product Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
+=======
+ * @module commerceLookupsCountryRoute
+ * @description Baasic Commerce Lookups Country Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
@@ -26148,6 +30034,7 @@ var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
 var _1 = __webpack_require__(5);
+<<<<<<< develop
 var CommerceProductInstanceFilesRoute = (function (_super) {
     tslib_1.__extends(CommerceProductInstanceFilesRoute, _super);
     function CommerceProductInstanceFilesRoute(productInstanceFilesBatchRoute, appOptions) {
@@ -26165,11 +30052,30 @@ var CommerceProductInstanceFilesRoute = (function (_super) {
     Object.defineProperty(CommerceProductInstanceFilesRoute.prototype, "batch", {
         get: function () {
             return this.productInstanceFilesBatchRoute;
+=======
+var CommerceLookupsCountryRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsCountryRoute, _super);
+    function CommerceLookupsCountryRoute(commerceCountryBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.commerceCountryBatchRoute = commerceCountryBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/countries/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/lookups/countries/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/lookups/countries';
+        _this.updateRoute = 'commerce/lookups/countries/{id}';
+        _this.deleteRoute = 'commerce/lookups/countries/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsCountryRoute.prototype, "batch", {
+        get: function () {
+            return this.commerceCountryBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Parses find route which can be expanded with additional options. Supported items are:
      * - `searchQuery` - A string referencing file properties using the phrase search.
      * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
@@ -26271,6 +30177,76 @@ var _a, _b;
 
 /***/ }),
 /* 380 */
+=======
+     * Parses find commerce country route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceLookupsCountryRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsCountryRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceLookupsCountryRoute.get();
+     **/
+    CommerceLookupsCountryRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create commerce country route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsCountryRoute.create();
+     **/
+    CommerceLookupsCountryRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+    * Parses update commerce country route; this URI template does not expose any additional options.
+    * @method
+    * @example commerceLookupsCountryRoute.update(data);
+    **/
+    CommerceLookupsCountryRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+    * Parses delete commerce country route; this URI template does not expose any additional options.
+    * @method
+    * @example commerceLookupsCountryRoute.delete(data);
+    **/
+    CommerceLookupsCountryRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsCountryRoute;
+}(common_1.BaseRoute));
+CommerceLookupsCountryRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsCountryBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsCountryBatchRoute !== "undefined" && _1.CommerceLookupsCountryBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsCountryRoute);
+exports.CommerceLookupsCountryRoute = CommerceLookupsCountryRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 233 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26278,6 +30254,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(377));
 __export(__webpack_require__(376));
 __export(__webpack_require__(379));
@@ -26306,13 +30283,22 @@ __export(__webpack_require__(380));
 
 /***/ }),
 /* 382 */
+=======
+__export(__webpack_require__(230));
+__export(__webpack_require__(229));
+__export(__webpack_require__(232));
+__export(__webpack_require__(231));
+
+
+/***/ }),
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
- * @module commerceProductClient
- * @description  Commerce Product Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceProductClient` uses `commerceProductRoute`.
+ * @module commerceInvoiceStatusBatchClient
+ * @description  Commerce Invoice Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceInvoiceStatusBatchClient` uses `commerceInvoiceStatusBatchRoute`.
  */
 
 var tslib_1 = __webpack_require__(1);
@@ -26320,6 +30306,179 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(5);
+var CommerceLookupsInvoiceStatusBatchClient = (function () {
+    function CommerceLookupsInvoiceStatusBatchClient(commerceLookupsInvoiceStatusBatchRoute, apiClient) {
+        this.commerceLookupsInvoiceStatusBatchRoute = commerceLookupsInvoiceStatusBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsInvoiceStatusBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsInvoiceStatusBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsInvoiceStatusBatchClient.create([{
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    CommerceLookupsInvoiceStatusBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example commerceLookupsInvoiceStatusBatchClient.update(InvoiceStatuses)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsInvoiceStatusBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsInvoiceStatusBatchClient.remove(InvoiceStatusIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsInvoiceStatusBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsInvoiceStatusBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsInvoiceStatusBatchClient;
+}());
+CommerceLookupsInvoiceStatusBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsInvoiceStatusBatchRoute !== "undefined" && _1.CommerceLookupsInvoiceStatusBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsInvoiceStatusBatchClient);
+exports.CommerceLookupsInvoiceStatusBatchClient = CommerceLookupsInvoiceStatusBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 235 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module commerceProductClient
+ * @description  Commerce Product Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceProductClient` uses `commerceProductRoute`.
+=======
+ * @module commerceLookupsInvoiceStatusBatchRoute
+ * @description Baasic Commerce Lookups Invoice Status Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsInvoiceStatusBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsInvoiceStatusBatchRoute, _super);
+    function CommerceLookupsInvoiceStatusBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/invoice-statuses/batch';
+        _this.updateRoute = 'commerce/lookups/invoice-statuses/batch';
+        _this.deleteRoute = 'commerce/lookups/invoice-statuses/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsInvoiceStatusBatchRoute.create();
+     */
+    CommerceLookupsInvoiceStatusBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsInvoiceStatusBatchRoute.update();
+     */
+    CommerceLookupsInvoiceStatusBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsInvoiceStatusBatchRoute.remove();
+     */
+    CommerceLookupsInvoiceStatusBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsInvoiceStatusBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsInvoiceStatusBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsInvoiceStatusBatchRoute);
+exports.CommerceLookupsInvoiceStatusBatchRoute = CommerceLookupsInvoiceStatusBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsInvoiceStatusClient
+ * @description  Commerce Lookups InvoiceStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsInvoiceStatusClient` uses `commerceLookupsInvoiceStatusRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+<<<<<<< develop
 var CommerceProductClient = (function () {
     function CommerceProductClient(commerceProductRoute, apiClient) {
         this.commerceProductRoute = commerceProductRoute;
@@ -26328,6 +30487,24 @@ var CommerceProductClient = (function () {
     Object.defineProperty(CommerceProductClient.prototype, "routeDefinition", {
         get: function () {
             return this.commerceProductRoute;
+=======
+var CommerceLookupsInvoiceStatusClient = (function () {
+    function CommerceLookupsInvoiceStatusClient(commerceLookupsInvoiceStatusBatchClient, commerceLookupsInvoiceStatusRoute, apiClient) {
+        this.commerceLookupsInvoiceStatusBatchClient = commerceLookupsInvoiceStatusBatchClient;
+        this.commerceLookupsInvoiceStatusRoute = commerceLookupsInvoiceStatusRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsInvoiceStatusClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsInvoiceStatusRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceLookupsInvoiceStatusClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsInvoiceStatusBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
@@ -26335,6 +30512,7 @@ var CommerceProductClient = (function () {
     /**
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
      * @method
+<<<<<<< develop
      * @example commerceProductClient.find({
                    pageNumber : 1,
                    pageSize : 10,
@@ -26352,11 +30530,29 @@ var CommerceProductClient = (function () {
                });
     **/
     CommerceProductClient.prototype.find = function (options) {
+=======
+     * @example commerceLookupsInvoiceStatusClient.find({
+                        pageNumber : 1,
+                        pageSize : 10,
+                        orderBy : '<field>',
+                        orderDirection : '<asc|desc>',
+                        search : '<search-phrase>'
+                    })
+                    .then(function (collection) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsInvoiceStatusClient.prototype.find = function (options) {
+>>>>>>> Fix jQuery http client reject promise issue
         return this.apiClient.get(this.routeDefinition.find(options));
     };
     /**
      * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
      * @method
+<<<<<<< develop
      * @example commerceProductClient.get()
                       .then(function (data) {
                           // perform success action here
@@ -26367,10 +30563,43 @@ var CommerceProductClient = (function () {
    **/
     CommerceProductClient.prototype.get = function (id, options) {
         return this.apiClient.get(this.commerceProductRoute.get(id, options));
+=======
+     * @example commerceLookupsInvoiceStatusClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsInvoiceStatusClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsInvoiceStatusRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsInvoiceStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceInvoiceStatus);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceInvoiceStatus is a resource previously fetched using get action.
+                    commerceInvoiceStatus.description = '<description>';
+                    commerceLookupsInvoiceStatusClient.update(commerceInvoiceStatus)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsInvoiceStatusClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+>>>>>>> Fix jQuery http client reject promise issue
     };
     /**
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
      * @method
+<<<<<<< develop
      * @example commerceProductClient.create({
                     name : '<product-name>',
                     slug : '<slug>',
@@ -26379,6 +30608,12 @@ var CommerceProductClient = (function () {
                     planId : '<plan-id>',
                     price: 100,
                     published: true
+=======
+     * @example commerceLookupsInvoiceStatusClient.create({
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+>>>>>>> Fix jQuery http client reject promise issue
                 })
                 .then(function (data) {
                     // perform success action here
@@ -26387,6 +30622,7 @@ var CommerceProductClient = (function () {
                      // perform error handling here
                 });
      **/
+<<<<<<< develop
     CommerceProductClient.prototype.create = function (data) {
         return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     };
@@ -26419,6 +30655,20 @@ var CommerceProductClient = (function () {
      * @method
      * @example // commerceProduct is a resource previously fetched using get action.
                     commerceProductClient.remove(commerceProduct)
+=======
+    CommerceLookupsInvoiceStatusClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsInvoiceStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceInvoiceStatus);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceInvoiceStatus is a resource previously fetched using get action.
+                    commerceLookupsInvoiceStatusClient.remove(commerceInvoiceStatus)
+>>>>>>> Fix jQuery http client reject promise issue
                         .then(function (data) {
                             // perform success action here
                         },
@@ -26426,6 +30676,7 @@ var CommerceProductClient = (function () {
                              // perform error handling here
                         });
      **/
+<<<<<<< develop
     CommerceProductClient.prototype.remove = function (data) {
         return this.apiClient.delete(this.routeDefinition.delete(data));
     };
@@ -26441,6 +30692,24 @@ exports.CommerceProductClient = CommerceProductClient;
 var _a, _b;
 /**
  * @copyright (c) 2017 Mono Ltd
+=======
+    CommerceLookupsInvoiceStatusClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsInvoiceStatusClient;
+}());
+CommerceLookupsInvoiceStatusClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsInvoiceStatusBatchClient !== "undefined" && _1.CommerceLookupsInvoiceStatusBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsInvoiceStatusRoute !== "undefined" && _1.CommerceLookupsInvoiceStatusRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsInvoiceStatusClient);
+exports.CommerceLookupsInvoiceStatusClient = CommerceLookupsInvoiceStatusClient;
+var _a, _b, _c;
+/**
+ * @copyright(c) 2017 Mono Ltd
+>>>>>>> Fix jQuery http client reject promise issue
  * @license MIT
  * @author Mono Ltd
  * @overview
@@ -26451,14 +30720,23 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 383 */
+=======
+/* 237 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module commerceProductRoute
  * @description Baasic Commerce Product Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Product Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsInvoiceStatusRoute
+ * @description Baasic Commerce Lookups InvoiceStatus Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups InvoiceStatus Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
@@ -26466,6 +30744,7 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var CommerceProductRoute = (function (_super) {
     tslib_1.__extends(CommerceProductRoute, _super);
     function CommerceProductRoute(appOptions) {
@@ -26480,22 +30759,56 @@ var CommerceProductRoute = (function (_super) {
     }
     /**
      * Parses find commerce product route which can be expanded with additional options. Supported items are:
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsInvoiceStatusRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsInvoiceStatusRoute, _super);
+    function CommerceLookupsInvoiceStatusRoute(basicCommerceLookupsInvoiceStatusBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.basicCommerceLookupsInvoiceStatusBatchRoute = basicCommerceLookupsInvoiceStatusBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/invoice-statuses/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/lookups/invoice-statuses/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/lookups/invoice-statuses';
+        _this.updateRoute = 'commerce/lookups/invoice-statuses/{id}';
+        _this.deleteRoute = 'commerce/lookups/invoice-statuses/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsInvoiceStatusRoute.prototype, "batch", {
+        get: function () {
+            return this.basicCommerceLookupsInvoiceStatusBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce customer-payment-methods route which can be expanded with additional options. Supported items are:
+>>>>>>> Fix jQuery http client reject promise issue
      * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
      * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
      * - `rpp` - A value used to limit the size of result set per page.
      * - `sort` - A string used to set the commerce property to sort the result collection by.
      * - `embed` - Comma separated list of resources to be contained within the current representation.
+<<<<<<< develop
      * - `productCategoryIds` - A list of product category ids.
      * - `productCategoryAbrvs` - A list of product category abbreviations.
      * @method
      * @example commerceProductRoute.find({searchQuery: '<search-phrase>'});
      **/
     CommerceProductRoute.prototype.find = function (options) {
+=======
+     * @method
+     * @param options Query resource options.
+     * @example commerceLookupsInvoiceStatusRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsInvoiceStatusRoute.prototype.find = function (options) {
+>>>>>>> Fix jQuery http client reject promise issue
         return _super.prototype.baseFind.call(this, this.findRoute, options);
     };
     /**
      * Parses get route; this route doesn't expose any properties.
      * @method
+<<<<<<< develop
      * @example commerceProductRoute.get(id, options);
      **/
     CommerceProductRoute.prototype.get = function (id, options) {
@@ -26534,6 +30847,47 @@ CommerceProductRoute = tslib_1.__decorate([
 ], CommerceProductRoute);
 exports.CommerceProductRoute = CommerceProductRoute;
 var _a;
+=======
+     * @example commerceLookupsInvoiceStatusRoute.get();
+     **/
+    CommerceLookupsInvoiceStatusRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, options);
+    };
+    /**
+     * Parses create commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsInvoiceStatusRoute.create();
+     **/
+    CommerceLookupsInvoiceStatusRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsInvoiceStatusRoute.update(data);
+     **/
+    CommerceLookupsInvoiceStatusRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsInvoiceStatusRoute.delete(data);
+     **/
+    CommerceLookupsInvoiceStatusRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsInvoiceStatusRoute;
+}(common_1.BaseRoute));
+CommerceLookupsInvoiceStatusRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsInvoiceStatusBatchRoute !== "undefined" && _1.CommerceLookupsInvoiceStatusBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsInvoiceStatusRoute);
+exports.CommerceLookupsInvoiceStatusRoute = CommerceLookupsInvoiceStatusRoute;
+var _a, _b;
+>>>>>>> Fix jQuery http client reject promise issue
 /**
  * @copyright (c) 2017 Mono Ltd
  * @license MIT
@@ -26547,6 +30901,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26596,6 +30951,9 @@ __export(__webpack_require__(382));
 
 /***/ }),
 /* 389 */
+=======
+/* 238 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26603,6 +30961,7 @@ __export(__webpack_require__(382));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(387));
 __export(__webpack_require__(388));
 __export(__webpack_require__(386));
@@ -26611,10 +30970,21 @@ __export(__webpack_require__(385));
 
 /***/ }),
 /* 390 */
+=======
+__export(__webpack_require__(235));
+__export(__webpack_require__(234));
+__export(__webpack_require__(237));
+__export(__webpack_require__(236));
+
+
+/***/ }),
+/* 239 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var inversify_1 = __webpack_require__(0);
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(21);
@@ -26650,12 +31020,57 @@ exports.diModule = diModule;
 /**
  * @module dynamicResourceACLClient
  * @description  Dynamic Resource ACL Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceACLClient` uses `dynamicResourceACLRoute`.
+=======
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(5);
+var _2 = __webpack_require__(37);
+var inversify_1 = __webpack_require__(0);
+var Lookups = (function () {
+    function Lookups(addressTypes, countries, countryStates, paymentMethods, paymentTransactionStatuses, recurringCyclePeriodTypes, subscriptionStatuses, invoiceStatuses) {
+        this.addressTypes = addressTypes;
+        this.countries = countries;
+        this.countryStates = countryStates;
+        this.paymentMethods = paymentMethods;
+        this.paymentTransactionStatuses = paymentTransactionStatuses;
+        this.recurringCyclePeriodTypes = recurringCyclePeriodTypes;
+        this.subscriptionStatuses = subscriptionStatuses;
+        this.invoiceStatuses = invoiceStatuses;
+    }
+    return Lookups;
+}());
+Lookups = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsAddressTypesClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsCountryClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.CommerceLookupsCountryStateClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentMethodClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentTransactionStatusClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.CommerceLookupsRecurringCyclePeriodTypeClient)),
+    tslib_1.__param(6, inversify_1.inject(_1.TYPES.CommerceLookupsSubscriptionStatusClient)),
+    tslib_1.__param(7, inversify_1.inject(_1.TYPES.CommerceLookupsInvoiceStatusClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _2.CommerceLookupsAddressTypesClient !== "undefined" && _2.CommerceLookupsAddressTypesClient) === "function" && _a || Object, typeof (_b = typeof _2.CommerceLookupsCountryClient !== "undefined" && _2.CommerceLookupsCountryClient) === "function" && _b || Object, typeof (_c = typeof _2.CommerceLookupsCountryStateClient !== "undefined" && _2.CommerceLookupsCountryStateClient) === "function" && _c || Object, typeof (_d = typeof _2.CommerceLookupsPaymentMethodClient !== "undefined" && _2.CommerceLookupsPaymentMethodClient) === "function" && _d || Object, typeof (_e = typeof _2.CommerceLookupsPaymentTransactionStatusClient !== "undefined" && _2.CommerceLookupsPaymentTransactionStatusClient) === "function" && _e || Object, typeof (_f = typeof _2.CommerceLookupsRecurringCyclePeriodTypeClient !== "undefined" && _2.CommerceLookupsRecurringCyclePeriodTypeClient) === "function" && _f || Object, typeof (_g = typeof _2.CommerceLookupsSubscriptionStatusClient !== "undefined" && _2.CommerceLookupsSubscriptionStatusClient) === "function" && _g || Object, typeof (_h = typeof _2.CommerceLookupsInvoiceStatusClient !== "undefined" && _2.CommerceLookupsInvoiceStatusClient) === "function" && _h || Object])
+], Lookups);
+exports.Lookups = Lookups;
+var _a, _b, _c, _d, _e, _f, _g, _h;
+
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commercePaymentMethodBatchClient
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentMethodBatchClient` uses `commercePaymentMethodBatchRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(21);
 var DynamicResourceACLClient = (function () {
     function DynamicResourceACLClient(dynamicResourceACLRoute, apiClient) {
@@ -26665,11 +31080,23 @@ var DynamicResourceACLClient = (function () {
     Object.defineProperty(DynamicResourceACLClient.prototype, "routeDefinition", {
         get: function () {
             return this.dynamicResourceACLRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsPaymentMethodBatchClient = (function () {
+    function CommerceLookupsPaymentMethodBatchClient(commerceLookupsPaymentMethodBatchRoute, apiClient) {
+        this.commerceLookupsPaymentMethodBatchRoute = commerceLookupsPaymentMethodBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsPaymentMethodBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsPaymentMethodBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified dynamic resource.
      * @method
      * @param options Options object.
@@ -26689,10 +31116,21 @@ var DynamicResourceACLClient = (function () {
      * @method
      * @param options Options object.
      * @example dynamicResourceACLClient.update({id: '<dynamic-resource-id>', schemaName: '<schema-name>'})
+=======
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsPaymentMethodBatchClient.create([{
+                        name : '<name>',
+                        abrv: '<abbreviation>',
+                        description: '<description>',
+                        published: '<published>'
+                    }])
+>>>>>>> Fix jQuery http client reject promise issue
                     .then(function (data) {
                         // perform success action here
                     },
                      function (response, status, headers, config) {
+<<<<<<< develop
                         // perform error handling here
                     });
      **/
@@ -26712,10 +31150,23 @@ var DynamicResourceACLClient = (function () {
      * @param data ACL Policy whose security privileges need to be retrieved and updated.
      * @example // dynamicResource is a resource previously fetched using get action.
                     dynamicResourceACLClient.removeByUser('<access-action>', '<username>', dynamicResource)
+=======
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsPaymentMethodBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example   commerceLookupsPaymentMethodBatchClient.update(commercePaymentMethods)
+>>>>>>> Fix jQuery http client reject promise issue
                         .then(function (data) {
                             // perform success action here
                         },
                          function (response, status, headers, config) {
+<<<<<<< develop
                             // perform error handling here
                         });
      **/
@@ -26756,6 +31207,42 @@ DynamicResourceACLClient = tslib_1.__decorate([
 exports.DynamicResourceACLClient = DynamicResourceACLClient;
 var _a, _b;
 /**
+=======
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsPaymentMethodBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsPaymentMethodBatchClient.remove(commercePaymentMethodIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsPaymentMethodBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsPaymentMethodBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsPaymentMethodBatchClient;
+}());
+CommerceLookupsPaymentMethodBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentMethodBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsPaymentMethodBatchRoute !== "undefined" && _1.CommerceLookupsPaymentMethodBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsPaymentMethodBatchClient);
+exports.CommerceLookupsPaymentMethodBatchClient = CommerceLookupsPaymentMethodBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+>>>>>>> Fix jQuery http client reject promise issue
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
@@ -26764,6 +31251,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26771,6 +31259,16 @@ var _a, _b;
 /**
  * @module dynamicResourceACLRoute
  * @description Baasic Dynamic Resource ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Resource ACL Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+=======
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsPaymentMethodBatchRoute
+ * @description Baasic Commerce Lookups Payment Method Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
@@ -26778,6 +31276,7 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var DynamicResourceACLRoute = (function (_super) {
     tslib_1.__extends(DynamicResourceACLRoute, _super);
     function DynamicResourceACLRoute(appOptions) {
@@ -26859,6 +31358,55 @@ DynamicResourceACLRoute = tslib_1.__decorate([
 exports.DynamicResourceACLRoute = DynamicResourceACLRoute;
 var _a;
 /**
+=======
+var CommerceLookupsPaymentMethodBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsPaymentMethodBatchRoute, _super);
+    function CommerceLookupsPaymentMethodBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/payment-methods/batch';
+        _this.updateRoute = 'commerce/lookups/payment-methods/batch';
+        _this.deleteRoute = 'commerce/lookups/payment-methods/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsPaymentMethodBatchRoute.create();
+     */
+    CommerceLookupsPaymentMethodBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsPaymentMethodBatchRoute.update();
+     */
+    CommerceLookupsPaymentMethodBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsPaymentMethodBatchRoute.remove();
+     */
+    CommerceLookupsPaymentMethodBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsPaymentMethodBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsPaymentMethodBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsPaymentMethodBatchRoute);
+exports.CommerceLookupsPaymentMethodBatchRoute = CommerceLookupsPaymentMethodBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+>>>>>>> Fix jQuery http client reject promise issue
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
@@ -26868,20 +31416,30 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 393 */
+=======
+/* 242 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module dynamicResourceBatchClient
  * @description  DynamicResourceBatchClient provides an easy way to consume DynamicResourceBatchBatch REST API end-points. In order to obtain needed routes `dynamicResourceBatchClient` uses `dynamicResourceBatchRoute`.
+=======
+ * @module commerceLookupsPaymentMethodClient
+ * @description  Commerce Lookups PaymentMethod Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentMethodClient` uses `commerceLookupsPaymentMethodRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(21);
 var DynamicResourceBatchClient = (function () {
     function DynamicResourceBatchClient(dynamicResourceBatchRoute, apiClient) {
@@ -26891,11 +31449,31 @@ var DynamicResourceBatchClient = (function () {
     Object.defineProperty(DynamicResourceBatchClient.prototype, "routeDefinition", {
         get: function () {
             return this.dynamicResourceBatchRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsPaymentMethodClient = (function () {
+    function CommerceLookupsPaymentMethodClient(commerceLookupsPaymentMethodBatchClient, commerceLookupsPaymentMethodRoute, apiClient) {
+        this.commerceLookupsPaymentMethodBatchClient = commerceLookupsPaymentMethodBatchClient;
+        this.commerceLookupsPaymentMethodRoute = commerceLookupsPaymentMethodRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsPaymentMethodClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsPaymentMethodRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceLookupsPaymentMethodClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsPaymentMethodBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the create JSON object action has been performed; this action creates new JSON object resources.
      * @method
      * @param data JSON object objects that need to be inserted into the system.
@@ -26982,29 +31560,148 @@ exports.DynamicResourceBatchClient = DynamicResourceBatchClient;
 var _a, _b;
 /**
  * @copyright (c) 2017 Mono Ltd
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusClient.find({
+                        pageNumber : 1,
+                        pageSize : 10,
+                        orderBy : '<field>',
+                        orderDirection : '<asc|desc>',
+                        search : '<search-phrase>'
+                    })
+                    .then(function (collection) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsPaymentMethodClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusClient.get()
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    CommerceLookupsPaymentMethodClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsPaymentMethodRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commercePaymentTransactionStatus);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commercePaymentTransactionStatus is a resource previously fetched using get action.
+                        commercePaymentTransactionStatus.description = '<description>';
+                        commerceLookupsPaymentTransactionStatusClient.update(commercePaymentTransactionStatus)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceLookupsPaymentMethodClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusClient.create({
+                        name : '<name>',
+                        abrv: '<abbreviation>',
+                        description: '<description>'
+                    })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsPaymentMethodClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commercePaymentTransactionStatus);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commercePaymentTransactionStatus is a resource previously fetched using get action.
+                        commerceLookupsPaymentTransactionStatusClient.remove(commercePaymentTransactionStatus)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceLookupsPaymentMethodClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsPaymentMethodClient;
+}());
+CommerceLookupsPaymentMethodClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentMethodBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentMethodRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsPaymentMethodBatchClient !== "undefined" && _1.CommerceLookupsPaymentMethodBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsPaymentMethodRoute !== "undefined" && _1.CommerceLookupsPaymentMethodRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsPaymentMethodClient);
+exports.CommerceLookupsPaymentMethodClient = CommerceLookupsPaymentMethodClient;
+var _a, _b, _c;
+/**
+ * @copyright(c) 2017 Mono Ltd
+>>>>>>> Fix jQuery http client reject promise issue
  * @license MIT
  * @author Mono Ltd
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
+=======
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 394 */
+=======
+/* 243 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module dynamicResourceBatchRoute
  * @description DynamicResourceBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use DynamicResourceBatchRoute Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsPaymentMethodRoute
+ * @description Baasic Commerce Lookups PaymentMethod Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups PaymentMethod Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 var DynamicResourceBatchRoute = (function (_super) {
     tslib_1.__extends(DynamicResourceBatchRoute, _super);
@@ -27062,12 +31759,101 @@ var _a;
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+=======
+;
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(5);
+var CommerceLookupsPaymentMethodRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsPaymentMethodRoute, _super);
+    function CommerceLookupsPaymentMethodRoute(basicCommerceLookupsPaymentMethodBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.basicCommerceLookupsPaymentMethodBatchRoute = basicCommerceLookupsPaymentMethodBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/payment-methods/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/lookups/payment-methods/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/lookups/payment-methods';
+        _this.updateRoute = 'commerce/lookups/payment-methods/{id}';
+        _this.deleteRoute = 'commerce/lookups/payment-methods/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsPaymentMethodRoute.prototype, "batch", {
+        get: function () {
+            return this.basicCommerceLookupsPaymentMethodBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce customer-payment-methods route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options.
+     * @example commerceLookupsPaymentMethodRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsPaymentMethodRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceLookupsPaymentMethodRoute.get();
+     **/
+    CommerceLookupsPaymentMethodRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, options);
+    };
+    /**
+     * Parses create commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsPaymentMethodRoute.create();
+     **/
+    CommerceLookupsPaymentMethodRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsPaymentMethodRoute.update(data);
+     **/
+    CommerceLookupsPaymentMethodRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsPaymentMethodRoute.delete(data);
+     **/
+    CommerceLookupsPaymentMethodRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsPaymentMethodRoute;
+}(common_1.BaseRoute));
+CommerceLookupsPaymentMethodRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentMethodBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsPaymentMethodBatchRoute !== "undefined" && _1.CommerceLookupsPaymentMethodBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsPaymentMethodRoute);
+exports.CommerceLookupsPaymentMethodRoute = CommerceLookupsPaymentMethodRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27075,12 +31861,38 @@ var _a;
 /**
  * @module dynamicResourceClient
  * @description  Dynamic Resource Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceClient` uses `dynamicResourceRoute`.
+=======
+/* 244 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(241));
+__export(__webpack_require__(240));
+__export(__webpack_require__(243));
+__export(__webpack_require__(242));
+
+
+/***/ }),
+/* 245 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commercePaymentTransactionStatusBatchClient
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionStatusBatchClient` uses `commercePaymentTransactionStatusBatchRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(21);
 var DynamicResourceClient = (function () {
     function DynamicResourceClient(dynamicResourceRoute, dynamicResourceBatchClient, dynamicResourceACLClient, dynamicSchemaClient, apiClient) {
@@ -27119,11 +31931,23 @@ var DynamicResourceClient = (function () {
     Object.defineProperty(DynamicResourceClient.prototype, "batch", {
         get: function () {
             return this.dynamicResourceBatchClient;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsPaymentTransactionStatusBatchClient = (function () {
+    function CommerceLookupsPaymentTransactionStatusBatchClient(commerceLookupsPaymentTransactionStatusBatchRoute, apiClient) {
+        this.commerceLookupsPaymentTransactionStatusBatchRoute = commerceLookupsPaymentTransactionStatusBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsPaymentTransactionStatusBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsPaymentTransactionStatusBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resources matching the given criteria.
      * @method
      * @param schemaName Name of dynamic resource schema whose dynamic resources need to be retrieved.
@@ -27241,6 +32065,29 @@ var DynamicResourceClient = (function () {
                     dynamicResourceClient.remove(dynamicResource, {
                         query: "where field = 'value' "
                     })
+=======
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusBatchClient.create([{
+                   name : '<name>',
+                   abrv: '<abbreviation>',
+                   description: '<description>'
+               }])
+               .then(function (data) {
+                   // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+    **/
+    CommerceLookupsPaymentTransactionStatusBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusBatchClient.update(commercePaymentTransactionStatuses)
+>>>>>>> Fix jQuery http client reject promise issue
                     .then(function (data) {
                         // perform success action here
                     },
@@ -27248,6 +32095,7 @@ var DynamicResourceClient = (function () {
                          // perform error handling here
                     });
      **/
+<<<<<<< develop
     DynamicResourceClient.prototype.remove = function (schemaName, data, options) {
         return this.apiClient.delete(this.dynamicResourceRoute.delete(schemaName, data, options));
     };
@@ -27261,6 +32109,15 @@ var DynamicResourceClient = (function () {
      * @param data JSON object used to purge dynamic resources.
      * @example // dynamicResource is a resource previously fetched using get action.
                     dynamicResourceClient.purge('<schema-name>')
+=======
+    CommerceLookupsPaymentTransactionStatusBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusBatchClient.remove(commercePaymentTransactionStatusIds)
+>>>>>>> Fix jQuery http client reject promise issue
                     .then(function (data) {
                         // perform success action here
                     },
@@ -27268,6 +32125,7 @@ var DynamicResourceClient = (function () {
                          // perform error handling here
                     });
      **/
+<<<<<<< develop
     DynamicResourceClient.prototype.purge = function (schemaName) {
         return this.apiClient.delete(this.dynamicResourceRoute.purge(schemaName));
     };
@@ -27294,12 +32152,48 @@ var _a, _b, _c, _d, _e;
 /**
  * @module dynamicResourceRoute
  * @description Baasic Dynamic Resource Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Resource Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+=======
+    CommerceLookupsPaymentTransactionStatusBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsPaymentTransactionStatusBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsPaymentTransactionStatusBatchClient;
+}());
+CommerceLookupsPaymentTransactionStatusBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentTransactionStatusBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsPaymentTransactionStatusBatchRoute !== "undefined" && _1.CommerceLookupsPaymentTransactionStatusBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsPaymentTransactionStatusBatchClient);
+exports.CommerceLookupsPaymentTransactionStatusBatchClient = CommerceLookupsPaymentTransactionStatusBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 246 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsPaymentTransactionStatusBatchRoute
+ * @description Baasic Commerce Lookups Payment Method Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(21);
 var contracts_1 = __webpack_require__(3);
 var DynamicResourceRoute = (function (_super) {
@@ -27390,15 +32284,70 @@ DynamicResourceRoute = tslib_1.__decorate([
 exports.DynamicResourceRoute = DynamicResourceRoute;
 var _a, _b, _c;
 /**
+=======
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsPaymentTransactionStatusBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsPaymentTransactionStatusBatchRoute, _super);
+    function CommerceLookupsPaymentTransactionStatusBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/payment-transaction-statuses/batch';
+        _this.updateRoute = 'commerce/lookups/payment-transaction-statuses/batch';
+        _this.deleteRoute = 'commerce/lookups/payment-transaction-statuses/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusBatchRoute.create();
+     */
+    CommerceLookupsPaymentTransactionStatusBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusBatchRoute.update();
+     */
+    CommerceLookupsPaymentTransactionStatusBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusBatchRoute.remove();
+     */
+    CommerceLookupsPaymentTransactionStatusBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsPaymentTransactionStatusBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsPaymentTransactionStatusBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsPaymentTransactionStatusBatchRoute);
+exports.CommerceLookupsPaymentTransactionStatusBatchRoute = CommerceLookupsPaymentTransactionStatusBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+>>>>>>> Fix jQuery http client reject promise issue
  * @overview
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
+=======
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
+<<<<<<< develop
 /* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27406,12 +32355,23 @@ var _a, _b, _c;
 /**
  * @module dynamicSchemaClient
  * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `dynamicSchemaClient` uses `dynamicSchemaRoute`.
+=======
+/* 247 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsPaymentTransactionStatusClient
+ * @description  Commerce Lookups PaymentTransactionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsPaymentTransactionStatusClient` uses `commerceLookupsPaymentTransactionStatusRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(21);
 var DynamicSchemaClient = (function () {
     function DynamicSchemaClient(dynamicSchemaRoute, apiClient) {
@@ -27426,11 +32386,4081 @@ var DynamicSchemaClient = (function () {
          **/
         get: function () {
             return this.dynamicSchemaRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsPaymentTransactionStatusClient = (function () {
+    function CommerceLookupsPaymentTransactionStatusClient(commerceLookupsPaymentTransactionStatusBatchClient, commerceLookupsPaymentTransactionStatusRoute, apiClient) {
+        this.commerceLookupsPaymentTransactionStatusBatchClient = commerceLookupsPaymentTransactionStatusBatchClient;
+        this.commerceLookupsPaymentTransactionStatusRoute = commerceLookupsPaymentTransactionStatusRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsPaymentTransactionStatusClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsPaymentTransactionStatusRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceLookupsPaymentTransactionStatusClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsPaymentTransactionStatusBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resource schemas matching the given criteria.
+     * @method
+     * @param options Options object.
+     * @example dynamicSchemaClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    DynamicSchemaClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified dynamic resource schema.
+     * @method
+     * @param name Name of dynamic resource schema which need to be retrieved.
+     * @param options Options object.
+     * @example dynamicSchemaClient.get('<schema-name>')
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusClient.find({
+                        pageNumber : 1,
+                        pageSize : 10,
+                        orderBy : '<field>',
+                        orderDirection : '<asc|desc>',
+                        search : '<search-phrase>'
+                    })
+                    .then(function (collection) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsPaymentTransactionStatusClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusClient.get()
+>>>>>>> Fix jQuery http client reject promise issue
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+<<<<<<< develop
+                        // perform error handling here
+                    });
+     **/
+    DynamicSchemaClient.prototype.get = function (name, options) {
+        return this.apiClient.get(this.dynamicSchemaRoute.get(name, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create action has been performed; this action creates a new dynamic resource schema item.
+     * @method
+     * @param data A dynamic resource schema object that needs to be inserted into the system.
+     * @example dynamicSchemaClient.create({
+                    schema : {
+                        type : 'object',
+                        properties : {
+                            id : {
+                                title : '<unique-identifier-field>',
+                                readonly : true,
+                                hidden : true,
+                                type : 'string'
+                            },
+                            description : {
+                                type: string
+                            }
+                        }
+                    },
+                    name : '<schema-name>',
+                    description : '<description>',
+                    enforceSchemaValidation : true
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    DynamicSchemaClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update dynamic resource schema action has been performed; this action updates a dynamic resource schema item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(dynamicResourceSchema);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A dynamic schema object used to update specified dynamic resource schema.
+     * @example // dynamicResourceSchema is a resource previously fetched using get action.
+                    dynamicResourceSchema.description = '<description>';
+                    dynamicSchemaClient.update(dynamicResourceSchema)
+=======
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsPaymentTransactionStatusClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsPaymentTransactionStatusRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commercePaymentTransactionStatus);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commercePaymentTransactionStatus is a resource previously fetched using get action.
+                    commercePaymentTransactionStatus.description = '<description>';
+                    commerceLookupsPaymentTransactionStatusClient.update(commercePaymentTransactionStatus)
+>>>>>>> Fix jQuery http client reject promise issue
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+<<<<<<< develop
+                            // perform error handling here
+                        });
+     **/
+    DynamicSchemaClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource schema item from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicSchemaRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(dynamicResourceSchema);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data A dynamic schema object used to delete specified dynamic resource schema.
+     * @example // dynamicResourceSchema is a resource previously fetched using get action.
+                    dynamicSchemaClient.remove(dynamicResourceSchema)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    DynamicSchemaClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the generate schema action has been performed. Success response returns a schema generated based on the json input.
+     * @method
+     * @param data Unordered collection of key value pairs used to specify dynamic schema definition.
+     * @example baasicDynamicSchemaService.generate({
+                    id : '<schema-Id>',
+                    description : '<description>'
+=======
+                             // perform error handling here
+                        });
+     **/
+    CommerceLookupsPaymentTransactionStatusClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusClient.create({
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+>>>>>>> Fix jQuery http client reject promise issue
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+<<<<<<< develop
+                    // perform error handling here
+                });
+     **/
+    DynamicSchemaClient.prototype.generate = function (data) {
+        return this.apiClient.post(this.routeDefinition.generate(), this.routeDefinition.createParams(data));
+    };
+    return DynamicSchemaClient;
+}());
+DynamicSchemaClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.DynamicSchemaRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicSchemaRoute !== "undefined" && _1.DynamicSchemaRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], DynamicSchemaClient);
+exports.DynamicSchemaClient = DynamicSchemaClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route definition.
+=======
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsPaymentTransactionStatusClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsPaymentTransactionStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commercePaymentTransactionStatus);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commercePaymentTransactionStatus is a resource previously fetched using get action.
+                        commerceLookupsPaymentTransactionStatusClient.remove(commercePaymentTransactionStatus)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceLookupsPaymentTransactionStatusClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsPaymentTransactionStatusClient;
+}());
+CommerceLookupsPaymentTransactionStatusClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentTransactionStatusBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentTransactionStatusRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsPaymentTransactionStatusBatchClient !== "undefined" && _1.CommerceLookupsPaymentTransactionStatusBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsPaymentTransactionStatusRoute !== "undefined" && _1.CommerceLookupsPaymentTransactionStatusRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsPaymentTransactionStatusClient);
+exports.CommerceLookupsPaymentTransactionStatusClient = CommerceLookupsPaymentTransactionStatusClient;
+var _a, _b, _c;
+/**
+ * @copyright(c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 398 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module dynamicSchemaRoute
+ * @description Baasic Dynamic Schema Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Schema Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+=======
+/* 248 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsPaymentTransactionStatusRoute
+ * @description Baasic Commerce Lookups PaymentTransactionStatus Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups PaymentTransactionStatus Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
+var DynamicSchemaRoute = (function (_super) {
+    tslib_1.__extends(DynamicSchemaRoute, _super);
+    function DynamicSchemaRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'schemas/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'schemas/{name}/{?embed,fields}';
+        _this.generateRoute = 'schemas/generate';
+        _this.createRoute = 'schemas';
+        _this.updateRoute = 'schemas/{id}';
+        _this.deleteRoute = 'schemas/{id}';
+        return _this;
+    }
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing dynamic resource schema properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain dynamic resource schema subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the dynamic resource schema property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example dynamicSchemaRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    DynamicSchemaRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route which must be expanded with name of the previously created dynamic resource schema. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example dynamicSchemaRoute.find({name: '<schema-name>'});
+     **/
+    DynamicSchemaRoute.prototype.get = function (name, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, this.modelMapper.getParams(name, options, 'name'));
+    };
+    /**
+     * Parses create route; this URI template doesn't expose any additional properties.
+     * @method
+     * @example dynamicSchemaRoute.generate();
+     **/
+    DynamicSchemaRoute.prototype.generate = function () {
+        return _super.prototype.baseCreate.call(this, this.generateRoute, {});
+    };
+    /**
+     * Parses create route; this URI template doesn't expose any additional properties.
+     * @method
+     * @example dynamicSchemaRoute.create(data);
+     **/
+    DynamicSchemaRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route.
+     * @method
+     * @param data A dynamic schema object used to update specified dynamic resource schema.
+     * @example dynamicSchemaRoute.update(data);
+     */
+    DynamicSchemaRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route.
+     * @method
+     * @param data A dynamic schema object used to delete specified dynamic resource schema.
+     */
+    DynamicSchemaRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return DynamicSchemaRoute;
+}(common_1.BaseRoute));
+DynamicSchemaRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], DynamicSchemaRoute);
+exports.DynamicSchemaRoute = DynamicSchemaRoute;
+var _a;
+/**
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsPaymentTransactionStatusRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsPaymentTransactionStatusRoute, _super);
+    function CommerceLookupsPaymentTransactionStatusRoute(basicCommerceLookupsPaymentTransactionStatusBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.basicCommerceLookupsPaymentTransactionStatusBatchRoute = basicCommerceLookupsPaymentTransactionStatusBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/payment-transaction-statuses/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/lookups/payment-transaction-statuses/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/lookups/payment-transaction-statuses';
+        _this.updateRoute = 'commerce/lookups/payment-transaction-statuses/{id}';
+        _this.deleteRoute = 'commerce/lookups/payment-transaction-statuses/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsPaymentTransactionStatusRoute.prototype, "batch", {
+        get: function () {
+            return this.basicCommerceLookupsPaymentTransactionStatusBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce customer-payment-methods route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options.
+     * @example commerceLookupsPaymentTransactionStatusRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsPaymentTransactionStatusRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusRoute.get();
+     **/
+    CommerceLookupsPaymentTransactionStatusRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, options);
+    };
+    /**
+     * Parses create commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusRoute.create();
+     **/
+    CommerceLookupsPaymentTransactionStatusRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusRoute.update(data);
+     **/
+    CommerceLookupsPaymentTransactionStatusRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsPaymentTransactionStatusRoute.delete(data);
+     **/
+    CommerceLookupsPaymentTransactionStatusRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsPaymentTransactionStatusRoute;
+}(common_1.BaseRoute));
+CommerceLookupsPaymentTransactionStatusRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsPaymentTransactionStatusBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsPaymentTransactionStatusBatchRoute !== "undefined" && _1.CommerceLookupsPaymentTransactionStatusBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsPaymentTransactionStatusRoute);
+exports.CommerceLookupsPaymentTransactionStatusRoute = CommerceLookupsPaymentTransactionStatusRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+>>>>>>> Fix jQuery http client reject promise issue
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+<<<<<<< develop
+ - All end-point objects are transformed by the associated route definition.
+=======
+ - All end-point objects are transformed by the associated route service.
+>>>>>>> Fix jQuery http client reject promise issue
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 399 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 400 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 401 */
+=======
+/* 249 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+<<<<<<< develop
+
+
+/***/ }),
+/* 402 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 403 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(399));
+__export(__webpack_require__(402));
+__export(__webpack_require__(401));
+__export(__webpack_require__(400));
+
+
+/***/ }),
+/* 404 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(22);
+var TYPES = {
+    FilesACLClient: Symbol("FilesACLClient"),
+    FilesACLRoute: Symbol("FilesACLRoute"),
+    FilesBatchRoute: Symbol("FilesBatchRoute"),
+    FilesBatchClient: Symbol("FilesBatchClient"),
+    FilesRoute: Symbol("FilesRoute"),
+    FilesClient: Symbol("FilesClient"),
+    FilesStreamsRoute: Symbol("FilesStreamsRoute"),
+    FilesStreamsClient: Symbol("FilesStreamsClient")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.FilesBatchRoute).to(_1.FilesBatchRoute);
+    bind(TYPES.FilesBatchClient).to(_1.FilesBatchClient);
+    bind(TYPES.FilesStreamsRoute).to(_1.FilesStreamsRoute);
+    bind(TYPES.FilesStreamsClient).to(_1.FilesStreamsClient);
+    bind(TYPES.FilesACLRoute).to(_1.FilesACLRoute);
+    bind(TYPES.FilesACLClient).to(_1.FilesACLClient);
+    bind(TYPES.FilesRoute).to(_1.FilesRoute);
+    bind(TYPES.FilesClient).to(_1.FilesClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 405 */
+=======
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(246));
+__export(__webpack_require__(245));
+__export(__webpack_require__(248));
+__export(__webpack_require__(247));
+
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceRecurringCyclePeriodTypeBatchClient
+ * @description  Commerce Payment Method Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceRecurringCyclePeriodTypeBatchClient` uses `commerceRecurringCyclePeriodTypeBatchRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(5);
+var CommerceLookupsRecurringCyclePeriodTypeBatchClient = (function () {
+    function CommerceLookupsRecurringCyclePeriodTypeBatchClient(commerceLookupsRecurringCyclePeriodTypeBatchRoute, apiClient) {
+        this.commerceLookupsRecurringCyclePeriodTypeBatchRoute = commerceLookupsRecurringCyclePeriodTypeBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsRecurringCyclePeriodTypeBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsRecurringCyclePeriodTypeBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchClient.create([{
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>',
+                    monthFactor: '<month-factor'>
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example   commerceLookupsRecurringCyclePeriodTypeBatchClient.update(commerceRecurringPeriodTypes)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchClient.remove(commerceRecurringPeriodTypeIds)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsRecurringCyclePeriodTypeBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsRecurringCyclePeriodTypeBatchClient;
+}());
+CommerceLookupsRecurringCyclePeriodTypeBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsRecurringCyclePeriodTypeBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsRecurringCyclePeriodTypeBatchRoute !== "undefined" && _1.CommerceLookupsRecurringCyclePeriodTypeBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsRecurringCyclePeriodTypeBatchClient);
+exports.CommerceLookupsRecurringCyclePeriodTypeBatchClient = CommerceLookupsRecurringCyclePeriodTypeBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceLookupsRecurringCyclePeriodTypeBatchRoute
+ * @description Baasic Commerce Lookups Recurring Cycle Period Type Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsRecurringCyclePeriodTypeBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsRecurringCyclePeriodTypeBatchRoute, _super);
+    function CommerceLookupsRecurringCyclePeriodTypeBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/recurring-cycle-period-types/batch';
+        _this.updateRoute = 'commerce/lookups/recurring-cycle-period-types/batch';
+        _this.deleteRoute = 'commerce/lookups/recurring-cycle-period-types/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.create();
+     */
+    CommerceLookupsRecurringCyclePeriodTypeBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.update();
+     */
+    CommerceLookupsRecurringCyclePeriodTypeBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeBatchRoute.remove();
+     */
+    CommerceLookupsRecurringCyclePeriodTypeBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsRecurringCyclePeriodTypeBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsRecurringCyclePeriodTypeBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsRecurringCyclePeriodTypeBatchRoute);
+exports.CommerceLookupsRecurringCyclePeriodTypeBatchRoute = CommerceLookupsRecurringCyclePeriodTypeBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 252 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module filesACLClient
+ * @description  Files ACL Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsRecurringCyclePeriodTypeClient
+ * @description  Commerce Lookups RecurringCyclePeriodType Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsRecurringCyclePeriodTypeClient` uses `commerceLookupsRecurringCyclePeriodTypeRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
+var _1 = __webpack_require__(22);
+var FilesACLClient = (function () {
+    function FilesACLClient(filesACLRoute, apiClient) {
+        this.filesACLRoute = filesACLRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(FilesACLClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.filesACLRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsRecurringCyclePeriodTypeClient = (function () {
+    function CommerceLookupsRecurringCyclePeriodTypeClient(commerceLookupsRecurringCyclePeriodTypeBatchClient, commerceLookupsRecurringCyclePeriodTypeRoute, apiClient) {
+        this.commerceLookupsRecurringCyclePeriodTypeBatchClient = commerceLookupsRecurringCyclePeriodTypeBatchClient;
+        this.commerceLookupsRecurringCyclePeriodTypeRoute = commerceLookupsRecurringCyclePeriodTypeRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsRecurringCyclePeriodTypeClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsRecurringCyclePeriodTypeRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CommerceLookupsRecurringCyclePeriodTypeClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsRecurringCyclePeriodTypeBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified file resource.
+     * @method
+     * @param options ACL options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example filesACLClient.get({id: '<file-id>'})
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    FilesACLClient.prototype.get = function (options) {
+        return this.apiClient.get(this.routeDefinition.get(options));
+    };
+    /**
+     * Returns a promise that is resolved once the update acl action has been performed, this action creates new ACL policy for the specified file resource.
+     * @method
+     * @param options An ACL policy object that needs to be inserted into the system. This object specifies parameters necessary for establishing user and/or role set of rights.
+     * @example let options = {id : '<file-id>'};
+                let aclObj =  {  actionId: '<action-id>',  roleId: '<role-id>',  userId: '<user-id>' };
+                options[baasicConstants.modelPropertyName] = aclObj;
+                filesACLClient.update(options)
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeClient.get('<recurring-cycle-period-type-id>')
+>>>>>>> Fix jQuery http client reject promise issue
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+<<<<<<< develop
+    FilesACLClient.prototype.update = function (options) {
+        return this.apiClient.put(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
+    };
+    /**
+     * Returns a promise that is resolved once the removeByUser action has been performed. This action deletes ACL policy assigned to the specified user and file resource.
+     * @method
+     * @param id File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and file resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
+     * @returns A promise that is resolved once the removeByUser action has been performed.
+     * @example filesACLClient.removeByUser('<file-id>', '<access-action>', '<username>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    FilesACLClient.prototype.removeByUser = function (id, action, user, data) {
+        return this.apiClient.delete(this.filesACLRoute.deleteByUser(id, action, user, data));
+    };
+    /**
+     * Returns a promise that is resolved once the removeByRole action has been performed. This action deletes ACL policy assigned to the specified role and file resource.
+     * @method
+     * @example filesACLClient.removeByRole('<file-id>', '<access-action>', '<role-name>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    FilesACLClient.prototype.removeByRole = function (id, action, role, data) {
+        return this.apiClient.delete(this.filesACLRoute.deleteByRole(id, action, role, data));
+    };
+    return FilesACLClient;
+}());
+FilesACLClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.FilesACLRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.FilesACLRoute !== "undefined" && _1.FilesACLRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], FilesACLClient);
+exports.FilesACLClient = FilesACLClient;
+var _a, _b;
+/**
+ * @overview
+***Notes:**
+- Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+- All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 406 */
+=======
+    CommerceLookupsRecurringCyclePeriodTypeClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsRecurringCyclePeriodTypeRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsRecurringCyclePeriodTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceRecurringPeriodType);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceRecurringPeriodType is a resource previously fetched using get action.
+                        commerceRecurringPeriodType.description = '<description>';
+                        commerceLookupsRecurringCyclePeriodTypeClient.update(commerceRecurringPeriodType)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeClient.create({
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>',
+                    monthFactor: '<month-factor'>
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsRecurringCyclePeriodTypeRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceRecurringPeriodType);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceRecurringPeriodType is a resource previously fetched using get action.
+                        commerceLookupsRecurringCyclePeriodTypeClient.remove(commerceRecurringPeriodType)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsRecurringCyclePeriodTypeClient;
+}());
+CommerceLookupsRecurringCyclePeriodTypeClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsRecurringCyclePeriodTypeBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsRecurringCyclePeriodTypeRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsRecurringCyclePeriodTypeBatchClient !== "undefined" && _1.CommerceLookupsRecurringCyclePeriodTypeBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsRecurringCyclePeriodTypeRoute !== "undefined" && _1.CommerceLookupsRecurringCyclePeriodTypeRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsRecurringCyclePeriodTypeClient);
+exports.CommerceLookupsRecurringCyclePeriodTypeClient = CommerceLookupsRecurringCyclePeriodTypeClient;
+var _a, _b, _c;
+/**
+ * @copyright(c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 253 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module filesACLRoute
+ * @description Baasic Files ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsRecurringCyclePeriodTypeRoute
+ * @description Baasic Commerce Lookups RecurringCyclePeriodType Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups RecurringCyclePeriodType Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
+var FilesACLRoute = (function (_super) {
+    tslib_1.__extends(FilesACLRoute, _super);
+    function FilesACLRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'files/{id}/acl/{?fields}';
+        _this.updateRoute = 'files/{id}/acl/{?fields}';
+        _this.deleteByUserRoute = 'files/{id}/acl/actions/{accessAction}/users/{user}/';
+        _this.deleteByRoleRoute = 'files/{id}/acl/actions/{accessAction}/roles/{role}/';
+        return _this;
+    }
+    /**
+     * Parses get acl route; this URI template should be expanded with the Id of the file resource.
+     * @method
+     * @example filesACLRoute.get({id: '<file-id>'});
+     **/
+    FilesACLRoute.prototype.get = function (options) {
+        var params = this.utility.extend({}, options);
+        return _super.prototype.baseCreate.call(this, this.getRoute, params);
+    };
+    /**
+     * Parses update acl route; this URI template should be expanded with the Id of the file resource.
+     * @method
+     * @example filesACLRoute.update({id: '<file-id>'});
+     **/
+    FilesACLRoute.prototype.update = function (options) {
+        var params = this.utility.extend({}, options);
+        return _super.prototype.baseCreate.call(this, this.updateRoute, params);
+    };
+    /**
+     * Parses deleteByUser acl route which can be expanded with additional options. Supported items are:
+     * - `id` - File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and file resource.
+     * - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.
+     * @method
+     * @param id File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and file resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user A value that uniquely identifies user for which ACL policy needs to be removed.
+     * @example filesACLRoute.deleteByUser({ id: '<file-id>', accessAction: '<access-action>', user: '<username>' });
+     **/
+    FilesACLRoute.prototype.deleteByUser = function (id, action, user, data) {
+        var params = this.modelMapper.removeParams(data);
+        params.id = id;
+        params.user = user;
+        params.accessAction = action;
+        return _super.prototype.baseCreate.call(this, this.deleteByUserRoute, params);
+    };
+    /**
+     * Parses deleteByUser acl route which can be expanded with additional options. Supported items are:
+     * - `id` - File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified role and file resource.
+     * - `role` - A value which uniquely identifies role for which ACL policy needs to be removed.
+     * @method
+     * @param id File id which uniquely identifies file resource whose security privileges need to be retrieved and updated.
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and file resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param role A value that uniquely identifies role for which ACL policy needs to be removed.
+     * @example filesACLRoute.deleteByRole({ id: '<file-id>', accessAction: '<access-action>', role: '<role-name>' });
+     **/
+    FilesACLRoute.prototype.deleteByRole = function (id, action, role, data) {
+        var params = this.modelMapper.removeParams(data);
+        params.id = id;
+        params.role = role;
+        params.accessAction = action;
+        return _super.prototype.baseCreate.call(this, this.deleteByRoleRoute, params);
+    };
+    FilesACLRoute.prototype.updateParams = function (data) {
+        var params = this.utility.extend({}, data);
+        return params[this.modelMapper.modelPropertyName];
+    };
+    return FilesACLRoute;
+}(common_1.BaseRoute));
+FilesACLRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], FilesACLRoute);
+exports.FilesACLRoute = FilesACLRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsRecurringCyclePeriodTypeRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsRecurringCyclePeriodTypeRoute, _super);
+    function CommerceLookupsRecurringCyclePeriodTypeRoute(basicCommerceLookupsRecurringCyclePeriodTypeBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.basicCommerceLookupsRecurringCyclePeriodTypeBatchRoute = basicCommerceLookupsRecurringCyclePeriodTypeBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/recurring-cycle-period-types/{?searchQuery,page,rpp,sort,embed}';
+        _this.getRoute = 'commerce/lookups/recurring-cycle-period-types/{id}/{?embed}';
+        _this.createRoute = 'commerce/lookups/recurring-cycle-period-types';
+        _this.updateRoute = 'commerce/lookups/recurring-cycle-period-types/{id}';
+        _this.deleteRoute = 'commerce/lookups/recurring-cycle-period-types/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsRecurringCyclePeriodTypeRoute.prototype, "batch", {
+        get: function () {
+            return this.basicCommerceLookupsRecurringCyclePeriodTypeBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find commerce customer-payment-methods route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options.
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.get();
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, options);
+    };
+    /**
+     * Parses create commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.create();
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.update(data);
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsRecurringCyclePeriodTypeRoute.delete(data);
+     **/
+    CommerceLookupsRecurringCyclePeriodTypeRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsRecurringCyclePeriodTypeRoute;
+}(common_1.BaseRoute));
+CommerceLookupsRecurringCyclePeriodTypeRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsRecurringCyclePeriodTypeBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsRecurringCyclePeriodTypeBatchRoute !== "undefined" && _1.CommerceLookupsRecurringCyclePeriodTypeBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsRecurringCyclePeriodTypeRoute);
+exports.CommerceLookupsRecurringCyclePeriodTypeRoute = CommerceLookupsRecurringCyclePeriodTypeRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 407 */
+=======
+/* 254 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(251));
+__export(__webpack_require__(250));
+__export(__webpack_require__(253));
+__export(__webpack_require__(252));
+
+
+/***/ }),
+/* 255 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module filesBatchClient
+ * @description  Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceSubscriptionStatusBatchClient
+ * @description  Commerce Subscription Stauts Batch Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceSubscriptionStatusBatchClient` uses `commerceSubscriptionStatusBatchRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
+var _1 = __webpack_require__(22);
+var FilesBatchClient = (function () {
+    function FilesBatchClient(filesBatchRoute, apiClient) {
+        this.filesBatchRoute = filesBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(FilesBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.filesBatchRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsSubscriptionStatusBatchClient = (function () {
+    function CommerceLookupsSubscriptionStatusBatchClient(commerceLookupsSubscriptionStatusBatchRoute, apiClient) {
+        this.commerceLookupsSubscriptionStatusBatchRoute = commerceLookupsSubscriptionStatusBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsSubscriptionStatusBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsSubscriptionStatusBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.
+     * @method
+     * @param data A collection of file objects used to update specified file resources.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example filesClient.update(files)
+=======
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
+     * @method
+     * @example commerceLookupsSubscriptionStatusBatchClient.create([{
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+                }])
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    CommerceLookupsSubscriptionStatusBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates specified commerce resources.
+     * @method
+     * @example commerceLookupsSubscriptionStatusBatchClient.update(subscriptionStatuses)
+>>>>>>> Fix jQuery http client reject promise issue
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+<<<<<<< develop
+    FilesBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resources from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).
+     * @method
+     * @param data A collection of file objects that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example filesBatchClient.link(files)
+=======
+    CommerceLookupsSubscriptionStatusBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove commerce action has been performed. This action will remove commerce resources from the system if successfully completed.
+     * @method
+     * @example commerceLookupsSubscriptionStatusBatchClient.remove(subscriptionStatusIds)
+>>>>>>> Fix jQuery http client reject promise issue
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+<<<<<<< develop
+    FilesBatchClient.prototype.link = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system.
+     * @method
+     * @param data Collection of file delete requests which uniquely identifies file resources that need to be deleted.
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // Remove original file resources
+                    filesBatchClient.unlink([{ id: '<file-id>' }])
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+                // Remove derived file resources
+                    filesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    FilesBatchClient.prototype.unlink = function (data) {
+        return this.apiClient.delete(this.filesBatchRoute.unlink(), undefined, data);
+    };
+    return FilesBatchClient;
+}());
+FilesBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.FilesBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.FilesBatchRoute !== "undefined" && _1.FilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], FilesBatchClient);
+exports.FilesBatchClient = FilesBatchClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+=======
+    CommerceLookupsSubscriptionStatusBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.commerceLookupsSubscriptionStatusBatchRoute.delete(), undefined, ids);
+    };
+    return CommerceLookupsSubscriptionStatusBatchClient;
+}());
+CommerceLookupsSubscriptionStatusBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsSubscriptionStatusBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsSubscriptionStatusBatchRoute !== "undefined" && _1.CommerceLookupsSubscriptionStatusBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceLookupsSubscriptionStatusBatchClient);
+exports.CommerceLookupsSubscriptionStatusBatchClient = CommerceLookupsSubscriptionStatusBatchClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 408 */
+=======
+/* 256 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module filesBatchRoute
+ * @description Baasic Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsSubscriptionStatusBatchRoute
+ * @description Baasic Commerce Lookups Subscription Status Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups Country State Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+<<<<<<< develop
+var contracts_1 = __webpack_require__(3);
+var FilesBatchRoute = (function (_super) {
+    tslib_1.__extends(FilesBatchRoute, _super);
+    function FilesBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.updateRoute = 'files/batch';
+        _this.linkRoute = 'files/batch/link';
+        _this.unlinkRoute = 'files/batch/unlink';
+        return _this;
+    }
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example filesBatchRoute.update();
+     **/
+    FilesBatchRoute.prototype.update = function () {
+        return _super.prototype.baseCreate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example filesBatchRoute.link();
+     **/
+    FilesBatchRoute.prototype.link = function () {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
+    };
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @example filesBatchRoute.unlink();
+     **/
+    FilesBatchRoute.prototype.unlink = function () {
+        return _super.prototype.baseCreate.call(this, this.unlinkRoute, {});
+    };
+    return FilesBatchRoute;
+}(common_1.BaseRoute));
+FilesBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], FilesBatchRoute);
+exports.FilesBatchRoute = FilesBatchRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+=======
+;
+var contracts_1 = __webpack_require__(3);
+var CommerceLookupsSubscriptionStatusBatchRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsSubscriptionStatusBatchRoute, _super);
+    function CommerceLookupsSubscriptionStatusBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.createRoute = 'commerce/lookups/subscription-statuses/batch';
+        _this.updateRoute = 'commerce/lookups/subscription-statuses/batch';
+        _this.deleteRoute = 'commerce/lookups/subscription-statuses/batch';
+        return _this;
+    }
+    /**
+     * Parses create commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsSubscriptionStatusBatchRoute.create();
+     */
+    CommerceLookupsSubscriptionStatusBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsSubscriptionStatusBatchRoute.update();
+     */
+    CommerceLookupsSubscriptionStatusBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses remove commerce country state batch route; this route does not expose any additional options
+     * @method
+     * @example commerceLookupsSubscriptionStatusBatchRoute.remove();
+     */
+    CommerceLookupsSubscriptionStatusBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return CommerceLookupsSubscriptionStatusBatchRoute;
+}(common_1.BaseRoute));
+CommerceLookupsSubscriptionStatusBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceLookupsSubscriptionStatusBatchRoute);
+exports.CommerceLookupsSubscriptionStatusBatchRoute = CommerceLookupsSubscriptionStatusBatchRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 409 */
+=======
+/* 257 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module filesClient
+ * @description  Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsSubscriptionStatusClient
+ * @description  Commerce Lookups SubscriptionStatus Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceLookupsSubscriptionStatusClient` uses `commerceLookupsSubscriptionStatusRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
+var _1 = __webpack_require__(22);
+var FilesClient = (function () {
+    function FilesClient(filesRoute, apiClient, filesStreamsClient, filesBatchClient, filesACLClient) {
+        this.filesRoute = filesRoute;
+        this.apiClient = apiClient;
+        this.filesStreamsClient = filesStreamsClient;
+        this.filesBatchClient = filesBatchClient;
+        this.filesACLClient = filesACLClient;
+    }
+    Object.defineProperty(FilesClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.filesRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FilesClient.prototype, "streams", {
+        get: function () {
+            return this.filesStreamsClient;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FilesClient.prototype, "batch", {
+        get: function () {
+            return this.filesBatchClient;
+=======
+var _1 = __webpack_require__(5);
+var CommerceLookupsSubscriptionStatusClient = (function () {
+    function CommerceLookupsSubscriptionStatusClient(commerceLookupsSubscriptionStatusBatchClient, commerceLookupsSubscriptionStatusRoute, apiClient) {
+        this.commerceLookupsSubscriptionStatusBatchClient = commerceLookupsSubscriptionStatusBatchClient;
+        this.commerceLookupsSubscriptionStatusRoute = commerceLookupsSubscriptionStatusRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceLookupsSubscriptionStatusClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceLookupsSubscriptionStatusRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+<<<<<<< develop
+    Object.defineProperty(FilesClient.prototype, "acl", {
+        get: function () {
+            return this.filesACLClient;
+=======
+    Object.defineProperty(CommerceLookupsSubscriptionStatusClient.prototype, "batch", {
+        get: function () {
+            return this.commerceLookupsSubscriptionStatusBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example filesClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    FilesClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested file resource.
+     * @method
+     * @param id File id which uniquely identifies file resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example filesClient.get('<file-id>')
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceLookupsSubscriptionStatusClient.find({
+                        pageNumber : 1,
+                        pageSize : 10,
+                        orderBy : '<field>',
+                        orderDirection : '<asc|desc>',
+                        search : '<search-phrase>'
+                    })
+                    .then(function (collection) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommerceLookupsSubscriptionStatusClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceLookupsSubscriptionStatusClient.get()
+>>>>>>> Fix jQuery http client reject promise issue
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+<<<<<<< develop
+    FilesClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.filesRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update file action has been performed; this action will update a file resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `filesRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(fileEntry);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A file entry object used to update specific file entry resource in the system.
+     * @example // fileEntry is a file resource previously fetched using get action.
+                    fileEntry.description = '<description>';
+                    filesClient.update(fileEntry)
+=======
+    CommerceLookupsSubscriptionStatusClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceLookupsSubscriptionStatusRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsSubscriptionStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceSubscriptionStatus);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceSubscriptionStatus is a resource previously fetched using get action.
+                    commerceSubscriptionStatus.description = '<description>';
+                    commerceLookupsSubscriptionStatusClient.update(commerceSubscriptionStatus)
+>>>>>>> Fix jQuery http client reject promise issue
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+<<<<<<< develop
+    FilesClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove one or many file resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will remove just derived resource. Otherwise, specified file and all its accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicFilesRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(fileEntry);
+     * let uri = params['model'].links('unlink').href;
+     * ```
+     * @method
+     * @param data
+     * @param options
+     * @returns A promise that is resolved once the unlink action has been performed.
+     * @example // fileEntry is a file resource previously fetched using get action. The following action will remove the original file resource and all accompanying derived file resources.
+                    filesClient.unlink(fileEntry)
+=======
+    CommerceLookupsSubscriptionStatusClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceLookupsSubscriptionStatusClient.create({
+                    name : '<name>',
+                    abrv: '<abbreviation>',
+                    description: '<description>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceLookupsSubscriptionStatusClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceLookupsSubscriptionStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceSubscriptionStatus);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceSubscriptionStatus is a resource previously fetched using get action.
+                    commerceLookupsSubscriptionStatusClient.remove(commerceSubscriptionStatus)
+>>>>>>> Fix jQuery http client reject promise issue
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+<<<<<<< develop
+                // fileEntry is a file resource previously fetched using get action. The following action will remove derived file resource only.
+                    filesClient.unlink(fileEntry, {width: <width>, height: <height>})
+                        .then(function (data) {
+                            // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    FilesClient.prototype.unlink = function (data, options) {
+        return this.apiClient.delete(this.filesRoute.unlink(data, options));
+    };
+    /**
+     * Returns a promise that is resolved once the link action has been performed; this action links file resource from other modules into the Files module (For example: file resources from the Media Vault module can be linked directly into the Files module).
+     * @method
+     * @param data A file object that need to be inserted into the system.
+     * @returns A promise that is resolved once the link action has been performed.
+     * @example filesClient.link(fileObject)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    FilesClient.prototype.link = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
+    };
+    return FilesClient;
+}());
+FilesClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.FilesRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.FilesStreamsClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.FilesBatchClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.FilesACLClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.FilesRoute !== "undefined" && _1.FilesRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.FilesStreamsClient !== "undefined" && _1.FilesStreamsClient) === "function" && _c || Object, typeof (_d = typeof _1.FilesBatchClient !== "undefined" && _1.FilesBatchClient) === "function" && _d || Object, typeof (_e = typeof _1.FilesACLClient !== "undefined" && _1.FilesACLClient) === "function" && _e || Object])
+], FilesClient);
+exports.FilesClient = FilesClient;
+var _a, _b, _c, _d, _e;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+    */ 
+
+
+/***/ }),
+/* 410 */
+=======
+     **/
+    CommerceLookupsSubscriptionStatusClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceLookupsSubscriptionStatusClient;
+}());
+CommerceLookupsSubscriptionStatusClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsSubscriptionStatusBatchClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.CommerceLookupsSubscriptionStatusRoute)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsSubscriptionStatusBatchClient !== "undefined" && _1.CommerceLookupsSubscriptionStatusBatchClient) === "function" && _a || Object, typeof (_b = typeof _1.CommerceLookupsSubscriptionStatusRoute !== "undefined" && _1.CommerceLookupsSubscriptionStatusRoute) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], CommerceLookupsSubscriptionStatusClient);
+exports.CommerceLookupsSubscriptionStatusClient = CommerceLookupsSubscriptionStatusClient;
+var _a, _b, _c;
+/**
+ * @copyright(c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 258 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module filesRoute
+ * @description Baasic Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commerceLookupsSubscriptionStatusRoute
+ * @description Baasic Commerce Lookups SubscriptionStatus Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups SubscriptionStatus Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+<<<<<<< develop
+var _1 = __webpack_require__(22);
+var contracts_1 = __webpack_require__(3);
+var FilesRoute = (function (_super) {
+    tslib_1.__extends(FilesRoute, _super);
+    function FilesRoute(appOptions, filesStreamsRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.filesStreamsRoute = filesStreamsRoute;
+        _this.findRoute = 'files/{?searchQuery,page,rpp,sort,embed,fields,fileName,from,to,ids,minFileSize,maxFileSize}';
+        _this.getRoute = 'files/{id}/{?embed,fields}';
+        _this.updateRoute = 'files/{id}';
+        _this.unlinkRoute = 'files/unlink/{id}/{?height,width}';
+        _this.linkRoute = 'files/link';
+        return _this;
+    }
+    Object.defineProperty(FilesRoute.prototype, "streams", {
+        get: function () {
+            return this.filesStreamsRoute;
+=======
+var contracts_1 = __webpack_require__(3);
+var _1 = __webpack_require__(5);
+var CommerceLookupsSubscriptionStatusRoute = (function (_super) {
+    tslib_1.__extends(CommerceLookupsSubscriptionStatusRoute, _super);
+    function CommerceLookupsSubscriptionStatusRoute(basicCommerceLookupsSubscriptionStatusBatchRoute, appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.basicCommerceLookupsSubscriptionStatusBatchRoute = basicCommerceLookupsSubscriptionStatusBatchRoute;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/lookups/subscription-statuses/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/lookups/subscription-statuses/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/lookups/subscription-statuses';
+        _this.updateRoute = 'commerce/lookups/subscription-statuses/{id}';
+        _this.deleteRoute = 'commerce/lookups/subscription-statuses/{id}';
+        return _this;
+    }
+    Object.defineProperty(CommerceLookupsSubscriptionStatusRoute.prototype, "batch", {
+        get: function () {
+            return this.basicCommerceLookupsSubscriptionStatusBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing file properties using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the file property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example filesRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    FilesRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param id File id which uniquely identifies file resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example filesRoute.get({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param data A file entry object used to update specific file entry resource in the system.
+     * @example filesRoute.get({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses unlink route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param data A file entry object used to update specific file entry resource in the system.
+     * @example filesRoute.unlink({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.unlink = function (data, options) {
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, data, options, 'unlink');
+    };
+    /**
+     * Parses link route; this URI template does not expose any additional options.
+     * @method
+     * @example filesRoute.link();
+     **/
+    FilesRoute.prototype.link = function () {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
+    };
+    return FilesRoute;
+}(common_1.BaseRoute));
+FilesRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.FilesStreamsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.FilesStreamsRoute !== "undefined" && _1.FilesStreamsRoute) === "function" && _b || Object])
+], FilesRoute);
+exports.FilesRoute = FilesRoute;
+var _a, _b;
+/**
+ * @overview
+***Notes:**
+- Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+- [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+- All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 411 */
+=======
+     * Parses find commerce customer-payment-methods route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options.
+     * @example commerceLookupsSubscriptionStatusRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceLookupsSubscriptionStatusRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceLookupsSubscriptionStatusRoute.get();
+     **/
+    CommerceLookupsSubscriptionStatusRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, options);
+    };
+    /**
+     * Parses create commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsSubscriptionStatusRoute.create();
+     **/
+    CommerceLookupsSubscriptionStatusRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsSubscriptionStatusRoute.update(data);
+     **/
+    CommerceLookupsSubscriptionStatusRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete commerce payment method route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceLookupsSubscriptionStatusRoute.delete(data);
+     **/
+    CommerceLookupsSubscriptionStatusRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceLookupsSubscriptionStatusRoute;
+}(common_1.BaseRoute));
+CommerceLookupsSubscriptionStatusRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceLookupsSubscriptionStatusBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceLookupsSubscriptionStatusBatchRoute !== "undefined" && _1.CommerceLookupsSubscriptionStatusBatchRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _b || Object])
+], CommerceLookupsSubscriptionStatusRoute);
+exports.CommerceLookupsSubscriptionStatusRoute = CommerceLookupsSubscriptionStatusRoute;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 259 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(256));
+__export(__webpack_require__(255));
+__export(__webpack_require__(258));
+__export(__webpack_require__(257));
+
+
+/***/ }),
+/* 260 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module filesStreamsClient
+ * @description  Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commercePaymentTransactionClient
+ * @description  Commerce PaymentTransaction Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commercePaymentTransactionClient` uses `commercePaymentTransactionRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
+var _1 = __webpack_require__(22);
+var FilesStreamsClient = (function () {
+    function FilesStreamsClient(filesStreamsRoute, apiClient) {
+        this.filesStreamsRoute = filesStreamsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(FilesStreamsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.filesStreamsRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommercePaymentTransactionClient = (function () {
+    function CommercePaymentTransactionClient(commercePaymentTransactionRoute, apiClient) {
+        this.commercePaymentTransactionRoute = commercePaymentTransactionRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommercePaymentTransactionClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commercePaymentTransactionRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
+     * @method
+     * @param id File id of the original file resource used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original file stream
+                        filesStreamsClient.get({id: '<path>'})
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+                // Request derived file stream
+                    filesStreamsClient.get({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.get = function (data) {
+        return this.apiClient.get(this.routeDefinition.get(data));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @example // Request the original blob
+                    filesStreamsClient.getBlob('<path>')
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+                // Request derived blob
+                    filesStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.getBlob = function (data) {
+        return this.apiClient.request({
+            url: this.filesStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
+    };
+    /**
+     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
+     * @method
+     * @example // Update original file stream
+                    filesStreamsClient.update('<path>', <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+                // Update derived file stream
+                    filesStreamsClient.update({id: '<path>', width: <width>, height: <height>}, <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.update = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.put(this.filesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
+    };
+    /**
+     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @example filesStreamsClient.create('<path>', <blob>)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    FilesStreamsClient.prototype.create = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
+    };
+    return FilesStreamsClient;
+}());
+FilesStreamsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.FilesStreamsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.FilesStreamsRoute !== "undefined" && _1.FilesStreamsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], FilesStreamsClient);
+exports.FilesStreamsClient = FilesStreamsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */
+
+
+/***/ }),
+/* 412 */
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commercePaymentTransactionClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommercePaymentTransactionClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commercePaymentTransactionClient.get()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommercePaymentTransactionClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commercePaymentTransactionRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commercePaymentTransactionClient.create(data)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    CommercePaymentTransactionClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commercePaymentTransactionRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commercePaymentTransaction);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commercePaymentTransaction is a resource previously fetched using get action.
+                        commercePaymentTransaction.amount : 100;
+                        commercePaymentTransactionClient.update(commercePaymentTransaction)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommercePaymentTransactionClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commercePaymentTransactionRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commercePaymentTransaction);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commercePaymentTransaction is a resource previously fetched using get action.
+                        commercePaymentTransactionClient.remove(commercePaymentTransaction)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommercePaymentTransactionClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommercePaymentTransactionClient;
+}());
+CommercePaymentTransactionClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommercePaymentTransactionRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommercePaymentTransactionRoute !== "undefined" && _1.CommercePaymentTransactionRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommercePaymentTransactionClient);
+exports.CommercePaymentTransactionClient = CommercePaymentTransactionClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 261 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module filesStreamsRoute
+ * @description Baasic Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module commercePaymentTransactionRoute
+ * @description Baasic Commerce PaymentTransaction Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce PaymentTransaction Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+<<<<<<< develop
+var contracts_1 = __webpack_require__(3);
+var FilesStreamsRoute = (function (_super) {
+    tslib_1.__extends(FilesStreamsRoute, _super);
+    function FilesStreamsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'file-streams/{id}/{?width,height,t}';
+        _this.updateRoute = 'file-streams/{id}/{?width,height}';
+        _this.createRoute = 'file-streams/{path}';
+        return _this;
+    }
+    /**
+     * Parses get route; this route should be expanded with id or path of desired file stream. Additional supported items are:
+     * - `width` - width of desired derived image.
+     * - `height` - height of desired derived image.
+     * - `t` - cache invalidation param.
+     * @method
+     * @example filesStreamsRoute.get({id: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.get = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.getRoute, data);
+    };
+    /**
+     * Parses update route; this route should be expanded with the id or path of the previously saved resource. Additional supported items are:
+     * - `width` - width of derived image to update.
+     * - `height` - height of derived image to update.
+     * @method
+     * @example filesStreamsRoute.update({id: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.update = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses create route; this route should be expanded with the path which indicates where the stream will be saved.
+     * @method
+     * @example filesStreamsRoute.create({path: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.create = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                path: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    return FilesStreamsRoute;
+}(common_1.BaseRoute));
+FilesStreamsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], FilesStreamsRoute);
+exports.FilesStreamsRoute = FilesStreamsRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+=======
+;
+var contracts_1 = __webpack_require__(3);
+var CommercePaymentTransactionRoute = (function (_super) {
+    tslib_1.__extends(CommercePaymentTransactionRoute, _super);
+    function CommercePaymentTransactionRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/payment-transactions/{?customerId,searchQuery,invoiceStatusId,subscriptionId,paymentMethodId,firstName,lastName,transactionStatuses,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/payment-transactions/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/payment-transactions';
+        _this.updateRoute = 'commerce/payment-transactions/{id}';
+        _this.deleteRoute = 'commerce/payment-transactions/{id}';
+        return _this;
+    }
+    /**
+     * Parses find commerce payment transaction route which can be expanded with additional options. Supported items are:
+     * - `customerId` - A customer unique identifier.
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `invoiceStatusId` - A invoice status unique identifier.
+     * - `subscriptionId` - A subscription unique identifier.
+     * - `paymentMethodId` - A payment method unique identifier.
+     * - `firstName` - A customer first name.
+     * - `lastName` - A customer last name.
+     * - `transactionStatuses` - A transaction statuses in CSV format.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commercePaymentTransactionRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommercePaymentTransactionRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commercePaymentTransactionRoute.get(id, options);
+     **/
+    CommercePaymentTransactionRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create route; this route doesn't expose any properties.
+     * @method
+     * @example commercePaymentTransactionRoute.create();
+     **/
+    CommercePaymentTransactionRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update route; this route doesn't expose any properties.
+     * @method
+     * @example commercePaymentTransactionRoute.update(data);
+     **/
+    CommercePaymentTransactionRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this route doesn't expose any properties.
+     * @method
+     * @example commercePaymentTransactionRoute.delete(data);
+     **/
+    CommercePaymentTransactionRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommercePaymentTransactionRoute;
+}(common_1.BaseRoute));
+CommercePaymentTransactionRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommercePaymentTransactionRoute);
+exports.CommercePaymentTransactionRoute = CommercePaymentTransactionRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 413 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 414 */
+=======
+/* 262 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+<<<<<<< develop
+__export(__webpack_require__(413));
+
+
+/***/ }),
+/* 415 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(10);
+var _1 = __webpack_require__(30);
+var TYPES = {
+    KeyValueClient: Symbol("KeyValueClient"),
+    KeyValueRoute: Symbol("KeyValueRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.KeyValueRoute).to(_1.KeyValueRoute);
+    bind(TYPES.KeyValueClient).to(_1.KeyValueClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 416 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module keyValueClient
+ * @description  Key Value Client provides an easy way to consume  Key Value REST API end-points. In order to obtain needed routes `keyValueClient` uses `baasicKeyValueRouteClient`.
+=======
+__export(__webpack_require__(261));
+__export(__webpack_require__(260));
+
+
+/***/ }),
+/* 263 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module commerceProductClient
+ * @description  Commerce Product Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceProductClient` uses `commerceProductRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
+var _1 = __webpack_require__(30);
+var KeyValueClient = (function () {
+    function KeyValueClient(keyValueRoute, apiClient) {
+        this.keyValueRoute = keyValueRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(KeyValueClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `keyValueRoute`.
+         * @method
+         * @example keyValueClient.routeDefinition.get();
+         **/
+        get: function () {
+            return this.keyValueRoute;
+=======
+var _1 = __webpack_require__(5);
+var CommerceProductClient = (function () {
+    function CommerceProductClient(commerceProductRoute, apiClient) {
+        this.commerceProductRoute = commerceProductRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(CommerceProductClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.commerceProductRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of key value resources matching the given criteria.
+     * @param options query resource options object
+     * @returns A promise that is resolved once the find action has beend performed.
+     * @method
+     * @example keyValueClient.find({
+                 pageNumber: 1,
+                 pageSize: 10,
+                 orderBy: '<field>',
+                 orderDirection: '<asc|desc>',
+                 search: '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    KeyValueClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified key value resource.
+     * @param id unique identifer of key value resources
+     * @param options query resource options object
+     * @returns A promise that is resolved once the get action has beend performed.
+     * @method
+     * @example keyValueClient.get('<key-value-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    KeyValueClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.keyValueRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create key value action has been performed; this action creates a new key value resource.
+     * @param data A key value object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create key value action has beend performed.
+     * @method
+     * @example keyValueClient.create({key: '<key>', value: '<value>', })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     */
+    KeyValueClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update key value action has been performed; this action updates a key value resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicKeyValueRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(keyValue);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @param data A key value object used to update specified key value resource.
+     * @return A promise that is resolved once the update key value action has been performed.
+     * @method
+     * @example // keyValue is a resource previously fetched using get action.
+                   keyValue.value = '<new-value>';
+                   keyValueClient.update(keyValue)
+                   .then(function (data) {
+                       // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    KeyValueClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a key value resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicKeyValueRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(keyValue);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @param data A key value object used to delete specified key value resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @method
+     * @example // keyValue is a resource previously fetched using get action.
+                    keyValueClient.remove(keyValue)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    KeyValueClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data), this.routeDefinition.deleteParams(data));
+    };
+    return KeyValueClient;
+}());
+KeyValueClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.KeyValueRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.KeyValueRoute !== "undefined" && _1.KeyValueRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], KeyValueClient);
+exports.KeyValueClient = KeyValueClient;
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
+     * @method
+     * @example commerceProductClient.find({
+                   pageNumber : 1,
+                   pageSize : 10,
+                   orderBy : '<field>',
+                   orderDirection : '<asc|desc>',
+                   search : '<search-phrase>'
+               })
+               .then(function (collection) {
+                   // perform success action here
+               },
+                function (response, status, headers, config) {
+                    // perform error handling here
+               });
+    **/
+    CommerceProductClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the commerce resource.
+     * @method
+     * @example commerceProductClient.get()
+                      .then(function (data) {
+                          // perform success action here
+                      },
+                       function (response, status, headers, config) {
+                           // perform error handling here
+                      });
+   **/
+    CommerceProductClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.commerceProductRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resource.
+     * @method
+     * @example commerceProductClient.create({
+                    name : '<product-name>',
+                    slug : '<slug>',
+                    shortDescription : '<short-description>',
+                    recurringCyclePeriodTypeId: '<recurring-cycle-period-type-id>'
+                    planId : '<plan-id>',
+                    price: 100,
+                    published: true
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    CommerceProductClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update commerce action has been performed; this action updates a commerce resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceProductRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceProduct);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @example // commerceProduct is a resource previously fetched using get action.
+                        commerceProduct.shortDescription : '<short-description>';
+                        commerceProductClient.update(commerceProduct)
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    CommerceProductClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `commerceProductRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(commerceProduct);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @example // commerceProduct is a resource previously fetched using get action.
+                    commerceProductClient.remove(commerceProduct)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    CommerceProductClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return CommerceProductClient;
+}());
+CommerceProductClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.CommerceProductRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CommerceProductRoute !== "undefined" && _1.CommerceProductRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], CommerceProductClient);
+exports.CommerceProductClient = CommerceProductClient;
+>>>>>>> Fix jQuery http client reject promise issue
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 417 */
+=======
+/* 264 */
+>>>>>>> Fix jQuery http client reject promise issue
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+<<<<<<< develop
+ * @module keyValueRoute
+ * @description Baasic Key Value Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Key Value Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+=======
+ * @module commerceProductRoute
+ * @description Baasic Commerce Product Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Product Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
+var KeyValueRoute = (function (_super) {
+    tslib_1.__extends(KeyValueRoute, _super);
+    function KeyValueRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'key-values/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'key-values/{id}/{?embed,fields}';
+        _this.createRoute = 'key-values';
+        _this.updateRoute = 'key-values/{id}';
+        _this.deleteRoute = 'key-values/{id}';
+        return _this;
+    }
+    /**
+     * Parses find key value route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify key value resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain key value subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the key value property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example keyValueRoute.find(options);
+     **/
+    KeyValueRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get key value route which must be expanded with the Id of the previously created key value resource in the system.
+     * @method
+     * @param id Key value resource unique identifier.
+     * @param options Query resource options object.
+     * @example keyValueRoute.get();
+     **/
+    KeyValueRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create key value route; this URI template does not expose any additional options.
+     * @method
+     * @example keyValueRoute.create();
+     **/
+    KeyValueRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update key value route.
+     * @method
+     * @param data Key Value object used to create update route.
+     * @example keyValueRoute.update(data);
+     */
+    KeyValueRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete key value route.
+     * @method
+     * @param data Key Value object used to create delete route.
+     * @example keyValueRoute.delete(data);
+     */
+    KeyValueRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return KeyValueRoute;
+}(common_1.BaseRoute));
+KeyValueRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], KeyValueRoute);
+exports.KeyValueRoute = KeyValueRoute;
+=======
+var CommerceProductRoute = (function (_super) {
+    tslib_1.__extends(CommerceProductRoute, _super);
+    function CommerceProductRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'commerce/products/{id}/{?embed,fields}';
+        _this.createRoute = 'commerce/products';
+        _this.updateRoute = 'commerce/products/{id}';
+        _this.deleteRoute = 'commerce/products/{id}';
+        return _this;
+    }
+    /**
+     * Parses find commerce product route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify commerce resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the commerce property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example commerceProductRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    CommerceProductRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route doesn't expose any properties.
+     * @method
+     * @example commerceProductRoute.get(id, options);
+     **/
+    CommerceProductRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create commerce product route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceProductRoute.create();
+     **/
+    CommerceProductRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update commerce product route; this URI template does not expose any additional options.
+     * @method
+     * @example commerceProductRoute.update(data);
+     **/
+    CommerceProductRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+    * Parses delete commerce product route; this URI template does not expose any additional options.
+    * @method
+    * @example commerceProductRoute.delete(data);
+    **/
+    CommerceProductRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return CommerceProductRoute;
+}(common_1.BaseRoute));
+CommerceProductRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], CommerceProductRoute);
+exports.CommerceProductRoute = CommerceProductRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 418 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryBatchClient
+ * @description  Media Gallery Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+/* 265 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(264));
+__export(__webpack_require__(263));
+
+
+/***/ }),
+/* 266 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 267 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 268 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 269 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 270 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(268));
+__export(__webpack_require__(269));
+__export(__webpack_require__(267));
+__export(__webpack_require__(266));
+
+
+/***/ }),
+/* 271 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(20);
+var TYPES = {
+    DynamicResourceACLClient: Symbol("DynamicResourceACLClient"),
+    DynamicResourceACLRoute: Symbol("DynamicResourceACLRoute"),
+    DynamicResourceClient: Symbol("DynamicResourceClient"),
+    DynamicResourceRoute: Symbol("DynamicResourceRoute"),
+    DynamicSchemaClient: Symbol("DynamicSchemaClient"),
+    DynamicSchemaRoute: Symbol("DynamicSchemaRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.DynamicResourceACLRoute).to(_1.DynamicResourceACLRoute);
+    bind(TYPES.DynamicResourceACLClient).to(_1.DynamicResourceACLClient);
+    bind(TYPES.DynamicResourceRoute).to(_1.DynamicResourceRoute);
+    bind(TYPES.DynamicResourceClient).to(_1.DynamicResourceClient);
+    bind(TYPES.DynamicSchemaRoute).to(_1.DynamicSchemaRoute);
+    bind(TYPES.DynamicSchemaClient).to(_1.DynamicSchemaClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 272 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module dynamicResourceACLClient
+ * @description  Dynamic Resource ACL Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceACLClient` uses `dynamicResourceACLRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
+var _1 = __webpack_require__(13);
+var MediaGalleryBatchClient = (function () {
+    function MediaGalleryBatchClient(mediaGalleryBatchRoute, apiClient) {
+        this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGalleryBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryBatchRoute;
+=======
+var _1 = __webpack_require__(20);
+var DynamicResourceACLClient = (function () {
+    function DynamicResourceACLClient(dynamicResourceACLRoute, apiClient) {
+        this.dynamicResourceACLRoute = dynamicResourceACLRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(DynamicResourceACLClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.dynamicResourceACLRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified media gallery resources.
+     * @method
+     * @param data A collection of media gallery objects used to update specified media gallery resources.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example mediaGalleryStreamsClient.update(files)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    MediaGalleryBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove media gallery resources from the system if successfully completed. Specified media galleries and all accompanying derived resources will be removed from the system.
+     * @method
+     * @param ids Collection of media gallery Id which uniquely identifies media gallery resources that need to be deleted.
+     * @example // Remove original media gallery resources
+                        mediaGalleryBatchClient.remove([<media-gallery-id>])
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    MediaGalleryBatchClient.prototype.remove = function (ids) {
+        return this.apiClient.delete(this.mediaGalleryBatchRoute.delete(), undefined, ids);
+    };
+    /**
+    * Returns a promise that is resolved once the create action has been performed; this action creates specified media gallery resources.
+    * @method
+    * @param data A collection of media gallery objects used to create specified media gallery resources.
+    * @returns A promise that is resolved once the create action has been performed.
+    * @example mediaGalleryStreamsClient.create(files)
+                  .then(function (data) {
+                      // perform success action here
+                  },
+                   function (response, status, headers, config) {
+                       // perform error handling here
+                  });
+   **/
+    MediaGalleryBatchClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    return MediaGalleryBatchClient;
+}());
+MediaGalleryBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryBatchRoute !== "undefined" && _1.MediaGalleryBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaGalleryBatchClient);
+exports.MediaGalleryBatchClient = MediaGalleryBatchClient;
+=======
+     * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified dynamic resource.
+     * @method
+     * @param options Options object.
+     * @example dynamicResourceACLClient.get({id: '<dynamic-resource-id>', schemaName: '<schema-name>'})
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    DynamicResourceACLClient.prototype.get = function (options) {
+        return this.apiClient.get(this.routeDefinition.get(options));
+    };
+    /**
+     * Returns a promise that is resolved once the update acl action has been performed; this action creates new ACL policy for the specified dynamic resource.
+     * @method
+     * @param options Options object.
+     * @example dynamicResourceACLClient.update({id: '<dynamic-resource-id>', schemaName: '<schema-name>'})
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    DynamicResourceACLClient.prototype.update = function (options) {
+        return this.apiClient.put(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
+    };
+    /**
+     * Returns a promise that is resolved once the removeByUser action has been performed. This action deletes ACL policy assigned to the specified user and dynamic resource.
+     * @method
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and dynamic resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param user Username which uniquely identifies user for which ACL policy needs to be removed.
+     * @param data ACL Policy whose security privileges need to be retrieved and updated.
+     * @example // dynamicResource is a resource previously fetched using get action.
+                    dynamicResourceACLClient.removeByUser('<access-action>', '<username>', dynamicResource)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    DynamicResourceACLClient.prototype.removeByUser = function (action, user, data) {
+        return this.apiClient.delete(this.dynamicResourceACLRoute.deleteByUser(action, user, data));
+    };
+    /**
+     * Returns a promise that is resolved once the removeByRole action has been performed. This action deletes ACL policy assigned to the specified role and dynamic resource.
+     * @method
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified role and dynamic resource.
+     *               Supported Values:
+     *               "Create"
+     *               "Delete"
+     *               "Read"
+     *               "Update"
+     * @param role Role's name which uniquely identifies role for which ACL policy needs to be removed.
+     * @param data ACL Policy whose security privileges need to be retrieved and updated.
+     * @example // dynamicResource is a resource previously fetched using get action.
+                    dynamicResourceACLClient.removeByRole('<access-action>', '<role-name>', dynamicResource)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    DynamicResourceACLClient.prototype.removeByRole = function (action, role, data) {
+        return this.apiClient.delete(this.dynamicResourceACLRoute.deleteByRole(action, role, data));
+    };
+    return DynamicResourceACLClient;
+}());
+DynamicResourceACLClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.DynamicResourceACLRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicResourceACLRoute !== "undefined" && _1.DynamicResourceACLRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], DynamicResourceACLClient);
+exports.DynamicResourceACLClient = DynamicResourceACLClient;
+>>>>>>> Fix jQuery http client reject promise issue
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+<<<<<<< develop
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+=======
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 419 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryBatchRoute
+ * @description Baasic Media Gallery Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+/* 273 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module dynamicResourceACLRoute
+ * @description Baasic Dynamic Resource ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Resource ACL Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+<<<<<<< develop
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryBatchRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryBatchRoute, _super);
+    function MediaGalleryBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.updateRoute = 'media-galleries/batch';
+        _this.deleteRoute = 'media-galleries/batch';
+        _this.createRoute = 'media-galleries/batch';
+        return _this;
+    }
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryBatchRoute.update();
+     **/
+    MediaGalleryBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses create route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryBatchRoute.create();
+     **/
+    MediaGalleryBatchRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses remove route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryBatchRoute.delete();
+     **/
+    MediaGalleryBatchRoute.prototype.delete = function () {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
+    };
+    return MediaGalleryBatchRoute;
+}(common_1.BaseRoute));
+MediaGalleryBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGalleryBatchRoute);
+exports.MediaGalleryBatchRoute = MediaGalleryBatchRoute;
+=======
+;
+var contracts_1 = __webpack_require__(3);
+var DynamicResourceACLRoute = (function (_super) {
+    tslib_1.__extends(DynamicResourceACLRoute, _super);
+    function DynamicResourceACLRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'resources/{schemaName}/{id}/acl/{?fields}';
+        _this.updateRoute = 'resources/{schemaName}/{id}/acl/{?fields}';
+        _this.deleteByUserRoute = 'resources/{schemaName}/{id}/acl/actions/{accessAction}/users/{user}/';
+        _this.deleteByRoleRoute = 'resources/{schemaName}/{id}/acl/actions/{accessAction}/roles/{role}/';
+        return _this;
+    }
+    /**
+     * Parses get acl route; this URI template should be expanded with the Id of the dynamic resource and name of the dynamic resource schema.
+     * @method
+     * @param options Query resource options object.
+     * @example dynamicResourceACLRoute.get(options)
+     **/
+    DynamicResourceACLRoute.prototype.get = function (options) {
+        var params = this.utility.extend({}, options);
+        return _super.prototype.baseCreate.call(this, this.getRoute, params);
+    };
+    /**
+     * Parses update acl route; this URI template should be expanded with the Id of the dynamic resource and name of the dynamic resource schema.
+     * @method
+     * @param options Options object.
+     * @example dynamicResourceACLRoute.update(options)
+     **/
+    DynamicResourceACLRoute.prototype.update = function (options) {
+        var params = this.utility.extend({}, options);
+        return _super.prototype.baseCreate.call(this, this.updateRoute, options);
+    };
+    /**
+     * Parses deleteByUser acl route which can be expanded with additional options. Supported items are:
+     * - `schemaName` - Name of the dynamic resource schema.
+     * - `id` - Id of the dynamic resource.
+     * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified user and dynamic resource item.
+     * - `user` - A value which uniquely identifies user for which ACL policy needs to be removed.
+     * @method
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified user and dynamic resource item.
+     * @param username A value which uniquely identifies user for which ACL policy needs to be removed.
+     * @param data ACL Policy object used to perform delete action.
+     * @example dynamicResourceACLRoute.deleteByUser(action, username, data);
+     **/
+    DynamicResourceACLRoute.prototype.deleteByUser = function (action, username, data) {
+        var params = this.modelMapper.removeParams(data);
+        params.user = username;
+        params.accessAction = action;
+        return _super.prototype.baseCreate.call(this, this.deleteByUserRoute, params);
+    };
+    /**
+     * Parses deleteByRole acl route which can be expanded with additional options. Supported items are:
+     * - `schemaName` - Name of the dynamic resource schema.
+     * - `id` - Id of the dynamic resource.
+     * - `accessAction` - Action abbreviation which identifies ACL policy assigned to the specified role and dynamic resource item.
+     * - `role` - A value which uniquely identifies role for which ACL policy needs to be removed.
+     * @method
+     * @param action Action abbreviation which identifies ACL policy assigned to the specified role and dynamic resource item.
+     * @param role A value which uniquely identifies role for which ACL policy needs to be removed.
+     * @param data ACLPolicy object used to perform delete action.
+     * @example dynamicResourceACLRoute.deleteByRole(action, role, data)
+     **/
+    DynamicResourceACLRoute.prototype.deleteByRole = function (action, role, data) {
+        var params = this.modelMapper.removeParams(data);
+        params.role = role;
+        params.accessAction = action;
+        return _super.prototype.baseCreate.call(this, this.deleteByRoleRoute, params);
+    };
+    DynamicResourceACLRoute.prototype.updateParams = function (options) {
+        var params = this.utility.extend({}, options);
+        return params[this.modelMapper.modelPropertyName];
+    };
+    return DynamicResourceACLRoute;
+}(common_1.BaseRoute));
+DynamicResourceACLRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], DynamicResourceACLRoute);
+exports.DynamicResourceACLRoute = DynamicResourceACLRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+var _a;
+/**
+ * @overview
+ ***Notes:**
+<<<<<<< develop
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+=======
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+>>>>>>> Fix jQuery http client reject promise issue
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 420 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryClient
+ * @description  Media Gallery Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+/* 274 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module dynamicResourceClient
+ * @description  Dynamic Resource Client provides an easy way to consume  Dynamic Resource REST API end-points. In order to obtain needed routes `dynamicResourceClient` uses `dynamicResourceRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
+var _1 = __webpack_require__(13);
+var MediaGalleryClient = (function () {
+    function MediaGalleryClient(mediaGalleryRoute, apiClient, mediaGalleryBatchClient, mediaGalleryFileStreamClient, mediaGalleryInstanceFilesClient, mediaGallerySettingsClient) {
+        this.mediaGalleryRoute = mediaGalleryRoute;
+        this.apiClient = apiClient;
+        this.mediaGalleryBatchClient = mediaGalleryBatchClient;
+        this.mediaGalleryFileStreamClient = mediaGalleryFileStreamClient;
+        this.mediaGalleryInstanceFilesClient = mediaGalleryInstanceFilesClient;
+        this.mediaGallerySettingsClient = mediaGallerySettingsClient;
+    }
+    Object.defineProperty(MediaGalleryClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaGalleryClient.prototype, "streams", {
+        get: function () {
+            return this.mediaGalleryFileStreamClient;
+=======
+var _1 = __webpack_require__(20);
+var DynamicResourceClient = (function () {
+    function DynamicResourceClient(dynamicResourceRoute, dynamicResourceACLClient, dynamicSchemaClient, apiClient) {
+        this.dynamicResourceRoute = dynamicResourceRoute;
+        this.dynamicResourceACLClient = dynamicResourceACLClient;
+        this.dynamicSchemaClient = dynamicSchemaClient;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(DynamicResourceClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `dynamicResourceRoute`.
+         * @method
+         * @example dynamicResourceClient.routeDefinition.get(schemaName, id, options)
+         **/
+        get: function () {
+            return this.dynamicResourceRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+<<<<<<< develop
+    Object.defineProperty(MediaGalleryClient.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryBatchClient;
+=======
+    Object.defineProperty(DynamicResourceClient.prototype, "acl", {
+        get: function () {
+            return this.dynamicResourceACLClient;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+<<<<<<< develop
+    Object.defineProperty(MediaGalleryClient.prototype, "files", {
+        get: function () {
+            return this.mediaGalleryInstanceFilesClient;
+=======
+    Object.defineProperty(DynamicResourceClient.prototype, "schema", {
+        get: function () {
+            return this.dynamicSchemaClient;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of media gallery resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example mediaGalleryClient.find({
+                  pageNumber : 1,
+                  pageSize : 10,
+                  orderBy : '<field>',
+                  orderDirection : '<asc|desc>',
+                  search : '<search-phrase>',
+                  ids: '1,2,5',
+                  from: '',
+                  to: ''
+               })
+               .then(function (collection) {
+                   // perform success action here
+              },
+               function (response, status, headers, config) {
+                   // perform error handling here
+              });
+   **/
+    MediaGalleryClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested media gallery resource.
+     * @method
+     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example mediaGalleryClient.get('<media-gallery-id>')
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resources matching the given criteria.
+     * @method
+     * @param schemaName Name of dynamic resource schema whose dynamic resources need to be retrieved.
+     * @param options Query resource options object.
+     * @returns Promise that is resolved once the find action has been performed.
+     * @example dynamicResourceClient.find('<schema-name>', {
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    DynamicResourceClient.prototype.find = function (schemaName, options) {
+        return this.apiClient.get(this.dynamicResourceRoute.find(schemaName, options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified dynamic resource.
+     * @method
+     * @example dynamicResourceClient.get('<schema-name>', '<dynamic-resource-id>')
+>>>>>>> Fix jQuery http client reject promise issue
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+<<<<<<< develop
+                         // perform error handling here
+                    });
+     **/
+    MediaGalleryClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update media gallery action has been performed; this action will update a media gallery resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaGalleryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(mediaGalleryEntry);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A media gallery object used to update specified media gallery resource.
+     * @returns A promise that is resolved once the update media gallery action has been performed.
+     * @example // mediaGalleryEntry is a media gallery resource previously fetched using get action.
+                    mediaGalleryEntry.description = '<description>';
+                    mediaGalleryClient.update(mediaGalleryEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    MediaGalleryClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove one media gallery resources from the system if successfully completed. Specified media gallery and all accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(mediaGalleryEntry);
+     * let uri = params['id'].links('delete').href;
+     * ```
+     * @method
+     * @param id Media gallery id used to delete specific Media gallery resource from the system.
+     * @example // id is a media gallery resource id previously fetched using get action. The following action will remove the original media gallery resource and all accompanying derived media gallery resources.
+                   mediaGalleryClient.remove(id)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    MediaGalleryClient.prototype.remove = function (id) {
+        return this.apiClient.delete(this.routeDefinition.delete(id));
+    };
+    /**
+     * Returns a promise that is resolved once the create media gallery action has been performed; this action creates a new media gallery.
+     * @method
+     * @param data Media Gallery object.
+     * @returns A promise that is resolved once the create media gallery action has been performed.
+     * @example mediaGalleryClient.create(mediaGallery)
+=======
+                        // perform error handling here
+                    });
+     **/
+    DynamicResourceClient.prototype.get = function (schemaName, id, options) {
+        return this.apiClient.get(this.dynamicResourceRoute.get(id, schemaName, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create dynamic resource action has been performed; this action creates a new dynamic resource item.
+     * @method
+     * @param schemaName Name of dynamic resource schema that needs to be updated with new dynamic resource.
+     * @param data A JSON object that needs to be inserted into the system as dynamic resource. JSON object is an unordered collection of zero or more key/value pairs structured using the standard JSON syntax rules.
+     * @example dynamicResourceClient.create('<schema-name>', {
+                    id : '',
+                    description : '<description>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    DynamicResourceClient.prototype.create = function (schemaName, data) {
+        return this.apiClient.post(this.routeDefinition.create(schemaName), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update action has been performed; this action updates a dynamic resource item. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(dynamicResource);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A JSON object used to update specified dynamic resource. JSON object is an unordered collection of zero or more key/value pairs structured using the standard JSON syntax rules.
+     * @param options Options object.
+     * @example // dynamicResource is a resource previously fetched using get action.
+                    dynamicResource.description = '<description>';
+                    dynamicResourceClient.update(dynamicResource, {
+                        query: "where field = 'value' "
+                    })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    DynamicResourceClient.prototype.update = function (schemaName, data, options) {
+        return this.apiClient.put(this.routeDefinition.update(schemaName, data, options), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the patch action has been performed; this action patches an existing dynamic resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(dynamicResource);
+     * let uri = params['model'].links('patch').href;
+     * ```
+     * @method
+     * @param data JSON object used for partial update of specified dynamic resource. JSON object is an unordered collection of zero or more key/value pairs structured using the standard JSON syntax rules.
+     * @param options Options object.
+     * @example // dynamicResource is a resource previously fetched using get action.
+                    dynamicResource.description = '<new-description>';
+                    dynamicResource.newField = '<newfield-value>';
+                    dynamicResourceClient.patch(dynamicResource, {
+                        query: "where field = 'value' "
+                    })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                        
+                    });
+     **/
+    DynamicResourceClient.prototype.patch = function (schemaName, data, options) {
+        return this.apiClient.patch(this.routeDefinition.patch(schemaName, data, options), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a dynamic resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(dynamicResource);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data JSON object used to delete specified dynamic resource. JSON object is an unordered collection of zero or more key/value pairs structured using the standard JSON syntax rules.
+     * @example // dynamicResource is a resource previously fetched using get action.
+                    dynamicResourceClient.remove(dynamicResource, {
+                        query: "where field = 'value' "
+                    })
+>>>>>>> Fix jQuery http client reject promise issue
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+<<<<<<< develop
+                        // perform error handling here
+                    });
+     **/
+    MediaGalleryClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the purge action has been performed. This action will remove all media gallery resources from the system if successfully completed.
+     * @method
+     * @example // Remove original media gallery resources
+                        mediaGalleryClient.purge()
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    MediaGalleryClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    return MediaGalleryClient;
+}());
+MediaGalleryClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGalleryBatchClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.MediaGalleryFileStreamClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.MediaGalleryInstanceFilesClient)),
+    tslib_1.__param(5, inversify_1.inject(_1.TYPES.MediaGallerySettingsClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryRoute !== "undefined" && _1.MediaGalleryRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.MediaGalleryBatchClient !== "undefined" && _1.MediaGalleryBatchClient) === "function" && _c || Object, typeof (_d = typeof _1.MediaGalleryFileStreamClient !== "undefined" && _1.MediaGalleryFileStreamClient) === "function" && _d || Object, typeof (_e = typeof _1.MediaGalleryInstanceFilesClient !== "undefined" && _1.MediaGalleryInstanceFilesClient) === "function" && _e || Object, typeof (_f = typeof _1.MediaGallerySettingsClient !== "undefined" && _1.MediaGallerySettingsClient) === "function" && _f || Object])
+], MediaGalleryClient);
+exports.MediaGalleryClient = MediaGalleryClient;
+var _a, _b, _c, _d, _e, _f;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+=======
+                         // perform error handling here
+                    });
+     **/
+    DynamicResourceClient.prototype.remove = function (schemaName, data, options) {
+        return this.apiClient.delete(this.dynamicResourceRoute.delete(schemaName, data, options));
+    };
+    return DynamicResourceClient;
+}());
+DynamicResourceClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.DynamicResourceRoute)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.DynamicResourceACLClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.DynamicSchemaClient)),
+    tslib_1.__param(3, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicResourceRoute !== "undefined" && _1.DynamicResourceRoute) === "function" && _a || Object, typeof (_b = typeof _1.DynamicResourceACLClient !== "undefined" && _1.DynamicResourceACLClient) === "function" && _b || Object, typeof (_c = typeof _1.DynamicSchemaClient !== "undefined" && _1.DynamicSchemaClient) === "function" && _c || Object, typeof (_d = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _d || Object])
+], DynamicResourceClient);
+exports.DynamicResourceClient = DynamicResourceClient;
+var _a, _b, _c, _d;
+
+
+/***/ }),
+/* 275 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module dynamicResourceRoute
+ * @description Baasic Dynamic Resource Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Resource Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(20);
+var contracts_1 = __webpack_require__(3);
+var DynamicResourceRoute = (function (_super) {
+    tslib_1.__extends(DynamicResourceRoute, _super);
+    function DynamicResourceRoute(appOptions, dynamicResourceACLRoute, dynamicSchemaRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.dynamicResourceACLRoute = dynamicResourceACLRoute;
+        _this.dynamicSchemaRoute = dynamicSchemaRoute;
+        _this.findRoute = 'resources/{schemaName}/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'resources/{schemaName}/{id}/{?embed,fields}';
+        _this.createRoute = 'resources/{schemaName}';
+        _this.updateRoute = 'resources/{schemaName}/{id}/{?embed,fields,query}';
+        _this.patchRoute = 'resources/{schemaName}/{id}/{?embed,fields,query}';
+        _this.deleteRoute = 'resources/{schemaName}/{id}/{?query}';
+        return _this;
+    }
+    Object.defineProperty(DynamicResourceRoute.prototype, "acl", {
+        get: function () {
+            return this.dynamicResourceACLRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(DynamicResourceRoute.prototype, "dynamicSchema", {
+        get: function () {
+            return this.dynamicSchemaRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `schemaName` - Name of the dynamic resource schema.
+     * - `searchQuery` - A string referencing dynamic resource properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain dynamic resource subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the dynamic resource property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options query resource options object
+     * @example dynamicResourceRoute.find(options);
+     **/
+    DynamicResourceRoute.prototype.find = function (schemaName, options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, this.utility.extend({ schemaName: schemaName }, options));
+    };
+    /**
+     * Parses get route which must be expanded with the name of the previously created dynamic resource schema in the system and the Id of the previously created dynamic resource. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param id Unique identifier of dynamic resources
+     * @param schemaName schema name
+     * @param options query resource options object
+     * @example dynamicResourceRoute.get(id, schemaName, options);
+     **/
+    DynamicResourceRoute.prototype.get = function (id, schemaName, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, this.utility.extend({ schemaName: schemaName }, options));
+    };
+    DynamicResourceRoute.prototype.create = function (schemaName) {
+        var params = this.modelMapper.getParams(schemaName, undefined, 'schemaName');
+        return _super.prototype.baseCreate.call(this, this.createRoute, params);
+    };
+    DynamicResourceRoute.prototype.update = function (schemaName, data, options) {
+        var opt = options || {};
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
+    };
+    DynamicResourceRoute.prototype.patch = function (schemaName, data, options) {
+        var opt = options || {};
+        return _super.prototype.baseUpdate.call(this, this.patchRoute, data, this.utility.extend({ schemaName: schemaName }, opt), 'patch');
+    };
+    DynamicResourceRoute.prototype.delete = function (schemaName, data, options) {
+        var opt = options || {};
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data, this.utility.extend({ schemaName: schemaName }, opt));
+    };
+    return DynamicResourceRoute;
+}(common_1.BaseRoute));
+DynamicResourceRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.DynamicResourceACLRoute)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.DynamicSchemaRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.DynamicResourceACLRoute !== "undefined" && _1.DynamicResourceACLRoute) === "function" && _b || Object, typeof (_c = typeof _1.DynamicSchemaRoute !== "undefined" && _1.DynamicSchemaRoute) === "function" && _c || Object])
+], DynamicResourceRoute);
+exports.DynamicResourceRoute = DynamicResourceRoute;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+>>>>>>> Fix jQuery http client reject promise issue
+ */ 
+
+
+/***/ }),
+<<<<<<< develop
+/* 421 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryFileBatchClient
+ * @description  Media Gallery Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+/* 276 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module dynamicSchemaClient
+ * @description  Dynamic Schema Client provides an easy way to consume  Dynamic Schema REST API end-points. In order to obtain needed routes `dynamicSchemaClient` uses `dynamicSchemaRoute`.
+>>>>>>> Fix jQuery http client reject promise issue
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
+var _1 = __webpack_require__(13);
+var MediaGalleryFileBatchClient = (function () {
+    function MediaGalleryFileBatchClient(mediaGalleryBatchRoute, apiClient) {
+        this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGalleryFileBatchClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryBatchRoute;
+=======
+var _1 = __webpack_require__(20);
+var DynamicSchemaClient = (function () {
+    function DynamicSchemaClient(dynamicSchemaRoute, apiClient) {
+        this.dynamicSchemaRoute = dynamicSchemaRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(DynamicSchemaClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `dynamicSchemaRoute`.
+         * @method
+         * @example dynamicSchemaClient.routeDefinition.get();
+         **/
+        get: function () {
+            return this.dynamicSchemaRoute;
+>>>>>>> Fix jQuery http client reject promise issue
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the update action has been performed; this action updates specified media gallery file resources.
+     * @method
+     * @param data A collection of media gallery file objects used to update specified media gallery file resources.
+     * @returns A promise that is resolved once the update action has been performed.
+     * @example mediaGalleryFileBatchClient.update(files)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    MediaGalleryFileBatchClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the unlink action has been performed. This action will remove media gallery file resources from the system if successfully completed. Specified media galleries and all accompanying derived resources will be removed from the system.
+     * @method
+     * @param ids Collection of media gallery Id which uniquely identifies media gallery file resources that need to be deleted.
+     * @example // Remove original media gallery file resources
+                        mediaGalleryFileBatchClient.unlink([<media-gallery-id>])
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+     **/
+    MediaGalleryFileBatchClient.prototype.unlink = function (ids) {
+        return this.apiClient.delete(this.mediaGalleryBatchRoute.unlink(), undefined, ids);
+    };
+    /**
+    * Returns a promise that is resolved once the create action has been performed; this action creates specified media gallery file resources.
+    * @method
+    * @param data A collection of media gallery file objects used to create specified media gallery file resources.
+    * @returns A promise that is resolved once the create action has been performed.
+    * @example mediaGalleryFileBatchClient.link(files)
+                  .then(function (data) {
+                      // perform success action here
+                  },
+                   function (response, status, headers, config) {
+                       // perform error handling here
+                  });
+   **/
+    MediaGalleryFileBatchClient.prototype.link = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
+    };
+    return MediaGalleryFileBatchClient;
+}());
+MediaGalleryFileBatchClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileBatchRoute !== "undefined" && _1.MediaGalleryFileBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaGalleryFileBatchClient);
+exports.MediaGalleryFileBatchClient = MediaGalleryFileBatchClient;
+=======
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of dynamic resource schemas matching the given criteria.
      * @method
      * @param options Options object.
@@ -27568,28 +36598,90 @@ DynamicSchemaClient = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.DynamicSchemaRoute !== "undefined" && _1.DynamicSchemaRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
 ], DynamicSchemaClient);
 exports.DynamicSchemaClient = DynamicSchemaClient;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a, _b;
 /**
  * @overview
  ***Notes:**
+<<<<<<< develop
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+=======
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
  - All end-point objects are transformed by the associated route definition.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
-/* 398 */
+<<<<<<< develop
+/* 422 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module mediaGalleryFileBatchRoute
+ * @description Baasic Media Gallery Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /**
  * @module dynamicSchemaRoute
  * @description Baasic Dynamic Schema Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Dynamic Schema Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< develop
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryFileBatchRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryFileBatchRoute, _super);
+    function MediaGalleryFileBatchRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.updateRoute = 'media-gallery-files/batch';
+        _this.unlinkRoute = 'media-gallery-files/batch/unlink';
+        _this.linkRoute = 'media-gallery-files/batch/link';
+        return _this;
+    }
+    /**
+     * Parses update route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryFileBatchRoute.update();
+     **/
+    MediaGalleryFileBatchRoute.prototype.update = function () {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
+    };
+    /**
+     * Parses link route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryFileBatchRoute.link();
+     **/
+    MediaGalleryFileBatchRoute.prototype.link = function () {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
+    };
+    /**
+     * Parses unlink route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryFileBatchRoute.unlink();
+     **/
+    MediaGalleryFileBatchRoute.prototype.unlink = function () {
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, {});
+    };
+    return MediaGalleryFileBatchRoute;
+}(common_1.BaseRoute));
+MediaGalleryFileBatchRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGalleryFileBatchRoute);
+exports.MediaGalleryFileBatchRoute = MediaGalleryFileBatchRoute;
+=======
 ;
 var contracts_1 = __webpack_require__(3);
 var DynamicSchemaRoute = (function (_super) {
@@ -27668,18 +36760,28 @@ DynamicSchemaRoute = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], DynamicSchemaRoute);
 exports.DynamicSchemaRoute = DynamicSchemaRoute;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a;
 /**
  * @overview
  ***Notes:**
+<<<<<<< develop
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+=======
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route definition.
+>>>>>>> Fix jQuery http client reject promise issue
  */ 
 
 
 /***/ }),
-/* 399 */
+<<<<<<< develop
+/* 423 */
+=======
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27688,7 +36790,7 @@ var _a;
 
 
 /***/ }),
-/* 400 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27697,7 +36799,7 @@ var _a;
 
 
 /***/ }),
-/* 401 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27705,7 +36807,7 @@ var _a;
 
 
 /***/ }),
-/* 402 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27714,7 +36816,7 @@ var _a;
 
 
 /***/ }),
-/* 403 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27722,21 +36824,21 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(399));
-__export(__webpack_require__(402));
-__export(__webpack_require__(401));
-__export(__webpack_require__(400));
+__export(__webpack_require__(278));
+__export(__webpack_require__(281));
+__export(__webpack_require__(280));
+__export(__webpack_require__(279));
 
 
 /***/ }),
-/* 404 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(22);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(19);
 var TYPES = {
     FilesACLClient: Symbol("FilesACLClient"),
     FilesACLRoute: Symbol("FilesACLRoute"),
@@ -27762,21 +36864,46 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 405 */
+/* 284 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
+ * @module mediaGalleryFileClient
+ * @description  Media Gallery File Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery File Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
  * @module filesACLClient
  * @description  Files ACL Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
+<<<<<<< develop
+var _1 = __webpack_require__(13);
+var MediaGalleryFileClient = (function () {
+    function MediaGalleryFileClient(mediaGalleryFileRoute, apiClient, mediaGalleryFileBatchClient) {
+        this.mediaGalleryFileRoute = mediaGalleryFileRoute;
+        this.apiClient = apiClient;
+        this.mediaGalleryFileBatchClient = mediaGalleryFileBatchClient;
+    }
+    Object.defineProperty(MediaGalleryFileClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryFileRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MediaGalleryFileClient.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryFileBatchClient;
+=======
+var _1 = __webpack_require__(19);
 var FilesACLClient = (function () {
     function FilesACLClient(filesACLRoute, apiClient) {
         this.filesACLRoute = filesACLRoute;
@@ -27785,16 +36912,51 @@ var FilesACLClient = (function () {
     Object.defineProperty(FilesACLClient.prototype, "routeDefinition", {
         get: function () {
             return this.filesACLRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of media gallery resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example mediaGalleryClient.find({
+                  pageNumber : 1,
+                  pageSize : 10,
+                  orderBy : '<field>',
+                  orderDirection : '<asc|desc>',
+                  search : '<search-phrase>',
+                  ids: '1,2,5',
+                  from: '',
+                  to: ''
+               })
+               .then(function (collection) {
+                   // perform success action here
+              },
+               function (response, status, headers, config) {
+                   // perform error handling here
+              });
+   **/
+    MediaGalleryFileClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns requested media gallery resource.
+     * @method
+     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example mediaGalleryClient.get('<media-gallery-id>')
+=======
      * Returns a promise that is resolved once the get action has been performed. Success response returns a list of ACL policies established for the specified file resource.
      * @method
      * @param options ACL options object.
      * @returns A promise that is resolved once the get action has been performed.
      * @example filesACLClient.get({id: '<file-id>'})
+>>>>>>> Fix jQuery http client reject promise issue
                     .then(function (data) {
                         // perform success action here
                     },
@@ -27802,6 +36964,59 @@ var FilesACLClient = (function () {
                          // perform error handling here
                     });
      **/
+<<<<<<< develop
+    MediaGalleryFileClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the update media gallery action has been performed; this action will update a media gallery resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaGalleryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(mediaGalleryEntry);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data A media gallery object used to update specified media gallery resource.
+     * @returns A promise that is resolved once the update media gallery action has been performed.
+     * @example // mediaGalleryEntry is a media gallery resource previously fetched using get action.
+                    mediaGalleryEntry.description = '<description>';
+                    mediaGalleryClient.update(mediaGalleryEntry)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    MediaGalleryFileClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove one media gallery file resources from the system if successfully completed. Specified media gallery file and all accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryFileRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(mediaGalleryFileEntry);
+     * let uri = params['id'].links('delete').href;
+     * ```
+     * @method
+     * @param id Media gallery file id used to delete specific Media gallery resource from the system.
+     * @example // id is a media gallery file resource id previously fetched using get action. The following action will remove the original media gallery file resource and all accompanying derived media gallery file resources.
+                   mediaGalleryFileClient.remove(id)
+                       .then(function (data) {
+                           // perform success action here
+                       },
+                        function (response, status, headers, config) {
+                            // perform error handling here
+                       });
+    **/
+    MediaGalleryFileClient.prototype.remove = function (id) {
+        return this.apiClient.delete(this.routeDefinition.unlink(id));
+    };
+    /**
+     * Returns a promise that is resolved once the create media gallery action has been performed; this action creates a new media gallery.
+     * @method
+     * @param data Media Gallery object.
+     * @returns A promise that is resolved once the create media gallery action has been performed.
+     * @example mediaGalleryClient.create(mediaGallery)
+=======
     FilesACLClient.prototype.get = function (options) {
         return this.apiClient.get(this.routeDefinition.get(options));
     };
@@ -27850,10 +37065,40 @@ var FilesACLClient = (function () {
      * Returns a promise that is resolved once the removeByRole action has been performed. This action deletes ACL policy assigned to the specified role and file resource.
      * @method
      * @example filesACLClient.removeByRole('<file-id>', '<access-action>', '<role-name>')
+>>>>>>> Fix jQuery http client reject promise issue
                     .then(function (data) {
                         // perform success action here
                     },
                      function (response, status, headers, config) {
+<<<<<<< develop
+                        // perform error handling here
+                    });
+     **/
+    MediaGalleryFileClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.link(data), this.routeDefinition.createParams(data));
+    };
+    return MediaGalleryFileClient;
+}());
+MediaGalleryFileClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryFileRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGalleryFileBatchClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileRoute !== "undefined" && _1.MediaGalleryFileRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.MediaGalleryFileBatchClient !== "undefined" && _1.MediaGalleryFileBatchClient) === "function" && _c || Object])
+], MediaGalleryFileClient);
+exports.MediaGalleryFileClient = MediaGalleryFileClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 424 */
+=======
                          // perform error handling here
                     });
      **/
@@ -27879,20 +37124,114 @@ var _a, _b;
 
 
 /***/ }),
-/* 406 */
+/* 285 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
+ * @module MediaGalleryFileRoute
+ * @description Baasic Media Gallery File Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery File Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
  * @module filesACLRoute
  * @description Baasic Files ACL Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
+var _1 = __webpack_require__(13);
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryFileRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryFileRoute, _super);
+    function MediaGalleryFileRoute(appOptions, mediaGalleryBatchRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
+        _this.findRoute = 'media-gallery-files/{?searchQuery,fileName,minFileSize,maxFileSize,ids,from,to,page,rpp,sort,embed,fields,mediaGalleryIds,isCover}';
+        _this.getRoute = 'media-gallery-files/{id}/{?embed,fields}';
+        _this.updateRoute = 'media-gallery-files/{id}';
+        _this.unlinkRoute = 'media-gallery-files/unlink({id}';
+        _this.linkRoute = 'media-gallery-files/';
+        return _this;
+    }
+    Object.defineProperty(MediaGalleryFileRoute.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryBatchRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing media gallery properties using the phrase search.
+     * - `ids` - Comma separated list of media gallery ids to be retrieved.       *
+     * - `from` - The from date.
+     * - `to` - The to date.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain media gallery subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the media gallery property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example mediaGalleryFileRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    MediaGalleryFileRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param id Media gallery file id which uniquely identifies media gallery resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example mediaGalleryFileRoute.get({id: '<media-gallery-id>'});
+     **/
+    MediaGalleryFileRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param data Media gallery file object used to update specific Media gallery file resource in the system.
+     * @example mediaGalleryFileRoute.update(data);
+     **/
+    MediaGalleryFileRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this route should be expanded with the Id of media gallery file resource.
+     * @method
+     * @param id Media gallery file object id used to delete specific Media gallery file file resource in the system.
+     * @example mediaGalleryFileRoute.delete({id: '<media-gallery-file--id>'});
+     **/
+    MediaGalleryFileRoute.prototype.unlink = function (id) {
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, id);
+    };
+    /**
+    * Parses create route; this URI template doesnt support any additional options.
+    * @method
+    * @param data An media gallery file object that needs to be inserted into the system.
+    * @example mediaGalleryFileRoute.create(data);
+    **/
+    MediaGalleryFileRoute.prototype.link = function (data) {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, data);
+    };
+    return MediaGalleryFileRoute;
+}(common_1.BaseRoute));
+MediaGalleryFileRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaGalleryFileBatchRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MediaGalleryFileBatchRoute !== "undefined" && _1.MediaGalleryFileBatchRoute) === "function" && _b || Object])
+], MediaGalleryFileRoute);
+exports.MediaGalleryFileRoute = MediaGalleryFileRoute;
+var _a, _b;
+=======
 var contracts_1 = __webpack_require__(3);
 var FilesACLRoute = (function (_super) {
     tslib_1.__extends(FilesACLRoute, _super);
@@ -27982,6 +37321,7 @@ FilesACLRoute = tslib_1.__decorate([
 ], FilesACLRoute);
 exports.FilesACLRoute = FilesACLRoute;
 var _a;
+>>>>>>> Fix jQuery http client reject promise issue
 /**
  * @overview
  ***Notes:**
@@ -27992,21 +37332,42 @@ var _a;
 
 
 /***/ }),
-/* 407 */
+<<<<<<< develop
+/* 425 */
+=======
+/* 286 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
+ * @module mediaGalleryFilesStreamsClient
+ * @description  Media Gallery Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+=======
  * @module filesBatchClient
  * @description  Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
+<<<<<<< develop
+var _1 = __webpack_require__(13);
+var MediaGalleryFileStreamClient = (function () {
+    function MediaGalleryFileStreamClient(mediaGalleryFilesStreamsRoute, apiClient) {
+        this.mediaGalleryFilesStreamsRoute = mediaGalleryFilesStreamsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MediaGalleryFileStreamClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.mediaGalleryFilesStreamsRoute;
+=======
+var _1 = __webpack_require__(19);
 var FilesBatchClient = (function () {
     function FilesBatchClient(filesBatchRoute, apiClient) {
         this.filesBatchRoute = filesBatchRoute;
@@ -28015,11 +37376,57 @@ var FilesBatchClient = (function () {
     Object.defineProperty(FilesBatchClient.prototype, "routeDefinition", {
         get: function () {
             return this.filesBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
+     * @method
+     * @param id Media Gallery Entry id which uniquely identifies media gallery file that needs to be retrieved.
+     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original file stream
+                    mediaGalleryFilesStreamsClient.get({id: '<file-id>'}, {mediaGalleryid: '<media-gallery-id>', t: '<timestamp>'})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    MediaGalleryFileStreamClient.prototype.get = function (id, data) {
+        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(id, data));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @param id Media Gallery Entry id which uniquely identifies media gallery file that needs to be retrieved.
+     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original blob
+                    mediaGalleryFilesStreamsClient.getBlob('<file-id>', {mediaGalleryId:'<media-gallery-id>', t: '<timestamp>'})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    MediaGalleryFileStreamClient.prototype.getBlob = function (id, data) {
+        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(id, data), { 'Accept': 'application/octet-stream' });
+    };
+    /**
+     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
+     * @method
+     * @param data Media GalleryFile object used to identify stream that needs to be updated.
+     * @param stream
+     * @returns A promise that is resolved once the update file stream action has been performed.
+     * @example // Update original file stream
+                    mediaGalleryFilesStreamsClient.update({id:'<file-id>'}, <file-stream>)
+=======
      * Returns a promise that is resolved once the update action has been performed; this action updates specified file resources.
      * @method
      * @param data A collection of file objects used to update specified file resources.
@@ -28058,12 +37465,49 @@ var FilesBatchClient = (function () {
      * @returns A promise that is resolved once the unlink action has been performed.
      * @example // Remove original file resources
                     filesBatchClient.unlink([{ id: '<file-id>' }])
+>>>>>>> Fix jQuery http client reject promise issue
                         .then(function (data) {
                             // perform success action here
                         },
                          function (response, status, headers, config) {
                             // perform error handling here
                         });
+<<<<<<< develop
+     **/
+    MediaGalleryFileStreamClient.prototype.update = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.put(this.mediaGalleryFilesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
+    };
+    /**
+     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @param data Media GalleryFile object that need to be inserted into the system.
+     * @param stream
+     * @returns A promise that is resolved once the create file stream action has been performed.
+     * @example mediaGalleryFilesStreamsClient.create({mediaGalleryId:'<media-gallery-id>'}, <blob>)
+                   .then(function (data) {
+                        // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                       // perform error handling here
+                   });
+    **/
+    MediaGalleryFileStreamClient.prototype.create = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.post(this.mediaGalleryFilesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
+    };
+    return MediaGalleryFileStreamClient;
+}());
+MediaGalleryFileStreamClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryFileStreamRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileStreamRoute !== "undefined" && _1.MediaGalleryFileStreamRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MediaGalleryFileStreamClient);
+exports.MediaGalleryFileStreamClient = MediaGalleryFileStreamClient;
+=======
                 // Remove derived file resources
                     filesBatchClient.unlink([{ id: '<file-id>', fileFormat: { width: <width>, height: <height> } }])
                         .then(function (data) {
@@ -28085,29 +37529,106 @@ FilesBatchClient = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.FilesBatchRoute !== "undefined" && _1.FilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
 ], FilesBatchClient);
 exports.FilesBatchClient = FilesBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a, _b;
 /**
  * @overview
  ***Notes:**
+<<<<<<< develop
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 426 */
+=======
  - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
  - All end-point objects are transformed by the associated route service.
  */ 
 
 
 /***/ }),
-/* 408 */
+/* 287 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
+ * @module MediaGalleryFilesStreamsRoute
+ * @description Baasic Media Gallery  Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+=======
  * @module filesBatchRoute
  * @description Baasic Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
+<<<<<<< develop
+;
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryFileStreamRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryFileStreamRoute, _super);
+    function MediaGalleryFileStreamRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'media-gallery-file-streams/{id}/{?mediaGalleryId,t}';
+        _this.createRoute = 'media-gallery-file-streams/{filename}/{?mediaGalleryId}';
+        _this.updateRoute = 'media-gallery-file-streams/{id}';
+        return _this;
+    }
+    /**
+     * Parses get route; this route should be expanded with id of desired file stream.
+     * @method
+     * @param id Media Gallery File id which uniquely identifies media gallery whose media gallery file need to be retrieved.
+     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
+     * @example mediaGalleryFileStreamRoute.get(id);
+     **/
+    MediaGalleryFileStreamRoute.prototype.get = function (id, data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                mediaGalleryId: data
+            };
+        }
+        var params = this.utility.extend({}, data);
+        params.id = id;
+        return _super.prototype.baseGet.call(this, this.getRoute, params);
+    };
+    /**
+     * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.
+     * @method
+     * @param data Media Gallery File object that need to be inserted into the system.
+     * @example mediaGalleryFileStreamRoute.create({filename: '<filename>'});
+     **/
+    MediaGalleryFileStreamRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses update route; this route should be expanded with the id of the previously saved resource. Additional supported items are:
+     * - `width` - width of derived image to update.
+     * - `height` - height of derived image to update.
+     * @method
+     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery file need to be updated.
+     * @param data Media Gallery File object used to identify stream that needs to be updated.
+     * @example mediaGalleryFileStreamRoute.update({id: '<filename>'});
+     **/
+    MediaGalleryFileStreamRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return MediaGalleryFileStreamRoute;
+}(common_1.BaseRoute));
+MediaGalleryFileStreamRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MediaGalleryFileStreamRoute);
+exports.MediaGalleryFileStreamRoute = MediaGalleryFileStreamRoute;
+=======
 var contracts_1 = __webpack_require__(3);
 var FilesBatchRoute = (function (_super) {
     tslib_1.__extends(FilesBatchRoute, _super);
@@ -28151,10 +37672,21 @@ FilesBatchRoute = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], FilesBatchRoute);
 exports.FilesBatchRoute = FilesBatchRoute;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a;
 /**
  * @overview
  ***Notes:**
+<<<<<<< develop
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 427 */
+=======
  - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
@@ -28162,21 +37694,51 @@ var _a;
 
 
 /***/ }),
-/* 409 */
+/* 288 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
+ * @module MediaGalleryRoute
+ * @description Baasic Media Gallery Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
  * @module filesClient
  * @description  Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(13);
+var contracts_1 = __webpack_require__(3);
+var MediaGalleryRoute = (function (_super) {
+    tslib_1.__extends(MediaGalleryRoute, _super);
+    function MediaGalleryRoute(appOptions, mediaGalleryBatchRoute, mediaGallerySettingsRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
+        _this.mediaGallerySettingsRoute = mediaGallerySettingsRoute;
+        _this.findRoute = 'media-galleries/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'media-galleries/{id}/{?embed,fields}';
+        _this.updateRoute = 'media-galleries/{id}';
+        _this.deleteRoute = 'media-galleries/{id}';
+        _this.createRoute = 'media-galleries/';
+        _this.purgeRoute = 'media-galleries/purge';
+        return _this;
+    }
+    Object.defineProperty(MediaGalleryRoute.prototype, "batch", {
+        get: function () {
+            return this.mediaGalleryBatchRoute;
+=======
 ;
 var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
+var _1 = __webpack_require__(19);
 var FilesClient = (function () {
     function FilesClient(filesRoute, apiClient, filesStreamsClient, filesBatchClient, filesACLClient) {
         this.filesRoute = filesRoute;
@@ -28202,18 +37764,99 @@ var FilesClient = (function () {
     Object.defineProperty(FilesClient.prototype, "batch", {
         get: function () {
             return this.filesBatchClient;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
+<<<<<<< develop
+    Object.defineProperty(MediaGalleryRoute.prototype, "settings", {
+        get: function () {
+            return this.mediaGallerySettingsRoute;
+=======
     Object.defineProperty(FilesClient.prototype, "acl", {
         get: function () {
             return this.filesACLClient;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing media gallery properties using the phrase search.
+     * - `ids` - Comma separated list of media gallery ids to be retrieved.       *
+     * - `from` - The from date.
+     * - `to` - The to date.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain media gallery subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the media gallery property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example mediaGalleryRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    MediaGalleryRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example mediaGalleryRoute.get({id: '<media-gallery-id>'});
+     **/
+    MediaGalleryRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param data Media gallery object used to update specific Media gallery resource in the system.
+     * @example mediaGalleryRoute.update(data);
+     **/
+    MediaGalleryRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete route; this route should be expanded with the Id of media gallery resource.
+     * @method
+     * @param data Media gallery object of specific Media gallery resource in the system.
+     * @example mediaGalleryRoute.delete(<media-gallery>);
+     **/
+    MediaGalleryRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+    * Parses create route; this URI template doesnt support any additional options.
+    * @method
+    * @param data An media gallery  object that needs to be inserted into the system.
+    * @example mediaGalleryRoute.create(data);
+    **/
+    MediaGalleryRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    /**
+     * Parses purge route; this URI template does not expose any additional options.
+     * @method
+     * @example mediaGalleryPurgeRoute.purge();
+     **/
+    MediaGalleryRoute.prototype.purge = function () {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
+    };
+    return MediaGalleryRoute;
+}(common_1.BaseRoute));
+MediaGalleryRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGallerySettingsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MediaGalleryBatchRoute !== "undefined" && _1.MediaGalleryBatchRoute) === "function" && _b || Object, typeof (_c = typeof _1.MediaGallerySettingsRoute !== "undefined" && _1.MediaGallerySettingsRoute) === "function" && _c || Object])
+], MediaGalleryRoute);
+exports.MediaGalleryRoute = MediaGalleryRoute;
+var _a, _b, _c;
+=======
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.
      * @method
      * @param options Query resource options object.
@@ -28332,1742 +37975,12 @@ FilesClient = tslib_1.__decorate([
 ], FilesClient);
 exports.FilesClient = FilesClient;
 var _a, _b, _c, _d, _e;
+>>>>>>> Fix jQuery http client reject promise issue
 /**
  * @overview
  ***Notes:**
  - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
-    */ 
-
-
-/***/ }),
-/* 410 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module filesRoute
- * @description Baasic Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-;
-var _1 = __webpack_require__(22);
-var contracts_1 = __webpack_require__(3);
-var FilesRoute = (function (_super) {
-    tslib_1.__extends(FilesRoute, _super);
-    function FilesRoute(appOptions, filesStreamsRoute) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.filesStreamsRoute = filesStreamsRoute;
-        _this.findRoute = 'files/{?searchQuery,page,rpp,sort,embed,fields,fileName,from,to,ids,minFileSize,maxFileSize}';
-        _this.getRoute = 'files/{id}/{?embed,fields}';
-        _this.updateRoute = 'files/{id}';
-        _this.unlinkRoute = 'files/unlink/{id}/{?height,width}';
-        _this.linkRoute = 'files/link';
-        return _this;
-    }
-    Object.defineProperty(FilesRoute.prototype, "streams", {
-        get: function () {
-            return this.filesStreamsRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Parses find route which can be expanded with additional options. Supported items are:
-     * - `searchQuery` - A string referencing file properties using the phrase search.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
-     * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the file property to sort the result collection by.
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @method
-     * @param options Query resource options object.
-     * @example filesRoute.find({searchQuery: '<search-phrase>'});
-     **/
-    FilesRoute.prototype.find = function (options) {
-        return _super.prototype.baseFind.call(this, this.findRoute, options);
-    };
-    /**
-     * Parses get route; this route should be expanded with the Id of the file resource.
-     * @method
-     * @param id File id which uniquely identifies file resource that needs to be retrieved.
-     * @param options Query resource options object.
-     * @example filesRoute.get({id: '<file-id>'});
-     **/
-    FilesRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
-    };
-    /**
-     * Parses update route; this route should be expanded with the Id of the file resource.
-     * @method
-     * @param data A file entry object used to update specific file entry resource in the system.
-     * @example filesRoute.get({id: '<file-id>'});
-     **/
-    FilesRoute.prototype.update = function (data) {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
-    };
-    /**
-     * Parses unlink route; this route should be expanded with the Id of the file resource.
-     * @method
-     * @param data A file entry object used to update specific file entry resource in the system.
-     * @example filesRoute.unlink({id: '<file-id>'});
-     **/
-    FilesRoute.prototype.unlink = function (data, options) {
-        return _super.prototype.baseDelete.call(this, this.unlinkRoute, data, options, 'unlink');
-    };
-    /**
-     * Parses link route; this URI template does not expose any additional options.
-     * @method
-     * @example filesRoute.link();
-     **/
-    FilesRoute.prototype.link = function () {
-        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
-    };
-    return FilesRoute;
-}(common_1.BaseRoute));
-FilesRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.FilesStreamsRoute)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.FilesStreamsRoute !== "undefined" && _1.FilesStreamsRoute) === "function" && _b || Object])
-], FilesRoute);
-exports.FilesRoute = FilesRoute;
-var _a, _b;
-/**
- * @overview
-***Notes:**
-- Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
-- [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
-- All end-point objects are transformed by the associated route service.
-*/ 
-
-
-/***/ }),
-/* 411 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module filesStreamsClient
- * @description  Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(22);
-var FilesStreamsClient = (function () {
-    function FilesStreamsClient(filesStreamsRoute, apiClient) {
-        this.filesStreamsRoute = filesStreamsRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(FilesStreamsClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.filesStreamsRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
-     * @method
-     * @param id File id of the original file resource used to identify stream that needs to be retrieved from the system.
-     * @returns A promise that is resolved once the get action has been performed.
-     * @example // Request the original file stream
-                        filesStreamsClient.get({id: '<path>'})
-                            .then(function (data) {
-                                // perform success action here
-                            },
-                             function (response, status, headers, config) {
-                                 // perform error handling here
-                            });
-                // Request derived file stream
-                    filesStreamsClient.get({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
-    FilesStreamsClient.prototype.get = function (data) {
-        return this.apiClient.get(this.routeDefinition.get(data));
-    };
-    /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
-     * @method
-     * @example // Request the original blob
-                    filesStreamsClient.getBlob('<path>')
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-                // Request derived blob
-                    filesStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
-    FilesStreamsClient.prototype.getBlob = function (data) {
-        return this.apiClient.request({
-            url: this.filesStreamsRoute.get(data),
-            responseType: 'blob',
-            headers: { 'Accept': 'application/octet-stream' },
-            method: 'GET'
-        });
-    };
-    /**
-     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
-     * @method
-     * @example // Update original file stream
-                    filesStreamsClient.update('<path>', <file-stream>)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-                // Update derived file stream
-                    filesStreamsClient.update({id: '<path>', width: <width>, height: <height>}, <file-stream>)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
-    FilesStreamsClient.prototype.update = function (data, stream) {
-        var formData = new FormData();
-        formData.append('file', stream);
-        return this.apiClient.put(this.filesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
-    };
-    /**
-     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
-     * @method
-     * @example filesStreamsClient.create('<path>', <blob>)
-                   .then(function (data) {
-                       // perform success action here
-                   },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                   });
-    **/
-    FilesStreamsClient.prototype.create = function (data, stream) {
-        var formData = new FormData();
-        formData.append('file', stream);
-        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
-    };
-    return FilesStreamsClient;
-}());
-FilesStreamsClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.FilesStreamsRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.FilesStreamsRoute !== "undefined" && _1.FilesStreamsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
-], FilesStreamsClient);
-exports.FilesStreamsClient = FilesStreamsClient;
-var _a, _b;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */
-
-
-/***/ }),
-/* 412 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module filesStreamsRoute
- * @description Baasic Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
-var FilesStreamsRoute = (function (_super) {
-    tslib_1.__extends(FilesStreamsRoute, _super);
-    function FilesStreamsRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.getRoute = 'file-streams/{id}/{?width,height,t}';
-        _this.updateRoute = 'file-streams/{id}/{?width,height}';
-        _this.createRoute = 'file-streams/{path}';
-        return _this;
-    }
-    /**
-     * Parses get route; this route should be expanded with id or path of desired file stream. Additional supported items are:
-     * - `width` - width of desired derived image.
-     * - `height` - height of desired derived image.
-     * - `t` - cache invalidation param.
-     * @method
-     * @example filesStreamsRoute.get({id: '<path>'});
-     **/
-    FilesStreamsRoute.prototype.get = function (data) {
-        if (!this.utility.isObject(data)) {
-            data = {
-                id: data
-            };
-        }
-        return _super.prototype.baseCreate.call(this, this.getRoute, data);
-    };
-    /**
-     * Parses update route; this route should be expanded with the id or path of the previously saved resource. Additional supported items are:
-     * - `width` - width of derived image to update.
-     * - `height` - height of derived image to update.
-     * @method
-     * @example filesStreamsRoute.update({id: '<path>'});
-     **/
-    FilesStreamsRoute.prototype.update = function (data) {
-        if (!this.utility.isObject(data)) {
-            data = {
-                id: data
-            };
-        }
-        return _super.prototype.baseCreate.call(this, this.updateRoute, data);
-    };
-    /**
-     * Parses create route; this route should be expanded with the path which indicates where the stream will be saved.
-     * @method
-     * @example filesStreamsRoute.create({path: '<path>'});
-     **/
-    FilesStreamsRoute.prototype.create = function (data) {
-        if (!this.utility.isObject(data)) {
-            data = {
-                path: data
-            };
-        }
-        return _super.prototype.baseCreate.call(this, this.createRoute, data);
-    };
-    return FilesStreamsRoute;
-}(common_1.BaseRoute));
-FilesStreamsRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], FilesStreamsRoute);
-exports.FilesStreamsRoute = FilesStreamsRoute;
-var _a;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 413 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 414 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(413));
-
-
-/***/ }),
-/* 415 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(30);
-var TYPES = {
-    KeyValueClient: Symbol("KeyValueClient"),
-    KeyValueRoute: Symbol("KeyValueRoute")
-};
-exports.TYPES = TYPES;
-var diModule = new inversify_1.ContainerModule(function (bind) {
-    bind(TYPES.KeyValueRoute).to(_1.KeyValueRoute);
-    bind(TYPES.KeyValueClient).to(_1.KeyValueClient);
-});
-exports.diModule = diModule;
-
-
-/***/ }),
-/* 416 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * @module keyValueClient
- * @description  Key Value Client provides an easy way to consume  Key Value REST API end-points. In order to obtain needed routes `keyValueClient` uses `baasicKeyValueRouteClient`.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(30);
-var KeyValueClient = (function () {
-    function KeyValueClient(keyValueRoute, apiClient) {
-        this.keyValueRoute = keyValueRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(KeyValueClient.prototype, "routeDefinition", {
-        /**
-         * Provides direct access to `keyValueRoute`.
-         * @method
-         * @example keyValueClient.routeDefinition.get();
-         **/
-        get: function () {
-            return this.keyValueRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of key value resources matching the given criteria.
-     * @param options query resource options object
-     * @returns A promise that is resolved once the find action has beend performed.
-     * @method
-     * @example keyValueClient.find({
-                 pageNumber: 1,
-                 pageSize: 10,
-                 orderBy: '<field>',
-                 orderDirection: '<asc|desc>',
-                 search: '<search-phrase>'
-                })
-                .then(function (collection) {
-                    // perform success action here
-                },
-                 function (response, status, headers, config) {
-                    // perform error handling here
-                });
-     **/
-    KeyValueClient.prototype.find = function (options) {
-        return this.apiClient.get(this.routeDefinition.find(options));
-    };
-    /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified key value resource.
-     * @param id unique identifer of key value resources
-     * @param options query resource options object
-     * @returns A promise that is resolved once the get action has beend performed.
-     * @method
-     * @example keyValueClient.get('<key-value-id>')
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    KeyValueClient.prototype.get = function (id, options) {
-        return this.apiClient.get(this.keyValueRoute.get(id, options));
-    };
-    /**
-     * Returns a promise that is resolved once the create key value action has been performed; this action creates a new key value resource.
-     * @param data A key value object that needs to be inserted into the system.
-     * @returns A promise that is resolved once the create key value action has beend performed.
-     * @method
-     * @example keyValueClient.create({key: '<key>', value: '<value>', })
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     */
-    KeyValueClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the update key value action has been performed; this action updates a key value resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicKeyValueRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.removeParams(keyValue);
-     * let uri = params['model'].links('put').href;
-     * ```
-     * @param data A key value object used to update specified key value resource.
-     * @return A promise that is resolved once the update key value action has been performed.
-     * @method
-     * @example // keyValue is a resource previously fetched using get action.
-                   keyValue.value = '<new-value>';
-                   keyValueClient.update(keyValue)
-                   .then(function (data) {
-                       // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    KeyValueClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove a key value resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicKeyValueRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.removeParams(keyValue);
-     * let uri = params['model'].links('delete').href;
-     * ```
-     * @param data A key value object used to delete specified key value resource.
-     * @returns A promise that is resolved once the remove action has been performed.
-     * @method
-     * @example // keyValue is a resource previously fetched using get action.
-                    keyValueClient.remove(keyValue)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    KeyValueClient.prototype.remove = function (data) {
-        return this.apiClient.delete(this.routeDefinition.delete(data), this.routeDefinition.deleteParams(data));
-    };
-    return KeyValueClient;
-}());
-KeyValueClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.KeyValueRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.KeyValueRoute !== "undefined" && _1.KeyValueRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
-], KeyValueClient);
-exports.KeyValueClient = KeyValueClient;
-var _a, _b;
-/**
- * @copyright (c) 2017 Mono Ltd
- * @license MIT
- * @author Mono Ltd
- * @overview
- ***Notes:**
- - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 417 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module keyValueRoute
- * @description Baasic Key Value Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Key Value Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-;
-var contracts_1 = __webpack_require__(3);
-var KeyValueRoute = (function (_super) {
-    tslib_1.__extends(KeyValueRoute, _super);
-    function KeyValueRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.findRoute = 'key-values/{?searchQuery,page,rpp,sort,embed,fields}';
-        _this.getRoute = 'key-values/{id}/{?embed,fields}';
-        _this.createRoute = 'key-values';
-        _this.updateRoute = 'key-values/{id}';
-        _this.deleteRoute = 'key-values/{id}';
-        return _this;
-    }
-    /**
-     * Parses find key value route which can be expanded with additional options. Supported items are:
-     * - `searchQuery` - A string value used to identify key value resources using the phrase search.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain key value subset from the storage.
-     * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the key value property to sort the result collection by.
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @method
-     * @param options Query resource options object.
-     * @example keyValueRoute.find(options);
-     **/
-    KeyValueRoute.prototype.find = function (options) {
-        return _super.prototype.baseFind.call(this, this.findRoute, options);
-    };
-    /**
-     * Parses get key value route which must be expanded with the Id of the previously created key value resource in the system.
-     * @method
-     * @param id Key value resource unique identifier.
-     * @param options Query resource options object.
-     * @example keyValueRoute.get();
-     **/
-    KeyValueRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
-    };
-    /**
-     * Parses create key value route; this URI template does not expose any additional options.
-     * @method
-     * @example keyValueRoute.create();
-     **/
-    KeyValueRoute.prototype.create = function () {
-        return _super.prototype.baseCreate.call(this, this.createRoute, {});
-    };
-    /**
-     * Parses update key value route.
-     * @method
-     * @param data Key Value object used to create update route.
-     * @example keyValueRoute.update(data);
-     */
-    KeyValueRoute.prototype.update = function (data) {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
-    };
-    /**
-     * Parses delete key value route.
-     * @method
-     * @param data Key Value object used to create delete route.
-     * @example keyValueRoute.delete(data);
-     */
-    KeyValueRoute.prototype.delete = function (data) {
-        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
-    };
-    return KeyValueRoute;
-}(common_1.BaseRoute));
-KeyValueRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], KeyValueRoute);
-exports.KeyValueRoute = KeyValueRoute;
-var _a;
-/**
- * @copyright (c) 2017 Mono Ltd
- * @license MIT
- * @author Mono Ltd
- * @overview
- ***Notes:**
- - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 418 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module mediaGalleryBatchClient
- * @description  Media Gallery Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
-var MediaGalleryBatchClient = (function () {
-    function MediaGalleryBatchClient(mediaGalleryBatchRoute, apiClient) {
-        this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(MediaGalleryBatchClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.mediaGalleryBatchRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the update action has been performed; this action updates specified media gallery resources.
-     * @method
-     * @param data A collection of media gallery objects used to update specified media gallery resources.
-     * @returns A promise that is resolved once the update action has been performed.
-     * @example mediaGalleryStreamsClient.update(files)
-                   .then(function (data) {
-                       // perform success action here
-                   },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                   });
-    **/
-    MediaGalleryBatchClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove media gallery resources from the system if successfully completed. Specified media galleries and all accompanying derived resources will be removed from the system.
-     * @method
-     * @param ids Collection of media gallery Id which uniquely identifies media gallery resources that need to be deleted.
-     * @example // Remove original media gallery resources
-                        mediaGalleryBatchClient.remove([<media-gallery-id>])
-                            .then(function (data) {
-                                // perform success action here
-                            },
-                             function (response, status, headers, config) {
-                                 // perform error handling here
-                            });
-     **/
-    MediaGalleryBatchClient.prototype.remove = function (ids) {
-        return this.apiClient.delete(this.mediaGalleryBatchRoute.delete(), undefined, ids);
-    };
-    /**
-    * Returns a promise that is resolved once the create action has been performed; this action creates specified media gallery resources.
-    * @method
-    * @param data A collection of media gallery objects used to create specified media gallery resources.
-    * @returns A promise that is resolved once the create action has been performed.
-    * @example mediaGalleryStreamsClient.create(files)
-                  .then(function (data) {
-                      // perform success action here
-                  },
-                   function (response, status, headers, config) {
-                       // perform error handling here
-                  });
-   **/
-    MediaGalleryBatchClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
-    };
-    return MediaGalleryBatchClient;
-}());
-MediaGalleryBatchClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryBatchRoute !== "undefined" && _1.MediaGalleryBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
-], MediaGalleryBatchClient);
-exports.MediaGalleryBatchClient = MediaGalleryBatchClient;
-var _a, _b;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 419 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module mediaGalleryBatchRoute
- * @description Baasic Media Gallery Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
-var MediaGalleryBatchRoute = (function (_super) {
-    tslib_1.__extends(MediaGalleryBatchRoute, _super);
-    function MediaGalleryBatchRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.updateRoute = 'media-galleries/batch';
-        _this.deleteRoute = 'media-galleries/batch';
-        _this.createRoute = 'media-galleries/batch';
-        return _this;
-    }
-    /**
-     * Parses update route; this URI template does not expose any additional options.
-     * @method
-     * @example mediaGalleryBatchRoute.update();
-     **/
-    MediaGalleryBatchRoute.prototype.update = function () {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
-    };
-    /**
-     * Parses create route; this URI template does not expose any additional options.
-     * @method
-     * @example mediaGalleryBatchRoute.create();
-     **/
-    MediaGalleryBatchRoute.prototype.create = function () {
-        return _super.prototype.baseCreate.call(this, this.createRoute, {});
-    };
-    /**
-     * Parses remove route; this URI template does not expose any additional options.
-     * @method
-     * @example mediaGalleryBatchRoute.delete();
-     **/
-    MediaGalleryBatchRoute.prototype.delete = function () {
-        return _super.prototype.baseDelete.call(this, this.deleteRoute, {});
-    };
-    return MediaGalleryBatchRoute;
-}(common_1.BaseRoute));
-MediaGalleryBatchRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], MediaGalleryBatchRoute);
-exports.MediaGalleryBatchRoute = MediaGalleryBatchRoute;
-var _a;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 420 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module mediaGalleryClient
- * @description  Media Gallery Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
-var MediaGalleryClient = (function () {
-    function MediaGalleryClient(mediaGalleryRoute, apiClient, mediaGalleryBatchClient, mediaGalleryFileStreamClient, mediaGalleryInstanceFilesClient, mediaGallerySettingsClient) {
-        this.mediaGalleryRoute = mediaGalleryRoute;
-        this.apiClient = apiClient;
-        this.mediaGalleryBatchClient = mediaGalleryBatchClient;
-        this.mediaGalleryFileStreamClient = mediaGalleryFileStreamClient;
-        this.mediaGalleryInstanceFilesClient = mediaGalleryInstanceFilesClient;
-        this.mediaGallerySettingsClient = mediaGallerySettingsClient;
-    }
-    Object.defineProperty(MediaGalleryClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.mediaGalleryRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(MediaGalleryClient.prototype, "streams", {
-        get: function () {
-            return this.mediaGalleryFileStreamClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(MediaGalleryClient.prototype, "batch", {
-        get: function () {
-            return this.mediaGalleryBatchClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(MediaGalleryClient.prototype, "files", {
-        get: function () {
-            return this.mediaGalleryInstanceFilesClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of media gallery resources matching the given criteria.
-     * @method
-     * @param options Query resource options object.
-     * @returns A promise that is resolved once the find action has been performed.
-     * @example mediaGalleryClient.find({
-                  pageNumber : 1,
-                  pageSize : 10,
-                  orderBy : '<field>',
-                  orderDirection : '<asc|desc>',
-                  search : '<search-phrase>',
-                  ids: '1,2,5',
-                  from: '',
-                  to: ''
-               })
-               .then(function (collection) {
-                   // perform success action here
-              },
-               function (response, status, headers, config) {
-                   // perform error handling here
-              });
-   **/
-    MediaGalleryClient.prototype.find = function (options) {
-        return this.apiClient.get(this.routeDefinition.find(options));
-    };
-    /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns requested media gallery resource.
-     * @method
-     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
-     * @param options Query resource options object.
-     * @returns A promise that is resolved once the get action has been performed.
-     * @example mediaGalleryClient.get('<media-gallery-id>')
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
-    MediaGalleryClient.prototype.get = function (id, options) {
-        return this.apiClient.get(this.routeDefinition.get(id, options));
-    };
-    /**
-     * Returns a promise that is resolved once the update media gallery action has been performed; this action will update a media gallery resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaGalleryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.updateParams(mediaGalleryEntry);
-     * let uri = params['model'].links('put').href;
-     * ```
-     * @method
-     * @param data A media gallery object used to update specified media gallery resource.
-     * @returns A promise that is resolved once the update media gallery action has been performed.
-     * @example // mediaGalleryEntry is a media gallery resource previously fetched using get action.
-                    mediaGalleryEntry.description = '<description>';
-                    mediaGalleryClient.update(mediaGalleryEntry)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
-    MediaGalleryClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove one media gallery resources from the system if successfully completed. Specified media gallery and all accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.removeParams(mediaGalleryEntry);
-     * let uri = params['id'].links('delete').href;
-     * ```
-     * @method
-     * @param id Media gallery id used to delete specific Media gallery resource from the system.
-     * @example // id is a media gallery resource id previously fetched using get action. The following action will remove the original media gallery resource and all accompanying derived media gallery resources.
-                   mediaGalleryClient.remove(id)
-                       .then(function (data) {
-                           // perform success action here
-                       },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                       });
-    **/
-    MediaGalleryClient.prototype.remove = function (id) {
-        return this.apiClient.delete(this.routeDefinition.delete(id));
-    };
-    /**
-     * Returns a promise that is resolved once the create media gallery action has been performed; this action creates a new media gallery.
-     * @method
-     * @param data Media Gallery object.
-     * @returns A promise that is resolved once the create media gallery action has been performed.
-     * @example mediaGalleryClient.create(mediaGallery)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    MediaGalleryClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the purge action has been performed. This action will remove all media gallery resources from the system if successfully completed.
-     * @method
-     * @example // Remove original media gallery resources
-                        mediaGalleryClient.purge()
-                            .then(function (data) {
-                                // perform success action here
-                            },
-                             function (response, status, headers, config) {
-                                 // perform error handling here
-                            });
-     **/
-    MediaGalleryClient.prototype.purge = function () {
-        return this.apiClient.delete(this.routeDefinition.purge());
-    };
-    return MediaGalleryClient;
-}());
-MediaGalleryClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGalleryBatchClient)),
-    tslib_1.__param(3, inversify_1.inject(_1.TYPES.MediaGalleryFileStreamClient)),
-    tslib_1.__param(4, inversify_1.inject(_1.TYPES.MediaGalleryInstanceFilesClient)),
-    tslib_1.__param(5, inversify_1.inject(_1.TYPES.MediaGallerySettingsClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryRoute !== "undefined" && _1.MediaGalleryRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.MediaGalleryBatchClient !== "undefined" && _1.MediaGalleryBatchClient) === "function" && _c || Object, typeof (_d = typeof _1.MediaGalleryFileStreamClient !== "undefined" && _1.MediaGalleryFileStreamClient) === "function" && _d || Object, typeof (_e = typeof _1.MediaGalleryInstanceFilesClient !== "undefined" && _1.MediaGalleryInstanceFilesClient) === "function" && _e || Object, typeof (_f = typeof _1.MediaGallerySettingsClient !== "undefined" && _1.MediaGallerySettingsClient) === "function" && _f || Object])
-], MediaGalleryClient);
-exports.MediaGalleryClient = MediaGalleryClient;
-var _a, _b, _c, _d, _e, _f;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 421 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module mediaGalleryFileBatchClient
- * @description  Media Gallery Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
-var MediaGalleryFileBatchClient = (function () {
-    function MediaGalleryFileBatchClient(mediaGalleryBatchRoute, apiClient) {
-        this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(MediaGalleryFileBatchClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.mediaGalleryBatchRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the update action has been performed; this action updates specified media gallery file resources.
-     * @method
-     * @param data A collection of media gallery file objects used to update specified media gallery file resources.
-     * @returns A promise that is resolved once the update action has been performed.
-     * @example mediaGalleryFileBatchClient.update(files)
-                   .then(function (data) {
-                       // perform success action here
-                   },
-                    function (response, status, headers, config) {
-                        // perform error handling here
-                   });
-    **/
-    MediaGalleryFileBatchClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.update(), this.routeDefinition.updateParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the unlink action has been performed. This action will remove media gallery file resources from the system if successfully completed. Specified media galleries and all accompanying derived resources will be removed from the system.
-     * @method
-     * @param ids Collection of media gallery Id which uniquely identifies media gallery file resources that need to be deleted.
-     * @example // Remove original media gallery file resources
-                        mediaGalleryFileBatchClient.unlink([<media-gallery-id>])
-                            .then(function (data) {
-                                // perform success action here
-                            },
-                             function (response, status, headers, config) {
-                                 // perform error handling here
-                            });
-     **/
-    MediaGalleryFileBatchClient.prototype.unlink = function (ids) {
-        return this.apiClient.delete(this.mediaGalleryBatchRoute.unlink(), undefined, ids);
-    };
-    /**
-    * Returns a promise that is resolved once the create action has been performed; this action creates specified media gallery file resources.
-    * @method
-    * @param data A collection of media gallery file objects used to create specified media gallery file resources.
-    * @returns A promise that is resolved once the create action has been performed.
-    * @example mediaGalleryFileBatchClient.link(files)
-                  .then(function (data) {
-                      // perform success action here
-                  },
-                   function (response, status, headers, config) {
-                       // perform error handling here
-                  });
-   **/
-    MediaGalleryFileBatchClient.prototype.link = function (data) {
-        return this.apiClient.post(this.routeDefinition.link(), this.routeDefinition.createParams(data));
-    };
-    return MediaGalleryFileBatchClient;
-}());
-MediaGalleryFileBatchClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileBatchRoute !== "undefined" && _1.MediaGalleryFileBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
-], MediaGalleryFileBatchClient);
-exports.MediaGalleryFileBatchClient = MediaGalleryFileBatchClient;
-var _a, _b;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 422 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module mediaGalleryFileBatchRoute
- * @description Baasic Media Gallery Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Batch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
-var MediaGalleryFileBatchRoute = (function (_super) {
-    tslib_1.__extends(MediaGalleryFileBatchRoute, _super);
-    function MediaGalleryFileBatchRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.updateRoute = 'media-gallery-files/batch';
-        _this.unlinkRoute = 'media-gallery-files/batch/unlink';
-        _this.linkRoute = 'media-gallery-files/batch/link';
-        return _this;
-    }
-    /**
-     * Parses update route; this URI template does not expose any additional options.
-     * @method
-     * @example mediaGalleryFileBatchRoute.update();
-     **/
-    MediaGalleryFileBatchRoute.prototype.update = function () {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, {});
-    };
-    /**
-     * Parses link route; this URI template does not expose any additional options.
-     * @method
-     * @example mediaGalleryFileBatchRoute.link();
-     **/
-    MediaGalleryFileBatchRoute.prototype.link = function () {
-        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
-    };
-    /**
-     * Parses unlink route; this URI template does not expose any additional options.
-     * @method
-     * @example mediaGalleryFileBatchRoute.unlink();
-     **/
-    MediaGalleryFileBatchRoute.prototype.unlink = function () {
-        return _super.prototype.baseDelete.call(this, this.unlinkRoute, {});
-    };
-    return MediaGalleryFileBatchRoute;
-}(common_1.BaseRoute));
-MediaGalleryFileBatchRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], MediaGalleryFileBatchRoute);
-exports.MediaGalleryFileBatchRoute = MediaGalleryFileBatchRoute;
-var _a;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 423 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module mediaGalleryFileClient
- * @description  Media Gallery File Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery File Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
-var MediaGalleryFileClient = (function () {
-    function MediaGalleryFileClient(mediaGalleryFileRoute, apiClient, mediaGalleryFileBatchClient) {
-        this.mediaGalleryFileRoute = mediaGalleryFileRoute;
-        this.apiClient = apiClient;
-        this.mediaGalleryFileBatchClient = mediaGalleryFileBatchClient;
-    }
-    Object.defineProperty(MediaGalleryFileClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.mediaGalleryFileRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(MediaGalleryFileClient.prototype, "batch", {
-        get: function () {
-            return this.mediaGalleryFileBatchClient;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of media gallery resources matching the given criteria.
-     * @method
-     * @param options Query resource options object.
-     * @returns A promise that is resolved once the find action has been performed.
-     * @example mediaGalleryClient.find({
-                  pageNumber : 1,
-                  pageSize : 10,
-                  orderBy : '<field>',
-                  orderDirection : '<asc|desc>',
-                  search : '<search-phrase>',
-                  ids: '1,2,5',
-                  from: '',
-                  to: ''
-               })
-               .then(function (collection) {
-                   // perform success action here
-              },
-               function (response, status, headers, config) {
-                   // perform error handling here
-              });
-   **/
-    MediaGalleryFileClient.prototype.find = function (options) {
-        return this.apiClient.get(this.routeDefinition.find(options));
-    };
-    /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns requested media gallery resource.
-     * @method
-     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
-     * @param options Query resource options object.
-     * @returns A promise that is resolved once the get action has been performed.
-     * @example mediaGalleryClient.get('<media-gallery-id>')
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                         // perform error handling here
-                    });
-     **/
-    MediaGalleryFileClient.prototype.get = function (id, options) {
-        return this.apiClient.get(this.routeDefinition.get(id, options));
-    };
-    /**
-     * Returns a promise that is resolved once the update media gallery action has been performed; this action will update a media gallery resource if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `mediaGalleryRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.updateParams(mediaGalleryEntry);
-     * let uri = params['model'].links('put').href;
-     * ```
-     * @method
-     * @param data A media gallery object used to update specified media gallery resource.
-     * @returns A promise that is resolved once the update media gallery action has been performed.
-     * @example // mediaGalleryEntry is a media gallery resource previously fetched using get action.
-                    mediaGalleryEntry.description = '<description>';
-                    mediaGalleryClient.update(mediaGalleryEntry)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                             // perform error handling here
-                        });
-     **/
-    MediaGalleryFileClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
-    };
-    /**
-     * Returns a promise that is resolved once the remove action has been performed. This action will remove one media gallery file resources from the system if successfully completed. Specified media gallery file and all accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaGalleryFileRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
-     * ```
-     * let params = modelMapper.removeParams(mediaGalleryFileEntry);
-     * let uri = params['id'].links('delete').href;
-     * ```
-     * @method
-     * @param id Media gallery file id used to delete specific Media gallery resource from the system.
-     * @example // id is a media gallery file resource id previously fetched using get action. The following action will remove the original media gallery file resource and all accompanying derived media gallery file resources.
-                   mediaGalleryFileClient.remove(id)
-                       .then(function (data) {
-                           // perform success action here
-                       },
-                        function (response, status, headers, config) {
-                            // perform error handling here
-                       });
-    **/
-    MediaGalleryFileClient.prototype.remove = function (id) {
-        return this.apiClient.delete(this.routeDefinition.unlink(id));
-    };
-    /**
-     * Returns a promise that is resolved once the create media gallery action has been performed; this action creates a new media gallery.
-     * @method
-     * @param data Media Gallery object.
-     * @returns A promise that is resolved once the create media gallery action has been performed.
-     * @example mediaGalleryClient.create(mediaGallery)
-                    .then(function (data) {
-                        // perform success action here
-                    },
-                     function (response, status, headers, config) {
-                        // perform error handling here
-                    });
-     **/
-    MediaGalleryFileClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.link(data), this.routeDefinition.createParams(data));
-    };
-    return MediaGalleryFileClient;
-}());
-MediaGalleryFileClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryFileRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGalleryFileBatchClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileRoute !== "undefined" && _1.MediaGalleryFileRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof _1.MediaGalleryFileBatchClient !== "undefined" && _1.MediaGalleryFileBatchClient) === "function" && _c || Object])
-], MediaGalleryFileClient);
-exports.MediaGalleryFileClient = MediaGalleryFileClient;
-var _a, _b, _c;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 424 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module MediaGalleryFileRoute
- * @description Baasic Media Gallery File Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery File Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-;
-var _1 = __webpack_require__(13);
-var contracts_1 = __webpack_require__(3);
-var MediaGalleryFileRoute = (function (_super) {
-    tslib_1.__extends(MediaGalleryFileRoute, _super);
-    function MediaGalleryFileRoute(appOptions, mediaGalleryBatchRoute) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
-        _this.findRoute = 'media-gallery-files/{?searchQuery,fileName,minFileSize,maxFileSize,ids,from,to,page,rpp,sort,embed,fields,mediaGalleryIds,isCover}';
-        _this.getRoute = 'media-gallery-files/{id}/{?embed,fields}';
-        _this.updateRoute = 'media-gallery-files/{id}';
-        _this.unlinkRoute = 'media-gallery-files/unlink({id}';
-        _this.linkRoute = 'media-gallery-files/';
-        return _this;
-    }
-    Object.defineProperty(MediaGalleryFileRoute.prototype, "batch", {
-        get: function () {
-            return this.mediaGalleryBatchRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Parses find route which can be expanded with additional options. Supported items are:
-     * - `searchQuery` - A string referencing media gallery properties using the phrase search.
-     * - `ids` - Comma separated list of media gallery ids to be retrieved.       *
-     * - `from` - The from date.
-     * - `to` - The to date.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain media gallery subset from the storage.
-     * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the media gallery property to sort the result collection by.
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @method
-     * @param options Query resource options object.
-     * @example mediaGalleryFileRoute.find({searchQuery: '<search-phrase>'});
-     **/
-    MediaGalleryFileRoute.prototype.find = function (options) {
-        return _super.prototype.baseFind.call(this, this.findRoute, options);
-    };
-    /**
-     * Parses get route; this route should be expanded with the Id of media gallery resource.
-     * @method
-     * @param id Media gallery file id which uniquely identifies media gallery resource that needs to be retrieved.
-     * @param options Query resource options object.
-     * @example mediaGalleryFileRoute.get({id: '<media-gallery-id>'});
-     **/
-    MediaGalleryFileRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
-    };
-    /**
-     * Parses update route; this route should be expanded with the Id of media gallery resource.
-     * @method
-     * @param data Media gallery file object used to update specific Media gallery file resource in the system.
-     * @example mediaGalleryFileRoute.update(data);
-     **/
-    MediaGalleryFileRoute.prototype.update = function (data) {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
-    };
-    /**
-     * Parses delete route; this route should be expanded with the Id of media gallery file resource.
-     * @method
-     * @param id Media gallery file object id used to delete specific Media gallery file file resource in the system.
-     * @example mediaGalleryFileRoute.delete({id: '<media-gallery-file--id>'});
-     **/
-    MediaGalleryFileRoute.prototype.unlink = function (id) {
-        return _super.prototype.baseDelete.call(this, this.unlinkRoute, id);
-    };
-    /**
-    * Parses create route; this URI template doesnt support any additional options.
-    * @method
-    * @param data An media gallery file object that needs to be inserted into the system.
-    * @example mediaGalleryFileRoute.create(data);
-    **/
-    MediaGalleryFileRoute.prototype.link = function (data) {
-        return _super.prototype.baseCreate.call(this, this.linkRoute, data);
-    };
-    return MediaGalleryFileRoute;
-}(common_1.BaseRoute));
-MediaGalleryFileRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaGalleryFileBatchRoute)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MediaGalleryFileBatchRoute !== "undefined" && _1.MediaGalleryFileBatchRoute) === "function" && _b || Object])
-], MediaGalleryFileRoute);
-exports.MediaGalleryFileRoute = MediaGalleryFileRoute;
-var _a, _b;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
- */ 
-
-
-/***/ }),
-/* 425 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module mediaGalleryFilesStreamsClient
- * @description  Media Gallery Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
-*/
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-;
-var httpApi_1 = __webpack_require__(4);
-var _1 = __webpack_require__(13);
-var MediaGalleryFileStreamClient = (function () {
-    function MediaGalleryFileStreamClient(mediaGalleryFilesStreamsRoute, apiClient) {
-        this.mediaGalleryFilesStreamsRoute = mediaGalleryFilesStreamsRoute;
-        this.apiClient = apiClient;
-    }
-    Object.defineProperty(MediaGalleryFileStreamClient.prototype, "routeDefinition", {
-        get: function () {
-            return this.mediaGalleryFilesStreamsRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
-     * @method
-     * @param id Media Gallery Entry id which uniquely identifies media gallery file that needs to be retrieved.
-     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
-     * @returns A promise that is resolved once the get action has been performed.
-     * @example // Request the original file stream
-                    mediaGalleryFilesStreamsClient.get({id: '<file-id>'}, {mediaGalleryid: '<media-gallery-id>', t: '<timestamp>'})
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
-    MediaGalleryFileStreamClient.prototype.get = function (id, data) {
-        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(id, data));
-    };
-    /**
-     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
-     * @method
-     * @param id Media Gallery Entry id which uniquely identifies media gallery file that needs to be retrieved.
-     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
-     * @returns A promise that is resolved once the get action has been performed.
-     * @example // Request the original blob
-                    mediaGalleryFilesStreamsClient.getBlob('<file-id>', {mediaGalleryId:'<media-gallery-id>', t: '<timestamp>'})
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
-    MediaGalleryFileStreamClient.prototype.getBlob = function (id, data) {
-        return this.apiClient.get(this.mediaGalleryFilesStreamsRoute.get(id, data), { 'Accept': 'application/octet-stream' });
-    };
-    /**
-     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
-     * @method
-     * @param data Media GalleryFile object used to identify stream that needs to be updated.
-     * @param stream
-     * @returns A promise that is resolved once the update file stream action has been performed.
-     * @example // Update original file stream
-                    mediaGalleryFilesStreamsClient.update({id:'<file-id>'}, <file-stream>)
-                        .then(function (data) {
-                            // perform success action here
-                        },
-                         function (response, status, headers, config) {
-                            // perform error handling here
-                        });
-     **/
-    MediaGalleryFileStreamClient.prototype.update = function (data, stream) {
-        var formData = new FormData();
-        formData.append('file', stream);
-        return this.apiClient.put(this.mediaGalleryFilesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
-    };
-    /**
-     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
-     * @method
-     * @param data Media GalleryFile object that need to be inserted into the system.
-     * @param stream
-     * @returns A promise that is resolved once the create file stream action has been performed.
-     * @example mediaGalleryFilesStreamsClient.create({mediaGalleryId:'<media-gallery-id>'}, <blob>)
-                   .then(function (data) {
-                        // perform success action here
-                   },
-                    function (response, status, headers, config) {
-                       // perform error handling here
-                   });
-    **/
-    MediaGalleryFileStreamClient.prototype.create = function (data, stream) {
-        var formData = new FormData();
-        formData.append('file', stream);
-        return this.apiClient.post(this.mediaGalleryFilesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
-    };
-    return MediaGalleryFileStreamClient;
-}());
-MediaGalleryFileStreamClient = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MediaGalleryFileStreamRoute)),
-    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryFileStreamRoute !== "undefined" && _1.MediaGalleryFileStreamRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
-], MediaGalleryFileStreamClient);
-exports.MediaGalleryFileStreamClient = MediaGalleryFileStreamClient;
-var _a, _b;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
- - All end-point objects are transformed by the associated route service.
-*/ 
-
-
-/***/ }),
-/* 426 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module MediaGalleryFilesStreamsRoute
- * @description Baasic Media Gallery  Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Streams Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
-*/
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-;
-var contracts_1 = __webpack_require__(3);
-var MediaGalleryFileStreamRoute = (function (_super) {
-    tslib_1.__extends(MediaGalleryFileStreamRoute, _super);
-    function MediaGalleryFileStreamRoute(appOptions) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.getRoute = 'media-gallery-file-streams/{id}/{?mediaGalleryId,t}';
-        _this.createRoute = 'media-gallery-file-streams/{filename}/{?mediaGalleryId}';
-        _this.updateRoute = 'media-gallery-file-streams/{id}';
-        return _this;
-    }
-    /**
-     * Parses get route; this route should be expanded with id of desired file stream.
-     * @method
-     * @param id Media Gallery File id which uniquely identifies media gallery whose media gallery file need to be retrieved.
-     * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.
-     * @example mediaGalleryFileStreamRoute.get(id);
-     **/
-    MediaGalleryFileStreamRoute.prototype.get = function (id, data) {
-        if (!this.utility.isObject(data)) {
-            data = {
-                mediaGalleryId: data
-            };
-        }
-        var params = this.utility.extend({}, data);
-        params.id = id;
-        return _super.prototype.baseGet.call(this, this.getRoute, params);
-    };
-    /**
-     * Parses create route; this route should be expanded with the filename which indicates where the stream will be saved.
-     * @method
-     * @param data Media Gallery File object that need to be inserted into the system.
-     * @example mediaGalleryFileStreamRoute.create({filename: '<filename>'});
-     **/
-    MediaGalleryFileStreamRoute.prototype.create = function (data) {
-        return _super.prototype.baseCreate.call(this, this.createRoute, data);
-    };
-    /**
-     * Parses update route; this route should be expanded with the id of the previously saved resource. Additional supported items are:
-     * - `width` - width of derived image to update.
-     * - `height` - height of derived image to update.
-     * @method
-     * @param mediaGalleryId Media Gallery slug or id which uniquely identifies media gallery whose media gallery file need to be updated.
-     * @param data Media Gallery File object used to identify stream that needs to be updated.
-     * @example mediaGalleryFileStreamRoute.update({id: '<filename>'});
-     **/
-    MediaGalleryFileStreamRoute.prototype.update = function (data) {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
-    };
-    return MediaGalleryFileStreamRoute;
-}(common_1.BaseRoute));
-MediaGalleryFileStreamRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
-], MediaGalleryFileStreamRoute);
-exports.MediaGalleryFileStreamRoute = MediaGalleryFileStreamRoute;
-var _a;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
- - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
- - All end-point objects are transformed by the associated route service.
-*/ 
-
-
-/***/ }),
-/* 427 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals module */
-/**
- * @module MediaGalleryRoute
- * @description Baasic Media Gallery Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
- */
-
-var tslib_1 = __webpack_require__(1);
-var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-;
-var _1 = __webpack_require__(13);
-var contracts_1 = __webpack_require__(3);
-var MediaGalleryRoute = (function (_super) {
-    tslib_1.__extends(MediaGalleryRoute, _super);
-    function MediaGalleryRoute(appOptions, mediaGalleryBatchRoute, mediaGallerySettingsRoute) {
-        var _this = _super.call(this, appOptions) || this;
-        _this.appOptions = appOptions;
-        _this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
-        _this.mediaGallerySettingsRoute = mediaGallerySettingsRoute;
-        _this.findRoute = 'media-galleries/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
-        _this.getRoute = 'media-galleries/{id}/{?embed,fields}';
-        _this.updateRoute = 'media-galleries/{id}';
-        _this.deleteRoute = 'media-galleries/{id}';
-        _this.createRoute = 'media-galleries/';
-        _this.purgeRoute = 'media-galleries/purge';
-        return _this;
-    }
-    Object.defineProperty(MediaGalleryRoute.prototype, "batch", {
-        get: function () {
-            return this.mediaGalleryBatchRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(MediaGalleryRoute.prototype, "settings", {
-        get: function () {
-            return this.mediaGallerySettingsRoute;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Parses find route which can be expanded with additional options. Supported items are:
-     * - `searchQuery` - A string referencing media gallery properties using the phrase search.
-     * - `ids` - Comma separated list of media gallery ids to be retrieved.       *
-     * - `from` - The from date.
-     * - `to` - The to date.
-     * - `page` - A value used to set the page number, i.e. to retrieve certain media gallery subset from the storage.
-     * - `rpp` - A value used to limit the size of result set per page.
-     * - `sort` - A string used to set the media gallery property to sort the result collection by.
-     * - `embed` - Comma separated list of resources to be contained within the current representation.
-     * @method
-     * @param options Query resource options object.
-     * @example mediaGalleryRoute.find({searchQuery: '<search-phrase>'});
-     **/
-    MediaGalleryRoute.prototype.find = function (options) {
-        return _super.prototype.baseFind.call(this, this.findRoute, options);
-    };
-    /**
-     * Parses get route; this route should be expanded with the Id of media gallery resource.
-     * @method
-     * @param id Media gallery id which uniquely identifies media gallery resource that needs to be retrieved.
-     * @param options Query resource options object.
-     * @example mediaGalleryRoute.get({id: '<media-gallery-id>'});
-     **/
-    MediaGalleryRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
-    };
-    /**
-     * Parses update route; this route should be expanded with the Id of media gallery resource.
-     * @method
-     * @param data Media gallery object used to update specific Media gallery resource in the system.
-     * @example mediaGalleryRoute.update(data);
-     **/
-    MediaGalleryRoute.prototype.update = function (data) {
-        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
-    };
-    /**
-     * Parses delete route; this route should be expanded with the Id of media gallery resource.
-     * @method
-     * @param data Media gallery object of specific Media gallery resource in the system.
-     * @example mediaGalleryRoute.delete(<media-gallery>);
-     **/
-    MediaGalleryRoute.prototype.delete = function (data) {
-        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
-    };
-    /**
-    * Parses create route; this URI template doesnt support any additional options.
-    * @method
-    * @param data An media gallery  object that needs to be inserted into the system.
-    * @example mediaGalleryRoute.create(data);
-    **/
-    MediaGalleryRoute.prototype.create = function (data) {
-        return _super.prototype.baseCreate.call(this, this.createRoute, data);
-    };
-    /**
-     * Parses purge route; this URI template does not expose any additional options.
-     * @method
-     * @example mediaGalleryPurgeRoute.purge();
-     **/
-    MediaGalleryRoute.prototype.purge = function () {
-        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
-    };
-    return MediaGalleryRoute;
-}(common_1.BaseRoute));
-MediaGalleryRoute = tslib_1.__decorate([
-    inversify_1.injectable(),
-    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
-    tslib_1.__param(1, inversify_1.inject(_1.TYPES.MediaGalleryBatchRoute)),
-    tslib_1.__param(2, inversify_1.inject(_1.TYPES.MediaGallerySettingsRoute)),
-    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.MediaGalleryBatchRoute !== "undefined" && _1.MediaGalleryBatchRoute) === "function" && _b || Object, typeof (_c = typeof _1.MediaGallerySettingsRoute !== "undefined" && _1.MediaGallerySettingsRoute) === "function" && _c || Object])
-], MediaGalleryRoute);
-exports.MediaGalleryRoute = MediaGalleryRoute;
-var _a, _b, _c;
-/**
- * @overview
- ***Notes:**
- - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+<<<<<<< develop
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
  */ 
@@ -30075,17 +37988,31 @@ var _a, _b, _c;
 
 /***/ }),
 /* 428 */
+=======
+ - All end-point objects are transformed by the associated route service.
+    */ 
+
+
+/***/ }),
+/* 289 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module mediaGallerySettingsClient
  * @description  Media Gallery Settings Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Settings Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+=======
+ * @module filesRoute
+ * @description Baasic Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+>>>>>>> Fix jQuery http client reject promise issue
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 ;
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(13);
@@ -30097,11 +38024,34 @@ var MediaGallerySettingsClient = (function () {
     Object.defineProperty(MediaGallerySettingsClient.prototype, "routeDefinition", {
         get: function () {
             return this.mediaGallerySettingsRoute;
+=======
+var common_1 = __webpack_require__(2);
+;
+var _1 = __webpack_require__(19);
+var contracts_1 = __webpack_require__(3);
+var FilesRoute = (function (_super) {
+    tslib_1.__extends(FilesRoute, _super);
+    function FilesRoute(appOptions, filesStreamsRoute) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.filesStreamsRoute = filesStreamsRoute;
+        _this.findRoute = 'files/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'files/{id}/{?embed,fields}';
+        _this.updateRoute = 'files/{id}';
+        _this.unlinkRoute = 'files/unlink/{id}/{?height,width}';
+        _this.linkRoute = 'files/link';
+        return _this;
+    }
+    Object.defineProperty(FilesRoute.prototype, "streams", {
+        get: function () {
+            return this.filesStreamsRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the get action has been performed. Success response returns media gallery settings resource.
      * @method
      * @returns A promise that is resolved once the get action has been performed.
@@ -30337,11 +38287,84 @@ exports.diModule = diModule;
 
 /***/ }),
 /* 439 */
+=======
+     * Parses find route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing file properties using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain file subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the file property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example filesRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    FilesRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param id File id which uniquely identifies file resource that needs to be retrieved.
+     * @param options Query resource options object.
+     * @example filesRoute.get({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses update route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param data A file entry object used to update specific file entry resource in the system.
+     * @example filesRoute.get({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses unlink route; this route should be expanded with the Id of the file resource.
+     * @method
+     * @param data A file entry object used to update specific file entry resource in the system.
+     * @example filesRoute.unlink({id: '<file-id>'});
+     **/
+    FilesRoute.prototype.unlink = function (data, options) {
+        return _super.prototype.baseDelete.call(this, this.unlinkRoute, data, options, 'unlink');
+    };
+    /**
+     * Parses link route; this URI template does not expose any additional options.
+     * @method
+     * @example filesRoute.link();
+     **/
+    FilesRoute.prototype.link = function () {
+        return _super.prototype.baseCreate.call(this, this.linkRoute, {});
+    };
+    return FilesRoute;
+}(common_1.BaseRoute));
+FilesRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.FilesStreamsRoute)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object, typeof (_b = typeof _1.FilesStreamsRoute !== "undefined" && _1.FilesStreamsRoute) === "function" && _b || Object])
+], FilesRoute);
+exports.FilesRoute = FilesRoute;
+var _a, _b;
+/**
+ * @overview
+***Notes:**
+- Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+- [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+- All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 290 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module mediaGalleryInstanceFilesBatchClient
  * @description  Media Gallery Instance Files Batch Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
@@ -30358,11 +38381,31 @@ var MediaGalleryInstanceFilesBatchClient = (function () {
     Object.defineProperty(MediaGalleryInstanceFilesBatchClient.prototype, "routeDefinition", {
         get: function () {
             return this.mediaGalleryInstanceFilesBatchRoute;
+=======
+ * @module filesStreamsClient
+ * @description  Files Streams Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Streams Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+;
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(19);
+var FilesStreamsClient = (function () {
+    function FilesStreamsClient(filesStreamsRoute, apiClient) {
+        this.filesStreamsRoute = filesStreamsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(FilesStreamsClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.filesStreamsRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the unlink action has been performed. This action will remove file resources from the system if successfully completed. Specified file and all its accompanying derived resources will be removed from the system.
      * @method
      * @param mediaGalleryId Media Gallery file id of the original media gallery file used to identify media gallery files on which delete action should be performed.
@@ -30423,10 +38466,115 @@ MediaGalleryInstanceFilesBatchClient = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MediaGalleryInstanceFilesBatchRoute !== "undefined" && _1.MediaGalleryInstanceFilesBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
 ], MediaGalleryInstanceFilesBatchClient);
 exports.MediaGalleryInstanceFilesBatchClient = MediaGalleryInstanceFilesBatchClient;
+=======
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a stream of the derived resource. Otherwise, stream of the original file resource will be retrieved.
+     * @method
+     * @param id File id of the original file resource used to identify stream that needs to be retrieved from the system.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example // Request the original file stream
+                        filesStreamsClient.get({id: '<path>'})
+                            .then(function (data) {
+                                // perform success action here
+                            },
+                             function (response, status, headers, config) {
+                                 // perform error handling here
+                            });
+                // Request derived file stream
+                    filesStreamsClient.get({id: '<path>', width: <width>, height: <height>})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.get = function (data) {
+        return this.apiClient.get(this.routeDefinition.get(data));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the file stream as a blob. If derived resource's format is passed, such as `width` and `height` for the image type of file resource, the operation will return a blob of the derived file resource. Otherwise, blob of the original file resource will be retrieved. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @example // Request the original blob
+                    filesStreamsClient.getBlob('<path>')
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+                // Request derived blob
+                    filesStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>})
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.getBlob = function (data) {
+        return this.apiClient.request({
+            url: this.filesStreamsRoute.get(data),
+            responseType: 'blob',
+            headers: { 'Accept': 'application/octet-stream' },
+            method: 'GET'
+        });
+    };
+    /**
+     * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
+     * @method
+     * @example // Update original file stream
+                    filesStreamsClient.update('<path>', <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+                // Update derived file stream
+                    filesStreamsClient.update({id: '<path>', width: <width>, height: <height>}, <file-stream>)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    FilesStreamsClient.prototype.update = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.put(this.filesStreamsRoute.update(data), data, {});
+    };
+    /**
+     * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
+     * @method
+     * @example filesStreamsClient.create('<path>', <blob>)
+                   .then(function (data) {
+                       // perform success action here
+                   },
+                    function (response, status, headers, config) {
+                        // perform error handling here
+                   });
+    **/
+    FilesStreamsClient.prototype.create = function (data, stream) {
+        var formData = new FormData();
+        formData.append('file', stream);
+        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, {});
+    };
+    return FilesStreamsClient;
+}());
+FilesStreamsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.FilesStreamsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.FilesStreamsRoute !== "undefined" && _1.FilesStreamsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], FilesStreamsClient);
+exports.FilesStreamsClient = FilesStreamsClient;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a, _b;
 /**
  * @overview
  ***Notes:**
+<<<<<<< develop
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
  - All end-point objects are transformed by the associated route service.
 */
@@ -30434,19 +38582,35 @@ var _a, _b;
 
 /***/ }),
 /* 440 */
+=======
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */
+
+
+/***/ }),
+/* 291 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module mediaGalleryInstanceFilesBatchRoute
  * @description Baasic Media Gallery Instance Files Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Batch Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
+=======
+ * @module filesStreamsRoute
+ * @description Baasic Files Streams Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var MediaGalleryInstanceFilesBatchRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryInstanceFilesBatchRoute, _super);
     function MediaGalleryInstanceFilesBatchRoute(appOptions) {
@@ -30495,10 +38659,74 @@ MediaGalleryInstanceFilesBatchRoute = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
 ], MediaGalleryInstanceFilesBatchRoute);
 exports.MediaGalleryInstanceFilesBatchRoute = MediaGalleryInstanceFilesBatchRoute;
+=======
+var FilesStreamsRoute = (function (_super) {
+    tslib_1.__extends(FilesStreamsRoute, _super);
+    function FilesStreamsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.getRoute = 'file-streams/{id}/{?width,height}';
+        _this.updateRoute = 'file-streams/{id}/{?width,height}';
+        _this.createRoute = 'file-streams/{path}';
+        return _this;
+    }
+    /**
+     * Parses get route; this route should be expanded with id or path of desired file stream. Additional supported items are:
+     * - `width` - width of desired derived image.
+     * - `height` - height of desired derived image.
+     * @method
+     * @example filesStreamsRoute.get({id: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.get = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.getRoute, data);
+    };
+    /**
+     * Parses update route; this route should be expanded with the id or path of the previously saved resource. Additional supported items are:
+     * - `width` - width of derived image to update.
+     * - `height` - height of derived image to update.
+     * @method
+     * @example filesStreamsRoute.update({id: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.update = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                id: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses create route; this route should be expanded with the path which indicates where the stream will be saved.
+     * @method
+     * @example filesStreamsRoute.create({path: '<path>'});
+     **/
+    FilesStreamsRoute.prototype.create = function (data) {
+        if (!this.utility.isObject(data)) {
+            data = {
+                path: data
+            };
+        }
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
+    };
+    return FilesStreamsRoute;
+}(common_1.BaseRoute));
+FilesStreamsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], FilesStreamsRoute);
+exports.FilesStreamsRoute = FilesStreamsRoute;
+>>>>>>> Fix jQuery http client reject promise issue
 var _a;
 /**
  * @overview
  ***Notes:**
+<<<<<<< develop
  - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
  - All end-point objects are transformed by the associated route service.
@@ -30515,11 +38743,71 @@ var _a;
  * @module mediaGalleryInstanceFilesClient
  * @description  Media Gallery Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
+=======
+ - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 292 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(292));
+
+
+/***/ }),
+/* 294 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(28);
+var TYPES = {
+    KeyValueClient: Symbol("KeyValueClient"),
+    KeyValueRoute: Symbol("KeyValueRoute")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.KeyValueRoute).to(_1.KeyValueRoute);
+    bind(TYPES.KeyValueClient).to(_1.KeyValueClient);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 295 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @module keyValueClient
+ * @description  Key Value Client provides an easy way to consume  Key Value REST API end-points. In order to obtain needed routes `keyValueClient` uses `baasicKeyValueRouteClient`.
+ */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(13);
 var MediaGalleryInstanceFilesClient = (function () {
     function MediaGalleryInstanceFilesClient(mediaGalleryInstanceFilesRoute, MediaGalleryInstanceFilesBatchClient, apiClient) {
@@ -30537,11 +38825,28 @@ var MediaGalleryInstanceFilesClient = (function () {
     Object.defineProperty(MediaGalleryInstanceFilesClient.prototype, "batch", {
         get: function () {
             return this.MediaGalleryInstanceFilesBatchClient;
+=======
+var _1 = __webpack_require__(28);
+var KeyValueClient = (function () {
+    function KeyValueClient(keyValueRoute, apiClient) {
+        this.keyValueRoute = keyValueRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(KeyValueClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `keyValueRoute`.
+         * @method
+         * @example keyValueClient.routeDefinition.get();
+         **/
+        get: function () {
+            return this.keyValueRoute;
+>>>>>>> Fix jQuery http client reject promise issue
         },
         enumerable: true,
         configurable: true
     });
     /**
+<<<<<<< develop
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of file resources matching the given criteria.
      * @method
      * @param mediaGalleryId Media Galleryslug or id which uniquely identifies media gallery whose media gallery files need to be retrieved.
@@ -30556,6 +38861,18 @@ var MediaGalleryInstanceFilesClient = (function () {
                     from: '',
                     to: '',
                     search : '<search-phrase>'
+=======
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of key value resources matching the given criteria.
+     * @param options query resource options object
+     * @returns A promise that is resolved once the find action has beend performed.
+     * @method
+     * @example keyValueClient.find({
+                 pageNumber: 1,
+                 pageSize: 10,
+                 orderBy: '<field>',
+                 orderDirection: '<asc|desc>',
+                 search: '<search-phrase>'
+>>>>>>> Fix jQuery http client reject promise issue
                 })
                 .then(function (collection) {
                     // perform success action here
@@ -30564,6 +38881,7 @@ var MediaGalleryInstanceFilesClient = (function () {
                     // perform error handling here
                 });
      **/
+<<<<<<< develop
     MediaGalleryInstanceFilesClient.prototype.find = function (mediaGalleryId, options) {
         return this.apiClient.get(this.mediaGalleryInstanceFilesRoute.find(mediaGalleryId, options));
     };
@@ -30692,20 +39010,131 @@ var _a, _b, _c;
 
 /***/ }),
 /* 442 */
+=======
+    KeyValueClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified key value resource.
+     * @param id unique identifer of key value resources
+     * @param options query resource options object
+     * @returns A promise that is resolved once the get action has beend performed.
+     * @method
+     * @example keyValueClient.get('<key-value-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    KeyValueClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.keyValueRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create key value action has been performed; this action creates a new key value resource.
+     * @param data A key value object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create key value action has beend performed.
+     * @method
+     * @example keyValueClient.create({key: '<key>', value: '<value>', })
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     */
+    KeyValueClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update key value action has been performed; this action updates a key value resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicKeyValueRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(keyValue);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @param data A key value object used to update specified key value resource.
+     * @return A promise that is resolved once the update key value action has been performed.
+     * @method
+     * @example // keyValue is a resource previously fetched using get action.
+                   keyValue.value = '<new-value>';
+                   keyValueClient.update(keyValue)
+                   .then(function (data) {
+                       // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    KeyValueClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove action has been performed. This action will remove a key value resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicKeyValueRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(keyValue);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @param data A key value object used to delete specified key value resource.
+     * @returns A promise that is resolved once the remove action has been performed.
+     * @method
+     * @example // keyValue is a resource previously fetched using get action.
+                    keyValueClient.remove(keyValue)
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                        // perform error handling here
+                    });
+     **/
+    KeyValueClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data), this.routeDefinition.deleteParams(data));
+    };
+    return KeyValueClient;
+}());
+KeyValueClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.KeyValueRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.KeyValueRoute !== "undefined" && _1.KeyValueRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], KeyValueClient);
+exports.KeyValueClient = KeyValueClient;
+var _a, _b;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 296 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
  * @module mediaGalleryInstanceFilesRoute
  * @description Baasic Media Gallery Instance Files Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Media Gallery Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
 */
+=======
+ * @module keyValueRoute
+ * @description Baasic Key Value Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Key Value Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
+ */
+>>>>>>> Fix jQuery http client reject promise issue
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(13);
 var MediaGalleryInstanceFilesRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryInstanceFilesRoute, _super);
@@ -30868,6 +39297,93 @@ var _a, _b, _c;
 
 /***/ }),
 /* 445 */
+=======
+var KeyValueRoute = (function (_super) {
+    tslib_1.__extends(KeyValueRoute, _super);
+    function KeyValueRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'key-values/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'key-values/{id}/{?embed,fields}';
+        _this.createRoute = 'key-values';
+        _this.updateRoute = 'key-values/{id}';
+        _this.deleteRoute = 'key-values/{id}';
+        return _this;
+    }
+    /**
+     * Parses find key value route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify key value resources using the phrase search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain key value subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the key value property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param options Query resource options object.
+     * @example keyValueRoute.find(options);
+     **/
+    KeyValueRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses get key value route which must be expanded with the Id of the previously created key value resource in the system.
+     * @method
+     * @param id Key value resource unique identifier.
+     * @param options Query resource options object.
+     * @example keyValueRoute.get();
+     **/
+    KeyValueRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses create key value route; this URI template does not expose any additional options.
+     * @method
+     * @example keyValueRoute.create();
+     **/
+    KeyValueRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update key value route.
+     * @method
+     * @param data Key Value object used to create update route.
+     * @example keyValueRoute.update(data);
+     */
+    KeyValueRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete key value route.
+     * @method
+     * @param data Key Value object used to create delete route.
+     * @example keyValueRoute.delete(data);
+     */
+    KeyValueRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    return KeyValueRoute;
+}(common_1.BaseRoute));
+KeyValueRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], KeyValueRoute);
+exports.KeyValueRoute = KeyValueRoute;
+var _a;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+/* 297 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30881,7 +39397,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(19);
+=======
+var _1 = __webpack_require__(17);
+>>>>>>> Fix jQuery http client reject promise issue
 var MediaVaultBatchClient = (function () {
     function MediaVaultBatchClient(mediaVaultBatchRoute, apiClient) {
         this.mediaVaultBatchRoute = mediaVaultBatchRoute;
@@ -30953,7 +39473,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 446 */
+=======
+/* 298 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31011,7 +39535,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 447 */
+=======
+/* 299 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31025,7 +39553,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(19);
+=======
+var _1 = __webpack_require__(17);
+>>>>>>> Fix jQuery http client reject promise issue
 var MediaVaultClient = (function () {
     function MediaVaultClient(mediaVaultRoute, apiClient, mediaVaultStreamsClient, mediaVaultBatchClient, mediaVaultSettingsClient, mediaVaultProcessingProviderSettingsClient) {
         this.mediaVaultRoute = mediaVaultRoute;
@@ -31129,7 +39661,11 @@ var MediaVaultClient = (function () {
                         });
      **/
     MediaVaultClient.prototype.update = function (data) {
+<<<<<<< develop
         return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+=======
+        return this.apiClient.put(this.routeDefinition.updateParams(data), this.routeDefinition.updateParams(data));
+>>>>>>> Fix jQuery http client reject promise issue
     };
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will remove one or many media vault resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of media vault resource, the operation will remove just derived resource. Otherwise, specified media vault and all its accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaVaultRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
@@ -31183,7 +39719,11 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
+<<<<<<< develop
 /* 448 */
+=======
+/* 300 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31197,7 +39737,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(19);
+=======
+var _1 = __webpack_require__(17);
+>>>>>>> Fix jQuery http client reject promise issue
 var MediaVaultProcessingProviderSettingsClient = (function () {
     function MediaVaultProcessingProviderSettingsClient(mediaVaultProcessingProviderSettingsRoute, apiClient) {
         this.mediaVaultProcessingProviderSettingsRoute = mediaVaultProcessingProviderSettingsRoute;
@@ -31290,7 +39834,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 449 */
+=======
+/* 301 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31364,7 +39912,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 450 */
+=======
+/* 302 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31378,7 +39930,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(19);
+=======
+var _1 = __webpack_require__(17);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var MediaVaultRoute = (function (_super) {
     tslib_1.__extends(MediaVaultRoute, _super);
@@ -31489,7 +40045,11 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
+<<<<<<< develop
 /* 451 */
+=======
+/* 303 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31503,7 +40063,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(19);
+=======
+var _1 = __webpack_require__(17);
+>>>>>>> Fix jQuery http client reject promise issue
 var MediaVaultSettingsClient = (function () {
     function MediaVaultSettingsClient(mediaVaultSettingsRoute, apiClient) {
         this.mediaVaultSettingsRoute = mediaVaultSettingsRoute;
@@ -31566,7 +40130,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 452 */
+=======
+/* 304 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31624,7 +40192,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 453 */
+=======
+/* 305 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31638,7 +40210,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(19);
+=======
+var _1 = __webpack_require__(17);
+>>>>>>> Fix jQuery http client reject promise issue
 var MediaVaultStreamsClient = (function () {
     function MediaVaultStreamsClient(mediaVaultStreamsRoute, apiClient) {
         this.mediaVaultStreamsRoute = mediaVaultStreamsRoute;
@@ -31663,7 +40239,11 @@ var MediaVaultStreamsClient = (function () {
                                  // perform error handling here
                             });
                 // Request derived media vault stream
+<<<<<<< develop
                         mediaVaultStreamsClient.get({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
+=======
+                        mediaVaultStreamsClient.get({id: '<path>', width: <width>, height: <height>})
+>>>>>>> Fix jQuery http client reject promise issue
                             .then(function (data) {
                                 // perform success action here
                             },
@@ -31686,7 +40266,11 @@ var MediaVaultStreamsClient = (function () {
                                  // perform error handling here
                             });
                 // Request derived blob
+<<<<<<< develop
                         mediaVaultStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
+=======
+                        mediaVaultStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>})
+>>>>>>> Fix jQuery http client reject promise issue
                             .then(function (data) {
                                 // perform success action here
                             },
@@ -31762,7 +40346,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 454 */
+=======
+/* 306 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31781,7 +40369,11 @@ var MediaVaultStreamsRoute = (function (_super) {
     function MediaVaultStreamsRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+<<<<<<< develop
         _this.getRoute = 'media-vault-streams/{id}/{?width,height,t}';
+=======
+        _this.getRoute = 'media-vault-streams/{id}/{?width,height}';
+>>>>>>> Fix jQuery http client reject promise issue
         _this.createRoute = 'media-vault-streams/{path}';
         _this.updateRoute = 'media-vault-streams/{id}/{?width,height}';
         return _this;
@@ -31790,7 +40382,10 @@ var MediaVaultStreamsRoute = (function (_super) {
      * Parses get route; this route should be expanded with id or path of desired media vault stream. Additional supported items are:
      * - `width` - width of desired derived image.
      * - `height` - height of desired derived image.
+<<<<<<< develop
      * - `t` - cache invalidation param.
+=======
+>>>>>>> Fix jQuery http client reject promise issue
      * @method
      * @example mediaVaultRoute.get({id: '<path>'});
      **/
@@ -31849,7 +40444,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 455 */
+=======
+/* 307 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31858,7 +40457,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 456 */
+=======
+/* 308 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31866,7 +40469,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 457 */
+=======
+/* 309 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31875,7 +40482,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 458 */
+=======
+/* 310 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31884,7 +40495,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 459 */
+=======
+/* 311 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31892,6 +40507,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(456));
 __export(__webpack_require__(455));
 __export(__webpack_require__(457));
@@ -31900,13 +40516,28 @@ __export(__webpack_require__(458));
 
 /***/ }),
 /* 460 */
+=======
+__export(__webpack_require__(308));
+__export(__webpack_require__(307));
+__export(__webpack_require__(309));
+__export(__webpack_require__(310));
+
+
+/***/ }),
+/* 312 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(19);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(17);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     MediaVaultBatchRoute: Symbol("MediaVaultBatchRoute"),
     MediaVaultBatchClient: Symbol("MediaVaultBatchClient"),
@@ -31936,7 +40567,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 461 */
+=======
+/* 313 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31944,7 +40579,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 462 */
+=======
+/* 314 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31952,7 +40591,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 463 */
+=======
+/* 315 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31961,7 +40604,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 464 */
+=======
+/* 316 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31970,7 +40617,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 465 */
+=======
+/* 317 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31978,7 +40629,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 466 */
+=======
+/* 318 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31987,7 +40642,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 467 */
+=======
+/* 319 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31995,7 +40654,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 468 */
+=======
+/* 320 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32004,7 +40667,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 469 */
+=======
+/* 321 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32013,7 +40680,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 470 */
+=======
+/* 322 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32022,7 +40693,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 471 */
+=======
+/* 323 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32031,7 +40706,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 472 */
+=======
+/* 324 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32039,7 +40718,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 473 */
+=======
+/* 325 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32048,7 +40731,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 474 */
+=======
+/* 326 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32057,7 +40744,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 475 */
+=======
+/* 327 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32065,7 +40756,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 476 */
+=======
+/* 328 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32073,7 +40768,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 477 */
+=======
+/* 329 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32081,7 +40780,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 478 */
+=======
+/* 330 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32090,7 +40793,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 479 */
+=======
+/* 331 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32099,7 +40806,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 480 */
+=======
+/* 332 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32108,7 +40819,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 481 */
+=======
+/* 333 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32116,6 +40831,7 @@ exports.diModule = diModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(471));
 __export(__webpack_require__(472));
 __export(__webpack_require__(470));
@@ -32140,13 +40856,44 @@ __export(__webpack_require__(465));
 
 /***/ }),
 /* 482 */
+=======
+__export(__webpack_require__(323));
+__export(__webpack_require__(324));
+__export(__webpack_require__(322));
+__export(__webpack_require__(328));
+__export(__webpack_require__(329));
+__export(__webpack_require__(316));
+__export(__webpack_require__(321));
+__export(__webpack_require__(320));
+__export(__webpack_require__(332));
+__export(__webpack_require__(327));
+__export(__webpack_require__(330));
+__export(__webpack_require__(313));
+__export(__webpack_require__(314));
+__export(__webpack_require__(315));
+__export(__webpack_require__(325));
+__export(__webpack_require__(326));
+__export(__webpack_require__(318));
+__export(__webpack_require__(319));
+__export(__webpack_require__(331));
+__export(__webpack_require__(317));
+
+
+/***/ }),
+/* 334 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(11);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     LoginRoute: Symbol("LoginRoute"),
     LoginClient: Symbol("LoginClient"),
@@ -32198,7 +40945,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 483 */
+=======
+/* 335 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32213,7 +40964,11 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var LoginClient = (function () {
     function LoginClient(loginRoute, tokenHandler, apiClient) {
         this.loginRoute = loginRoute;
@@ -32352,7 +41107,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 484 */
+=======
+/* 336 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32405,7 +41164,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 485 */
+=======
+/* 337 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32419,7 +41182,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var LoginSocialClient = (function () {
     function LoginSocialClient(loginSocialRoute, tokenHandler, apiClient) {
         this.loginSocialRoute = loginSocialRoute;
@@ -32545,7 +41312,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 486 */
+=======
+/* 338 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32611,7 +41382,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 487 */
+=======
+/* 339 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32625,7 +41400,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var common_1 = __webpack_require__(2);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var httpApi_1 = __webpack_require__(4);
 var LookupClient = (function () {
     function LookupClient(lookupRoute, apiClient) {
@@ -32700,7 +41479,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 488 */
+=======
+/* 340 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32753,7 +41536,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 489 */
+=======
+/* 341 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32766,7 +41553,11 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var PasswordRecoveryClient = (function () {
     function PasswordRecoveryClient(passwordRecoveryRoute, apiClient) {
         this.passwordRecoveryRoute = passwordRecoveryRoute;
@@ -32843,7 +41634,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 490 */
+=======
+/* 342 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32895,7 +41690,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 491 */
+=======
+/* 343 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32910,7 +41709,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var common_1 = __webpack_require__(2);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var PermissionClient = (function () {
     function PermissionClient(permissionRoute, apiClient, application) {
@@ -33235,7 +42038,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 492 */
+=======
+/* 344 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33399,7 +42206,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 493 */
+=======
+/* 345 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33413,7 +42224,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var RegisterClient = (function () {
     function RegisterClient(registerRoute, apiClient, tokenHandler) {
         this.registerRoute = registerRoute;
@@ -33507,7 +42322,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 494 */
+=======
+/* 346 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33572,7 +42391,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 495 */
+=======
+/* 347 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33586,7 +42409,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var RoleBatchClient = (function () {
     function RoleBatchClient(roleBatchRoute, apiClient) {
         this.roleBatchRoute = roleBatchRoute;
@@ -33684,7 +42511,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 496 */
+=======
+/* 348 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33763,7 +42594,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 497 */
+=======
+/* 349 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33777,7 +42612,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var RoleClient = (function () {
     function RoleClient(roleBatchClient, roleRoute, apiClient) {
         this.roleBatchClient = roleBatchClient;
@@ -33927,7 +42766,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 498 */
+=======
+/* 350 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33942,7 +42785,11 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var RoleRoute = (function (_super) {
     tslib_1.__extends(RoleRoute, _super);
     function RoleRoute(appOptions, roleBatchRoute) {
@@ -34051,13 +42898,21 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 499 */
+=======
+/* 351 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var inversify_1 = __webpack_require__(0);
 var Root = (function () {
     function Root(login, loginSocial, passwordRecovery, register, role, user, permissions, lookups) {
@@ -34089,7 +42944,11 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 
 /***/ }),
+<<<<<<< develop
 /* 500 */
+=======
+/* 352 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34103,7 +42962,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserClient = (function () {
     function UserClient(userRoute, userSocialLoginClient, apiClient) {
         this.userRoute = userRoute;
@@ -34375,7 +43238,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 501 */
+=======
+/* 353 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34389,7 +43256,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var UserRoute = (function (_super) {
     tslib_1.__extends(UserRoute, _super);
@@ -34536,7 +43407,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 502 */
+=======
+/* 354 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34550,7 +43425,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(11);
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserSocialLoginClient = (function () {
     function UserSocialLoginClient(userSocialLoginRoute, apiClient) {
         this.userSocialLoginRoute = userSocialLoginRoute;
@@ -34620,7 +43499,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 503 */
+=======
+/* 355 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34704,7 +43587,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 504 */
+=======
+/* 356 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34713,7 +43600,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 505 */
+=======
+/* 357 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34722,7 +43613,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 506 */
+=======
+/* 358 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34731,7 +43626,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 507 */
+=======
+/* 359 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34739,6 +43638,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(504));
 __export(__webpack_require__(505));
 __export(__webpack_require__(506));
@@ -34746,13 +43646,27 @@ __export(__webpack_require__(506));
 
 /***/ }),
 /* 508 */
+=======
+__export(__webpack_require__(356));
+__export(__webpack_require__(357));
+__export(__webpack_require__(358));
+
+
+/***/ }),
+/* 360 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(14);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     MeteringACLClient: Symbol("MeteringACLClient"),
     MeteringACLRoute: Symbol("MeteringACLRoute"),
@@ -34790,7 +43704,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 509 */
+=======
+/* 361 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34804,7 +43722,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var MeteringACLClient = (function () {
     function MeteringACLClient(meteringACLRoute, apiClient) {
         this.meteringACLRoute = meteringACLRoute;
@@ -34921,7 +43843,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 510 */
+=======
+/* 362 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35045,7 +43971,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 511 */
+=======
+/* 363 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35059,7 +43989,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var MeteringBatchClient = (function () {
     function MeteringBatchClient(meteringBatchRoute, apiClient) {
         this.meteringBatchRoute = meteringBatchRoute;
@@ -35147,7 +44081,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 512 */
+=======
+/* 364 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35218,7 +44156,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 513 */
+=======
+/* 365 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35231,7 +44173,11 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var MeteringCategoryBatchClient = (function () {
     function MeteringCategoryBatchClient(meteringCategoryBatchRoute, apiClient) {
         this.meteringCategoryBatchRoute = meteringCategoryBatchRoute;
@@ -35321,7 +44267,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 514 */
+=======
+/* 366 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35391,7 +44341,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 515 */
+=======
+/* 367 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35405,7 +44359,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var MeteringCategoryClient = (function () {
     function MeteringCategoryClient(meteringCategoryRoute, apiClient, meteringCategoryBatchClient) {
         this.meteringCategoryRoute = meteringCategoryRoute;
@@ -35553,7 +44511,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 516 */
+=======
+/* 368 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35566,7 +44528,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var MeteringCategoryRoute = (function (_super) {
     tslib_1.__extends(MeteringCategoryRoute, _super);
@@ -35661,7 +44627,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 517 */
+=======
+/* 369 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35675,7 +44645,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var MeteringClient = (function () {
     function MeteringClient(meteringRoute, apiClient, meteringBatchClient, meteringStatisticsClient, meteringACLClient, meteringCategoryClient, meteringSettingsClient) {
         this.meteringRoute = meteringRoute;
@@ -35872,7 +44846,11 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
+<<<<<<< develop
 /* 518 */
+=======
+/* 370 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35886,7 +44864,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var MeteringRoute = (function (_super) {
     tslib_1.__extends(MeteringRoute, _super);
@@ -36017,7 +44999,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< develop
 /* 519 */
+=======
+/* 371 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36031,7 +45017,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var MeteringSettingsClient = (function () {
     function MeteringSettingsClient(meteringSettingsRoute, apiClient) {
         this.meteringSettingsRoute = meteringSettingsRoute;
@@ -36102,7 +45092,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 520 */
+=======
+/* 372 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36165,7 +45159,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 521 */
+=======
+/* 373 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36179,7 +45177,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(14);
+=======
+var _1 = __webpack_require__(12);
+>>>>>>> Fix jQuery http client reject promise issue
 var MeteringStatisticsClient = (function () {
     function MeteringStatisticsClient(meteringStatisticsRoute, apiClient) {
         this.meteringStatisticsRoute = meteringStatisticsRoute;
@@ -36244,7 +45246,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 522 */
+=======
+/* 374 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36312,7 +45318,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 523 */
+=======
+/* 375 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36321,7 +45331,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 524 */
+=======
+/* 376 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36330,7 +45344,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 525 */
+=======
+/* 377 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36339,7 +45357,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 526 */
+=======
+/* 378 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36348,7 +45370,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 527 */
+=======
+/* 379 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36357,7 +45383,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 528 */
+=======
+/* 380 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36366,7 +45396,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 529 */
+=======
+/* 381 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36374,6 +45408,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(525));
 __export(__webpack_require__(526));
 __export(__webpack_require__(528));
@@ -36384,13 +45419,30 @@ __export(__webpack_require__(527));
 
 /***/ }),
 /* 530 */
+=======
+__export(__webpack_require__(377));
+__export(__webpack_require__(378));
+__export(__webpack_require__(380));
+__export(__webpack_require__(375));
+__export(__webpack_require__(376));
+__export(__webpack_require__(379));
+
+
+/***/ }),
+/* 382 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(8);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     NotificationsClient: Symbol("NotificationsClient"),
     NotificationsPublishBatchClient: Symbol("NotificationsPublishBatchClient"),
@@ -36456,7 +45508,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 531 */
+=======
+/* 383 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36468,7 +45524,11 @@ exports.diModule = diModule;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsClient = (function () {
     function NotificationsClient(notificationsPublishClient, basicNotificationsSubscriptionsClient, notificationsRegistrationsClient, notificationsSettingsClient, notificationsRoute) {
         this.notificationsPublishClient = notificationsPublishClient;
@@ -36534,7 +45594,11 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
+<<<<<<< develop
 /* 532 */
+=======
+/* 384 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36547,7 +45611,11 @@ var _a, _b, _c, _d, _e;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsPublishBatchClient = (function () {
     function NotificationsPublishBatchClient(notificationsPublishBatchRoute, apiClient) {
         this.notificationsPublishBatchRoute = notificationsPublishBatchRoute;
@@ -36603,7 +45671,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 533 */
+=======
+/* 385 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36652,7 +45724,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 534 */
+=======
+/* 386 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36665,7 +45741,11 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsPublishClient = (function () {
     function NotificationsPublishClient(notificationsPublishRoute, notificationsPublishBatchClient, apiClient) {
         this.notificationsPublishRoute = notificationsPublishRoute;
@@ -36730,7 +45810,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 535 */
+=======
+/* 387 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36744,7 +45828,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsPublishRoute = (function (_super) {
     tslib_1.__extends(NotificationsPublishRoute, _super);
     function NotificationsPublishRoute(appOptions, notificationsPublishBatchRoute) {
@@ -36785,7 +45873,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 536 */
+=======
+/* 388 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36799,7 +45891,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRegistrationsAnonymousBatchClient = (function () {
     function NotificationsRegistrationsAnonymousBatchClient(notificationsRegistrationsAnonymousBatchRoute, apiClient) {
         this.notificationsRegistrationsAnonymousBatchRoute = notificationsRegistrationsAnonymousBatchRoute;
@@ -36883,7 +45979,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 537 */
+=======
+/* 389 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36949,7 +46049,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 538 */
+=======
+/* 390 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36963,7 +46067,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRegistrationsAnonymousClient = (function () {
     function NotificationsRegistrationsAnonymousClient(notificationsRegistrationsAnonymousRoute, notificationsRegistrationsAnonymousBatchClient, apiClient) {
         this.notificationsRegistrationsAnonymousRoute = notificationsRegistrationsAnonymousRoute;
@@ -37108,7 +46216,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 539 */
+=======
+/* 391 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37123,7 +46235,11 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRegistrationsAnonymousRoute = (function (_super) {
     tslib_1.__extends(NotificationsRegistrationsAnonymousRoute, _super);
     function NotificationsRegistrationsAnonymousRoute(appOptions, notificationsRegistrationsAnonymousBatchRoute) {
@@ -37218,7 +46334,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 540 */
+=======
+/* 392 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37230,7 +46350,11 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRegistrationsClient = (function () {
     function NotificationsRegistrationsClient(notificationsRegistrationsRoute, notificationsRegistrationsAnonymousClient, notificationsRegistrationsUsersClient) {
         this.notificationsRegistrationsRoute = notificationsRegistrationsRoute;
@@ -37278,7 +46402,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 541 */
+=======
+/* 393 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37292,7 +46420,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRegistrationsRoute = (function (_super) {
     tslib_1.__extends(NotificationsRegistrationsRoute, _super);
     function NotificationsRegistrationsRoute(appOptions, notificationsRegistrationsUsersRoute, notificationsRegistrationsAnonymousRoute) {
@@ -37337,7 +46469,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 542 */
+=======
+/* 394 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37351,7 +46487,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRegistrationsUsersBatchClient = (function () {
     function NotificationsRegistrationsUsersBatchClient(notificationsRegistrationsUsersBatchRoute, apiClient) {
         this.notificationsRegistrationsUsersBatchRoute = notificationsRegistrationsUsersBatchRoute;
@@ -37435,7 +46575,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 543 */
+=======
+/* 395 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37503,7 +46647,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 544 */
+=======
+/* 396 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37517,7 +46665,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRegistrationsUsersClient = (function () {
     function NotificationsRegistrationsUsersClient(notificationsRegistrationsUsersRoute, notificationsRegistrationsUsersBatchClient, apiClient) {
         this.notificationsRegistrationsUsersRoute = notificationsRegistrationsUsersRoute;
@@ -37661,7 +46813,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 545 */
+=======
+/* 397 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37676,7 +46832,11 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRegistrationsUsersRoute = (function (_super) {
     tslib_1.__extends(NotificationsRegistrationsUsersRoute, _super);
     function NotificationsRegistrationsUsersRoute(appOptions, notificationsRegistrationsUsersBatchRoute) {
@@ -37769,7 +46929,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 546 */
+=======
+/* 398 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37783,7 +46947,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsRoute = (function (_super) {
     tslib_1.__extends(NotificationsRoute, _super);
     function NotificationsRoute(appOptions, notificationsPublishRoute, basicNotificationsSubscriptionsRoute, notificationsRegistrationsRoute, notificationsSettingsRoute) {
@@ -37846,7 +47014,11 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
+<<<<<<< develop
 /* 547 */
+=======
+/* 399 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37859,7 +47031,11 @@ var _a, _b, _c, _d, _e;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSettingsClient = (function () {
     function NotificationsSettingsClient(notificationsSettingsRoute, apiClient) {
         this.notificationsSettingsRoute = notificationsSettingsRoute;
@@ -37928,7 +47104,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 548 */
+=======
+/* 400 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37988,7 +47168,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 549 */
+=======
+/* 401 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38002,7 +47186,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSubscriptionsAnonymousBatchClient = (function () {
     function NotificationsSubscriptionsAnonymousBatchClient(notificationsSubscriptionsAnonymousBatchRoute, apiClient) {
         this.notificationsSubscriptionsAnonymousBatchRoute = notificationsSubscriptionsAnonymousBatchRoute;
@@ -38085,7 +47273,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 550 */
+=======
+/* 402 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38153,7 +47345,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 551 */
+=======
+/* 403 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38167,7 +47363,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSubscriptionsAnonymousClient = (function () {
     function NotificationsSubscriptionsAnonymousClient(notificationsSubscriptionsAnonymousRoute, notificationsSubscriptionsAnonymousBatchClient, apiClient) {
         this.notificationsSubscriptionsAnonymousRoute = notificationsSubscriptionsAnonymousRoute;
@@ -38312,7 +47512,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 552 */
+=======
+/* 404 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38327,7 +47531,11 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSubscriptionsAnonymousRoute = (function (_super) {
     tslib_1.__extends(NotificationsSubscriptionsAnonymousRoute, _super);
     function NotificationsSubscriptionsAnonymousRoute(notificationsSubscriptionsAnonymousBatchRoute, appOptions) {
@@ -38423,7 +47631,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 553 */
+=======
+/* 405 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38435,7 +47647,11 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSubscriptionsClient = (function () {
     function NotificationsSubscriptionsClient(notificationsSubscriptionsRoute, notificationsSubscriptionsAnonymousClient, notificationsSubscriptionsUsersClient) {
         this.notificationsSubscriptionsRoute = notificationsSubscriptionsRoute;
@@ -38483,7 +47699,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 554 */
+=======
+/* 406 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38497,7 +47717,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSubscriptionsRoute = (function (_super) {
     tslib_1.__extends(NotificationsSubscriptionsRoute, _super);
     function NotificationsSubscriptionsRoute(notificationsSubscriptionsAnonymousRoute, notificationsSubscriptionsUsersRoute, appOptions) {
@@ -38542,7 +47766,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 555 */
+=======
+/* 407 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38556,7 +47784,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSubscriptionsUsersBatchClient = (function () {
     function NotificationsSubscriptionsUsersBatchClient(notificationsSubscriptionsUsersBatchRoute, apiClient) {
         this.notificationsSubscriptionsUsersBatchRoute = notificationsSubscriptionsUsersBatchRoute;
@@ -38639,7 +47871,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 556 */
+=======
+/* 408 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38707,7 +47943,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 557 */
+=======
+/* 409 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38721,7 +47961,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSubscriptionsUsersClient = (function () {
     function NotificationsSubscriptionsUsersClient(notificationsSubscriptionsUsersRoute, NotificationsSubscriptionsUsersBatchClient, apiClient) {
         this.notificationsSubscriptionsUsersRoute = notificationsSubscriptionsUsersRoute;
@@ -38865,7 +48109,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 558 */
+=======
+/* 410 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38880,7 +48128,11 @@ var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
 var contracts_1 = __webpack_require__(3);
+<<<<<<< develop
 var _1 = __webpack_require__(8);
+=======
+var _1 = __webpack_require__(7);
+>>>>>>> Fix jQuery http client reject promise issue
 var NotificationsSubscriptionsUsersRoute = (function (_super) {
     tslib_1.__extends(NotificationsSubscriptionsUsersRoute, _super);
     function NotificationsSubscriptionsUsersRoute(appOptions, notificationsSubscriptionsUsersBatchRoute) {
@@ -38968,7 +48220,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 559 */
+=======
+/* 411 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38977,7 +48233,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 560 */
+=======
+/* 412 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38985,18 +48245,31 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(559));
 
 
 /***/ }),
 /* 561 */
+=======
+__export(__webpack_require__(411));
+
+
+/***/ }),
+/* 413 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(24);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(22);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     TemplatingBatchClient: Symbol("TemplatingBatchClient"),
     TemplatingBatchRoute: Symbol("TemplatingBatchRoute"),
@@ -39014,7 +48287,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 562 */
+=======
+/* 414 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39028,7 +48305,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(24);
+=======
+var _1 = __webpack_require__(22);
+>>>>>>> Fix jQuery http client reject promise issue
 var TemplatingBatchClient = (function () {
     function TemplatingBatchClient(templatingBatchRoute, apiClient) {
         this.templatingBatchRoute = templatingBatchRoute;
@@ -39108,7 +48389,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 563 */
+=======
+/* 415 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39175,7 +48460,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 564 */
+=======
+/* 416 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39189,7 +48478,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(24);
+=======
+var _1 = __webpack_require__(22);
+>>>>>>> Fix jQuery http client reject promise issue
 var TemplatingClient = (function () {
     function TemplatingClient(templatingRoute, templatingBatchClient, apiClient) {
         this.templatingRoute = templatingRoute;
@@ -39327,7 +48620,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 565 */
+=======
+/* 417 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39341,7 +48638,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(24);
+=======
+var _1 = __webpack_require__(22);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var TemplatingRoute = (function (_super) {
     tslib_1.__extends(TemplatingRoute, _super);
@@ -39433,7 +48734,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 566 */
+=======
+/* 418 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39446,7 +48751,11 @@ var _a, _b;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var CompanyBatchClient = (function () {
     function CompanyBatchClient(companyBatchRoute, apiClient) {
         this.companyBatchRoute = companyBatchRoute;
@@ -39530,7 +48839,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 567 */
+=======
+/* 419 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39596,7 +48909,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 568 */
+=======
+/* 420 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39610,7 +48927,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var CompanyClient = (function () {
     function CompanyClient(companyBatchClient, companyRoute, apiClient) {
         this.companyBatchClient = companyBatchClient;
@@ -39753,7 +49074,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 569 */
+=======
+/* 421 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39767,7 +49092,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var CompanyRoute = (function (_super) {
     tslib_1.__extends(CompanyRoute, _super);
@@ -39846,7 +49175,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 570 */
+=======
+/* 422 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39855,7 +49188,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 571 */
+=======
+/* 423 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39864,7 +49201,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 572 */
+=======
+/* 424 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39873,7 +49214,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 573 */
+=======
+/* 425 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39882,7 +49227,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 574 */
+=======
+/* 426 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39891,7 +49240,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 575 */
+=======
+/* 427 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39900,7 +49253,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 576 */
+=======
+/* 428 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39909,7 +49266,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 577 */
+=======
+/* 429 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39918,7 +49279,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 578 */
+=======
+/* 430 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39927,7 +49292,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 579 */
+=======
+/* 431 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39936,7 +49305,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 580 */
+=======
+/* 432 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39945,7 +49318,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 581 */
+=======
+/* 433 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39954,7 +49331,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 582 */
+=======
+/* 434 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39962,6 +49343,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(570));
 __export(__webpack_require__(572));
 __export(__webpack_require__(575));
@@ -39978,13 +49360,36 @@ __export(__webpack_require__(581));
 
 /***/ }),
 /* 583 */
+=======
+__export(__webpack_require__(422));
+__export(__webpack_require__(424));
+__export(__webpack_require__(427));
+__export(__webpack_require__(428));
+__export(__webpack_require__(426));
+__export(__webpack_require__(425));
+__export(__webpack_require__(423));
+__export(__webpack_require__(430));
+__export(__webpack_require__(431));
+__export(__webpack_require__(429));
+__export(__webpack_require__(432));
+__export(__webpack_require__(433));
+
+
+/***/ }),
+/* 435 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(9);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     CompanyBatchClient: Symbol("CompanyBatchClient"),
     CompanyBatchRoute: Symbol("CompanyBatchRoute"),
@@ -40048,7 +49453,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 584 */
+=======
+/* 436 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40061,7 +49470,11 @@ exports.diModule = diModule;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var OrganizationBatchClient = (function () {
     function OrganizationBatchClient(organizationBatchRoute, apiClient) {
         this.organizationBatchRoute = organizationBatchRoute;
@@ -40143,7 +49556,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 585 */
+=======
+/* 437 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40209,7 +49626,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 586 */
+=======
+/* 438 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40223,7 +49644,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var OrganizationClient = (function () {
     function OrganizationClient(organizationRoute, organizationBatchClient, apiClient) {
         this.organizationRoute = organizationRoute;
@@ -40360,7 +49785,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 587 */
+=======
+/* 439 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40374,7 +49803,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var OrganizationRoute = (function (_super) {
     tslib_1.__extends(OrganizationRoute, _super);
@@ -40465,13 +49898,21 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 588 */
+=======
+/* 440 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var inversify_1 = __webpack_require__(0);
 var Root = (function () {
     function Root(profile, company, organization, skill) {
@@ -40495,7 +49936,11 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
+<<<<<<< develop
 /* 589 */
+=======
+/* 441 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40508,7 +49953,11 @@ var _a, _b, _c, _d;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var SkillBatchClient = (function () {
     function SkillBatchClient(skillBatchRoute, apiClient) {
         this.skillBatchRoute = skillBatchRoute;
@@ -40592,7 +50041,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 590 */
+=======
+/* 442 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40658,7 +50111,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 591 */
+=======
+/* 443 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40672,7 +50129,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var SkillClient = (function () {
     function SkillClient(skillRoute, skillBatchClient, apiClient) {
         this.skillRoute = skillRoute;
@@ -40808,7 +50269,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 592 */
+=======
+/* 444 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40822,7 +50287,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var SkillRoute = (function (_super) {
     tslib_1.__extends(SkillRoute, _super);
@@ -40831,7 +50300,11 @@ var SkillRoute = (function (_super) {
         _this.appOptions = appOptions;
         _this.skillBatchRoute = skillBatchRoute;
         _this.findRoute = 'profile/lookups/skills/{?searchQuery,page,rpp,sort,embed,fields}';
+<<<<<<< develop
         _this.getRoute = 'profile/lookups/skills/{id}/{?embed,fields}';
+=======
+        _this.getRoute = 'profile/lookups/skills';
+>>>>>>> Fix jQuery http client reject promise issue
         _this.createRoute = 'profile/lookups/skills';
         _this.updateRoute = 'profile/lookups/skills/{id}';
         _this.deleteRoute = 'lookups/skills/{id}';
@@ -40906,7 +50379,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 593 */
+=======
+/* 445 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40919,7 +50396,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserEducationClient = (function () {
     function UserEducationClient(userEducationRoute, apiClient) {
         this.userEducationRoute = userEducationRoute;
@@ -41048,7 +50529,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 594 */
+=======
+/* 446 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41144,7 +50629,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 595 */
+=======
+/* 447 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41158,7 +50647,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserProfileACLClient = (function () {
     function UserProfileACLClient(userProfileACLRoute, apiClient) {
         this.userProfileACLRoute = userProfileACLRoute;
@@ -41276,7 +50769,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 596 */
+=======
+/* 448 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41395,7 +50892,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 597 */
+=======
+/* 449 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41409,7 +50910,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserProfileAvatarClient = (function () {
     function UserProfileAvatarClient(userProfileAvatarRoute, userProfileAvatarStreamsClient, apiClient) {
         this.userProfileAvatarRoute = userProfileAvatarRoute;
@@ -41528,7 +51033,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 598 */
+=======
+/* 450 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41542,7 +51051,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var UserProfileAvatarRoute = (function (_super) {
     tslib_1.__extends(UserProfileAvatarRoute, _super);
@@ -41631,7 +51144,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 599 */
+=======
+/* 451 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41644,7 +51161,11 @@ var _a, _b;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserProfileAvatarStreamsClient = (function () {
     function UserProfileAvatarStreamsClient(userProfileAvatarStreamsRoute, apiClient) {
         this.userProfileAvatarStreamsRoute = userProfileAvatarStreamsRoute;
@@ -41671,7 +51192,11 @@ var UserProfileAvatarStreamsClient = (function () {
                              // perform error handling here
                         });
                     // Request derived file stream
+<<<<<<< develop
                     userProfileAvatarStreamsClient.get({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
+=======
+                    userProfileAvatarStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+>>>>>>> Fix jQuery http client reject promise issue
                         .then(function (data) {
                             // perform success action here
                         },
@@ -41694,7 +51219,11 @@ var UserProfileAvatarStreamsClient = (function () {
                              // perform error handling here
                         });
                         // Request derived blob
+<<<<<<< develop
                         userProfileAvatarStreamsClient.getBlob({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
+=======
+                        userProfileAvatarStreamsClient.getBlob({id: '<file-id>', width: <width>, height: <height>})
+>>>>>>> Fix jQuery http client reject promise issue
                             .then(function (data) {
                                 // perform success action here
                             },
@@ -41728,7 +51257,11 @@ var UserProfileAvatarStreamsClient = (function () {
     UserProfileAvatarStreamsClient.prototype.create = function (id, data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
+<<<<<<< develop
         return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), formData, { 'Content-Type': undefined });
+=======
+        return this.apiClient.post(this.userProfileAvatarStreamsRoute.create(id, data), data, { 'Content-Type': undefined });
+>>>>>>> Fix jQuery http client reject promise issue
     };
     /**
      * Returns a promise that is resolved once the update file stream action has been performed; this action will replace the existing stream with a new one. Alternatively, if a derived stream is being updated it will either create a new derived stream or replace the existing one. In order to update a derived stream, format needs to be passed (For example: `width` and `height` for the image type of file stream data type).
@@ -41756,7 +51289,11 @@ var UserProfileAvatarStreamsClient = (function () {
     UserProfileAvatarStreamsClient.prototype.update = function (data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
+<<<<<<< develop
         return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), formData, { 'Content-Type': undefined });
+=======
+        return this.apiClient.put(this.userProfileAvatarStreamsRoute.update(data), data, { 'Content-Type': undefined });
+>>>>>>> Fix jQuery http client reject promise issue
     };
     return UserProfileAvatarStreamsClient;
 }());
@@ -41777,7 +51314,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 600 */
+=======
+/* 452 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41796,7 +51337,11 @@ var UserProfileAvatarStreamsRoute = (function (_super) {
     function UserProfileAvatarStreamsRoute(appOptions) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
+<<<<<<< develop
         _this.getRoute = 'profiles/{id}/avatar-streams/{?width,height,t}';
+=======
+        _this.getRoute = 'profiles/{id}/avatar-streams/{?width,height}';
+>>>>>>> Fix jQuery http client reject promise issue
         _this.createRoute = 'profiles/{id}/avatar-streams/{filename}';
         _this.updateRoute = 'profiles/{id}/avatar-streams/{?width,height}';
         return _this;
@@ -41805,7 +51350,10 @@ var UserProfileAvatarStreamsRoute = (function (_super) {
      * Parses get route; this route should be expanded with id of profile. Additional supported items are:
      * - `width` - width of desired derived image.
      * - `height` - height of desired derived image.
+<<<<<<< develop
      * - `t` - cache invalidation param.
+=======
+>>>>>>> Fix jQuery http client reject promise issue
      * @method
      * @example userProfileAvatarStreamsRoute.get({id: '<file-id>'});
      **/
@@ -41866,7 +51414,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 601 */
+=======
+/* 453 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41880,7 +51432,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserProfileClient = (function () {
     function UserProfileClient(userProfileACLClient, userProfileRoute, apiClient, userEducationClient, userProfileAvatarClient, userSkillClient, userWorkClient) {
         this.userProfileACLClient = userProfileACLClient;
@@ -42061,7 +51617,11 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 
 /***/ }),
+<<<<<<< develop
 /* 602 */
+=======
+/* 454 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42075,7 +51635,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var UserProfileRoute = (function (_super) {
     tslib_1.__extends(UserProfileRoute, _super);
@@ -42169,7 +51733,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 603 */
+=======
+/* 455 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42183,7 +51751,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserSkillClient = (function () {
     function UserSkillClient(userSkillRoute, apiClient) {
         this.userSkillRoute = userSkillRoute;
@@ -42313,7 +51885,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 604 */
+=======
+/* 456 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42409,7 +51985,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 605 */
+=======
+/* 457 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42423,7 +52003,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(9);
+=======
+var _1 = __webpack_require__(8);
+>>>>>>> Fix jQuery http client reject promise issue
 var UserWorkClient = (function () {
     function UserWorkClient(userWorkRoute, apiClient) {
         this.userWorkRoute = userWorkRoute;
@@ -42550,7 +52134,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 606 */
+=======
+/* 458 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42640,7 +52228,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 607 */
+=======
+/* 459 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42649,7 +52241,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 608 */
+=======
+/* 460 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42658,7 +52254,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 609 */
+=======
+/* 461 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42666,19 +52266,33 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 __export(__webpack_require__(608));
 __export(__webpack_require__(607));
 
 
 /***/ }),
 /* 610 */
+=======
+__export(__webpack_require__(460));
+__export(__webpack_require__(459));
+
+
+/***/ }),
+/* 462 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(25);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(23);
+>>>>>>> Fix jQuery http client reject promise issue
 var TYPES = {
     ValueSetClient: Symbol("ValueSetClient"),
     ValueSetItemClient: Symbol("ValueSetItemClient"),
@@ -42696,7 +52310,11 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 611 */
+=======
+/* 463 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42709,7 +52327,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(25);
+=======
+var _1 = __webpack_require__(23);
+>>>>>>> Fix jQuery http client reject promise issue
 var ValueSetClient = (function () {
     function ValueSetClient(valueSetRoute, valueSetItemClient, apiClient) {
         this.valueSetRoute = valueSetRoute;
@@ -42859,7 +52481,11 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 612 */
+=======
+/* 464 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42872,7 +52498,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var _1 = __webpack_require__(25);
+=======
+var _1 = __webpack_require__(23);
+>>>>>>> Fix jQuery http client reject promise issue
 var ValueSetItemClient = (function () {
     function ValueSetItemClient(valueSetItemRoute, apiClient) {
         this.valueSetItemRoute = valueSetItemRoute;
@@ -43009,7 +52639,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 613 */
+=======
+/* 465 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43114,7 +52748,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 614 */
+=======
+/* 466 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43127,7 +52765,11 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var common_1 = __webpack_require__(2);
 ;
+<<<<<<< develop
 var _1 = __webpack_require__(25);
+=======
+var _1 = __webpack_require__(23);
+>>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
 var ValueSetRoute = (function (_super) {
     tslib_1.__extends(ValueSetRoute, _super);
@@ -43221,7 +52863,11 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 615 */
+=======
+/* 467 */
+>>>>>>> Fix jQuery http client reject promise issue
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/
@@ -44114,4 +53760,8 @@ var UriTemplate = (function () {
 /***/ })
 /******/ ]);
 });
+<<<<<<< develop
 //# sourceMappingURL=baasic-sdk-javascript.js.map 
+=======
+//# sourceMappingURL=baasic-sdk-javascript.js.map
+>>>>>>> Fix jQuery http client reject promise issue

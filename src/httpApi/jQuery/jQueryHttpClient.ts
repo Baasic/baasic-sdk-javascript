@@ -36,12 +36,12 @@ export class JQueryHttpClient implements IHttpClient {
                 };
             },
             (jqXHR, textStatus, errorThrown) => {
-                return <IHttpResponse<ResponseType>>{
+                throw <IHttpResponse<ResponseType>>{
                     request: request,
                     statusText: textStatus,
                     statusCode: jqXHR.status,
                     headers: parseHeaders(jqXHR.getAllResponseHeaders()),
-                    data: jqXHR.responseText || jqXHR.responseXML
+                    data: tryConvertToJson(jqXHR.responseText) || jqXHR.responseXML
                 };
             });
     }
@@ -68,6 +68,14 @@ function parseHeaders(headers: string): IHttpHeaders {
         }
     }
     return result;
+}
+
+function tryConvertToJson(obj) {
+    try {
+        return JSON.parse(obj);
+    } catch (err) {
+        return obj;
+    }
 }
 
 
