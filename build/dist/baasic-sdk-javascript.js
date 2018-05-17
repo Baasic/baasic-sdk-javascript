@@ -6359,7 +6359,13 @@ var JQueryHttpClient = (function () {
             jqueryParams.headers = request.headers;
         }
         if (request.data) {
-            jqueryParams.data = request.data;
+            var contentType = getHeader(request.headers, 'Content-Type');
+            if (contentType && contentType.toLowerCase().indexOf('application/json') !== -1) {
+                jqueryParams.data = JSON.stringify(request.data);
+            }
+            else {
+                jqueryParams.data = request.data;
+            }
         }
         if (request.responseType) {
             jqueryParams.dataType = request.responseType;
@@ -6420,11 +6426,24 @@ function parseHeaders(headers) {
     return result;
 }
 <<<<<<< develop
+<<<<<<< develop
 
 
 /***/ }),
 /* 133 */
 =======
+=======
+function getHeader(headers, key) {
+    if (headers) {
+        var header = headers[key] || headers[key.toLowerCase()];
+        if (Array.isArray(header)) {
+            header = header.join(';');
+        }
+        return header;
+    }
+    return undefined;
+}
+>>>>>>> Fix jQuery http client
 function tryConvertToJson(obj) {
     try {
         return JSON.parse(obj);

@@ -18,7 +18,12 @@ export class JQueryHttpClient implements IHttpClient {
         }
 
         if (request.data) {
-            jqueryParams.data = request.data;
+            const contentType = getHeader(request.headers, 'Content-Type');
+            if (contentType && contentType.toLowerCase().indexOf('application/json') !== -1) {
+                jqueryParams.data = JSON.stringify(request.data);
+            } else {
+                jqueryParams.data = request.data;
+            }
         }
 
         if (request.responseType) {
@@ -68,6 +73,17 @@ function parseHeaders(headers: string): IHttpHeaders {
         }
     }
     return result;
+}
+
+function getHeader(headers: any, key: string): string {
+    if (headers) {
+        var header = headers[key] || headers[key.toLowerCase()];
+        if (Array.isArray(header)) {
+            header = header.join(';');
+        }
+        return header;
+    }
+    return undefined;
 }
 
 function tryConvertToJson(obj) {
