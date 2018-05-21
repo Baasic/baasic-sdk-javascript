@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-inter06 - Tuesday, March 13th, 2018, 11:25:08 AM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-inter07 - Monday, May 21st, 2018, 11:53:25 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -19910,7 +19910,7 @@ var CommerceCustomerPaymentMethodClient = (function () {
                 });
      **/
     CommerceCustomerPaymentMethodClient.prototype.create = function (data) {
-        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     };
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will remove a commerce resource from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `baasicCommerceCustomerPaymentMethodRouteService` route template. Here is an example of how a route can be obtained from HAL enabled objects:
@@ -19999,15 +19999,15 @@ var CommerceCustomerPaymentMethodRoute = (function (_super) {
      * @example commerceCustomerPaymentMethodRoute.get(id, options);
      **/
     CommerceCustomerPaymentMethodRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, options);
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
     /**
      * Parses create commerce customer-payment-method route; this URI template does not expose any additional options.
      * @method
      * @example commerceCustomerPaymentMethodRoute.create();
      **/
-    CommerceCustomerPaymentMethodRoute.prototype.create = function () {
-        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    CommerceCustomerPaymentMethodRoute.prototype.create = function (data) {
+        return _super.prototype.baseCreate.call(this, this.createRoute, data);
     };
     /**
      * Parses update commerce customer-payment-method route; this URI template does not expose any additional options.
@@ -22785,7 +22785,7 @@ var CommerceLookupsInvoiceStatusRoute = (function (_super) {
      * @example commerceLookupsInvoiceStatusRoute.get();
      **/
     CommerceLookupsInvoiceStatusRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, options);
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
     /**
      * Parses create commerce payment method route; this URI template does not expose any additional options.
@@ -23262,7 +23262,7 @@ var CommerceLookupsPaymentMethodRoute = (function (_super) {
      * @example commerceLookupsPaymentMethodRoute.get();
      **/
     CommerceLookupsPaymentMethodRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, options);
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
     /**
      * Parses create commerce payment method route; this URI template does not expose any additional options.
@@ -23697,7 +23697,7 @@ var CommerceLookupsPaymentTransactionStatusRoute = (function (_super) {
      * @example commerceLookupsPaymentTransactionStatusRoute.get();
      **/
     CommerceLookupsPaymentTransactionStatusRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, options);
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
     /**
      * Parses create commerce payment method route; this URI template does not expose any additional options.
@@ -24134,7 +24134,7 @@ var CommerceLookupsRecurringCyclePeriodTypeRoute = (function (_super) {
      * @example commerceLookupsRecurringCyclePeriodTypeRoute.get();
      **/
     CommerceLookupsRecurringCyclePeriodTypeRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, options);
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
     /**
      * Parses create commerce payment method route; this URI template does not expose any additional options.
@@ -24569,7 +24569,7 @@ var CommerceLookupsSubscriptionStatusRoute = (function (_super) {
      * @example commerceLookupsSubscriptionStatusRoute.get();
      **/
     CommerceLookupsSubscriptionStatusRoute.prototype.get = function (id, options) {
-        return _super.prototype.baseGet.call(this, this.getRoute, options);
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
     };
     /**
      * Parses create commerce payment method route; this URI template does not expose any additional options.

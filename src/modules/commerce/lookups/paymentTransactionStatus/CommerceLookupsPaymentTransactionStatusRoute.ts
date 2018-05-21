@@ -53,7 +53,7 @@ export class CommerceLookupsPaymentTransactionStatusRoute extends BaseRoute {
      * @example commerceLookupsPaymentTransactionStatusRoute.get();                               
      **/
     get(id: string, options: IGetRequestOptions): any {
-        return super.baseGet(this.getRoute, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 

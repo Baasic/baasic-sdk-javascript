@@ -46,7 +46,7 @@ export class CommerceCustomerPaymentMethodRoute extends BaseRoute {
      * @example commerceCustomerPaymentMethodRoute.get(id, options);                               
      **/
     get(id: string, options: IGetRequestOptions): any {
-        return super.baseGet(this.getRoute, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -54,8 +54,8 @@ export class CommerceCustomerPaymentMethodRoute extends BaseRoute {
      * @method                        
      * @example commerceCustomerPaymentMethodRoute.create();                              
      **/
-    create(): any {
-        return super.baseCreate(this.createRoute, {});
+    create(data: any): any {
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 

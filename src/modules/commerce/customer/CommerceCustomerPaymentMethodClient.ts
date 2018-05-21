@@ -96,7 +96,7 @@ export class CommerceCustomerPaymentMethodClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**                 
