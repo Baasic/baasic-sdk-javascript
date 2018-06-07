@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-inter07 - Monday, May 21st, 2018, 11:53:25 AM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-inter08 - Thursday, June 7th, 2018, 11:51:15 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -29605,7 +29605,7 @@ var MediaGalleryFileRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
-        _this.findRoute = 'media-gallery-files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.findRoute = 'media-gallery-files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields,mediaGalleryIds}';
         _this.getRoute = 'media-gallery-files/{id}/{?embed,fields}';
         _this.updateRoute = 'media-gallery-files/{id}';
         _this.unlinkRoute = 'media-gallery-files/unlink({id}';
@@ -31079,7 +31079,7 @@ var MediaVaultClient = (function () {
                         });
      **/
     MediaVaultClient.prototype.update = function (data) {
-        return this.apiClient.put(this.routeDefinition.updateParams(data), this.routeDefinition.updateParams(data));
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
     };
     /**
      * Returns a promise that is resolved once the remove action has been performed. This action will remove one or many media vault resources from the system if successfully completed. If derived resource's format is passed, such as `width` and `height` for the image type of media vault resource, the operation will remove just derived resource. Otherwise, specified media vault and all its accompanying derived resources will be removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply baasicMediaVaultRouteService route template. Here is an example of how a route can be obtained from HAL enabled objects:
