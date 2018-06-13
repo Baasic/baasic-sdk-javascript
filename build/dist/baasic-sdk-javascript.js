@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-beta06 - Wednesday, June 6th, 2018, 1:50:12 PM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-beta06 - Wednesday, June 13th, 2018, 10:01:31 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -29551,7 +29551,7 @@ var MediaGalleryFileRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.mediaGalleryBatchRoute = mediaGalleryBatchRoute;
-        _this.findRoute = 'media-gallery-files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields,mediaGalleryIds}';
+        _this.findRoute = 'media-gallery-files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields,mediaGalleryIds,isCover}';
         _this.getRoute = 'media-gallery-files/{id}/{?embed,fields}';
         _this.updateRoute = 'media-gallery-files/{id}';
         _this.unlinkRoute = 'media-gallery-files/unlink({id}';
