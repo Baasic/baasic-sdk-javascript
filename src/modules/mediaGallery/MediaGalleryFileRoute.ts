@@ -17,7 +17,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 @injectable()
 export class MediaGalleryFileRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'media-gallery-files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields,mediaGalleryIds}';
+    public readonly findRoute: string = 'media-gallery-files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields,mediaGalleryIds,isCover}';
 
     public readonly getRoute: string = 'media-gallery-files/{id}/{?embed,fields}';
 
