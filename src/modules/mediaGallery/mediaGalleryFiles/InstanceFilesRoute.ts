@@ -17,7 +17,7 @@ import { IMediaGalleryFile, IMediaGalleryOptions } from '../contracts';
 @injectable()
 export class MediaGalleryInstanceFilesRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'media-galleries/{mediaGalleryId}/files/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'media-galleries/{mediaGalleryId}/files/{?searchQuery,fileName,minFileSize,maxFileSize,ids,from,to,page,rpp,sort,embed,fields}';
 
     public readonly getRoute: string = 'media-galleries/{mediaGalleryId}/files/{id}/{?embed,fields}';
 

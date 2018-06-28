@@ -5,5 +5,11 @@ export interface IArticleOptions extends IOptions {
     startDate?: any,
     endDate?: any,
     statuses?: string[],
-    tags?: string[]
+    tags?: string[],
+    fileName: string,
+    minFileSize?: number,
+    maxFileSize?: number,
+    ids?: string,
+    from?: string,
+    to: string,
 }

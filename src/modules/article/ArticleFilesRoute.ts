@@ -13,12 +13,12 @@ import {
     ArticleFilesStreamsRoute,
     TYPES as articleTypes
 } from './';
-import { IArticleFile } from './contracts';
+import { IArticleFile, IArticleOptions } from './contracts';
 
 @injectable()
 export class ArticleFilesRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'article-files/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'article-files/{?searchQuery,fileName,minFileSize,maxFileSize,ids,from,to,age,rpp,sort,embed,fields}';
 
     public readonly getRoute: string = 'article-files/{id}/{?embed,fields}';
 
@@ -53,7 +53,7 @@ export class ArticleFilesRoute extends BaseRoute {
      * @param options Query resource options object.                        
      * @example articleFilesRoute.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(options?: IOptions): any {
+    find(options?: IArticleOptions): any {
         return super.baseFind(this.findRoute, options);
     }
 
