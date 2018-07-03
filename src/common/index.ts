@@ -8,5 +8,6 @@ export * from './modelMapper';
 export * from './baseRoute';
 export * from './halParser';
 export * from './contracts';
+export * from './dateFormatter';
 
 

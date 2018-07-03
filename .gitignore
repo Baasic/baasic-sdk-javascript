@@ -55,3 +55,5 @@ jspm_packages
 
 build/dist/docs/
 .vs/
+
+bower_components/

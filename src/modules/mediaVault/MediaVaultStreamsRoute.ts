@@ -11,7 +11,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 @injectable()
 export class MediaVaultStreamsRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'media-vault-streams/{id}/{?width,height}';
+    public readonly getRoute: string = 'media-vault-streams/{id}/{?width,height,t}';
 
     public readonly createRoute: string = 'media-vault-streams/{path}';
 
@@ -23,6 +23,7 @@ export class MediaVaultStreamsRoute extends BaseRoute {
      * Parses get route; this route should be expanded with id or path of desired media vault stream. Additional supported items are:
      * - `width` - width of desired derived image.
      * - `height` - height of desired derived image.
+     * - `t` - cache invalidation param. 
      * @method
      * @example mediaVaultRoute.get({id: '<path>'});
      **/

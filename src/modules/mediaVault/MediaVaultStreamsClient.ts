@@ -33,7 +33,7 @@ export class MediaVaultStreamsClient {
                                  // perform error handling here
                             });
                 // Request derived media vault stream
-                        mediaVaultStreamsClient.get({id: '<path>', width: <width>, height: <height>})
+                        mediaVaultStreamsClient.get({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
                             .then(function (data) {
                                 // perform success action here
                             },
@@ -57,7 +57,7 @@ export class MediaVaultStreamsClient {
                                  // perform error handling here
                             });
                 // Request derived blob
-                        mediaVaultStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>})
+                        mediaVaultStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
                             .then(function (data) {
                                 // perform success action here
                             },

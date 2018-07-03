@@ -38,7 +38,7 @@ export class ArticleInstanceFilesStreamsClient {
                         });
 
                 // Request derived file stream                
-                        articleInstanceFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+                        articleInstanceFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
                             .then(function (data) {     
                                 // perform success action here 
                             },
@@ -69,7 +69,8 @@ export class ArticleInstanceFilesStreamsClient {
                         articleInstanceFilesStreamsClient.getBlob({
                             id: '<file-id>', 
                             width: <width>, 
-                            height: <height>
+                            height: <height>,
+                            t: <timestamp>
                         })
                         .then(function (data) {     
                             // perform success action here 
