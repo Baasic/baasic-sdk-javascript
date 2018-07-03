@@ -11,7 +11,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 @injectable()
 export class FilesStreamsRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'file-streams/{id}/{?width,height}';
+    public readonly getRoute: string = 'file-streams/{id}/{?width,height,t}';
 
     public readonly updateRoute: string = 'file-streams/{id}/{?width,height}';
 
@@ -22,7 +22,8 @@ export class FilesStreamsRoute extends BaseRoute {
     /**                     
      * Parses get route; this route should be expanded with id or path of desired file stream. Additional supported items are:                     
      * - `width` - width of desired derived image.                     
-     * - `height` - height of desired derived image.                     
+     * - `height` - height of desired derived image.
+     * - `t` - cache invalidation param.                      
      * @method                 
      * @example filesStreamsRoute.get({id: '<path>'});                                   
      **/

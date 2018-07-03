@@ -10,7 +10,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 export class UserProfileAvatarStreamsRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'profiles/{id}/avatar-streams/{?width,height}';
+    public readonly getRoute: string = 'profiles/{id}/avatar-streams/{?width,height,t}';
 
     public readonly createRoute: string = 'profiles/{id}/avatar-streams/{filename}';
 
@@ -21,7 +21,8 @@ export class UserProfileAvatarStreamsRoute extends BaseRoute {
     /**                     
      * Parses get route; this route should be expanded with id of profile. Additional supported items are:                     
      * - `width` - width of desired derived image.                     
-     * - `height` - height of desired derived image.                     
+     * - `height` - height of desired derived image.
+     * - `t` - cache invalidation param.                      
      * @method                    
      * @example userProfileAvatarStreamsRoute.get({id: '<file-id>'});                                   
      **/

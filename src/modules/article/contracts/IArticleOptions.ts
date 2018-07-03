@@ -11,5 +11,5 @@ export interface IArticleOptions extends IOptions {
     maxFileSize?: number,
     ids?: string,
     from?: string,
-    to: string,
+    to: string
 }

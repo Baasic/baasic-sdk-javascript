@@ -34,7 +34,7 @@ export class UserProfileAvatarStreamsClient {
                              // perform error handling here
                         });
                     // Request derived file stream
-                    userProfileAvatarStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+                    userProfileAvatarStreamsClient.get({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
                         .then(function (data) {
                             // perform success action here
                         },
@@ -58,7 +58,7 @@ export class UserProfileAvatarStreamsClient {
                              // perform error handling here
                         });
                         // Request derived blob
-                        userProfileAvatarStreamsClient.getBlob({id: '<file-id>', width: <width>, height: <height>})
+                        userProfileAvatarStreamsClient.getBlob({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
                             .then(function (data) {
                                 // perform success action here
                             },
