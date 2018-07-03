@@ -35,7 +35,7 @@ export class FilesStreamsClient {
                                  // perform error handling here
                             });
                 // Request derived file stream
-                    filesStreamsClient.get({id: '<path>', width: <width>, height: <height>})
+                    filesStreamsClient.get({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
                         .then(function (data) {
                             // perform success action here
                         },
@@ -59,7 +59,7 @@ export class FilesStreamsClient {
                             // perform error handling here
                         });
                 // Request derived blob
-                    filesStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>})
+                    filesStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
                         .then(function (data) {
                             // perform success action here
                         },

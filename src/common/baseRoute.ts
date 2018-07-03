@@ -1,6 +1,6 @@
 import * as uritemplate from 'uritemplate';
 import { IOptions } from './contracts';
-import { ModelMapper, Utility } from './';
+import { ModelMapper, Utility, DateFormatter } from './';
 import { IAppOptions } from '../core/contracts';
 import { injectable } from "inversify";
 
@@ -8,6 +8,7 @@ import { injectable } from "inversify";
 export abstract class BaseRoute {
 
     protected utility: Utility;
+    protected dateFormatter: DateFormatter;
     protected modelMapper: ModelMapper;
 
     constructor(
@@ -15,6 +16,7 @@ export abstract class BaseRoute {
     ) {
         this.utility = new Utility();
         this.modelMapper = new ModelMapper();
+        this.dateFormatter = new DateFormatter();
     }
 
     /**                
@@ -40,6 +42,9 @@ export abstract class BaseRoute {
       * @example baseRoute.get(route, id);
       **/
     protected baseGet(route: string, id?: any, options?: any, propName?: string): any {
+        if (options !== null && !this.utility.isUndefined(options.dateUpdated)) {
+            options.t = this.dateFormatter.FormatToString(new Date(options.dateUpdated));
+        }
         return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
 
@@ -50,6 +55,9 @@ export abstract class BaseRoute {
       * @example baseRoute.create();
       **/
     protected baseCreate(route: string, data?: any): any {
+        if (data !== null && !this.utility.isUndefined(data.dateUpdated)) {
+            data.t = this.dateFormatter.FormatToString(new Date(data.dateUpdated));
+        }
         return uritemplate.parse(route).expand(data);
     }
 

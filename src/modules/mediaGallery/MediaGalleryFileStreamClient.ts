@@ -29,7 +29,7 @@ export class MediaGalleryFileStreamClient {
      * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.                             
      * @returns A promise that is resolved once the get action has been performed. 
      * @example // Request the original file stream              
-                    mediaGalleryFilesStreamsClient.get({id: '<file-id>'}, {mediaGalleryid: '<media-gallery-id>'})
+                    mediaGalleryFilesStreamsClient.get({id: '<file-id>'}, {mediaGalleryid: '<media-gallery-id>', t: '<timestamp>'})
                         .then(function (data) {     
                             // perform success action here 
                         },
@@ -48,7 +48,7 @@ export class MediaGalleryFileStreamClient {
      * @param data Media Gallery File object used to identify stream that needs to be retrieved from the system.    
      * @returns A promise that is resolved once the get action has been performed.                            
      * @example // Request the original blob                
-                    mediaGalleryFilesStreamsClient.getBlob('<file-id>', {mediaGalleryId:'<media-gallery-id>'})
+                    mediaGalleryFilesStreamsClient.getBlob('<file-id>', {mediaGalleryId:'<media-gallery-id>', t: '<timestamp>'})
                         .then(function (data) {     
                             // perform success action here 
                         },

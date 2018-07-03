@@ -14,7 +14,7 @@ import { IMediaGalleryFile } from './contracts';
 @injectable()
 export class MediaGalleryFileStreamRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'media-gallery-file-streams/{id}/{?mediaGalleryId}';
+    public readonly getRoute: string = 'media-gallery-file-streams/{id}/{?mediaGalleryId,t}';
 
     public readonly createRoute: string = 'media-gallery-file-streams/{filename}/{?mediaGalleryId}';
 

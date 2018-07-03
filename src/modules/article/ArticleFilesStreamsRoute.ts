@@ -14,7 +14,7 @@ import { IArticleFile } from './contracts';
 @injectable()
 export class ArticleFilesStreamsRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'article-file-streams/{id}/{?width,height}';
+    public readonly getRoute: string = 'article-file-streams/{id}/{?width,height,t}';
 
     public readonly createRoute: string = 'article-file-streams/{filename}/{?articleId}';
 
@@ -29,6 +29,7 @@ export class ArticleFilesStreamsRoute extends BaseRoute {
      * Parses get route; this route should be expanded with id of desired file stream. Additional supported items are:                     
      * - `width` - width of desired derived image.  
      * - `height` - height of desired derived image. 
+     * - `t` - cache invalidation param. 
      * @method
      * @param data Article file id of the original article file used to identify stream that needs to be retrieved from the system.
      * @example articleFilesRoute.get({id: '<filename>'});

@@ -67,7 +67,8 @@ export class ArticleFilesStreamsClient {
                         articleFilesStreamsClient.getBlob({
                             id: '<file-id>',
                             width: <width>,
-                            height: <height>
+                            height: <height>,
+                            t: <timestamp>
                         })
                         .then(function (data) {
                             // perform success action here
