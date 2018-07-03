@@ -1,5 +1,5 @@
 import { Container, interfaces, ContainerModule } from "inversify";
-import { IHttpClient, httpTYPES } from './httpApi';
+import { IHttpClient, httpTYPES, IAbortSignal } from './httpApi';
 import { IStorageHandler, IDefaultStorageConfig, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES } from './core/contracts';
 import { JQueryHttpClient } from './httpApi/jQuery';
 import { LocalStorageHandler } from './core/localStorage';
@@ -12,13 +12,13 @@ export class DIModule {
     init(app: IBaasicApp, modules: any[]): void {
         let diModule = new ContainerModule((bind) => {
             let apiKey = app.getApiKey();
-            var urlBuilder = [ `${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}` ];
+            var urlBuilder = [`${app.settings.useSSL ? 'https' : 'http'}://${app.settings.apiRootUrl}`];
             if (app.settings.apiVersion) {
                 urlBuilder.push(app.settings.apiVersion);
             }
             urlBuilder.push(apiKey);
             urlBuilder.push('');
-            
+
             if (app.settings) {
 
                 let appOptions: IAppOptions = {
@@ -35,8 +35,10 @@ export class DIModule {
             this.bindHandler<IHttpClient>(httpTYPES.IHttpClient, app.settings.httpClient, JQueryHttpClient);
             this.bindHandlerWithOptions<IStorageHandler, IDefaultStorageConfig>(coreTYPES.IStorageHandler, coreTYPES.IDefaultStorageConfig, app.settings.storageHandler, LocalStorageHandler);
             this.bindHandler<IEventHandler>(coreTYPES.IEventHandler, app.settings.eventHandler, BrowserEventHandler);
+            if (app.settings.abortSignal) {
+                this.kernel.bind<IAbortSignal>(httpTYPES.IAbortSignal).toConstantValue(app.settings.abortSignal());
+            }
 
-            
             this.kernel.bind<IBaasicApp>(coreTYPES.IBaasicApp).toConstantValue(app);
 
         });
