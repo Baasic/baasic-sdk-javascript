@@ -37,7 +37,7 @@ export class ArticleFilesStreamsClient {
                         });
 
                 // Request derived file stream
-                        articleFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+                        articleFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
                             .then(function (data) {
                                 // perform success action here
                             },

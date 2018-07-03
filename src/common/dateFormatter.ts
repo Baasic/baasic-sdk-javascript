@@ -11,12 +11,13 @@ export class DateFormatter {
      * @returns formatted date.
      */
     FormatToString(date: Date, format?: string): string {
-        if (format === 'undefined' || format === null || format === '') {
-            format = 'yyyyMMddHHmmss';
+        var formatSet : string = 'yyyyMMddHHmmss'
+        if(format !== undefined && format !== null && format !== '') {
+            formatSet = format;
         }
 
-        var formattsSplitted: string[] = format.match(/(.)\1*/g);
-        if (formattsSplitted.length = 0) {
+        var formattsSplitted: string[] = formatSet.match(/(.)\1*/g);
+        if (formattsSplitted.length === 0) {
             return '';
         }
 

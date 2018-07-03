@@ -42,8 +42,8 @@ export abstract class BaseRoute {
       * @example baseRoute.get(route, id);
       **/
     protected baseGet(route: string, id?: any, options?: any, propName?: string): any {
-        if (options !== null && !this.utility.isUndefined(options.dateUpdated)) {
-            options.t = this.dateFormatter.FormatToString(new Date(options.dateUpdated));
+        if (options !== null && !this.utility.isUndefined(options) && !this.utility.isUndefined(options.dateUpdated)) {
+            options.t = this.dateFormatter.FormatToString(new Date(options.dateUpdated), null);
         }
         return uritemplate.parse(route).expand(this.modelMapper.getParams(id, options, propName));
     }
@@ -55,8 +55,8 @@ export abstract class BaseRoute {
       * @example baseRoute.create();
       **/
     protected baseCreate(route: string, data?: any): any {
-        if (data !== null && !this.utility.isUndefined(data.dateUpdated)) {
-            data.t = this.dateFormatter.FormatToString(new Date(data.dateUpdated));
+        if (data !== null && !this.utility.isUndefined(data) && !this.utility.isUndefined(data.dateUpdated)) {
+            data.t = this.dateFormatter.FormatToString(new Date(data.dateUpdated), null);
         }
         return uritemplate.parse(route).expand(data);
     }
