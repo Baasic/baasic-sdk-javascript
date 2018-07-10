@@ -14,7 +14,7 @@ import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 @injectable()
 export class FilesRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'files/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'files/{?searchQuery,page,rpp,sort,embed,fields,fileName,from,to,ids,minFileSize,maxFileSize}';
 
     public readonly getRoute: string = 'files/{id}/{?embed,fields}';
 

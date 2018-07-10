@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-inter13 - Thursday, July 5th, 2018, 2:41:08 PM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-inter14 - Tuesday, July 10th, 2018, 4:11:49 PM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -28417,7 +28417,7 @@ var FilesRoute = (function (_super) {
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.filesStreamsRoute = filesStreamsRoute;
-        _this.findRoute = 'files/{?searchQuery,page,rpp,sort,embed,fields}';
+        _this.findRoute = 'files/{?searchQuery,page,rpp,sort,embed,fields,fileName,from,to,ids,minFileSize,maxFileSize}';
         _this.getRoute = 'files/{id}/{?embed,fields}';
         _this.updateRoute = 'files/{id}';
         _this.unlinkRoute = 'files/unlink/{id}/{?height,width}';
