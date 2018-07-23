@@ -7,6 +7,7 @@
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import { VersionRoute, TYPES as applicationTypes } from './';
+import { IModuleVersion } from './contracts';
 
 @injectable()
 export class VersionClient {
@@ -24,6 +25,21 @@ export class VersionClient {
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
+    /**                  
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the all application module versions.               
+     * @method
+     * @returns A promise that is resolved once the get action has been performed.                           
+     * @example versionClient.get()
+                .then(function (data) {   
+                    // perform success action here 
+                },
+                 function (response, status, headers, config) {   
+                    // perform error handling here 
+                });                  
+     **/
+    get(): PromiseLike<IHttpResponse<IModuleVersion[]>> {
+        return this.apiClient.get<IModuleVersion[]>(this.routeDefinition.get());
+    }
 }
 
 /**  

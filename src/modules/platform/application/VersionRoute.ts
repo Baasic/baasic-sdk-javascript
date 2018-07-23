@@ -14,12 +14,21 @@ export class VersionRoute extends BaseRoute {
     /**                  
      * Versions route with route and query parameters.
      **/
-    public versionsRoute: string = 'platform/versions';
+    public getRoute: string = 'platform/versions';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) {
         super(appOptions);
+    }
+
+    /**                 
+     * Parses get version route.
+     * @method                        
+     * @example versionRoute.get()
+     **/
+    get(): any {
+        return super.baseGet(this.getRoute);
     }
 }
 

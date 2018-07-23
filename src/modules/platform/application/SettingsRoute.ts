@@ -6,6 +6,7 @@
 import { injectable, inject } from "inversify";
 import { BaseRoute } from 'common';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IApplicationSettings } from './contracts';
 
 @injectable()
 export class SettingsRoute extends BaseRoute {
@@ -14,12 +15,36 @@ export class SettingsRoute extends BaseRoute {
     /**                  
      * Settings route with route and query parameters.
      **/
-    public settingsRoute: string = 'platform/settings';
+    public getRoute: string = 'platform/settings';
+
+    /**                  
+     * Settings route with route and query parameters.
+     **/
+    public updateRoute: string = 'platform/settings';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) {
         super(appOptions);
+    }
+
+    /**                 
+     * Parses get version route.
+     * @method                        
+     * @example versionRoute.get()
+     **/
+    get(): any {
+        return super.baseGet(this.getRoute);
+    }
+
+    /**
+     * Parses update settings route.
+     * @method
+     * @param data A settings object used to update specified settings resource.
+     * @example settingsRoute.update(data);
+     */
+    update(data: IApplicationSettings): any {
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

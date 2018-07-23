@@ -49,6 +49,12 @@ export class UserRoute extends BaseRoute {
         return super.baseGet(this.getRoute, id, options, 'username');
     }
 
+    /**
+     * Parses delete user route.
+     * @method
+     * @param data A user object used to delete specified user resource.
+     * @example userRoute.delete(data);
+     */
     delete(data: IPlatformUser): any {
         return super.baseDelete(this.deleteRoute, data);
     }
@@ -64,7 +70,7 @@ export class UserRoute extends BaseRoute {
      * @example userRoute.find({searchQuery: '<search-phrase>'});                              
      **/
     find(options: IOptions): any {
-        return super.baseFind(this.findRoute, options);
+            return super.baseFind(this.findRoute, options);
     }
 
     /**                 
@@ -76,14 +82,20 @@ export class UserRoute extends BaseRoute {
         return super.baseCreate(this.createRoute, {});
     }
 
-    update(data: IPlatformUser): any {
+    /**
+         * Parses update user route.
+         * @method
+         * @param data A user object used to update specified user resource.
+         * @example userRoute.update(data);
+         */
+        update(data: IPlatformUser): any {
         return super.baseUpdate(this.updateRoute, data);
     }
 }
 
 /**  
  * @overview  
- ***Notes:**  
+ ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.  
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.  
  - All end-point objects are transformed by the associated route definition. 

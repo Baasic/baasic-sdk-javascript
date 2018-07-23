@@ -14,7 +14,12 @@ export class MaintenanceRoute extends BaseRoute {
     /**                  
      * Maintenance route with route and query parameters.
      **/
-    public maintenanceRoute: string = 'platform/maintenance/{id}';
+    public applicationMaintenanceRoute: string = 'platform/maintenance/{id}';
+
+    /**                  
+     * Maintenance route with route and query parameters.
+     **/
+    public maintenanceRoute: string = 'platform/maintenance';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
@@ -23,12 +28,21 @@ export class MaintenanceRoute extends BaseRoute {
     }
 
     /**                  
+     * Parses application maintenance route.                 
+     * @method                         
+     * @example maintenanceRoute.maintain(id);                                
+     **/
+    maintainApp(id: string): any {
+        return super.baseUpdate(this.applicationMaintenanceRoute, id);
+    }
+
+    /**                  
      * Parses maintenance route.                 
      * @method                         
      * @example maintenanceRoute.maintain();                                
      **/
-    maintain(data: any): any {
-        return super.baseCreate(this.maintenanceRoute, data);
+    maintain(): any {
+        return super.baseUpdate(this.maintenanceRoute, {});
     }
 }
 

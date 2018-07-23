@@ -10,3 +10,4 @@ export * from './IRegisterUser';
 export * from './IRole';
 export * from './IPlatformUser';
 export * from './IUserAccess';
+export * from './INewUser';

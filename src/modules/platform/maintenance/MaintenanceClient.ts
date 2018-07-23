@@ -25,8 +25,12 @@ export class MaintenanceClient {
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
-    maintain(id: string): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.maintenanceRoute.maintain(), data);
+    maintainApp(id: string): PromiseLike<IHttpResponse<any>> {
+        return this.apiClient.put<any>(this.routeDefinition.maintainApp(id), {});
+    }
+
+    maintain(): PromiseLike<IHttpResponse<any>> {
+        return this.apiClient.put<any>(this.routeDefinition.maintain(), {});
     }
 }
 
