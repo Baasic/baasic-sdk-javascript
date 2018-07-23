@@ -12,9 +12,9 @@ export class PasswordRecoveryRoute extends BaseRoute {
 
 
     /**                  
-     * Login route with route and query parameters.
-     **/
-    public loginRoute: string = 'platform/recover-password';
+    * Password recovery route with route and query parameters.
+    **/
+    public passwordRecoveryRoute: string = 'platform/recover-password';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
@@ -23,13 +23,21 @@ export class PasswordRecoveryRoute extends BaseRoute {
     }
 
     /**                  
-     * Parses login route which can be expanded with additional options. Supported items are:                                   
-     * - `options` - Comma separated list of options used to setup authentication token with cookie session. Supported values are: "session" and "sliding".                  
+     * Parses recover-password route, recover-password route doesn't expose any additional properties.                  
      * @method                         
-     * @example loginRoute.login( {options: 'sliding'});                                
+     * @example passwordRecoveryRoute.passwordRecovery();                                
      **/
-    login(options: any): any {
-        return super.baseCreate(this.loginRoute, options);
+    passwordRecovery(): any {
+        return super.baseCreate(this.passwordRecoveryRoute, {});
+    }
+
+    /**                  
+     * Parses recover-password change route, recover-password change route doesn't expose any additional properties.                  
+     * @method                         
+     * @example passwordRecoveryRoute.passwordChange();                                
+     **/
+    passwordChange(): any {
+        return super.baseCreate(this.passwordRecoveryRoute + '/change', {});
     }
 }
 

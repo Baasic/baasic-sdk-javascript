@@ -12,14 +12,23 @@ export class LookupRoute extends BaseRoute {
 
 
     /**                  
-     * Lookup route with route and query parameters.
-     **/
-    public lookupRoute: string = 'platform/lookups';
+    * Get access section route with route and query parameters.
+    **/
+    public getAccessSectionRoute: string = 'platform/lookups/access-sections';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) {
         super(appOptions);
+    }
+
+    /**                 
+     * Parses get access sections route which can be expanded with additional options.            
+     * @method                        
+     * @example baasicLookupRouteService.getAccessSections();                               
+     **/
+    getAccessSections(): any {
+        return super.baseCreate(this.getAccessSectionRoute, {});
     }
 }
 

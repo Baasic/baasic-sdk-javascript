@@ -5,21 +5,79 @@
  */
 import { injectable, inject } from "inversify";
 import { BaseRoute } from 'common';
+import { IOptions } from '../../../common/contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IPlatformUser } from './contracts';
 
 @injectable()
 export class UserRoute extends BaseRoute {
 
-
     /**                  
-     * Application route with route and query parameters.
-     **/
-    public userRoute: string = 'platform/users';
+    * Find route with route and query parameters.
+    **/
+    public findRoute: string = 'platform/users/{?searchQuery,page,rpp,sort,embed,fields}';
+    /**                  
+    * Get route with route and query parameters.
+    **/
+    public getRoute: string = 'platform/users/{username}/{?embed,fields}';
+    /**                  
+    * Create route with route and query parameters.
+    **/
+    public createRoute: string = 'platform/users';
+    /**                  
+    * Update route with route and query parameters.
+    **/
+    public updateRoute: string = 'platform/users/{id}';
+    /**                  
+    * Delete route with route and query parameters.
+    **/
+    public deleteRoute: string = 'platform/users/{id}';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) {
         super(appOptions);
+    }
+
+    /**                 
+     * Parses get user route which must be expanded with the username of the previously created user resource in the system. Additional expand supported items are: 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * @method                        
+     * @example userRoute.get({username: '<username>'})
+     **/
+    get(id: string, options?: IOptions): any {
+        return super.baseGet(this.getRoute, id, options, 'username');
+    }
+
+    delete(data: IPlatformUser): any {
+        return super.baseDelete(this.deleteRoute, data);
+    }
+
+    /**                 
+     * Parses find user route which can be expanded with additional options. Supported items are:                 
+     * - `searchQuery` - A string referencing user properties using the phrase or BQL (Baasic Query Language) search.                 
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user subset from the storage.                 
+     * - `rpp` - A value used to limit the size of result set per page.                 
+     * - `sort` - A string used to set the user property to sort the result collection by. 				
+     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * @method                        
+     * @example userRoute.find({searchQuery: '<search-phrase>'});                              
+     **/
+    find(options: IOptions): any {
+        return super.baseFind(this.findRoute, options);
+    }
+
+    /**                 
+     * Parses create user route, this URI template does not expose any additional options.                 
+     * @method                        
+     * @example userRoute.create();                              
+     **/
+    create(): any {
+        return super.baseCreate(this.createRoute, {});
+    }
+
+    update(data: IPlatformUser): any {
+        return super.baseUpdate(this.updateRoute, data);
     }
 }
 

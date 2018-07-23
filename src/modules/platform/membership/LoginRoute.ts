@@ -14,7 +14,7 @@ export class LoginRoute extends BaseRoute {
     /**                  
      * Login route with route and query parameters.
      **/
-    public loginRoute: string = 'dashboard/login/{?embed,fields,options}';
+    public loginRoute: string = 'platform/dashboard/login/{?embed,fields,options}';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions

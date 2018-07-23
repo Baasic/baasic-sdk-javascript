@@ -6,15 +6,15 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { Utility } from '../../../common';
+import { IAccessSection } from './contracts';
 import { LookupRoute, TYPES as membershipTypes } from './';
 
 @injectable()
 export class LookupClient {
 
-    /**                 
-     * Provides direct access to `lookupRoute`.                 
-     * @method                                   
-     **/
+    private utility: Utility = new Utility();
+
     get routeDefinition(): LookupRoute {
         return this.lookupRoute;
     }
@@ -24,6 +24,29 @@ export class LookupClient {
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 
+    /**                  
+     * Returns a promise that is resolved once the get access sections action has been performed. Success response returns the access section resources.                  
+     * @method                      
+     * @returns A promise that is resolved once the get access sections action has been performed. 
+     * @example lookupClient.getAccessSections()
+                    .then(function (data) {   
+                        // perform success action here 
+                    },
+                     function (response, status, headers, config) {   
+                         // perform error handling here 
+                    });                  
+     **/
+    getAccessSections(): PromiseLike<IHttpResponse<IAccessSection[]>> {
+        var self = this;
+        return this.apiClient.createPromise<any>((resolve, reject) => {
+            self.apiClient.get(this.lookupRoute.getAccessSections())
+                .then<any>(function (data) {
+                    resolve(data);
+                }, function (data) {
+                    reject(data);
+                });
+        });
+    }
 }
 
 /**  

@@ -12,14 +12,55 @@ export class RegisterRoute extends BaseRoute {
 
 
     /**                  
-     * Register route with route and query parameters.
-     **/
-    public registerRoute: string = 'platform/register';
+    * Create route with route and query parameters.
+    **/
+    public createRoute: string = 'platform/register';
+
+    /**                  
+    * Activate route with route and query parameters.
+    **/
+    public activateRoute: string = 'platform/activate/{activationToken}/';
+
+    /**                  
+    * Recovery route with route and query parameters.
+    **/
+    public recoveryRoute: string = 'platform/recovery/{email}/';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) {
         super(appOptions);
+    }
+
+    /** 			
+     * Parses register route, this route doesn't support any additional properties. 			
+     * @method        			
+     * @example registerRoute.create();               			
+     **/
+    create(): any {
+        return super.baseCreate(this.createRoute, {});
+    }
+
+    /** 			
+     * Parses activation route; route should be expanded with the `activationToken` which uniquely identifies the user account that needs to be activated. 			
+     * @method
+     * @param data Security code which uniquely identifies user account that needs to be activated.        			
+     * @example registerRoute.activate({activationToken: '<activation-token>'});               			
+     **/
+    activate(data: string): any {
+        let params = this.modelMapper.getParams(data, undefined, 'activationToken');
+        return super.baseCreate(this.activateRoute, params);
+    }
+
+    /** 			
+     * Parses recovery route; route should be expanded with the `email` which uniquely identifies the user account that needs email recovery to be resent. 			
+     * @method
+     * @param data User email which uniquely identifies user account that needs password recovery resent.      			
+     * @example registerRoute.recovery({email: '<email>'});               			
+     **/
+    recovery(data: string): any {
+        let params = this.modelMapper.getParams(data, undefined, 'email');
+        return super.baseCreate(this.recoveryRoute, params);
     }
 }
 

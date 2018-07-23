@@ -123,6 +123,45 @@ export class LoginClient {
         });
     }
 
+    /** 				
+     * Returns a promise that is resolved once the refresh token action has been performed. This action refreshes user token. 				
+     * @method
+     * @param token Authentication token which uniquely identifies user that needs to be logged out from the system.
+     * @param type Token type.
+     * @returns A promise that is resolved once the refresh token action has been performed.  				
+     * @example let token = baasicAuthorizationService.getAccessToken(); 
+                loginClient.refresh(token.access_token, token.token_type)
+                .then(function (data) {   
+                    // perform success handling here 
+                }, function() {
+                    // perform error handling here
+                }) 
+                .finally (function () {});								
+    */
+    refresh(token: string, type: string): PromiseLike<any> {
+        let data = {
+            token: token,
+            type: type
+        };
+        var self = this;
+        return this.apiClient.createPromise<any>((resolve, reject) => {
+            self.apiClient.put<any>(self.loginRoute.login({}), null, data)
+                .then(function (result) {
+                    let token: IToken = {
+                        token: result.data.access_token,
+                        expires_in: result.data.expires_in,
+                        sliding_window: result.data.sliding_window,
+                        tokenUrl: result.data.access_url_token,
+                        type: result.data.token_type
+                    };
+                    self.tokenHandler.store(token);
+                    resolve(result);
+                }, (result) => {
+                    reject(result);
+                });
+        });
+    }
+
     /**              
      * Returns url encoded form data.              
      */
