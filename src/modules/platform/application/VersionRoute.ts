@@ -28,7 +28,7 @@ export class VersionRoute extends BaseRoute {
      * @example versionRoute.get()
      **/
     get(): any {
-        return super.baseGet(this.getRoute);
+        return super.baseGet(this.getRoute, null, {});
     }
 }
 

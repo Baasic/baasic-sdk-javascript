@@ -1,5 +1,7 @@
 import {
-    MaintenanceClient,
+    ApplicationClient,
+    SettingsClient,
+    VersionClient,
     TYPES
 } from '.';
 
@@ -9,7 +11,9 @@ import { injectable, inject } from "inversify";
 export class Root {
 
     constructor(
-        @inject(TYPES.MaintenanceClient) public maintenance: MaintenanceClient
+        @inject(TYPES.ApplicationClient) public application: ApplicationClient,
+        @inject(TYPES.SettingsClient) public settings: SettingsClient,
+        @inject(TYPES.VersionClient) public version: VersionClient
     ) {
 
     }
