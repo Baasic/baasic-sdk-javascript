@@ -1,7 +1,7 @@
 import * as uritemplate from 'uritemplate';
 import { IOptions } from './contracts';
 import { ModelMapper, Utility, DateFormatter } from './';
-import { IAppOptions } from '../core/contracts';
+import { IAppOptions } from 'core/contracts';
 import { injectable } from "inversify";
 
 @injectable()

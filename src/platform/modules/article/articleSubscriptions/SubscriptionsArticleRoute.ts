@@ -5,8 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../common';
-import { IAppOptions, TYPES as coreTypes } from '../core/contracts';
+import { BaseRoute } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticle, IArticleSubscription } from '../contracts';
 
 @injectable()
