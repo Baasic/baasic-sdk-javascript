@@ -5,8 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
-import { Utility } from '../../common';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { Utility } from 'common';
 import { IAccessSection } from './contracts';
 import { LookupRoute, TYPES as membershipTypes } from './';
 

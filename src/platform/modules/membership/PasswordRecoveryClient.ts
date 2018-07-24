@@ -5,7 +5,7 @@
 */
 
 import { injectable, inject } from "inversify";
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { PasswordRecoveryRoute, TYPES as membershipTypes } from './';
 import { IRequestPasswordReset, IResetPassword, IUpdatePassword } from './contracts';
 
@@ -41,7 +41,7 @@ export class PasswordRecoveryClient {
                 .finally (function () {});							
      */
     change(data: IUpdatePassword): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.passwordRecoveryRoute.passwordChange(), data);
+        return this.apiClient.put(this.routeDefinition.passwordChange(), data);
     }
 
     /** 				
@@ -63,7 +63,7 @@ export class PasswordRecoveryClient {
                 .finally (function () {});								
      */
     requestReset(data: IRequestPasswordReset): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.passwordRecoveryRoute.passwordRecovery(), data);
+        return this.apiClient.post(this.routeDefinition.passwordRecovery(), data);
     }
 
     /** 				
@@ -83,7 +83,7 @@ export class PasswordRecoveryClient {
                 .finally (function () {});							
      */
     reset(data: IResetPassword): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.put(this.passwordRecoveryRoute.passwordRecovery(), data);
+        return this.apiClient.put(this.routeDefinition.passwordRecovery(), data);
     }
 }
 

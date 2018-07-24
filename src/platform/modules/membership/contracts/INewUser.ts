@@ -1,11 +1,7 @@
-import { IModel } from '../../../common/contracts';;
-import { IAppUser, IUserIdentity } from './';
-
-export interface INewUser extends IModel, IAppUser, IUserIdentity {
-    autoCreatePassword?: boolean,
-    confirmPassword: string,
+export interface INewUser {
+    displayName: string,
+    email: string,
+    isSuperAdmin: boolean,
     password: string,
-    mailUrl?: string,
-    sendEmailNotification?: boolean,
-    allowDashboardAccess?: boolean
+    userName: string
 }

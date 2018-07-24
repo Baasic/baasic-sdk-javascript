@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
 import { IUserEducation } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class UserEducationRoute extends BaseRoute {
 
@@ -22,7 +22,7 @@ export class UserEducationRoute extends BaseRoute {
 
     public readonly deleteRoute: string = 'profiles/{userId}/educations/{id}';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 

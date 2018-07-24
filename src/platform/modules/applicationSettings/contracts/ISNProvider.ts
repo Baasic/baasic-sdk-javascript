@@ -1,5 +1,6 @@
 export interface ISNProvider {
     id: string,
     key: string,
-    secret: string
+    secret: string,
+    name: string
 }

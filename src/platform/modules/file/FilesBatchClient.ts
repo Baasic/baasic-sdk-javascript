@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { FilesBatchRoute, TYPES as filesTypes } from './';
 import { IFileEntry } from './contracts';
 

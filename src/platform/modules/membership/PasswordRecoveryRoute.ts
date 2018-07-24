@@ -14,7 +14,7 @@ export class PasswordRecoveryRoute extends BaseRoute {
     /**                  
     * Password recovery route with route and query parameters.
     **/
-    public passwordRecoveryRoute: string = 'platform/recover-password';
+    public passwordRecoveryRoute: string = 'recover-password';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions

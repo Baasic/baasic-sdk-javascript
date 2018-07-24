@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../../common';
-import { IACLOptions, IACLPolicy } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IACLOptions, IACLPolicy } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class CalendarACLRoute extends BaseRoute {
@@ -17,7 +17,7 @@ export class CalendarACLRoute extends BaseRoute {
     public readonly deleteByUserRoute: string = 'calendars/{id}/acl/actions/{accessAction}/users/{userName}';
     public readonly deleteByRoleRoute: string = 'calendars/{id}/acl/actions/{accessAction}/roles/{role}';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
      * Parses get calendar acl route; this URI template should be expanded with the Id of the calnedar.										

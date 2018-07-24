@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleComment } from './contracts';
 
 @injectable()
@@ -34,7 +34,7 @@ export class ArticleCommentsRoute extends BaseRoute {
     public readonly reportRoute: string = 'article-comments/{id}/report';
 
     public readonly unreportRoute: string = 'article-comments/{id}/unreport';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }

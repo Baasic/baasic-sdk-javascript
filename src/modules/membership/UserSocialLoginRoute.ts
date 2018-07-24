@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class UserSocialLoginRoute extends BaseRoute {
@@ -21,7 +21,7 @@ export class UserSocialLoginRoute extends BaseRoute {
     public removeRoute: string = 'users/{username}/social-login/{provider}';
 
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses get social login route, URI template should be expanded with the username of the user resource whose social login connections should be retrieved.                     

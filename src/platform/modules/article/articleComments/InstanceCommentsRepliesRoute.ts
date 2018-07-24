@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from '../common';
+import { IGetRequestOptions, IOptions } from '../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../core/contracts';
 import { IArticle, IArticleCommentReply } from '../contracts';
 
 @injectable()
@@ -43,8 +43,7 @@ export class ArticleInstanceCommentRepliesRoute extends BaseRoute {
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
     /**
      * Parses find route which can be expanded with additional options. Supported items are:

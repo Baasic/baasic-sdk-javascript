@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTYPES } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTYPES } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class LookupRoute extends BaseRoute {
@@ -18,8 +18,7 @@ export class LookupRoute extends BaseRoute {
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses get route which can be expanded with additional options. Supported items are: 				

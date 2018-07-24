@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     CommerceRoute,
     CommerceCustomerClient,
@@ -36,11 +36,11 @@ export class CommerceClient {
         return this.commerceProductClient;
     }
 
-    get files(): CommerceProductFilesClient{
+    get files(): CommerceProductFilesClient {
         return this.commerceProductFilesClient;
     }
-    
-    get settings(): CommerceProductSettingsClient{
+
+    get settings(): CommerceProductSettingsClient {
         return this.commerceProductSettingsClient;
     }
 

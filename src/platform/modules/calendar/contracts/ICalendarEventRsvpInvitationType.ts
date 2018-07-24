@@ -1,4 +1,4 @@
-import { IModel } from '../../../common/contracts'
+import { IModel } from 'common/contracts'
 
 export interface ICalendarEventRsvpInvitationType extends IModel {
     Abrv?: string;

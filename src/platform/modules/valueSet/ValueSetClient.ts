@@ -4,8 +4,8 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ValueSetItemClient, ValueSetRoute, TYPES as valueSetTypes } from './';
 import { IValueSet } from './contracts';
 

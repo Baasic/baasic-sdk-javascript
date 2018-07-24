@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, Utility } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, Utility } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
     ArticleACLRoute,
     ArticleSubscriptionsRoute,

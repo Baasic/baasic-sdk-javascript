@@ -20,3 +20,5 @@ export * from './IUserOptions';
 export * from './ILoginData';
 export * from './IPlatformUserInfo';
 export * from './IPlatformUser';
+export * from './IUpdatePassword';
+export * from './IResendActivation';

@@ -6,7 +6,7 @@
 
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
+import { BaseRoute } from 'common';
 import {
     NotificationsPublishClient,
     NotificationsSubscriptionsClient,

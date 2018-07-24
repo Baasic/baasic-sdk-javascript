@@ -1,4 +1,4 @@
-import { IModel } from '../../../common/contracts';
+import { IModel } from 'common/contracts';
 import { IDerivedEntry, IFileUserInfo } from './';
 
 export interface IFileEntry extends IModel {

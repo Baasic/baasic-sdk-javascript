@@ -4,8 +4,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IACLPolicy } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IACLPolicy } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { DynamicResourceACLRoute, TYPES as dynamicResourceTypes } from './';
 import { IDynamicACLOptions } from './contracts';
 

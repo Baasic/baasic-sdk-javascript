@@ -1,4 +1,4 @@
-import { IOptions } from './../../../../common/contracts/IOptions'
+import { IOptions } from './../common/contracts/IOptions'
 
 export interface IGetCalendarRsvpAttendeeOptions extends IOptions {
     ids?: string[];

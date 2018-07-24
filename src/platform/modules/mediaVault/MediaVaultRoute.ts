@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
 import {
     MediaVaultBatchRoute,
     MediaVaultProcessingProviderSettingsRoute,
@@ -15,7 +15,7 @@ import {
     TYPES as mediaVaultTypes
 } from './';
 import { IMediaEntry } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MediaVaultRoute extends BaseRoute {
@@ -27,7 +27,7 @@ export class MediaVaultRoute extends BaseRoute {
     public readonly updateRoute: string = 'media-vaults/{id}';
 
     public readonly deleteRoute: string = 'media-vaults/{id}/{?height,width}';
-    
+
     get streams(): MediaVaultStreamsRoute {
         return this.mediaVaultStreamsRoute;
     }

@@ -6,9 +6,9 @@
 
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IMediaGalleryFile } from './contracts';
 
 @injectable()
@@ -61,7 +61,7 @@ export class MediaGalleryFileStreamRoute extends BaseRoute {
      * @param data Media Gallery File object used to identify stream that needs to be updated.                        
      * @example mediaGalleryFileStreamRoute.update({id: '<filename>'});
      **/
-    update(data: IMediaGalleryFile): any {      
+    update(data: IMediaGalleryFile): any {
         return super.baseUpdate(this.updateRoute, data);
     }
 }

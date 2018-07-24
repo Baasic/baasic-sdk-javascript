@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IACLOptions, IACLPolicy, IQueryModel, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { IACLOptions, IACLPolicy, IQueryModel, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { CalendarACLRoute, TYPES as calendarTypes } from '../';
 
 @injectable()

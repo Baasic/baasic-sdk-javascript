@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IRole } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
-import { RoleBatchRoute, TYPES as membershipTypes } from './'; 
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { RoleBatchRoute, TYPES as membershipTypes } from './';
 
 @injectable()
 export class RoleRoute extends BaseRoute {
@@ -44,7 +44,7 @@ export class RoleRoute extends BaseRoute {
         return this.roleBatchRoute;
     }
 
-    constructor( 
+    constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
         @inject(membershipTypes.RoleBatchRoute) protected roleBatchRoute: RoleBatchRoute
     ) { super(appOptions); }

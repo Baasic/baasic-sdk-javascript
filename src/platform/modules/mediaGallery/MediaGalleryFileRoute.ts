@@ -5,14 +5,14 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import {    
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import {
     TYPES as mediaGalleryTypes,
     MediaGalleryFileBatchRoute
 } from './';
 import { IMediaGalleryFile, IMediaGalleryOptions } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MediaGalleryFileRoute extends BaseRoute {
@@ -26,8 +26,8 @@ export class MediaGalleryFileRoute extends BaseRoute {
     public readonly unlinkRoute: string = 'media-gallery-files/unlink({id}';
 
     public readonly linkRoute: string = 'media-gallery-files/';
-    
- 
+
+
     get batch(): MediaGalleryFileBatchRoute {
         return this.mediaGalleryBatchRoute;
     }
@@ -86,12 +86,12 @@ export class MediaGalleryFileRoute extends BaseRoute {
         return super.baseDelete(this.unlinkRoute, id);
     }
 
-     /**
-     * Parses create route; this URI template doesnt support any additional options.
-     * @method
-     * @param data An media gallery file object that needs to be inserted into the system.
-     * @example mediaGalleryFileRoute.create(data);
-     **/
+    /**
+    * Parses create route; this URI template doesnt support any additional options.
+    * @method
+    * @param data An media gallery file object that needs to be inserted into the system.
+    * @example mediaGalleryFileRoute.create(data);
+    **/
     link(data: IMediaGalleryFile): any {
         return super.baseCreate(this.linkRoute, data);
     }

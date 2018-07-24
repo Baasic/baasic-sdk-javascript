@@ -4,10 +4,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IACLPolicy } from '../../common/contracts';;
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IACLPolicy } from 'common/contracts';;
 import { IDynamicACLOptions } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class DynamicResourceACLRoute extends BaseRoute {
@@ -20,7 +20,7 @@ export class DynamicResourceACLRoute extends BaseRoute {
 
     public readonly deleteByRoleRoute: string = 'resources/{schemaName}/{id}/acl/actions/{accessAction}/roles/{role}/';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
      * Parses get acl route; this URI template should be expanded with the Id of the dynamic resource and name of the dynamic resource schema.

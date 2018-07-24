@@ -14,17 +14,17 @@ export class RegisterRoute extends BaseRoute {
     /**                  
     * Create route with route and query parameters.
     **/
-    public createRoute: string = 'platform/register';
+    public createRoute: string = 'register';
 
     /**                  
     * Activate route with route and query parameters.
     **/
-    public activateRoute: string = 'platform/activate/{activationToken}/';
+    public activateRoute: string = 'activate/{activationToken}/';
 
     /**                  
     * Recovery route with route and query parameters.
     **/
-    public recoveryRoute: string = 'platform/recovery/{email}/';
+    public recoveryRoute: string = 'recovery/{email}/';
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions

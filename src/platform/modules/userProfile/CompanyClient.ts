@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IGetRequestOptions, IOptions, IQueryModel } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IGetRequestOptions, IOptions, IQueryModel } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { CompanyBatchClient, CompanyRoute, TYPES as userProfileTypes } from './';
 import { ICompany } from './contracts';
 

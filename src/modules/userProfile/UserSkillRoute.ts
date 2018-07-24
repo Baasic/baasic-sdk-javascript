@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
 import { IUserSkill } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class UserSkillRoute extends BaseRoute {
 
@@ -22,7 +22,7 @@ export class UserSkillRoute extends BaseRoute {
 
     public readonly deleteRoute: string = 'profiles/{userId}/skills/{id}';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
      * Parses find route which can be expanded with additional options. Supported items are:                 

@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from '../common';
+import { IGetRequestOptions, IOptions } from '../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../core/contracts';
 import { IArticle, IRating } from '../contracts';
 
 @injectable()
@@ -29,8 +29,7 @@ export class ArticleInstanceRatingsRoute extends BaseRoute {
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses create article rating route; this URI does not support any additional embed items.                 

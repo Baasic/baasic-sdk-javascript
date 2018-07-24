@@ -5,9 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from '../common';
+import { IAppOptions, TYPES as coreTypes } from '../core/contracts';
 import { IArticleSubscription } from '../contracts';
 
 @injectable()
@@ -21,8 +20,7 @@ export class ArticleSubscriptionsCommentReportedRoute extends BaseRoute {
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
     /**                         
      * Parses commentReported subscribe route which doesn't support any additional options.                         

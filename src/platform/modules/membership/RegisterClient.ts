@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
-import { IToken, ITokenHandler, TYPES as coreTYPES } from '../../core/contracts';
+import { IToken, ITokenHandler, TYPES as coreTYPES } from 'core/contracts';
 import { RegisterRoute, TYPES as membershipTypes } from '.';
 import { IRegisterUser, IResendActivation } from './contracts';
 

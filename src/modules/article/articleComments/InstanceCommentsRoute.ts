@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { ArticleInstanceCommentRepliesRoute, TYPES as articleTypes } from '../';
 import { IArticle, IArticleComment } from '../contracts';
 
@@ -41,7 +41,7 @@ export class ArticleInstanceCommentsRoute extends BaseRoute {
     public readonly spamRoute: string = 'articles/{articleId}/comments/{id}/spam';
 
     public readonly unspamRoute: string = 'articles/{articleId}/comments/{id}/unspam';
-    
+
     get replies(): ArticleInstanceCommentRepliesRoute {
         return this.articleInstanceCommentRepliesRoute;
     }

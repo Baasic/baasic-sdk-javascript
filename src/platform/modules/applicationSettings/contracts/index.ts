@@ -1,3 +1,5 @@
-export * from './IApplicationRole';
 export * from './ISNProvider';
-export * from './IApplication';
+export * from './IModuleVersion';
+export * from './INewPlatformApplication';
+export * from './IPlatformApplication';
+export * from './IApplicationSettings';

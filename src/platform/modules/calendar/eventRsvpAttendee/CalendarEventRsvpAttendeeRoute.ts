@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 import { ICalendarEvent, ICalendarEventAttendee, IGetCalendarEventAttendeeOptions } from '../contracts';
 
@@ -25,8 +25,8 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
     public readonly subscribeRoute: string = "calendar-event-attendees/{id}/subscribe"
     public readonly unsubscribeRoute: string = "calendar-event-attendees/{id}/unsubscribe"
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
-    
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
     /**
      * Parses find route which can be expanded with additional GetCalendarLookupOptions. Supported items are:
      * - `searchQuery` - A string referencing CalendarEventAttendee properties using the phrase or BQL (Baasic Query Language) search.
@@ -51,7 +51,7 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
      */
     find(options?: IGetCalendarEventAttendeeOptions): any {
         var opt;
-        if(options){
+        if (options) {
             opt = options;
             opt.to = this.getToDate(opt);
             opt.from = this.getFromDate(opt);
@@ -93,13 +93,13 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
         return super.baseUpdate(this.updateRoute, data);
     }
 
-     /**
-     * Parses update status email or name route. This URI template does not expose any additional options.
-     * @method
-     * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
-     * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
-     * @example calendarEventRsvpAttendeeRoute.update(id, statusId);
-     */
+    /**
+    * Parses update status email or name route. This URI template does not expose any additional options.
+    * @method
+    * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
+    * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
+    * @example calendarEventRsvpAttendeeRoute.update(id, statusId);
+    */
     updateStatus(id: string, statusId: string): any {
         let params: any = {};
         params.id = id;
@@ -107,14 +107,14 @@ export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
         return super.baseUpdate(this.updateStatusRoute, params);
     }
 
-     /**
-     * Parses update status email or name route. This URI template does not expose any additional options.
-     * @method
-     * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
-     * @param emailOrFullName Email or full name
-     * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
-     * @example calendarEventRsvpAttendeeRoute.update(id, email, statusId);
-     */
+    /**
+    * Parses update status email or name route. This URI template does not expose any additional options.
+    * @method
+    * @param id A CalendarEventAttendee identifier which uniquely identifies CalendarEventAttendee resource.
+    * @param emailOrFullName Email or full name
+    * @param statusId A calendarEventAttendeeStatus identifier which uniquely identifies CalendarEventAttendee resource.
+    * @example calendarEventRsvpAttendeeRoute.update(id, email, statusId);
+    */
     updateStatusEmailOrFullName(id: string, emailOrFullName: string, statusId: string): any {
         let params: any = {};
         params.id = id;

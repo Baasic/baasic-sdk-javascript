@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { IRole } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class RoleBatchRoute extends BaseRoute {
@@ -27,10 +27,10 @@ export class RoleBatchRoute extends BaseRoute {
     /**                  
     * Delete route with route and query parameters.
     **/
-    public removeRoute: string = 'lookups/roles/batch';    
-    
+    public removeRoute: string = 'lookups/roles/batch';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
      * Parses create batch roles route; this URI template does not expose any additional options.                 

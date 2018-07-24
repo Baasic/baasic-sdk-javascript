@@ -1,4 +1,4 @@
 export interface IUserIdentity {
-    username: string,
+    userName: string,
     email: string
 }

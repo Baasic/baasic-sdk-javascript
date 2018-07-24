@@ -1,4 +1,4 @@
-import { IModel } from '../../../common/contracts';
+import { IModel } from 'common/contracts';
 import { IMediaGalleryFile, IFileUserInfo } from './';
 
 export interface IMediaGallery extends IModel {

@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
     CommerceProductFilesBatchRoute,
     CommerceProductFilesStreamsRoute,
@@ -27,7 +27,7 @@ export class CommerceProductFilesRoute extends BaseRoute {
     public readonly unlinkRoute: string = 'commerce/product-files/unlink/{id}';
 
     public readonly updateRoute: string = 'commerce/product-files/{id}';
-    
+
     get streams(): CommerceProductFilesStreamsRoute {
         return this.productFilesStreamsRoute;
     }

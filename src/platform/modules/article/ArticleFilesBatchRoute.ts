@@ -5,9 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class ArticleFilesBatchRoute extends BaseRoute {
@@ -17,7 +16,7 @@ export class ArticleFilesBatchRoute extends BaseRoute {
     public readonly updateRoute: string = 'article-files/batch';
 
     public readonly linkRoute: string = 'article-files/batch/link';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }

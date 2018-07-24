@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES, IHttpHeaders } from '../../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES, IHttpHeaders } from 'httpApi';
 import {
-    CalendarEventRoute,    
+    CalendarEventRoute,
     CalendarEventBatchClient,
     TYPES as calendarTypes
 } from '../';

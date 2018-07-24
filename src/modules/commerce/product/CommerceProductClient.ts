@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { CommerceProductRoute, TYPES as commerceTypes } from '../';
-import {IProductOptions } from '../contracts';
+import { IProductOptions } from '../contracts';
 
 @injectable()
 export class CommerceProductClient {

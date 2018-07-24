@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from '../common';
+import { IOptions } from '../common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from '../core/contracts';
 import {
     ArticleSubscriptionsCommentReportedRoute,
     ArticleSubscriptionsArticleRoute,
@@ -35,6 +35,5 @@ export class ArticleInstanceSubscriptionsRoute extends BaseRoute {
         @inject(articleTYPES.ArticleSubscriptionsArticleRoute) protected articleSubscriptionsArticleRoute: ArticleSubscriptionsArticleRoute,
         @inject(articleTYPES.ArticleSubscriptionsCommentRequiresModerationRoute) protected articleSubscriptionsCommentRequiresModerationRoute: ArticleSubscriptionsCommentRequiresModerationRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 }

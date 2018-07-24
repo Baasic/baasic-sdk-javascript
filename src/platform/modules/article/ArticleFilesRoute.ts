@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
     ArticleFilesBatchRoute,
     ArticleFilesStreamsRoute,
@@ -27,7 +27,7 @@ export class ArticleFilesRoute extends BaseRoute {
     public readonly unlinkRoute: string = 'article-files/unlink/{id}';
 
     public readonly updateRoute: string = 'article-files/{id}';
-    
+
     get streams(): ArticleFilesStreamsRoute {
         return this.articleFilesStreamsRoute;
     }

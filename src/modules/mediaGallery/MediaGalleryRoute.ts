@@ -5,15 +5,15 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import {    
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import {
     TYPES as mediaGalleryTypes,
     MediaGalleryBatchRoute,
     MediaGallerySettingsRoute
 } from './';
 import { IMediaGallery, IMediaGalleryOptions } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MediaGalleryRoute extends BaseRoute {
@@ -29,7 +29,7 @@ export class MediaGalleryRoute extends BaseRoute {
     public readonly createRoute: string = 'media-galleries/';
 
     public readonly purgeRoute: string = 'media-galleries/purge';
-    
+
 
     get batch(): MediaGalleryBatchRoute {
         return this.mediaGalleryBatchRoute;
@@ -43,7 +43,7 @@ export class MediaGalleryRoute extends BaseRoute {
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
         @inject(mediaGalleryTypes.MediaGalleryBatchRoute) protected mediaGalleryBatchRoute: MediaGalleryBatchRoute,
-        @inject(mediaGalleryTypes.MediaGallerySettingsRoute) protected mediaGallerySettingsRoute: MediaGallerySettingsRoute,        
+        @inject(mediaGalleryTypes.MediaGallerySettingsRoute) protected mediaGallerySettingsRoute: MediaGallerySettingsRoute,
     ) { super(appOptions); }
 
     /**                 
@@ -95,12 +95,12 @@ export class MediaGalleryRoute extends BaseRoute {
         return super.baseDelete(this.deleteRoute, data);
     }
 
-     /**
-     * Parses create route; this URI template doesnt support any additional options.
-     * @method
-     * @param data An media gallery  object that needs to be inserted into the system.
-     * @example mediaGalleryRoute.create(data);
-     **/
+    /**
+    * Parses create route; this URI template doesnt support any additional options.
+    * @method
+    * @param data An media gallery  object that needs to be inserted into the system.
+    * @example mediaGalleryRoute.create(data);
+    **/
     create(data: IMediaGallery): any {
         return super.baseCreate(this.createRoute, data);
     }

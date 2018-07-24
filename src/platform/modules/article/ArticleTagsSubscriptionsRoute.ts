@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleTag } from './contracts';
 
 @injectable()
@@ -21,8 +21,7 @@ export class ArticleTagsSubscriptionsRoute extends BaseRoute {
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
     /**                     
      * Parses subscribe route which must be expanded with id of the tag.                     

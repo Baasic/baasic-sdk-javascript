@@ -5,8 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     MediaGalleryInstanceFilesBatchClient,
     MediaGalleryInstanceFilesRoute,
@@ -121,7 +121,7 @@ export class MediaGalleryInstanceFilesClient {
                              // perform error handling here 
                         });                     
      **/
-    unlinkByMediaGallery(mediaGalleryId: string,  options: Object): PromiseLike<IHttpResponse<void>> {
+    unlinkByMediaGallery(mediaGalleryId: string, options: Object): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.mediaGalleryInstanceFilesRoute.unlinkByMediaGallery(mediaGalleryId, options));
     }
 

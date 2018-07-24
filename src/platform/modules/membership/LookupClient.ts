@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IGetRequestOptions } from '../../common/contracts';;
-import { Utility } from '../../common';
-import { ILookup } from './contracts';
+import { IGetRequestOptions } from 'common/contracts';;
+import { Utility } from 'common';
+import { ILookup, IAccessSection } from './contracts';
 import { LookupRoute, TYPES as membershipTypes } from './';
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 
 @injectable()
 export class LookupClient {
@@ -60,6 +60,30 @@ export class LookupClient {
             self.apiClient.get(this.lookupRoute.get(opt))
                 .then<any>(function (data) {
                     data.data = self.getResponseData(embed, data.data);
+                    resolve(data);
+                }, function (data) {
+                    reject(data);
+                });
+        });
+    }
+
+    /**                  
+     * Returns a promise that is resolved once the get access sections action has been performed. Success response returns the access section resources.                  
+     * @method                      
+     * @returns A promise that is resolved once the get access sections action has been performed. 
+     * @example lookupClient.getAccessSections()
+                    .then(function (data) {   
+                        // perform success action here 
+                    },
+                     function (response, status, headers, config) {   
+                         // perform error handling here 
+                    });                  
+     **/
+    getAccessSections(): PromiseLike<IHttpResponse<IAccessSection[]>> {
+        var self = this;
+        return this.apiClient.createPromise<any>((resolve, reject) => {
+            self.apiClient.get(this.lookupRoute.getAccessSections())
+                .then<any>(function (data) {
                     resolve(data);
                 }, function (data) {
                     reject(data);
