@@ -1,5 +1,9 @@
 <<<<<<< develop
+<<<<<<< develop
 // [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-beta09 - Friday, August 17th, 2018, 8:55:52 AM  
+=======
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-beta09 - Tuesday, July 24th, 2018, 12:23:34 PM  
+>>>>>>> - updated platform
  (function webpackUniversalModuleDefinition(root, factory) {
 =======
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -79,10 +83,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	// Load entry module and return exports
 <<<<<<< develop
+<<<<<<< develop
 /******/ 	return __webpack_require__(__webpack_require__.s = 43);
 =======
 /******/ 	return __webpack_require__(__webpack_require__.s = 40);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 35);
+>>>>>>> - updated platform
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,30 +100,35 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var container_1 = __webpack_require__(72);
+=======
+var container_1 = __webpack_require__(80);
+>>>>>>> - updated platform
 exports.Container = container_1.Container;
-var container_module_1 = __webpack_require__(73);
+var container_module_1 = __webpack_require__(81);
 exports.ContainerModule = container_module_1.ContainerModule;
-var injectable_1 = __webpack_require__(63);
+var injectable_1 = __webpack_require__(71);
 exports.injectable = injectable_1.injectable;
-var tagged_1 = __webpack_require__(67);
+var tagged_1 = __webpack_require__(75);
 exports.tagged = tagged_1.tagged;
-var named_1 = __webpack_require__(65);
+var named_1 = __webpack_require__(73);
 exports.named = named_1.named;
-var inject_1 = __webpack_require__(62);
+var inject_1 = __webpack_require__(70);
 exports.inject = inject_1.inject;
-var optional_1 = __webpack_require__(66);
+var optional_1 = __webpack_require__(74);
 exports.optional = optional_1.optional;
-var unmanaged_1 = __webpack_require__(69);
+var unmanaged_1 = __webpack_require__(77);
 exports.unmanaged = unmanaged_1.unmanaged;
-var multi_inject_1 = __webpack_require__(64);
+var multi_inject_1 = __webpack_require__(72);
 exports.multiInject = multi_inject_1.multiInject;
-var target_name_1 = __webpack_require__(68);
+var target_name_1 = __webpack_require__(76);
 exports.targetName = target_name_1.targetName;
-var guid_1 = __webpack_require__(20);
+var guid_1 = __webpack_require__(21);
 exports.guid = guid_1.guid;
 var decorator_utils_1 = __webpack_require__(17);
 exports.decorate = decorator_utils_1.decorate;
+<<<<<<< develop
 var constraint_helpers_1 = __webpack_require__(34);
 =======
 var container_1 = __webpack_require__(69);
@@ -144,15 +157,22 @@ var decorator_utils_1 = __webpack_require__(15);
 exports.decorate = decorator_utils_1.decorate;
 var constraint_helpers_1 = __webpack_require__(32);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var constraint_helpers_1 = __webpack_require__(39);
+>>>>>>> - updated platform
 exports.traverseAncerstors = constraint_helpers_1.traverseAncerstors;
 exports.taggedConstraint = constraint_helpers_1.taggedConstraint;
 exports.namedConstraint = constraint_helpers_1.namedConstraint;
 exports.typeConstraint = constraint_helpers_1.typeConstraint;
 <<<<<<< develop
+<<<<<<< develop
 var serialization_1 = __webpack_require__(23);
 =======
 var serialization_1 = __webpack_require__(21);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var serialization_1 = __webpack_require__(25);
+>>>>>>> - updated platform
 exports.getServiceIdentifierAsString = serialization_1.getServiceIdentifierAsString;
 
 
@@ -347,6 +367,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(87));
 var diModule_1 = __webpack_require__(35);
 exports.commonDIModule = diModule_1.diModule;
@@ -370,6 +391,21 @@ __export(__webpack_require__(85));
 __export(__webpack_require__(99));
 __export(__webpack_require__(98));
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(122));
+__export(__webpack_require__(121));
+__export(__webpack_require__(123));
+__export(__webpack_require__(124));
+__export(__webpack_require__(125));
+__export(__webpack_require__(126));
+__export(__webpack_require__(120));
+__export(__webpack_require__(118));
+__export(__webpack_require__(117));
+__export(__webpack_require__(115));
+__export(__webpack_require__(116));
+__export(__webpack_require__(119));
+__export(__webpack_require__(127));
+>>>>>>> - updated platform
 
 
 /***/ }),
@@ -382,17 +418,21 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(114));
+=======
+__export(__webpack_require__(95));
+var diModule_1 = __webpack_require__(40);
+exports.commonDIModule = diModule_1.diModule;
+var diModule_2 = __webpack_require__(40);
+exports.TYPES = diModule_2.TYPES;
+>>>>>>> - updated platform
 __export(__webpack_require__(113));
-__export(__webpack_require__(115));
-__export(__webpack_require__(116));
-__export(__webpack_require__(117));
-__export(__webpack_require__(118));
 __export(__webpack_require__(112));
+__export(__webpack_require__(96));
 __export(__webpack_require__(111));
-__export(__webpack_require__(110));
-__export(__webpack_require__(108));
 __export(__webpack_require__(109));
+<<<<<<< develop
 __export(__webpack_require__(119));
 =======
 __export(__webpack_require__(110));
@@ -408,6 +448,9 @@ __export(__webpack_require__(104));
 __export(__webpack_require__(105));
 __export(__webpack_require__(115));
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(110));
+>>>>>>> - updated platform
 
 
 /***/ }),
@@ -420,10 +463,15 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 var diModule_1 = __webpack_require__(37);
+=======
+var diModule_1 = __webpack_require__(43);
+>>>>>>> - updated platform
 exports.httpDIModule = diModule_1.diModule;
-var diModule_2 = __webpack_require__(37);
+var diModule_2 = __webpack_require__(43);
 exports.httpTYPES = diModule_2.TYPES;
+<<<<<<< develop
 __export(__webpack_require__(125));
 __export(__webpack_require__(127));
 __export(__webpack_require__(128));
@@ -441,6 +489,14 @@ __export(__webpack_require__(124));
 __export(__webpack_require__(121));
 __export(__webpack_require__(125));
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(132));
+__export(__webpack_require__(134));
+__export(__webpack_require__(135));
+__export(__webpack_require__(136));
+__export(__webpack_require__(133));
+__export(__webpack_require__(137));
+>>>>>>> - updated platform
 
 
 /***/ }),
@@ -453,16 +509,27 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(313));
 __export(__webpack_require__(294));
 __export(__webpack_require__(293));
 __export(__webpack_require__(40));
 __export(__webpack_require__(312));
+=======
+__export(__webpack_require__(319));
+__export(__webpack_require__(300));
+__export(__webpack_require__(299));
+__export(__webpack_require__(47));
+>>>>>>> - updated platform
 __export(__webpack_require__(318));
-__export(__webpack_require__(367));
-__export(__webpack_require__(384));
-__export(__webpack_require__(381));
+__export(__webpack_require__(324));
+__export(__webpack_require__(373));
+__export(__webpack_require__(390));
+__export(__webpack_require__(387));
+__export(__webpack_require__(313));
+__export(__webpack_require__(310));
 __export(__webpack_require__(307));
+<<<<<<< develop
 __export(__webpack_require__(304));
 __export(__webpack_require__(301));
 =======
@@ -475,6 +542,8 @@ __export(__webpack_require__(218));
 __export(__webpack_require__(262));
 __export(__webpack_require__(265));
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+>>>>>>> - updated platform
 
 
 /***/ }),
@@ -486,6 +555,7 @@ __export(__webpack_require__(265));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(209));
 __export(__webpack_require__(140));
@@ -502,18 +572,34 @@ __export(__webpack_require__(142));
 __export(__webpack_require__(141));
 __export(__webpack_require__(144));
 __export(__webpack_require__(143));
+=======
+__export(__webpack_require__(215));
+>>>>>>> - updated platform
 __export(__webpack_require__(146));
-__export(__webpack_require__(145));
-__export(__webpack_require__(153));
-__export(__webpack_require__(152));
+__export(__webpack_require__(198));
+__export(__webpack_require__(214));
+__export(__webpack_require__(197));
+__export(__webpack_require__(45));
+__export(__webpack_require__(189));
+__export(__webpack_require__(175));
+__export(__webpack_require__(196));
 __export(__webpack_require__(157));
-__export(__webpack_require__(156));
-__export(__webpack_require__(155));
-__export(__webpack_require__(154));
-__export(__webpack_require__(166));
-__export(__webpack_require__(165));
+__export(__webpack_require__(170));
+__export(__webpack_require__(148));
+__export(__webpack_require__(147));
+__export(__webpack_require__(150));
+__export(__webpack_require__(149));
+__export(__webpack_require__(152));
+__export(__webpack_require__(151));
+__export(__webpack_require__(159));
+__export(__webpack_require__(158));
+__export(__webpack_require__(163));
+__export(__webpack_require__(162));
+__export(__webpack_require__(161));
+__export(__webpack_require__(160));
 __export(__webpack_require__(172));
 __export(__webpack_require__(171));
+<<<<<<< develop
 __export(__webpack_require__(187));
 __export(__webpack_require__(186));
 __export(__webpack_require__(185));
@@ -561,6 +647,19 @@ __export(__webpack_require__(165));
 __export(__webpack_require__(36));
 __export(__webpack_require__(205));
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(178));
+__export(__webpack_require__(177));
+__export(__webpack_require__(193));
+__export(__webpack_require__(192));
+__export(__webpack_require__(191));
+__export(__webpack_require__(190));
+__export(__webpack_require__(180));
+__export(__webpack_require__(179));
+__export(__webpack_require__(176));
+__export(__webpack_require__(45));
+__export(__webpack_require__(216));
+>>>>>>> - updated platform
 
 
 /***/ }),
@@ -572,6 +671,7 @@ __export(__webpack_require__(205));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(255));
 __export(__webpack_require__(241));
@@ -618,6 +718,21 @@ __export(__webpack_require__(398));
 __export(__webpack_require__(383));
 __export(__webpack_require__(381));
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(261));
+__export(__webpack_require__(247));
+__export(__webpack_require__(219));
+__export(__webpack_require__(276));
+__export(__webpack_require__(237));
+__export(__webpack_require__(271));
+__export(__webpack_require__(266));
+__export(__webpack_require__(46));
+__export(__webpack_require__(220));
+__export(__webpack_require__(221));
+__export(__webpack_require__(222));
+__export(__webpack_require__(223));
+__export(__webpack_require__(298));
+>>>>>>> - updated platform
 
 
 /***/ }),
@@ -630,31 +745,43 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(530));
 __export(__webpack_require__(533));
 __export(__webpack_require__(532));
 __export(__webpack_require__(535));
 __export(__webpack_require__(534));
 __export(__webpack_require__(537));
+=======
+>>>>>>> - updated platform
 __export(__webpack_require__(536));
 __export(__webpack_require__(539));
 __export(__webpack_require__(538));
+__export(__webpack_require__(541));
+__export(__webpack_require__(540));
 __export(__webpack_require__(543));
 __export(__webpack_require__(542));
 __export(__webpack_require__(545));
 __export(__webpack_require__(544));
-__export(__webpack_require__(541));
-__export(__webpack_require__(540));
+__export(__webpack_require__(549));
+__export(__webpack_require__(548));
+__export(__webpack_require__(551));
+__export(__webpack_require__(550));
+__export(__webpack_require__(547));
+__export(__webpack_require__(546));
+__export(__webpack_require__(562));
+__export(__webpack_require__(561));
 __export(__webpack_require__(556));
 __export(__webpack_require__(555));
-__export(__webpack_require__(550));
-__export(__webpack_require__(549));
-__export(__webpack_require__(552));
-__export(__webpack_require__(551));
 __export(__webpack_require__(558));
 __export(__webpack_require__(557));
+__export(__webpack_require__(564));
+__export(__webpack_require__(563));
+__export(__webpack_require__(560));
+__export(__webpack_require__(559));
 __export(__webpack_require__(554));
 __export(__webpack_require__(553));
+<<<<<<< develop
 __export(__webpack_require__(548));
 __export(__webpack_require__(547));
 __export(__webpack_require__(546));
@@ -691,6 +818,11 @@ __export(__webpack_require__(457));
 __export(__webpack_require__(440));
 __export(__webpack_require__(434));
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(552));
+__export(__webpack_require__(537));
+__export(__webpack_require__(535));
+>>>>>>> - updated platform
 
 
 /***/ }),
@@ -700,38 +832,10 @@ __export(__webpack_require__(434));
 "use strict";
 
 <<<<<<< develop
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(583));
-__export(__webpack_require__(567));
-__export(__webpack_require__(566));
-__export(__webpack_require__(569));
-__export(__webpack_require__(568));
-__export(__webpack_require__(585));
-__export(__webpack_require__(584));
-__export(__webpack_require__(587));
-__export(__webpack_require__(586));
-__export(__webpack_require__(590));
-__export(__webpack_require__(589));
-__export(__webpack_require__(592));
-__export(__webpack_require__(591));
-__export(__webpack_require__(594));
-__export(__webpack_require__(593));
-__export(__webpack_require__(600));
-__export(__webpack_require__(599));
-__export(__webpack_require__(598));
-__export(__webpack_require__(597));
-__export(__webpack_require__(596));
-__export(__webpack_require__(595));
-__export(__webpack_require__(602));
-__export(__webpack_require__(601));
-__export(__webpack_require__(604));
-__export(__webpack_require__(603));
-__export(__webpack_require__(606));
-__export(__webpack_require__(605));
-__export(__webpack_require__(588));
-__export(__webpack_require__(582));
+<<<<<<< develop
+=======
+
+module.exports = __webpack_require__(66)() ? Symbol : __webpack_require__(68);
 
 
 /***/ }),
@@ -740,8 +844,39 @@ __export(__webpack_require__(582));
 
 "use strict";
 
-
-module.exports = __webpack_require__(58)() ? Symbol : __webpack_require__(60);
+>>>>>>> - updated platform
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(589));
+__export(__webpack_require__(573));
+__export(__webpack_require__(572));
+__export(__webpack_require__(575));
+__export(__webpack_require__(574));
+__export(__webpack_require__(591));
+__export(__webpack_require__(590));
+__export(__webpack_require__(593));
+__export(__webpack_require__(592));
+__export(__webpack_require__(596));
+__export(__webpack_require__(595));
+__export(__webpack_require__(598));
+__export(__webpack_require__(597));
+__export(__webpack_require__(600));
+__export(__webpack_require__(599));
+__export(__webpack_require__(606));
+__export(__webpack_require__(605));
+__export(__webpack_require__(604));
+__export(__webpack_require__(603));
+__export(__webpack_require__(602));
+__export(__webpack_require__(601));
+__export(__webpack_require__(608));
+__export(__webpack_require__(607));
+__export(__webpack_require__(610));
+__export(__webpack_require__(609));
+__export(__webpack_require__(612));
+__export(__webpack_require__(611));
+__export(__webpack_require__(594));
+__export(__webpack_require__(588));
 
 
 /***/ }),
@@ -762,29 +897,37 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(482));
 __export(__webpack_require__(486));
 __export(__webpack_require__(485));
 __export(__webpack_require__(484));
 __export(__webpack_require__(483));
-__export(__webpack_require__(490));
-__export(__webpack_require__(489));
-__export(__webpack_require__(494));
-__export(__webpack_require__(493));
-__export(__webpack_require__(496));
-__export(__webpack_require__(495));
-__export(__webpack_require__(498));
-__export(__webpack_require__(497));
-__export(__webpack_require__(503));
-__export(__webpack_require__(501));
-__export(__webpack_require__(502));
-__export(__webpack_require__(500));
+=======
+__export(__webpack_require__(488));
 __export(__webpack_require__(492));
 __export(__webpack_require__(491));
-__export(__webpack_require__(488));
-__export(__webpack_require__(487));
+>>>>>>> - updated platform
+__export(__webpack_require__(490));
+__export(__webpack_require__(489));
+__export(__webpack_require__(496));
+__export(__webpack_require__(495));
+__export(__webpack_require__(500));
 __export(__webpack_require__(499));
-__export(__webpack_require__(481));
+__export(__webpack_require__(502));
+__export(__webpack_require__(501));
+__export(__webpack_require__(504));
+__export(__webpack_require__(503));
+__export(__webpack_require__(509));
+__export(__webpack_require__(507));
+__export(__webpack_require__(508));
+__export(__webpack_require__(506));
+__export(__webpack_require__(498));
+__export(__webpack_require__(497));
+__export(__webpack_require__(494));
+__export(__webpack_require__(493));
+__export(__webpack_require__(505));
+__export(__webpack_require__(487));
 
 
 /***/ }),
@@ -844,22 +987,22 @@ exports.DESIGN_PARAM_TYPES = "design:paramtypes";
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(438));
-__export(__webpack_require__(419));
-__export(__webpack_require__(418));
+__export(__webpack_require__(444));
+__export(__webpack_require__(425));
+__export(__webpack_require__(424));
+__export(__webpack_require__(435));
+__export(__webpack_require__(434));
+__export(__webpack_require__(433));
+__export(__webpack_require__(426));
+__export(__webpack_require__(430));
 __export(__webpack_require__(429));
 __export(__webpack_require__(428));
 __export(__webpack_require__(427));
-__export(__webpack_require__(420));
-__export(__webpack_require__(424));
-__export(__webpack_require__(423));
-__export(__webpack_require__(422));
-__export(__webpack_require__(421));
-__export(__webpack_require__(426));
-__export(__webpack_require__(425));
-__export(__webpack_require__(437));
+__export(__webpack_require__(432));
+__export(__webpack_require__(431));
 __export(__webpack_require__(443));
-__export(__webpack_require__(444));
+__export(__webpack_require__(449));
+__export(__webpack_require__(450));
 
 
 /***/ }),
@@ -875,22 +1018,26 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(508));
+=======
+>>>>>>> - updated platform
 __export(__webpack_require__(514));
-__export(__webpack_require__(513));
-__export(__webpack_require__(516));
-__export(__webpack_require__(515));
-__export(__webpack_require__(512));
-__export(__webpack_require__(511));
-__export(__webpack_require__(522));
-__export(__webpack_require__(521));
-__export(__webpack_require__(510));
-__export(__webpack_require__(509));
-__export(__webpack_require__(518));
-__export(__webpack_require__(517));
 __export(__webpack_require__(520));
 __export(__webpack_require__(519));
-__export(__webpack_require__(507));
+__export(__webpack_require__(522));
+__export(__webpack_require__(521));
+__export(__webpack_require__(518));
+__export(__webpack_require__(517));
+__export(__webpack_require__(528));
+__export(__webpack_require__(527));
+__export(__webpack_require__(516));
+__export(__webpack_require__(515));
+__export(__webpack_require__(524));
+__export(__webpack_require__(523));
+__export(__webpack_require__(526));
+__export(__webpack_require__(525));
+__export(__webpack_require__(513));
 
 
 /***/ }),
@@ -1100,18 +1247,21 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
+=======
+__export(__webpack_require__(466));
+>>>>>>> - updated platform
 __export(__webpack_require__(460));
-__export(__webpack_require__(454));
-__export(__webpack_require__(453));
-__export(__webpack_require__(446));
-__export(__webpack_require__(445));
+__export(__webpack_require__(459));
 __export(__webpack_require__(452));
 __export(__webpack_require__(451));
-__export(__webpack_require__(449));
-__export(__webpack_require__(448));
-__export(__webpack_require__(450));
-__export(__webpack_require__(447));
-__export(__webpack_require__(459));
+__export(__webpack_require__(458));
+__export(__webpack_require__(457));
+__export(__webpack_require__(455));
+__export(__webpack_require__(454));
+__export(__webpack_require__(456));
+__export(__webpack_require__(453));
+__export(__webpack_require__(465));
 
 
 /***/ }),
@@ -1138,6 +1288,30 @@ __export(__webpack_require__(311));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(653));
+__export(__webpack_require__(654));
+__export(__webpack_require__(634));
+__export(__webpack_require__(655));
+__export(__webpack_require__(635));
+__export(__webpack_require__(657));
+__export(__webpack_require__(637));
+__export(__webpack_require__(659));
+__export(__webpack_require__(638));
+__export(__webpack_require__(656));
+__export(__webpack_require__(636));
+__export(__webpack_require__(658));
+__export(__webpack_require__(652));
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 function guid() {
     function s4() {
         return Math.floor((1 + Math.random()) * 0x10000)
@@ -1152,10 +1326,14 @@ exports.guid = guid;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 21 */
 =======
 /* 19 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 22 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1164,19 +1342,26 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(390));
 __export(__webpack_require__(394));
 __export(__webpack_require__(393));
+=======
+__export(__webpack_require__(396));
+__export(__webpack_require__(400));
+__export(__webpack_require__(399));
+__export(__webpack_require__(404));
+__export(__webpack_require__(403));
+>>>>>>> - updated platform
 __export(__webpack_require__(398));
 __export(__webpack_require__(397));
-__export(__webpack_require__(392));
-__export(__webpack_require__(391));
-__export(__webpack_require__(396));
+__export(__webpack_require__(402));
+__export(__webpack_require__(401));
 __export(__webpack_require__(395));
-__export(__webpack_require__(389));
 
 
 /***/ }),
+<<<<<<< develop
 /* 22 */
 =======
 __export(__webpack_require__(283));
@@ -1194,6 +1379,9 @@ __export(__webpack_require__(282));
 /***/ }),
 /* 20 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 23 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1202,19 +1390,24 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(404));
+=======
+__export(__webpack_require__(410));
+__export(__webpack_require__(418));
+__export(__webpack_require__(417));
+__export(__webpack_require__(414));
+__export(__webpack_require__(413));
+>>>>>>> - updated platform
 __export(__webpack_require__(412));
 __export(__webpack_require__(411));
-__export(__webpack_require__(408));
-__export(__webpack_require__(407));
-__export(__webpack_require__(406));
-__export(__webpack_require__(405));
-__export(__webpack_require__(410));
+__export(__webpack_require__(416));
+__export(__webpack_require__(415));
 __export(__webpack_require__(409));
-__export(__webpack_require__(403));
 
 
 /***/ }),
+<<<<<<< develop
 /* 23 */
 =======
 __export(__webpack_require__(271));
@@ -1230,6 +1423,28 @@ __export(__webpack_require__(270));
 /***/ }),
 /* 21 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(625));
+__export(__webpack_require__(624));
+__export(__webpack_require__(621));
+__export(__webpack_require__(627));
+__export(__webpack_require__(622));
+__export(__webpack_require__(628));
+__export(__webpack_require__(623));
+__export(__webpack_require__(626));
+
+
+/***/ }),
+/* 25 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1331,10 +1546,14 @@ exports.getFunctionName = getFunctionName;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 24 */
 =======
 /* 22 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 26 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1342,6 +1561,7 @@ exports.getFunctionName = getFunctionName;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(561));
 __export(__webpack_require__(563));
@@ -1365,6 +1585,18 @@ __export(__webpack_require__(412));
 /***/ }),
 /* 23 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(567));
+__export(__webpack_require__(569));
+__export(__webpack_require__(568));
+__export(__webpack_require__(571));
+__export(__webpack_require__(570));
+__export(__webpack_require__(566));
+
+
+/***/ }),
+/* 27 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1372,6 +1604,7 @@ __export(__webpack_require__(412));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(610));
 __export(__webpack_require__(613));
@@ -1395,16 +1628,47 @@ __export(__webpack_require__(461));
 /***/ }),
 /* 24 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(616));
+__export(__webpack_require__(619));
+__export(__webpack_require__(618));
+__export(__webpack_require__(620));
+__export(__webpack_require__(617));
+__export(__webpack_require__(615));
+
+
+/***/ }),
+/* 28 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(631));
+__export(__webpack_require__(632));
+__export(__webpack_require__(630));
+__export(__webpack_require__(633));
 
+
+<<<<<<< develop
 <<<<<<< develop
 var _undefined = __webpack_require__(45)(); // Support ES3 engines
 =======
 var _undefined = __webpack_require__(42)(); // Support ES3 engines
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _undefined = __webpack_require__(53)(); // Support ES3 engines
+>>>>>>> - updated platform
 
 module.exports = function (val) {
  return (val !== _undefined) && (val !== null);
@@ -1413,19 +1677,27 @@ module.exports = function (val) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 27 */
 =======
 /* 25 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 30 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var binding_when_syntax_1 = __webpack_require__(28);
 =======
 var binding_when_syntax_1 = __webpack_require__(26);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var binding_when_syntax_1 = __webpack_require__(31);
+>>>>>>> - updated platform
 var BindingOnSyntax = (function () {
     function BindingOnSyntax(binding) {
         this._binding = binding;
@@ -1441,14 +1713,19 @@ exports.BindingOnSyntax = BindingOnSyntax;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 28 */
 =======
 /* 26 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 31 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 <<<<<<< develop
 var binding_on_syntax_1 = __webpack_require__(27);
 var constraint_helpers_1 = __webpack_require__(34);
@@ -1456,6 +1733,10 @@ var constraint_helpers_1 = __webpack_require__(34);
 var binding_on_syntax_1 = __webpack_require__(25);
 var constraint_helpers_1 = __webpack_require__(32);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var binding_on_syntax_1 = __webpack_require__(30);
+var constraint_helpers_1 = __webpack_require__(39);
+>>>>>>> - updated platform
 var BindingWhenSyntax = (function () {
     function BindingWhenSyntax(binding) {
         this._binding = binding;
@@ -1554,10 +1835,29 @@ exports.BindingWhenSyntax = BindingWhenSyntax;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 29 */
 =======
 /* 27 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(130));
+__export(__webpack_require__(131));
+var diModule_1 = __webpack_require__(128);
+exports.coreDIModule = diModule_1.diModule;
+
+
+/***/ }),
+/* 33 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1566,13 +1866,17 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
+=======
+__export(__webpack_require__(145));
+__export(__webpack_require__(140));
+>>>>>>> - updated platform
 __export(__webpack_require__(139));
-__export(__webpack_require__(134));
-__export(__webpack_require__(133));
-__export(__webpack_require__(138));
+__export(__webpack_require__(144));
 
 
 /***/ }),
+<<<<<<< develop
 /* 30 */
 =======
 __export(__webpack_require__(134));
@@ -1584,6 +1888,9 @@ __export(__webpack_require__(133));
 /***/ }),
 /* 28 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 34 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1591,6 +1898,7 @@ __export(__webpack_require__(133));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(415));
 __export(__webpack_require__(417));
@@ -1610,32 +1918,79 @@ __export(__webpack_require__(293));
 /***/ }),
 /* 29 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(421));
+__export(__webpack_require__(423));
+__export(__webpack_require__(422));
+__export(__webpack_require__(420));
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(50));
+__export(__webpack_require__(51));
+__export(__webpack_require__(48));
+__export(__webpack_require__(49));
+var httpApi_1 = __webpack_require__(4);
+exports.IHttpClient = httpApi_1.IHttpClient;
+exports.IHttpHeaders = httpApi_1.IHttpHeaders;
+exports.IHttpRequest = httpApi_1.IHttpRequest;
+exports.IHttpResponse = httpApi_1.IHttpResponse;
+var contracts_1 = __webpack_require__(2);
+exports.IStorageHandler = contracts_1.IStorageHandler;
+exports.IEventHandler = contracts_1.IEventHandler;
+exports.ITokenHandler = contracts_1.ITokenHandler;
+exports.IBaasicAppOptions = contracts_1.IBaasicAppOptions;
+exports.IBaasicOptions = contracts_1.IBaasicOptions;
+exports.IToken = contracts_1.IToken;
+exports.TokenTypes = contracts_1.TokenTypes;
+exports.IUser = contracts_1.IUser;
+exports.IUserHandler = contracts_1.IUserHandler;
+exports.IDefaultStorageConfig = contracts_1.IDefaultStorageConfig;
+__export(__webpack_require__(3));
+__export(__webpack_require__(36));
+
+
+/***/ }),
+/* 36 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var ApplicationSettings = __webpack_require__(29);
+=======
+var ApplicationSettings = __webpack_require__(33);
+>>>>>>> - updated platform
 exports.ApplicationSettings = ApplicationSettings;
 var Membership = __webpack_require__(11);
 exports.Membership = Membership;
-var UserProfile = __webpack_require__(9);
+var UserProfile = __webpack_require__(10);
 exports.UserProfile = UserProfile;
-var KeyValue = __webpack_require__(30);
+var KeyValue = __webpack_require__(34);
 exports.KeyValue = KeyValue;
-var ValueSet = __webpack_require__(25);
+var ValueSet = __webpack_require__(27);
 exports.ValueSet = ValueSet;
 var Article = __webpack_require__(6);
 exports.Article = Article;
-var DynamicResource = __webpack_require__(21);
+var DynamicResource = __webpack_require__(22);
 exports.DynamicResource = DynamicResource;
 var MediaVault = __webpack_require__(19);
 exports.MediaVault = MediaVault;
 var MediaGallery = __webpack_require__(13);
 exports.MediaGallery = MediaGallery;
-var Files = __webpack_require__(22);
+var Files = __webpack_require__(23);
 exports.Files = Files;
-var Templating = __webpack_require__(24);
+var Templating = __webpack_require__(26);
 exports.Templating = Templating;
 var Metering = __webpack_require__(14);
 exports.Metering = Metering;
@@ -1648,6 +2003,7 @@ exports.Calendar = Calendar;
 
 
 /***/ }),
+<<<<<<< develop
 /* 32 */
 =======
 var ApplicationSettings = __webpack_require__(27);
@@ -1681,14 +2037,17 @@ exports.Commerce = Commerce;
 /***/ }),
 /* 30 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 37 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
 var metadata_1 = __webpack_require__(15);
-var queryable_string_1 = __webpack_require__(79);
-var guid_1 = __webpack_require__(20);
+var queryable_string_1 = __webpack_require__(87);
+var guid_1 = __webpack_require__(21);
 var METADATA_KEY = __webpack_require__(12);
 =======
 var metadata_1 = __webpack_require__(13);
@@ -1784,14 +2143,19 @@ exports.Target = Target;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 33 */
 =======
 /* 31 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 38 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 <<<<<<< develop
 var binding_when_syntax_1 = __webpack_require__(28);
 var binding_on_syntax_1 = __webpack_require__(27);
@@ -1799,6 +2163,10 @@ var binding_on_syntax_1 = __webpack_require__(27);
 var binding_when_syntax_1 = __webpack_require__(26);
 var binding_on_syntax_1 = __webpack_require__(25);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var binding_when_syntax_1 = __webpack_require__(31);
+var binding_on_syntax_1 = __webpack_require__(30);
+>>>>>>> - updated platform
 var BindingWhenOnSyntax = (function () {
     function BindingWhenOnSyntax(binding) {
         this._binding = binding;
@@ -1860,10 +2228,14 @@ exports.BindingWhenOnSyntax = BindingWhenOnSyntax;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 34 */
 =======
 /* 32 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 39 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1915,18 +2287,27 @@ exports.typeConstraint = typeConstraint;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 35 */
 =======
 /* 33 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 40 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 <<<<<<< develop
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(2);
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(3);
+>>>>>>> - updated platform
 var TYPES = {
     Utility: Symbol("Utility"),
     DateFormatter: Symbol("DateFormatter"),
@@ -1955,10 +2336,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 36 */
 =======
 /* 34 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 41 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1966,6 +2351,7 @@ exports.diModule = diModule;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(123));
 __export(__webpack_require__(124));
@@ -1984,13 +2370,36 @@ exports.coreDIModule = diModule_1.diModule;
 =======
 /* 35 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(114));
+
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(129));
+
+
+/***/ }),
+/* 43 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 <<<<<<< develop
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(4);
 var TYPES = {
     ApiClient: Symbol("ApiClient"),
@@ -2013,10 +2422,26 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 38 */
 =======
 /* 36 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(138));
+
+
+/***/ }),
+/* 45 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2029,7 +2454,7 @@ exports.diModule = diModule;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 var httpApi_1 = __webpack_require__(4);
 var _1 = __webpack_require__(6);
 var ArticleClient = (function () {
@@ -2349,7 +2774,11 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 39 */
+=======
+/* 46 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2357,18 +2786,22 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(281));
-__export(__webpack_require__(276));
-__export(__webpack_require__(286));
-__export(__webpack_require__(291));
-__export(__webpack_require__(271));
+__export(__webpack_require__(287));
+__export(__webpack_require__(282));
+__export(__webpack_require__(292));
+__export(__webpack_require__(297));
+__export(__webpack_require__(277));
 
 
 /***/ }),
+<<<<<<< develop
 /* 40 */
 =======
 /* 37 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 47 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2376,6 +2809,7 @@ __export(__webpack_require__(271));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(323));
 __export(__webpack_require__(338));
@@ -2386,10 +2820,22 @@ __export(__webpack_require__(354));
 __export(__webpack_require__(359));
 __export(__webpack_require__(364));
 __export(__webpack_require__(343));
+=======
+__export(__webpack_require__(329));
+>>>>>>> - updated platform
 __export(__webpack_require__(344));
+__export(__webpack_require__(339));
+__export(__webpack_require__(334));
+__export(__webpack_require__(355));
+__export(__webpack_require__(360));
+__export(__webpack_require__(365));
+__export(__webpack_require__(370));
+__export(__webpack_require__(349));
+__export(__webpack_require__(350));
 
 
 /***/ }),
+<<<<<<< develop
 /* 41 */
 =======
 __export(__webpack_require__(223));
@@ -2406,10 +2852,14 @@ __export(__webpack_require__(239));
 /***/ }),
 /* 38 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 48 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
@@ -2423,6 +2873,14 @@ var _1 = __webpack_require__(40);
 var httpApi_1 = __webpack_require__(4);
 var modules = __webpack_require__(29);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(32);
+var _1 = __webpack_require__(35);
+var httpApi_1 = __webpack_require__(4);
+var modules = __webpack_require__(36);
+>>>>>>> - updated platform
 var BaasicApp = (function () {
     function BaasicApp(apiKey, options) {
         this.apiKey = apiKey;
@@ -2496,16 +2954,82 @@ exports.BaasicApp = BaasicApp;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 42 */
 =======
 /* 39 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(32);
+var _1 = __webpack_require__(35);
+var httpApi_1 = __webpack_require__(4);
+var modules = __webpack_require__(629);
+var BaasicPlatform = (function () {
+    function BaasicPlatform(options) {
+        this.options = options;
+        this.utility = new common_1.Utility();
+        var opt = {};
+        if (options) {
+            opt = options;
+        }
+        this.settings = this.utility.extendAs({}, BaasicPlatform.defaultSettings, opt);
+        this.diModule = new _1.PlatformDIModule();
+        this.diModule.init(this, [common_1.commonDIModule, core_1.coreDIModule, httpApi_1.httpDIModule, modules]);
+        this.tokenHandler = this.diModule.kernel.get(contracts_1.TYPES.ITokenHandler);
+        this.userHandler = this.diModule.kernel.get(contracts_1.TYPES.IUserHandler);
+        this.eventHandler = this.diModule.kernel.get(contracts_1.TYPES.IEventHandler);
+        this.apiClient = this.diModule.kernel.get(httpApi_1.httpTYPES.ApiClient);
+        this.membershipModule = this.diModule.kernel.get(modules.Membership.TYPES.Root);
+        //Modules
+        this.applicationModule = this.diModule.kernel.get(modules.Application.TYPES.Root);
+        this.maintenanceModule = this.diModule.kernel.get(modules.Maintenance.TYPES.Root);
+    }
+    BaasicPlatform.prototype.getAccessToken = function () {
+        return this.tokenHandler.get(contracts_1.TokenTypes.Access);
+    };
+    BaasicPlatform.prototype.updateAccessToken = function (value) {
+        this.tokenHandler.store(value);
+    };
+    BaasicPlatform.prototype.getApiKey = function () {
+        return 'platform';
+    };
+    BaasicPlatform.prototype.getApiUrl = function () {
+        return this.settings.apiUrl;
+    };
+    BaasicPlatform.prototype.getUser = function () {
+        return this.userHandler.getUser();
+    };
+    BaasicPlatform.prototype.setUser = function (userInfo) {
+        this.userHandler.setUser(userInfo);
+    };
+    return BaasicPlatform;
+}());
+BaasicPlatform.defaultSettings = {
+    useSSL: true,
+    apiRootUrl: 'api.baasic.com',
+    apiVersion: 'v1',
+    enableHALJSON: false
+};
+exports.BaasicPlatform = BaasicPlatform;
+
+
+/***/ }),
+/* 50 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
 var jQuery_1 = __webpack_require__(131);
@@ -2516,6 +3040,12 @@ var jQuery_1 = __webpack_require__(126);
 var localStorage_1 = __webpack_require__(118);
 var browserEvents_1 = __webpack_require__(103);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var contracts_1 = __webpack_require__(2);
+var jQuery_1 = __webpack_require__(44);
+var localStorage_1 = __webpack_require__(42);
+var browserEvents_1 = __webpack_require__(41);
+>>>>>>> - updated platform
 var DIModule = (function () {
     function DIModule() {
         this.diModules = [];
@@ -2598,14 +3128,19 @@ exports.DIModule = DIModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 43 */
 =======
 /* 40 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 51 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
@@ -2646,11 +3181,98 @@ __export(__webpack_require__(29));
 /***/ }),
 /* 41 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var contracts_1 = __webpack_require__(2);
+var jQuery_1 = __webpack_require__(44);
+var localStorage_1 = __webpack_require__(42);
+var browserEvents_1 = __webpack_require__(41);
+var PlatformDIModule = (function () {
+    function PlatformDIModule() {
+        this.diModules = [];
+        this.kernel = new inversify_1.Container();
+    }
+    PlatformDIModule.prototype.init = function (app, modules) {
+        var _this = this;
+        var diModule = new inversify_1.ContainerModule(function (bind) {
+            var apiKey = app.getApiKey();
+            var urlBuilder = [(app.settings.useSSL ? 'https' : 'http') + "://" + app.settings.apiRootUrl];
+            if (app.settings.apiVersion) {
+                urlBuilder.push(app.settings.apiVersion);
+            }
+            urlBuilder.push('');
+            if (app.settings) {
+                var appOptions = {
+                    apiKey: apiKey,
+                    apiUrl: urlBuilder.join('/'),
+                    enableHALJSON: app.settings.enableHALJSON
+                };
+                app.settings.apiUrl = appOptions.apiUrl;
+                _this.kernel.bind(contracts_1.TYPES.IAppOptions).toConstantValue(appOptions);
+                _this.kernel.bind(contracts_1.TYPES.IBaasicAppOptions).toConstantValue(app.settings);
+            }
+            _this.bindHandler(httpApi_1.httpTYPES.IHttpClient, app.settings.httpClient, jQuery_1.JQueryHttpClient);
+            _this.bindHandlerWithOptions(contracts_1.TYPES.IStorageHandler, contracts_1.TYPES.IDefaultStorageConfig, app.settings.storageHandler, localStorage_1.LocalStorageHandler);
+            _this.bindHandler(contracts_1.TYPES.IEventHandler, app.settings.eventHandler, browserEvents_1.BrowserEventHandler);
+            if (app.settings.abortSignal) {
+                _this.kernel.bind(httpApi_1.httpTYPES.IAbortSignal).toConstantValue(app.settings.abortSignal());
+            }
+            _this.kernel.bind(contracts_1.TYPES.IBaasicApp).toConstantValue(app);
+        });
+        this.diModules.push(diModule);
+        for (var _i = 0, modules_1 = modules; _i < modules_1.length; _i++) {
+            var m = modules_1[_i];
+            this.addModule(m);
+        }
+        (_a = this.kernel).load.apply(_a, this.diModules);
+        var _a;
+    };
+    PlatformDIModule.prototype.bindHandler = function (type, value, defaultBinding) {
+        if (value) {
+            this.kernel.bind(type).toConstantValue(value());
+        }
+        else {
+            this.kernel.bind(type).to(defaultBinding);
+        }
+    };
+    PlatformDIModule.prototype.bindHandlerWithOptions = function (type, optionType, value, defaultBinding) {
+        if (value) {
+            if (value instanceof Function) {
+                this.kernel.bind(type).toConstantValue(value());
+                return;
+            }
+            else {
+                this.kernel.bind(optionType).toConstantValue(value);
+            }
+        }
+        this.kernel.bind(type).to(defaultBinding);
+    };
+    PlatformDIModule.prototype.addModule = function (module) {
+        if (module instanceof inversify_1.ContainerModule) {
+            this.diModules.push(module);
+        }
+        else if (module instanceof Object && !(module instanceof Function)) {
+            for (var mod in module) {
+                this.addModule(module[mod]);
+            }
+        }
+    };
+    return PlatformDIModule;
+}());
+exports.PlatformDIModule = PlatformDIModule;
+;
+
+
+/***/ }),
+/* 52 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 <<<<<<< develop
 var assign        = __webpack_require__(46)
   , normalizeOpts = __webpack_require__(53)
@@ -2662,6 +3284,12 @@ var assign        = __webpack_require__(43)
   , isCallable    = __webpack_require__(46)
   , contains      = __webpack_require__(52)
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var assign        = __webpack_require__(54)
+  , normalizeOpts = __webpack_require__(61)
+  , isCallable    = __webpack_require__(57)
+  , contains      = __webpack_require__(63)
+>>>>>>> - updated platform
 
   , d;
 
@@ -2723,10 +3351,14 @@ d.gs = function (dscr, get, set/*, options*/) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 45 */
 =======
 /* 42 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 53 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2738,22 +3370,31 @@ module.exports = function () {};
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 46 */
 =======
 /* 43 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 54 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 <<<<<<< develop
+<<<<<<< develop
 module.exports = __webpack_require__(47)()
+=======
+module.exports = __webpack_require__(55)()
+>>>>>>> - updated platform
 	? Object.assign
-	: __webpack_require__(48);
+	: __webpack_require__(56);
 
 
 /***/ }),
+<<<<<<< develop
 /* 47 */
 =======
 module.exports = __webpack_require__(44)()
@@ -2764,6 +3405,9 @@ module.exports = __webpack_require__(44)()
 /***/ }),
 /* 44 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 55 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2780,15 +3424,20 @@ module.exports = function () {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 48 */
 =======
 /* 45 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 56 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< develop
 <<<<<<< develop
 var keys  = __webpack_require__(50)
   , value = __webpack_require__(54)
@@ -2796,6 +3445,10 @@ var keys  = __webpack_require__(50)
 var keys  = __webpack_require__(47)
   , value = __webpack_require__(51)
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var keys  = __webpack_require__(58)
+  , value = __webpack_require__(62)
+>>>>>>> - updated platform
   , max   = Math.max;
 
 module.exports = function (dest, src /*, …srcn*/) {
@@ -2819,10 +3472,14 @@ module.exports = function (dest, src /*, …srcn*/) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 49 */
 =======
 /* 46 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 57 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2837,22 +3494,31 @@ module.exports = function (obj) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 50 */
 =======
 /* 47 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 58 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 <<<<<<< develop
+<<<<<<< develop
 module.exports = __webpack_require__(51)()
+=======
+module.exports = __webpack_require__(59)()
+>>>>>>> - updated platform
 	? Object.keys
-	: __webpack_require__(52);
+	: __webpack_require__(60);
 
 
 /***/ }),
+<<<<<<< develop
 /* 51 */
 =======
 module.exports = __webpack_require__(48)()
@@ -2863,6 +3529,9 @@ module.exports = __webpack_require__(48)()
 /***/ }),
 /* 48 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 59 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2880,20 +3549,28 @@ module.exports = function () {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 52 */
 =======
 /* 49 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 60 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 <<<<<<< develop
+<<<<<<< develop
 var isValue = __webpack_require__(26);
 =======
 var isValue = __webpack_require__(24);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var isValue = __webpack_require__(29);
+>>>>>>> - updated platform
 
 var keys = Object.keys;
 
@@ -2904,20 +3581,28 @@ module.exports = function (object) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 53 */
 =======
 /* 50 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 61 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 <<<<<<< develop
+<<<<<<< develop
 var isValue = __webpack_require__(26);
 =======
 var isValue = __webpack_require__(24);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var isValue = __webpack_require__(29);
+>>>>>>> - updated platform
 
 var forEach = Array.prototype.forEach, create = Object.create;
 
@@ -2939,20 +3624,28 @@ module.exports = function (opts1 /*, …options*/) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 54 */
 =======
 /* 51 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 62 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 <<<<<<< develop
+<<<<<<< develop
 var isValue = __webpack_require__(26);
 =======
 var isValue = __webpack_require__(24);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var isValue = __webpack_require__(29);
+>>>>>>> - updated platform
 
 module.exports = function (value) {
 	if (!isValue(value)) throw new TypeError("Cannot use null or undefined");
@@ -2962,22 +3655,31 @@ module.exports = function (value) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 55 */
 =======
 /* 52 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 63 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 <<<<<<< develop
+<<<<<<< develop
 module.exports = __webpack_require__(56)()
+=======
+module.exports = __webpack_require__(64)()
+>>>>>>> - updated platform
 	? String.prototype.contains
-	: __webpack_require__(57);
+	: __webpack_require__(65);
 
 
 /***/ }),
+<<<<<<< develop
 /* 56 */
 =======
 module.exports = __webpack_require__(53)()
@@ -2988,6 +3690,9 @@ module.exports = __webpack_require__(53)()
 /***/ }),
 /* 53 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 64 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3003,10 +3708,14 @@ module.exports = function () {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 57 */
 =======
 /* 54 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 65 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3021,10 +3730,14 @@ module.exports = function (searchString/*, position*/) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 58 */
 =======
 /* 55 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 66 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3049,10 +3762,14 @@ module.exports = function () {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 59 */
 =======
 /* 56 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 67 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3069,10 +3786,14 @@ module.exports = function (x) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 60 */
 =======
 /* 57 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 68 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3081,12 +3802,17 @@ module.exports = function (x) {
 
 
 <<<<<<< develop
+<<<<<<< develop
 var d              = __webpack_require__(44)
   , validateSymbol = __webpack_require__(61)
 =======
 var d              = __webpack_require__(41)
   , validateSymbol = __webpack_require__(58)
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var d              = __webpack_require__(52)
+  , validateSymbol = __webpack_require__(69)
+>>>>>>> - updated platform
 
   , create = Object.create, defineProperties = Object.defineProperties
   , defineProperty = Object.defineProperty, objPrototype = Object.prototype
@@ -3203,20 +3929,28 @@ defineProperty(HiddenSymbol.prototype, SymbolPolyfill.toPrimitive,
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 61 */
 =======
 /* 58 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 69 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 <<<<<<< develop
+<<<<<<< develop
 var isSymbol = __webpack_require__(59);
 =======
 var isSymbol = __webpack_require__(56);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var isSymbol = __webpack_require__(67);
+>>>>>>> - updated platform
 
 module.exports = function (value) {
 	if (!isSymbol(value)) throw new TypeError(value + " is not a symbol");
@@ -3226,10 +3960,14 @@ module.exports = function (value) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 62 */
 =======
 /* 59 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 70 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3259,10 +3997,14 @@ exports.inject = inject;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 63 */
 =======
 /* 60 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 71 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3289,10 +4031,14 @@ exports.injectable = injectable;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 64 */
 =======
 /* 61 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 72 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3322,10 +4068,14 @@ exports.multiInject = multiInject;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 65 */
 =======
 /* 62 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 73 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3355,10 +4105,14 @@ exports.named = named;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 66 */
 =======
 /* 63 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 74 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3388,10 +4142,14 @@ exports.optional = optional;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 67 */
 =======
 /* 64 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 75 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3419,10 +4177,14 @@ exports.tagged = tagged;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 68 */
 =======
 /* 65 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 76 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3447,10 +4209,14 @@ exports.targetName = targetName;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 69 */
 =======
 /* 66 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 77 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3475,16 +4241,24 @@ exports.unmanaged = unmanaged;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 70 */
 =======
 /* 67 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 78 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var guid_1 = __webpack_require__(20);
+=======
+var guid_1 = __webpack_require__(21);
+>>>>>>> - updated platform
 var literal_types_1 = __webpack_require__(18);
 =======
 var guid_1 = __webpack_require__(18);
@@ -3526,10 +4300,14 @@ exports.Binding = Binding;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 71 */
 =======
 /* 68 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 79 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3544,14 +4322,19 @@ exports.BindingCount = BindingCount;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 72 */
 =======
 /* 69 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 80 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 <<<<<<< develop
 var binding_1 = __webpack_require__(70);
 var lookup_1 = __webpack_require__(75);
@@ -3561,6 +4344,16 @@ var binding_to_syntax_1 = __webpack_require__(86);
 var serialization_1 = __webpack_require__(23);
 var container_snapshot_1 = __webpack_require__(74);
 var guid_1 = __webpack_require__(20);
+=======
+var binding_1 = __webpack_require__(78);
+var lookup_1 = __webpack_require__(83);
+var planner_1 = __webpack_require__(86);
+var resolver_1 = __webpack_require__(91);
+var binding_to_syntax_1 = __webpack_require__(94);
+var serialization_1 = __webpack_require__(25);
+var container_snapshot_1 = __webpack_require__(82);
+var guid_1 = __webpack_require__(21);
+>>>>>>> - updated platform
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
@@ -3795,19 +4588,27 @@ exports.Container = Container;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 73 */
 =======
 /* 70 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 81 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var guid_1 = __webpack_require__(20);
 =======
 var guid_1 = __webpack_require__(18);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var guid_1 = __webpack_require__(21);
+>>>>>>> - updated platform
 var ContainerModule = (function () {
     function ContainerModule(registry) {
         this.guid = guid_1.guid();
@@ -3820,10 +4621,14 @@ exports.ContainerModule = ContainerModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 74 */
 =======
 /* 71 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 82 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3844,10 +4649,14 @@ exports.ContainerSnapshot = ContainerSnapshot;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 75 */
 =======
 /* 72 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 83 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3940,19 +4749,27 @@ exports.Lookup = Lookup;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 76 */
 =======
 /* 73 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 84 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var guid_1 = __webpack_require__(20);
 =======
 var guid_1 = __webpack_require__(18);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var guid_1 = __webpack_require__(21);
+>>>>>>> - updated platform
 var Context = (function () {
     function Context(container) {
         this.guid = guid_1.guid();
@@ -3968,10 +4785,14 @@ exports.Context = Context;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 77 */
 =======
 /* 74 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 85 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3988,14 +4809,19 @@ exports.Plan = Plan;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 78 */
 =======
 /* 75 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 86 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 <<<<<<< develop
 var plan_1 = __webpack_require__(77);
 var context_1 = __webpack_require__(76);
@@ -4003,10 +4829,19 @@ var request_1 = __webpack_require__(81);
 var target_1 = __webpack_require__(32);
 var binding_count_1 = __webpack_require__(71);
 var reflection_utils_1 = __webpack_require__(80);
+=======
+var plan_1 = __webpack_require__(85);
+var context_1 = __webpack_require__(84);
+var request_1 = __webpack_require__(89);
+var target_1 = __webpack_require__(37);
+var binding_count_1 = __webpack_require__(79);
+var reflection_utils_1 = __webpack_require__(88);
+>>>>>>> - updated platform
 var metadata_1 = __webpack_require__(15);
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
+<<<<<<< develop
 var serialization_1 = __webpack_require__(23);
 =======
 var plan_1 = __webpack_require__(74);
@@ -4021,6 +4856,9 @@ var METADATA_KEY = __webpack_require__(11);
 var literal_types_1 = __webpack_require__(16);
 var serialization_1 = __webpack_require__(21);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var serialization_1 = __webpack_require__(25);
+>>>>>>> - updated platform
 function getBindingDictionary(cntnr) {
     return cntnr._bindingDictionary;
 }
@@ -4148,10 +4986,14 @@ exports.createMockRequest = createMockRequest;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 79 */
 =======
 /* 76 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 87 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4185,17 +5027,26 @@ exports.QueryableString = QueryableString;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 80 */
 =======
 /* 77 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 88 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var serialization_1 = __webpack_require__(23);
 var target_1 = __webpack_require__(32);
+=======
+var serialization_1 = __webpack_require__(25);
+var target_1 = __webpack_require__(37);
+>>>>>>> - updated platform
 var ERROR_MSGS = __webpack_require__(16);
 var METADATA_KEY = __webpack_require__(12);
 var literal_types_1 = __webpack_require__(18);
@@ -4310,19 +5161,27 @@ function formatTargetMetadata(targetMetadata) {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 81 */
 =======
 /* 78 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 89 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var guid_1 = __webpack_require__(20);
 =======
 var guid_1 = __webpack_require__(18);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var guid_1 = __webpack_require__(21);
+>>>>>>> - updated platform
 var Request = (function () {
     function Request(serviceIdentifier, parentContext, parentRequest, bindings, target) {
         this.guid = guid_1.guid();
@@ -4345,10 +5204,14 @@ exports.Request = Request;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 82 */
 =======
 /* 79 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 90 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4398,18 +5261,22 @@ exports.resolveInstance = resolveInstance;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 83 */
 =======
 /* 80 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 91 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
 var literal_types_1 = __webpack_require__(18);
-var serialization_1 = __webpack_require__(23);
-var instantiation_1 = __webpack_require__(82);
+var serialization_1 = __webpack_require__(25);
+var instantiation_1 = __webpack_require__(90);
 var ERROR_MSGS = __webpack_require__(16);
 =======
 var literal_types_1 = __webpack_require__(16);
@@ -4483,21 +5350,29 @@ exports.resolve = resolve;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 84 */
 =======
 /* 81 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 92 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
 var literal_types_1 = __webpack_require__(18);
+<<<<<<< develop
 var binding_when_on_syntax_1 = __webpack_require__(33);
 =======
 var literal_types_1 = __webpack_require__(16);
 var binding_when_on_syntax_1 = __webpack_require__(31);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var binding_when_on_syntax_1 = __webpack_require__(38);
+>>>>>>> - updated platform
 var BindingInSyntax = (function () {
     function BindingInSyntax(binding) {
         this._binding = binding;
@@ -4517,14 +5392,19 @@ exports.BindingInSyntax = BindingInSyntax;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 85 */
 =======
 /* 82 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 93 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 <<<<<<< develop
 var binding_in_syntax_1 = __webpack_require__(84);
 var binding_when_syntax_1 = __webpack_require__(28);
@@ -4534,6 +5414,11 @@ var binding_in_syntax_1 = __webpack_require__(81);
 var binding_when_syntax_1 = __webpack_require__(26);
 var binding_on_syntax_1 = __webpack_require__(25);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var binding_in_syntax_1 = __webpack_require__(92);
+var binding_when_syntax_1 = __webpack_require__(31);
+var binding_on_syntax_1 = __webpack_require__(30);
+>>>>>>> - updated platform
 var BindingInWhenOnSyntax = (function () {
     function BindingInWhenOnSyntax(binding) {
         this._binding = binding;
@@ -4602,17 +5487,26 @@ exports.BindingInWhenOnSyntax = BindingInWhenOnSyntax;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 86 */
 =======
 /* 83 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 94 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var binding_in_when_on_syntax_1 = __webpack_require__(85);
 var binding_when_on_syntax_1 = __webpack_require__(33);
+=======
+var binding_in_when_on_syntax_1 = __webpack_require__(93);
+var binding_when_on_syntax_1 = __webpack_require__(38);
+>>>>>>> - updated platform
 var literal_types_1 = __webpack_require__(18);
 var ERROR_MSGS = __webpack_require__(16);
 =======
@@ -4691,10 +5585,14 @@ exports.BindingToSyntax = BindingToSyntax;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 87 */
 =======
 /* 84 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 95 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4703,15 +5601,20 @@ exports.BindingToSyntax = BindingToSyntax;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 88 */
 =======
 /* 85 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 96 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
+<<<<<<< develop
 <<<<<<< develop
 var uritemplate = __webpack_require__(615);
 =======
@@ -4719,6 +5622,11 @@ var uritemplate = __webpack_require__(467);
 >>>>>>> Fix jQuery http client reject promise issue
 var _1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
+=======
+var uritemplate = __webpack_require__(660);
+var _1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var inversify_1 = __webpack_require__(0);
 var BaseRoute = (function () {
     function BaseRoute(appOptions) {
@@ -4875,10 +5783,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 89 */
 =======
 /* 86 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 97 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4886,11 +5798,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 90 */
 =======
 /* 87 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 98 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4898,11 +5814,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 91 */
 =======
 /* 88 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 99 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4910,11 +5830,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 92 */
 =======
 /* 89 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 100 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4922,11 +5846,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 93 */
 =======
 /* 90 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 101 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4934,11 +5862,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 94 */
 =======
 /* 91 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 102 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4946,11 +5878,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 95 */
 =======
 /* 92 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 103 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4958,11 +5894,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 96 */
 =======
 /* 93 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 104 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4970,11 +5910,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 97 */
 =======
 /* 94 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 105 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4982,11 +5926,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 98 */
 =======
 /* 95 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 106 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4994,11 +5942,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 99 */
 =======
 /* 96 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 107 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5006,11 +5958,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 100 */
 =======
 /* 97 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 108 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5019,10 +5975,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 101 */
 =======
 /* 98 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 109 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5031,22 +5991,27 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(96));
 __export(__webpack_require__(98));
+=======
+__export(__webpack_require__(104));
+__export(__webpack_require__(106));
+__export(__webpack_require__(105));
+>>>>>>> - updated platform
 __export(__webpack_require__(97));
-__export(__webpack_require__(89));
-__export(__webpack_require__(90));
-__export(__webpack_require__(93));
-__export(__webpack_require__(94));
-__export(__webpack_require__(91));
-__export(__webpack_require__(92));
-__export(__webpack_require__(100));
-__export(__webpack_require__(95));
+__export(__webpack_require__(98));
+__export(__webpack_require__(101));
+__export(__webpack_require__(102));
 __export(__webpack_require__(99));
+__export(__webpack_require__(100));
+__export(__webpack_require__(108));
+__export(__webpack_require__(103));
+__export(__webpack_require__(107));
 
 
 /***/ }),
-/* 102 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5120,6 +6085,7 @@ exports.DateFormatter = DateFormatter;
 
 
 /***/ }),
+<<<<<<< develop
 /* 103 */
 =======
 __export(__webpack_require__(93));
@@ -5139,11 +6105,14 @@ __export(__webpack_require__(96));
 /***/ }),
 /* 99 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 111 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var _1 = __webpack_require__(2);
+var _1 = __webpack_require__(3);
 var utility = new _1.Utility();
 //HAL Parser is based on https://github.com/Baasic/angular-hal & https://github.com/jasonaden/angular-hal implementation. Parser is used to parse [HAL (Hyptertext Application Language)](http://stateless.co/hal_specification.html) JSON structures into usable JavaScript objects.
 var __bind = function (fn, me) { return function () { return fn.apply(me, arguments); }; };
@@ -5256,10 +6225,14 @@ exports.HALParser = HALParser = new Parser('JavaScriptSDK');
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 104 */
 =======
 /* 100 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 112 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5268,7 +6241,7 @@ exports.HALParser = HALParser = new Parser('JavaScriptSDK');
  * @description This service is used to perform low level model or option transformations before they are sent to the Baasic back-end.
  **/
 
-var _1 = __webpack_require__(2);
+var _1 = __webpack_require__(3);
 var ModelMapper = (function () {
     function ModelMapper() {
         this.idPropertyName = 'id';
@@ -5395,10 +6368,14 @@ exports.ModelMapper = ModelMapper;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 105 */
 =======
 /* 101 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 113 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5482,17 +6459,21 @@ exports.Utility = Utility;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 106 */
 =======
 /* 102 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 114 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var inversify_1 = __webpack_require__(0);
 var utility = new common_1.Utility();
 var BrowserEventHandler = (function () {
@@ -5587,14 +6568,19 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 107 */
 =======
 /* 103 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 115 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+<<<<<<< develop
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
@@ -5611,6 +6597,12 @@ __export(__webpack_require__(102));
 /***/ }),
 /* 104 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+
+
+/***/ }),
+/* 116 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5618,11 +6610,15 @@ __export(__webpack_require__(102));
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 109 */
 =======
 /* 105 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 117 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5630,11 +6626,15 @@ __export(__webpack_require__(102));
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 110 */
 =======
 /* 106 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 118 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5642,11 +6642,15 @@ __export(__webpack_require__(102));
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 111 */
 =======
 /* 107 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 119 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5654,11 +6658,15 @@ __export(__webpack_require__(102));
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 112 */
 =======
 /* 108 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 120 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5666,11 +6674,15 @@ __export(__webpack_require__(102));
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 113 */
 =======
 /* 109 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 121 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5678,11 +6690,15 @@ __export(__webpack_require__(102));
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 114 */
 =======
 /* 110 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 122 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5691,10 +6707,14 @@ __export(__webpack_require__(102));
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 115 */
 =======
 /* 111 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 123 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5707,10 +6727,14 @@ exports.TokenTypes = {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 116 */
 =======
 /* 112 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 124 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5718,11 +6742,15 @@ exports.TokenTypes = {
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 117 */
 =======
 /* 113 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 125 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5730,11 +6758,15 @@ exports.TokenTypes = {
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 118 */
 =======
 /* 114 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 126 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5743,19 +6775,27 @@ exports.TokenTypes = {
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 119 */
 =======
 /* 115 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 127 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 =======
 var Symbol = __webpack_require__(9);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> - updated platform
 var TYPES = {
     IBaasicAppOptions: Symbol("IBaasicAppOptions"),
     IAppOptions: Symbol("IAppOptions"),
@@ -5764,6 +6804,7 @@ var TYPES = {
     ITokenHandler: Symbol("ITokenHandler"),
     IUserHandler: Symbol("IUserHandler"),
     IBaasicApp: Symbol("IBaasicApp"),
+    IBaasicPlatform: Symbol("IBaasicPlatform"),
     IDefaultStorageConfig: Symbol("IDefaultStorageConfig")
 };
 exports.TYPES = TYPES;
@@ -5771,21 +6812,30 @@ exports.TYPES = TYPES;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 120 */
 =======
 /* 116 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 128 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
 var _1 = __webpack_require__(36);
 =======
 var _1 = __webpack_require__(34);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var contracts_1 = __webpack_require__(2);
+var _1 = __webpack_require__(32);
+>>>>>>> - updated platform
 var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(contracts_1.TYPES.ITokenHandler).to(_1.TokenHandler).inSingletonScope();
     bind(contracts_1.TYPES.IUserHandler).to(_1.UserHandler).inSingletonScope();
@@ -5795,16 +6845,20 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 121 */
 =======
 /* 117 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 129 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var inversify_1 = __webpack_require__(0);
 var LocalStorageHandler = (function () {
     function LocalStorageHandler(config) {
@@ -5848,6 +6902,7 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 122 */
 =======
 /* 118 */
@@ -5872,13 +6927,16 @@ __export(__webpack_require__(117));
 /***/ }),
 /* 119 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 130 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var inversify_1 = __webpack_require__(0);
 var TokenHandler = (function () {
     function TokenHandler(eventHandler, storageHandler, application) {
@@ -5999,16 +7057,20 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 124 */
 =======
 /* 120 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 131 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var inversify_1 = __webpack_require__(0);
 var UserHandler = (function () {
     function UserHandler(eventHandler, storageHandler, application) {
@@ -6072,7 +7134,11 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 125 */
+=======
+/* 132 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6080,10 +7146,14 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 126 */
 =======
 /* 121 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 133 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6091,11 +7161,15 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 127 */
 =======
 /* 122 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 134 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6103,11 +7177,15 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 128 */
 =======
 /* 123 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 135 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6115,11 +7193,15 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 129 */
 =======
 /* 124 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 136 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6128,10 +7210,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 130 */
 =======
 /* 125 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 137 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6139,8 +7225,8 @@ var _a, _b, _c;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var _1 = __webpack_require__(4);
-var contracts_1 = __webpack_require__(3);
-var common_1 = __webpack_require__(2);
+var contracts_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 var ApiClient = ApiClient_1 = (function () {
     function ApiClient(appOptions, httpClient, tokenHandler, halParser) {
         this.appOptions = appOptions;
@@ -6315,6 +7401,7 @@ var ApiClient_1, _a, _b, _c, _d;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 131 */
 =======
 /* 126 */
@@ -6339,6 +7426,9 @@ __export(__webpack_require__(127));
 /***/ }),
 /* 127 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 138 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6430,6 +7520,7 @@ function parseHeaders(headers) {
 
 
 /***/ }),
+<<<<<<< develop
 /* 133 */
 =======
 =======
@@ -6457,6 +7548,9 @@ function tryConvertToJson(obj) {
 /***/ }),
 /* 128 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 139 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6471,10 +7565,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(29);
 =======
 var _1 = __webpack_require__(27);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(33);
+>>>>>>> - updated platform
 var ApplicationSettingsClient = (function () {
     function ApplicationSettingsClient(applicationSettingsRoute, apiClient) {
         this.applicationSettingsRoute = applicationSettingsRoute;
@@ -6551,10 +7649,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 134 */
 =======
 /* 129 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 140 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6566,8 +7668,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ApplicationSettingsRoute = (function (_super) {
     tslib_1.__extends(ApplicationSettingsRoute, _super);
     function ApplicationSettingsRoute(appOptions) {
@@ -6618,10 +7720,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 135 */
 =======
 /* 130 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 141 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6631,10 +7737,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 136 */
 =======
 /* 131 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 142 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6642,11 +7752,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 137 */
 =======
 /* 132 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 143 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6655,10 +7769,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 138 */
 =======
 /* 133 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 144 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6666,6 +7784,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(136));
 __export(__webpack_require__(137));
@@ -6683,11 +7802,21 @@ __export(__webpack_require__(130));
 /***/ }),
 /* 134 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(142));
+__export(__webpack_require__(143));
+__export(__webpack_require__(141));
+
+
+/***/ }),
+/* 145 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 <<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(29);
@@ -6695,6 +7824,10 @@ var _1 = __webpack_require__(29);
 var Symbol = __webpack_require__(9);
 var _1 = __webpack_require__(27);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(33);
+>>>>>>> - updated platform
 var TYPES = {
     ApplicationSettingsClient: Symbol("ApplicationSettingsClient"),
     ApplicationSettingsRoute: Symbol("ApplicationSettingsRoute")
@@ -6709,10 +7842,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 140 */
 =======
 /* 135 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 146 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6767,10 +7904,14 @@ exports.ALPHABET = ALPHABET;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 141 */
 =======
 /* 136 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 147 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6905,10 +8046,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 142 */
 =======
 /* 137 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 148 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6920,9 +8065,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleACLRoute = (function (_super) {
     tslib_1.__extends(ArticleACLRoute, _super);
     function ArticleACLRoute(appOptions) {
@@ -7034,10 +8179,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 143 */
 =======
 /* 138 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 149 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7364,10 +8513,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 144 */
 =======
 /* 139 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 150 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7379,9 +8532,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleCommentRepliesRoute = (function (_super) {
     tslib_1.__extends(ArticleCommentRepliesRoute, _super);
     function ArticleCommentRepliesRoute(appOptions) {
@@ -7548,10 +8701,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 145 */
 =======
 /* 140 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 151 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7850,10 +9007,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 146 */
 =======
 /* 141 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 152 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7865,9 +9026,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleCommentsRoute = (function (_super) {
     tslib_1.__extends(ArticleCommentsRoute, _super);
     function ArticleCommentsRoute(appOptions) {
@@ -8006,10 +9167,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 147 */
 =======
 /* 142 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 153 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8364,10 +9529,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 148 */
 =======
 /* 143 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 154 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8719,10 +9888,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 149 */
 =======
 /* 144 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 155 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8734,9 +9907,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleInstanceCommentRepliesRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceCommentRepliesRoute, _super);
     function ArticleInstanceCommentRepliesRoute(appOptions) {
@@ -8854,10 +10027,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 150 */
 =======
 /* 145 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 156 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8869,9 +10046,9 @@ var _a;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(6);
 var ArticleInstanceCommentsRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceCommentsRoute, _super);
@@ -9065,10 +10242,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 151 */
 =======
 /* 146 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 157 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9076,6 +10257,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(149));
 __export(__webpack_require__(148));
@@ -9095,6 +10277,16 @@ __export(__webpack_require__(142));
 /***/ }),
 /* 147 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(155));
+__export(__webpack_require__(154));
+__export(__webpack_require__(156));
+__export(__webpack_require__(153));
+
+
+/***/ }),
+/* 158 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9198,10 +10390,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 153 */
 =======
 /* 148 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 159 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9213,9 +10409,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleFilesBatchRoute = (function (_super) {
     tslib_1.__extends(ArticleFilesBatchRoute, _super);
     function ArticleFilesBatchRoute(appOptions) {
@@ -9270,10 +10466,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 154 */
 =======
 /* 149 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 160 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9440,10 +10640,14 @@ var _a, _b, _c, _d;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 155 */
 =======
 /* 150 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 161 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9455,9 +10659,9 @@ var _a, _b, _c, _d;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(6);
 var ArticleFilesRoute = (function (_super) {
     tslib_1.__extends(ArticleFilesRoute, _super);
@@ -9566,10 +10770,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 156 */
 =======
 /* 151 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 162 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9733,10 +10941,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 157 */
 =======
 /* 152 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 163 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9748,9 +10960,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleFilesStreamsRoute = (function (_super) {
     tslib_1.__extends(ArticleFilesStreamsRoute, _super);
     function ArticleFilesStreamsRoute(appOptions) {
@@ -9825,10 +11037,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 158 */
 =======
 /* 153 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 164 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9934,10 +11150,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 159 */
 =======
 /* 154 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 165 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9949,8 +11169,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleInstanceFilesBatchRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceFilesBatchRoute, _super);
     function ArticleInstanceFilesBatchRoute(appOptions) {
@@ -10011,10 +11231,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 160 */
 =======
 /* 155 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 166 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10206,10 +11430,14 @@ var _a, _b, _c, _d;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 161 */
 =======
 /* 156 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 167 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10221,9 +11449,9 @@ var _a, _b, _c, _d;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(6);
 var ArticleInstanceFilesRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceFilesRoute, _super);
@@ -10366,10 +11594,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 162 */
 =======
 /* 157 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 168 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10532,10 +11764,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 163 */
 =======
 /* 158 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 169 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10547,12 +11783,17 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 =======
 ;
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var ArticleInstanceFilesStreamsRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceFilesStreamsRoute, _super);
     function ArticleInstanceFilesStreamsRoute(appOptions) {
@@ -10636,10 +11877,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 164 */
 =======
 /* 159 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 170 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10647,6 +11892,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(163));
 __export(__webpack_require__(162));
@@ -10670,6 +11916,18 @@ __export(__webpack_require__(155));
 /***/ }),
 /* 160 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(169));
+__export(__webpack_require__(168));
+__export(__webpack_require__(165));
+__export(__webpack_require__(164));
+__export(__webpack_require__(167));
+__export(__webpack_require__(166));
+
+
+/***/ }),
+/* 171 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10848,10 +12106,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 166 */
 =======
 /* 161 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 172 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10863,9 +12125,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleRatingsRoute = (function (_super) {
     tslib_1.__extends(ArticleRatingsRoute, _super);
     function ArticleRatingsRoute(appOptions) {
@@ -10971,10 +12233,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 167 */
 =======
 /* 162 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 173 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11173,10 +12439,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 168 */
 =======
 /* 163 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 174 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11188,9 +12458,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleInstanceRatingsRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceRatingsRoute, _super);
     function ArticleInstanceRatingsRoute(appOptions) {
@@ -11314,10 +12584,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 169 */
 =======
 /* 164 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 175 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11325,6 +12599,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(168));
 __export(__webpack_require__(167));
@@ -11340,6 +12615,14 @@ __export(__webpack_require__(162));
 /***/ }),
 /* 165 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(174));
+__export(__webpack_require__(173));
+
+
+/***/ }),
+/* 176 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11351,9 +12634,9 @@ __export(__webpack_require__(162));
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(6);
 var ArticleRoute = (function (_super) {
     tslib_1.__extends(ArticleRoute, _super);
@@ -11572,10 +12855,14 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 171 */
 =======
 /* 166 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 177 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11668,10 +12955,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 172 */
 =======
 /* 167 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 178 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11683,9 +12974,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleSettingsRoute = (function (_super) {
     tslib_1.__extends(ArticleSettingsRoute, _super);
     function ArticleSettingsRoute(appOptions) {
@@ -11736,10 +13027,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 173 */
 =======
 /* 168 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 179 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11827,10 +13122,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 174 */
 =======
 /* 169 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 180 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11842,9 +13141,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleSubscriptionsRoute = (function (_super) {
     tslib_1.__extends(ArticleSubscriptionsRoute, _super);
     function ArticleSubscriptionsRoute(appOptions) {
@@ -11895,10 +13194,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 175 */
 =======
 /* 170 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 181 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11963,10 +13266,14 @@ var _a, _b, _c, _d;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 176 */
 =======
 /* 171 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 182 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11978,9 +13285,9 @@ var _a, _b, _c, _d;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(6);
 var ArticleInstanceSubscriptionsRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceSubscriptionsRoute, _super);
@@ -12029,10 +13336,14 @@ var _a, _b, _c, _d;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 177 */
 =======
 /* 172 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 183 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12124,10 +13435,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 178 */
 =======
 /* 173 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 184 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12139,9 +13454,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleSubscriptionsArticleRoute = (function (_super) {
     tslib_1.__extends(ArticleSubscriptionsArticleRoute, _super);
     function ArticleSubscriptionsArticleRoute(appOptions) {
@@ -12201,10 +13516,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 179 */
 =======
 /* 174 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 185 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12293,10 +13612,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 180 */
 =======
 /* 175 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 186 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12308,9 +13631,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleSubscriptionsCommentReportedRoute = (function (_super) {
     tslib_1.__extends(ArticleSubscriptionsCommentReportedRoute, _super);
     function ArticleSubscriptionsCommentReportedRoute(appOptions) {
@@ -12361,10 +13684,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 181 */
 =======
 /* 176 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 187 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12453,10 +13780,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 182 */
 =======
 /* 177 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 188 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12468,9 +13799,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleSubscriptionsCommentRequiresModerationRoute = (function (_super) {
     tslib_1.__extends(ArticleSubscriptionsCommentRequiresModerationRoute, _super);
     function ArticleSubscriptionsCommentRequiresModerationRoute(appOptions) {
@@ -12521,10 +13852,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 183 */
 =======
 /* 178 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 189 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12533,17 +13868,23 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(178));
 __export(__webpack_require__(180));
+=======
+__export(__webpack_require__(184));
+__export(__webpack_require__(186));
+__export(__webpack_require__(188));
+>>>>>>> - updated platform
 __export(__webpack_require__(182));
-__export(__webpack_require__(176));
-__export(__webpack_require__(177));
-__export(__webpack_require__(179));
+__export(__webpack_require__(183));
+__export(__webpack_require__(185));
+__export(__webpack_require__(187));
 __export(__webpack_require__(181));
-__export(__webpack_require__(175));
 
 
 /***/ }),
+<<<<<<< develop
 /* 184 */
 =======
 __export(__webpack_require__(173));
@@ -12559,6 +13900,9 @@ __export(__webpack_require__(170));
 /***/ }),
 /* 179 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 190 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12699,10 +14043,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 185 */
 =======
 /* 180 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 191 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12714,9 +14062,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(6);
 var ArticleTagsRoute = (function (_super) {
     tslib_1.__extends(ArticleTagsRoute, _super);
@@ -12805,10 +14153,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 186 */
 =======
 /* 181 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 192 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12908,10 +14260,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 187 */
 =======
 /* 182 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 193 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12923,9 +14279,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleTagsSubscriptionsRoute = (function (_super) {
     tslib_1.__extends(ArticleTagsSubscriptionsRoute, _super);
     function ArticleTagsSubscriptionsRoute(appOptions) {
@@ -12994,10 +14350,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 188 */
 =======
 /* 183 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 194 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13153,10 +14513,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 189 */
 =======
 /* 184 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 195 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13168,9 +14532,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ArticleInstanceTagsRoute = (function (_super) {
     tslib_1.__extends(ArticleInstanceTagsRoute, _super);
     function ArticleInstanceTagsRoute(appOptions) {
@@ -13266,10 +14630,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 190 */
 =======
 /* 185 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 196 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13277,6 +14645,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(189));
 __export(__webpack_require__(188));
@@ -13292,11 +14661,19 @@ __export(__webpack_require__(183));
 /***/ }),
 /* 186 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(195));
+__export(__webpack_require__(194));
+
+
+/***/ }),
+/* 197 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 var _1 = __webpack_require__(6);
 var BaasicArticleUtility = (function () {
     function BaasicArticleUtility() {
@@ -13336,10 +14713,14 @@ exports.BaasicArticleUtility = BaasicArticleUtility;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 192 */
 =======
 /* 187 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 198 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13363,10 +14744,14 @@ exports.CommentStatus = CommentStatus;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 193 */
 =======
 /* 188 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 199 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13375,11 +14760,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 194 */
 =======
 /* 189 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 200 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13388,11 +14777,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 195 */
 =======
 /* 190 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 201 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13400,11 +14793,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 196 */
 =======
 /* 191 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 202 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13413,11 +14810,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 197 */
 =======
 /* 192 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 203 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13426,11 +14827,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 198 */
 =======
 /* 193 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 204 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13439,11 +14844,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 199 */
 =======
 /* 194 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 205 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13452,11 +14861,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 200 */
 =======
 /* 195 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 206 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13465,11 +14878,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 201 */
 =======
 /* 196 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 207 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13477,11 +14894,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 202 */
 =======
 /* 197 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 208 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13489,11 +14910,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 203 */
 =======
 /* 198 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 209 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13502,11 +14927,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 204 */
 =======
 /* 199 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 210 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13515,11 +14944,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 205 */
 =======
 /* 200 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 211 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13527,11 +14960,15 @@ exports.CommentStatus = CommentStatus;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 206 */
 =======
 /* 201 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 212 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13540,10 +14977,14 @@ exports.CommentStatus = CommentStatus;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 207 */
 =======
 /* 202 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 213 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13553,10 +14994,14 @@ exports.CommentStatus = CommentStatus;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 208 */
 =======
 /* 203 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 214 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13564,6 +15009,7 @@ exports.CommentStatus = CommentStatus;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(201));
 __export(__webpack_require__(205));
@@ -13574,15 +15020,27 @@ __export(__webpack_require__(196));
 __export(__webpack_require__(206));
 __export(__webpack_require__(198));
 __export(__webpack_require__(197));
+=======
+>>>>>>> - updated platform
 __export(__webpack_require__(207));
+__export(__webpack_require__(211));
+__export(__webpack_require__(210));
+__export(__webpack_require__(201));
 __export(__webpack_require__(200));
-__export(__webpack_require__(203));
 __export(__webpack_require__(202));
-__export(__webpack_require__(193));
+__export(__webpack_require__(212));
+__export(__webpack_require__(204));
+__export(__webpack_require__(203));
+__export(__webpack_require__(213));
+__export(__webpack_require__(206));
+__export(__webpack_require__(209));
+__export(__webpack_require__(208));
 __export(__webpack_require__(199));
+__export(__webpack_require__(205));
 
 
 /***/ }),
+<<<<<<< develop
 /* 209 */
 =======
 __export(__webpack_require__(196));
@@ -13605,16 +15063,23 @@ __export(__webpack_require__(194));
 /***/ }),
 /* 204 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 215 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 <<<<<<< develop
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
 =======
 var Symbol = __webpack_require__(9);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(6);
 var TYPES = {
     ArticleCommentRepliesClient: Symbol("ArticleCommentRepliesClient"),
@@ -13720,10 +15185,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 210 */
 =======
 /* 205 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 216 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13760,10 +15229,14 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 211 */
 =======
 /* 206 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 217 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14076,10 +15549,14 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 212 */
 =======
 /* 207 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 218 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14096,10 +15573,14 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CalendarACLRoute = (function (_super) {
     tslib_1.__extends(CalendarACLRoute, _super);
     function CalendarACLRoute(appOptions) {
@@ -14299,7 +15780,11 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 213 */
+=======
+/* 219 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14307,15 +15792,19 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(211));
-__export(__webpack_require__(212));
+__export(__webpack_require__(217));
+__export(__webpack_require__(218));
 
 
 /***/ }),
+<<<<<<< develop
 /* 214 */
 =======
 /* 208 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 220 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14533,7 +16022,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 215 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14545,8 +16034,8 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarBatchRoute, _super);
     function CalendarBatchRoute(appOptions) {
@@ -14603,10 +16092,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 216 */
 =======
 /* 209 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 222 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14941,10 +16434,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 217 */
 =======
 /* 210 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 223 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14961,10 +16458,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CalendarRoute = (function (_super) {
     tslib_1.__extends(CalendarRoute, _super);
     function CalendarRoute(appOptions) {
@@ -15080,7 +16581,7 @@ var _a;
 
 
 /***/ }),
-/* 218 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15333,10 +16834,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 219 */
 =======
 /* 211 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 225 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15353,10 +16858,14 @@ var _a;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CalendarEventsRoute = (function (_super) {
     tslib_1.__extends(CalendarEventsRoute, _super);
     function CalendarEventsRoute(appOptions) {
@@ -15567,10 +17076,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 220 */
 =======
 /* 212 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 226 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15578,6 +17091,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(218));
 __export(__webpack_require__(219));
@@ -15706,6 +17220,14 @@ exports.diModule = diModule;
 /***/ }),
 /* 214 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(224));
+__export(__webpack_require__(225));
+
+
+/***/ }),
+/* 227 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15852,6 +17374,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 222 */
 =======
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
@@ -15942,6 +17465,9 @@ var _a, _b, _c;
 /***/ }),
 /* 215 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 228 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15958,9 +17484,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CalendarRsvpAttendeeBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarRsvpAttendeeBatchRoute, _super);
     function CalendarRsvpAttendeeBatchRoute(appOptions) {
@@ -16113,10 +17644,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 223 */
 =======
 /* 216 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 229 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16513,10 +18048,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 224 */
 =======
 /* 217 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 230 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16533,10 +18072,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CalendarRsvpAttendeeRoute = (function (_super) {
     tslib_1.__extends(CalendarRsvpAttendeeRoute, _super);
     function CalendarRsvpAttendeeRoute(appOptions) {
@@ -16843,10 +18386,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 225 */
 =======
 /* 218 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 231 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16854,6 +18401,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(221));
 __export(__webpack_require__(222));
@@ -16873,6 +18421,16 @@ __export(__webpack_require__(214));
 /***/ }),
 /* 219 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(227));
+__export(__webpack_require__(228));
+__export(__webpack_require__(229));
+__export(__webpack_require__(230));
+
+
+/***/ }),
+/* 232 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16988,6 +18546,7 @@ CalendarRsvpBatchClient = tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.CalendarRsvpBatchRoute !== "undefined" && _1.CalendarRsvpBatchRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
 ], CalendarRsvpBatchClient);
 exports.CalendarRsvpBatchClient = CalendarRsvpBatchClient;
+<<<<<<< develop
 =======
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
      * @method
@@ -17044,6 +18603,8 @@ CommerceLookupsAddressTypesBatchClient = tslib_1.__decorate([
 ], CommerceLookupsAddressTypesBatchClient);
 exports.CommerceLookupsAddressTypesBatchClient = CommerceLookupsAddressTypesBatchClient;
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+>>>>>>> - updated platform
 var _a, _b;
 /**
  * @copyright (c) 2017 Mono Ltd
@@ -17053,24 +18614,33 @@ var _a, _b;
  ***Notes:**
  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
 <<<<<<< develop
+<<<<<<< develop
  - All end-point objects are transformed by the associated route definition.
 =======
  - All end-point objects are transformed by the associated route service.
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+ - All end-point objects are transformed by the associated route definition.
+>>>>>>> - updated platform
  */ 
 
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 227 */
 =======
 /* 220 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 233 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
 <<<<<<< develop
  * @module calendarRsvpBatchRoute
  * @description BaasicCalendarRsvpBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarRsvpBatch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
@@ -17078,13 +18648,22 @@ var _a, _b;
  * @module commerceLookupsAddressTypeBatchRoute
  * @description Baasic Commerce Lookups AddressType Batch Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Commerce Lookups AddressType Batch Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+ * @module calendarRsvpBatchRoute
+ * @description BaasicCalendarRsvpBatchRoute Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use BaasicCalendarRsvpBatch Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+>>>>>>> - updated platform
  */
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CalendarRsvpBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarRsvpBatchRoute, _super);
     function CalendarRsvpBatchRoute(appOptions) {
@@ -17202,10 +18781,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 228 */
 =======
 /* 221 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 234 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17531,10 +19114,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 229 */
 =======
 /* 222 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 235 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17551,10 +19138,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CalendarRsvpRoute = (function (_super) {
     tslib_1.__extends(CalendarRsvpRoute, _super);
     function CalendarRsvpRoute(appOptions) {
@@ -17796,7 +19387,11 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 230 */
+=======
+/* 236 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17804,17 +19399,21 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(226));
-__export(__webpack_require__(227));
-__export(__webpack_require__(228));
-__export(__webpack_require__(229));
+__export(__webpack_require__(232));
+__export(__webpack_require__(233));
+__export(__webpack_require__(234));
+__export(__webpack_require__(235));
 
 
 /***/ }),
+<<<<<<< develop
 /* 231 */
 =======
 /* 223 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 237 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17822,6 +19421,7 @@ __export(__webpack_require__(229));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(225));
 __export(__webpack_require__(230));
@@ -17874,6 +19474,11 @@ __export(__webpack_require__(220));
 
 "use strict";
 
+=======
+__export(__webpack_require__(231));
+__export(__webpack_require__(236));
+__export(__webpack_require__(226));
+>>>>>>> - updated platform
 
 
 /***/ }),
@@ -17906,20 +19511,6 @@ __export(__webpack_require__(220));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(232));
-__export(__webpack_require__(233));
-__export(__webpack_require__(234));
-__export(__webpack_require__(237));
-__export(__webpack_require__(236));
-__export(__webpack_require__(238));
-__export(__webpack_require__(239));
-__export(__webpack_require__(235));
-__export(__webpack_require__(254));
-__export(__webpack_require__(246));
-__export(__webpack_require__(240));
 
 
 /***/ }),
@@ -17960,13 +19551,6 @@ __export(__webpack_require__(240));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(242));
-__export(__webpack_require__(243));
-__export(__webpack_require__(244));
-__export(__webpack_require__(245));
 
 
 /***/ }),
@@ -17975,6 +19559,20 @@ __export(__webpack_require__(245));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(238));
+__export(__webpack_require__(239));
+__export(__webpack_require__(240));
+__export(__webpack_require__(243));
+__export(__webpack_require__(242));
+__export(__webpack_require__(244));
+__export(__webpack_require__(245));
+__export(__webpack_require__(241));
+__export(__webpack_require__(260));
+__export(__webpack_require__(252));
+__export(__webpack_require__(246));
 
 
 /***/ }),
@@ -18015,6 +19613,13 @@ __export(__webpack_require__(245));
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(248));
+__export(__webpack_require__(249));
+__export(__webpack_require__(250));
+__export(__webpack_require__(251));
 
 
 /***/ }),
@@ -18031,16 +19636,6 @@ __export(__webpack_require__(245));
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(249));
-__export(__webpack_require__(248));
-__export(__webpack_require__(251));
-__export(__webpack_require__(250));
-__export(__webpack_require__(253));
-__export(__webpack_require__(247));
-__export(__webpack_require__(252));
 
 
 /***/ }),
@@ -18049,8 +19644,66 @@ __export(__webpack_require__(252));
 
 "use strict";
 
+
+
+/***/ }),
+/* 256 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 258 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 259 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 260 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(255));
+__export(__webpack_require__(254));
+__export(__webpack_require__(257));
+__export(__webpack_require__(256));
+__export(__webpack_require__(259));
+__export(__webpack_require__(253));
+__export(__webpack_require__(258));
+
+
+/***/ }),
+/* 261 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
+var Symbol = __webpack_require__(9);
 var _1 = __webpack_require__(7);
 var TYPES = {
     CalendarLookups: Symbol("CalendarLookups"),
@@ -18153,7 +19806,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 256 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18268,7 +19921,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 257 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18280,8 +19933,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRsvpAttendeeBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRsvpAttendeeBatchRoute, _super);
     function CalendarEventRsvpAttendeeBatchRoute(appOptions) {
@@ -18335,7 +19988,7 @@ var _a;
 
 
 /***/ }),
-/* 258 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18612,7 +20265,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 259 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18624,9 +20277,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRsvpAttendeeRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRsvpAttendeeRoute, _super);
     function CalendarEventRsvpAttendeeRoute(appOptions) {
@@ -18805,7 +20458,7 @@ var _a;
 
 
 /***/ }),
-/* 260 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18813,14 +20466,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(256));
-__export(__webpack_require__(257));
-__export(__webpack_require__(258));
-__export(__webpack_require__(259));
+__export(__webpack_require__(262));
+__export(__webpack_require__(263));
+__export(__webpack_require__(264));
+__export(__webpack_require__(265));
 
 
 /***/ }),
-/* 261 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18928,7 +20581,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 262 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18940,8 +20593,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRsvpBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRsvpBatchRoute, _super);
     function CalendarEventRsvpBatchRoute(appOptions) {
@@ -18995,7 +20648,7 @@ var _a;
 
 
 /***/ }),
-/* 263 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19186,7 +20839,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 264 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19198,9 +20851,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRsvpRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRsvpRoute, _super);
     function CalendarEventRsvpRoute(appOptions) {
@@ -19339,7 +20992,7 @@ var _a;
 
 
 /***/ }),
-/* 265 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19347,14 +21000,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(261));
-__export(__webpack_require__(262));
-__export(__webpack_require__(263));
-__export(__webpack_require__(264));
+__export(__webpack_require__(267));
+__export(__webpack_require__(268));
+__export(__webpack_require__(269));
+__export(__webpack_require__(270));
 
 
 /***/ }),
-/* 266 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19466,7 +21119,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 267 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19478,8 +21131,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarEventBatchRoute, _super);
     function CalendarEventBatchRoute(appOptions) {
@@ -19533,7 +21186,7 @@ var _a;
 
 
 /***/ }),
-/* 268 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19746,7 +21399,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 269 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19758,9 +21411,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRoute, _super);
     function CalendarEventRoute(appOptions) {
@@ -19897,7 +21550,7 @@ var _a;
 
 
 /***/ }),
-/* 270 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19905,21 +21558,21 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(267));
-__export(__webpack_require__(266));
-__export(__webpack_require__(269));
-__export(__webpack_require__(268));
+__export(__webpack_require__(273));
+__export(__webpack_require__(272));
+__export(__webpack_require__(275));
+__export(__webpack_require__(274));
 
 
 /***/ }),
-/* 271 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
 var _1 = __webpack_require__(7);
-var _2 = __webpack_require__(39);
+var _2 = __webpack_require__(46);
 var inversify_1 = __webpack_require__(0);
 var CalendarLookups = (function () {
     function CalendarLookups(RsvpInvitationType, RsvpAttendeeStatus, eventStatus, eventType) {
@@ -19943,7 +21596,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 272 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20046,7 +21699,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 273 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20058,8 +21711,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRsvpAttendeeStatusBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRsvpAttendeeStatusBatchRoute, _super);
     function CalendarEventRsvpAttendeeStatusBatchRoute(appOptions) {
@@ -20113,7 +21766,7 @@ var _a;
 
 
 /***/ }),
-/* 274 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20291,7 +21944,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 275 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20303,9 +21956,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRsvpAttendeeStatusRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRsvpAttendeeStatusRoute, _super);
     function CalendarEventRsvpAttendeeStatusRoute(appOptions) {
@@ -20422,7 +22075,7 @@ var _a;
 
 
 /***/ }),
-/* 276 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20430,14 +22083,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(272));
-__export(__webpack_require__(273));
-__export(__webpack_require__(274));
-__export(__webpack_require__(275));
+__export(__webpack_require__(278));
+__export(__webpack_require__(279));
+__export(__webpack_require__(280));
+__export(__webpack_require__(281));
 
 
 /***/ }),
-/* 277 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20540,7 +22193,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 278 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20552,8 +22205,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRsvpInvitationTypeBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRsvpInvitationTypeBatchRoute, _super);
     function CalendarEventRsvpInvitationTypeBatchRoute(appOptions) {
@@ -20607,7 +22260,7 @@ var _a;
 
 
 /***/ }),
-/* 279 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20785,7 +22438,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 280 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20797,9 +22450,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventRsvpInvitationTypeRoute = (function (_super) {
     tslib_1.__extends(CalendarEventRsvpInvitationTypeRoute, _super);
     function CalendarEventRsvpInvitationTypeRoute(appOptions) {
@@ -20916,7 +22569,7 @@ var _a;
 
 
 /***/ }),
-/* 281 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20924,14 +22577,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(277));
-__export(__webpack_require__(278));
-__export(__webpack_require__(279));
-__export(__webpack_require__(280));
+__export(__webpack_require__(283));
+__export(__webpack_require__(284));
+__export(__webpack_require__(285));
+__export(__webpack_require__(286));
 
 
 /***/ }),
-/* 282 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21034,7 +22687,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 283 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21046,8 +22699,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventStatusBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarEventStatusBatchRoute, _super);
     function CalendarEventStatusBatchRoute(appOptions) {
@@ -21101,7 +22754,7 @@ var _a;
 
 
 /***/ }),
-/* 284 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21279,7 +22932,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 285 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21291,9 +22944,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventStatusRoute = (function (_super) {
     tslib_1.__extends(CalendarEventStatusRoute, _super);
     function CalendarEventStatusRoute(appOptions) {
@@ -21410,7 +23063,7 @@ var _a;
 
 
 /***/ }),
-/* 286 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21418,14 +23071,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(282));
-__export(__webpack_require__(283));
-__export(__webpack_require__(284));
-__export(__webpack_require__(285));
+__export(__webpack_require__(288));
+__export(__webpack_require__(289));
+__export(__webpack_require__(290));
+__export(__webpack_require__(291));
 
 
 /***/ }),
-/* 287 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21528,7 +23181,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 288 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21540,8 +23193,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventTypeBatchRoute = (function (_super) {
     tslib_1.__extends(CalendarEventTypeBatchRoute, _super);
     function CalendarEventTypeBatchRoute(appOptions) {
@@ -21594,7 +23247,7 @@ var _a;
 
 
 /***/ }),
-/* 289 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21772,7 +23425,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 290 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21784,9 +23437,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CalendarEventTypeRoute = (function (_super) {
     tslib_1.__extends(CalendarEventTypeRoute, _super);
     function CalendarEventTypeRoute(appOptions) {
@@ -21902,7 +23555,7 @@ var _a;
 
 
 /***/ }),
-/* 291 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21910,14 +23563,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(287));
-__export(__webpack_require__(288));
-__export(__webpack_require__(289));
-__export(__webpack_require__(290));
+__export(__webpack_require__(293));
+__export(__webpack_require__(294));
+__export(__webpack_require__(295));
+__export(__webpack_require__(296));
 
 
 /***/ }),
-/* 292 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21951,7 +23604,7 @@ var _a, _b, _c, _d, _e, _f;
 
 
 /***/ }),
-/* 293 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22187,7 +23840,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 
 
 /***/ }),
-/* 294 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22199,9 +23852,9 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceRoute = (function (_super) {
     tslib_1.__extends(CommerceRoute, _super);
     function CommerceRoute(appOptions) {
@@ -22297,58 +23950,58 @@ var _a;
 
 
 /***/ }),
-/* 295 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 296 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 297 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 298 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 299 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 300 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
 /* 301 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 302 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 303 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 304 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 305 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 306 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22356,16 +24009,16 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(298));
-__export(__webpack_require__(297));
-__export(__webpack_require__(300));
-__export(__webpack_require__(299));
-__export(__webpack_require__(295));
-__export(__webpack_require__(296));
+__export(__webpack_require__(304));
+__export(__webpack_require__(303));
+__export(__webpack_require__(306));
+__export(__webpack_require__(305));
+__export(__webpack_require__(301));
+__export(__webpack_require__(302));
 
 
 /***/ }),
-/* 302 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22511,7 +24164,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 303 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22523,9 +24176,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceCouponUseRoute = (function (_super) {
     tslib_1.__extends(CommerceCouponUseRoute, _super);
     function CommerceCouponUseRoute(appOptions) {
@@ -22605,7 +24258,7 @@ var _a;
 
 
 /***/ }),
-/* 304 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22613,12 +24266,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(303));
-__export(__webpack_require__(302));
+__export(__webpack_require__(309));
+__export(__webpack_require__(308));
 
 
 /***/ }),
-/* 305 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22779,7 +24432,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 306 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22791,9 +24444,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceCouponRoute = (function (_super) {
     tslib_1.__extends(CommerceCouponRoute, _super);
     function CommerceCouponRoute(appOptions) {
@@ -22885,7 +24538,7 @@ var _a;
 
 
 /***/ }),
-/* 307 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22893,12 +24546,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(306));
-__export(__webpack_require__(305));
+__export(__webpack_require__(312));
+__export(__webpack_require__(311));
 
 
 /***/ }),
-/* 308 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23029,7 +24682,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 309 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23171,7 +24824,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 310 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23183,9 +24836,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceCustomerPaymentMethodRoute = (function (_super) {
     tslib_1.__extends(CommerceCustomerPaymentMethodRoute, _super);
     function CommerceCustomerPaymentMethodRoute(appOptions) {
@@ -23265,7 +24918,7 @@ var _a;
 
 
 /***/ }),
-/* 311 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23277,9 +24930,9 @@ var _a;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceCustomerRoute = (function (_super) {
     tslib_1.__extends(CommerceCustomerRoute, _super);
     function CommerceCustomerRoute(appOptions) {
@@ -23350,7 +25003,7 @@ var _a;
 
 
 /***/ }),
-/* 312 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23358,20 +25011,20 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(311));
-__export(__webpack_require__(308));
-__export(__webpack_require__(310));
-__export(__webpack_require__(309));
+__export(__webpack_require__(317));
+__export(__webpack_require__(314));
+__export(__webpack_require__(316));
+__export(__webpack_require__(315));
 
 
 /***/ }),
-/* 313 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
+var Symbol = __webpack_require__(9);
 var _1 = __webpack_require__(5);
 var TYPES = {
     CommerceCustomerPaymentMethodClient: Symbol("CommerceCustomerPaymentMethodClient"),
@@ -23512,7 +25165,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 314 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23634,7 +25287,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 315 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23646,9 +25299,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceInvoiceRoute = (function (_super) {
     tslib_1.__extends(CommerceInvoiceRoute, _super);
@@ -23734,7 +25387,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 316 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23818,7 +25471,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 317 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23830,9 +25483,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceInvoiceStreamsRoute = (function (_super) {
     tslib_1.__extends(CommerceInvoiceStreamsRoute, _super);
     function CommerceInvoiceStreamsRoute(appOptions) {
@@ -23876,7 +25529,7 @@ var _a;
 
 
 /***/ }),
-/* 318 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23884,14 +25537,14 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(317));
-__export(__webpack_require__(316));
-__export(__webpack_require__(315));
-__export(__webpack_require__(314));
+__export(__webpack_require__(323));
+__export(__webpack_require__(322));
+__export(__webpack_require__(321));
+__export(__webpack_require__(320));
 
 
 /***/ }),
-/* 319 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23986,7 +25639,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 320 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23998,9 +25651,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsAddressTypeBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsAddressTypeBatchRoute, _super);
     function CommerceLookupsAddressTypeBatchRoute(appOptions) {
@@ -24057,7 +25710,7 @@ var _a;
 
 
 /***/ }),
-/* 321 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24206,7 +25859,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 322 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24218,9 +25871,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsAddressTypeRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsAddressTypeRoute, _super);
@@ -24310,7 +25963,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 323 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24318,14 +25971,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(320));
-__export(__webpack_require__(319));
-__export(__webpack_require__(322));
-__export(__webpack_require__(321));
+__export(__webpack_require__(326));
+__export(__webpack_require__(325));
+__export(__webpack_require__(328));
+__export(__webpack_require__(327));
 
 
 /***/ }),
-/* 324 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24421,7 +26074,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 325 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24433,9 +26086,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsCountryStateBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsCountryStateBatchRoute, _super);
     function CommerceLookupsCountryStateBatchRoute(appOptions) {
@@ -24492,7 +26145,7 @@ var _a;
 
 
 /***/ }),
-/* 326 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24643,7 +26296,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 327 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24655,9 +26308,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsCountryStateRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsCountryStateRoute, _super);
@@ -24749,7 +26402,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 328 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24757,14 +26410,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(325));
-__export(__webpack_require__(324));
-__export(__webpack_require__(327));
-__export(__webpack_require__(326));
+__export(__webpack_require__(331));
+__export(__webpack_require__(330));
+__export(__webpack_require__(333));
+__export(__webpack_require__(332));
 
 
 /***/ }),
-/* 329 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24859,7 +26512,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 330 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24871,9 +26524,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsCountryBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsCountryBatchRoute, _super);
     function CommerceLookupsCountryBatchRoute(appOptions) {
@@ -24930,7 +26583,7 @@ var _a;
 
 
 /***/ }),
-/* 331 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25079,7 +26732,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 332 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25091,9 +26744,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsCountryRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsCountryRoute, _super);
@@ -25183,7 +26836,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 333 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25191,14 +26844,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(330));
-__export(__webpack_require__(329));
-__export(__webpack_require__(332));
-__export(__webpack_require__(331));
+__export(__webpack_require__(336));
+__export(__webpack_require__(335));
+__export(__webpack_require__(338));
+__export(__webpack_require__(337));
 
 
 /***/ }),
-/* 334 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25293,7 +26946,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 335 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25305,9 +26958,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsCouponTypeBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsCouponTypeBatchRoute, _super);
     function CommerceLookupsCouponTypeBatchRoute(appOptions) {
@@ -25364,7 +27017,7 @@ var _a;
 
 
 /***/ }),
-/* 336 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25513,7 +27166,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 337 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25525,9 +27178,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsCouponTypeRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsCouponTypeRoute, _super);
@@ -25617,7 +27270,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 338 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25625,14 +27278,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(335));
-__export(__webpack_require__(334));
-__export(__webpack_require__(337));
-__export(__webpack_require__(336));
+__export(__webpack_require__(341));
+__export(__webpack_require__(340));
+__export(__webpack_require__(343));
+__export(__webpack_require__(342));
 
 
 /***/ }),
-/* 339 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25727,7 +27380,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 340 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25739,9 +27392,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsInvoiceStatusBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsInvoiceStatusBatchRoute, _super);
     function CommerceLookupsInvoiceStatusBatchRoute(appOptions) {
@@ -25798,7 +27451,7 @@ var _a;
 
 
 /***/ }),
-/* 341 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25947,7 +27600,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 342 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25959,9 +27612,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsInvoiceStatusRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsInvoiceStatusRoute, _super);
@@ -26052,7 +27705,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 343 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26060,21 +27713,21 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(340));
-__export(__webpack_require__(339));
-__export(__webpack_require__(342));
-__export(__webpack_require__(341));
+__export(__webpack_require__(346));
+__export(__webpack_require__(345));
+__export(__webpack_require__(348));
+__export(__webpack_require__(347));
 
 
 /***/ }),
-/* 344 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
 var _1 = __webpack_require__(5);
-var _2 = __webpack_require__(40);
+var _2 = __webpack_require__(47);
 var inversify_1 = __webpack_require__(0);
 var Lookups = (function () {
     function Lookups(addressTypes, countries, countryStates, paymentMethods, paymentTransactionStatuses, recurringCyclePeriodTypes, subscriptionStatuses, invoiceStatuses, couponTypes) {
@@ -26108,7 +27761,7 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 
 
 /***/ }),
-/* 345 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26204,7 +27857,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 346 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26216,9 +27869,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsPaymentMethodBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsPaymentMethodBatchRoute, _super);
     function CommerceLookupsPaymentMethodBatchRoute(appOptions) {
@@ -26275,7 +27928,7 @@ var _a;
 
 
 /***/ }),
-/* 347 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26424,7 +28077,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 348 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26436,9 +28089,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsPaymentMethodRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsPaymentMethodRoute, _super);
@@ -26529,7 +28182,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 349 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26537,14 +28190,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(346));
-__export(__webpack_require__(345));
-__export(__webpack_require__(348));
-__export(__webpack_require__(347));
+__export(__webpack_require__(352));
+__export(__webpack_require__(351));
+__export(__webpack_require__(354));
+__export(__webpack_require__(353));
 
 
 /***/ }),
-/* 350 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26639,7 +28292,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 351 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26651,9 +28304,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsPaymentTransactionStatusBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsPaymentTransactionStatusBatchRoute, _super);
     function CommerceLookupsPaymentTransactionStatusBatchRoute(appOptions) {
@@ -26710,7 +28363,7 @@ var _a;
 
 
 /***/ }),
-/* 352 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26859,7 +28512,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 353 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26871,9 +28524,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsPaymentTransactionStatusRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsPaymentTransactionStatusRoute, _super);
@@ -26964,7 +28617,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 354 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26972,14 +28625,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(351));
-__export(__webpack_require__(350));
-__export(__webpack_require__(353));
-__export(__webpack_require__(352));
+__export(__webpack_require__(357));
+__export(__webpack_require__(356));
+__export(__webpack_require__(359));
+__export(__webpack_require__(358));
 
 
 /***/ }),
-/* 355 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27075,7 +28728,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 356 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27087,9 +28740,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsRecurringCyclePeriodTypeBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsRecurringCyclePeriodTypeBatchRoute, _super);
     function CommerceLookupsRecurringCyclePeriodTypeBatchRoute(appOptions) {
@@ -27146,7 +28799,7 @@ var _a;
 
 
 /***/ }),
-/* 357 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27296,7 +28949,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 358 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27308,9 +28961,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsRecurringCyclePeriodTypeRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsRecurringCyclePeriodTypeRoute, _super);
@@ -27401,7 +29054,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 359 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27409,14 +29062,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(356));
-__export(__webpack_require__(355));
-__export(__webpack_require__(358));
-__export(__webpack_require__(357));
+__export(__webpack_require__(362));
+__export(__webpack_require__(361));
+__export(__webpack_require__(364));
+__export(__webpack_require__(363));
 
 
 /***/ }),
-/* 360 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27511,7 +29164,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 361 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27523,9 +29176,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceLookupsSubscriptionStatusBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsSubscriptionStatusBatchRoute, _super);
     function CommerceLookupsSubscriptionStatusBatchRoute(appOptions) {
@@ -27582,7 +29235,7 @@ var _a;
 
 
 /***/ }),
-/* 362 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27731,7 +29384,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 363 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27743,9 +29396,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceLookupsSubscriptionStatusRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsSubscriptionStatusRoute, _super);
@@ -27836,7 +29489,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 364 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27844,14 +29497,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(361));
-__export(__webpack_require__(360));
-__export(__webpack_require__(363));
-__export(__webpack_require__(362));
+__export(__webpack_require__(367));
+__export(__webpack_require__(366));
+__export(__webpack_require__(369));
+__export(__webpack_require__(368));
 
 
 /***/ }),
-/* 365 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27987,7 +29640,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 366 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27999,9 +29652,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommercePaymentTransactionRoute = (function (_super) {
     tslib_1.__extends(CommercePaymentTransactionRoute, _super);
     function CommercePaymentTransactionRoute(appOptions) {
@@ -28088,7 +29741,7 @@ var _a;
 
 
 /***/ }),
-/* 367 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28096,12 +29749,12 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(366));
-__export(__webpack_require__(365));
+__export(__webpack_require__(372));
+__export(__webpack_require__(371));
 
 
 /***/ }),
-/* 368 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28204,7 +29857,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 369 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28216,9 +29869,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceProductFilesBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceProductFilesBatchRoute, _super);
     function CommerceProductFilesBatchRoute(appOptions) {
@@ -28272,7 +29925,7 @@ var _a;
 
 
 /***/ }),
-/* 370 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28438,7 +30091,7 @@ var _a, _b, _c, _d;
 
 
 /***/ }),
-/* 371 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28450,9 +30103,9 @@ var _a, _b, _c, _d;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 var CommerceProductFilesRoute = (function (_super) {
     tslib_1.__extends(CommerceProductFilesRoute, _super);
@@ -28763,7 +30416,7 @@ var _a, _b, _c;
 
 
 /***/ }),
-/* 372 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28983,6 +30636,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 373 */
 =======
                              // perform error handling here
@@ -29035,6 +30689,9 @@ var _a, _b, _c;
 /***/ }),
 /* 227 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 379 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29052,10 +30709,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CommerceProductFilesStreamsRoute = (function (_super) {
     tslib_1.__extends(CommerceProductFilesStreamsRoute, _super);
     function CommerceProductFilesStreamsRoute(appOptions) {
@@ -29121,7 +30782,7 @@ var _a;
 
 
 /***/ }),
-/* 374 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29293,7 +30954,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 375 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29305,9 +30966,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CommerceProductSettingsRoute = (function (_super) {
     tslib_1.__extends(CommerceProductSettingsRoute, _super);
     function CommerceProductSettingsRoute(appOptions) {
@@ -29357,6 +31018,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 376 */
 =======
  - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
@@ -29382,6 +31044,9 @@ __export(__webpack_require__(226));
 /***/ }),
 /* 229 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 382 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29499,6 +31164,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 377 */
 =======
      * Returns a promise that is resolved once the create commerce action has been performed; this action creates a new commerce resources.
@@ -29570,6 +31236,9 @@ var _a, _b;
 /***/ }),
 /* 230 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 383 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29587,9 +31256,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CommerceProductInstanceFilesBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceProductInstanceFilesBatchRoute, _super);
     function CommerceProductInstanceFilesBatchRoute(appOptions) {
@@ -29649,6 +31323,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 378 */
 =======
 ;
@@ -29711,11 +31386,15 @@ var _a;
 /***/ }),
 /* 231 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 384 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* globals module */
 /**
+<<<<<<< develop
 <<<<<<< develop
  * @module commerceProductInstanceFilesClient
  * @description  Product Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
@@ -29725,6 +31404,11 @@ var _a;
  * @description  Commerce Country Client provides an easy way to consume  Commerce REST API end-points. In order to obtain a needed routes `commerceCountryClient` uses `commerceCountryRoute`.
  */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+ * @module commerceProductInstanceFilesClient
+ * @description  Product Instance Files Client provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Files Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+>>>>>>> - updated platform
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
@@ -30002,6 +31686,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 379 */
 =======
     CommerceLookupsCountryClient.prototype.remove = function (data) {
@@ -30032,6 +31717,9 @@ var _a, _b, _c;
 /***/ }),
 /* 232 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 385 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30049,9 +31737,9 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var _1 = __webpack_require__(5);
 <<<<<<< develop
 var CommerceProductInstanceFilesRoute = (function (_super) {
@@ -30195,6 +31883,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 380 */
 =======
      * Parses find commerce country route which can be expanded with additional options. Supported items are:
@@ -30266,6 +31955,9 @@ var _a, _b;
 /***/ }),
 /* 233 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 386 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30274,14 +31966,21 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(377));
 __export(__webpack_require__(376));
 __export(__webpack_require__(379));
 __export(__webpack_require__(378));
+=======
+__export(__webpack_require__(383));
+__export(__webpack_require__(382));
+__export(__webpack_require__(385));
+__export(__webpack_require__(384));
+>>>>>>> - updated platform
 
 
 /***/ }),
-/* 381 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30289,18 +31988,19 @@ __export(__webpack_require__(378));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(373));
-__export(__webpack_require__(372));
-__export(__webpack_require__(369));
-__export(__webpack_require__(368));
-__export(__webpack_require__(371));
-__export(__webpack_require__(370));
+__export(__webpack_require__(379));
+__export(__webpack_require__(378));
 __export(__webpack_require__(375));
 __export(__webpack_require__(374));
+__export(__webpack_require__(377));
+__export(__webpack_require__(376));
+__export(__webpack_require__(381));
 __export(__webpack_require__(380));
+__export(__webpack_require__(386));
 
 
 /***/ }),
+<<<<<<< develop
 /* 382 */
 =======
 __export(__webpack_require__(230));
@@ -30311,6 +32011,9 @@ __export(__webpack_require__(231));
 
 /***/ }),
 /* 234 */
+=======
+/* 388 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30405,8 +32108,12 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 235 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 389 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30422,12 +32129,19 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 var CommerceLookupsInvoiceStatusBatchRoute = (function (_super) {
     tslib_1.__extends(CommerceLookupsInvoiceStatusBatchRoute, _super);
     function CommerceLookupsInvoiceStatusBatchRoute(appOptions) {
+=======
+var contracts_1 = __webpack_require__(2);
+var CommerceProductRoute = (function (_super) {
+    tslib_1.__extends(CommerceProductRoute, _super);
+    function CommerceProductRoute(appOptions) {
+>>>>>>> - updated platform
         var _this = _super.call(this, appOptions) || this;
         _this.appOptions = appOptions;
         _this.createRoute = 'commerce/lookups/invoice-statuses/batch';
@@ -30481,7 +32195,11 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 236 */
+=======
+/* 390 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30492,6 +32210,7 @@ var _a;
 >>>>>>> Fix jQuery http client reject promise issue
  */
 
+<<<<<<< develop
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
@@ -30935,6 +32654,17 @@ __export(__webpack_require__(382));
 
 /***/ }),
 /* 385 */
+=======
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(389));
+__export(__webpack_require__(388));
+
+
+/***/ }),
+/* 391 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30943,7 +32673,7 @@ __export(__webpack_require__(382));
 
 
 /***/ }),
-/* 386 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30951,16 +32681,7 @@ __export(__webpack_require__(382));
 
 
 /***/ }),
-/* 387 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-;
-
-
-/***/ }),
-/* 388 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30969,10 +32690,23 @@ __export(__webpack_require__(382));
 
 
 /***/ }),
+/* 394 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+<<<<<<< develop
 /* 389 */
 =======
 /* 238 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 395 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30980,6 +32714,7 @@ __export(__webpack_require__(382));
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(387));
 __export(__webpack_require__(388));
@@ -30999,14 +32734,24 @@ __export(__webpack_require__(236));
 /***/ }),
 /* 239 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(393));
+__export(__webpack_require__(394));
+__export(__webpack_require__(392));
+__export(__webpack_require__(391));
+
+
+/***/ }),
+/* 396 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 <<<<<<< develop
 var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(21);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(22);
 var TYPES = {
     DynamicResourceBatchRoute: Symbol("DynamicResourceBatchRoute"),
     DynamicResourceBatchClient: Symbol("DynamicResourceBatchClient"),
@@ -31032,7 +32777,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 391 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31090,7 +32835,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(21);
+=======
+var _1 = __webpack_require__(22);
+>>>>>>> - updated platform
 var DynamicResourceACLClient = (function () {
     function DynamicResourceACLClient(dynamicResourceACLRoute, apiClient) {
         this.dynamicResourceACLRoute = dynamicResourceACLRoute;
@@ -31271,7 +33020,11 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 392 */
+=======
+/* 398 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31292,10 +33045,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var DynamicResourceACLRoute = (function (_super) {
     tslib_1.__extends(DynamicResourceACLRoute, _super);
     function DynamicResourceACLRoute(appOptions) {
@@ -31436,10 +33193,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 393 */
 =======
 /* 242 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 399 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31459,7 +33220,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(21);
+=======
+var _1 = __webpack_require__(22);
+>>>>>>> - updated platform
 var DynamicResourceBatchClient = (function () {
     function DynamicResourceBatchClient(dynamicResourceBatchRoute, apiClient) {
         this.dynamicResourceBatchRoute = dynamicResourceBatchRoute;
@@ -31699,10 +33464,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 394 */
 =======
 /* 243 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 400 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31719,9 +33488,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var DynamicResourceBatchRoute = (function (_super) {
     tslib_1.__extends(DynamicResourceBatchRoute, _super);
     function DynamicResourceBatchRoute(appOptions) {
@@ -31873,7 +33647,11 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 395 */
+=======
+/* 401 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31912,7 +33690,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(21);
+=======
+var _1 = __webpack_require__(22);
+>>>>>>> - updated platform
 var DynamicResourceClient = (function () {
     function DynamicResourceClient(dynamicResourceRoute, dynamicResourceBatchClient, dynamicResourceACLClient, dynamicSchemaClient, apiClient) {
         this.dynamicResourceRoute = dynamicResourceRoute;
@@ -32164,6 +33946,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
+<<<<<<< develop
 /* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32198,6 +33981,9 @@ var _a, _b;
 
 /***/ }),
 /* 246 */
+=======
+/* 402 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32210,11 +33996,16 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(21);
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(22);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var DynamicResourceRoute = (function (_super) {
     tslib_1.__extends(DynamicResourceRoute, _super);
     function DynamicResourceRoute(appOptions, dynamicResourceACLRoute, dynamicSchemaRoute) {
@@ -32367,7 +34158,11 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 397 */
+=======
+/* 403 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32391,7 +34186,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(21);
+=======
+var _1 = __webpack_require__(22);
+>>>>>>> - updated platform
 var DynamicSchemaClient = (function () {
     function DynamicSchemaClient(dynamicSchemaRoute, apiClient) {
         this.dynamicSchemaRoute = dynamicSchemaRoute;
@@ -32685,7 +34484,11 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 398 */
+=======
+/* 404 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32706,10 +34509,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var DynamicSchemaRoute = (function (_super) {
     tslib_1.__extends(DynamicSchemaRoute, _super);
     function DynamicSchemaRoute(appOptions) {
@@ -32885,7 +34692,11 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 399 */
+=======
+/* 405 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32894,7 +34705,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 400 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32903,10 +34714,14 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 401 */
 =======
 /* 249 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 407 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32915,7 +34730,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 402 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32924,7 +34739,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 403 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32932,21 +34747,21 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(399));
-__export(__webpack_require__(402));
-__export(__webpack_require__(401));
-__export(__webpack_require__(400));
+__export(__webpack_require__(405));
+__export(__webpack_require__(408));
+__export(__webpack_require__(407));
+__export(__webpack_require__(406));
 
 
 /***/ }),
-/* 404 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(22);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(23);
 var TYPES = {
     FilesACLClient: Symbol("FilesACLClient"),
     FilesACLRoute: Symbol("FilesACLRoute"),
@@ -32972,6 +34787,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 405 */
 =======
 function __export(m) {
@@ -33153,6 +34969,9 @@ var _a;
 /***/ }),
 /* 252 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 411 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33172,7 +34991,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(22);
+=======
+var _1 = __webpack_require__(23);
+>>>>>>> - updated platform
 var FilesACLClient = (function () {
     function FilesACLClient(filesACLRoute, apiClient) {
         this.filesACLRoute = filesACLRoute;
@@ -33321,6 +35144,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 406 */
 =======
     CommerceLookupsRecurringCyclePeriodTypeClient.prototype.get = function (id, options) {
@@ -33409,6 +35233,9 @@ var _a, _b, _c;
 /***/ }),
 /* 253 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 412 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33425,10 +35252,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var FilesACLRoute = (function (_super) {
     tslib_1.__extends(FilesACLRoute, _super);
     function FilesACLRoute(appOptions) {
@@ -33614,6 +35445,7 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 407 */
 =======
 /* 254 */
@@ -33633,6 +35465,9 @@ __export(__webpack_require__(252));
 /***/ }),
 /* 255 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 413 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33652,7 +35487,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(22);
+=======
+var _1 = __webpack_require__(23);
+>>>>>>> - updated platform
 var FilesBatchClient = (function () {
     function FilesBatchClient(filesBatchRoute, apiClient) {
         this.filesBatchRoute = filesBatchRoute;
@@ -33810,10 +35649,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 408 */
 =======
 /* 256 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 414 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33830,9 +35673,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var FilesBatchRoute = (function (_super) {
     tslib_1.__extends(FilesBatchRoute, _super);
     function FilesBatchRoute(appOptions) {
@@ -33941,10 +35789,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 409 */
 =======
 /* 257 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 415 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33964,7 +35816,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(22);
+=======
+var _1 = __webpack_require__(23);
+>>>>>>> - updated platform
 var FilesClient = (function () {
     function FilesClient(filesRoute, apiClient, filesStreamsClient, filesBatchClient, filesACLClient) {
         this.filesRoute = filesRoute;
@@ -34223,6 +36079,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
+<<<<<<< develop
 /* 410 */
 =======
      **/
@@ -34254,6 +36111,9 @@ var _a, _b, _c;
 /***/ }),
 /* 258 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 416 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34270,11 +36130,16 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(22);
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(23);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var FilesRoute = (function (_super) {
     tslib_1.__extends(FilesRoute, _super);
     function FilesRoute(appOptions, filesStreamsRoute) {
@@ -34456,6 +36321,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34473,6 +36339,9 @@ __export(__webpack_require__(257));
 /***/ }),
 /* 260 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 417 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34492,7 +36361,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(22);
+=======
+var _1 = __webpack_require__(23);
+>>>>>>> - updated platform
 var FilesStreamsClient = (function () {
     function FilesStreamsClient(filesStreamsRoute, apiClient) {
         this.filesStreamsRoute = filesStreamsRoute;
@@ -34630,6 +36503,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 412 */
 =======
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of commerce resources matching the given criteria.
@@ -34742,6 +36616,9 @@ var _a, _b;
 /***/ }),
 /* 261 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 418 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34758,9 +36635,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var FilesStreamsRoute = (function (_super) {
     tslib_1.__extends(FilesStreamsRoute, _super);
     function FilesStreamsRoute(appOptions) {
@@ -34919,7 +36801,11 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 413 */
+=======
+/* 419 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34928,10 +36814,14 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 414 */
 =======
 /* 262 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 420 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34940,18 +36830,22 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(413));
+=======
+__export(__webpack_require__(419));
+>>>>>>> - updated platform
 
 
 /***/ }),
-/* 415 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
-var _1 = __webpack_require__(30);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(34);
 var TYPES = {
     KeyValueClient: Symbol("KeyValueClient"),
     KeyValueRoute: Symbol("KeyValueRoute")
@@ -34965,7 +36859,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
-/* 416 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34994,7 +36888,11 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(30);
+=======
+var _1 = __webpack_require__(34);
+>>>>>>> - updated platform
 var KeyValueClient = (function () {
     function KeyValueClient(keyValueRoute, apiClient) {
         this.keyValueRoute = keyValueRoute;
@@ -35250,10 +37148,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 417 */
 =======
 /* 264 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 423 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35270,10 +37172,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var KeyValueRoute = (function (_super) {
     tslib_1.__extends(KeyValueRoute, _super);
     function KeyValueRoute(appOptions) {
@@ -35426,6 +37332,7 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35528,6 +37435,9 @@ exports.diModule = diModule;
 
 /***/ }),
 /* 272 */
+=======
+/* 424 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35725,7 +37635,11 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 419 */
+=======
+/* 425 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35746,9 +37660,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var MediaGalleryBatchRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryBatchRoute, _super);
     function MediaGalleryBatchRoute(appOptions) {
@@ -35890,7 +37809,11 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 420 */
+=======
+/* 426 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36368,7 +38291,11 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 421 */
+=======
+/* 427 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36634,7 +38561,11 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 422 */
+=======
+/* 428 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36655,9 +38586,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var MediaGalleryFileBatchRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryFileBatchRoute, _super);
     function MediaGalleryFileBatchRoute(appOptions) {
@@ -36798,6 +38734,7 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 423 */
 =======
 /* 278 */
@@ -36885,6 +38822,9 @@ exports.diModule = diModule;
 /***/ }),
 /* 284 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 429 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37116,6 +39056,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 424 */
 =======
                          // perform error handling here
@@ -37145,6 +39086,9 @@ var _a, _b;
 /***/ }),
 /* 285 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 430 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37161,11 +39105,11 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
 <<<<<<< develop
 var _1 = __webpack_require__(13);
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MediaGalleryFileRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryFileRoute, _super);
     function MediaGalleryFileRoute(appOptions, mediaGalleryBatchRoute) {
@@ -37352,10 +39296,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 425 */
 =======
 /* 286 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 431 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37560,6 +39508,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 426 */
 =======
  - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
@@ -37570,6 +39519,9 @@ var _a, _b;
 /***/ }),
 /* 287 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 432 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37587,10 +39539,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
+=======
+var common_1 = __webpack_require__(3);
+>>>>>>> - updated platform
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MediaGalleryFileStreamRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryFileStreamRoute, _super);
     function MediaGalleryFileStreamRoute(appOptions) {
@@ -37704,6 +39660,7 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 /* 427 */
 =======
  - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
@@ -37715,6 +39672,9 @@ var _a;
 /***/ }),
 /* 288 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 433 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37732,10 +39692,14 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 <<<<<<< develop
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
+=======
+var common_1 = __webpack_require__(3);
+>>>>>>> - updated platform
 ;
 var _1 = __webpack_require__(13);
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MediaGalleryRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryRoute, _super);
     function MediaGalleryRoute(appOptions, mediaGalleryBatchRoute, mediaGallerySettingsRoute) {
@@ -38006,6 +39970,7 @@ var _a, _b, _c, _d, _e;
 
 
 /***/ }),
+<<<<<<< develop
 /* 428 */
 =======
  - All end-point objects are transformed by the associated route service.
@@ -38015,6 +39980,9 @@ var _a, _b, _c, _d, _e;
 /***/ }),
 /* 289 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 434 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38120,7 +40088,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 429 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38132,8 +40100,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MediaGallerySettingsRoute = (function (_super) {
     tslib_1.__extends(MediaGallerySettingsRoute, _super);
     function MediaGallerySettingsRoute(appOptions) {
@@ -38178,54 +40146,6 @@ var _a;
 
 
 /***/ }),
-/* 430 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 431 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 432 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 433 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 434 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
-/* 435 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-
-/***/ }),
 /* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -38239,16 +40159,6 @@ var _a;
 
 "use strict";
 
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(433));
-__export(__webpack_require__(436));
-__export(__webpack_require__(435));
-__export(__webpack_require__(434));
-__export(__webpack_require__(431));
-__export(__webpack_require__(432));
-__export(__webpack_require__(430));
 
 
 /***/ }),
@@ -38257,8 +40167,66 @@ __export(__webpack_require__(430));
 
 "use strict";
 
+
+
+/***/ }),
+/* 439 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 440 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 441 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 442 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 443 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(439));
+__export(__webpack_require__(442));
+__export(__webpack_require__(441));
+__export(__webpack_require__(440));
+__export(__webpack_require__(437));
+__export(__webpack_require__(438));
+__export(__webpack_require__(436));
+
+
+/***/ }),
+/* 444 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var inversify_1 = __webpack_require__(0);
-var Symbol = __webpack_require__(10);
+var Symbol = __webpack_require__(9);
 var _1 = __webpack_require__(13);
 var TYPES = {
     MediaGalleryClient: Symbol("MediaGalleryClient"),
@@ -38305,6 +40273,7 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 /* 439 */
 =======
      * Parses find route which can be expanded with additional options. Supported items are:
@@ -38378,6 +40347,9 @@ var _a, _b;
 /***/ }),
 /* 290 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 445 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38600,6 +40572,7 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 /* 440 */
 =======
  - Refer to the [REST API documentation](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
@@ -38610,6 +40583,9 @@ var _a, _b;
 /***/ }),
 /* 291 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 446 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38627,9 +40603,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var MediaGalleryInstanceFilesBatchRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryInstanceFilesBatchRoute, _super);
     function MediaGalleryInstanceFilesBatchRoute(appOptions) {
@@ -38753,7 +40734,7 @@ var _a;
 
 
 /***/ }),
-/* 441 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39028,6 +41009,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 442 */
 =======
     KeyValueClient.prototype.find = function (options) {
@@ -39133,6 +41115,9 @@ var _a, _b;
 /***/ }),
 /* 296 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 448 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39150,10 +41135,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(13);
 var MediaGalleryInstanceFilesRoute = (function (_super) {
     tslib_1.__extends(MediaGalleryInstanceFilesRoute, _super);
@@ -39272,7 +41261,7 @@ var _a, _b;
 
 
 /***/ }),
-/* 443 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39280,14 +41269,14 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__(440));
-__export(__webpack_require__(439));
-__export(__webpack_require__(442));
-__export(__webpack_require__(441));
+__export(__webpack_require__(446));
+__export(__webpack_require__(445));
+__export(__webpack_require__(448));
+__export(__webpack_require__(447));
 
 
 /***/ }),
-/* 444 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39315,6 +41304,7 @@ var _a, _b, _c;
 
 
 /***/ }),
+<<<<<<< develop
 /* 445 */
 =======
 var KeyValueRoute = (function (_super) {
@@ -39403,6 +41393,9 @@ var _a;
 /***/ }),
 /* 297 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 451 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39493,10 +41486,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 446 */
 =======
 /* 298 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 452 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39508,8 +41505,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MediaVaultBatchRoute = (function (_super) {
     tslib_1.__extends(MediaVaultBatchRoute, _super);
     function MediaVaultBatchRoute(appOptions) {
@@ -39555,10 +41552,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 447 */
 =======
 /* 299 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 453 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39739,10 +41740,14 @@ var _a, _b, _c, _d, _e, _f;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 448 */
 =======
 /* 300 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 454 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39854,10 +41859,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 449 */
 =======
 /* 301 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 455 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39869,9 +41878,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MediaVaultProcessingProviderSettingsRoute = (function (_super) {
     tslib_1.__extends(MediaVaultProcessingProviderSettingsRoute, _super);
     function MediaVaultProcessingProviderSettingsRoute(appOptions) {
@@ -39932,10 +41941,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 450 */
 =======
 /* 302 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 456 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39947,14 +41960,18 @@ var _a;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
 <<<<<<< develop
 var _1 = __webpack_require__(19);
+<<<<<<< develop
 =======
 var _1 = __webpack_require__(17);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var MediaVaultRoute = (function (_super) {
     tslib_1.__extends(MediaVaultRoute, _super);
     function MediaVaultRoute(appOptions, mediaVaultStreamsRoute, mediaVaultBatchRoute, mediaVaultSettingsRoute, mediaVaultProcessingProviderSettingsRoute) {
@@ -40065,10 +42082,14 @@ var _a, _b, _c, _d, _e;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 451 */
 =======
 /* 303 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 457 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40150,10 +42171,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 452 */
 =======
 /* 304 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 458 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40165,8 +42190,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MediaVaultSettingsRoute = (function (_super) {
     tslib_1.__extends(MediaVaultSettingsRoute, _super);
     function MediaVaultSettingsRoute(appOptions) {
@@ -40212,10 +42237,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 453 */
 =======
 /* 305 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 459 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40366,10 +42395,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 454 */
 =======
 /* 306 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 460 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40381,8 +42414,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MediaVaultStreamsRoute = (function (_super) {
     tslib_1.__extends(MediaVaultStreamsRoute, _super);
     function MediaVaultStreamsRoute(appOptions) {
@@ -40464,10 +42497,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 455 */
 =======
 /* 307 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 461 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40476,11 +42513,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 456 */
 =======
 /* 308 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 462 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40488,11 +42529,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 457 */
 =======
 /* 309 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 463 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40501,11 +42546,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 458 */
 =======
 /* 310 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 464 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40515,10 +42564,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 459 */
 =======
 /* 311 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 465 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40526,6 +42579,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(456));
 __export(__webpack_require__(455));
@@ -40545,13 +42599,27 @@ __export(__webpack_require__(310));
 /***/ }),
 /* 312 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(462));
+__export(__webpack_require__(461));
+__export(__webpack_require__(463));
+__export(__webpack_require__(464));
+
+
+/***/ }),
+/* 466 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 <<<<<<< develop
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(19);
 =======
 var Symbol = __webpack_require__(9);
@@ -40587,10 +42655,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 461 */
 =======
 /* 313 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 467 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40598,11 +42670,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 462 */
 =======
 /* 314 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 468 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40610,11 +42686,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 463 */
 =======
 /* 315 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 469 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40623,11 +42703,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 464 */
 =======
 /* 316 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 470 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40636,11 +42720,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 465 */
 =======
 /* 317 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 471 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40648,11 +42736,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 466 */
 =======
 /* 318 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 472 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40661,11 +42753,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 467 */
 =======
 /* 319 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 473 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40673,11 +42769,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 468 */
 =======
 /* 320 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 474 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40686,11 +42786,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 469 */
 =======
 /* 321 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 475 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40699,11 +42803,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 470 */
 =======
 /* 322 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 476 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40712,11 +42820,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 471 */
 =======
 /* 323 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 477 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40725,11 +42837,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 472 */
 =======
 /* 324 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 478 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40737,11 +42853,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 473 */
 =======
 /* 325 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 479 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40750,11 +42870,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 474 */
 =======
 /* 326 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 480 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40763,11 +42887,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 475 */
 =======
 /* 327 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 481 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40775,11 +42903,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 476 */
 =======
 /* 328 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 482 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40787,11 +42919,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 477 */
 =======
 /* 329 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 483 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40799,11 +42935,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 478 */
 =======
 /* 330 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 484 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40812,11 +42952,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 479 */
 =======
 /* 331 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 485 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40825,11 +42969,15 @@ exports.diModule = diModule;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 480 */
 =======
 /* 332 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 486 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40839,10 +42987,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 481 */
 =======
 /* 333 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 487 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40851,29 +43003,37 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(471));
 __export(__webpack_require__(472));
 __export(__webpack_require__(470));
 __export(__webpack_require__(476));
+=======
+>>>>>>> - updated platform
 __export(__webpack_require__(477));
-__export(__webpack_require__(464));
-__export(__webpack_require__(469));
-__export(__webpack_require__(468));
-__export(__webpack_require__(480));
-__export(__webpack_require__(475));
 __export(__webpack_require__(478));
-__export(__webpack_require__(461));
-__export(__webpack_require__(462));
-__export(__webpack_require__(463));
-__export(__webpack_require__(473));
+__export(__webpack_require__(476));
+__export(__webpack_require__(482));
+__export(__webpack_require__(483));
+__export(__webpack_require__(470));
+__export(__webpack_require__(475));
 __export(__webpack_require__(474));
-__export(__webpack_require__(466));
+__export(__webpack_require__(486));
+__export(__webpack_require__(481));
+__export(__webpack_require__(484));
 __export(__webpack_require__(467));
+__export(__webpack_require__(468));
+__export(__webpack_require__(469));
 __export(__webpack_require__(479));
-__export(__webpack_require__(465));
+__export(__webpack_require__(480));
+__export(__webpack_require__(472));
+__export(__webpack_require__(473));
+__export(__webpack_require__(485));
+__export(__webpack_require__(471));
 
 
 /***/ }),
+<<<<<<< develop
 /* 482 */
 =======
 __export(__webpack_require__(323));
@@ -40901,13 +43061,20 @@ __export(__webpack_require__(317));
 /***/ }),
 /* 334 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 488 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 <<<<<<< develop
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(11);
 =======
 var Symbol = __webpack_require__(9);
@@ -40965,10 +43132,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 483 */
 =======
 /* 335 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 489 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40980,8 +43151,8 @@ exports.diModule = diModule;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
 var _1 = __webpack_require__(11);
@@ -41127,10 +43298,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 484 */
 =======
 /* 336 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 490 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41142,8 +43317,8 @@ var tslib_1 = __webpack_require__(1);
  * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var LoginRoute = (function (_super) {
     tslib_1.__extends(LoginRoute, _super);
     function LoginRoute(appOptions) {
@@ -41184,10 +43359,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 485 */
 =======
 /* 337 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 491 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41200,8 +43379,12 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(11);
 =======
 var _1 = __webpack_require__(10);
@@ -41332,10 +43515,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 486 */
 =======
 /* 338 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 492 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41347,8 +43534,8 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var LoginSocialRoute = (function (_super) {
     tslib_1.__extends(LoginSocialRoute, _super);
     function LoginSocialRoute(appOptions) {
@@ -41402,10 +43589,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 487 */
 =======
 /* 339 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 493 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41418,8 +43609,12 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 <<<<<<< develop
+=======
+var common_1 = __webpack_require__(3);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(11);
 =======
 var _1 = __webpack_require__(10);
@@ -41499,10 +43694,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 488 */
 =======
 /* 340 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 494 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41514,8 +43713,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var LookupRoute = (function (_super) {
     tslib_1.__extends(LookupRoute, _super);
     function LookupRoute(appOptions) {
@@ -41556,10 +43755,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 489 */
 =======
 /* 341 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 495 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41654,10 +43857,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 490 */
 =======
 /* 342 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 496 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41669,8 +43876,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var PasswordRecoveryRoute = (function (_super) {
     tslib_1.__extends(PasswordRecoveryRoute, _super);
     function PasswordRecoveryRoute(appOptions) {
@@ -41710,10 +43917,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 491 */
 =======
 /* 343 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 497 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41726,14 +43937,18 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 ;
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
 var _1 = __webpack_require__(11);
+<<<<<<< develop
 =======
 var _1 = __webpack_require__(10);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var PermissionClient = (function () {
     function PermissionClient(permissionRoute, apiClient, application) {
         this.permissionRoute = permissionRoute;
@@ -42058,10 +44273,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 492 */
 =======
 /* 344 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 498 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42073,8 +44292,8 @@ var tslib_1 = __webpack_require__(1);
  * @description Baasic Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
  */
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var PermissionRoute = (function (_super) {
     tslib_1.__extends(PermissionRoute, _super);
     function PermissionRoute(appOptions) {
@@ -42226,10 +44445,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 493 */
 =======
 /* 345 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 499 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42242,8 +44465,12 @@ var _a;
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(11);
 =======
 var _1 = __webpack_require__(10);
@@ -42342,10 +44569,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 494 */
 =======
 /* 346 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 500 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42357,8 +44588,8 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var RegisterRoute = (function (_super) {
     tslib_1.__extends(RegisterRoute, _super);
     function RegisterRoute(appOptions) {
@@ -42411,10 +44642,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 495 */
 =======
 /* 347 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 501 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42531,10 +44766,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 496 */
 =======
 /* 348 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 502 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42546,9 +44785,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var RoleBatchRoute = (function (_super) {
     tslib_1.__extends(RoleBatchRoute, _super);
     function RoleBatchRoute(appOptions) {
@@ -42614,10 +44853,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 497 */
 =======
 /* 349 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 503 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42786,10 +45029,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 498 */
 =======
 /* 350 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 504 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42801,10 +45048,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(11);
 =======
 var _1 = __webpack_require__(10);
@@ -42918,10 +45169,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 499 */
 =======
 /* 351 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 505 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42964,10 +45219,14 @@ var _a, _b, _c, _d, _e, _f, _g, _h;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 500 */
 =======
 /* 352 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 506 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43258,10 +45517,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 501 */
 =======
 /* 353 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 507 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43273,6 +45536,7 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 ;
 <<<<<<< develop
@@ -43281,6 +45545,11 @@ var _1 = __webpack_require__(11);
 var _1 = __webpack_require__(10);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var common_1 = __webpack_require__(3);
+var _1 = __webpack_require__(11);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var UserRoute = (function (_super) {
     tslib_1.__extends(UserRoute, _super);
     function UserRoute(appOptions, userSocialLoginRoute) {
@@ -43427,10 +45696,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 502 */
 =======
 /* 354 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 508 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43519,10 +45792,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 503 */
 =======
 /* 355 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 509 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43534,8 +45811,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var UserSocialLoginRoute = (function (_super) {
     tslib_1.__extends(UserSocialLoginRoute, _super);
     function UserSocialLoginRoute(appOptions) {
@@ -43607,10 +45884,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 504 */
 =======
 /* 356 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 510 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43619,11 +45900,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 505 */
 =======
 /* 357 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 511 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43632,11 +45917,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 506 */
 =======
 /* 358 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 512 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43646,10 +45935,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 507 */
 =======
 /* 359 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 513 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43657,6 +45950,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(504));
 __export(__webpack_require__(505));
@@ -43674,13 +45968,26 @@ __export(__webpack_require__(358));
 /***/ }),
 /* 360 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(510));
+__export(__webpack_require__(511));
+__export(__webpack_require__(512));
+
+
+/***/ }),
+/* 514 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 <<<<<<< develop
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(14);
 =======
 var Symbol = __webpack_require__(9);
@@ -43724,10 +46031,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 509 */
 =======
 /* 361 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 515 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43863,10 +46174,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 510 */
 =======
 /* 362 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 516 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43878,9 +46193,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MeteringACLRoute = (function (_super) {
     tslib_1.__extends(MeteringACLRoute, _super);
     function MeteringACLRoute(appOptions) {
@@ -43991,10 +46306,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 511 */
 =======
 /* 363 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 517 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44101,10 +46420,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 512 */
 =======
 /* 364 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 518 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44116,9 +46439,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MeteringBatchRoute = (function (_super) {
     tslib_1.__extends(MeteringBatchRoute, _super);
     function MeteringBatchRoute(appOptions) {
@@ -44176,10 +46499,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 513 */
 =======
 /* 365 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 519 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44287,10 +46614,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 514 */
 =======
 /* 366 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 520 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44301,9 +46632,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MeteringCategoryBatchRoute = (function (_super) {
     tslib_1.__extends(MeteringCategoryBatchRoute, _super);
     function MeteringCategoryBatchRoute(appOptions) {
@@ -44361,10 +46692,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 515 */
 =======
 /* 367 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 521 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44531,10 +46866,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 516 */
 =======
 /* 368 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 522 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44545,14 +46884,18 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
 <<<<<<< develop
 var _1 = __webpack_require__(14);
+<<<<<<< develop
 =======
 var _1 = __webpack_require__(12);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var MeteringCategoryRoute = (function (_super) {
     tslib_1.__extends(MeteringCategoryRoute, _super);
     function MeteringCategoryRoute(appOptions, meteringCategoryBatchRoute) {
@@ -44647,10 +46990,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 517 */
 =======
 /* 369 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 523 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44866,10 +47213,14 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 518 */
 =======
 /* 370 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 524 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44881,14 +47232,18 @@ var tslib_1 = __webpack_require__(1);
  * @description Baasic Metering Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Metering Route Definition to obtain a needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
  */
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
 <<<<<<< develop
 var _1 = __webpack_require__(14);
+<<<<<<< develop
 =======
 var _1 = __webpack_require__(12);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var MeteringRoute = (function (_super) {
     tslib_1.__extends(MeteringRoute, _super);
     function MeteringRoute(appOptions, meteringBatchRoute, meteringStatisticsRoute, meteringACLRoute) {
@@ -45019,10 +47374,14 @@ var _a, _b, _c, _d;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 519 */
 =======
 /* 371 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 525 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45112,10 +47471,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 520 */
 =======
 /* 372 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 526 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45127,9 +47490,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MeteringSettingsRoute = (function (_super) {
     tslib_1.__extends(MeteringSettingsRoute, _super);
     function MeteringSettingsRoute(appOptions) {
@@ -45179,10 +47542,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 521 */
 =======
 /* 373 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 527 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45266,10 +47633,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 522 */
 =======
 /* 374 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 528 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45281,9 +47652,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var MeteringStatisticsRoute = (function (_super) {
     tslib_1.__extends(MeteringStatisticsRoute, _super);
     function MeteringStatisticsRoute(appOptions) {
@@ -45338,10 +47709,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 523 */
 =======
 /* 375 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 529 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45350,11 +47725,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 524 */
 =======
 /* 376 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 530 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45363,11 +47742,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 525 */
 =======
 /* 377 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 531 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45376,11 +47759,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 526 */
 =======
 /* 378 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 532 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45389,11 +47776,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 527 */
 =======
 /* 379 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 533 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45402,11 +47793,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 528 */
 =======
 /* 380 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 534 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45416,10 +47811,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 529 */
 =======
 /* 381 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 535 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45427,6 +47826,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(525));
 __export(__webpack_require__(526));
@@ -45450,13 +47850,29 @@ __export(__webpack_require__(379));
 /***/ }),
 /* 382 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(531));
+__export(__webpack_require__(532));
+__export(__webpack_require__(534));
+__export(__webpack_require__(529));
+__export(__webpack_require__(530));
+__export(__webpack_require__(533));
+
+
+/***/ }),
+/* 536 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
 <<<<<<< develop
+<<<<<<< develop
 var Symbol = __webpack_require__(10);
+=======
+var Symbol = __webpack_require__(9);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var Symbol = __webpack_require__(9);
@@ -45528,10 +47944,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 531 */
 =======
 /* 383 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 537 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45614,10 +48034,14 @@ var _a, _b, _c, _d, _e;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 532 */
 =======
 /* 384 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 538 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45691,10 +48115,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 533 */
 =======
 /* 385 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 539 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45706,8 +48134,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var NotificationsPublishBatchRoute = (function (_super) {
     tslib_1.__extends(NotificationsPublishBatchRoute, _super);
     function NotificationsPublishBatchRoute(appOptions) {
@@ -45744,10 +48172,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 534 */
 =======
 /* 386 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 540 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45830,10 +48262,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 535 */
 =======
 /* 387 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 541 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45845,9 +48281,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var _1 = __webpack_require__(7);
@@ -45893,10 +48334,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 536 */
 =======
 /* 388 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 542 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45999,10 +48444,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 537 */
 =======
 /* 389 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 543 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46014,9 +48463,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var NotificationsRegistrationsAnonymousBatchRoute = (function (_super) {
     tslib_1.__extends(NotificationsRegistrationsAnonymousBatchRoute, _super);
     function NotificationsRegistrationsAnonymousBatchRoute(appOptions) {
@@ -46069,10 +48518,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 538 */
 =======
 /* 390 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 544 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46236,10 +48689,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 539 */
 =======
 /* 391 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 545 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46251,10 +48708,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var _1 = __webpack_require__(7);
@@ -46354,10 +48815,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 540 */
 =======
 /* 392 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 546 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46422,10 +48887,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 541 */
 =======
 /* 393 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 547 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46437,9 +48906,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var _1 = __webpack_require__(7);
@@ -46489,10 +48963,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 542 */
 =======
 /* 394 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 548 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46595,10 +49073,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 543 */
 =======
 /* 395 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 549 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46610,9 +49092,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var NotificationsRegistrationsUsersBatchRoute = (function (_super) {
     tslib_1.__extends(NotificationsRegistrationsUsersBatchRoute, _super);
     function NotificationsRegistrationsUsersBatchRoute(appOptions) {
@@ -46667,10 +49149,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 544 */
 =======
 /* 396 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 550 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46833,10 +49319,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 545 */
 =======
 /* 397 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 551 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46848,10 +49338,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var _1 = __webpack_require__(7);
@@ -46949,10 +49443,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 546 */
 =======
 /* 398 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 552 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46964,9 +49462,14 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var _1 = __webpack_require__(7);
@@ -47034,10 +49537,14 @@ var _a, _b, _c, _d, _e;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 547 */
 =======
 /* 399 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 553 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47124,10 +49631,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 548 */
 =======
 /* 400 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 554 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47139,8 +49650,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var NotificationsSettingsRoute = (function (_super) {
     tslib_1.__extends(NotificationsSettingsRoute, _super);
     function NotificationsSettingsRoute(appOptions) {
@@ -47188,10 +49699,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 549 */
 =======
 /* 401 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 555 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47293,10 +49808,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 550 */
 =======
 /* 402 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 556 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47308,9 +49827,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var NotificationsSubscriptionsAnonymousBatchRoute = (function (_super) {
     tslib_1.__extends(NotificationsSubscriptionsAnonymousBatchRoute, _super);
     function NotificationsSubscriptionsAnonymousBatchRoute(appOptions) {
@@ -47365,10 +49884,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 551 */
 =======
 /* 403 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 557 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47532,10 +50055,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 552 */
 =======
 /* 404 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 558 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47547,10 +50074,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var _1 = __webpack_require__(7);
@@ -47651,10 +50182,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 553 */
 =======
 /* 405 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 559 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47719,10 +50254,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 554 */
 =======
 /* 406 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 560 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47734,9 +50273,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 var common_1 = __webpack_require__(2);
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var _1 = __webpack_require__(7);
@@ -47786,10 +50330,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 555 */
 =======
 /* 407 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 561 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47891,10 +50439,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 556 */
 =======
 /* 408 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 562 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47906,9 +50458,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var NotificationsSubscriptionsUsersBatchRoute = (function (_super) {
     tslib_1.__extends(NotificationsSubscriptionsUsersBatchRoute, _super);
     function NotificationsSubscriptionsUsersBatchRoute(appOptions) {
@@ -47963,10 +50515,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 557 */
 =======
 /* 409 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 563 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48129,10 +50685,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 558 */
 =======
 /* 410 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 564 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48144,10 +50704,14 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 var contracts_1 = __webpack_require__(3);
 <<<<<<< develop
+=======
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var _1 = __webpack_require__(8);
 =======
 var _1 = __webpack_require__(7);
@@ -48240,10 +50804,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 559 */
 =======
 /* 411 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 565 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48253,10 +50821,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 560 */
 =======
 /* 412 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 566 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48264,6 +50836,7 @@ var _a, _b;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(559));
 
@@ -48277,11 +50850,19 @@ __export(__webpack_require__(411));
 /***/ }),
 /* 413 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(565));
+
+
+/***/ }),
+/* 567 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 <<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(24);
@@ -48289,6 +50870,10 @@ var _1 = __webpack_require__(24);
 var Symbol = __webpack_require__(9);
 var _1 = __webpack_require__(22);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(26);
+>>>>>>> - updated platform
 var TYPES = {
     TemplatingBatchClient: Symbol("TemplatingBatchClient"),
     TemplatingBatchRoute: Symbol("TemplatingBatchRoute"),
@@ -48307,10 +50892,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 562 */
 =======
 /* 414 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 568 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48325,10 +50914,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(24);
 =======
 var _1 = __webpack_require__(22);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(26);
+>>>>>>> - updated platform
 var TemplatingBatchClient = (function () {
     function TemplatingBatchClient(templatingBatchRoute, apiClient) {
         this.templatingBatchRoute = templatingBatchRoute;
@@ -48409,10 +51002,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 563 */
 =======
 /* 415 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 569 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48424,8 +51021,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var TemplatingBatchRoute = (function (_super) {
     tslib_1.__extends(TemplatingBatchRoute, _super);
     function TemplatingBatchRoute(appOptions) {
@@ -48480,10 +51077,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 564 */
 =======
 /* 416 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 570 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48498,10 +51099,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(24);
 =======
 var _1 = __webpack_require__(22);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(26);
+>>>>>>> - updated platform
 var TemplatingClient = (function () {
     function TemplatingClient(templatingRoute, templatingBatchClient, apiClient) {
         this.templatingRoute = templatingRoute;
@@ -48640,10 +51245,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 565 */
 =======
 /* 417 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 571 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48655,14 +51264,19 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(24);
 =======
 var _1 = __webpack_require__(22);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(26);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var TemplatingRoute = (function (_super) {
     tslib_1.__extends(TemplatingRoute, _super);
     function TemplatingRoute(appOptions, templatingBatchRoute) {
@@ -48754,10 +51368,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 566 */
 =======
 /* 418 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 572 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48771,10 +51389,14 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var CompanyBatchClient = (function () {
     function CompanyBatchClient(companyBatchRoute, apiClient) {
         this.companyBatchRoute = companyBatchRoute;
@@ -48859,10 +51481,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 567 */
 =======
 /* 419 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 573 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48874,8 +51500,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var CompanyBatchRoute = (function (_super) {
     tslib_1.__extends(CompanyBatchRoute, _super);
     function CompanyBatchRoute(appOptions) {
@@ -48929,10 +51555,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 568 */
 =======
 /* 420 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 574 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48947,10 +51577,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var CompanyClient = (function () {
     function CompanyClient(companyBatchClient, companyRoute, apiClient) {
         this.companyBatchClient = companyBatchClient;
@@ -49094,10 +51728,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 569 */
 =======
 /* 421 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 575 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49109,14 +51747,19 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(10);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var CompanyRoute = (function (_super) {
     tslib_1.__extends(CompanyRoute, _super);
     function CompanyRoute(appOptions, companyBatchRoute) {
@@ -49195,10 +51838,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 570 */
 =======
 /* 422 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 576 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49207,11 +51854,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 571 */
 =======
 /* 423 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 577 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49220,11 +51871,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 572 */
 =======
 /* 424 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 578 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49233,11 +51888,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 573 */
 =======
 /* 425 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 579 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49246,11 +51905,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 574 */
 =======
 /* 426 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 580 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49259,11 +51922,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 575 */
 =======
 /* 427 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 581 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49272,11 +51939,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 576 */
 =======
 /* 428 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 582 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49285,11 +51956,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 577 */
 =======
 /* 429 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 583 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49298,11 +51973,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 578 */
 =======
 /* 430 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 584 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49311,11 +51990,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 579 */
 =======
 /* 431 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 585 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49324,11 +52007,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 580 */
 =======
 /* 432 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 586 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49337,11 +52024,15 @@ var _a, _b;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 581 */
 =======
 /* 433 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 587 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49351,10 +52042,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 582 */
 =======
 /* 434 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 588 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49363,21 +52058,28 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 <<<<<<< develop
+<<<<<<< develop
 __export(__webpack_require__(570));
 __export(__webpack_require__(572));
 __export(__webpack_require__(575));
+=======
+>>>>>>> - updated platform
 __export(__webpack_require__(576));
-__export(__webpack_require__(574));
-__export(__webpack_require__(573));
-__export(__webpack_require__(571));
 __export(__webpack_require__(578));
+__export(__webpack_require__(581));
+__export(__webpack_require__(582));
+__export(__webpack_require__(580));
 __export(__webpack_require__(579));
 __export(__webpack_require__(577));
-__export(__webpack_require__(580));
-__export(__webpack_require__(581));
+__export(__webpack_require__(584));
+__export(__webpack_require__(585));
+__export(__webpack_require__(583));
+__export(__webpack_require__(586));
+__export(__webpack_require__(587));
 
 
 /***/ }),
+<<<<<<< develop
 /* 583 */
 =======
 __export(__webpack_require__(422));
@@ -49397,11 +52099,15 @@ __export(__webpack_require__(433));
 /***/ }),
 /* 435 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 589 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 <<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(9);
@@ -49409,6 +52115,10 @@ var _1 = __webpack_require__(9);
 var Symbol = __webpack_require__(9);
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var TYPES = {
     CompanyBatchClient: Symbol("CompanyBatchClient"),
     CompanyBatchRoute: Symbol("CompanyBatchRoute"),
@@ -49473,10 +52183,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 584 */
 =======
 /* 436 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 590 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49490,10 +52204,14 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var OrganizationBatchClient = (function () {
     function OrganizationBatchClient(organizationBatchRoute, apiClient) {
         this.organizationBatchRoute = organizationBatchRoute;
@@ -49576,10 +52294,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 585 */
 =======
 /* 437 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 591 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49591,8 +52313,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var OrganizationBatchRoute = (function (_super) {
     tslib_1.__extends(OrganizationBatchRoute, _super);
     function OrganizationBatchRoute(appOptions) {
@@ -49646,10 +52368,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 586 */
 =======
 /* 438 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 592 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49664,10 +52390,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var OrganizationClient = (function () {
     function OrganizationClient(organizationRoute, organizationBatchClient, apiClient) {
         this.organizationRoute = organizationRoute;
@@ -49805,10 +52535,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 587 */
 =======
 /* 439 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 593 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49820,14 +52554,19 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(10);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var OrganizationRoute = (function (_super) {
     tslib_1.__extends(OrganizationRoute, _super);
     function OrganizationRoute(appOptions, organizationBatchRoute) {
@@ -49918,20 +52657,28 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 588 */
 =======
 /* 440 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 594 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var inversify_1 = __webpack_require__(0);
 var Root = (function () {
     function Root(profile, company, organization, skill) {
@@ -49956,10 +52703,14 @@ var _a, _b, _c, _d;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 589 */
 =======
 /* 441 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 595 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49973,10 +52724,14 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var SkillBatchClient = (function () {
     function SkillBatchClient(skillBatchRoute, apiClient) {
         this.skillBatchRoute = skillBatchRoute;
@@ -50061,10 +52816,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 590 */
 =======
 /* 442 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 596 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50076,8 +52835,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var SkillBatchRoute = (function (_super) {
     tslib_1.__extends(SkillBatchRoute, _super);
     function SkillBatchRoute(appOptions) {
@@ -50131,10 +52890,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 591 */
 =======
 /* 443 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 597 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50149,10 +52912,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var SkillClient = (function () {
     function SkillClient(skillRoute, skillBatchClient, apiClient) {
         this.skillRoute = skillRoute;
@@ -50289,10 +53056,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 592 */
 =======
 /* 444 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 598 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50304,14 +53075,19 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(10);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var SkillRoute = (function (_super) {
     tslib_1.__extends(SkillRoute, _super);
     function SkillRoute(appOptions, skillBatchRoute) {
@@ -50399,10 +53175,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 593 */
 =======
 /* 445 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 599 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50416,10 +53196,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var UserEducationClient = (function () {
     function UserEducationClient(userEducationRoute, apiClient) {
         this.userEducationRoute = userEducationRoute;
@@ -50549,10 +53333,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 594 */
 =======
 /* 446 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 600 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50564,9 +53352,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var UserEducationRoute = (function (_super) {
     tslib_1.__extends(UserEducationRoute, _super);
     function UserEducationRoute(appOptions) {
@@ -50649,10 +53437,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 595 */
 =======
 /* 447 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 601 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50667,10 +53459,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var UserProfileACLClient = (function () {
     function UserProfileACLClient(userProfileACLRoute, apiClient) {
         this.userProfileACLRoute = userProfileACLRoute;
@@ -50789,10 +53585,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 596 */
 =======
 /* 448 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 602 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50804,9 +53604,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var UserProfileACLRoute = (function (_super) {
     tslib_1.__extends(UserProfileACLRoute, _super);
     function UserProfileACLRoute(appOptions) {
@@ -50912,10 +53712,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 597 */
 =======
 /* 449 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 603 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50930,10 +53734,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var UserProfileAvatarClient = (function () {
     function UserProfileAvatarClient(userProfileAvatarRoute, userProfileAvatarStreamsClient, apiClient) {
         this.userProfileAvatarRoute = userProfileAvatarRoute;
@@ -51053,10 +53861,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 598 */
 =======
 /* 450 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 604 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51068,14 +53880,19 @@ var _a, _b, _c;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(10);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var UserProfileAvatarRoute = (function (_super) {
     tslib_1.__extends(UserProfileAvatarRoute, _super);
     function UserProfileAvatarRoute(appOptions, userProfileAvatarStreamsRoute) {
@@ -51164,10 +53981,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 599 */
 =======
 /* 451 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 605 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51181,10 +54002,14 @@ var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var UserProfileAvatarStreamsClient = (function () {
     function UserProfileAvatarStreamsClient(userProfileAvatarStreamsRoute, apiClient) {
         this.userProfileAvatarStreamsRoute = userProfileAvatarStreamsRoute;
@@ -51334,10 +54159,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 600 */
 =======
 /* 452 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 606 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51349,8 +54178,8 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
-var contracts_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var UserProfileAvatarStreamsRoute = (function (_super) {
     tslib_1.__extends(UserProfileAvatarStreamsRoute, _super);
     function UserProfileAvatarStreamsRoute(appOptions) {
@@ -51434,10 +54263,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 601 */
 =======
 /* 453 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 607 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51452,10 +54285,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var UserProfileClient = (function () {
     function UserProfileClient(userProfileACLClient, userProfileRoute, apiClient, userEducationClient, userProfileAvatarClient, userSkillClient, userWorkClient) {
         this.userProfileACLClient = userProfileACLClient;
@@ -51637,10 +54474,14 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 602 */
 =======
 /* 454 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 608 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51652,14 +54493,19 @@ var _a, _b, _c, _d, _e, _f, _g;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(10);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var UserProfileRoute = (function (_super) {
     tslib_1.__extends(UserProfileRoute, _super);
     function UserProfileRoute(appOptions, userProfileACLRoute) {
@@ -51753,10 +54599,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 603 */
 =======
 /* 455 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 609 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51771,10 +54621,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var UserSkillClient = (function () {
     function UserSkillClient(userSkillRoute, apiClient) {
         this.userSkillRoute = userSkillRoute;
@@ -51905,10 +54759,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 604 */
 =======
 /* 456 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 610 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51920,9 +54778,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var UserSkillRoute = (function (_super) {
     tslib_1.__extends(UserSkillRoute, _super);
     function UserSkillRoute(appOptions) {
@@ -52005,10 +54863,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 605 */
 =======
 /* 457 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 611 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52023,10 +54885,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(9);
 =======
 var _1 = __webpack_require__(8);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(10);
+>>>>>>> - updated platform
 var UserWorkClient = (function () {
     function UserWorkClient(userWorkRoute, apiClient) {
         this.userWorkRoute = userWorkRoute;
@@ -52154,10 +55020,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 606 */
 =======
 /* 458 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 612 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52169,9 +55039,9 @@ var _a, _b;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var UserWorkRoute = (function (_super) {
     tslib_1.__extends(UserWorkRoute, _super);
     function UserWorkRoute(appOptions) {
@@ -52248,10 +55118,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 607 */
 =======
 /* 459 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 613 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52260,11 +55134,15 @@ var _a;
 
 
 /***/ }),
+<<<<<<< develop
 <<<<<<< develop
 /* 608 */
 =======
 /* 460 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 614 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52274,10 +55152,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 609 */
 =======
 /* 461 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 615 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52285,6 +55167,7 @@ var _a;
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+<<<<<<< develop
 <<<<<<< develop
 __export(__webpack_require__(608));
 __export(__webpack_require__(607));
@@ -52300,11 +55183,20 @@ __export(__webpack_require__(459));
 /***/ }),
 /* 462 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+__export(__webpack_require__(614));
+__export(__webpack_require__(613));
+
+
+/***/ }),
+/* 616 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var inversify_1 = __webpack_require__(0);
+<<<<<<< develop
 <<<<<<< develop
 var Symbol = __webpack_require__(10);
 var _1 = __webpack_require__(25);
@@ -52312,6 +55204,10 @@ var _1 = __webpack_require__(25);
 var Symbol = __webpack_require__(9);
 var _1 = __webpack_require__(23);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(27);
+>>>>>>> - updated platform
 var TYPES = {
     ValueSetClient: Symbol("ValueSetClient"),
     ValueSetItemClient: Symbol("ValueSetItemClient"),
@@ -52330,10 +55226,14 @@ exports.diModule = diModule;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 611 */
 =======
 /* 463 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 617 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52347,10 +55247,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(25);
 =======
 var _1 = __webpack_require__(23);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(27);
+>>>>>>> - updated platform
 var ValueSetClient = (function () {
     function ValueSetClient(valueSetRoute, valueSetItemClient, apiClient) {
         this.valueSetRoute = valueSetRoute;
@@ -52501,10 +55405,14 @@ var _a, _b, _c;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 612 */
 =======
 /* 464 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 618 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52518,10 +55426,14 @@ var inversify_1 = __webpack_require__(0);
 ;
 var httpApi_1 = __webpack_require__(4);
 <<<<<<< develop
+<<<<<<< develop
 var _1 = __webpack_require__(25);
 =======
 var _1 = __webpack_require__(23);
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+var _1 = __webpack_require__(27);
+>>>>>>> - updated platform
 var ValueSetItemClient = (function () {
     function ValueSetItemClient(valueSetItemRoute, apiClient) {
         this.valueSetItemRoute = valueSetItemRoute;
@@ -52659,10 +55571,14 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 613 */
 =======
 /* 465 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 619 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52673,9 +55589,9 @@ var tslib_1 = __webpack_require__(1);
  * @description Baasic Value Set Item Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Value Set Item Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services  use the same function names as their corresponding services.
  */
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
-var contracts_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
 var ValueSetItemRoute = (function (_super) {
     tslib_1.__extends(ValueSetItemRoute, _super);
     function ValueSetItemRoute(appOptions) {
@@ -52768,10 +55684,14 @@ var _a;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 614 */
 =======
 /* 466 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 620 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52782,14 +55702,19 @@ var _a;
 
 var tslib_1 = __webpack_require__(1);
 var inversify_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(2);
+var common_1 = __webpack_require__(3);
 ;
+<<<<<<< develop
 <<<<<<< develop
 var _1 = __webpack_require__(25);
 =======
 var _1 = __webpack_require__(23);
 >>>>>>> Fix jQuery http client reject promise issue
 var contracts_1 = __webpack_require__(3);
+=======
+var _1 = __webpack_require__(27);
+var contracts_1 = __webpack_require__(2);
+>>>>>>> - updated platform
 var ValueSetRoute = (function (_super) {
     tslib_1.__extends(ValueSetRoute, _super);
     function ValueSetRoute(appOptions, valueSetItemRoute) {
@@ -52883,10 +55808,2038 @@ var _a, _b;
 
 /***/ }),
 <<<<<<< develop
+<<<<<<< develop
 /* 615 */
 =======
 /* 467 */
 >>>>>>> Fix jQuery http client reject promise issue
+=======
+/* 621 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module applicationClient
+ * @description  Application Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `applicationClient` uses `applicationRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+;
+var _1 = __webpack_require__(24);
+var ApplicationClient = (function () {
+    function ApplicationClient(applicationRoute, apiClient) {
+        this.applicationRoute = applicationRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(ApplicationClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `applicationRoute`.
+         * @method
+         **/
+        get: function () {
+            return this.applicationRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of application resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @example applicationClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ApplicationClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified application resource.
+     * @method
+     * @param id A application identifier.
+     * @param options Query resources options.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example applicationClient.get({
+                    id : '<id>',
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ApplicationClient.prototype.get = function (id) {
+        return this.apiClient.get(this.routeDefinition.get(id));
+    };
+    /**
+     * Returns a promise that is resolved once the create application action has been performed; this action creates a new application.
+     * @method
+     * @param data An application object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create application action has been performed.
+     * @example applicationClient.create({
+                    email : '<email>',
+                    password : '<password>',
+                    name : '<name>',
+                    identifier : '<identifier>',
+                    additionalProperty: '<additional-property>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    ApplicationClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update application action has been performed; this action updates a application.
+     * @param data A application object used to update specified application resource.
+     * @returns A promise that is resolved once the update application action has been performed.
+     * @method
+     * @example  applicationClient.update(application)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ApplicationClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove application action has been performed. This action will remove a application from the system if successfully completed.
+     * @method
+     * @param data  A application object used to delete specified application resource.
+     * @returns A promise that is resolved once the remove application action has been performed.
+     * @example applicationClient.remove(application)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ApplicationClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update application activate action has been performed; this action activates a application.
+     * @param data A application object used to activate specified application resource.
+     * @returns A promise that is resolved once the activate application action has been performed.
+     * @method
+     * @example  applicationClient.activate(id)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ApplicationClient.prototype.activate = function (id) {
+        return this.apiClient.put(this.routeDefinition.activate(id), {});
+    };
+    /**
+     * Returns a promise that is resolved once the deactivate application action has been performed; this action deactivate a application.
+     * @param data A application object used to deactivate specified application resource.
+     * @returns A promise that is resolved once the deactivate application action has been performed.
+     * @method
+     * @example  applicationClient.deactivate(id)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    ApplicationClient.prototype.deactivate = function (id) {
+        return this.apiClient.put(this.routeDefinition.deactivate(id), {});
+    };
+    return ApplicationClient;
+}());
+ApplicationClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ApplicationRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ApplicationRoute !== "undefined" && _1.ApplicationRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], ApplicationClient);
+exports.ApplicationClient = ApplicationClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 622 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module settingsClient
+ * @description  Settings Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `settingsClient` uses `settingsRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(24);
+var SettingsClient = (function () {
+    function SettingsClient(settingsRoute, apiClient) {
+        this.settingsRoute = settingsRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(SettingsClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `settingsRoute`.
+         * @method
+         **/
+        get: function () {
+            return this.settingsRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the application settings.
+     * @method
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example settingsClient.get()
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    SettingsClient.prototype.get = function () {
+        return this.apiClient.get(this.routeDefinition.get());
+    };
+    /**
+     * Returns a promise that is resolved once the update application setting action has been performed; this action updates a application seting.
+     * @param data A setting object used to update specified setting resource.
+     * @returns A promise that is resolved once the update setting action has been performed.
+     * @method
+     * @example settingsClient.update(data)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    SettingsClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    return SettingsClient;
+}());
+SettingsClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.SettingsRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.SettingsRoute !== "undefined" && _1.SettingsRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], SettingsClient);
+exports.SettingsClient = SettingsClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 623 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module versionClient
+ * @description  Version Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `versionClient` uses `versionRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(24);
+var VersionClient = (function () {
+    function VersionClient(versionRoute, apiClient) {
+        this.versionRoute = versionRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(VersionClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `versionRoute`.
+         * @method
+         **/
+        get: function () {
+            return this.versionRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the all application module versions.
+     * @method
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example versionClient.get()
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    VersionClient.prototype.get = function () {
+        return this.apiClient.get(this.routeDefinition.get());
+    };
+    return VersionClient;
+}());
+VersionClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.VersionRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.VersionRoute !== "undefined" && _1.VersionRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], VersionClient);
+exports.VersionClient = VersionClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 624 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module applicationRoute
+ * @description Baasic Application Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Application Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var ApplicationRoute = (function (_super) {
+    tslib_1.__extends(ApplicationRoute, _super);
+    function ApplicationRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+         * Application activate route with route and query parameters.
+         **/
+        _this.activateRoute = 'platform/applications/{id}/activate';
+        /**
+         * Application activate route with route and query parameters.
+         **/
+        _this.deactivateRoute = 'platform/applications/{id}/deactivate';
+        /**
+         * Application delete route with route and query parameters.
+         **/
+        _this.deleteRoute = 'platform/applications/{id}';
+        /**
+         * Application find route with route and query parameters.
+         **/
+        _this.findRoute = 'platform/applications/{?searchQuery,page,rpp,sort,embed,fields}';
+        /**
+        * Get route with route and query parameters.
+        **/
+        _this.getRoute = 'platform/applications/{id}';
+        /**
+        * Create route with route and query parameters.
+        **/
+        _this.createRoute = 'platform/applications';
+        /**
+        * Update route with route and query parameters.
+        **/
+        _this.updateRoute = 'platform/applications/{id}';
+        return _this;
+    }
+    /**
+     * Parses activation route; route should be expanded with the `id` which uniquely identifies the application that needs to be activated.
+     * @method
+     * @param data Id which uniquely identifies application that needs to be activated.
+     * @example applicationRoute.activate({id: '<identifier>'});
+     **/
+    ApplicationRoute.prototype.activate = function (data) {
+        var params = this.modelMapper.getParams(data, undefined, 'id');
+        return _super.prototype.baseCreate.call(this, this.activateRoute, params);
+    };
+    /**
+     * Parses deactivation route; route should be expanded with the `id` which uniquely identifies the application that needs to be deactivated.
+     * @method
+     * @param data Id which uniquely identifies application that needs to be deactivated.
+     * @example applicationRoute.deactivate({id: '<identifier>'});
+     **/
+    ApplicationRoute.prototype.deactivate = function (data) {
+        var params = this.modelMapper.getParams(data, undefined, 'id');
+        return _super.prototype.baseCreate.call(this, this.deactivateRoute, params);
+    };
+    /**
+  * Parses get application route which must be expanded with the identifier of the previously created application resource in the system.
+  * @method
+  * @example applicationRoute.get(id)
+  **/
+    ApplicationRoute.prototype.get = function (id) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, {});
+    };
+    /**
+     * Parses delete application route.
+     * @method
+     * @param data A application object used to delete specified application resource.
+     * @example applicationRoute.delete(data);
+     */
+    ApplicationRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses find application route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing application properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain application subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the application property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example applicationRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    ApplicationRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses create application route, this URI template does not expose any additional options.
+     * @method
+     * @example applicationRoute.create();
+     **/
+    ApplicationRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update application route.
+     * @method
+     * @param data A application object used to update specified application resource.
+     * @example applicationRoute.update(data);
+     */
+    ApplicationRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return ApplicationRoute;
+}(common_1.BaseRoute));
+ApplicationRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], ApplicationRoute);
+exports.ApplicationRoute = ApplicationRoute;
+var _a;
+/**
+ * verview
+ ***Notes:**
+ - Refer to e [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing itith an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 625 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(24);
+var TYPES = {
+    ApplicationRoute: Symbol("ApplicationRoute"),
+    ApplicationClient: Symbol("ApplicationClient"),
+    SettingsRoute: Symbol("SettingsRoute"),
+    SettingsClient: Symbol("SettingsClient"),
+    VersionRoute: Symbol("VersionRoute"),
+    VersionClient: Symbol("VersionClient"),
+    Root: Symbol("Maintenance-Root")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.ApplicationRoute).to(_1.ApplicationRoute);
+    bind(TYPES.ApplicationClient).to(_1.ApplicationClient);
+    bind(TYPES.SettingsRoute).to(_1.SettingsRoute);
+    bind(TYPES.SettingsClient).to(_1.SettingsClient);
+    bind(TYPES.VersionRoute).to(_1.VersionRoute);
+    bind(TYPES.VersionClient).to(_1.VersionClient);
+    bind(TYPES.Root).to(_1.Root);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 626 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(24);
+var inversify_1 = __webpack_require__(0);
+var Root = (function () {
+    function Root(application, settings, version) {
+        this.application = application;
+        this.settings = settings;
+        this.version = version;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.ApplicationClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.SettingsClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.VersionClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.ApplicationClient !== "undefined" && _1.ApplicationClient) === "function" && _a || Object, typeof (_b = typeof _1.SettingsClient !== "undefined" && _1.SettingsClient) === "function" && _b || Object, typeof (_c = typeof _1.VersionClient !== "undefined" && _1.VersionClient) === "function" && _c || Object])
+], Root);
+exports.Root = Root;
+var _a, _b, _c;
+
+
+/***/ }),
+/* 627 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module settingsRoute
+ * @description Baasic Settings Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Settings Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var SettingsRoute = (function (_super) {
+    tslib_1.__extends(SettingsRoute, _super);
+    function SettingsRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+         * Settings route with route and query parameters.
+         **/
+        _this.getRoute = 'platform/settings';
+        /**
+         * Settings route with route and query parameters.
+         **/
+        _this.updateRoute = 'platform/settings';
+        return _this;
+    }
+    /**
+     * Parses get version route.
+     * @method
+     * @example versionRoute.get()
+     **/
+    SettingsRoute.prototype.get = function () {
+        return _super.prototype.baseGet.call(this, this.getRoute);
+    };
+    /**
+     * Parses update settings route.
+     * @method
+     * @param data A settings object used to update specified settings resource.
+     * @example settingsRoute.update(data);
+     */
+    SettingsRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return SettingsRoute;
+}(common_1.BaseRoute));
+SettingsRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], SettingsRoute);
+exports.SettingsRoute = SettingsRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 628 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module versionRoute
+ * @description Baasic Version Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Version Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var VersionRoute = (function (_super) {
+    tslib_1.__extends(VersionRoute, _super);
+    function VersionRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+         * Versions route with route and query parameters.
+         **/
+        _this.getRoute = 'platform/versions';
+        return _this;
+    }
+    /**
+     * Parses get version route.
+     * @method
+     * @example versionRoute.get()
+     **/
+    VersionRoute.prototype.get = function () {
+        return _super.prototype.baseGet.call(this, this.getRoute, null, {});
+    };
+    return VersionRoute;
+}(common_1.BaseRoute));
+VersionRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], VersionRoute);
+exports.VersionRoute = VersionRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 629 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Application = __webpack_require__(24);
+exports.Application = Application;
+var Maintenance = __webpack_require__(28);
+exports.Maintenance = Maintenance;
+var Membership = __webpack_require__(20);
+exports.Membership = Membership;
+
+
+/***/ }),
+/* 630 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module maintenanceClient
+ * @description  Maintenance Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `maintenanceClient` uses `maintenanceRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(28);
+var MaintenanceClient = (function () {
+    function MaintenanceClient(maintenanceRoute, apiClient) {
+        this.maintenanceRoute = maintenanceRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(MaintenanceClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `maintenanceRoute`.
+         * @method
+         * @example maintenanceClient.routeDefinition.maintain(id);
+         **/
+        get: function () {
+            return this.maintenanceRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MaintenanceClient.prototype.maintainApp = function (id) {
+        return this.apiClient.put(this.routeDefinition.maintainApp(id), {});
+    };
+    MaintenanceClient.prototype.maintain = function () {
+        return this.apiClient.put(this.routeDefinition.maintain(), {});
+    };
+    return MaintenanceClient;
+}());
+MaintenanceClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MaintenanceRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MaintenanceRoute !== "undefined" && _1.MaintenanceRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], MaintenanceClient);
+exports.MaintenanceClient = MaintenanceClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 631 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(28);
+var TYPES = {
+    MaintenanceRoute: Symbol("MaintenanceRoute"),
+    MaintenanceClient: Symbol("MaintenanceClient"),
+    Root: Symbol("Maintenance-Root")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.MaintenanceRoute).to(_1.MaintenanceRoute);
+    bind(TYPES.MaintenanceClient).to(_1.MaintenanceClient);
+    bind(TYPES.Root).to(_1.Root);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 632 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module maintenanceRoute
+ * @description Baasic Platform Maintenance Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Maintenance Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var MaintenanceRoute = (function (_super) {
+    tslib_1.__extends(MaintenanceRoute, _super);
+    function MaintenanceRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+         * Maintenance route with route and query parameters.
+         **/
+        _this.applicationMaintenanceRoute = 'platform/maintenance/{id}';
+        /**
+         * Maintenance route with route and query parameters.
+         **/
+        _this.maintenanceRoute = 'platform/maintenance';
+        return _this;
+    }
+    /**
+     * Parses application maintenance route.
+     * @method
+     * @example maintenanceRoute.maintain(id);
+     **/
+    MaintenanceRoute.prototype.maintainApp = function (id) {
+        return _super.prototype.baseUpdate.call(this, this.applicationMaintenanceRoute, id);
+    };
+    /**
+     * Parses maintenance route.
+     * @method
+     * @example maintenanceRoute.maintain();
+     **/
+    MaintenanceRoute.prototype.maintain = function () {
+        return _super.prototype.baseUpdate.call(this, this.maintenanceRoute, {});
+    };
+    return MaintenanceRoute;
+}(common_1.BaseRoute));
+MaintenanceRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], MaintenanceRoute);
+exports.MaintenanceRoute = MaintenanceRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 633 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(28);
+var inversify_1 = __webpack_require__(0);
+var Root = (function () {
+    function Root(maintenance) {
+        this.maintenance = maintenance;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.MaintenanceClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.MaintenanceClient !== "undefined" && _1.MaintenanceClient) === "function" && _a || Object])
+], Root);
+exports.Root = Root;
+var _a;
+
+
+/***/ }),
+/* 634 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module loginClient
+ * @description  Login Client provides an easy way to consume  Application Registration REST API end-points. In order to obtain needed routes `loginClient` uses `loginRoute`.
+ */
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(20);
+var LoginClient = (function () {
+    function LoginClient(loginRoute, tokenHandler, apiClient) {
+        this.loginRoute = loginRoute;
+        this.tokenHandler = tokenHandler;
+        this.apiClient = apiClient;
+        this.utility = new common_1.Utility();
+    }
+    Object.defineProperty(LoginClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.loginRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the login action has been performed. This action logs user into the application and success response returns the token resource.
+     * @method
+     * @example loginClient.login({
+                    username : '<username>',
+                    password : '<password>',
+                    options : ['session', 'sliding']
+                })
+                .then(function (data) {
+                    // perform success actions here
+                },
+                 function (data, status) {
+                     // perform error handling here
+                })
+                .finally (function () {});
+     **/
+    LoginClient.prototype.login = function (data) {
+        var settings = this.utility.extend({}, data);
+        if (settings.options) {
+            var options = settings.options;
+            if (options instanceof Array) {
+                settings.options = options.join();
+            }
+        }
+        var loginData = this.transformData({
+            grant_type: 'password',
+            username: settings.username,
+            password: settings.password
+        });
+        var self = this;
+        return this.apiClient.createPromise(function (resolve, reject) {
+            self.apiClient.post(self.loginRoute.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
+                .then(function (data) {
+                var token = {
+                    token: data.data.access_token,
+                    expires_in: data.data.expires_in,
+                    sliding_window: data.data.sliding_window,
+                    tokenUrl: data.data.access_url_token,
+                    type: data.data.token_type
+                };
+                self.tokenHandler.store(token);
+                resolve(data);
+            }, function (data) {
+                reject(data);
+            });
+        });
+    };
+    /**
+     * Returns a promise that is resolved once the loadUserData action has been performed. This action retrieves the account information of the currently logged in user. Retrieved account information will contain permission collection which identifies access policies assigned to the user and application sections.
+     * @method
+     * @example loginClient.loadUserData()
+                    .then(function (data) {
+                        // perform success actions here
+                    },
+                     function (data) {
+                         // perform error handling here
+                    })
+                    .finally (function () {});
+     */
+    LoginClient.prototype.loadUserData = function (data) {
+        data = data || {};
+        return this.apiClient.get(this.loginRoute.login(data), { 'Accept': 'application/json; charset=UTF-8' });
+    };
+    /**
+     * Returns a promise that is resolved once the logout action has been performed. This action invalidates user token logging the user out of the system.
+     * @method
+     * @param token Authentication token which uniquely identifies user that needs to be logged out from the system.
+     * @param type Token type.
+     * @returns A promise that is resolved once the logout action has been performed.
+     * @example let token = baasicAuthorizationService.getAccessToken();
+                loginClient.logout(token.access_token, token.token_type)
+                .then(function (data) {
+                    // perform success handling here
+                }, function() {
+                    // perform error handling here
+                })
+                .finally (function () {});
+     */
+    LoginClient.prototype.logout = function (token, type) {
+        var data = {
+            token: token,
+            type: type
+        };
+        var self = this;
+        return this.apiClient.createPromise(function (resolve, reject) {
+            self.apiClient.delete(self.loginRoute.login({}), null, data)
+                .then(function (result) {
+                self.tokenHandler.store(null);
+                resolve(result);
+            }, function (result) {
+                reject(result);
+            });
+        });
+    };
+    /**
+     * Returns a promise that is resolved once the refresh token action has been performed. This action refreshes user token.
+     * @method
+     * @param token Authentication token which uniquely identifies user that needs to be logged out from the system.
+     * @param type Token type.
+     * @returns A promise that is resolved once the refresh token action has been performed.
+     * @example let token = baasicAuthorizationService.getAccessToken();
+                loginClient.refresh(token.access_token, token.token_type)
+                .then(function (data) {
+                    // perform success handling here
+                }, function() {
+                    // perform error handling here
+                })
+                .finally (function () {});
+    */
+    LoginClient.prototype.refresh = function (token, type) {
+        var data = {
+            token: token,
+            type: type
+        };
+        var self = this;
+        return this.apiClient.createPromise(function (resolve, reject) {
+            self.apiClient.put(self.loginRoute.login({}), null, data)
+                .then(function (result) {
+                var token = {
+                    token: result.data.access_token,
+                    expires_in: result.data.expires_in,
+                    sliding_window: result.data.sliding_window,
+                    tokenUrl: result.data.access_url_token,
+                    type: result.data.token_type
+                };
+                self.tokenHandler.store(token);
+                resolve(result);
+            }, function (result) {
+                reject(result);
+            });
+        });
+    };
+    /**
+     * Returns url encoded form data.
+     */
+    LoginClient.prototype.transformData = function (data) {
+        var items = [];
+        for (var key in data) {
+            items.push([encodeURIComponent(key), encodeURIComponent(data[key])].join('='));
+        }
+        return items.join('&');
+    };
+    return LoginClient;
+}());
+LoginClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.LoginRoute)),
+    tslib_1.__param(1, inversify_1.inject(contracts_1.TYPES.ITokenHandler)),
+    tslib_1.__param(2, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.LoginRoute !== "undefined" && _1.LoginRoute) === "function" && _a || Object, typeof (_b = typeof contracts_1.ITokenHandler !== "undefined" && contracts_1.ITokenHandler) === "function" && _b || Object, typeof (_c = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _c || Object])
+], LoginClient);
+exports.LoginClient = LoginClient;
+var _a, _b, _c;
+/**
+ * @overview
+  ***Notes:**
+  - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+  - All end-point objects are transformed by the associated route definition.
+  */ 
+
+
+/***/ }),
+/* 635 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module lookupClient
+ * @description  Lookup Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `lookupClient` uses `lookupRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var common_1 = __webpack_require__(3);
+var _1 = __webpack_require__(20);
+var LookupClient = (function () {
+    function LookupClient(lookupRoute, apiClient) {
+        this.lookupRoute = lookupRoute;
+        this.apiClient = apiClient;
+        this.utility = new common_1.Utility();
+    }
+    Object.defineProperty(LookupClient.prototype, "routeDefinition", {
+        get: function () {
+            return this.lookupRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the get access sections action has been performed. Success response returns the access section resources.
+     * @method
+     * @returns A promise that is resolved once the get access sections action has been performed.
+     * @example lookupClient.getAccessSections()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    LookupClient.prototype.getAccessSections = function () {
+        var _this = this;
+        var self = this;
+        return this.apiClient.createPromise(function (resolve, reject) {
+            self.apiClient.get(_this.lookupRoute.getAccessSections())
+                .then(function (data) {
+                resolve(data);
+            }, function (data) {
+                reject(data);
+            });
+        });
+    };
+    return LookupClient;
+}());
+LookupClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.LookupRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.LookupRoute !== "undefined" && _1.LookupRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], LookupClient);
+exports.LookupClient = LookupClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 636 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module passwordRecoveryClient
+ * @description  Password Recovery Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `passwordRecoveryClient` uses `passwordRecoveryRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var _1 = __webpack_require__(20);
+var PasswordRecoveryClient = (function () {
+    function PasswordRecoveryClient(passwordRecoveryRoute, apiClient) {
+        this.passwordRecoveryRoute = passwordRecoveryRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(PasswordRecoveryClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `passwordRecoveryRoute`.
+         * @method
+         **/
+        get: function () {
+            return this.passwordRecoveryRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the password change action is completed. This updates user's password selection.
+     * @method
+     * @param data Password recovery object used to update user's current password selection.
+     * @example passwordRecoveryClient.change({
+                    newPassword : '<new-password>'
+                })
+                .then(function () {
+                    // perform success action here
+                },
+                 function (data) {
+                    // perform error handling here
+                })
+                .finally (function () {});
+     */
+    PasswordRecoveryClient.prototype.change = function (data) {
+        return this.apiClient.put(this.passwordRecoveryRoute.passwordChange(), data);
+    };
+    /**
+     * Returns a promise that is resolved once the password recovery requestReset action is completed. This action initiates the password recovery process for the user.
+     * @method
+     * @param data A password recovery object which contains parameters required for the password retrieval request.
+     * @example passwordRecoveryClient.requestReset({
+                    challengeIdentifier : '<challenge-identifier>',
+                    challengeResponse : '<challenge-response>',
+                    recoverUrl : '<recover-url>',
+                    username : '<username>'
+                })
+                .then(function () {
+                    // perform success action here
+                },
+                 function (data) {
+                    // perform error handling here
+                })
+                .finally (function () {});
+     */
+    PasswordRecoveryClient.prototype.requestReset = function (data) {
+        return this.apiClient.post(this.passwordRecoveryRoute.passwordRecovery(), data);
+    };
+    /**
+     * Returns a promise that is resolved once the password reset action is completed. This updates user's password selection.
+     * @method
+     * @param data Password recovery object used to update user's current password selection.
+     * @example passwordRecoveryClient.reset({
+                    newPassword : '<new-password>',
+                    passwordRecoveryToken : '<password-recovery-token>'
+                })
+                .then(function () {
+                    // perform success action here
+                },
+                 function (data) {
+                    // perform error handling here
+                })
+                .finally (function () {});
+     */
+    PasswordRecoveryClient.prototype.reset = function (data) {
+        return this.apiClient.put(this.passwordRecoveryRoute.passwordRecovery(), data);
+    };
+    return PasswordRecoveryClient;
+}());
+PasswordRecoveryClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.PasswordRecoveryRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.PasswordRecoveryRoute !== "undefined" && _1.PasswordRecoveryRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], PasswordRecoveryClient);
+exports.PasswordRecoveryClient = PasswordRecoveryClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 637 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module registerClient
+ * @description  Register Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `registerClient` uses `registerRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+var contracts_1 = __webpack_require__(2);
+var _1 = __webpack_require__(20);
+var RegisterClient = (function () {
+    function RegisterClient(registerRoute, apiClient, tokenHandler) {
+        this.registerRoute = registerRoute;
+        this.apiClient = apiClient;
+        this.tokenHandler = tokenHandler;
+    }
+    Object.defineProperty(RegisterClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `registerRoute`.
+         * @method
+         **/
+        get: function () {
+            return this.registerRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the register create has been performed. This action will create a new user if completed successfully. Created user is not approved immediately, instead an activation e-mail is sent to the user.
+     * @param data A user account object that needs to be inserted into the system.
+     * @method
+     * @example registerClient.create({
+                    activationUrl : '<activation-url>',
+                    challengeIdentifier : '<challenge-identifier>',
+                    challengeResponse : '<challenge-response>',
+                    email : '<email>',
+                    password : '<password>',
+                    username : '<username>'
+                })
+                .success(function (data) {
+                    // perform success actions here
+                }).error(function (data, status) {
+                    // perform error handling here
+                })
+                .finally (function () {});
+     **/
+    RegisterClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the account activation action has been performed; this action activates a user account and success response returns the token resource.
+     * @param data Security code which uniquely identifies user account that needs to be activated.
+     * @returns A promise that is resolved once the account activation action has been performed.
+     * @method
+     * @example registerClient.activate({
+                   activationToken : '<activation-token>'
+               })
+               .then(function (data) {
+                   // perform success actions here
+               },
+                function (data, status) {
+                   // perform error handling here
+               })
+               .finally (function () {});
+    **/
+    RegisterClient.prototype.activate = function (data) {
+        var self = this;
+        var promise = this.apiClient.put(this.registerRoute.activate(data), data);
+        promise.then(function (data) {
+            var token = {
+                token: data.data.access_token,
+                expires_in: data.data.expires_in,
+                sliding_window: data.data.sliding_window,
+                tokenUrl: data.data.access_url_token,
+                type: data.data.token_type
+            };
+            self.tokenHandler.store(token);
+            return data;
+        });
+        return promise;
+    };
+    /**
+     * Returns a promise that is resolved once the account recovery action has been performed; this action resends password recovery to user.
+     * @param data Email which uniquely identifies user account that needs recovery email resent.
+     * @returns A promise that is resolved once the recovery action has been performed.
+     * @method
+     * @example registerClient.recovery({
+                   email : '<email>',
+                   activationUrl: '<activation-url>',
+                   challengeResponse: '<challenge-response>'
+               })
+               .then(function (data) {
+                   // perform success actions here
+               },
+                function (data, status) {
+                   // perform error handling here
+               })
+               .finally (function () {});
+    **/
+    RegisterClient.prototype.recovery = function (data) {
+        var self = this;
+        return this.apiClient.put(this.registerRoute.recovery(data.email), data);
+    };
+    return RegisterClient;
+}());
+RegisterClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.RegisterRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__param(2, inversify_1.inject(contracts_1.TYPES.ITokenHandler)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.RegisterRoute !== "undefined" && _1.RegisterRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object, typeof (_c = typeof contracts_1.ITokenHandler !== "undefined" && contracts_1.ITokenHandler) === "function" && _c || Object])
+], RegisterClient);
+exports.RegisterClient = RegisterClient;
+var _a, _b, _c;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 638 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals module */
+/**
+ * @module userClient
+ * @description  User Client provides an easy way to consume  Password Recovery REST API end-points. In order to obtain needed routes `userClient` uses `userRoute`.
+*/
+
+var tslib_1 = __webpack_require__(1);
+var inversify_1 = __webpack_require__(0);
+var httpApi_1 = __webpack_require__(4);
+;
+var _1 = __webpack_require__(20);
+var UserClient = (function () {
+    function UserClient(userRoute, apiClient) {
+        this.userRoute = userRoute;
+        this.apiClient = apiClient;
+    }
+    Object.defineProperty(UserClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `userRoute`.
+         * @method
+         **/
+        get: function () {
+            return this.userRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of user resources matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @example userClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    UserClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns the specified user resource.
+     * @method
+     * @param id A username or id which uniquely identifies an application user whose account information needs to be retrieved.
+     * @param options Query resources options.
+     * @returns A promise that is resolved once the get action has been performed.
+     * @example userClient.get({
+                    username : '<username>',
+                    embed : '<embedded-resource>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    UserClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.userRoute.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create user action has been performed; this action creates a new user.
+     * @method
+     * @param data An user object that needs to be inserted into the system.
+     * @returns A promise that is resolved once the create user action has been performed.
+     * @example userClient.create({
+                    email : '<email>',
+                    password : '<password>',
+                    userName : '<username>',
+                    additionalProperty: '<additional-property>'
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    UserClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update user action has been performed; this action updates a user. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(user);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @param data A user object used to update specified user resource.
+     * @returns A promise that is resolved once the update user action has been performed.
+     * @method
+     * @example // user is a resource previously fetched using get action.
+                    user.roles = ['<role-name>', '<new-role-name>'];
+                    user.email = '<new-email>';
+                    userClient.update(user)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    UserClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove user action has been performed. This action will remove a user from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `userRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(user);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data  A user object used to delete specified user resource.
+     * @returns A promise that is resolved once the remove user action has been performed.
+     * @example // user is a resource previously fetched using get action.
+                    userClient.remove(user)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                            // perform error handling here
+                        });
+     **/
+    UserClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    return UserClient;
+}());
+UserClient = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.UserRoute)),
+    tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.UserRoute !== "undefined" && _1.UserRoute) === "function" && _a || Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" && _b || Object])
+], UserClient);
+exports.UserClient = UserClient;
+var _a, _b;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+*/ 
+
+
+/***/ }),
+/* 639 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 640 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 641 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 642 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 643 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 644 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 645 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 646 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 647 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 648 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+;
+
+
+/***/ }),
+/* 649 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 650 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 651 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+
+/***/ }),
+/* 652 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(643));
+__export(__webpack_require__(640));
+__export(__webpack_require__(645));
+__export(__webpack_require__(647));
+__export(__webpack_require__(649));
+__export(__webpack_require__(639));
+__export(__webpack_require__(646));
+__export(__webpack_require__(651));
+__export(__webpack_require__(644));
+__export(__webpack_require__(648));
+__export(__webpack_require__(642));
+__export(__webpack_require__(650));
+__export(__webpack_require__(641));
+
+
+/***/ }),
+/* 653 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var inversify_1 = __webpack_require__(0);
+var Symbol = __webpack_require__(9);
+var _1 = __webpack_require__(20);
+var TYPES = {
+    LoginRoute: Symbol("LoginRoute"),
+    LoginClient: Symbol("LoginClient"),
+    LookupRoute: Symbol("LookupRoute"),
+    LookupClient: Symbol("LookupClient"),
+    PasswordRecoveryRoute: Symbol("PasswordRecoveryRoute"),
+    PasswordRecoveryClient: Symbol("PasswordRecoveryClient"),
+    RegisterRoute: Symbol("RegisterRoute"),
+    RegisterClient: Symbol("RegisterClient"),
+    UserRoute: Symbol("UserRoute"),
+    UserClient: Symbol("UserClient"),
+    Root: Symbol("Membership-Root")
+};
+exports.TYPES = TYPES;
+var diModule = new inversify_1.ContainerModule(function (bind) {
+    bind(TYPES.LoginRoute).to(_1.LoginRoute);
+    bind(TYPES.LoginClient).to(_1.LoginClient);
+    bind(TYPES.LookupRoute).to(_1.LookupRoute);
+    bind(TYPES.LookupClient).to(_1.LookupClient);
+    bind(TYPES.PasswordRecoveryRoute).to(_1.PasswordRecoveryRoute);
+    bind(TYPES.PasswordRecoveryClient).to(_1.PasswordRecoveryClient);
+    bind(TYPES.RegisterRoute).to(_1.RegisterRoute);
+    bind(TYPES.RegisterClient).to(_1.RegisterClient);
+    bind(TYPES.UserRoute).to(_1.UserRoute);
+    bind(TYPES.UserClient).to(_1.UserClient);
+    bind(TYPES.Root).to(_1.Root);
+});
+exports.diModule = diModule;
+
+
+/***/ }),
+/* 654 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module loginRoute
+ * @description Baasic Platform Login Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Login Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var LoginRoute = (function (_super) {
+    tslib_1.__extends(LoginRoute, _super);
+    function LoginRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+         * Login route with route and query parameters.
+         **/
+        _this.loginRoute = 'platform/dashboard/login/{?embed,fields,options}';
+        return _this;
+    }
+    /**
+     * Parses login route which can be expanded with additional options. Supported items are:
+     * - `options` - Comma separated list of options used to setup authentication token with cookie session. Supported values are: "session" and "sliding".
+     * @method
+     * @example loginRoute.login( {options: 'sliding'});
+     **/
+    LoginRoute.prototype.login = function (options) {
+        return _super.prototype.baseCreate.call(this, this.loginRoute, options);
+    };
+    return LoginRoute;
+}(common_1.BaseRoute));
+LoginRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], LoginRoute);
+exports.LoginRoute = LoginRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 655 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module lookupRoute
+ * @description Baasic Lookup Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Lookup Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var LookupRoute = (function (_super) {
+    tslib_1.__extends(LookupRoute, _super);
+    function LookupRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+        * Get access section route with route and query parameters.
+        **/
+        _this.getAccessSectionRoute = 'platform/lookups/access-sections';
+        return _this;
+    }
+    /**
+     * Parses get access sections route which can be expanded with additional options.
+     * @method
+     * @example baasicLookupRouteService.getAccessSections();
+     **/
+    LookupRoute.prototype.getAccessSections = function () {
+        return _super.prototype.baseCreate.call(this, this.getAccessSectionRoute, {});
+    };
+    return LookupRoute;
+}(common_1.BaseRoute));
+LookupRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], LookupRoute);
+exports.LookupRoute = LookupRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 656 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module passwordRecoveryRoute
+ * @description Baasic Platform Password Recovery Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Recover Password Recovery Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var PasswordRecoveryRoute = (function (_super) {
+    tslib_1.__extends(PasswordRecoveryRoute, _super);
+    function PasswordRecoveryRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+        * Password recovery route with route and query parameters.
+        **/
+        _this.passwordRecoveryRoute = 'platform/recover-password';
+        return _this;
+    }
+    /**
+     * Parses recover-password route, recover-password route doesn't expose any additional properties.
+     * @method
+     * @example passwordRecoveryRoute.passwordRecovery();
+     **/
+    PasswordRecoveryRoute.prototype.passwordRecovery = function () {
+        return _super.prototype.baseCreate.call(this, this.passwordRecoveryRoute, {});
+    };
+    /**
+     * Parses recover-password change route, recover-password change route doesn't expose any additional properties.
+     * @method
+     * @example passwordRecoveryRoute.passwordChange();
+     **/
+    PasswordRecoveryRoute.prototype.passwordChange = function () {
+        return _super.prototype.baseCreate.call(this, this.passwordRecoveryRoute + '/change', {});
+    };
+    return PasswordRecoveryRoute;
+}(common_1.BaseRoute));
+PasswordRecoveryRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], PasswordRecoveryRoute);
+exports.PasswordRecoveryRoute = PasswordRecoveryRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 657 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module registerRoute
+ * @description Baasic Register Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Register Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var RegisterRoute = (function (_super) {
+    tslib_1.__extends(RegisterRoute, _super);
+    function RegisterRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+        * Create route with route and query parameters.
+        **/
+        _this.createRoute = 'platform/register';
+        /**
+        * Activate route with route and query parameters.
+        **/
+        _this.activateRoute = 'platform/activate/{activationToken}/';
+        /**
+        * Recovery route with route and query parameters.
+        **/
+        _this.recoveryRoute = 'platform/recovery/{email}/';
+        return _this;
+    }
+    /**
+     * Parses register route, this route doesn't support any additional properties.
+     * @method
+     * @example registerRoute.create();
+     **/
+    RegisterRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses activation route; route should be expanded with the `activationToken` which uniquely identifies the user account that needs to be activated.
+     * @method
+     * @param data Security code which uniquely identifies user account that needs to be activated.
+     * @example registerRoute.activate({activationToken: '<activation-token>'});
+     **/
+    RegisterRoute.prototype.activate = function (data) {
+        var params = this.modelMapper.getParams(data, undefined, 'activationToken');
+        return _super.prototype.baseCreate.call(this, this.activateRoute, params);
+    };
+    /**
+     * Parses recovery route; route should be expanded with the `email` which uniquely identifies the user account that needs email recovery to be resent.
+     * @method
+     * @param data User email which uniquely identifies user account that needs password recovery resent.
+     * @example registerRoute.recovery({email: '<email>'});
+     **/
+    RegisterRoute.prototype.recovery = function (data) {
+        var params = this.modelMapper.getParams(data, undefined, 'email');
+        return _super.prototype.baseCreate.call(this, this.recoveryRoute, params);
+    };
+    return RegisterRoute;
+}(common_1.BaseRoute));
+RegisterRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], RegisterRoute);
+exports.RegisterRoute = RegisterRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 658 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+var _1 = __webpack_require__(20);
+var inversify_1 = __webpack_require__(0);
+var Root = (function () {
+    function Root(login, lookups, passwordRecovery, register, user) {
+        this.login = login;
+        this.lookups = lookups;
+        this.passwordRecovery = passwordRecovery;
+        this.register = register;
+        this.user = user;
+    }
+    return Root;
+}());
+Root = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(_1.TYPES.LoginClient)),
+    tslib_1.__param(1, inversify_1.inject(_1.TYPES.LookupClient)),
+    tslib_1.__param(2, inversify_1.inject(_1.TYPES.PasswordRecoveryClient)),
+    tslib_1.__param(3, inversify_1.inject(_1.TYPES.RegisterClient)),
+    tslib_1.__param(4, inversify_1.inject(_1.TYPES.UserClient)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.LoginClient !== "undefined" && _1.LoginClient) === "function" && _a || Object, typeof (_b = typeof _1.LookupClient !== "undefined" && _1.LookupClient) === "function" && _b || Object, typeof (_c = typeof _1.PasswordRecoveryClient !== "undefined" && _1.PasswordRecoveryClient) === "function" && _c || Object, typeof (_d = typeof _1.RegisterClient !== "undefined" && _1.RegisterClient) === "function" && _d || Object, typeof (_e = typeof _1.UserClient !== "undefined" && _1.UserClient) === "function" && _e || Object])
+], Root);
+exports.Root = Root;
+var _a, _b, _c, _d, _e;
+
+
+/***/ }),
+/* 659 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var tslib_1 = __webpack_require__(1);
+/* globals module */
+/**
+ * @module userRoute
+ * @description Baasic User Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic User Route Definition to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+ */
+var inversify_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(3);
+var contracts_1 = __webpack_require__(2);
+var UserRoute = (function (_super) {
+    tslib_1.__extends(UserRoute, _super);
+    function UserRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        /**
+        * Find route with route and query parameters.
+        **/
+        _this.findRoute = 'platform/users/{?searchQuery,page,rpp,sort,embed,fields}';
+        /**
+        * Get route with route and query parameters.
+        **/
+        _this.getRoute = 'platform/users/{username}/{?embed,fields}';
+        /**
+        * Create route with route and query parameters.
+        **/
+        _this.createRoute = 'platform/users';
+        /**
+        * Update route with route and query parameters.
+        **/
+        _this.updateRoute = 'platform/users/{id}';
+        /**
+        * Delete route with route and query parameters.
+        **/
+        _this.deleteRoute = 'platform/users/{id}';
+        return _this;
+    }
+    /**
+     * Parses get user route which must be expanded with the username of the previously created user resource in the system. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example userRoute.get({username: '<username>'})
+     **/
+    UserRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options, 'username');
+    };
+    /**
+     * Parses delete user route.
+     * @method
+     * @param data A user object used to delete specified user resource.
+     * @example userRoute.delete(data);
+     */
+    UserRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    /**
+     * Parses find user route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing user properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain user subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the user property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @example userRoute.find({searchQuery: '<search-phrase>'});
+     **/
+    UserRoute.prototype.find = function (options) {
+        return _super.prototype.baseFind.call(this, this.findRoute, options);
+    };
+    /**
+     * Parses create user route, this URI template does not expose any additional options.
+     * @method
+     * @example userRoute.create();
+     **/
+    UserRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+         * Parses update user route.
+         * @method
+         * @param data A user object used to update specified user resource.
+         * @example userRoute.update(data);
+         */
+    UserRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    return UserRoute;
+}(common_1.BaseRoute));
+UserRoute = tslib_1.__decorate([
+    inversify_1.injectable(),
+    tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+    tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" && _a || Object])
+], UserRoute);
+exports.UserRoute = UserRoute;
+var _a;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route definition.
+ */ 
+
+
+/***/ }),
+/* 660 */
+>>>>>>> - updated platform
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global unescape, module, define, window, global*/
