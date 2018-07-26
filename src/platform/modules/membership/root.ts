@@ -4,10 +4,9 @@ import {
     PasswordRecoveryClient,
     RegisterClient,
     RoleClient,
-    UserSocialLoginClient,
     UserClient,
-    PermissionClient,
     LookupClient,
+    PermissionClient,
     TYPES
 } from './';
 
@@ -23,8 +22,8 @@ export class Root {
         @inject(TYPES.RegisterClient) public register: RegisterClient,
         @inject(TYPES.RoleClient) public role: RoleClient,
         @inject(TYPES.UserClient) public user: UserClient,
-        @inject(TYPES.PermissionClient) public permissions: PermissionClient,
-        @inject(TYPES.LookupClient) public lookups: LookupClient
+        @inject(TYPES.LookupClient) public lookups: LookupClient,
+        @inject(TYPES.PermissionClient) public permissions: PermissionClient
     ) {
 
     }

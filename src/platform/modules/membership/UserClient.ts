@@ -9,7 +9,6 @@ import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     UserRoute,
-    UserSocialLoginClient,
     TYPES as membershipTypes
 } from './';
 import { IAppUser, IPlatformUser, INewUser, INewPassword, IUserOptions } from './contracts';
@@ -27,13 +26,8 @@ export class UserClient {
         return this.userRoute;
     }
 
-    get socialLogin(): UserSocialLoginClient {
-        return this.userSocialLoginClient;
-    }
-
     constructor(
         @inject(membershipTypes.UserRoute) protected userRoute: UserRoute,
-        @inject(membershipTypes.UserSocialLoginClient) protected userSocialLoginClient: UserSocialLoginClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
     ) { }
 

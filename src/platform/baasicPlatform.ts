@@ -25,19 +25,8 @@ export class BaasicPlatform implements IBaasicPlatform {
     public readonly membershipModule: modules.Membership.Root;
     //Modules
     public readonly applicationSettingModule: modules.ApplicationSettings.ApplicationSettingsClient;
-    public readonly keyValueModule: modules.KeyValue.KeyValueClient;
-    public readonly valueSetModule: modules.ValueSet.ValueSetClient;
     public readonly userProfileModule: modules.UserProfile.Root;
-    public readonly templatingModule: modules.Templating.TemplatingClient;
-    public readonly meteringModule: modules.Metering.MeteringClient;
-    public readonly mediaVaultModule: modules.MediaVault.MediaVaultClient;
-    public readonly mediaGalleryModule: modules.MediaGallery.Root;
-    public readonly fileModule: modules.Files.FilesClient;
-    public readonly dynamicResourceModule: modules.DynamicResource.DynamicResourceClient;
     public readonly notificationModule: modules.Notifications.NotificationsClient;
-    public readonly articleModule: modules.Article.Root;
-    public readonly commerceModule: modules.Commerce.CommerceClient;
-    public readonly calendarModule: modules.Calendar.Root;
     public readonly maintenanceModule: modules.Maintenance.Root;
 
 
@@ -62,19 +51,8 @@ export class BaasicPlatform implements IBaasicPlatform {
         this.membershipModule = this.diModule.kernel.get<modules.Membership.Root>(modules.Membership.TYPES.Root);
         //Modules
         this.applicationSettingModule = this.diModule.kernel.get<modules.ApplicationSettings.ApplicationSettingsClient>(modules.ApplicationSettings.TYPES.ApplicationSettingsClient);
-        this.keyValueModule = this.diModule.kernel.get<modules.KeyValue.KeyValueClient>(modules.KeyValue.TYPES.KeyValueClient);
-        this.valueSetModule = this.diModule.kernel.get<modules.ValueSet.ValueSetClient>(modules.ValueSet.TYPES.ValueSetClient);
         this.userProfileModule = this.diModule.kernel.get<modules.UserProfile.Root>(modules.UserProfile.TYPES.Root);
-        this.templatingModule = this.diModule.kernel.get<modules.Templating.TemplatingClient>(modules.Templating.TYPES.TemplatingClient);
-        this.meteringModule = this.diModule.kernel.get<modules.Metering.MeteringClient>(modules.Metering.TYPES.MeteringClient);
-        this.mediaVaultModule = this.diModule.kernel.get<modules.MediaVault.MediaVaultClient>(modules.MediaVault.TYPES.MediaVaultClient);
-        this.mediaGalleryModule = this.diModule.kernel.get<modules.MediaGallery.Root>(modules.MediaGallery.TYPES.Root);
-        this.fileModule = this.diModule.kernel.get<modules.Files.FilesClient>(modules.Files.TYPES.FilesClient);
-        this.dynamicResourceModule = this.diModule.kernel.get<modules.DynamicResource.DynamicResourceClient>(modules.DynamicResource.TYPES.DynamicResourceClient);
         this.notificationModule = this.diModule.kernel.get<modules.Notifications.NotificationsClient>(modules.Notifications.TYPES.NotificationsClient);
-        this.articleModule = this.diModule.kernel.get<modules.Article.Root>(modules.Article.TYPES.Root);
-        this.commerceModule = this.diModule.kernel.get<modules.Commerce.CommerceClient>(modules.Commerce.TYPES.CommerceClient);
-        this.calendarModule = this.diModule.kernel.get<modules.Calendar.Root>(modules.Calendar.TYPES.Root);
         this.maintenanceModule = this.diModule.kernel.get<modules.Maintenance.Root>(modules.Maintenance.TYPES.Root);
     }
 

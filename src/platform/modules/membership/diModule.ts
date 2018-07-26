@@ -13,14 +13,12 @@ import {
     RoleBatchRoute,
     RoleClient,
     RoleRoute,
-    UserSocialLoginClient,
-    UserSocialLoginRoute,
     UserClient,
     UserRoute,
-    PermissionRoute,
-    PermissionClient,
     LookupRoute,
     LookupClient,
+    PermissionRoute,
+    PermissionClient,
     Root
 } from './';
 
@@ -37,14 +35,12 @@ const TYPES = {
     RoleBatchRoute: Symbol("RoleBatchRoute"),
     RoleClient: Symbol("RoleClient"),
     RoleRoute: Symbol("RoleRoute"),
-    UserSocialLoginClient: Symbol("UserSocialLoginClient"),
-    UserSocialLoginRoute: Symbol("UserSocialLoginRoute"),
     UserClient: Symbol("UserClient"),
     UserRoute: Symbol("UserRoute"),
-    PermissionRoute: Symbol("PermissionRoute"),
-    PermissionClient: Symbol("PermissionClient"),
     LookupRoute: Symbol("LookupRoute"),
     LookupClient: Symbol("LookupClient"),
+    PermissionRoute: Symbol("PermissionRoute"),
+    PermissionClient: Symbol("PermissionClient"),
     Root: Symbol("Membership-Root")
 };
 
@@ -63,14 +59,12 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<RoleBatchClient>(TYPES.RoleBatchClient).to(RoleBatchClient);
     bind<RoleRoute>(TYPES.RoleRoute).to(RoleRoute);
     bind<RoleClient>(TYPES.RoleClient).to(RoleClient);
-    bind<UserSocialLoginRoute>(TYPES.UserSocialLoginRoute).to(UserSocialLoginRoute);
-    bind<UserSocialLoginClient>(TYPES.UserSocialLoginClient).to(UserSocialLoginClient);
     bind<UserRoute>(TYPES.UserRoute).to(UserRoute);
     bind<UserClient>(TYPES.UserClient).to(UserClient);
-    bind<PermissionRoute>(TYPES.PermissionRoute).to(PermissionRoute);
-    bind<PermissionClient>(TYPES.PermissionClient).to(PermissionClient);
     bind<LookupRoute>(TYPES.LookupRoute).to(LookupRoute);
     bind<LookupClient>(TYPES.LookupClient).to(LookupClient);
+    bind<PermissionRoute>(TYPES.PermissionRoute).to(PermissionRoute);
+    bind<PermissionClient>(TYPES.PermissionClient).to(PermissionClient);
     bind<Root>(TYPES.Root).to(Root);
 });
 

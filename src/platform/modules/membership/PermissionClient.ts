@@ -9,7 +9,7 @@ import { IQueryModel, IOptions } from 'common/contracts';;
 import { Utility } from 'common';
 import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { PermissionRoute, TYPES as membershipTypes } from './';
-import { IAccessPolicy, IAccessAction, IRole, IUserInfo } from './contracts';
+import { IAccessPolicy, IAccessAction, IRole, IPlatformUserInfo } from './contracts';
 import { IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 
 @injectable()
@@ -323,7 +323,7 @@ export class PermissionClient {
         return this.apiClient.get(this.routeDefinition.getRoles(options));
     }
 
-    private getUsers(options): PromiseLike<IHttpResponse<IQueryModel<IUserInfo>>> {
+    private getUsers(options): PromiseLike<IHttpResponse<IQueryModel<IPlatformUserInfo>>> {
         return this.apiClient.get(this.routeDefinition.getUsers(options));
     }
 

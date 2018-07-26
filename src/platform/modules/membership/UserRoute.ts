@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
 import { IOptions } from 'common/contracts';
-import { UserSocialLoginRoute, TYPES as membershipTypes } from './';
+import { TYPES as membershipTypes } from './';
 import { IAppUser, IPlatformUser } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
@@ -59,13 +59,8 @@ export class UserRoute extends BaseRoute {
     **/
     public disapproveRoute: string = 'users/{id}/disapprove';
 
-    get socialLogin(): UserSocialLoginRoute {
-        return this.userSocialLoginRoute;
-    }
-
     constructor(
-        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions,
-        @inject(membershipTypes.UserSocialLoginRoute) protected userSocialLoginRoute: UserSocialLoginRoute
+        @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
     ) { super(appOptions); }
 
     /**                 
