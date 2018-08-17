@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-beta09 - Tuesday, July 10th, 2018, 3:59:01 PM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.5-beta09 - Friday, August 17th, 2018, 8:55:52 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -28550,7 +28550,7 @@ var FilesStreamsClient = (function () {
     FilesStreamsClient.prototype.update = function (data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.filesStreamsRoute.update(data), data, {});
+        return this.apiClient.put(this.filesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
     };
     /**
      * Returns a promise that is resolved once the create file stream action has been performed; this action will upload the specified blob. For more information on Blob objects please see [Blob Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
@@ -28566,7 +28566,7 @@ var FilesStreamsClient = (function () {
     FilesStreamsClient.prototype.create = function (data, stream) {
         var formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, {});
+        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
     };
     return FilesStreamsClient;
 }());
