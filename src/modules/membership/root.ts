@@ -1,4 +1,5 @@
 import {
+    DashboardLoginClient,
     LoginClient,
     LoginSocialClient,
     PasswordRecoveryClient,
@@ -17,6 +18,7 @@ import { injectable, inject } from "inversify";
 export class Root {
 
     constructor(
+        @inject(TYPES.DashboardLoginClient) public dashboardLogin: DashboardLoginClient,
         @inject(TYPES.LoginClient) public login: LoginClient,
         @inject(TYPES.LoginSocialClient) public loginSocial: LoginSocialClient,
         @inject(TYPES.PasswordRecoveryClient) public passwordRecovery: PasswordRecoveryClient,

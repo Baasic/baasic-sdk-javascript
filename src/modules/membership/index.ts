@@ -2,6 +2,8 @@ export * from './diModule';
 
 export * from './loginSocialRoute';
 export * from './loginSocialClient';
+export * from './dashboardLoginRoute';
+export * from './dashboardLoginClient';
 export * from './loginRoute';
 export * from './loginClient';
 export * from './passwordRecoveryRoute';
