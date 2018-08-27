@@ -1,8 +1,6 @@
 import { ContainerModule } from "inversify";
 import * as Symbol from "es6-symbol";
 import {
-    DashboardLoginRoute,
-    DashboardLoginClient,
     LoginRoute,
     LoginClient,
     LoginSocialRoute,
@@ -27,8 +25,6 @@ import {
 } from './';
 
 const TYPES = {
-    DashboardLoginRoute: Symbol("DashboardLoginRoute"),
-    DashboardLoginClient: Symbol("DashboardLoginClient"),
     LoginRoute: Symbol("LoginRoute"),
     LoginClient: Symbol("LoginClient"),
     LoginSocialRoute: Symbol("LoginSocialRoute"),
@@ -57,8 +53,6 @@ export { TYPES };
 let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<LoginSocialRoute>(TYPES.LoginSocialRoute).to(LoginSocialRoute);
     bind<LoginSocialClient>(TYPES.LoginSocialClient).to(LoginSocialClient);
-    bind<DashboardLoginRoute>(TYPES.DashboardLoginRoute).to(DashboardLoginRoute);
-    bind<DashboardLoginClient>(TYPES.DashboardLoginClient).to(DashboardLoginClient);
     bind<LoginRoute>(TYPES.LoginRoute).to(LoginRoute);
     bind<LoginClient>(TYPES.LoginClient).to(LoginClient);
     bind<PasswordRecoveryRoute>(TYPES.PasswordRecoveryRoute).to(PasswordRecoveryRoute);
