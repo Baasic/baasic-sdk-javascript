@@ -60,3 +60,5 @@ build/dist/docs/
 
 bower_components/
 build/lib/
+
+build_cache/
