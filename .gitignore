@@ -56,4 +56,6 @@ jspm_packages
 build/dist/docs/
 .vs/
 
+\.idea/
+
 bower_components/
