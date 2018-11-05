@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     MediaGalleryBatchClient,
     MediaGalleryRoute,
@@ -24,7 +24,7 @@ export class MediaGalleryClient {
         return this.mediaGalleryRoute;
     }
 
-    get streams() : MediaGalleryFileStreamClient {
+    get streams(): MediaGalleryFileStreamClient {
         return this.mediaGalleryFileStreamClient;
     }
 
@@ -35,14 +35,14 @@ export class MediaGalleryClient {
     get files(): MediaGalleryInstanceFilesClient {
         return this.mediaGalleryInstanceFilesClient;
     }
-    
+
     constructor(
         @inject(mediaGalleryTypes.MediaGalleryRoute) protected mediaGalleryRoute: MediaGalleryRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient,
         @inject(mediaGalleryTypes.MediaGalleryBatchClient) protected mediaGalleryBatchClient: MediaGalleryBatchClient,
         @inject(mediaGalleryTypes.MediaGalleryFileStreamClient) protected mediaGalleryFileStreamClient: MediaGalleryFileStreamClient,
         @inject(mediaGalleryTypes.MediaGalleryInstanceFilesClient) protected mediaGalleryInstanceFilesClient: MediaGalleryInstanceFilesClient,
-        @inject(mediaGalleryTypes.MediaGallerySettingsClient) protected mediaGallerySettingsClient: MediaGallerySettingsClient        
+        @inject(mediaGalleryTypes.MediaGallerySettingsClient) protected mediaGallerySettingsClient: MediaGallerySettingsClient
     ) { }
 
     /**                  

@@ -5,17 +5,17 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IOptions } from '../../common/contracts';;
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IOptions } from 'common/contracts';;
 import { IMeteringData } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MeteringStatisticsRoute extends BaseRoute {
 
     public readonly findRoute: string = 'metering/statistics/{category}/{?applicationIds,rateBy,from,to,names,moduleNames,statuses,endpoints,sources,page,rpp,sort,embed,fields}';
-    
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses find metering route which can be expanded with additional options. Supported items are:                     

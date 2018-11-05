@@ -5,8 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     CommerceProductInstanceFilesBatchClient,
     CommerceProductInstanceFilesRoute,
@@ -121,7 +121,7 @@ export class CommerceProductInstanceFilesClient {
                              // perform error handling here 
                         });                     
      **/
-    unlinkByProduct(productId: string,  options: Object): PromiseLike<IHttpResponse<void>> {
+    unlinkByProduct(productId: string, options: Object): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.ProductInstanceFilesRoute.unlinkByProduct(productId, options));
     }
 

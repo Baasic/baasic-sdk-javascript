@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MediaVaultSettingsRoute extends BaseRoute {
@@ -14,8 +14,8 @@ export class MediaVaultSettingsRoute extends BaseRoute {
     public readonly getRoute: string = 'media-vault-settings';
 
     public readonly updateRoute: string = 'media-vault-settings';
-    
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses get route; this route doesn not expose any additional options.                     

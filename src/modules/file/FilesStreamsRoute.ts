@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class FilesStreamsRoute extends BaseRoute {
@@ -16,8 +16,8 @@ export class FilesStreamsRoute extends BaseRoute {
     public readonly updateRoute: string = 'file-streams/{id}/{?width,height}';
 
     public readonly createRoute: string = 'file-streams/{path}';
-    
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses get route; this route should be expanded with id or path of desired file stream. Additional supported items are:                     

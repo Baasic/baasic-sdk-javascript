@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { ICouponOptions } from '../contracts';
 
 @injectable()
@@ -22,9 +22,9 @@ export class CommerceCouponRoute extends BaseRoute {
     public readonly updateRoute: string = 'commerce/coupons/{id}';
 
     public readonly deleteRoute: string = 'commerce/coupons/{id}';
-    
+
     public readonly findCouponUseRoute: string = 'commerce/coupons/{id}/uses/{?embed,fields}';
-    
+
 
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
@@ -90,7 +90,7 @@ export class CommerceCouponRoute extends BaseRoute {
      **/
     findCouponUses(couponId: string, options?: IGetRequestOptions): any {
         return super.baseGet(this.findCouponUseRoute, couponId, options);
-    }    
+    }
 }
 
 /**  

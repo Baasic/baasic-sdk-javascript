@@ -5,7 +5,7 @@
 */
 
 import { injectable, inject } from "inversify";
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { PasswordRecoveryRoute, TYPES as membershipTypes } from './';
 import { IRequestPasswordReset, IResetPassword } from './contracts';
 

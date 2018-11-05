@@ -5,15 +5,15 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     UserRoute,
     UserSocialLoginClient,
     TYPES as membershipTypes
 } from './';
 import { IAppUser, INewUser, INewPassword, IUserOptions } from './contracts';
-import { ModelMapper } from '../../common';
+import { ModelMapper } from 'common';
 
 @injectable()
 export class UserClient {

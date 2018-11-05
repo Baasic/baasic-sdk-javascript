@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { MediaGalleryBatchRoute, TYPES as mediaGalleryTypes } from './';
 import { IMediaGallery } from './contracts';
 
@@ -56,19 +56,19 @@ export class MediaGalleryBatchClient {
         return this.apiClient.delete<void>(this.mediaGalleryBatchRoute.delete(), undefined, ids);
     }
 
-     /**                   
-     * Returns a promise that is resolved once the create action has been performed; this action creates specified media gallery resources.                   
-     * @method
-     * @param data A collection of media gallery objects used to create specified media gallery resources.
-     * @returns A promise that is resolved once the create action has been performed.                          
-     * @example mediaGalleryStreamsClient.create(files)
-                   .then(function (data) {   
-                       // perform success action here 
-                   },
-                    function (response, status, headers, config) {   
-                        // perform error handling here 
-                   });                   
-    **/
+    /**                   
+    * Returns a promise that is resolved once the create action has been performed; this action creates specified media gallery resources.                   
+    * @method
+    * @param data A collection of media gallery objects used to create specified media gallery resources.
+    * @returns A promise that is resolved once the create action has been performed.                          
+    * @example mediaGalleryStreamsClient.create(files)
+                  .then(function (data) {   
+                      // perform success action here 
+                  },
+                   function (response, status, headers, config) {   
+                       // perform error handling here 
+                  });                   
+   **/
     create(data: IMediaGallery[]): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.post<void>(this.routeDefinition.create(), this.routeDefinition.createParams(data));
     }

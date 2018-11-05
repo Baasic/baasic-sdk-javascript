@@ -1,5 +1,5 @@
 import { IStorageHandler, IEventHandler, IDefaultStorageConfig } from './';
-import { IHttpClient, IAbortSignal } from '../../httpApi';
+import { IHttpClient, IAbortSignal } from 'httpApi';
 
 
 export interface IBaasicOptions {

@@ -5,8 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class RegisterRoute extends BaseRoute {
@@ -21,7 +21,7 @@ export class RegisterRoute extends BaseRoute {
     public activateRoute: string = 'register/activate/{activationToken}/';
 
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 			
      * Parses register route, this route doesn't support any additional properties. 			

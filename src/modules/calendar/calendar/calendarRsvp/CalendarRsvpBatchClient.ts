@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     TYPES as calendarTypes,
     CalendarRsvpBatchRoute

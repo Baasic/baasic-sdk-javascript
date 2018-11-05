@@ -1,4 +1,4 @@
-import { Utility } from '../../common';
+import { Utility } from 'common';
 import { IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from '../contracts';
 import { injectable, inject } from "inversify";
 

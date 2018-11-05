@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 import { ICalendarEventRsvpAttendeeStatus } from '../../contracts';
 
@@ -17,7 +17,7 @@ export class CalendarEventRsvpAttendeeStatusBatchRoute extends BaseRoute {
     public readonly updateRoute: string = 'calendar-lookups/rsvp-attendee-statuses/batch';
     public readonly deleteRoute: string = 'calendar-lookups/rsvp-attendee-statuses/batch';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
      * Parses create route. This URI template does not expose any additional options.

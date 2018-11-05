@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     CalendarEventClient,
     CalendarLookups,
@@ -176,7 +176,7 @@ export class CalendarClient {
                     // perform error handling here
                 });
      */
-    purge( ): PromiseLike<IHttpResponse<void>> {
+    purge(): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.routeDefinition.purge());
     }
 }

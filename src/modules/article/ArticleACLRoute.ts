@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IACLPolicy, IACLOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IACLPolicy, IACLOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 export class ArticleACLRoute extends BaseRoute {
 
@@ -19,7 +19,7 @@ export class ArticleACLRoute extends BaseRoute {
 
     public readonly deleteByRoleRoute: string = 'articles/{id}/acl/actions/{accessAction}/roles/{role}/';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
      * Parses get article acl route; this URI template should be expanded with the Id of the article.										

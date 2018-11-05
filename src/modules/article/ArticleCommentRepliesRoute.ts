@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleCommentReply } from './contracts';
 
 @injectable()
@@ -25,24 +25,23 @@ export class ArticleCommentRepliesRoute extends BaseRoute {
 
     public readonly approveRoute: string = 'article-comment-replies/{id}/approve';
 
-    public readonly unapproveRoute: string  = 'article-comment-replies/{id}/unapprove';
+    public readonly unapproveRoute: string = 'article-comment-replies/{id}/unapprove';
 
     public readonly flagRoute: string = 'article-comment-replies/{id}/flag';
 
     public readonly unflagRoute: string = 'article-comment-replies/{id}/unflag';
 
-    public readonly reportRoute: string  = 'article-comment-replies/{id}/report';
+    public readonly reportRoute: string = 'article-comment-replies/{id}/report';
 
     public readonly unreportRoute: string = 'article-comment-replies/{id}/unreport';
 
     public readonly spamRoute: string = 'article-comment-replies/{id}/spam';
 
     public readonly unspamRoute: string = 'article-comment-replies/{id}/unspam';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
     /**
      * Parses find route which can be expanded with additional options. Supported items are:

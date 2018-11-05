@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MediaVaultStreamsRoute extends BaseRoute {
@@ -17,7 +17,7 @@ export class MediaVaultStreamsRoute extends BaseRoute {
 
     public readonly updateRoute: string = 'media-vault-streams/{id}/{?width,height}';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
      * Parses get route; this route should be expanded with id or path of desired media vault stream. Additional supported items are:

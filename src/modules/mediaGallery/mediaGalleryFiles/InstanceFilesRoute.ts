@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
     MediaGalleryInstanceFilesBatchRoute,
     TYPES as mediaGalleryTypes
@@ -105,7 +105,7 @@ export class MediaGalleryInstanceFilesRoute extends BaseRoute {
      * @param options  
      * @example mediaGalleryFilesRoute.unlinkByMediaGallery(data);
      **/
-    unlinkByMediaGallery(mediaGalleryId: string, options?: any) {        
+    unlinkByMediaGallery(mediaGalleryId: string, options?: any) {
         return super.baseDelete(this.unlinkByMediaGalleryRoute, mediaGalleryId, options, 'unlink-by-media-gallery');
     }
 

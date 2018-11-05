@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../../../common';
-import { IGetRequestOptions, IOptions } from '../../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 import { ICalendarEventType, IGetCalendarOptions } from '../../contracts';
 
@@ -20,7 +20,7 @@ export class CalendarEventTypeRoute extends BaseRoute {
     public readonly deleteRoute: string = 'calendar-lookups/types/{id}';
     public readonly purgeRoute: string = 'calendar-lookups/types/purge';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
      * Parses find route which can be expanded with additional GetCalendarOptions. Supported items are:
@@ -38,7 +38,7 @@ export class CalendarEventTypeRoute extends BaseRoute {
      */
     find(options?: IGetCalendarOptions): any {
         var opt;
-        if(options){
+        if (options) {
             opt = options;
             opt.to = this.getToDate(opt);
             opt.from = this.getFromDate(opt);

@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { ArticleTagsSubscriptionsRoute, TYPES as articleTypes } from './';
 import { IArticleTag } from './contracts';
 
@@ -21,7 +21,7 @@ export class ArticleTagsRoute extends BaseRoute {
     public readonly updateRoute: string = 'article-tags/{id}';
 
     public readonly deleteRoute: string = 'article-tags/{id}';
-    
+
     get subscriptions(): ArticleTagsSubscriptionsRoute {
         return this.articleTagsSubscriptionsRoute;
     }
@@ -29,8 +29,7 @@ export class ArticleTagsRoute extends BaseRoute {
     constructor(
         @inject(articleTypes.ArticleTagsSubscriptionsRoute) protected articleTagsSubscriptionsRoute: ArticleTagsSubscriptionsRoute,
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
     /** 				
      * Parses find article tags route which can be expanded with additional options. Supported items are: 				

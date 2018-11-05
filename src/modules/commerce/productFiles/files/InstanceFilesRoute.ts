@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../../common';
-import { IGetRequestOptions, IOptions } from '../../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
     CommerceProductInstanceFilesBatchRoute,
     TYPES as productTypes
@@ -110,7 +110,7 @@ export class CommerceProductInstanceFilesRoute extends BaseRoute {
      * @param options  
      * @example productFilesRoute.unlinkByProduct(data);
      **/
-    unlinkByProduct(productId: string, options?: any) {        
+    unlinkByProduct(productId: string, options?: any) {
         return super.baseDelete(this.unlinkByProductRoute, productId, options, 'unlink-by-product');
     }
 

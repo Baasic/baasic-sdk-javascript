@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from 'inversify';
-import { IResponse } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IResponse } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { TemplatingBatchRoute, TYPES as templatingTypes } from './';
 import { ITemplate } from './contracts';
 

@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../../../core/contracts';
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 import { ICalendar } from '../../contracts';
 
@@ -17,7 +17,7 @@ export class CalendarRsvpAttendeeBatchRoute extends BaseRoute {
     public readonly updateRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/batch';
     public readonly unlinkRoute: string = 'calendars/{calendarId}/events/{eventId}/attendees/batch';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**
      * Parses link route. This URI template does not expose any additional options.

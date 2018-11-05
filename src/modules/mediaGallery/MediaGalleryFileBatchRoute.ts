@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MediaGalleryFileBatchRoute extends BaseRoute {
@@ -16,9 +16,9 @@ export class MediaGalleryFileBatchRoute extends BaseRoute {
     public readonly unlinkRoute: string = 'media-gallery-files/batch/unlink';
 
     public readonly linkRoute: string = 'media-gallery-files/batch/link';
-    
-    
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
+
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses update route; this URI template does not expose any additional options.                     
