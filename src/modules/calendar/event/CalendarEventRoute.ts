@@ -15,7 +15,7 @@ import { ICalendar, ICalendarEvent, IGetCalendarEventOptions } from '../contract
 export class CalendarEventRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-events/{?searchQuery,page,rpp,sort,embed,fields,ids,ownerIds,calendarIds,calendarNames,statusIds,typeIds,from,to}';
-    public readonly getRoute: string = 'calendar-events/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendar-events/{id}/{?embed,fields}';
     public readonly getByEmailOrFullNameRoute: string = 'calendar-events/{id}/{emailOrFullName}'
     public readonly createRoute: string = 'calendar-events';
     public readonly updateRoute: string = 'calendar-events/{id}';

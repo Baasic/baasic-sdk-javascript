@@ -15,7 +15,7 @@ import { ICalendarEvent, ICalendarEventAttendee, IGetCalendarEventAttendeeOption
 export class CalendarEventRsvpAttendeeRoute extends BaseRoute {
 
     public readonly findRoute: string = 'calendar-event-attendees/{?searchQuery,page,rpp,sort,embed,fields,calendarIds,calendarNames,eventIds,invitationTypeIds,attendeeStatusIds,userIds,slotDifference,emails,from,to,ids}';
-    public readonly getRoute: string = 'calendar-event-attendees/{id}/{?embed, fields}';
+    public readonly getRoute: string = 'calendar-event-attendees/{id}/{?embed,fields}';
     public readonly createRoute: string = 'calendar-event-attendees';
     public readonly updateRoute: string = 'calendar-event-attendees/{id}';
     public readonly deleteRoute: string = 'calendar-event-attendees/{id}';

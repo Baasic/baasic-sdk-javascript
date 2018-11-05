@@ -14,8 +14,8 @@ import { ICalendar, IGetCalendarOptions } from './contracts';
 @injectable()
 export class CalendarRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids}';
-    public readonly getRoute: string = 'calendars/{id}/{?embed, fields}';
+    public readonly findRoute: string = 'calendars/{?searchQuery,page,rpp,sort,embed,fields,from,to,ids,ownerIds}';
+    public readonly getRoute: string = 'calendars/{id}/{?embed,fields}';
     public readonly createRoute: string = 'calendars';
     public readonly updateRoute: string = 'calendars/{id}';
     public readonly deleteRoute: string = 'calendars/{id}';
@@ -32,6 +32,7 @@ export class CalendarRoute extends BaseRoute {
      * - `embed` - Comma separated list of resources to be contained within the current representation.
      * - `from` - Fluent syntax for 'From' date. Used to limit the dataset to only use resources starting from this date
      * - `to` - Fluent syntax for 'To' date. Used to limit the dataset to only use resources ending to this date.
+     * - `ownerIds` - Used to limit the dataset to only use resources beloging to specified owners.
      * @method
      * @param options Query resource GetCalendarOptions object.
      * @example calendarRoute.find({searchQuery: '<search-phrase>'});

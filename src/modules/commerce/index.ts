@@ -10,3 +10,4 @@ export * from './productFiles';
 export * from './coupon';
 export * from './coupon-use';
 export * from './contracts';
+export * from './addon';
