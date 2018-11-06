@@ -1,5 +1,6 @@
 export * from './diModule';
 export * from './baasicApp';
+export * from './platform/baasicPlatform';
 export { IHttpClient, IHttpHeaders, IHttpRequest, IHttpResponse } from './httpApi';
 export {
     IStorageHandler,

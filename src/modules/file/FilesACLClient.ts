@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IACLOptions, IACLPolicy } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IACLOptions, IACLPolicy } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { FilesACLRoute, TYPES as filesTypes } from './';
 
 @injectable()
@@ -53,7 +53,7 @@ export class FilesACLClient {
                          // perform error handling here
                     }); 				    
      **/
-    update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
+    update(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
         return this.apiClient.put<IACLPolicy[]>(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
     }
 

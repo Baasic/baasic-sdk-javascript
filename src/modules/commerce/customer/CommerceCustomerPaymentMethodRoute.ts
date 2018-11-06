@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class CommerceCustomerPaymentMethodRoute extends BaseRoute {
@@ -46,7 +46,7 @@ export class CommerceCustomerPaymentMethodRoute extends BaseRoute {
      * @example commerceCustomerPaymentMethodRoute.get(id, options);                               
      **/
     get(id: string, options: IGetRequestOptions): any {
-        return super.baseGet(this.getRoute, options);
+        return super.baseGet(this.getRoute, id, options);
     }
 
     /**                 
@@ -54,8 +54,8 @@ export class CommerceCustomerPaymentMethodRoute extends BaseRoute {
      * @method                        
      * @example commerceCustomerPaymentMethodRoute.create();                              
      **/
-    create(): any {
-        return super.baseCreate(this.createRoute, {});
+    create(data: any): any {
+        return super.baseCreate(this.createRoute, data);
     }
 
     /**                 

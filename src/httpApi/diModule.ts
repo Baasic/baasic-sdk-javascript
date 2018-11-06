@@ -4,7 +4,8 @@ import { ApiClient } from './';
 
 const TYPES = {
     ApiClient: Symbol("ApiClient"),
-    IHttpClient: Symbol("IHttpClient")
+    IHttpClient: Symbol("IHttpClient"),
+    IAbortSignal: Symbol("IAbortSignal")
 };
 
 export { TYPES };

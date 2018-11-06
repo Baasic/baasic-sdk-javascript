@@ -5,14 +5,15 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IProductOptions } from '../contracts';
 
 @injectable()
 export class CommerceProductRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'commerce/products/{?searchQuery,page,rpp,sort,embed,fields,productCategoryIds,productCategoryAbrvs}';
 
     public readonly getRoute: string = 'commerce/products/{id}/{?embed,fields}';
 
@@ -32,11 +33,13 @@ export class CommerceProductRoute extends BaseRoute {
      * - `page` - A value used to set the page number, i.e. to retrieve certain commerce subset from the storage.                 
      * - `rpp` - A value used to limit the size of result set per page.                 
      * - `sort` - A string used to set the commerce property to sort the result collection by. 				
-     * - `embed` - Comma separated list of resources to be contained within the current representation.                 
+     * - `embed` - Comma separated list of resources to be contained within the current representation.        
+     * - `productCategoryIds` - A list of product category ids.            
+     * - `productCategoryAbrvs` - A list of product category abbreviations.         
      * @method                        
      * @example commerceProductRoute.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(options?: IOptions): any {
+    find(options?: IProductOptions): any {
         return super.baseFind(this.findRoute, options);
     }
 

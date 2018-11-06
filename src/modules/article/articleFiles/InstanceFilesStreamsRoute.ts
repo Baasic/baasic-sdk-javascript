@@ -6,15 +6,14 @@
 
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../../common';
-import { IOptions } from '../../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
+import { BaseRoute } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleFile } from '../contracts';
 
 @injectable()
 export class ArticleInstanceFilesStreamsRoute extends BaseRoute {
 
-    public readonly getRoute: string = 'articles/{articleId}/file-streams/{id}/{?width,height}';
+    public readonly getRoute: string = 'articles/{articleId}/file-streams/{id}/{?width,height,t}';
 
     public readonly createRoute: string = 'articles/{articleId}/file-streams/{filename}';
 
@@ -28,6 +27,7 @@ export class ArticleInstanceFilesStreamsRoute extends BaseRoute {
      * Parses get route; this route should be expanded with id of desired file stream. Additional supported items are:                     
      * - `width` - width of desired derived image.  
      * - `height` - height of desired derived image. 
+     * - `t` - cache invalidation param. 
      * @method
      * @param articleId Article slug or id which uniquely identifies article whose article file need to be retrieved.
      * @param data Article File object used to identify stream that needs to be retrieved from the system.    
@@ -39,6 +39,7 @@ export class ArticleInstanceFilesStreamsRoute extends BaseRoute {
                 id: data
             };
         }
+
         let params = this.utility.extend({}, data);
         params.articleId = articleId;
         return super.baseCreate(this.getRoute, params);

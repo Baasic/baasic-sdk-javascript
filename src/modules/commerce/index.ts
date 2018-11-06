@@ -6,3 +6,8 @@ export * from './customer';
 export * from './invoice';
 export * from './paymentTransaction';
 export * from './product';
+export * from './productFiles';
+export * from './coupon';
+export * from './coupon-use';
+export * from './contracts';
+export * from './addon';

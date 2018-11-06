@@ -9,7 +9,7 @@ module.exports = webpackMerge(commonConfig, {
          * Minimize bundled output.
          */
         new UglifyJsPlugin({
-            cacheFolder: path.resolve(__dirname, 'build', 'cached_uglify'),
+            cacheFolder: path.resolve(__dirname, 'build_cache', 'cached_uglify'),
             debug: false,
             minimize: true,
             sourceMap: true,

@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTYPES } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { BaseRoute, TYPES as commonTYPES } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
 import { IKeyValue } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class KeyValueRoute extends BaseRoute {
@@ -22,11 +22,10 @@ export class KeyValueRoute extends BaseRoute {
     public readonly updateRoute: string = 'key-values/{id}';
 
     public readonly deleteRoute: string = 'key-values/{id}';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
     /**                 
      * Parses find key value route which can be expanded with additional options. Supported items are:                 

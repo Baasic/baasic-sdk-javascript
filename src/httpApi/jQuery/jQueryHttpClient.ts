@@ -18,7 +18,12 @@ export class JQueryHttpClient implements IHttpClient {
         }
 
         if (request.data) {
-            jqueryParams.data = request.data;
+            const contentType = getHeader(request.headers, 'Content-Type');
+            if (contentType && contentType.toLowerCase().indexOf('application/json') !== -1) {
+                jqueryParams.data = JSON.stringify(request.data);
+            } else {
+                jqueryParams.data = request.data;
+            }
         }
 
         if (request.responseType) {
@@ -36,12 +41,12 @@ export class JQueryHttpClient implements IHttpClient {
                 };
             },
             (jqXHR, textStatus, errorThrown) => {
-                return <IHttpResponse<ResponseType>>{
+                throw <IHttpResponse<ResponseType>>{
                     request: request,
                     statusText: textStatus,
                     statusCode: jqXHR.status,
                     headers: parseHeaders(jqXHR.getAllResponseHeaders()),
-                    data: jqXHR.responseText || jqXHR.responseXML
+                    data: tryConvertToJson(jqXHR.responseText) || jqXHR.responseXML
                 };
             });
     }
@@ -68,6 +73,25 @@ function parseHeaders(headers: string): IHttpHeaders {
         }
     }
     return result;
+}
+
+function getHeader(headers: any, key: string): string {
+    if (headers) {
+        var header = headers[key] || headers[key.toLowerCase()];
+        if (Array.isArray(header)) {
+            header = header.join(';');
+        }
+        return header;
+    }
+    return undefined;
+}
+
+function tryConvertToJson(obj) {
+    try {
+        return JSON.parse(obj);
+    } catch (err) {
+        return obj;
+    }
 }
 
 

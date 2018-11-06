@@ -14,6 +14,8 @@ import * as DynamicResource from './dynamicResource';
 export { DynamicResource };
 import * as MediaVault from './mediaVault';
 export { MediaVault };
+import * as MediaGallery from './mediaGallery';
+export { MediaGallery };
 import * as Files from './file';
 export { Files };
 import * as Templating from './templating';
@@ -24,3 +26,7 @@ import * as Notifications from './notifications';
 export { Notifications };
 import * as Commerce from './commerce';
 export { Commerce };
+import * as Calendar from './calendar';
+export { Calendar };
+import * as ShoppingCart from './shoppingCart';
+export { ShoppingCart }

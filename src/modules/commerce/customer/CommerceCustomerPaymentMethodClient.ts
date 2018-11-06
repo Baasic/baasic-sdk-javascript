@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { CommerceCustomerPaymentMethodRoute, TYPES as commerceTypes } from '../';
 
 @injectable()
@@ -96,7 +96,7 @@ export class CommerceCustomerPaymentMethodClient {
                 });                  
      **/
     create(data: any): PromiseLike<IHttpResponse<any>> {
-        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+        return this.apiClient.post(this.routeDefinition.create(data), this.routeDefinition.createParams(data));
     }
 
     /**                 

@@ -5,9 +5,9 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IACLOptions, IACLPolicy } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IACLOptions, IACLPolicy } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class FilesACLRoute extends BaseRoute {
@@ -20,7 +20,7 @@ export class FilesACLRoute extends BaseRoute {
 
     public readonly deleteByRoleRoute: string = 'files/{id}/acl/actions/{accessAction}/roles/{role}/';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /** 					
      * Parses get acl route; this URI template should be expanded with the Id of the file resource.										
@@ -37,7 +37,7 @@ export class FilesACLRoute extends BaseRoute {
      * @method    				
      * @example filesACLRoute.update({id: '<file-id>'}); 					
      **/
-    update(options: IACLOptions[]): any {
+    update(options: IACLOptions): any {
         let params = this.utility.extend({}, options);
         return super.baseCreate(this.updateRoute, params);
     }

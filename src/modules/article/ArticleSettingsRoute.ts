@@ -5,9 +5,9 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import { IArticleSettings } from './contracts';
 
 @injectable()
@@ -16,11 +16,10 @@ export class ArticleSettingsRoute extends BaseRoute {
     public readonly getRoute: string = 'article-settings/{?embed,fields}';
 
     public readonly updateRoute: string = 'article-settings/{id}';
-    
+
     constructor(
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
-    )
-    { super(appOptions); }
+    ) { super(appOptions); }
 
 
     /** 				

@@ -5,8 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class PasswordRecoveryRoute extends BaseRoute {
@@ -16,7 +16,7 @@ export class PasswordRecoveryRoute extends BaseRoute {
     **/
     public passwordRecoveryRoute: string = 'recover-password';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                  
      * Parses recover-password route, recover-password route doesn't expose any additional properties.                  

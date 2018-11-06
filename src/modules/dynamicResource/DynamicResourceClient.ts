@@ -4,10 +4,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions, IQueryOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions, IQueryOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     DynamicResourceACLClient,
+    DynamicResourceBatchClient,
     DynamicResourceRoute,
     DynamicSchemaClient,
     TYPES as dynamicResourceTypes
@@ -34,8 +35,13 @@ export class DynamicResourceClient {
         return this.dynamicSchemaClient;
     }
 
+    get batch(): DynamicResourceBatchClient {
+        return this.dynamicResourceBatchClient;
+    }
+
     constructor(
         @inject(dynamicResourceTypes.DynamicResourceRoute) protected dynamicResourceRoute: DynamicResourceRoute,
+        @inject(dynamicResourceTypes.DynamicResourceBatchClient) protected dynamicResourceBatchClient: DynamicResourceBatchClient,
         @inject(dynamicResourceTypes.DynamicResourceACLClient) protected dynamicResourceACLClient: DynamicResourceACLClient,
         @inject(dynamicResourceTypes.DynamicSchemaClient) protected dynamicSchemaClient: DynamicSchemaClient,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient
@@ -173,5 +179,26 @@ export class DynamicResourceClient {
      **/
     remove(schemaName: string, data: any, options?: IQueryOptions): PromiseLike<IHttpResponse<void>> {
         return this.apiClient.delete<void>(this.dynamicResourceRoute.delete(schemaName, data, options));
+    }
+
+    /**                  
+     * Returns a promise that is resolved once the purge action has been performed. This action will remove all dynamic resources from the system if successfully completed. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `dynamicResourceRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects: 
+     * ``` 
+     * let params = modelMapper.removeParams(dynamicResource); 
+     * let uri = params['model'].links('purge').href; 
+     * ```                  
+     * @method
+     * @param data JSON object used to purge dynamic resources.                          
+     * @example // dynamicResource is a resource previously fetched using get action.				 
+                    dynamicResourceClient.purge('<schema-name>')
+                    .then(function (data) {   
+                        // perform success action here 
+                    },
+                     function (response, status, headers, config) {   
+                         // perform error handling here 
+                    });						
+     **/
+    purge(schemaName: string): PromiseLike<IHttpResponse<void>> {
+        return this.apiClient.delete<void>(this.dynamicResourceRoute.purge(schemaName));
     }
 }

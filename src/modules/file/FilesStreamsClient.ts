@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { FilesStreamsRoute, TYPES as filesTypes } from './';
 
 @injectable()
@@ -35,7 +35,7 @@ export class FilesStreamsClient {
                                  // perform error handling here
                             });
                 // Request derived file stream
-                    filesStreamsClient.get({id: '<path>', width: <width>, height: <height>})
+                    filesStreamsClient.get({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
                         .then(function (data) {
                             // perform success action here
                         },
@@ -59,7 +59,7 @@ export class FilesStreamsClient {
                             // perform error handling here
                         });
                 // Request derived blob
-                    filesStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>})
+                    filesStreamsClient.getBlob({id: '<path>', width: <width>, height: <height>, t: <timestamp>})
                         .then(function (data) {
                             // perform success action here
                         },
@@ -99,7 +99,7 @@ export class FilesStreamsClient {
     update(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.put(this.filesStreamsRoute.update(data), data, { });
+        return this.apiClient.put(this.filesStreamsRoute.update(data), formData, { 'Content-Type': undefined });
     }
 
     /**
@@ -116,7 +116,7 @@ export class FilesStreamsClient {
     create(data: any, stream: any): PromiseLike<IHttpResponse<any>> {
         let formData = new FormData();
         formData.append('file', stream);
-        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { });
+        return this.apiClient.post(this.filesStreamsRoute.create(data), formData, { 'Content-Type': undefined });
     }
 }
 

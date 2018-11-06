@@ -5,20 +5,20 @@
 */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { BaseRoute } from 'common';
+import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 import {
     ArticleFilesBatchRoute,
     ArticleFilesStreamsRoute,
     TYPES as articleTypes
 } from './';
-import { IArticleFile } from './contracts';
+import { IArticleFile, IArticleOptions } from './contracts';
 
 @injectable()
 export class ArticleFilesRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'article-files/{?searchQuery,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'article-files/{?searchQuery,fileName,minFileSize,maxFileSize,ids,from,to,age,rpp,sort,embed,fields}';
 
     public readonly getRoute: string = 'article-files/{id}/{?embed,fields}';
 
@@ -27,7 +27,7 @@ export class ArticleFilesRoute extends BaseRoute {
     public readonly unlinkRoute: string = 'article-files/unlink/{id}';
 
     public readonly updateRoute: string = 'article-files/{id}';
-    
+
     get streams(): ArticleFilesStreamsRoute {
         return this.articleFilesStreamsRoute;
     }
@@ -53,7 +53,7 @@ export class ArticleFilesRoute extends BaseRoute {
      * @param options Query resource options object.                        
      * @example articleFilesRoute.find({searchQuery: '<search-phrase>'});                               
      **/
-    find(options?: IOptions): any {
+    find(options?: IArticleOptions): any {
         return super.baseFind(this.findRoute, options);
     }
 

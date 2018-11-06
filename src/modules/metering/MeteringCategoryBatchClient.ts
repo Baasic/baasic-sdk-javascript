@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { MeteringCategoryBatchRoute, TYPES as meteringTypes } from './';
 import { IMeteringCategory } from './contracts';
 
@@ -76,7 +76,7 @@ export class MeteringCategoryBatchClient {
                     });		                  
      **/
     delete(ids: string[]): PromiseLike<IHttpResponse<void>> {
-        return this.apiClient.delete<void>(this.routeDefinition.delete(), this.routeDefinition.deleteParams(ids));
+        return this.apiClient.delete<void>(this.routeDefinition.delete(), undefined, this.routeDefinition.deleteParams(ids));
     }
 }
 

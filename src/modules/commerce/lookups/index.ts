@@ -1,4 +1,5 @@
 export * from './addressType';
+export * from './couponType';
 export * from './country';
 export * from './countryState';
 export * from './paymentMethod';

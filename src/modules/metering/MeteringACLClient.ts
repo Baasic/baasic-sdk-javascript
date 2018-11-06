@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IACLOptions, IACLPolicy, IQueryModel, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IACLOptions, IACLPolicy, IQueryModel, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { MeteringACLRoute, TYPES as meteringTypes } from './';
 
 @injectable()
@@ -53,7 +53,7 @@ export class MeteringACLClient {
                           // perform error handling here 
                     }); 				    
      **/
-    update(options: IACLOptions[]): PromiseLike<IHttpResponse<IACLPolicy[]>> {
+    update(options: IACLOptions): PromiseLike<IHttpResponse<IACLPolicy[]>> {
         return this.apiClient.put<IACLPolicy[]>(this.routeDefinition.update(options), this.routeDefinition.updateParams(options));
     }
 

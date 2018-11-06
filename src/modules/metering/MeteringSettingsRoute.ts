@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from '../../common';
-import { IGetRequestOptions } from '../../common/contracts';;
+import { BaseRoute, TYPES as commonTypes } from 'common';
+import { IGetRequestOptions } from 'common/contracts';;
 import { IMeteringSettings } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MeteringSettingsRoute extends BaseRoute {
@@ -16,8 +16,8 @@ export class MeteringSettingsRoute extends BaseRoute {
     public readonly getRoute: string = 'metering/settings/{id}/{?embed,fields}';
 
     public readonly updateRoute: string = 'metering/settings/{id}';
-    
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
      * Parses get route; this route doesn't expose any properties.                 

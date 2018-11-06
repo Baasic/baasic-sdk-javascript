@@ -9,5 +9,6 @@ export * from './IBaasicOptions';
 export * from './IBaasicAppOptions';
 export * from './IAppOptions';
 export * from './IBaasicApp';
+export * from './IBaasicPlatform';
 
 export * from './diModule';

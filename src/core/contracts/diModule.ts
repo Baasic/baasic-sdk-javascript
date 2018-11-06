@@ -8,6 +8,7 @@ const TYPES = {
     ITokenHandler: Symbol("ITokenHandler"),
     IUserHandler: Symbol("IUserHandler"),
     IBaasicApp: Symbol("IBaasicApp"),
+    IBaasicPlatform: Symbol("IBaasicPlatform"),
     IDefaultStorageConfig: Symbol("IDefaultStorageConfig")
 };
 

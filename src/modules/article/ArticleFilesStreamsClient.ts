@@ -5,8 +5,8 @@
 */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IOptions } from 'common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { ArticleFilesStreamsRoute, TYPES as articleTypes } from './';
 import { IArticleFile } from './contracts';
 
@@ -37,7 +37,7 @@ export class ArticleFilesStreamsClient {
                         });
 
                 // Request derived file stream
-                        articleFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>})
+                        articleFilesStreamsClient.get({id: '<file-id>', width: <width>, height: <height>, t: <timestamp>})
                             .then(function (data) {
                                 // perform success action here
                             },
@@ -67,7 +67,8 @@ export class ArticleFilesStreamsClient {
                         articleFilesStreamsClient.getBlob({
                             id: '<file-id>',
                             width: <width>,
-                            height: <height>
+                            height: <height>,
+                            t: <timestamp>
                         })
                         .then(function (data) {
                             // perform success action here

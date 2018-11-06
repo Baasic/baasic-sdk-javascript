@@ -1,7 +1,7 @@
 import { injectable, inject } from "inversify";
-import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, httpTYPES } from './';
-import { ITokenHandler, IAppOptions, TYPES as coreTYPES } from '../core/contracts';
-import { IHALParser, TYPES as commonTYPES } from '../common';
+import { IHttpHeaders, IHttpRequest, IHttpResponse, IHttpClient, httpTYPES, IAbortSignal } from './';
+import { ITokenHandler, IAppOptions, TYPES as coreTYPES } from 'core/contracts';
+import { IHALParser, TYPES as commonTYPES } from 'common';
 
 @injectable()
 export class ApiClient {
@@ -40,7 +40,7 @@ export class ApiClient {
         }
 
         if (request.data && !this.headerExists(headers, 'Content-Type')) {
-            if(!(request.data instanceof FormData)) {
+            if (!(request.data instanceof FormData)) {
                 headers['Content-Type'] = 'application/json; charset=UTF-8';
             }
         }
@@ -81,7 +81,7 @@ export class ApiClient {
                         }
                     }
                 }
-                
+
                 return response;
             });
         return promise;
@@ -117,7 +117,7 @@ export class ApiClient {
         return url;
     }
 
-    private internalRequest<TResponse>(url: string, method: string, data?: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
+    private internalRequest<TResponse>(url: string, method: string, data?: any, headers?: IHttpHeaders, abortSignal?: IAbortSignal): PromiseLike<IHttpResponse<TResponse>> {
         url = this.compileUrl(url);
 
         let request: IHttpRequest = {
@@ -131,6 +131,10 @@ export class ApiClient {
 
         if (headers) {
             request.headers = headers;
+        }
+
+        if (abortSignal) {
+            request.abortSignal = abortSignal;
         }
 
         return this.request<TResponse>(request);
@@ -162,7 +166,7 @@ export class ApiClient {
         } else if (Array.isArray(value)) {
             tokens = value[0].split(' ').concat(value.slice(1));
         }
-        
+
         if (tokens && tokens.length > 0) {
             var wwwAutheniticate: any = {
                 scheme: tokens[0]
@@ -180,6 +184,6 @@ export class ApiClient {
 
             return wwwAutheniticate;
         }
-        
+
     }
 };

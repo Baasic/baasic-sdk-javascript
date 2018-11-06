@@ -13,6 +13,24 @@ import {
     CommercePaymentTransactionRoute,
     CommerceProductClient,
     CommerceProductRoute,
+    CommerceAddOnClient,
+    CommerceAddOnRoute,
+    CommerceProductFilesStreamsClient,
+    CommerceProductFilesStreamsRoute,
+    CommerceProductFilesBatchClient,
+    CommerceProductFilesBatchRoute,
+    CommerceProductFilesClient,
+    CommerceProductFilesRoute,
+    CommerceProductSettingsClient,
+    CommerceProductSettingsRoute,
+    CommerceProductInstanceFilesBatchClient,
+    CommerceProductInstanceFilesBatchRoute,
+    CommerceProductInstanceFilesClient,
+    CommerceProductInstanceFilesRoute,
+    CommerceCouponClient,
+    CommerceCouponRoute,
+    CommerceCouponUseClient,
+    CommerceCouponUseRoute,
     CommerceClient,
     CommerceRoute,
     CommerceLookupsAddressTypesBatchClient,
@@ -47,6 +65,10 @@ import {
     CommerceLookupsInvoiceStatusRoute,
     CommerceLookupsInvoiceStatusBatchClient,
     CommerceLookupsInvoiceStatusClient,
+    CommerceLookupsCouponTypeBatchRoute,
+    CommerceLookupsCouponTypeRoute,
+    CommerceLookupsCouponTypesBatchClient,
+    CommerceLookupsCouponTypesClient,
     Lookups
 } from './';
 
@@ -61,8 +83,26 @@ const TYPES = {
     CommerceInvoiceStreamsRoute: Symbol("CommerceInvoiceStreamsRoute"),
     CommercePaymentTransactionClient: Symbol("CommercePaymentTransactionClient"),
     CommercePaymentTransactionRoute: Symbol("CommercePaymentTransactionRoute"),
+    CommerceAddOnClient: Symbol("CommerceAddOnClient"),
+    CommerceAddOnRoute: Symbol("CommerceAddOnRoute"),
     CommerceProductClient: Symbol("CommerceProductClient"),
     CommerceProductRoute: Symbol("CommerceProductRoute"),
+    CommerceProductFilesStreamsClient: Symbol("CommerceProductFilesStreamsClient"),
+    CommerceProductFilesStreamsRoute: Symbol("CommerceProductFilesStreamsRoute"),
+    CommerceProductFilesBatchClient: Symbol("CommerceProductFilesBatchClient"),
+    CommerceProductFilesBatchRoute: Symbol("CommerceProductFilesBatchRoute"),
+    CommerceProductFilesClient: Symbol("CommerceProductFilesClient"),
+    CommerceProductFilesRoute: Symbol("CommerceProductFilesRoute"),
+    CommerceProductSettingsClient: Symbol("CommerceProductSettingsClient"),
+    CommerceProductSettingsRoute: Symbol("CommerceProductSettingsRoute"),
+    CommerceProductInstanceFilesClient: Symbol("CommerceProductInstanceFilesClient"),
+    CommerceProductInstanceFilesRoute: Symbol("CommerceProductInstanceFilesRoute"),
+    CommerceProductInstanceFilesBatchClient: Symbol("CommerceProductInstanceFilesBatchClient"),
+    CommerceProductInstanceFilesBatchRoute: Symbol("CommerceProductInstanceFilesBatchRoute"),
+    CommerceCouponClient: Symbol("CommerceCouponClient"),
+    CommerceCouponRoute: Symbol("CommerceCouponRoute"),
+    CommerceCouponUseClient: Symbol("CommerceCouponUseClient"),
+    CommerceCouponUseRoute: Symbol("CommerceCouponUseRoute"),    
     CommerceClient: Symbol("CommerceClient"),
     CommerceRoute: Symbol("CommerceRoute"),
     CommerceLookupsAddressTypesBatchClient: Symbol("CommerceLookupsAddressTypesBatchClient"),
@@ -97,6 +137,10 @@ const TYPES = {
     CommerceLookupsInvoiceStatusRoute: Symbol("CommerceLookupsInvoiceStatusRoute"),
     CommerceLookupsInvoiceStatusBatchClient: Symbol("CommerceLookupsInvoiceStatusBatchClient"),
     CommerceLookupsInvoiceStatusClient: Symbol("CommerceLookupsInvoiceStatusClient"),
+    CommerceLookupsCouponTypeBatchRoute: Symbol("CommerceLookupsCouponTypeBatchRoute"),
+    CommerceLookupsCouponTypeRoute: Symbol("CommerceLookupsCouponTypeRoute"),
+    CommerceLookupsCouponTypesBatchClient: Symbol("CommerceLookupsCouponTypesBatchClient"),
+    CommerceLookupsCouponTypesClient: Symbol("CommerceLookupsCouponTypesClient"),
     Lookups: Symbol("Lookups")
 
 };
@@ -114,8 +158,22 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CommerceInvoiceRoute>(TYPES.CommerceInvoiceRoute).to(CommerceInvoiceRoute);
     bind<CommercePaymentTransactionRoute>(TYPES.CommercePaymentTransactionRoute).to(CommercePaymentTransactionRoute);
     bind<CommercePaymentTransactionClient>(TYPES.CommercePaymentTransactionClient).to(CommercePaymentTransactionClient);
+    bind<CommerceAddOnRoute>(TYPES.CommerceAddOnRoute).to(CommerceAddOnRoute);
+    bind<CommerceAddOnClient>(TYPES.CommerceAddOnClient).to(CommerceAddOnClient);
     bind<CommerceProductRoute>(TYPES.CommerceProductRoute).to(CommerceProductRoute);
     bind<CommerceProductClient>(TYPES.CommerceProductClient).to(CommerceProductClient);
+    bind<CommerceProductFilesStreamsRoute>(TYPES.CommerceProductFilesStreamsRoute).to(CommerceProductFilesStreamsRoute);
+    bind<CommerceProductFilesStreamsClient>(TYPES.CommerceProductFilesStreamsClient).to(CommerceProductFilesStreamsClient);
+    bind<CommerceProductFilesBatchRoute>(TYPES.CommerceProductFilesBatchRoute).to(CommerceProductFilesBatchRoute);
+    bind<CommerceProductFilesBatchClient>(TYPES.CommerceProductFilesBatchClient).to(CommerceProductFilesBatchClient);
+    bind<CommerceProductFilesClient>(TYPES.CommerceProductFilesClient).to(CommerceProductFilesClient);
+    bind<CommerceProductFilesRoute>(TYPES.CommerceProductFilesRoute).to(CommerceProductFilesRoute);
+    bind<CommerceProductSettingsClient>(TYPES.CommerceProductSettingsClient).to(CommerceProductSettingsClient);
+    bind<CommerceProductSettingsRoute>(TYPES.CommerceProductSettingsRoute).to(CommerceProductSettingsRoute);
+    bind<CommerceCouponClient>(TYPES.CommerceCouponClient).to(CommerceCouponClient);
+    bind<CommerceCouponRoute>(TYPES.CommerceCouponRoute).to(CommerceCouponRoute);
+    bind<CommerceCouponUseClient>(TYPES.CommerceCouponUseClient).to(CommerceCouponUseClient);
+    bind<CommerceCouponUseRoute>(TYPES.CommerceCouponUseRoute).to(CommerceCouponUseRoute);    
     bind<CommerceRoute>(TYPES.CommerceRoute).to(CommerceRoute);
     bind<CommerceClient>(TYPES.CommerceClient).to(CommerceClient);
     bind<CommerceLookupsAddressTypeBatchRoute>(TYPES.CommerceLookupsAddressTypeBatchRoute).to(CommerceLookupsAddressTypeBatchRoute);
@@ -150,6 +208,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<CommerceLookupsInvoiceStatusRoute>(TYPES.CommerceLookupsInvoiceStatusRoute).to(CommerceLookupsInvoiceStatusRoute);
     bind<CommerceLookupsInvoiceStatusBatchClient>(TYPES.CommerceLookupsInvoiceStatusBatchClient).to(CommerceLookupsInvoiceStatusBatchClient);
     bind<CommerceLookupsInvoiceStatusClient>(TYPES.CommerceLookupsInvoiceStatusClient).to(CommerceLookupsInvoiceStatusClient);
+    bind<CommerceLookupsCouponTypeBatchRoute>(TYPES.CommerceLookupsCouponTypeBatchRoute).to(CommerceLookupsCouponTypeBatchRoute);
+    bind<CommerceLookupsCouponTypeRoute>(TYPES.CommerceLookupsCouponTypeRoute).to(CommerceLookupsCouponTypeRoute);
+    bind<CommerceLookupsCouponTypesBatchClient>(TYPES.CommerceLookupsCouponTypesBatchClient).to(CommerceLookupsCouponTypesBatchClient);
+    bind<CommerceLookupsCouponTypesClient>(TYPES.CommerceLookupsCouponTypesClient).to(CommerceLookupsCouponTypesClient);     
     bind<Lookups>(TYPES.Lookups).to(Lookups);
 });
 

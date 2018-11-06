@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import {
     CommerceRoute,
     CommerceCustomerClient,
@@ -14,6 +14,10 @@ import {
     CommerceProductClient,
     CommercePaymentTransactionClient,
     Lookups,
+    CommerceProductFilesClient,
+    CommerceProductSettingsClient,
+    CommerceCouponClient,
+    CommerceCouponUseClient,
     TYPES as commerceTypes
 } from './';
 
@@ -32,8 +36,24 @@ export class CommerceClient {
         return this.commerceProductClient;
     }
 
+    get files(): CommerceProductFilesClient {
+        return this.commerceProductFilesClient;
+    }
+
+    get settings(): CommerceProductSettingsClient {
+        return this.commerceProductSettingsClient;
+    }
+
     get paymentTransactions(): CommercePaymentTransactionClient {
         return this.commercePaymentTransactionClient;
+    }
+
+    get coupons(): CommerceCouponClient {
+        return this.commerceCouponClient;
+    }
+
+    get couponUses(): CommerceCouponUseClient {
+        return this.commerceCouponUseClient;
     }
 
     get lookups(): Lookups {
@@ -48,7 +68,11 @@ export class CommerceClient {
         @inject(commerceTypes.CommerceCustomerClient) protected commerceCustomerClient: CommerceCustomerClient,
         @inject(commerceTypes.CommerceInvoiceClient) protected commerceInvoiceClient: CommerceInvoiceClient,
         @inject(commerceTypes.CommerceProductClient) protected commerceProductClient: CommerceProductClient,
+        @inject(commerceTypes.CommerceProductFilesClient) protected commerceProductFilesClient: CommerceProductFilesClient,
+        @inject(commerceTypes.CommerceProductSettingsClient) protected commerceProductSettingsClient: CommerceProductSettingsClient,
         @inject(commerceTypes.CommercePaymentTransactionClient) protected commercePaymentTransactionClient: CommercePaymentTransactionClient,
+        @inject(commerceTypes.CommerceCouponClient) protected commerceCouponClient: CommerceCouponClient,
+        @inject(commerceTypes.CommerceCouponUseClient) protected commerceCouponUseClient: CommerceCouponUseClient,
         @inject(commerceTypes.Lookups) protected lookup: Lookups,
         @inject(commerceTypes.CommerceRoute) protected commerceRoute: CommerceRoute,
         @inject(httpTYPES.ApiClient) protected apiClient: ApiClient

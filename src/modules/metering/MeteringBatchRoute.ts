@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, ModelMapper, TYPES as commonTypes } from '../../common';
-import { IOptions } from '../../common/contracts';;
+import { BaseRoute, ModelMapper, TYPES as commonTypes } from 'common';
+import { IOptions } from 'common/contracts';;
 import { IMeteringData } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class MeteringBatchRoute extends BaseRoute {
@@ -18,8 +18,8 @@ export class MeteringBatchRoute extends BaseRoute {
     public readonly updateRoute: string = 'metering/data/batch';
 
     public readonly deleteRoute: string = 'metering/data/batch';
-    
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     

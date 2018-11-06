@@ -1,4 +1,4 @@
-import { Utility } from '../../common';
+import { Utility } from 'common';
 import { IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from '../contracts';
 import { injectable, inject } from "inversify";
 
@@ -25,7 +25,7 @@ export class BrowserEventHandler implements IEventHandler {
 			};
 		} else if (CustomEvent && typeof CustomEvent === 'function') {
 			this.triggerEvent = (eventName, data) => {
-				var event = utility.extend(new CustomEvent(eventName), data);
+				var event = utility.extend(new CustomEvent(eventName, { bubbles: true }), data);
 				document.dispatchEvent(event);
 			};
 		} else if (document.createEvent) {

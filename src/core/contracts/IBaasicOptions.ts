@@ -1,5 +1,5 @@
 import { IStorageHandler, IEventHandler, IDefaultStorageConfig } from './';
-import { IHttpClient } from '../../httpApi';
+import { IHttpClient, IAbortSignal } from 'httpApi';
 
 
 export interface IBaasicOptions {
@@ -9,5 +9,6 @@ export interface IBaasicOptions {
     enableHALJSON?: boolean,
     storageHandler?: () => IStorageHandler | IDefaultStorageConfig,
     httpClient?: () => IHttpClient,
+    abortSignal?: () => IAbortSignal,
     eventHandler?: () => IEventHandler
 }

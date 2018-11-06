@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../common/contracts';;
-import { Utility } from '../../common';
-import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
+import { IQueryModel, IOptions } from 'common/contracts';;
+import { Utility } from 'common';
+import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
 import { PermissionRoute, TYPES as membershipTypes } from './';
 import { IAccessPolicy, IAccessAction, IRole, IUserInfo } from './contracts';
-import { IBaasicApp, TYPES as coreTYPES } from '../../core/contracts';
+import { IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
 
 @injectable()
 export class PermissionClient {
@@ -292,7 +292,7 @@ export class PermissionClient {
                 var tokens = authorization.split('.');
                 if (tokens.length > 0) {
                     var section = tokens[0];
-    
+
                     var sectionPermissions = user.permissions[section];
                     if (sectionPermissions) {
                         if (tokens.length > 1) {
@@ -308,7 +308,7 @@ export class PermissionClient {
                         }
                     }
                 }
-            }    
+            }
         }
 
         this.permissionHash[apiKey][authorization] = hasPermission;

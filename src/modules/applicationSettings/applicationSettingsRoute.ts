@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from '../../common';
-import { IOptions } from '../../common/contracts';
+import { BaseRoute } from 'common';
+import { IOptions } from 'common/contracts';
 import { IApplication } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
+import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
 
 @injectable()
 export class ApplicationSettingsRoute extends BaseRoute {
@@ -16,8 +16,8 @@ export class ApplicationSettingsRoute extends BaseRoute {
     public readonly getRoute: string = 'applications/{?embed,fields}';
 
     public readonly updateRoute: string = 'applications/';
-    
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                 
      * Parses get route; this route doesn't expose any properties.                 
