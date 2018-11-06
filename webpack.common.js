@@ -48,7 +48,7 @@ module.exports = {
      * Specify output as an UMD library.
      */
     output: {
-        path: 'build/dist',
+        path: path.resolve('build/dist'),
         filename: 'baasic-sdk-javascript.js',
         library: 'baasicSdkJavaScript',
         libraryTarget: 'umd'
