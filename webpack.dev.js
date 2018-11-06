@@ -2,6 +2,7 @@ var commonConfig = require('./webpack.common');
 var webpackMerge = require('webpack-merge');
 
 module.exports = webpackMerge(commonConfig, {
+    mode: 'development',
     /**
      * Developer tool to enhance debugging
      *

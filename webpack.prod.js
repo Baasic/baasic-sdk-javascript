@@ -4,6 +4,7 @@ var commonConfig = require('./webpack.common');
 var path = require('path');
 
 module.exports = webpackMerge(commonConfig, {
+    mode: 'production',
     plugins: [
         /**
          * Minimize bundled output.
