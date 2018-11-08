@@ -5,7 +5,6 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from 'common/contracts';;
 import {
     ArticleInstanceSubscriptionsRoute,
     ArticleSubscriptionsArticleClient,
@@ -13,7 +12,6 @@ import {
     ArticleSubscriptionsCommentRequiresModerationClient,
     TYPES as articleTypes
 } from '../';
-import { IArticle, IArticleOptions } from '../contracts';
 
 @injectable()
 export class ArticleInstanceSubscriptionsClient {
@@ -39,6 +37,5 @@ export class ArticleInstanceSubscriptionsClient {
         @inject(articleTypes.ArticleSubscriptionsArticleClient) protected articleSubscriptionsArticleClient: ArticleSubscriptionsArticleClient,
         @inject(articleTypes.ArticleSubscriptionsCommentRequiresModerationClient) protected articleSubscriptionsCommentRequiresModerationClient: ArticleSubscriptionsCommentRequiresModerationClient,
         @inject(articleTypes.ArticleInstanceSubscriptionsRoute) protected articleInstanceSubscriptionsRoute: ArticleInstanceSubscriptionsRoute
-    )
-    { }
+    ) { }
 }

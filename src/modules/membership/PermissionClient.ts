@@ -5,12 +5,12 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from 'common/contracts';;
-import { Utility } from 'common';
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { IQueryModel, IOptions } from '../../common/contracts';;
+import { Utility } from '../../common';
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { PermissionRoute, TYPES as membershipTypes } from './';
 import { IAccessPolicy, IAccessAction, IRole, IUserInfo } from './contracts';
-import { IBaasicApp, TYPES as coreTYPES } from 'core/contracts';
+import { IBaasicApp, TYPES as coreTYPES } from '../../core/contracts';
 
 @injectable()
 export class PermissionClient {

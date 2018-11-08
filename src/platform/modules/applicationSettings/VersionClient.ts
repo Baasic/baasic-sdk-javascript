@@ -5,7 +5,7 @@
 */
 
 import { injectable, inject } from "inversify";
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import { VersionRoute, TYPES as applicationTypes } from './';
 import { IModuleVersion } from './contracts';
 

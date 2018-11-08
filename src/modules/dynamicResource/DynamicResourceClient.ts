@@ -4,8 +4,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IGetRequestOptions, IOptions, IQueryOptions } from 'common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions, IQueryOptions } from '../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import {
     DynamicResourceACLClient,
     DynamicResourceBatchClient,

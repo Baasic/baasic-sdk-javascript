@@ -1,5 +1,5 @@
 import { IApplicationRole, ISNProvider } from './';
-import { IModel } from 'common/contracts';;
+import { IModel } from '../../../common/contracts';;
 
 export interface IApplication extends IModel {
     allowAnyOrigin?: boolean,

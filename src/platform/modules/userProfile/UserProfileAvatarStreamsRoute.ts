@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from 'common';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
 export class UserProfileAvatarStreamsRoute extends BaseRoute {
 
@@ -16,7 +16,7 @@ export class UserProfileAvatarStreamsRoute extends BaseRoute {
 
     public readonly updateRoute: string = 'profiles/{id}/avatar-streams/{?width,height}';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses get route; this route should be expanded with id of profile. Additional supported items are:                     

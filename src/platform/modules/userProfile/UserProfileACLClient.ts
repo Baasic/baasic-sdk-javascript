@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IACLOptions, IACLPolicy } from 'common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { IACLOptions, IACLPolicy } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import { UserProfileACLRoute, TYPES as userProfileTypes } from './';
 
 @injectable()

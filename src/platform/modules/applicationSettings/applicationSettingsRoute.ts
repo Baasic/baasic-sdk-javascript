@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute } from 'common';
-import { IOptions } from 'common/contracts';
+import { BaseRoute } from '../../../common';
+import { IOptions } from '../../../common/contracts';
 import { IPlatformApplication } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
 @injectable()
 export class ApplicationSettingsRoute extends BaseRoute {

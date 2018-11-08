@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from 'common';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { BaseRoute, TYPES as commonTypes } from '../../../common';
+import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
 export class CompanyBatchRoute extends BaseRoute {
 
@@ -16,7 +16,7 @@ export class CompanyBatchRoute extends BaseRoute {
 
     public readonly deleteRoute: string = 'lookups/companies/batch';
 
-    constructor( @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
+    constructor(@inject(coreTypes.IAppOptions) protected appOptions: IAppOptions) { super(appOptions); }
 
     /**                     
      * Parses create route; this URI template does not expose any additional options.                     

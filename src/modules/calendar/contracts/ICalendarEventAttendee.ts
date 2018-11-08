@@ -1,6 +1,6 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';
 
-import { ICalendarEventRsvpAttendeeStatus, ICalendarEventRsvpAttendeeInvitationType, ICalendarUserInfo, ICalendarEventAttendeeOptions} from './';
+import { ICalendarEventRsvpAttendeeStatus, ICalendarEventRsvpAttendeeInvitationType, ICalendarUserInfo, ICalendarEventAttendeeOptions } from './';
 
 export interface ICalendarEventAttendee extends IModel {
     AttendeeStatus?: ICalendarEventRsvpAttendeeStatus;
