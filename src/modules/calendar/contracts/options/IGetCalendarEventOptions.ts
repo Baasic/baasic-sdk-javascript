@@ -1,4 +1,4 @@
-import { IOptions } from 'common/contracts';
+import { IOptions } from '../../../../common/contracts';
 
 export interface IGetCalendarEventOptions extends IOptions {
 	ids?: string[];

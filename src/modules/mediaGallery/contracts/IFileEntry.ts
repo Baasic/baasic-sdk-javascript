@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';
 import { IDerivedEntry, IFileUserInfo } from './';
 
 export interface IFileEntry extends IModel {
@@ -8,7 +8,7 @@ export interface IFileEntry extends IModel {
     fileName?: string,
     fileSize: number,
     height?: number,
-    json?: string, 
+    json?: string,
     metaData?: Object,
     ownerUser?: IFileUserInfo,
     ownerUserId?: string,

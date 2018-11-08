@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';;
+import { IModel } from '../../../common/contracts';;
 
 export interface IOrganization extends IModel {
     description?: string,

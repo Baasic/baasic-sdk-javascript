@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';;
+import { IModel } from '../../../common/contracts';;
 import { IArticleFileEntry } from './';
 
 export interface IArticleFile extends IModel {

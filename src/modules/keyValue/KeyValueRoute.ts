@@ -5,10 +5,10 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTYPES } from 'common';
-import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { BaseRoute, TYPES as commonTYPES } from '../../common';
+import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { IKeyValue } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()
 export class KeyValueRoute extends BaseRoute {

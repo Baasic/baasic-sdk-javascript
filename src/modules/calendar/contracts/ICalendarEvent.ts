@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';
+import { IModel } from '../../../common/contracts';
 
 import { ICalendar, ICalendarEventDetail, ICalendarEventRsvp, ICalendarUserInfo, ICalendarEventOptions } from './';
 

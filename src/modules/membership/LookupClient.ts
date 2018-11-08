@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IGetRequestOptions } from 'common/contracts';;
-import { Utility } from 'common';
+import { IGetRequestOptions } from '../../common/contracts';;
+import { Utility } from '../../common';
 import { ILookup } from './contracts';
 import { LookupRoute, TYPES as membershipTypes } from './';
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 
 @injectable()
 export class LookupClient {

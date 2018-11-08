@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';;
+import { IModel } from '../common/contracts';;
 import { IArticleComment, IArticleFile, IAuthor, IArticleTag, IRating } from './';
 
 export interface IArticle extends IModel {
