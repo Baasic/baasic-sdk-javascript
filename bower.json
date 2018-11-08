@@ -1,6 +1,6 @@
 {
   "name": "baasic-sdk-javascript",
-  "version": "2.0.6-beta02",
+  "version": "2.0.8",
   "description": "JavaScript SDK provides core functionality for building web and mobile applications on [Baasic](http://www.baasic.com/).",
   "main": [
     "build/dist/baasic-sdk-javascript.js"
