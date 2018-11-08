@@ -51,13 +51,12 @@ export class ApiClient {
             }
         }
 
-        var self = this;
         var promise = this.httpClient.request<TResponse>(request);
-        promise.then<IHttpResponse<TResponse>>(function (data) {
-            if (syncToken) self.tokenHandler.store(authToken);
-            var contentType = self.getHeader(data.headers, 'Content-Type');
+        promise.then<IHttpResponse<TResponse>, IHttpResponse<any>>(data => {
+            if (syncToken) this.tokenHandler.store(authToken);
+            var contentType = this.getHeader(data.headers, 'Content-Type');
             if (contentType && contentType.toLowerCase().indexOf('application/hal+json') !== -1) {
-                data.data = self.halParser.parse(data.data);
+                data.data = this.halParser.parse(data.data);
             }
             return data;
         },

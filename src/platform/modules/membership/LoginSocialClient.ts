@@ -73,7 +73,7 @@ export class LoginSocialClient {
         return this.apiClient.createPromise<any>((resolve, reject) => {
             self.apiClient.post<any>(self.loginSocialRoute.post(provider, options), self.loginSocialRoute.createParams(data),
                 { 'Content-Type': 'application/json; charset=UTF-8' })
-                .then<any>(function (data) {
+                .then<any, void>(data => {
                     if (data) {
                         let token: IToken = {
                             token: data.data.access_token,
@@ -85,7 +85,7 @@ export class LoginSocialClient {
                         self.tokenHandler.store(token);
                     }
                     resolve(data);
-                }, function (data) {
+                }, data => {
                     reject(data);
                 });
         });

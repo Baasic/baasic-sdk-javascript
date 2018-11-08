@@ -5,5 +5,7 @@ export interface IOptions {
     orderDirection?: string,
     search?: string,
     embed?: string,
-    fields?: string
+    fields?: string,
+    provider?: string,
+    returnUrl?: string
 }
