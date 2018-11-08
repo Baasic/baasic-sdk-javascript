@@ -1,8 +1,8 @@
-import { Utility, commonDIModule } from 'common';
-import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, IBaasicOptions, IEventHandler, IBaasicPlatform, TYPES as coreTYPES } from 'core/contracts';
-import { coreDIModule as coreDIModule } from 'core';
+import { Utility, commonDIModule } from '../common';
+import { ITokenHandler, IToken, TokenType, TokenTypes, IUserHandler, IUser, IBaasicAppOptions, IBaasicOptions, IEventHandler, IBaasicPlatform, TYPES as coreTYPES } from '../core/contracts';
+import { coreDIModule as coreDIModule } from '../core';
 import { DIModule } from '../';
-import { httpDIModule as httpDIModule, ApiClient, httpTYPES } from 'httpApi';
+import { httpDIModule as httpDIModule, ApiClient, httpTYPES } from '../httpApi';
 import * as modules from './modules';
 
 export class BaasicPlatform implements IBaasicPlatform {

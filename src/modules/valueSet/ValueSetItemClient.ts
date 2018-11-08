@@ -3,8 +3,8 @@
  * @description  Value Set Item Client provides an easy way to consume  Value Set Item REST end-points. In order to obtain needed routes `valueSetItemClient` uses `valueSetItemRoute`. 
  */
 import { injectable, inject } from 'inversify';
-import { IQueryModel, IGetRequestOptions, IOptions } from 'common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { IQueryModel, IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { ValueSetItemRoute, TYPES as valueSetTypes } from './';
 import { IValueSetItem } from './contracts';
 

@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';;
+import { IModel } from '../../../common/contracts';;
 import { IOrganization, IUserProfile } from './';
 
 export interface IUserEducation extends IModel {

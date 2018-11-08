@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';;
+import { IModel } from '../../../../common/contracts';;
 import { ICompany } from './';
 
 export interface IUserProfileWork extends IModel {
@@ -7,5 +7,5 @@ export interface IUserProfileWork extends IModel {
     companyName?: string,
     endDate?: string,
     startDate?: string,
-    summary?: string   
+    summary?: string
 }

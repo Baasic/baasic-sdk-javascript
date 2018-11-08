@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IOptions, IQueryModel } from 'common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { IOptions, IQueryModel } from '../../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 import { ApplicationSettingsRoute, TYPES as applicationTypes } from './';
 import { IPlatformApplication, INewPlatformApplication } from './contracts';
 

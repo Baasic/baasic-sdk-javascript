@@ -5,8 +5,8 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IGetRequestOptions, IOptions } from 'common/contracts';;
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { IGetRequestOptions, IOptions } from '../../common/contracts';;
+import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { UserProfileAvatarRoute, UserProfileAvatarStreamsClient, TYPES as userProfileTypes } from './';
 import { IProfileAvatar } from './contracts';
 

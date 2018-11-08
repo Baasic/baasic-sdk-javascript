@@ -1,4 +1,4 @@
-import { IModel } from 'common/contracts';;
+import { IModel } from '../../../../common/contracts';;
 import { IProfileAvatarFileEntry } from './';
 
 export interface IProfileAvatar extends IModel {

@@ -1,5 +1,5 @@
 import { IValueSetItem } from './';
-import { IModel } from 'common/contracts';;
+import { IModel } from '../../../common/contracts';;
 
 export interface IValueSet extends IModel {
     values?: IValueSetItem[],

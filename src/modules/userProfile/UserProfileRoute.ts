@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from 'common';
-import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { BaseRoute, TYPES as commonTypes } from '../../common';
+import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { UserProfileACLRoute, TYPES as userProfileTypes } from './';
 import { IUserProfile } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 export class UserProfileRoute extends BaseRoute {
 

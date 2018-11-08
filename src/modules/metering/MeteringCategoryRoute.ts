@@ -4,11 +4,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { BaseRoute, TYPES as commonTypes } from 'common';
-import { IGetRequestOptions, IOptions } from 'common/contracts';;
+import { BaseRoute, TYPES as commonTypes } from '../../common';
+import { IGetRequestOptions, IOptions } from '../../common/contracts';;
 import { MeteringCategoryBatchRoute, TYPES as meteringTypes } from './';
 import { IMeteringCategory } from './contracts';
-import { IAppOptions, TYPES as coreTypes } from 'core/contracts';
+import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
 @injectable()
 export class MeteringCategoryRoute extends BaseRoute {

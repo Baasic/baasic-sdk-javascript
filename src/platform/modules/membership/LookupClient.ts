@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IGetRequestOptions } from 'common/contracts';;
-import { Utility } from 'common';
+import { IGetRequestOptions } from '../../../common/contracts';;
+import { Utility } from '../../../common';
 import { ILookup, IAccessSection } from './contracts';
 import { LookupRoute, TYPES as membershipTypes } from './';
-import { ApiClient, IHttpResponse, httpTYPES } from 'httpApi';
+import { ApiClient, IHttpResponse, httpTYPES } from '../../../httpApi';
 
 @injectable()
 export class LookupClient {
@@ -58,10 +58,10 @@ export class LookupClient {
         var self = this;
         return this.apiClient.createPromise<any>((resolve, reject) => {
             self.apiClient.get(this.lookupRoute.get(opt))
-                .then<any>(function (data) {
+                .then<any, void>(data => {
                     data.data = self.getResponseData(embed, data.data);
                     resolve(data);
-                }, function (data) {
+                }, data => {
                     reject(data);
                 });
         });
@@ -83,9 +83,9 @@ export class LookupClient {
         var self = this;
         return this.apiClient.createPromise<any>((resolve, reject) => {
             self.apiClient.get(this.lookupRoute.getAccessSections())
-                .then<any>(function (data) {
+                .then<any, void>(data => {
                     resolve(data);
-                }, function (data) {
+                }, data => {
                     reject(data);
                 });
         });
