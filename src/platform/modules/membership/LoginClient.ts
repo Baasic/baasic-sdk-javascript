@@ -58,7 +58,7 @@ export class LoginClient {
         var self = this;
         return this.apiClient.createPromise<any>((resolve, reject) => {
             self.apiClient.post<any>(self.loginRoute.login(settings), loginData, { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' })
-                .then<any>(function (data) {
+                .then<any, void>(data => {
                     let token: IToken = {
                         token: data.data.access_token,
                         expires_in: data.data.expires_in,
@@ -68,7 +68,7 @@ export class LoginClient {
                     };
                     self.tokenHandler.store(token);
                     resolve(data);
-                }, function (data) {
+                }, data => {
                     reject(data);
                 });
         });

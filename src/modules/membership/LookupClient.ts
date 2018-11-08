@@ -58,10 +58,10 @@ export class LookupClient {
         var self = this;
         return this.apiClient.createPromise<any>((resolve, reject) => {
             self.apiClient.get(this.lookupRoute.get(opt))
-                .then<any>(function (data) {
+                .then<any, void>((data) => {
                     data.data = self.getResponseData(embed, data.data);
                     resolve(data);
-                }, function (data) {
+                }, data => {
                     reject(data);
                 });
         });
