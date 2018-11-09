@@ -9,6 +9,7 @@ import { BaseRoute, TYPES as commonTypes } from '../../common';
 import { IACLPolicy, IACLOptions } from '../../common/contracts';;
 import { IAppOptions, TYPES as coreTypes } from '../../core/contracts';
 
+@injectable()
 export class ArticleACLRoute extends BaseRoute {
 
     public readonly getRoute: string = 'articles/{id}/acl/{?fields}';

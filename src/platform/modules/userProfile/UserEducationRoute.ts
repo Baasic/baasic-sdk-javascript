@@ -10,6 +10,7 @@ import { IGetRequestOptions, IOptions } from '../../../common/contracts';;
 import { IUserEducation } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
+@injectable()
 export class UserEducationRoute extends BaseRoute {
 
     public readonly findRoute: string = 'profiles/{userId}/educations/{?searchQuery,page,rpp,sort,embed,fields}';
