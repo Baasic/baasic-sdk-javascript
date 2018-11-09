@@ -8,6 +8,7 @@ import { injectable, inject } from "inversify";
 import { BaseRoute, TYPES as commonTypes } from '../../../common';
 import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
+@injectable()
 export class UserProfileAvatarStreamsRoute extends BaseRoute {
 
     public readonly getRoute: string = 'profiles/{id}/avatar-streams/{?width,height,t}';
