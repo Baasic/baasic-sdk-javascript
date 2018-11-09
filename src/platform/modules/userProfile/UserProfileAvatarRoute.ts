@@ -11,6 +11,7 @@ import { UserProfileAvatarStreamsRoute, TYPES as userProfileTypes } from './';
 import { IProfileAvatar } from './contracts';
 import { IAppOptions, TYPES as coreTypes } from '../../../core/contracts';
 
+@injectable()
 export class UserProfileAvatarRoute extends BaseRoute {
 
     public readonly getRoute: string = 'profiles/{id}/avatars/{?embed,fields}';
