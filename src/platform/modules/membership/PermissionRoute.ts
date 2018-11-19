@@ -11,7 +11,11 @@ import { IAccessPolicy, IAccessAction } from './contracts';
 @injectable()
 export class PermissionRoute extends BaseRoute {
 
-    /**                  
+    /**
+     * Find all route with route and query parameters.
+     */
+    public findAllRoute: string = 'permissions/sections{?searchQuery,sort,embed,fields}';
+    /**
     * Find route with route and query parameters.
     **/
     public findRoute: string = 'permissions/sections/{section}/{?searchQuery,sort,embed,fields}';
@@ -43,6 +47,20 @@ export class PermissionRoute extends BaseRoute {
         super(appOptions);
     }
 
+    /**
+     * Parses find all route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string value used to identify access policy resources using the phrase search.
+     * - `sort` - A string used to set the access policy property to sort the result collection by.
+     * @method
+     * @example
+     permissionRoute.findAll(
+     {searchQuery: '<search-phrase>'}
+     );
+     **/
+    findAll(options?: any): any {
+        var opt = options || {};
+        return super.baseFind(this.findAllRoute, this.utility.extend(opt));
+    }
     /**
     * Parses find route which can be expanded with additional options. Supported items are: 
     * - `section` - Section abbreviation which identifies part of the application for which security privileges can be retrieved and managed.
