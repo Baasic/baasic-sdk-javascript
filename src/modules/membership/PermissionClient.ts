@@ -91,6 +91,13 @@ export class PermissionClient {
     }
 
     /**
+     * Returns a promise that is resolved once the getSectionPolicies action has beed preformed. Success response returns a list of requested access policies that match the specified search parameters
+     */
+    getSectionsPolicies(sections: string, options?: any): PromiseLike<IHttpResponse<IAccessPolicy[]>> {
+        return this.apiClient.get<IAccessPolicy[]>(this.permissionRoute.findSectionsPolicies(sections, options));
+    }
+
+    /**
     * Returns a promise that is resolved once the getPermissionSubjects action has been performed. Success response returns a list of matching user and role resources.
     * @method        
     * @example 
