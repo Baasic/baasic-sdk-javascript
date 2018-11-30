@@ -142,7 +142,10 @@ export class PermissionRoute extends BaseRoute {
      * @param {string} sections - Comma-spearated list of section abbreviations that identify parts of the application for which security privileges can be retrieved and managed.
      */
     findSectionsPolicies(sectionAbrvs: string, options?: any): any {
-        var opt = options || {};
+        var opt = {
+            sectionAbrvs,
+            ...options
+        };
         return super.baseFind(this.sectionsPoliciesRoute, opt);
     }
 
