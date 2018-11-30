@@ -22,7 +22,7 @@ export class PermissionRoute extends BaseRoute {
     /**
      * sectionsPolicies route and query parameters.
      */
-    public sectionsPoliciesRoute: string = 'permissions/sections/policies/{?sections,searchQuery,sort,embed,fields}';
+    public sectionsPoliciesRoute: string = 'permissions/sections/policies/{?sectionAbrvs,searchQuery,sort,embed,fields}';
     /**
      * Get actions route with route and query parameters.
      **/
@@ -141,7 +141,7 @@ export class PermissionRoute extends BaseRoute {
      * - `section` - Section abbreviation which identifies part of the application for which security privileges can be retrieved and managed.
      * @param {string} sections - Comma-spearated list of section abbreviations that identify parts of the application for which security privileges can be retrieved and managed.
      */
-    findSectionsPolicies(sections: string, options?: any): any {
+    findSectionsPolicies(sectionAbrvs: string, options?: any): any {
         var opt = options || {};
         return super.baseFind(this.sectionsPoliciesRoute, opt);
     }
