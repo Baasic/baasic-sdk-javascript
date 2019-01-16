@@ -34,15 +34,6 @@ export class LookupRoute extends BaseRoute {
     get(data: any): any {
         return super.baseCreate(this.getRoute, data);
     }
-
-    /**                 
-     * Parses get access sections route which can be expanded with additional options.            
-     * @method                        
-     * @example baasicLookupRouteService.getAccessSections();                               
-     **/
-    getAccessSections(): any {
-        return super.baseCreate(this.getAccessSectionRoute, {});
-    }
 }
 
 /**  

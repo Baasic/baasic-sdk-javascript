@@ -66,30 +66,6 @@ export class LookupClient {
                 });
         });
     }
-
-    /**                  
-     * Returns a promise that is resolved once the get access sections action has been performed. Success response returns the access section resources.                  
-     * @method                      
-     * @returns A promise that is resolved once the get access sections action has been performed. 
-     * @example lookupClient.getAccessSections()
-                    .then(function (data) {   
-                        // perform success action here 
-                    },
-                     function (response, status, headers, config) {   
-                         // perform error handling here 
-                    });                  
-     **/
-    getAccessSections(): PromiseLike<IHttpResponse<IAccessSection[]>> {
-        var self = this;
-        return this.apiClient.createPromise<any>((resolve, reject) => {
-            self.apiClient.get(this.lookupRoute.getAccessSections())
-                .then<any, void>(data => {
-                    resolve(data);
-                }, data => {
-                    reject(data);
-                });
-        });
-    }
 }
 
 /**  
