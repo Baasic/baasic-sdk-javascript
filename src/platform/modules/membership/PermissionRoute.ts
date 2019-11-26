@@ -19,7 +19,11 @@ export class PermissionRoute extends BaseRoute {
     * Find route with route and query parameters.
     **/
     public findRoute: string = 'permissions/sections/{section}/{?searchQuery,sort,embed,fields}';
-    /**                  
+    /**
+     * sectionsPolicies route and query parameters.
+     */
+    public sectionsPoliciesRoute: string = 'permissions/sections/policies/{?sectionAbrvs,searchQuery,sort,embed,fields}';
+    /**
     * Get actions route with route and query parameters.
     **/
     public getActionsRoute: string = 'permissions/actions/{?searchQuery,sort,embed,fields}';
@@ -123,6 +127,25 @@ permissionRoute.getRoles(
         var opt = options || {};
         return super.baseFind(this.getUsersRoute, opt);
     }
+
+    /**
+     * Parses sectionsPoliciesRoute which can be expanded with additional options.
+     * - `searchQuery` - A string value used to identify access policy resources using the phrase search.
+     * - `sort` - A string used to set the access policy property to sort the result collection by.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain access policy subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `section` - Section abbreviation which identifies part of the application for which security privileges can be retrieved and managed.
+     * @param {string} sections - Comma-spearated list of section abbreviations that identify parts of the application for which security privileges can be retrieved and managed.
+     */
+    findSectionsPolicies(sectionAbrvs: string, options?: any): any {
+        var opt = {
+            sectionAbrvs,
+            ...options
+        };
+
+        return super.baseFind(this.sectionsPoliciesRoute, opt);
+    }
+
     /**
     * Parses create permission route; this URI template doesn't expose any additional properties.
     * @method        
