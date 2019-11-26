@@ -5,11 +5,11 @@
  */
 
 import { injectable, inject } from "inversify";
-import { IQueryModel, IOptions } from '../../common/contracts';;
+import { IQueryModel, IOptions } from '../../common/contracts';
 import { Utility } from '../../common';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { PermissionRoute, TYPES as membershipTypes } from './';
-import { IAccessPolicy, IAccessAction, IRole, IUserInfo } from './contracts';
+import { IAccessPolicy, IAccessSection, IAccessAction, IRole, IUserInfo } from './contracts';
 import { IBaasicApp, TYPES as coreTYPES } from '../../core/contracts';
 
 @injectable()
@@ -33,11 +33,30 @@ export class PermissionClient {
         @inject(coreTYPES.IBaasicApp) private application: IBaasicApp
     ) { }
 
+    /**
+     * Returns a promise that is resolved once the findAll action has been performed. Success response returns a list of access sections matching the given criteria.
+     * @method
+     * @param options Query resource options object.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example permissionClient.findAll({
+                    searchQuery : '<search-phrase>'
+                })
+     .then(function (collection) {
+                    // perform success action here
+                },
+     function (response, status, headers, config) {
+                    // perform error handling here
+                });
+     **/
+    findAll(options?: any): PromiseLike<IHttpResponse<IAccessSection[]>> {
+        return this.apiClient.get<IAccessSection[]>(this.permissionRoute.findAll(options));
+    }
+
     /**                  
      * Returns a promise that is resolved once the find action has been performed. Success response returns a list of role resources matching the given criteria.              
      * @method
      * @param options Query resource options object. 
-     * @returns A promise that is resolved once the find action has beend performed.                            
+     * @returns A promise that is resolved once the find action has been performed.
      * @example permissionClient.find({   
                     section : '<access-section>',   
                     search : '<search-phrase>' 
@@ -69,6 +88,13 @@ export class PermissionClient {
     **/
     getActions(options?: any): PromiseLike<IHttpResponse<IAccessAction[]>> {
         return this.apiClient.get<IAccessAction[]>(this.routeDefinition.getActions(options));
+    }
+
+    /**
+     * Returns a promise that is resolved once the getSectionPolicies action has beed preformed. Success response returns a list of requested access policies that match the specified search parameters
+     */
+    getSectionsPolicies(sectionAbrvs: string, options?: any): PromiseLike<IHttpResponse<IAccessPolicy[]>> {
+        return this.apiClient.get<IAccessPolicy[]>(this.permissionRoute.findSectionsPolicies(sectionAbrvs, options));
     }
 
     /**
