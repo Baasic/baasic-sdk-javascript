@@ -30,7 +30,7 @@ export abstract class BaseRoute {
      * @returns Query resources uri with search params
      * @example baasicBaseDefinition.find();
      **/
-    protected baseFind(route: string, options?: IOptions): any {
+    protected baseFind(route: string, options?: any): any {
         let params = this.modelMapper.findParams(options);
         return uritemplate.parse(route).expand(params);
     }
@@ -67,7 +67,7 @@ export abstract class BaseRoute {
      * @method
      * @example baseRoute.update();
      */
-    protected baseUpdate(route: string, data: any, options?: IOptions, linkName?: string): any {
+    protected baseUpdate(route: string, data: any, options?: any, linkName?: string): any {
         let link: string = linkName ? linkName : 'put';
         let params = this.modelMapper.updateParams(data);
         let model = params[this.modelMapper.modelPropertyName];
@@ -94,7 +94,7 @@ export abstract class BaseRoute {
      * @method
      * @example baseRoute.delete();
      */
-    protected baseDelete(route: string, data: any, options?: IOptions, linkName?: string): any {
+    protected baseDelete(route: string, data: any, options?: any, linkName?: string): any {
         let link: string = linkName ? linkName : 'delete';
         let params = this.modelMapper.removeParams(data);
         let model = params[this.modelMapper.modelPropertyName];

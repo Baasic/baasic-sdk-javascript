@@ -6,6 +6,4 @@ export interface IOptions {
     search?: string,
     embed?: string,
     fields?: string,
-    provider?: string,
-    returnUrl?: string
 }

@@ -21,8 +21,14 @@ export class ModelMapper {
         let object: any = {};
         if (this.utility.isObject(options)) {
             this.utility.extend(object, options);
-            if (options.hasOwnProperty('orderBy') && options.hasOwnProperty('orderDirection')) {
-                object.sort = options.orderBy ? options.orderBy + '|' + options.orderDirection : null;
+            if (options.orderBy && options.orderDirection) {
+                const orderByParams = options.orderBy.split(',');
+                const orderDirectionParams = options.orderDirection.split(',');
+                if (orderByParams.length === orderDirectionParams.length) {
+                    object.sort = orderByParams.map((item, index) => {
+                        return `${item}|${orderDirectionParams[index]}`;
+                    }).join(', ');
+                }                
             }
             if (options.hasOwnProperty('search')) {
                 object.searchQuery = options.search;
