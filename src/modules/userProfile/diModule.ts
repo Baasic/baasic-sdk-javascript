@@ -27,6 +27,10 @@ import {
     UserSkillRoute,
     UserWorkClient,
     UserWorkRoute,
+    LanguageBatchRoute,
+    LanguageBatchClient,
+    LanguageRoute,
+    LanguageClient,
     Root
 } from './';
 
@@ -57,6 +61,10 @@ const TYPES = {
     UserSkillRoute: Symbol("UserSkillRoute"),
     UserWorkClient: Symbol("UserWorkClient"),
     UserWorkRoute: Symbol("UserWorkRoute"),
+    LanguageBatchRoute: Symbol("LanguageBatchRoute"),
+    LanguageBatchClient: Symbol("LanguageBatchClient"),
+    LanguageRoute: Symbol("LanguageRoute"),
+    LanguageClient: Symbol("LanguageClient"),
     Root: Symbol("UserProfile-Root")
 };
 
@@ -89,6 +97,10 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<UserSkillClient>(TYPES.UserSkillClient).to(UserSkillClient);
     bind<UserWorkRoute>(TYPES.UserWorkRoute).to(UserWorkRoute);
     bind<UserWorkClient>(TYPES.UserWorkClient).to(UserWorkClient);
+    bind<LanguageBatchRoute>(TYPES.LanguageBatchRoute).to(LanguageBatchRoute);
+    bind<LanguageBatchClient>(TYPES.LanguageBatchClient).to(LanguageBatchClient);
+    bind<LanguageRoute>(TYPES.LanguageRoute).to(LanguageRoute);
+    bind<LanguageClient>(TYPES.LanguageClient).to(LanguageClient);
     bind<Root>(TYPES.Root).to(Root);
 });
 

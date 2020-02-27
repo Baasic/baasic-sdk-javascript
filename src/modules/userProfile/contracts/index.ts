@@ -10,3 +10,4 @@ export * from './IUserProfileWork';
 export * from './IUserProfile';
 export * from './IUserSkill';
 export * from './IUserWork';
+export * from './ILanguage';

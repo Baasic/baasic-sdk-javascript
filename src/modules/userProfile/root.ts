@@ -1,9 +1,9 @@
 import {
-    UserProfileACLClient, UserProfileRoute,
     UserProfileClient,
     CompanyClient,
     OrganizationClient,
     SkillClient,
+    LanguageClient,
     TYPES
 } from './';
 
@@ -16,7 +16,8 @@ export class Root {
         @inject(TYPES.UserProfileClient) public profile: UserProfileClient,
         @inject(TYPES.CompanyClient) public company: CompanyClient,
         @inject(TYPES.OrganizationClient) public organization: OrganizationClient,
-        @inject(TYPES.SkillClient) public skill: SkillClient
+        @inject(TYPES.SkillClient) public skill: SkillClient,
+        @inject(TYPES.LanguageClient) public language: LanguageClient
     ) {
     }
 
