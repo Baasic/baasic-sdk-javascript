@@ -10,3 +10,4 @@ export * from './IACLPolicy';
 export * from './IResponse';
 export * from './IGetRequestOptions';
 export * from './IQueryOptions';
+export * from './ILanguage';

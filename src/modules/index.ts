@@ -30,3 +30,5 @@ import * as Calendar from './calendar';
 export { Calendar };
 import * as ShoppingCart from './shoppingCart';
 export { ShoppingCart }
+import * as Blog from './blog';
+export { Blog };
