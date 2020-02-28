@@ -1,6 +1,6 @@
 /* globals module */
 /**
- * @module articleClient
+ * @module blogClient
  * @description  Blogs Client provides an easy way to consume  Blogs REST API end-points. In order to obtain needed routes `articleClient` uses `articleRoute`.
  */
 

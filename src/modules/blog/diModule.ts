@@ -15,6 +15,8 @@ import {
     BlogPostFilesBatchClient,
     BlogPostFilesRoute,
     BlogPostFilesClient,
+    BlogPostStatusRoute,
+    BlogPostStatusClient,
     Root
 } from './';
 
@@ -33,6 +35,8 @@ const TYPES = {
     BlogPostFilesBatchClient: Symbol("BlogPostFilesBatchClient"),
     BlogPostFilesRoute: Symbol("BlogPostFilesRoute"),
     BlogPostFilesClient: Symbol("BlogPostFilesClient"),
+    BlogPostStatusRoute: Symbol("BlogPostStatusRoute"),
+    BlogPostStatusClient: Symbol("BlogPostStatusClient"),
     Root: Symbol("Root")    
 };
 
@@ -53,6 +57,8 @@ let diModule: ContainerModule = new ContainerModule((bind) => {
     bind<BlogPostFilesBatchClient>(TYPES.BlogPostFilesBatchClient).to(BlogPostFilesBatchClient);
     bind<BlogPostFilesRoute>(TYPES.BlogPostFilesRoute).to(BlogPostFilesRoute);
     bind<BlogPostFilesClient>(TYPES.BlogPostFilesClient).to(BlogPostFilesClient);
+    bind<BlogPostStatusRoute>(TYPES.BlogPostStatusRoute).to(BlogPostStatusRoute);
+    bind<BlogPostStatusClient>(TYPES.BlogPostStatusClient).to(BlogPostStatusClient);
     bind<Root>(TYPES.Root).to(Root);
 });
 

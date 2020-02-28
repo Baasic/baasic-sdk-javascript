@@ -4,6 +4,7 @@ import {
     BlogPostCommentClient,
     BlogPostFilesClient,
     BlogTagClient,
+    BlogPostStatusClient,
     TYPES
 } from './';
 
@@ -19,7 +20,7 @@ export class Root {
         @inject(TYPES.BlogPostCommentClient) public comments: BlogPostCommentClient,
         @inject(TYPES.BlogPostFilesClient) public files: BlogPostFilesClient,
         @inject(TYPES.BlogTagClient) public tags: BlogTagClient,
-
+        @inject(TYPES.BlogPostStatusClient) public statuses: BlogPostStatusClient
     ) {
     }
 

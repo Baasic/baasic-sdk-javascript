@@ -1,4 +1,6 @@
 export * from './diModule';
+export * from './BlogPostStatusRoute';
+export * from './BlogPostStatusClient';
 export * from './BlogPostRoute';
 export * from './BlogPostClient';
 export * from './BlogTagRoute';
