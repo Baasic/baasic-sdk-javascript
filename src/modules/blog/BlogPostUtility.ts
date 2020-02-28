@@ -1,6 +1,6 @@
 import { ALPHABET as alphabet, Utility } from '../../common';
 
-export class BaasicArticleUtility {
+export class BaasicBlogPostUtility {
 
     private utility: Utility = new Utility();
 

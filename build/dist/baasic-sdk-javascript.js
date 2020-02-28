@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.11-beta05 - Thursday, February 27th, 2020, 1:26:17 PM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.11-beta05 - Friday, February 28th, 2020, 10:36:43 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -3931,6 +3931,66 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 /***/ }),
 
+/***/ "./src/common/alphabet.ts":
+/*!********************************!*\
+  !*** ./src/common/alphabet.ts ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var ALPHABET = {
+    a: /[\u0061\u24D0\uFF41\u1E9A\u00E0\u00E1\u00E2\u1EA7\u1EA5\u1EAB\u1EA9\u00E3\u0101\u0103\u1EB1\u1EAF\u1EB5\u1EB3\u0227\u01E1\u00E4\u01DF\u1EA3\u00E5\u01FB\u01CE\u0201\u0203\u1EA1\u1EAD\u1EB7\u1E01\u0105\u2C65\u0250]/ig,
+    aa: /[\uA733]/ig,
+    ae: /[\u00E6\u01FD\u01E3]/ig,
+    ao: /[\uA735]/ig,
+    au: /[\uA737]/ig,
+    av: /[\uA739\uA73B]/ig,
+    ay: /[\uA73D]/ig,
+    b: /[\u0062\u24D1\uFF42\u1E03\u1E05\u1E07\u0180\u0183\u0253]/ig,
+    c: /[\u0063\u24D2\uFF43\u0107\u0109\u010B\u010D\u00E7\u1E09\u0188\u023C\uA73F\u2184]/ig,
+    d: /[\u0064\u24D3\uFF44\u1E0B\u010F\u1E0D\u1E11\u1E13\u1E0F\u0111\u018C\u0256\u0257\uA77A]/ig,
+    dz: /[\u01F3\u01C6]/ig,
+    e: /[\u0065\u24D4\uFF45\u00E8\u00E9\u00EA\u1EC1\u1EBF\u1EC5\u1EC3\u1EBD\u0113\u1E15\u1E17\u0115\u0117\u00EB\u1EBB\u011B\u0205\u0207\u1EB9\u1EC7\u0229\u1E1D\u0119\u1E19\u1E1B\u0247\u025B\u01DD]/ig,
+    f: /[\u0066\u24D5\uFF46\u1E1F\u0192\uA77C]/ig,
+    g: /[\u0067\u24D6\uFF47\u01F5\u011D\u1E21\u011F\u0121\u01E7\u0123\u01E5\u0260\uA7A1\u1D79\uA77F]/ig,
+    h: /[\u0068\u24D7\uFF48\u0125\u1E23\u1E27\u021F\u1E25\u1E29\u1E2B\u1E96\u0127\u2C68\u2C76\u0265]/ig,
+    hv: /[\u0195]/ig,
+    i: /[\u0069\u24D8\uFF49\u00EC\u00ED\u00EE\u0129\u012B\u012D\u00EF\u1E2F\u1EC9\u01D0\u0209\u020B\u1ECB\u012F\u1E2D\u0268\u0131]/ig,
+    j: /[\u006A\u24D9\uFF4A\u0135\u01F0\u0249]/ig,
+    k: /[\u006B\u24DA\uFF4B\u1E31\u01E9\u1E33\u0137\u1E35\u0199\u2C6A\uA741\uA743\uA745\uA7A3]/ig,
+    l: /[\u006C\u24DB\uFF4C\u0140\u013A\u013E\u1E37\u1E39\u013C\u1E3D\u1E3B\u017F\u0142\u019A\u026B\u2C61\uA749\uA781\uA747]/ig,
+    lj: /[\u01C9]/ig,
+    m: /[\u006D\u24DC\uFF4D\u1E3F\u1E41\u1E43\u0271\u026F]/ig,
+    n: /[\u006E\u24DD\uFF4E\u01F9\u0144\u00F1\u1E45\u0148\u1E47\u0146\u1E4B\u1E49\u019E\u0272\u0149\uA791\uA7A5]/ig,
+    nj: /[\u01CC]/ig,
+    o: /[\u006F\u24DE\uFF4F\u00F2\u00F3\u00F4\u1ED3\u1ED1\u1ED7\u1ED5\u00F5\u1E4D\u022D\u1E4F\u014D\u1E51\u1E53\u014F\u022F\u0231\u00F6\u022B\u1ECF\u0151\u01D2\u020D\u020F\u01A1\u1EDD\u1EDB\u1EE1\u1EDF\u1EE3\u1ECD\u1ED9\u01EB\u01ED\u00F8\u01FF\u0254\uA74B\uA74D\u0275]/ig,
+    oi: /[\u01A3]/ig,
+    ou: /[\u0223]/ig,
+    oo: /[\uA74F]/ig,
+    p: /[\u0070\u24DF\uFF50\u1E55\u1E57\u01A5\u1D7D\uA751\uA753\uA755]/ig,
+    q: /[\u0071\u24E0\uFF51\u024B\uA757\uA759]/ig,
+    r: /[\u0072\u24E1\uFF52\u0155\u1E59\u0159\u0211\u0213\u1E5B\u1E5D\u0157\u1E5F\u024D\u027D\uA75B\uA7A7\uA783]/ig,
+    s: /[\u0073\u24E2\uFF53\u015B\u1E65\u015D\u1E61\u0161\u1E67\u1E63\u1E69\u0219\u015F\u023F\uA7A9\uA785\u1E9B]/ig,
+    ss: /[\u00DF\u1E9E]/ig,
+    t: /[\u0074\u24E3\uFF54\u1E6B\u1E97\u0165\u1E6D\u021B\u0163\u1E71\u1E6F\u0167\u01AD\u0288\u2C66\uA787]/ig,
+    tz: /[\uA729]/ig,
+    u: /[\u0075\u24E4\uFF55\u00F9\u00FA\u00FB\u0169\u1E79\u016B\u1E7B\u016D\u00FC\u01DC\u01D8\u01D6\u01DA\u1EE7\u016F\u0171\u01D4\u0215\u0217\u01B0\u1EEB\u1EE9\u1EEF\u1EED\u1EF1\u1EE5\u1E73\u0173\u1E77\u1E75\u0289]/ig,
+    v: /[\u0076\u24E5\uFF56\u1E7D\u1E7F\u028B\uA75F\u028C]/ig,
+    vy: /[\uA761]/ig,
+    w: /[\u0077\u24E6\uFF57\u1E81\u1E83\u0175\u1E87\u1E85\u1E98\u1E89\u2C73]/ig,
+    x: /[\u0078\u24E7\uFF58\u1E8B\u1E8D]/ig,
+    y: /[\u0079\u24E8\uFF59\u1EF3\u00FD\u0177\u1EF9\u0233\u1E8F\u00FF\u1EF7\u1E99\u1EF5\u01B4\u024F\u1EFF]/ig,
+    z: /[\u007A\u24E9\uFF5A\u017A\u1E91\u017C\u017E\u1E93\u1E95\u01B6\u0225\u0240\u2C6C\uA763]/ig,
+    '': /[\u0300\u0301\u0302\u0303\u0308]/ig
+};
+exports.ALPHABET = ALPHABET;
+
+
+/***/ }),
+
 /***/ "./src/common/baseRoute.ts":
 /*!*********************************!*\
   !*** ./src/common/baseRoute.ts ***!
@@ -4553,6 +4613,7 @@ var diModule_1 = __webpack_require__(/*! ./diModule */ "./src/common/diModule.ts
 exports.commonDIModule = diModule_1.diModule;
 var diModule_2 = __webpack_require__(/*! ./diModule */ "./src/common/diModule.ts");
 exports.TYPES = diModule_2.TYPES;
+tslib_1.__exportStar(__webpack_require__(/*! ./alphabet */ "./src/common/alphabet.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./utility */ "./src/common/utility.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./modelMapper */ "./src/common/modelMapper.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./baseRoute */ "./src/common/baseRoute.ts"), exports);
@@ -6290,66 +6351,6 @@ tslib_1.__exportStar(__webpack_require__(/*! ./diModule */ "./src/modules/applic
 tslib_1.__exportStar(__webpack_require__(/*! ./applicationSettingsRoute */ "./src/modules/applicationSettings/applicationSettingsRoute.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./applicationSettingsClient */ "./src/modules/applicationSettings/applicationSettingsClient.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./contracts */ "./src/modules/applicationSettings/contracts/index.ts"), exports);
-
-
-/***/ }),
-
-/***/ "./src/modules/article/alphabet.ts":
-/*!*****************************************!*\
-  !*** ./src/modules/article/alphabet.ts ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var ALPHABET = {
-    a: /[\u0061\u24D0\uFF41\u1E9A\u00E0\u00E1\u00E2\u1EA7\u1EA5\u1EAB\u1EA9\u00E3\u0101\u0103\u1EB1\u1EAF\u1EB5\u1EB3\u0227\u01E1\u00E4\u01DF\u1EA3\u00E5\u01FB\u01CE\u0201\u0203\u1EA1\u1EAD\u1EB7\u1E01\u0105\u2C65\u0250]/ig,
-    aa: /[\uA733]/ig,
-    ae: /[\u00E6\u01FD\u01E3]/ig,
-    ao: /[\uA735]/ig,
-    au: /[\uA737]/ig,
-    av: /[\uA739\uA73B]/ig,
-    ay: /[\uA73D]/ig,
-    b: /[\u0062\u24D1\uFF42\u1E03\u1E05\u1E07\u0180\u0183\u0253]/ig,
-    c: /[\u0063\u24D2\uFF43\u0107\u0109\u010B\u010D\u00E7\u1E09\u0188\u023C\uA73F\u2184]/ig,
-    d: /[\u0064\u24D3\uFF44\u1E0B\u010F\u1E0D\u1E11\u1E13\u1E0F\u0111\u018C\u0256\u0257\uA77A]/ig,
-    dz: /[\u01F3\u01C6]/ig,
-    e: /[\u0065\u24D4\uFF45\u00E8\u00E9\u00EA\u1EC1\u1EBF\u1EC5\u1EC3\u1EBD\u0113\u1E15\u1E17\u0115\u0117\u00EB\u1EBB\u011B\u0205\u0207\u1EB9\u1EC7\u0229\u1E1D\u0119\u1E19\u1E1B\u0247\u025B\u01DD]/ig,
-    f: /[\u0066\u24D5\uFF46\u1E1F\u0192\uA77C]/ig,
-    g: /[\u0067\u24D6\uFF47\u01F5\u011D\u1E21\u011F\u0121\u01E7\u0123\u01E5\u0260\uA7A1\u1D79\uA77F]/ig,
-    h: /[\u0068\u24D7\uFF48\u0125\u1E23\u1E27\u021F\u1E25\u1E29\u1E2B\u1E96\u0127\u2C68\u2C76\u0265]/ig,
-    hv: /[\u0195]/ig,
-    i: /[\u0069\u24D8\uFF49\u00EC\u00ED\u00EE\u0129\u012B\u012D\u00EF\u1E2F\u1EC9\u01D0\u0209\u020B\u1ECB\u012F\u1E2D\u0268\u0131]/ig,
-    j: /[\u006A\u24D9\uFF4A\u0135\u01F0\u0249]/ig,
-    k: /[\u006B\u24DA\uFF4B\u1E31\u01E9\u1E33\u0137\u1E35\u0199\u2C6A\uA741\uA743\uA745\uA7A3]/ig,
-    l: /[\u006C\u24DB\uFF4C\u0140\u013A\u013E\u1E37\u1E39\u013C\u1E3D\u1E3B\u017F\u0142\u019A\u026B\u2C61\uA749\uA781\uA747]/ig,
-    lj: /[\u01C9]/ig,
-    m: /[\u006D\u24DC\uFF4D\u1E3F\u1E41\u1E43\u0271\u026F]/ig,
-    n: /[\u006E\u24DD\uFF4E\u01F9\u0144\u00F1\u1E45\u0148\u1E47\u0146\u1E4B\u1E49\u019E\u0272\u0149\uA791\uA7A5]/ig,
-    nj: /[\u01CC]/ig,
-    o: /[\u006F\u24DE\uFF4F\u00F2\u00F3\u00F4\u1ED3\u1ED1\u1ED7\u1ED5\u00F5\u1E4D\u022D\u1E4F\u014D\u1E51\u1E53\u014F\u022F\u0231\u00F6\u022B\u1ECF\u0151\u01D2\u020D\u020F\u01A1\u1EDD\u1EDB\u1EE1\u1EDF\u1EE3\u1ECD\u1ED9\u01EB\u01ED\u00F8\u01FF\u0254\uA74B\uA74D\u0275]/ig,
-    oi: /[\u01A3]/ig,
-    ou: /[\u0223]/ig,
-    oo: /[\uA74F]/ig,
-    p: /[\u0070\u24DF\uFF50\u1E55\u1E57\u01A5\u1D7D\uA751\uA753\uA755]/ig,
-    q: /[\u0071\u24E0\uFF51\u024B\uA757\uA759]/ig,
-    r: /[\u0072\u24E1\uFF52\u0155\u1E59\u0159\u0211\u0213\u1E5B\u1E5D\u0157\u1E5F\u024D\u027D\uA75B\uA7A7\uA783]/ig,
-    s: /[\u0073\u24E2\uFF53\u015B\u1E65\u015D\u1E61\u0161\u1E67\u1E63\u1E69\u0219\u015F\u023F\uA7A9\uA785\u1E9B]/ig,
-    ss: /[\u00DF\u1E9E]/ig,
-    t: /[\u0074\u24E3\uFF54\u1E6B\u1E97\u0165\u1E6D\u021B\u0163\u1E71\u1E6F\u0167\u01AD\u0288\u2C66\uA787]/ig,
-    tz: /[\uA729]/ig,
-    u: /[\u0075\u24E4\uFF55\u00F9\u00FA\u00FB\u0169\u1E79\u016B\u1E7B\u016D\u00FC\u01DC\u01D8\u01D6\u01DA\u1EE7\u016F\u0171\u01D4\u0215\u0217\u01B0\u1EEB\u1EE9\u1EEF\u1EED\u1EF1\u1EE5\u1E73\u0173\u1E77\u1E75\u0289]/ig,
-    v: /[\u0076\u24E5\uFF56\u1E7D\u1E7F\u028B\uA75F\u028C]/ig,
-    vy: /[\uA761]/ig,
-    w: /[\u0077\u24E6\uFF57\u1E81\u1E83\u0175\u1E87\u1E85\u1E98\u1E89\u2C73]/ig,
-    x: /[\u0078\u24E7\uFF58\u1E8B\u1E8D]/ig,
-    y: /[\u0079\u24E8\uFF59\u1EF3\u00FD\u0177\u1EF9\u0233\u1E8F\u00FF\u1EF7\u1E99\u1EF5\u01B4\u024F\u1EFF]/ig,
-    z: /[\u007A\u24E9\uFF5A\u017A\u1E91\u017C\u017E\u1E93\u1E95\u01B6\u0225\u0240\u2C6C\uA763]/ig,
-    '': /[\u0300\u0301\u0302\u0303\u0308]/ig
-};
-exports.ALPHABET = ALPHABET;
 
 
 /***/ }),
@@ -13220,14 +13221,13 @@ exports.ArticleTagsSubscriptionsRoute = ArticleTagsSubscriptionsRoute;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
-var _1 = __webpack_require__(/*! ./ */ "./src/modules/article/index.ts");
 var BaasicArticleUtility = /** @class */ (function () {
     function BaasicArticleUtility() {
         this.utility = new common_1.Utility();
     }
     BaasicArticleUtility.prototype.replaceDiacritics = function (str) {
-        for (var letter in _1.ALPHABET) {
-            str = str.replace(_1.ALPHABET[letter], letter);
+        for (var letter in common_1.ALPHABET) {
+            str = str.replace(common_1.ALPHABET[letter], letter);
         }
         return str;
     };
@@ -13667,7 +13667,6 @@ exports.diModule = diModule;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 tslib_1.__exportStar(__webpack_require__(/*! ./diModule */ "./src/modules/article/diModule.ts"), exports);
-tslib_1.__exportStar(__webpack_require__(/*! ./alphabet */ "./src/modules/article/alphabet.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./constants */ "./src/modules/article/constants.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./contracts */ "./src/modules/article/contracts/index.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./articleUtility */ "./src/modules/article/articleUtility.ts"), exports);
@@ -13759,7 +13758,7 @@ exports.Root = Root;
 
 /* globals module */
 /**
- * @module articleClient
+ * @module blogClient
  * @description  Blogs Client provides an easy way to consume  Blogs REST API end-points. In order to obtain needed routes `articleClient` uses `articleRoute`.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -13952,6 +13951,7 @@ var BlogPostClient = /** @class */ (function () {
         this.blogRoute = blogRoute;
         this.apiClient = apiClient;
         this.utility = new common_1.Utility();
+        this.blogPostUtility = new _1.BaasicBlogPostUtility();
     }
     Object.defineProperty(BlogPostClient.prototype, "routeDefinition", {
         /**
@@ -15691,6 +15691,345 @@ exports.BlogPostRoute = BlogPostRoute;
 
 /***/ }),
 
+/***/ "./src/modules/blog/BlogPostStatusClient.ts":
+/*!**************************************************!*\
+  !*** ./src/modules/blog/BlogPostStatusClient.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/* globals module */
+/**
+ * @module blogPostStatusClient
+ * @description  Blog Post Status Client provides an easy way to consume  Blogs REST API end-points. In order to obtain needed routes `blogPostStatusClient` uses `blogPostStatusRoute`.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+var httpApi_1 = __webpack_require__(/*! ../../httpApi */ "./src/httpApi/index.ts");
+var _1 = __webpack_require__(/*! ./ */ "./src/modules/blog/index.ts");
+var BlogPostStatusClient = /** @class */ (function () {
+    function BlogPostStatusClient(blogPostStatusRoute, apiClient) {
+        this.blogPostStatusRoute = blogPostStatusRoute;
+        this.apiClient = apiClient;
+        this.utility = new common_1.Utility();
+    }
+    Object.defineProperty(BlogPostStatusClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `blogPostStatusRoute`.
+         * @method
+         * @example blogPostStatusClient.routeDefinition.get();
+         **/
+        get: function () {
+            return this.blogPostStatusRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of blog post statuses resources matching the given criteria.
+     * @method
+     * @param options A promise that is resolved once the find action has been performed.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example blogPostStatusClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    BlogPostStatusClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns a single article resource.
+     * @method
+     * @param id Blog slug or id which uniquely identifies article resource that needs to be retrieved.
+     * @param options Options object that contains embed items.
+     * @returns a promise that is resolved once the get action has been performed.
+     * @example articleClient.get('<article-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    BlogPostStatusClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create blog post status action has been performed, this action creates a new blog post status resource.
+     * @method
+     * @param data An blog post status object that needs to be inserted into the system.
+     * @returns a promise that is resolved once the create blog post status action has been performed.
+     * @example blogPostStatusClient.create({
+                    name : '<name>',
+                    abrv : '<abrv>',
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    BlogPostStatusClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update blog post status action has been performed; this action updates an blog post status resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `blogPostStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(blogPostStatus);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An blogPostStatus object that needs to be updated into the system.
+     * @returns A promise that is resolved once the update blogPostStatus action has been performed.
+     * @example // blogPostStatus is a resource previously fetched using get action.
+                    blogPostStatus.name = '<name>';
+                    blogPostStatusClient.update(blogPostStatus)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    BlogPostStatusClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove blog post status action has been performed. If the action is successfully completed, the blogPostStatus resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `blogPostStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(article);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An blogPostStatus object that needs to be removed from the system.
+     * @returns A promise that is resolved once the remove blogPostStatus action has been performed.
+     * @example // blogPostStatus is a resource previously fetched using get action.
+                    blogPostStatusClient.remove(blogPostStatus)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    BlogPostStatusClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the purge blogPostStatus action has been performed. Please note that all blogPostStatus resources will be deleted from the system once the action is successfully completed and therefore it can only be executed by user assigned to account owner role.
+     * @method
+     * @example blogPostStatusClient.purge()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    BlogPostStatusClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    var _a, _b;
+    BlogPostStatusClient = tslib_1.__decorate([
+        inversify_1.injectable(),
+        tslib_1.__param(0, inversify_1.inject(_1.TYPES.BlogPostStatusRoute)),
+        tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+        tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.BlogPostStatusRoute !== "undefined" && _1.BlogPostStatusRoute) === "function" ? _a : Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" ? _b : Object])
+    ], BlogPostStatusClient);
+    return BlogPostStatusClient;
+}());
+exports.BlogPostStatusClient = BlogPostStatusClient;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+
+/***/ "./src/modules/blog/BlogPostStatusRoute.ts":
+/*!*************************************************!*\
+  !*** ./src/modules/blog/BlogPostStatusRoute.ts ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/* globals module */
+/**
+ * @module blogPostStatusRoute
+ * @description Baasic Blog Post Status Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Blog Post Status Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+var contracts_1 = __webpack_require__(/*! ../../core/contracts */ "./src/core/contracts/index.ts");
+var BlogPostStatusRoute = /** @class */ (function (_super) {
+    tslib_1.__extends(BlogPostStatusRoute, _super);
+    function BlogPostStatusRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'loookups/blog-post-statuses/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'loookups/blog-post-statuses/{id}/{?embed,fields}';
+        _this.purgeRoute = 'loookups/blog-post-statuses/purge';
+        _this.createRoute = 'loookups/blog-post-statuses';
+        _this.updateRoute = 'loookups/blog-post-statuses/{id}';
+        _this.deleteRoute = 'loookups/blog-post-statuses/{id}';
+        return _this;
+    }
+    /**
+     * Parses find blog post status route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing blog properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain blog subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the blog property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * - `startDate` - A value used to specify the blog creation, publish or archive date date starting from which blog resource collection should be returned.
+     * - `endDate` - A value used to specify the blog creation, publish or archive date until (and including) which blog resource collection should be returned.
+     * @method
+     * @param options A promise that is resolved once the find action has been performed.
+     * @example blogPostStatusRoute.find.expand({searchQuery: '<search-phrase>'});
+     **/
+    BlogPostStatusRoute.prototype.find = function (options) {
+        var opt = options || {};
+        return _super.prototype.baseFind.call(this, this.findRoute, opt);
+    };
+    /**
+     * Parses get blog route which must be expanded with the Id of the previously created blog resource in the system. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param id blog slug or id which uniquely identifies blog resource that needs to be retrieved.
+     * @param options Options object that contains embed items.
+     * @example blogPostStatusRoute.get({id: '<blog-id>'});
+     **/
+    BlogPostStatusRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses purge blog route, this URI template doesn't expose any additional properties.
+     * @method
+     * @example blogPostStatusRoute.purge();
+     **/
+    BlogPostStatusRoute.prototype.purge = function () {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
+    };
+    /**
+     * Parses create blog post status route; this URI template doesn't expose any additional properties.
+     * @method
+     * @example blogPostStatusRoute.create();
+     **/
+    BlogPostStatusRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update blog post status route; this URI template doesn't expose any additional properties.
+     * @method
+     * @param data An blog post status object that needs to be updated into the system.
+     * @example blogPostStatusRoute.update(data);
+     **/
+    BlogPostStatusRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete blog post status route; this URI template doesn't expose any additional properties.
+     * @method
+     * @param data An blog post status object that needs to be removed from the system.
+     * @example blogPostStatusRoute.delete(data);
+     **/
+    BlogPostStatusRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    var _a;
+    BlogPostStatusRoute = tslib_1.__decorate([
+        inversify_1.injectable(),
+        tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+        tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" ? _a : Object])
+    ], BlogPostStatusRoute);
+    return BlogPostStatusRoute;
+}(common_1.BaseRoute));
+exports.BlogPostStatusRoute = BlogPostStatusRoute;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+
+/***/ "./src/modules/blog/BlogPostUtility.ts":
+/*!*********************************************!*\
+  !*** ./src/modules/blog/BlogPostUtility.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+var BaasicBlogPostUtility = /** @class */ (function () {
+    function BaasicBlogPostUtility() {
+        this.utility = new common_1.Utility();
+    }
+    BaasicBlogPostUtility.prototype.replaceDiacritics = function (str) {
+        for (var letter in common_1.ALPHABET) {
+            str = str.replace(common_1.ALPHABET[letter], letter);
+        }
+        return str;
+    };
+    BaasicBlogPostUtility.prototype.toSlug = function (str) {
+        if (this.utility.isUndefined(str) || str === null || str === '') {
+            return str;
+        }
+        str = this.replaceDiacritics(str);
+        str = str.toLowerCase();
+        str = str.replace(/[^a-z0-9]+/g, '-');
+        str = str.replace(/^-|-$/g, '');
+        return str;
+    };
+    BaasicBlogPostUtility.prototype.updateSlug = function (resource) {
+        var newSlug = this.toSlug(resource.slug);
+        if (this.utility.isUndefined(newSlug) || newSlug === null || newSlug === '') {
+            newSlug = this.toSlug(resource.title);
+        }
+        if (!this.utility.isUndefined(newSlug) || newSlug !== null || newSlug !== '') {
+            if (resource.slug !== newSlug) {
+                resource.slug = newSlug;
+            }
+        }
+    };
+    return BaasicBlogPostUtility;
+}());
+exports.BaasicBlogPostUtility = BaasicBlogPostUtility;
+
+
+/***/ }),
+
 /***/ "./src/modules/blog/BlogRoute.ts":
 /*!***************************************!*\
   !*** ./src/modules/blog/BlogRoute.ts ***!
@@ -16135,6 +16474,8 @@ var TYPES = {
     BlogPostFilesBatchClient: Symbol("BlogPostFilesBatchClient"),
     BlogPostFilesRoute: Symbol("BlogPostFilesRoute"),
     BlogPostFilesClient: Symbol("BlogPostFilesClient"),
+    BlogPostStatusRoute: Symbol("BlogPostStatusRoute"),
+    BlogPostStatusClient: Symbol("BlogPostStatusClient"),
     Root: Symbol("Root")
 };
 exports.TYPES = TYPES;
@@ -16153,6 +16494,8 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.BlogPostFilesBatchClient).to(_1.BlogPostFilesBatchClient);
     bind(TYPES.BlogPostFilesRoute).to(_1.BlogPostFilesRoute);
     bind(TYPES.BlogPostFilesClient).to(_1.BlogPostFilesClient);
+    bind(TYPES.BlogPostStatusRoute).to(_1.BlogPostStatusRoute);
+    bind(TYPES.BlogPostStatusClient).to(_1.BlogPostStatusClient);
     bind(TYPES.Root).to(_1.Root);
 });
 exports.diModule = diModule;
@@ -16172,6 +16515,9 @@ exports.diModule = diModule;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 tslib_1.__exportStar(__webpack_require__(/*! ./diModule */ "./src/modules/blog/diModule.ts"), exports);
+tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostUtility */ "./src/modules/blog/BlogPostUtility.ts"), exports);
+tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostStatusRoute */ "./src/modules/blog/BlogPostStatusRoute.ts"), exports);
+tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostStatusClient */ "./src/modules/blog/BlogPostStatusClient.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostRoute */ "./src/modules/blog/BlogPostRoute.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostClient */ "./src/modules/blog/BlogPostClient.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogTagRoute */ "./src/modules/blog/BlogTagRoute.ts"), exports);
@@ -16205,14 +16551,15 @@ var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.j
 var _1 = __webpack_require__(/*! ./ */ "./src/modules/blog/index.ts");
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
 var Root = /** @class */ (function () {
-    function Root(blogs, blogPosts, comments, files, tags) {
+    function Root(blogs, blogPosts, comments, files, tags, statuses) {
         this.blogs = blogs;
         this.blogPosts = blogPosts;
         this.comments = comments;
         this.files = files;
         this.tags = tags;
+        this.statuses = statuses;
     }
-    var _a, _b, _c, _d, _e;
+    var _a, _b, _c, _d, _e, _f;
     Root = tslib_1.__decorate([
         inversify_1.injectable(),
         tslib_1.__param(0, inversify_1.inject(_1.TYPES.BlogClient)),
@@ -16220,7 +16567,8 @@ var Root = /** @class */ (function () {
         tslib_1.__param(2, inversify_1.inject(_1.TYPES.BlogPostCommentClient)),
         tslib_1.__param(3, inversify_1.inject(_1.TYPES.BlogPostFilesClient)),
         tslib_1.__param(4, inversify_1.inject(_1.TYPES.BlogTagClient)),
-        tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.BlogClient !== "undefined" && _1.BlogClient) === "function" ? _a : Object, typeof (_b = typeof _1.BlogPostClient !== "undefined" && _1.BlogPostClient) === "function" ? _b : Object, typeof (_c = typeof _1.BlogPostCommentClient !== "undefined" && _1.BlogPostCommentClient) === "function" ? _c : Object, typeof (_d = typeof _1.BlogPostFilesClient !== "undefined" && _1.BlogPostFilesClient) === "function" ? _d : Object, typeof (_e = typeof _1.BlogTagClient !== "undefined" && _1.BlogTagClient) === "function" ? _e : Object])
+        tslib_1.__param(5, inversify_1.inject(_1.TYPES.BlogPostStatusClient)),
+        tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.BlogClient !== "undefined" && _1.BlogClient) === "function" ? _a : Object, typeof (_b = typeof _1.BlogPostClient !== "undefined" && _1.BlogPostClient) === "function" ? _b : Object, typeof (_c = typeof _1.BlogPostCommentClient !== "undefined" && _1.BlogPostCommentClient) === "function" ? _c : Object, typeof (_d = typeof _1.BlogPostFilesClient !== "undefined" && _1.BlogPostFilesClient) === "function" ? _d : Object, typeof (_e = typeof _1.BlogTagClient !== "undefined" && _1.BlogTagClient) === "function" ? _e : Object, typeof (_f = typeof _1.BlogPostStatusClient !== "undefined" && _1.BlogPostStatusClient) === "function" ? _f : Object])
     ], Root);
     return Root;
 }());

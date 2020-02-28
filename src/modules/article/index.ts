@@ -1,5 +1,4 @@
 export * from './diModule';
-export * from './alphabet';
 export * from './constants';
 export * from './contracts';
 export * from './articleUtility';

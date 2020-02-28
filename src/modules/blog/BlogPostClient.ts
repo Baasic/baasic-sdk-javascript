@@ -9,12 +9,14 @@ import { IQueryModel, IGetRequestOptions } from '../../common/contracts';;
 import { Utility } from '../../common';
 import { ApiClient, IHttpResponse, httpTYPES } from '../../httpApi';
 import { IBlogPost, IBlogPostOptions } from './contracts';
-import { BlogPostRoute, TYPES as blogTypes } from './';
+import { BlogPostRoute, BaasicBlogPostUtility, TYPES as blogTypes } from './';
 
 @injectable()
 export class BlogPostClient {
 
     private utility: Utility = new Utility();
+
+    public blogPostUtility: BaasicBlogPostUtility = new BaasicBlogPostUtility();
 
     /**
      * Provides direct access to `IBlogPostRoute`.
