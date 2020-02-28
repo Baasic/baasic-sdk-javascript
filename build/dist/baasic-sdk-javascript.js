@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.1.0-inter02 - Thursday, February 27th, 2020, 1:30:46 PM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.1.0-inter03 - Friday, February 28th, 2020, 9:14:13 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -13760,7 +13760,7 @@ exports.Root = Root;
 
 /* globals module */
 /**
- * @module articleClient
+ * @module blogClient
  * @description  Blogs Client provides an easy way to consume  Blogs REST API end-points. In order to obtain needed routes `articleClient` uses `articleRoute`.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -15692,6 +15692,296 @@ exports.BlogPostRoute = BlogPostRoute;
 
 /***/ }),
 
+/***/ "./src/modules/blog/BlogPostStatusClient.ts":
+/*!**************************************************!*\
+  !*** ./src/modules/blog/BlogPostStatusClient.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/* globals module */
+/**
+ * @module blogPostStatusClient
+ * @description  Blog Post Status Client provides an easy way to consume  Blogs REST API end-points. In order to obtain needed routes `blogPostStatusClient` uses `blogPostStatusRoute`.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+var httpApi_1 = __webpack_require__(/*! ../../httpApi */ "./src/httpApi/index.ts");
+var _1 = __webpack_require__(/*! ./ */ "./src/modules/blog/index.ts");
+var BlogPostStatusClient = /** @class */ (function () {
+    function BlogPostStatusClient(blogPostStatusRoute, apiClient) {
+        this.blogPostStatusRoute = blogPostStatusRoute;
+        this.apiClient = apiClient;
+        this.utility = new common_1.Utility();
+    }
+    Object.defineProperty(BlogPostStatusClient.prototype, "routeDefinition", {
+        /**
+         * Provides direct access to `blogPostStatusRoute`.
+         * @method
+         * @example blogPostStatusClient.routeDefinition.get();
+         **/
+        get: function () {
+            return this.blogPostStatusRoute;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns a promise that is resolved once the find action has been performed. Success response returns a list of blog post statuses resources matching the given criteria.
+     * @method
+     * @param options A promise that is resolved once the find action has been performed.
+     * @returns A promise that is resolved once the find action has been performed.
+     * @example blogPostStatusClient.find({
+                    pageNumber : 1,
+                    pageSize : 10,
+                    orderBy : '<field>',
+                    orderDirection : '<asc|desc>',
+                    search : '<search-phrase>'
+                })
+                .then(function (collection) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    BlogPostStatusClient.prototype.find = function (options) {
+        return this.apiClient.get(this.routeDefinition.find(options));
+    };
+    /**
+     * Returns a promise that is resolved once the get action has been performed. Success response returns a single article resource.
+     * @method
+     * @param id Blog slug or id which uniquely identifies article resource that needs to be retrieved.
+     * @param options Options object that contains embed items.
+     * @returns a promise that is resolved once the get action has been performed.
+     * @example articleClient.get('<article-id>')
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    BlogPostStatusClient.prototype.get = function (id, options) {
+        return this.apiClient.get(this.routeDefinition.get(id, options));
+    };
+    /**
+     * Returns a promise that is resolved once the create blog post status action has been performed, this action creates a new blog post status resource.
+     * @method
+     * @param data An blog post status object that needs to be inserted into the system.
+     * @returns a promise that is resolved once the create blog post status action has been performed.
+     * @example blogPostStatusClient.create({
+                    name : '<name>',
+                    abrv : '<abrv>',
+                })
+                .then(function (data) {
+                    // perform success action here
+                },
+                 function (response, status, headers, config) {
+                     // perform error handling here
+                });
+     **/
+    BlogPostStatusClient.prototype.create = function (data) {
+        return this.apiClient.post(this.routeDefinition.create(), this.routeDefinition.createParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the update blog post status action has been performed; this action updates an blog post status resource. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `blogPostStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.updateParams(blogPostStatus);
+     * let uri = params['model'].links('put').href;
+     * ```
+     * @method
+     * @param data An blogPostStatus object that needs to be updated into the system.
+     * @returns A promise that is resolved once the update blogPostStatus action has been performed.
+     * @example // blogPostStatus is a resource previously fetched using get action.
+                    blogPostStatus.name = '<name>';
+                    blogPostStatusClient.update(blogPostStatus)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    BlogPostStatusClient.prototype.update = function (data) {
+        return this.apiClient.put(this.routeDefinition.update(data), this.routeDefinition.updateParams(data));
+    };
+    /**
+     * Returns a promise that is resolved once the remove blog post status action has been performed. If the action is successfully completed, the blogPostStatus resource will be permanently removed from the system. This route uses HAL enabled objects to obtain routes and therefore it doesn't apply `blogPostStatusRoute` route template. Here is an example of how a route can be obtained from HAL enabled objects:
+     * ```
+     * let params = modelMapper.removeParams(article);
+     * let uri = params['model'].links('delete').href;
+     * ```
+     * @method
+     * @param data An blogPostStatus object that needs to be removed from the system.
+     * @returns A promise that is resolved once the remove blogPostStatus action has been performed.
+     * @example // blogPostStatus is a resource previously fetched using get action.
+                    blogPostStatusClient.remove(blogPostStatus)
+                        .then(function (data) {
+                            // perform success action here
+                        },
+                         function (response, status, headers, config) {
+                             // perform error handling here
+                        });
+     **/
+    BlogPostStatusClient.prototype.remove = function (data) {
+        return this.apiClient.delete(this.routeDefinition.delete(data));
+    };
+    /**
+     * Returns a promise that is resolved once the purge blogPostStatus action has been performed. Please note that all blogPostStatus resources will be deleted from the system once the action is successfully completed and therefore it can only be executed by user assigned to account owner role.
+     * @method
+     * @example blogPostStatusClient.purge()
+                    .then(function (data) {
+                        // perform success action here
+                    },
+                     function (response, status, headers, config) {
+                         // perform error handling here
+                    });
+     **/
+    BlogPostStatusClient.prototype.purge = function () {
+        return this.apiClient.delete(this.routeDefinition.purge());
+    };
+    var _a, _b;
+    BlogPostStatusClient = tslib_1.__decorate([
+        inversify_1.injectable(),
+        tslib_1.__param(0, inversify_1.inject(_1.TYPES.BlogPostStatusRoute)),
+        tslib_1.__param(1, inversify_1.inject(httpApi_1.httpTYPES.ApiClient)),
+        tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.BlogPostStatusRoute !== "undefined" && _1.BlogPostStatusRoute) === "function" ? _a : Object, typeof (_b = typeof httpApi_1.ApiClient !== "undefined" && httpApi_1.ApiClient) === "function" ? _b : Object])
+    ], BlogPostStatusClient);
+    return BlogPostStatusClient;
+}());
+exports.BlogPostStatusClient = BlogPostStatusClient;
+/**
+ * @overview
+ ***Notes:**
+ - Refer to the [REST API documentation](https://github.com/Baasic/baasic-rest-api/wiki) for detailed information about available Baasic REST API end-points.
+ - All end-point objects are transformed by the associated route service.
+ */ 
+
+
+/***/ }),
+
+/***/ "./src/modules/blog/BlogPostStatusRoute.ts":
+/*!*************************************************!*\
+  !*** ./src/modules/blog/BlogPostStatusRoute.ts ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/* globals module */
+/**
+ * @module blogPostStatusRoute
+ * @description Baasic Blog Post Status Route Definition provides Baasic route templates which can be expanded to Baasic REST URIs. Various services can use Baasic Blog Post Status Route Service to obtain needed routes while other routes will be obtained through HAL. By convention, all route services use the same function names as their corresponding services.
+*/
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
+var common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+var contracts_1 = __webpack_require__(/*! ../../core/contracts */ "./src/core/contracts/index.ts");
+var BlogPostStatusRoute = /** @class */ (function (_super) {
+    tslib_1.__extends(BlogPostStatusRoute, _super);
+    function BlogPostStatusRoute(appOptions) {
+        var _this = _super.call(this, appOptions) || this;
+        _this.appOptions = appOptions;
+        _this.findRoute = 'loookups/blog-post-statuses/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+        _this.getRoute = 'loookups/blog-post-statuses/{id}/{?embed,fields}';
+        _this.purgeRoute = 'loookups/blog-post-statuses/purge';
+        _this.createRoute = 'loookups/blog-post-statuses';
+        _this.updateRoute = 'loookups/blog-post-statuses/{id}';
+        _this.deleteRoute = 'loookups/blog-post-statuses/{id}';
+        return _this;
+    }
+    /**
+     * Parses find blog post status route which can be expanded with additional options. Supported items are:
+     * - `searchQuery` - A string referencing blog properties using the phrase or BQL (Baasic Query Language) search.
+     * - `page` - A value used to set the page number, i.e. to retrieve certain blog subset from the storage.
+     * - `rpp` - A value used to limit the size of result set per page.
+     * - `sort` - A string used to set the blog property to sort the result collection by.
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * - `startDate` - A value used to specify the blog creation, publish or archive date date starting from which blog resource collection should be returned.
+     * - `endDate` - A value used to specify the blog creation, publish or archive date until (and including) which blog resource collection should be returned.
+     * @method
+     * @param options A promise that is resolved once the find action has been performed.
+     * @example blogPostStatusRoute.find.expand({searchQuery: '<search-phrase>'});
+     **/
+    BlogPostStatusRoute.prototype.find = function (options) {
+        var opt = options || {};
+        return _super.prototype.baseFind.call(this, this.findRoute, opt);
+    };
+    /**
+     * Parses get blog route which must be expanded with the Id of the previously created blog resource in the system. Additional expand supported items are:
+     * - `embed` - Comma separated list of resources to be contained within the current representation.
+     * @method
+     * @param id blog slug or id which uniquely identifies blog resource that needs to be retrieved.
+     * @param options Options object that contains embed items.
+     * @example blogPostStatusRoute.get({id: '<blog-id>'});
+     **/
+    BlogPostStatusRoute.prototype.get = function (id, options) {
+        return _super.prototype.baseGet.call(this, this.getRoute, id, options);
+    };
+    /**
+     * Parses purge blog route, this URI template doesn't expose any additional properties.
+     * @method
+     * @example blogPostStatusRoute.purge();
+     **/
+    BlogPostStatusRoute.prototype.purge = function () {
+        return _super.prototype.baseDelete.call(this, this.purgeRoute, {});
+    };
+    /**
+     * Parses create blog post status route; this URI template doesn't expose any additional properties.
+     * @method
+     * @example blogPostStatusRoute.create();
+     **/
+    BlogPostStatusRoute.prototype.create = function () {
+        return _super.prototype.baseCreate.call(this, this.createRoute, {});
+    };
+    /**
+     * Parses update blog post status route; this URI template doesn't expose any additional properties.
+     * @method
+     * @param data An blog post status object that needs to be updated into the system.
+     * @example blogPostStatusRoute.update(data);
+     **/
+    BlogPostStatusRoute.prototype.update = function (data) {
+        return _super.prototype.baseUpdate.call(this, this.updateRoute, data);
+    };
+    /**
+     * Parses delete blog post status route; this URI template doesn't expose any additional properties.
+     * @method
+     * @param data An blog post status object that needs to be removed from the system.
+     * @example blogPostStatusRoute.delete(data);
+     **/
+    BlogPostStatusRoute.prototype.delete = function (data) {
+        return _super.prototype.baseDelete.call(this, this.deleteRoute, data);
+    };
+    var _a;
+    BlogPostStatusRoute = tslib_1.__decorate([
+        inversify_1.injectable(),
+        tslib_1.__param(0, inversify_1.inject(contracts_1.TYPES.IAppOptions)),
+        tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof contracts_1.IAppOptions !== "undefined" && contracts_1.IAppOptions) === "function" ? _a : Object])
+    ], BlogPostStatusRoute);
+    return BlogPostStatusRoute;
+}(common_1.BaseRoute));
+exports.BlogPostStatusRoute = BlogPostStatusRoute;
+/**
+ * @copyright (c) 2017 Mono Ltd
+ * @license MIT
+ * @author Mono Ltd
+ * @overview
+ ***Notes:**
+ - Refer to the [Baasic REST API](http://dev.baasic.com/api/reference/home) for detailed information about available Baasic REST API end-points.
+ - [URI Template](https://github.com/Baasic/uritemplate-js) syntax enables expanding the Baasic route templates to Baasic REST URIs providing it with an object that contains URI parameters.
+ - All end-point objects are transformed by the associated route service.
+*/
+
+
+/***/ }),
+
 /***/ "./src/modules/blog/BlogRoute.ts":
 /*!***************************************!*\
   !*** ./src/modules/blog/BlogRoute.ts ***!
@@ -16136,6 +16426,8 @@ var TYPES = {
     BlogPostFilesBatchClient: Symbol("BlogPostFilesBatchClient"),
     BlogPostFilesRoute: Symbol("BlogPostFilesRoute"),
     BlogPostFilesClient: Symbol("BlogPostFilesClient"),
+    BlogPostStatusRoute: Symbol("BlogPostStatusRoute"),
+    BlogPostStatusClient: Symbol("BlogPostStatusClient"),
     Root: Symbol("Root")
 };
 exports.TYPES = TYPES;
@@ -16154,6 +16446,8 @@ var diModule = new inversify_1.ContainerModule(function (bind) {
     bind(TYPES.BlogPostFilesBatchClient).to(_1.BlogPostFilesBatchClient);
     bind(TYPES.BlogPostFilesRoute).to(_1.BlogPostFilesRoute);
     bind(TYPES.BlogPostFilesClient).to(_1.BlogPostFilesClient);
+    bind(TYPES.BlogPostStatusRoute).to(_1.BlogPostStatusRoute);
+    bind(TYPES.BlogPostStatusClient).to(_1.BlogPostStatusClient);
     bind(TYPES.Root).to(_1.Root);
 });
 exports.diModule = diModule;
@@ -16173,6 +16467,8 @@ exports.diModule = diModule;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 tslib_1.__exportStar(__webpack_require__(/*! ./diModule */ "./src/modules/blog/diModule.ts"), exports);
+tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostStatusRoute */ "./src/modules/blog/BlogPostStatusRoute.ts"), exports);
+tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostStatusClient */ "./src/modules/blog/BlogPostStatusClient.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostRoute */ "./src/modules/blog/BlogPostRoute.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostClient */ "./src/modules/blog/BlogPostClient.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogTagRoute */ "./src/modules/blog/BlogTagRoute.ts"), exports);
@@ -16206,14 +16502,15 @@ var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.j
 var _1 = __webpack_require__(/*! ./ */ "./src/modules/blog/index.ts");
 var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify/lib/inversify.js");
 var Root = /** @class */ (function () {
-    function Root(blogs, blogPosts, comments, files, tags) {
+    function Root(blogs, blogPosts, comments, files, tags, statuses) {
         this.blogs = blogs;
         this.blogPosts = blogPosts;
         this.comments = comments;
         this.files = files;
         this.tags = tags;
+        this.statuses = statuses;
     }
-    var _a, _b, _c, _d, _e;
+    var _a, _b, _c, _d, _e, _f;
     Root = tslib_1.__decorate([
         inversify_1.injectable(),
         tslib_1.__param(0, inversify_1.inject(_1.TYPES.BlogClient)),
@@ -16221,7 +16518,8 @@ var Root = /** @class */ (function () {
         tslib_1.__param(2, inversify_1.inject(_1.TYPES.BlogPostCommentClient)),
         tslib_1.__param(3, inversify_1.inject(_1.TYPES.BlogPostFilesClient)),
         tslib_1.__param(4, inversify_1.inject(_1.TYPES.BlogTagClient)),
-        tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.BlogClient !== "undefined" && _1.BlogClient) === "function" ? _a : Object, typeof (_b = typeof _1.BlogPostClient !== "undefined" && _1.BlogPostClient) === "function" ? _b : Object, typeof (_c = typeof _1.BlogPostCommentClient !== "undefined" && _1.BlogPostCommentClient) === "function" ? _c : Object, typeof (_d = typeof _1.BlogPostFilesClient !== "undefined" && _1.BlogPostFilesClient) === "function" ? _d : Object, typeof (_e = typeof _1.BlogTagClient !== "undefined" && _1.BlogTagClient) === "function" ? _e : Object])
+        tslib_1.__param(5, inversify_1.inject(_1.TYPES.BlogPostStatusClient)),
+        tslib_1.__metadata("design:paramtypes", [typeof (_a = typeof _1.BlogClient !== "undefined" && _1.BlogClient) === "function" ? _a : Object, typeof (_b = typeof _1.BlogPostClient !== "undefined" && _1.BlogPostClient) === "function" ? _b : Object, typeof (_c = typeof _1.BlogPostCommentClient !== "undefined" && _1.BlogPostCommentClient) === "function" ? _c : Object, typeof (_d = typeof _1.BlogPostFilesClient !== "undefined" && _1.BlogPostFilesClient) === "function" ? _d : Object, typeof (_e = typeof _1.BlogTagClient !== "undefined" && _1.BlogTagClient) === "function" ? _e : Object, typeof (_f = typeof _1.BlogPostStatusClient !== "undefined" && _1.BlogPostStatusClient) === "function" ? _f : Object])
     ], Root);
     return Root;
 }());
