@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.1.0-inter03 - Friday, February 28th, 2020, 9:14:13 AM  
-=======
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.11-beta05 - Friday, February 28th, 2020, 10:36:43 AM  
->>>>>>> develop
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.1.0-inter04 - Friday, February 28th, 2020, 10:38:06 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -15986,8 +15982,6 @@ exports.BlogPostStatusRoute = BlogPostStatusRoute;
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "./src/modules/blog/BlogPostUtility.ts":
 /*!*********************************************!*\
   !*** ./src/modules/blog/BlogPostUtility.ts ***!
@@ -16037,7 +16031,6 @@ exports.BaasicBlogPostUtility = BaasicBlogPostUtility;
 
 /***/ }),
 
->>>>>>> develop
 /***/ "./src/modules/blog/BlogRoute.ts":
 /*!***************************************!*\
   !*** ./src/modules/blog/BlogRoute.ts ***!
@@ -16523,10 +16516,7 @@ exports.diModule = diModule;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 tslib_1.__exportStar(__webpack_require__(/*! ./diModule */ "./src/modules/blog/diModule.ts"), exports);
-<<<<<<< HEAD
-=======
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostUtility */ "./src/modules/blog/BlogPostUtility.ts"), exports);
->>>>>>> develop
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostStatusRoute */ "./src/modules/blog/BlogPostStatusRoute.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostStatusClient */ "./src/modules/blog/BlogPostStatusClient.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./BlogPostRoute */ "./src/modules/blog/BlogPostRoute.ts"), exports);
