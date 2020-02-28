@@ -1,5 +1,4 @@
-import { Utility } from '../../common';
-import { ALPHABET as alphabet } from './';
+import { ALPHABET as alphabet, Utility } from '../../common';
 
 export class BaasicArticleUtility {
 
