@@ -13,17 +13,17 @@ import { IBlogPostStatus } from './contracts';
 @injectable()
 export class BlogPostStatusRoute extends BaseRoute {
 
-    public readonly findRoute: string = 'loookups/blog-post-statuses/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
+    public readonly findRoute: string = 'lookups/blog-post-statuses/{?searchQuery,ids,from,to,page,rpp,sort,embed,fields}';
 
-    public readonly getRoute: string = 'loookups/blog-post-statuses/{id}/{?embed,fields}';
+    public readonly getRoute: string = 'lookups/blog-post-statuses/{id}/{?embed,fields}';
 
-    public readonly purgeRoute: string = 'loookups/blog-post-statuses/purge';
+    public readonly purgeRoute: string = 'lookups/blog-post-statuses/purge';
 
-    public readonly createRoute: string = 'loookups/blog-post-statuses';
+    public readonly createRoute: string = 'lookups/blog-post-statuses';
 
-    public readonly updateRoute: string = 'loookups/blog-post-statuses/{id}';
+    public readonly updateRoute: string = 'lookups/blog-post-statuses/{id}';
 
-    public readonly deleteRoute: string = 'loookups/blog-post-statuses/{id}';    
+    public readonly deleteRoute: string = 'lookups/blog-post-statuses/{id}';    
 
     constructor(        
         @inject(coreTypes.IAppOptions) protected appOptions: IAppOptions
