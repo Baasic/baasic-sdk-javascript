@@ -86,24 +86,24 @@ export class ApiClient {
         return promise;
     }
 
-    get<TResponse>(url: string, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest<TResponse>(url, "GET", undefined, headers);
+    get<TResponse>(url: string, headers?: IHttpHeaders, abortSignal?: IAbortSignal): PromiseLike<IHttpResponse<TResponse>> {
+        return this.internalRequest<TResponse>(url, "GET", undefined, headers, abortSignal);
     }
 
-    delete<TResponse>(url: string, headers?: IHttpHeaders, data?: any): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest<TResponse>(url, "DELETE", data, headers);
+    delete<TResponse>(url: string, headers?: IHttpHeaders, data?: any, abortSignal?: IAbortSignal): PromiseLike<IHttpResponse<TResponse>> {
+        return this.internalRequest<TResponse>(url, "DELETE", data, headers, abortSignal);
     }
 
-    post<TResponse>(url: string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest<TResponse>(url, "POST", data, headers);
+    post<TResponse>(url: string, data: any, headers?: IHttpHeaders, abortSignal?: IAbortSignal): PromiseLike<IHttpResponse<TResponse>> {
+        return this.internalRequest<TResponse>(url, "POST", data, headers, abortSignal);
     }
 
-    put<TResponse>(url: string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest<TResponse>(url, "PUT", data, headers);
+    put<TResponse>(url: string, data: any, headers?: IHttpHeaders, abortSignal?: IAbortSignal): PromiseLike<IHttpResponse<TResponse>> {
+        return this.internalRequest<TResponse>(url, "PUT", data, headers, abortSignal);
     }
 
-    patch<TResponse>(url: string, data: any, headers?: IHttpHeaders): PromiseLike<IHttpResponse<TResponse>> {
-        return this.internalRequest<TResponse>(url, "PATCH", data, headers);
+    patch<TResponse>(url: string, data: any, headers?: IHttpHeaders, abortSignal?: IAbortSignal): PromiseLike<IHttpResponse<TResponse>> {
+        return this.internalRequest<TResponse>(url, "PATCH", data, headers, abortSignal);
     }
 
     private compileUrl(url: string): string {
