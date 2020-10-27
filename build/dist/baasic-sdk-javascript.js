@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.11-beta05 - Friday, February 28th, 2020, 10:36:43 AM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.11-beta05 - Tuesday, October 27th, 2020, 10:24:22 AM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -5775,20 +5775,20 @@ var ApiClient = /** @class */ (function () {
         });
         return promise;
     };
-    ApiClient.prototype.get = function (url, headers) {
-        return this.internalRequest(url, "GET", undefined, headers);
+    ApiClient.prototype.get = function (url, headers, abortSignal) {
+        return this.internalRequest(url, "GET", undefined, headers, abortSignal);
     };
-    ApiClient.prototype.delete = function (url, headers, data) {
-        return this.internalRequest(url, "DELETE", data, headers);
+    ApiClient.prototype.delete = function (url, headers, data, abortSignal) {
+        return this.internalRequest(url, "DELETE", data, headers, abortSignal);
     };
-    ApiClient.prototype.post = function (url, data, headers) {
-        return this.internalRequest(url, "POST", data, headers);
+    ApiClient.prototype.post = function (url, data, headers, abortSignal) {
+        return this.internalRequest(url, "POST", data, headers, abortSignal);
     };
-    ApiClient.prototype.put = function (url, data, headers) {
-        return this.internalRequest(url, "PUT", data, headers);
+    ApiClient.prototype.put = function (url, data, headers, abortSignal) {
+        return this.internalRequest(url, "PUT", data, headers, abortSignal);
     };
-    ApiClient.prototype.patch = function (url, data, headers) {
-        return this.internalRequest(url, "PATCH", data, headers);
+    ApiClient.prototype.patch = function (url, data, headers, abortSignal) {
+        return this.internalRequest(url, "PATCH", data, headers, abortSignal);
     };
     ApiClient.prototype.compileUrl = function (url) {
         if (!ApiClient_1.httpTest.test(url)) {
