@@ -29,6 +29,14 @@ export class TokenHandler implements ITokenHandler {
         tokenUpdated: 'tokenUpdated'
     };
 
+    public get tokenExpiredEventName() {
+        return `tokenExpired-${this.application.getApiKey()}`;
+    }
+
+    public get tokenUpdatedEventName() {
+        return `tokenUpdated-${this.application.getApiKey()}`;
+    }
+
     store(token: IToken): void {
         //Type guard for plain JavaScript
         var anyToken: IToken | any = token;
@@ -69,7 +77,7 @@ export class TokenHandler implements ITokenHandler {
 
     triggerTokenExpired(app: IBaasicApp) {
         var data = { app: app };
-        this.eventHandler.triggerEvent('tokenExpired', data);
+        this.eventHandler.triggerEvent(this.tokenExpiredEventName, data);
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.tokenExpired
@@ -78,7 +86,7 @@ export class TokenHandler implements ITokenHandler {
 
     triggerTokenUpdated(app: IBaasicApp) {
         var data = { app: app };
-        this.eventHandler.triggerEvent('tokenUpdated', data);
+        this.eventHandler.triggerEvent(this.tokenUpdatedEventName, data);
 
         this.eventHandler.pushMessage({
             type: this.messageTypes.tokenUpdated
@@ -116,7 +124,7 @@ export class TokenHandler implements ITokenHandler {
 
 
     initEventing(): void {
-        this.eventHandler.addEvent('tokenExpired', e => {
+        this.eventHandler.addEvent(this.tokenExpiredEventName, e => {
             e = e || event;
             if (e.originalEvent) {
                 e = e.originalEvent;
