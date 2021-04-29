@@ -1,4 +1,4 @@
-// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.11-beta06 - Thursday, April 29th, 2021, 11:38:57 AM  
+// [Baasic JavaScript SDK (c) 2016 Mono Software Ltd.]  Build version: 2.0.11-beta06 - Thursday, April 29th, 2021, 1:07:19 PM  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -3863,7 +3863,7 @@ var BaasicApp = /** @class */ (function () {
         this.settings = this.utility.extendAs({}, BaasicApp.defaultSettings, opt);
         this.diModule = new _1.DIModule();
         this.diModule.init(this, [common_1.commonDIModule, core_1.coreDIModule, httpApi_1.httpDIModule, modules]);
-        // this.tokenHandler = this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
+        this.tokenHandler = this.diModule.kernel.get(contracts_1.TYPES.ITokenHandler);
         this.userHandler = this.diModule.kernel.get(contracts_1.TYPES.IUserHandler);
         this.eventHandler = this.diModule.kernel.get(contracts_1.TYPES.IEventHandler);
         this.apiClient = this.diModule.kernel.get(httpApi_1.httpTYPES.ApiClient);
@@ -3887,12 +3887,10 @@ var BaasicApp = /** @class */ (function () {
         this.blogModule = this.diModule.kernel.get(modules.Blog.TYPES.Root);
     }
     BaasicApp.prototype.getAccessToken = function () {
-        // return this.tokenHandler.get(<TokenType>TokenTypes.Access);
-        return this.diModule.kernel.get(contracts_1.TYPES.ITokenHandler).get(contracts_1.TokenTypes.Access);
+        return this.tokenHandler.get(contracts_1.TokenTypes.Access);
     };
     BaasicApp.prototype.updateAccessToken = function (value) {
-        // this.tokenHandler.store(value);
-        return this.diModule.kernel.get(contracts_1.TYPES.ITokenHandler).store(value);
+        this.tokenHandler.store(value);
     };
     BaasicApp.prototype.getApiKey = function () {
         return this.apiKey;
@@ -5125,6 +5123,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 /***/ }),
 
+/***/ "./src/core/contracts/ITokenStoreOptions.ts":
+/*!**************************************************!*\
+  !*** ./src/core/contracts/ITokenStoreOptions.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+
+
+/***/ }),
+
 /***/ "./src/core/contracts/IUser.ts":
 /*!*************************************!*\
   !*** ./src/core/contracts/IUser.ts ***!
@@ -5194,6 +5206,7 @@ var tslib_1 = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.j
 tslib_1.__exportStar(__webpack_require__(/*! ./IStorageHandler */ "./src/core/contracts/IStorageHandler.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./IEventHandler */ "./src/core/contracts/IEventHandler.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./IToken */ "./src/core/contracts/IToken.ts"), exports);
+tslib_1.__exportStar(__webpack_require__(/*! ./ITokenStoreOptions */ "./src/core/contracts/ITokenStoreOptions.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./ITokenHandler */ "./src/core/contracts/ITokenHandler.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./IUser */ "./src/core/contracts/IUser.ts"), exports);
 tslib_1.__exportStar(__webpack_require__(/*! ./IUserHandler */ "./src/core/contracts/IUserHandler.ts"), exports);
@@ -5222,7 +5235,7 @@ var inversify_1 = __webpack_require__(/*! inversify */ "./node_modules/inversify
 var contracts_1 = __webpack_require__(/*! ./contracts */ "./src/core/contracts/index.ts");
 var _1 = __webpack_require__(/*! ./ */ "./src/core/index.ts");
 var diModule = new inversify_1.ContainerModule(function (bind) {
-    bind(contracts_1.TYPES.ITokenHandler).to(_1.TokenHandler).inSingletonScope();
+    // bind<ITokenHandler>(TYPES.ITokenHandler).to(TokenHandler).inSingletonScope();
     bind(contracts_1.TYPES.IUserHandler).to(_1.UserHandler).inSingletonScope();
 });
 exports.diModule = diModule;
@@ -5365,8 +5378,7 @@ var TokenHandler = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    TokenHandler.prototype.store = function (token, skipSync) {
-        if (skipSync === void 0) { skipSync = false; }
+    TokenHandler.prototype.store = function (token, options) {
         //Type guard for plain JavaScript
         var anyToken = token;
         if (anyToken && !this.utility.isUndefined(anyToken.access_token)) {
@@ -5386,13 +5398,17 @@ var TokenHandler = /** @class */ (function () {
         else {
             this.storageHandler.set(this.tokenKey, token);
         }
-        if (!skipSync) {
-            if (token === undefined || token === null) {
-                this.triggerTokenExpired(this.application);
-            }
-            else {
-                this.triggerTokenUpdated(this.application);
-            }
+        if (options && options.skipTokenEvents) {
+            return;
+        }
+        this.handleTokenEvent(token);
+    };
+    TokenHandler.prototype.handleTokenEvent = function (token) {
+        if (token === undefined || token === null) {
+            this.triggerTokenExpired(this.application);
+        }
+        else {
+            this.triggerTokenUpdated(this.application);
         }
     };
     TokenHandler.prototype.get = function (type) {
@@ -52168,7 +52184,7 @@ var BaasicPlatform = /** @class */ (function () {
         this.settings = this.utility.extendAs({}, BaasicPlatform.defaultSettings, opt);
         this.diModule = new __1.DIModule();
         this.diModule.init(this, [common_1.commonDIModule, core_1.coreDIModule, httpApi_1.httpDIModule, modules]);
-        // this.tokenHandler = this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
+        this.tokenHandler = this.diModule.kernel.get(contracts_1.TYPES.ITokenHandler);
         this.userHandler = this.diModule.kernel.get(contracts_1.TYPES.IUserHandler);
         this.eventHandler = this.diModule.kernel.get(contracts_1.TYPES.IEventHandler);
         this.apiClient = this.diModule.kernel.get(httpApi_1.httpTYPES.ApiClient);
@@ -52180,12 +52196,10 @@ var BaasicPlatform = /** @class */ (function () {
         this.maintenanceModule = this.diModule.kernel.get(modules.Maintenance.TYPES.Root);
     }
     BaasicPlatform.prototype.getAccessToken = function () {
-        // return this.tokenHandler.get(<TokenType>TokenTypes.Access);
-        return this.diModule.kernel.get(contracts_1.TYPES.ITokenHandler).get(contracts_1.TokenTypes.Access);
+        return this.tokenHandler.get(contracts_1.TokenTypes.Access);
     };
     BaasicPlatform.prototype.updateAccessToken = function (value) {
-        // this.tokenHandler.store(value);
-        return this.diModule.kernel.get(contracts_1.TYPES.ITokenHandler).store(value);
+        this.tokenHandler.store(value);
     };
     BaasicPlatform.prototype.getApiKey = function () {
         return 'platform';

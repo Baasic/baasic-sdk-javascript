@@ -1,5 +1,5 @@
 import { Utility } from '../common';
-import { IToken, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from './contracts';
+import { IToken, ITokenStoreOptions, TokenType, TokenTypes, ITokenHandler, IEventHandler, IStorageHandler, IBaasicApp, TYPES as coreTYPES } from './contracts';
 import { injectable, inject } from "inversify";
 
 @injectable()
@@ -37,7 +37,7 @@ export class TokenHandler implements ITokenHandler {
         return `tokenUpdated-${this.application.getApiKey()}`;
     }
 
-    store(token: IToken, skipSync: boolean = false): void {
+    store(token: IToken, options?: ITokenStoreOptions): void {
         //Type guard for plain JavaScript
         var anyToken: IToken | any = token;
         if (anyToken && !this.utility.isUndefined(anyToken.access_token)) {
@@ -59,14 +59,19 @@ export class TokenHandler implements ITokenHandler {
             this.storageHandler.set(this.tokenKey, token);
         }
 
-        if (!skipSync) {
-            if (token === undefined || token === null) {
-                this.triggerTokenExpired(this.application);
-            } else {
-                this.triggerTokenUpdated(this.application);
-            }
+        if (options && options.skipTokenEvents) {
+            return;
         }
 
+        this.handleTokenEvent(token);
+    }
+
+    protected handleTokenEvent(token?: IToken) {
+        if (token === undefined || token === null) {
+            this.triggerTokenExpired(this.application);
+        } else {
+            this.triggerTokenUpdated(this.application);
+        }
     }
 
     get(type?: TokenType): IToken {

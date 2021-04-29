@@ -43,7 +43,7 @@ export class BaasicPlatform implements IBaasicPlatform {
         this.diModule = new DIModule();
         this.diModule.init(this, [commonDIModule, coreDIModule, httpDIModule, modules]);
 
-        // this.tokenHandler = this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
+        this.tokenHandler = this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler);
         this.userHandler = this.diModule.kernel.get<IUserHandler>(coreTYPES.IUserHandler);
         this.eventHandler = this.diModule.kernel.get<IEventHandler>(coreTYPES.IEventHandler);
         this.apiClient = this.diModule.kernel.get<ApiClient>(httpTYPES.ApiClient);
@@ -57,13 +57,11 @@ export class BaasicPlatform implements IBaasicPlatform {
     }
 
     getAccessToken(): IToken {
-        // return this.tokenHandler.get(<TokenType>TokenTypes.Access);
-        return this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler).get(<TokenType>TokenTypes.Access);
+        return this.tokenHandler.get(<TokenType>TokenTypes.Access);
     }
 
     updateAccessToken(value: IToken) {
-        // this.tokenHandler.store(value);
-        return this.diModule.kernel.get<ITokenHandler>(coreTYPES.ITokenHandler).store(value);
+        this.tokenHandler.store(value);
     }
 
     getApiKey(): string {
