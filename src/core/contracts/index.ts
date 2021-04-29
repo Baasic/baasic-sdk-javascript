@@ -1,6 +1,7 @@
 export * from './IStorageHandler';
 export * from './IEventHandler';
 export * from './IToken';
+export * from './ITokenStoreOptions';
 export * from './ITokenHandler';
 export * from './IUser';
 export * from './IUserHandler';

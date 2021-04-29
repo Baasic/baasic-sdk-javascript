@@ -1,10 +1,10 @@
 import { Container, interfaces, ContainerModule } from "inversify";
 import { IHttpClient, httpTYPES, IAbortSignal } from './httpApi';
-import { IStorageHandler, IDefaultStorageConfig, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES } from './core/contracts';
+import { IStorageHandler, IDefaultStorageConfig, TokenType, TokenTypes, IToken, IEventHandler, IBaasicAppOptions, IAppOptions, IBaasicApp, TYPES as coreTYPES, ITokenHandler } from './core/contracts';
 import { JQueryHttpClient } from './httpApi/jQuery';
 import { LocalStorageHandler } from './core/localStorage';
 import { BrowserEventHandler } from './core/browserEvents';
-import { TYPES as commonTypes } from './common'
+import { TokenHandler } from "core";
 
 export class DIModule {
     diModules: interfaces.ContainerModule[] = [];
@@ -34,6 +34,7 @@ export class DIModule {
 
             this.bindHandler<IHttpClient>(httpTYPES.IHttpClient, app.settings.httpClient, JQueryHttpClient);
             this.bindHandlerWithOptions<IStorageHandler, IDefaultStorageConfig>(coreTYPES.IStorageHandler, coreTYPES.IDefaultStorageConfig, app.settings.storageHandler, LocalStorageHandler);
+            this.bindHandler<ITokenHandler>(coreTYPES.ITokenHandler, app.settings.tokenHandler, TokenHandler);
             this.bindHandler<IEventHandler>(coreTYPES.IEventHandler, app.settings.eventHandler, BrowserEventHandler);
             if (app.settings.abortSignal) {
                 this.kernel.bind<IAbortSignal>(httpTYPES.IAbortSignal).toConstantValue(app.settings.abortSignal());
