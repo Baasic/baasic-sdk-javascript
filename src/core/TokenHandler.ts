@@ -87,7 +87,7 @@ export class TokenHandler implements ITokenHandler {
         this.eventHandler.triggerEvent(this.tokenExpiredEventName, data);
 
         this.eventHandler.pushMessage({
-            type: this.messageTypes.tokenExpired
+            type: this.tokenExpiredEventName
         }, {});
     }
 
@@ -96,7 +96,7 @@ export class TokenHandler implements ITokenHandler {
         this.eventHandler.triggerEvent(this.tokenUpdatedEventName, data);
 
         this.eventHandler.pushMessage({
-            type: this.messageTypes.tokenUpdated
+            type: this.tokenUpdatedEventName
         }, {});
     }
 
@@ -104,10 +104,8 @@ export class TokenHandler implements ITokenHandler {
         if (token && token.expireTime) {
             var expiresIn = token.expireTime - new Date().getTime();
             if (expiresIn > 0) {
-                var self = this;
-                return setTimeout(function () {
-                    self.store(null);
-                    self.triggerTokenExpired(self.application);
+                return setTimeout(() => {
+                    this.store(null);
                 }, expiresIn);
             } else {
                 this.store(null);

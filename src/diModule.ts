@@ -34,7 +34,14 @@ export class DIModule {
 
             this.bindHandler<IHttpClient>(httpTYPES.IHttpClient, app.settings.httpClient, JQueryHttpClient);
             this.bindHandlerWithOptions<IStorageHandler, IDefaultStorageConfig>(coreTYPES.IStorageHandler, coreTYPES.IDefaultStorageConfig, app.settings.storageHandler, LocalStorageHandler);
-            this.bindHandler<ITokenHandler>(coreTYPES.ITokenHandler, app.settings.tokenHandler, TokenHandler);
+
+            if (app.settings.TokenHandler) {
+                this.kernel.bind<ITokenHandler>(coreTYPES.ITokenHandler).to(<any>app.settings.TokenHandler).inSingletonScope();
+            }
+            else {
+                this.kernel.bind<ITokenHandler>(coreTYPES.ITokenHandler).to(TokenHandler).inSingletonScope();
+            }
+
             this.bindHandler<IEventHandler>(coreTYPES.IEventHandler, app.settings.eventHandler, BrowserEventHandler);
             if (app.settings.abortSignal) {
                 this.kernel.bind<IAbortSignal>(httpTYPES.IAbortSignal).toConstantValue(app.settings.abortSignal());
@@ -71,7 +78,6 @@ export class DIModule {
 
         this.kernel.bind<THandler>(type).to(defaultBinding);
     }
-
 
     private addModule(module: any) {
         if (module instanceof ContainerModule) {

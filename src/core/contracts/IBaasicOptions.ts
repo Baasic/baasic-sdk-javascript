@@ -8,8 +8,8 @@ export interface IBaasicOptions {
     apiRootUrl: string,
     apiVersion: string,
     enableHALJSON?: boolean,
+    TokenHandler?: ITokenHandler,
     storageHandler?: () => IStorageHandler | IDefaultStorageConfig,
-    tokenHandler?: () => ITokenHandler,
     httpClient?: () => IHttpClient,
     abortSignal?: () => IAbortSignal,
     eventHandler?: () => IEventHandler
